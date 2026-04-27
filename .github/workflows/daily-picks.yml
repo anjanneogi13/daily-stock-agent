@@ -2,8 +2,7 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # 5:00 PM Singapore Time (UTC+8) = 09:00 UTC, weekdays
-    - cron: '0 9 * * 1-5'
+    - cron: '0 9 * * 1-5'   # 5 PM SGT
   workflow_dispatch:
 
 jobs:
@@ -11,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,3 +37,25 @@ jobs:
           git add data/ logs/ || true
           git diff --staged --quiet || git commit -m "Daily picks $(date +%Y-%m-%d) SGT"
           git push || echo "Nothing to push"
+
+      - name: Create issue with picks (emails you)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+            const logFile = `logs/run-${date.replace(/-/g, '')}.log`;
+            let body = '## Daily Stock Picks\n\n';
+            try {
+              const log = fs.readFileSync(logFile, 'utf8');
+              body += '```\n' + log.slice(-3000) + '\n```';
+            } catch (e) {
+              body += 'No log file found.';
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Daily Picks ${date}`,
+              body: body,
+              labels: ['daily-picks']
+            });
