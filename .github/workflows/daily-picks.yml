@@ -2,7 +2,7 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    - cron: '0 9 * * 1-5'   # 5 PM SGT
+    - cron: '0 9 * * 1-5'   # 5 PM SGT (9 AM UTC) Mon-Fri
   workflow_dispatch:
 
 jobs:
@@ -26,6 +26,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           mkdir -p logs data
           python main.py 2>&1 | tee logs/run-$(date +%Y%m%d).log
@@ -48,7 +50,7 @@ jobs:
             let body = '## Daily Stock Picks\n\n';
             try {
               const log = fs.readFileSync(logFile, 'utf8');
-              body += '```\n' + log.slice(-3000) + '\n```';
+              body += '```\n' + log.slice(-6000) + '\n```';
             } catch (e) {
               body += 'No log file found.';
             }
