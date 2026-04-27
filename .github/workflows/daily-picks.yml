@@ -2,9 +2,8 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # 8:30 AM ET weekdays = 13:30 UTC (during EDT = Mar-Nov)
     - cron: '30 13 * * 1-5'
-  workflow_dispatch:   # also lets you run manually from Actions tab
+  workflow_dispatch:
 
 jobs:
   run-picks:
@@ -18,13 +17,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install curl_cffi
 
       - name: Run agent
         run: |
