@@ -1,0 +1,51 @@
+universe:
+  source: custom
+  custom_tickers:
+    - AAPL
+    - MSFT
+    - NVDA
+    - AMD
+    - AVGO
+  semiconductors:
+    always_include: true
+    min_ai_weight: 0.0
+  excluded_tickers:
+    - MRVL
+  min_price: 5.0
+  max_price: 1500.0
+  min_avg_volume: 500000
+
+strategy:
+  style: swing
+  lookback_days: 180
+
+weights:
+  trend: 0.25
+  momentum: 0.20
+  volatility: 0.10
+  volume: 0.15
+  fundamentals: 0.15
+  sentiment: 0.15
+
+sector:
+  semi_boost: 1.10
+  ai_boost: 0.20
+
+risk:
+  account_size: 10000.0
+  risk_per_trade_pct: 1.0
+  max_positions: 5
+  max_daily_loss_pct: 3.0
+  stop_loss_atr_mult: 1.5
+  take_profit_atr_mult: 3.0
+
+output:
+  top_n_picks: 7
+  min_score: 0.55
+  save_csv: true
+  csv_path: data/picks.csv
+
+llm:
+  enabled: false
+  model: gpt-4o-mini
+  max_tokens: 500

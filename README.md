@@ -1,2 +1,3 @@
-# daily-stock-agent
-Personal stock research tool
+# Daily Stock Picker Agent
+
+Educational only. Not financial advice.
