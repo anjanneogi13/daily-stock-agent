@@ -1,5 +1,5 @@
 universe:
-  source: custom
+  source: sp500          # ← changed from custom
   custom_tickers:
     - AAPL
     - MSFT
@@ -40,7 +40,7 @@ risk:
   take_profit_atr_mult: 3.0
 
 output:
-  top_n_picks: 7
+  top_n_picks: 10        # ← bumped from 7
   min_score: 0.55
   save_csv: true
   csv_path: data/picks.csv
