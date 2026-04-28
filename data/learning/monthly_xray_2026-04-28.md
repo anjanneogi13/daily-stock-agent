@@ -1,45 +1,89 @@
 # Monthly X-Ray - 2026-04-28
 
-_Gemini failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 4.195133691s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}_
+_Gemini failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 40.725584455s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}_
+_Falling back to deterministic local analysis below._
 
-```json
-{
-  "period": {
-    "start": "2026-03-29",
-    "end": "2026-04-28",
-    "picks": 10,
-    "evaluated": 0
-  },
-  "weekly_summary": [
-    {
-      "week_starting": "2026-04-27",
-      "picks": 10,
-      "evaluated": 0,
-      "tp": 0,
-      "sl": 0,
-      "win_rate_pct": 0,
-      "avg_r": 0,
-      "avg_return_pct": 0,
-      "total_r": 0.0
-    }
-  ],
-  "trend": [],
-  "code_changes": [
-    {
-      "date": "2026-04-28",
-      "msg": "Add premarket sanity check with risk-tagged Telegram + email"
-    }
-  ],
-  "by_score": {},
-  "by_regime": {},
-  "best": [],
-  "worst": [],
-  "observation_types": {
-    "sector_warning": 2,
-    "weak_pick": 6,
-    "sl_too_tight": 1,
-    "premarket_correct": 6,
-    "sl_well_placed": 2
-  }
-}
-```
+# 📊 Monthly Local Analysis (30d)
+
+**Period:** 30d  •  **Picks:** 10  •  **Evaluated:** 0  •  **Pending:** 10
+
+_Not enough evaluated trades yet for stats._
+
+
+## 🏷️ Picks by tag
+- SEMI / AI: 9
+- SEMI: 1
+
+
+## 🔬 Code-Aware Diagnostic
+
+### 📋 Current strategy parameters
+
+**`config.yaml`**
+- `universe.source = sp500`
+- `universe.semiconductors.always_include = True`
+- `universe.semiconductors.min_ai_weight = 0.0`
+- `universe.min_price = 5.0`
+- `universe.max_price = 1500.0`
+- `universe.min_avg_volume = 500000`
+- `strategy.style = swing`
+- `strategy.lookback_days = 180`
+- `weights.trend = 0.18`
+- `weights.momentum = 0.2`
+- `weights.volatility = 0.08`
+- `weights.volume = 0.05`
+- _… +18 more_
+
+**`src/backtester.py`**
+- `backtest_simple(rsi_buy) = 35` (line 8)
+- `backtest_simple(rsi_sell) = 70` (line 8)
+
+**`src/cape_ratio.py`**
+- `_CAPE_VALUE = 38.5` (line 6)
+
+**`src/data_fetcher.py`**
+- `fetch_universe_data(max_workers) = 5` (line 44)
+
+**`src/earnings.py`**
+- `earnings_safe(min_days) = 5` (line 37)
+
+**`src/indicators.py`**
+- `rsi(period) = 14` (line 18)
+- `macd(fast) = 12` (line 26)
+- `macd(slow) = 26` (line 26)
+- `macd(signal) = 9` (line 26)
+- `bollinger(period) = 20` (line 35)
+- `bollinger(std) = 2.0` (line 35)
+- `atr(period) = 14` (line 41)
+- `stochastic(k_period) = 14` (line 55)
+- `stochastic(d_period) = 3` (line 55)
+- `parabolic_sar(af_start) = 0.02` (line 68)
+- `parabolic_sar(af_step) = 0.02` (line 68)
+- `parabolic_sar(af_max) = 0.2` (line 68)
+- _… +5 more_
+
+**`src/llm_agent.py`**
+- `_MIN_INTERVAL = 5.0` (line 38)
+- `_gemini_with_retry(max_retries) = 1` (line 111)
+
+**`src/market_news.py`**
+- `fetch_market_news(limit) = 40` (line 25)
+
+**`src/news_sentiment.py`**
+- `fetch_news(limit) = 5` (line 19)
+
+**`src/parallel_scorer.py`**
+- `score_all(max_workers) = 10` (line 38)
+
+**`src/pick_evaluator.py`**
+- `MAX_DAYS_OPEN = 20` (line 15)
+- `EVAL_LOOKBACK_DAYS = 30` (line 16)
+
+**`src/semiconductors.py`**
+- `get_semi_tickers(min_ai_weight) = 0.0` (line 53)
+
+### 🩺 Code-targeted suggestions
+_(based on last 30d, 0 evaluated trades)_
+
+
+📚 Need at least 5 evaluated trades for code-aware diagnosis.
