@@ -1,0 +1,60 @@
+name: Monthly X-Ray
+
+on:
+  schedule:
+    - cron: '0 21 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  monthly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install google-genai
+
+      - name: Generate monthly X-ray
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/monthly_xray.py
+
+      - name: Post as GitHub issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+            let body;
+            try { body = fs.readFileSync(`data/learning/monthly_xray_${date}.md`, 'utf8'); }
+            catch (e) { body = '_Not generated_'; }
+            body += `\n\n---\n\n## Monthly Decision\n\n1. Did the system make money?\n2. Did our tweaks help?\n3. What experiments next month?`;
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `📅 Monthly X-Ray ${date}`,
+              body: body,
+              labels: ['monthly-review','needs-review'],
+              assignees: ['anjanneogi13']
+            });
+
+      - name: Telegram notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/send_monthly_telegram.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/learning/monthly_xray_*.md
+          git diff --staged --quiet || git commit -m "Monthly X-Ray [skip ci]"
+          git push
