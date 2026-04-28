@@ -234,3 +234,5 @@ logs/
 .cache/
 build/
 dist/
+data/finnhub_cache/
+data/llm_cache/

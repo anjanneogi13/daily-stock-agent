@@ -47,31 +47,9 @@ def run():
     rprint("[3/6] Fetching market data...")
     data = fetch_universe_data(tickers, period=f"{cfg['strategy']['lookback_days']}d")
 
-    rprint("[4/6] Computing indicators + scoring...")
-    candidates = []
-    for tk, df in data.items():
-        d = add_indicators(df)
-        sig = latest_signals(d)
-        if not sig.get("close"):
-            continue
-        info = fetch_info(tk)
-        if not passes_filters(info, cfg):
-            continue
-        fund = score_fundamentals(info)
-        news = fetch_news(tk, limit=5)
-        sent = score_sentiment(news)
-        scores = composite_score(sig, fund, sent, cfg["weights"],
-                                 ticker=tk, sector_cfg=cfg.get("sector", {}))
-        if scores["composite"] < cfg["output"]["min_score"]:
-            continue
-        plan = trade_plan(sig, cfg)
-        candidates.append({
-            "ticker": tk, "scores": scores, "plan": plan, "news": news,
-            "info_short": {"name": info.get("shortName", tk),
-                           "sector": info.get("sector", "N/A")},
-        })
-
-    candidates.sort(key=lambda x: x["scores"]["composite"], reverse=True)
+    rprint("[4/6] Computing indicators + scoring (parallel, all candidates)...")
+    from src.parallel_scorer import score_all
+    candidates = score_all(data, cfg, max_workers=10)
 
     rprint("[5/6] Filtering for earnings risk (skip if earnings in next 5 days)...")
     filtered = []

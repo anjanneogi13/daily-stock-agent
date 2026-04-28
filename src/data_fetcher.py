@@ -1,6 +1,7 @@
-"""Market data via yfinance with curl_cffi session (bypasses EU consent)."""
+"""Market data via yfinance + Finnhub fundamentals."""
 import yfinance as yf
 import pandas as pd
+import os
 from typing import Dict, List
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -9,6 +10,13 @@ try:
     SESSION = cf_requests.Session(impersonate="chrome")
 except Exception:
     SESSION = None
+
+# Optional Finnhub for fundamentals
+try:
+    from .finnhub_data import fetch_fundamentals as _finnhub_fundamentals
+    HAS_FINNHUB = True
+except Exception:
+    HAS_FINNHUB = False
 
 
 def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
@@ -44,22 +52,33 @@ def fetch_universe_data(tickers: List[str], period: str = "6mo",
 
 
 def fetch_info(ticker: str) -> dict:
-    """Lightweight info fetch with browser-impersonating session."""
+    """Combined info: price/volume from yfinance + fundamentals from Finnhub."""
+    info = {
+        "shortName": ticker, "currentPrice": None,
+        "averageVolume": 1_000_000, "sector": "N/A",
+        "marketCap": None, "trailingPE": None,
+        "earningsQuarterlyGrowth": None, "profitMargins": None,
+        "debtToEquity": None,
+    }
+    # 1. Price + volume from yfinance fast_info (lightweight)
     try:
         t = yf.Ticker(ticker, session=SESSION) if SESSION else yf.Ticker(ticker)
         fast = t.fast_info
-        return {
-            "shortName": ticker,
-            "currentPrice": getattr(fast, "last_price", None),
-            "regularMarketPrice": getattr(fast, "last_price", None),
-            "averageVolume": getattr(fast, "ten_day_average_volume", None) or 1_000_000,
-            "marketCap": getattr(fast, "market_cap", None),
-            "sector": "N/A",
-        }
+        info["currentPrice"] = getattr(fast, "last_price", None)
+        info["regularMarketPrice"] = getattr(fast, "last_price", None)
+        info["averageVolume"] = getattr(fast, "ten_day_average_volume", None) or 1_000_000
+        info["marketCap"] = getattr(fast, "market_cap", None)
     except Exception:
-        return {
-            "shortName": ticker,
-            "currentPrice": None,
-            "averageVolume": 1_000_000,
-            "sector": "N/A",
-        }
+        pass
+
+    # 2. Real fundamentals from Finnhub (if key set)
+    if HAS_FINNHUB and os.getenv("FINNHUB_API_KEY"):
+        try:
+            fund = _finnhub_fundamentals(ticker)
+            for k, v in fund.items():
+                if v is not None and v != "N/A":
+                    info[k] = v
+        except Exception as e:
+            print(f"[finnhub] {ticker} skipped: {type(e).__name__}")
+
+    return info

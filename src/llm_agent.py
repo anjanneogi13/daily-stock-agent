@@ -1,5 +1,41 @@
 """LLM rationale generation. Supports Gemini (free) + OpenAI."""
-import os, time, random
+import os, time, random, json, hashlib
+from pathlib import Path
+from datetime import datetime, timedelta
+
+_CACHE_DIR = Path("data/llm_cache")
+_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+_CACHE_TTL = timedelta(hours=12)
+
+
+def _cache_key(ticker, scores, plan):
+    payload = json.dumps({"t": ticker, "s": scores, "p": plan}, sort_keys=True, default=str)
+    return hashlib.md5(payload.encode()).hexdigest()
+
+
+def _cache_get(key):
+    p = _CACHE_DIR / f"{key}.json"
+    if not p.exists():
+        return None
+    try:
+        d = json.loads(p.read_text())
+        if datetime.now() - datetime.fromisoformat(d["at"]) < _CACHE_TTL:
+            return d["text"]
+    except Exception:
+        pass
+    return None
+
+
+def _cache_put(key, text):
+    try:
+        (_CACHE_DIR / f"{key}.json").write_text(json.dumps({"at": datetime.now().isoformat(), "text": text}))
+    except Exception:
+        pass
+
+
+_QUOTA_EXHAUSTED = [False]   # module flag — once tripped, skip remaining LLM calls
+_LAST_CALL = [0.0]
+_MIN_INTERVAL = 5.0
 
 
 def _rule_based(ticker: str, scores: dict, plan: dict) -> str:
@@ -58,11 +94,6 @@ def _openai(prompt: str, model: str) -> str:
     return resp.choices[0].message.content.strip()
 
 
-# Throttle to stay safely under free-tier per-minute limits
-_LAST_CALL = [0.0]
-_MIN_INTERVAL = 5.0   # 12 RPM, under flash-lite's 15 RPM cap
-
-
 def _throttle():
     elapsed = time.time() - _LAST_CALL[0]
     if elapsed < _MIN_INTERVAL:
@@ -70,8 +101,17 @@ def _throttle():
     _LAST_CALL[0] = time.time()
 
 
-def _gemini_with_retry(prompt: str, model: str, max_retries: int = 2) -> str:
-    """Retry on 429/503 with exponential backoff."""
+def _is_daily_quota_error(e: Exception) -> bool:
+    msg = str(e)
+    return "PerDay" in msg or "GenerateRequestsPerDay" in msg or (
+        "RESOURCE_EXHAUSTED" in msg and "PerMinute" not in msg
+    )
+
+
+def _gemini_with_retry(prompt: str, model: str, max_retries: int = 1) -> str:
+    """Retry only on transient errors. Trip flag on daily-quota errors."""
+    if _QUOTA_EXHAUSTED[0]:
+        raise RuntimeError("Daily quota exhausted — skipping remaining LLM calls")
     last_err = None
     for attempt in range(max_retries + 1):
         try:
@@ -80,16 +120,20 @@ def _gemini_with_retry(prompt: str, model: str, max_retries: int = 2) -> str:
         except Exception as e:
             last_err = e
             msg = str(e)
-            if "429" in msg or "503" in msg or "RESOURCE_EXHAUSTED" in msg or "UNAVAILABLE" in msg:
-                wait = (2 ** attempt) * 15 + random.uniform(0, 3)
-                print(f"[llm] rate-limited, waiting {wait:.0f}s before retry {attempt+1}/{max_retries}...")
+            if _is_daily_quota_error(e):
+                _QUOTA_EXHAUSTED[0] = True
+                print("[llm] daily quota exhausted — falling back to rule-based for remaining picks")
+                raise
+            if "429" in msg or "503" in msg or "UNAVAILABLE" in msg:
+                wait = 15 + random.uniform(0, 3)
+                print(f"[llm] transient error, waiting {wait:.0f}s before retry...")
                 time.sleep(wait)
                 continue
             raise
     raise last_err
 
 
-def explain_pick(ticker: str, scores: dict, plan: dict,
+def _explain_uncached(ticker: str, scores: dict, plan: dict,
                  news: list = None, model: str = "gemini-2.5-flash-lite") -> str:
     prompt = _build_prompt(ticker, scores, plan, news or [])
     try:
@@ -102,6 +146,18 @@ def explain_pick(ticker: str, scores: dict, plan: dict,
         if os.getenv("OPENAI_API_KEY"):
             return _openai(prompt, "gpt-4o-mini")
     except Exception as e:
-        msg = str(e)[:160]
+        msg = str(e)[:120]
         print(f"[llm] {ticker} failed ({type(e).__name__}: {msg}) — using rule-based")
     return _rule_based(ticker, scores, plan)
+
+
+
+def explain_pick(ticker: str, scores: dict, plan: dict,
+                 news: list = None, model: str = "gemini-2.5-flash-lite") -> str:
+    key = _cache_key(ticker, scores, plan)
+    cached = _cache_get(key)
+    if cached:
+        return cached
+    text = _explain_uncached(ticker, scores, plan, news, model)
+    _cache_put(key, text)
+    return text
