@@ -221,7 +221,12 @@ else:
         resp = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
         md = resp.text
     except Exception as e:
-        md = _human_fallback("Gemini failed: " + str(e))
+        err_str = str(e)
+        if "RESOURCE_EXHAUSTED" in err_str or "429" in err_str or "quota" in err_str.lower():
+            reason = "⚠️ Gemini free quota exhausted — using local analysis."
+        else:
+            reason = "Gemini failed: " + err_str.split(chr(10))[0][:200]
+        md = _human_fallback(reason)
 
 out_dir = Path("data/learning")
 out_dir.mkdir(parents=True, exist_ok=True)

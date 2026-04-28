@@ -3,6 +3,16 @@ import os, sys, urllib.request, urllib.parse
 from datetime import datetime
 from pathlib import Path
 
+def _compact_for_telegram(md: str) -> str:
+    """Remove verbose parameter inventory; keep stats + suggestions."""
+    import re
+    # Remove the "### 📋 Current strategy parameters" block (until next ### or end)
+    md = re.sub(r"### 📋 Current strategy parameters.*?(?=\n### |\Z)", "", md, flags=re.DOTALL)
+    # Collapse 3+ blank lines
+    md = re.sub(r"\n{3,}", "\n\n", md)
+    return md.strip()
+
+
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 if not TOKEN or not CHAT_ID:
@@ -10,7 +20,7 @@ if not TOKEN or not CHAT_ID:
 
 date = datetime.now().strftime("%Y-%m-%d")
 p = Path(f"data/learning/weekly_review_{date}.md")
-summary = p.read_text() if p.exists() else "Weekly review not generated."
+summary = _compact_for_telegram(p.read_text()) if p.exists() else "Weekly review not generated."
 
 # Trim to fit Telegram limit
 if len(summary) > 3500:

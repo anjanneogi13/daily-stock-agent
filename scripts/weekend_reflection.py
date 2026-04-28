@@ -109,7 +109,8 @@ if text:
 else:
     from local_analyst import analyze
     local = analyze(period_days=7, label="Weekly")
-    md = f"# 🧠 Weekend Review — {today}\n\n_Gemini unavailable: {err}_\n\n_Falling back to deterministic local analysis below._\n\n---\n\n{local}\n\n---\n\nRaw observations: {len(all_obs)} this week (in data/learning/observations.jsonl)."
+    _err_short = "⚠️ Gemini free quota exhausted — using local analysis." if any(k in str(err) for k in ["RESOURCE_EXHAUSTED","429","quota","404","NOT_FOUND"]) else f"Gemini unavailable: {str(err).splitlines()[0][:150]}"
+    md = f"# 🧠 Weekend Review — {today}\n\n_{_err_short}_\n\n---\n\n{local}\n\n---\n\nRaw observations: {len(all_obs)} this week."
 
 out = Path(f"data/learning/weekly_review_{today}.md")
 out.write_text(md)
