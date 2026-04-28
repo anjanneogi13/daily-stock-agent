@@ -99,17 +99,23 @@ CRITICAL RULES:
 
 print(f"[reflect] {len(all_obs)} observations, {len(evaluated)} evaluated trades")
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-if not GEMINI_API_KEY:
-    md = f"# 🧠 Weekend Review — {today}\n\n_GEMINI_API_KEY missing._\n\nObservations this week: {len(all_obs)}\nEvaluated: {len(evaluated)}, TP: {tp_count}, SL: {sl_count}\n"
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from gemini_helper import call_gemini
+
+text, err = call_gemini(prompt)
+if text:
+    md = text
 else:
-    try:
-        from google import genai
-        client = genai.Client(api_key=GEMINI_API_KEY)
-        resp = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
-        md = resp.text
-    except Exception as e:
-        md = f"# 🧠 Weekend Review — {today}\n\n_Gemini failed: {e}_\n\nRaw obs count: {len(all_obs)}"
+    md = f"# 🧠 Weekend Review — {today}
+
+_Gemini unavailable: {err}_
+
+Observations this week: {len(all_obs)}
+Evaluated: {len(evaluated)}, TP: {tp_count}, SL: {sl_count}
+
+Raw observations preserved in data/learning/observations.jsonl for manual review.
+"
 
 out = Path(f"data/learning/weekly_review_{today}.md")
 out.write_text(md)
