@@ -49,12 +49,10 @@ def atr(df: pd.DataFrame, period: int = 14) -> pd.Series:
 
 
 # ============================================================
-# NEW INDICATORS
+# ADDITIONAL INDICATORS
 # ============================================================
 
 def stochastic(df: pd.DataFrame, k_period: int = 14, d_period: int = 3):
-    """Stochastic Oscillator (%K and %D). 0-100 scale.
-    >80 = overbought, <20 = oversold."""
     low_min = df["low"].rolling(k_period).min()
     high_max = df["high"].rolling(k_period).max()
     k = 100 * (df["close"] - low_min) / (high_max - low_min).replace(0, np.nan)
@@ -63,51 +61,98 @@ def stochastic(df: pd.DataFrame, k_period: int = 14, d_period: int = 3):
 
 
 def obv(df: pd.DataFrame) -> pd.Series:
-    """On-Balance Volume. Cumulative volume weighted by price direction.
-    Rising OBV = institutional accumulation."""
     direction = np.sign(df["close"].diff()).fillna(0)
     return (direction * df["volume"]).cumsum()
 
 
 def parabolic_sar(df: pd.DataFrame, af_start: float = 0.02,
                   af_step: float = 0.02, af_max: float = 0.20) -> pd.Series:
-    """Parabolic SAR — trend-following stop level.
-    Price above SAR = uptrend; price below SAR = downtrend."""
     high, low = df["high"].values, df["low"].values
     n = len(df)
     sar = np.zeros(n)
-    trend = 1  # 1 = up, -1 = down
+    trend = 1
     af = af_start
     ep = high[0]
     sar[0] = low[0]
-
     for i in range(1, n):
         sar[i] = sar[i-1] + af * (ep - sar[i-1])
         if trend == 1:
             sar[i] = min(sar[i], low[i-1], low[max(i-2, 0)])
             if low[i] < sar[i]:
-                trend = -1
-                sar[i] = ep
-                ep = low[i]
-                af = af_start
+                trend = -1; sar[i] = ep; ep = low[i]; af = af_start
             elif high[i] > ep:
-                ep = high[i]
-                af = min(af + af_step, af_max)
+                ep = high[i]; af = min(af + af_step, af_max)
         else:
             sar[i] = max(sar[i], high[i-1], high[max(i-2, 0)])
             if high[i] > sar[i]:
-                trend = 1
-                sar[i] = ep
-                ep = high[i]
-                af = af_start
+                trend = 1; sar[i] = ep; ep = high[i]; af = af_start
             elif low[i] < ep:
-                ep = low[i]
-                af = min(af + af_step, af_max)
+                ep = low[i]; af = min(af + af_step, af_max)
     return pd.Series(sar, index=df.index)
 
 
+def vwap(df: pd.DataFrame, period: int = 20) -> pd.Series:
+    """Rolling Volume-Weighted Average Price."""
+    typical = (df["high"] + df["low"] + df["close"]) / 3.0
+    pv = (typical * df["volume"]).rolling(period).sum()
+    v = df["volume"].rolling(period).sum()
+    return pv / v.replace(0, np.nan)
+
+
+def adx(df: pd.DataFrame, period: int = 14):
+    """ADX (trend strength), +DI, -DI. >25 = strong trend."""
+    high, low, close = df["high"], df["low"], df["close"]
+    tr = pd.concat([
+        high - low,
+        (high - close.shift()).abs(),
+        (low - close.shift()).abs(),
+    ], axis=1).max(axis=1)
+    up_move = high.diff()
+    down_move = -low.diff()
+    plus_dm = ((up_move > down_move) & (up_move > 0)).astype(float) * up_move
+    minus_dm = ((down_move > up_move) & (down_move > 0)).astype(float) * down_move
+    atr_w = tr.ewm(alpha=1/period, adjust=False).mean()
+    plus_di = 100 * plus_dm.ewm(alpha=1/period, adjust=False).mean() / atr_w.replace(0, np.nan)
+    minus_di = 100 * minus_dm.ewm(alpha=1/period, adjust=False).mean() / atr_w.replace(0, np.nan)
+    dx = 100 * (plus_di - minus_di).abs() / (plus_di + minus_di).replace(0, np.nan)
+    adx_line = dx.ewm(alpha=1/period, adjust=False).mean()
+    return adx_line, plus_di, minus_di
+
+
+def candlestick_patterns(df: pd.DataFrame) -> dict:
+    if len(df) < 3:
+        return {}
+    last, prev, prev2 = df.iloc[-1], df.iloc[-2], df.iloc[-3]
+    o, h, l, c = float(last["open"]), float(last["high"]), float(last["low"]), float(last["close"])
+    po, pc = float(prev["open"]), float(prev["close"])
+    body = abs(c - o)
+    rng = max(h - l, 1e-9)
+    upper_wick = h - max(c, o)
+    lower_wick = min(c, o) - l
+
+    p = {
+        "bullish_engulfing": (pc < po) and (c > o) and (c >= po) and (o <= pc),
+        "bearish_engulfing": (pc > po) and (c < o) and (c <= po) and (o >= pc),
+        "hammer": (lower_wick >= 2 * body) and (upper_wick <= body) and (c > o),
+        "shooting_star": (upper_wick >= 2 * body) and (lower_wick <= body) and (c < o),
+        "doji": body / rng < 0.1,
+        "morning_star": (
+            float(prev2["close"]) < float(prev2["open"])
+            and abs(pc - po) / max(float(prev["high"]) - float(prev["low"]), 1e-9) < 0.3
+            and c > o and c > (float(prev2["open"]) + float(prev2["close"])) / 2
+        ),
+        "evening_star": (
+            float(prev2["close"]) > float(prev2["open"])
+            and abs(pc - po) / max(float(prev["high"]) - float(prev["low"]), 1e-9) < 0.3
+            and c < o and c < (float(prev2["open"]) + float(prev2["close"])) / 2
+        ),
+    }
+    p["bullish_signal"] = any(p[k] for k in ["bullish_engulfing", "hammer", "morning_star"])
+    p["bearish_signal"] = any(p[k] for k in ["bearish_engulfing", "shooting_star", "evening_star"])
+    return p
+
+
 def fibonacci_levels(df: pd.DataFrame, lookback: int = 60) -> dict:
-    """Fibonacci retracement levels from recent swing high/low."""
     recent = df.tail(lookback)
     swing_high = float(recent["high"].max())
     swing_low = float(recent["low"].min())
@@ -123,82 +168,68 @@ def fibonacci_levels(df: pd.DataFrame, lookback: int = 60) -> dict:
     }
 
 
-def support_resistance(df: pd.DataFrame, lookback: int = 60,
-                        window: int = 5) -> dict:
-    """Support = recent significant low; Resistance = recent significant high.
-    Uses local extrema over `window` bars."""
+def support_resistance(df: pd.DataFrame, lookback: int = 60, window: int = 5) -> dict:
     recent = df.tail(lookback)
-    highs = recent["high"]
-    lows = recent["low"]
-
-    # Local maxima and minima
-    res_levels = []
-    sup_levels = []
+    highs, lows = recent["high"], recent["low"]
+    res_levels, sup_levels = [], []
     for i in range(window, len(recent) - window):
         if highs.iloc[i] == highs.iloc[i-window:i+window+1].max():
             res_levels.append(highs.iloc[i])
         if lows.iloc[i] == lows.iloc[i-window:i+window+1].min():
             sup_levels.append(lows.iloc[i])
-
     close = float(df["close"].iloc[-1])
-    # Nearest resistance ABOVE current price
     above = [r for r in res_levels if r > close]
-    nearest_resistance = float(min(above)) if above else float(highs.max())
-    # Nearest support BELOW current price
     below = [s for s in sup_levels if s < close]
-    nearest_support = float(max(below)) if below else float(lows.min())
-
+    nearest_res = float(min(above)) if above else float(highs.max())
+    nearest_sup = float(max(below)) if below else float(lows.min())
     return {
-        "support": nearest_support,
-        "resistance": nearest_resistance,
-        "distance_to_support_pct": round((close / nearest_support - 1) * 100, 2),
-        "distance_to_resistance_pct": round((nearest_resistance / close - 1) * 100, 2),
+        "support": nearest_sup,
+        "resistance": nearest_res,
+        "distance_to_support_pct": round((close / nearest_sup - 1) * 100, 2),
+        "distance_to_resistance_pct": round((nearest_res / close - 1) * 100, 2),
     }
 
 
 # ============================================================
-# COMPOSITE: ADD ALL TO DATAFRAME
+# COMPOSITE
 # ============================================================
 
 def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
-    """Compute and attach all indicators to the OHLCV dataframe."""
     if df.empty:
         return df
     d = df.copy()
     c = d["close"]
 
-    # Moving averages
     d["sma_20"] = sma(c, 20)
     d["sma_50"] = sma(c, 50)
     d["sma_200"] = sma(c, 200)
     d["ema_9"] = ema(c, 9)
     d["ema_21"] = ema(c, 21)
 
-    # Momentum
     d["rsi_14"] = rsi(c, 14)
     macd_line, sig_line, hist = macd(c)
     d["macd"], d["macd_signal"], d["macd_hist"] = macd_line, sig_line, hist
 
-    # Volatility
     bb_up, bb_mid, bb_low = bollinger(c)
     d["bb_upper"], d["bb_middle"], d["bb_lower"] = bb_up, bb_mid, bb_low
     d["atr_14"] = atr(d, 14)
 
-    # NEW: Stochastic
     k, dl = stochastic(d)
     d["stoch_k"], d["stoch_d"] = k, dl
 
-    # NEW: OBV
     d["obv"] = obv(d)
-    d["obv_ema"] = ema(d["obv"], 20)  # OBV trend
+    d["obv_ema"] = ema(d["obv"], 20)
 
-    # NEW: Parabolic SAR
     try:
         d["psar"] = parabolic_sar(d)
     except Exception:
         d["psar"] = np.nan
 
-    # Volume
+    d["vwap_20"] = vwap(d)
+
+    adx_line, plus_di, minus_di = adx(d)
+    d["adx"], d["plus_di"], d["minus_di"] = adx_line, plus_di, minus_di
+
     d["vol_sma_20"] = sma(d["volume"], 20)
     d["vol_ratio"] = d["volume"] / d["vol_sma_20"]
 
@@ -206,38 +237,33 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def latest_signals(df: pd.DataFrame) -> dict:
-    """Snapshot of latest indicator values + key derived signals."""
     if df.empty:
         return {}
     last = df.iloc[-1]
     close = float(last["close"])
 
+    def _f(col):
+        v = last.get(col)
+        return float(v) if pd.notna(v) else None
+
     out = {
         "close": close,
         "prev_close": float(df["close"].iloc[-2]) if len(df) > 1 else close,
-        "sma_20": float(last["sma_20"]) if pd.notna(last["sma_20"]) else None,
-        "sma_50": float(last["sma_50"]) if pd.notna(last["sma_50"]) else None,
-        "sma_200": float(last["sma_200"]) if pd.notna(last["sma_200"]) else None,
-        "ema_9": float(last["ema_9"]) if pd.notna(last["ema_9"]) else None,
-        "ema_21": float(last["ema_21"]) if pd.notna(last["ema_21"]) else None,
-        "rsi_14": float(last["rsi_14"]) if pd.notna(last["rsi_14"]) else None,
-        "macd": float(last["macd"]) if pd.notna(last["macd"]) else None,
-        "macd_signal": float(last["macd_signal"]) if pd.notna(last["macd_signal"]) else None,
-        "macd_hist": float(last["macd_hist"]) if pd.notna(last["macd_hist"]) else None,
-        "bb_upper": float(last["bb_upper"]) if pd.notna(last["bb_upper"]) else None,
-        "bb_middle": float(last["bb_middle"]) if pd.notna(last["bb_middle"]) else None,
-        "bb_lower": float(last["bb_lower"]) if pd.notna(last["bb_lower"]) else None,
-        "atr_14": float(last["atr_14"]) if pd.notna(last["atr_14"]) else None,
-        "vol_ratio": float(last["vol_ratio"]) if pd.notna(last["vol_ratio"]) else None,
-        # NEW
-        "stoch_k": float(last["stoch_k"]) if pd.notna(last["stoch_k"]) else None,
-        "stoch_d": float(last["stoch_d"]) if pd.notna(last["stoch_d"]) else None,
-        "obv": float(last["obv"]) if pd.notna(last["obv"]) else None,
-        "obv_ema": float(last["obv_ema"]) if pd.notna(last["obv_ema"]) else None,
-        "psar": float(last["psar"]) if pd.notna(last["psar"]) else None,
+        "sma_20": _f("sma_20"), "sma_50": _f("sma_50"), "sma_200": _f("sma_200"),
+        "ema_9": _f("ema_9"), "ema_21": _f("ema_21"),
+        "rsi_14": _f("rsi_14"),
+        "macd": _f("macd"), "macd_signal": _f("macd_signal"), "macd_hist": _f("macd_hist"),
+        "bb_upper": _f("bb_upper"), "bb_middle": _f("bb_middle"), "bb_lower": _f("bb_lower"),
+        "atr_14": _f("atr_14"),
+        "vol_ratio": _f("vol_ratio"),
+        "stoch_k": _f("stoch_k"), "stoch_d": _f("stoch_d"),
+        "obv": _f("obv"), "obv_ema": _f("obv_ema"),
+        "psar": _f("psar"),
+        "vwap_20": _f("vwap_20"),
+        "adx": _f("adx"), "plus_di": _f("plus_di"), "minus_di": _f("minus_di"),
     }
 
-    # Derived signals (boolean flags + percentages for scoring)
+    # Derived flags
     if out["bb_upper"] and out["bb_lower"]:
         bb_range = out["bb_upper"] - out["bb_lower"]
         out["bb_position"] = (close - out["bb_lower"]) / bb_range if bb_range else 0.5
@@ -250,7 +276,27 @@ def latest_signals(df: pd.DataFrame) -> dict:
     out["obv_rising"] = (out["obv"] is not None and out["obv_ema"] is not None
                         and out["obv"] > out["obv_ema"])
 
-    # Fibonacci + Support/Resistance (computed on full df)
+    # ADX trend strength
+    out["strong_trend"] = (out["adx"] is not None and out["adx"] > 25)
+    out["di_bullish"] = (out["plus_di"] is not None and out["minus_di"] is not None
+                         and out["plus_di"] > out["minus_di"])
+
+    # VWAP position
+    if out["vwap_20"]:
+        out["above_vwap"] = close > out["vwap_20"]
+        out["vwap_distance_pct"] = round((close / out["vwap_20"] - 1) * 100, 2)
+    else:
+        out["above_vwap"] = False
+        out["vwap_distance_pct"] = 0
+
+    # Candlestick patterns
+    try:
+        patterns = candlestick_patterns(df)
+        out.update({f"cdl_{k}": v for k, v in patterns.items()})
+    except Exception:
+        pass
+
+    # Fibonacci + Support/Resistance
     try:
         out.update(fibonacci_levels(df))
         out.update(support_resistance(df))

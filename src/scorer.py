@@ -52,6 +52,40 @@ def _enhanced_indicator_score(sig: dict) -> dict:
     else:
         scores["fibonacci"] = 0.50
 
+
+    # ADX — trend strength bonus
+    adx_v = sig.get("adx")
+    if adx_v is not None:
+        if adx_v > 40:    scores["adx_strength"] = 0.90  # very strong trend
+        elif adx_v > 25:  scores["adx_strength"] = 0.80  # solid trend
+        elif adx_v > 20:  scores["adx_strength"] = 0.60
+        else:             scores["adx_strength"] = 0.35  # choppy / no trend
+    else:
+        scores["adx_strength"] = 0.50
+
+    # +DI vs -DI direction
+    scores["di_direction"] = 0.80 if sig.get("di_bullish") else 0.30
+
+    # VWAP — bullish if above, bearish if below
+    if sig.get("above_vwap"):
+        d = sig.get("vwap_distance_pct", 0)
+        # Best zone: 0-3% above VWAP (uptrend, not stretched)
+        if 0 < d <= 3:    scores["vwap_position"] = 0.85
+        elif d <= 6:      scores["vwap_position"] = 0.70
+        else:             scores["vwap_position"] = 0.50  # too extended
+    else:
+        scores["vwap_position"] = 0.30
+
+    # Candlestick patterns
+    if sig.get("cdl_bullish_signal"):
+        scores["candlestick"] = 0.85
+    elif sig.get("cdl_bearish_signal"):
+        scores["candlestick"] = 0.20
+    elif sig.get("cdl_doji"):
+        scores["candlestick"] = 0.50  # indecision
+    else:
+        scores["candlestick"] = 0.55
+
     return scores
 
 
