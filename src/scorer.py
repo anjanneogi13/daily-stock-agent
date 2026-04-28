@@ -1,6 +1,69 @@
-"""Multi-factor scoring with semiconductor sector boost."""
+"""Multi-factor scoring with semiconductor sector boost + advanced indicators."""
 from typing import Dict
 from .semiconductors import is_semi, get_semi_meta
+
+
+# ============================================================
+# ENHANCED INDICATOR SCORES (Stochastic, OBV, PSAR, BB pos,
+# Support/Resistance, Fibonacci)
+# ============================================================
+
+def _enhanced_indicator_score(sig: dict) -> dict:
+    """Score derived from the FULL indicator suite (each 0-1)."""
+    scores = {}
+
+    # Stochastic — bullish if oversold, bearish if overbought
+    k = sig.get("stoch_k")
+    if k is not None:
+        if k <= 20:    scores["stochastic"] = 0.85   # oversold = bounce setup
+        elif k < 80:   scores["stochastic"] = 0.70   # healthy zone
+        else:          scores["stochastic"] = 0.30   # overbought
+    else:
+        scores["stochastic"] = 0.50
+
+    # OBV — institutional buying confirmation
+    scores["obv_trend"] = 0.85 if sig.get("obv_rising") else 0.40
+
+    # Parabolic SAR — trend confirmation
+    scores["psar_trend"] = 0.85 if sig.get("above_psar") else 0.30
+
+    # Bollinger position — prefer middle/lower, penalize upper
+    bb_pos = sig.get("bb_position", 0.5)
+    if bb_pos < 0.2:    scores["bb_position"] = 0.85
+    elif bb_pos < 0.6:  scores["bb_position"] = 0.75
+    elif bb_pos < 0.85: scores["bb_position"] = 0.55
+    else:               scores["bb_position"] = 0.30
+
+    # Support/Resistance — prefer near support, far from resistance
+    d_sup = sig.get("distance_to_support_pct", 50)
+    d_res = sig.get("distance_to_resistance_pct", 50)
+    upside_room = min(d_res / 10.0, 1.0)
+    safety = 1.0 - min(d_sup / 15.0, 1.0)
+    scores["sr_setup"] = round(upside_room * 0.6 + safety * 0.4, 3)
+
+    # Fibonacci — golden buy zone (38.2%-50%)
+    close = sig.get("close")
+    f382, f50, f618 = sig.get("fib_382"), sig.get("fib_50"), sig.get("fib_618")
+    if close and f382 and f618:
+        if f382 <= close <= f50:    scores["fibonacci"] = 0.85
+        elif f50 < close <= f618:   scores["fibonacci"] = 0.75
+        elif close < f382:          scores["fibonacci"] = 0.60
+        else:                       scores["fibonacci"] = 0.50
+    else:
+        scores["fibonacci"] = 0.50
+
+    return scores
+
+
+def score_indicators(sig: dict) -> float:
+    """Average of all enhanced indicator sub-scores (0-1)."""
+    sub = _enhanced_indicator_score(sig)
+    return round(sum(sub.values()) / len(sub), 4) if sub else 0.5
+
+
+# ============================================================
+# CORE COMPONENT SCORES (existing)
+# ============================================================
 
 def score_trend(sig: dict) -> float:
     score = 0.5
@@ -11,6 +74,7 @@ def score_trend(sig: dict) -> float:
     if s200 and c > s200: score += 0.15
     if c < s20 < s50: score -= 0.30
     return max(0.0, min(1.0, score))
+
 
 def score_momentum(sig: dict) -> float:
     score = 0.5
@@ -25,6 +89,7 @@ def score_momentum(sig: dict) -> float:
         elif macd < macd_sig:                         score -= 0.15
     return max(0.0, min(1.0, score))
 
+
 def score_volatility(sig: dict) -> float:
     atr, close = sig.get("atr_14"), sig.get("close")
     if not (atr and close): return 0.5
@@ -33,6 +98,7 @@ def score_volatility(sig: dict) -> float:
     elif vol_pct > 0.06:        return 0.30
     return 0.5
 
+
 def score_volume(sig: dict) -> float:
     vr = sig.get("vol_ratio")
     if vr is None: return 0.5
@@ -40,6 +106,11 @@ def score_volume(sig: dict) -> float:
     if vr > 1.3:   return 0.70
     if vr < 0.7:   return 0.35
     return 0.5
+
+
+# ============================================================
+# SECTOR BOOST
+# ============================================================
 
 def sector_bonus(ticker: str, sector_cfg: dict) -> Dict:
     if not is_semi(ticker):
@@ -56,8 +127,16 @@ def sector_bonus(ticker: str, sector_cfg: dict) -> Dict:
         "ai_weight": ai_weight,
     }
 
+
+# ============================================================
+# COMPOSITE
+# ============================================================
+
 def composite_score(sig: dict, fund_score: float, sent_score: float,
                     weights: dict, ticker: str = "", sector_cfg: dict = None) -> Dict:
+    enhanced = _enhanced_indicator_score(sig)
+    indicators_avg = round(sum(enhanced.values()) / len(enhanced), 4)
+
     components = {
         "trend":        score_trend(sig),
         "momentum":     score_momentum(sig),
@@ -65,13 +144,21 @@ def composite_score(sig: dict, fund_score: float, sent_score: float,
         "volume":       score_volume(sig),
         "fundamentals": fund_score,
         "sentiment":    sent_score,
+        "indicators":   indicators_avg,   # NEW combined sub-score
     }
+
     raw = sum(components[k] * weights.get(k, 0) for k in components)
     bonus = sector_bonus(ticker, sector_cfg or {})
     boosted = max(0.0, min(1.0, raw * bonus["multiplier"]))
+
     components["raw_score"]   = round(raw, 4)
     components["sector_mult"] = bonus["multiplier"]
     components["sector_tag"]  = bonus["tag"]
     components["sector_cat"]  = bonus["category"]
     components["composite"]   = round(boosted, 4)
+
+    # Surface individual indicator scores for transparency / LLM context
+    for k, v in enhanced.items():
+        components[f"ind_{k}"] = v
+
     return components

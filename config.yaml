@@ -18,12 +18,13 @@ strategy:
   style: swing
   lookback_days: 180
 weights:
-  trend: 0.25
+  trend: 0.18
   momentum: 0.2
-  volatility: 0.1
-  volume: 0.15
-  fundamentals: 0.15
-  sentiment: 0.15
+  volatility: 0.08
+  volume: 0.05
+  fundamentals: 0.14
+  sentiment: 0.12
+  indicators: 0.23
 sector:
   semi_boost: 1.1
   ai_boost: 0.2
