@@ -99,6 +99,8 @@ def run():
         if d2e < 5:
             rprint(f"  [dim]Skipping {p['ticker']} — earnings in {d2e}d[/dim]")
             continue
+        if d2e >= 999:
+            rprint(f"  [dim yellow]⚠ {p['ticker']} earnings date unknown — included with caution[/dim yellow]")
         filtered.append(p)
         if len(filtered) >= cfg["output"]["top_n_picks"]:
             break
