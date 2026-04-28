@@ -10,6 +10,7 @@ from src.data_fetcher import fetch_universe_data, fetch_info
 from src.indicators import add_indicators, latest_signals
 from src.fundamentals import score_fundamentals
 from src.cape_ratio import get_cape
+from src.pick_logger import log_picks
 from src.fundamentals import passes_filters
 from src.news_sentiment import fetch_news, score_sentiment
 from src.scorer import composite_score
@@ -99,6 +100,28 @@ def run():
         rprint(rationale); rprint("")
         if os.getenv("TRADING_MODE", "paper") == "paper":
             log_paper_trade(p, cfg["output"]["csv_path"].replace("picks","trades"))
+
+    # ===== Log picks for performance tracking =====
+    try:
+        picks_for_log = []
+        for p in top:
+            picks_for_log.append({
+                "ticker": p["ticker"],
+                "company": p.get("info_short", {}).get("name", ""),
+                "tag": p["scores"].get("sector_tag") or "",
+                "score": p["scores"].get("composite", 0),
+                "multiplier": p["scores"].get("sector_mult", 1.0),
+                "entry": p["plan"].get("entry"),
+                "stop_loss": p["plan"].get("stop_loss"),
+                "take_profit": p["plan"].get("take_profit"),
+                "risk_reward": p["plan"].get("risk_reward", 2.0),
+                "qty": p["plan"].get("quantity", 0),
+                "days_to_earnings": p.get("days_to_earnings"),
+            })
+        n = log_picks(picks_for_log, reg, cape if 'cape' in dir() else None)
+        rprint(f"[dim][log] Saved {n} picks to data/picks_log.csv[/dim]")
+    except Exception as e:
+        rprint(f"[red][log] Could not save picks: {e}[/red]")
 
     rprint("[green]Done. Review picks before any real-money action.[/green]")
 
