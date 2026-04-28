@@ -40,24 +40,25 @@ jobs:
           git diff --staged --quiet || git commit -m "Daily picks $(date +%Y-%m-%d) SGT"
           git push || echo "Nothing to push"
 
+      - name: Format picks as Markdown
+        run: python scripts/format_picks_email.py > /tmp/picks_email.md
+
       - name: Create issue with picks (emails you)
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
             const date = new Date().toISOString().split('T')[0];
-            const logFile = `logs/run-${date.replace(/-/g, '')}.log`;
-            let body = '## Daily Stock Picks\n\n';
+            let body;
             try {
-              const log = fs.readFileSync(logFile, 'utf8');
-              body += '```\n' + log.slice(-6000) + '\n```';
+              body = fs.readFileSync('/tmp/picks_email.md', 'utf8');
             } catch (e) {
-              body += 'No log file found.';
+              body = '## Daily Stock Picks\n\n_Formatter failed — see workflow logs._';
             }
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Daily Picks ${date}`,
+              title: `📈 Daily Picks ${date}`,
               body: body,
               labels: ['daily-picks'],
               assignees: ['anjanneogi13']
