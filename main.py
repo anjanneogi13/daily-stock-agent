@@ -11,6 +11,8 @@ from src.indicators import add_indicators, latest_signals
 from src.fundamentals import score_fundamentals
 from src.cape_ratio import get_cape
 from src.pick_logger import log_picks
+from src.market_news import get_market_briefing
+from src.earnings_analyzer import analyze_earnings
 from src.fundamentals import passes_filters
 from src.news_sentiment import fetch_news, score_sentiment
 from src.scorer import composite_score
@@ -53,6 +55,32 @@ def run():
         rprint(f"[CAPE] S&P 500 Shiller CAPE: {cape['cape']:.2f} — {cape['verdict']} ({cape['percentile']})")
 
 
+
+    # ===== Daily Market Briefing =====
+    rprint("\n[bold cyan]📰 Daily Market Briefing...[/bold cyan]")
+    briefing = get_market_briefing()
+    sent = briefing.get("sentiment", "neutral")
+    sscore = briefing.get("score", 0.5)
+    scolor = "green" if sent == "bullish" else "red" if sent == "bearish" else "yellow"
+    panel_text = f"[bold {scolor}]{sent.upper()}[/bold {scolor}] (score: {sscore:.2f})\n"
+    panel_text += f"[dim]{briefing.get('summary','')}[/dim]\n"
+    if briefing.get("key_catalysts"):
+        panel_text += "\n📈 [green]Catalysts:[/green]\n"
+        for c2 in briefing["key_catalysts"][:3]:
+            panel_text += f"  • {c2}\n"
+    if briefing.get("key_risks"):
+        panel_text += "\n⚠ [red]Risks:[/red]\n"
+        for rk in briefing["key_risks"][:3]:
+            panel_text += f"  • {rk}\n"
+    rprint(Panel.fit(panel_text.rstrip(), title="Market Sentiment"))
+
+    # Apply sentiment modifier to min_score
+    if sent == "bearish":
+        cfg["output"]["min_score"] = max(cfg["output"]["min_score"], 0.72)
+        rprint("[yellow]⚠ Bearish news sentiment — tightening min_score to 0.72[/yellow]")
+    elif sent == "bullish" and sscore >= 0.65:
+        rprint("[green]✓ Bullish news sentiment — keeping standard filters[/green]")
+
     rprint("[2/6] Loading universe...")
     tickers = get_universe(cfg)
 
@@ -75,17 +103,39 @@ def run():
         if len(filtered) >= cfg["output"]["top_n_picks"]:
             break
 
+
+    # ===== Earnings Quality Analysis on filtered picks =====
+    rprint("[5b/6] Analyzing earnings quality (beats, surprises, analyst trends)...")
+    for p in filtered:
+        try:
+            ea = analyze_earnings(p["ticker"])
+            p["earnings"] = ea
+            # Blend earnings_quality into composite (12% weight)
+            eq = ea.get("earnings_quality", 0.5)
+            old_score = p["scores"]["composite"]
+            new_score = round(old_score * 0.88 + eq * 0.12, 3)
+            p["scores"]["composite_pre_earnings"] = old_score
+            p["scores"]["composite"] = new_score
+        except Exception as e:
+            rprint(f"  [dim]earnings err for {p['ticker']}: {e}[/dim]")
+            p["earnings"] = {}
+    # Re-sort by new composite
+    filtered.sort(key=lambda x: x["scores"]["composite"], reverse=True)
+
     top = filtered
     rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} after earnings filter\n")
 
     table = Table(title="Top Picks (SEMI=Semiconductor, AI=AI-relevant)")
-    for col in ["#","Ticker","Tag","Score","Mult","Entry","SL","TP","R:R","Qty","Earn"]:
+    for col in ["#","Ticker","Tag","Score","EQ","Beat%","AnaBuy%","Entry","SL","TP","R:R","Qty","Earn"]:
         table.add_column(col)
     for i, p in enumerate(top, 1):
-        plan = p["plan"]; s = p["scores"]
+        plan = p["plan"]; s = p["scores"]; ea = p.get("earnings", {})
         e = f"{p.get('days_to_earnings','?')}d" if p.get("days_to_earnings") else "—"
+        eq = f"{ea.get('earnings_quality',0):.2f}" if ea.get("earnings_quality") is not None else "—"
+        br = f"{int(ea['beat_rate']*100)}%" if ea.get("beat_rate") is not None else "—"
+        ab = f"{ea['analyst_buy_pct']:.0f}%" if ea.get("analyst_buy_pct") is not None else "—"
         table.add_row(str(i), p["ticker"], s.get("sector_tag") or "",
-                      f"{s['composite']:.2f}", f"x{s['sector_mult']}",
+                      f"{s['composite']:.2f}", eq, br, ab,
                       f"${plan.get('entry','-')}", f"${plan.get('stop_loss','-')}",
                       f"${plan.get('take_profit','-')}",
                       f"{plan.get('risk_reward','-')}", str(plan.get("quantity","-")),
