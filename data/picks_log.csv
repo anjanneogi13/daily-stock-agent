@@ -1,0 +1,11 @@
+pick_date,pick_time,ticker,company,tag,score,multiplier,entry,stop_loss,take_profit,risk_reward,qty,days_to_earnings,regime,spy_close,cape,evaluation_status,evaluated_on,exit_price,actual_return_pct,r_multiple
+2026-04-28,12:39:53,LRCX,LRCX,SEMI / AI,0.847,1.26,259.47,241.69,295.04,2.0,5,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,NVDA,NVIDIA Corp,SEMI / AI,0.802,1.3,216.61,208.16,233.5,2.0,11,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,TSM,Taiwan Semiconductor Manufacturing Co Ltd,SEMI / AI,0.796,1.29,404.98,384.72,445.5,2.0,4,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,ALAB,ALAB,SEMI / AI,0.794,1.29,196.64,175.82,238.27,2.0,4,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,ARM,ARM,SEMI / AI,0.766,1.27,215.88,196.81,254.02,2.0,5,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,AVGO,Broadcom Inc,SEMI / AI,0.761,1.29,418.2,399.39,455.83,2.0,5,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,ASML,ASML,SEMI / AI,0.755,1.28,1432.44,1342.01,1613.3,2.0,1,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,SMCI,Super Micro Computer Inc,SEMI / AI,0.74,1.29,27.85,25.31,32.93,2.0,39,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,ONTO,ONTO,SEMI,0.734,1.23,298.28,274.43,345.97,2.0,4,,unknown,,38.5,pending,,,,
+2026-04-28,12:39:53,RMBS,RMBS,SEMI / AI,0.724,1.25,141.31,128.28,167.37,2.0,7,,unknown,,38.5,pending,,,,

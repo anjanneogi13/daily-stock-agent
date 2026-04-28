@@ -242,3 +242,4 @@ data/llm_cache/
 !data/learning/**
 !data/exec_report_*.json
 !data/premarket_check.json
+!data/picks_log.csv

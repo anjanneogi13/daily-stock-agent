@@ -9,7 +9,11 @@ today_str = today.strftime("%Y-%m-%d")
 month_start = (today - timedelta(days=30)).strftime("%Y-%m-%d")
 print(f"[monthly] Range: {month_start} -> {today_str}")
 
-picks = list(csv.DictReader(Path("data/picks_log.csv").open()))
+picks_file = Path("data/picks_log.csv")
+if not picks_file.exists():
+    print("[monthly] No picks_log.csv yet — nothing to analyze. Skipping.")
+    import sys; sys.exit(0)
+picks = list(csv.DictReader(picks_file.open()))
 month_picks = [p for p in picks if month_start <= p.get("pick_date", "") <= today_str]
 evaluated = [p for p in month_picks if p.get("evaluation_status") in ("tp_hit", "sl_hit", "expired")]
 
