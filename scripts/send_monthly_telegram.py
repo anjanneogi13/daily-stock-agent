@@ -18,7 +18,7 @@ if len(msg) > 4000:
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 data = urllib.parse.urlencode({
     "chat_id": CHAT_ID, "text": msg,
-    "parse_mode": "Markdown", "disable_web_page_preview": "true",
+     "disable_web_page_preview": "true",
 }).encode()
 try:
     urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)

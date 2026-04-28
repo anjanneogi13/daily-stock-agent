@@ -45,21 +45,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          python << 'PY'
-          import os, json, urllib.request, urllib.parse
-          from datetime import datetime
-          from pathlib import Path
-          date = datetime.now().strftime("%Y-%m-%d")
-          md_path = Path(f"data/learning/weekly_review_{date}.md")
-          summary = md_path.read_text()[:3500] if md_path.exists() else "_Review not generated_"
-          msg = f"🧠 *Weekend Review Ready*\n\n{summary}\n\n📋 Full review + action items in your GitHub issues."
-          if len(msg) > 4000: msg = msg[:3950] + "\n_(truncated — see GitHub issue)_"
-          url = f"https://api.telegram.org/bot{os.environ['TELEGRAM_BOT_TOKEN']}/sendMessage"
-          data = urllib.parse.urlencode({"chat_id": os.environ["TELEGRAM_CHAT_ID"], "text": msg, "parse_mode": "Markdown", "disable_web_page_preview": "true"}).encode()
-          urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
-          print("✅ Telegram sent")
-          PY
+        run: python scripts/send_weekend_telegram.py
+
 
       - name: Commit weekly review
         run: |
