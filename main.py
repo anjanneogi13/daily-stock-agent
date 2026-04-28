@@ -8,7 +8,9 @@ from rich.panel import Panel
 from src.universe import get_universe
 from src.data_fetcher import fetch_universe_data, fetch_info
 from src.indicators import add_indicators, latest_signals
-from src.fundamentals import score_fundamentals, passes_filters
+from src.fundamentals import score_fundamentals
+from src.cape_ratio import get_cape
+from src.fundamentals import passes_filters
 from src.news_sentiment import fetch_news, score_sentiment
 from src.scorer import composite_score
 from src.risk_manager import trade_plan
@@ -40,6 +42,15 @@ def run():
     if not reg["bullish"]:
         rprint("[yellow]⚠ Bearish regime — being more selective. Min score raised.[/yellow]")
         cfg["output"]["min_score"] = max(cfg["output"]["min_score"], 0.70)
+
+    cape = get_cape()
+
+
+    if cape.get("cape"):
+
+
+        rprint(f"[CAPE] S&P 500 Shiller CAPE: {cape['cape']:.2f} — {cape['verdict']} ({cape['percentile']})")
+
 
     rprint("[2/6] Loading universe...")
     tickers = get_universe(cfg)

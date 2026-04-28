@@ -1,108 +1,155 @@
-"""Real fundamentals from Finnhub — parallel + cached for speed without losing data."""
-import os, time, json, requests, threading
+"""Finnhub fundamentals fetcher with full field mapping + caching."""
+import os
+import json
+import time
+import requests
 from pathlib import Path
 from datetime import datetime, timedelta
-from typing import Dict, Optional
+from dotenv import load_dotenv
 
-BASE = "https://finnhub.io/api/v1"
-CACHE_DIR = Path("data/finnhub_cache")
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
-CACHE_TTL = timedelta(days=1)
+load_dotenv()
 
-# Token bucket rate limiter — safely under 60 req/min
-_LOCK = threading.Lock()
-_CALL_TIMES = []
-_RATE_LIMIT = 55  # requests per minute (5 buffer)
-_WINDOW = 60.0    # seconds
+_BASE = "https://finnhub.io/api/v1"
+_KEY = os.getenv("FINNHUB_API_KEY", "")
+_CACHE_DIR = Path("data/finnhub_cache")
+_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+_CACHE_TTL = timedelta(hours=24)
 
 
-def _throttle():
-    """Block until safe to make next call (token-bucket style)."""
-    with _LOCK:
-        now = time.time()
-        # Drop calls older than window
-        _CALL_TIMES[:] = [t for t in _CALL_TIMES if now - t < _WINDOW]
-        if len(_CALL_TIMES) >= _RATE_LIMIT:
-            sleep_for = _WINDOW - (now - _CALL_TIMES[0]) + 0.1
-            time.sleep(max(sleep_for, 0))
-            now = time.time()
-            _CALL_TIMES[:] = [t for t in _CALL_TIMES if now - t < _WINDOW]
-        _CALL_TIMES.append(now)
-
-
-def _cache_path(ticker: str) -> Path:
-    return CACHE_DIR / f"{ticker.upper()}.json"
-
-
-def _load_cache(ticker: str) -> Optional[dict]:
-    p = _cache_path(ticker)
+def _cache_get(ticker: str):
+    p = _CACHE_DIR / f"{ticker}.json"
     if not p.exists():
         return None
     try:
-        data = json.loads(p.read_text())
-        cached_at = datetime.fromisoformat(data["_cached_at"])
-        if datetime.now() - cached_at < CACHE_TTL:
-            return data["payload"]
+        d = json.loads(p.read_text())
+        if datetime.now() - datetime.fromisoformat(d["at"]) < _CACHE_TTL:
+            return d["data"]
     except Exception:
         pass
     return None
 
 
-def _save_cache(ticker: str, payload: dict):
+def _cache_put(ticker: str, data: dict):
     try:
-        _cache_path(ticker).write_text(json.dumps({
-            "_cached_at": datetime.now().isoformat(),
-            "payload": payload,
-        }))
+        (_CACHE_DIR / f"{ticker}.json").write_text(
+            json.dumps({"at": datetime.now().isoformat(), "data": data})
+        )
     except Exception:
         pass
 
 
-def _get(endpoint: str, params: dict, retries: int = 2) -> Optional[dict]:
-    key = os.getenv("FINNHUB_API_KEY")
-    if not key:
-        return None
-    params["token"] = key
-    for attempt in range(retries + 1):
-        _throttle()
-        try:
-            r = requests.get(f"{BASE}/{endpoint}", params=params, timeout=15)
-            if r.status_code == 200:
-                return r.json()
-            if r.status_code == 429:
-                time.sleep(5 * (attempt + 1))
-                continue
-        except Exception:
-            time.sleep(2)
-    return None
+def _safe_pct(v):
+    """Convert percent-as-number (e.g. 95.27) to decimal (0.9527)."""
+    return (v / 100.0) if v is not None else None
 
 
-def fetch_fundamentals(ticker: str) -> Dict:
-    """Returns fundamentals dict, with disk caching + retries."""
-    cached = _load_cache(ticker)
-    if cached is not None:
+def fetch_fundamentals(ticker: str) -> dict:
+    """Fetch full fundamentals for a ticker. Cached 24h."""
+    cached = _cache_get(ticker)
+    if cached:
         return cached
 
-    metric = _get("stock/metric", {"symbol": ticker, "metric": "all"})
-    profile = _get("stock/profile2", {"symbol": ticker})
-
     out = {
-        "trailingPE": None, "earningsQuarterlyGrowth": None,
-        "profitMargins": None, "debtToEquity": None,
-        "marketCap": None, "sector": "N/A", "shortName": ticker,
+        # Core
+        "shortName": ticker, "sector": "N/A", "marketCap": None,
+        # Valuation
+        "trailingPE": None, "pegRatio": None, "priceToBook": None,
+        "priceToSales": None,
+        # Growth
+        "earningsQuarterlyGrowth": None, "epsGrowth5Y": None,
+        "revenueGrowth": None, "revenueGrowth5Y": None,
+        # Profitability
+        "profitMargins": None, "returnOnEquity": None,
+        "returnOnEquity5Y": None, "pretaxMargin": None,
+        # EPS
+        "eps": None, "epsAnnual": None,
+        # Health
+        "debtToEquity": None, "longTermDebtToEquity": None,
+        "currentRatio": None,
+        # Cash flow
+        "freeCashFlowPerShare": None, "freeCashFlowYield": None,
+        "cashFlowPerShare": None,
+        # Performance
+        "relativeToSP500_52w": None,
     }
-    if metric and "metric" in metric:
-        m = metric["metric"]
-        out["trailingPE"] = m.get("peTTM") or m.get("peBasicExclExtraTTM")
-        eps_g = m.get("epsGrowthQuarterlyYoy")
-        out["earningsQuarterlyGrowth"] = (eps_g / 100.0) if eps_g is not None else None
-        pm = m.get("netProfitMarginTTM")
-        out["profitMargins"] = (pm / 100.0) if pm is not None else None
-        out["debtToEquity"] = m.get("totalDebt/totalEquityAnnual")
-    if profile:
-        out["marketCap"] = (profile.get("marketCapitalization") or 0) * 1_000_000
-        out["sector"] = profile.get("finnhubIndustry") or "N/A"
-        out["shortName"] = profile.get("name") or ticker
 
-    _save_cache(ticker, out)
+    if not _KEY:
+        print(f"[finnhub] No API key — returning empty for {ticker}")
+        _cache_put(ticker, out)
+        return out
+
+    # 1) Profile (name + sector + market cap)
+    try:
+        r = requests.get(f"{_BASE}/stock/profile2",
+                         params={"symbol": ticker, "token": _KEY}, timeout=10)
+        if r.status_code == 200:
+            p = r.json()
+            out["shortName"] = p.get("name") or ticker
+            out["sector"] = p.get("finnhubIndustry") or "N/A"
+            mc = p.get("marketCapitalization")
+            # Finnhub returns marketCap in millions
+            if mc:
+                out["marketCap"] = float(mc) * 1_000_000
+    except Exception as e:
+        print(f"[finnhub] {ticker} profile error: {e}")
+
+    # 2) Metrics (the big one)
+    try:
+        r = requests.get(f"{_BASE}/stock/metric",
+                         params={"symbol": ticker, "metric": "all", "token": _KEY},
+                         timeout=15)
+        if r.status_code == 200:
+            m = r.json().get("metric", {}) or {}
+
+            # === VALUATION ===
+            out["trailingPE"] = m.get("peTTM") or m.get("peAnnual")
+            out["pegRatio"] = m.get("pegTTM")
+            out["priceToBook"] = m.get("pbAnnual") or m.get("pb")
+            out["priceToSales"] = m.get("psTTM") or m.get("psAnnual")
+
+            # === GROWTH (Finnhub returns percentages; convert to decimals) ===
+            out["earningsQuarterlyGrowth"] = _safe_pct(m.get("epsGrowthQuarterlyYoy"))
+            out["epsGrowth5Y"] = _safe_pct(m.get("epsGrowth5Y"))
+            out["revenueGrowth"] = _safe_pct(m.get("revenueGrowthQuarterlyYoy"))
+            out["revenueGrowth5Y"] = _safe_pct(m.get("revenueGrowth5Y"))
+
+            # === PROFITABILITY ===
+            out["profitMargins"] = _safe_pct(m.get("netProfitMarginTTM") or m.get("netProfitMarginAnnual"))
+            out["returnOnEquity"] = _safe_pct(m.get("roeTTM"))
+            out["returnOnEquity5Y"] = _safe_pct(m.get("roe5Y"))
+            out["pretaxMargin"] = _safe_pct(m.get("pretaxMarginTTM"))
+
+            # === EPS ===
+            out["eps"] = m.get("epsBasicExclExtraItemsTTM") or m.get("epsExclExtraItemsTTM") or m.get("epsAnnual")
+            out["epsAnnual"] = m.get("epsAnnual")
+
+            # === BALANCE SHEET HEALTH ===
+            out["debtToEquity"] = m.get("totalDebt/totalEquityAnnual") or m.get("totalDebt/totalEquityQuarterly")
+            out["longTermDebtToEquity"] = m.get("longTermDebt/equityAnnual")
+            out["currentRatio"] = m.get("currentRatioAnnual") or m.get("currentRatioQuarterly")
+
+            # === CASH FLOW ===
+            out["cashFlowPerShare"] = m.get("cashFlowPerShareTTM") or m.get("cashFlowPerShareAnnual")
+            # FCF yield = 1 / (Price-to-FCF). pfcfShareTTM = Price / FCF-per-share
+            pfcf = m.get("pfcfShareTTM") or m.get("pfcfShareAnnual")
+            if pfcf and pfcf > 0:
+                out["freeCashFlowYield"] = round(1.0 / pfcf, 4)
+            # FCF per share derived: cashFlowPerShare is operating CF; use pfcf to back into FCF
+            # If we have market cap and pfcf, FCF total = marketCap / pfcf
+            if out["marketCap"] and pfcf and pfcf > 0:
+                out["freeCashFlow"] = round(out["marketCap"] / pfcf, 2)
+            else:
+                out["freeCashFlow"] = None
+
+            # === PERFORMANCE (relative strength vs SPY) ===
+            out["relativeToSP500_52w"] = m.get("priceRelativeToS&P50052Week")
+
+    except Exception as e:
+        print(f"[finnhub] {ticker} metric error: {e}")
+
+    _cache_put(ticker, out)
     return out
+
+
+# Backwards-compat alias
+fetch_info = fetch_fundamentals
