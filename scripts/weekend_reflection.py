@@ -107,15 +107,7 @@ text, err = call_gemini(prompt)
 if text:
     md = text
 else:
-    md = f"# 🧠 Weekend Review — {today}
-
-_Gemini unavailable: {err}_
-
-Observations this week: {len(all_obs)}
-Evaluated: {len(evaluated)}, TP: {tp_count}, SL: {sl_count}
-
-Raw observations preserved in data/learning/observations.jsonl for manual review.
-"
+    md = f"# 🧠 Weekend Review — {today}\n\n_Gemini unavailable: {err}_\n\nObservations this week: {len(all_obs)}\nEvaluated: {len(evaluated)}, TP: {tp_count}, SL: {sl_count}\n\nRaw observations preserved in data/learning/observations.jsonl for manual review.\n"
 
 out = Path(f"data/learning/weekly_review_{today}.md")
 out.write_text(md)
