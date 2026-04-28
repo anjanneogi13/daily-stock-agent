@@ -187,10 +187,33 @@ prompt = "".join(prompt_parts)
 
 print(f"[monthly] {len(month_picks)} picks, {len(evaluated)} closed, {len(weekly_summary)} weeks")
 
+
+def _human_fallback(reason: str) -> str:
+    """Build a human-readable monthly report when Gemini is unavailable."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
+    parts = [
+        "# Monthly X-Ray - " + today_str,
+        "",
+        "_" + reason + "_",
+        "_Falling back to deterministic local analysis below._",
+        "",
+    ]
+    try:
+        from local_analyst import analyze
+        parts.append(analyze(30, "Monthly"))
+    except Exception as _e:
+        parts.append("_local_analyst failed: " + str(_e) + "_")
+        parts.append("")
+        parts.append("```json")
+        parts.append(data_json)
+        parts.append("```")
+    return "\n".join(parts)
+
 key = os.environ.get("GEMINI_API_KEY")
 md = ""
 if not key:
-    md = "# Monthly X-Ray - " + today_str + "\n\n_GEMINI_API_KEY missing._\n\n```json\n" + data_json + "\n```"
+    md = _human_fallback("GEMINI_API_KEY missing")
 else:
     try:
         from google import genai
@@ -198,7 +221,7 @@ else:
         resp = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
         md = resp.text
     except Exception as e:
-        md = "# Monthly X-Ray - " + today_str + "\n\n_Gemini failed: " + str(e) + "_\n\n```json\n" + data_json + "\n```"
+        md = _human_fallback("Gemini failed: " + str(e))
 
 out_dir = Path("data/learning")
 out_dir.mkdir(parents=True, exist_ok=True)
