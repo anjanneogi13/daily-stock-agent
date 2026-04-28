@@ -48,15 +48,20 @@ def extract_params(file_path: Path) -> dict:
 
 
 def inspect_codebase() -> dict:
-    """Walk known scripts and aggregate parameter inventory."""
+    """Walk all scripts/*.py and aggregate parameter inventory."""
     base = Path("scripts")
-    files = ["pick_stocks.py", "evaluate.py", "premarket_check.py",
-             "daily_observation.py", "weekend_reflection.py"]
     inventory = {}
-    for f in files:
-        p = base / f
-        if p.exists():
-            inventory[f] = extract_params(p)
+    if not base.exists():
+        return inventory
+    for p in sorted(base.glob("*.py")):
+        if p.name.startswith("_") or p.name in ("send_telegram.py", "send_exec_telegram.py",
+            "send_weekend_telegram.py", "send_monthly_telegram.py",
+            "send_dashboard_telegram.py", "format_picks_email.py",
+            "gemini_helper.py", "code_inspector.py", "local_analyst.py"):
+            continue  # skip non-strategy / utility scripts
+        params = extract_params(p)
+        if params:
+            inventory[p.name] = params
     return inventory
 
 
