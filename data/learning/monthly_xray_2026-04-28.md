@@ -1,6 +1,6 @@
 # Monthly X-Ray - 2026-04-28
 
-_GEMINI_API_KEY missing_
+_⚠️ Gemini free quota exhausted — using local analysis._
 _Falling back to deterministic local analysis below._
 
 # 📊 Monthly Local Analysis (30d)
