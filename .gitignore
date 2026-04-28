@@ -236,3 +236,9 @@ build/
 dist/
 data/finnhub_cache/
 data/llm_cache/
+
+# But DO commit learning + exec reports + premarket checks (small JSON, agent memory)
+!data/learning/
+!data/learning/**
+!data/exec_report_*.json
+!data/premarket_check.json
