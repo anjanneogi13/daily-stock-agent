@@ -97,6 +97,17 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           python scripts/send_exec_telegram.py $DATE
 
+      - name: 📓 Daily observation logging (agent learning)
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          python scripts/daily_observation.py $DATE
+
+      - name: Commit observations
+        run: |
+          git add data/learning/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "📓 Daily observations [skip ci]"
+          git push || true
+
       - name: Commit exec report JSON
         run: |
           git add data/exec_report_*.json 2>/dev/null || true

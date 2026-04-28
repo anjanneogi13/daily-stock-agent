@@ -1,0 +1,70 @@
+name: 🧠 Weekend Reflection
+
+on:
+  schedule:
+    - cron: '0 21 * * 5'  # Friday 21:00 UTC = Saturday 5 AM SGT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  reflect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install google-genai
+
+      - name: Run weekend reflection
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/weekend_reflection.py
+
+      - name: Post review as GitHub issue (emails you)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+            let body;
+            try { body = fs.readFileSync(`data/learning/weekly_review_${date}.md`, 'utf8'); }
+            catch (e) { body = '_Review not generated_'; }
+            body += `\n\n---\n\n## 👤 Your Move\n\nReview the suggestions above. To apply any:\n1. Read "Where in the code"\n2. Make the change yourself in your editor\n3. Commit and push\n\n**Never apply a Low-confidence suggestion without thinking it through.**`;
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `🧠 Weekend Review ${date} — Review Suggestions`,
+              body: body,
+              labels: ['weekend-review', 'needs-review'],
+              assignees: ['anjanneogi13']
+            });
+
+      - name: Telegram notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python << 'PY'
+          import os, json, urllib.request, urllib.parse
+          from datetime import datetime
+          from pathlib import Path
+          date = datetime.now().strftime("%Y-%m-%d")
+          md_path = Path(f"data/learning/weekly_review_{date}.md")
+          summary = md_path.read_text()[:3500] if md_path.exists() else "_Review not generated_"
+          msg = f"🧠 *Weekend Review Ready*\n\n{summary}\n\n📋 Full review + action items in your GitHub issues."
+          if len(msg) > 4000: msg = msg[:3950] + "\n_(truncated — see GitHub issue)_"
+          url = f"https://api.telegram.org/bot{os.environ['TELEGRAM_BOT_TOKEN']}/sendMessage"
+          data = urllib.parse.urlencode({"chat_id": os.environ["TELEGRAM_CHAT_ID"], "text": msg, "parse_mode": "Markdown", "disable_web_page_preview": "true"}).encode()
+          urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
+          print("✅ Telegram sent")
+          PY
+
+      - name: Commit weekly review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/learning/
+          git diff --staged --quiet || git commit -m "🧠 Weekend review [skip ci]"
+          git push
