@@ -40,7 +40,12 @@ def analyze(period_days=7, label="Weekly"):
             lines.append("\n## 🏷️ Picks by tag")
             for tag, n in tag_counts.items():
                 lines.append(f"- {tag}: {n}")
-        return "\n".join(lines)
+        try:
+        from code_inspector import report as _code_report
+        lines.append("\n\n" + _code_report(period_days))
+    except Exception as _e:
+        lines.append(f"\n\n_Code-aware diagnostic skipped: {_e}_")
+    return "\n".join(lines)
     
     # ── Headline stats ──────────────────────────────
     tp = (evaluated['evaluation_status'] == 'tp_hit').sum()
