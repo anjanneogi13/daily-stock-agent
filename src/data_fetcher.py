@@ -22,7 +22,7 @@ except Exception:
 def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
     try:
         kwargs = dict(period=period, interval=interval,
-                      progress=False, auto_adjust=True, timeout=20)
+                      progress=False, auto_adjust=False, timeout=20)
         if SESSION is not None:
             kwargs["session"] = SESSION
         kwargs.setdefault("auto_adjust", False)
