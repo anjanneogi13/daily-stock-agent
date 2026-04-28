@@ -40,6 +40,9 @@ jobs:
           git diff --staged --quiet || git commit -m "Daily picks $(date +%Y-%m-%d) SGT"
           git push || echo "Nothing to push"
 
+      - name: Premarket sanity check 🚦
+        run: python scripts/premarket_check.py
+
       - name: Format picks as Markdown
         run: python scripts/format_picks_email.py > /tmp/picks_email.md
 
