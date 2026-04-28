@@ -63,3 +63,42 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/send_dashboard_telegram.py
+
+      - name: Generate execution X-ray report 🔬
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          python scripts/daily_execution_report.py $DATE > /tmp/exec_report.txt 2>&1 || true
+          cat /tmp/exec_report.txt
+
+      - name: Post execution report as GitHub issue (emails you) 📧
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+            let body = '## 🔬 Daily Execution X-Ray\n\n```\n';
+            try { body += fs.readFileSync('/tmp/exec_report.txt', 'utf8'); }
+            catch (e) { body += '(no report)'; }
+            body += '\n```\n\n_Per-pick breakdown: did fill? SL or TP first? Money left on table?_';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🔬 Execution Report ${date}`,
+              body: body,
+              labels: ['execution-report'],
+              assignees: ['anjanneogi13']
+            });
+
+      - name: Send execution report to Telegram 📲
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          python scripts/send_exec_telegram.py $DATE
+
+      - name: Commit exec report JSON
+        run: |
+          git add data/exec_report_*.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "🔬 Exec report [skip ci]"
+          git push || true
