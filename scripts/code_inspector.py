@@ -1,231 +1,314 @@
 """
-Code-Aware Coach: parses the codebase to extract current parameters,
-cross-references with performance data, and suggests specific code changes.
-Runs without AI — pure deterministic analysis.
+Code-Aware Coach: parses config.yaml + src/ + main.py to extract real strategy
+parameters, cross-references with picks_log.csv performance data, and produces
+specific file:line/key-targeted suggestions. Pure deterministic — no AI required.
 """
 import ast
 import re
 from pathlib import Path
 import pandas as pd
 
+try:
+    import yaml
+    HAS_YAML = True
+except ImportError:
+    HAS_YAML = False
 
-def extract_params(file_path: Path) -> dict:
-    """Extract module-level constants and function defaults from a Python file."""
+
+# ════════════════════════════════════════════════════
+# Config + code scanning
+# ════════════════════════════════════════════════════
+def load_config_params() -> dict:
+    """Flatten config.yaml into a dict of dotted-path → value, with file ref."""
+    p = Path("config.yaml")
+    if not (HAS_YAML and p.exists()):
+        return {}
+    try:
+        cfg = yaml.safe_load(p.read_text())
+    except Exception:
+        return {}
+
+    flat = {}
+
+    def walk(node, path=""):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                walk(v, f"{path}.{k}" if path else k)
+        elif isinstance(node, (int, float, bool, str)):
+            flat[path] = {"value": node, "file": "config.yaml", "type": "yaml"}
+
+    walk(cfg)
+    return flat
+
+
+def extract_code_params(file_path: Path) -> dict:
+    """Extract module-level constants and indicator default args from a Python file."""
     if not file_path.exists():
         return {}
     src = file_path.read_text()
     params = {}
-    
-    # 1. Module-level UPPERCASE constants (e.g., MIN_SCORE = 0.7)
+
+    # 1. Module-level constants (UPPERCASE or lowercase) of numeric type
     try:
         tree = ast.parse(src)
         for node in tree.body:
             if isinstance(node, ast.Assign):
                 for tgt in node.targets:
-                    if isinstance(tgt, ast.Name) and tgt.id.isupper():
+                    if isinstance(tgt, ast.Name):
                         try:
                             val = ast.literal_eval(node.value)
-                            params[tgt.id] = {"value": val, "line": node.lineno, "file": str(file_path)}
+                            if isinstance(val, (int, float, bool)):
+                                params[tgt.id] = {
+                                    "value": val,
+                                    "line": node.lineno,
+                                    "file": str(file_path),
+                                    "type": "const",
+                                }
                         except Exception:
                             pass
-    except Exception as e:
-        params["_parse_error"] = str(e)
-    
-    # 2. Common indicator patterns: rsi(period=14), atr(window=14), ema(span=20), etc.
-    for m in re.finditer(r'(\w+)\s*\(\s*(?:period|window|span|n|length)\s*=\s*(\d+)', src):
-        key = f"{m.group(1)}_period"
-        line_no = src[:m.start()].count("\n") + 1
-        params.setdefault(key, {"value": int(m.group(2)), "line": line_no, "file": str(file_path)})
-    
-    # 3. ATR multipliers / R:R ratios in arithmetic (e.g., entry - 1.5*atr, entry + 2*risk)
-    for m in re.finditer(r'(\d+(?:\.\d+)?)\s*\*\s*(atr|risk|stop|sl)\b', src, re.IGNORECASE):
-        key = f"{m.group(2).lower()}_multiplier"
-        line_no = src[:m.start()].count("\n") + 1
-        if key not in params:
-            params[key] = {"value": float(m.group(1)), "line": line_no, "file": str(file_path)}
-    
+            # 2. Function default args (e.g., def rsi(period: int = 14))
+            elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                args = node.args
+                defaults = args.defaults
+                if defaults:
+                    arg_names = [a.arg for a in args.args[-len(defaults):]]
+                    for arg_name, dval in zip(arg_names, defaults):
+                        try:
+                            v = ast.literal_eval(dval)
+                            if isinstance(v, (int, float)):
+                                key = f"{node.name}({arg_name})"
+                                params[key] = {
+                                    "value": v,
+                                    "line": node.lineno,
+                                    "file": str(file_path),
+                                    "type": "default",
+                                }
+                        except Exception:
+                            pass
+    except Exception:
+        pass
+
     return params
 
 
 def inspect_codebase() -> dict:
-    """Walk all scripts/*.py and aggregate parameter inventory."""
-    base = Path("scripts")
-    inventory = {}
-    if not base.exists():
-        return inventory
-    for p in sorted(base.glob("*.py")):
-        if p.name.startswith("_") or p.name in ("send_telegram.py", "send_exec_telegram.py",
-            "send_weekend_telegram.py", "send_monthly_telegram.py",
-            "send_dashboard_telegram.py", "format_picks_email.py",
-            "gemini_helper.py", "code_inspector.py", "local_analyst.py"):
-            continue  # skip non-strategy / utility scripts
-        params = extract_params(p)
+    """Aggregate inventory: config.yaml + src/*.py + main.py."""
+    inventory = {"config.yaml": load_config_params()}
+    for p in [Path("main.py")] + sorted(Path("src").glob("*.py")) if Path("src").exists() else [Path("main.py")]:
+        if not p.exists() or p.name == "__init__.py":
+            continue
+        params = extract_code_params(p)
         if params:
-            inventory[p.name] = params
-    return inventory
+            inventory[str(p)] = params
+    return {k: v for k, v in inventory.items() if v}
 
 
+# ════════════════════════════════════════════════════
+# Diagnostic engine
+# ════════════════════════════════════════════════════
 def diagnose(inventory: dict, evaluated: pd.DataFrame) -> list[str]:
-    """Cross-reference params with performance patterns to produce code-targeted suggestions."""
     suggestions = []
+
     if evaluated.empty or len(evaluated) < 5:
         return ["📚 Need at least 5 evaluated trades for code-aware diagnosis."]
-    
+
     ev = evaluated.copy()
     for col in ["score", "actual_return_pct", "r_multiple"]:
         if col in ev.columns:
             ev[col] = pd.to_numeric(ev[col], errors="coerce")
-    
-    # ── Find current params across files ──────────────
-    def find(name_substr: str):
-        for fname, params in inventory.items():
-            for key, meta in params.items():
-                if name_substr.lower() in key.lower():
-                    return fname, key, meta
+
+    # Helper: lookup a param across all sources
+    def find_param(*key_substrings):
+        for src_name, params in inventory.items():
+            for k, meta in params.items():
+                kl = k.lower()
+                if any(sub.lower() in kl for sub in key_substrings):
+                    return src_name, k, meta
         return None, None, None
-    
-    # ── Diagnosis 1: MIN_SCORE vs score-bucket performance ──
-    fname, key, meta = find("min_score")
-    if not meta:
-        fname, key, meta = find("score_threshold")
-    if meta and "score" in ev.columns:
-        ev_clean = ev.dropna(subset=["score", "actual_return_pct"])
-        if len(ev_clean) >= 5:
-            high = ev_clean[ev_clean["score"] >= 0.80]["actual_return_pct"].mean()
-            low  = ev_clean[ev_clean["score"] <  0.80]["actual_return_pct"].mean()
-            cur = meta["value"]
-            if pd.notna(high) and pd.notna(low) and high - low > 1:
-                new = max(cur + 0.05, 0.78)
-                suggestions.append(
-                    f"🎯 **`{key} = {cur}` in `{fname}:{meta['line']}` is too lenient.**\n"
-                    f"  - Picks with score ≥0.80 averaged {high:+.2f}% return.\n"
-                    f"  - Picks with score <0.80 averaged {low:+.2f}% return.\n"
-                    f"  - **Action:** change to `{key} = {new:.2f}` to skip the weak bucket. "
-                    f"Estimated impact: +{(high-low):.1f}% avg per trade, fewer total picks."
-                )
-    
-    # ── Diagnosis 2: ATR multiplier vs SL hit rate ──
-    fname, key, meta = find("atr_mult")
-    if not meta:
-        fname, key, meta = find("stop_multiplier")
-    if not meta:
-        fname, key, meta = find("sl_multiplier")
+
+    cfg_params = inventory.get("config.yaml", {})
+
     sl_hits = (ev["evaluation_status"] == "sl_hit").sum() if "evaluation_status" in ev.columns else 0
     tp_hits = (ev["evaluation_status"] == "tp_hit").sum() if "evaluation_status" in ev.columns else 0
     total_eval = sl_hits + tp_hits
-    if meta and total_eval >= 8 and sl_hits > tp_hits * 1.5:
-        cur = meta["value"]
-        new = round(cur * 1.3, 2)
-        suggestions.append(
-            f"🛡️ **`{key} = {cur}` in `{fname}:{meta['line']}` may be too tight.**\n"
-            f"  - SL hit {sl_hits}× vs TP hit {tp_hits}× — losing setups before they breathe.\n"
-            f"  - **Action:** widen to `{key} = {new}` (× 1.3). "
-            f"Trade-off: bigger losses on truly bad picks, but more winners survive normal volatility."
-        )
-    elif meta and total_eval >= 8 and tp_hits > sl_hits * 2:
-        cur = meta["value"]
-        new = round(cur * 0.85, 2)
-        suggestions.append(
-            f"🛡️ **`{key} = {cur}` in `{fname}:{meta['line']}` is generous.**\n"
-            f"  - TP hit {tp_hits}× vs SL hit {sl_hits}× — you're winning a lot. "
-            f"Tighten SL to lock in more profit per losing trade.\n"
-            f"  - **Action:** tighten to `{key} = {new}`."
-        )
-    
-    # ── Diagnosis 3: TP ratio (R:R target) ──
-    fname, key, meta = find("tp_mult")
-    if not meta:
-        fname, key, meta = find("risk_reward")
-    if not meta:
-        fname, key, meta = find("take_profit")
-    if meta and total_eval >= 10:
-        win_rate = tp_hits / total_eval * 100
-        cur = meta["value"]
-        if win_rate < 35 and isinstance(cur, (int, float)) and cur >= 2:
+    win_rate = tp_hits / total_eval * 100 if total_eval else 0
+
+    # ── 1. output.min_score vs score-bucket performance ──
+    min_score = cfg_params.get("output.min_score")
+    if min_score and "score" in ev.columns and "actual_return_pct" in ev.columns:
+        ev_clean = ev.dropna(subset=["score", "actual_return_pct"])
+        if len(ev_clean) >= 5:
+            high = ev_clean[ev_clean["score"] >= 0.80]["actual_return_pct"].mean()
+            low = ev_clean[ev_clean["score"] < 0.80]["actual_return_pct"].mean()
+            if pd.notna(high) and pd.notna(low) and high - low > 1:
+                cur = min_score["value"]
+                new = round(max(cur + 0.05, 0.78), 2)
+                suggestions.append(
+                    f"🎯 **`config.yaml: output.min_score = {cur}` is too lenient.**\n"
+                    f"  - Score ≥0.80 averaged {high:+.2f}% return.\n"
+                    f"  - Score <0.80 averaged {low:+.2f}% return.\n"
+                    f"  - **Action:** edit `config.yaml` → `output.min_score: {new}`. "
+                    f"Estimated impact: +{(high-low):.1f}% avg per trade."
+                )
+
+    # ── 2. risk.stop_loss_atr_mult vs SL/TP ratio ──
+    sl_mult = cfg_params.get("risk.stop_loss_atr_mult")
+    if sl_mult and total_eval >= 8:
+        cur = sl_mult["value"]
+        if sl_hits > tp_hits * 1.5:
+            new = round(cur * 1.3, 2)
+            suggestions.append(
+                f"🛡️ **`config.yaml: risk.stop_loss_atr_mult = {cur}` is too tight.**\n"
+                f"  - SL hit {sl_hits}× vs TP hit {tp_hits}× — losing setups before they breathe.\n"
+                f"  - **Action:** edit `config.yaml` → `stop_loss_atr_mult: {new}`."
+            )
+        elif tp_hits > sl_hits * 2:
+            new = round(cur * 0.85, 2)
+            suggestions.append(
+                f"🛡️ **`config.yaml: risk.stop_loss_atr_mult = {cur}` is generous.**\n"
+                f"  - TP {tp_hits}× vs SL {sl_hits}× — tighten to lock more profit.\n"
+                f"  - **Action:** edit `config.yaml` → `stop_loss_atr_mult: {new}`."
+            )
+
+    # ── 3. risk.take_profit_atr_mult vs win rate ──
+    tp_mult = cfg_params.get("risk.take_profit_atr_mult")
+    if tp_mult and total_eval >= 10:
+        cur = tp_mult["value"]
+        if win_rate < 35 and cur >= 2:
             new = round(cur * 0.75, 2)
             suggestions.append(
-                f"🎯 **`{key} = {cur}` in `{fname}:{meta['line']}` is too ambitious.**\n"
-                f"  - Win rate {win_rate:.0f}% — TP target rarely reached.\n"
-                f"  - **Action:** lower to `{key} = {new}`. More wins, smaller wins, but better expectancy."
+                f"🎯 **`config.yaml: risk.take_profit_atr_mult = {cur}` is ambitious.**\n"
+                f"  - Win rate {win_rate:.0f}% — TP rarely reached.\n"
+                f"  - **Action:** edit `config.yaml` → `take_profit_atr_mult: {new}`. "
+                f"More wins, smaller wins, better expectancy."
             )
-    
-    # ── Diagnosis 4: Indicator periods worth A/B testing ──
-    for fname, params in inventory.items():
-        for key, meta in params.items():
-            if key.endswith("_period") and isinstance(meta.get("value"), int):
-                val = meta["value"]
-                if "rsi" in key.lower() and val == 14:
-                    suggestions.append(
-                        f"🔬 **`{key} = {val}` in `{fname}:{meta['line']}` is the default.**\n"
-                        f"  - Default RSI(14) is widely arbitraged. Consider A/B testing RSI(7) for faster signals or RSI(21) for less noise.\n"
-                        f"  - **Action:** Try `{key} = 21` for one week, compare win rate."
-                    )
-                if "atr" in key.lower() and val < 10:
-                    suggestions.append(
-                        f"🔬 **`{key} = {val}` in `{fname}:{meta['line']}` may be noisy.**\n"
-                        f"  - Short ATR period reacts to single-day spikes. Consider ATR(14) or ATR(20) for stable stops.\n"
-                        f"  - **Action:** Try `{key} = 14`."
-                    )
-    
-    # ── Diagnosis 5: Tag-level filter recommendation with file:line ──
-    if "tag" in ev.columns:
+        elif win_rate > 60 and cur <= 2:
+            new = round(cur * 1.25, 2)
+            suggestions.append(
+                f"🎯 **`config.yaml: risk.take_profit_atr_mult = {cur}` is conservative.**\n"
+                f"  - Win rate {win_rate:.0f}% — could ride winners further.\n"
+                f"  - **Action:** edit `config.yaml` → `take_profit_atr_mult: {new}`."
+            )
+
+    # ── 4. risk_per_trade_pct sanity ──
+    risk_pct = cfg_params.get("risk.risk_per_trade_pct")
+    if risk_pct and total_eval >= 10:
+        cur = risk_pct["value"]
+        cum = pd.to_numeric(ev.get("actual_return_pct"), errors="coerce").sum()
+        if cum < -5 and cur > 0.5:
+            new = round(cur * 0.5, 2)
+            suggestions.append(
+                f"💰 **`config.yaml: risk.risk_per_trade_pct = {cur}` × negative cumulative {cum:+.1f}% = bleeding.**\n"
+                f"  - **Action:** edit `config.yaml` → `risk_per_trade_pct: {new}` until win rate stabilizes."
+            )
+
+    # ── 5. Weight rebalance suggestions based on tag/feature performance ──
+    weights = {k.split(".")[1]: v["value"] for k, v in cfg_params.items() if k.startswith("weights.")}
+    if weights and "tag" in ev.columns:
         tag_perf = ev.dropna(subset=["actual_return_pct"]).groupby("tag").agg(
             n=("ticker", "count"), avg=("actual_return_pct", "mean")
         ).reset_index()
-        bad = tag_perf[(tag_perf["n"] >= 3) & (tag_perf["avg"] < -1.5)]
-        for _, r in bad.iterrows():
-            target = "pick_stocks.py"
+        bad_tags = tag_perf[(tag_perf["n"] >= 3) & (tag_perf["avg"] < -1.5)]
+        for _, r in bad_tags.iterrows():
             suggestions.append(
-                f"🚫 **Tag `'{r['tag']}'` is consistently losing ({r['avg']:+.1f}% avg over {int(r['n'])} trades).**\n"
-                f"  - **Action:** open `scripts/{target}` and add at the top of the scoring loop:\n"
-                f"    ```python\n    if tag == \"{r['tag']}\":\n        continue  # filter out underperforming tag\n    ```"
+                f"🚫 **Tag `'{r['tag']}'` lost {r['avg']:+.1f}% avg ({int(r['n'])} trades).**\n"
+                f"  - **Action:** in `src/scorer.py` add early `return None` for this tag, "
+                f"OR adjust `config.yaml: sector.semi_boost / ai_boost` if applicable."
             )
-    
+
+    # ── 6. Score-vs-return correlation → which weights to tune ──
+    if "score" in ev.columns and "actual_return_pct" in ev.columns:
+        ev_clean = ev.dropna(subset=["score", "actual_return_pct"])
+        if len(ev_clean) >= 8:
+            corr = ev_clean["score"].corr(ev_clean["actual_return_pct"])
+            if pd.notna(corr):
+                if corr < -0.1:
+                    suggestions.append(
+                        f"🚨 **Score INVERSELY correlates with returns ({corr:.2f}).**\n"
+                        f"  - **Action:** scoring formula is broken. Open `src/scorer.py` and review "
+                        f"`composite_score()` weights — one component likely has the wrong sign."
+                    )
+                elif corr < 0.15:
+                    top_w = sorted(weights.items(), key=lambda x: -x[1])[:3] if weights else []
+                    top_str = ", ".join(f"{k}={v}" for k, v in top_w)
+                    suggestions.append(
+                        f"⚠️ **Score-return correlation weak ({corr:.2f}).** Heaviest weights: {top_str}.\n"
+                        f"  - **Action:** experiment in `config.yaml` `weights:` — try halving the largest "
+                        f"weight and doubling `sentiment` or `fundamentals`. Compare next week."
+                    )
+                elif corr > 0.4:
+                    suggestions.append(
+                        f"✅ **Score predicts returns well (corr={corr:.2f}).** Don't change weights — system is calibrated."
+                    )
+
+    # ── 7. Indicator period defaults — suggest A/B ──
+    for src_name, params in inventory.items():
+        for key, meta in params.items():
+            if not isinstance(meta.get("value"), (int, float)):
+                continue
+            kl = key.lower()
+            if "rsi(period)" in kl and meta["value"] == 14:
+                suggestions.append(
+                    f"🔬 **`{src_name}:{meta['line']}` `rsi(period=14)` is the textbook default.**\n"
+                    f"  - **Action:** A/B test by overriding to 7 (faster) or 21 (smoother) in `add_indicators()`."
+                )
+            if "atr(period)" in kl and meta["value"] < 10:
+                suggestions.append(
+                    f"🔬 **`{src_name}:{meta['line']}` `atr(period={meta['value']})` may be noisy.**\n"
+                    f"  - **Action:** try period=14."
+                )
+
     if not suggestions:
-        suggestions.append("✅ No code-level red flags detected. Strategy is performing within expected bounds for current parameters.")
-    
+        suggestions.append(
+            "✅ No code-level red flags. Strategy operating within expected bounds for current params. Keep accumulating data."
+        )
     return suggestions
 
 
+# ════════════════════════════════════════════════════
+# Top-level report
+# ════════════════════════════════════════════════════
 def report(period_days: int = 7) -> str:
-    """Generate a code-aware diagnostic report."""
-    csv = Path("data/picks_log.csv")
-    lines = ["## 🔬 Code-Aware Diagnostic"]
-    
     inventory = inspect_codebase()
-    
-    # Inventory summary
-    lines.append("\n### 📋 Current parameter inventory")
+    lines = ["## 🔬 Code-Aware Diagnostic"]
+
+    lines.append("\n### 📋 Current strategy parameters")
     if not inventory:
-        lines.append("- _No scripts found to inspect._")
+        lines.append("- _No params discovered._")
     else:
-        for fname, params in inventory.items():
+        for src_name, params in inventory.items():
             if not params:
                 continue
-            lines.append(f"\n**`scripts/{fname}`**")
-            for k, meta in list(params.items())[:8]:
-                if k.startswith("_"):
-                    continue
-                lines.append(f"- `{k} = {meta['value']}` (line {meta['line']})")
-    
-    # Diagnoses
-    if csv.exists():
-        df = pd.read_csv(csv)
-        if "pick_date" in df.columns:
-            df["pick_date"] = pd.to_datetime(df["pick_date"], errors="coerce")
-            from datetime import datetime, timedelta
-            cutoff = datetime.now() - timedelta(days=period_days)
-            recent = df[df["pick_date"] >= cutoff]
-        else:
-            recent = df
-        evaluated = recent[recent.get("evaluation_status", pd.Series()).isin(["tp_hit", "sl_hit", "closed"])]
-        
-        lines.append(f"\n### 🩺 Code-targeted suggestions (based on last {period_days}d, {len(evaluated)} evaluated trades)")
-        for s in diagnose(inventory, evaluated):
-            lines.append(f"\n{s}")
+            lines.append(f"\n**`{src_name}`**")
+            shown = 0
+            for k, meta in params.items():
+                if shown >= 12:
+                    lines.append(f"- _… +{len(params)-shown} more_")
+                    break
+                line_ref = f" (line {meta['line']})" if "line" in meta else ""
+                lines.append(f"- `{k} = {meta['value']}`{line_ref}")
+                shown += 1
+
+    csv = Path("data/picks_log.csv")
+    lines.append(f"\n### 🩺 Code-targeted suggestions")
+    if not csv.exists():
+        lines.append("\n_No picks_log.csv yet._")
+        return "\n".join(lines)
+
+    df = pd.read_csv(csv)
+    if "pick_date" in df.columns:
+        df["pick_date"] = pd.to_datetime(df["pick_date"], errors="coerce")
+        from datetime import datetime, timedelta
+        cutoff = datetime.now() - timedelta(days=period_days)
+        recent = df[df["pick_date"] >= cutoff]
     else:
-        lines.append("\n_No picks_log.csv yet — code suggestions will appear once trades are evaluated._")
-    
+        recent = df
+
+    evaluated = recent[recent.get("evaluation_status", pd.Series()).isin(["tp_hit", "sl_hit", "closed"])]
+    lines.append(f"_(based on last {period_days}d, {len(evaluated)} evaluated trades)_\n")
+    for s in diagnose(inventory, evaluated):
+        lines.append(f"\n{s}")
+
     return "\n".join(lines)
 
 
