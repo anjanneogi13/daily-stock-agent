@@ -21,12 +21,10 @@ except Exception:
 
 def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
     try:
-        kwargs = dict(period=period, interval=interval,
-                      progress=False, auto_adjust=False, timeout=20)
-        if SESSION is not None:
-            kwargs["session"] = SESSION
-        kwargs.setdefault("auto_adjust", False)
-        df = yf.download(ticker, **kwargs)
+        # NO shared session — yfinance default handles its own connections safely.
+        # Shared curl_cffi session was causing data to bleed across parallel ticker fetches.
+        df = yf.download(ticker, period=period, interval=interval,
+                         progress=False, auto_adjust=False, timeout=20)
         if df.empty:
             return pd.DataFrame()
         if isinstance(df.columns, pd.MultiIndex):
@@ -34,7 +32,7 @@ def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.Da
         df.columns = [c.lower() for c in df.columns]
         return df
     except Exception as e:
-        print(f"[data] {ticker}: {type(e).__name__}")
+        print(f"[data] {ticker}: {type(e).__name__}: {str(e)[:120]}")
         return pd.DataFrame()
 
 
