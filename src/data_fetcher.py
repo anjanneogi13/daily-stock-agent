@@ -20,12 +20,17 @@ except Exception:
 
 
 def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
+    """Thread-safe OHLCV fetch.
+
+    NOTE: yf.download() is NOT thread-safe (shares module-level cache,
+    causes data leakage across parallel ticker fetches). yf.Ticker().history()
+    is per-instance and safe to use in ThreadPoolExecutor.
+    """
     try:
-        # NO shared session — yfinance default handles its own connections safely.
-        # Shared curl_cffi session was causing data to bleed across parallel ticker fetches.
-        df = yf.download(ticker, period=period, interval=interval,
-                         progress=False, auto_adjust=False, timeout=20)
-        if df.empty:
+        t = yf.Ticker(ticker)
+        df = t.history(period=period, interval=interval,
+                       auto_adjust=False, timeout=20)
+        if df is None or df.empty:
             return pd.DataFrame()
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)
