@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write   # so we can commit updated picks_log.csv
+  issues: write    # so we can post dashboard issues
 
 jobs:
   evaluate:
@@ -34,3 +35,31 @@ jobs:
           git add data/picks_log.csv
           git diff --staged --quiet || git commit -m "📊 Daily pick evaluation [skip ci]"
           git push
+
+      - name: Generate dashboard text
+        run: python scripts/performance_dashboard.py > /tmp/dashboard.txt 2>&1 || true
+
+      - name: Post dashboard as GitHub issue (emails you) 📧
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+            let body = '## 📊 Performance Dashboard\n\n```\n';
+            try { body += fs.readFileSync('/tmp/dashboard.txt', 'utf8'); }
+            catch (e) { body += '(no dashboard output)'; }
+            body += '\n```\n\n_Auto-generated after US market close._';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📊 Performance Update ${date}`,
+              body: body,
+              labels: ['performance'],
+              assignees: ['anjanneogi13']
+            });
+
+      - name: Send dashboard to Telegram 📲
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/send_dashboard_telegram.py
