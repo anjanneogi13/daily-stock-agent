@@ -3,7 +3,7 @@ name: Evaluate Picks Daily
 on:
   schedule:
     # 4 AM SGT = 8 PM UTC = 4 PM ET (US market close)
-    - cron: '0 20 * * 1-5'
+    - cron: '0 22 * * 1-5'
   workflow_dispatch:
 
 permissions:
