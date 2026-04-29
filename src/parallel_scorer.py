@@ -25,7 +25,7 @@ def _score_one(tk, df, cfg):
         if scores["composite"] < cfg["output"]["min_score"]:
             return None
         # Week 4: ATR-based dynamic stops (fallback to old trade_plan if ATR missing)
-        atr = sig.get("atr") or sig.get("ATR") or 0
+        atr = sig.get("atr_14") or sig.get("atr") or sig.get("ATR") or 0
         price = sig.get("close", 0)
         capital = cfg.get("risk", {}).get("capital", 10000)
         if atr and atr > 0 and price > 0:

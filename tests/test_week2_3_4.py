@@ -132,3 +132,13 @@ def test_max_drawdown_calculation():
 if __name__ == "__main__":
     import pytest
     sys.exit(pytest.main([__file__, "-v"]))
+
+
+# ═══ Regression: ATR key compatibility with indicators.py ════════
+def test_atr_key_matches_indicators():
+    """Make sure parallel_scorer reads the same ATR key indicators.py writes."""
+    from src.indicators import latest_signals
+    import inspect, src.parallel_scorer as ps
+    src_code = inspect.getsource(ps._score_one)
+    # indicators writes "atr_14" — scorer must read it
+    assert 'atr_14' in src_code, "parallel_scorer must read 'atr_14' (key from indicators.py)"
