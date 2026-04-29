@@ -69,3 +69,25 @@ MIT
 
 ---
 *Built with Claude + GitHub Copilot.*
+
+---
+
+## 🔔 Phase 2A: News Engine (Live)
+
+The agent continuously monitors news from Alpaca, Yahoo Finance, and curated sources.
+Each headline is classified by Claude Sonnet 4.5 for trading impact (sentiment, urgency,
+category, tradeable score).
+
+**High-impact news (score ≥ 0.7) triggers:**
+- Telegram alert with rationale
+- Addition to 3-day watchlist
+- Score boost in next morning's pick generation
+
+**Schedule:** Every 30 min, pre-market + market hours + after-hours (4 AM – 8 PM ET).
+
+**State files:**
+- `data/watchlist.json` — current 3-day watchlist
+- `data/news_log.jsonl` — every classified headline (forever log)
+- `data/news_seen.json` — dedup cache (48h TTL)
+
+**Telegram threshold:** `tradeable_score >= 0.7` (configurable in `scripts/run_news_engine.py`)

@@ -17,3 +17,6 @@ curl_cffi==0.7.4
 google-genai==0.3.0
 yfinance==0.2.65
 anthropic>=0.40.0
+
+# Phase 2A: News Engine + Alpaca
+alpaca-py>=0.20.0
