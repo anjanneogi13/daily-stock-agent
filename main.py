@@ -35,8 +35,7 @@ def load_config(path: str = "config.yaml") -> dict:
 def run():
 
     # ═══ Week 2: Market guards ═══
-    print("
-[guard] Checking market conditions...")
+    print("\n[guard] Checking market conditions...")
     vix = vix_level()
     spy = spy_trend()
     sectors = sector_strength()

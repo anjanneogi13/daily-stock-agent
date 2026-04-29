@@ -72,23 +72,27 @@ def _rule_based(ticker: str, scores: dict, plan: dict) -> str:
 # ─── Prompt ─────────────────────────────────────────────────────────────
 def _build_prompt(ticker: str, scores: dict, plan: dict, news: list) -> str:
     headlines = "\n".join(f"- {n.get('title','')}" for n in (news or [])[:5]) or "None"
-    return f"""You are a cautious equity research analyst. Write a 3-4 sentence rationale for buying {ticker}.
+    sector = scores.get("sector_tag", "Unknown")
+    trade_type = plan.get("trade_type", "swing").upper()
+    rr = plan.get("risk_reward", "?")
+    hold_rule = "intraday only — exit by 3:55 PM ET" if trade_type == "DAY" else "2-10 trading days"
+    return f"""You are a senior US equity analyst writing a {trade_type} trade rationale for {ticker} (sector: {sector}).
 
-Scores (0-1): {scores}
-Plan: {plan}
-Headlines:
+SCORES (0-1 scale): {scores}
+TRADE PLAN: entry ${plan.get('entry')}, stop ${plan.get('stop_loss')}, target ${plan.get('take_profit')}, R:R {rr}
+HOLDING: {hold_rule}
+TODAY'S HEADLINES:
 {headlines}
 
-Rules:
-- Lead with strongest factor.
-- Mention one concrete risk.
-- Reference entry/stop/target with R:R.
-- End with: "Not financial advice."
-- Plain prose only, no bullets/markdown.
-- Keep under 100 words. Complete every sentence."""
+Write 4-5 sentences:
+1. The strongest setup factor (with numeric evidence).
+2. Why this fits a {trade_type} trade specifically.
+3. One concrete risk to watch.
+4. The trigger to exit early (besides hitting stop).
+5. End with: "Not financial advice."
 
+Plain prose only. No bullets. No markdown. Under 120 words. Complete every sentence."""
 
-# ─── Provider: Claude ───────────────────────────────────────────────────
 def _claude(prompt: str) -> str:
     import anthropic
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
