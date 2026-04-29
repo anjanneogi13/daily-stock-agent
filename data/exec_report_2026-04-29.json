@@ -1,0 +1,75 @@
+{
+  "date": "2026-04-29",
+  "picks": [
+    {
+      "ticker": "TSM",
+      "status": "NO_DATA",
+      "entry": 392.34,
+      "sl": 373.01,
+      "tp": 431.0
+    },
+    {
+      "ticker": "CDNS",
+      "status": "NO_DATA",
+      "entry": 325.31,
+      "sl": 303.78,
+      "tp": 368.36
+    },
+    {
+      "ticker": "ADI",
+      "status": "NO_DATA",
+      "entry": 383.26,
+      "sl": 366.87,
+      "tp": 416.03
+    },
+    {
+      "ticker": "ANET",
+      "status": "NO_DATA",
+      "entry": 165.29,
+      "sl": 155.63,
+      "tp": 184.62
+    },
+    {
+      "ticker": "ONTO",
+      "status": "NO_DATA",
+      "entry": 282.39,
+      "sl": 258.37,
+      "tp": 330.42
+    },
+    {
+      "ticker": "ARM",
+      "status": "NO_DATA",
+      "entry": 198.65,
+      "sl": 178.37,
+      "tp": 239.22
+    },
+    {
+      "ticker": "DELL",
+      "status": "NO_DATA",
+      "entry": 205.93,
+      "sl": 191.28,
+      "tp": 235.22
+    },
+    {
+      "ticker": "CRDO",
+      "status": "NO_DATA",
+      "entry": 165.92,
+      "sl": 144.63,
+      "tp": 208.49
+    },
+    {
+      "ticker": "NVDA",
+      "status": "NO_DATA",
+      "entry": 213.17,
+      "sl": 204.59,
+      "tp": 230.33
+    },
+    {
+      "ticker": "SMH",
+      "status": "NO_DATA",
+      "entry": 491.21,
+      "sl": 472.21,
+      "tp": 529.21
+    }
+  ]
+}
