@@ -1,1 +1,76 @@
-{"items": []}
+{
+  "items": [
+    {
+      "ticker": "LMND",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Revenue beat expectations but shares fell, indicating negative market reaction to other earnings components or guidance despite top-line beat.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Lemonade Stock Wednesday?",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52139940/whats-going-on-with-lemonade-stock-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-04-29T16:45:47.939843+00:00"
+    },
+    {
+      "ticker": "TBN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgrade to Outperform with $55 price target is a meaningful positive catalyst from a major bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Upgrades Tamboran Resources to Outperform, Raises Price Target to $55",
+      "url": "https://www.benzinga.com/news/26/04/52139839/rbc-capital-upgrades-tamboran-resources-to-outperform-raises-price-target-to-55",
+      "source": "alpaca",
+      "added_at": "2026-04-29T16:45:47.939852+00:00"
+    },
+    {
+      "ticker": "SPOT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large equity holder selling 50% stake signals potential supply overhang and possible concerns about Spotify's valuation or strategic direction from a key content partner.",
+      "action_window": "next_day",
+      "headline": "Universal Music Group Plans to Monetize 50% Of Its Equity Stake In Spotify",
+      "url": "https://www.benzinga.com/news/26/04/52139587/universal-music-group-plans-to-monetize-50-of-its-equity-stake-in-spotify",
+      "source": "alpaca",
+      "added_at": "2026-04-29T16:45:47.939857+00:00"
+    },
+    {
+      "ticker": "ZM",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive momentum from strategic AI initiative and executive hire from Microsoft, but approaching technical resistance limits upside confidence.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Zoom Video Stock Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52139550/whats-going-on-with-zoom-video-stock-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-04-29T16:45:47.939860+00:00"
+    },
+    {
+      "ticker": "SBUX",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with traffic hitting 3-year high, raised FY guidance, multiple analyst upgrades, and shares already surging indicates meaningful positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Starbucks Brews Breakout: Sales Beat, Traffic Hits 3-Year High, Shares Surge",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52139378/starbucks-posts-q2-beat-these-analysts-raise-forecasts-best-traffic-3-years",
+      "source": "alpaca",
+      "added_at": "2026-04-29T16:45:47.939864+00:00"
+    },
+    {
+      "ticker": "STX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analysts doubling price targets following 44% revenue surge and all-time high breakout, with multi-year AI-driven demand visibility through 2027 representing a strong fundamental catalyst.",
+      "action_window": "intraday",
+      "headline": "Seagate Stock Hits All-Time High: Why Analysts Just Doubled Their Price Targets",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/04/52139230/seagate-stock-hits-all-time-high-why-analysts-just-doubled-their-price-targets",
+      "source": "alpaca",
+      "added_at": "2026-04-29T16:45:47.939867+00:00"
+    }
+  ]
+}
