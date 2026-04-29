@@ -25,3 +25,5 @@ pick_date,pick_time,ticker,company,tag,score,multiplier,entry,stop_loss,take_pro
 2026-04-29,00:41:31,CRDO,CRDO,SEMI / AI,0.761,1.27,165.92,144.63,208.49,2.0,4,33,bull,711.69,38.5,pending,,,,
 2026-04-29,00:41:31,NVDA,NVDA,SEMI / AI,0.753,1.3,213.17,204.59,230.33,2.0,11,21,bull,711.69,38.5,pending,,,,
 2026-04-29,00:41:31,SMH,SMH,SEMI / AI,0.749,1.26,491.21,472.21,529.21,2.0,5,,bull,711.69,38.5,pending,,,,
+2026-04-29,13:56:29,SNPS,SNPS,SEMI / AI,0.794,1.27,478.58,449.57,536.59,2.0,3,28,bull,710.62,38.5,pending,,,,
+2026-04-29,13:56:29,VICR,VICR,SEMI,0.778,1.24,238.04,205.62,302.88,2.0,3,83,bull,710.62,38.5,pending,,,,
