@@ -2,7 +2,8 @@ name: 🧠 Weekend Reflection
 
 on:
   schedule:
-    - cron: '0 23 * * 5'  # Fri 23:00 UTC = Sat 7 AM SGT (safely after Fri close in both EDT/EST)
+    - cron: '0 22 * * 5'   # 6 PM EDT = 22:00 UTC Fri
+    - cron: '0 23 * * 5'   # 6 PM EST = 23:00 UTC Fri
   workflow_dispatch:
 
 permissions:

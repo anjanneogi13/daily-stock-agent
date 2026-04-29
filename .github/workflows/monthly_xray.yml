@@ -2,7 +2,8 @@ name: Monthly X-Ray
 
 on:
   schedule:
-    - cron: '0 21 1 * *'
+    - cron: '0 20 1 * *'   # 4 PM EDT = 20:00 UTC, 1st of month
+    - cron: '0 21 1 * *'   # 4 PM EST = 21:00 UTC, 1st of month
   workflow_dispatch:
 
 permissions:
