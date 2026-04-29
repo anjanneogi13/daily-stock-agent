@@ -20,8 +20,8 @@ on:
     - cron: '0 14 * * 1-5'    # 9:00 AM EST
     - cron: '10 14 * * 1-5'   # 9:10 AM EST
     - cron: '20 14 * * 1-5'   # 9:20 AM EST
-  
-    workflow_dispatch:
+
+  workflow_dispatch:
 
 jobs:
   run-picks:
