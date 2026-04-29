@@ -2,10 +2,18 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # Run at 8:45 AM ET (~45 min before US market open)
-    # Two crons because GitHub Actions doesn't handle DST — guard step skips the wrong one
-    - cron: '45 12 * * 1-5'   # 8:45 AM EDT (Mar–Nov) = 8:45 PM SGT
-    - cron: '45 13 * * 1-5'   # 8:45 AM EST (Nov–Mar) = 9:45 PM SGT
+    # Daily picks ~45 min before US market open (9:30 AM ET).
+    # Multiple crons because GitHub Actions cron can be delayed 15-60 min.
+    # ET-hour guard below ensures only ONE actually executes per day.
+    - cron: '30 12 * * 1-5'   # 8:30 AM EDT (Mar–Nov)
+    - cron: '45 12 * * 1-5'   # 8:45 AM EDT
+    - cron: '0  13 * * 1-5'   # 9:00 AM EDT (catches delayed runs)
+    - cron: '15 13 * * 1-5'   # 9:15 AM EDT (last chance EDT)
+    - cron: '30 13 * * 1-5'   # 8:30 AM EST (Nov–Mar)
+    - cron: '45 13 * * 1-5'   # 8:45 AM EST
+    - cron: '0  14 * * 1-5'   # 9:00 AM EST (catches delayed runs)
+    - cron: '15 14 * * 1-5'   # 9:15 AM EST (last chance EST)
+  
   workflow_dispatch:
 
 jobs:
@@ -18,20 +26,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Skip if not ~45min before US open (DST guard)
+      - name: DST + dedup guard (only first run of day in 8:00–9:25 ET window)
         run: |
           ET_HOUR=$(TZ='America/New_York' date +%H)
           ET_MIN=$(TZ='America/New_York' date +%M)
-          # Allow manual dispatch any time
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          echo "Now: $ET_DATE $ET_HOUR:$ET_MIN ET"
+
+          # Manual dispatch always allowed
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "✅ Manual run — skipping time guard (currently $ET_HOUR:$ET_MIN ET)"
+            echo "✅ Manual run — bypassing time guard"
             exit 0
           fi
-          if [ "$ET_HOUR" != "08" ]; then
-            echo "⏭  Not 8 AM ET window (currently $ET_HOUR:$ET_MIN ET) — skipping duplicate cron"
+
+          # Allow only between 08:00 and 09:25 ET (before market open at 09:30)
+          ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
+          WINDOW_START=$((8 * 60))     # 08:00
+          WINDOW_END=$((9 * 60 + 25))  # 09:25
+          if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ] || [ $ET_MINUTES_OF_DAY -gt $WINDOW_END ]; then
+            echo "⏭  Outside 08:00–09:25 ET window — skipping"
             exit 0
           fi
-          echo "✅ Running at $ET_HOUR:$ET_MIN ET (~45 min before US open)"
+
+          # De-dup: skip if today's premarket_check.json or picks_log already updated today
+          if [ -f data/premarket_check.json ]; then
+            LAST_DATE=$(python -c "import json; print(json.load(open('data/premarket_check.json')).get('date',''))" 2>/dev/null || echo "")
+            if [ "$LAST_DATE" = "$ET_DATE" ]; then
+              echo "⏭  Already ran today ($LAST_DATE) — skipping duplicate cron"
+              exit 0
+            fi
+          fi
+
+          echo "✅ Proceeding with daily picks at $ET_HOUR:$ET_MIN ET"
 
       - name: Set up Python
         uses: actions/setup-python@v5
