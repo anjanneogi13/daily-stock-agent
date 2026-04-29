@@ -110,7 +110,7 @@ def _gemini_sentiment(prompt: str, model: str = "gemini-2.5-flash-lite") -> str:
     r = requests.post(url, timeout=30, json={
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.3, "maxOutputTokens": 800},
-    }, timeout=30)
+    })
     if r.status_code != 200:
         raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:200]}")
     return r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
