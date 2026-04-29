@@ -2,15 +2,16 @@
   "items": [
     {
       "ticker": "LMND",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Revenue beat expectations but shares fell, indicating negative market reaction to other earnings components or guidance despite top-line beat.",
+      "rationale": "Company delivered double catalyst with Q1 earnings beat and raised FY26 guidance above estimates, both strong positive signals confirmed by stock already trading higher.",
       "action_window": "intraday",
-      "headline": "What's Going On With Lemonade Stock Wednesday?",
-      "url": "https://www.benzinga.com/markets/earnings/26/04/52139940/whats-going-on-with-lemonade-stock-wednesday",
+      "headline": "Lemonade shares are trading higher after the company reported better-than-expected Q1 financial results and raised its FY26 sales guidance above estimates.",
+      "url": "https://www.benzinga.com/quote/LMND",
       "source": "alpaca",
-      "added_at": "2026-04-29T16:45:47.939843+00:00"
+      "added_at": "2026-04-29T16:45:47.939843+00:00",
+      "updated_at": "2026-04-29T17:57:18.509612+00:00"
     },
     {
       "ticker": "TBN",
@@ -71,6 +72,55 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/04/52139230/seagate-stock-hits-all-time-high-why-analysts-just-doubled-their-price-targets",
       "source": "alpaca",
       "added_at": "2026-04-29T16:45:47.939867+00:00"
+    },
+    {
+      "ticker": "YUM",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Earnings beat combined with strong global expansion and digital growth represents a meaningful positive catalyst with shares already rising on the news.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Yum! Brands Stock Today?",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52143241/whats-going-on-with-yum-brands-stock-today-2",
+      "source": "alpaca",
+      "added_at": "2026-04-29T17:57:18.509572+00:00"
+    },
+    {
+      "ticker": "TEVA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Three concurrent bullish catalysts - M&A pipeline investment, Q1 earnings beat, and shareholder-friendly buyback authorization signal strong management confidence and capital deployment capability.",
+      "action_window": "intraday",
+      "headline": "Teva Signals Confidence With $700 Million Pipeline Push, Buyback Plan",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52143231/teva-signals-confidence-with-700-million-pipeline-push-buyback-plan",
+      "source": "alpaca",
+      "added_at": "2026-04-29T17:57:18.509584+00:00"
+    },
+    {
+      "ticker": "PSUS",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "IPO indicated to open 22% below offering price ($39-$39.50 vs $50), signaling weak demand and potential losses for IPO investors requiring immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Pershing Square USA Shares Indicated To Open Between $39-$39.50; IPO Priced At $50/Share On 33.12M Shares",
+      "url": "https://www.benzinga.com/quote/PSUS",
+      "source": "alpaca",
+      "added_at": "2026-04-29T17:57:18.509591+00:00",
+      "updated_at": "2026-04-29T17:57:18.509604+00:00"
+    },
+    {
+      "ticker": "CLS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "TD Cowen upgrade to Buy with significant price target increase represents a meaningful positive catalyst from a reputable sell-side firm that typically drives near-term buying interest.",
+      "action_window": "next_day",
+      "headline": "TD Cowen Upgrades Celestica to Buy, Raises Price Target to $430",
+      "url": "https://www.benzinga.com/news/26/04/52142797/td-cowen-upgrades-celestica-to-buy-raises-price-target-to-430",
+      "source": "alpaca",
+      "added_at": "2026-04-29T17:57:18.509596+00:00"
     }
   ]
 }
