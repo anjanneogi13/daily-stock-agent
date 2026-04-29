@@ -216,7 +216,8 @@ try:
     import sys as _sys
     _sys.path.insert(0, str(Path(__file__).resolve().parent))
     from claude_helper import call_llm
-    md = call_llm(prompt)
+    md, _err = call_llm(prompt)
+    if _err: md = ''
     if not md or md.startswith("[ERROR"):
         md = _human_fallback("LLM returned empty/error: " + (md or "none"))
 except Exception as e:
