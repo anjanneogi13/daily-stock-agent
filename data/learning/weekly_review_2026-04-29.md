@@ -1,59 +1,74 @@
 # 🧠 Weekend Review — 2026-04-29
 
 ## 📊 The Week in One Sentence
-We generated 26 picks but none have closed yet, so we can't evaluate performance — however, the premarket warning system caught several bad setups before they could hurt us.
+We generated 28 picks but none closed yet, so this is a "read the temperature" review — and honestly, the temperature reading shows we're picking stocks on terrible days and our premarket filters are catching problems *after* we've already made bad picks.
 
 ## ✅ What's Working Well
-- **The premarket filter is saving us from disasters.** On April 28th, ARM, AVGO, and RMBS were all flagged "SKIP TODAY" in premarket, and all three would have hit stop-loss if traded. The system correctly identified danger before the market even opened.
-- **Stop-losses protected us when they fired.** RMBS on 2026-04-28 hit its stop at -9.2%, but would have continued crashing to -21% to -25% by close. Without that stop, we'd have lost an extra 12-16% on that trade alone.
+- **The premarket filter is doing its job** — ARM, AVGO, and RMBS all got tagged "SKIP TODAY" on April 28th and indeed all hit their stop losses, proving the filter spotted danger correctly
+- **Stop losses are saving us from disasters** — RMBS would have closed down 21-25% without the stop loss, but instead got stopped out at -9%, saving us from a catastrophic loss on April 28th
 
 ## ❌ What Went Wrong
-- **We're picking semiconductor stocks on the worst possible days.** On April 28th, the semiconductor sector (SOXX) was down -3.05% in premarket. Despite this massive red flag, we still generated picks for LRCX, ALAB, ARM, AVGO, ONTO, TSM, and RMBS — and every single one either crashed or got stopped out. These were predictable losers.
-- **Many picks never showed any upside momentum.** Stocks like LRCX, ALAB, and ONTO opened down and just kept falling. For example, LRCX's "best" moment was still -2.22% down. We're catching falling knives instead of waiting for any sign of strength.
-- **Some stop-losses appear too tight.** ARM and TSM both hit their stops on April 28th, but the price barely moved further down (less than -0.2% additional drop). We may be getting shaken out right at the bottom instead of giving trades room to breathe.
+- **We're picking semiconductor stocks on awful sector days** — On April 28th, the semiconductor sector (SOXX) was down -3.05% in premarket, and we still generated picks for LRCX, ALAB, ARM, AVGO, ONTO, TSM, and RMBS. These weren't just losses, they were "falling knife" entries where stocks never showed any strength.
+- **18 out of 28 picks were weak from the start** — Stocks like LRCX, ALAB, and ONTO got filled at open and immediately dropped, never recovering. Their "best case" movements were still negative (MFE around -2% to -3%), meaning we bought at exactly the wrong time.
+- **Some stop losses might be too tight** — TSM hit its stop loss at -5%, then only dropped another -0.01% after that. ARM stopped out at -8.8% and only fell -0.16% more. We're getting shaken out right at the bottom.
+- **All 28 picks came from the same bad day** — Every single observation is from April 28th, which suggests the system either isn't running daily or only ran once during a market bloodbath.
 
 ## 🔧 Suggested Changes (For Your Review)
 
-### Suggestion 1: Add a sector-wide kill switch for semiconductor picks
+### Suggestion 1: Block picks entirely when sector is down big in premarket
+**The problem:** On April 28th, SOXX was down -3.05% in premarket, yet the system still generated 10+ semiconductor picks that day. The premarket filter tagged them "SKIP TODAY" but only *after* they were already selected as picks. That's backwards — we shouldn't be picking them at all.
 
-**The problem:** On April 28th, SOXX was down -3.05% in premarket, yet we still generated 7 semiconductor picks that day. The premarket filter flagged them individually, but we shouldn't even be considering these stocks when the entire sector is collapsing.
+**The fix:** Add a sector health check *before* stock selection runs. If SOXX is down -2% or worse in premarket, don't generate any semiconductor picks that day. Same logic could apply to other sectors (XLF for financials, XLE for energy, etc.).
 
-**The fix:** Before generating any picks, check if SOXX is down -2% or more in premarket. If yes, completely skip all semiconductor stocks for that day — don't even run them through the normal selection process.
+**Where in the code:** `scripts/daily_picker.py` or wherever the main pick generation logic runs — needs to check sector ETF prices before filtering individual stocks
 
-**Where in the code:** `scripts/stock_screener.py` or wherever the initial universe of stocks is filtered before analysis begins.
+**How to test:** Run it on historical data from April 28th, 2026. It should generate zero semiconductor picks that day. Then test on a normal day (SOXX flat or up) and confirm picks still generate.
 
-**How to test:** Manually set SOXX premarket change to -2.5% and verify that no semiconductor tickers (LRCX, NVDA, TSM, ARM, AVGO, AMAT, etc.) appear in that day's picks at all.
+**Confidence:** High — the data clearly shows 4+ stop losses hit when SOXX was down -3%, and the pattern is obvious enough that this would prevent a lot of pain.
 
-**Confidence:** High — we have clear evidence that 7/7 semiconductor picks failed on a day when SOXX was down hard. This pattern repeated multiple times in the observations.
+---
 
-### Suggestion 2: Require a "first 15 minutes strength check" before entry
+### Suggestion 2: Widen stop losses by 1-2% to avoid getting shaken out at the exact bottom
+**The problem:** TSM stopped out at -5.00% and then only dropped -0.01% more. ARM stopped out at -8.8% and dropped just -0.16% after. We're getting stopped out within pennies of the low, suggesting our stops are so tight they're catching normal intraday volatility instead of true breakdowns.
 
-**The problem:** Stocks like LRCX, ALAB, and ONTO opened down and never recovered. LRCX's best moment all day was still -2.22% in the red. We're entering trades at the open without waiting to see if the stock shows any buying pressure.
+**The fix:** Increase stop loss distances by 1-2 percentage points, or use ATR (Average True Range) instead of fixed percentages. For a stock like TSM, a -6% or -7% stop would let it breathe without risking much more downside.
 
-**The fix:** After the market opens, wait 10-15 minutes. Only enter the trade if the stock has recovered to at least -0.5% from open or is showing green. If it's still bleeding heavily after 15 minutes, skip the trade for that day.
+**Where in the code:** Wherever stop loss percentages are defined — likely `config.yaml` or `stop_loss_calculator.py`
 
-**Where in the code:** `scripts/trade_execution.py` or the order placement logic — add a timer and price check between 9:30 AM and 9:45 AM before submitting the buy order.
+**How to test:** Backtest the same April 28th picks with wider stops. Check how many would have avoided the stop hit and recovered. If most still tanked, the tight stops aren't the problem. If several recovered, wider stops would help.
 
-**How to test:** On a simulated bad day (like April 28th), verify that LRCX and ALAB would NOT have been entered because they were still down -3% to -5% at 9:45 AM.
+**Confidence:** Medium — we only have 5 examples of "too tight" stops, and 3 of them (ARM, TSM twice) are marginal. Need more data to be sure, but the pattern is suggestive.
 
-**Confidence:** Medium — we have strong evidence that opening losers stay losers, but this adds complexity and might cause us to miss some good entries. Worth testing on historical data first.
+---
 
-### Suggestion 3: Widen stop-losses by 1-2% for high-volatility stocks
+### Suggestion 3: Don't run picks at all on days when market opens down sharply
+**The problem:** Every single one of the 28 picks came from April 28th, a day when semiconductors opened down -3%. The system generated picks into a falling market, resulting in 18 "weak pick" observations where stocks never showed any upward movement at all.
 
-**The problem:** ARM and TSM both hit their stops on April 28th (around -5% to -8.8%), but then the price barely moved further (only -0.01% to -0.16% additional drop). We're getting stopped out right at the intraday low instead of letting normal volatility play out.
+**The fix:** Add a "market circuit breaker" that checks SPY or QQQ at open. If the market is down more than -1% in the first 15 minutes, cancel all picks for the day or switch to a "wait and see" mode. Only enter trades if the market stabilizes or bounces.
 
-**The fix:** For stocks with average true range (ATR) above a certain threshold (e.g., $5 daily range), add 1.5-2% cushion to the stop-loss. So instead of -5%, use -6.5% or -7% to avoid getting shaken out by normal price swings.
+**Where in the code:** `scripts/market_open_monitor.py` or the execution/order entry script that runs at 9:30 AM
 
-**Where in the code:** `scripts/risk_management.py` or wherever stop-loss levels are calculated — add an ATR check and adjust the stop percentage accordingly.
+**How to test:** Simulate April 28th with the rule active — it should either generate no picks or delay them until later in the day. Then test on a normal down -0.3% open to make sure it doesn't block too aggressively.
 
-**How to test:** Backtest ARM and TSM trades from April 28th with a -7% stop instead of -5% and see if they would have recovered instead of stopping out.
+**Confidence:** High — catching a falling knife is one of the most common ways to lose money, and we have 18 examples from a single day proving we did exactly that.
 
-**Confidence:** Low — while we have 5 examples of "tight stops," we also have 6 examples where stops saved us from much bigger losses (like RMBS). Needs more data before making this change permanent.
+---
+
+### Suggestion 4: Reduce position size or skip entirely when premarket filter says "SKIP TODAY"
+**The problem:** The system correctly tagged ARM, AVGO, and RMBS as "SKIP TODAY" on April 28th, but they still appear in the observations as picks that hit stop losses. If the filter is working but we're still entering these trades, the filter isn't connected to the execution logic.
+
+**The fix:** Make the "SKIP TODAY" tag enforceable — either completely block order entry for those tickers, or reduce position size to 25% as a "test only" allocation. The filter should have teeth, not just be a warning.
+
+**Where in the code:** `scripts/order_execution.py` or wherever the premarket tags feed into actual trade decisions
+
+**How to test:** Manually set a stock's premarket tag to "SKIP TODAY" and verify the system either doesn't place an order or only places a tiny one. Confirm normal picks still execute at full size.
+
+**Confidence:** High — we already built the filter and it's working. We just need to wire it up so the system actually listens to it.
 
 ## 🎓 Lesson of the Week
-The most important lesson is that **sector context matters more than individual stock signals.** When an entire sector is getting hammered (like semiconductors down -3% in premarket), even your "best" picks from that sector are likely to fail. No amount of technical analysis on an individual stock can overcome a sector-wide selloff. The premarket filter caught this for individual stocks, but we need to think bigger — if the whole neighborhood is on fire, don't go house shopping there at all.
+The single most important lesson this week: **Don't fight the tape**. When an entire sector is getting crushed in premarket (like semiconductors down -3% on April 28th), there are no "good picks" in that sector that day — only varying degrees of bad. Our system correctly identified the danger with premarket warnings, but then went ahead and generated picks anyway. The edge isn't in finding the one stock that goes up when everything else is down; the edge is in having the discipline to sit out and wait for a better day. Cash is a position too.
 
 ## ⏭️ What I'd Watch For Next Week
-- **How many picks actually close** — we need at least 20 completed trades before making major system changes.
-- **Whether CDNS and ANET continue trending up** — these were the only two stocks showing promise on April 28th (+1.46% and +1.24%), both outside the semiconductor disaster zone.
-- **If sector-wide selloffs happen again** — watch for days when entire sectors (not just semis) are down -2%+ in premarket, and see if our picks in those sectors fail consistently.
+- **Whether the system runs on multiple days** — all 28 picks came from April 28th. If this is a bug (system only ran once), that's a problem. If it's by design (only run once a week), we need more frequent picks to build a real dataset.
+- **How many of the "promising" picks actually close** — CDNS and ANET were both up around +1.2-1.5% on April 28th. Let's see if they reach take profit or reverse course.
+- **Whether semiconductor sector conditions improve** — if SOXX stays weak, we should see the new "block sector picks" rule (if implemented) kick in and prevent more falling knife entries.
