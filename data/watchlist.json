@@ -173,16 +173,16 @@
     },
     {
       "ticker": "TYL",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Q1 revenue beat estimate by $4.4M (~0.7%), representing a modest but positive earnings surprise that typically drives after-hours trading activity.",
+      "rationale": "Tyler Technologies beat both EPS estimates by 3% ($3.09 vs $3.00) and revenue estimates by 0.7% ($613.5M vs $609.1M), representing a solid dual beat that typically drives positive price action.",
       "action_window": "next_day",
-      "headline": "Tyler Technologies Q1 Sales $613.500M Beat $609.118M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/04/52153098/tyler-technologies-q1-sales-613-500m-beat-609-118m-estimate",
+      "headline": "Update: Tyler Technologies Q1 Adj. EPS $3.09 Beats $3.00 Estimate, Sales $613.500M Beat $609.118M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52156222/update-tyler-technologies-q1-adj-eps-3-09-beats-3-00-estimate-sales-613-500m-beat-609-118m-estimate",
       "source": "alpaca",
       "added_at": "2026-04-29T20:39:50.103844+00:00",
-      "updated_at": "2026-04-29T20:39:50.103861+00:00"
+      "updated_at": "2026-04-29T21:56:53.260553+00:00"
     },
     {
       "ticker": "AIN",
@@ -279,6 +279,139 @@
       "url": "https://www.benzinga.com/news/earnings/26/04/52152996/alerus-finl-q1-adj-eps-0-89-beats-0-59-estimate-sales-75-759m-beat-73-343m-estimate",
       "source": "alpaca",
       "added_at": "2026-04-29T20:39:50.103886+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_raise",
+      "rationale": "Meta increasing infrastructure CAPEX forecast due to higher component costs (particularly memory pricing) signals margin pressure and elevated spending that typically pressures near-term profitability despite strategic custom silicon partnership with Broadcom.",
+      "action_window": "next_day",
+      "headline": "Meta CEO Mark Zuckerberg Says Co Is Rolling Out More Than ONE GW Of Our Own Custom Silicon That Co Is Developing With Broadcom; Co Is Increasing Infrastructure CAPEX Forecast For This Year Most Of That Is Due To Higher Component Costs Particularly Memory Pricing; Co Is Rolling Out A 'Significant Amo",
+      "url": "https://www.benzinga.com/news/26/04/52156176/meta-ceo-mark-zuckerberg-says-co-is-rolling-out-more-than-one-gw-of-our-own-custom-silicon-that-co-i",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260517+00:00",
+      "updated_at": "2026-04-29T21:56:53.260562+00:00"
+    },
+    {
+      "ticker": "TSLA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Product update on long-awaited Tesla Semi provides modest positive catalyst but lacks specific details on production scale, pricing, or delivery timelines that would drive stronger trading impact.",
+      "action_window": "next_day",
+      "headline": "Tesla Just Dropped Big News About Its Electric Semi Truck",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52156420/tesla-just-dropped-big-news-about-its-electric-semi-truck",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260529+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "CEO announcing AWS reaching $150B annualized revenue run rate is a significant milestone demonstrating accelerating cloud growth, representing material upside to consensus estimates and validating AWS's dominant market position.",
+      "action_window": "intraday",
+      "headline": "Amazon CEO Says AWS Is Now A $150B Annualized Revenue Run Rate Business",
+      "url": "https://www.benzinga.com/news/26/04/52156403/amazon-ceo-says-aws-is-now-a-150b-annualized-revenue-run-rate-business",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260535+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "CEO announcing Copilot engagement matching Outlook (a core Microsoft product) signals strong AI product adoption and validates Microsoft's massive AI investment strategy.",
+      "action_window": "intraday",
+      "headline": "Microsoft CEO Says Weekly Engagement For Copilot Is Now At The Same Level As Outlook",
+      "url": "https://www.benzinga.com/news/26/04/52156368/microsoft-ceo-says-weekly-engagement-for-copilot-is-now-at-the-same-level-as-outlook",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260539+00:00"
+    },
+    {
+      "ticker": "USLM",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 13% below estimate and revenue 14% below consensus represents material underperformance likely to trigger immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "United States Lime Q1 EPS $1.06 Misses $1.20 Estimate, Sales $87.833M Miss $102.000M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52156351/united-states-lime-q1-eps-1-06-misses-1-20-estimate-sales-87-833m-miss-102-000m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260544+00:00"
+    },
+    {
+      "ticker": "MDXG",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 67% worse than estimates and revenue missing by 9.3%, creating immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: MiMedx Group Q1 Adj. EPS $(0.05) Misses $(0.03) Estimate, Sales $58.991M Miss $65.020M Estimate.",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52156159/correction-mimedx-group-q1-adj-eps-0-05-misses-0-03-estimate-sales-58-991m-miss-65-020m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260568+00:00"
+    },
+    {
+      "ticker": "INHD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Reverse stock splits (1-for-20) typically signal financial distress or compliance issues with exchange listing requirements, often negatively perceived by markets despite no fundamental change.",
+      "action_window": "next_day",
+      "headline": "Inno Holdings Reveals 1-For-20 Reverse Stock Split. Effective On May 4, 2026",
+      "url": "https://www.benzinga.com/quote/INHD",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260572+00:00"
+    },
+    {
+      "ticker": "INLF",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes delisting risk and restores investor confidence, typically triggering relief rally in small-cap stocks.",
+      "action_window": "next_day",
+      "headline": "INLIF LIMITED Regains Nasdaq Compliance",
+      "url": "https://www.benzinga.com/quote/INLF",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260576+00:00"
+    },
+    {
+      "ticker": "VIST",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Vista Energy reported strong Q1 results with EPS up 19.5% YoY and sales nearly doubled (+97% YoY), representing a significant earnings beat with exceptional revenue growth.",
+      "action_window": "next_day",
+      "headline": "Vista Energy Q1 EPS $0.98 Up From $0.82 YoY, Sales $865.012M Up From $438.456M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52156065/vista-energy-q1-eps-0-98-up-from-0-82-yoy-sales-865-012m-up-from-438-456m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260581+00:00"
+    },
+    {
+      "ticker": "MX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Adjusted EPS fell 77% YoY from $1.30 to $0.30 despite 9% revenue growth, indicating severe margin compression and a significant earnings miss.",
+      "action_window": "next_day",
+      "headline": "Methanex Q1 Adj. EPS $0.30 Down From $1.30 YoY, Sales $974.000M Up From $896.000M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52156049/methanex-q1-adj-eps-0-30-down-from-1-30-yoy-sales-974-000m-up-from-896-000m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260595+00:00"
+    },
+    {
+      "ticker": "WPK",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 earnings miss with EPS down 5.4% YoY ($0.53 vs $0.56) and revenue decline of 1.7% ($280M vs $285M) represents a meaningful negative catalyst for near-term trading.",
+      "action_window": "next_day",
+      "headline": "Winpak Q1 EPS $0.53 Down From $0.56 YoY, Sales $280.034M Down From $284.802M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52155987/winpak-q1-eps-0-53-down-from-0-56-yoy-sales-280-034m-down-from-284-802m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-04-29T21:56:53.260601+00:00"
     }
   ]
 }
