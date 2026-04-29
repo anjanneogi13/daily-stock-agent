@@ -39,8 +39,8 @@ if mkt:
         print(f"\n### ⚠️ RECOMMENDATION: Reduce all positions by 50% today\n")
 
 print(f"\n## 🎯 Picks\n")
-print("| # | Ticker | Tag | Score | Entry | Now | SL | TP | R:R | Qty | Note |")
-print("|---|--------|-----|-------|-------|-----|----|----|-----|-----|------|")
+print("| # | Type | Ticker | Tag | Score | Entry | Now | SL | TP | R:R | Qty | Note |")
+print("|---|------|--------|-----|-------|-------|-----|----|----|-----|-----|------|")
 
 for i, r in enumerate(rows, 1):
     try:
@@ -52,7 +52,8 @@ for i, r in enumerate(rows, 1):
     cur = t.get("current_price")
     cur_str = f"${cur:.2f}" if cur else "—"
     note = t.get("reason", "")[:40]
-    print(f"| {i} | **{r['ticker']}** | {tag} | {float(r['score']):.2f} | "
+    tt = r.get("trade_type","swing"); type_emoji = "🔥 DAY" if tt == "day" else "⚡ SWG"
+    print(f"| {i} | {type_emoji} | **{r['ticker']}** | {tag} | {float(r['score']):.2f} | "
           f"${entry:.2f} | {cur_str} | ${sl:.2f} (−{risk:.1f}%) | ${tp:.2f} (+{reward:.1f}%) | "
           f"{r.get('risk_reward','2.0')} | {r.get('qty','-')} | {note} |")
 

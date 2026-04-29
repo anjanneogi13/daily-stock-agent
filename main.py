@@ -1,4 +1,4 @@
-"""Daily Stock Picker — CLI entrypoint with regime + earnings filters."""
+"""Daily Stock Picker — CLI entrypoint with regime + earnings filters + Week 3 wiring."""
 import os, yaml
 from dotenv import load_dotenv
 from rich import print as rprint
@@ -33,25 +33,36 @@ def load_config(path: str = "config.yaml") -> dict:
 
 
 def run():
+    load_dotenv()
+    cfg = load_config()
+    rprint("[bold cyan]Daily Stock Picker Agent[/bold cyan]")
+    rprint("[dim]Not financial advice. Educational only.[/dim]\n")
 
-    # ═══ Week 2: Market guards ═══
-    print("\n[guard] Checking market conditions...")
+    # ═══════════════════════════════════════════════════════════════
+    # WEEK 2 GUARDS: VIX + SPY trend + Sector strength
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[bold cyan]🛡️  Market Guards[/bold cyan]")
     vix = vix_level()
     spy = spy_trend()
     sectors = sector_strength()
     weak_sectors = {s: 2 for s, v in sectors.items() if v.get("weak")}
-    print(f"[guard] VIX={vix:.1f}  SPY>50DMA={spy['above_50dma']}  SPY>200DMA={spy['above_200dma']}")
-    if weak_sectors:
-        print(f"[guard] ⚠️  Weak sectors today (capped at 2): {list(weak_sectors.keys())}")
-    if vix > 30:
-        print(f"[guard] 🚨 VIX={vix:.1f} > 30 — high volatility regime, picks count reduced 50%")
-    if not spy['above_50dma']:
-        print(f"[guard] 🚨 SPY below 50DMA — defensive mode, reducing picks 50%")
 
-    load_dotenv()
-    cfg = load_config()
-    rprint("[bold cyan]Daily Stock Picker Agent[/bold cyan]")
-    rprint("[dim]Not financial advice. Paper-trade only.[/dim]\n")
+    rprint(f"  VIX={vix:.1f}  SPY>50DMA={spy['above_50dma']}  SPY>200DMA={spy['above_200dma']}")
+    if weak_sectors:
+        rprint(f"  [yellow]⚠ Weak sectors today (will cap at 2): {list(weak_sectors.keys())}[/yellow]")
+
+    # Adjust pick count based on guards
+    base_picks = cfg["output"]["top_n_picks"]
+    adjusted_picks = base_picks
+    if vix > 30:
+        rprint(f"  [red]🚨 VIX={vix:.1f} > 30 — high volatility, reducing picks 50%[/red]")
+        adjusted_picks = max(3, base_picks // 2)
+    if not spy["above_50dma"]:
+        rprint(f"  [red]🚨 SPY below 50DMA — defensive mode, reducing picks 50%[/red]")
+        adjusted_picks = min(adjusted_picks, max(3, base_picks // 2))
+    if adjusted_picks != base_picks:
+        cfg["output"]["top_n_picks"] = adjusted_picks
+        rprint(f"  [yellow]Pick count: {base_picks} → {adjusted_picks}[/yellow]")
 
     rprint("[1/6] Checking market regime...")
     reg = market_regime()
@@ -66,14 +77,8 @@ def run():
         cfg["output"]["min_score"] = max(cfg["output"]["min_score"], 0.70)
 
     cape = get_cape()
-
-
     if cape.get("cape"):
-
-
         rprint(f"[CAPE] S&P 500 Shiller CAPE: {cape['cape']:.2f} — {cape['verdict']} ({cape['percentile']})")
-
-
 
     # ===== Daily Market Briefing =====
     rprint("\n[bold cyan]📰 Daily Market Briefing...[/bold cyan]")
@@ -93,7 +98,6 @@ def run():
             panel_text += f"  • {rk}\n"
     rprint(Panel.fit(panel_text.rstrip(), title="Market Sentiment"))
 
-    # Apply sentiment modifier to min_score
     if sent == "bearish":
         cfg["output"]["min_score"] = max(cfg["output"]["min_score"], 0.72)
         rprint("[yellow]⚠ Bearish news sentiment — tightening min_score to 0.72[/yellow]")
@@ -112,7 +116,7 @@ def run():
 
     rprint("[5/6] Filtering for earnings risk (skip if earnings in next 5 days)...")
     filtered = []
-    for p in candidates[: cfg["output"]["top_n_picks"] * 3]:
+    for p in candidates[: cfg["output"]["top_n_picks"] * 4]:  # 4x buffer for sector cap
         d2e = days_to_earnings(p["ticker"])
         p["days_to_earnings"] = d2e if d2e < 999 else None
         if d2e < 5:
@@ -121,17 +125,15 @@ def run():
         if d2e >= 999:
             rprint(f"  [dim yellow]⚠ {p['ticker']} earnings date unknown — included with caution[/dim yellow]")
         filtered.append(p)
-        if len(filtered) >= cfg["output"]["top_n_picks"]:
+        if len(filtered) >= cfg["output"]["top_n_picks"] * 3:
             break
 
-
-    # ===== Earnings Quality Analysis on filtered picks =====
+    # ===== Earnings Quality Analysis =====
     rprint("[5b/6] Analyzing earnings quality (beats, surprises, analyst trends)...")
     for p in filtered:
         try:
             ea = analyze_earnings(p["ticker"])
             p["earnings"] = ea
-            # Blend earnings_quality into composite (12% weight)
             eq = ea.get("earnings_quality", 0.5)
             old_score = p["scores"]["composite"]
             new_score = round(old_score * 0.88 + eq * 0.12, 3)
@@ -140,23 +142,53 @@ def run():
         except Exception as e:
             rprint(f"  [dim]earnings err for {p['ticker']}: {e}[/dim]")
             p["earnings"] = {}
-    # Re-sort by new composite
     filtered.sort(key=lambda x: x["scores"]["composite"], reverse=True)
 
-    top = filtered
-    rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} after earnings filter\n")
+    # ═══════════════════════════════════════════════════════════════
+    # WEEK 3: Sector concentration cap (with weak-sector tightening)
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[5c/6] Applying sector concentration cap...")
+    pre_cap = len(filtered)
+    # Pad info_short.sector if missing (for cap to work)
+    for p in filtered:
+        if "info_short" not in p:
+            p["info_short"] = {}
+        if not p["info_short"].get("sector"):
+            p["info_short"]["sector"] = p["scores"].get("sector_tag") or "Unknown"
+    capped = apply_sector_cap(filtered, max_per_sector=4, reduced_sectors=weak_sectors)
+    rprint(f"  [dim]Sector cap: {pre_cap} → {len(capped)} (max 4/sector, weak={list(weak_sectors.keys()) or 'none'})[/dim]")
 
-    table = Table(title="Top Picks (SEMI=Semiconductor, AI=AI-relevant)")
-    for col in ["#","Ticker","Tag","Score","EQ","Beat%","AnaBuy%","Entry","SL","TP","R:R","Qty","Earn"]:
+    # Trim to final pick count
+    top = capped[: cfg["output"]["top_n_picks"]]
+
+    # ═══════════════════════════════════════════════════════════════
+    # WEEK 3: Auto-tag DAY vs SWING
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[5d/6] Auto-tagging trade type (DAY vs SWING)...")
+    for p in top:
+        ttype = classify_trade_type(p["scores"])
+        p["trade_type"] = ttype
+        # Also stamp into plan for downstream LLM prompt
+        if "plan" in p and isinstance(p["plan"], dict):
+            p["plan"]["trade_type"] = ttype
+    day_n = sum(1 for p in top if p["trade_type"] == "day")
+    swing_n = sum(1 for p in top if p["trade_type"] == "swing")
+    rprint(f"  [dim]Tagged: 🔥 {day_n} DAY · ⚡ {swing_n} SWING[/dim]")
+
+    rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} final picks\n")
+
+    table = Table(title="Top Picks")
+    for col in ["#","Type","Ticker","Sector","Score","EQ","Beat%","Entry","SL","TP","R:R","Qty","Earn"]:
         table.add_column(col)
     for i, p in enumerate(top, 1):
         plan = p["plan"]; s = p["scores"]; ea = p.get("earnings", {})
         e = f"{p.get('days_to_earnings','?')}d" if p.get("days_to_earnings") else "—"
         eq = f"{ea.get('earnings_quality',0):.2f}" if ea.get("earnings_quality") is not None else "—"
         br = f"{int(ea['beat_rate']*100)}%" if ea.get("beat_rate") is not None else "—"
-        ab = f"{ea['analyst_buy_pct']:.0f}%" if ea.get("analyst_buy_pct") is not None else "—"
-        table.add_row(str(i), p["ticker"], s.get("sector_tag") or "",
-                      f"{s['composite']:.2f}", eq, br, ab,
+        type_emoji = "🔥 DAY" if p["trade_type"] == "day" else "⚡ SWG"
+        table.add_row(str(i), type_emoji, p["ticker"],
+                      p.get("info_short", {}).get("sector", "—")[:12],
+                      f"{s['composite']:.2f}", eq, br,
                       f"${plan.get('entry','-')}", f"${plan.get('stop_loss','-')}",
                       f"${plan.get('take_profit','-')}",
                       f"{plan.get('risk_reward','-')}", str(plan.get("quantity","-")),
@@ -167,12 +199,13 @@ def run():
     for p in top:
         rationale = explain_pick(p["ticker"], p["scores"], p["plan"], p["news"],
                                  model=cfg["llm"]["model"])
-        rprint(f"[bold yellow]{p['ticker']}[/bold yellow] - {p['info_short']['name']}")
+        emoji = "🔥" if p["trade_type"] == "day" else "⚡"
+        rprint(f"[bold yellow]{emoji} {p['ticker']}[/bold yellow] - {p['info_short'].get('name','')} ({p['trade_type'].upper()})")
         rprint(rationale); rprint("")
         if os.getenv("TRADING_MODE", "paper") == "paper":
             log_paper_trade(p, cfg["output"]["csv_path"].replace("picks","trades"))
 
-    # ===== Log picks for performance tracking =====
+    # ===== Log picks (now includes trade_type) =====
     try:
         picks_for_log = []
         for p in top:
@@ -180,6 +213,7 @@ def run():
                 "ticker": p["ticker"],
                 "company": p.get("info_short", {}).get("name", ""),
                 "tag": p["scores"].get("sector_tag") or "",
+                "trade_type": p.get("trade_type", "swing"),
                 "score": p["scores"].get("composite", 0),
                 "multiplier": p["scores"].get("sector_mult", 1.0),
                 "entry": p["plan"].get("entry"),
@@ -189,7 +223,7 @@ def run():
                 "qty": p["plan"].get("quantity", 0),
                 "days_to_earnings": p.get("days_to_earnings"),
             })
-        n = log_picks(picks_for_log, reg, cape if 'cape' in dir() else None)
+        n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
         rprint(f"[dim][log] Saved {n} picks to data/picks_log.csv[/dim]")
     except Exception as e:
         rprint(f"[red][log] Could not save picks: {e}[/red]")

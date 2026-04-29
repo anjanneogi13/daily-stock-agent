@@ -8,7 +8,7 @@ LOG_PATH = Path("data/picks_log.csv")
 LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 FIELDS = [
-    "pick_date", "pick_time", "ticker", "company", "tag",
+    "pick_date", "pick_time", "ticker", "company", "tag", "trade_type",
     "score", "multiplier", "entry", "stop_loss", "take_profit",
     "risk_reward", "qty", "days_to_earnings",
     "regime", "spy_close", "cape",
@@ -50,6 +50,7 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "ticker": p.get("ticker"),
                 "company": p.get("company", ""),
                 "tag": p.get("tag", ""),
+                "trade_type": p.get("trade_type", "swing"),
                 "score": round(p.get("score", 0), 3),
                 "multiplier": p.get("multiplier", 1.0),
                 "entry": p.get("entry"),
