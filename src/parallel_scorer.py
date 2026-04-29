@@ -4,6 +4,7 @@ from .indicators import add_indicators, latest_signals
 from .fundamentals import score_fundamentals, passes_filters
 from .news_sentiment import fetch_news, score_sentiment
 from .scorer import composite_score
+from .watchlist_manager import watchlist_score_boost
 from .risk_manager import trade_plan, atr_trade_plan
 from .data_fetcher import fetch_info
 
@@ -22,6 +23,15 @@ def _score_one(tk, df, cfg):
         sent = score_sentiment(news)
         scores = composite_score(sig, fund, sent, cfg["weights"],
                                  ticker=tk, sector_cfg=cfg.get("sector", {}))
+
+        # Phase 2A: News watchlist boost (-0.15 to +0.15)
+        # Bullish news → boost; bearish news → penalty (effectively excludes)
+        wl_boost = watchlist_score_boost(tk)
+        if wl_boost != 0:
+            scores["watchlist_boost"] = round(wl_boost, 3)
+            scores["composite"] = max(0.0, min(1.0, scores["composite"] + wl_boost))
+            scores["composite"] = round(scores["composite"], 4)
+
         if scores["composite"] < cfg["output"]["min_score"]:
             return None
         # Week 4: ATR-based dynamic stops (fallback to old trade_plan if ATR missing)

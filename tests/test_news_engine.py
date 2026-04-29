@@ -215,3 +215,58 @@ def test_watchlist_returns_sorted_by_score():
 if __name__ == "__main__":
     import pytest
     sys.exit(pytest.main([__file__, "-v"]))
+
+# ═══ Phase 2A.2: Watchlist Boost Integration with Scorer ═════════
+def test_score_boost_applied_to_bullish_ticker():
+    """A ticker on the watchlist (bullish) gets a positive composite boost."""
+    _reset_watchlist()
+    items = [{
+        "headline": "Test bullish",
+        "url": "",
+        "source": "alpaca",
+        "ticker_list": ["BOOST"],
+        "classification": {
+            "sentiment": "bullish",
+            "tradeable_score": 1.0,  # max
+            "primary_ticker": "BOOST",
+            "category": "earnings_beat",
+            "rationale": "test",
+            "action_window": "intraday",
+        }
+    }]
+    add_from_news(items)
+    boost = watchlist_score_boost("BOOST")
+    # Max bullish boost = 1.0 * 0.15 = 0.15
+    assert boost == 0.15
+
+
+def test_score_boost_clamped_to_range():
+    """Watchlist boost should never exceed +/- 0.15."""
+    _reset_watchlist()
+    # Bullish at any score
+    items = [{
+        "headline": "h", "url": "", "source": "alpaca", "ticker_list": ["A"],
+        "classification": {"sentiment": "bullish", "tradeable_score": 1.0,
+                           "primary_ticker": "A", "category": "earnings_beat",
+                           "rationale": "", "action_window": "intraday"}
+    }, {
+        "headline": "h", "url": "", "source": "alpaca", "ticker_list": ["B"],
+        "classification": {"sentiment": "bearish", "tradeable_score": 1.0,
+                           "primary_ticker": "B", "category": "downgrade",
+                           "rationale": "", "action_window": "intraday"}
+    }]
+    add_from_news(items)
+    assert watchlist_score_boost("A") <= 0.15
+    assert watchlist_score_boost("B") >= -0.15
+    assert watchlist_score_boost("NONE") == 0.0
+
+
+def test_parallel_scorer_imports_watchlist():
+    """Make sure parallel_scorer wires in watchlist_score_boost (regression)."""
+    import inspect
+    import src.parallel_scorer as ps
+    src_code = inspect.getsource(ps)
+    assert "watchlist_score_boost" in src_code, \
+        "parallel_scorer must import and use watchlist_score_boost"
+    assert "watchlist_boost" in src_code, \
+        "parallel_scorer must record watchlist_boost in scores dict"
