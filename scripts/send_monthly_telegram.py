@@ -14,8 +14,8 @@ def _compact_for_telegram(md: str) -> str:
 
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
-if not TOKEN or not CHAT_ID:
+CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"), os.environ.get("TELEGRAM_GROUP_CHAT_ID")] if c]
+if not TOKEN or not CHAT_IDS:
     print("[telegram] Missing creds"); sys.exit(0)
 
 date = datetime.now().strftime("%Y-%m-%d")
@@ -26,12 +26,13 @@ if len(msg) > 4000:
     msg = msg[:3950] + "\n_(truncated)_"
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-data = urllib.parse.urlencode({
-    "chat_id": CHAT_ID, "text": msg,
-     "disable_web_page_preview": "true",
-}).encode()
-try:
-    urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
-    print("[telegram] ✅ Sent")
-except Exception as e:
-    print(f"[telegram] ❌ {e}")
+for _cid in CHAT_IDS:
+    data = urllib.parse.urlencode({
+        "chat_id": _cid, "text": msg,
+         "disable_web_page_preview": "true",
+    }).encode()
+    try:
+        urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
+        print("[telegram] ✅ Sent")
+    except Exception as e:
+        print(f"[telegram] ❌ {e}")

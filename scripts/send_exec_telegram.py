@@ -4,8 +4,8 @@ from datetime import datetime
 from pathlib import Path
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
-if not TOKEN or not CHAT_ID:
+CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"), os.environ.get("TELEGRAM_GROUP_CHAT_ID")] if c]
+if not TOKEN or not CHAT_IDS:
     print("[telegram] Missing creds"); sys.exit(0)
 
 date = sys.argv[1] if len(sys.argv) > 1 else datetime.now().strftime("%Y-%m-%d")
@@ -55,13 +55,14 @@ msg = "\n".join(lines)
 if len(msg) > 4000: msg = msg[:3950] + "\n_(truncated)_"
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-body = urllib.parse.urlencode({
-    "chat_id": CHAT_ID, "text": msg,
-    "parse_mode": "Markdown", "disable_web_page_preview": "true",
-}).encode()
-try:
-    resp = urllib.request.urlopen(urllib.request.Request(url, data=body), timeout=10)
-    res = json.loads(resp.read())
-    print(f"[telegram] {'✅ Sent exec report' if res.get('ok') else '❌ '+str(res)}")
-except Exception as e:
-    print(f"[telegram] ❌ {e}"); sys.exit(1)
+for _cid in CHAT_IDS:
+    body = urllib.parse.urlencode({
+        "chat_id": _cid, "text": msg,
+        "parse_mode": "Markdown", "disable_web_page_preview": "true",
+    }).encode()
+    try:
+        resp = urllib.request.urlopen(urllib.request.Request(url, data=body), timeout=10)
+        res = json.loads(resp.read())
+        print(f"[telegram] {'✅ Sent exec report' if res.get('ok') else '❌ '+str(res)}")
+    except Exception as e:
+        print(f"[telegram] ❌ {e}"); sys.exit(1)
