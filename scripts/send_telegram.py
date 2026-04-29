@@ -8,6 +8,18 @@ CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"), os.environ.get("TELE
 if not TOKEN or not CHAT_IDS:
     print("[telegram] Missing creds — skipping"); sys.exit(0)
 
+# Phase 2A.3: Load current watchlist tickers to mark news-driven picks
+def _load_watchlist_tickers():
+    try:
+        wl = json.loads(Path("data/watchlist.json").read_text())
+        return {it["ticker"] for it in wl.get("items", []) if it.get("sentiment") == "bullish"}
+    except Exception:
+        return set()
+
+WL_TICKERS = _load_watchlist_tickers()
+def _wl_emoji(t):
+    return "🔔 " if t in WL_TICKERS else ""
+
 today = datetime.now().strftime("%Y-%m-%d")
 
 # Load picks
@@ -30,8 +42,9 @@ mkt = pm.get("market", {})
 if not rows:
     msg = f"📭 *Daily Stock Picks — {today}*\n\n_No picks today._"
 else:
+    wl_legend = " • 🔔 = news-driven" if any(_wl_emoji(r["ticker"]) for r in rows) else ""
     lines = [f"📈 *Daily Stock Picks — {today}*",
-             f"_{len(rows)} picks • Regime: {rows[0].get('regime','?')} • CAPE: {rows[0].get('cape','?')}_",
+             f"_{len(rows)} picks • Regime: {rows[0].get('regime','?')} • CAPE: {rows[0].get('cape','?')}{wl_legend}_",
              ""]
     # Market summary
     if mkt:
@@ -61,8 +74,8 @@ else:
         cur_str = f" (now ${cur:.2f})" if cur else ""
 
         lines.append(
-            f"*{i}. {r['ticker']}* — score {float(r['score']):.2f}{earn}\n"
-            f"   {tag} _{reason}_\n" if tag else f"*{i}. {r['ticker']}* — score {float(r['score']):.2f}{earn}\n"
+            f"*{i}. {_wl_emoji(r['ticker'])}{r['ticker']}* — score {float(r['score']):.2f}{earn}\n"
+            f"   {tag} _{reason}_\n" if tag else f"*{i}. {_wl_emoji(r['ticker'])}{r['ticker']}* — score {float(r['score']):.2f}{earn}\n"
         )
         lines.append(
             f"   🎯 Entry: `${entry:.2f}`{cur_str}\n"
