@@ -53,7 +53,7 @@ for r in picks:
     t = r["ticker"]
     try:
         entry = float(r["entry"]); sl = float(r["stop_loss"]); tp = float(r["take_profit"])
-    except: continue
+    except Exception: continue
 
     df = fetch_intraday(t, date_str)
     if df is None or len(df) < 2:

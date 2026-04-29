@@ -15,6 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Dedup guard (skip if already ran today)
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          MARKER="data/.last_run_${{ github.workflow }}.txt"
+          if [ -f "$MARKER" ] && [ "$(cat $MARKER)" = "$ET_DATE" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "⏭  Already ran today ($ET_DATE) — skipping"
+            exit 0
+          fi
+          mkdir -p data
+          echo "$ET_DATE" > "$MARKER"
+
         with:
           fetch-depth: 0
       - name: Skip if duplicate DST cron fire

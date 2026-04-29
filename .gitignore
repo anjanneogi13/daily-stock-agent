@@ -243,3 +243,6 @@ data/llm_cache/
 !data/exec_report_*.json
 !data/premarket_check.json
 !data/picks_log.csv
+
+# LLM/news caches (regenerated automatically)
+data/news_cache/

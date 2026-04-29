@@ -13,7 +13,7 @@ pm = {}
 pmp = Path("data/premarket_check.json")
 if pmp.exists():
     try: pm = json.loads(pmp.read_text())
-    except: pm = {}
+    except Exception: pm = {}
 tags = {x["ticker"]: x for x in pm.get("picks", [])}
 mkt = pm.get("market", {})
 
@@ -46,7 +46,7 @@ for i, r in enumerate(rows, 1):
     try:
         entry = float(r["entry"]); sl = float(r["stop_loss"]); tp = float(r["take_profit"])
         risk = (entry - sl) / entry * 100; reward = (tp - entry) / entry * 100
-    except: entry=sl=tp=0; risk=reward=0
+    except Exception: entry=sl=tp=0; risk=reward=0
     t = tags.get(r["ticker"], {})
     tag = t.get("tag", "—")
     cur = t.get("current_price")

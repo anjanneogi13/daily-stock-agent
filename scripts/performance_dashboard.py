@@ -15,7 +15,7 @@ pending = [r for r in rows if r.get("evaluation_status") == "pending" or not r.g
 
 def f(x, d=0.0):
     try: return float(x)
-    except: return d
+    except Exception: return d
 
 print("\n" + "="*70)
 print(f"📊 DAILY STOCK AGENT — PERFORMANCE DASHBOARD")

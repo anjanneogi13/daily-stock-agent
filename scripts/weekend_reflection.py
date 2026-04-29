@@ -20,7 +20,7 @@ for line in obs_file.read_text().splitlines():
         o = json.loads(line)
         if o["date"] >= cutoff:
             all_obs.append(o)
-    except: pass
+    except Exception: pass
 
 if not all_obs:
     print("No observations in last 7 days"); sys.exit(0)
