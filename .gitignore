@@ -246,3 +246,4 @@ data/llm_cache/
 
 # LLM/news caches (regenerated automatically)
 data/news_cache/
+data/picks_log.csv.*.bak

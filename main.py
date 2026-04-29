@@ -224,7 +224,10 @@ def run():
                 "days_to_earnings": p.get("days_to_earnings"),
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
-        rprint(f"[dim][log] Saved {n} picks to data/picks_log.csv[/dim]")
+        if n == 0 and len(picks_for_log) > 0:
+            rprint(f"[yellow][log] All {len(picks_for_log)} picks already logged earlier today (dedup) — none added[/yellow]")
+        else:
+            rprint(f"[dim][log] Saved {n}/{len(picks_for_log)} picks to data/picks_log.csv[/dim]")
     except Exception as e:
         rprint(f"[red][log] Could not save picks: {e}[/red]")
 

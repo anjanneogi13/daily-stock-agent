@@ -27,8 +27,6 @@ jobs:
           mkdir -p data
           echo "$ET_DATE" > "$MARKER"
 
-        with:
-          fetch-depth: 0
       - name: Skip if duplicate DST cron fire
         run: |
           ET_HOUR=$(TZ='America/New_York' date +%H)

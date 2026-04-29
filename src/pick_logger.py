@@ -69,4 +69,7 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "r_multiple": "",
             })
             saved += 1
+    skipped_dupes = len(picks) - saved
+    if skipped_dupes > 0:
+        print(f"[pick_logger] {saved} new, {skipped_dupes} skipped (already logged today)")
     return saved
