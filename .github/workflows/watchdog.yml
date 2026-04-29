@@ -1,0 +1,56 @@
+name: Morning Run Watchdog
+
+# Fires at 9:35 ET (5 min AFTER market open). Checks if today's picks ran.
+# If not, sends Telegram alert.
+
+on:
+  schedule:
+    - cron: '35 13 * * 1-5'   # 9:35 AM EDT
+    - cron: '35 14 * * 1-5'   # 9:35 AM EST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check if today's picks ran
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          ET_HOUR=$(TZ='America/New_York' date +%H)
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          echo "Watchdog firing at $ET_HOUR ET ($ET_DATE)"
+
+          # Skip duplicate DST fire — only run at 9 ET hour
+          if [ "$ET_HOUR" != "09" ]; then
+            echo "⏭  Wrong DST slot ($ET_HOUR ET) — skipping"
+            exit 0
+          fi
+
+          # Check premarket_check.json date
+          LAST_DATE=""
+          if [ -f data/premarket_check.json ]; then
+            LAST_DATE=$(python3 -c "import json; print(json.load(open('data/premarket_check.json')).get('date',''))" 2>/dev/null || echo "")
+          fi
+
+          if [ "$LAST_DATE" = "$ET_DATE" ]; then
+            echo "✅ Picks ran today ($LAST_DATE) — all good"
+            exit 0
+          fi
+
+          # ALERT: morning run missed
+          MSG="🚨 *Morning run MISSED for $ET_DATE*%0A%0AGitHub Actions cron didn't fire in time.%0AYour picks for today are NOT generated.%0A%0A👉 Manually trigger: https://github.com/${{ github.repository }}/actions/workflows/daily-picks.yml"
+
+          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+            -d "chat_id=$TELEGRAM_CHAT_ID" \
+            -d "text=$MSG" \
+            -d "parse_mode=Markdown"
+
+          echo "🚨 Alert sent — picks missed today"
+          exit 1
