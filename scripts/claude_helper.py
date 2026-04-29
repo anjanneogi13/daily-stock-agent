@@ -32,7 +32,6 @@ def _try_gemini(prompt: str):
     try:
         from gemini_helper import call_gemini as _g
         out = _g(prompt)
-        # gemini_helper returns (text, err) tuple already
         if isinstance(out, tuple):
             return out
         return out, None
@@ -51,7 +50,7 @@ def call_llm(prompt: str, system: str = None):
         return text2, None
     return None, f"both LLMs failed: claude={err}, gemini={err2}"
 
-# Backwards-compatible alias for any caller using call_gemini
+# Backwards-compatible alias
 call_gemini = call_llm
 generate = call_llm
 
