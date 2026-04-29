@@ -33,6 +33,7 @@ jobs:
       - name: Run weekend reflection
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/weekend_reflection.py
 
       - name: Post review as GitHub issue (emails you)

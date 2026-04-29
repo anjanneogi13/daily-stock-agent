@@ -36,6 +36,7 @@ jobs:
       - name: Generate monthly X-ray
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/monthly_xray.py
 
       - name: Post as GitHub issue

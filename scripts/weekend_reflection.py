@@ -101,7 +101,7 @@ print(f"[reflect] {len(all_obs)} observations, {len(evaluated)} evaluated trades
 
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
-from gemini_helper import call_gemini
+from claude_helper import call_gemini
 
 text, err = call_gemini(prompt)
 if text:
