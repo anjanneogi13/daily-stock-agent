@@ -11,6 +11,10 @@ from src.indicators import add_indicators, latest_signals
 from src.fundamentals import score_fundamentals
 from src.cape_ratio import get_cape
 from src.pick_logger import log_picks
+from src.market_guard import vix_level, spy_trend, sector_strength, classify_trade_type
+from src.premarket_filter import gap_check
+from src.scorer import apply_sector_cap
+from src.risk_manager import atr_trade_plan
 from src.market_news import get_market_briefing
 from src.earnings_analyzer import analyze_earnings
 from src.fundamentals import passes_filters
@@ -29,6 +33,22 @@ def load_config(path: str = "config.yaml") -> dict:
 
 
 def run():
+
+    # ═══ Week 2: Market guards ═══
+    print("
+[guard] Checking market conditions...")
+    vix = vix_level()
+    spy = spy_trend()
+    sectors = sector_strength()
+    weak_sectors = {s: 2 for s, v in sectors.items() if v.get("weak")}
+    print(f"[guard] VIX={vix:.1f}  SPY>50DMA={spy['above_50dma']}  SPY>200DMA={spy['above_200dma']}")
+    if weak_sectors:
+        print(f"[guard] ⚠️  Weak sectors today (capped at 2): {list(weak_sectors.keys())}")
+    if vix > 30:
+        print(f"[guard] 🚨 VIX={vix:.1f} > 30 — high volatility regime, picks count reduced 50%")
+    if not spy['above_50dma']:
+        print(f"[guard] 🚨 SPY below 50DMA — defensive mode, reducing picks 50%")
+
     load_dotenv()
     cfg = load_config()
     rprint("[bold cyan]Daily Stock Picker Agent[/bold cyan]")

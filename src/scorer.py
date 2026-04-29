@@ -3,6 +3,22 @@ from typing import Dict
 from .semiconductors import is_semi, get_semi_meta
 
 
+# ─── Adaptive sector concentration (Week 2) ───────────────────────
+def apply_sector_cap(picks: list, max_per_sector: int = 4,
+                     reduced_sectors: dict = None) -> list:
+    """Cap picks per sector. reduced_sectors = {"Technology": 2} for weak sectors today."""
+    reduced_sectors = reduced_sectors or {}
+    counts = {}
+    kept = []
+    for p in sorted(picks, key=lambda x: x.get("scores", {}).get("composite", 0), reverse=True):
+        sector = p.get("info_short", {}).get("sector", "Unknown")
+        cap = reduced_sectors.get(sector, max_per_sector)
+        if counts.get(sector, 0) < cap:
+            kept.append(p)
+            counts[sector] = counts.get(sector, 0) + 1
+    return kept
+
+
 # ============================================================
 # ENHANCED INDICATOR SCORES (Stochastic, OBV, PSAR, BB pos,
 # Support/Resistance, Fibonacci)
