@@ -1,89 +1,76 @@
 # Monthly X-Ray - 2026-04-29
 
-_⚠️ Gemini free quota exhausted — using local analysis._
-_Falling back to deterministic local analysis below._
+## The Bottom Line
 
-# 📊 Monthly Local Analysis (30d)
+**DATA INSUFFICIENT.** The agent generated 28 picks this month but exactly zero have been evaluated (closed positions). We have no P&L data, no win rate, no average-R, and no returns to analyze. This is a complete data blackout. Either the agent just started running at month-end, positions haven't had time to resolve, or there's a fundamental issue with trade execution or data collection. We cannot assess performance, profitability, or strategy effectiveness.
 
-**Period:** 30d  •  **Picks:** 26  •  **Evaluated:** 0  •  **Pending:** 26
+## Week-Over-Week Story
 
-_Not enough evaluated trades yet for stats._
+There is no week-over-week story to tell. The only weekly data point shows 28 picks in the final week (April 27-29) with 0 evaluations. No wins, no losses, no returns. The agent appears to have been activated at the very end of the month following a code change on April 29 that reset the watchlist due to test fixture pollution. We have no prior weekly data to compare against, and no outcome data to assess the impact of any changes.
 
+## Did Our Tweaks Actually Work?
 
-## 🏷️ Picks by tag
-- SEMI / AI: 20
-- SEMI: 6
+**April 29 - Watchlist Reset**
+- **Change:** Reset watchlist to fix test fixture pollution from PR #49
+- **Performance BEFORE:** Unknown (no evaluated trades)
+- **Performance AFTER:** Unknown (no evaluated trades)
+- **Verdict:** Insufficient data
+- **Revert?** No. This was a cleanup fix, not a strategy change.
 
+Without any evaluated trades before or after this change, we cannot determine if it had any impact on trading performance. The change appears administrative rather than strategic.
 
-## 🔬 Code-Aware Diagnostic
+## What's Working (Keep Doing)
 
-### 📋 Current strategy parameters
+Cannot determine without evaluated trades. However, observational data shows:
+- **Premarket analysis alignment:** 18 "premarket_correct" observations suggest the agent's premarket analysis is validating properly against actual market open behavior
+- **Risk management awareness:** 6 "sl_well_placed" observations indicate the stop-loss logic is at least attempting proper risk management
 
-**`config.yaml`**
-- `universe.source = sp500`
-- `universe.semiconductors.always_include = True`
-- `universe.semiconductors.min_ai_weight = 0.0`
-- `universe.min_price = 5.0`
-- `universe.max_price = 1500.0`
-- `universe.min_avg_volume = 500000`
-- `strategy.style = swing`
-- `strategy.lookback_days = 180`
-- `weights.trend = 0.18`
-- `weights.momentum = 0.2`
-- `weights.volatility = 0.08`
-- `weights.volume = 0.05`
-- _… +18 more_
+These are process metrics, not outcome metrics. They mean nothing if trades lose money.
 
-**`src/backtester.py`**
-- `backtest_simple(rsi_buy) = 35` (line 8)
-- `backtest_simple(rsi_sell) = 70` (line 8)
+## What's NOT Working (Stop or Fix)
 
-**`src/cape_ratio.py`**
-- `_CAPE_VALUE = 38.5` (line 6)
+**Critical Issues:**
 
-**`src/data_fetcher.py`**
-- `fetch_universe_data(max_workers) = 5` (line 44)
+1. **No evaluated trades after 28 picks** - Either positions aren't closing, data isn't being collected, or the evaluation pipeline is broken. This is the #1 problem.
 
-**`src/earnings.py`**
-- `earnings_safe(min_days) = 5` (line 37)
+2. **Weak pick generation (64% of observations)** - 18 out of 28 picks flagged as "weak_pick" means nearly two-thirds of the agent's selections are questionable at generation time. This is a massive quality problem.
 
-**`src/indicators.py`**
-- `rsi(period) = 14` (line 18)
-- `macd(fast) = 12` (line 26)
-- `macd(slow) = 26` (line 26)
-- `macd(signal) = 9` (line 26)
-- `bollinger(period) = 20` (line 35)
-- `bollinger(std) = 2.0` (line 35)
-- `atr(period) = 14` (line 41)
-- `stochastic(k_period) = 14` (line 55)
-- `stochastic(d_period) = 3` (line 55)
-- `parabolic_sar(af_start) = 0.02` (line 68)
-- `parabolic_sar(af_step) = 0.02` (line 68)
-- `parabolic_sar(af_max) = 0.2` (line 68)
-- _… +5 more_
+3. **Sector concentration risk** - 7 sector warnings across 28 picks (25%) suggests the agent is over-concentrating in specific sectors, violating diversification principles.
 
-**`src/llm_agent.py`**
-- `_MIN_INTERVAL = 5.0` (line 38)
-- `_gemini_with_retry(max_retries) = 1` (line 111)
+4. **Stop-loss placement issues** - 5 "sl_too_tight" flags indicate the agent is setting stops that may get triggered by normal volatility rather than genuine thesis invalidation.
 
-**`src/market_news.py`**
-- `fetch_market_news(limit) = 40` (line 25)
+5. **Low conviction overall** - Only 2 "promising" observations out of 28 picks (7%) means the agent is throwing darts, not making high-conviction calls.
 
-**`src/news_sentiment.py`**
-- `fetch_news(limit) = 5` (line 19)
+## Patterns the Agent Should Learn
 
-**`src/parallel_scorer.py`**
-- `score_all(max_workers) = 10` (line 38)
+Cannot identify patterns without trade outcomes. We need to see which "weak_pick" flags actually resulted in losses, whether "sl_too_tight" warnings led to premature stop-outs, and if "promising" picks actually delivered returns. Currently flying blind.
 
-**`src/pick_evaluator.py`**
-- `MAX_DAYS_OPEN = 20` (line 15)
-- `EVAL_LOOKBACK_DAYS = 30` (line 16)
+## Recommended Next Month's Experiments
 
-**`src/semiconductors.py`**
-- `get_semi_tickers(min_ai_weight) = 0.0` (line 53)
+**HOLD ALL EXPERIMENTS.** With zero evaluated trades, we have no baseline to measure against. Any changes would be random. 
 
-### 🩺 Code-targeted suggestions
-_(based on last 30d, 0 evaluated trades)_
+**Required actions before ANY experimentation:**
 
+1. **Diagnose evaluation pipeline** - Determine why 28 picks generated zero evaluations. Fix data collection.
+2. **Wait for minimum 30 evaluated trades** - Establish a baseline win rate and avg-R with statistical significance.
+3. **Validate execution** - Confirm trades are actually being entered and exited as intended.
 
-📚 Need at least 5 evaluated trades for code-aware diagnosis.
+Once we have 30+ evaluated trades, priority experiments should address:
+
+- **Hypothesis:** Raising the quality threshold will eliminate weak picks and improve win rate
+- **Change:** Filter out any pick flagged as "weak_pick" before execution
+- **Success metric:** Win rate improves by >10 percentage points vs baseline
+- **Rollback trigger:** Win rate drops >5 percentage points or total-R becomes more negative
+- **Confidence:** Medium - we won't know if "weak" picks are actually unprofitable until we have outcome data
+
+## Reverts to Consider
+
+None. There's nothing to revert because we have no performance data showing degradation from any change.
+
+## The One Number That Matters
+
+**0 evaluated trades out of 28 picks = 0% completion rate**
+
+This is the actual crisis. Not win rate, not returns, not Sharpe ratio. The agent is generating signals but we have no evidence of execution or outcomes. Until this number becomes meaningful (>30 evaluated trades), every other metric is theater. Fix the pipeline, collect the data, then optimize the strategy.
+
+**RECOMMENDATION: Do not deploy capital or increase position sizing until the evaluation pipeline is confirmed working and we have at least 30 evaluated trades to establish a baseline.**
