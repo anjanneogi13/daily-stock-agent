@@ -42,5 +42,5 @@ output:
   csv_path: data/picks.csv
 llm:
   enabled: true
-  model: gemini-2.5-flash-lite
+  model: claude-sonnet-4-5
   max_tokens: 500
