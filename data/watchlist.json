@@ -124,15 +124,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "macro",
-      "rationale": "Fed Chair Powell signaling Fed independence is under threat and resorting to courts suggests institutional breakdown and policy uncertainty, creating significant market volatility risk.",
+      "rationale": "Fed Chair Powell's comments acknowledging higher-than-target inflation (PDFP >2%) and describing an 'unusual, uncomfortable' labor market balance signal potential for continued hawkish monetary policy, negatively impacting equities.",
       "action_window": "intraday",
-      "headline": "Fed Chair Powell Says Don't Want To Use Our Tools To Achieve Goals Outside Our Mandate; Every Administration Wants To Use Our Tools For Other Purposes, And We've Resisted; Fed Independence Is At Risk; We Are Having To Resort To The Courts To Enforce Ability To Make Monetary Policy Without Political ",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/04/52146812/fed-chair-powell-says-dont-want-to-use-our-tools-to-achieve-goals-outside-our-man",
+      "headline": "Fed Chair Powell Says PDFP Actually Higher Than 2%, That's A Positive Thing; Unemployment Rate Is Pretty Close To Natural Rate; Doesn't Feel Like A Good Labor Market To Some Because Low Quits, Low Hires, No New Job Creation; Its An Unusual, Uncomfortable Balance In Labor Market;  Inflation Is The Th",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/04/52147150/fed-chair-powell-says-pdfp-actually-higher-than-2-thats-a-positive-thing-unemploy",
       "source": "alpaca",
-      "added_at": "2026-04-29T19:16:13.338483+00:00"
+      "added_at": "2026-04-29T19:16:13.338483+00:00",
+      "updated_at": "2026-04-29T19:28:53.469803+00:00"
     },
     {
       "ticker": "ODFL",
@@ -145,6 +146,18 @@
       "url": "https://www.benzinga.com/markets/earnings/26/04/52146557/why-is-old-dominion-stock-falling-wednesday",
       "source": "alpaca",
       "added_at": "2026-04-29T19:16:13.338502+00:00"
+    },
+    {
+      "ticker": "VSAT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Successful deployment of ViaSat-3 F3 satellite is a significant operational milestone that expands network capacity and validates infrastructure investment for the company.",
+      "action_window": "next_day",
+      "headline": "SpaceX Announces Deployment Of ViaSat-3 F3 Confirmed",
+      "url": "https://www.benzinga.com/news/26/04/52147248/spacex-announces-deployment-of-viasat-3-f3-confirmed",
+      "source": "alpaca",
+      "added_at": "2026-04-29T19:28:53.469796+00:00"
     }
   ]
 }
