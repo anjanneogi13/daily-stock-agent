@@ -2,7 +2,10 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    - cron: '0 9 * * 1-5'   # 5 PM SGT (9 AM UTC) Mon-Fri
+    # Run at 8:45 AM ET (~45 min before US market open)
+    # Two crons because GitHub Actions doesn't handle DST — guard step skips the wrong one
+    - cron: '45 12 * * 1-5'   # 8:45 AM EDT (Mar–Nov) = 8:45 PM SGT
+    - cron: '45 13 * * 1-5'   # 8:45 AM EST (Nov–Mar) = 9:45 PM SGT
   workflow_dispatch:
 
 jobs:
@@ -14,6 +17,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Skip if not ~45min before US open (DST guard)
+        run: |
+          ET_HOUR=$(TZ='America/New_York' date +%H)
+          ET_MIN=$(TZ='America/New_York' date +%M)
+          # Allow manual dispatch any time
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "✅ Manual run — skipping time guard (currently $ET_HOUR:$ET_MIN ET)"
+            exit 0
+          fi
+          if [ "$ET_HOUR" != "08" ]; then
+            echo "⏭  Not 8 AM ET window (currently $ET_HOUR:$ET_MIN ET) — skipping duplicate cron"
+            exit 0
+          fi
+          echo "✅ Running at $ET_HOUR:$ET_MIN ET (~45 min before US open)"
 
       - name: Set up Python
         uses: actions/setup-python@v5
