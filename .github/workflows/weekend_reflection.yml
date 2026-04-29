@@ -15,6 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Skip if duplicate DST cron fire
+        run: |
+          ET_HOUR=$(TZ='America/New_York' date +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual run — bypassing guard ($ET_HOUR ET)"; exit 0
+          fi
+          if [ "$ET_HOUR" != "18" ]; then
+            echo "Skipping duplicate DST fire — current $ET_HOUR ET, target 18 ET"
+            exit 0
+          fi
+          echo "Running at $ET_HOUR ET (target match)"
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
       - run: pip install -r requirements.txt
