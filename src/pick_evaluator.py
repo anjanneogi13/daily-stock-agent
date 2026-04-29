@@ -94,11 +94,20 @@ def evaluate_pending() -> dict:
                 continue
             high = float(bar["High"])
             low = float(bar["Low"])
-            # Conservative rule: if BOTH hit on same day, assume SL hit first (worst case)
+            # Same-day BOTH hit: use Open as tie-breaker (whichever level is closer to Open hit first)
             if low <= sl and high >= tp:
-                outcome = "sl_hit"
-                exit_price = sl
+                open_px = float(bar["Open"])
+                dist_to_tp = abs(tp - open_px)
+                dist_to_sl = abs(open_px - sl)
+                # If Open is closer to TP than to SL, price likely traveled UP first → TP hit first
+                if dist_to_tp < dist_to_sl:
+                    outcome = "tp_hit"
+                    exit_price = tp
+                else:
+                    outcome = "sl_hit"
+                    exit_price = sl
                 exit_date = date
+                print(f"  [tie-break] {row['ticker']} {date.date()}: Open=${open_px:.2f} → {outcome} (dTP=${dist_to_tp:.2f} dSL=${dist_to_sl:.2f})")
                 break
             elif low <= sl:
                 outcome = "sl_hit"
