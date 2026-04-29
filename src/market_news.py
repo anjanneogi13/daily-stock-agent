@@ -107,7 +107,7 @@ def _claude_sentiment(prompt: str) -> str:
 def _gemini_sentiment(prompt: str, model: str = "gemini-2.5-flash-lite") -> str:
     """Call Gemini via REST. Returns raw text response or raises."""
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={_GEMINI_KEY}"
-    r = requests.post(url, json={
+    r = requests.post(url, timeout=30, json={
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.3, "maxOutputTokens": 800},
     }, timeout=30)
