@@ -2,19 +2,26 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # Daily picks ~45 min before US market open (9:30 AM ET).
-    # Multiple crons because GitHub Actions cron can be delayed 15-60 min.
-    # ET-hour guard below ensures only ONE actually executes per day.
-    - cron: '30 12 * * 1-5'   # 8:30 AM EDT (Mar–Nov)
+    # Daily picks 8:00–9:20 ET. GitHub cron is unreliable — 16 backup slots
+    # cover both EDT (Mar–Nov, UTC-4) and EST (Nov–Mar, UTC-5).
+    # ET-hour guard inside job ensures only ONE actually executes per day.
+    # EDT slots (UTC = ET + 4):
+    - cron: '0 12 * * 1-5'    # 8:00 AM EDT
+    - cron: '15 12 * * 1-5'   # 8:15 AM EDT
+    - cron: '30 12 * * 1-5'   # 8:30 AM EDT
     - cron: '45 12 * * 1-5'   # 8:45 AM EDT
-    - cron: '0  13 * * 1-5'   # 9:00 AM EDT (catches delayed runs)
-    - cron: '15 13 * * 1-5'   # 9:15 AM EDT (last chance EDT)
-    - cron: '30 13 * * 1-5'   # 8:30 AM EST (Nov–Mar)
+    - cron: '0 13 * * 1-5'    # 9:00 AM EDT (also = 8:00 AM EST)
+    - cron: '10 13 * * 1-5'   # 9:10 AM EDT
+    - cron: '15 13 * * 1-5'   # 9:15 AM EDT (also = 8:15 AM EST)
+    - cron: '20 13 * * 1-5'   # 9:20 AM EDT
+    # EST-only extras (UTC = ET + 5):
+    - cron: '30 13 * * 1-5'   # 8:30 AM EST
     - cron: '45 13 * * 1-5'   # 8:45 AM EST
-    - cron: '0  14 * * 1-5'   # 9:00 AM EST (catches delayed runs)
-    - cron: '15 14 * * 1-5'   # 9:15 AM EST (last chance EST)
+    - cron: '0 14 * * 1-5'    # 9:00 AM EST
+    - cron: '10 14 * * 1-5'   # 9:10 AM EST
+    - cron: '20 14 * * 1-5'   # 9:20 AM EST
   
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   run-picks:
