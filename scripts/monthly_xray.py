@@ -210,23 +210,22 @@ def _human_fallback(reason: str) -> str:
         parts.append("```")
     return "\n".join(parts)
 
-key = os.environ.get("GEMINI_API_KEY")
+# LLM call: Claude Sonnet 4.5 (auto-fallback to Gemini, then local analysis)
 md = ""
-if not key:
-    md = _human_fallback("GEMINI_API_KEY missing")
-else:
-    try:
-        from google import genai
-        client = genai.Client(api_key=key)
-        resp = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
-        md = resp.text
-    except Exception as e:
-        err_str = str(e)
-        if "RESOURCE_EXHAUSTED" in err_str or "429" in err_str or "quota" in err_str.lower():
-            reason = "⚠️ Gemini free quota exhausted — using local analysis."
-        else:
-            reason = "Gemini failed: " + err_str.split(chr(10))[0][:200]
-        md = _human_fallback(reason)
+try:
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from claude_helper import call_llm
+    md = call_llm(prompt)
+    if not md or md.startswith("[ERROR"):
+        md = _human_fallback("LLM returned empty/error: " + (md or "none"))
+except Exception as e:
+    err_str = str(e)
+    if "RESOURCE_EXHAUSTED" in err_str or "429" in err_str or "quota" in err_str.lower():
+        reason = "⚠️ LLM quota exhausted — using local analysis."
+    else:
+        reason = "LLM failed: " + err_str.split(chr(10))[0][:200]
+    md = _human_fallback(reason)
 
 out_dir = Path("data/learning")
 out_dir.mkdir(parents=True, exist_ok=True)
