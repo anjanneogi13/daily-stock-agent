@@ -1,0 +1,66 @@
+name: Weekly Performance Report
+
+on:
+  schedule:
+    - cron: '0 13 * * 6'   # Sat 9 AM ET (EDT) = 13:00 UTC
+    - cron: '0 14 * * 6'   # Sat 9 AM ET (EST) = 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Dedup guard (skip if already ran today)
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          MARKER="data/.last_run_weekly_report.txt"
+          if [ -f "$MARKER" ] && [ "$(cat $MARKER)" = "$ET_DATE" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "⏭  Already ran today ($ET_DATE) — skipping"
+            exit 0
+          fi
+          mkdir -p data
+          echo "$ET_DATE" > "$MARKER"
+
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt
+
+      - name: Generate weekly report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/weekly_report_card.py
+
+      - name: Post as GitHub issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+            let body;
+            try { body = fs.readFileSync(`data/weekly_reports/report_${date}.md`, 'utf8'); }
+            catch (e) { body = '_Not generated_'; }
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `📊 Weekly Report — ${date}`,
+              body: body,
+              labels: ['weekly-report'],
+            });
+
+      - name: Commit metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/metrics_daily.json data/metrics_history.jsonl data/weekly_reports/
+          git diff --staged --quiet || git commit -m "📊 Weekly report [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            sleep 3
+          done || true

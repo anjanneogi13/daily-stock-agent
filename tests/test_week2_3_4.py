@@ -1,0 +1,134 @@
+"""Smoke tests for Week 2/3/4 features. Run via: pytest tests/"""
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.market_guard import classify_trade_type, vix_level, spy_trend, sector_strength
+from src.risk_manager import atr_trade_plan
+from src.scorer import apply_sector_cap
+from src.premarket_filter import gap_check
+from src.performance_tracker import (
+    compute_metrics, _r_multiple, _safe_float, _sharpe, _max_drawdown
+)
+
+
+# ═══ Week 2: Trade type classifier ═══════════════════════════════
+def test_classify_high_momentum_volume_is_day():
+    assert classify_trade_type({"momentum": 0.85, "volume": 0.8, "trend": 0.6}) == "day"
+
+def test_classify_trend_only_is_swing():
+    assert classify_trade_type({"momentum": 0.5, "volume": 0.5, "trend": 0.85}) == "swing"
+
+def test_classify_handles_missing_keys():
+    assert classify_trade_type({}) == "swing"  # safe default
+
+def test_classify_high_momentum_with_gap_is_swing():
+    """If gap is too large, even high momentum should NOT be day-trade."""
+    assert classify_trade_type({"momentum": 0.85, "volume": 0.8, "trend": 0.6}, gap_pct=0.05) == "swing"
+
+
+# ═══ Week 2: ATR trade plan ══════════════════════════════════════
+def test_atr_swing_trade_2x_stop():
+    plan = atr_trade_plan(100, 2, 10000, trade_type="swing")
+    assert plan["stop_loss"] == 96.0  # 100 - (2*ATR=2)
+    assert plan["take_profit"] == 108.0  # 100 + (4*ATR=2)
+    assert plan["risk_reward"] == 2.0
+
+def test_atr_day_trade_tighter_stop():
+    plan = atr_trade_plan(100, 2, 10000, trade_type="day")
+    assert plan["stop_loss"] == 98.0   # 100 - (1*ATR=2)
+    assert plan["take_profit"] == 104.0 # 100 + (2*ATR=2)
+    assert plan["risk_reward"] == 2.0
+
+def test_atr_zero_atr_uses_fallback():
+    plan = atr_trade_plan(100, 0, 10000, trade_type="swing")
+    # Falls back to 2% (atr = price * 0.02 = 2)
+    assert plan["stop_loss"] < 100
+    assert plan["take_profit"] > 100
+    assert plan["quantity"] >= 1
+
+def test_atr_position_sizing_respects_risk():
+    # 1% risk on $10k = $100. Stop at $96 = $4 risk/share. Should be 25 shares.
+    plan = atr_trade_plan(100, 2, 10000, risk_pct=0.01, trade_type="swing")
+    assert plan["quantity"] == 25
+
+
+# ═══ Week 3: Sector cap ══════════════════════════════════════════
+def test_sector_cap_basic():
+    picks = [
+        {"ticker": f"T{i}", "scores": {"composite": 1.0 - i*0.01},
+         "info_short": {"sector": "Technology"}}
+        for i in range(10)
+    ]
+    result = apply_sector_cap(picks, max_per_sector=4)
+    assert len(result) == 4
+    assert all(p["info_short"]["sector"] == "Technology" for p in result)
+
+def test_sector_cap_with_weak_sector():
+    picks = [
+        {"ticker": f"T{i}", "scores": {"composite": 0.9},
+         "info_short": {"sector": "Technology"}} for i in range(5)
+    ] + [
+        {"ticker": f"F{i}", "scores": {"composite": 0.7},
+         "info_short": {"sector": "Financials"}} for i in range(5)
+    ]
+    result = apply_sector_cap(picks, max_per_sector=4, reduced_sectors={"Technology": 2})
+    tech = sum(1 for p in result if p["info_short"]["sector"] == "Technology")
+    fin = sum(1 for p in result if p["info_short"]["sector"] == "Financials")
+    assert tech == 2  # capped to 2 (weak sector)
+    assert fin == 4   # full cap
+
+def test_sector_cap_keeps_highest_score_first():
+    picks = [
+        {"ticker": "LOW",  "scores": {"composite": 0.5}, "info_short": {"sector": "Tech"}},
+        {"ticker": "HIGH", "scores": {"composite": 0.9}, "info_short": {"sector": "Tech"}},
+    ]
+    result = apply_sector_cap(picks, max_per_sector=1)
+    assert result[0]["ticker"] == "HIGH"
+
+
+# ═══ Week 4: Performance metrics ═════════════════════════════════
+def test_safe_float_handles_empty_string():
+    assert _safe_float("") == 0.0
+    assert _safe_float(None) == 0.0
+    assert _safe_float("3.14") == 3.14
+    assert _safe_float("not a number") == 0.0
+
+def test_r_multiple_winning_trade():
+    row = {"entry": "100", "stop_loss": "95", "exit_price": "110"}
+    assert _r_multiple(row) == 2.0  # (110-100)/(100-95) = 10/5 = 2
+
+def test_r_multiple_losing_trade():
+    row = {"entry": "100", "stop_loss": "95", "exit_price": "94"}
+    assert _r_multiple(row) == -1.2  # (94-100)/(100-95) = -6/5 = -1.2
+
+def test_compute_metrics_empty_returns_zeros():
+    m = compute_metrics([], "test")
+    assert m["n_trades"] == 0
+    assert m["win_rate"] == 0.0
+
+def test_compute_metrics_basic():
+    picks = [
+        {"ticker": "WIN1", "entry": "100", "stop_loss": "95", "exit_price": "110",
+         "actual_return_pct": "10"},
+        {"ticker": "WIN2", "entry": "100", "stop_loss": "95", "exit_price": "105",
+         "actual_return_pct": "5"},
+        {"ticker": "LOSS", "entry": "100", "stop_loss": "95", "exit_price": "94",
+         "actual_return_pct": "-6"},
+    ]
+    m = compute_metrics(picks, "test")
+    assert m["n_trades"] == 3
+    assert m["wins"] == 2
+    assert m["losses"] == 1
+    assert m["win_rate"] == 66.7
+    assert m["best_ticker"] == "WIN1"
+    assert m["worst_ticker"] == "LOSS"
+
+def test_max_drawdown_calculation():
+    # Returns: +10%, -20%, +5% → equity 100 → 110 → 88 → 92.4. Max DD from 110 → 88 = 20%
+    dd = _max_drawdown([10, -20, 5])
+    assert 19 < dd < 21
+
+
+if __name__ == "__main__":
+    import pytest
+    sys.exit(pytest.main([__file__, "-v"]))

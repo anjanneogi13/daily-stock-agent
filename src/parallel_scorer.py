@@ -4,7 +4,7 @@ from .indicators import add_indicators, latest_signals
 from .fundamentals import score_fundamentals, passes_filters
 from .news_sentiment import fetch_news, score_sentiment
 from .scorer import composite_score
-from .risk_manager import trade_plan
+from .risk_manager import trade_plan, atr_trade_plan
 from .data_fetcher import fetch_info
 
 
@@ -24,7 +24,17 @@ def _score_one(tk, df, cfg):
                                  ticker=tk, sector_cfg=cfg.get("sector", {}))
         if scores["composite"] < cfg["output"]["min_score"]:
             return None
-        plan = trade_plan(sig, cfg)
+        # Week 4: ATR-based dynamic stops (fallback to old trade_plan if ATR missing)
+        atr = sig.get("atr") or sig.get("ATR") or 0
+        price = sig.get("close", 0)
+        capital = cfg.get("risk", {}).get("capital", 10000)
+        if atr and atr > 0 and price > 0:
+            # Determine trade type early for stop sizing (preliminary, finalized in main.py)
+            from .market_guard import classify_trade_type
+            ttype = classify_trade_type(scores)
+            plan = atr_trade_plan(price, atr, capital, trade_type=ttype)
+        else:
+            plan = trade_plan(sig, cfg)
         return {
             "ticker": tk, "scores": scores, "plan": plan, "news": news,
             "info_short": {"name": info.get("shortName", tk),
