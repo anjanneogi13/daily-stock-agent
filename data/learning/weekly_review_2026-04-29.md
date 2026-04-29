@@ -1,94 +1,59 @@
 # 🧠 Weekend Review — 2026-04-29
 
-_⚠️ Gemini free quota exhausted — using local analysis._
+## 📊 The Week in One Sentence
+We generated 26 picks but none have closed yet, so we can't evaluate performance — however, the premarket warning system caught several bad setups before they could hurt us.
 
----
+## ✅ What's Working Well
+- **The premarket filter is saving us from disasters.** On April 28th, ARM, AVGO, and RMBS were all flagged "SKIP TODAY" in premarket, and all three would have hit stop-loss if traded. The system correctly identified danger before the market even opened.
+- **Stop-losses protected us when they fired.** RMBS on 2026-04-28 hit its stop at -9.2%, but would have continued crashing to -21% to -25% by close. Without that stop, we'd have lost an extra 12-16% on that trade alone.
 
-# 📊 Weekly Local Analysis (7d)
+## ❌ What Went Wrong
+- **We're picking semiconductor stocks on the worst possible days.** On April 28th, the semiconductor sector (SOXX) was down -3.05% in premarket. Despite this massive red flag, we still generated picks for LRCX, ALAB, ARM, AVGO, ONTO, TSM, and RMBS — and every single one either crashed or got stopped out. These were predictable losers.
+- **Many picks never showed any upside momentum.** Stocks like LRCX, ALAB, and ONTO opened down and just kept falling. For example, LRCX's "best" moment was still -2.22% down. We're catching falling knives instead of waiting for any sign of strength.
+- **Some stop-losses appear too tight.** ARM and TSM both hit their stops on April 28th, but the price barely moved further down (less than -0.2% additional drop). We may be getting shaken out right at the bottom instead of giving trades room to breathe.
 
-**Period:** 7d  •  **Picks:** 26  •  **Evaluated:** 0  •  **Pending:** 26
+## 🔧 Suggested Changes (For Your Review)
 
-_Not enough evaluated trades yet for stats._
+### Suggestion 1: Add a sector-wide kill switch for semiconductor picks
 
+**The problem:** On April 28th, SOXX was down -3.05% in premarket, yet we still generated 7 semiconductor picks that day. The premarket filter flagged them individually, but we shouldn't even be considering these stocks when the entire sector is collapsing.
 
-## 🏷️ Picks by tag
-- SEMI / AI: 20
-- SEMI: 6
+**The fix:** Before generating any picks, check if SOXX is down -2% or more in premarket. If yes, completely skip all semiconductor stocks for that day — don't even run them through the normal selection process.
 
+**Where in the code:** `scripts/stock_screener.py` or wherever the initial universe of stocks is filtered before analysis begins.
 
-## 🔬 Code-Aware Diagnostic
+**How to test:** Manually set SOXX premarket change to -2.5% and verify that no semiconductor tickers (LRCX, NVDA, TSM, ARM, AVGO, AMAT, etc.) appear in that day's picks at all.
 
-### 📋 Current strategy parameters
+**Confidence:** High — we have clear evidence that 7/7 semiconductor picks failed on a day when SOXX was down hard. This pattern repeated multiple times in the observations.
 
-**`config.yaml`**
-- `universe.source = sp500`
-- `universe.semiconductors.always_include = True`
-- `universe.semiconductors.min_ai_weight = 0.0`
-- `universe.min_price = 5.0`
-- `universe.max_price = 1500.0`
-- `universe.min_avg_volume = 500000`
-- `strategy.style = swing`
-- `strategy.lookback_days = 180`
-- `weights.trend = 0.18`
-- `weights.momentum = 0.2`
-- `weights.volatility = 0.08`
-- `weights.volume = 0.05`
-- _… +18 more_
+### Suggestion 2: Require a "first 15 minutes strength check" before entry
 
-**`src/backtester.py`**
-- `backtest_simple(rsi_buy) = 35` (line 8)
-- `backtest_simple(rsi_sell) = 70` (line 8)
+**The problem:** Stocks like LRCX, ALAB, and ONTO opened down and never recovered. LRCX's best moment all day was still -2.22% in the red. We're entering trades at the open without waiting to see if the stock shows any buying pressure.
 
-**`src/cape_ratio.py`**
-- `_CAPE_VALUE = 38.5` (line 6)
+**The fix:** After the market opens, wait 10-15 minutes. Only enter the trade if the stock has recovered to at least -0.5% from open or is showing green. If it's still bleeding heavily after 15 minutes, skip the trade for that day.
 
-**`src/data_fetcher.py`**
-- `fetch_universe_data(max_workers) = 5` (line 44)
+**Where in the code:** `scripts/trade_execution.py` or the order placement logic — add a timer and price check between 9:30 AM and 9:45 AM before submitting the buy order.
 
-**`src/earnings.py`**
-- `earnings_safe(min_days) = 5` (line 37)
+**How to test:** On a simulated bad day (like April 28th), verify that LRCX and ALAB would NOT have been entered because they were still down -3% to -5% at 9:45 AM.
 
-**`src/indicators.py`**
-- `rsi(period) = 14` (line 18)
-- `macd(fast) = 12` (line 26)
-- `macd(slow) = 26` (line 26)
-- `macd(signal) = 9` (line 26)
-- `bollinger(period) = 20` (line 35)
-- `bollinger(std) = 2.0` (line 35)
-- `atr(period) = 14` (line 41)
-- `stochastic(k_period) = 14` (line 55)
-- `stochastic(d_period) = 3` (line 55)
-- `parabolic_sar(af_start) = 0.02` (line 68)
-- `parabolic_sar(af_step) = 0.02` (line 68)
-- `parabolic_sar(af_max) = 0.2` (line 68)
-- _… +5 more_
+**Confidence:** Medium — we have strong evidence that opening losers stay losers, but this adds complexity and might cause us to miss some good entries. Worth testing on historical data first.
 
-**`src/llm_agent.py`**
-- `_MIN_INTERVAL = 5.0` (line 38)
-- `_gemini_with_retry(max_retries) = 1` (line 111)
+### Suggestion 3: Widen stop-losses by 1-2% for high-volatility stocks
 
-**`src/market_news.py`**
-- `fetch_market_news(limit) = 40` (line 25)
+**The problem:** ARM and TSM both hit their stops on April 28th (around -5% to -8.8%), but then the price barely moved further (only -0.01% to -0.16% additional drop). We're getting stopped out right at the intraday low instead of letting normal volatility play out.
 
-**`src/news_sentiment.py`**
-- `fetch_news(limit) = 5` (line 19)
+**The fix:** For stocks with average true range (ATR) above a certain threshold (e.g., $5 daily range), add 1.5-2% cushion to the stop-loss. So instead of -5%, use -6.5% or -7% to avoid getting shaken out by normal price swings.
 
-**`src/parallel_scorer.py`**
-- `score_all(max_workers) = 10` (line 38)
+**Where in the code:** `scripts/risk_management.py` or wherever stop-loss levels are calculated — add an ATR check and adjust the stop percentage accordingly.
 
-**`src/pick_evaluator.py`**
-- `MAX_DAYS_OPEN = 20` (line 15)
-- `EVAL_LOOKBACK_DAYS = 30` (line 16)
+**How to test:** Backtest ARM and TSM trades from April 28th with a -7% stop instead of -5% and see if they would have recovered instead of stopping out.
 
-**`src/semiconductors.py`**
-- `get_semi_tickers(min_ai_weight) = 0.0` (line 53)
+**Confidence:** Low — while we have 5 examples of "tight stops," we also have 6 examples where stops saved us from much bigger losses (like RMBS). Needs more data before making this change permanent.
 
-### 🩺 Code-targeted suggestions
-_(based on last 7d, 0 evaluated trades)_
+## 🎓 Lesson of the Week
+The most important lesson is that **sector context matters more than individual stock signals.** When an entire sector is getting hammered (like semiconductors down -3% in premarket), even your "best" picks from that sector are likely to fail. No amount of technical analysis on an individual stock can overcome a sector-wide selloff. The premarket filter caught this for individual stocks, but we need to think bigger — if the whole neighborhood is on fire, don't go house shopping there at all.
 
-
-📚 Need at least 5 evaluated trades for code-aware diagnosis.
-
----
-
-Raw observations: 55 this week.
+## ⏭️ What I'd Watch For Next Week
+- **How many picks actually close** — we need at least 20 completed trades before making major system changes.
+- **Whether CDNS and ANET continue trending up** — these were the only two stocks showing promise on April 28th (+1.46% and +1.24%), both outside the semiconductor disaster zone.
+- **If sector-wide selloffs happen again** — watch for days when entire sectors (not just semis) are down -2%+ in premarket, and see if our picks in those sectors fail consistently.
