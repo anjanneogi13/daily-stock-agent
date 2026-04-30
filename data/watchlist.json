@@ -782,6 +782,18 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52190722/solventum-stock-is-recovering-whats-going-on",
       "source": "alpaca",
       "added_at": "2026-04-30T19:19:13.514833+00:00"
+    },
+    {
+      "ticker": "CRS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "TD Cowen maintains Buy rating with significant price target raise to $450, indicating strong conviction in upside potential and likely representing a material increase from prior target.",
+      "action_window": "next_day",
+      "headline": "TD Cowen Maintains Buy on Carpenter Technology, Raises Price Target to $450",
+      "url": "https://www.benzinga.com/news/26/04/52192701/td-cowen-maintains-buy-on-carpenter-technology-raises-price-target-to-450",
+      "source": "alpaca",
+      "added_at": "2026-04-30T19:57:26.827071+00:00"
     }
   ]
 }
