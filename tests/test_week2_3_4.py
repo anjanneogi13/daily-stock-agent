@@ -30,14 +30,14 @@ def test_classify_high_momentum_with_gap_is_swing():
 def test_atr_swing_trade_2x_stop():
     plan = atr_trade_plan(100, 2, 10000, trade_type="swing")
     assert plan["stop_loss"] == 96.0  # 100 - (2*ATR=2)
-    assert plan["take_profit"] == 108.0  # 100 + (4*ATR=2)
-    assert plan["risk_reward"] == 2.0
+    assert plan["take_profit"] == 105.0  # Tier 1: 100 + (2.5*ATR=2)
+    assert plan["risk_reward"] == 1.25  # Tier 1: 2.5/2.0 ATR
 
 def test_atr_day_trade_tighter_stop():
     plan = atr_trade_plan(100, 2, 10000, trade_type="day")
     assert plan["stop_loss"] == 98.0   # 100 - (1*ATR=2)
-    assert plan["take_profit"] == 105.0  # Tier 1: 100 + (2.5*ATR=2)
-    assert plan["risk_reward"] == 2.0
+    assert plan["take_profit"] == 103.0  # Tier 1: 100 + (1.5*ATR=2)
+    assert plan["risk_reward"] == 1.5  # Tier 1: 1.5/1.0 ATR
 
 def test_atr_zero_atr_uses_fallback():
     plan = atr_trade_plan(100, 0, 10000, trade_type="swing")
@@ -197,7 +197,7 @@ def test_atr_swing_tp_mult_is_2_5_not_4():
     from src.risk_manager import atr_trade_plan
     plan = atr_trade_plan(price=100.0, atr=2.0, capital=10000.0, trade_type="swing")
     # Risk = 2*ATR=4 below entry → SL=$96. TP at 2.5*ATR=$5 above → TP=$105
-    assert plan["take_profit"] == 105.0, f"Expected TP=$105 (2.5xATR), got {plan['take_profit']}"
+    assert plan["take_profit"] == 105.0  # Tier 1: 100 + (2.5*ATR=2)
     assert plan["stop_loss"] == 96.0
     # R:R = 5/4 = 1.25
     assert 1.20 <= plan["risk_reward"] <= 1.30
@@ -208,5 +208,5 @@ def test_atr_day_tp_mult_is_1_5_not_2():
     from src.risk_manager import atr_trade_plan
     plan = atr_trade_plan(price=100.0, atr=2.0, capital=10000.0, trade_type="day")
     # Day: SL=1×ATR, TP=1.5×ATR → SL=$98, TP=$103
-    assert plan["take_profit"] == 103.0, f"Expected TP=$103 (1.5xATR), got {plan['take_profit']}"
+    assert plan["take_profit"] == 103.0  # Tier 1: 100 + (1.5*ATR=2)
     assert plan["stop_loss"] == 98.0
