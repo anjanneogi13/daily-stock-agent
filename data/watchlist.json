@@ -327,15 +327,16 @@
     },
     {
       "ticker": "SO",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "FY2028 guidance range straddles consensus estimate of $5.35, indicating no meaningful deviation from expectations with midpoint at $5.35 exactly matching consensus.",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Earnings beat with strong utility demand and customer growth provides solid fundamental support, though utilities typically have muted post-earnings volatility.",
       "action_window": "intraday",
-      "headline": "Southern Sees FY2028 Adj EPS $5.25-$5.45 vs $5.35 Est",
-      "url": "https://www.benzinga.com/news/26/04/52165937/southern-sees-fy2028-adj-eps-5-25-5-45-vs-5-35-est",
+      "headline": "Southern Company Boosted By Strong Utility Demand",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52187043/southern-company-boosted-by-strong-utility-demand",
       "source": "alpaca",
-      "added_at": "2026-04-30T11:45:55.500540+00:00"
+      "added_at": "2026-04-30T11:45:55.500540+00:00",
+      "updated_at": "2026-04-30T18:08:48.942234+00:00"
     },
     {
       "ticker": "SAIA",
@@ -721,6 +722,54 @@
       "url": "https://www.benzinga.com/insights/options/26/04/52185818/9-financials-stocks-with-whale-alerts-in-todays-session",
       "source": "alpaca",
       "added_at": "2026-04-30T17:52:16.683288+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_raise",
+      "rationale": "Stock plummeting despite solid earnings due to significantly raised CapEx guidance and declining daily active users, creating immediate selling pressure on earnings day.",
+      "action_window": "intraday",
+      "headline": "Meta Stock Sees Heavy Selling Thursday \u2014 What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52187113/meta-stock-sees-heavy-selling-thursday-whats-going-on",
+      "source": "alpaca",
+      "added_at": "2026-04-30T18:08:48.942207+00:00"
+    },
+    {
+      "ticker": "KALV",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Needham downgrade from Buy to Hold signals reduced analyst confidence and typically triggers selling pressure, though Hold rating limits severity compared to Sell rating.",
+      "action_window": "intraday",
+      "headline": "Needham Downgrades KalVista Pharmaceuticals to Hold",
+      "url": "https://www.benzinga.com/news/26/04/52187085/needham-downgrades-kalvista-pharmaceuticals-to-hold",
+      "source": "alpaca",
+      "added_at": "2026-04-30T18:08:48.942221+00:00"
+    },
+    {
+      "ticker": "MLM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "17% revenue growth driven by infrastructure demand is a strong positive catalyst, though mixed earnings performance and market reaction timing (after-hours on earnings date) moderates tradeable impact.",
+      "action_window": "next_day",
+      "headline": "Martin Marietta Gains From Infrastructure Demand Surge",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52187011/martin-marietta-gains-from-infrastructure-demand-surge",
+      "source": "alpaca",
+      "added_at": "2026-04-30T18:08:48.942242+00:00"
+    },
+    {
+      "ticker": "DDOG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Confirmation of Anthropic (major AI company) as the client behind a previously announced massive contract reduces uncertainty and validates the contract's significance, triggering immediate price spike.",
+      "action_window": "intraday",
+      "headline": "Datadog Stock In The Spotlight After Hunterbrook Names Anthropic As Major Client",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52186622/datadog-stock-in-the-spotlight-after-hunterbrook-names-anthropic-as-major-client",
+      "source": "alpaca",
+      "added_at": "2026-04-30T18:08:48.942253+00:00"
     }
   ]
 }
