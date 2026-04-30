@@ -34,7 +34,8 @@ def trade_plan(sig: dict, config: dict) -> Dict:
 # ─── ATR-based dynamic stops (Week 2) ─────────────────────────────
 def atr_trade_plan(price: float, atr: float, capital: float,
                    risk_pct: float = 0.01, atr_mult_sl: float = 2.0,
-                   atr_mult_tp: float = 2.5,  # Tier 1: was 4.0 — too far, now hittable trade_type: str = "swing") -> dict:
+                   atr_mult_tp: float = 2.5,  # Tier 1: was 4.0 — too far, now hittable
+                   trade_type: str = "swing") -> dict:
     """
     Dynamic SL/TP based on ATR (true volatility), not arbitrary %.
     Day trades use tighter ATR multipliers.

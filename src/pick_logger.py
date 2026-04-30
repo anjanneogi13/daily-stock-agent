@@ -59,7 +59,7 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "risk_reward": p.get("risk_reward", 2.0),
                 "qty": p.get("qty", 0),
                 "days_to_earnings": p.get("days_to_earnings", ""),
-                "regime": regime.get("regime", "?"),
+                "regime": (regime or {}).get("regime") or "unknown",
                 "spy_close": regime.get("spy_close", ""),
                 "cape": (cape or {}).get("cape", ""),
                 "evaluation_status": "pending",
