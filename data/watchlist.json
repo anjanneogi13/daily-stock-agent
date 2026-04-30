@@ -515,6 +515,42 @@
       "url": "https://www.benzinga.com/quote/UNG",
       "source": "alpaca",
       "added_at": "2026-04-30T14:34:38.071616+00:00"
+    },
+    {
+      "ticker": "MARA",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "MARA Holdings announced a major $1.5B acquisition of Long Ridge Energy with 1 GW power capacity, a significant strategic move for a Bitcoin mining company to secure energy infrastructure.",
+      "action_window": "intraday",
+      "headline": "Why Is MARA Holdings Stock Surging On Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52178449/why-is-mara-holdings-stock-surging-on-thursday",
+      "source": "alpaca",
+      "added_at": "2026-04-30T15:28:25.651329+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Exceptional Q1 earnings report driving the largest stock breakout in over 20 years with strong analyst endorsement and new all-time highs.",
+      "action_window": "intraday",
+      "headline": "Alphabet's 'Phenomenal' Quarter Powers Biggest Stock Breakout Since 2004",
+      "url": "https://www.benzinga.com/markets/tech/26/04/52178444/alphabet-phenomenal-quarter-powers-biggest-stock-rally-since-2004",
+      "source": "alpaca",
+      "added_at": "2026-04-30T15:28:25.651341+00:00"
+    },
+    {
+      "ticker": "CVNA",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Barclays maintains Overweight rating while raising price target to $475, signaling increased confidence but not a full rating upgrade from neutral/negative.",
+      "action_window": "intraday",
+      "headline": "Barclays Maintains Overweight on Carvana, Raises Price Target to $475",
+      "url": "https://www.benzinga.com/news/26/04/52177958/barclays-maintains-overweight-on-carvana-raises-price-target-to-475",
+      "source": "alpaca",
+      "added_at": "2026-04-30T15:28:25.651355+00:00"
     }
   ]
 }
