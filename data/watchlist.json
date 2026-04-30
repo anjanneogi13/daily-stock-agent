@@ -182,15 +182,16 @@
     },
     {
       "ticker": "XPO",
-      "tradeable_score": 0.78,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "XPO beat Q1 EPS estimates by 14.8% ($1.01 vs $0.88) and revenue beat by 2.8%, representing a solid double-beat that typically drives immediate positive price action.",
+      "rationale": "Strong Q1 earnings beat with $2.1B revenue, positive CEO commentary on demand recovery, and shares already rising on the news create a meaningful near-term catalyst.",
       "action_window": "intraday",
-      "headline": "XPO Q1 Adj. EPS $1.01 Beats $0.88 Estimate, Sales $2.096B Beat $2.038B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/04/52163348/xpo-q1-adj-eps-1-01-beats-0-88-estimate-sales-2-096b-beat-2-038b-estimate",
+      "headline": "XPO CEO Says Demand Recovery Will Amplify Returns From Here",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52186445/xpo-ceo-says-demand-recovery-will-amplify-returns-from-here",
       "source": "alpaca",
-      "added_at": "2026-04-30T10:55:05.132388+00:00"
+      "added_at": "2026-04-30T10:55:05.132388+00:00",
+      "updated_at": "2026-04-30T17:52:16.683249+00:00"
     },
     {
       "ticker": "FTI",
@@ -578,15 +579,16 @@
     },
     {
       "ticker": "WING",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.8,
       "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Multiple analyst downgrades following mixed Q1 results with sales miss and uncertain 2026 outlook creates moderate negative pressure despite earnings beat.",
+      "category": "earnings_miss",
+      "rationale": "Disappointing Q1 same-store sales decline with lowered FY26 guidance and multiple analyst price target cuts creates strong negative momentum despite maintained ratings.",
       "action_window": "next_day",
-      "headline": "These Analysts Slash Their Forecasts On Wingstop After Q1 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52181555/these-analysts-slash-their-forecasts-on-wingstop-after-q1-results",
+      "headline": "Wingstop Posts Steeper Q1 Same-Store Sales Decline, Analysts Slash Price Targets",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52185766/wingstop-posts-steeper-q1-same-store-sales-decline-analysts-slash-price-targets",
       "source": "alpaca",
-      "added_at": "2026-04-30T16:19:04.783420+00:00"
+      "added_at": "2026-04-30T16:19:04.783420+00:00",
+      "updated_at": "2026-04-30T17:52:16.683296+00:00"
     },
     {
       "ticker": "SPY",
@@ -671,6 +673,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52183411/alphabet-stock-is-showing-incredible-strength-whats-happening",
       "source": "alpaca",
       "added_at": "2026-04-30T16:57:23.970404+00:00"
+    },
+    {
+      "ticker": "SIMO",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Susquehanna maintains positive rating with significant price target increase to $275, indicating strong upside potential and renewed confidence in the stock.",
+      "action_window": "next_day",
+      "headline": "Susquehanna Maintains Positive on Silicon Motion Technology, Raises Price Target to $275",
+      "url": "https://www.benzinga.com/news/26/04/52186001/susquehanna-maintains-positive-on-silicon-motion-technology-raises-price-target-to-275",
+      "source": "alpaca",
+      "added_at": "2026-04-30T17:52:16.683266+00:00"
+    },
+    {
+      "ticker": "HYPEUSD",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Launch of first 2x leveraged ETF creates new institutional access and demand channel for HYPE token, likely driving increased trading volume and price discovery.",
+      "action_window": "intraday",
+      "headline": "New 2x Leveraged Hyperliquid ETF Brings DeFi Derivatives Exposure To Public Markets",
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/04/52185953/new-2x-leveraged-hyperliquid-etf-brings-defi-derivatives-exposure-to-public-markets",
+      "source": "alpaca",
+      "added_at": "2026-04-30T17:52:16.683274+00:00"
+    },
+    {
+      "ticker": "KKR",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "KKR launching a $10B AI-focused firm with high-profile leadership demonstrates strategic expansion into the hottest sector, though impact depends on capital deployment timeline and investor commitment details.",
+      "action_window": "next_day",
+      "headline": "'KKR Preparing New $10 Billion AI Firm Led by Ex-Amazon Web Chief' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/04/52185913/kkr-preparing-new-10-billion-ai-firm-led-by-ex-amazon-web-chief-bloomberg-news",
+      "source": "alpaca",
+      "added_at": "2026-04-30T17:52:16.683280+00:00"
+    },
+    {
+      "ticker": "AFL",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Whale alerts indicate significant institutional buying activity across multiple financial stocks, suggesting near-term momentum but lacks specific catalyst details for individual tickers.",
+      "action_window": "intraday",
+      "headline": "9 Financials Stocks With Whale Alerts In Today's Session",
+      "url": "https://www.benzinga.com/insights/options/26/04/52185818/9-financials-stocks-with-whale-alerts-in-todays-session",
+      "source": "alpaca",
+      "added_at": "2026-04-30T17:52:16.683288+00:00"
     }
   ]
 }
