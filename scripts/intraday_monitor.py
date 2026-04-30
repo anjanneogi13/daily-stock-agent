@@ -8,6 +8,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from intraday_news import fetch_recent_news, classify_material
 from intraday_scanner import scan_for_new_opportunities, get_live_quote
+from src.trailing_stop import compute_trailing_sl, trail_status
+from src.picks_csv import update_pick_row
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -72,6 +74,27 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
         if not live or live.get("price") is None:
             continue
         price = live["price"]
+
+        # Phase 2B.2: update peak price + trailing SL per check
+        from datetime import datetime
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        original_sl = float(p.get("original_sl") or sl)
+        current_sl = float(p.get("current_sl") or sl)
+        peak_price = float(p.get("peak_price") or entry)
+        new_peak = max(peak_price, price)
+        new_sl, did_raise = compute_trailing_sl(entry, new_peak, current_sl)
+        # Persist updates if peak rose or SL got raised
+        updates = {}
+        if new_peak > peak_price:
+            updates["peak_price"] = new_peak
+        if did_raise:
+            updates["current_sl"] = new_sl
+            updates["trail_active"] = "true"
+        if updates:
+            update_pick_row(today_str, ticker, updates)
+        # Use the (possibly raised) SL for the rest of this check
+        sl = new_sl
+
         flags = []
         if sl > 0 and price <= sl * 1.01 and price > sl:
             flags.append(("near_sl", f"Within 1% of SL (${sl:.2f})"))
@@ -85,7 +108,9 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
                 flags.append(("hit_tp", f"Hit Take-Profit (${tp:.2f})"))
         if live.get("vol_ratio", 0) >= 3.0:
             flags.append(("vol_spike", f"Volume spike ({live['vol_ratio']:.1f}x avg)"))
-        news = fetch_recent_news(ticker, lookback_min=45)
+        if did_raise:
+            flags.append(("trail_raise", f"🔒 SL raised to ${new_sl:.2f} (locked +{((new_sl-entry)/entry*100):.1f}%)"))
+                news = fetch_recent_news(ticker, lookback_min=45)
         material_news = []
         for n in news:
             cat = classify_material(n.get("headline", ""))

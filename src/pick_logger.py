@@ -20,6 +20,8 @@ FIELDS = [
     "evaluated_on", "exit_price", "actual_return_pct", "r_multiple",
     # Phase 2B.1 scale-out fields:
     "tp1", "tp2", "qty_t1", "qty_t2", "qty_t3", "tier_status",
+    # Phase 2B.2 trailing-stop fields:
+    "original_sl", "current_sl", "peak_price", "trail_active",
 ]
 
 
@@ -111,6 +113,11 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "qty_t2": p.get("qty_t2", ""),
                 "qty_t3": p.get("qty_t3", ""),
                 "tier_status": "none",  # none | tp1_hit | tp2_hit | trailing | closed
+                # Phase 2B.2: trailing-stop state (mutable, updated by intraday monitor)
+                "original_sl": p.get("stop_loss"),
+                "current_sl": p.get("stop_loss"),
+                "peak_price": p.get("entry"),
+                "trail_active": "false",
             })
             saved += 1
     skipped_dupes = len(picks) - saved
