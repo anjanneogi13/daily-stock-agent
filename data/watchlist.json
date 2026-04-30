@@ -1048,6 +1048,30 @@
       "url": "https://www.benzinga.com/news/26/04/52201534/trupanion-narrows-fy2026-sales-guidance-from-1-550b-1-582b-to-1-556b-1-581b-vs-1-577b-est",
       "source": "alpaca",
       "added_at": "2026-04-30T21:56:19.263260+00:00"
+    },
+    {
+      "ticker": "QTWO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains positive stance with price target raise, signaling increased confidence but not a rating upgrade from neutral, creating moderate positive momentum.",
+      "action_window": "next_day",
+      "headline": "JP Morgan Maintains Overweight on Q2 Holdings, Raises Price Target to $80",
+      "url": "https://www.benzinga.com/news/26/04/52202105/jp-morgan-maintains-overweight-on-q2-holdings-raises-price-target-to-80",
+      "source": "alpaca",
+      "added_at": "2026-04-30T22:46:32.780200+00:00"
+    },
+    {
+      "ticker": "OWL",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Blue Owl successfully monetizes SpaceX position at premium $1.25T valuation, realizing significant gains and demonstrating strong portfolio management that should benefit shareholders.",
+      "action_window": "next_day",
+      "headline": "Blue Owl Cashes In: Sells Half Its SpaceX Stake At $1.25 Trillion Valuation",
+      "url": "https://www.benzinga.com/markets/private-markets/26/04/52202077/blue-owl-cashes-in-sells-half-its-spacex-stake-at-1-25-trillion-valuation",
+      "source": "alpaca",
+      "added_at": "2026-04-30T22:46:32.780214+00:00"
     }
   ]
 }
