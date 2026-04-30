@@ -770,6 +770,18 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52186622/datadog-stock-in-the-spotlight-after-hunterbrook-names-anthropic-as-major-client",
       "source": "alpaca",
       "added_at": "2026-04-30T18:08:48.942253+00:00"
+    },
+    {
+      "ticker": "SOLV",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Activist investor Trian Fund involvement typically drives near-term upside as market anticipates operational improvements and value-unlocking measures.",
+      "action_window": "this_week",
+      "headline": "Solventum Stock Is Recovering: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52190722/solventum-stock-is-recovering-whats-going-on",
+      "source": "alpaca",
+      "added_at": "2026-04-30T19:19:13.514833+00:00"
     }
   ]
 }
