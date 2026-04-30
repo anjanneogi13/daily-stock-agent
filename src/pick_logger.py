@@ -24,6 +24,8 @@ FIELDS = [
     "original_sl", "current_sl", "peak_price", "trail_active",
     # Phase 2B.3 adaptive-TP fields:
     "current_tp", "tp_raises",
+    # Phase 2B.5: adaptive SL tighten audit
+    "peak_rsi", "sl_tightens",
 ]
 
 
@@ -123,6 +125,8 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 # Phase 2B.3: adaptive TP state
                 "current_tp": p.get("take_profit"),
                 "tp_raises": "[]",  # JSON audit trail
+                "peak_rsi": "",  # Phase 2B.5: highest RSI seen
+                "sl_tightens": "[]",  # Phase 2B.5: tighten audit
             })
             saved += 1
     skipped_dupes = len(picks) - saved
