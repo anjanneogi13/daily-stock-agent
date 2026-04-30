@@ -36,7 +36,7 @@ def test_atr_swing_trade_2x_stop():
 def test_atr_day_trade_tighter_stop():
     plan = atr_trade_plan(100, 2, 10000, trade_type="day")
     assert plan["stop_loss"] == 98.0   # 100 - (1*ATR=2)
-    assert plan["take_profit"] == 104.0 # 100 + (2*ATR=2)
+    assert plan["take_profit"] == 105.0  # Tier 1: 100 + (2.5*ATR=2)
     assert plan["risk_reward"] == 2.0
 
 def test_atr_zero_atr_uses_fallback():
