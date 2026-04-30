@@ -95,6 +95,114 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52160875/why-qualcomm-shares-are-trading-higher-by-over-10-here-are-20-stocks-moving-premarket",
       "source": "alpaca",
       "added_at": "2026-04-30T10:02:03.879982+00:00"
+    },
+    {
+      "ticker": "LH",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Laboratory Corp beat both EPS estimates by 3.9% and revenue estimates by 0.9%, representing a solid double beat that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Laboratory Corp Q1 Adj. EPS $4.25 Beats $4.09 Estimate, Sales $3.538B Beat $3.505B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52163539/laboratory-corp-q1-adj-eps-4-25-beats-4-09-estimate-sales-3-538b-beat-3-505b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132331+00:00"
+    },
+    {
+      "ticker": "KIM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Kimco Realty beat both FFO and revenue estimates with FFO of $0.46 vs $0.45 expected and sales of $558M vs $543M expected, representing modest beats that should support positive price action.",
+      "action_window": "intraday",
+      "headline": "Kimco Realty Q1 FFO $0.46 Beats $0.45 Estimate, Sales $558.016M Beat $542.933M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52163504/kimco-realty-q1-ffo-0-46-beats-0-45-estimate-sales-558-016m-beat-542-933m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132344+00:00"
+    },
+    {
+      "ticker": "CNX",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Strong EPS beat of 28% is offset by significant revenue miss of 12.5%, creating mixed signals that warrant immediate assessment but uncertain directional conviction.",
+      "action_window": "intraday",
+      "headline": "CNX Resources Q1 Adj. EPS $1.20 Beats $0.94 Estimate, Sales $500.000M Miss $571.685M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52163499/cnx-resources-q1-adj-eps-1-20-beats-0-94-estimate-sales-500-000m-miss-571-685m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132349+00:00"
+    },
+    {
+      "ticker": "LLY",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Exceptional Q1 earnings with blockbuster drugs Mounjaro and Zepbound showing triple-digit and near-80% revenue growth respectively, indicating massive demand for Eli Lilly's diabetes and weight-loss franchises.",
+      "action_window": "intraday",
+      "headline": "Eli Lilly Q1 Mounjaro Revenue +125% TO $8.70B; Zepbound +79% To $4.10B",
+      "url": "https://www.benzinga.com/quote/LLY",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132353+00:00"
+    },
+    {
+      "ticker": "GVA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Significant FY2026 sales guidance raise of approximately 6-8% above prior range and 5-9% above consensus estimates represents a material positive catalyst requiring immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "Granite Construction Raises FY2026 Sales Guidance from $4.900B-$5.100B to $5.200B-$5.400B vs $4.962B Est",
+      "url": "https://www.benzinga.com/news/26/04/52163478/granite-construction-raises-fy2026-sales-guidance-from-4-900b-5-100b-to-5-200b-5-400b-vs-4-962b-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132357+00:00"
+    },
+    {
+      "ticker": "IRM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Iron Mountain reports Q2 FFO beat of 15.7% ($1.40 vs $1.21 est) and revenue beat of 2.4% ($1.965B vs $1.919B est), representing a meaningful double beat on earnings guidance.",
+      "action_window": "intraday",
+      "headline": "Iron Mountain Sees Q2 FFO $1.40 vs $1.21 Est; Sees Sales $1.965B vs $1.919B Est",
+      "url": "https://www.benzinga.com/news/26/04/52163443/iron-mountain-sees-q2-ffo-1-40-vs-1-21-est-sees-sales-1-965b-vs-1-919b-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132375+00:00"
+    },
+    {
+      "ticker": "CAH",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Cardinal Health raised FY2026 EPS guidance significantly above consensus, with new midpoint of $10.75 representing ~4.3% beat versus $10.31 estimate, indicating strong operational performance.",
+      "action_window": "intraday",
+      "headline": "Cardinal Health Raises FY2026 Adj EPS Guidance from $10.15-$10.35 to $10.70-$10.80 vs $10.31 Est",
+      "url": "https://www.benzinga.com/news/26/04/52163426/cardinal-health-raises-fy2026-adj-eps-guidance-from-10-15-10-35-to-10-70-10-80-vs-10-31-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132379+00:00"
+    },
+    {
+      "ticker": "XPO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "XPO beat Q1 EPS estimates by 14.8% ($1.01 vs $0.88) and revenue beat by 2.8%, representing a solid double-beat that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "XPO Q1 Adj. EPS $1.01 Beats $0.88 Estimate, Sales $2.096B Beat $2.038B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52163348/xpo-q1-adj-eps-1-01-beats-0-88-estimate-sales-2-096b-beat-2-038b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132388+00:00"
+    },
+    {
+      "ticker": "FTI",
+      "tradeable_score": 0.62,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating by 12% but revenue missing by 1.2%, creating uncertainty on trading direction despite earnings beat classification.",
+      "action_window": "intraday",
+      "headline": "TechnipFMC Q1 Adj. EPS $0.64 Beats $0.57 Estimate, Sales $2.493B Miss $2.524B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52163344/technipfmc-q1-adj-eps-0-64-beats-0-57-estimate-sales-2-493b-miss-2-524b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T10:55:05.132391+00:00"
     }
   ]
 }
