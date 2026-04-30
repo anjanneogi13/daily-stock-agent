@@ -347,6 +347,126 @@
       "url": "https://www.benzinga.com/news/earnings/26/04/52165920/saia-q1-eps-1-86-beats-1-84-estimate-sales-806-226m-beat-788-003m-estimate",
       "source": "alpaca",
       "added_at": "2026-04-30T11:45:55.500543+00:00"
+    },
+    {
+      "ticker": "NUVL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic collaboration with established diagnostics company validates Nuvalent's oncology pipeline and provides commercialization pathway, creating immediate positive catalyst for smaller-cap NUVL while moderately benefiting GH's platform expansion.",
+      "action_window": "intraday",
+      "headline": "Guardant Health And Nuvalent Enter Strategic Collaboration For The Development And Potential Commercialization Of Nuvalent's Oncology Pipeline Using The Guardant Infinity Platform's Tissue And Liquid Tools",
+      "url": "https://www.benzinga.com/news/26/04/52167436/guardant-health-and-nuvalent-enter-strategic-collaboration-for-the-development-and-potential-commerc",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791092+00:00"
+    },
+    {
+      "ticker": "DGNX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Proposed acquisition at $1.5B implied valuation represents a significant premium and potential liquidity event for DGNX shareholders in an all-share transaction.",
+      "action_window": "intraday",
+      "headline": "Diginex Provides Updates Following Resulticks Global's Proposed Acquisition At Implied Valuation Of ~$1.5B In All-Share Transaction",
+      "url": "https://www.benzinga.com/m-a/26/04/52167421/diginex-provides-updates-following-resulticks-globals-proposed-acquisition-at-implied-valuation-of-1",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791104+00:00"
+    },
+    {
+      "ticker": "IINN",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Joint development agreement with quantum technology company represents strategic partnership expansion into cutting-edge quantum computing space, though commercial impact timeline remains uncertain.",
+      "action_window": "intraday",
+      "headline": "Inspira Technologies Signs Joint Development Agreement With Qarakal Quantum To Integrate Its Additively Manufactured Electronics Platform Into Working Superconducting Quantum Environment",
+      "url": "https://www.benzinga.com/news/26/04/52167406/inspira-technologies-signs-joint-development-agreement-with-qarakal-quantum-to-integrate-its-additiv",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791110+00:00"
+    },
+    {
+      "ticker": "MA",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong Q1 operational metrics with purchase volume up 9% and switched transactions up 9% indicate healthy business momentum ahead of full earnings report.",
+      "action_window": "intraday",
+      "headline": "MasterCard Reports Q1 2026 Gross Dollar Volume Up 7% And Purchase Volume Up 9%, On Local Currency Basis, With Switched Transactions Growth Of 9%",
+      "url": "https://www.benzinga.com/quote/MA",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791116+00:00"
+    },
+    {
+      "ticker": "SKBL",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Merger deal announcement is a major catalyst for Skyline Builders Group as the target company, typically triggering immediate price movement despite undisclosed financial terms.",
+      "action_window": "intraday",
+      "headline": "Skyline Builders Group, Cove Kaz Capital Sign Merger Deal; Financial Terms Undisclosed",
+      "url": "https://www.benzinga.com/news/26/04/52167368/skyline-builders-group-cove-kaz-capital-sign-merger-deal-financial-terms-undisclosed",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791120+00:00"
+    },
+    {
+      "ticker": "CHKP",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "GovRAMP authorization opens significant government contract opportunities for Check Point's Infinity Platform, representing a material market expansion catalyst but with gradual revenue realization.",
+      "action_window": "this_week",
+      "headline": "Check Point Software Announces GovRAMP Authorization For Its Check Point Infinity Platform",
+      "url": "https://www.benzinga.com/news/26/04/52167351/check-point-software-announces-govramp-authorization-for-its-check-point-infinity-platform",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791124+00:00"
+    },
+    {
+      "ticker": "OGN",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Organon missed both Q1 EPS estimates by 14.5% and revenue estimates by 1.6%, representing a meaningful double miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Organon Q1 Adj. EPS $0.71 Misses $0.83 Estimate, Sales $1.460B Miss $1.484B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52167193/organon-q1-adj-eps-0-71-misses-0-83-estimate-sales-1-460b-miss-1-484b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791137+00:00"
+    },
+    {
+      "ticker": "BSAC",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings results with EPS beating expectations by 1.6% but revenue missing by 4.3%, creating offsetting signals for traders.",
+      "action_window": "intraday",
+      "headline": "Banco Santander Chile Q1 EPS $0.63 Beats $0.62 Estimate, Sales $782.088M Miss $817.590M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52167192/banco-santander-chile-q1-eps-0-63-beats-0-62-estimate-sales-782-088m-miss-817-590m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791141+00:00"
+    },
+    {
+      "ticker": "TDAY",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Strong EPS beat ($0.10 vs -$0.08 estimate) offset by minor revenue miss ($548.5M vs $551M), creating mixed signals for traders.",
+      "action_window": "intraday",
+      "headline": "USA Today Co Q1 Adj. EPS $0.10 Beats $(0.08) Estimate, Sales $548.485M Miss $551.014M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52167141/usa-today-co-q1-adj-eps-0-10-beats-0-08-estimate-sales-548-485m-miss-551-014m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791146+00:00"
+    },
+    {
+      "ticker": "SOLS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Uranium conversion services agreement represents a meaningful operational development for Hadron Energy's supply chain, securing critical conversion capacity in a tight uranium market.",
+      "action_window": "intraday",
+      "headline": "Hadron Energy Signs Uranium Conversion Services Agreement With ConverDyn",
+      "url": "https://www.benzinga.com/news/26/04/52167139/hadron-energy-signs-uranium-conversion-services-agreement-with-converdyn",
+      "source": "alpaca",
+      "added_at": "2026-04-30T12:15:33.791150+00:00"
     }
   ]
 }
