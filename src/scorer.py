@@ -19,6 +19,27 @@ def apply_sector_cap(picks: list, max_per_sector: int = 4,
     return kept
 
 
+def apply_tag_cap(picks: list, max_per_tag: int = 2) -> list:
+    """Hard cap by primary tag (SEMI, AI, etc.). Catches what yfinance sector misses.
+    Tag format: 'SEMI / AI' → primary='SEMI'. Sorts by composite score, keeps top N per tag.
+    """
+    counts = {}
+    kept = []
+    for p in sorted(picks, key=lambda x: x.get("scores", {}).get("composite", 0), reverse=True):
+        tag = p.get("tag") or ""
+        if not tag:
+            kept.append(p)
+            continue
+        primary = tag.split(" / ")[0].strip().upper()
+        if not primary:
+            kept.append(p)
+            continue
+        if counts.get(primary, 0) < max_per_tag:
+            kept.append(p)
+            counts[primary] = counts.get(primary, 0) + 1
+    return kept
+
+
 # ============================================================
 # ENHANCED INDICATOR SCORES (Stochastic, OBV, PSAR, BB pos,
 # Support/Resistance, Fibonacci)
