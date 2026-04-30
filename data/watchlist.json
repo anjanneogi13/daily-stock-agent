@@ -1072,6 +1072,18 @@
       "url": "https://www.benzinga.com/markets/private-markets/26/04/52202077/blue-owl-cashes-in-sells-half-its-spacex-stake-at-1-25-trillion-valuation",
       "source": "alpaca",
       "added_at": "2026-04-30T22:46:32.780214+00:00"
+    },
+    {
+      "ticker": "EXLS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Barrington Research upgrade to Outperform with $40 price target is a meaningful positive catalyst that typically drives next-day price appreciation.",
+      "action_window": "next_day",
+      "headline": "Barrington Research Upgrades ExlService Hldgs to Outperform, Announces $40 Price Target",
+      "url": "https://www.benzinga.com/news/26/04/52203036/barrington-research-upgrades-exlservice-hldgs-to-outperform-announces-40-price-target",
+      "source": "alpaca",
+      "added_at": "2026-04-30T23:46:12.806510+00:00"
     }
   ]
 }
