@@ -56,13 +56,24 @@ def atr_trade_plan(price: float, atr: float, capital: float,
     qty = max(1, int(risk_capital / risk_per_share))
     rr = round((tp - price) / risk_per_share, 2)
 
+    # Phase 2B.1: scale-out tier plan
+    from src.exit_manager import compute_exit_tiers
+    tiers = compute_exit_tiers(round(price, 2), atr, qty, trade_type)
+
     return {
         "entry": round(price, 2),
         "stop_loss": sl,
-        "take_profit": tp,
+        "take_profit": tp,           # legacy single-TP (= tp2 for backward compat)
         "risk_reward": rr,
         "quantity": qty,
         "atr": round(atr, 2),
         "trade_type": trade_type,
         "stop_method": f"{atr_mult_sl}xATR",
+        # Phase 2B.1 scale-out fields:
+        "tp1": tiers["tp1"],
+        "tp2": tiers["tp2"],
+        "tp3_mode": tiers["tp3_mode"],
+        "qty_t1": tiers["qty_t1"],
+        "qty_t2": tiers["qty_t2"],
+        "qty_t3": tiers["qty_t3"],
     }
