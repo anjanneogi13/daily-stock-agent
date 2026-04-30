@@ -503,6 +503,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/04/52170019/correction-international-paper-q1-adj-eps-0-15-beats-0-14-estimate-sales-5-970b-miss-6-014b-estimat",
       "source": "alpaca",
       "added_at": "2026-04-30T13:28:03.531271+00:00"
+    },
+    {
+      "ticker": "UNG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Natural gas storage came in significantly below expectations (79B vs 83B est.), indicating tighter supply conditions which is bullish for natural gas prices and UNG.",
+      "action_window": "intraday",
+      "headline": "USA Natural Gas Storage 79B Vs 83B Est.",
+      "url": "https://www.benzinga.com/quote/UNG",
+      "source": "alpaca",
+      "added_at": "2026-04-30T14:34:38.071616+00:00"
     }
   ]
 }
