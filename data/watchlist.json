@@ -551,6 +551,90 @@
       "url": "https://www.benzinga.com/news/26/04/52177958/barclays-maintains-overweight-on-carvana-raises-price-target-to-475",
       "source": "alpaca",
       "added_at": "2026-04-30T15:28:25.651355+00:00"
+    },
+    {
+      "ticker": "VLO",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat is offset by lowered throughput outlook creating mixed signals that limit upside momentum despite positive results.",
+      "action_window": "intraday",
+      "headline": "Valero Delivers Strong Q1 Beat, But Lower Throughput Outlook Clouds Near-Term Stock Path",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52181728/valero-delivers-strong-q1-beat-but-lower-throughput-outlook-clouds-near-term-stock-path",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783395+00:00"
+    },
+    {
+      "ticker": "CAT",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Caterpillar earnings beat is a significant positive catalyst for CAT and related industrials, while crude oil decline creates mixed macro implications for energy-sensitive stocks.",
+      "action_window": "intraday",
+      "headline": "Crude Oil Down 2%; Caterpillar Earnings Top Views",
+      "url": "https://www.benzinga.com/markets/market-summary/26/04/52181604/crude-oil-down-2-caterpillar-earnings-top-views",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783408+00:00"
+    },
+    {
+      "ticker": "WING",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Multiple analyst downgrades following mixed Q1 results with sales miss and uncertain 2026 outlook creates moderate negative pressure despite earnings beat.",
+      "action_window": "next_day",
+      "headline": "These Analysts Slash Their Forecasts On Wingstop After Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52181555/these-analysts-slash-their-forecasts-on-wingstop-after-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783420+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "EU rejection of US tariff resolution plan escalates trade tensions, creating near-term headwinds for global equities and particularly European markets, though specific details and implementation timeline remain unclear.",
+      "action_window": "intraday",
+      "headline": "'EU Rejects US Plan to End Metals Tariff Spat and Mulls Response' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/04/52181496/eu-rejects-us-plan-to-end-metals-tariff-spat-and-mulls-response-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783426+00:00"
+    },
+    {
+      "ticker": "OKE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Scotiabank downgrade from presumably Outperform to Sector Perform with lower price target represents reduced conviction and negative near-term outlook for ONEOK.",
+      "action_window": "intraday",
+      "headline": "Scotiabank Downgrades ONEOK to Sector Perform, Lowers Price Target to $89",
+      "url": "https://www.benzinga.com/news/26/04/52181193/scotiabank-downgrades-oneok-to-sector-perform-lowers-price-target-to-89",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783432+00:00"
+    },
+    {
+      "ticker": "QCOM",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Qualcomm Q2 earnings beat with shares spiking and positive forward guidance on Chinese OEM revenue recovery in Q4, though tempered by ongoing handset headwinds.",
+      "action_window": "intraday",
+      "headline": "Qualcomm Posts Q2 Beat, Analysts Expect Handset Headwinds To Continue",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52181151/qualcomm-posts-q2-beat-analysts-expect-handset-headwinds-to-continue",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783437+00:00"
+    },
+    {
+      "ticker": "ODFL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings with solid revenue and net income figures prompted multiple analyst price target increases, indicating meaningful positive revision to forward expectations.",
+      "action_window": "next_day",
+      "headline": "Old Dominion Freight Line Analysts Increase Their Forecasts Following Strong Q1 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52181114/old-dominion-freight-line-analysts-increase-their-forecasts-following-strong-q1-earnings",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:19:04.783442+00:00"
     }
   ]
 }
