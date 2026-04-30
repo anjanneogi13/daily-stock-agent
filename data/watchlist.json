@@ -467,6 +467,42 @@
       "url": "https://www.benzinga.com/news/26/04/52167139/hadron-energy-signs-uranium-conversion-services-agreement-with-converdyn",
       "source": "alpaca",
       "added_at": "2026-04-30T12:15:33.791150+00:00"
+    },
+    {
+      "ticker": "VISN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant Q1 earnings beat with adjusted EPS 70% above estimates ($0.34 vs $0.20) and revenue exceeding expectations by 5.3%, indicating strong operational performance requiring immediate re-evaluation.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: Vistance Networks Q1 Adj. EPS $0.34 Beats $0.20 Estimate, Sales $471.800M Beat $448.200M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52170056/correction-vistance-networks-q1-adj-eps-0-34-beats-0-20-estimate-sales-471-800m-beat-448-200m-estim",
+      "source": "alpaca",
+      "added_at": "2026-04-30T13:28:03.531255+00:00"
+    },
+    {
+      "ticker": "ESEA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant fleet expansion of $158M (~4 new vessels) represents major growth capex that should increase revenue capacity, though dilution from equity financing tempers enthusiasm.",
+      "action_window": "intraday",
+      "headline": "Euroseas Signs Contracts For Construction Of Four Additional Feeder Containers For $158M, To Be Financed With Debt And Equity",
+      "url": "https://www.benzinga.com/news/26/04/52170033/euroseas-signs-contracts-for-construction-of-four-additional-feeder-containers-for-158m-to-be-financ",
+      "source": "alpaca",
+      "added_at": "2026-04-30T13:28:03.531265+00:00"
+    },
+    {
+      "ticker": "IP",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating estimates by 7% but revenue missing by 0.7%, creating conflicting signals that limit decisive trading direction.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: International Paper Q1 Adj. EPS $0.15 Beats $0.14 Estimate, Sales $5.970B Miss $6.014B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52170019/correction-international-paper-q1-adj-eps-0-15-beats-0-14-estimate-sales-5-970b-miss-6-014b-estimat",
+      "source": "alpaca",
+      "added_at": "2026-04-30T13:28:03.531271+00:00"
     }
   ]
 }
