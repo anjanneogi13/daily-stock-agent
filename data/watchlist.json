@@ -635,6 +635,42 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/04/52181114/old-dominion-freight-line-analysts-increase-their-forecasts-following-strong-q1-earnings",
       "source": "alpaca",
       "added_at": "2026-04-30T16:19:04.783442+00:00"
+    },
+    {
+      "ticker": "PWR",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Major EPS and revenue beat combined with raised FY26 guidance and strong infrastructure tailwinds creates significant bullish catalyst with shares already rallying.",
+      "action_window": "intraday",
+      "headline": "Quanta Services Shares Rally On Record Infrastructure Demand",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52183524/quanta-services-shares-rally-on-record-infrastructure-demand",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:57:23.970385+00:00"
+    },
+    {
+      "ticker": "CMPX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large bullish options sweep of 1,191 July calls near the ask with minimal open interest signals institutional positioning ahead of May 11 earnings, indicating potential upside expectations.",
+      "action_window": "intraday",
+      "headline": "Compass Therapeutics Option Alert: Jul 17 $2 Calls Sweep (11) Near The Ask: 1191 @ $0.351 Vs 33 OI; Earnings 5/11 Before Open [Est] Ref=$1.765",
+      "url": "https://www.benzinga.com/quote/CMPX",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:57:23.970397+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat combined with dividend increase represents a significant positive catalyst with shares already rallying intraday.",
+      "action_window": "intraday",
+      "headline": "Alphabet Stock Is Showing Incredible Strength: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/04/52183411/alphabet-stock-is-showing-incredible-strength-whats-happening",
+      "source": "alpaca",
+      "added_at": "2026-04-30T16:57:23.970404+00:00"
     }
   ]
 }
