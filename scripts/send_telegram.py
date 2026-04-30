@@ -83,6 +83,26 @@ else:
             f"   💰 TP: `${tp:.2f}` (+{reward:.1f}%)\n"
             f"   📦 Qty: {r.get('qty','-')} • R:R {r.get('risk_reward','2.0')}\n"
         )
+
+        # Phase 2B.4: 3-tier scale-out display (if tier columns populated)
+        try:
+            tp1 = float(r.get("tp1") or 0)
+            tp2 = float(r.get("tp2") or 0)
+            qt1 = int(float(r.get("qty_t1") or 0))
+            qt2 = int(float(r.get("qty_t2") or 0))
+            qt3 = int(float(r.get("qty_t3") or 0))
+            if tp1 > 0 and tp2 > 0 and (qt1 + qt2 + qt3) > 0:
+                tp1_pct = (tp1 - entry) / entry * 100 if entry > 0 else 0
+                tp2_pct = (tp2 - entry) / entry * 100 if entry > 0 else 0
+                tier_block = (
+                    f"   ├ T1 `${tp1:.2f}` (+{tp1_pct:.1f}%) × {qt1}sh — early lock\n"
+                    f"   ├ T2 `${tp2:.2f}` (+{tp2_pct:.1f}%) × {qt2}sh — bulk\n"
+                    f"   └ T3 trail × {qt3}sh — runner 🚀\n"
+                )
+                lines.append(tier_block)
+        except (ValueError, TypeError):
+            pass  # old picks without tier cols — skip silently
+
     lines.append("⚠️ _Educational only. Not financial advice._")
     msg = "\n".join(lines)
 
