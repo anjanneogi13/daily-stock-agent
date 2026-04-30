@@ -155,7 +155,13 @@ def run():
             p["info_short"] = {}
         if not p["info_short"].get("sector"):
             p["info_short"]["sector"] = p["scores"].get("sector_tag") or "Unknown"
-    capped = apply_sector_cap(filtered, max_per_sector=4, reduced_sectors=weak_sectors)
+    capped = apply_sector_cap(filtered, max_per_sector=2, reduced_sectors=weak_sectors)
+    # Tier 1 fix: hard cap 2 per primary tag (SEMI, AI, etc.) — catches what yfinance sector misses
+    from src.scorer import apply_tag_cap
+    pre = len(capped)
+    capped = apply_tag_cap(capped, max_per_tag=2)
+    if len(capped) < pre:
+        print(f'[tag_cap] {pre} → {len(capped)} after tag cap (max 2 per primary tag)')
     rprint(f"  [dim]Sector cap: {pre_cap} → {len(capped)} (max 4/sector, weak={list(weak_sectors.keys()) or 'none'})[/dim]")
 
     # Trim to final pick count
