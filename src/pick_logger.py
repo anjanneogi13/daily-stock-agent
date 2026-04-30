@@ -1,4 +1,8 @@
-"""Logs every generated pick to a CSV for later evaluation."""
+"""Logs every generated pick to a CSV for later evaluation.
+
+Phase 2B.1: added scale-out tier columns (tp1, tp2, qty_t1/t2/t3, tier_status).
+Header migration: detects old schema and rewrites with new header (old rows get blanks).
+"""
 import csv
 from datetime import datetime
 from pathlib import Path
@@ -12,15 +16,49 @@ FIELDS = [
     "score", "multiplier", "entry", "stop_loss", "take_profit",
     "risk_reward", "qty", "days_to_earnings",
     "regime", "spy_close", "cape",
-    "evaluation_status",   # "pending" | "tp_hit" | "sl_hit" | "expired" | "open"
+    "evaluation_status",
     "evaluated_on", "exit_price", "actual_return_pct", "r_multiple",
+    # Phase 2B.1 scale-out fields:
+    "tp1", "tp2", "qty_t1", "qty_t2", "qty_t3", "tier_status",
 ]
+
+
+def _migrate_header_if_needed():
+    """If existing CSV has old header, rewrite the file with new header.
+    Old rows get empty values for new columns (CSV-safe)."""
+    if not LOG_PATH.exists() or LOG_PATH.stat().st_size == 0:
+        return
+    with LOG_PATH.open() as f:
+        reader = csv.reader(f)
+        try:
+            existing_header = next(reader)
+        except StopIteration:
+            return
+        if existing_header == FIELDS:
+            return  # already migrated
+        # Read all existing rows as dicts using OLD header
+        f.seek(0)
+        old_rows = list(csv.DictReader(f))
+
+    # Rewrite with NEW header (extrasaction='ignore' guards future drift)
+    with LOG_PATH.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
+        w.writeheader()
+        for row in old_rows:
+            # Fill new fields with empty strings for old rows
+            for new_field in FIELDS:
+                if new_field not in row:
+                    row[new_field] = ""
+            w.writerow(row)
+    print(f"[pick_logger] migrated CSV header: +{len(FIELDS) - len(existing_header)} new columns")
 
 
 def _ensure_header():
     if not LOG_PATH.exists() or LOG_PATH.stat().st_size == 0:
         with LOG_PATH.open("w", newline="") as f:
             csv.DictWriter(f, fieldnames=FIELDS).writeheader()
+    else:
+        _migrate_header_if_needed()
 
 
 def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
@@ -30,7 +68,6 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
     today = now.strftime("%Y-%m-%d")
     timestr = now.strftime("%H:%M:%S")
 
-    # Don't double-log if we already saved picks for today
     existing_today = set()
     if LOG_PATH.exists():
         with LOG_PATH.open() as f:
@@ -40,7 +77,7 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
 
     saved = 0
     with LOG_PATH.open("a", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS)
+        w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         for p in picks:
             if p["ticker"] in existing_today:
                 continue
@@ -60,13 +97,20 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "qty": p.get("qty", 0),
                 "days_to_earnings": p.get("days_to_earnings", ""),
                 "regime": (regime or {}).get("regime") or "unknown",
-                "spy_close": regime.get("spy_close", ""),
+                "spy_close": (regime or {}).get("spy_close", ""),
                 "cape": (cape or {}).get("cape", ""),
                 "evaluation_status": "pending",
                 "evaluated_on": "",
                 "exit_price": "",
                 "actual_return_pct": "",
                 "r_multiple": "",
+                # Phase 2B.1 scale-out fields:
+                "tp1": p.get("tp1", ""),
+                "tp2": p.get("tp2", ""),
+                "qty_t1": p.get("qty_t1", ""),
+                "qty_t2": p.get("qty_t2", ""),
+                "qty_t3": p.get("qty_t3", ""),
+                "tier_status": "none",  # none | tp1_hit | tp2_hit | trailing | closed
             })
             saved += 1
     skipped_dupes = len(picks) - saved
