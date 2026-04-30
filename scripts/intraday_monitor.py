@@ -110,7 +110,7 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             flags.append(("vol_spike", f"Volume spike ({live['vol_ratio']:.1f}x avg)"))
         if did_raise:
             flags.append(("trail_raise", f"🔒 SL raised to ${new_sl:.2f} (locked +{((new_sl-entry)/entry*100):.1f}%)"))
-                news = fetch_recent_news(ticker, lookback_min=45)
+        news = fetch_recent_news(ticker, lookback_min=45)
         material_news = []
         for n in news:
             cat = classify_material(n.get("headline", ""))
