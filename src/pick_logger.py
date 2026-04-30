@@ -22,6 +22,8 @@ FIELDS = [
     "tp1", "tp2", "qty_t1", "qty_t2", "qty_t3", "tier_status",
     # Phase 2B.2 trailing-stop fields:
     "original_sl", "current_sl", "peak_price", "trail_active",
+    # Phase 2B.3 adaptive-TP fields:
+    "current_tp", "tp_raises",
 ]
 
 
@@ -118,6 +120,9 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "current_sl": p.get("stop_loss"),
                 "peak_price": p.get("entry"),
                 "trail_active": "false",
+                # Phase 2B.3: adaptive TP state
+                "current_tp": p.get("take_profit"),
+                "tp_raises": "[]",  # JSON audit trail
             })
             saved += 1
     skipped_dupes = len(picks) - saved

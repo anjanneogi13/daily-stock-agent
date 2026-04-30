@@ -10,6 +10,7 @@ from intraday_news import fetch_recent_news, classify_material
 from intraday_scanner import scan_for_new_opportunities, get_live_quote
 from src.trailing_stop import compute_trailing_sl, trail_status
 from src.picks_csv import update_pick_row
+from src.adaptive_tp import should_raise_tp, append_raise_audit, last_raise_ts
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -110,6 +111,32 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             flags.append(("vol_spike", f"Volume spike ({live['vol_ratio']:.1f}x avg)"))
         if did_raise:
             flags.append(("trail_raise", f"🔒 SL raised to ${new_sl:.2f} (locked +{((new_sl-entry)/entry*100):.1f}%)"))
+
+        # Phase 2B.3: adaptive TP raise (momentum-driven)
+        try:
+            current_tp = float(p.get("current_tp") or tp)
+            current_rsi = live.get("rsi")
+            vol_ratio = live.get("vol_ratio")
+            tp_raises_json = p.get("tp_raises") or "[]"
+            should_r, new_tp, reason = should_raise_tp(
+                entry=entry,
+                current_price=price,
+                current_tp=current_tp,
+                current_rsi=current_rsi,
+                vol_ratio=vol_ratio,
+                last_raise_iso=last_raise_ts(tp_raises_json),
+            )
+            if should_r:
+                updated_audit = append_raise_audit(tp_raises_json, new_tp, reason)
+                update_pick_row(today_str, ticker, {
+                    "current_tp": new_tp,
+                    "tp_raises": updated_audit,
+                })
+                flags.append(("tp_raise", f"🚀 TP raised to ${new_tp:.2f} ({reason})"))
+                tp = new_tp  # use new TP for rest of this check
+        except Exception as e:
+            print(f"[adaptive_tp] {ticker} skipped: {e}")
+
         news = fetch_recent_news(ticker, lookback_min=45)
         material_news = []
         for n in news:
