@@ -11,6 +11,7 @@ from intraday_scanner import scan_for_new_opportunities, get_live_quote
 from src.trailing_stop import compute_trailing_sl, trail_status
 from src.picks_csv import update_pick_row
 from src.adaptive_tp import should_raise_tp, append_raise_audit, last_raise_ts
+from src.adaptive_sl import should_tighten_sl, append_tighten_audit, last_tighten_ts
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -136,6 +137,36 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
                 tp = new_tp  # use new TP for rest of this check
         except Exception as e:
             print(f"[adaptive_tp] {ticker} skipped: {e}")
+
+        # Phase 2B.5: adaptive SL tighten (momentum-fading, profit-protect)
+        try:
+            current_rsi = live.get("rsi")
+            vol_ratio = live.get("vol_ratio")
+            stored_peak_rsi = float(p.get("peak_rsi") or 0)
+            new_peak_rsi = max(stored_peak_rsi, current_rsi or 0)
+            sl_tightens_json = p.get("sl_tightens") or "[]"
+            should_t, new_sl_t, reason_t = should_tighten_sl(
+                entry=entry,
+                current_price=price,
+                current_sl=sl,
+                current_rsi=current_rsi,
+                peak_rsi=new_peak_rsi if new_peak_rsi > 0 else None,
+                vol_ratio=vol_ratio,
+                last_tighten_iso=last_tighten_ts(sl_tightens_json),
+            )
+            sl_updates = {}
+            if new_peak_rsi > stored_peak_rsi:
+                sl_updates["peak_rsi"] = round(new_peak_rsi, 1)
+            if should_t:
+                updated_audit_t = append_tighten_audit(sl_tightens_json, new_sl_t, reason_t)
+                sl_updates["current_sl"] = new_sl_t
+                sl_updates["sl_tightens"] = updated_audit_t
+                flags.append(("sl_tighten", f"🛡️ SL tightened to ${new_sl_t:.2f} ({reason_t})"))
+                sl = new_sl_t  # use tightened SL for rest of this check
+            if sl_updates:
+                update_pick_row(today_str, ticker, sl_updates)
+        except Exception as e:
+            print(f"[adaptive_sl] {ticker} skipped: {e}")
 
         news = fetch_recent_news(ticker, lookback_min=45)
         material_news = []
