@@ -1036,6 +1036,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/04/52201361/badger-infrastructure-q1-adj-eps-0-22-misses-0-23-estimate-sales-203-244m-miss-262-360m-estimate",
       "source": "alpaca",
       "added_at": "2026-04-30T21:53:09.349174+00:00"
+    },
+    {
+      "ticker": "TRUP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Trupanion narrowed FY2026 guidance with a lower midpoint ($1.5685B vs $1.566B prior) that remains below consensus estimate of $1.577B, signaling modest weakness.",
+      "action_window": "next_day",
+      "headline": "Trupanion Narrows FY2026 Sales Guidance from $1.550B-$1.582B to $1.556B-$1.581B vs $1.577B Est",
+      "url": "https://www.benzinga.com/news/26/04/52201534/trupanion-narrows-fy2026-sales-guidance-from-1-550b-1-582b-to-1-556b-1-581b-vs-1-577b-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T21:56:19.263260+00:00"
     }
   ]
 }
