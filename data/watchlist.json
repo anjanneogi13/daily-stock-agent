@@ -794,6 +794,114 @@
       "url": "https://www.benzinga.com/news/26/04/52192701/td-cowen-maintains-buy-on-carpenter-technology-raises-price-target-to-450",
       "source": "alpaca",
       "added_at": "2026-04-30T19:57:26.827071+00:00"
+    },
+    {
+      "ticker": "TWLO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings beat combined with strong forward guidance represents a significant positive catalyst with stock already showing strong upward movement.",
+      "action_window": "intraday",
+      "headline": "Twilio Stock Soars On Q1 Earnings Beat, Strong Forward Guidance",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52198407/twilio-stock-soars-on-q1-earnings-beat-strong-forward-guidance",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011306+00:00"
+    },
+    {
+      "ticker": "CUE",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Private placement with pre-funded warrants at $11 strike typically signals dilution and stock price pressure, especially for small-cap biotech requiring immediate capital raise.",
+      "action_window": "next_day",
+      "headline": "Cue Biopharma Announces Private Placement For Gross Proceeds Of ~$30M, Selling Pre\u2011Funded Warrants For Up To 2.7M Shares And Accompanying $11 Warrants For 1.36M Shares",
+      "url": "https://www.benzinga.com/news/26/04/52198328/cue-biopharma-announces-private-placement-for-gross-proceeds-of-30m-selling-pre-funded-warrants-for",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011320+00:00"
+    },
+    {
+      "ticker": "WY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Weyerhaeuser beat Q1 EPS estimates by 120% ($0.11 vs $0.05) and exceeded revenue expectations, representing a significant positive earnings surprise that typically drives immediate stock price appreciation.",
+      "action_window": "intraday",
+      "headline": "Weyerhaeuser Q1 Adj. EPS $0.11 Beats $0.05 Estimate, Sales $1.727B Beat $1.716B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/04/52198265/weyerhaeuser-q1-adj-eps-0-11-beats-0-05-estimate-sales-1-727b-beat-1-716b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011329+00:00"
+    },
+    {
+      "ticker": "RIVN",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Double earnings beat combined with imminent R2 customer deliveries represents a significant fundamental catalyst for a growth-stage EV manufacturer.",
+      "action_window": "intraday",
+      "headline": "Rivian Q1 Highlights: Double Beat, R2 Customer Deliveries In Coming Weeks",
+      "url": "https://www.benzinga.com/markets/earnings/26/04/52198262/rivian-q1-highlights-double-beat-r2-customer-deliveries-in-coming-weeks",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011336+00:00"
+    },
+    {
+      "ticker": "ALHC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company's Q2 sales guidance midpoint of $1.305B falls below consensus estimate of $1.315B, indicating a revenue miss of approximately 0.8%.",
+      "action_window": "intraday",
+      "headline": "Alignment Healthcare Sees Q2 Sales $1.295B-$1.315B vs $1.315B Est",
+      "url": "https://www.benzinga.com/news/26/04/52198174/alignment-healthcare-sees-q2-sales-1-295b-1-315b-vs-1-315b-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011343+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Massive $100B buyback authorization signals strong cash position and management confidence in stock value, combined with dividend increase demonstrating commitment to shareholder returns.",
+      "action_window": "intraday",
+      "headline": "Apple Authorizes Up To $100B Share Buyback, Boosts Dividend From $0.26 To $0.27 Per Share",
+      "url": "https://www.benzinga.com/news/26/04/52198140/apple-authorizes-up-to-100b-share-buyback-boosts-dividend-from-0-26-to-0-27-per-share",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011357+00:00"
+    },
+    {
+      "ticker": "EBS",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company guides Q2 sales below consensus estimates with midpoint of $177.5M representing 8.6% miss versus $186M expectation, signaling potential operational headwinds.",
+      "action_window": "intraday",
+      "headline": "Emergent BioSolutions Sees Q2 Sales $170.000M-$185.000M vs $186.000M Est",
+      "url": "https://www.benzinga.com/news/26/04/52198075/emergent-biosolutions-sees-q2-sales-170-000m-185-000m-vs-186-000m-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011364+00:00"
+    },
+    {
+      "ticker": "SEM",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of 22% ($0.36 vs $0.46 estimate) outweighs modest revenue beat, indicating margin compression or operational challenges that warrant immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Select Medical Hldgs Q1 Adj. EPS $0.36 Misses $0.46 Estimate, Sales $1.421B Beat $1.411B Estimate",
+      "url": "https://www.benzinga.com/quote/SEM",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011379+00:00"
+    },
+    {
+      "ticker": "GDDY",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "guidance_cut",
+      "rationale": "Q2 sales guidance midpoint of $1.295B is essentially inline with $1.290B consensus estimate, representing a marginal 0.4% beat with range straddling expectations.",
+      "action_window": "intraday",
+      "headline": "GoDaddy Sees Q2 Sales $1.285B-$1.305B vs $1.290B Est",
+      "url": "https://www.benzinga.com/news/26/04/52197980/godaddy-sees-q2-sales-1-285b-1-305b-vs-1-290b-est",
+      "source": "alpaca",
+      "added_at": "2026-04-30T20:40:39.011390+00:00"
     }
   ]
 }
