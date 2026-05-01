@@ -1,7 +1,15 @@
-"""Sends today's picks to Telegram with premarket tags."""
+"""Sends today's picks to Telegram with premarket tags.
+
+PR #66: Added dedup_sender to prevent duplicate messages when multiple
+cron slots fire (e.g., 14 NVDA messages on Apr 30 due to 5 parallel runs).
+"""
 import csv, os, sys, json, urllib.request, urllib.parse
 from datetime import datetime
 from pathlib import Path
+
+# Add repo root to path so we can import src/
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.dedup_sender import should_send, mark_sent
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"), os.environ.get("TELEGRAM_GROUP_CHAT_ID")] if c]
@@ -109,7 +117,14 @@ else:
 if len(msg) > 4000:
     msg = msg[:3950] + "\n\n_(truncated)_"
 
+# 🚨 PR #66: Dedup check — skip if same content sent in last 60 min
+# This solves the "14 NVDA messages on Apr 30" issue caused by parallel cron runs
+if not should_send(msg, window_minutes=60):
+    print("[telegram] ⏭ Skipped — same content sent within last 60 min (dedup)")
+    sys.exit(0)
+
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+all_sent = True
 for _cid in CHAT_IDS:
     data = urllib.parse.urlencode({
         "chat_id": _cid, "text": msg,
@@ -118,6 +133,19 @@ for _cid in CHAT_IDS:
     try:
         resp = urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
         result = json.loads(resp.read())
-        print(f"[telegram] {'✅ Sent' if result.get('ok') else '❌ '+str(result)}")
+        if result.get('ok'):
+            print(f"[telegram] ✅ Sent to {_cid[:6]}...")
+        else:
+            print(f"[telegram] ❌ {result}")
+            all_sent = False
     except Exception as e:
-        print(f"[telegram] ❌ {e}"); sys.exit(1)
+        print(f"[telegram] ❌ {e}")
+        all_sent = False
+
+# Mark as sent ONLY if at least one chat received it
+if all_sent:
+    mark_sent(msg, window_minutes=60)
+    print("[telegram] ✅ Marked sent in dedup log")
+else:
+    print("[telegram] ⚠ Not marking sent — some chats failed")
+    sys.exit(1)
