@@ -689,6 +689,42 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52210466/reddit-turns-human-chatter-into-wall-street-gold-with-blowout-q1",
       "source": "alpaca",
       "added_at": "2026-05-01T13:16:42.323234+00:00"
+    },
+    {
+      "ticker": "TEAM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Double beat on Q3 earnings combined with analyst price target increase to $120 creates strong bullish catalyst with stock already moving higher.",
+      "action_window": "intraday",
+      "headline": "Atlassian Stock Rises After Double Beat, Price Target Hike",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52216505/atlassian-stock-rises-after-double-beat-price-target-hike",
+      "source": "alpaca",
+      "added_at": "2026-05-01T14:37:27.389701+00:00"
+    },
+    {
+      "ticker": "ROKU",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Roku reported Q1 earnings beat with raised guidance and multiple analyst price target upgrades, driving significant share price rally.",
+      "action_window": "intraday",
+      "headline": "Roku Rewinds Doubters With Ad-Fueled Earnings Beat",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52216378/roku-rewinds-doubters-with-ad-fueled-earnings-beat",
+      "source": "alpaca",
+      "added_at": "2026-05-01T14:37:27.389717+00:00"
+    },
+    {
+      "ticker": "WDC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Evercore ISI maintains Outperform rating with significant price target raise to $500, indicating strong conviction and material upside potential from a respected sell-side firm.",
+      "action_window": "intraday",
+      "headline": "Evercore ISI Group Maintains Outperform on Western Digital, Raises Price Target to $500",
+      "url": "https://www.benzinga.com/news/26/05/52215972/evercore-isi-group-maintains-outperform-on-western-digital-raises-price-target-to-500",
+      "source": "alpaca",
+      "added_at": "2026-05-01T14:37:27.389728+00:00"
     }
   ]
 }
