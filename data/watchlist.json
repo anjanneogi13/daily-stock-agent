@@ -1230,6 +1230,42 @@
       "url": "https://www.benzinga.com/news/26/05/52233444/kb-home-robert-r-dillard-resigns-as-cfo-effective-may-8-2026",
       "source": "alpaca",
       "added_at": "2026-05-01T21:14:23.106568+00:00"
+    },
+    {
+      "ticker": "NAII",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CFO resignation creates uncertainty and potential governance concerns, though interim replacement provides some continuity during search period.",
+      "action_window": "next_day",
+      "headline": "Natural Alternatives International Michael E. Fortin Resigns As CFO Effective May 15, 2026; Kenneth E. Wolf To Act As Principal Financial And Accounting Officer During CFO Search",
+      "url": "https://www.benzinga.com/news/26/05/52234102/natural-alternatives-international-michael-e-fortin-resigns-as-cfo-effective-may-15-2026-kenneth-e-w",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:28:00.963678+00:00"
+    },
+    {
+      "ticker": "WKSP",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CFO transition is a notable corporate governance event that typically creates short-term uncertainty but lacks clear directional catalyst without additional context about the circumstances.",
+      "action_window": "next_day",
+      "headline": "Worksport Michael Johnston Resigns As Chief Financial Officer; Jennifer Kartychak Appointed As Chief Financial Officer Effective May 1, 2026",
+      "url": "https://www.benzinga.com/news/26/05/52234000/worksport-michael-johnston-resigns-as-chief-financial-officer-jennifer-kartychak-appointed-as-chief",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:28:00.963694+00:00"
+    },
+    {
+      "ticker": "CELC",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Phase 3 trial met primary endpoint with clinically meaningful results and immediate plan for FDA submission represents a major de-risking event for a biotech stock.",
+      "action_window": "intraday",
+      "headline": "Celcuity's Phase 3 VIKTORIA-1 Trial Meets Primary Endpoint With Clinically Meaningful Improvement In Progression-Free Survival In PIK3CA Mutant Cohort; Celcuity Intends To Submit These Data To The FDA As A Supplemental New Drug Application And To Submit VIKTORIA-1 Data To Other Regulatory Authoritie",
+      "url": "https://www.benzinga.com/general/biotech/26/05/52233917/celcuitys-phase-3-viktoria-1-trial-meets-primary-endpoint-with-clinically-meaningful-improvement-",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:28:00.963710+00:00"
     }
   ]
 }
