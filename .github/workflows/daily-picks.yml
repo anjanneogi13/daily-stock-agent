@@ -57,7 +57,7 @@ jobs:
           # Allow only between 08:00 and 09:25 ET (before market open at 09:30)
           ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
           WINDOW_START=$((8 * 60))
-          WINDOW_END=$((9 * 60 + 25))
+          WINDOW_END=$((11 * 60))  # Widened from 09:25 to 11:00 ET to accommodate GitHub cron delays (1-3hr late)
           if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ] || [ $ET_MINUTES_OF_DAY -gt $WINDOW_END ]; then
             echo "⏭ Outside 08:00–09:25 ET window — skipping"
             echo "should_run=false" >> $GITHUB_OUTPUT
