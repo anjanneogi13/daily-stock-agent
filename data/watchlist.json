@@ -437,15 +437,16 @@
     },
     {
       "ticker": "GTES",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Mixed earnings result with EPS beating by 6% but revenue missing by 1.1%, creating offsetting trading signals that warrant monitoring but limit clear directional conviction.",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Gates Industrial's strategic acquisition of Timken's belts business with manufacturing assets represents a meaningful expansion that should drive positive momentum for the acquirer.",
       "action_window": "intraday",
-      "headline": "Gates Industrial Corp Q1 Adj. EPS $0.35 Beats $0.33 Estimate, Sales $851.100M Miss $860.949M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52208359/gates-industrial-corp-q1-adj-eps-0-35-beats-0-33-estimate-sales-851-100m-miss-860-949m-estimate",
+      "headline": "Gates Industrial Agrees To Acquire Belts Business From The Timken Company, Including Select Manufacturing Assets; Terms Not Disclosed",
+      "url": "https://www.benzinga.com/m-a/26/05/52208791/gates-industrial-agrees-to-acquire-belts-business-from-the-timken-company-including-select-manufactu",
       "source": "alpaca",
-      "added_at": "2026-05-01T11:39:49.063783+00:00"
+      "added_at": "2026-05-01T11:39:49.063783+00:00",
+      "updated_at": "2026-05-01T11:54:55.389271+00:00"
     },
     {
       "ticker": "TPG",
@@ -470,6 +471,91 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52208236/unisync-q2-eps-0-11-sales-28-651m-up-from-24-527m-yoy",
       "source": "alpaca",
       "added_at": "2026-05-01T11:39:49.063797+00:00"
+    },
+    {
+      "ticker": "IESC",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating estimates by 5.3% but revenue missing by 3.2%, creating uncertainty about operational performance and likely causing volatile intraday trading.",
+      "action_window": "intraday",
+      "headline": "IES Hldgs Q2 Adj. EPS $4.16 Beats $3.95 Estimate, Sales $974.200M Miss $1.006B Estimate.",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52208611/ies-hldgs-q2-adj-eps-4-16-beats-3-95-estimate-sales-974-200m-miss-1-006b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389285+00:00"
+    },
+    {
+      "ticker": "CERS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BTIG upgrade from neutral to buy with specific price target represents meaningful positive analyst catalyst likely to drive near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "BTIG Upgrades Cerus to Buy, Announces $4 Price Target",
+      "url": "https://www.benzinga.com/news/26/05/52208560/btig-upgrades-cerus-to-buy-announces-4-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389294+00:00"
+    },
+    {
+      "ticker": "CSHR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong FY2025 results with $165.7M revenue and robust $131.3M EBITDA (79% margin) combined with prestigious Nasdaq listing announcement creates meaningful positive catalyst for crypto asset manager.",
+      "action_window": "intraday",
+      "headline": "CoinShares Reports FY2025 Results With $165.7M Revenue And $131.3M EBITDA, Highlights Nasdaq Listing",
+      "url": "https://www.benzinga.com/quote/CSHR",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389300+00:00"
+    },
+    {
+      "ticker": "RBLX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BTIG downgrade from Buy to Neutral represents negative analyst sentiment shift that typically drives selling pressure, though not from a top-tier bulge bracket firm.",
+      "action_window": "intraday",
+      "headline": "BTIG Downgrades Roblox to Neutral",
+      "url": "https://www.benzinga.com/news/26/05/52208507/btig-downgrades-roblox-to-neutral",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389305+00:00"
+    },
+    {
+      "ticker": "FRT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Federal Realty beat FFO estimates by 3.3% ($1.88 vs $1.82) and revenue estimates by 3.0% ($341M vs $331M), representing a solid dual beat for a REIT on Q1 earnings.",
+      "action_window": "intraday",
+      "headline": "Federal Realty Investment Q1 FFO $1.88 Beats $1.82 Estimate, Sales $341.084M Beat $331.074M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52208456/federal-realty-investment-q1-ffo-1-88-beats-1-82-estimate-sales-341-084m-beat-331-074m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389310+00:00",
+      "updated_at": "2026-05-01T11:54:55.389321+00:00"
+    },
+    {
+      "ticker": "SLNH",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes delisting risk and improves institutional accessibility, but represents resolution of a prior negative rather than new fundamental catalyst.",
+      "action_window": "intraday",
+      "headline": "Soluna Regains Nasdaq Compliance",
+      "url": "https://www.benzinga.com/news/26/05/52208466/soluna-regains-nasdaq-compliance",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389315+00:00"
+    },
+    {
+      "ticker": "ARWR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Regulatory approval (Australian TGA) for REDEMPLO represents a meaningful commercial milestone for Arrowhead's siRNA platform, though Australia is a smaller market than US/EU.",
+      "action_window": "intraday",
+      "headline": "Arrowhead Pharma Says Australian TGA Approves REDEMPLO, siRNA Medicine, As Adjunct To Diet To Reduce Triglyceride Levels For Adult Patients With Familial Chylomicronemia Syndrome",
+      "url": "https://www.benzinga.com/news/26/05/52208448/arrowhead-pharma-says-australian-tga-approves-redemplo-sirna-medicine-as-adjunct-to-diet-to-reduce-t",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:54:55.389327+00:00"
     }
   ]
 }
