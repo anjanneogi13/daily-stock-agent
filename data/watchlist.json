@@ -23,6 +23,115 @@
       "url": "",
       "source": "alpaca",
       "added_at": "2026-05-01T01:28:40.764078+00:00"
+    },
+    {
+      "ticker": "MG",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Magna International delivered exceptional Q1 results with adjusted EPS beating estimates by 68% ($1.38 vs $0.82) and sales exceeding expectations by 26% ($10.381B vs $8.252B), representing a significant positive surprise that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Magna International Q1 Adj. EPS $1.38 Beats $0.82 Estimate, Sales $10.381B Beat $8.252B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52206099/magna-international-q1-adj-eps-1-38-beats-0-82-estimate-sales-10-381b-beat-8-252b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370252+00:00"
+    },
+    {
+      "ticker": "LYB",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Completed asset divestiture supports portfolio optimization strategy, unlocking capital and improving operational focus, though impact magnitude depends on undisclosed transaction terms.",
+      "action_window": "intraday",
+      "headline": "LyondellBasell Completes Sale Of Select European Olefins And Polyolefins Assets To AEQUITA, Advances Portfolio Optimization Strategy",
+      "url": "https://www.benzinga.com/quote/LYB",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370266+00:00"
+    },
+    {
+      "ticker": "AIIO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company announces positive cash flow inflection point, operational progress with commercial vehicle deliveries, advancing AI partnerships, and significant $60M expected gain from asset disposal representing multiple strong catalysts.",
+      "action_window": "intraday",
+      "headline": "Robo.ai CEO Says Company Reaches Positive Cash Flow Inflection Point In 2025, Advances AI Partnerships, Delivers Commercial Vehicles, Expects $60M Asset Disposal Gain",
+      "url": "https://www.benzinga.com/quote/AIIO",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370270+00:00"
+    },
+    {
+      "ticker": "MGA",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Magna International reported Q1 adjusted EPS of $1.38, beating estimates by 36.6%, while revenue of $10.381B also exceeded expectations, representing a significant earnings beat that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Magna International Q1 Adj. EPS $1.38 Beats $1.01 Estimate, Sales $10.381B Beat $10.255B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52205935/magna-international-q1-adj-eps-1-38-beats-1-01-estimate-sales-10-381b-beat-10-255b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370274+00:00",
+      "updated_at": "2026-05-01T09:29:12.370279+00:00"
+    },
+    {
+      "ticker": "POR",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Portland General Electric missed Q1 earnings by 34% ($0.58 vs $0.88) and revenue by 8% ($879M vs $957M), representing a significant double-miss on key metrics.",
+      "action_window": "intraday",
+      "headline": "Portland Gen Electric Q1 Adj. EPS $0.58 Misses $0.88 Estimate, Sales $879.000M Miss $957.286M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52205910/portland-gen-electric-q1-adj-eps-0-58-misses-0-88-estimate-sales-879-000m-miss-957-286m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370283+00:00"
+    },
+    {
+      "ticker": "SNDK",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Multi-year supply agreements with five deals signed provide improved revenue visibility and validate strengthening demand in NAND/AI chip markets, representing a positive strategic shift.",
+      "action_window": "next_day",
+      "headline": "SanDisk Bets Big On Multi-Year Contracts As AI Chip Demand Booms",
+      "url": "https://www.benzinga.com/markets/equities/26/05/52205851/sandisk-bets-big-on-multi-year-contracts-as-ai-chip-demand-booms",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370286+00:00"
+    },
+    {
+      "ticker": "SXI",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company provides positive FY26 revenue growth guidance of ~$100M but includes significant caveats regarding economic conditions, global trade, and tariffs which creates uncertainty.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: Standex International Says In FY26, Barring Any Unforeseen Economic, Global Trade, Or Tariffs Related Disruptions, Expects Revenue To Grow By ~$100M",
+      "url": "https://www.benzinga.com/news/26/05/52205704/correction-standex-international-says-in-fy26-barring-any-unforeseen-economic-global-trade-or-tariff",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370290+00:00"
+    },
+    {
+      "ticker": "TWLO",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Twilio reported strong Q1 earnings beat with raised guidance, driving a significant 20.6% pre-market surge representing a major confirmed catalyst with immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Why Twilio Shares Are Trading Higher By Over 20%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52205678/why-twilio-shares-are-trading-higher-by-over-20-here-are-20-stocks-moving-premarket",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370293+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Apple beat Q2 estimates and raised guidance with multiple respected analysts calling for 10%+ upside and a 'golden era', representing a strong earnings catalyst with positive forward outlook.",
+      "action_window": "next_day",
+      "headline": "Dan Ives Says Apple's 'Golden Era' Is Near, Gene Munster Sees 10% Upside And Daniel Newman Calls Outlook 'Ripe'",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52205638/dan-ives-says-apples-golden-era-is-near-as-gene-munster-sees-10-upside-and-daniel-newman-calls-outlook-ripe",
+      "source": "alpaca",
+      "added_at": "2026-05-01T09:29:12.370296+00:00"
     }
   ]
 }
