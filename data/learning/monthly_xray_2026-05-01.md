@@ -2,81 +2,65 @@
 
 ## The Bottom Line
 
-This agent got destroyed. Out of 36 picks made, only 6 were evaluated (the rest presumably didn't trigger or are still open). All 6 evaluated trades hit stop-loss, resulting in a **0% win rate** and **-6.0R total** (-1.0R average per trade). The average loss per trade was -6.22%. This is not "variance" or "unlucky timing"—this is a complete failure to generate alpha during the observation period. If this agent is trading live capital, **stop immediately**.
+This agent got destroyed this month. Out of 36 picks, only 6 were evaluated, and every single one hit the stop loss. That's a 0% win rate with an average R of -1.0 and total loss of -6R. The average trade lost 6.22%. This is not a rough patch—this is a complete systematic failure. If this is live money, stop trading immediately and figure out what's broken before burning through more capital.
 
 ## Week-Over-Week Story
 
-**DATA INSUFFICIENT** - We only have one week of evaluated trades (April 27 week) with 6 completed positions. There's no prior week to compare against, so we cannot establish trend direction or assess whether performance is improving or deteriorating. The single week shows catastrophic results: 0/6 winners, -6.0R, but we need at least 3-4 weeks of data to distinguish between systematic failure and an unlucky draw during a market event.
-
-The code change on May 1st (news engine update) came *after* all evaluated trades completed, so it cannot be credited or blamed for this month's disaster.
+**DATA INSUFFICIENT** - Only one week of data exists (April 27-May 1), so there's no week-over-week comparison to make. The single week shows catastrophic performance: 0% win rate, -6.0R total, -6.22% average loss per trade. The only code change during this period was a daily observation log on May 1st, which appears to be documentation rather than strategy modification, so it can't be linked to performance.
 
 ## Did Our Tweaks Actually Work?
 
-**News Engine Update (2026-05-01)**
-- **Before:** 0% win rate, -1.0R average (6 trades)
-- **After:** No evaluated trades yet
-- **Verdict:** INSUFFICIENT DATA - Change occurred on the last day of the reporting period
-- **Should we revert?** Cannot assess yet, but given the baseline performance is literally the worst possible outcome, we're not reverting from something that was working
+**Change: Daily observations log (May 1st)**
+- **Performance BEFORE:** Unknown (no prior period data)
+- **Performance AFTER:** 0% win rate, -6.0R
+- **Verdict:** Insufficient data - this appears to be a logging/documentation change, not a strategy change
+- **Revert?** N/A - not a trading logic change
 
-This is a backwards-looking analysis problem: we need the change to have happened mid-month to assess impact. The news engine update might be attempting to fix the bleeding, but we won't know until June data arrives.
+The real issue is we have no baseline. We can't tell if this is new broken code or if the strategy has always been this bad. The observation types show the system flagged 18 "weak_pick" warnings and 11 "sector_warning" flags—if the agent knew these were weak, why did it trade them?
 
 ## What's Working (Keep Doing)
 
-**Nothing is working.** Let me be crystal clear:
-- Every confidence band (0.80-0.85, 0.75-0.80, <0.75) produced 0% win rate
-- Every market regime (unknown, bull) produced 0% win rate
-- The "best" trade still lost -3.9%
-- Even the agent's "premarket_correct" signal fired 18 times but we have no evidence it translated to winning trades
-
-The observation flags show the system *knows* something is wrong (18 "weak_pick" warnings, 10 "sector_warning" flags, 5 "sl_too_tight" alerts), but knowing and fixing are different things.
+Absolutely nothing is working right now. However, looking at the data:
+- The agent generated 36 picks but only 6 were evaluated, suggesting some internal filtering prevented 30 trades from executing—this filter might be the only thing that saved us from -36R instead of -6R
+- The observation system correctly identified 18 "weak picks" and flagged pre-market conditions 18 times, showing the monitoring infrastructure works even if the trading logic doesn't
 
 ## What's NOT Working (Stop or Fix)
 
-1. **Position entry logic is broken** - 100% stop-loss rate suggests the agent is entering at terrible prices, perhaps buying into momentum that immediately reverses, or entering right before adverse events
+**Everything.** Specifically:
 
-2. **Stop-loss placement** - Average loss of -6.22% per trade is quite large. The system flagged "sl_too_tight" 5 times but also "sl_well_placed" 6 times, suggesting inconsistent risk management. When 100% of trades hit SL, the placement is irrelevant—we're on the wrong side
+1. **Score thresholds are meaningless**: Picks scored 0.80-0.85 (supposedly high confidence) had 0% win rate. Picks under 0.75 had 0% win rate. The scoring system has zero predictive power.
 
-3. **Regime detection is useless** - 5 trades classified as "unknown" regime and 1 as "bull," all lost. If you can't identify the regime, you shouldn't be taking directional bets
+2. **Stop losses triggering immediately**: All 6 trades hit SL with no TP hits. Average loss was 6.22%, ranging from -3.9% (NVDA) to -9.22% (RMBS). Either stops are too tight or the entry timing is catastrophically bad.
 
-4. **Confidence scoring adds no value** - Higher confidence (0.80-0.85) performed identically to low confidence (<0.75). The scoring system is not predictive
+3. **Semiconductor concentration risk**: 5 of 6 evaluated trades were semiconductor stocks (LRCX, NVDA, ARM, AVGO, RMBS). This sector got hammered and the agent had no diversification.
 
-5. **Sector concentration** - April 28th shows heavy semiconductor exposure (LRCX, NVDA, ARM, AVGO, RMBS). When the sector rolled over, everything hit stop-loss. Zero diversification benefit
+4. **Regime detection failure**: 5 trades classified as "unknown" regime, only 1 as "bull". Trading in unknown conditions with 100% failure rate is reckless.
+
+5. **The agent traded its own red flags**: 18 weak pick warnings, yet trades still executed. The observation system is screaming warnings that the execution system ignores.
 
 ## Patterns the Agent Should Learn
 
-1. **April 28th was a coordinated entry date** - 5 out of 6 evaluated trades entered on this single day, all in related sectors (semiconductors). This screams systematic bias toward a sector narrative that immediately failed. The agent needs circuit breakers against concentrated same-day sector bets
+1. **When semiconductors all flash the same signal, it's probably a sector-wide move, not individual opportunities**—all five semiconductor picks on April 28th lost money simultaneously (LRCX -6.85%, ARM -8.83%, RMBS -9.22%, AVGO -4.5%, NVDA -3.9%)
 
-2. **NVDA appeared twice in losses** (April 28 and 29), losing -3.9% and -4.02%. The agent is re-entering losing positions or running multiple strategies on the same ticker without coordination
+2. **"Unknown" regime = don't trade**: 5 out of 5 unknown regime trades failed. This should trigger position sizing reduction or trade rejection.
 
-3. **The "missed_opportunity" flag fired only once** - If the agent only missed ONE opportunity while taking 36 picks and losing on all 6 evaluated, the opportunity filter is way too loose
-
-4. **"Promising" flagged 14 times but "weak_pick" flagged 18 times** - The agent is contradicting itself, generating picks it simultaneously thinks are weak. This suggests multiple competing signals without proper hierarchy
+3. **Weak pick warnings should block trades**: If the system flags 18 weak picks, those shouldn't execute. The warning system and execution system are disconnected.
 
 ## Recommended Next Month's Experiments
 
-**DATA INSUFFICIENT** - With only 6 evaluated trades and a 0% win rate, we don't have enough signal to design meaningful experiments. We're flying blind. Any experiment designed on 6 catastrophic trades would be curve-fitting to noise.
-
-**What we should do instead:**
-- **Pause live trading immediately** if any real capital is at risk
-- Run paper trading only for May to gather 40+ evaluated trades
-- Focus diagnostic experiments on understanding *why* April 28th was such a disaster date
-- Implement pre-trade checklist: sector concentration limit (max 3 tickers per sector per day), regime confidence threshold (no trades in "unknown" regime), minimum time between entries on same ticker (24 hours)
+**DATA INSUFFICIENT** - With only 6 evaluated trades and 0% win rate, we have no statistical foundation to design experiments. Running new experiments on a broken base system is throwing good money after bad.
 
 ## Reverts to Consider
 
-**Cannot recommend specific reverts** because we don't have pre/post comparison data for any changes. However, if previous months showed >40% win rate and +0.3R average, we should:
+**Immediate action required:**
+1. Revert to the last version that had positive expectancy (if one exists—need to check historical data)
+2. If no positive expectancy version exists, shut down live trading completely
+3. Review code changes from the past 2-3 months to identify when win rate dropped below 40%
 
-1. Pull the git history going back 3 months
-2. Identify the version that last produced profitable results
-3. Revert to that baseline immediately
-4. Treat the current version as experimental and rebuild from known-good state
-
-If this agent *never* had a profitable month, the recommendation is simpler: **shut it down and start over with a new hypothesis**.
+**Without historical performance data, we're flying blind.** The git log shows only documentation changes, suggesting either the repo doesn't capture strategy changes properly or this is a newly deployed system that was never properly validated.
 
 ## The One Number That Matters
 
-**0%** win rate on evaluated trades.
+**0% win rate on 6 evaluated trades, -6R total**
 
-Not 20%. Not 35%. Zero. Every single evaluated trade lost money. This isn't about optimizing take-profit levels or tweaking confidence thresholds. The fundamental trade selection logic is broken, and no amount of parameter tuning will fix a system that cannot identify a single winning setup out of six attempts. 
-
-**Recommendation: Cease live trading until win rate exceeds 30% over 30+ paper trades.**
+This isn't variance—even a coin flip should win 1-2 trades out of 6. This is systematic failure. The strategy either has a fundamental flaw (wrong signals, bad timing, inverted logic) or market conditions changed so dramatically that previously working logic now fails completely. Either way: **STOP LIVE TRADING** until you can paper trade for 50+ trades and achieve at least 40% win rate with positive expectancy. Right now, you're just paying the market tuition with nothing to show for it.
