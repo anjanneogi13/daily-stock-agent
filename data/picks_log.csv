@@ -32,3 +32,5 @@ pick_date,pick_time,ticker,company,tag,trade_type,score,multiplier,entry,stop_lo
 2026-05-01,11:58:11,SNPS,Synopsys Inc,SEMI / AI,swing,0.775,1.27,482.6,443.98,530.87,1.25,2,26,bull,718.66,38.5,pending,,,,,,,,,,none,443.98,443.98,482.6,false,530.87,[],,[]
 2026-05-01,11:58:11,AMP,Ameriprise Financial Inc,,swing,0.737,1.0,474.79,450.4,505.28,1.25,4,83,bull,718.66,38.5,pending,,,,,,,,,,none,450.4,450.4,474.79,false,505.28,[],,[]
 2026-05-01,11:58:11,TXN,Texas Instruments Inc,SEMI,swing,0.711,1.2,281.08,259.6,307.92,1.25,4,88,bull,718.66,38.5,pending,,,,,,,,,,none,259.6,259.6,281.08,false,307.92,[],,[]
+2026-05-01,12:24:16,ARWR,Arrowhead Pharmaceuticals Inc,,swing,0.868,1.0,73.48,71.37,76.99,1.66,47,6,bull,718.66,38.5,pending,,,,,,,,,,none,71.37,71.37,73.48,false,76.99,[],,[]
+2026-05-01,12:24:16,SLNH,Soluna Holdings Inc,,swing,0.717,1.0,1.66,1.5,1.93,1.69,625,,bull,718.66,38.5,pending,,,,,,,,,,none,1.5,1.5,1.66,false,1.93,[],,[]
