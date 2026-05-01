@@ -870,6 +870,30 @@
       "url": "https://www.benzinga.com/quote/OIO",
       "source": "alpaca",
       "added_at": "2026-05-01T18:01:08.415776+00:00"
+    },
+    {
+      "ticker": "MRNA",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Moderna reported better-than-expected Q1 earnings with affirmed FY26 guidance above estimates, creating a double positive catalyst with immediate trading impact already evident in share price movement.",
+      "action_window": "intraday",
+      "headline": "Moderna shares are trading higher after the company reported better-than-expected Q1 financial results and affirmed its FY26 sales guidance above estimates.",
+      "url": "https://www.benzinga.com/quote/MRNA",
+      "source": "alpaca",
+      "added_at": "2026-05-01T19:02:55.884029+00:00"
+    },
+    {
+      "ticker": "CAT",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analyst upgrades across five stocks including a notable sentiment reversal on Caterpillar from bearish to bullish, but diluted impact across multiple tickers.",
+      "action_window": "next_day",
+      "headline": "This Caterpillar Analyst Is No Longer Bearish; Here Are Top 5 Upgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52228315/this-caterpillar-analyst-is-no-longer-bearish-here-are-top-5-upgrades-for-friday-2",
+      "source": "alpaca",
+      "added_at": "2026-05-01T19:02:55.884042+00:00"
     }
   ]
 }
