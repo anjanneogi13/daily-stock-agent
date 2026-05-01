@@ -398,6 +398,78 @@
       "url": "https://www.benzinga.com/news/26/05/52207068/civeo-raises-fy2026-sales-guidance-from-650-000m-700-000m-to-675-000m-700-000m-vs-674-648m-est",
       "source": "alpaca",
       "added_at": "2026-05-01T10:54:17.776994+00:00"
+    },
+    {
+      "ticker": "PIPR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Piper Sandler beat EPS estimates by 7.5% ($1.00 vs $0.93) and revenue estimates by 7.6% ($474.4M vs $440.9M), representing a significant double beat on quarterly earnings.",
+      "action_window": "intraday",
+      "headline": "Piper Sandler Q1 Adj. EPS $1.00 Beats $0.93 Estimate, Sales $474.409M Beat $440.872M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52208419/piper-sandler-q1-adj-eps-1-00-beats-0-93-estimate-sales-474-409m-beat-440-872m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:39:49.063760+00:00"
+    },
+    {
+      "ticker": "CBOE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "CBOE reported Q1 earnings beat of 12.5% on EPS and 4.9% revenue beat versus estimates, representing a meaningful positive surprise worthy of immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Cboe Global Markets Q1 Adj. EPS $3.70 Beats $3.29 Estimate, Sales $728.900M Beat $694.719M Estimate",
+      "url": "https://www.benzinga.com/quote/CBOE",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:39:49.063771+00:00"
+    },
+    {
+      "ticker": "D",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Dominion Energy beat both EPS estimates by 4.4% and sales estimates by 11.2%, representing a significant double beat that typically drives immediate positive price action in utility stocks.",
+      "action_window": "intraday",
+      "headline": "Dominion Energy Q1 Adj. EPS $0.95 Beats $0.91 Estimate, Sales $5.019B Beat $4.512B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52208360/dominion-energy-q1-adj-eps-0-95-beats-0-91-estimate-sales-5-019b-beat-4-512b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:39:49.063777+00:00"
+    },
+    {
+      "ticker": "GTES",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating by 6% but revenue missing by 1.1%, creating offsetting trading signals that warrant monitoring but limit clear directional conviction.",
+      "action_window": "intraday",
+      "headline": "Gates Industrial Corp Q1 Adj. EPS $0.35 Beats $0.33 Estimate, Sales $851.100M Miss $860.949M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52208359/gates-industrial-corp-q1-adj-eps-0-35-beats-0-33-estimate-sales-851-100m-miss-860-949m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:39:49.063783+00:00"
+    },
+    {
+      "ticker": "TPG",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating by 14.8% but revenue missing by 4.6%, creating offsetting forces that likely result in modest initial volatility.",
+      "action_window": "intraday",
+      "headline": "Update: TPG Q1 Adj. EPS $0.70 Beats $0.61 Estimate, Sales $557.180M Miss $584.282M Estimate",
+      "url": "https://www.benzinga.com/quote/TPG",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:39:49.063792+00:00"
+    },
+    {
+      "ticker": "UNI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong YoY revenue growth of 16.8% ($24.527M to $28.651M) with positive EPS of $0.11 indicates solid operational performance, though lack of prior consensus estimates limits tradeable conviction.",
+      "action_window": "intraday",
+      "headline": "Unisync Q2 EPS $0.11, Sales $28.651M Up From $24.527M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52208236/unisync-q2-eps-0-11-sales-28-651m-up-from-24-527m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-01T11:39:49.063797+00:00"
     }
   ]
 }
