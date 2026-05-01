@@ -150,7 +150,7 @@ def test_watchlist_score_boost_bullish():
     }]
     add_from_news(items)
     boost = watchlist_score_boost("BOOST")
-    assert 0 < boost <= 0.15
+    assert 0 < boost <= 0.30  # PR #68: cap raised from 0.15 to 0.30
     assert watchlist_score_boost("NOT_THERE") == 0.0
 
 
@@ -236,12 +236,12 @@ def test_score_boost_applied_to_bullish_ticker():
     }]
     add_from_news(items)
     boost = watchlist_score_boost("BOOST")
-    # Max bullish boost = 1.0 * 0.15 = 0.15
-    assert boost == 0.15
+    # PR #68: Max bullish boost (fresh news) = 1.0 * 0.15 * 2.0 = 0.30
+    assert boost == 0.30  # PR #68: fresh news = 2x freshness mult
 
 
 def test_score_boost_clamped_to_range():
-    """Watchlist boost should never exceed +/- 0.15."""
+    """PR #68: Watchlist boost cap raised from +/-0.15 to +/-0.30 (fresh news)."""
     _reset_watchlist()
     # Bullish at any score
     items = [{
@@ -256,8 +256,8 @@ def test_score_boost_clamped_to_range():
                            "rationale": "", "action_window": "intraday"}
     }]
     add_from_news(items)
-    assert watchlist_score_boost("A") <= 0.15
-    assert watchlist_score_boost("B") >= -0.15
+    assert watchlist_score_boost("A") <= 0.30  # PR #68: new cap
+    assert watchlist_score_boost("B") >= -0.30  # PR #68: new cap
     assert watchlist_score_boost("NONE") == 0.0
 
 

@@ -1,5 +1,6 @@
 universe:
   source: sp500
+  include_watchlist: true   # PR #68: bullish-news tickers in scoring pool
   custom_tickers:
   - AAPL
   - MSFT
