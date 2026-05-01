@@ -1,7 +1,10 @@
-"""Sends today's picks to Telegram with premarket tags.
+"""Sends today's picks to Telegram with DUAL-SECTION format (PR #69).
 
-PR #66: Added dedup_sender to prevent duplicate messages when multiple
-cron slots fire (e.g., 14 NVDA messages on Apr 30 due to 5 parallel runs).
+🌅 DAY TRADES section first (with max-hold time)
+📈 SWING TRADES section below (multi-day hold)
+
+PR #66: dedup_sender prevents duplicate messages (parallel cron runs)
+PR #69: Dual-section format makes DAY vs SWING clear at a glance
 """
 import csv, os, sys, json, urllib.request, urllib.parse
 from datetime import datetime
@@ -12,51 +15,175 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.dedup_sender import should_send, mark_sent
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"), os.environ.get("TELEGRAM_GROUP_CHAT_ID")] if c]
+CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
+                         os.environ.get("TELEGRAM_GROUP_CHAT_ID")] if c]
 if not TOKEN or not CHAT_IDS:
     print("[telegram] Missing creds — skipping"); sys.exit(0)
 
-# Phase 2A.3: Load current watchlist tickers to mark news-driven picks
+
+# ═══════════════════════════════════════════════════════════════
+# Helpers
+# ═══════════════════════════════════════════════════════════════
 def _load_watchlist_tickers():
+    """Phase 2A.3: Load bullish-news tickers to mark with 🔔."""
     try:
         wl = json.loads(Path("data/watchlist.json").read_text())
         return {it["ticker"] for it in wl.get("items", []) if it.get("sentiment") == "bullish"}
     except Exception:
         return set()
 
+
 WL_TICKERS = _load_watchlist_tickers()
+
+
 def _wl_emoji(t):
     return "🔔 " if t in WL_TICKERS else ""
 
-today = datetime.now().strftime("%Y-%m-%d")
 
-# Load picks
-rows = []
-p = Path("data/picks_log.csv")
-if p.exists():
-    rows = [r for r in csv.DictReader(p.open()) if r.get("pick_date") == today]
-
-# Load premarket tags (optional)
-pm = {}
-pm_path = Path("data/premarket_check.json")
-if pm_path.exists():
+def _safe_float(val, default=0.0):
     try:
-        pm = json.loads(pm_path.read_text())
-    except Exception:
-        pm = {}
-tags = {x["ticker"]: x for x in pm.get("picks", [])}
-mkt = pm.get("market", {})
+        return float(val) if val not in (None, "") else default
+    except (ValueError, TypeError):
+        return default
 
-if not rows:
-    msg = f"📭 *Daily Stock Picks — {today}*\n\n_No picks today._"
-else:
-    wl_legend = " • 🔔 = news-driven" if any(_wl_emoji(r["ticker"]) for r in rows) else ""
-    lines = [f"📈 *Daily Stock Picks — {today}*",
-             f"_{len(rows)} picks • Regime: {rows[0].get('regime','?')} • CAPE: {rows[0].get('cape','?')}{wl_legend}_",
-             ""]
-    # Market summary
+
+def _safe_int(val, default=0):
+    try:
+        return int(float(val)) if val not in (None, "") else default
+    except (ValueError, TypeError):
+        return default
+
+
+def _classify_pick(row):
+    """PR #69: Determine if pick is DAY or SWING from CSV.
+    Defaults to 'swing' for backward compat with old picks.
+    """
+    return (row.get("trade_type", "") or "swing").strip().lower()
+
+
+# ═══════════════════════════════════════════════════════════════
+# Per-pick formatters (compact day vs detailed swing)
+# ═══════════════════════════════════════════════════════════════
+def _format_day_pick(i, row, tag_info):
+    """🌅 Day trade format — compact, emphasizes tight stop + max hold."""
+    t = row["ticker"]
+    entry = _safe_float(row["entry"])
+    sl    = _safe_float(row["stop_loss"])
+    tp    = _safe_float(row["take_profit"])
+    risk_pct = (entry - sl) / entry * 100 if entry > 0 else 0
+    rew_pct  = (tp - entry) / entry * 100 if entry > 0 else 0
+    rr = row.get("risk_reward", "?")
+    qty = row.get("qty", "?")
+    score = _safe_float(row.get("score", 0))
+
+    tag = tag_info.get("tag", "")
+    reason = tag_info.get("reason", "")
+    cur = tag_info.get("current_price")
+    cur_str = f" → ${cur:.2f}" if cur else ""
+
+    lines = [
+        f"⚡ *{i}. {_wl_emoji(t)}{t}* — score {score:.2f} | day_score {_safe_float(row.get('day_score', 0)):.2f}"
+    ]
+    if tag:
+        lines.append(f"   {tag} _{reason}_")
+
+    lines.append(
+        f"   🎯 `${entry:.2f}`{cur_str}  "
+        f"🛑 `${sl:.2f}` (−{risk_pct:.2f}%)  "
+        f"💰 `${tp:.2f}` (+{rew_pct:.2f}%)"
+    )
+    lines.append(
+        f"   📦 {qty}sh · R:R {rr} · ⏱ Hold ≤4h (force EOD close)"
+    )
+    return "\n".join(lines) + "\n"
+
+
+def _format_swing_pick(i, row, tag_info):
+    """📈 Swing trade format — detailed, multi-day hold."""
+    t = row["ticker"]
+    entry = _safe_float(row["entry"])
+    sl    = _safe_float(row["stop_loss"])
+    tp    = _safe_float(row["take_profit"])
+    risk_pct = (entry - sl) / entry * 100 if entry > 0 else 0
+    rew_pct  = (tp - entry) / entry * 100 if entry > 0 else 0
+    rr = row.get("risk_reward", "2.0")
+    qty = row.get("qty", "-")
+    score = _safe_float(row.get("score", 0))
+    d2e = row.get("days_to_earnings", "")
+    earn = f" • 📅 {d2e}d" if d2e else ""
+
+    tag = tag_info.get("tag", "")
+    reason = tag_info.get("reason", "")
+    cur = tag_info.get("current_price")
+    cur_str = f" (now ${cur:.2f})" if cur else ""
+
+    lines = [f"📊 *{i}. {_wl_emoji(t)}{t}* — score {score:.2f}{earn}"]
+    if tag:
+        lines.append(f"   {tag} _{reason}_")
+
+    lines.extend([
+        f"   🎯 Entry: `${entry:.2f}`{cur_str}",
+        f"   🛑 SL: `${sl:.2f}` (−{risk_pct:.1f}%)",
+        f"   💰 TP: `${tp:.2f}` (+{rew_pct:.1f}%)",
+        f"   📦 Qty: {qty} • R:R {rr}",
+    ])
+
+    # 3-tier scale-out display (Phase 2B.4)
+    tp1 = _safe_float(row.get("tp1"))
+    tp2 = _safe_float(row.get("tp2"))
+    qt1 = _safe_int(row.get("qty_t1"))
+    qt2 = _safe_int(row.get("qty_t2"))
+    qt3 = _safe_int(row.get("qty_t3"))
+    if tp1 > 0 and tp2 > 0 and (qt1 + qt2 + qt3) > 0 and entry > 0:
+        tp1_pct = (tp1 - entry) / entry * 100
+        tp2_pct = (tp2 - entry) / entry * 100
+        lines.extend([
+            f"   ├ T1 `${tp1:.2f}` (+{tp1_pct:.1f}%) × {qt1}sh — early lock",
+            f"   ├ T2 `${tp2:.2f}` (+{tp2_pct:.1f}%) × {qt2}sh — bulk",
+            f"   └ T3 trail × {qt3}sh — runner 🚀",
+        ])
+
+    return "\n".join(lines) + "\n"
+
+
+# ═══════════════════════════════════════════════════════════════
+# Build the message
+# ═══════════════════════════════════════════════════════════════
+def build_message(rows, pm, today):
+    """PR #69: Build dual-section message (DAY first, SWING below)."""
+    # Premarket tags lookup
+    tags = {x["ticker"]: x for x in pm.get("picks", [])}
+    mkt = pm.get("market", {})
+
+    if not rows:
+        return f"📭 *Daily Stock Picks — {today}*\n\n_No picks today._"
+
+    # Split picks by trade_type
+    day_picks   = [r for r in rows if _classify_pick(r) == "day"]
+    swing_picks = [r for r in rows if _classify_pick(r) != "day"]
+    has_news = any(_wl_emoji(r["ticker"]) for r in rows)
+    legend_bits = []
+    if has_news: legend_bits.append("🔔 news-driven")
+    legend_bits.append("⚡ DAY · 📊 SWING")
+    legend = " • " + " • ".join(legend_bits)
+
+    # Header
+    lines = [
+        f"📈 *Daily Stock Picks — {today}*",
+        f"_{len(rows)} picks ({len(day_picks)} day · {len(swing_picks)} swing)"
+        f" • Regime: {rows[0].get('regime','?')}"
+        f" • CAPE: {rows[0].get('cape','?')}{legend}_",
+        ""
+    ]
+
+    # Market summary (unchanged from before)
     if mkt:
-        lines.append(f"🌐 *Market:* SPY {mkt.get('spy_change_pct',0):+.2f}% • QQQ {mkt.get('qqq_change_pct',0):+.2f}% • SOXX {mkt.get('soxx_change_pct',0):+.2f}% • VIX {mkt.get('vix','?')}")
+        lines.append(
+            f"🌐 *Market:* SPY {mkt.get('spy_change_pct',0):+.2f}% • "
+            f"QQQ {mkt.get('qqq_change_pct',0):+.2f}% • "
+            f"SOXX {mkt.get('soxx_change_pct',0):+.2f}% • "
+            f"VIX {mkt.get('vix','?')}"
+        )
         for w in mkt.get("warnings", []):
             lines.append(w)
         if mkt.get("global_action") == "skip_all":
@@ -65,87 +192,89 @@ else:
             lines.append("\n⚠️ *Reduce all positions by 50% today*\n")
         lines.append("")
 
-    # Per-pick
-    for i, r in enumerate(rows, 1):
-        try:
-            entry = float(r["entry"]); sl = float(r["stop_loss"]); tp = float(r["take_profit"])
-            risk = (entry - sl) / entry * 100
-            reward = (tp - entry) / entry * 100
-        except Exception:
-            entry = sl = tp = 0; risk = reward = 0
-        d2e = r.get("days_to_earnings","")
-        earn = f" • 📅 {d2e}d" if d2e else ""
-        t = tags.get(r["ticker"], {})
-        tag = t.get("tag", "")
-        reason = t.get("reason", "")
-        cur = t.get("current_price")
-        cur_str = f" (now ${cur:.2f})" if cur else ""
+    # ═══ DAY TRADES SECTION ═══
+    if day_picks:
+        lines.append(f"🌅 *DAY TRADES ({len(day_picks)})* — Close by EOD")
+        lines.append("─" * 30)
+        for i, r in enumerate(day_picks, 1):
+            lines.append(_format_day_pick(i, r, tags.get(r["ticker"], {})))
+        lines.append("")
 
-        lines.append(
-            f"*{i}. {_wl_emoji(r['ticker'])}{r['ticker']}* — score {float(r['score']):.2f}{earn}\n"
-            f"   {tag} _{reason}_\n" if tag else f"*{i}. {_wl_emoji(r['ticker'])}{r['ticker']}* — score {float(r['score']):.2f}{earn}\n"
-        )
-        lines.append(
-            f"   🎯 Entry: `${entry:.2f}`{cur_str}\n"
-            f"   🛑 SL: `${sl:.2f}` (−{risk:.1f}%)\n"
-            f"   💰 TP: `${tp:.2f}` (+{reward:.1f}%)\n"
-            f"   📦 Qty: {r.get('qty','-')} • R:R {r.get('risk_reward','2.0')}\n"
-        )
+    # ═══ SWING TRADES SECTION ═══
+    if swing_picks:
+        lines.append(f"📈 *SWING TRADES ({len(swing_picks)})* — Multi-day hold")
+        lines.append("─" * 30)
+        for i, r in enumerate(swing_picks, 1):
+            lines.append(_format_swing_pick(i, r, tags.get(r["ticker"], {})))
 
-        # Phase 2B.4: 3-tier scale-out display (if tier columns populated)
-        try:
-            tp1 = float(r.get("tp1") or 0)
-            tp2 = float(r.get("tp2") or 0)
-            qt1 = int(float(r.get("qty_t1") or 0))
-            qt2 = int(float(r.get("qty_t2") or 0))
-            qt3 = int(float(r.get("qty_t3") or 0))
-            if tp1 > 0 and tp2 > 0 and (qt1 + qt2 + qt3) > 0:
-                tp1_pct = (tp1 - entry) / entry * 100 if entry > 0 else 0
-                tp2_pct = (tp2 - entry) / entry * 100 if entry > 0 else 0
-                tier_block = (
-                    f"   ├ T1 `${tp1:.2f}` (+{tp1_pct:.1f}%) × {qt1}sh — early lock\n"
-                    f"   ├ T2 `${tp2:.2f}` (+{tp2_pct:.1f}%) × {qt2}sh — bulk\n"
-                    f"   └ T3 trail × {qt3}sh — runner 🚀\n"
-                )
-                lines.append(tier_block)
-        except (ValueError, TypeError):
-            pass  # old picks without tier cols — skip silently
+    # Footer with news-driven recap
+    if has_news:
+        news_tickers = sorted({r["ticker"] for r in rows if r["ticker"] in WL_TICKERS})
+        lines.append(f"📰 *News-driven:* {', '.join(news_tickers)}")
 
+    lines.append("")
     lines.append("⚠️ _Educational only. Not financial advice._")
-    msg = "\n".join(lines)
+    lines.append("🔧 _PR #66+#67+#68+#69 active_")
 
-if len(msg) > 4000:
-    msg = msg[:3950] + "\n\n_(truncated)_"
+    return "\n".join(lines)
 
-# 🚨 PR #66: Dedup check — skip if same content sent in last 60 min
-# This solves the "14 NVDA messages on Apr 30" issue caused by parallel cron runs
-if not should_send(msg, window_minutes=60):
-    print("[telegram] ⏭ Skipped — same content sent within last 60 min (dedup)")
-    sys.exit(0)
 
-url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-all_sent = True
-for _cid in CHAT_IDS:
-    data = urllib.parse.urlencode({
-        "chat_id": _cid, "text": msg,
-        "parse_mode": "Markdown", "disable_web_page_preview": "true",
-    }).encode()
-    try:
-        resp = urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
-        result = json.loads(resp.read())
-        if result.get('ok'):
-            print(f"[telegram] ✅ Sent to {_cid[:6]}...")
-        else:
-            print(f"[telegram] ❌ {result}")
+# ═══════════════════════════════════════════════════════════════
+# Main execution
+# ═══════════════════════════════════════════════════════════════
+if __name__ == "__main__":
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # Load picks
+    rows = []
+    p = Path("data/picks_log.csv")
+    if p.exists():
+        rows = [r for r in csv.DictReader(p.open()) if r.get("pick_date") == today]
+
+    # Load premarket tags
+    pm = {}
+    pm_path = Path("data/premarket_check.json")
+    if pm_path.exists():
+        try:
+            pm = json.loads(pm_path.read_text())
+        except Exception:
+            pm = {}
+
+    msg = build_message(rows, pm, today)
+
+    # Truncate if too long for Telegram
+    if len(msg) > 4000:
+        msg = msg[:3950] + "\n\n_(truncated)_"
+
+    # 🚨 PR #66: Dedup check
+    if not should_send(msg, window_minutes=60):
+        print("[telegram] ⏭ Skipped — same content sent within last 60 min (dedup)")
+        sys.exit(0)
+
+    # Send to all chat IDs
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    all_sent = True
+    for _cid in CHAT_IDS:
+        data = urllib.parse.urlencode({
+            "chat_id": _cid, "text": msg,
+            "parse_mode": "Markdown", "disable_web_page_preview": "true",
+        }).encode()
+        try:
+            resp = urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
+            result = json.loads(resp.read())
+            if result.get('ok'):
+                print(f"[telegram] ✅ Sent to {_cid[:6]}...")
+            else:
+                print(f"[telegram] ❌ {result}")
+                all_sent = False
+        except Exception as e:
+            print(f"[telegram] ❌ {e}")
             all_sent = False
-    except Exception as e:
-        print(f"[telegram] ❌ {e}")
-        all_sent = False
 
-# Mark as sent ONLY if at least one chat received it
-if all_sent:
-    mark_sent(msg, window_minutes=60)
-    print("[telegram] ✅ Marked sent in dedup log")
-else:
-    print("[telegram] ⚠ Not marking sent — some chats failed")
-    sys.exit(1)
+    # Mark sent only if at least one chat received it
+    if all_sent:
+        mark_sent(msg, window_minutes=60)
+        print("[telegram] ✅ Marked sent in dedup log")
+    else:
+        print("[telegram] ⚠ Not marking sent — some chats failed")
+        sys.exit(1)
