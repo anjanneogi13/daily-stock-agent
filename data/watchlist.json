@@ -834,6 +834,18 @@
       "url": "https://www.benzinga.com/quote/COAG",
       "source": "alpaca",
       "added_at": "2026-05-01T16:50:32.387333+00:00"
+    },
+    {
+      "ticker": "INSG",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Asset acquisition from Nokia that could nearly double INSG revenue with Nokia taking strategic 11% stake represents major confirmed M&A catalyst with significant business transformation potential.",
+      "action_window": "intraday",
+      "headline": "Inseego's Nokia Deal Could Nearly Double Revenue, Analyst Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52224179/inseegos-nokia-deal-could-nearly-double-revenue-analyst-says",
+      "source": "alpaca",
+      "added_at": "2026-05-01T16:57:59.837301+00:00"
     }
   ]
 }
