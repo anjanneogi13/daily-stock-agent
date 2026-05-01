@@ -44,3 +44,23 @@ llm:
   enabled: true
   model: claude-sonnet-4-5
   max_tokens: 500
+
+# ═══════════════════════════════════════════════════════════════
+# PR #67: DAY TRADING CONFIGURATION
+# ═══════════════════════════════════════════════════════════════
+day_trading:
+  enabled: true
+  max_picks: 3              # max DAY picks per session
+  min_score: 0.65           # day_score threshold
+  atr_mult_sl: 0.6          # tight stop (~1-1.5% typical)
+  atr_mult_tp1: 1.0         # quick target (~1.5-2%)
+  atr_mult_tp2: 1.8         # full target (~3%)
+  max_hold_minutes: 240     # force EOD close (4 hours)
+  min_rvol: 1.2             # require above-avg volume
+  min_dollar_volume: 20000000  # $20M daily liquidity
+  
+swing_trading:
+  enabled: true
+  max_picks: 5              # max SWING picks per session
+  min_score: 0.55           # existing threshold
+  # Uses existing atr_mult_sl=2.0 from risk: section

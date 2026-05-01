@@ -1,4 +1,8 @@
-"""Parallel candidate scoring — all tickers, no shortcuts."""
+"""Parallel candidate scoring — all tickers, no shortcuts.
+
+PR #67: Now also computes day_trading_score for each candidate.
+classify_with_day_score makes the final DAY/SWING decision.
+"""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from .indicators import add_indicators, latest_signals
 from .fundamentals import score_fundamentals, passes_filters
@@ -7,6 +11,8 @@ from .scorer import composite_score
 from .watchlist_manager import watchlist_score_boost
 from .risk_manager import trade_plan, atr_trade_plan
 from .data_fetcher import fetch_info
+from .day_trading_scorer import day_trading_score
+from .market_guard import classify_with_day_score
 
 
 def _score_one(tk, df, cfg):
@@ -24,8 +30,7 @@ def _score_one(tk, df, cfg):
         scores = composite_score(sig, fund, sent, cfg["weights"],
                                  ticker=tk, sector_cfg=cfg.get("sector", {}))
 
-        # Phase 2A: News watchlist boost (-0.15 to +0.15)
-        # Bullish news → boost; bearish news → penalty (effectively excludes)
+        # Phase 2A: News watchlist boost
         wl_boost = watchlist_score_boost(tk)
         if wl_boost != 0:
             scores["watchlist_boost"] = round(wl_boost, 3)
@@ -34,21 +39,35 @@ def _score_one(tk, df, cfg):
 
         if scores["composite"] < cfg["output"]["min_score"]:
             return None
-        # Week 4: ATR-based dynamic stops (fallback to old trade_plan if ATR missing)
+
+        # PR #67: Day trading score (separate from swing composite)
+        # News boost flows in here too (same watchlist signal)
+        news_boost_for_day = max(0, wl_boost)  # only positive news helps day trades
+        day_eval = day_trading_score(sig, news_boost=news_boost_for_day)
+        scores["day_score"] = day_eval["day_score"]
+        scores["day_reason"] = day_eval["day_reason"]
+        scores["day_components"] = day_eval["day_components"]
+
+        # Determine trade type (day vs swing)
+        ttype = classify_with_day_score(scores, day_eval["day_score"], sig=sig)
+        scores["trade_type"] = ttype  # surface for downstream
+
+        # ATR-based stops (tighter for day trades)
         atr = sig.get("atr_14") or sig.get("atr") or sig.get("ATR") or 0
         price = sig.get("close", 0)
-        capital = cfg.get("risk", {}).get("capital", 10000)
+        capital = cfg.get("risk", {}).get("capital", 10000) or \
+                  cfg.get("risk", {}).get("account_size", 10000)
         if atr and atr > 0 and price > 0:
-            # Determine trade type early for stop sizing (preliminary, finalized in main.py)
-            from .market_guard import classify_trade_type
-            ttype = classify_trade_type(scores)
             plan = atr_trade_plan(price, atr, capital, trade_type=ttype)
         else:
             plan = trade_plan(sig, cfg)
+            plan["trade_type"] = ttype
+
         return {
             "ticker": tk, "scores": scores, "plan": plan, "news": news,
             "info_short": {"name": info.get("shortName", tk),
                            "sector": info.get("sector", "N/A")},
+            "trade_type": ttype,  # also surface at top level
         }
     except Exception as e:
         print(f"[score] {tk}: {type(e).__name__}: {str(e)[:80]}")
