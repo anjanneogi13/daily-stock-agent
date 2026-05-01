@@ -1182,6 +1182,54 @@
       "url": "https://www.benzinga.com/quote/GLED",
       "source": "alpaca",
       "added_at": "2026-05-01T20:29:19.886776+00:00"
+    },
+    {
+      "ticker": "TDTH",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq deficiency letters typically indicate non-compliance with listing requirements (bid price, market cap, or filing delays), creating delisting risk and negative price pressure.",
+      "action_window": "next_day",
+      "headline": "Trident Digital Tech Holdings Receives Nasdaq Letter",
+      "url": "https://www.benzinga.com/news/26/05/52233679/trident-digital-tech-holdings-receives-nasdaq-letter",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:14:23.106532+00:00"
+    },
+    {
+      "ticker": "DFDV",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market offering of up to $200M in common stock signals significant dilution risk and typically triggers immediate selling pressure as existing shareholders face substantial equity dilution.",
+      "action_window": "intraday",
+      "headline": "DeFi Development Enters Sales Agreement With R.F. Lafferty To Offer And Sell Up To $200M Of Common Stock",
+      "url": "https://www.benzinga.com/news/26/05/52233488/defi-development-enters-sales-agreement-with-r-f-lafferty-to-offer-and-sell-up-to-200m-of-common-sto",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:14:23.106548+00:00"
+    },
+    {
+      "ticker": "XEL",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $4.3B common stock offering represents significant dilution (~25-30% of market cap for a utility), typically triggering immediate selling pressure as existing shareholders face ownership dilution.",
+      "action_window": "intraday",
+      "headline": "Xcel Energy Files Prospectus To Offer And Sell Up To $4.3B Of Common Stock",
+      "url": "https://www.benzinga.com/news/26/05/52233466/xcel-energy-files-prospectus-to-offer-and-sell-up-to-4-3b-of-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:14:23.106558+00:00"
+    },
+    {
+      "ticker": "KBH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CFO resignation creates near-term uncertainty about financial leadership and potential undisclosed issues, though impact depends on succession planning and circumstances.",
+      "action_window": "next_day",
+      "headline": "KB Home Robert R. Dillard Resigns As CFO Effective May 8, 2026",
+      "url": "https://www.benzinga.com/news/26/05/52233444/kb-home-robert-r-dillard-resigns-as-cfo-effective-may-8-2026",
+      "source": "alpaca",
+      "added_at": "2026-05-01T21:14:23.106568+00:00"
     }
   ]
 }
