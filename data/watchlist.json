@@ -1050,6 +1050,138 @@
       "url": "https://www.benzinga.com/news/26/05/52231569/fibrobiologics-enters-into-6-15m-offering-of-common-stock",
       "source": "alpaca",
       "added_at": "2026-05-01T20:15:18.112567+00:00"
+    },
+    {
+      "ticker": "FCPT",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $500M common share offering represents significant dilution (~25-30% of market cap for this REIT) and typically creates immediate selling pressure as existing shareholders face value dilution.",
+      "action_window": "intraday",
+      "headline": "Four Corners Property Trust Files Prospectus For Offering $500M Common Shares",
+      "url": "https://www.benzinga.com/news/26/05/52232493/four-corners-property-trust-files-prospectus-for-offering-500m-common-shares",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886695+00:00"
+    },
+    {
+      "ticker": "IBCP",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Share buyback authorization of $200M signals management confidence and commitment to shareholder returns, typically supporting stock price through reduced share count and demand creation.",
+      "action_window": "next_day",
+      "headline": "Independent Bank Corp Authorizes Stock Buyback Plan To Repurchase Up To $200M Of Common Stock",
+      "url": "https://www.benzinga.com/news/26/05/52232447/independent-bank-corp-authorizes-stock-buyback-plan-to-repurchase-up-to-200m-of-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886710+00:00"
+    },
+    {
+      "ticker": "FARM",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Stockholder approval of acquisition at $1.29/share with imminent close date (May 6) creates a defined price target and arbitrage opportunity before delisting.",
+      "action_window": "intraday",
+      "headline": "Farmer Brothers Stockholders Approve Proposed Acquisition By Royal Cup For $1.29/Share, Transaction Expected To Close May 6, Farmer Brothers To Go Private",
+      "url": "https://www.benzinga.com/quote/FARM",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886718+00:00"
+    },
+    {
+      "ticker": "LRHC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Revenue restatement and material weaknesses in internal controls for two consecutive years signals serious accounting issues and erodes investor confidence, typically triggering immediate selloff and potential delisting risk.",
+      "action_window": "intraday",
+      "headline": "La Rosa Holdings To Restate Revenue And Cost Of Revenue For Consolidated Statement Of Operations For Years 2024 & 2023; - Identifies Material Weaknesses In Internal Control As Of Dec 31, 2024; Taking Steps To Remediate Internal Control Weaknesses",
+      "url": "https://www.benzinga.com/news/26/05/52232388/la-rosa-holdings-to-restate-revenue-and-cost-of-revenue-for-consolidated-statement-of-operations-for",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886724+00:00"
+    },
+    {
+      "ticker": "JNJ",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval for STELARA's Crohn's disease indication is positive but represents a label expansion for an already-marketed drug rather than a novel product approval, limiting incremental impact for a large-cap company.",
+      "action_window": "next_day",
+      "headline": "Johnson & Johnson Receives FDA Approval For STELARA To Treat Moderately To Severely Active Crohn's Disease",
+      "url": "https://www.benzinga.com/news/26/05/52232349/johnson-johnson-receives-fda-approval-for-stelara-to-treat-moderately-to-severely-active-crohns-dise",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886731+00:00"
+    },
+    {
+      "ticker": "EP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "ATM equity offering of $30M signals potential dilution for existing shareholders, though the controlled nature and reasonable 3% commission structure moderates the negative impact.",
+      "action_window": "intraday",
+      "headline": "Empire Petroleum Enters $30M At-The-Market Equity Sales Agreement With Roth Capital, 3% Commission Structure",
+      "url": "https://www.benzinga.com/news/26/05/52232348/empire-petroleum-enters-30m-at-the-market-equity-sales-agreement-with-roth-capital-3-commission-stru",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886737+00:00"
+    },
+    {
+      "ticker": "ULH",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with Q1 EPS of -$0.13 versus $0.09 estimate ($0.22 shortfall) and revenue missing by $4.7M indicates operational challenges requiring immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "Universal Logistics Hldgs Q1 EPS $(0.13) Misses $0.09 Estimate, Sales $367.575M Miss $372.300M Estimate",
+      "url": "https://www.benzinga.com/quote/ULH",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886743+00:00"
+    },
+    {
+      "ticker": "FLYYQ",
+      "tradeable_score": 0.95,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Complete cessation of airline operations within hours represents catastrophic business failure and likely total equity wipeout for shareholders.",
+      "action_window": "intraday",
+      "headline": "'Spirit Is Currently Expected To Cease Operations Around 3 a.m. ET Saturday' - WSJ",
+      "url": "https://www.benzinga.com/news/26/05/52232300/spirit-is-currently-expected-to-cease-operations-around-3-a-m-et-saturday-wsj",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886749+00:00"
+    },
+    {
+      "ticker": "PN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Dual major catalysts of strategic acquisition completion and substantial $300M PIPE financing signal strong institutional confidence and immediate capital availability for growth.",
+      "action_window": "intraday",
+      "headline": "Skycorp Solar Inks Agreement To Acquire Remaining 56% Ownership In Nanjing Cesun Power For $20.2M; Signs $300M PIPE Financing With Three Institutional Investors",
+      "url": "https://www.benzinga.com/news/26/05/52232234/skycorp-solar-inks-agreement-to-acquire-remaining-56-ownership-in-nanjing-cesun-power-for-20-2m-sign",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886755+00:00"
+    },
+    {
+      "ticker": "LABT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Prospectus filing for resale of nearly 9.6M shares by existing stockholders signals potential dilution and selling pressure, typically bearish for small biotech stocks in the near term.",
+      "action_window": "next_day",
+      "headline": "Lakewood-Amedex Biotherapeutics Files Prospectus Related To Resale Of Up To 9,647,726 Shares Of Common Stock By Certain Selling Stockholder",
+      "url": "https://www.benzinga.com/news/26/05/52232162/lakewood-amedex-biotherapeutics-files-prospectus-related-to-resale-of-up-to-9-647-726-shares-of-comm",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886761+00:00"
+    },
+    {
+      "ticker": "GLED",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive merger agreement at $350M valuation represents a confirmed M&A transaction for SPAC target, typically resulting in immediate price movement toward deal value.",
+      "action_window": "intraday",
+      "headline": "Rongcheng Group Enters Into Merger Agreement With GalaxyEdge Acquisition; Transaction Valued At $350M",
+      "url": "https://www.benzinga.com/quote/GLED",
+      "source": "alpaca",
+      "added_at": "2026-05-01T20:29:19.886776+00:00"
     }
   ]
 }
