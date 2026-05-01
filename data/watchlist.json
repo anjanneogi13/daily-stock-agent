@@ -123,15 +123,16 @@
     },
     {
       "ticker": "AAPL",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.76,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Apple beat Q2 estimates and raised guidance with multiple respected analysts calling for 10%+ upside and a 'golden era', representing a strong earnings catalyst with positive forward outlook.",
+      "rationale": "Record quarterly results with strong iPhone, Mac, and services growth overcoming cost headwinds represents a meaningful earnings beat worthy of immediate trading consideration.",
       "action_window": "next_day",
-      "headline": "Dan Ives Says Apple's 'Golden Era' Is Near, Gene Munster Sees 10% Upside And Daniel Newman Calls Outlook 'Ripe'",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52205638/dan-ives-says-apples-golden-era-is-near-as-gene-munster-sees-10-upside-and-daniel-newman-calls-outlook-ripe",
+      "headline": "Apple Shrugs Off Component Costs To Post Record March Quarter: Analyst",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52223235/apple-shrugs-off-component-costs-to-post-record-march-quarter-analyst",
       "source": "alpaca",
-      "added_at": "2026-05-01T09:29:12.370296+00:00"
+      "added_at": "2026-05-01T09:29:12.370296+00:00",
+      "updated_at": "2026-05-01T16:50:32.387345+00:00"
     },
     {
       "ticker": "EL",
@@ -785,6 +786,54 @@
       "url": "https://www.benzinga.com/insights/news/26/05/52220958/agnico-eagle-mines-q1-2026-earnings-call-transcript",
       "source": "alpaca",
       "added_at": "2026-05-01T15:57:44.219334+00:00"
+    },
+    {
+      "ticker": "BE",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock hitting all-time highs indicates significant positive catalyst and strong momentum, though specific driver unknown from headline alone.",
+      "action_window": "intraday",
+      "headline": "Why Bloom Energy Stock Hit All-Time Highs Today",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52224000/why-bloom-energy-stock-hit-all-time-highs-today",
+      "source": "alpaca",
+      "added_at": "2026-05-01T16:50:32.387294+00:00"
+    },
+    {
+      "ticker": "ARVN",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval for a novel targeted therapy in a specific breast cancer indication is a major commercial catalyst that typically drives significant stock appreciation.",
+      "action_window": "intraday",
+      "headline": "Arvinas Receives FDA Approval For VEPPANU To Treat Adults With Estrogen Receptor-Positive Human Epidermal Growth Factor Receptor 2-Negative, Estrogen Receptor-Mutated Advanced Or Metastatic Breast Cancer",
+      "url": "https://www.benzinga.com/news/26/05/52223902/arvinas-receives-fda-approval-for-veppanu-to-treat-adults-with-estrogen-receptor-positive-human-epid",
+      "source": "alpaca",
+      "added_at": "2026-05-01T16:50:32.387308+00:00"
+    },
+    {
+      "ticker": "CVNA",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital maintains positive outlook with significant price target increase to $460, indicating strong upside potential and conviction in Carvana's prospects.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Maintains Outperform on Carvana, Raises Price Target to $460",
+      "url": "https://www.benzinga.com/news/26/05/52223591/rbc-capital-maintains-outperform-on-carvana-raises-price-target-to-460",
+      "source": "alpaca",
+      "added_at": "2026-05-01T16:50:32.387317+00:00"
+    },
+    {
+      "ticker": "COAG",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "IPO opened 50% above pricing at $27 vs $18, indicating extremely strong market demand and significant first-day pop that creates immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Hemab Therapeutics IPO Opens For Trade At $27/Share; IPO Priced At $18/Share On 16.75M Shares",
+      "url": "https://www.benzinga.com/quote/COAG",
+      "source": "alpaca",
+      "added_at": "2026-05-01T16:50:32.387333+00:00"
     }
   ]
 }
