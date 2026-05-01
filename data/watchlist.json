@@ -846,6 +846,30 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52224179/inseegos-nokia-deal-could-nearly-double-revenue-analyst-says",
       "source": "alpaca",
       "added_at": "2026-05-01T16:57:59.837301+00:00"
+    },
+    {
+      "ticker": "CHD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings beat with strong 5% organic sales growth and margin expansion demonstrates operational strength despite inflation headwinds, though CEO inflation warning tempers upside.",
+      "action_window": "intraday",
+      "headline": "Church & Dwight CEO Warns Of Middle East-Driven Inflation, But Calls It 'Transitory'",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52226431/church-dwight-ceo-warns-of-middle-east-driven-inflation-but-calls-it-transitory",
+      "source": "alpaca",
+      "added_at": "2026-05-01T18:01:08.415763+00:00"
+    },
+    {
+      "ticker": "OIO",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Complete C-suite overhaul (CEO, Chairman, CFO, and COO) signals strategic shift but impact depends on leadership quality and transition execution which are unknown.",
+      "action_window": "next_day",
+      "headline": "OIO Group Appoints Sung Fung Choi As CEO And Chairman, Succeeding Quek Leng Chuang; Names Jason Yuk Lun Wong CFO, Replacing Ho Shian Ching, And Taps En Ti Diana Majcher As COO",
+      "url": "https://www.benzinga.com/quote/OIO",
+      "source": "alpaca",
+      "added_at": "2026-05-01T18:01:08.415776+00:00"
     }
   ]
 }
