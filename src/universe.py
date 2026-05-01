@@ -1,4 +1,4 @@
-"""Stock universe selection — semiconductor priority built in."""
+"""Stock universe selection — semiconductor priority + watchlist expansion (PR #68)."""
 import pandas as pd
 from io import StringIO
 from typing import List
@@ -50,6 +50,21 @@ def _fallback_universe() -> List[str]:
             "JPM", "V", "JNJ", "WMT", "SPY", "QQQ"]
 
 
+def _get_watchlist_additions() -> List[str]:
+    """
+    PR #68: Get bullish-news-flagged tickers from watchlist.
+    These get added to universe so they ALWAYS get scored, even if
+    not in S&P500. Wraps in try/except so missing/corrupt watchlist
+    doesn't break universe selection.
+    """
+    try:
+        from .watchlist_manager import get_watchlist_tickers
+        return get_watchlist_tickers(bullish_only=True)
+    except Exception as e:
+        print(f"[universe] Watchlist read failed: {e} — skipping watchlist boost")
+        return []
+
+
 def get_universe(config: dict) -> List[str]:
     src = config["universe"]["source"]
     if src == "semis_only":
@@ -63,11 +78,23 @@ def get_universe(config: dict) -> List[str]:
     else:
         raise ValueError(f"Unknown universe source: {src}")
 
+    # Always-include semiconductors
     semi_cfg = config["universe"].get("semiconductors", {})
     if semi_cfg.get("always_include", True):
         min_ai = semi_cfg.get("min_ai_weight", 0.0)
         base = list(dict.fromkeys(base + get_semi_tickers(min_ai_weight=min_ai)))
 
+    # PR #68: Always-include watchlist (bullish news catalysts)
+    if config["universe"].get("include_watchlist", True):
+        watchlist = _get_watchlist_additions()
+        if watchlist:
+            before = len(base)
+            base = list(dict.fromkeys(base + watchlist))
+            added = len(base) - before
+            if added > 0:
+                print(f"[universe] +{added} tickers from watchlist: {watchlist[:5]}{'...' if added>5 else ''}")
+
+    # Excluded tickers
     excluded = {t.upper() for t in config["universe"].get("excluded_tickers", [])}
     base = [t for t in base if t.upper() not in excluded]
 
