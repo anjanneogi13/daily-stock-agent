@@ -510,15 +510,16 @@
     },
     {
       "ticker": "RBLX",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.85,
       "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "BTIG downgrade from Buy to Neutral represents negative analyst sentiment shift that typically drives selling pressure, though not from a top-tier bulge bracket firm.",
+      "category": "guidance_cut",
+      "rationale": "Company revised FY26 revenue guidance below estimates post-earnings, triggering immediate stock crash with high conviction bearish signal.",
       "action_window": "intraday",
-      "headline": "BTIG Downgrades Roblox to Neutral",
-      "url": "https://www.benzinga.com/news/26/05/52208507/btig-downgrades-roblox-to-neutral",
+      "headline": "Roblox Stock Crashes After Earnings As Weak Outlook Weighs On Shares",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52210168/roblox-stock-crashes-after-earnings-as-weak-outlook-weighs-on-shares",
       "source": "alpaca",
-      "added_at": "2026-05-01T11:54:55.389305+00:00"
+      "added_at": "2026-05-01T11:54:55.389305+00:00",
+      "updated_at": "2026-05-01T13:03:54.717520+00:00"
     },
     {
       "ticker": "FRT",
@@ -556,6 +557,66 @@
       "url": "https://www.benzinga.com/news/26/05/52208448/arrowhead-pharma-says-australian-tga-approves-redemplo-sirna-medicine-as-adjunct-to-diet-to-reduce-t",
       "source": "alpaca",
       "added_at": "2026-05-01T11:54:55.389327+00:00"
+    },
+    {
+      "ticker": "RIVN",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Positive operational update on R2 production ramp, margin improvement trajectory, and facility expansion signals progress toward profitability, though lacks specific quantifiable metrics or firm dates.",
+      "action_window": "this_week",
+      "headline": "Rivian Doubles Down On R2 As Demand Pulls In First-Time EV Buyers",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52210222/rivian-doubles-down-on-r2-as-demand-pulls-in-first-time-ev-buyers",
+      "source": "alpaca",
+      "added_at": "2026-05-01T13:03:54.717491+00:00"
+    },
+    {
+      "ticker": "MGM",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Jefferies downgrade from Buy/Overweight to Hold with reduced price target creates near-term selling pressure, though Hold rating limits severe downside.",
+      "action_window": "intraday",
+      "headline": "Jefferies Downgrades MGM Resorts International to Hold, Lowers Price Target to $44",
+      "url": "https://www.benzinga.com/news/26/05/52210185/jefferies-downgrades-mgm-resorts-international-to-hold-lowers-price-target-to-44",
+      "source": "alpaca",
+      "added_at": "2026-05-01T13:03:54.717504+00:00"
+    },
+    {
+      "ticker": "AXSM",
+      "tradeable_score": 0.93,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval for label expansion into Alzheimer's agitation represents a significant new market opportunity for an existing approved drug, backed by Phase 3 data.",
+      "action_window": "intraday",
+      "headline": "Axsome Wins FDA Nod For Expanded Use For Auvelity Beyond Depression",
+      "url": "https://www.benzinga.com/news/fda/26/05/52210170/axsome-wins-fda-nod-for-expanded-use-for-auvelity-beyond-depression",
+      "source": "alpaca",
+      "added_at": "2026-05-01T13:03:54.717511+00:00"
+    },
+    {
+      "ticker": "RMIX",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Jefferies initiating coverage with a Buy rating and $19 price target is a meaningful positive catalyst that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Jefferies Initiates Coverage On Suncrete with Buy Rating, Announces Price Target of $19",
+      "url": "https://www.benzinga.com/news/26/05/52210158/jefferies-initiates-coverage-on-suncrete-with-buy-rating-announces-price-target-of-19",
+      "source": "alpaca",
+      "added_at": "2026-05-01T13:03:54.717527+00:00"
+    },
+    {
+      "ticker": "LIN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Linde's Q2 EPS guidance midpoint of $4.45 falls below consensus estimate of $4.44, with the range skewing lower, indicating weaker-than-expected near-term performance.",
+      "action_window": "intraday",
+      "headline": "Linde Sees Q2 Adj EPS $4.40-$4.50 vs $4.44 Est",
+      "url": "https://www.benzinga.com/news/26/05/52210139/linde-sees-q2-adj-eps-4-40-4-50-vs-4-44-est",
+      "source": "alpaca",
+      "added_at": "2026-05-01T13:03:54.717533+00:00"
     }
   ]
 }
