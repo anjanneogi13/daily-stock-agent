@@ -725,6 +725,30 @@
       "url": "https://www.benzinga.com/news/26/05/52215972/evercore-isi-group-maintains-outperform-on-western-digital-raises-price-target-to-500",
       "source": "alpaca",
       "added_at": "2026-05-01T14:37:27.389728+00:00"
+    },
+    {
+      "ticker": "RVMD",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA early access grant for pancreatic cancer drug is a major regulatory milestone that typically drives significant upward price movement for biotech stocks.",
+      "action_window": "intraday",
+      "headline": "'F.D.A. Grants Early Access to Promising Drug for Pancreatic Cancer' - New York Times",
+      "url": "https://www.benzinga.com/news/26/05/52220527/f-d-a-grants-early-access-to-promising-drug-for-pancreatic-cancer-new-york-times",
+      "source": "alpaca",
+      "added_at": "2026-05-01T15:51:51.188214+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Treasury Secretary's aggressive statement about controlling the Strait of Hormuz signals escalating geopolitical tension with Iran, creating immediate uncertainty for oil markets and broader equities despite potential supply disruption dynamics.",
+      "action_window": "intraday",
+      "headline": "Treasury Secretary Scott Bessent Posts On X \"It is very difficult for rats in a sewer pipe to know what's going on in the outside world. Some color for the Iranian Leadership as they literally sit in the dark: 1. The United States has complete control of the Strait of Hormuz. 2. There is a hard curr",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52220308/treasury-secretary-scott-bessent-posts-on-x-it-is-very-difficult-for-rats-in-a-se",
+      "source": "alpaca",
+      "added_at": "2026-05-01T15:51:51.188234+00:00"
     }
   ]
 }
