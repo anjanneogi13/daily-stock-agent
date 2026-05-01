@@ -894,6 +894,18 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52228315/this-caterpillar-analyst-is-no-longer-bearish-here-are-top-5-upgrades-for-friday-2",
       "source": "alpaca",
       "added_at": "2026-05-01T19:02:55.884042+00:00"
+    },
+    {
+      "ticker": "UONE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Urban One is expanding through acquisition of two Dallas radio stations, a strategic growth move that traders are actively responding to with stock price surge.",
+      "action_window": "intraday",
+      "headline": "Why Urban One Stock Is Skyrocketing Friday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52229317/why-urban-one-stock-is-skyrocketing-friday",
+      "source": "alpaca",
+      "added_at": "2026-05-01T19:25:05.662801+00:00"
     }
   ]
 }
