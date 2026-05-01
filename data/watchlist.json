@@ -1302,6 +1302,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52234436/inno-holdings-q2-eps-0-13-up-from-19-20-yoy-sales-931-911k-up-from-478-100k-yoy",
       "source": "alpaca",
       "added_at": "2026-05-01T22:12:05.608579+00:00"
+    },
+    {
+      "ticker": "FET",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Q2 sales guidance midpoint of $212.5M falls short of $201.85M consensus estimate, indicating potential revenue miss and operational challenges.",
+      "action_window": "intraday",
+      "headline": "Conference Call:\nForum Energy Technologies Sees Q2 Sales $200.000M-$225.000M vs $201.850M Est",
+      "url": "https://www.benzinga.com/news/26/05/52234794/conference-call-forum-energy-technologies-sees-q2-sales-200-000m-225-000m-vs-201-850m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-01T23:14:59.879600+00:00"
     }
   ]
 }
