@@ -130,14 +130,24 @@ jobs:
 
           git commit -m "Daily picks $(date +%Y-%m-%d) SGT"
 
-          # Robust push with retries — if all fail, FAIL the workflow (no silent || true)
+          # Robust push with retries + auto-stash to avoid 'unstaged changes' rebase failures
           PUSH_OK=0
           for i in 1 2 3 4 5; do
+            # Stash any unstaged changes from concurrent steps (premarket, news, etc.)
+            STASHED=0
+            if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+              git stash push --include-untracked -m "auto-stash-push-attempt-$i" >/dev/null 2>&1 && STASHED=1
+            fi
+
             if git pull --rebase origin main && git push; then
               PUSH_OK=1
               echo "✅ Push succeeded on attempt $i"
+              [ "$STASHED" -eq 1 ] && git stash pop >/dev/null 2>&1 || true
               break
             fi
+
+            # Restore stash before retry
+            [ "$STASHED" -eq 1 ] && git stash pop >/dev/null 2>&1 || true
             echo "[push] retry $i/5 after conflict — sleeping ${i}s"
             sleep $((i * 2))
           done
