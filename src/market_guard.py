@@ -50,17 +50,67 @@ def sector_strength(sector_etfs: dict = None) -> dict:
             continue
     return out
 
-def classify_trade_type(scores: dict, gap_pct: float = 0.0) -> str:
+def classify_trade_type(scores: dict, sig: dict = None, gap_pct: float = 0.0) -> str:
     """
-    Auto-tag pick as 'day' or 'swing' based on score profile.
-    DAY = high momentum + volume + small gap (intraday momentum)
-    SWING = trend + fundamentals (multi-day hold)
+    Auto-tag pick as 'day' or 'swing' based on score profile + indicators.
+
+    PR #67 FIX: Old logic required momentum > 0.75 AND volume > 0.7
+    which was IMPOSSIBLY HIGH (no picks ever qualified). Result: all
+    28 picks tagged "swing", causing -6% losses on what should have
+    been quick intraday trades.
+
+    NEW LOGIC:
+      - DAY trade if: high momentum (>0.65) + decent volume (>0.55)
+                      + tight ATR (<3.5%) + no big gap
+      - Otherwise: SWING (multi-day hold)
+
+    Args:
+        scores: composite_score output (momentum, volume, trend, etc.)
+        sig: latest_signals dict (for ATR/price ratio check) — optional
+        gap_pct: overnight gap as decimal (0.02 = 2%)
+
+    Returns:
+        "day" or "swing"
     """
     momentum = scores.get("momentum", 0.5)
     volume   = scores.get("volume", 0.5)
     trend    = scores.get("trend", 0.5)
-    # High momentum + high volume + decent gap → day trade
-    if momentum > 0.75 and volume > 0.7 and abs(gap_pct) < 0.025:
+
+    # ATR/price ratio — too volatile = better as swing (overnight risk)
+    atr_ratio = 0.02
+    if sig:
+        atr = sig.get("atr_14") or sig.get("atr") or 0
+        price = sig.get("close", 0)
+        if atr and price > 0:
+            atr_ratio = atr / price
+
+    # DAY criteria (REALISTIC thresholds)
+    is_day = (
+        momentum >= 0.65 and       # strong intraday momentum
+        volume   >= 0.55 and       # above-average volume
+        atr_ratio <= 0.035 and     # not too crazy volatile
+        abs(gap_pct) < 0.04        # not a huge gap (gap-and-fade risk)
+    )
+
+    if is_day:
         return "day"
-    # Strong trend + composite → swing
+
+    # Strong trend + reasonable composite → swing
+    if trend >= 0.60:
+        return "swing"
+
+    # Default: swing (safer default for marginal setups)
     return "swing"
+
+
+def classify_with_day_score(scores: dict, day_score: float,
+                             sig: dict = None, gap_pct: float = 0.0) -> str:
+    """
+    Enhanced classifier using the dedicated day_trading_score.
+    Use this when day_score is available (preferred over classify_trade_type alone).
+
+    Returns "day" if day_score >= 0.65 AND meets gap constraint.
+    """
+    if day_score >= 0.65 and abs(gap_pct) < 0.04:
+        return "day"
+    return classify_trade_type(scores, sig, gap_pct)
