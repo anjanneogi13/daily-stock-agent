@@ -749,6 +749,42 @@
       "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52220308/treasury-secretary-scott-bessent-posts-on-x-it-is-very-difficult-for-rats-in-a-se",
       "source": "alpaca",
       "added_at": "2026-05-01T15:51:51.188234+00:00"
+    },
+    {
+      "ticker": "XRX",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 revenue beat estimates with stock already surging, amplified by high short interest potentially driving squeeze and positive CEO outlook for 2026.",
+      "action_window": "intraday",
+      "headline": "Why Xerox Stock Is Surging On Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52221211/why-xerox-stock-is-surging-on-friday",
+      "source": "alpaca",
+      "added_at": "2026-05-01T15:57:44.219316+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Presidential announcement of imminent tariff increases on European auto imports represents a major trade escalation with immediate market-moving implications for equity indices and European stocks.",
+      "action_window": "intraday",
+      "headline": "President Trump Posts On Truth Social \" am pleased to announce that, based on the fact the European Union is not complying with our fully agreed to Trade Deal, next week I will be increasing Tariffs charged to the European Union for Cars and Trucks coming into the United States. The Tariff will be i",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52220965/president-trump-posts-on-truth-social-am-pleased-to-announce-that-based-on-the-fa",
+      "source": "alpaca",
+      "added_at": "2026-05-01T15:57:44.219328+00:00"
+    },
+    {
+      "ticker": "AEM",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Earnings call transcript publication indicates Q1 results are out but without details on beats/misses or guidance, the direction is unclear though the event itself is material.",
+      "action_window": "intraday",
+      "headline": "Agnico Eagle Mines Q1 2026 Earnings Call Transcript",
+      "url": "https://www.benzinga.com/insights/news/26/05/52220958/agnico-eagle-mines-q1-2026-earnings-call-transcript",
+      "source": "alpaca",
+      "added_at": "2026-05-01T15:57:44.219334+00:00"
     }
   ]
 }
