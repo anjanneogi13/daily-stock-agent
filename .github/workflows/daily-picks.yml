@@ -2,19 +2,17 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # Daily picks 8:00–9:20 ET. GitHub cron is unreliable — 16 backup slots
+    # Daily picks 8:00–9:20 ET. GitHub cron is unreliable — 13 backup slots
     # cover both EDT (Mar–Nov, UTC-4) and EST (Nov–Mar, UTC-5).
-    # ET-hour guard inside job ensures only ONE actually executes per day.
-    # EDT slots (UTC = ET + 4):
+    # CONCURRENCY GROUP ensures only ONE run happens per day (no parallel push conflicts).
     - cron: '0 12 * * 1-5'    # 8:00 AM EDT
     - cron: '15 12 * * 1-5'   # 8:15 AM EDT
     - cron: '30 12 * * 1-5'   # 8:30 AM EDT
     - cron: '45 12 * * 1-5'   # 8:45 AM EDT
-    - cron: '0 13 * * 1-5'    # 9:00 AM EDT (also = 8:00 AM EST)
+    - cron: '0 13 * * 1-5'    # 9:00 AM EDT
     - cron: '10 13 * * 1-5'   # 9:10 AM EDT
-    - cron: '15 13 * * 1-5'   # 9:15 AM EDT (also = 8:15 AM EST)
+    - cron: '15 13 * * 1-5'   # 9:15 AM EDT
     - cron: '20 13 * * 1-5'   # 9:20 AM EDT
-    # EST-only extras (UTC = ET + 5):
     - cron: '30 13 * * 1-5'   # 8:30 AM EST
     - cron: '45 13 * * 1-5'   # 8:45 AM EST
     - cron: '0 14 * * 1-5'    # 9:00 AM EST
@@ -22,6 +20,12 @@ on:
     - cron: '20 14 * * 1-5'   # 9:20 AM EST
 
   workflow_dispatch:
+
+# 🚨 CRITICAL FIX: Only one run at a time. Subsequent runs same day will be cancelled.
+# This prevents the parallel push conflicts that lost CSV writes today (Apr 30).
+concurrency:
+  group: daily-picks-${{ github.ref }}
+  cancel-in-progress: false  # Let first run complete; queue/skip later ones
 
 jobs:
   run-picks:
@@ -32,8 +36,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Need full history for rebase
 
-      - name: DST + dedup guard (only first run of day in 8:00–9:25 ET window)
+      - name: DST + dedup guard (skip if already ran today)
+        id: guard
         run: |
           ET_HOUR=$(TZ='America/New_York' date +%H)
           ET_MIN=$(TZ='America/New_York' date +%M)
@@ -43,44 +50,51 @@ jobs:
           # Manual dispatch always allowed
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "✅ Manual run — bypassing time guard"
+            echo "should_run=true" >> $GITHUB_OUTPUT
             exit 0
           fi
 
           # Allow only between 08:00 and 09:25 ET (before market open at 09:30)
           ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
-          WINDOW_START=$((8 * 60))     # 08:00
-          WINDOW_END=$((9 * 60 + 25))  # 09:25
+          WINDOW_START=$((8 * 60))
+          WINDOW_END=$((9 * 60 + 25))
           if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ] || [ $ET_MINUTES_OF_DAY -gt $WINDOW_END ]; then
-            echo "⏭  Outside 08:00–09:25 ET window — skipping"
+            echo "⏭ Outside 08:00–09:25 ET window — skipping"
+            echo "should_run=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          # De-dup: skip if today's premarket_check.json or picks_log already updated today
-          if [ -f data/premarket_check.json ]; then
-            LAST_DATE=$(python -c "import json; print(json.load(open('data/premarket_check.json')).get('date',''))" 2>/dev/null || echo "")
-            if [ "$LAST_DATE" = "$ET_DATE" ]; then
-              echo "⏭  Already ran today ($LAST_DATE) — skipping duplicate cron"
+          # 🚨 NEW: Check picks_log.csv directly (more reliable than premarket_check.json)
+          if [ -f data/picks_log.csv ]; then
+            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
+            if [ "$TODAY_ROWS" -gt 0 ]; then
+              echo "⏭ Already have $TODAY_ROWS picks logged for $ET_DATE — skipping"
+              echo "should_run=false" >> $GITHUB_OUTPUT
               exit 0
             fi
           fi
 
           echo "✅ Proceeding with daily picks at $ET_HOUR:$ET_MIN ET"
+          echo "should_run=true" >> $GITHUB_OUTPUT
 
       - name: Set up Python
+        if: steps.guard.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install dependencies
+        if: steps.guard.outputs.should_run == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt pytest
 
       - name: Run smoke tests
+        if: steps.guard.outputs.should_run == 'true'
         run: pytest tests/ -v --tb=short || (echo "❌ tests failed — check before deploying" && exit 1)
 
-
       - name: Run agent
+        if: steps.guard.outputs.should_run == 'true'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -88,24 +102,61 @@ jobs:
           mkdir -p logs data
           python main.py 2>&1 | tee logs/run-$(date +%Y%m%d).log
 
-      - name: Commit results
+      - name: Verify CSV was written
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
+          if [ "$TODAY_ROWS" -eq 0 ]; then
+            echo "❌ CRITICAL: main.py ran but no picks logged for $ET_DATE!"
+            echo "Last 5 dates in CSV:"
+            cut -d',' -f1 data/picks_log.csv | sort -u | tail -5
+            exit 1
+          else
+            echo "✅ Verified $TODAY_ROWS picks logged for $ET_DATE"
+          fi
+
+      - name: Commit results (with retry safety)
+        if: steps.guard.outputs.should_run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Daily picks $(date +%Y-%m-%d) SGT"
-          for i in 1 2 3; do
-            git pull --rebase origin main && git push && break
-            echo "[push] retry $i after conflict"; sleep 3
-          done || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "ℹ No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Daily picks $(date +%Y-%m-%d) SGT"
+
+          # Robust push with retries — if all fail, FAIL the workflow (no silent || true)
+          PUSH_OK=0
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              PUSH_OK=1
+              echo "✅ Push succeeded on attempt $i"
+              break
+            fi
+            echo "[push] retry $i/5 after conflict — sleeping ${i}s"
+            sleep $((i * 2))
+          done
+
+          if [ "$PUSH_OK" -eq 0 ]; then
+            echo "❌ CRITICAL: All 5 push attempts failed — CSV write LOST"
+            exit 1
+          fi
 
       - name: Premarket sanity check 🚦
+        if: steps.guard.outputs.should_run == 'true'
         run: python scripts/premarket_check.py
 
       - name: Format picks as Markdown
+        if: steps.guard.outputs.should_run == 'true'
         run: python scripts/format_picks_email.py > /tmp/picks_email.md
 
       - name: Create issue with picks (emails you)
+        if: steps.guard.outputs.should_run == 'true'
         uses: actions/github-script@v7
         with:
           script: |
@@ -127,6 +178,7 @@ jobs:
             });
 
       - name: Send picks to Telegram 📲
+        if: steps.guard.outputs.should_run == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
