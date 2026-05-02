@@ -1,6 +1,6 @@
 # 🚀 FINAL CONSOLIDATED ROADMAP — Daily Stock Agent
 
-## 🏆 MILESTONE: SHIPPED Saturday 2026-05-02 (44 commits, 1 day)
+## 🏆 MILESTONE: SHIPPED Saturday 2026-05-02 (54 commits, 1 day)
 
 This single Saturday sprint shipped ~5-6 weeks of original-plan work.
 All items below were 🔴 Not Started at the start of this day.
@@ -86,16 +86,94 @@ All items below were 🔴 Not Started at the start of this day.
 - ✅ Daily backup system (749 files protected) — `77c4ab3` (PR #83)
 - ✅ News intelligence engine — `036b23b` (PR #77)
 
-### 🚨 IMMEDIATE NEXT-SESSION ACTIONS
-1. **Wed May 6** — Flip `BRAIN_ENFORCE_EV=true` (data-justified by Sharpe -10.6)
-2. **Wed May 6** — Flip `AUTO_PAUSE_ENABLED=true` after 2-3 days observe
-3. **Next session** — Pillar 1 Layer 4 (hypothesis testing engine)
-4. **Future** — Monster Hunt Mode (closes Edge Layer 3/3)
+
+### 🌙 EVENING SPRINT (16:00-22:30 UTC) — THE BREAKTHROUGH
+
+After the afternoon's 44 commits, we kept going and discovered the live
+performance gap was **not** an algo problem — it was a plumbing problem.
+
+#### Backtester Build (Phases A + 1.1)
+- ✅ **Backtester v2 Phase A** — Brain Replay Engine (10/10 tests pass) — `343b25c`
+- ✅ **Backtester v1.1** — cooldown + gap fills + RSI cap (13 tests pass) — `a28fc61`
+- ✅ **Real backtest validated** — 100 tickers × 20 months × 2,010 picks
+  - Sharpe **+0.97** (annualized)
+  - Win rate **44.43%**
+  - Profit factor **1.15**
+  - Sortino +1.24, Calmar workable
+
+#### 🏆 THE BREAKTHROUGH DISCOVERY
+| Metric | Backtest (algo) | Live (executed) | Gap |
+|---|---|---|---|
+| Win rate | **44.43%** | 11% | -33pp |
+| Avg R | **+0.08** | -0.70 | -0.78R |
+| Sharpe | **+0.97** | -23.8 | **-24.8** |
+| Profit factor | **1.15** | 0.04 | -1.11 |
+
+**Verdict:** The algorithm has real, validated edge. The 24.8 Sharpe gap
+was caused by execution-layer bugs that bias picks toward losing clusters.
+
+See: `docs/sessions/2026-05-02_BREAKTHROUGH.md`
+
+#### Root-Cause Fixes Shipped Tonight
+- ✅ **Sector boost leak FIXED** — `34c60b1`
+  - `semi_boost: 1.1 → 1.0` and `ai_boost: 0.2 → 0.0`
+  - Diagnostic proved 89.5%% of live picks were SEMI-tagged (100%% lost)
+  - +30%% scoring head-start for SEMI/AI was forcing single-cluster bets
+- ✅ **Multi-fire workflow bug FIXED** — `53a394d`
+  - Cron entries reduced from 13 → 2 (primary EDT + primary EST)
+  - Added early-exit guard in main.py (skip if today already logged)
+  - Was firing 2-3x/day (Apr 28: 2 runs, May 1: 3 runs) → bypassing tag cap
+  - Belt + suspenders defense in depth
+
+#### Workflow Stability
+- ✅ **6 workflow DST bugs FIXED** — daily-picks, weekly_report, weekend_reflection, +3 — `aa8685d`, `55c773f`
+
+#### Test Suite
+- Saturday morning: 152 tests
+- Saturday afternoon: 232 tests
+- Saturday evening: **245 tests** (+61%% in one day)
+
+#### Data-Driven Insights from Backtester
+**Top edges (universe focus):** PLTR +1.06R (88%% win), MDB +0.97R, NOW +0.87R, SNOW +0.83R, C +0.72R  
+**Bottom losers (drop from universe):** UNH -1.35R, TEAM -1.0R, SMCI -0.94R, DIS -0.64R, SCHW -0.64R
+
+#### Total Saturday Stats
+- **54 commits** (44 afternoon + 10 evening)
+- 2 architectural bugs killed (worth months of guess-work)
+- 1 algorithm validated (changes everything about Phase 1 priorities)
+
+---
+
+### 🚨 IMMEDIATE NEXT-SESSION ACTIONS (UPDATED EVENING May 2)
+
+**SUNDAY (May 3) — 15-min review only:**
+1. Review Saturday's 54 commits (read-only, no changes)
+2. Verify no overnight workflow failures
+
+**MONDAY (May 4) — VALIDATION DAY (THE most important day):**
+1. **8:30 AM ET** — Watch daily-picks fire ONCE (was 2-3x)
+2. **9:00 AM ET** — Verify diverse picks in Telegram (NOT 5/5 SEMI)
+3. If picks are diverse → tonight's fixes worked, proceed to Tue plan
+4. If picks still concentrated → hunt 3rd bug before anything else
+
+**TUE-THU (May 5-7) — IF MONDAY VALIDATES:**
+5. Drop bottom-5 tickers from universe (UNH, TEAM, SMCI, DIS, SCHW)
+6. Port cooldown logic from backtester to live system
+7. **Wed May 6** — Flip `BRAIN_ENFORCE_EV=true` (data-justified)
+8. **Wed May 6** — Flip `AUTO_PAUSE_ENABLED=true` after 2-3 days observe
+
+**FRI-SAT (May 8-9) — Pillar 1 Layer 4:**
+9. Pillar 1 Layer 4: hypothesis testing engine (now UNBLOCKED by backtester)
+10. Backtester Phase B: walk-forward validation
+
+**LATER:**
+11. Monster Hunt Mode (closes Edge Layer 3/3)
+12. Pillar 2 (Wisdom Base) — Week of May 10
 
 ---
 
 
-> **Version:** FINAL v3.0 (consolidates v1, v2, brain architecture, EV/Monster/Position features)
+> **Version:** FINAL v3.1 (May 2 evening: backtester v2 + breakthrough + 2 root-cause fixes)
 > **Locked:** May 2, 2026
 > **Owner:** Anjan Neogi, Singapore
 > **This is the single source of truth.** All future PRs reference this.
@@ -577,6 +655,9 @@ Channels: LinkedIn (primary), Twitter/X, Substack, YouTube, Discord.
 
 - **v1.0 (April 30):** Original 24-month plan (100 features)
 - **v2.0 (May 2 AM):** Reset based on Day 3 audit, customer persona locked
+- **v3.1 (May 2 evening):** Backtester v2 shipped, algo validated +0.97 Sharpe,
+  2 root-cause execution leaks patched (sector boost + workflow multi-fire).
+  Phase 0 stabilization week added (May 3-9).
 - **v3.0 FINAL (May 2 PM):** Consolidates everything:
   - 5-pillar brain architecture (Pillars 1-5)
   - Pillar 6 (P&L + Reporting Brain) added
