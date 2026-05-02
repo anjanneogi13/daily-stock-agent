@@ -108,7 +108,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - 🔴 BUG-2: Picks stuck in "pending" evaluation status
 - 🔴 BUG-3: Regime returning "unknown" frequently  
 - 🔴 BUG-4: Same ticker (TSM) picked 3+ times in 9 days — no cooldown
-- 🔴 BUG-5: SL too tight rejection blocking quality picks (NVDA, AVGO, RMBS rejected with 1.8-2.8% SL)
+- ✅ ~~BUG-5: SL too tight rejection~~ → RESOLVED (tiered SL mins by price, May 2)
 
 ### TECH DEBT
 - 🔴 Test coverage 15% (need 40%+)
