@@ -1,6 +1,6 @@
 # 🧠 Project Context — Read This First
 
-## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (40+ commits, 5/5 BUGS, Position Tracker + Strategy Breakdown DONE, 210 tests)
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (42+ commits, 5/5 BUGS, P6 Brain @50%, Sharpe LIVE, 221 tests)
 
 ### TL;DR FOR NEXT CHAT SESSION
 - 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
@@ -11,8 +11,10 @@
 - 📲 Telegram MD→plain-text auto-fallback shipped (HTTP 400 fix)
 - 📊 CI now auto-builds stock_stats every run (fresh data, never stale)
 - 📚 5-pillar brain architecture locked (ADR-001, ADR-002, BRAIN_ARCHITECTURE.md)
-- ✅ 210 tests passing (+38% from morning's 152)
-- 🚨 NEW INSIGHT: swing trades 0/8, SEMI/AI tag 0/7, regime=unknown 0/6 (Pillar 6 breakdown)
+- ✅ 221 tests passing (+45% from morning's 152)
+- 🚨 INSIGHTS (DATA-VALIDATED): swing 0/8, SEMI/AI 0/7, regime=unknown 0/6
+- 🚨 RISK METRICS LIVE: Sharpe annualized **-10.6**, Max DD **-40.4%**, Calmar **-6.84**
+- 🔥 IMPLICATION: BRAIN_ENFORCE_EV flip on Wed May 6 is now URGENT, not optional
 
 ### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
 1. **Pillar 1 Layer 4** (hypothesis testing engine) — next big build
@@ -36,9 +38,9 @@
 | 24-month plan complete | ~8% | **~16%** |
 | Known bugs fixed | 1/5 | **5/5 ✅** |
 | Brain pillars LIVE | 0/5 | **1/5** |
-| Pillar 6 (P&L Brain) | 10% | **35%** (breakdown shipped) |
+| Pillar 6 (P&L Brain) | 10% | **50%** (breakdown + Sharpe/Sortino/MaxDD/Calmar) |
 | Edge Layer items | 0/3 | **2/3** (Position + Strategy) |
-| Test count | 152 | **210** (+38%) |
+| Test count | 152 | **221** (+45%) |
 | Brain ticker coverage | 20 | **106** |
 | Open PRs (debt) | 13 | 13 (unchanged) |
 

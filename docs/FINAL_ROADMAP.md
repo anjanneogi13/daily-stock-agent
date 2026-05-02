@@ -206,7 +206,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - ✅ Basic weekly performance report card
 - 🔴 Week-over-week trend
 - ✅ Win rate by strategy (day/swing/multi) — May 2 strategy_breakdown.py
-- 🔴 Sharpe ratio calculation
+- ✅ Sharpe ratio calculation — May 2 risk_metrics.py
 
 **Monthly reports:** (partial done)
 - ✅ Basic monthly X-ray
@@ -217,7 +217,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 
 **Quarterly reports:** 🔴 NOT STARTED
 - 🔴 90-day performance vs SPY/QQQ
-- 🔴 Drawdown analysis
+- 🟡 Drawdown analysis — math shipped May 2, needs 90d window for quarterly
 - 🔴 Strategy attribution
 - 🔴 Pattern win rate evolution
 - 🔴 LLM-generated quarterly review
@@ -229,7 +229,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - 🔴 Annual P&L with full attribution
 - 🔴 Tax-loss harvesting opportunities (US)
 - 🔴 Wash sale rule compliance
-- 🔴 Annual Sharpe, Sortino, Calmar ratios
+- ✅ Sharpe, Sortino, Calmar formulas — May 2 (yearly window TBD)
 - 🔴 Year-over-year comparison
 - 🔴 Capital gains breakdown (short vs long-term)
 - 🔴 1099-equivalent annual summary (PDF)
