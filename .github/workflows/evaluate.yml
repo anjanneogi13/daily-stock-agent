@@ -126,6 +126,13 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           python scripts/send_exec_telegram.py $DATE
 
+      - name: Send position monitor alerts to Telegram ⏰
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/send_position_alerts.py
+        continue-on-error: true
+
       - name: 📓 Daily observation logging (agent learning)
         run: |
           DATE=$(date -u +%Y-%m-%d)
