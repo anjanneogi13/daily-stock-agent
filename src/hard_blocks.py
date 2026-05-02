@@ -30,7 +30,30 @@ except ImportError:
 
 # ─── Tunable thresholds (conservative defaults) ──────────────────
 MIN_PRICE = 5.00                  # No penny stocks
-MIN_SL_BUFFER_PCT = 3.0           # Stock must have ≥3% room to SL
+# ─── Tiered SL minimums by price (BUG-5 fix, May 2 2026) ─────────
+# Liquid mega-caps need tighter stops than volatile small caps.
+# Aligns with Probability Engine vision (docs/PROBABILITY_ENGINE_DESIGN.md)
+SL_MIN_TIERS = [
+    (100.0, 1.5),   # Mega-cap (≥$100): 1.5% min — NVDA, AVGO, MSFT, etc.
+    (30.0,  2.0),   # Mid-cap ($30-99):  2.0% min — RMBS, mid-tier
+    (10.0,  2.5),   # Small-cap ($10-29): 2.5% min
+    (0.0,   3.0),   # Micro-cap (<$10):  3.0% min — needs wider stops
+]
+
+
+def get_min_sl_pct(price: float) -> float:
+    """
+    Tiered SL minimum based on stock price (proxy for liquidity/volatility).
+    Mega-caps trade tighter; small caps need more room.
+    """
+    try:
+        p = float(price)
+    except (ValueError, TypeError):
+        return 3.0  # safe default
+    for threshold, min_pct in SL_MIN_TIERS:
+        if p >= threshold:
+            return min_pct
+    return 3.0
 SECTOR_ETF_DROP_THRESHOLD = -2.0  # Sector ETF down ≥2% blocks all stocks in it
 
 # Sector → ETF mapping (for premarket sector check)
@@ -114,7 +137,10 @@ def _block_penny(pick: dict) -> Tuple[bool, str]:
 
 
 def _block_sl_buffer(pick: dict) -> Tuple[bool, str]:
-    """BLOCK 2: Stop-loss must be at least MIN_SL_BUFFER_PCT below entry."""
+    """
+    BLOCK 2: Stop-loss must be at least min_sl_pct below entry.
+    Tiered by price (BUG-5 fix): mega-caps allowed tighter stops.
+    """
     plan = pick.get("plan", {})
     entry = plan.get("entry") or pick.get("entry")
     sl = plan.get("stop_loss") or pick.get("stop_loss")
@@ -125,8 +151,9 @@ def _block_sl_buffer(pick: dict) -> Tuple[bool, str]:
         if entry_f <= 0:
             return True, ""
         buffer_pct = (entry_f - sl_f) / entry_f * 100
-        if buffer_pct < MIN_SL_BUFFER_PCT:
-            return False, f"SL too tight ({buffer_pct:.1f}% < {MIN_SL_BUFFER_PCT}%)"
+        min_sl = get_min_sl_pct(entry_f)
+        if buffer_pct < min_sl:
+            return False, f"SL too tight ({buffer_pct:.1f}% < {min_sl:.1f}% for ${entry_f:.0f} stock)"
     except (ValueError, TypeError, ZeroDivisionError):
         pass
     return True, ""
