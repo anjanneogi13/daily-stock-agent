@@ -263,9 +263,9 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - 🔴 New 💎 MONSTER HUNTS section in Telegram
 
 **Position Tracker** (formerly PR #72, ~60 min)
-- 🔴 New positions.json tracks live trades
-- 🔴 EOD job auto-flags positions past max_hold
-- 🔴 Telegram alerts on max-hold breach
+- ✅ position_monitor module reads picks_log (no separate file by design, May 2)
+- 🟡 scan_open_positions() ready (May 2) — needs evaluator hookup next session
+- 🟡 format_telegram_summary() ready (May 2) — needs dispatch hookup
 - 🔴 Updates picks_log.csv with actual_return
 
 #### 🟢 PRIORITY 4 — Validation Infrastructure — 1 week

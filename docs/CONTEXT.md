@@ -1,6 +1,6 @@
 # 🧠 Project Context — Read This First
 
-## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (33+ commits, 5/5 BUGS DONE, SPY alpha live)
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (35+ commits, 5/5 BUGS, SPY alpha, Position Monitor)
 
 ### TL;DR FOR NEXT CHAT SESSION
 - 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
@@ -14,7 +14,7 @@
 - ✅ 190 tests passing (+25% from morning's 152)
 
 ### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
-1. **Position Tracker** (positions.json + max_hold flagging, ~60 min) — Edge Layer
+1. **Wire position_monitor into daily evaluator + Telegram dispatch** (~30 min)
 2. ~~SPY benchmark column~~ ✅ DONE today (e409a5b)
 3. **Wednesday May 6**: review Mon/Tue EV gate logs → flip `BRAIN_ENFORCE_EV=true`
    (with 11.1% win rate proven, EV gate is HIGH priority)
@@ -77,6 +77,8 @@
 - `58f9595` docs: mark SPY benchmark + 4/5 bugs done in roadmap
 - `d2925e4` docs(sessions): Saturday May 2 sprint log
 - `2f46dae` fix(BUG-3): eliminate regime='unknown' — PHASE 0 100% DONE 🎉
+- `abb6be5` docs: PHASE 0 COMPLETE summary
+- HEAD feat(edge): position_monitor — flags overdue positions (200 tests)
 
 ---
 
