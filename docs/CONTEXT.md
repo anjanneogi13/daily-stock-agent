@@ -1,12 +1,13 @@
 # 🧠 Project Context — Read This First
 
-## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (16 commits, 4/5 bugs fixed)
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (18 commits, 4/5 bugs fixed, SPY alpha live)
 
 ### TL;DR FOR NEXT CHAT SESSION
 - 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
 - 🎯 Brain coverage: **20 → 106 tickers** (5.3x expansion)
 - 🧮 EV gate added in **OBSERVE-MODE** (logs vetoes, doesn't filter — flip Wednesday after Mon/Tue observation)
 - 🐛 **BUG-2 + BUG-4 + BUG-5 RESOLVED** (4/5 Phase 0 bugs done)
+📊 **SPY benchmark + alpha tracking LIVE** (Priority 4 item shipped 5 weeks early)
 - 📲 Telegram MD→plain-text auto-fallback shipped (HTTP 400 fix)
 - 📊 CI now auto-builds stock_stats every run (fresh data, never stale)
 - 📚 5-pillar brain architecture locked (ADR-001, ADR-002, BRAIN_ARCHITECTURE.md)
@@ -14,7 +15,7 @@
 
 ### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
 1. **BUG-3 fix**: regime returning "unknown" too often (~60 min) — last Phase 0 bug
-2. **SPY benchmark column** in picks_log (~30 min) — for relative perf analysis
+2. ~~SPY benchmark column~~ ✅ DONE today (e409a5b)
 3. **Wednesday May 6**: review Mon/Tue EV gate logs → flip `BRAIN_ENFORCE_EV=true`
    (with 11.1% win rate proven, EV gate is HIGH priority)
 
@@ -46,7 +47,8 @@
 ### 🐛 STILL OPEN BUGS
 - 🔴 BUG-3: Regime returning "unknown" frequently (only one left!)
 
-### 📈 FIRST REAL PERFORMANCE NUMBERS (post-BUG-2 fix)
+### 📈 FIRST REAL PERFORMANCE NUMBERS (post-BUG-2 fix + SPY alpha)
+**Returns:**
 - 9/38 picks closed (29 still mid-flight)
 - Win rate: 11.1% (1 TP, 8 SL)
 - Expectancy: -0.70R per trade
@@ -54,7 +56,13 @@
 - Best: AAPL +2.18% (1.66R)
 - Worst: ARM -8.83%
 - **Implication**: Pillar 1 EV gate even MORE necessary than thought.
-  When enforced (Wed), should reject the systematic SEMI/AI losers.
+
+**Alpha vs SPY (NEW):**
+- 1/9 picks beat SPY (only AAPL +1.9% alpha)
+- Avg alpha: **-5.70%** (worse than raw return → genuine alpha destruction)
+- Worst: SLNH -9.92%, ARM -8.83%, RMBS -9.22%
+- **Implication**: Losses aren't "market down" — losses are losing TO the market.
+  SEMI/AI tag is systematically alpha-negative.
 
 ### 📝 KEY COMMITS TODAY (chronological)
 - `cd4d212` Pillar 1 brain wired into main.py + Telegram fallback fix
@@ -64,6 +72,8 @@
 - `bcd529e` feat(brain): EV gate (observe-mode, opt-in enforcement)
 - `2eab633` docs(context): May 2 sprint summary
 - `bf06c07` fix(BUG-2): evaluator off-by-one — first real win-rate numbers
+- `d54666f` docs(context): mark BUG-2 closed + record real win/loss numbers
+- `e409a5b` feat(eval): SPY benchmark + alpha tracking — 1/9 beat SPY
 
 ---
 
