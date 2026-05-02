@@ -7,6 +7,7 @@ from src.pick_evaluator import evaluate_pending
 from src.performance_stats import print_dashboard
 from src.position_monitor import scan_open_positions
 from src.strategy_breakdown import print_all_breakdowns
+from src.risk_metrics import compute_risk_metrics, format_risk_text
 
 print("Evaluating pending picks...\n")
 counts = evaluate_pending()
@@ -34,3 +35,7 @@ else:
 # Strategy/tag/regime breakdown (Pillar 6 P&L Brain - Weekly metrics)
 print()
 print_all_breakdowns()
+
+# Risk-adjusted metrics (Pillar 6 — Sharpe/Sortino/Max DD/Calmar)
+print()
+print(format_risk_text(compute_risk_metrics()))
