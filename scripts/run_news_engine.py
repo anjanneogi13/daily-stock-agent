@@ -14,10 +14,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.news_engine import fetch_all_news, append_news_log
 from src.news_classifier import classify_batch
 from src.watchlist_manager import add_from_news, get_watchlist_tickers
+from src.news_signals import add_signal_from_classification, stats as signals_stats  # PR #77
 
 
-TELEGRAM_THRESHOLD = 0.7  # tradeable_score above which we Telegram alert
-MAX_ALERTS_PER_RUN = 5    # avoid spamming Telegram
+TELEGRAM_THRESHOLD = 0.85  # PR #77: raised from 0.7 to cut noise (~60% fewer alerts)  # tradeable_score above which we Telegram alert
+MAX_ALERTS_PER_RUN = 3    # PR #77: lowered from 5 to focus on signal    # avoid spamming Telegram
 
 
 def send_telegram(text: str):
@@ -71,6 +72,27 @@ def main():
     classified = classify_batch(items, max_items=20)
     append_news_log(classified)
     print(f"[news_engine] Classified {len(classified)} items")
+
+    # ─── PR #77: Extract trading signals from classifications ────
+    signals_added = 0
+    for item in classified:
+        sig = add_signal_from_classification(item)
+        if sig:
+            signals_added += 1
+            if sig.get("hard_block"):
+                print(f"[news_signals] 🚨 HARD BLOCK: {sig['ticker']} ({sig['catalyst']})")
+            else:
+                arrow = "⬆" if sig['score_delta'] > 0 else "⬇"
+                print(f"[news_signals] {arrow} {sig['ticker']:6s} "
+                      f"{sig['score_delta']:+.2f} ({sig['catalyst']})")
+    
+    if signals_added > 0:
+        s = signals_stats()
+        print(f"[news_signals] State: {s['total_active']} active "
+              f"({s['bullish_count']} bull, {s['bearish_count']} bear, "
+              f"{len(s['hard_blocks'])} blocks)")
+        if s['hard_blocks']:
+            print(f"[news_signals] Hard blocks: {s['hard_blocks']}")
 
     # Update watchlist
     added = add_from_news(classified)

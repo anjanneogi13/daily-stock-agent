@@ -154,6 +154,21 @@ def _block_weak_sector(pick: dict, weak_sectors: Dict[str, float]) -> Tuple[bool
     return True, ""
 
 
+def _block_catastrophic_news(pick: dict) -> Tuple[bool, str]:
+    """BLOCK 4 (PR #77): Hard block on catastrophic news (bankruptcy etc.)."""
+    try:
+        from src.news_signals import is_hard_blocked
+        ticker = pick.get("ticker", "")
+        if not ticker:
+            return True, ""
+        blocked, reason = is_hard_blocked(ticker)
+        if blocked:
+            return False, f"catastrophic news ({reason})"
+    except Exception:
+        pass
+    return True, ""
+
+
 # ─── Master function ─────────────────────────────────────────────
 
 def apply_hard_blocks(picks: List[Dict],
@@ -179,9 +194,10 @@ def apply_hard_blocks(picks: List[Dict],
         
         # Run blocks in priority order (cheapest first)
         checks = [
-            ("penny_stock", _block_penny(pick)),
-            ("sl_too_tight", _block_sl_buffer(pick)),
-            ("weak_sector",  _block_weak_sector(pick, weak_sectors)),
+            ("catastrophic_news", _block_catastrophic_news(pick)),  # PR #77
+            ("penny_stock",       _block_penny(pick)),
+            ("sl_too_tight",      _block_sl_buffer(pick)),
+            ("weak_sector",       _block_weak_sector(pick, weak_sectors)),
         ]
         
         block_reason = None

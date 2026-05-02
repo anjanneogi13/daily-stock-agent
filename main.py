@@ -164,6 +164,33 @@ def run():
         print(f'[tag_cap] {pre} → {len(capped)} after tag cap (max 2 per primary tag)')
     rprint(f"  [dim]Sector cap: {pre_cap} → {len(capped)} (max 4/sector, weak={list(weak_sectors.keys()) or 'none'})[/dim]")
 
+    # ═══════════════════════════════════════════════════════════════
+    # PR #77: Apply news signals (boost/penalty from recent news)
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[5c.5/6] Applying news signals (boost/penalty from classified news)...")
+    try:
+        from src.news_signals import get_ticker_boost
+        boosted_count = 0
+        for p in capped:
+            boost = get_ticker_boost(p["ticker"])
+            if abs(boost) >= 0.01:
+                old = p["scores"]["composite"]
+                new = round(max(0.0, min(1.0, old + boost)), 4)
+                p["scores"]["news_boost"] = boost
+                p["scores"]["composite_pre_news"] = old
+                p["scores"]["composite"] = new
+                boosted_count += 1
+                arrow = "⬆" if boost > 0 else "⬇"
+                rprint(f"  {arrow} {p['ticker']:6s}  {old:.3f} → {new:.3f}  ({boost:+.2f})")
+        if boosted_count == 0:
+            rprint("  [dim]No active news signals for current picks[/dim]")
+        else:
+            rprint(f"  [green]✓ {boosted_count} picks adjusted by news signals[/green]")
+        # Re-sort by new composite score
+        capped.sort(key=lambda x: x["scores"]["composite"], reverse=True)
+    except Exception as e:
+        rprint(f"  [yellow]⚠ News signals unavailable: {e}[/yellow]")
+
     # Trim to final pick count
     top = capped[: cfg["output"]["top_n_picks"]]
 
