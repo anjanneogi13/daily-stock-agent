@@ -111,3 +111,37 @@ When flipped to enforce mode (Wed), should systematically reject SEMI/AI picks.
 - `d54666f` docs(context): mark BUG-2 closed + real win/loss numbers
 - `e409a5b` feat(eval): SPY benchmark + alpha tracking — 1/9 beat SPY
 - `58f9595` docs: mark SPY benchmark + 4/5 bugs done in roadmap
+
+
+---
+
+## 🎉 PHASE 0 COMPLETE — END-OF-DAY UPDATE
+
+After the "scorecard" point, shipped TWO MORE big wins:
+
+### Commit e409a5b — SPY Benchmark + Alpha Tracking
+- Added `_spy_close_on()` + `_add_spy_alpha()` helpers to evaluator
+- `picks_log.csv` now has `spy_close_at_exit`, `spy_return_pct`, `alpha_pct`
+- Backfilled 6 Apr 28 picks with SPY prices
+- **First alpha number: avg -5.70% vs SPY, only AAPL beat market (1/9)**
+
+### Commit 2f46dae — BUG-3 (regime "unknown") FIXED
+- 4-layer defense: retry × 3, 100d SMA fallback, disk cache, conservative default
+- "unknown" regime mathematically impossible after this
+- 26% of picks (10/38) historically had regime='unknown' → now eliminated
+
+### Final Phase 0 Tally
+| Bug | Status |
+|---|---|
+| BUG-1 Penny stock leak | ✅ |
+| BUG-2 Evaluator off-by-one | ✅ TODAY |
+| BUG-3 Regime unknown | ✅ TODAY |
+| BUG-4 Ticker cooldown | ✅ TODAY |
+| BUG-5 SL too tight | ✅ TODAY |
+
+**5/5 = 100% — Phase 0 done in a single Saturday.**
+
+### Updated Next-Session Top-3
+1. **Position Tracker** (positions.json + max_hold) — Edge Layer item, ~60 min
+2. **Wednesday May 6**: review EV gate observe-mode logs → flip enforce mode
+3. **Pillar 1 Layer 4** (hypothesis testing engine) — start the next big build

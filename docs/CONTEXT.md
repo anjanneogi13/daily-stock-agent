@@ -1,12 +1,12 @@
 # 🧠 Project Context — Read This First
 
-## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (18 commits, 4/5 bugs fixed, SPY alpha live)
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (33+ commits, 5/5 BUGS DONE, SPY alpha live)
 
 ### TL;DR FOR NEXT CHAT SESSION
 - 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
 - 🎯 Brain coverage: **20 → 106 tickers** (5.3x expansion)
 - 🧮 EV gate added in **OBSERVE-MODE** (logs vetoes, doesn't filter — flip Wednesday after Mon/Tue observation)
-- 🐛 **BUG-2 + BUG-4 + BUG-5 RESOLVED** (4/5 Phase 0 bugs done)
+- 🐛 **PHASE 0 COMPLETE — ALL 5/5 BUGS RESOLVED** 🎉
 📊 **SPY benchmark + alpha tracking LIVE** (Priority 4 item shipped 5 weeks early)
 - 📲 Telegram MD→plain-text auto-fallback shipped (HTTP 400 fix)
 - 📊 CI now auto-builds stock_stats every run (fresh data, never stale)
@@ -14,7 +14,7 @@
 - ✅ 190 tests passing (+25% from morning's 152)
 
 ### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
-1. **BUG-3 fix**: regime returning "unknown" too often (~60 min) — last Phase 0 bug
+1. **Position Tracker** (positions.json + max_hold flagging, ~60 min) — Edge Layer
 2. ~~SPY benchmark column~~ ✅ DONE today (e409a5b)
 3. **Wednesday May 6**: review Mon/Tue EV gate logs → flip `BRAIN_ENFORCE_EV=true`
    (with 11.1% win rate proven, EV gate is HIGH priority)
@@ -45,7 +45,7 @@
 - **Month 2 June** plan: Pillar 1 Layer 3 + EV Filter → **Layer 3 DONE + EV in observe-mode (5 weeks early)**
 
 ### 🐛 STILL OPEN BUGS
-- 🔴 BUG-3: Regime returning "unknown" frequently (only one left!)
+✅ NONE — Phase 0 complete as of 2f46dae
 
 ### 📈 FIRST REAL PERFORMANCE NUMBERS (post-BUG-2 fix + SPY alpha)
 **Returns:**
@@ -74,6 +74,9 @@
 - `bf06c07` fix(BUG-2): evaluator off-by-one — first real win-rate numbers
 - `d54666f` docs(context): mark BUG-2 closed + record real win/loss numbers
 - `e409a5b` feat(eval): SPY benchmark + alpha tracking — 1/9 beat SPY
+- `58f9595` docs: mark SPY benchmark + 4/5 bugs done in roadmap
+- `d2925e4` docs(sessions): Saturday May 2 sprint log
+- `2f46dae` fix(BUG-3): eliminate regime='unknown' — PHASE 0 100% DONE 🎉
 
 ---
 

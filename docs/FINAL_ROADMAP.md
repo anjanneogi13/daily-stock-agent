@@ -144,7 +144,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 ### KNOWN BUGS (Phase 0 — Fix First)
 - ✅ ~~BUG-1: Penny stock leak~~ → RESOLVED (PR #84 hard blocks working)
 - ✅ BUG-2: Picks stuck in "pending" → RESOLVED (May 2, off-by-one in evaluator)
-- 🔴 BUG-3: Regime returning "unknown" frequently  
+- ✅ BUG-3: Regime "unknown" → RESOLVED (May 2, retry+fallback+cache)  
 - ✅ ~~BUG-4: Ticker cooldown~~ → RESOLVED (5-day cooldown in hard_blocks.py, May 2)
 - ✅ ~~BUG-5: SL too tight rejection~~ → RESOLVED (tiered SL mins by price, May 2)
 
