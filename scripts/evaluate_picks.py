@@ -5,7 +5,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.pick_evaluator import evaluate_pending
 from src.performance_stats import print_dashboard
-from src.position_monitor import scan_open_positions, format_telegram_summary
+from src.position_monitor import scan_open_positions
+from src.strategy_breakdown import print_all_breakdowns
 
 print("Evaluating pending picks...\n")
 counts = evaluate_pending()
@@ -29,3 +30,7 @@ if alerts:
     print("\nRun: python3 scripts/send_position_alerts.py to dispatch to Telegram")
 else:
     print("✅ All positions within max_hold budget")
+
+# Strategy/tag/regime breakdown (Pillar 6 P&L Brain - Weekly metrics)
+print()
+print_all_breakdowns()
