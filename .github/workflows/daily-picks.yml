@@ -93,6 +93,14 @@ jobs:
         if: steps.guard.outputs.should_run == 'true'
         run: pytest tests/ -v --tb=short || (echo "❌ tests failed — check before deploying" && exit 1)
 
+      - name: Build per-stock statistics 🧠 (Pillar 1 brain coverage)
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          echo "Building stock_stats for top 100 tickers (~3 min)..."
+          python scripts/build_stock_stats.py --top100 || echo "⚠ Stats build failed — brain will fall back to defaults (non-fatal)"
+          echo "✓ Stats coverage: $(ls data/stock_stats/ 2>/dev/null | wc -l) tickers"
+        continue-on-error: true
+
       - name: Run agent
         if: steps.guard.outputs.should_run == 'true'
         env:
