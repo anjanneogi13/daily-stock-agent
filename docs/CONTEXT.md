@@ -1,5 +1,61 @@
 # 🧠 Project Context — Read This First
 
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (14 commits)
+
+### TL;DR FOR NEXT CHAT SESSION
+- 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
+- 🎯 Brain coverage: **20 → 106 tickers** (5.3x expansion)
+- 🧮 EV gate added in **OBSERVE-MODE** (logs vetoes, doesn't filter — flip Wednesday after Mon/Tue observation)
+- 🐛 **BUG-4 (ticker cooldown) + BUG-5 (SL too tight) RESOLVED**
+- 📲 Telegram MD→plain-text auto-fallback shipped (HTTP 400 fix)
+- 📊 CI now auto-builds stock_stats every run (fresh data, never stale)
+- 📚 5-pillar brain architecture locked (ADR-001, ADR-002, BRAIN_ARCHITECTURE.md)
+- ✅ 190 tests passing (+25% from morning's 152)
+
+### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
+1. **BUG-2 fix**: pending evaluations stuck (~45 min) — blocks learning loop
+2. **SPY benchmark column** in picks_log (~30 min) — for relative perf analysis
+3. **Wednesday May 6**: review Mon/Tue EV gate logs → flip `BRAIN_ENFORCE_EV=true`
+
+### 🚨 DO NOT TOUCH (working in production)
+- `main.py` brain block (lines 213-260) — additive, zero-risk
+- `.github/workflows/daily-picks.yml` stats build step — `continue-on-error: true`
+- `TOP_100_TICKERS` list in `scripts/build_stock_stats.py` — just expanded, no churn
+- Brain output is ADDITIVE only — old SL/TP still primary in Telegram
+
+### 🔄 OPT-IN SWITCHES (env vars to flip later)
+- `BRAIN_ENFORCE_EV=true` → activates EV-based pick filtering
+- `BRAIN_EV_MIN_PCT=-1.0` → threshold for veto (default generous, tighten over time)
+
+### 📊 PROGRESS METRICS (DELTA TODAY)
+| Metric | This Morning | Now |
+|---|---|---|
+| 24-month plan complete | ~8% | **~14%** |
+| Known bugs fixed | 1/5 | **3/5** |
+| Brain pillars LIVE | 0/5 | **1/5** |
+| Test count | 152 | **190** (+25%) |
+| Brain ticker coverage | 20 | **106** |
+| Open PRs (debt) | 13 | 13 (unchanged) |
+
+### 📋 SCHEDULE COMPARISON: Plan vs Reality
+- **Saturday May 2** plan: roadmap docs + BUG-4 + BUG-5 + SPY col → **3/4 DONE** (SPY pending)
+- **Week 2-4 May** plan: Pillar 1 Layer 1 + Layer 2 → **DONE TODAY (3 weeks early)**
+- **Month 2 June** plan: Pillar 1 Layer 3 + EV Filter → **Layer 3 DONE + EV in observe-mode (5 weeks early)**
+
+### 🐛 STILL OPEN BUGS
+- 🔴 BUG-2: Picks stuck in "pending" evaluation status (next sprint)
+- 🔴 BUG-3: Regime returning "unknown" frequently (next sprint)
+
+### 📝 KEY COMMITS TODAY (chronological)
+- `cd4d212` Pillar 1 brain wired into main.py + Telegram fallback fix
+- `42570ea` docs: roadmap reality check — Phase 5 + Pillar 1 LIVE
+- `860a134` feat(brain): expand stats coverage 20 → 106 tickers
+- `11b6e36` ci(brain): auto-build stats before every daily picks run
+- `bcd529e` feat(brain): EV gate (observe-mode, opt-in enforcement)
+
+---
+
+
 > **Purpose:** This file is the SINGLE SOURCE OF TRUTH for any new chat session, any future contributor, or any future "you" picking this up after a break. Read this completely before doing anything.
 
 > **Last updated:** 2026-05-02 by Anjan
