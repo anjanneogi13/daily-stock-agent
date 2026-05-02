@@ -64,6 +64,24 @@ def run():
         cfg["output"]["top_n_picks"] = adjusted_picks
         rprint(f"  [yellow]Pick count: {base_picks} → {adjusted_picks}[/yellow]")
 
+    # ═══════════════════════════════════════════════════════════════
+    # 🚨 EARLY EXIT GUARD (2026-05-02): Skip if today already logged.
+    # Why: GitHub cron multi-fires (Apr 28 = 2 runs, May 1 = 3 runs)
+    # bypassed the tag cap (which is per-run, not per-day).
+    # This guard makes ALL subsequent same-day runs no-op.
+    # ═══════════════════════════════════════════════════════════════
+    import csv as _csv
+    from datetime import date as _date
+    from pathlib import Path as _Path
+    _today = _date.today().strftime("%Y-%m-%d")
+    _log = _Path("data/picks_log.csv")
+    if _log.exists():
+        with _log.open() as _f:
+            for _row in _csv.DictReader(_f):
+                if _row.get("pick_date") == _today:
+                    rprint(f"[yellow]⏭  SKIP: picks already logged for {_today} (multi-fire guard)[/yellow]")
+                    return
+
     rprint("[1/6] Checking market regime...")
     reg = market_regime()
     color = "green" if reg["bullish"] else "red"

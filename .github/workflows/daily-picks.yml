@@ -2,22 +2,12 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # Daily picks 8:00–9:20 ET. GitHub cron is unreliable — 13 backup slots
-    # cover both EDT (Mar–Nov, UTC-4) and EST (Nov–Mar, UTC-5).
-    # CONCURRENCY GROUP ensures only ONE run happens per day (no parallel push conflicts).
-    - cron: '0 12 * * 1-5'    # 8:00 AM EDT
-    - cron: '15 12 * * 1-5'   # 8:15 AM EDT
-    - cron: '30 12 * * 1-5'   # 8:30 AM EDT
-    - cron: '45 12 * * 1-5'   # 8:45 AM EDT
-    - cron: '0 13 * * 1-5'    # 9:00 AM EDT
-    - cron: '10 13 * * 1-5'   # 9:10 AM EDT
-    - cron: '15 13 * * 1-5'   # 9:15 AM EDT
-    - cron: '20 13 * * 1-5'   # 9:20 AM EDT
-    - cron: '30 13 * * 1-5'   # 8:30 AM EST
-    - cron: '45 13 * * 1-5'   # 8:45 AM EST
-    - cron: '0 14 * * 1-5'    # 9:00 AM EST
-    - cron: '10 14 * * 1-5'   # 9:10 AM EST
-    - cron: '20 14 * * 1-5'   # 9:20 AM EST
+    # ⚠ 2026-05-02: Reduced from 13 cron entries to 2.
+    # Old design had 13 "backup" slots → workflow fired 2-3x/day
+    # → tag cap (per-run) was bypassed → 16 SEMI picks/day
+    # New: ONE primary + ONE backup. main.py also early-exits if today logged.
+    - cron: '30 12 * * 1-5'   # 8:30 AM EDT primary (Mar-Nov)
+    - cron: '30 13 * * 1-5'   # 8:30 AM EST primary (Nov-Mar) / 9:30 EDT backup
 
   workflow_dispatch:
 
