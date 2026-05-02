@@ -272,6 +272,40 @@ def run():
     # ═══════════════════════════════════════════════════════════════
 
     # ═══════════════════════════════════════════════════════════════
+    # PILLAR 1 EV GATE (May 2 2026) — opt-in via env vars
+    # OBSERVE-MODE by default: logs vetoes but doesn't filter.
+    # To activate: set BRAIN_ENFORCE_EV=true in workflow env.
+    # ═══════════════════════════════════════════════════════════════
+    enforce_ev = os.getenv("BRAIN_ENFORCE_EV", "false").lower() == "true"
+    ev_min_pct = float(os.getenv("BRAIN_EV_MIN_PCT", "-1.0"))
+    ev_vetoes = []
+    for p in top:
+        b = p.get("brain", {}) or {}
+        ev = b.get("ev_pct")
+        if ev is not None and ev < ev_min_pct:
+            ev_vetoes.append({
+                "ticker": p["ticker"],
+                "ev_pct": ev,
+                "p_win": b.get("p_win"),
+                "confidence": b.get("confidence"),
+            })
+    if ev_vetoes:
+        mode = "ENFORCED" if enforce_ev else "OBSERVE-ONLY"
+        rprint(f"  [yellow]🧮 EV gate ({mode}, threshold={ev_min_pct:+.2f}%): {len(ev_vetoes)} pick(s) flagged[/yellow]")
+        for v in ev_vetoes:
+            rprint(
+                f"    {'❌' if enforce_ev else '⚠ '} {v['ticker']:6s}  "
+                f"EV={v['ev_pct']:+.2f}%  P(win)={v['p_win']:.0%}  [{v['confidence']}]"
+            )
+        if enforce_ev:
+            veto_set = {v["ticker"] for v in ev_vetoes}
+            top = [p for p in top if p["ticker"] not in veto_set]
+            rprint(f"  [yellow]🧮 Filtered: {len(top)} picks remain after EV enforcement[/yellow]")
+    else:
+        rprint(f"  [dim]🧮 EV gate: 0 vetoes (threshold={ev_min_pct:+.2f}%, mode={'ENFORCED' if enforce_ev else 'OBSERVE'})[/dim]")
+    # ═══════════════════════════════════════════════════════════════
+
+    # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
