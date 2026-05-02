@@ -89,8 +89,12 @@ def evaluate_pending() -> dict:
         exit_price = None
         exit_date = None
         for date, bar in df.iterrows():
-            # Only evaluate bars AFTER the pick date — entry is next day
-            if date.date() <= pick_date:
+            # BUG-2 FIX (May 2 2026): include pick_date bar.
+            # Picks generate during US session (committed ~12 ET = ~16 UTC),
+            # so the entry day IS pick_date, not pick_date+1.
+            # Skipping pick_date caused 32 picks to stay 'pending' forever
+            # when SL/TP hit on the same trading day.
+            if date.date() < pick_date:
                 continue
             high = float(bar["High"])
             low = float(bar["Low"])
