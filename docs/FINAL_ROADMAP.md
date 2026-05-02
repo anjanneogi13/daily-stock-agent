@@ -205,7 +205,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 **Weekly reports:** (partial done)
 - ✅ Basic weekly performance report card
 - 🔴 Week-over-week trend
-- 🔴 Win rate by strategy (day/swing/multi)
+- ✅ Win rate by strategy (day/swing/multi) — May 2 strategy_breakdown.py
 - 🔴 Sharpe ratio calculation
 
 **Monthly reports:** (partial done)
