@@ -306,6 +306,40 @@ def run():
     # ═══════════════════════════════════════════════════════════════
 
     # ═══════════════════════════════════════════════════════════════
+    # PILLAR 5 AUTO-PAUSE (May 2 2026) — opt-in via env var
+    # OBSERVE-MODE by default: logs paused groups but doesn't filter.
+    # To activate: set AUTO_PAUSE_ENABLED=true in workflow env.
+    # ═══════════════════════════════════════════════════════════════
+    enforce_pause = os.getenv("AUTO_PAUSE_ENABLED", "false").lower() == "true"
+    pause_lookback = int(os.getenv("AUTO_PAUSE_LOOKBACK_DAYS", "30"))
+    try:
+        from src.auto_pause import get_paused_set
+        paused_tags = get_paused_set("tag", lookback_days=pause_lookback)
+        paused_types = get_paused_set("trade_type", lookback_days=pause_lookback)
+        pause_vetoes = []
+        for p_ in top:
+            tag = (p_.get("tag") or "").strip()
+            tt = (p_.get("trade_type") or "").strip()
+            if tag in paused_tags:
+                pause_vetoes.append((p_["ticker"], "tag", tag, paused_tags[tag]))
+            elif tt in paused_types:
+                pause_vetoes.append((p_["ticker"], "trade_type", tt, paused_types[tt]))
+        if pause_vetoes:
+            mode = "ENFORCED" if enforce_pause else "OBSERVE-ONLY"
+            rprint(f"  [yellow]🛑 Auto-pause ({mode}): {len(pause_vetoes)} pick(s) flagged[/yellow]")
+            for tk, dim, val, why in pause_vetoes:
+                rprint(f"    {'❌' if enforce_pause else '⚠ '} {tk:6s}  {dim}={val!r}  reason: {why}")
+            if enforce_pause:
+                veto_set = {v[0] for v in pause_vetoes}
+                top = [p_ for p_ in top if p_["ticker"] not in veto_set]
+                rprint(f"  [yellow]🛑 Filtered: {len(top)} picks remain after auto-pause[/yellow]")
+        else:
+            rprint(f"  [dim]🛑 Auto-pause: 0 vetoes (mode={'ENFORCED' if enforce_pause else 'OBSERVE'}, lookback={pause_lookback}d)[/dim]")
+    except Exception as e:
+        rprint(f"  [yellow]⚠ Auto-pause skipped: {e}[/yellow]")
+    # ═══════════════════════════════════════════════════════════════
+
+    # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
