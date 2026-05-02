@@ -252,23 +252,45 @@ if __name__ == "__main__":
         sys.exit(0)
 
     # Send to all chat IDs
+    # FIX (2026-05-02): Telegram returns HTTP 400 when message contains
+    # unescaped Markdown chars (_ * [ ] etc). Strategy: try Markdown first,
+    # if that fails fall back to plain text so picks ALWAYS get delivered.
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
     all_sent = True
-    for _cid in CHAT_IDS:
-        data = urllib.parse.urlencode({
-            "chat_id": _cid, "text": msg,
-            "parse_mode": "Markdown", "disable_web_page_preview": "true",
-        }).encode()
+
+    def _try_send(chat_id: str, text: str, parse_mode: str | None) -> tuple[bool, str]:
+        payload = {"chat_id": chat_id, "text": text, "disable_web_page_preview": "true"}
+        if parse_mode:
+            payload["parse_mode"] = parse_mode
+        data = urllib.parse.urlencode(payload).encode()
         try:
             resp = urllib.request.urlopen(urllib.request.Request(url, data=data), timeout=10)
             result = json.loads(resp.read())
-            if result.get('ok'):
-                print(f"[telegram] ✅ Sent to {_cid[:6]}...")
-            else:
-                print(f"[telegram] ❌ {result}")
-                all_sent = False
+            if result.get("ok"):
+                return True, "ok"
+            return False, str(result)
+        except urllib.error.HTTPError as he:
+            try:
+                body = he.read().decode()
+            except Exception:
+                body = ""
+            return False, f"HTTP {he.code} {body[:200]}"
         except Exception as e:
-            print(f"[telegram] ❌ {e}")
+            return False, str(e)
+
+    for _cid in CHAT_IDS:
+        # Attempt 1: Markdown (preferred — preserves formatting)
+        ok, info = _try_send(_cid, msg, parse_mode="Markdown")
+        if ok:
+            print(f"[telegram] ✅ Sent to {_cid[:6]}... (Markdown)")
+            continue
+        # Attempt 2: Plain text fallback (NEVER fail silently)
+        print(f"[telegram] ⚠ Markdown failed ({info[:120]}); retrying as plain text...")
+        ok, info = _try_send(_cid, msg, parse_mode=None)
+        if ok:
+            print(f"[telegram] ✅ Sent to {_cid[:6]}... (plain text fallback)")
+        else:
+            print(f"[telegram] ❌ Plain text also failed: {info[:200]}")
             all_sent = False
 
     # Mark sent only if at least one chat received it
