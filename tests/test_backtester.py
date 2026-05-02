@@ -111,3 +111,49 @@ def test_metrics_no_warning_when_n_30():
     picks = [{"r_multiple": 1.0, "return_pct": 3.0, "exit_status": "tp_hit"}] * 30
     m = compute_metrics(picks)
     assert m["statistical_warning"] is None
+
+
+"""v1.1 tests — gap fills + cooldown + RSI cap."""
+import pandas as pd
+from src.backtester.outcome_simulator import simulate_outcome
+
+
+def test_gap_down_fills_at_open_below_stop():
+    """If next day opens below SL, fill at open (worse than stop)."""
+    bars = pd.DataFrame({
+        "Open": [88.0],   # gap down: opens BELOW stop of 95
+        "High": [90.0],
+        "Low": [85.0],
+        "Close": [87.0],
+    }, index=pd.date_range("2024-06-01", periods=1, freq="B"))
+    out = simulate_outcome(bars, entry=100, stop_loss=95,
+                           take_profit=110, max_hold_days=5)
+    assert out["exit_status"] == "sl_gap"
+    assert out["exit_price"] == 88.0
+    assert out["r_multiple"] < -1.0, "must be worse than -1R on gap-down"
+
+
+def test_gap_up_fills_at_open_above_tp():
+    """If next day opens above TP, fill at open (better than TP)."""
+    bars = pd.DataFrame({
+        "Open": [115.0],  # gap up above TP of 110
+        "High": [118.0],
+        "Low": [114.0],
+        "Close": [116.0],
+    }, index=pd.date_range("2024-06-01", periods=1, freq="B"))
+    out = simulate_outcome(bars, entry=100, stop_loss=95,
+                           take_profit=110, max_hold_days=5)
+    assert out["exit_status"] == "tp_gap"
+    assert out["exit_price"] == 115.0
+    assert out["r_multiple"] > 2.0, "must be better than 2R on gap-up"
+
+
+def test_normal_sl_still_works_after_v1_1():
+    """Regression: intraday SL still detected when not a gap."""
+    bars = pd.DataFrame({
+        "Open": [99.0], "High": [102.0], "Low": [94.0], "Close": [98.0],
+    }, index=pd.date_range("2024-06-01", periods=1, freq="B"))
+    out = simulate_outcome(bars, entry=100, stop_loss=95,
+                           take_profit=110, max_hold_days=5)
+    assert out["exit_status"] == "sl_hit"
+    assert out["exit_price"] == 95
