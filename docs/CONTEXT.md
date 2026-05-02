@@ -1,0 +1,188 @@
+# 🧠 Project Context — Read This First
+
+> **Purpose:** This file is the SINGLE SOURCE OF TRUTH for any new chat session, any future contributor, or any future "you" picking this up after a break. Read this completely before doing anything.
+
+> **Last updated:** 2026-05-02 by Anjan
+> **Update protocol:** After EVERY significant decision or session
+
+---
+
+## 🎯 PROJECT IDENTITY
+
+- **Name:** Daily Stock Agent
+- **Owner:** Anjan Neogi (Singapore)
+- **Started:** April 30, 2026
+- **Mission:** Build the world's first transparent, audited, AI-powered trading agent that beats every retail product
+- **24-month plan:** See `docs/MASTER_PLAN_24_MONTH.md`
+- **Goal:** $20K+ MRR by Month 18 (quit job), $70K+ MRR by Month 24
+
+---
+
+## 🏛️ FOUR PILLARS
+
+1. **Technical Excellence** — Be objectively better
+2. **Trust & Transparency** — Be the only honest player (open source, audited)
+3. **Community & Education** — Build in public
+4. **Sustainable Business** — $1M+ ARR by Month 24
+
+---
+
+## 🧠 ARCHITECTURE NORTH STAR
+
+**Statistical Probability Engine** (locked May 2, 2026)
+
+Every price decision (SL, TP, buy, sell, trigger) MUST be PROBABILITY-BASED, not rule-based. The agent must know its own probability of working at all times.
+
+See: `docs/PROBABILITY_ENGINE_DESIGN.md`
+
+This replaces all arbitrary thresholds (1.5×ATR, RSI 30, 3% SL) with empirically-derived probabilistic decisions.
+
+---
+
+## ✅ WHAT'S BUILT (Audit Reference)
+
+- 81 Python files, 10,095 lines of code
+- 9 GitHub Actions workflows (daily picks, news, eval, weekend, monthly, intraday, watchdog, backup)
+- 12 test files (LOW coverage — gap)
+- 86 PRs merged
+- 38 picks logged in 9 days
+- 749 data files
+- News pipeline working (266 active signals)
+- Backup system live
+- Hard enforcement layer live
+
+For complete inventory, run:
+```bash
+python scripts/code_inspector.py
+```
+
+---
+
+## 🚨 KNOWN BUGS / TECHNICAL DEBT
+
+1. **BUG-2:** Many picks stuck in "pending" evaluation status
+2. **BUG-3:** Regime returning "unknown" frequently
+3. **BUG-4:** Same ticker (TSM) picked 3+ times in 9 days — no cooldown
+4. **TECH DEBT:** `src/paper_trader.py` exists but not integrated
+5. **TECH DEBT:** Test coverage ~15% (need 40%+)
+6. **TECH DEBT:** 13 open PRs creating merge debt
+
+---
+
+## 🚫 WHAT WE EXPLICITLY ARE NOT BUILDING (Yet)
+
+- LLM vision chart reading → tech immature in 2026
+- Deep learning models → need 10K+ trades
+- High-frequency strategies → unrealistic for retail
+- Live brokerage execution → after 3 months proven paper edge
+- Discord/Slack notifications → don't fragment focus
+- Multi-asset (crypto, options) → after Phase T7 (Month 8)
+
+For each, see `docs/decisions/` for the WHY.
+
+---
+
+## 📜 OPERATING PRINCIPLES
+
+1. **Decisions live in the repo, not in chat sessions**
+   - Chat sessions reset; the repo doesn't
+   - Every architectural decision → `docs/decisions/ADR-NNN.md`
+
+2. **Probability over rules**
+   - Replace arbitrary thresholds with empirical probabilities
+   - Every pattern must pass hypothesis test (p < 0.05) to deploy
+
+3. **Anti-overfitting discipline**
+   - Train/test split mandatory
+   - Walk-forward validation (no lookahead)
+   - 95% CIs for go/no-go decisions
+   - Pre-register hypotheses BEFORE testing
+
+4. **Build in public**
+   - LinkedIn (M/W/F), Twitter (daily)
+   - Open source from Day 1
+   - Honest about losses
+
+5. **Stage gates discipline**
+   - Stage 1: 60-day Alpaca paper validation (no real money before)
+   - Stage 2: 60-day Moomoo real $5K (no SaaS build before)
+   - Stage 3: 3-month soft launch (no public launch before)
+
+6. **Sustainable pace**
+   - Weekly rest day (Sunday afternoon off)
+   - Quarterly 2-week vacation
+   - 8 hours sleep non-negotiable
+
+---
+
+## 🔄 SESSION START PROTOCOL (For Future "You" or AI)
+
+When starting a new chat session, paste this prompt:
+
+> "Resuming work on daily-stock-agent. Read these files in order:
+> 1. `docs/CONTEXT.md` (this file)
+> 2. `docs/ROADMAP.md` (current state + plan)
+> 3. `docs/PROBABILITY_ENGINE_DESIGN.md` (architecture)
+> 4. `docs/sessions/` (most recent file — last session handoff)
+> 5. `docs/decisions/` (recent ADRs)
+>
+> Then summarize: where we are, what's next, any open questions."
+
+---
+
+## 📂 KEY DOC LOCATIONS
+
+| Doc | Purpose |
+|---|---|
+| `docs/CONTEXT.md` | THIS FILE — read first |
+| `docs/ROADMAP.md` | Current phased roadmap, updated weekly |
+| `docs/MASTER_PLAN_24_MONTH.md` | 24-month strategic plan |
+| `docs/PROBABILITY_ENGINE_DESIGN.md` | Statistical engine architecture |
+| `docs/decisions/` | Architecture Decision Records |
+| `docs/sessions/` | Chat session handoffs |
+| `docs/playbook/` | How we work |
+| `docs/learnings/` | What we discovered |
+
+---
+
+## 🔧 KEY COMMANDS
+
+```bash
+# See current pipeline status
+python main.py --status
+
+# Run full pick generation (manual)
+python main.py
+
+# Generate evaluation report
+python evaluate_picks.py
+
+# Trigger backup
+python scripts/backup_data.py
+
+# View recent picks
+tail -10 data/picks_log.csv
+
+# Check workflow status  
+gh run list --limit 10
+```
+
+---
+
+## 🤝 WORKING AGREEMENT
+
+**Founder commits:**
+- Update this file after every major decision
+- Tweet/post weekly minimum (build in public)
+- Respect stage gates (don't skip)
+- Take rest (no burnout)
+
+**AI co-pilot commits:**
+- Read this file at start of every session
+- Push back on bad ideas (honest co-founder voice)
+- Document everything in repo (memory > chat)
+- Reference architecture decisions before coding
+
+---
+
+*This is your single source of truth. Treat it as sacred.*
