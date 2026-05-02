@@ -22,7 +22,7 @@ Three differentiators no competitor has:
 
 | Pillar | Purpose | Status |
 |---|---|---|
-| 1. Probability Engine | Empirical SL/TP/buy/sell levels | 🔴 Not started |
+| 1. Probability Engine | Empirical SL/TP/buy/sell levels | ✅ v0.1 LIVE (May 2) |
 | 2. Wisdom Base | Encoded knowledge from 10+ trading books | 🔴 Not started |
 | 3. Pattern Recognition | Numerical patterns scanned across universe | 🟡 Partial (indicators exist) |
 | 4. Feedback Loop | Outcome-driven self-learning | 🔴 Not started |

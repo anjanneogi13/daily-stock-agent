@@ -208,7 +208,71 @@ def run():
             rprint(f"    • {b['ticker']:6s}  [{b['block_type']}]  {b['reason']}")
     else:
         rprint(f"  [green]✓ All {pre_block_count} picks passed hard blocks[/green]")
+    # ═══════════════════════════════════════════════════════════════
+    # PILLAR 1: PROBABILITY ENGINE v0.1 (May 2 2026)
+    # Run brain on each pick. ADDITIVE — does NOT replace existing SL/TP.
+    # Stores brain output in p["brain"] for Telegram comparison + audit.
+    # See: docs/BRAIN_ARCHITECTURE.md, src/probability_engine.py
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[5e/6] Running probability engine (Pillar 1) on picks...")
+    try:
+        from src.probability_engine import (
+            compute_probabilistic_decision,
+            SignalState,
+        )
+        regime_label = reg.get("regime", "unknown") if isinstance(reg, dict) else "unknown"
+        brain_count = 0
+        for p in top:
+            try:
+                ticker = p["ticker"]
+                entry_price = float(p["plan"].get("entry") or 0)
+                if entry_price <= 0:
+                    continue
+                # Pull conditioning signals from existing pick context
+                news_data = p.get("news", {}) or {}
+                news_score = float(news_data.get("tradeable_score", 0) or 0)
+                news_sentiment = news_data.get("sentiment", "neutral") or "neutral"
+                signals = SignalState(
+                    regime=regime_label,
+                    news_score=news_score,
+                    news_sentiment=news_sentiment,
+                    days_to_earnings=p.get("days_to_earnings"),
+                    watchlist_boost=float(p["scores"].get("watchlist_boost", 0) or 0),
+                )
+                decision = compute_probabilistic_decision(ticker, entry_price, signals=signals)
+                # Store as audit trail; do NOT mutate plan yet
+                p["brain"] = {
+                    "p_win": decision.p_win,
+                    "ev_pct": decision.expected_value_pct,
+                    "brain_sl": decision.final_sl_price,
+                    "brain_tp": decision.final_tp_price,
+                    "brain_sl_pct": decision.final_sl_pct,
+                    "brain_tp_pct": decision.final_tp_pct,
+                    "confidence": decision.confidence,
+                    "signals": decision.adjustments_applied,
+                }
+                brain_count += 1
+            except Exception as e:
+                p["brain"] = {"error": str(e)}
+        rprint(f"  [green]✓ Brain analyzed {brain_count}/{len(top)} picks[/green]")
+        # Show brain decisions
+        for p in top:
+            b = p.get("brain", {})
+            if "p_win" in b:
+                ev_color = "green" if b["ev_pct"] > 0 else "red"
+                rprint(
+                    f"    🧠 {p['ticker']:6s}  "
+                    f"P(win)={b['p_win']:.0%}  "
+                    f"EV=[{ev_color}]{b['ev_pct']:+.2f}%[/{ev_color}]  "
+                    f"brain_SL=${b['brain_sl']}  brain_TP=${b['brain_tp']}  "
+                    f"[{b['confidence']}]"
+                )
+    except Exception as e:
+        rprint(f"  [yellow]⚠ Probability engine skipped: {e}[/yellow]")
+    # ═══════════════════════════════════════════════════════════════
 
+    # ═══════════════════════════════════════════════════════════════
+    # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
@@ -257,6 +321,7 @@ def run():
     try:
         picks_for_log = []
         for p in top:
+            brain = p.get("brain", {}) or {}
             picks_for_log.append({
                 "ticker": p["ticker"],
                 "company": p.get("info_short", {}).get("name", ""),
@@ -270,6 +335,12 @@ def run():
                 "risk_reward": p["plan"].get("risk_reward", 2.0),
                 "qty": p["plan"].get("quantity", 0),
                 "days_to_earnings": p.get("days_to_earnings"),
+                # PILLAR 1 audit fields (May 2 2026)
+                "brain_p_win": brain.get("p_win"),
+                "brain_ev_pct": brain.get("ev_pct"),
+                "brain_sl": brain.get("brain_sl"),
+                "brain_tp": brain.get("brain_tp"),
+                "brain_confidence": brain.get("confidence"),
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
         if n == 0 and len(picks_for_log) > 0:
