@@ -20,7 +20,14 @@ def _load_picks() -> list:
     if not LOG_PATH.exists():
         return []
     with LOG_PATH.open() as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    # Ensure new SPY/alpha columns exist on all rows (May 2 2026)
+    new_fields = ["spy_close_at_exit", "spy_return_pct", "alpha_pct"]
+    for r in rows:
+        for f in new_fields:
+            if f not in r:
+                r[f] = ""
+    return rows
 
 
 def _save_picks(rows: list):
@@ -46,6 +53,61 @@ def _fetch_ohlc(ticker: str, start: str) -> pd.DataFrame:
     except Exception as e:
         print(f"  [eval] {ticker} fetch error: {e}")
         return pd.DataFrame()
+
+
+_SPY_CACHE = {}
+
+def _spy_close_on(date_str: str) -> float | None:
+    """Get SPY closing price on or nearest trading day to given date.
+    Cached to avoid repeated yf.download calls during evaluator run."""
+    if date_str in _SPY_CACHE:
+        return _SPY_CACHE[date_str]
+    try:
+        from datetime import datetime as _dt, timedelta as _td
+        target = _dt.strptime(date_str, "%Y-%m-%d").date()
+        # Fetch a 5-day window to handle weekends/holidays
+        start = (target - _td(days=5)).isoformat()
+        end = (target + _td(days=2)).isoformat()
+        df = yf.download("SPY", start=start, end=end, progress=False, auto_adjust=False)
+        if df.empty:
+            _SPY_CACHE[date_str] = None
+            return None
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = df.columns.get_level_values(0)
+        # Find the row at-or-before target date
+        df = df[df.index.date <= target]
+        if df.empty:
+            _SPY_CACHE[date_str] = None
+            return None
+        val = float(df["Close"].iloc[-1])
+        _SPY_CACHE[date_str] = val
+        return val
+    except Exception as e:
+        print(f"  [spy] {date_str} fetch error: {e}")
+        _SPY_CACHE[date_str] = None
+        return None
+
+
+def _add_spy_alpha(row: dict, exit_date_str: str, pick_return_pct: float) -> str:
+    """Compute SPY return over hold period and stash alpha in row.
+    Returns spy_close_at_exit (str) or empty string on failure."""
+    spy_at_pick_str = row.get("spy_close", "")
+    if not spy_at_pick_str:
+        row["alpha_pct"] = None
+        return ""
+    try:
+        spy_at_pick = float(spy_at_pick_str)
+    except Exception:
+        row["alpha_pct"] = None
+        return ""
+    spy_at_exit = _spy_close_on(exit_date_str)
+    if spy_at_exit is None or spy_at_pick <= 0:
+        row["alpha_pct"] = None
+        return ""
+    spy_return = (spy_at_exit - spy_at_pick) / spy_at_pick * 100
+    row["spy_return_pct"] = round(spy_return, 2)
+    row["alpha_pct"] = round(pick_return_pct - spy_return, 2)
+    return str(round(spy_at_exit, 2))
 
 
 def evaluate_pending() -> dict:
@@ -132,9 +194,12 @@ def evaluate_pending() -> dict:
             row["actual_return_pct"] = round(ret, 2)
             risk = entry - sl
             row["r_multiple"] = round((exit_price - entry) / risk, 2) if risk > 0 else 0
+            # SPY relative perf (May 2 2026): alpha vs benchmark
+            row["spy_close_at_exit"] = _add_spy_alpha(row, exit_date.strftime("%Y-%m-%d"), ret)
             counts[outcome.replace("_hit", "_hits")] += 1
             counts["evaluated"] += 1
-            print(f"  ✅ {ticker}: {outcome.upper()} on {exit_date.date()} | exit ${exit_price:.2f} | {ret:+.2f}% | {row['r_multiple']}R")
+            alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
+            print(f"  ✅ {ticker}: {outcome.upper()} on {exit_date.date()} | exit ${exit_price:.2f} | {ret:+.2f}% | {row['r_multiple']}R{alpha_str}")
         else:
             # Days elapsed since pick
             days_elapsed = (today - pick_date).days
@@ -148,9 +213,12 @@ def evaluate_pending() -> dict:
                 row["actual_return_pct"] = round(ret, 2)
                 risk = entry - sl
                 row["r_multiple"] = round((last_close - entry) / risk, 2) if risk > 0 else 0
+                # SPY relative perf for expired picks
+                row["spy_close_at_exit"] = _add_spy_alpha(row, today.isoformat(), ret)
                 counts["expired"] += 1
                 counts["evaluated"] += 1
-                print(f"  ⏰ {ticker}: EXPIRED after {days_elapsed}d | exit ${last_close:.2f} | {ret:+.2f}% | {row['r_multiple']}R")
+                alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
+                print(f"  ⏰ {ticker}: EXPIRED after {days_elapsed}d | exit ${last_close:.2f} | {ret:+.2f}% | {row['r_multiple']}R{alpha_str}")
             else:
                 counts["still_open"] += 1
                 print(f"  🟡 {ticker}: still open ({days_elapsed}d since pick)")
