@@ -99,6 +99,44 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - ✅ docs/sessions/2026-05-02-saturday-shipping.md
 - ✅ docs/FINAL_ROADMAP.md (THIS FILE)
 
+### Phase 5 — May 2 2026 Saturday Sprint (DONE TODAY)
+
+**🧠 PILLAR 1 — Probability Engine v0.1 LIVE in PRODUCTION:**
+- ✅ src/stock_stats.py (per-stock empirical statistics, 20 tickers)
+- ✅ scripts/build_stock_stats.py (universe builder)
+- ✅ src/probability_engine.py (multi-signal decision brain)
+  - Layer 1: Empirical price-history base rates
+  - Layer 2: Market regime conditioning
+  - Layer 3: News + sentiment posteriors
+  - Layer 4: Catalyst (earnings) conditioning
+  - Layer 4b: Watchlist signal integration
+  - Layer 5: Multi-signal combiner (heuristic v0.1)
+  - Layer 6: SL/TP/buy/trigger price decisions
+- ✅ tests/test_probability_engine.py — 38 tests
+- ✅ Wired into main.py production pipeline (additive, zero risk)
+- ✅ picks_log.csv now includes brain_p_win, brain_ev_pct, brain_sl, brain_tp, brain_confidence
+- ✅ VERIFIED LIVE in production workflow run (cd4d212)
+
+**Bug Fixes Shipped:**
+- ✅ BUG-4: ticker cooldown (5 days, hard_blocks.py)
+- ✅ BUG-5: tiered SL minimums by price ($100+: 1.5%, $30-99: 2%, etc.)
+
+**Production Hardening:**
+- ✅ Telegram Markdown→plain-text auto-fallback (HTTP 400 fix, cd4d212)
+- ✅ Workflow now resilient to stock names with special chars
+
+**Tests & Quality:**
+- ✅ Test coverage: 152 → 190 tests (+25%)
+- ✅ Zero regressions across 12 commits in single afternoon
+
+**Honest v0.1 Limitations (next sprints):**
+- 🟡 Stats only for 20 tickers (need top 100+) — Sunday task
+- 🟡 Combiner heuristic, not full Bayesian — v0.2
+- 🟡 EV calculated but NOT enforced as filter yet — Sunday task
+- 🟡 Adjustment weights are PRIORS, not learned — needs Pillar 4
+- 🟡 Brain output ADDITIVE — old SL/TP still primary in Telegram
+
+
 ---
 
 ## ❌ TECHNICAL DELIVERABLES — NOT YET DONE
@@ -107,7 +145,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - ✅ ~~BUG-1: Penny stock leak~~ → RESOLVED (PR #84 hard blocks working)
 - 🔴 BUG-2: Picks stuck in "pending" evaluation status
 - 🔴 BUG-3: Regime returning "unknown" frequently  
-- 🔴 BUG-4: Same ticker (TSM) picked 3+ times in 9 days — no cooldown
+- ✅ ~~BUG-4: Ticker cooldown~~ → RESOLVED (5-day cooldown in hard_blocks.py, May 2)
 - ✅ ~~BUG-5: SL too tight rejection~~ → RESOLVED (tiered SL mins by price, May 2)
 
 ### TECH DEBT
@@ -119,12 +157,12 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 
 #### 🔴 PRIORITY 1 — Brain Pillars (Months 1-6)
 
-**Pillar 1: Probability Engine** (3-week build, 4 phases)
-- 🔴 Layer 1: stock_stats per ticker (top 50 stocks)
-- 🔴 Layer 2: Regime-conditional statistics
-- 🔴 Layer 3: Probabilistic price level calculator
-- 🔴 Layer 4: Hypothesis testing engine
-- 🔴 Layer 5: Self-Awareness foundation
+**Pillar 1: Probability Engine** — 🟡 v0.1 LIVE in production (May 2 2026)
+- ✅ Layer 1: stock_stats per ticker (20 tickers shipped, expand to 100+ Sunday)
+- ✅ Layer 2: Regime-conditional statistics (heuristic in SignalState)
+- ✅ Layer 3: Probabilistic price level calculator (LIVE in main.py)
+- 🔴 Layer 4: Hypothesis testing engine (v0.2 — needs Pillar 4 outcomes)
+- 🔴 Layer 5: Self-Awareness foundation (overlaps with Pillar 5)
 
 **Pillar 2: Wisdom Base** (1-week build)
 - 🔴 Curate 10-book list
