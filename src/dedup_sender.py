@@ -93,3 +93,45 @@ def stats() -> dict:
         "total_tracked": len(sent),
         "path": str(DEDUP_PATH),
     }
+
+# ─────────────────────────────────────────────────────────────────
+# PR #85: Report-level dedup (stable key, not content hash)
+# ─────────────────────────────────────────────────────────────────
+# Problem: workflows fire 2x (DST dual cron) and "exit 0" guards
+# only exit the bash step, not the whole job. Telegram sends 2x.
+# Solution: deterministic key per (report_type, date) blocks repeats.
+
+def _report_key(report_type: str, date_str: str) -> str:
+    """Stable dedup key: 'daily_dashboard:2026-05-01' etc."""
+    return f"report:{report_type}:{date_str}"
+
+
+def should_send_report(report_type: str, date_str: str) -> bool:
+    """Check if this report has already been sent today.
+    
+    report_type examples:
+      • 'daily_dashboard'
+      • 'exec_report'
+      • 'weekly_review'
+      • 'monthly_xray'
+    
+    Returns True if NOT sent yet today (i.e. OK to send).
+    Override with FORCE_RESEND=1 env var for manual reruns.
+    """
+    import os
+    if os.environ.get("FORCE_RESEND") == "1":
+        return True
+    key = _report_key(report_type, date_str)
+    sent = _load_sent()
+    return key not in sent
+
+
+def mark_report_sent(report_type: str, date_str: str) -> None:
+    """Record that this report was sent. Persists across runs."""
+    key = _report_key(report_type, date_str)
+    sent = _load_sent()
+    sent[key] = datetime.now().isoformat()
+    # Don't purge report keys aggressively - keep for 30 days
+    # Old report keys naturally rotate by date
+    _save_sent(sent)
+

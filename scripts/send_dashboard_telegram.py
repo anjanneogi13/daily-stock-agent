@@ -6,6 +6,16 @@ CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"), os.environ.get("TELE
 if not TOKEN or not CHAT_IDS:
     print("[telegram] Missing creds — skipping"); sys.exit(0)
 
+# ─── PR #85: Report-level dedup (skip if already sent today) ─────
+from datetime import datetime as _dt
+from src.dedup_sender import should_send_report, mark_report_sent
+_REPORT_TYPE = "daily_dashboard"
+_TODAY = _dt.now().strftime("%Y-%m-%d")
+if not should_send_report(_REPORT_TYPE, _TODAY):
+    print(f"[telegram] ⏭  Daily Performance Update for {_TODAY} already sent — skipping (set FORCE_RESEND=1 to override)")
+    sys.exit(0)
+print(f"[telegram] ✓ Daily Performance Update for {_TODAY} — sending...")
+
 # Capture dashboard output
 result = subprocess.run(["python", "scripts/performance_dashboard.py"],
                         capture_output=True, text=True)
