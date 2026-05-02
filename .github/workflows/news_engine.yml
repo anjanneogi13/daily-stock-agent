@@ -5,11 +5,15 @@ name: News Engine
 
 on:
   schedule:
-    # Pre-market & market hours, every 30 min (UTC)
-    # 4:00 AM ET to 8:00 PM ET = 08:00 UTC to 00:00 UTC next day (EDT)
-    - cron: '*/30 8-23 * * 1-5'   # EDT coverage (Mar–Nov)
-    - cron: '*/30 9-23 * * 1-5'   # EST coverage (Nov–Mar) — overlaps OK, dedup handles it
+    # Single cron — '*/30 8-23' covers BOTH EDT and EST pre-market through
+    # post-market windows. The previous EDT+EST pair caused 2x Anthropic API
+    # calls every 30 min during the 9-23 UTC overlap window (~30 wasted calls/day).
+    - cron: '*/30 8-23 * * 1-5'
   workflow_dispatch:
+
+concurrency:
+  group: news-engine-${{ github.event.schedule || github.run_id }}
+  cancel-in-progress: false
 
 permissions:
   contents: write

@@ -6,9 +6,15 @@ on:
     # Two cron sets to handle DST — guard step skips off-hours
     # EDT (Mar-Nov): 13:30-20:00 UTC
     # EST (Nov-Mar): 14:30-21:00 UTC
-    - cron: '0,30 13-20 * * 1-5'   # Covers EDT window
-    - cron: '0,30 14-21 * * 1-5'   # Covers EST window
+    # Single cron range covers both EDT (13:30-20:00 UTC) and EST (14:30-21:00 UTC)
+    # market windows. The internal ET-hour guard below skips off-hours fires.
+    # This eliminates the 2x duplicate runs that occurred in EDT-EST overlap.
+    - cron: '0,30 13-21 * * 1-5'
   workflow_dispatch:
+
+concurrency:
+  group: intraday-monitor-${{ github.event.schedule || github.run_id }}
+  cancel-in-progress: false
 
 jobs:
   monitor:
