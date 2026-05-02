@@ -1,6 +1,6 @@
 # 🧠 Project Context — Read This First
 
-## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (42+ commits, 5/5 BUGS, P6 Brain @50%, Sharpe LIVE, 221 tests)
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (44+ commits, 5/5 BUGS, P5 STARTED, P6 @50%, 232 tests)
 
 ### TL;DR FOR NEXT CHAT SESSION
 - 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
@@ -15,6 +15,8 @@
 - 🚨 INSIGHTS (DATA-VALIDATED): swing 0/8, SEMI/AI 0/7, regime=unknown 0/6
 - 🚨 RISK METRICS LIVE: Sharpe annualized **-10.6**, Max DD **-40.4%**, Calmar **-6.84**
 - 🔥 IMPLICATION: BRAIN_ENFORCE_EV flip on Wed May 6 is now URGENT, not optional
+- 🛑 AUTO-PAUSE module LIVE in observe-mode (Pillar 5 0% → 20%)
+  Would block TONIGHT: SEMI/AI, swing, regime=unknown (all 0% win rate)
 
 ### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
 1. **Pillar 1 Layer 4** (hypothesis testing engine) — next big build
@@ -31,16 +33,18 @@
 ### 🔄 OPT-IN SWITCHES (env vars to flip later)
 - `BRAIN_ENFORCE_EV=true` → activates EV-based pick filtering
 - `BRAIN_EV_MIN_PCT=-1.0` → threshold for veto (default generous, tighten over time)
+- `AUTO_PAUSE_ENABLED=true` → activates auto-pause filtering of paused tags/trade_types
+- `AUTO_PAUSE_LOOKBACK_DAYS=30` → rolling window for pause rules
 
 ### 📊 PROGRESS METRICS (DELTA TODAY)
 | Metric | This Morning | Now |
 |---|---|---|
 | 24-month plan complete | ~8% | **~16%** |
 | Known bugs fixed | 1/5 | **5/5 ✅** |
-| Brain pillars LIVE | 0/5 | **1/5** |
+| Brain pillars LIVE | 0/5 | **1.5/5** (P1 + P5 foundation) |
 | Pillar 6 (P&L Brain) | 10% | **50%** (breakdown + Sharpe/Sortino/MaxDD/Calmar) |
 | Edge Layer items | 0/3 | **2/3** (Position + Strategy) |
-| Test count | 152 | **221** (+45%) |
+| Test count | 152 | **232** (+53%) |
 | Brain ticker coverage | 20 | **106** |
 | Open PRs (debt) | 13 | 13 (unchanged) |
 

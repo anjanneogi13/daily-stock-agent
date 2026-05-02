@@ -189,8 +189,8 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 
 **Pillar 5: Self-Awareness** (1-week build)
 - 🔴 Rolling 30-day confidence intervals
-- 🔴 Per-strategy + per-regime tracking
-- 🔴 Auto-pause triggers
+- ✅ Per-strategy + per-regime tracking — May 2 (auto_pause supports any dimension)
+- ✅ Auto-pause triggers (foundation) — May 2 auto_pause.py
 - 🔴 Calibration check (monthly)
 - 🔴 Telegram weekly self-assessment
 
