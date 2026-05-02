@@ -35,3 +35,4 @@ pick_date,pick_time,ticker,company,tag,trade_type,score,multiplier,entry,stop_lo
 2026-05-01,12:24:16,ARWR,Arrowhead Pharmaceuticals Inc,,swing,0.868,1.0,73.48,71.37,76.99,1.66,47,6,bull,718.66,38.5,pending,,,,,,,,,,none,71.37,71.37,73.48,false,76.99,[],,[]
 2026-05-01,12:24:16,SLNH,Soluna Holdings Inc,,swing,0.717,1.0,1.66,1.5,1.93,1.69,625,,bull,718.66,38.5,pending,,,,,,,,,,none,1.5,1.5,1.66,false,1.93,[],,[]
 2026-05-01,12:56:43,TSM,TSM,SEMI / AI,swing,0.823,1.29,396.06,370.18,428.41,1.25,3,76,bull,718.66,38.5,pending,,,,,,,,,,none,370.18,370.18,396.06,false,428.41,[],,[]
+2026-05-02,04:27:04,TSM,TSM,SEMI / AI,swing,0.822,1.29,397.67,370.87,431.18,1.25,3,75,bull,720.65,38.5,pending,,,,,,,,,,none,370.87,370.87,397.67,false,431.18,[],,[]
