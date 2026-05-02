@@ -1,0 +1,56 @@
+# PR #83: Daily Backup System
+# Runs at 23:00 UTC daily (after market close + all reports)
+# Backs up data/ folder to GitHub Releases (versioned, durable)
+
+name: Daily Backup
+
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backup-${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Show backup scope
+        run: |
+          echo "=== Files to backup ==="
+          ls -la data/ 2>/dev/null | head -20 || echo "(no data/ found)"
+          echo ""
+          echo "=== Total data/ size ==="
+          du -sh data/ 2>/dev/null || echo "(no data/)"
+
+      - name: Run backup
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/backup_data.py
+
+      - name: Verify release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="backup-$(date -u +%Y-%m-%d)"
+          echo "=== Verifying release: $TAG ==="
+          gh release view "$TAG" --json tagName,assets,createdAt || \
+            (echo "Release not found" && exit 1)
+            
