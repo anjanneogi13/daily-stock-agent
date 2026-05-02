@@ -1,5 +1,100 @@
 # 🚀 FINAL CONSOLIDATED ROADMAP — Daily Stock Agent
 
+## 🏆 MILESTONE: SHIPPED Saturday 2026-05-02 (44 commits, 1 day)
+
+This single Saturday sprint shipped ~5-6 weeks of original-plan work.
+All items below were 🔴 Not Started at the start of this day.
+
+### Phase 0 — Bug Fixes (5/5 = 100% COMPLETE)
+- ✅ BUG-1: Penny stock leak (PR #84 hard blocks) — pre-existing
+- ✅ BUG-2: Picks stuck in pending — `bf06c07` (off-by-one in evaluator)
+- ✅ BUG-3: Regime returning 'unknown' — `2f46dae` (retry+fallback+cache)
+- ✅ BUG-4: Same ticker repeated 3+ times — `c9ac768` (ticker cooldown)
+- ✅ BUG-5: SL too tight rejecting quality picks — `39c8f05` (tiered SL by price)
+
+### Pillar 1 — Probability Engine (3/5 layers LIVE)
+- ✅ Layer 1: stock_stats per ticker — `84f0d40`, expanded 20→106 tickers `860a134`
+- ✅ Layer 2: regime-conditional statistics — `84f0d40`
+- ✅ Layer 3: probabilistic price level calculator — `7c366df` (wired into main.py)
+- ✅ EV Gate (Edge Layer + Pillar 1 integration) — `bcd529e` (observe-mode)
+- ✅ CI auto-builds stock_stats every run — `11b6e36`
+- ✅ 38 tests locking behavior — `5807c7d`
+- 🔴 Layer 4: hypothesis testing engine — NEXT
+- 🔴 Layer 5: self-awareness foundation
+
+### Pillar 5 — Self-Awareness (FOUNDATION LIVE — 20%)
+- ✅ Auto-pause triggers (zero_win / loss_streak / neg_R rules) — `3433a3a`
+- ✅ Per-tag + per-trade_type + per-regime tracking — `3433a3a`
+- ✅ Observe-mode default (env: AUTO_PAUSE_ENABLED) — mirror EV-gate pattern
+- 🔴 Rolling 30d confidence intervals (groundwork done in risk_metrics)
+- 🔴 Calibration check (monthly)
+- 🔴 Telegram weekly self-assessment
+
+### Pillar 6 — P&L + Reporting Brain (10% → 50%)
+- ✅ SPY benchmark + alpha tracking on closed picks — `e409a5b`
+- ✅ Strategy/tag/regime breakdown (win_rate, avg_R, total_R, alpha) — `7bf24b3`
+- ✅ Sharpe ratio (per-trade + naive-annualized) — `1ecf50d`
+- ✅ Sortino ratio (downside-only) — `1ecf50d`
+- ✅ Max drawdown (chronological equity curve) — `1ecf50d`
+- ✅ Calmar ratio (annualized return / |max DD|) — `1ecf50d`
+- 🟡 Drawdown analysis — math shipped, needs 90d window for quarterly
+- 🔴 Week-over-week trend
+- 🔴 Per-sector P&L breakdown
+- 🔴 Quarterly / Yearly reports
+
+### Edge Layer (2/3 items DONE)
+- ✅ EV Filter (was PR #70) — `bcd529e` (observe-mode)
+- ✅ Position Tracker (was PR #72) — `a2f3952` + `cc798a1` (logic + Telegram + CI)
+- 🔴 Monster Hunt Mode (was PR #71) — NEXT
+
+### Validation Infrastructure (Priority 4)
+- ✅ SPY benchmark column in picks_log — `e409a5b`
+- ✅ Ticker cooldown (BUG-4 fix) — `c9ac768`
+- ✅ SL min by stock type (BUG-5 fix) — `39c8f05`
+- ✅ Universe top 100 — `860a134` (106 tickers, exceeds target)
+- 🔴 Sector benchmark per pick
+- 🔴 Alpaca paper trading integration
+
+### Pillar 6 / Telegram Hardening
+- ✅ Telegram MD→plain-text auto-fallback — `cd4d212`
+- ✅ Telegram report dedup (no duplicate daily sends) — `5ebfde6` (PR #85)
+- ✅ Position alerts dispatch + dedup (`scripts/send_position_alerts.py`)
+
+### Live Diagnostics (DATA-VALIDATED on 9 closed picks)
+| Metric | Value | Implication |
+|---|---|---|
+| Sharpe (annualized) | **-10.6** | Catastrophic — Wed EV flip is URGENT |
+| Sortino (annualized) | **-6.02** | Downside dominant |
+| Max drawdown | **-40.4%** | Capital protection critical |
+| Calmar | **-6.84** | Risk/reward inverted |
+| Win rate (swing) | **0/8** | All swing trades lost |
+| Win rate (SEMI/AI tag) | **0/7** | Tag bleeding capital |
+| Win rate (regime=unknown) | **0/6** | Validates BUG-3 fix urgency |
+
+### Test Suite Growth
+- Morning: 152 tests
+- After BUG fixes & breakdown: 210 tests
+- After Sharpe/Sortino: 221 tests
+- After auto-pause: **232 tests** (+53% in one day)
+
+### Documentation Infrastructure
+- ✅ CONTEXT.md (single-source-of-truth) — `b754e2b`
+- ✅ FINAL_ROADMAP.md v3.0 — `96b9693`
+- ✅ 24-month master plan v2.0 — `0e8b841`
+- ✅ ADR-001/002 (Probability Engine + brain architecture) — `b754e2b`
+- ✅ Statistical Probability Engine design — `c9454e4`
+- ✅ Daily backup system (749 files protected) — `77c4ab3` (PR #83)
+- ✅ News intelligence engine — `036b23b` (PR #77)
+
+### 🚨 IMMEDIATE NEXT-SESSION ACTIONS
+1. **Wed May 6** — Flip `BRAIN_ENFORCE_EV=true` (data-justified by Sharpe -10.6)
+2. **Wed May 6** — Flip `AUTO_PAUSE_ENABLED=true` after 2-3 days observe
+3. **Next session** — Pillar 1 Layer 4 (hypothesis testing engine)
+4. **Future** — Monster Hunt Mode (closes Edge Layer 3/3)
+
+---
+
+
 > **Version:** FINAL v3.0 (consolidates v1, v2, brain architecture, EV/Monster/Position features)
 > **Locked:** May 2, 2026
 > **Owner:** Anjan Neogi, Singapore
@@ -275,9 +370,9 @@ See: `docs/BRAIN_ARCHITECTURE.md` for full pillar 1-5 design.
 - 🔴 Sector benchmark per pick
 - 🔴 Real fill tracking (slippage from Alpaca)
 - 🔴 "No trade today" capability (high-bar threshold)
-- 🔴 Ticker cooldown (BUG-4 fix — no TSM 3× in week)
-- 🔴 SL min differentiation by stock type (BUG-5 fix)
-- 🔴 Universe reduction (500 → top 100 by liquidity)
+- ✅ Ticker cooldown (May 2)
+- ✅ SL min by stock type (May 2)
+- ✅ Universe top 100 (106 tickers, May 2)
 
 #### 🟢 PRIORITY 5 — Multi-Asset & Advanced — Months 7-12
 
