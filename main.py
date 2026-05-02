@@ -168,6 +168,21 @@ def run():
     top = capped[: cfg["output"]["top_n_picks"]]
 
     # ═══════════════════════════════════════════════════════════════
+    # PR #84: HARD ENFORCEMENT LAYER (the prefrontal cortex)
+    # Blocks: penny stocks, tight SL, weak sector ETF
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[5d/6] Applying hard blocks (penny / SL buffer / weak sectors)...")
+    from src.hard_blocks import apply_hard_blocks
+    pre_block_count = len(top)
+    top, blocked = apply_hard_blocks(top, check_sectors=True)
+    if blocked:
+        rprint(f"  [red]🚫 HARD BLOCKED: {len(blocked)} picks[/red]")
+        for b in blocked:
+            rprint(f"    • {b['ticker']:6s}  [{b['block_type']}]  {b['reason']}")
+    else:
+        rprint(f"  [green]✓ All {pre_block_count} picks passed hard blocks[/green]")
+
+    # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
     rprint("[5d/6] Auto-tagging trade type (DAY vs SWING)...")
