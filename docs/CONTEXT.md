@@ -1,21 +1,22 @@
 # 🧠 Project Context — Read This First
 
-## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (14 commits)
+## 🚀 LAST UPDATED: 2026-05-02 Saturday Sprint (16 commits, 4/5 bugs fixed)
 
 ### TL;DR FOR NEXT CHAT SESSION
 - 🧠 **Pillar 1 Probability Engine v0.1 LIVE in production** (5 weeks ahead of plan!)
 - 🎯 Brain coverage: **20 → 106 tickers** (5.3x expansion)
 - 🧮 EV gate added in **OBSERVE-MODE** (logs vetoes, doesn't filter — flip Wednesday after Mon/Tue observation)
-- 🐛 **BUG-4 (ticker cooldown) + BUG-5 (SL too tight) RESOLVED**
+- 🐛 **BUG-2 + BUG-4 + BUG-5 RESOLVED** (4/5 Phase 0 bugs done)
 - 📲 Telegram MD→plain-text auto-fallback shipped (HTTP 400 fix)
 - 📊 CI now auto-builds stock_stats every run (fresh data, never stale)
 - 📚 5-pillar brain architecture locked (ADR-001, ADR-002, BRAIN_ARCHITECTURE.md)
 - ✅ 190 tests passing (+25% from morning's 152)
 
 ### 🎯 NEXT SESSION'S TOP-3 PRIORITIES
-1. **BUG-2 fix**: pending evaluations stuck (~45 min) — blocks learning loop
+1. **BUG-3 fix**: regime returning "unknown" too often (~60 min) — last Phase 0 bug
 2. **SPY benchmark column** in picks_log (~30 min) — for relative perf analysis
 3. **Wednesday May 6**: review Mon/Tue EV gate logs → flip `BRAIN_ENFORCE_EV=true`
+   (with 11.1% win rate proven, EV gate is HIGH priority)
 
 ### 🚨 DO NOT TOUCH (working in production)
 - `main.py` brain block (lines 213-260) — additive, zero-risk
@@ -31,7 +32,7 @@
 | Metric | This Morning | Now |
 |---|---|---|
 | 24-month plan complete | ~8% | **~14%** |
-| Known bugs fixed | 1/5 | **3/5** |
+| Known bugs fixed | 1/5 | **4/5** |
 | Brain pillars LIVE | 0/5 | **1/5** |
 | Test count | 152 | **190** (+25%) |
 | Brain ticker coverage | 20 | **106** |
@@ -43,8 +44,17 @@
 - **Month 2 June** plan: Pillar 1 Layer 3 + EV Filter → **Layer 3 DONE + EV in observe-mode (5 weeks early)**
 
 ### 🐛 STILL OPEN BUGS
-- 🔴 BUG-2: Picks stuck in "pending" evaluation status (next sprint)
-- 🔴 BUG-3: Regime returning "unknown" frequently (next sprint)
+- 🔴 BUG-3: Regime returning "unknown" frequently (only one left!)
+
+### 📈 FIRST REAL PERFORMANCE NUMBERS (post-BUG-2 fix)
+- 9/38 picks closed (29 still mid-flight)
+- Win rate: 11.1% (1 TP, 8 SL)
+- Expectancy: -0.70R per trade
+- SEMI/AI tag: 0% win rate, -7R total — needs scrutiny
+- Best: AAPL +2.18% (1.66R)
+- Worst: ARM -8.83%
+- **Implication**: Pillar 1 EV gate even MORE necessary than thought.
+  When enforced (Wed), should reject the systematic SEMI/AI losers.
 
 ### 📝 KEY COMMITS TODAY (chronological)
 - `cd4d212` Pillar 1 brain wired into main.py + Telegram fallback fix
@@ -52,6 +62,8 @@
 - `860a134` feat(brain): expand stats coverage 20 → 106 tickers
 - `11b6e36` ci(brain): auto-build stats before every daily picks run
 - `bcd529e` feat(brain): EV gate (observe-mode, opt-in enforcement)
+- `2eab633` docs(context): May 2 sprint summary
+- `bf06c07` fix(BUG-2): evaluator off-by-one — first real win-rate numbers
 
 ---
 
