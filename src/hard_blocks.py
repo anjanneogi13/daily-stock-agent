@@ -54,6 +54,38 @@ def get_min_sl_pct(price: float) -> float:
         if p >= threshold:
             return min_pct
     return 3.0
+
+
+
+# ─── Ticker cooldown (BUG-4 fix, May 2 2026) ──────────────────────
+# Prevent same ticker from being picked repeatedly within N days.
+# Aligns with Pillar 4 (Feedback Loop): wait for outcome before re-picking.
+COOLDOWN_DAYS = 5
+PICKS_LOG_PATH = Path("data/picks_log.csv")
+
+
+def _get_recent_pick_dates() -> Dict[str, str]:
+    """
+    Read picks_log.csv and return {ticker: most_recent_pick_date}.
+    Returns empty dict on any failure (fail-safe).
+    """
+    recent = {}
+    if not PICKS_LOG_PATH.exists():
+        return recent
+    try:
+        import csv
+        with open(PICKS_LOG_PATH, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                ticker = (row.get("ticker") or "").strip().upper()
+                pick_date = (row.get("pick_date") or "").strip()
+                if ticker and pick_date:
+                    # Keep most recent date per ticker (rows are chronological)
+                    if ticker not in recent or pick_date > recent[ticker]:
+                        recent[ticker] = pick_date
+    except Exception:
+        pass
+    return recent
 SECTOR_ETF_DROP_THRESHOLD = -2.0  # Sector ETF down ≥2% blocks all stocks in it
 
 # Sector → ETF mapping (for premarket sector check)
@@ -159,6 +191,27 @@ def _block_sl_buffer(pick: dict) -> Tuple[bool, str]:
     return True, ""
 
 
+
+def _block_recent_pick(pick: dict, recent_dates: Dict[str, str]) -> Tuple[bool, str]:
+    """
+    BLOCK 5: Skip tickers picked within COOLDOWN_DAYS.
+    Prevents picking TSM 4× in 5 days (BUG-4).
+    """
+    ticker = (pick.get("ticker") or "").strip().upper()
+    if not ticker or ticker not in recent_dates:
+        return True, ""
+    
+    last_date_str = recent_dates[ticker]
+    try:
+        last_date = datetime.strptime(last_date_str, "%Y-%m-%d").date()
+        today = datetime.now().date()
+        days_since = (today - last_date).days
+        if days_since < COOLDOWN_DAYS:
+            return False, f"recent pick ({days_since}d ago, cooldown {COOLDOWN_DAYS}d)"
+    except (ValueError, TypeError):
+        pass
+    return True, ""
+
 def _block_weak_sector(pick: dict, weak_sectors: Dict[str, float]) -> Tuple[bool, str]:
     """BLOCK 3: Skip stocks in sectors/tags whose ETF is down ≥2% premarket."""
     if not weak_sectors:
@@ -213,6 +266,9 @@ def apply_hard_blocks(picks: List[Dict],
     # Fetch weak sectors ONCE (single network round-trip)
     weak_sectors = get_weak_sectors() if check_sectors else {}
     
+    # Fetch recent pick dates ONCE (BUG-4 cooldown check)
+    recent_dates = _get_recent_pick_dates()
+    
     passed = []
     blocked = []
     
@@ -224,6 +280,7 @@ def apply_hard_blocks(picks: List[Dict],
             ("catastrophic_news", _block_catastrophic_news(pick)),  # PR #77
             ("penny_stock",       _block_penny(pick)),
             ("sl_too_tight",      _block_sl_buffer(pick)),
+            ("recent_pick",       _block_recent_pick(pick, recent_dates)),  # BUG-4
             ("weak_sector",       _block_weak_sector(pick, weak_sectors)),
         ]
         
