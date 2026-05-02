@@ -24,14 +24,48 @@ TOP_TICKERS = [
     "PLTR", "RMBS", "MRVL", "NFLX", "JPM",
 ]
 
+# Top 100 most-liquid US stocks (S&P + high-volume names)
+# Used for weekly stats refresh — gives brain coverage on ~95% of picks
+TOP_100_TICKERS = [
+    # Mega-cap tech
+    "NVDA", "MSFT", "AAPL", "GOOGL", "GOOG", "AMZN", "META", "TSLA",
+    # Semis
+    "AVGO", "TSM", "AMD", "MU", "QCOM", "INTC", "ORCL", "CRM",
+    "ASML", "AMAT", "LRCX", "KLAC", "MRVL", "ADI", "TXN", "MCHP",
+    "NXPI", "ON", "RMBS", "ARM", "SMCI",
+    # Software/cloud
+    "PLTR", "NFLX", "ADBE", "NOW", "CRWD", "PANW", "SNOW", "DDOG",
+    "MDB", "NET", "TEAM", "WDAY", "INTU",
+    # Financials
+    "JPM", "BAC", "GS", "MS", "WFC", "C", "BLK", "SCHW", "AXP", "V",
+    "MA", "PYPL", "COIN", "SOFI",
+    # Consumer
+    "WMT", "COST", "HD", "LOW", "TGT", "MCD", "SBUX", "NKE", "DIS",
+    "CMCSA", "T", "VZ", "TMUS",
+    # Energy
+    "XOM", "CVX", "COP", "EOG", "SLB",
+    # Healthcare/biotech
+    "UNH", "JNJ", "LLY", "PFE", "ABBV", "MRK", "TMO", "DHR", "AMGN",
+    "GILD", "BMY", "REGN", "VRTX",
+    # Industrials/aerospace
+    "BA", "GE", "CAT", "DE", "LMT", "RTX",
+    # ETFs (benchmarks for relative analysis)
+    "SPY", "QQQ", "IWM", "DIA",
+    # EV/auto
+    "F", "GM", "RIVN", "LCID",
+    # Misc high-volume
+    "BABA", "PDD", "NIO", "JD", "UBER",
+]
+
+
 
 def main():
     args = sys.argv[1:]
-    if args and args[0] != "--all":
+    if args and not args[0].startswith("--"):
         tickers = [t.upper() for t in args]
-    elif "--all" in args:
-        # TODO: load from full universe.yaml when needed
-        tickers = TOP_TICKERS
+    elif "--top100" in args or "--all" in args:
+        # PILLAR 1 expansion (May 2 2026): use top 100 for full coverage
+        tickers = TOP_100_TICKERS
     else:
         tickers = TOP_TICKERS
     
