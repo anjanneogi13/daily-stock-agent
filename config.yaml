@@ -27,8 +27,11 @@ weights:
   sentiment: 0.12
   indicators: 0.23
 sector:
-  semi_boost: 1.1
-  ai_boost: 0.2
+  # ⚠ DISABLED 2026-05-02: backtester proved SEMI bias = -24.8 Sharpe leak
+  # Original: semi_boost 1.1, ai_boost 0.2  (gave SEMI/AI stocks +30% score)
+  # See docs/sessions/2026-05-02_BREAKTHROUGH.md
+  semi_boost: 1.0
+  ai_boost: 0.0
 risk:
   account_size: 10000.0
   risk_per_trade_pct: 1.0
