@@ -193,11 +193,12 @@ See: `docs/BRAIN_ARCHITECTURE.md` (needs update for Pillar 2.5 + 3.5).
 **🆕 Pillar 3.5: Chart-Learning / Self-Calibration** — ✅ 100% (C1-C4 shipped May 3 AM, T37-T40)
 - 🔴 C1-C7 (calibration · timeframe attribution · weight proposer · walk-forward · auto-apply · pattern matrix)
 
-**Pillar 3: Pattern Recognition Engine** — 🔴 10%
-- 🔴 15 pattern detectors (HHHL, bull flag, ascending triangle, cup-and-handle, etc.)
-- 🔴 Per-pattern × per-regime statistics
-- 🔴 Auto-enable/disable via hypothesis testing
-- 🔴 Universe-wide daily scan
+**Pillar 3: Pattern Recognition Engine** — 🟡 35% (Phase 1 LIVE — T47 May 3 PM)
+- 🟡 4/15 detectors LIVE: HHHL, LHLL, breakout_20, breakdown_20
+- ✅ Per-pattern × per-regime stats aggregator (`pattern_stats.py`)
+- ✅ Universe scan CLI (`scripts/scan_patterns.py`)
+- 🔴 Phase 2: bull_flag, bear_flag, triangles, cup-and-handle (next sprint)
+- 🔴 Phase 3: head-and-shoulders, wedges, double top/bottom, Layer 6 wiring
 
 **Pillar 4: Feedback Loop & Self-Learning** — ✅ 100% COMPLETE (T44, May 3 PM)
 - ✅ auto_promote (T29) closes outcome → lesson loop
