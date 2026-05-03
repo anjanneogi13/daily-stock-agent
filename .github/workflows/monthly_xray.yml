@@ -76,7 +76,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
-        run: python scripts/send_monthly_telegram.py
+        run: python scripts/send_layman_monthly.py
 
       - name: Commit + marker
         if: steps.guard.outputs.skip != 'true'

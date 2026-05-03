@@ -72,6 +72,13 @@ jobs:
               labels: ['weekly-report'],
             });
 
+
+      - name: Send weekly recap to Telegram (layman)
+        env:
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: python scripts/send_layman_weekly.py
       - name: Commit metrics + marker
         if: steps.guard.outputs.skip != 'true'
         run: |

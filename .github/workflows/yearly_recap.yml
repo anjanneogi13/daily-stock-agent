@@ -1,0 +1,25 @@
+name: 🎊 Yearly Recap
+
+on:
+  schedule:
+    # Jan 2 at 12:00 UTC — covers full prior year
+    - cron: '0 12 2 1 *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  yearly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements.txt
+      - name: Send yearly recap to Telegram (layman)
+        env:
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: python scripts/send_layman_yearly.py
