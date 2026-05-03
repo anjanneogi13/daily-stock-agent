@@ -1,8 +1,6 @@
 """Pillar 3 — Pattern Recognition Engine.
 
-Phase 1: HHHL, LHLL, breakout_20, breakdown_20.
-Phase 2: bull_flag, bear_flag, ascending/descending/symmetric triangles, cup_and_handle.
-Phase 3: head_and_shoulders (+ inverse), double_top/bottom, wedges (+ Layer 6).
+ALL 15 DETECTORS LIVE (T49 — Phase 3 complete).
 """
 from .base import PatternDetector, Match
 from .hhhl import HHHLDetector, LHLLDetector
@@ -14,23 +12,30 @@ from .triangles import (
     SymmetricTriangleDetector,
 )
 from .cup_handle import CupAndHandleDetector
+from .double import DoubleTopDetector, DoubleBottomDetector
+from .head_shoulders import HeadShouldersDetector, InverseHeadShouldersDetector
+from .wedges import FallingWedgeDetector, RisingWedgeDetector
 
 ALL_DETECTORS = [
-    HHHLDetector(),
-    LHLLDetector(),
-    BreakoutDetector(),
-    BreakdownDetector(),
-    BullFlagDetector(),
-    BearFlagDetector(),
-    AscendingTriangleDetector(),
-    DescendingTriangleDetector(),
+    HHHLDetector(), LHLLDetector(),
+    BreakoutDetector(), BreakdownDetector(),
+    BullFlagDetector(), BearFlagDetector(),
+    AscendingTriangleDetector(), DescendingTriangleDetector(),
     SymmetricTriangleDetector(),
     CupAndHandleDetector(),
+    DoubleTopDetector(), DoubleBottomDetector(),
+    HeadShouldersDetector(), InverseHeadShouldersDetector(),
+    FallingWedgeDetector(), RisingWedgeDetector(),
 ]
 
-__all__ = ["PatternDetector", "Match", "ALL_DETECTORS",
-           "HHHLDetector", "LHLLDetector",
-           "BreakoutDetector", "BreakdownDetector",
-           "BullFlagDetector", "BearFlagDetector",
-           "AscendingTriangleDetector", "DescendingTriangleDetector",
-           "SymmetricTriangleDetector", "CupAndHandleDetector"]
+__all__ = ["PatternDetector", "Match", "ALL_DETECTORS"] + [
+    "HHHLDetector", "LHLLDetector",
+    "BreakoutDetector", "BreakdownDetector",
+    "BullFlagDetector", "BearFlagDetector",
+    "AscendingTriangleDetector", "DescendingTriangleDetector",
+    "SymmetricTriangleDetector",
+    "CupAndHandleDetector",
+    "DoubleTopDetector", "DoubleBottomDetector",
+    "HeadShouldersDetector", "InverseHeadShouldersDetector",
+    "FallingWedgeDetector", "RisingWedgeDetector",
+]
