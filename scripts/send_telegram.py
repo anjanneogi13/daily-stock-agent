@@ -27,6 +27,13 @@ if not TOKEN or not CHAT_IDS:
 # ═══════════════════════════════════════════════════════════════
 # Helpers
 # ═══════════════════════════════════════════════════════════════
+# ─── T24: per-pick wisdom hint (extracted to src/wisdom_hint.py) ───
+try:
+    from src.wisdom_hint import wisdom_hint
+except Exception:
+    def wisdom_hint(_t=None, **_k): return ""
+# ───────────────────────────────────────────────────────────────────
+
 def _load_watchlist_tickers():
     """Phase 2A.3: Load bullish-news tickers to mark with 🔔."""
     try:
@@ -67,6 +74,10 @@ def _classify_pick(row):
 # ═══════════════════════════════════════════════════════════════
 # Per-pick formatters (compact day vs detailed swing)
 # ═══════════════════════════════════════════════════════════════
+
+
+
+
 def _format_day_pick(i, row, tag_info):
     """🌅 Day trade format — compact, emphasizes tight stop + max hold."""
     t = row["ticker"]
@@ -89,6 +100,9 @@ def _format_day_pick(i, row, tag_info):
     ]
     if tag:
         lines.append(f"   {tag} _{reason}_")
+    _wh = wisdom_hint(t)
+    if _wh:
+        lines.append(_wh)
 
     lines.append(
         f"   🎯 `${entry:.2f}`{cur_str}  "
@@ -123,6 +137,9 @@ def _format_swing_pick(i, row, tag_info):
     lines = [f"📊 *{i}. {_wl_emoji(t)}{t}* — score {score:.2f}{earn}"]
     if tag:
         lines.append(f"   {tag} _{reason}_")
+    _wh = wisdom_hint(t)
+    if _wh:
+        lines.append(_wh)
 
     lines.extend([
         f"   🎯 Entry: `${entry:.2f}`{cur_str}",

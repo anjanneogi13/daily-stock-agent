@@ -204,3 +204,25 @@ def stats() -> Dict:
         "active_patterns": len(load_active_patterns()),
         "kill_list_size":  len(get_kill_list()),
     }
+
+# ═══════════════════════════════════════════════════════════════
+# T24: per-ticker lesson lookup for inline Telegram hints
+# ═══════════════════════════════════════════════════════════════
+def lessons_for_ticker(ticker: str, min_confidence: float = 0.7) -> List[Dict]:
+    """Return active high-confidence lessons matching a ticker.
+
+    Match is case-insensitive against:
+      - tags list (preferred — auto_cooldown writes ticker as a tag)
+      - text body (fallback for legacy/manual lessons)
+    """
+    if not ticker:
+        return []
+    tk = ticker.upper()
+    out = []
+    for L in load_active_lessons(min_confidence=min_confidence):
+        tags = [str(x).upper() for x in (L.get("tags") or [])]
+        text = str(L.get("text") or "").upper()
+        if tk in tags or tk in text.split():
+            out.append(L)
+    return out
+
