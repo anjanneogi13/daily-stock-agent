@@ -27,6 +27,7 @@ from src.regime import market_regime
 from src.earnings import days_to_earnings
 from src.monster_hunt import apply_monster_treatment
 from src.sector_benchmark import resolve_sector_etf
+from src.signal_journal import log_pick as _journal_log_pick
 
 
 def load_config(path: str = "config.yaml") -> dict:
@@ -489,6 +490,24 @@ def run():
                 "sector_close": _sclose,
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
+        # Pillar 1 Layer 4: signal journal (append signals + bucketed view)
+        try:
+            _regime_str = (reg or {}).get("regime") or "unknown"
+            for _p in top:
+                _row = {
+                    "ticker":           _p["ticker"],
+                    "scores":           _p["scores"],
+                    "brain":            _p.get("brain", {}),
+                    "regime":           _regime_str,
+                    "trade_type":       _p.get("trade_type", "swing"),
+                    "days_to_earnings": _p.get("days_to_earnings"),
+                    "vol_ratio":        _p["scores"].get("vol_ratio"),
+                    "tag":              _p["scores"].get("sector_tag"),
+                }
+                _journal_log_pick(_row, regime=_regime_str)
+            rprint(f"[dim][journal] Logged {len(top)} picks to signal_journal.jsonl[/dim]")
+        except Exception as _je:
+            rprint(f"[yellow]⚠ signal_journal log skipped: {_je}[/yellow]")
         if n == 0 and len(picks_for_log) > 0:
             rprint(f"[yellow][log] All {len(picks_for_log)} picks already logged earlier today (dedup) — none added[/yellow]")
         else:

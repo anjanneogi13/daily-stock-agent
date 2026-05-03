@@ -10,6 +10,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import yfinance as yf
 import pandas as pd
+from .signal_journal import attach_outcome as _journal_attach
 
 LOG_PATH = Path("data/picks_log.csv")
 MAX_DAYS_OPEN = 20   # mark expired after this many trading days
@@ -240,6 +241,16 @@ def evaluate_pending() -> dict:
             # SPY relative perf (May 2 2026): alpha vs benchmark
             row["spy_close_at_exit"] = _add_spy_alpha(row, exit_date.strftime("%Y-%m-%d"), ret)
             row["sector_close_at_exit"] = _add_sector_alpha(row, exit_date.strftime("%Y-%m-%d"), ret)
+            try:
+                _journal_attach(
+                    ticker=row.get("ticker"),
+                    pick_date=row.get("pick_date"),
+                    r_multiple=float(row.get("r_multiple")) if row.get("r_multiple") not in (None, "", "None") else None,
+                    actual_return_pct=float(ret) if ret is not None else None,
+                    evaluated_on=exit_date.strftime("%Y-%m-%d"),
+                )
+            except Exception as _e:
+                pass
             counts[outcome.replace("_hit", "_hits")] += 1
             counts["evaluated"] += 1
             alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
@@ -260,6 +271,16 @@ def evaluate_pending() -> dict:
                 # SPY relative perf for expired picks
                 row["spy_close_at_exit"] = _add_spy_alpha(row, today.isoformat(), ret)
                 row["sector_close_at_exit"] = _add_sector_alpha(row, today.isoformat(), ret)
+                try:
+                    _journal_attach(
+                        ticker=row.get("ticker"),
+                        pick_date=row.get("pick_date"),
+                        r_multiple=float(row.get("r_multiple")) if row.get("r_multiple") not in (None, "", "None") else None,
+                        actual_return_pct=float(ret) if ret is not None else None,
+                        evaluated_on=today.isoformat(),
+                    )
+                except Exception:
+                    pass
                 counts["expired"] += 1
                 counts["evaluated"] += 1
                 alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
