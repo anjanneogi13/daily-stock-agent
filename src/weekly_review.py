@@ -306,6 +306,29 @@ def format_telegram(r: Dict) -> str:
     except Exception:
         pass
 
+
+    # Pillar 6 — Week-over-Week trend + per-sector P&L
+    try:
+        from src.wow_trend import compare as _wow, format_footer as _wow_fmt
+        cmp = _wow(picks)
+        wow_block = _wow_fmt(cmp)
+        if wow_block:
+            lines.append("")
+            lines.append("📈 *Week-over-Week (Pillar 6)*")
+            lines.append(wow_block)
+    except Exception:
+        pass
+
+    try:
+        from src.sector_pnl import per_sector_pnl as _spnl, format_table as _spnl_tbl
+        rows = _spnl(picks)
+        if rows:
+            lines.append("")
+            lines.append("💰 *Per-sector P&L (Pillar 6)*")
+            lines.append(_spnl_tbl(rows))
+    except Exception:
+        pass
+
     lines.append("")
     lines.append("📋 *Recommended action*")
     for a in r["actions"]:
