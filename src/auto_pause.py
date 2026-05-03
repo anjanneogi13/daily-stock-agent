@@ -61,6 +61,19 @@ def _load_closed() -> List[Dict]:
     return out
 
 
+
+
+def _ensure_dt(r):
+    """T23: lazily parse evaluated_on→_evaluated_dt if not pre-cached."""
+    if "_evaluated_dt" in r and r["_evaluated_dt"] is not None:
+        return r["_evaluated_dt"]
+    raw = r.get("evaluated_on") or r.get("pick_date") or ""
+    try:
+        return datetime.fromisoformat(str(raw)[:10])
+    except Exception:
+        return None
+
+
 def consecutive_losses(closed: List[Dict]) -> int:
     """How many losses in a row, ending with the most recent close."""
     n = 0
@@ -77,7 +90,7 @@ def rolling_r(closed: List[Dict], days: int) -> Optional[float]:
     if not closed:
         return None
     cutoff = datetime.now() - timedelta(days=days)
-    recent = [r for r in closed if r["_evaluated_dt"] >= cutoff]
+    recent = [r for r in closed if (_ensure_dt(r) or cutoff - timedelta(days=9999)) >= cutoff]
     rs = [_to_float(r.get("r_multiple")) for r in recent]
     rs = [x for x in rs if x is not None]
     if not rs:
@@ -87,7 +100,7 @@ def rolling_r(closed: List[Dict], days: int) -> Optional[float]:
 
 def rolling_win_rate(closed: List[Dict], days: int) -> Optional[float]:
     cutoff = datetime.now() - timedelta(days=days)
-    recent = [r for r in closed if r["_evaluated_dt"] >= cutoff]
+    recent = [r for r in closed if (_ensure_dt(r) or cutoff - timedelta(days=9999)) >= cutoff]
     if not recent:
         return None
     wins = sum(1 for r in recent if r.get("evaluation_status") == "tp_hit")
@@ -152,13 +165,18 @@ def classify(score: int) -> str:
 
 def format_summary(result: Dict) -> str:
     """One-line summary suitable for Telegram daily message."""
-    lines = []
-    lines.append(f"🛡 *PAUSE SIGNAL:* {result['level']} ({result['score']}/10)")
-    if result["reasons"]:
-        for r in result["reasons"]:
+    # T23: defensive defaults — never crash on partial dicts
+    score   = result.get("score", 0)
+    level   = result.get("level") or classify(score)
+    reasons = result.get("reasons") or []
+    would_pause = result.get("would_pause", score >= 8)
+
+    lines = [f"🛡 *PAUSE SIGNAL:* {level} ({score}/10)"]
+    if reasons:
+        for r in reasons:
             lines.append(f"  • {r}")
-    if result["would_pause"]:
+    if would_pause:
         lines.append("  ⚠️ Enforce-mode would PAUSE for 3 days (currently observe-mode)")
-    elif not result["reasons"]:
+    elif not reasons:
         lines.append("  • All clear — no risk flags")
     return "\n".join(lines)
