@@ -28,6 +28,7 @@ from src.earnings import days_to_earnings
 from src.monster_hunt import apply_monster_treatment
 from src.sector_benchmark import resolve_sector_etf
 from src.signal_journal import log_pick as _journal_log_pick
+from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
 
 
 # Auto-seed wisdom base on every run (idempotent — safe)
@@ -517,6 +518,17 @@ def run():
             rprint(f"[dim][journal] Logged {len(top)} picks to signal_journal.jsonl[/dim]")
         except Exception as _je:
             rprint(f"[yellow]⚠ signal_journal log skipped: {_je}[/yellow]")
+
+        # Pillar 4 prep: pause signal (OBSERVE-MODE — never actually pauses)
+        try:
+            _pause = _pause_score()
+            rprint("")
+            for _line in _pause_fmt(_pause).split("\n"):
+                # Convert telegram-style * markers to rich-friendly bold
+                _clean = _line.replace("*", "")
+                rprint(f"[dim]{_clean}[/dim]")
+        except Exception as _pe:
+            rprint(f"[yellow]⚠ pause_signal calc skipped: {_pe}[/yellow]")
         if n == 0 and len(picks_for_log) > 0:
             rprint(f"[yellow][log] All {len(picks_for_log)} picks already logged earlier today (dedup) — none added[/yellow]")
         else:

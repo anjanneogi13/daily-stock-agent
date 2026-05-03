@@ -1,137 +1,86 @@
-"""Tests for auto_pause module."""
-import csv
-from datetime import date
+"""Tests for Pillar 4 prep — auto_pause observe-mode."""
+import sys
 from pathlib import Path
-import pytest
-from src import auto_pause as ap
+from datetime import datetime, timedelta
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from src.auto_pause import (
+    consecutive_losses, rolling_r, rolling_win_rate,
+    compute_score, classify, format_summary,
+)
 
 
-@pytest.fixture
-def tmp_log(tmp_path, monkeypatch):
-    log = tmp_path / "picks_log.csv"
-    monkeypatch.setattr(ap, "PICKS_LOG", log)
-    return log
-
-
-def _write(log: Path, rows: list[dict]):
-    with log.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
-        w.writeheader()
-        w.writerows(rows)
-
-
-def _pick(**o):
-    base = {
-        "ticker": "X", "tag": "QUALITY", "trade_type": "swing", "regime": "bull",
-        "pick_date": "2026-04-25", "evaluated_on": "2026-04-28",
-        "evaluation_status": "tp_hit",
-        "actual_return_pct": "1.0", "r_multiple": "1.0",
+def _row(status, r_mult, days_ago=0):
+    d = datetime.now() - timedelta(days=days_ago)
+    return {
+        "evaluation_status": status,
+        "r_multiple": str(r_mult),
+        "evaluated_on": d.strftime("%Y-%m-%d"),
+        "_evaluated_dt": d,
     }
-    base.update(o)
-    return base
 
 
-def test_no_log_returns_empty(tmp_path, monkeypatch):
-    monkeypatch.setattr(ap, "PICKS_LOG", tmp_path / "missing.csv")
-    assert ap.get_paused_set("tag") == {}
+def test_consecutive_losses_zero():
+    assert consecutive_losses([]) == 0
 
 
-def test_zero_win_rule_triggers_at_5(tmp_log):
-    rows = [_pick(tag="SEMI", evaluation_status="sl_hit",
-                  evaluated_on=f"2026-04-2{i}", r_multiple="-1.0",
-                  actual_return_pct="-3.0") for i in range(1, 6)]
-    _write(tmp_log, rows)
-    paused = ap.get_paused_set("tag", today=date(2026, 4, 30))
-    assert "SEMI" in paused
-    # Either zero_win (5 losses, 0 wins) OR loss_streak (3+ in a row) is correct
-    assert any(k in paused["SEMI"] for k in ("zero_win", "loss_streak"))
+def test_consecutive_losses_streak():
+    rows = [_row("tp_hit", 1.5, 10), _row("sl_hit", -1, 5),
+            _row("sl_hit", -1, 3), _row("sl_hit", -1, 1)]
+    assert consecutive_losses(rows) == 3
 
 
-def test_no_pause_when_below_all_thresholds(tmp_log):
-    """4 picks, no 3-streak, total_R > -5 → no rule fires."""
-    rows = [
-        _pick(tag="SEMI", evaluation_status="sl_hit", evaluated_on="2026-04-21", r_multiple="-1.0"),
-        _pick(tag="SEMI", evaluation_status="expired", evaluated_on="2026-04-22",
-              r_multiple="-0.5", actual_return_pct="-1.0"),
-        _pick(tag="SEMI", evaluation_status="sl_hit", evaluated_on="2026-04-23", r_multiple="-1.0"),
-        _pick(tag="SEMI", evaluation_status="expired", evaluated_on="2026-04-24",
-              r_multiple="-0.5", actual_return_pct="-1.0"),
-    ]
-    _write(tmp_log, rows)
-    paused = ap.get_paused_set("tag", today=date(2026, 4, 30))
-    assert "SEMI" not in paused
+def test_consecutive_loss_broken_by_win():
+    rows = [_row("sl_hit", -1, 5), _row("sl_hit", -1, 3), _row("tp_hit", 1.5, 1)]
+    assert consecutive_losses(rows) == 0
 
 
-def test_loss_streak_triggers_pause(tmp_log):
-    rows = [
-        _pick(tag="AI", evaluation_status="tp_hit", evaluated_on="2026-04-20", r_multiple="1.5"),
-        _pick(tag="AI", evaluation_status="sl_hit", evaluated_on="2026-04-25", r_multiple="-1.0"),
-        _pick(tag="AI", evaluation_status="sl_hit", evaluated_on="2026-04-26", r_multiple="-1.0"),
-        _pick(tag="AI", evaluation_status="sl_hit", evaluated_on="2026-04-27", r_multiple="-1.0"),
-    ]
-    _write(tmp_log, rows)
-    paused = ap.get_paused_set("tag", today=date(2026, 4, 30))
-    assert "AI" in paused
-    assert "loss_streak" in paused["AI"]
+def test_rolling_r_sums_window():
+    rows = [_row("tp_hit", 1.5, 5),
+            _row("sl_hit", -1.0, 3),
+            _row("sl_hit", -1.0, 100)]  # outside window
+    assert rolling_r(rows, days=14) == 0.5
 
 
-def test_loss_streak_broken_by_recent_win(tmp_log):
-    rows = [
-        _pick(tag="AI", evaluation_status="sl_hit", evaluated_on="2026-04-25", r_multiple="-1.0"),
-        _pick(tag="AI", evaluation_status="sl_hit", evaluated_on="2026-04-26", r_multiple="-1.0"),
-        _pick(tag="AI", evaluation_status="tp_hit", evaluated_on="2026-04-27", r_multiple="1.5"),
-    ]
-    _write(tmp_log, rows)
-    assert ap.get_paused_set("tag", today=date(2026, 4, 30)) == {}
+def test_rolling_win_rate():
+    rows = [_row("tp_hit", 1.5, 5), _row("sl_hit", -1, 3)]
+    assert rolling_win_rate(rows, days=14) == 0.5
 
 
-def test_neg_r_or_streak_fires_on_4_losses(tmp_log):
-    """4 consecutive sl_hit @ -1.5R → BOTH loss_streak and neg_R apply.
-    Either is acceptable; just verify the group IS paused."""
-    rows = [_pick(tag="BIO", evaluation_status="sl_hit",
-                  evaluated_on=f"2026-04-2{i}", r_multiple="-1.5",
-                  actual_return_pct="-4.0") for i in range(1, 5)]
-    _write(tmp_log, rows)
-    paused = ap.get_paused_set("tag", today=date(2026, 4, 30))
-    assert "BIO" in paused
-    assert any(k in paused["BIO"] for k in ("loss_streak", "neg_R", "zero_win"))
+def test_classify_thresholds():
+    assert "GREEN" in classify(0)
+    assert "ELEVATED" in classify(4)
+    assert "AMBER" in classify(6)
+    assert "RED" in classify(9)
 
 
-def test_lookback_window_excludes_old_data(tmp_log):
-    rows = [_pick(tag="SEMI", evaluation_status="sl_hit",
-                  evaluated_on=f"2026-01-0{i}", r_multiple="-1.0")
-            for i in range(1, 6)]
-    _write(tmp_log, rows)
-    assert ap.get_paused_set("tag", today=date(2026, 4, 30)) == {}
+def test_compute_score_clean():
+    """1 win, no streak — should be GREEN."""
+    rows = [_row("tp_hit", 1.5, 5)]
+    r = compute_score(rows)
+    assert r["score"] <= 2
+    assert "GREEN" in r["level"]
+    assert r["would_pause"] is False
 
 
-def test_is_paused_convenience(tmp_log):
-    rows = [_pick(tag="SEMI", evaluation_status="sl_hit",
-                  evaluated_on=f"2026-04-2{i}", r_multiple="-1.0")
-            for i in range(1, 6)]
-    _write(tmp_log, rows)
-    blocked, reason = ap.is_paused("tag", "SEMI", today=date(2026, 4, 30))
-    assert blocked is True and reason is not None
-    blocked2, _ = ap.is_paused("tag", "QUALITY", today=date(2026, 4, 30))
-    assert blocked2 is False
+def test_compute_score_crisis_red():
+    """Build a real crisis: 6 consecutive losses, big drawdown."""
+    rows = [_row("sl_hit", -1.5, days) for days in [12, 10, 8, 6, 4, 2]]
+    r = compute_score(rows)
+    assert r["score"] >= 7  # streak(4) + dd(4) capped at 10
+    assert r["would_pause"] is True
 
 
-def test_is_paused_handles_empty_value(tmp_log):
-    _write(tmp_log, [_pick()])
-    blocked, _ = ap.is_paused("tag", "")
-    assert blocked is False
+def test_format_summary_shows_reasons():
+    rows = [_row("sl_hit", -1, days) for days in [6, 4, 2]]
+    r = compute_score(rows)
+    text = format_summary(r)
+    assert "PAUSE SIGNAL" in text
+    assert any("loss" in line.lower() for line in text.split("\n"))
 
 
-def test_format_summary_no_pauses(tmp_log):
-    _write(tmp_log, [_pick()])
-    out = ap.format_paused_summary(today=date(2026, 4, 30))
-    assert "no groups currently paused" in out
-
-
-def test_format_summary_with_pauses(tmp_log):
-    rows = [_pick(tag="SEMI", evaluation_status="sl_hit",
-                  evaluated_on=f"2026-04-2{i}", r_multiple="-1.0")
-            for i in range(1, 6)]
-    _write(tmp_log, rows)
-    out = ap.format_paused_summary(today=date(2026, 4, 30))
-    assert "SEMI" in out and "❌" in out
+def test_observe_mode_never_enforces():
+    """v0.1 must always have enforced=False."""
+    rows = [_row("sl_hit", -2, days) for days in range(1, 8)]
+    r = compute_score(rows)
+    assert r["enforced"] is False
