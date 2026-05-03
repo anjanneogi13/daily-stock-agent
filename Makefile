@@ -73,3 +73,13 @@ clean:  ## Remove caches and bytecode
 
 lint:   ## Quick syntax check on src/ + scripts/
 	@$(PY) -m compileall -q src scripts && echo "✅ syntax OK"
+
+# Books-into-Brain (Pillar 2.5)
+wisdom-load-books:
+	python -m src.book_ingest load-seed
+
+wisdom-list-books:
+	python -m src.book_ingest list-books
+
+wisdom-book-stats:
+	python -m src.book_ingest stats
