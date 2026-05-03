@@ -89,6 +89,7 @@ def load_seed(path: Path | str = DEFAULT_SEED,
             if rid:
                 tags = tags + [f"rule:{rid}"]
             conf = float(rule.get("confidence", 0.85))
+            triggers = list(rule.get("triggers", []))
             if not dry_run:
                 add_lesson(
                     text=text,
@@ -96,6 +97,7 @@ def load_seed(path: Path | str = DEFAULT_SEED,
                     confidence=conf,
                     tags=tags,
                     author=author,
+                    triggers=triggers,
                 )
             inserted += 1
 

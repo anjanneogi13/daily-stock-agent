@@ -32,15 +32,22 @@ def add_lesson(text: str,
                source: str = "manual",
                confidence: float = 0.5,
                tags: Optional[List[str]] = None,
-               author: str = "system") -> Dict:
-    """Append a new lesson. Returns the lesson record."""
+               author: str = "system",
+               triggers: Optional[List[str]] = None) -> Dict:
+    """Append a new lesson. Returns the lesson record.
+
+    T43/B4: `triggers` is a list of simple condition strings, e.g.
+    ['drawdown_pct>3', 'regime=chop']. Lesson surfaces when ALL fire
+    against the current pick/context (see eval_triggers below).
+    """
     rec = {
         "ts":         datetime.now().isoformat(timespec="seconds"),
         "text":       text,
-        "source":     source,         # "manual" | "hypothesis" | "backtester" | "evaluator"
+        "source":     source,         # "manual" | "hypothesis" | "backtester" | "evaluator" | "book:..."
         "confidence": float(confidence),  # 0.0-1.0
         "tags":       tags or [],
         "author":     author,
+        "triggers":   list(triggers or []),
         "active":     True,
     }
     with LESSONS.open("a") as f:
@@ -230,6 +237,68 @@ def lessons_for_ticker(ticker: str,
         if tk and (tk in tags or tk in text.split()):
             out.append(L); continue
         if sec and sec in tags:
+            out.append(L)
+    return out
+
+# ───────────────── T43/B4: Trigger evaluation ─────────────────
+
+import operator as _op
+import re as _re
+
+_OPS = {
+    ">=": _op.ge, "<=": _op.le, "!=": _op.ne,
+    ">":  _op.gt, "<":  _op.lt, "=":  _op.eq, "==": _op.eq,
+}
+# match "<key><op><value>" e.g. drawdown_pct>3, regime=chop, days_held<=2
+_TRIG_RE = _re.compile(r"^\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*(>=|<=|!=|==|>|<|=)\s*(.+?)\s*$")
+
+
+def _coerce(v):
+    s = str(v).strip()
+    try: return float(s)
+    except (TypeError, ValueError): return s.lower()
+
+
+def eval_trigger(expr: str, ctx: Dict) -> bool:
+    """Evaluate one expression like 'drawdown_pct>3' against ctx dict.
+    Unknown keys → False (safer: only fire when we know the answer)."""
+    if not expr or not isinstance(expr, str):
+        return False
+    m = _TRIG_RE.match(expr)
+    if not m:
+        return False
+    key, op, val = m.group(1), m.group(2), m.group(3)
+    if key not in ctx or ctx[key] is None:
+        return False
+    fn = _OPS.get(op)
+    if fn is None:
+        return False
+    a = _coerce(ctx[key])
+    b = _coerce(val)
+    try:
+        if isinstance(a, float) and isinstance(b, float):
+            return fn(a, b)
+        # string ops only support equality
+        if op in ("=", "==", "!="):
+            return fn(str(a), str(b))
+        return False
+    except Exception:
+        return False
+
+
+def eval_triggers(triggers: List[str], ctx: Dict) -> bool:
+    """ALL triggers must fire (AND semantics). Empty list → False."""
+    if not triggers:
+        return False
+    return all(eval_trigger(t, ctx) for t in triggers)
+
+
+def lessons_for_context(ctx: Dict, min_confidence: float = 0.7) -> List[Dict]:
+    """Return active high-confidence lessons whose triggers all fire on ctx."""
+    out = []
+    for L in load_active_lessons(min_confidence=min_confidence):
+        trigs = L.get("triggers") or []
+        if trigs and eval_triggers(trigs, ctx):
             out.append(L)
     return out
 

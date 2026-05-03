@@ -60,6 +60,46 @@ def what_worked(picks: List[Dict]) -> List[str]:
     return notes or ["(no clearly winning categories yet)"]
 
 
+
+def rules_violated_on_losers(picks):
+    """B6: For each loser, list high-conf book/lesson rules whose
+    triggers fire — i.e., rules we 'violated' by taking the trade.
+
+    Returns list of strings, max 5 entries.
+    """
+    try:
+        from src.wisdom_base import lessons_for_context
+    except Exception:
+        return []
+    out = []
+    for p in picks or []:
+        try:
+            r = float(p.get("r_multiple") or 0)
+        except (TypeError, ValueError):
+            continue
+        if r >= 0:
+            continue  # only losers
+        ctx = {
+            "drawdown_pct":  abs(float(p.get("actual_return_pct") or 0)),
+            "regime":        str(p.get("regime") or "").lower(),
+            "trade_type":    str(p.get("trade_type") or "").lower(),
+            "tag":           str(p.get("tag") or "").lower(),
+            "r_multiple":    r,
+            "days_held":     p.get("days_held"),
+        }
+        try:
+            ls = lessons_for_context(ctx, min_confidence=0.85)
+        except Exception:
+            ls = []
+        if not ls:
+            continue
+        best = max(ls, key=lambda L: L.get("confidence", 0))
+        text = (best.get("text") or "")[:80]
+        out.append(f"• {p.get('ticker','?')}: violated _{text}_")
+        if len(out) >= 5:
+            break
+    return out
+
 def what_failed(picks: List[Dict]) -> List[str]:
     notes = []
     closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit"}]

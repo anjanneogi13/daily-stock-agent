@@ -224,3 +224,29 @@ if __name__ == "__main__":
     import sys
     sys.exit(_cli())
 
+# ───────────────── T43/B4: trigger-context hints ─────────────────
+
+try:
+    from src.wisdom_base import lessons_for_context as _lfc
+except Exception:
+    _lfc = lambda ctx, min_confidence=0.7: []
+
+
+def context_hint(ctx: dict, min_confidence: float = 0.8) -> str:
+    """Surface the highest-confidence lesson whose triggers fire on ctx.
+
+    ctx keys may include: drawdown_pct, regime, days_held, trade_type,
+    rsi, atr, exit_status, r_multiple, etc.
+    Returns '' if nothing fires.
+    """
+    if not ctx:
+        return ""
+    try:
+        ls = _lfc(ctx, min_confidence=min_confidence)
+    except Exception:
+        return ""
+    if not ls:
+        return ""
+    best = max(ls, key=lambda L: L.get("confidence", 0))
+    return _format_lesson(best)
+

@@ -12,7 +12,7 @@
 | Metric | Value |
 |---|---|
 | Tests | **474 passing** (+322 since project audit; +131 today alone) |
-| Pillars complete | **3 of 6** (Pillar 1 ✅ · Pillar 2 ✅ 100% · Pillar 3.5 ✅) |
+| Pillars complete | **3 of 6** (Pillar 1 ✅ · Pillar 2 ✅ · Pillar 3.5 ✅ · Pillar 2.5 ✅) |
 | Pillars partial | **4 of 6** (3, 4, 5, 6 in motion) |
 | Bugs from Phase 0 | **5/5 RESOLVED** ✅ |
 | Backtester | **LIVE** — 2,010 picks replayed, algo Sharpe **+0.97** |
@@ -151,7 +151,7 @@ This single Saturday sprint shipped ~5-6 weeks of original-plan work.
 |---|---|---|---|
 | 1. Probability Engine | Empirical SL/TP/buy/sell levels | 🟡 v0.1 LIVE | 60% |
 | 2. **Wisdom Base** | Lessons + book-derived rules | 🟢 **v1.0 LIVE (May 3)** | **80%** |
-| 2.5. 🆕 **Books-into-Brain** | Seed lessons from 10+ trading books | 🟡 Half shipped | **50%** |
+| 2.5. 🆕 **Books-into-Brain** | Seed lessons from 10+ trading books | ✅ MVP complete | **100%** |
 | 3. Pattern Recognition | 15 detectors + per-pattern stats | 🟡 indicators exist | 10% |
 | 3.5. 🆕 **Chart-Learning / Calibration** | Replay → "what worked" → weight tuning | ✅ Complete | **100%** |
 | 4. Feedback Loop & Self-Learning | Outcome attribution + weight updates | 🟡 auto_promote shipped | 30% |
@@ -181,8 +181,9 @@ See: `docs/BRAIN_ARCHITECTURE.md` (needs update for Pillar 2.5 + 3.5).
 - ✅ Telegram showing matched/violated rules count (`wisdom_coverage` edges/warnings)
 - ✅ Weekly post-mortem (`weekly_review` formal section)
 
-**🆕 Pillar 2.5: Books-into-Brain** — 🟡 50% (B1+B2+B3+B5 shipped May 3 AM, T34-T36)
-- 🔴 B1-B7 (curate · loader · seed · trigger_context · attribution · post-mortem · LLM extract)
+**🆕 Pillar 2.5: Books-into-Brain** — ✅ 100% MVP (B1-B6 shipped, B7=optional/future)
+- ✅ B1-B5 (T34-T36, May 3 AM)  ✅ B4 trigger_context  ✅ B6 rules-violated post-mortem (T43, May 3 PM)
+- 🔵 B7 LLM-assisted PDF extraction — explicitly deferred (advanced/future)
 
 **🆕 Pillar 3.5: Chart-Learning / Self-Calibration** — ✅ 100% (C1-C4 shipped May 3 AM, T37-T40)
 - 🔴 C1-C7 (calibration · timeframe attribution · weight proposer · walk-forward · auto-apply · pattern matrix)
