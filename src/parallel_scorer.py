@@ -42,6 +42,22 @@ def _score_one(tk, df, cfg):
             scores["composite"] = max(0.0, min(1.0, scores["composite"] + wl_boost))
             scores["composite"] = round(scores["composite"], 4)
 
+        # 🧠 Pillar 3 Layer 6 — pattern multiplier (T50, additive, defensive)
+        # Wires the 16 chart pattern detectors into scoring. Multiplier in
+        # [0.85, 1.15] based on (pattern × regime) historical edge. Failure-safe.
+        try:
+            from .pattern_layer import pattern_multiplier as _pmul
+            from .regime import market_regime as _mr
+            _regime_now = (_mr() or {}).get("regime", "unknown")
+            _pmul_val, _pmatches = _pmul(tk, regime=_regime_now, df=d)
+            scores["pattern_multiplier"] = _pmul_val
+            if _pmatches:
+                scores["pattern_matches"] = ",".join(m.get("pattern","") for m in _pmatches)[:200]
+            if _pmul_val != 1.0:
+                scores["composite"] = max(0.0, min(1.0, round(scores["composite"] * _pmul_val, 4)))
+        except Exception:
+            scores["pattern_multiplier"] = 1.0
+
         if scores["composite"] < cfg["output"]["min_score"]:
             return None
 

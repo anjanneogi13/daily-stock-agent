@@ -1,0 +1,84 @@
+name: 🧠 Nightly Brain Maintenance
+
+on:
+  schedule:
+    # 23:00 UTC daily — runs AFTER evaluate.yml (22:00 UTC) so picks_log
+    # already has today's outcomes attached
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  nightly-brain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run nightly brain conductor
+        run: python scripts/run_nightly_brain.py
+
+      - name: Commit brain state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/patterns.jsonl data/pattern_stats.json \
+                  data/weight_proposals.jsonl data/weight_history.jsonl \
+                  data/learning_journal.jsonl config/weights.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "🧠 nightly brain maintenance $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin main && break
+              sleep 5
+            done
+          fi
+
+  meta-brain-sunday:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 23 * * *' || github.event_name == 'workflow_dispatch'
+    needs: nightly-brain
+    steps:
+      - name: Check if today is Sunday
+        id: dow
+        run: |
+          DOW=$(date -u +%u)   # 1=Mon ... 7=Sun
+          if [ "$DOW" = "7" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "send=true" >> $GITHUB_OUTPUT
+          else
+            echo "send=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout
+        if: steps.dow.outputs.send == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.dow.outputs.send == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        if: steps.dow.outputs.send == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Send weekly Self-Improvement Report
+        if: steps.dow.outputs.send == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN:      ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:        ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID:  ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: python scripts/send_meta_brain_telegram.py
