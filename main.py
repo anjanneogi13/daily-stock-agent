@@ -30,6 +30,15 @@ from src.sector_benchmark import resolve_sector_etf
 from src.signal_journal import log_pick as _journal_log_pick
 
 
+# Auto-seed wisdom base on every run (idempotent — safe)
+try:
+    import subprocess, sys as _sys
+    subprocess.run([_sys.executable, "scripts/bootstrap_wisdom.py"],
+                   check=False, capture_output=True, timeout=10)
+except Exception:
+    pass
+
+
 def load_config(path: str = "config.yaml") -> dict:
     with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f)
