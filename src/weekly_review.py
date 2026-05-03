@@ -16,6 +16,7 @@ from typing import Dict, List
 from .quarterly_report import _load_picks_in_range, _summary_metrics, _to_float
 from .wisdom_base import stats as wisdom_stats, load_active_patterns
 from .strategy_breakdown import breakdown_by
+from .sector_breakdown import sector_breakdown, format_sector_panel
 
 
 REPORTS = Path("reports/weekly")
@@ -113,6 +114,7 @@ def build_report(end_date: datetime = None) -> Dict:
     lost = what_failed(picks)
     actions = recommended_actions(metrics, lost, g)
     wstats = wisdom_stats()
+    sectors = sector_breakdown(picks)
 
     return {
         "start_date": start.strftime("%b %d"),
@@ -122,6 +124,7 @@ def build_report(end_date: datetime = None) -> Dict:
         "worked":     won,
         "failed":     lost,
         "wisdom":     wstats,
+        "sectors":    sectors,
         "actions":    actions,
     }
 
@@ -157,6 +160,10 @@ def format_telegram(r: Dict) -> str:
         lines.append("❌ *What failed*")
         for f in r["failed"]:
             lines.append(f"• {f}")
+
+    if r.get("sectors"):
+        lines.append("")
+        lines.append(format_sector_panel(r["sectors"]))
 
     lines.append("")
     lines.append("🧠 *Wisdom base*")
