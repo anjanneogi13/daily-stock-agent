@@ -15,6 +15,8 @@ from .day_trading_scorer import day_trading_score
 from .market_guard import classify_with_day_score
 from .monster_hunt import score_monster
 from .monster_data import get_monster_data
+from .wisdom_consultant import consult_before_pick as _wisdom_consult
+from .signal_journal import build_signals as _build_signals
 from .earnings import days_to_earnings as _d2e
 
 
@@ -86,6 +88,32 @@ def _score_one(tk, df, cfg):
             scores["monster_score"] = 0.0
             scores["is_monster"] = False
             scores["monster_reasons"] = []
+
+        # 🧠 Pillar 2: Consult wisdom base (warnings, boosts, kill check)
+        try:
+            _signals = _build_signals({
+                "ticker": tk,
+                "scores": scores,
+                "regime": cfg.get("_regime", "unknown"),
+                "trade_type": ttype,
+                "days_to_earnings": None,  # filled later by main.py
+                "vol_ratio": sig.get("vol_ratio"),
+                "tag": scores.get("sector_tag"),
+            })
+            _wis = _wisdom_consult(tk, _signals)
+            scores["wisdom_warnings"] = _wis["warnings"]
+            scores["wisdom_boosts"]   = _wis["boosts"]
+            scores["wisdom_kill"]     = bool(_wis.get("kill"))
+            scores["wisdom_score_adj"] = _wis.get("score_adj", 0.0)
+            # Tiny score tilt (capped ±0.05 in observe-mode)
+            scores["composite"] = max(0.0, min(1.0,
+                scores["composite"] + _wis.get("score_adj", 0.0)))
+            scores["composite"] = round(scores["composite"], 4)
+        except Exception as _wse:
+            scores["wisdom_warnings"] = []
+            scores["wisdom_boosts"]   = []
+            scores["wisdom_kill"]     = False
+            scores["wisdom_score_adj"] = 0.0
 
         return {
             "ticker": tk, "scores": scores, "plan": plan, "news": news,
