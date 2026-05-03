@@ -247,3 +247,7 @@ data/llm_cache/
 # LLM/news caches (regenerated automatically)
 data/news_cache/
 data/picks_log.csv.*.bak
+
+# Pillar 2.5 — books seed YAML must be tracked (CI loads from it)
+!data/books/
+!data/books/*.yaml

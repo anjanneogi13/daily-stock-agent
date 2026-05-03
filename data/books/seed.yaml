@@ -1,0 +1,292 @@
+# T34: Books-into-Brain seed lessons
+# 50 rules from 10 master traders/investors.
+# Each rule loaded into wisdom_base.LESSONS with source="book:<slug>"
+# Confidence 0.85-0.95 (high — these are tested across decades).
+
+meta:
+  version: 1
+  curated_by: "Anjan Neogi"
+  curated_on: "2026-05-03"
+  total_rules: 50
+
+books:
+
+  # ──────────────────────────────────────────────────────────
+  - slug: livermore
+    title: "Reminiscences of a Stock Operator"
+    author: "Edwin Lefèvre / Jesse Livermore"
+    year: 1923
+    rules:
+      - id: liv-01
+        text: "Never average down a losing position."
+        tags: [risk, trade_mgmt]
+        triggers: [drawdown_pct>3]
+        confidence: 0.95
+      - id: liv-02
+        text: "Cut losses quickly; let winners run."
+        tags: [risk, trade_mgmt]
+        confidence: 0.95
+      - id: liv-03
+        text: "The big money is in the big swing — sit tight in a winning trend."
+        tags: [psychology, trend]
+        confidence: 0.90
+      - id: liv-04
+        text: "Markets are never wrong, opinions often are."
+        tags: [psychology]
+        confidence: 0.90
+      - id: liv-05
+        text: "Don't trade every day; wait for setups with clear edge."
+        tags: [psychology, patience]
+        confidence: 0.90
+
+  # ──────────────────────────────────────────────────────────
+  - slug: lynch
+    title: "One Up On Wall Street"
+    author: "Peter Lynch"
+    year: 1989
+    rules:
+      - id: lyn-01
+        text: "Know what you own and why you own it."
+        tags: [fundamentals, conviction]
+        confidence: 0.95
+      - id: lyn-02
+        text: "Avoid hot tips and stocks 'everyone' is talking about."
+        tags: [psychology, sentiment]
+        triggers: [sentiment=euphoric]
+        confidence: 0.85
+      - id: lyn-03
+        text: "Small caps with strong earnings growth often outperform."
+        tags: [fundamentals, growth]
+        sectors: [small_cap]
+        confidence: 0.85
+      - id: lyn-04
+        text: "It's futile to predict the economy; predict the company."
+        tags: [fundamentals]
+        confidence: 0.85
+      - id: lyn-05
+        text: "Selling winners too soon and holding losers is the cardinal sin."
+        tags: [psychology, trade_mgmt]
+        confidence: 0.90
+
+  # ──────────────────────────────────────────────────────────
+  - slug: graham
+    title: "The Intelligent Investor"
+    author: "Benjamin Graham"
+    year: 1949
+    rules:
+      - id: gra-01
+        text: "Always buy with a margin of safety."
+        tags: [fundamentals, risk]
+        confidence: 0.95
+      - id: gra-02
+        text: "Mr. Market is moody — exploit his swings, don't follow him."
+        tags: [psychology, sentiment]
+        confidence: 0.95
+      - id: gra-03
+        text: "Investment is most intelligent when most businesslike."
+        tags: [psychology, process]
+        confidence: 0.90
+      - id: gra-04
+        text: "The investor's chief problem is likely to be himself."
+        tags: [psychology]
+        confidence: 0.95
+      - id: gra-05
+        text: "Distinguish investment from speculation; never confuse the two."
+        tags: [risk, classification]
+        confidence: 0.90
+
+  # ──────────────────────────────────────────────────────────
+  - slug: schwager
+    title: "Market Wizards"
+    author: "Jack Schwager"
+    year: 1989
+    rules:
+      - id: sch-01
+        text: "Risk control is the most important attribute of a successful trader."
+        tags: [risk]
+        confidence: 0.95
+      - id: sch-02
+        text: "Develop an edge before sizing up; method before money."
+        tags: [process, risk]
+        confidence: 0.90
+      - id: sch-03
+        text: "Discipline is the bridge between strategy and results."
+        tags: [psychology, process]
+        confidence: 0.90
+      - id: sch-04
+        text: "The trade you don't take can save more than the trade you do."
+        tags: [psychology, patience]
+        confidence: 0.85
+      - id: sch-05
+        text: "Lose your opinion, not your money — adapt to evidence."
+        tags: [psychology, adaptation]
+        confidence: 0.90
+
+  # ──────────────────────────────────────────────────────────
+  - slug: oneil
+    title: "How to Make Money in Stocks (CAN SLIM)"
+    author: "William O'Neil"
+    year: 1988
+    rules:
+      - id: one-01
+        text: "Cut losses at 7-8% — no exceptions."
+        tags: [risk, trade_mgmt]
+        triggers: [unrealized_pct<-7]
+        confidence: 0.95
+      - id: one-02
+        text: "Buy strong earnings (current quarter EPS up 25%+)."
+        tags: [fundamentals, growth]
+        confidence: 0.85
+      - id: one-03
+        text: "Buy stocks making new 52-week highs from sound bases."
+        tags: [pattern, breakout]
+        triggers: [near_52w_high]
+        confidence: 0.85
+      - id: one-04
+        text: "Volume should expand on breakout — 50%+ above average."
+        tags: [pattern, volume]
+        triggers: [rvol>1.5]
+        confidence: 0.85
+      - id: one-05
+        text: "Trade with the market trend, not against it."
+        tags: [trend, regime]
+        triggers: [regime=bear]
+        confidence: 0.90
+
+  # ──────────────────────────────────────────────────────────
+  - slug: douglas
+    title: "Trading in the Zone"
+    author: "Mark Douglas"
+    year: 2000
+    rules:
+      - id: dou-01
+        text: "Think in probabilities, not certainties."
+        tags: [psychology, probability]
+        confidence: 0.95
+      - id: dou-02
+        text: "Each trade is independent — don't let prior outcomes bias you."
+        tags: [psychology]
+        confidence: 0.90
+      - id: dou-03
+        text: "A consistent process produces consistent results."
+        tags: [process, psychology]
+        confidence: 0.90
+      - id: dou-04
+        text: "Anything can happen — accept uncertainty as the only certainty."
+        tags: [psychology, risk]
+        confidence: 0.90
+      - id: dou-05
+        text: "You don't need to know what will happen to make money."
+        tags: [psychology, probability]
+        confidence: 0.85
+
+  # ──────────────────────────────────────────────────────────
+  - slug: covel
+    title: "Trend Following"
+    author: "Michael Covel"
+    year: 2004
+    rules:
+      - id: cov-01
+        text: "Don't fight the tape — ride confirmed trends."
+        tags: [trend]
+        confidence: 0.90
+      - id: cov-02
+        text: "Most trades will be small losers; a few will be big winners."
+        tags: [risk, expectancy]
+        confidence: 0.90
+      - id: cov-03
+        text: "Exit rules matter more than entry rules."
+        tags: [trade_mgmt, risk]
+        confidence: 0.90
+      - id: cov-04
+        text: "Diversify across uncorrelated markets to smooth equity curve."
+        tags: [risk, diversification]
+        confidence: 0.85
+      - id: cov-05
+        text: "Don't predict — react to price."
+        tags: [trend, process]
+        confidence: 0.85
+
+  # ──────────────────────────────────────────────────────────
+  - slug: dalio
+    title: "Principles"
+    author: "Ray Dalio"
+    year: 2017
+    rules:
+      - id: dal-01
+        text: "Diversify across uncorrelated bets — the holy grail of investing."
+        tags: [risk, diversification]
+        confidence: 0.95
+      - id: dal-02
+        text: "Pain + reflection = progress; analyze every loss."
+        tags: [process, learning]
+        confidence: 0.90
+      - id: dal-03
+        text: "Don't confuse a good outcome with a good decision (or vice versa)."
+        tags: [psychology, process]
+        confidence: 0.90
+      - id: dal-04
+        text: "Know what kind of regime you're in (growth/inflation rising/falling)."
+        tags: [regime, macro]
+        triggers: [regime=unknown]
+        confidence: 0.85
+      - id: dal-05
+        text: "The biggest risk is the one you don't see — stress-test for tails."
+        tags: [risk, tail]
+        confidence: 0.90
+
+  # ──────────────────────────────────────────────────────────
+  - slug: soros
+    title: "The Alchemy of Finance"
+    author: "George Soros"
+    year: 1987
+    rules:
+      - id: sor-01
+        text: "When you're sure you're right, bet big — but verify the thesis daily."
+        tags: [conviction, sizing]
+        confidence: 0.85
+      - id: sor-02
+        text: "Reflexivity: prices influence fundamentals which influence prices."
+        tags: [sentiment, macro]
+        confidence: 0.85
+      - id: sor-03
+        text: "It's not whether you're right or wrong — it's how much you make when right and lose when wrong."
+        tags: [risk, expectancy]
+        confidence: 0.95
+      - id: sor-04
+        text: "When the thesis breaks, exit immediately — don't rationalize."
+        tags: [trade_mgmt, psychology]
+        confidence: 0.95
+      - id: sor-05
+        text: "Markets reward those who recognize regime change first."
+        tags: [regime, adaptation]
+        confidence: 0.85
+
+  # ──────────────────────────────────────────────────────────
+  - slug: marks
+    title: "The Most Important Thing"
+    author: "Howard Marks"
+    year: 2011
+    rules:
+      - id: mar-01
+        text: "Risk means more things can happen than will happen."
+        tags: [risk, probability]
+        confidence: 0.95
+      - id: mar-02
+        text: "Second-level thinking beats first-level thinking — always ask 'and then what?'"
+        tags: [psychology, process]
+        confidence: 0.90
+      - id: mar-03
+        text: "The most dangerous words: 'It's different this time.'"
+        tags: [psychology, sentiment]
+        triggers: [sentiment=euphoric]
+        confidence: 0.95
+      - id: mar-04
+        text: "Buy fear, sell greed — be contrarian when sentiment is extreme."
+        tags: [sentiment, contrarian]
+        triggers: [vix>30, vix<13]
+        confidence: 0.85
+      - id: mar-05
+        text: "It's not what you buy, it's what you pay — entry price is everything."
+        tags: [fundamentals, entry]
+        confidence: 0.90
