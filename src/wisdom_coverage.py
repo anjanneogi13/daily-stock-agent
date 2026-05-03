@@ -29,6 +29,7 @@ def coverage(rows: List[dict]) -> Dict:
                 "patterns": 0, "pct": 0.0}
 
     n_lessons = n_patterns = n_tagged = 0
+    n_edges = n_warnings = 0  # T42: matched vs violated
     for r in rows:
         try:
             wh = wisdom_hint(r.get("ticker"), sector=r.get("sector"))
@@ -44,6 +45,12 @@ def coverage(rows: List[dict]) -> Dict:
             n_lessons += 1
         if has_ph:
             n_patterns += 1
+            # Pattern hints carry ✨ for edges (matched-rule-supports-pick)
+            # and ⚠ for drags (matched-rule-warns-against-pick).
+            if "⚠" in ph:
+                n_warnings += 1
+            elif "✨" in ph or "🟢" in ph:
+                n_edges += 1
         if has_wh or has_ph:
             n_tagged += 1
 
@@ -52,6 +59,8 @@ def coverage(rows: List[dict]) -> Dict:
         "tagged":   n_tagged,
         "lessons":  n_lessons,
         "patterns": n_patterns,
+        "edges":    n_edges,
+        "warnings": n_warnings,
         "pct":      round(n_tagged / total * 100, 1),
     }
 
@@ -60,10 +69,16 @@ def format_footer(stats: Dict) -> str:
     """Telegram-ready 1-line footer. Returns '' if no picks."""
     if not stats or stats.get("total", 0) == 0:
         return ""
-    return (
+    base = (
         f"🧠 _Wisdom: {stats['tagged']}/{stats['total']} picks tagged "
         f"({stats['pct']:.0f}%) · {stats['lessons']} lesson"
         f"{'s' if stats['lessons'] != 1 else ''} · "
         f"{stats['patterns']} pattern"
         f"{'s' if stats['patterns'] != 1 else ''}_"
     )
+    # T42: append matched/violated split when meaningful
+    edges = stats.get("edges", 0)
+    warns = stats.get("warnings", 0)
+    if edges or warns:
+        base += f"\n🧠 _Rules check: ✨ {edges} matched · ⚠ {warns} warnings_"
+    return base

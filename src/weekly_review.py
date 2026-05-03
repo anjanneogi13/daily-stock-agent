@@ -151,6 +151,9 @@ def format_telegram(r: Dict) -> str:
         lines.append("• No closed picks this week")
 
     lines.append("")
+    lines.append("🩺 *Weekly Post-Mortem*")
+    lines.append("_(per-pick attribution — what the brain got right vs wrong this week)_")
+    lines.append("")
     lines.append("✅ *What worked*")
     for w in r["worked"]:
         lines.append(f"• {w}")

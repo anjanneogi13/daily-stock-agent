@@ -12,7 +12,7 @@
 | Metric | Value |
 |---|---|
 | Tests | **474 passing** (+322 since project audit; +131 today alone) |
-| Pillars complete | **3 of 6** (Pillar 1 v1.0 ✅, Pillar 2 v1.0 ✅, Pillar 3.5 ✅) |
+| Pillars complete | **3 of 6** (Pillar 1 ✅ · Pillar 2 ✅ 100% · Pillar 3.5 ✅) |
 | Pillars partial | **4 of 6** (3, 4, 5, 6 in motion) |
 | Bugs from Phase 0 | **5/5 RESOLVED** ✅ |
 | Backtester | **LIVE** — 2,010 picks replayed, algo Sharpe **+0.97** |
@@ -177,9 +177,9 @@ See: `docs/BRAIN_ARCHITECTURE.md` (needs update for Pillar 2.5 + 3.5).
 - ✅ Layer 4: Hypothesis testing — LIVE
 - ✅ Layer 5: Self-Awareness foundation — LIVE
 
-**Pillar 2: Wisdom Base v1.0** — ✅ 80% COMPLETE (May 3)
-- 🔴 Telegram showing matched/violated rules count
-- 🔴 Weekly post-mortem (overlaps Pillar 6)
+**Pillar 2: Wisdom Base v1.0** — ✅ 100% COMPLETE (May 3 PM, T42)
+- ✅ Telegram showing matched/violated rules count (`wisdom_coverage` edges/warnings)
+- ✅ Weekly post-mortem (`weekly_review` formal section)
 
 **🆕 Pillar 2.5: Books-into-Brain** — 🟡 50% (B1+B2+B3+B5 shipped May 3 AM, T34-T36)
 - 🔴 B1-B7 (curate · loader · seed · trigger_context · attribution · post-mortem · LLM extract)
