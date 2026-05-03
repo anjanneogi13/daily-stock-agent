@@ -2,5 +2,18 @@
   "version": 1,
   "updated": "2026-05-03",
   "_doc": "Brain-controlled knobs. Each entry is a per-factor-bucket multiplier (1.0 = neutral). weight_applier.py mutates these per proposal, capped at 5%/week per factor.",
-  "factors": {}
+  "factors": {
+    "f": {
+      "b1": 1.05
+    },
+    "rsi": {
+      "rsi_oversold(<30)": 0.0
+    },
+    "atrpct": {
+      "atrpct_<1.5": 1.05
+    },
+    "score": {
+      "score_>=0.85": 1.034
+    }
+  }
 }

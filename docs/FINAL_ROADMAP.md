@@ -84,3 +84,38 @@ pause state machine, sector caps, news verifier.
 - Auto-fetch holidays from internet (silent failure risk)
 - Removing the technical channel (the agent learns from it)
 - Sub-minute intraday trading (we're swing/day, not HFT)
+
+---
+
+## 🧠 PHASE 8 — Selective LLM Augmentation (PARKED — pending data)
+
+**Added:** 2026-05-04 (founder idea: multi-agent clones)
+**Status:** 🟡 PARKED — do not start until 4+ weeks of production data exist
+**Why parked:** Need real failure-mode data to know where LLM augmentation actually helps
+
+### Decision matrix
+
+| Where | LLM ROI | Effort | Cost/mo | Priority |
+|---|---|---|---|---|
+| **News article interpretation** | 🟢 HIGH | 1 weekend | ~$5-15 | After Month 1 obs |
+| **Weekend Reflection deepening** | 🟢 HIGH | 1 day | ~$2-5 | After Month 1 obs |
+| **Earnings call transcripts (NEW)** | 🟢 HIGH | 1 week | ~$10-30 | Month 3+ |
+| **Multi-LLM ensemble for hard picks** (Claude+GPT+Gemini vote) | 🟡 MEDIUM | 1 week | ~$30-80 | Month 5 (per BUSINESS_PLAN) |
+| **Meta-Brain Sunday digest LLM-ified** | 🟡 MEDIUM | 1 day | ~$2 | Only if users say current is robotic |
+| **Scoring / pattern detection / calibration** | 🔴 LOW | — | — | Never (math beats LLMs here) |
+
+### Why NOT a full multi-agent clone architecture
+
+The "5 LLM agents talking to a master" pattern was considered. Rejected because:
+1. Multi-LLM ENSEMBLE (3 LLMs voting on 1 question) gives 80% of the benefit at 20% of the cost
+2. Multi-AGENT (5 specialized LLMs) = ~$200-500/month + brittle coordination
+3. Our existing modules already act like specialized "agents" — they just communicate via files (cheap, atomic) instead of LLM API calls (expensive, fragile)
+4. The agent isn't bottlenecked on intelligence — it's bottlenecked on data quality. More LLMs won't fix bad yfinance data.
+
+### Trigger to revisit Phase 8
+
+Revisit after one of these signals appears in production:
+- ✅ User reports >30% of picks lacked critical news context the agent missed
+- ✅ Earnings surprises caused >10% of losing trades in a month
+- ✅ Brain stuck (no learning) for >3 weeks despite enough trades
+- ✅ Sunday digest feels robotic in user's actual reading

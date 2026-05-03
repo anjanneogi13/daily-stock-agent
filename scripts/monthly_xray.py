@@ -246,3 +246,16 @@ out_file.write_text(md)
 print("[monthly] Saved " + str(out_file))
 print()
 print(md[:2500])
+
+
+# 🗓 T51b — surface holiday calendar renewal warning
+try:
+    from src.market_calendar import renewal_message as _rm
+    _msg = _rm()
+    if _msg:
+        print("")
+        print("─" * 60)
+        print(_msg)
+        print("─" * 60)
+except Exception:
+    pass

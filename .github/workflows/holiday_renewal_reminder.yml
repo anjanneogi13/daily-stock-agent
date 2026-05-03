@@ -1,0 +1,108 @@
+name: 🗓 Holiday Calendar Renewal Reminder
+
+on:
+  schedule:
+    # Jan 1 + Jul 1 each year — twice yearly check
+    - cron: '0 12 1 1 *'   # Jan 1, 12:00 UTC
+    - cron: '0 12 1 7 *'   # Jul 1, 12:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-and-remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check renewal status
+        id: check
+        run: |
+          python3 -c "
+          from src.market_calendar import renewal_urgency, renewal_message, years_remaining, cached_years
+          urgency = renewal_urgency()
+          msg = renewal_message() or 'OK'
+          print(f'urgency={urgency}')
+          print(f'years_remaining={years_remaining()}')
+          print(f'max_cached_year={max(cached_years())}')
+          print(f'msg={msg}')
+          " | tee /tmp/check.txt
+          URG=$(grep '^urgency=' /tmp/check.txt | cut -d= -f2)
+          MSG=$(grep '^msg=' /tmp/check.txt | cut -d= -f2-)
+          MAX_Y=$(grep '^max_cached_year=' /tmp/check.txt | cut -d= -f2)
+          YRS_LEFT=$(grep '^years_remaining=' /tmp/check.txt | cut -d= -f2)
+          echo "urgency=$URG" >> $GITHUB_OUTPUT
+          echo "msg=$MSG" >> $GITHUB_OUTPUT
+          echo "max_year=$MAX_Y" >> $GITHUB_OUTPUT
+          echo "years_left=$YRS_LEFT" >> $GITHUB_OUTPUT
+
+      - name: Open reminder issue (if needed)
+        if: steps.check.outputs.urgency != 'none'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const urgency = '${{ steps.check.outputs.urgency }}';
+            const msg = `${{ steps.check.outputs.msg }}`;
+            const maxYear = '${{ steps.check.outputs.max_year }}';
+            const yrsLeft = '${{ steps.check.outputs.years_left }}';
+            const nextYear = parseInt(maxYear) + 1;
+            const icon = {soft:'📅', urgent:'⚠️', critical:'🚨'}[urgency] || '📅';
+            const title = `${icon} Add NYSE holidays for ${nextYear} (urgency: ${urgency})`;
+
+            // Skip if already-open issue with the same title exists
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              state: 'open',
+              labels: 'maintenance,calendar',
+            });
+            if (existing.data.some(i => i.title === title)) {
+              console.log('Reminder issue already open — skipping create');
+              return;
+            }
+
+            const body = [
+              `## ${msg}`,
+              ``,
+              `**Years still cached:** ${yrsLeft}`,
+              `**Last cached year:** ${maxYear}`,
+              `**Action needed:** Add ${nextYear} holidays to \`src/market_calendar.py\``,
+              ``,
+              `### How to do it (~30 seconds)`,
+              `1. Google: "NYSE ${nextYear} holidays" → take official NYSE page`,
+              `2. Open \`src/market_calendar.py\``,
+              `3. In \`US_MARKET_HOLIDAYS\` set, add ~10 lines for ${nextYear}`,
+              `4. In \`US_MARKET_EARLY_CLOSE\` set, add ~3 lines for ${nextYear}`,
+              `5. \`git add src/market_calendar.py && git commit -m "chore: add ${nextYear} NYSE holidays" && git push\``,
+              `6. Close this issue ✅`,
+              ``,
+              `### Why this matters`,
+              `If the calendar runs out, the agent will treat holidays as normal trading days,`,
+              `try to fetch data on closed markets, and corrupt its win-rate stats.`,
+              `The Meta-Brain will also nag you about this in the Sunday Telegram digest.`,
+              ``,
+              `_This reminder fires automatically every Jan 1 + Jul 1 until resolved._`,
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              title,
+              body,
+              labels: ['maintenance', 'calendar', urgency],
+            });
+            console.log(`Created reminder issue: ${title}`);
+
+      - name: Status (no action needed)
+        if: steps.check.outputs.urgency == 'none'
+        run: |
+          echo "✅ Holiday calendar healthy — ${{ steps.check.outputs.years_left }} years still cached"
+          echo "   Next reminder check: ~6 months from now"

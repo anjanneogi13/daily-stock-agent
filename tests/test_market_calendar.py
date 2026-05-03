@@ -172,3 +172,33 @@ def test_holidays_present_for_all_three_years():
     for yr in (2026, 2027, 2028):
         ys = [d for d in mc.US_MARKET_HOLIDAYS if d.startswith(str(yr))]
         assert len(ys) >= 8, f"year {yr} has only {len(ys)} holidays"
+
+
+
+# ─── T51b — Escalating renewal urgency ─────────────────────────
+def test_renewal_urgency_none_when_fresh():
+    assert mc.renewal_urgency("2026-05-03") == "none"
+
+
+def test_renewal_urgency_soft_when_18mo_or_less():
+    # ~16 months from May 2027 to Dec 2028
+    assert mc.renewal_urgency("2027-08-01") in ("soft", "urgent")
+
+
+def test_renewal_urgency_urgent_when_under_6mo():
+    # Aug 2028 → Dec 2028 = ~4 months
+    assert mc.renewal_urgency("2028-08-01") == "urgent"
+
+
+def test_renewal_urgency_critical_when_under_2mo():
+    # Nov 2028 → Dec 2028 = ~1 month
+    assert mc.renewal_urgency("2028-11-15") == "critical"
+
+
+def test_renewal_message_includes_icon_for_each_tier():
+    # critical
+    msg = mc.renewal_message("2028-11-15")
+    assert msg is not None and "🚨" in msg
+    # urgent
+    msg = mc.renewal_message("2028-08-01")
+    assert msg is not None and "⚠️" in msg

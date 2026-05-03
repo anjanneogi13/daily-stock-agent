@@ -1,7 +1,7 @@
 # 🎯 NEXT SESSION — pick up here
 
 **Last session:** 2026-05-03 (Sunday) — shipped Ideas 1-4 + calendar awareness
-**Next session opener:** *"I'm Anjan. Read docs/ARCHITECTURE.md, docs/FINAL_ROADMAP.md, and this file. Then proceed."*
+**Next session opener:** *"I'm Anjan. Read docs/ARCHITECTURE.md (what we built), docs/FINAL_ROADMAP.md (tactical roadmap, includes Phase 8 LLM ideas), docs/BUSINESS_PLAN.md (24-mo strategic plan), and this file. Then proceed."*
 
 ---
 

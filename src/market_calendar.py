@@ -162,19 +162,38 @@ def years_remaining(today=None) -> int:
     return max_year - today.year
 
 
-def needs_renewal(threshold_years: int = 1, today=None) -> bool:
-    """True if cache has < threshold_years remaining (time to add next year)."""
+def needs_renewal(threshold_years: int = 2, today=None) -> bool:
+    """True if cache has < threshold_years remaining."""
     return years_remaining(today) < threshold_years
 
 
+def renewal_urgency(today=None) -> str:
+    """Returns 'none', 'soft' (~18mo lead), 'urgent' (<6mo), 'critical' (<2mo)."""
+    today = _to_date(today)
+    max_year = max(cached_years())
+    months_left = (max_year - today.year) * 12 + (12 - today.month)
+    if months_left > 18:  return "none"
+    if months_left > 6:   return "soft"
+    if months_left > 2:   return "urgent"
+    return "critical"
+
+
 def renewal_message(today=None) -> Optional[str]:
-    """Plain-English heads-up for the Self-Improvement Report."""
-    if not needs_renewal(1, today):
+    """Plain-English heads-up. Escalates as deadline approaches."""
+    urgency = renewal_urgency(today)
+    if urgency == "none":
         return None
     today = _to_date(today)
-    next_year_needed = today.year + 2
-    return (f"📅 Holiday calendar runs out after {max(cached_years())}. "
-            f"Add {next_year_needed} holidays to src/market_calendar.py soon.")
+    max_year = max(cached_years())
+    next_year_needed = max_year + 1
+    icon = {"soft": "📅", "urgent": "⚠️", "critical": "🚨"}[urgency]
+    suffix = {
+        "soft":     "soon (no rush — plenty of lead time).",
+        "urgent":   "in the next month or two.",
+        "critical": "THIS WEEK — agent will silently break on next holiday otherwise.",
+    }[urgency]
+    return (f"{icon} Holiday calendar runs out after {max_year}. "
+            f"Add {next_year_needed} holidays to src/market_calendar.py {suffix}")
 
 
 # ═══════════════════════════════════════════════════════════════
