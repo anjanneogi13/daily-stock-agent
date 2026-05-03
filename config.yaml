@@ -76,3 +76,15 @@ swing_trading:
   max_picks: 5              # max SWING picks per session
   min_score: 0.55           # existing threshold
   # Uses existing atr_mult_sl=2.0 from risk: section
+
+# 💎 Monster Hunt Mode (added Sunday May 3 2026)
+# Detects asymmetric high-conviction setups and gives them lottery treatment:
+#   wider SL (5%), aggressive TP (25%), smaller position (1.5%)
+# See src/monster_hunt.py for full scoring rubric.
+monster:
+  enabled: true
+  threshold: 0.60          # min monster_score to activate treatment
+  position_pct: 1.5        # % of account_size per monster pick (lottery sizing)
+  sl_pct: 5.0              # wider stop loss
+  tp_pct: 25.0             # aggressive take profit
+  fetch_short_float: true  # fetch yfinance shortPercentOfFloat + floatShares
