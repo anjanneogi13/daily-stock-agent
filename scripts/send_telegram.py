@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.dedup_sender import should_send, mark_sent
 from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
 from src.pause_state import is_paused as _is_paused, format_pause_alert as _pause_alert
-from src.wisdom_base import get_kill_list as _get_kill
+from src.wisdom_base import get_kill_list as _get_kill, load_active_lessons as _get_lessons, load_active_patterns as _get_patterns
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -262,6 +262,21 @@ def build_message(rows, pm, today):
             lines.append(f"🥶 *Cooled-off:* {', '.join(_items)}")
     except Exception:
         pass  # never block daily message
+
+    # Pillar 2: top active wisdom lessons (high-confidence only)
+    try:
+        _lessons = _get_lessons(min_confidence=0.7)[:2]
+        if _lessons:
+            lines.append("")
+            lines.append("🧠 *Wisdom in play:*")
+            for _L in _lessons:
+                _txt = _L.get("text", "")[:90]
+                lines.append(f"  • {_txt}")
+            _np = len(_get_patterns())
+            if _np:
+                lines.append(f"  _({_np} active pattern{'s' if _np != 1 else ''} informing scores)_")
+    except Exception:
+        pass
 
     # Pillar 4 prep: pause signal in daily summary (T13 May 3 2026)
     try:
