@@ -22,6 +22,15 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 
+def _is_enforced() -> bool:
+    """Read config/auto_pause.json — single source of truth for enforce flag."""
+    try:
+        from src.pause_state import load_config
+        return bool(load_config().get("enforced", False))
+    except Exception:
+        return False
+
+
 PICKS_LOG = Path("data/picks_log.csv")
 CLOSED = {"tp_hit", "sl_hit", "expired"}
 
@@ -130,7 +139,7 @@ def compute_score(closed: Optional[List[Dict]] = None) -> Dict:
         "dd_14":    dd_14,
         "wr_30":    wr_30,
         "would_pause": score >= 8,
-        "enforced": False,  # observe-mode v0.1
+        "enforced": _is_enforced(),
     }
 
 

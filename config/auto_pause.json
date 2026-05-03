@@ -1,0 +1,6 @@
+{
+  "enforced": false,
+  "pause_threshold": 8,
+  "pause_days": 3,
+  "_comment": "Set enforced=true on Wed May 6 2026 after 3-day calibration. When score >= pause_threshold, agent skips daily picks for pause_days. Manual override: python scripts/unpause.py"
+}

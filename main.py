@@ -29,6 +29,7 @@ from src.monster_hunt import apply_monster_treatment
 from src.sector_benchmark import resolve_sector_etf
 from src.signal_journal import log_pick as _journal_log_pick
 from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
+from src.pause_state import is_paused as _is_paused, maybe_auto_pause as _maybe_pause, format_pause_alert as _pause_alert
 
 
 # Auto-seed wisdom base on every run (idempotent — safe)
@@ -50,6 +51,27 @@ def run():
     cfg = load_config()
     rprint("[bold cyan]Daily Stock Picker Agent[/bold cyan]")
     rprint("[dim]Not financial advice. Educational only.[/dim]\n")
+
+    # ═══════════════════════════════════════════════════════════════
+    # PILLAR 4 ENFORCE: Skip entire run if agent is paused
+    # ═══════════════════════════════════════════════════════════════
+    _ps = _is_paused()
+    if _ps["paused"]:
+        rprint("[red bold]🚨 AGENT PAUSED — skipping today's run[/red bold]")
+        rprint(f"[red]   Reason: {_ps['reason']}[/red]")
+        rprint(f"[red]   Until:  {_ps['until']} ({_ps['days_remaining']}d remaining)[/red]")
+        rprint(f"[dim]   Override: python scripts/unpause.py[/dim]")
+        # Write minimal pause-day artifact for the Telegram sender
+        try:
+            from pathlib import Path as _P
+            import json as _j
+            _P("data").mkdir(exist_ok=True)
+            _P("data/last_run_paused.json").write_text(_j.dumps({
+                "paused": True, "date": _ps["until"], **_ps
+            }, indent=2))
+        except Exception:
+            pass
+        return  # ← HARD STOP. No picks, no journaling, no Telegram picks.
 
     # ═══════════════════════════════════════════════════════════════
     # WEEK 2 GUARDS: VIX + SPY trend + Sector strength
@@ -519,14 +541,18 @@ def run():
         except Exception as _je:
             rprint(f"[yellow]⚠ signal_journal log skipped: {_je}[/yellow]")
 
-        # Pillar 4 prep: pause signal (OBSERVE-MODE — never actually pauses)
+        # Pillar 4: pause signal + auto-trigger if enforced
         try:
             _pause = _pause_score()
             rprint("")
             for _line in _pause_fmt(_pause).split("\n"):
-                # Convert telegram-style * markers to rich-friendly bold
                 _clean = _line.replace("*", "")
                 rprint(f"[dim]{_clean}[/dim]")
+
+            # Auto-pause if config.enforced AND score >= threshold
+            _new = _maybe_pause(_pause)
+            if _new:
+                rprint(f"[red]🚨 AUTO-PAUSE TRIGGERED — agent paused until {_new['until']}[/red]")
         except Exception as _pe:
             rprint(f"[yellow]⚠ pause_signal calc skipped: {_pe}[/yellow]")
         if n == 0 and len(picks_for_log) > 0:
