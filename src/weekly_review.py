@@ -186,6 +186,43 @@ def format_telegram(r: Dict) -> str:
     except Exception:
         pass
 
+
+    # Pillar 1 status footer (Layer 4 hypothesis + Layer 5 self-awareness)
+    try:
+        from src import auto_pause as ap
+        from src import pause_state as ps
+        from src.signal_journal import load_closed as _journal_closed
+
+        p1_lines = []
+
+        # Layer 5: pause-status snapshot
+        try:
+            score = ap.compute_score()
+            paused = ps.is_paused()
+            label = ap.classify(score["score"])
+            p1_lines.append(f"• 🛡 Self-awareness: {label} "
+                            f"(score {score['score']}/10, "
+                            f"{'PAUSED' if paused.get('paused') else 'active'})")
+        except Exception:
+            pass
+
+        # Layer 4: hypothesis-journal coverage
+        try:
+            closed = _journal_closed()
+            if closed:
+                wins = sum(1 for c in closed if c.get("outcome") == "win")
+                p1_lines.append(f"• 🧪 Hypothesis journal: {len(closed)} closed picks "
+                                f"({wins} wins, base WR {wins/len(closed):.0%})")
+        except Exception:
+            pass
+
+        if p1_lines:
+            lines.append("")
+            lines.append("🧠 *Probability engine (Pillar 1)*")
+            lines.extend(p1_lines)
+    except Exception:
+        pass
+
     lines.append("")
     lines.append("📋 *Recommended action*")
     for a in r["actions"]:

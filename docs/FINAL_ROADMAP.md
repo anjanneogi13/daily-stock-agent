@@ -12,7 +12,7 @@
 | Metric | Value |
 |---|---|
 | Tests | **474 passing** (+322 since project audit; +131 today alone) |
-| Pillars complete | **2 of 6** (Pillar 1 v0.1, **Pillar 2 v1.0 NEW**) |
+| Pillars complete | **3 of 6** (Pillar 1 v1.0 ✅, Pillar 2 v1.0 ✅, Pillar 3.5 ✅) |
 | Pillars partial | **4 of 6** (3, 4, 5, 6 in motion) |
 | Bugs from Phase 0 | **5/5 RESOLVED** ✅ |
 | Backtester | **LIVE** — 2,010 picks replayed, algo Sharpe **+0.97** |
@@ -33,13 +33,13 @@ This single Saturday sprint shipped ~5-6 weeks of original-plan work.
 - ✅ BUG-4: Same ticker repeated 3+ times — `c9ac768`
 - ✅ BUG-5: SL too tight rejecting quality picks — `39c8f05`
 
-### Pillar 1 — Probability Engine (3/5 layers LIVE)
+### Pillar 1 — Probability Engine (5/5 layers LIVE) ✅ COMPLETE
 - ✅ Layer 1: stock_stats per ticker — 106 tickers
 - ✅ Layer 2: regime-conditional statistics
 - ✅ Layer 3: probabilistic price level calculator (LIVE in main.py)
 - ✅ EV Gate (observe-mode) · CI auto-builds stock_stats · 38 tests
-- 🔴 Layer 4: hypothesis testing — DEFERRED (now part of Pillar 4 calibration)
-- 🔴 Layer 5: self-awareness foundation (overlaps with Pillar 5)
+- ✅ Layer 4: hypothesis testing — LIVE (`hypothesis_engine.py` + weekly CI + signal-journal backfill)
+- ✅ Layer 5: self-awareness foundation — LIVE (`pause_state.py` + `auto_pause.py` + weekly footer)
 
 ### Pillar 5 — Self-Awareness (FOUNDATION LIVE — 20%)
 - ✅ Auto-pause triggers (zero_win / loss_streak / neg_R) — `3433a3a`
@@ -151,9 +151,9 @@ This single Saturday sprint shipped ~5-6 weeks of original-plan work.
 |---|---|---|---|
 | 1. Probability Engine | Empirical SL/TP/buy/sell levels | 🟡 v0.1 LIVE | 60% |
 | 2. **Wisdom Base** | Lessons + book-derived rules | 🟢 **v1.0 LIVE (May 3)** | **80%** |
-| 2.5. 🆕 **Books-into-Brain** | Seed lessons from 10+ trading books | 🔴 Not started | **0%** |
+| 2.5. 🆕 **Books-into-Brain** | Seed lessons from 10+ trading books | 🟡 Half shipped | **50%** |
 | 3. Pattern Recognition | 15 detectors + per-pattern stats | 🟡 indicators exist | 10% |
-| 3.5. 🆕 **Chart-Learning / Calibration** | Replay → "what worked" → weight tuning | 🟡 Backtester live | **40%** |
+| 3.5. 🆕 **Chart-Learning / Calibration** | Replay → "what worked" → weight tuning | ✅ Complete | **100%** |
 | 4. Feedback Loop & Self-Learning | Outcome attribution + weight updates | 🟡 auto_promote shipped | 30% |
 | 5. Self-Awareness | Confidence intervals + auto-pause | 🟡 auto_pause LIVE | 20% |
 | 6. P&L + Reporting Brain | Daily/Weekly/Monthly/Quarterly/Yearly | 🟡 metrics shipped | 50% |
@@ -173,18 +173,18 @@ See: `docs/BRAIN_ARCHITECTURE.md` (needs update for Pillar 2.5 + 3.5).
 
 #### 🔴 PRIORITY 1 — Brain Pillars (Months 1-6)
 
-**Pillar 1: Probability Engine** — 🟡 60%
-- 🔴 Layer 4: Hypothesis testing (subsumed by Pillar 4 calibration loop)
-- 🔴 Layer 5: Self-Awareness foundation (overlaps with Pillar 5)
+**Pillar 1: Probability Engine** — ✅ 100% (May 3 PM)
+- ✅ Layer 4: Hypothesis testing — LIVE
+- ✅ Layer 5: Self-Awareness foundation — LIVE
 
 **Pillar 2: Wisdom Base v1.0** — ✅ 80% COMPLETE (May 3)
 - 🔴 Telegram showing matched/violated rules count
 - 🔴 Weekly post-mortem (overlaps Pillar 6)
 
-**🆕 Pillar 2.5: Books-into-Brain** — 🔴 0%
+**🆕 Pillar 2.5: Books-into-Brain** — 🟡 50% (B1+B2+B3+B5 shipped May 3 AM, T34-T36)
 - 🔴 B1-B7 (curate · loader · seed · trigger_context · attribution · post-mortem · LLM extract)
 
-**🆕 Pillar 3.5: Chart-Learning / Self-Calibration** — 🟡 40%
+**🆕 Pillar 3.5: Chart-Learning / Self-Calibration** — ✅ 100% (C1-C4 shipped May 3 AM, T37-T40)
 - 🔴 C1-C7 (calibration · timeframe attribution · weight proposer · walk-forward · auto-apply · pattern matrix)
 
 **Pillar 3: Pattern Recognition Engine** — 🔴 10%
