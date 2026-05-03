@@ -89,6 +89,19 @@ def scan_and_cool(apply: bool = False,
                 cool_off_days=cool_off_days,
                 source="auto_cooldown",
             )
+            # T22: compound the wisdom — write a lesson alongside the kill
+            try:
+                from datetime import datetime as _dt
+                wisdom_base.add_lesson(
+                    text=(f"{tk} cooled {cool_off_days}d after {n} consecutive "
+                          f"losses (auto-cooldown {_dt.now().date().isoformat()})"),
+                    source="auto_cooldown",
+                    confidence=0.65,  # observed but not yet validated long-term
+                    tags=["cooldown", "auto", tk],
+                    author="system",
+                )
+            except Exception:
+                pass  # never block the cooldown action
             newly_cooled.append(tk)
     else:
         # Dry-run still classifies for reporting
