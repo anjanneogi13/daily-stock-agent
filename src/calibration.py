@@ -33,15 +33,16 @@ RESULTS_ROOT = Path("data/backtest_results")
 
 # ───────────────────────── data loading ─────────────────────────
 
-def list_runs(root: Path = RESULTS_ROOT) -> List[Path]:
+def list_runs(root: Optional[Path] = None) -> List[Path]:
     """Return run directories sorted oldest→newest."""
+    root = root or RESULTS_ROOT
     if not root.exists():
         return []
     return sorted([d for d in root.iterdir() if d.is_dir()])
 
 
-def latest_run(root: Path = RESULTS_ROOT) -> Optional[Path]:
-    runs = list_runs(root)
+def latest_run(root: Optional[Path] = None) -> Optional[Path]:
+    runs = list_runs(root or RESULTS_ROOT)
     return runs[-1] if runs else None
 
 
@@ -317,3 +318,69 @@ def main(argv: Optional[List[str]] = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+# ───────────────────────── T40: Telegram footer ─────────────────────────
+
+def telegram_footer_lines(min_n: int = 30) -> list[str]:
+    """Return Markdown lines for the weekly Telegram footer.
+
+    Safe: returns [] if anything goes wrong (no run, empty CSV, etc).
+    Caller decides whether to wrap with a header.
+    """
+    try:
+        run = latest_run()
+        if not run:
+            return []
+        rows = load_picks(run)
+        if not rows:
+            return []
+        summ = overall_summary(rows)
+
+        # Pick top boost & top kill candidates from per-factor report
+        rep = per_factor_report(rows, min_n=min_n)
+        flat = []
+        for factor, table in rep.items():
+            if factor == "exit_status":
+                continue
+            for b in table:
+                bias = round(b["mean_r"] - summ["mean_r"], 3)
+                flat.append((factor, b, bias))
+
+        best  = max(flat, key=lambda x: x[2], default=None)
+        worst = min(flat, key=lambda x: x[2], default=None)
+
+        out: list[str] = []
+        out.append(f"• Last run: `{run.name}` · {summ['n']} picks · "
+                   f"WR {summ['win_rate']:.0%} · ΣR {summ['total_r']:+.1f}")
+        if best and best[2] > 0.05:
+            f, b, bias = best
+            out.append(f"• 🟢 Best edge: `{f}={b['bucket']}` "
+                       f"({bias:+.2f}R bias, n={b['n']})")
+        if worst and worst[2] < -0.05:
+            f, b, bias = worst
+            out.append(f"• 🔴 Worst drag: `{f}={b['bucket']}` "
+                       f"({bias:+.2f}R bias, n={b['n']})")
+        return out
+    except Exception:
+        return []
+
+
+def open_proposals_summary() -> Optional[str]:
+    """Count unapplied weight proposals — one-line summary or None."""
+    try:
+        from src.weight_proposer import read_proposals
+        unapplied = read_proposals(only_unapplied=True)
+        if not unapplied:
+            return None
+        kills    = sum(1 for p in unapplied if p.get("action") == "kill")
+        boosts   = sum(1 for p in unapplied if p.get("action") == "boost")
+        penalize = sum(1 for p in unapplied if p.get("action") == "penalize")
+        parts = []
+        if kills:    parts.append(f"{kills} kill")
+        if penalize: parts.append(f"{penalize} penalize")
+        if boosts:   parts.append(f"{boosts} boost")
+        return f"• 🧠 {len(unapplied)} weight proposals open: {' · '.join(parts)}"
+    except Exception:
+        return None
+

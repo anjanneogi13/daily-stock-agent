@@ -171,6 +171,21 @@ def format_telegram(r: Dict) -> str:
                  f"{r['wisdom']['active_patterns']} patterns · "
                  f"{r['wisdom']['kill_list_size']} on kill list")
 
+
+    # T40: Calibration brain footer (safe — degrades to nothing on error)
+    try:
+        from src.calibration import telegram_footer_lines, open_proposals_summary
+        cal_lines = telegram_footer_lines()
+        prop_line = open_proposals_summary()
+        if cal_lines or prop_line:
+            lines.append("")
+            lines.append("📐 *Calibration brain*")
+            lines.extend(cal_lines)
+            if prop_line:
+                lines.append(prop_line)
+    except Exception:
+        pass
+
     lines.append("")
     lines.append("📋 *Recommended action*")
     for a in r["actions"]:
