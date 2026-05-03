@@ -13,6 +13,7 @@ from pathlib import Path
 # Add repo root to path so we can import src/
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.dedup_sender import should_send, mark_sent
+from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -241,9 +242,20 @@ def build_message(rows, pm, today):
         news_tickers = sorted({r["ticker"] for r in rows if r["ticker"] in WL_TICKERS})
         lines.append(f"📰 *News-driven:* {', '.join(news_tickers)}")
 
+    # Pillar 4 prep: pause signal in daily summary (T13 May 3 2026)
+    try:
+        _ps = _pause_score()
+        lines.append("")
+        for _l in _pause_fmt(_ps).split("\n"):
+            lines.append(_l)
+        if _ps.get("enforced"):
+            lines.append("🚨 _Enforce-mode active — agent may auto-pause_")
+    except Exception as _pe:
+        pass  # Never block the daily message on pause-signal failure
+
     lines.append("")
     lines.append("⚠️ _Educational only. Not financial advice._")
-    lines.append("🔧 _PR #66+#67+#68+#69 active_")
+    lines.append("🔧 _PR #66+#67+#68+#69 active · pause v0.1_")
 
     return "\n".join(lines)
 
