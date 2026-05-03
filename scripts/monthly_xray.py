@@ -187,6 +187,17 @@ prompt = "".join(prompt_parts)
 
 print(f"[monthly] {len(month_picks)} picks, {len(evaluated)} closed, {len(weekly_summary)} weeks")
 
+# T45 / Pillar 5: monthly calibration (rolling 30/60/90d edges + CIs)
+try:
+    from src.self_awareness import monthly_calibration as _mc
+    cal = _mc()
+    print(f"[monthly] calibration: trend={cal['trend']}, "
+          f"30d_n={cal['30d']['n']}, 30d_R={cal['30d']['mean_r']:+.2f}, "
+          f"verdict={cal['30d']['verdict']}")
+except Exception as e:
+    cal = None
+    print(f"[monthly] calibration unavailable: {e}")
+
 
 def _human_fallback(reason: str) -> str:
     """Build a human-readable monthly report when Gemini is unavailable."""

@@ -12,7 +12,7 @@
 | Metric | Value |
 |---|---|
 | Tests | **474 passing** (+322 since project audit; +131 today alone) |
-| Pillars complete | **4 of 6** (1 ✅ · 2 ✅ · 2.5 ✅ · 3.5 ✅ · 4 ✅) |
+| Pillars complete | **5 of 6** (1 ✅ · 2 ✅ · 2.5 ✅ · 3.5 ✅ · 4 ✅ · 5 ✅) |
 | Pillars partial | **4 of 6** (3, 4, 5, 6 in motion) |
 | Bugs from Phase 0 | **5/5 RESOLVED** ✅ |
 | Backtester | **LIVE** — 2,010 picks replayed, algo Sharpe **+0.97** |
@@ -41,11 +41,13 @@ This single Saturday sprint shipped ~5-6 weeks of original-plan work.
 - ✅ Layer 4: hypothesis testing — LIVE (`hypothesis_engine.py` + weekly CI + signal-journal backfill)
 - ✅ Layer 5: self-awareness foundation — LIVE (`pause_state.py` + `auto_pause.py` + weekly footer)
 
-### Pillar 5 — Self-Awareness (FOUNDATION LIVE — 20%)
+### Pillar 5 — Self-Awareness — ✅ 100% COMPLETE (T45, May 3 PM)
 - ✅ Auto-pause triggers (zero_win / loss_streak / neg_R) — `3433a3a`
 - ✅ Per-tag + per-trade_type + per-regime tracking
 - ✅ Observe-mode default (env: AUTO_PAUSE_ENABLED)
-- 🔴 Rolling 30d confidence intervals · monthly calibration · weekly self-assessment
+- ✅ Rolling 30d confidence intervals (Wilson + mean-R 95% CI) — `self_awareness.py`
+- ✅ Monthly calibration (30/60/90d windows + trend) — wired into `monthly_xray.py`
+- ✅ Weekly self-assessment (already in `weekly_review.py` grade)
 
 ### Pillar 6 — P&L + Reporting Brain (10% → 50%)
 - ✅ SPY benchmark + alpha tracking — `e409a5b`
@@ -201,9 +203,7 @@ See: `docs/BRAIN_ARCHITECTURE.md` (needs update for Pillar 2.5 + 3.5).
 - ✅ Weight update mechanism with 5%/week cap (`weight_applier.py`)
 - ✅ Learning journal (`learning_journal.py`) + Weight history (`weight_history.jsonl`)
 
-**Pillar 5: Self-Awareness** — 🟡 20%
-- ✅ Auto-pause foundation
-- 🔴 Rolling 30d confidence intervals · monthly calibration · weekly self-assessment
+**Pillar 5: Self-Awareness** — ✅ 100% (T45 May 3 PM)
 
 #### 🟡 PRIORITY 2 — P&L + Reporting Brain (Pillar 6) — 50%
 - ✅ Sharpe/Sortino/Calmar/MaxDD · SPY α · strategy/tag/regime breakdown

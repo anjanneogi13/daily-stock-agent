@@ -293,6 +293,19 @@ def format_telegram(r: Dict) -> str:
     except Exception:
         pass
 
+
+    # Pillar 5 — rolling 30d edge with 95% CIs
+    try:
+        from src import self_awareness as _sa
+        sa_stats = _sa.rolling_window(30)
+        sa_block = _sa.format_footer(sa_stats)
+        if sa_block:
+            lines.append("")
+            lines.append("🛡 *Self-awareness (Pillar 5)*")
+            lines.append(sa_block)
+    except Exception:
+        pass
+
     lines.append("")
     lines.append("📋 *Recommended action*")
     for a in r["actions"]:
