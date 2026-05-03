@@ -30,9 +30,11 @@ if not TOKEN or not CHAT_IDS:
 # ─── T24: per-pick wisdom hint (extracted to src/wisdom_hint.py) ───
 try:
     from src.wisdom_hint import wisdom_hint, pattern_hint
+    from src.confidence_band import confidence_band
 except Exception:
     def wisdom_hint(_t=None, sector=None, **_k): return ""
     def pattern_hint(_r=None, **_k): return ""
+    def confidence_band(_s=0, _p="", _w=""): return ""
 # ───────────────────────────────────────────────────────────────────
 
 def _load_watchlist_tickers():
@@ -96,15 +98,16 @@ def _format_day_pick(i, row, tag_info):
     cur = tag_info.get("current_price")
     cur_str = f" → ${cur:.2f}" if cur else ""
 
+    _wh = wisdom_hint(t, sector=row.get('sector'))
+    _ph = pattern_hint(row)
+    _band = confidence_band(score, _ph, _wh)
     lines = [
-        f"⚡ *{i}. {_wl_emoji(t)}{t}* — score {score:.2f} | day_score {_safe_float(row.get('day_score', 0)):.2f}"
+        f"⚡ *{i}. {_wl_emoji(t)}{t}* {_band} — score {score:.2f} | day_score {_safe_float(row.get('day_score', 0)):.2f}"
     ]
     if tag:
         lines.append(f"   {tag} _{reason}_")
-    _wh = wisdom_hint(t, sector=row.get('sector'))
     if _wh:
         lines.append(_wh)
-    _ph = pattern_hint(row)
     if _ph:
         lines.append(_ph)
 
@@ -138,13 +141,14 @@ def _format_swing_pick(i, row, tag_info):
     cur = tag_info.get("current_price")
     cur_str = f" (now ${cur:.2f})" if cur else ""
 
-    lines = [f"📊 *{i}. {_wl_emoji(t)}{t}* — score {score:.2f}{earn}"]
+    _wh = wisdom_hint(t, sector=row.get('sector'))
+    _ph = pattern_hint(row)
+    _band = confidence_band(score, _ph, _wh)
+    lines = [f"📊 *{i}. {_wl_emoji(t)}{t}* {_band} — score {score:.2f}{earn}"]
     if tag:
         lines.append(f"   {tag} _{reason}_")
-    _wh = wisdom_hint(t, sector=row.get('sector'))
     if _wh:
         lines.append(_wh)
-    _ph = pattern_hint(row)
     if _ph:
         lines.append(_ph)
 
