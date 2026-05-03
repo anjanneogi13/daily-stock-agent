@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.dedup_sender import should_send, mark_sent
 from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
 from src.pause_state import is_paused as _is_paused, format_pause_alert as _pause_alert
+from src.wisdom_base import get_kill_list as _get_kill
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -242,6 +243,25 @@ def build_message(rows, pm, today):
     if has_news:
         news_tickers = sorted({r["ticker"] for r in rows if r["ticker"] in WL_TICKERS})
         lines.append(f"📰 *News-driven:* {', '.join(news_tickers)}")
+
+    # Pillar 4: active kill-list (auto-cooldown visibility)
+    try:
+        _kl = _get_kill()
+        if _kl:
+            from datetime import datetime as _dt
+            _now = _dt.now()
+            _items = []
+            for _tk, _e in sorted(_kl.items()):
+                try:
+                    _exp = _dt.fromisoformat(_e.get("expires_at", ""))
+                    _days = max(0, (_exp.date() - _now.date()).days)
+                    _items.append(f"{_tk} ({_days}d)")
+                except Exception:
+                    _items.append(_tk)
+            lines.append("")
+            lines.append(f"🥶 *Cooled-off:* {', '.join(_items)}")
+    except Exception:
+        pass  # never block daily message
 
     # Pillar 4 prep: pause signal in daily summary (T13 May 3 2026)
     try:
