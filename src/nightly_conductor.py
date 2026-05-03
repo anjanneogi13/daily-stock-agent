@@ -69,11 +69,12 @@ def _load_universe_for_scan(max_tickers: int = 100) -> List[str]:
 # ═══════════════════════════════════════════════════════════════
 # Step implementations
 # ═══════════════════════════════════════════════════════════════
-def _step_pattern_scan(tickers: Optional[List[str]] = None) -> Dict:
+def _step_pattern_scan(tickers: Optional[List[str]] = None,
+                       max_tickers: int = 100) -> Dict:
     from src.pattern_engine import scan_ticker, persist
     from src.regime import market_regime
     regime = (market_regime() or {}).get("regime", "unknown")
-    tickers = tickers or _load_universe_for_scan()
+    tickers = tickers or _load_universe_for_scan(max_tickers=max_tickers)
     all_matches = []
     for t in tickers:
         ms = scan_ticker(t, regime=regime)
@@ -152,14 +153,34 @@ def _step_lesson_gc() -> Dict:
 # ═══════════════════════════════════════════════════════════════
 # Public API
 # ═══════════════════════════════════════════════════════════════
-def run_nightly(scan_tickers: Optional[List[str]] = None) -> Dict:
-    """Run the full nightly brain maintenance cycle. Returns summary dict."""
+def run_nightly(scan_tickers: Optional[List[str]] = None,
+                deep_mode: Optional[bool] = None) -> Dict:
+    """Run the full nightly brain maintenance cycle. Returns summary dict.
+
+    deep_mode=True triggers extended scan (used on weekends/holidays when
+    no morning picks need to be scored — brain has spare capacity).
+    If None, auto-detects from today's market status.
+    """
     summary: Dict = {
         "ts": datetime.now().isoformat(),
         "steps": {},
     }
 
-    _step("pattern_scan",       lambda: _step_pattern_scan(scan_tickers), summary)
+    # 🗓 T51 — Auto-detect deep mode based on market status
+    if deep_mode is None:
+        try:
+            from src.market_calendar import is_trading_day, market_status_today
+            deep_mode = not is_trading_day()
+            summary["market_status"] = market_status_today()
+        except Exception:
+            deep_mode = False
+    summary["deep_mode"] = deep_mode
+
+    # On deep-mode days (market closed), scan a much larger universe
+    _scan_count = 300 if deep_mode else 100
+    _step("pattern_scan",
+          lambda: _step_pattern_scan(scan_tickers, max_tickers=_scan_count),
+          summary)
     _step("pattern_stats",      _step_pattern_stats, summary)
     _step("pattern_auto_e_d",   _step_pattern_auto_enable_disable, summary)
     _step("calibration_propose",_step_calibration_propose, summary)

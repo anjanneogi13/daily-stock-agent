@@ -196,6 +196,14 @@ def build_self_improvement_digest(days: int = 7) -> Dict:
     stuck     = detect_stuck_areas(events)
     hyps      = suggest_hypotheses()
     plain     = _human_summary_of_mutations(by_kind)
+    # 🗓 T51 — Calendar renewal warning
+    calendar_warning = None
+    try:
+        from src.market_calendar import renewal_message, years_remaining
+        calendar_warning = renewal_message()
+        cal_years_left = years_remaining()
+    except Exception:
+        cal_years_left = None
     return {
         "days":       days,
         "n_events":   len(events),
@@ -203,6 +211,8 @@ def build_self_improvement_digest(days: int = 7) -> Dict:
         "stuck":      stuck,
         "hypotheses": hyps,
         "plain_english": plain,
+        "calendar_warning": calendar_warning,
+        "calendar_years_remaining": cal_years_left,
     }
 
 
@@ -241,6 +251,11 @@ def format_telegram_digest(digest: Dict) -> str:
             direction = "winning more" if h["delta"] > 0 else "losing more"
             L.append(f"  • Picks tagged *{tag}* are {direction} than average "
                      f"({wr_pct:.0f}% vs {base_pct:.0f}% baseline, {h['n']} trades)")
+    # 🗓 T51 — calendar renewal heads-up (annual)
+    if digest.get("calendar_warning"):
+        L.append("")
+        L.append("*📅 Maintenance heads-up:*")
+        L.append(f"  {digest['calendar_warning']}")
     L.append("")
     L.append("_Remember: this brain learns from every trade. Some weeks it changes a lot, some weeks it just observes._")
     return "\n".join(L)

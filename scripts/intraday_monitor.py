@@ -13,6 +13,21 @@ from src.picks_csv import update_pick_row
 from src.adaptive_tp import should_raise_tp, append_raise_audit, last_raise_ts
 from src.adaptive_sl import should_tighten_sl, append_tighten_audit, last_tighten_ts
 
+# 🗓 T51 — Market calendar guard
+try:
+    from src.market_calendar import is_trading_day as _is_td, reason_market_closed as _why
+    from datetime import datetime
+    import zoneinfo
+    _now_et = datetime.now(zoneinfo.ZoneInfo("America/New_York"))
+    if not _is_td(_now_et):
+        print(f"🗓 US market CLOSED ({_why(_now_et)}) — intraday monitor skipping")
+        import sys; sys.exit(0)
+except ImportError:
+    pass  # zoneinfo missing, proceed
+except Exception as _e:
+    print(f"[market-calendar] guard failed: {_e} — proceeding")
+
+
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 

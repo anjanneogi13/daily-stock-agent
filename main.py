@@ -30,6 +30,7 @@ from src.sector_benchmark import resolve_sector_etf
 from src.signal_journal import log_pick as _journal_log_pick
 from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
 from src.pause_state import is_paused as _is_paused, maybe_auto_pause as _maybe_pause, format_pause_alert as _pause_alert
+from src.market_calendar import is_trading_day as _is_td, reason_market_closed as _why_closed, next_trading_day as _next_td
 
 
 # Auto-seed wisdom base on every run (idempotent — safe)
@@ -55,6 +56,16 @@ def run():
     # ═══════════════════════════════════════════════════════════════
     # PILLAR 4 ENFORCE: Skip entire run if agent is paused
     # ═══════════════════════════════════════════════════════════════
+    # 🗓 T51 — Skip if US market closed (weekend or holiday). Defensive.
+    try:
+        if not _is_td():
+            _reason = _why_closed() or "unknown"
+            _nxt = _next_td()
+            rprint(f"[yellow bold]🗓 US market CLOSED today ({_reason}). Next trading day: {_nxt}. Skipping picks.[/yellow bold]")
+            return
+    except Exception as _e:
+        rprint(f"[dim]market-calendar check failed: {_e} — proceeding[/dim]")
+
     _ps = _is_paused()
     if _ps["paused"]:
         rprint("[red bold]🚨 AGENT PAUSED — skipping today's run[/red bold]")
