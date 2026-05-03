@@ -26,7 +26,7 @@ test-cov:   ## Run tests with coverage summary
 	$(PY) -m pytest tests/ --cov=src --cov-report=term-missing -q
 
 # ─── Wisdom ops ────────────────────────────────────────────────
-.PHONY: wisdom-preview wisdom-promote wisdom-dryrun wisdom-stats
+.PHONY: wisdom-preview wisdom-promote wisdom-dryrun wisdom-stats wisdom-gc wisdom-gc-dryrun
 wisdom-preview:  ## Preview hints that would surface on today's picks
 	@echo "🔮 Wisdom hint preview"
 	@echo "─────────────────────────────────────────────"
@@ -44,6 +44,14 @@ wisdom-dryrun:   ## Preview which patterns WOULD be promoted (read-only)
 wisdom-stats:    ## Show wisdom-base counts (lessons, patterns, coverage)
 	@$(PY) -c "from src.wisdom_base import stats; \
 import json; print(json.dumps(stats(), indent=2))"
+
+wisdom-gc:       ## Deactivate lessons older than 90d (writes!)
+	@echo "🗑  GC stale lessons..."
+	@$(PY) -m src.lesson_gc
+
+wisdom-gc-dryrun: ## Preview which lessons WOULD be deactivated
+	@echo "👀 Lesson GC dry-run"
+	@$(PY) -m src.lesson_gc --dry-run
 
 # ─── Daily ops ─────────────────────────────────────────────────
 .PHONY: picks evaluate weekly
