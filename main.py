@@ -25,6 +25,7 @@ from src.llm_agent import explain_pick
 from src.paper_trader import log_paper_trade
 from src.regime import market_regime
 from src.earnings import days_to_earnings
+from src.monster_hunt import apply_monster_treatment
 
 
 def load_config(path: str = "config.yaml") -> dict:
@@ -405,6 +406,36 @@ def run():
 
     # ===== Log picks (now includes trade_type) =====
     try:
+        # 💎 Apply monster treatment (overrides SL/TP/qty for high-conviction picks)
+        try:
+            _mcfg = cfg.get("monster", {})
+            if _mcfg.get("enabled", True):
+                _mthr = _mcfg.get("threshold", 0.60)
+                _macct = cfg.get("risk", {}).get("account_size", 10000.0)
+                _mpos = _mcfg.get("position_pct", 1.5)
+                _monsters = 0
+                for _p in top:
+                    _ms = _p["scores"].get("monster_score", 0) or 0
+                    if _ms >= _mthr:
+                        _pdict = {
+                            "ticker": _p["ticker"],
+                            "entry": _p["plan"].get("entry"),
+                            "stop_loss": _p["plan"].get("stop_loss"),
+                            "take_profit": _p["plan"].get("take_profit"),
+                            "qty": _p["plan"].get("quantity"),
+                        }
+                        _treated = apply_monster_treatment(_pdict, _ms, _macct, _mpos)
+                        _p["plan"]["stop_loss"] = _treated["stop_loss"]
+                        _p["plan"]["take_profit"] = _treated["take_profit"]
+                        _p["plan"]["quantity"] = _treated["qty"]
+                        _p["plan"]["risk_reward"] = _treated["risk_reward"]
+                        _p["is_monster"] = True
+                        _monsters += 1
+                if _monsters:
+                    rprint(f"[bold magenta]💎 {_monsters} MONSTER pick(s) — wider SL, +25% TP, lottery sizing[/bold magenta]")
+        except Exception as _e:
+            rprint(f"[yellow]⚠ monster treatment skipped: {_e}[/yellow]")
+
         picks_for_log = []
         for p in top:
             brain = p.get("brain", {}) or {}
@@ -427,6 +458,9 @@ def run():
                 "brain_sl": brain.get("brain_sl"),
                 "brain_tp": brain.get("brain_tp"),
                 "brain_confidence": brain.get("confidence"),
+                # 💎 Monster Hunt audit
+                "monster_score": p["scores"].get("monster_score", 0),
+                "is_monster": p["scores"].get("is_monster", False),
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
         if n == 0 and len(picks_for_log) > 0:

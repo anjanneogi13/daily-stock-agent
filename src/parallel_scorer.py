@@ -13,6 +13,9 @@ from .risk_manager import trade_plan, atr_trade_plan
 from .data_fetcher import fetch_info
 from .day_trading_scorer import day_trading_score
 from .market_guard import classify_with_day_score
+from .monster_hunt import score_monster
+from .monster_data import get_monster_data
+from .earnings import days_to_earnings as _d2e
 
 
 def _score_one(tk, df, cfg):
@@ -63,11 +66,32 @@ def _score_one(tk, df, cfg):
             plan = trade_plan(sig, cfg)
             plan["trade_type"] = ttype
 
+        # 💎 Monster Hunt scoring (additive, never blocks)
+        try:
+            mdata = get_monster_data(tk) if cfg.get("monster", {}).get("fetch_short_float", True) else {}
+            d2e_val = _d2e(tk)
+            d2e_norm = d2e_val if d2e_val is not None and d2e_val < 999 else None
+            mres = score_monster(
+                composite=scores["composite"],
+                days_to_earnings=d2e_norm,
+                short_pct_of_float=mdata.get("short_pct_of_float"),
+                float_shares=mdata.get("float_shares"),
+                vol_ratio=sig.get("vol_ratio"),
+                has_bullish_news=(wl_boost > 0),
+            )
+            scores["monster_score"] = mres["monster_score"]
+            scores["monster_reasons"] = mres["monster_reasons"]
+            scores["is_monster"] = mres["is_monster"]
+        except Exception as _me:
+            scores["monster_score"] = 0.0
+            scores["is_monster"] = False
+            scores["monster_reasons"] = []
+
         return {
             "ticker": tk, "scores": scores, "plan": plan, "news": news,
             "info_short": {"name": info.get("shortName", tk),
                            "sector": info.get("sector", "N/A")},
-            "trade_type": ttype,  # also surface at top level
+            "trade_type": ttype,
         }
     except Exception as e:
         print(f"[score] {tk}: {type(e).__name__}: {str(e)[:80]}")

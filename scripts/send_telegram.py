@@ -149,6 +149,26 @@ def _format_swing_pick(i, row, tag_info):
 # ═══════════════════════════════════════════════════════════════
 # Build the message
 # ═══════════════════════════════════════════════════════════════
+
+
+def _format_monster_pick(i, row, tag_info):
+    """💎 Format a monster pick — emphasize lottery sizing + wide stop."""
+    ticker = row["ticker"]
+    score = _safe_float(row.get("monster_score"))
+    entry = _safe_float(row.get("entry"))
+    sl = _safe_float(row.get("stop_loss"))
+    tp = _safe_float(row.get("take_profit"))
+    qty = _safe_int(row.get("qty"))
+    rr = _safe_float(row.get("risk_reward"))
+    sl_pct = ((sl - entry) / entry * 100) if entry else 0
+    tp_pct = ((tp - entry) / entry * 100) if entry else 0
+    return (
+        f"💎 *{i}. {ticker}* · monster={score:.2f} · {row.get('tag','')[:18]}\n"
+        f"   Entry ${entry:.2f} · SL ${sl:.2f} ({sl_pct:+.1f}%) · TP ${tp:.2f} ({tp_pct:+.1f}%)\n"
+        f"   R:R {rr:.1f} · Qty {qty} (lottery sizing)"
+    )
+
+
 def build_message(rows, pm, today):
     """PR #69: Build dual-section message (DAY first, SWING below)."""
     # Premarket tags lookup
@@ -198,6 +218,15 @@ def build_message(rows, pm, today):
         lines.append("─" * 30)
         for i, r in enumerate(day_picks, 1):
             lines.append(_format_day_pick(i, r, tags.get(r["ticker"], {})))
+        lines.append("")
+
+    # ═══ 💎 MONSTER HUNTS SECTION ═══
+    monster_picks = [r for r in rows if str(r.get("is_monster","")).lower() == "true"]
+    if monster_picks:
+        lines.append(f"💎 *MONSTER HUNTS ({len(monster_picks)})* — Asymmetric setups, lottery sizing")
+        lines.append("─" * 30)
+        for i, r in enumerate(monster_picks, 1):
+            lines.append(_format_monster_pick(i, r, tags.get(r["ticker"], {})))
         lines.append("")
 
     # ═══ SWING TRADES SECTION ═══
