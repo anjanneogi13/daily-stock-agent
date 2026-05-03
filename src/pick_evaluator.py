@@ -22,7 +22,9 @@ def _load_picks() -> list:
     with LOG_PATH.open() as f:
         rows = list(csv.DictReader(f))
     # Ensure new SPY/alpha columns exist on all rows (May 2 2026)
-    new_fields = ["spy_close_at_exit", "spy_return_pct", "alpha_pct"]
+    new_fields = ["spy_close_at_exit", "spy_return_pct", "alpha_pct",
+                  "sector_etf", "sector_close", "sector_close_at_exit",
+                  "sector_return_pct", "sector_alpha_pct"]
     for r in rows:
         for f in new_fields:
             if f not in r:
@@ -108,6 +110,47 @@ def _add_spy_alpha(row: dict, exit_date_str: str, pick_return_pct: float) -> str
     row["spy_return_pct"] = round(spy_return, 2)
     row["alpha_pct"] = round(pick_return_pct - spy_return, 2)
     return str(round(spy_at_exit, 2))
+
+
+def _etf_close_on(etf: str, date_str: str) -> float | None:
+    """Fetch ETF close on date_str. Used for sector-alpha calc."""
+    if not etf:
+        return None
+    try:
+        from datetime import datetime, timedelta
+        d = datetime.strptime(date_str, "%Y-%m-%d")
+        df = _fetch_ohlc(etf, (d - timedelta(days=5)).strftime("%Y-%m-%d"))
+        if df is None or df.empty:
+            return None
+        df = df[df.index <= d.strftime("%Y-%m-%d")]
+        if df.empty:
+            return None
+        return float(df["Close"].iloc[-1])
+    except Exception as e:
+        print(f"  [sector] {etf} {date_str} fetch error: {e}")
+        return None
+
+
+def _add_sector_alpha(row: dict, exit_date_str: str, pick_return_pct: float) -> str:
+    """Mirror of _add_spy_alpha but for the pick's sector ETF."""
+    etf = row.get("sector_etf") or ""
+    sec_pick_str = row.get("sector_close", "")
+    if not etf or not sec_pick_str:
+        row["sector_alpha_pct"] = None
+        return ""
+    try:
+        sec_at_pick = float(sec_pick_str)
+    except Exception:
+        row["sector_alpha_pct"] = None
+        return ""
+    sec_at_exit = _etf_close_on(etf, exit_date_str)
+    if sec_at_exit is None or sec_at_pick <= 0:
+        row["sector_alpha_pct"] = None
+        return ""
+    sec_return = (sec_at_exit - sec_at_pick) / sec_at_pick * 100
+    row["sector_return_pct"] = round(sec_return, 2)
+    row["sector_alpha_pct"] = round(pick_return_pct - sec_return, 2)
+    return str(round(sec_at_exit, 2))
 
 
 def evaluate_pending() -> dict:
@@ -196,6 +239,7 @@ def evaluate_pending() -> dict:
             row["r_multiple"] = round((exit_price - entry) / risk, 2) if risk > 0 else 0
             # SPY relative perf (May 2 2026): alpha vs benchmark
             row["spy_close_at_exit"] = _add_spy_alpha(row, exit_date.strftime("%Y-%m-%d"), ret)
+            row["sector_close_at_exit"] = _add_sector_alpha(row, exit_date.strftime("%Y-%m-%d"), ret)
             counts[outcome.replace("_hit", "_hits")] += 1
             counts["evaluated"] += 1
             alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
@@ -215,6 +259,7 @@ def evaluate_pending() -> dict:
                 row["r_multiple"] = round((last_close - entry) / risk, 2) if risk > 0 else 0
                 # SPY relative perf for expired picks
                 row["spy_close_at_exit"] = _add_spy_alpha(row, today.isoformat(), ret)
+                row["sector_close_at_exit"] = _add_sector_alpha(row, today.isoformat(), ret)
                 counts["expired"] += 1
                 counts["evaluated"] += 1
                 alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""

@@ -28,6 +28,9 @@ FIELDS = [
     "peak_rsi", "sl_tightens",
     # Monster Hunt Mode (May 3 2026)
     "monster_score", "is_monster",
+    # Sector benchmark (May 3 2026 T3) — sector-relative alpha
+    "sector_etf", "sector_close", "sector_close_at_exit",
+    "sector_return_pct", "sector_alpha_pct",
 ]
 
 
@@ -132,6 +135,12 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 # Monster Hunt Mode
                 "monster_score": p.get("monster_score", ""),
                 "is_monster": "true" if p.get("is_monster") else "false",
+                # Sector benchmark (T3 May 3 2026)
+                "sector_etf": p.get("sector_etf", ""),
+                "sector_close": p.get("sector_close", ""),
+                "sector_close_at_exit": "",
+                "sector_return_pct": "",
+                "sector_alpha_pct": "",
             })
             saved += 1
     skipped_dupes = len(picks) - saved

@@ -26,6 +26,7 @@ from src.paper_trader import log_paper_trade
 from src.regime import market_regime
 from src.earnings import days_to_earnings
 from src.monster_hunt import apply_monster_treatment
+from src.sector_benchmark import resolve_sector_etf
 
 
 def load_config(path: str = "config.yaml") -> dict:
@@ -437,8 +438,30 @@ def run():
             rprint(f"[yellow]⚠ monster treatment skipped: {_e}[/yellow]")
 
         picks_for_log = []
+        # T3 May 3 2026: sector benchmark — fetch each ETF close once
+        from src.data_fetcher import fetch_info as _fi
+        try:
+            import yfinance as _yf
+            _etf_cache = {}
+            for _p in top:
+                _sec = _p.get("info_short", {}).get("sector", "")
+                _tag = _p["scores"].get("sector_tag") or ""
+                _etf = resolve_sector_etf(sector=_sec, tag=_tag)
+                _p["_sector_etf"] = _etf
+                if _etf not in _etf_cache:
+                    try:
+                        _hist = _yf.Ticker(_etf).history(period="2d")
+                        _etf_cache[_etf] = float(_hist["Close"].iloc[-1]) if len(_hist) else None
+                    except Exception:
+                        _etf_cache[_etf] = None
+                _p["_sector_close"] = _etf_cache[_etf]
+        except Exception as _se:
+            rprint(f"[yellow]⚠ sector benchmark fetch skipped: {_se}[/yellow]")
+
         for p in top:
             brain = p.get("brain", {}) or {}
+            _setf = p.get("_sector_etf", "SPY")
+            _sclose = p.get("_sector_close", "")
             picks_for_log.append({
                 "ticker": p["ticker"],
                 "company": p.get("info_short", {}).get("name", ""),
@@ -461,6 +484,9 @@ def run():
                 # 💎 Monster Hunt audit
                 "monster_score": p["scores"].get("monster_score", 0),
                 "is_monster": p["scores"].get("is_monster", False),
+                # Sector benchmark (T3 May 3 2026)
+                "sector_etf": _setf,
+                "sector_close": _sclose,
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
         if n == 0 and len(picks_for_log) > 0:
