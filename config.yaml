@@ -11,7 +11,15 @@ universe:
     always_include: true
     min_ai_weight: 0.0
   excluded_tickers:
+  # MRVL: original exclusion (owner preference)
   - MRVL
+  # Added 2026-05-03 (Sunday): backtester-proven losers
+  # Source: 100-ticker × 20-month backtest, 2,010 picks, see docs/FINAL_ROADMAP.md
+  - UNH    # -1.35R avg per pick — worst loser in universe
+  - TEAM   # -1.00R avg per pick
+  - SMCI   # -0.94R avg per pick — also high vol penalty
+  - DIS    #  -0.64R avg per pick
+  - SCHW   # -0.64R avg per pick
   min_price: 5.0
   max_price: 1500.0
   min_avg_volume: 500000
