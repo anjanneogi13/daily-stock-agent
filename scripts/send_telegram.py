@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.dedup_sender import should_send, mark_sent
 from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
+from src.pause_state import is_paused as _is_paused, format_pause_alert as _pause_alert
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -265,6 +266,38 @@ def build_message(rows, pm, today):
 # ═══════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     today = datetime.now().strftime("%Y-%m-%d")
+
+    # ═══════════════════════════════════════════════════════════════
+    # PAUSE-DAY: agent is paused → send pause alert instead of picks
+    # ═══════════════════════════════════════════════════════════════
+    _ps = _is_paused()
+    if _ps["paused"]:
+        pause_msg = (
+            f"📭 *Daily Stock Picks — {today}*\n"
+            f"\n"
+            f"{_pause_alert(_ps)}"
+        )
+        # Reuse send loop below with this message
+        msg = pause_msg
+        if not should_send(msg, window_minutes=120):
+            print("[telegram] ⏭ Pause alert already sent within 2h — skipping")
+            sys.exit(0)
+        url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+        sent_any = False
+        for _cid in CHAT_IDS:
+            payload = {"chat_id": _cid, "text": msg, "parse_mode": "Markdown"}
+            data = urllib.parse.urlencode(payload).encode()
+            try:
+                resp = urllib.request.urlopen(
+                    urllib.request.Request(url, data=data), timeout=10)
+                if json.loads(resp.read()).get("ok"):
+                    print(f"[telegram] ✅ Pause alert sent to {_cid[:6]}...")
+                    sent_any = True
+            except Exception as _e:
+                print(f"[telegram] ⚠ Pause alert failed: {_e}")
+        if sent_any:
+            mark_sent(msg, window_minutes=120)
+        sys.exit(0)
 
     # Load picks
     rows = []
