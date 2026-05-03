@@ -12,6 +12,42 @@ except Exception:
     _lft = lambda *a, **k: []
 
 
+
+def _short_author(author: str) -> str:
+    """Pull a short display name from a book author field.
+    'Edwin Lefèvre / Jesse Livermore' → 'Livermore'
+    'Peter Lynch'                     → 'Lynch'
+    'William O\'Neil'                 → "O'Neil"
+    """
+    if not author:
+        return ""
+    # Prefer the last name after '/' if multi-author, else last token of name
+    primary = author.split("/")[-1].strip()
+    parts = primary.split()
+    return parts[-1] if parts else primary
+
+
+def _format_lesson(best: dict, max_len: int = 90) -> str:
+    """Format a lesson dict as a Telegram hint line.
+    T36: prepend book author if source startswith 'book:'.
+    """
+    text = str(best.get("text", "")).strip()
+    if not text:
+        return ""
+    src = str(best.get("source", ""))
+    if src.startswith("book:"):
+        author = _short_author(str(best.get("author", "")))
+        if author:
+            # Reserve room for "Author: " prefix
+            budget = max_len - len(author) - 2
+            if len(text) > budget:
+                text = text[: budget - 1] + "…"
+            return f"   🧠 _{author}: {text}_"
+    if len(text) > max_len:
+        text = text[: max_len - 3] + "…"
+    return f"   🧠 _{text}_"
+
+
 def wisdom_hint(ticker: Optional[str],
                 min_confidence: float = 0.7,
                 sector: Optional[str] = None) -> str:
@@ -32,12 +68,7 @@ def wisdom_hint(ticker: Optional[str],
     if not ls:
         return ""
     best = max(ls, key=lambda L: L.get("confidence", 0))
-    text = str(best.get("text", "")).strip()
-    if not text:
-        return ""
-    if len(text) > 90:
-        text = text[:87] + "…"
-    return f"   🧠 _{text}_"
+    return _format_lesson(best)
 
 
 # ═══════════════════════════════════════════════════════════════
