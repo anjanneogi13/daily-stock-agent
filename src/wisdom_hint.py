@@ -32,8 +32,99 @@ def wisdom_hint(ticker: Optional[str], min_confidence: float = 0.7) -> str:
 
 
 # ═══════════════════════════════════════════════════════════════
+# T26: pattern-engine inline hints (empirical edge/drag from
+# hypothesis_engine, surfaced per pick when row attributes match)
+# ═══════════════════════════════════════════════════════════════
+try:
+    from src.wisdom_base import load_active_patterns as _lap
+except Exception:
+    _lap = lambda: []
+
+
+# Pick-row attributes worth matching against patterns.signal
+_PATTERN_SIGNALS = ("trade_type", "regime", "sector", "day_of_week")
+
+
+def pattern_hint(row: dict,
+                 min_sample: int = 20,
+                 max_p: float = 0.05) -> str:
+    """Return a one-line hint if a statistically-significant pattern
+    matches any attribute of the given pick row. Empty string if none.
+
+    Args:
+        row: a pick dict (or anything with .get) with attrs like
+             trade_type, regime, sector, day_of_week.
+        min_sample: required sample_n threshold (default 20).
+        max_p: required p_value ceiling (default 0.05).
+    """
+    if not row:
+        return ""
+    try:
+        pats = _lap()
+    except Exception:
+        return ""
+    if not pats:
+        return ""
+
+    # Score each match: prefer drag (risk warnings) over edge,
+    # higher sample_n, lower p_value.
+    matches = []
+    for pat in pats:
+        sig = pat.get("signal")
+        if sig not in _PATTERN_SIGNALS:
+            continue
+        row_val = row.get(sig)
+        if row_val is None:
+            continue
+        if str(row_val).lower() != str(pat.get("bucket", "")).lower():
+            continue
+        if int(pat.get("sample_n", 0)) < min_sample:
+            continue
+        if float(pat.get("p_value", 1.0)) > max_p:
+            continue
+        matches.append(pat)
+
+    if not matches:
+        return ""
+
+    # Priority: drag first (warnings), then by largest sample_n
+    drags = [m for m in matches if m.get("effect") == "drag"]
+    edges = [m for m in matches if m.get("effect") == "edge"]
+    chosen = (drags or edges)
+    chosen.sort(key=lambda m: (-int(m.get("sample_n", 0)),
+                                float(m.get("p_value", 1.0))))
+    best = chosen[0]
+
+    icon = "⚠" if best.get("effect") == "drag" else "✨"
+    wr   = float(best.get("win_rate", 0)) * 100
+    n    = int(best.get("sample_n", 0))
+    sig  = best.get("signal", "?")
+    bkt  = best.get("bucket", "?")
+    return f"   {icon} _{sig}={bkt}: {wr:.0f}% win-rate over {n} trades_"
+
+
+# ═══════════════════════════════════════════════════════════════
 # T25: dry-run CLI — preview hints before market open
 # ═══════════════════════════════════════════════════════════════
+def _row_for_ticker(ticker: str) -> dict:
+    """Best-effort: return latest pick row for ticker from picks_log.csv.
+    Returns {} if not found — pattern_hint preview gracefully degrades."""
+    import csv
+    from pathlib import Path as _P
+    path = _P("data/picks_log.csv")
+    if not path.exists():
+        return {}
+    rows = []
+    try:
+        with path.open() as f:
+            for r in csv.DictReader(f):
+                if r.get("ticker", "").upper() == ticker.upper():
+                    rows.append(r)
+    except Exception:
+        return {}
+    return rows[-1] if rows else {}
+
+
 def _cli(argv=None):
     """python -m src.wisdom_hint TICKER [TICKER ...]
        python -m src.wisdom_hint --from-csv path/to/picks_log.csv [--date YYYY-MM-DD]
@@ -77,7 +168,13 @@ def _cli(argv=None):
             n_hits += 1
             print(f"  {tk:6s}  →{h.lstrip()}")
         else:
-            print(f"  {tk:6s}  → (no hint)")
+            print(f"  {tk:6s}  → (no wisdom hint)")
+        # T26: also preview pattern hint if row-context exists
+        ph_row = _row_for_ticker(tk)
+        if ph_row:
+            ph = pattern_hint(ph_row)
+            if ph:
+                print(f"          {ph.lstrip()}")
     print("─" * 60)
     print(f"✅ {n_hits}/{len(tickers)} tickers have hints\n")
     return 0

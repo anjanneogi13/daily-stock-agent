@@ -29,9 +29,10 @@ if not TOKEN or not CHAT_IDS:
 # ═══════════════════════════════════════════════════════════════
 # ─── T24: per-pick wisdom hint (extracted to src/wisdom_hint.py) ───
 try:
-    from src.wisdom_hint import wisdom_hint
+    from src.wisdom_hint import wisdom_hint, pattern_hint
 except Exception:
     def wisdom_hint(_t=None, **_k): return ""
+    def pattern_hint(_r=None, **_k): return ""
 # ───────────────────────────────────────────────────────────────────
 
 def _load_watchlist_tickers():
@@ -103,6 +104,9 @@ def _format_day_pick(i, row, tag_info):
     _wh = wisdom_hint(t)
     if _wh:
         lines.append(_wh)
+    _ph = pattern_hint(row)
+    if _ph:
+        lines.append(_ph)
 
     lines.append(
         f"   🎯 `${entry:.2f}`{cur_str}  "
@@ -140,6 +144,9 @@ def _format_swing_pick(i, row, tag_info):
     _wh = wisdom_hint(t)
     if _wh:
         lines.append(_wh)
+    _ph = pattern_hint(row)
+    if _ph:
+        lines.append(_ph)
 
     lines.extend([
         f"   🎯 Entry: `${entry:.2f}`{cur_str}",
