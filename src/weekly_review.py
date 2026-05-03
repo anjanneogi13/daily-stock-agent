@@ -266,6 +266,33 @@ def format_telegram(r: Dict) -> str:
     except Exception:
         pass
 
+
+    # Pillar 4 — learning-journal & weight-history footer
+    try:
+        from src import learning_journal as _lj
+        from src import weight_applier as _wa
+        lj = _lj.summary(days=7)
+        wh = _wa.history_summary(days=7)
+        if lj["total"] or wh["total"]:
+            lines.append("")
+            lines.append("🧠 *Brain learned this week (Pillar 4)*")
+            if lj["total"]:
+                bk = lj["by_kind"]
+                bits = []
+                if bk.get("lesson_added"):     bits.append(f"+{bk['lesson_added']} lessons")
+                if bk.get("pattern_promoted"): bits.append(f"+{bk['pattern_promoted']} patterns")
+                if bk.get("kill_listed"):      bits.append(f"+{bk['kill_listed']} kill-listed")
+                if bk.get("lesson_deactivated"): bits.append(f"-{bk['lesson_deactivated']} stale")
+                if bits:
+                    lines.append("• 📚 " + " · ".join(bits))
+            if wh["total"]:
+                ba = wh["by_action"]
+                lines.append(f"• ⚖ Weights moved: {wh['total']} "
+                             f"({ba['boost']} boost · {ba['penalize']} penalize · "
+                             f"{ba['kill']} kill)")
+    except Exception:
+        pass
+
     lines.append("")
     lines.append("📋 *Recommended action*")
     for a in r["actions"]:

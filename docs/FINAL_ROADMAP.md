@@ -12,7 +12,7 @@
 | Metric | Value |
 |---|---|
 | Tests | **474 passing** (+322 since project audit; +131 today alone) |
-| Pillars complete | **3 of 6** (Pillar 1 ✅ · Pillar 2 ✅ · Pillar 3.5 ✅ · Pillar 2.5 ✅) |
+| Pillars complete | **4 of 6** (1 ✅ · 2 ✅ · 2.5 ✅ · 3.5 ✅ · 4 ✅) |
 | Pillars partial | **4 of 6** (3, 4, 5, 6 in motion) |
 | Bugs from Phase 0 | **5/5 RESOLVED** ✅ |
 | Backtester | **LIVE** — 2,010 picks replayed, algo Sharpe **+0.97** |
@@ -194,12 +194,12 @@ See: `docs/BRAIN_ARCHITECTURE.md` (needs update for Pillar 2.5 + 3.5).
 - 🔴 Auto-enable/disable via hypothesis testing
 - 🔴 Universe-wide daily scan
 
-**Pillar 4: Feedback Loop & Self-Learning** — 🟡 30%
+**Pillar 4: Feedback Loop & Self-Learning** — ✅ 100% COMPLETE (T44, May 3 PM)
 - ✅ auto_promote (T29) closes outcome → lesson loop
 - ✅ hypothesis_engine (T23) mines patterns from outcomes
-- 🔴 Win/loss attribution per factor (shares calibration.py with Pillar 3.5)
-- 🔴 Weight update mechanism (max 5%/week cap)
-- 🔴 Learning journal · Weight history tracking
+- ✅ Win/loss attribution per factor (calibration.py — shared w/ Pillar 3.5)
+- ✅ Weight update mechanism with 5%/week cap (`weight_applier.py`)
+- ✅ Learning journal (`learning_journal.py`) + Weight history (`weight_history.jsonl`)
 
 **Pillar 5: Self-Awareness** — 🟡 20%
 - ✅ Auto-pause foundation
