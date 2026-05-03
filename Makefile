@@ -93,3 +93,16 @@ calibrate-factors:
 
 calibrate-timeframes:
 	python -m src.calibration timeframes
+
+# Weight proposer (Pillar 3.5 — C3, READ-ONLY)
+calibrate-propose:
+	python -m src.weight_proposer propose --dry-run
+
+calibrate-propose-save:
+	python -m src.weight_proposer propose
+
+calibrate-review:
+	python -m src.weight_proposer review
+
+calibrate-history:
+	python -m src.weight_proposer history --limit 20
