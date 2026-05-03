@@ -208,21 +208,28 @@ def stats() -> Dict:
 # ═══════════════════════════════════════════════════════════════
 # T24: per-ticker lesson lookup for inline Telegram hints
 # ═══════════════════════════════════════════════════════════════
-def lessons_for_ticker(ticker: str, min_confidence: float = 0.7) -> List[Dict]:
+def lessons_for_ticker(ticker: str,
+                       min_confidence: float = 0.7,
+                       sector: str = None) -> List[Dict]:
     """Return active high-confidence lessons matching a ticker.
 
     Match is case-insensitive against:
       - tags list (preferred — auto_cooldown writes ticker as a tag)
       - text body (fallback for legacy/manual lessons)
+      - sector tag (T27) — if `sector` is given, also match lessons
+        whose tags include the sector name (e.g. "semis", "tech")
     """
-    if not ticker:
+    if not ticker and not sector:
         return []
-    tk = ticker.upper()
+    tk = (ticker or "").upper()
+    sec = (sector or "").upper().strip()
     out = []
     for L in load_active_lessons(min_confidence=min_confidence):
         tags = [str(x).upper() for x in (L.get("tags") or [])]
         text = str(L.get("text") or "").upper()
-        if tk in tags or tk in text.split():
+        if tk and (tk in tags or tk in text.split()):
+            out.append(L); continue
+        if sec and sec in tags:
             out.append(L)
     return out
 

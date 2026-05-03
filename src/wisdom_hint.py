@@ -12,11 +12,20 @@ except Exception:
     _lft = lambda *a, **k: []
 
 
-def wisdom_hint(ticker: Optional[str], min_confidence: float = 0.7) -> str:
-    """Return a one-line Telegram-ready hint for a ticker, or '' if none."""
-    if not ticker:
+def wisdom_hint(ticker: Optional[str],
+                min_confidence: float = 0.7,
+                sector: Optional[str] = None) -> str:
+    """Return a one-line Telegram-ready hint for a ticker, or '' if none.
+
+    T27: when `sector` is provided, also matches sector-wide lessons
+    (e.g. a lesson tagged "semis" surfaces on every semi pick).
+    """
+    if not ticker and not sector:
         return ""
     try:
+        ls = _lft(ticker, min_confidence=min_confidence, sector=sector)
+    except TypeError:
+        # Backward-compat with older wisdom_base
         ls = _lft(ticker, min_confidence=min_confidence)
     except Exception:
         return ""

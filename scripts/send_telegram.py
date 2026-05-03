@@ -31,7 +31,7 @@ if not TOKEN or not CHAT_IDS:
 try:
     from src.wisdom_hint import wisdom_hint, pattern_hint
 except Exception:
-    def wisdom_hint(_t=None, **_k): return ""
+    def wisdom_hint(_t=None, sector=None, **_k): return ""
     def pattern_hint(_r=None, **_k): return ""
 # ───────────────────────────────────────────────────────────────────
 
@@ -101,7 +101,7 @@ def _format_day_pick(i, row, tag_info):
     ]
     if tag:
         lines.append(f"   {tag} _{reason}_")
-    _wh = wisdom_hint(t)
+    _wh = wisdom_hint(t, sector=row.get('sector'))
     if _wh:
         lines.append(_wh)
     _ph = pattern_hint(row)
@@ -141,7 +141,7 @@ def _format_swing_pick(i, row, tag_info):
     lines = [f"📊 *{i}. {_wl_emoji(t)}{t}* — score {score:.2f}{earn}"]
     if tag:
         lines.append(f"   {tag} _{reason}_")
-    _wh = wisdom_hint(t)
+    _wh = wisdom_hint(t, sector=row.get('sector'))
     if _wh:
         lines.append(_wh)
     _ph = pattern_hint(row)
