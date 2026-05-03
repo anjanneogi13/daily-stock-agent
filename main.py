@@ -167,9 +167,27 @@ def run():
     from src.parallel_scorer import score_all
     candidates = score_all(data, cfg, max_workers=10)
 
-    rprint("[5/6] Filtering for earnings risk (skip if earnings in next 5 days)...")
+    rprint("[5/6] Filtering for earnings risk + wisdom kill list...")
     filtered = []
+    _killed_dropped = []
+    _wisdom_alerts  = []
     for p in candidates[: cfg["output"]["top_n_picks"] * 4]:  # 4x buffer for sector cap
+        # Pillar 2/4: hard-drop tickers on the wisdom kill list
+        if p["scores"].get("wisdom_kill"):
+            _killed_dropped.append(p["ticker"])
+            rprint(f"  [red]🥶 DROP {p['ticker']} — on cooldown (kill list)[/red]")
+            continue
+
+        # Surface wisdom warnings/boosts so they're visible (observe-mode)
+        _ww = p["scores"].get("wisdom_warnings") or []
+        _wb = p["scores"].get("wisdom_boosts")   or []
+        for _w in _ww:
+            rprint(f"  [yellow]⚠ {p['ticker']}: {_w}[/yellow]")
+            _wisdom_alerts.append((p["ticker"], "warn", _w))
+        for _b in _wb:
+            rprint(f"  [green]✨ {p['ticker']}: {_b}[/green]")
+            _wisdom_alerts.append((p["ticker"], "boost", _b))
+
         d2e = days_to_earnings(p["ticker"])
         p["days_to_earnings"] = d2e if d2e < 999 else None
         if d2e < 5:
