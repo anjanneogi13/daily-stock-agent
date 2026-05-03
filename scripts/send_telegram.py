@@ -31,10 +31,13 @@ if not TOKEN or not CHAT_IDS:
 try:
     from src.wisdom_hint import wisdom_hint, pattern_hint
     from src.confidence_band import confidence_band
+    from src.wisdom_coverage import coverage as _wcov, format_footer as _wcov_fmt
 except Exception:
     def wisdom_hint(_t=None, sector=None, **_k): return ""
     def pattern_hint(_r=None, **_k): return ""
     def confidence_band(_s=0, _p="", _w=""): return ""
+    def _wcov(_r=None): return {"total":0,"tagged":0,"lessons":0,"patterns":0,"pct":0.0}
+    def _wcov_fmt(_s=None): return ""
 # ───────────────────────────────────────────────────────────────────
 
 def _load_watchlist_tickers():
@@ -316,6 +319,13 @@ def build_message(rows, pm, today):
             lines.append("🚨 _Enforce-mode active — agent may auto-pause_")
     except Exception as _pe:
         pass  # Never block the daily message on pause-signal failure
+
+    # T33: wisdom coverage stat
+    _all_picks = (day_picks or []) + (swing_picks or []) + (monster_picks or [])
+    _cov_line = _wcov_fmt(_wcov(_all_picks))
+    if _cov_line:
+        lines.append("")
+        lines.append(_cov_line)
 
     lines.append("")
     lines.append("⚠️ _Educational only. Not financial advice._")
