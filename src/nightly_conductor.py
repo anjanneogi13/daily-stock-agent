@@ -124,11 +124,15 @@ def _step_calibration_propose() -> Dict:
 def _step_weight_apply() -> Dict:
     from src.weight_applier import apply_proposals
     res = apply_proposals(dry_run=False)
+    def _count(v):
+        if v is None: return 0
+        if isinstance(v, int): return v
+        try: return len(v)
+        except TypeError: return 0
     return {
-        "applied":         res.get("applied", 0) if isinstance(res.get("applied"), int)
-                           else len(res.get("applied", [])),
-        "skipped_capped":  len(res.get("skipped_capped", [])),
-        "skipped_invalid": len(res.get("skipped_invalid", [])),
+        "applied":         _count(res.get("applied")),
+        "skipped_capped":  _count(res.get("skipped_capped")),
+        "skipped_invalid": _count(res.get("skipped_invalid")),
     }
 
 
