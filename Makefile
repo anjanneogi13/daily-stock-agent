@@ -83,3 +83,13 @@ wisdom-list-books:
 
 wisdom-book-stats:
 	python -m src.book_ingest stats
+
+# Calibration Brain (Pillar 3.5)
+calibrate:
+	python -m src.calibration summary
+
+calibrate-factors:
+	python -m src.calibration factors
+
+calibrate-timeframes:
+	python -m src.calibration timeframes
