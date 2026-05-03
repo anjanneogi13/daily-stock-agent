@@ -75,6 +75,8 @@ def breakdown_by(dimension: str, rows: list[dict] | None = None) -> list[dict]:
         r_mults = [x for x in r_mults if x is not None]
         alphas = [_to_float(r.get("alpha_pct")) for r in items]
         alphas = [x for x in alphas if x is not None]
+        sec_alphas = [_to_float(r.get("sector_alpha_pct")) for r in items]
+        sec_alphas = [x for x in sec_alphas if x is not None]
 
         wins = sum(1 for r in items if r.get("evaluation_status") == "tp_hit")
         losses = sum(1 for r in items if r.get("evaluation_status") == "sl_hit")
@@ -90,6 +92,7 @@ def breakdown_by(dimension: str, rows: list[dict] | None = None) -> list[dict]:
             "avg_r": round(sum(r_mults) / len(r_mults), 2) if r_mults else None,
             "total_r": round(sum(r_mults), 2) if r_mults else None,
             "avg_alpha_pct": round(sum(alphas) / len(alphas), 2) if alphas else None,
+            "avg_sector_alpha_pct": round(sum(sec_alphas) / len(sec_alphas), 2) if sec_alphas else None,
         })
 
     out.sort(key=lambda d: (-d["n"], -(d["total_r"] or 0)))
@@ -102,19 +105,20 @@ def format_breakdown_text(dimension: str, rows: list[dict]) -> str:
         return f"=== Breakdown by {dimension} ===\n(no closed picks)\n"
     lines = [f"=== Breakdown by {dimension} ===",
              f"{'group':<15} {'n':>3} {'wins':>4} {'win%':>5} "
-             f"{'avgR':>6} {'totR':>6} {'avgRet%':>8} {'avgAlpha%':>10}"]
+             f"{'avgR':>6} {'totR':>6} {'avgRet%':>8} {'αSPY%':>7} {'αSec%':>7}"]
     for r in rows:
         wr = f"{r['win_rate']*100:.0f}%"
         avg_r = f"{r['avg_r']:.2f}" if r["avg_r"] is not None else "—"
         tot_r = f"{r['total_r']:.2f}" if r["total_r"] is not None else "—"
         avg_ret = f"{r['avg_return_pct']:.2f}" if r["avg_return_pct"] is not None else "—"
         avg_a = f"{r['avg_alpha_pct']:.2f}" if r["avg_alpha_pct"] is not None else "—"
+        avg_sa = f"{r['avg_sector_alpha_pct']:.2f}" if r.get("avg_sector_alpha_pct") is not None else "—"
         lines.append(f"{r['group']:<15} {r['n']:>3} {r['wins']:>4} {wr:>5} "
-                     f"{avg_r:>6} {tot_r:>6} {avg_ret:>8} {avg_a:>10}")
+                     f"{avg_r:>6} {tot_r:>6} {avg_ret:>8} {avg_a:>7} {avg_sa:>7}")
     return "\n".join(lines) + "\n"
 
 
-def print_all_breakdowns(dimensions: Iterable[str] = ("trade_type", "tag", "regime")) -> None:
+def print_all_breakdowns(dimensions: Iterable[str] = ("trade_type", "tag", "regime", "sector_etf")) -> None:
     """Print breakdowns for each dimension to stdout."""
     closed = _load_closed()
     if not closed:
