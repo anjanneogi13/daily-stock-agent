@@ -285,6 +285,26 @@ Black swan hedging · Portfolio DD circuit breakers · Tax-loss harvesting · Wa
 
 ## 🚀 NEXT-SESSION PLAN (3-hour sprint, May 3 PM SGT)
 
+**HOUR 1 — BOOKS PILLAR MVP**
+- T34 — `data/books/seed.yaml` — 30 curated rules (30m)
+  - Livermore · Lynch · Graham · Schwager · O'Neil · Douglas · Covel · Dalio · Soros · Marks
+- T35 — `src/book_ingest.py` + CLI + tests (20m)
+- T36 — Wire book lessons into `wisdom_hint` w/ attribution (10m)
+
+**HOUR 2 — CALIBRATION BRAIN**
+- T37 — `src/calibration.py` — read `data/backtest_results/*.csv`, per-factor win-rate × R-multiple (40m)
+- T38 — Per-timeframe attribution (D / W / M) (20m)
+
+**HOUR 3 — CLOSE THE LOOP**
+- T39 — Weight-delta proposer (READ-ONLY) → `data/weight_proposals.jsonl` (30m)
+- T40 — Weekly Telegram footer adds calibration line (15m)
+- T41 — Tests + commit + push (15m)
+
+**END STATE 17:48 SGT:**
+- ✅ Books pillar MVP shipped (Pillar 2.5)
+- ✅ Calibration brain MVP shipped (Pillar 3.5)
+- ✅ ~25-30 new tests · all green
+- ✅ Two new Telegram lines tomorrow morning
 
 ---
 
