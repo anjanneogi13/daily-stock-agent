@@ -1,0 +1,68 @@
+{
+  "NVT": {
+    "ticker": "NVT",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "RBC Capital Maintains Outperform on nVent Electric, Raises Price Target to $180",
+    "added_at": "2026-05-04T16:28:50.368475+00:00",
+    "expires": "2026-05-09T16:28:50.368482+00:00",
+    "hard_block": false
+  },
+  "WELL": {
+    "ticker": "WELL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "RBC Capital Maintains Outperform on Welltower, Raises Price Target to $238",
+    "added_at": "2026-05-04T16:28:50.368717+00:00",
+    "expires": "2026-05-09T16:28:50.368722+00:00",
+    "hard_block": false
+  },
+  "TTD": {
+    "ticker": "TTD",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "headline": "This Trade Desk Analyst Upgrades Rating Ahead Of Q1 Print",
+    "added_at": "2026-05-04T16:28:50.369036+00:00",
+    "expires": "2026-05-09T16:28:50.369041+00:00",
+    "hard_block": false
+  },
+  "WFRD": {
+    "ticker": "WFRD",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "headline": "Citigroup Maintains Buy on Weatherford International, Raises Price Target to $134",
+    "added_at": "2026-05-04T16:28:50.369393+00:00",
+    "expires": "2026-05-09T16:28:50.369398+00:00",
+    "hard_block": false
+  },
+  "CHD": {
+    "ticker": "CHD",
+    "score_delta": 0.093,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "headline": "Church & Dwight Analysts Boost Their Forecasts Following Upbeat Q1 Results",
+    "added_at": "2026-05-04T16:28:50.369718+00:00",
+    "expires": "2026-05-11T16:28:50.369723+00:00",
+    "hard_block": false
+  },
+  "TRP": {
+    "ticker": "TRP",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "RBC Capital Maintains Outperform on TC Energy, Raises Price Target to C$95",
+    "added_at": "2026-05-04T16:28:50.370036+00:00",
+    "expires": "2026-05-09T16:28:50.370041+00:00",
+    "hard_block": false
+  }
+}

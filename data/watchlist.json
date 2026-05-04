@@ -299,6 +299,42 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52250626/brightspring-health-analysts-increase-their-forecasts-following-q1-results",
       "source": "alpaca",
       "added_at": "2026-05-04T14:39:05.520602+00:00"
+    },
+    {
+      "ticker": "GLXY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Galaxy Digital shares rallying on Bitcoin surge past $80K combined with earnings catalyst creates meaningful trading opportunity in crypto-linked equity.",
+      "action_window": "intraday",
+      "headline": "Galaxy Digital Shares Rally Amid Bitcoin's Push Past $80,000",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52256407/galaxy-digital-shares-rally-amid-bitcoins-push-past-80000",
+      "source": "alpaca",
+      "added_at": "2026-05-04T16:28:50.370610+00:00"
+    },
+    {
+      "ticker": "TTD",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analyst upgrade ahead of earnings with positive revenue growth expectations and favorable tailwinds from World Cup and political spending provides a meaningful near-term catalyst.",
+      "action_window": "next_day",
+      "headline": "This Trade Desk Analyst Upgrades Rating Ahead Of Q1 Print",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52255840/this-trade-desk-analyst-upgrades-rating-ahead-of-q1-print",
+      "source": "alpaca",
+      "added_at": "2026-05-04T16:28:50.370625+00:00"
+    },
+    {
+      "ticker": "CHD",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with analyst upgrades, but impact moderated by unchanged full-year guidance despite macro headwinds.",
+      "action_window": "next_day",
+      "headline": "Church & Dwight Analysts Boost Their Forecasts Following Upbeat Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52255692/church-dwight-analysts-boost-their-forecasts-following-upbeat-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-04T16:28:50.370631+00:00"
     }
   ]
 }
