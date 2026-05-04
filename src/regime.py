@@ -111,7 +111,9 @@ def market_regime() -> dict:
     result = {
         "regime": regime_label,
         "spy_close": round(spy_close, 2),
-        "spy_sma200": round(sma, 2),  # keep field name for backward compat
+        "spy_sma200": round(sma, 2),
+        "spy_sma_anchor": round(sma, 2),  # M5: honest name when sma_window != 200
+        "sma_value": round(sma, 2),  # keep field name for backward compat
         "bullish": bullish,             # legacy boolean for callers expecting it
         "distance_pct": round(distance_pct, 2),
         "sma_window": sma_window,

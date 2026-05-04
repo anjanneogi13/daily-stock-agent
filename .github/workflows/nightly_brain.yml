@@ -31,6 +31,30 @@ jobs:
       - name: Run nightly brain conductor
         run: python scripts/run_nightly_brain.py
 
+
+      - name: Verify brain steps succeeded (M6)
+        run: |
+          python -c "
+          import json, sys
+          from pathlib import Path
+          jf = Path('data/learning_journal.jsonl')
+          if not jf.exists():
+              print('M6: no learning_journal.jsonl yet — skipping check'); sys.exit(0)
+          last_brain = None
+          for line in jf.read_text().strip().split('\n')[-200:]:
+              try:
+                  e = json.loads(line)
+                  if e.get('event') == 'nightly_brain_run':
+                      last_brain = e
+              except Exception:
+                  pass
+          if last_brain is None:
+              print('M6: no nightly_brain_run event in last 200 lines'); sys.exit(0)
+          failed = last_brain.get('steps_failed', 0)
+          print(f'M6: latest brain run failed_steps={failed}')
+          if failed >= 4:
+              print('M6: too many brain steps failed — failing workflow'); sys.exit(1)
+          "
       - name: Commit brain state changes
         run: |
           git config user.name "github-actions[bot]"

@@ -62,7 +62,7 @@ def _row_to_journal_format(r: Dict) -> Dict:
             "regime":      r.get("regime", "unknown") or "unknown",
             "trade_type":  r.get("trade_type", "unknown") or "unknown",
             "score_bucket": sb,
-            "tag":         (r.get("tag") or "none").split(" / ")[0].upper() or "none",
+            "tag":         ((r.get("sector_tag") or r.get("tag") or "none")).split(" / ")[0].upper() or "none",  # M4: pick_logger writes sector_tag
             "is_monster":  "yes" if r.get("is_monster") in ("True","true","1") else "no",
         }
     }

@@ -47,8 +47,8 @@ def _score_one(tk, df, cfg):
         # [0.85, 1.15] based on (pattern × regime) historical edge. Failure-safe.
         try:
             from .pattern_layer import pattern_multiplier as _pmul
-            from .regime import market_regime as _mr
-            _regime_now = (_mr() or {}).get("regime", "unknown")
+            # M1: cache regime once per run via cfg["_regime"]
+            _regime_now = cfg.get("_regime") or _resolve_regime(cfg)
             _pmul_val, _pmatches = _pmul(tk, regime=_regime_now, df=d)
             scores["pattern_multiplier"] = _pmul_val
             if _pmatches:
@@ -80,11 +80,8 @@ def _score_one(tk, df, cfg):
                   cfg.get("risk", {}).get("account_size", 10000)
         # E3b: pass regime so atr_trade_plan can size position defensively
         # in chop/bear (bull=1.0x, transition=0.8x, chop=0.6x, bear=0.4x)
-        try:
-            from .regime import market_regime as _mr
-            _regime_for_size = (_mr() or {}).get("regime", "unknown")
-        except Exception:
-            _regime_for_size = "unknown"
+        # M1: reuse the same regime cached above
+        _regime_for_size = cfg.get("_regime") or _resolve_regime(cfg)
         if atr and atr > 0 and price > 0:
             plan = atr_trade_plan(price, atr, capital, trade_type=ttype,
                                   regime=_regime_for_size)

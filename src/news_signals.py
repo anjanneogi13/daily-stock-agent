@@ -283,7 +283,7 @@ def stats() -> dict:
     signals = _load_signals()
     fresh = _purge_expired(signals)
     bullish = [t for t, s in fresh.items() if s.get("score_delta", 0) > 0]
-    bearish = [t for t, s in fresh.items() if 0 > s.get("score_delta", 0) > -0.5]
+    bearish = [t for t, s in fresh.items() if s.get("score_delta", 0) < 0 and not s.get("hard_block")]  # M7: catches deltas <-0.5 too
     blocks  = [t for t, s in fresh.items() if s.get("hard_block")]
     return {
         "total_active": len(fresh),

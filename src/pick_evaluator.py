@@ -278,7 +278,7 @@ def evaluate_pending() -> dict:
                     evaluated_on=exit_date.strftime("%Y-%m-%d"),
                 )
             except Exception as _e:
-                pass
+                print(f"[eval] WARN journal_attach failed for {row.get('ticker','?')}: {_e}")  # M9
             counts[outcome.replace("_hit", "_hits")] += 1
             counts["evaluated"] += 1
             alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
@@ -307,8 +307,8 @@ def evaluate_pending() -> dict:
                         actual_return_pct=float(ret) if ret is not None else None,
                         evaluated_on=today.isoformat(),
                     )
-                except Exception:
-                    pass
+                except Exception as _e:
+                    print(f"[eval] WARN journal_attach (expired) failed for {row.get('ticker','?')}: {_e}")  # M9
                 counts["expired"] += 1
                 counts["evaluated"] += 1
                 alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""

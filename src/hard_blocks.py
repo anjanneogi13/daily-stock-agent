@@ -159,7 +159,7 @@ def _block_penny(pick: dict) -> Tuple[bool, str]:
     """BLOCK 1: No stocks under $5 (penny stock filter)."""
     entry = pick.get("plan", {}).get("entry") or pick.get("entry")
     if entry is None:
-        return True, ""
+        return False, "missing entry price (broken upstream pick)"  # M2: fail-closed
     try:
         if float(entry) < MIN_PRICE:
             return False, f"penny stock (${float(entry):.2f} < ${MIN_PRICE})"
@@ -176,6 +176,8 @@ def _block_sl_buffer(pick: dict) -> Tuple[bool, str]:
     plan = pick.get("plan", {})
     entry = plan.get("entry") or pick.get("entry")
     sl = plan.get("stop_loss") or pick.get("stop_loss")
+    if entry and not sl:
+        return False, "missing stop_loss (broken upstream pick)"  # M2b: fail-closed
     if not (entry and sl):
         return True, ""
     try:
@@ -219,6 +221,7 @@ def _block_weak_sector(pick: dict, weak_sectors: Dict[str, float]) -> Tuple[bool
     
     sector = (pick.get("info_short", {}).get("sector") or "").strip()
     tag_raw = (pick.get("scores", {}).get("sector_tag") or pick.get("tag") or "").strip()
+    # M3: iterate all tags so "AI / SEMI" checks BOTH. We do this in caller below.
     primary_tag = tag_raw.split(" / ")[0].strip().upper() if tag_raw else ""
     
     # Match by sector name (case-insensitive)

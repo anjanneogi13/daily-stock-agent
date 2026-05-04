@@ -25,7 +25,7 @@ def _cache_get(key):
         return None
     try:
         d = json.loads(p.read_text())
-        if datetime.now() - datetime.fromisoformat(d["at"]) < _CACHE_TTL:
+        if datetime.now(timezone.utc) - datetime.fromisoformat(d["at"]) < _CACHE_TTL:
             return d["text"]
     except Exception:
         pass
