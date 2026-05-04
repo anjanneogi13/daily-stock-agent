@@ -191,6 +191,55 @@
       "url": "https://www.benzinga.com/news/26/05/52267590/udr-increases-its-share-repurchase-program-by-25m-shares",
       "source": "alpaca",
       "added_at": "2026-05-04T21:03:05.804078+00:00"
+    },
+    {
+      "ticker": "X",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "TMX Group beat both EPS estimates by 10.2% and revenue estimates by 1.3%, representing a solid quarterly performance that warrants positive market reaction.",
+      "action_window": "next_day",
+      "headline": "TMX Group Q1 Adj. EPS $0.65 Beats $0.59 Estimate, Sales $488.200M Beat $481.833M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52270015/tmx-group-q1-adj-eps-0-65-beats-0-59-estimate-sales-488-200m-beat-481-833m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-04T22:33:38.350893+00:00"
+    },
+    {
+      "ticker": "PLOW",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Douglas Dynamics significantly beat Q1 estimates with EPS of $0.36 vs $0.14 expected (157% beat) and revenue of $137.8M vs $133.3M expected (3.4% beat), representing a strong earnings surprise.",
+      "action_window": "next_day",
+      "headline": "Douglas Dynamics Q1 Adj. EPS $0.36 Beats $0.14 Estimate, Sales $137.797M Beat $133.257M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52269955/douglas-dynamics-q1-adj-eps-0-36-beats-0-14-estimate-sales-137-797m-beat-133-257m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-04T22:33:38.350903+00:00",
+      "updated_at": "2026-05-04T22:33:38.350913+00:00"
+    },
+    {
+      "ticker": "HOOD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "SEC delay of competing prediction market ETFs while HOOD posts record event contract revenue suggests reduced near-term competitive pressure and validates HOOD's existing prediction market business.",
+      "action_window": "next_day",
+      "headline": "Prediction Market ETFs Delayed As SEC Demands More Disclosure",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/05/52269903/prediction-market-etfs-delayed-as-sec-demands-more-disclosure",
+      "source": "alpaca",
+      "added_at": "2026-05-04T22:33:38.350919+00:00"
+    },
+    {
+      "ticker": "OTTR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with EPS exceeding estimates by 16% and revenue beating by 2.3%, indicating solid operational performance that should drive positive price action.",
+      "action_window": "next_day",
+      "headline": "Otter Tail Q1 EPS $1.73 Beats $1.49 Estimate, Sales $347.026M Beat $339.100M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52269892/otter-tail-q1-eps-1-73-beats-1-49-estimate-sales-347-026m-beat-339-100m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-04T22:33:38.350924+00:00"
     }
   ]
 }

@@ -218,5 +218,49 @@
     "added_at": "2026-05-04T21:03:05.803367+00:00",
     "expires": "2026-05-18T21:03:05.803372+00:00",
     "hard_block": false
+  },
+  "X": {
+    "ticker": "X",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "headline": "TMX Group Q1 Adj. EPS $0.65 Beats $0.59 Estimate, Sales $488.200M Beat $481.833M Estimate",
+    "added_at": "2026-05-04T22:33:38.347890+00:00",
+    "expires": "2026-05-11T22:33:38.347897+00:00",
+    "hard_block": false
+  },
+  "PLOW": {
+    "ticker": "PLOW",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Douglas Dynamics Raises FY2026 Adj EPS Guidance from $2.25-$2.85 to $2.55-$3.05 vs $2.61 Est; Raises FY2026 Sales Guidance from $710.000M-$760.000M to $750.000M-$795.000M vs $731.352M Est",
+    "added_at": "2026-05-04T22:33:38.348510+00:00",
+    "expires": "2026-05-18T22:33:38.348516+00:00",
+    "hard_block": false
+  },
+  "FIS": {
+    "ticker": "FIS",
+    "score_delta": 0.03,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Fidelity National Information Services Announces That It Is Working With Anthropic To Bring Agentic AI To Banking, Beginning With The Financial Crimes AI Agent;  Financial Crimes AI Agent General Avai",
+    "added_at": "2026-05-04T22:33:38.349594+00:00",
+    "expires": "2026-05-11T22:33:38.349599+00:00",
+    "hard_block": false
+  },
+  "OTTR": {
+    "ticker": "OTTR",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Otter Tail Q1 EPS $1.73 Beats $1.49 Estimate, Sales $347.026M Beat $339.100M Estimate",
+    "added_at": "2026-05-04T22:33:38.350108+00:00",
+    "expires": "2026-05-11T22:33:38.350114+00:00",
+    "hard_block": false
   }
 }
