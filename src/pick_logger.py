@@ -26,6 +26,8 @@ FIELDS = [
     "current_tp", "tp_raises",
     # Phase 2B.5: adaptive SL tighten audit
     "peak_rsi", "sl_tightens",
+    # PILLAR 1 brain audit (E2b — May 4 2026)
+    "brain_p_win", "brain_ev_pct", "brain_sl", "brain_tp", "brain_confidence",
     # Monster Hunt Mode (May 3 2026)
     "monster_score", "vol_ratio", "is_monster",
     # Sector benchmark (May 3 2026 T3) — sector-relative alpha
@@ -132,6 +134,12 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "tp_raises": "[]",  # JSON audit trail
                 "peak_rsi": "",  # Phase 2B.5: highest RSI seen
                 "sl_tightens": "[]",  # Phase 2B.5: tighten audit
+                # PILLAR 1 brain audit (E2b — fixes silent extrasaction='ignore' drop)
+                "brain_p_win":      p.get("brain_p_win", ""),
+                "brain_ev_pct":     p.get("brain_ev_pct", ""),
+                "brain_sl":         p.get("brain_sl", ""),
+                "brain_tp":         p.get("brain_tp", ""),
+                "brain_confidence": p.get("brain_confidence", ""),
                 # Monster Hunt Mode
                 "monster_score": p.get("monster_score", ""),
                 "vol_ratio": p.get("vol_ratio", ""),
