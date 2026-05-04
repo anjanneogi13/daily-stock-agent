@@ -106,10 +106,18 @@ def main():
     ]
     high_impact.sort(key=lambda x: x["classification"]["tradeable_score"], reverse=True)
 
+    # GATE: news Telegram alerts are INTERNAL by default (per founder design intent).
+    # News is for the agent's brain to digest, not the user's phone.
+    # To re-enable for power-user mode, set ENABLE_NEWS_TELEGRAM=true in env.
+    news_telegram_enabled = os.getenv("ENABLE_NEWS_TELEGRAM", "false").lower() == "true"
     for item in high_impact[:MAX_ALERTS_PER_RUN]:
-        send_telegram(format_alert(item))
-        print(f"[news_engine] Alerted: {item['classification'].get('primary_ticker')} "
-              f"({item['classification'].get('tradeable_score'):.2f})")
+        ticker = item['classification'].get('primary_ticker')
+        score  = item['classification'].get('tradeable_score', 0)
+        if news_telegram_enabled:
+            send_telegram(format_alert(item))
+            print(f"[news_engine] Alerted (TELEGRAM): {ticker} ({score:.2f})")
+        else:
+            print(f"[news_engine] Alerted (INTERNAL only): {ticker} ({score:.2f})")
 
     # Summary
     wl = get_watchlist_tickers()[:10]

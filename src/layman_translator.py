@@ -96,7 +96,7 @@ def pick_to_layman(pick: Dict, idx: int = 1) -> str:
     score = _f("composite_score") or _f("score")
     entry = _f("entry") or _f("buy_price")
     sl    = _f("sl")    or _f("stop_loss")
-    tp    = _f("tp")    or _f("target_price")
+    tp    = _f("tp")    or _f("target_price") or _f("take_profit")
     qty   = int(_f("qty") or _f("position_size"))
     ttype = (pick.get("trade_type", "") or "swing").lower()
 
