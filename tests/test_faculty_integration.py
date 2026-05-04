@@ -256,10 +256,10 @@ def test_full_pipeline_end_to_end():
     
     # 3. SIGNAL JOURNAL (Faculty 5) — must produce real buckets
     signals = build_signals(pick)
-    assert signals["composite_score_bucket"] == "high"
+    assert signals["composite_score_bucket"] == "very_high"  # 0.85 >= 0.79 threshold
     assert signals["regime"] == "bull"
     assert signals["tag"] == "TECH"
-    assert signals["vol_ratio_bucket"] == "normal"  # 1.4 < 1.5 = normal
+    assert signals["vol_ratio_bucket"] == "high"    # 1.4 in [1.3, 2.5) = high (recalibrated E1)
     
     # 4. VOICE (Faculty 6) — must render correctly
     out = pick_to_layman(pick, 1)

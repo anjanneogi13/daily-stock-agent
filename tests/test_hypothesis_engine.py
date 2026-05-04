@@ -18,10 +18,10 @@ from src.hypothesis_engine import (
 def test_bucket_composite():
     assert bucket_composite(None) == "unknown"
     assert bucket_composite(0.5) == "low"
-    assert bucket_composite(0.7) == "mid"
-    assert bucket_composite(0.84) == "mid"
-    assert bucket_composite(0.85) == "high"
-    assert bucket_composite(0.99) == "high"
+    assert bucket_composite(0.71) == "low"
+    assert bucket_composite(0.84) == "very_high"
+    assert bucket_composite(0.85) == "very_high"
+    assert bucket_composite(0.99) == "very_high"
 
 
 def test_bucket_d2e():
@@ -53,7 +53,7 @@ def test_build_signals_smoke():
         "brain": {"p_win": 0.62},
     }
     s = build_signals(pick)
-    assert s["composite_score_bucket"] == "high"
+    assert s["composite_score_bucket"] == "very_high"  # 0.88 >= 0.79 threshold
     assert s["regime"] == "bull"
     assert s["tag"] == "SEMI"
     assert s["days_to_earnings_bucket"] == "near"

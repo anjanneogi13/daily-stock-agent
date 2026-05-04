@@ -71,11 +71,11 @@ def test_post_fix_vol_ratio_never_unknown():
 def test_buckets_have_valid_values():
     """Every bucket value must be from a known vocabulary (no garbage)."""
     valid = {
-        "composite_score_bucket": {"low", "mid", "high", "unknown"},
+        "composite_score_bucket": {"low", "mid", "high", "very_high", "unknown"},
         "regime":                 {"bull", "bear", "chop", "transition", "unknown"},
-        "vol_ratio_bucket":       {"low", "normal", "high", "unknown"},
+        "vol_ratio_bucket":       {"low", "normal", "high", "extreme", "unknown"},
         "monster_score_bucket":   {"none", "mid", "monster"},
-        "brain_p_win_bucket":     {"low", "mid", "high", "unknown"},
+        "brain_p_win_bucket":     {"low", "mid", "high", "very_high", "unknown"},
         "days_to_earnings_bucket":{"none", "imminent", "near", "far"},
         "trade_type":             {"swing", "day"},
     }
