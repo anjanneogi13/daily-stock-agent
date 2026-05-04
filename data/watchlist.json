@@ -239,6 +239,66 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52244039/adc-therapeutics-q1-adj-eps-0-13-beats-0-21-estimate-sales-20-851m-beat-19-240m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-04T12:11:02.540321+00:00"
+    },
+    {
+      "ticker": "BIP",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Mixed earnings signal with net loss offset by record FFO creates uncertainty, though FFO is the key metric for infrastructure companies that investors typically prioritize.",
+      "action_window": "next_day",
+      "headline": "Brookfield Infrastructure's Paradox Quarter: Net Loss And Record FFO",
+      "url": "https://www.benzinga.com/Opinion/26/05/52251211/brookfield-infrastructures-paradox-quarter-net-loss-and-record-ffo",
+      "source": "alpaca",
+      "added_at": "2026-05-04T14:39:05.520554+00:00"
+    },
+    {
+      "ticker": "CBOE",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Strong Q1 earnings beat with multiple analyst price target increases signals positive momentum, though post-earnings catalyst may be partially priced in by publication date.",
+      "action_window": "next_day",
+      "headline": "These Analysts Increase Their Forecasts On Cboe Global Markets Following Q1 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52250972/these-analysts-increase-their-forecasts-on-cboe-global-markets-following-q1-earnings",
+      "source": "alpaca",
+      "added_at": "2026-05-04T14:39:05.520573+00:00"
+    },
+    {
+      "ticker": "SKK",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Circuit breaker halt with 25.71% gain indicates significant buying pressure from a major catalyst, though the specific trigger is not disclosed in the headline.",
+      "action_window": "intraday",
+      "headline": "SKK Holdings Shares Halted On Circuit Breaker To the Upside, Stock Now Up 25.71%",
+      "url": "https://www.benzinga.com/quote/SKK",
+      "source": "alpaca",
+      "added_at": "2026-05-04T14:39:05.520584+00:00"
+    },
+    {
+      "ticker": "AYA",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Trading halt lifted for new issue indicates IPO or new security available for trading, creating immediate short-term trading opportunity with uncertain directional bias.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halt status updated at 10:25:00 AM ET: Quotation Resumption: New Issue Available",
+      "url": "https://www.benzinga.com/quote/AYA",
+      "source": "alpaca",
+      "added_at": "2026-05-04T14:39:05.520593+00:00"
+    },
+    {
+      "ticker": "BTSG",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with raised full-year guidance and multiple analyst price target increases represents a meaningful positive catalyst with confirmation from multiple analysts.",
+      "action_window": "next_day",
+      "headline": "BrightSpring Health Analysts Increase Their Forecasts Following Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52250626/brightspring-health-analysts-increase-their-forecasts-following-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-04T14:39:05.520602+00:00"
     }
   ]
 }
