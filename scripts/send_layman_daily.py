@@ -15,6 +15,7 @@ from src.layman_translator import (
     pick_to_layman, header, footer_explainer, score_to_words
 )
 from src.dedup_sender import should_send, mark_sent
+from src.smell_faculty import sniff as _sniff, has_blocking_smell, format_for_telegram as _smell_fmt
 
 
 def _is_pick_sane(pick: dict) -> tuple[bool, str]:
@@ -42,6 +43,11 @@ def _is_pick_sane(pick: dict) -> tuple[bool, str]:
     if risk_pct <= 0:             return False, f"risk_pct is {risk_pct}"
     rr = reward_pct / risk_pct
     if rr < 1.0:                  return False, f"R/R too low ({rr:.2f}x < 1.0)"
+    
+    # SMELL GATE — block on CRITICAL+blocking smells (earnings tomorrow, RSI 85+, etc)
+    blocker = has_blocking_smell(pick, {})
+    if blocker:
+        return False, f"SMELL: {blocker.code} ({blocker.message})"
     
     return True, "ok"
 
@@ -109,7 +115,11 @@ def build_message(picks):
             if not _sane:
                 print(f"[SANITY GATE] BLOCKED pick {p.get('ticker','?')}: {_why}")
                 continue
-            lines.append(pick_to_layman(p, idx)); idx += 1; lines.append("")
+            lines.append(pick_to_layman(p, idx))
+            _warns = _sniff(p, {})
+            if _warns:
+                lines.append(_smell_fmt(_warns))
+            idx += 1; lines.append("")
 
     if swing_picks:
         lines.append("━━━━━ 📈 *SWING TRADES* (hold a few days/weeks) ━━━━━")
@@ -119,7 +129,11 @@ def build_message(picks):
             if not _sane:
                 print(f"[SANITY GATE] BLOCKED pick {p.get('ticker','?')}: {_why}")
                 continue
-            lines.append(pick_to_layman(p, idx)); idx += 1; lines.append("")
+            lines.append(pick_to_layman(p, idx))
+            _warns = _sniff(p, {})
+            if _warns:
+                lines.append(_smell_fmt(_warns))
+            idx += 1; lines.append("")
 
     lines.append(footer_explainer())
     lines.append("")

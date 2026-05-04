@@ -58,7 +58,10 @@ def fetch_universe_data(tickers: List[str], period: str = "6mo",
 def fetch_info(ticker: str) -> dict:
     """Combined info: price/volume from yfinance + fundamentals from Finnhub."""
     info = {
-        "shortName": ticker, "currentPrice": None,
+        "shortName": ticker,            # fallback if longName fetch fails
+        "longName": None,
+        "name": ticker,                 # what main.py reads (info_short.name)
+        "currentPrice": None,
         "averageVolume": 1_000_000, "sector": "N/A",
         "marketCap": None, "trailingPE": None,
         "earningsQuarterlyGrowth": None, "profitMargins": None,
@@ -72,6 +75,16 @@ def fetch_info(ticker: str) -> dict:
         info["regularMarketPrice"] = getattr(fast, "last_price", None)
         info["averageVolume"] = getattr(fast, "ten_day_average_volume", None) or 1_000_000
         info["marketCap"] = getattr(fast, "market_cap", None)
+        # Fetch real company name (yfinance .info is heavier — separate try)
+        try:
+            full_info = t.info or {}
+            long_name = full_info.get("longName") or full_info.get("shortName")
+            if long_name and long_name != ticker:
+                info["longName"]  = long_name
+                info["shortName"] = long_name
+                info["name"]      = long_name
+        except Exception:
+            pass
     except Exception:
         pass
 
