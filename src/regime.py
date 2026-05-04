@@ -88,12 +88,30 @@ def market_regime() -> dict:
         sma_window = min(100, len(spy))
 
     bullish = spy_close > sma
+    distance_pct = (spy_close / sma - 1) * 100
+
+    # E3a: 4-state regime classification (was binary bull/bear)
+    # Distance from SMA is a robust regime proxy — used by hypothesis_engine,
+    # pattern_stats, and (after E3b) position sizer.
+    #   > +5%       → bull       (strong uptrend, risk-on)
+    #   -2% to +5%  → transition (near SMA, undecided — caution)
+    #   -5% to -2%  → chop       (below SMA but not collapsed — reduce risk)
+    #   < -5%       → bear       (true bear market, defensive)
+    if distance_pct >= 5.0:
+        regime_label = "bull"
+    elif distance_pct >= -2.0:
+        regime_label = "transition"
+    elif distance_pct >= -5.0:
+        regime_label = "chop"
+    else:
+        regime_label = "bear"
+
     result = {
-        "regime": "bull" if bullish else "bear",
+        "regime": regime_label,
         "spy_close": round(spy_close, 2),
         "spy_sma200": round(sma, 2),  # keep field name for backward compat
-        "bullish": bullish,
-        "distance_pct": round((spy_close / sma - 1) * 100, 2),
+        "bullish": bullish,             # legacy boolean for callers expecting it
+        "distance_pct": round(distance_pct, 2),
         "sma_window": sma_window,
     }
     _save_regime(result)
