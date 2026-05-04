@@ -86,11 +86,39 @@ the entire competitive advantage.
 - **Modules:** `regime.py`, `last_regime.json`
 
 ### 9. 🔮 6th sense — Predicts what others can't
+
+The 6th sense has TWO horizons:
+
+#### 9a. Tactical prediction (TODAY)
 - Statistical hypothesis testing (Wilson 95% CI)
 - Finds edges others miss (per-pattern × per-regime)
 - Becomes sharper with every trade
-- **Modules:** `hypothesis_engine.py`
-- **Key principle:** This is the "moat." Anyone can build the 5 senses. Few can build a real 6th sense.
+- **Module:** `hypothesis_engine.py`
+
+#### 9b. Strategic regime prediction — the endgame (PLANNED — Phase 10)
+- Studies historical market events: crashes (1929, 1987, 2000, 2008, 2020),
+  bull cycles (1982-87, 1990s, 2009-20), stagnations (1973-75, 2000-03, 2015-16)
+- Catalogs precursor indicators for each event (yield curve, credit spreads,
+  VIX, housing starts, sector breakdowns, sentiment extremes)
+- Pattern-matches today's market against history every night
+- Flags transitions BEFORE they happen: *"Today looks 78% like Sept 2007 —
+  reducing equity exposure, increasing defensives, will reassess in 7 days"*
+- **Module:** `historical_regime_engine.py` (PLANNED — Phase 10)
+- **Inspiration:** Ray Dalio's *Principles of a Changing World Order* —
+  Bridgewater built a $150B fund partly on this exact pattern-matching ability.
+
+**Why this matters:** Most agents fail catastrophically at regime transitions
+because they were trained on one regime. A regime-prescient agent doesn't just
+react to bear markets — it sees them coming.
+
+**Key principles:**
+- This is the "moat." Anyone can build the 5 senses. Few can build a real 6th sense.
+- **History PROPOSES. Data DISPOSES.** A historical pattern match is just a
+  hypothesis. It must be statistically validated against present-day data
+  before adjusting weights. The agent does not blindly trust history any more
+  than it blindly trusts books — it tests everything.
+- The market is NEVER "always in one phase." Crashes, bulls, and stagnations
+  alternate forever. An agent built for only one will eventually break.
 
 ### 10. 🦉 Curiosity — Always learning (NEW vision 2026-05-04)
 
@@ -179,6 +207,12 @@ Or alternately:
 
 7. **Memory is sacred.** Picks log, signal journal, learning journal, memoir —
    never delete history. Always append. The past is how the future learns.
+
+8. **History informs, data decides.** When the agent learns from external sources
+   (books, historical events, expert opinions), those are HYPOTHESES, never rules.
+   Every external claim must pass Wilson 95% CI on our own data before being
+   promoted to active wisdom. Books propose, history proposes, experts propose —
+   our data disposes.
 
 ---
 
