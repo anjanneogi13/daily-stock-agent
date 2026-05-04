@@ -84,6 +84,16 @@ def r_multiple_words(r) -> str:
 # ═══════════════════════════════════════════════════════════════
 # Pick → friend-explains description (KEEPS all actionable data)
 # ═══════════════════════════════════════════════════════════════
+def _company_suffix(pick, ticker):
+    """Return ' — Apple Inc.' or '' if company name unavailable/equals ticker."""
+    co = (pick.get("company") or "").strip()
+    if not co or co.upper() == ticker.upper():
+        return ""
+    # Trim long names (e.g., "Agilent Technologies, Inc." → "Agilent Technologies")
+    co = co.replace(", Inc.", "").replace(" Inc.", "").replace(" Corp.", "")
+    return f" ({co[:35]})"
+
+
 def pick_to_layman(pick: Dict, idx: int = 1) -> str:
     """Translate one pick row to plain English. Includes:
        BUY PRICE, STOP-LOSS, TARGET PRICE, QUANTITY, HOLDING TIME, RISK LEVEL.
@@ -117,7 +127,7 @@ def pick_to_layman(pick: Dict, idx: int = 1) -> str:
     max_gain = abs(tp - entry) * qty if entry and tp and qty else 0
 
     lines = [
-        f"*{idx}. {t}* — looks {quality} 🎯",
+        f"*{idx}. {t}{_company_suffix(pick, t)}* — looks {quality} 🎯",
         f"💵 *Buy at:* ~${entry:.2f}  ·  *Quantity:* {qty} shares  (cost ~${cost:,.0f})",
         f"🛑 *Stop-loss (auto-exit):* ${sl:.2f}  ({pct(-risk_pct)}, you'd lose ~{money(-max_loss)})",
         f"🎯 *Target price (take profit):* ${tp:.2f}  ({pct(reward_pct)}, you'd gain ~{money(max_gain)})",
