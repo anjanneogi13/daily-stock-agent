@@ -131,6 +131,114 @@
       "url": "https://www.benzinga.com/m-a/26/05/52241302/applied-materials-expands-ai-arsenal-acquires-nexx-in-packaging-push",
       "source": "alpaca",
       "added_at": "2026-05-04T10:10:02.050449+00:00"
+    },
+    {
+      "ticker": "RLJ",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "RevPAR growth of 4.8% YoY is positive for a lodging REIT but represents modest operational improvement rather than a major catalyst.",
+      "action_window": "intraday",
+      "headline": "RLJ Lodging Trust Reports Q1 2026  Comparable RevPAR Of $148.55, Up 4.8% YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52244332/rlj-lodging-trust-reports-q1-2026-comparable-revpar-of-148-55-up-4-8-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540276+00:00"
+    },
+    {
+      "ticker": "TAK",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Phase 2/3 clinical trial meeting its primary endpoint is a significant positive catalyst that substantially increases probability of regulatory approval and future revenue potential.",
+      "action_window": "intraday",
+      "headline": "Takeda Announces That The TAK-881-300 Phase 2/3 Clinical Trial In Patients With Primary Immunodeficiency Disease 1 Met Its Primary Endpoint,",
+      "url": "https://www.benzinga.com/news/26/05/52244331/takeda-announces-that-the-tak-881-300-phase-23-clinical-trial-in-patients-with-primary-immunodeficie",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540286+00:00"
+    },
+    {
+      "ticker": "VYX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New enterprise customer agreement with Stater Bros for POS and payments platform represents meaningful revenue opportunity and validates NCR Voyix's commerce platform competitiveness.",
+      "action_window": "intraday",
+      "headline": "NCR Voyix Signs Agreement With Stater Bros To Launch NCR's POS, Payments Solutions To Stater On Voyix Commerce Platform",
+      "url": "https://www.benzinga.com/news/26/05/52244328/ncr-voyix-signs-agreement-with-stater-bros-to-launch-ncrs-pos-payments-solutions-to-stater-on-voyix",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540291+00:00"
+    },
+    {
+      "ticker": "NCLH",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Norwegian Cruise Line cut full-year guidance after Q1 results in pre-market, creating immediate downward pressure with high intraday trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Norwegian Cruise Line, Aura Biosciences And Other Big Stocks Moving Lower In Monday's Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52244298/norwegian-cruise-line-aura-biosciences-and-other-big-stocks-moving-lower-in-mondays-pre-market-session",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540295+00:00"
+    },
+    {
+      "ticker": "HESM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Hess Midstream beat both EPS and revenue estimates, with EPS exceeding by 4.6% and sales marginally beating expectations, creating modest positive momentum for intraday trading.",
+      "action_window": "intraday",
+      "headline": "Hess Midstream Q1 EPS $0.68 Beats $0.65 Estimate, Sales $390.100M Beat $389.508M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52244297/hess-midstream-q1-eps-0-68-beats-0-65-estimate-sales-390-100m-beat-389-508m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540299+00:00"
+    },
+    {
+      "ticker": "SWMR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with major corporation (Rakuten Group) to expand into new geographic market (Japan) represents meaningful business development for autonomy solutions company.",
+      "action_window": "intraday",
+      "headline": "Swarmer Announces Plans To Expand Advanced Autonomy Solutions In Japan With Support From Rakuten Group",
+      "url": "https://www.benzinga.com/quote/SWMR",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540303+00:00"
+    },
+    {
+      "ticker": "EBAY",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed M&A proposal from GameStop to acquire eBay represents a major catalyst with immediate trading implications for the target company, typically driving significant premium to current share price.",
+      "action_window": "intraday",
+      "headline": "EBay Confirms Receiving Acquisition Proposal From GameStop",
+      "url": "https://www.benzinga.com/news/26/05/52244266/ebay-confirms-receiving-acquisition-proposal-from-gamestop",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540311+00:00"
+    },
+    {
+      "ticker": "WDC",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Baird maintains bullish stance with significant price target increase to $450, indicating strong confidence in Western Digital's upside potential.",
+      "action_window": "intraday",
+      "headline": "Baird Maintains Outperform on Western Digital, Raises Price Target to $450",
+      "url": "https://www.benzinga.com/news/26/05/52244253/baird-maintains-outperform-on-western-digital-raises-price-target-to-450",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540316+00:00"
+    },
+    {
+      "ticker": "ADCT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Double beat on both EPS (38% better than estimate) and revenue (8% above estimate) represents a significant positive catalyst for immediate trading action.",
+      "action_window": "intraday",
+      "headline": "ADC Therapeutics Q1 Adj. EPS $(0.13) Beats $(0.21) Estimate, Sales $20.851M Beat $19.240M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52244039/adc-therapeutics-q1-adj-eps-0-13-beats-0-21-estimate-sales-20-851m-beat-19-240m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-04T12:11:02.540321+00:00"
     }
   ]
 }
