@@ -58,7 +58,8 @@ def smell_earnings_imminent(pick: Dict, sig: Dict) -> Optional[Smell]:
 
 def smell_extreme_rsi(pick: Dict, sig: Dict) -> Optional[Smell]:
     """RSI > 80 (overbought) or < 20 (oversold but for swing buys, just overbought)."""
-    rsi = sig.get("rsi") or pick.get("rsi")
+    # Finding #2 fix: real picks store these in pick["scores"][...] not flat
+    rsi = sig.get("rsi") or pick.get("rsi") or pick.get("scores", {}).get("rsi")
     if rsi is None:
         return None
     try:
@@ -77,7 +78,8 @@ def smell_extreme_rsi(pick: Dict, sig: Dict) -> Optional[Smell]:
 
 def smell_volume_spike(pick: Dict, sig: Dict) -> Optional[Smell]:
     """Vol ratio > 3x = possible blowoff or news-driven move."""
-    vr = sig.get("vol_ratio") or pick.get("vol_ratio")
+    vr = (sig.get("vol_ratio") or pick.get("vol_ratio")
+          or pick.get("scores", {}).get("vol_ratio"))
     if vr is None:
         return None
     try:
@@ -92,7 +94,8 @@ def smell_volume_spike(pick: Dict, sig: Dict) -> Optional[Smell]:
 
 def smell_gap_up(pick: Dict, sig: Dict) -> Optional[Smell]:
     """Today's open > 4% above yesterday's close = chasing."""
-    open_pct = sig.get("gap_pct") or pick.get("gap_pct")
+    open_pct = (sig.get("gap_pct") or pick.get("gap_pct")
+                or pick.get("scores", {}).get("gap_pct"))
     if open_pct is None:
         return None
     try:
@@ -110,7 +113,9 @@ def smell_gap_up(pick: Dict, sig: Dict) -> Optional[Smell]:
 
 def smell_low_liquidity(pick: Dict, sig: Dict) -> Optional[Smell]:
     """Avg daily volume < 500k shares = hard to exit cleanly."""
-    avg_vol = sig.get("avg_volume") or pick.get("avg_volume")
+    avg_vol = (sig.get("avg_volume") or pick.get("avg_volume")
+               or pick.get("scores", {}).get("avg_volume")
+               or pick.get("avg_daily_volume"))
     if avg_vol is None:
         return None
     try:
