@@ -153,3 +153,124 @@ def fetch_fundamentals(ticker: str) -> dict:
 
 # Backwards-compat alias
 fetch_info = fetch_fundamentals
+
+
+
+# ═══════════════════════════════════════════════════════════════
+# Real-time quote (E2c — May 4 2026)
+# Used for cross-validating yfinance prices to catch stale/wrong data.
+# ═══════════════════════════════════════════════════════════════
+def fetch_finnhub_quote(ticker: str) -> dict:
+    """Fetch real-time quote from Finnhub /quote endpoint.
+
+    Returns dict with: current, prev_close, high, low, open, timestamp.
+    All fields None if Finnhub unavailable or ticker invalid.
+
+    Finnhub /quote response schema:
+      c  = current price
+      pc = previous close
+      h  = high (today)
+      l  = low (today)
+      o  = open
+      t  = timestamp (epoch)
+    """
+    out = {"current": None, "prev_close": None, "high": None,
+           "low": None, "open": None, "timestamp": None, "source": "finnhub"}
+
+    import os, urllib.request, json as _json
+    key = os.getenv("FINNHUB_API_KEY")
+    if not key:
+        out["error"] = "no_api_key"
+        return out
+
+    try:
+        url = f"https://finnhub.io/api/v1/quote?symbol={ticker}&token={key}"
+        with urllib.request.urlopen(url, timeout=5) as r:
+            data = _json.loads(r.read())
+        # Finnhub returns c=0 for invalid tickers — treat as None
+        c = data.get("c")
+        if c == 0 or c is None:
+            out["error"] = "invalid_ticker_or_no_data"
+            return out
+        out["current"]    = float(c)
+        out["prev_close"] = float(data.get("pc") or 0) or None
+        out["high"]       = float(data.get("h") or 0) or None
+        out["low"]        = float(data.get("l") or 0) or None
+        out["open"]       = float(data.get("o") or 0) or None
+        out["timestamp"]  = data.get("t")
+    except Exception as e:
+        out["error"] = f"{type(e).__name__}: {str(e)[:60]}"
+
+    return out
+
+
+def cross_validate_price(ticker: str,
+                          primary_price: float,
+                          warn_threshold_pct: float = 2.0,
+                          block_threshold_pct: float = 5.0) -> dict:
+    """Cross-check primary (yfinance) price against Finnhub.
+
+    Returns dict:
+      {
+        "is_valid":       bool,    # False if disagreement > block_threshold
+        "should_warn":    bool,    # True if disagreement > warn_threshold
+        "primary_price":  float,
+        "second_price":   float | None,
+        "disagreement_pct": float | None,  # |a-b|/avg * 100
+        "reason":         str,     # human-readable
+      }
+
+    Graceful: if Finnhub unavailable, returns is_valid=True (don't block trades
+    just because second source is down).
+    """
+    result = {
+        "is_valid": True,
+        "should_warn": False,
+        "primary_price": primary_price,
+        "second_price": None,
+        "disagreement_pct": None,
+        "reason": "",
+    }
+
+    # 1. Primary price sanity (catches the XXYYZZ123 case)
+    if primary_price is None or primary_price <= 0:
+        result["is_valid"] = False
+        result["reason"] = f"primary price invalid ({primary_price!r})"
+        return result
+
+    # 2. Fetch second source
+    quote = fetch_finnhub_quote(ticker)
+    second = quote.get("current")
+
+    if second is None:
+        # Finnhub down or no key — graceful pass (don't punish for infra issues)
+        result["reason"] = f"no second source: {quote.get('error', 'unavailable')}"
+        return result
+
+    # 3. Compare
+    result["second_price"] = second
+    avg = (primary_price + second) / 2
+    disagreement = abs(primary_price - second) / avg * 100
+    result["disagreement_pct"] = round(disagreement, 2)
+
+    if disagreement > block_threshold_pct:
+        result["is_valid"] = False
+        result["reason"] = (
+            f"price disagreement {disagreement:.1f}% > block threshold "
+            f"{block_threshold_pct}% (yfinance ${primary_price:.2f} vs "
+            f"finnhub ${second:.2f})"
+        )
+    elif disagreement > warn_threshold_pct:
+        result["should_warn"] = True
+        result["reason"] = (
+            f"price disagreement {disagreement:.1f}% > warn threshold "
+            f"{warn_threshold_pct}% (yfinance ${primary_price:.2f} vs "
+            f"finnhub ${second:.2f})"
+        )
+    else:
+        result["reason"] = (
+            f"prices agree within {disagreement:.2f}% "
+            f"(yfinance ${primary_price:.2f} vs finnhub ${second:.2f})"
+        )
+
+    return result
