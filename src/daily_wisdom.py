@@ -103,6 +103,31 @@ def generate_daily_wisdom() -> str:
         lines.append("═" * 60)
         return "\n".join(lines)
 
+    # ─── F2 (May 4): Capture efficiency — Phase 2B headline metric ─────
+    # Was previously only visible to tests; surface in the daily report.
+    try:
+        from src.exit_metrics import capture_efficiency
+        import csv as _csv
+        rows = list(_csv.DictReader(open(PICKS_LOG)))
+        clean_rows = filter_to_quality(rows)
+        ce = capture_efficiency(clean_rows)
+        if ce and ce.get("n", 0) > 0:
+            lines.append("")
+            lines.append(f"📈 EXIT EFFICIENCY (post-floor, n={ce['n']})")
+            lines.append("─" * 60)
+            eff_pct = (ce.get("efficiency") or 0) * 100
+            target = 70.0
+            status = "✅" if eff_pct >= target else ("⚠️ " if eff_pct >= 50 else "🚨")
+            lines.append(f"  capture_efficiency = {eff_pct:.1f}%  {status}  (target ≥{target:.0f}%)")
+            avg_mfe = ce.get("avg_mfe")
+            avg_realized = ce.get("avg_realized")
+            if avg_mfe is not None and avg_realized is not None:
+                lines.append(f"  avg MFE: {avg_mfe:+.2f}R  →  avg realized: {avg_realized:+.2f}R")
+            lines.append(f"  (low efficiency = giving back gains; raise TP1 / tighten trail)")
+    except Exception as _ee:
+        # Silent — exit metrics are observability, not core
+        pass
+
     if n < N_ANECDOTAL:
         lines.append(f"⚠ Sample too small for statistical claims.")
         lines.append(f"  Showing observations only; do NOT change strategy on this.")
