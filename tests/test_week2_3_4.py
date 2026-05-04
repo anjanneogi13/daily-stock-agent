@@ -28,7 +28,7 @@ def test_classify_high_momentum_with_gap_is_swing():
 
 # ═══ Week 2: ATR trade plan ══════════════════════════════════════
 def test_atr_swing_trade_2x_stop():
-    plan = atr_trade_plan(100, 2, 10000, trade_type="swing")
+    plan = atr_trade_plan(100, 2, 10000, trade_type="swing", regime="bull")
     assert plan["stop_loss"] == 96.0  # 100 - (2*ATR=2)
     assert plan["take_profit"] == 105.0  # Tier 1: 100 + (2.5*ATR=2)
     assert plan["risk_reward"] == 1.25  # Tier 1: 2.5/2.0 ATR
@@ -36,13 +36,13 @@ def test_atr_swing_trade_2x_stop():
 def test_atr_day_trade_tighter_stop():
     """PR #67: Day trade stops tightened from 1.0×ATR to 0.6×ATR
     (was 2% stop, now ~1.2% stop — matches user 3-4% daily target)."""
-    plan = atr_trade_plan(100, 2, 10000, trade_type="day")
+    plan = atr_trade_plan(100, 2, 10000, trade_type="day", regime="bull")
     assert plan["stop_loss"] == 98.8   # 100 - (0.6*ATR=1.2) → tighter
     assert plan["take_profit"] == 102.0  # PR #67: 100 + (1.0*ATR=2.0)
     assert plan["risk_reward"] == 1.67  # PR #67: TP(2.0) / SL(1.2) = 1.67
 
 def test_atr_zero_atr_uses_fallback():
-    plan = atr_trade_plan(100, 0, 10000, trade_type="swing")
+    plan = atr_trade_plan(100, 0, 10000, trade_type="swing", regime="bull")
     # Falls back to 2% (atr = price * 0.02 = 2)
     assert plan["stop_loss"] < 100
     assert plan["take_profit"] > 100
@@ -50,7 +50,7 @@ def test_atr_zero_atr_uses_fallback():
 
 def test_atr_position_sizing_respects_risk():
     # 1% risk on $10k = $100. Stop at $96 = $4 risk/share. Should be 25 shares.
-    plan = atr_trade_plan(100, 2, 10000, risk_pct=0.01, trade_type="swing")
+    plan = atr_trade_plan(100, 2, 10000, risk_pct=0.01, trade_type="swing", regime="bull")
     assert plan["quantity"] == 25
 
 
@@ -197,7 +197,7 @@ def test_apply_tag_cap_keeps_picks_without_tag():
 def test_atr_swing_tp_mult_is_2_5_not_4():
     """Tier 1: TP multiplier for swing trades lowered from 4.0 to 2.5 (hittable)."""
     from src.risk_manager import atr_trade_plan
-    plan = atr_trade_plan(price=100.0, atr=2.0, capital=10000.0, trade_type="swing")
+    plan = atr_trade_plan(price=100.0, atr=2.0, capital=10000.0, trade_type="swing", regime="bull")
     # Risk = 2*ATR=4 below entry → SL=$96. TP at 2.5*ATR=$5 above → TP=$105
     assert plan["take_profit"] == 105.0  # Tier 1: 100 + (2.5*ATR=2)
     assert plan["stop_loss"] == 96.0
@@ -209,6 +209,6 @@ def test_atr_day_tp_mult_is_1_5_not_2():
     """PR #67: Day trade TP further tightened from 1.5×ATR to 1.0×ATR
     for quicker intraday wins. SL=0.6×ATR=1.2, TP=1.0×ATR=2.0."""
     from src.risk_manager import atr_trade_plan
-    plan = atr_trade_plan(price=100.0, atr=2.0, capital=10000.0, trade_type="day")
+    plan = atr_trade_plan(price=100.0, atr=2.0, capital=10000.0, trade_type="day", regime="bull")
     assert plan["stop_loss"] == 98.8       # 100 - 0.6*2.0 = 98.8
     assert plan["take_profit"] == 102.0    # 100 + 1.0*2.0 = 102.0

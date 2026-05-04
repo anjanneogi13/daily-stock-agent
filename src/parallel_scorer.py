@@ -78,11 +78,20 @@ def _score_one(tk, df, cfg):
         price = sig.get("close", 0)
         capital = cfg.get("risk", {}).get("capital", 10000) or \
                   cfg.get("risk", {}).get("account_size", 10000)
+        # E3b: pass regime so atr_trade_plan can size position defensively
+        # in chop/bear (bull=1.0x, transition=0.8x, chop=0.6x, bear=0.4x)
+        try:
+            from .regime import market_regime as _mr
+            _regime_for_size = (_mr() or {}).get("regime", "unknown")
+        except Exception:
+            _regime_for_size = "unknown"
         if atr and atr > 0 and price > 0:
-            plan = atr_trade_plan(price, atr, capital, trade_type=ttype)
+            plan = atr_trade_plan(price, atr, capital, trade_type=ttype,
+                                  regime=_regime_for_size)
         else:
             plan = trade_plan(sig, cfg)
             plan["trade_type"] = ttype
+            plan["regime"] = _regime_for_size
 
         # 💎 Monster Hunt scoring (additive, never blocks)
         try:
