@@ -73,7 +73,13 @@ def categorize_mutations(events: List[Dict]) -> Dict[str, List[Dict]]:
 # 2. Stuck-area detection
 # ═══════════════════════════════════════════════════════════════
 def detect_stuck_areas(events: List[Dict],
-                       stuck_days: int = 14) -> Dict:
+                       stuck_days: int = 14,
+                       system_age_days: int | None = None) -> Dict:
+    # Defensive (added 2026-05-04): if system younger than stuck_days,
+    # we CAN'T be stuck — there hasn't been enough time. Prevents false alarm.
+    if system_age_days is not None and system_age_days < stuck_days:
+        return {"stuck": False, "age_days": 0, "system_age_days": system_age_days,
+                "reason": f"system only {system_age_days}d old — too early to flag stuck"}
     """Flag concerning lack-of-learning patterns."""
     if not events:
         return {"stuck": True, "reason": f"No brain mutations in last {stuck_days}d",
@@ -193,7 +199,18 @@ def build_self_improvement_digest(days: int = 7) -> Dict:
     """Master function — assembles everything for the Sunday Telegram."""
     events    = recent_mutations(days)
     by_kind   = categorize_mutations(events)
-    stuck     = detect_stuck_areas(events)
+    # Compute system age from oldest brain event
+    _system_age_days = None
+    if events:
+        try:
+            from datetime import datetime as _dt, timezone as _tz
+            _oldest = min(e.get("ts", "") for e in events if e.get("ts"))
+            if _oldest:
+                _od = _dt.fromisoformat(_oldest.replace("Z", "+00:00"))
+                _system_age_days = (_dt.now(_tz.utc) - _od).days
+        except Exception:
+            _system_age_days = None
+    stuck     = detect_stuck_areas(events, system_age_days=_system_age_days)
     hyps      = suggest_hypotheses()
     plain     = _human_summary_of_mutations(by_kind)
     # 🗓 T51 — Calendar renewal warning

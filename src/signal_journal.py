@@ -93,17 +93,43 @@ def primary_tag(tag: Optional[str]) -> str:
 
 
 def build_signals(pick: Dict) -> Dict[str, str]:
-    """From a pick dict (with scores subdict), produce the bucketed signal map."""
-    scores = pick.get("scores", {}) if "scores" in pick else pick
-    brain  = pick.get("brain", {}) or {}
+    """From a pick dict, produce the bucketed signal map.
+
+    DEFENSIVE: tolerates multiple field-naming conventions because picks come
+    from different code paths (parallel_scorer, manual, evaluator) with
+    inconsistent schemas. Fixed 2026-05-04 after hypothesis report showed
+    100% of buckets were 'unknown'.
+    """
+    scores = pick.get("scores", {}) if isinstance(pick.get("scores"), dict) else {}
+    brain  = pick.get("brain", {}) if isinstance(pick.get("brain"), dict) else {}
+
+    composite = (scores.get("composite")
+                 or scores.get("composite_score")
+                 or pick.get("composite_score")
+                 or pick.get("score"))
+
+    tag = (pick.get("tag")
+           or scores.get("sector_tag")
+           or scores.get("tag"))
+
+    vol_ratio = (pick.get("vol_ratio")
+                 or scores.get("vol_ratio"))
+
+    monster = (scores.get("monster_score")
+               or pick.get("monster_score"))
+
+    p_win = (brain.get("p_win")
+             or pick.get("p_win")
+             or pick.get("brain_p_win"))
+
     return {
-        "composite_score_bucket": bucket_composite(scores.get("composite")),
+        "composite_score_bucket": bucket_composite(composite),
         "regime":                 (pick.get("regime") or "unknown"),
-        "tag":                    primary_tag(scores.get("sector_tag") or pick.get("tag")),
+        "tag":                    primary_tag(tag),
         "days_to_earnings_bucket": bucket_d2e(pick.get("days_to_earnings")),
-        "vol_ratio_bucket":       bucket_vol(pick.get("vol_ratio") or scores.get("vol_ratio")),
-        "monster_score_bucket":   bucket_monster(scores.get("monster_score")),
-        "brain_p_win_bucket":     bucket_p_win(brain.get("p_win")),
+        "vol_ratio_bucket":       bucket_vol(vol_ratio),
+        "monster_score_bucket":   bucket_monster(monster),
+        "brain_p_win_bucket":     bucket_p_win(p_win),
         "trade_type":             pick.get("trade_type", "swing"),
     }
 

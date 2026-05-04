@@ -157,6 +157,18 @@ def _step_lesson_gc() -> Dict:
 # ═══════════════════════════════════════════════════════════════
 # Public API
 # ═══════════════════════════════════════════════════════════════
+def _step_agent_memoir() -> Dict:
+    """Step 8 (added 2026-05-04): regenerate agent's self-portrait."""
+    from src.agent_memoir import write_memoir
+    m = write_memoir()
+    return {
+        "lifetime_trades": m["lifetime_stats"]["closed_trades"],
+        "win_rate":        m["lifetime_stats"]["win_rate"],
+        "has_biggest_win": m["biggest_win"] is not None,
+        "has_biggest_loss": m["biggest_loss"] is not None,
+    }
+
+
 def run_nightly(scan_tickers: Optional[List[str]] = None,
                 deep_mode: Optional[bool] = None) -> Dict:
     """Run the full nightly brain maintenance cycle. Returns summary dict.
@@ -191,6 +203,7 @@ def run_nightly(scan_tickers: Optional[List[str]] = None,
     _step("weight_apply",       _step_weight_apply, summary)
     _step("auto_promote",       _step_auto_promote, summary)
     _step("lesson_gc",          _step_lesson_gc, summary)
+    _step("agent_memoir",       _step_agent_memoir, summary)
 
     # Emit single nightly_brain_run event
     try:

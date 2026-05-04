@@ -71,8 +71,9 @@ def test_run_nightly_executes_all_steps_with_isolation(monkeypatch, tmp_path):
     monkeypatch.setattr(nc, "_step_weight_apply",        lambda: (_ for _ in ()).throw(RuntimeError("x")))
     monkeypatch.setattr(nc, "_step_auto_promote",        lambda: (_ for _ in ()).throw(RuntimeError("x")))
     monkeypatch.setattr(nc, "_step_lesson_gc",           lambda: (_ for _ in ()).throw(RuntimeError("x")))
+    monkeypatch.setattr(nc, "_step_agent_memoir",        lambda: (_ for _ in ()).throw(RuntimeError("x")))
     summary = nc.run_nightly()
-    assert summary["fail_count"] == 7
+    assert summary["fail_count"] == 8
     assert summary["ok_count"] == 0
-    # All 7 steps appear in summary
-    assert len(summary["steps"]) == 7
+    # All 8 steps appear in summary (added agent_memoir 2026-05-04)
+    assert len(summary["steps"]) == 8
