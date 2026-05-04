@@ -14,6 +14,37 @@ Code
 
 ---
 
+## 2026-05-04 (afternoon) — 7-Faculty Agent Vision documented
+
+- **WHAT:**
+  1. NEW DOC: `docs/AGENT_PHILOSOPHY.md` — canonical vision (7 faculties + zero emotion)
+  2. ARCHITECTURE.md: added Section 8 (7-Faculty Agent Model with module mapping)
+  3. FINAL_ROADMAP.md: appended Phase 9 (build curiosity_engine + sharpen weak faculties)
+
+- **WHY:**
+  - Founder vision: "Build agent like advanced human — brain, heart, soul, 5 senses,
+    6th sense, curiosity. But zero emotion. Decisions from data only."
+  - Project needed ONE canonical doc explaining what makes this agent different
+  - Roadmap needed reframing around the 7 faculties so weak ones get prioritized
+
+- **HOW (docs only — no code):**
+  - Mapped existing 78 modules onto the 7-faculty model
+  - Identified 3 weakest faculties: hearing (regex), smell (reactive), curiosity (missing)
+  - Encoded the 7 design rules (no emotion, glass box, honest, curiosity > reactivity, etc)
+
+- **IMPACT:**
+  - Future-Claude has clear vision doc to read
+  - Future-Anjan has tagline material ("7 faculties. 1 mission. Zero emotion.")
+  - Phase 9 roadmap = build curiosity_engine.py first (highest leverage)
+
+- **NOT shipped today (intentional):**
+  - curiosity_engine.py itself — wait until 4 weeks of obs data to know what to be curious about
+  - Hearing/smell improvements — Phase 8/9, not today
+
+- **COMMIT:** see git log
+
+---
+
 ## 2026-05-04 — Metadata tagging fix + agent memoir + stuck-warning fix
 
 - **WHAT:**

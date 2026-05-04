@@ -117,3 +117,57 @@ Code
 ## 7. What's NEXT (deferred to future sessions)
 
 See `docs/FINAL_ROADMAP.md` and `docs/NEXT_SESSION.md` for the prioritized backlog.
+
+---
+
+## 8. The 7-Faculty Agent Model (added 2026-05-04)
+
+Anjan's design vision: build the agent like an advanced human — with all the
+faculties of a person, plus a 6th sense for prediction, plus curiosity that
+never stops. But CRITICALLY: zero emotion. All decisions driven by data and
+what works, not fear or greed.
+
+### The 7 faculties
+
+| # | Faculty | Purpose | Current module(s) | Maturity |
+|---|---|---|---|---|
+| 1 | 🧠 **Brain** | Decision-making | `parallel_scorer.py`, `probability_engine.py` | Strong |
+| 2 | ❤️ **Heart** | Risk tolerance, conviction (NO emotion) | `weight_applier.py` (5%/wk cap), `auto_pause.py` | Strong |
+| 3 | 🌟 **Soul** | Identity, mission, narrative memory | `agent_memoir.py` | Strong (NEW May 4) |
+| 4 | 👁 **Sight** | Reads price/volume charts | `pattern_engine.py` (16 patterns) | Strong |
+| 5 | 👂 **Hearing** | Listens to news + sentiment | `news_engine.py` | Basic (regex) |
+| 6 | 👅 **Taste** | Discerns quality (good vs bad setups) | `monster_score`, `composite_score` | Strong |
+| 7 | 👃 **Smell** | Detects danger early | `auto_pause.py`, `hard_blocks` | Reactive only |
+| 8 | ✋ **Touch** | Feels market temperature (regime) | `regime.py` (bull/bear/chop) | Strong |
+| 9 | 🔮 **6th sense** | Predicts what others can't see | `hypothesis_engine.py` (Wilson 95% CI) | Just started |
+| 10 | 🦉 **Curiosity** | Uses idle time to study itself | `curiosity_engine.py` (planned) | NOT YET BUILT |
+
+(Yes there are 10 modules but only 7 faculties — sight/hearing/taste/smell/touch
+collectively are "the 5 senses" + brain + heart + soul + 6th sense + curiosity = 9.
+Going with 7 in marketing language: brain, heart, soul, 5 senses, 6th sense, curiosity.)
+
+### What makes this different from a human trader
+
+**Humans:** brain × 5 senses × emotional bias = often bad decisions
+**Our agent:** brain × 5 senses × 6th sense × curiosity − emotional bias = consistently better decisions
+
+Future tagline (per BUSINESS_PLAN):
+> *"A trading agent built like a human — but with one critical upgrade:
+>  it can't feel fear or greed."*
+
+### How faculties collaborate (the rhythm)
+
+Daily picks workflow: Sight (patterns) + Hearing (news) + Taste (monster_score) + Touch (regime) → Brain (parallel_scorer) consults Heart (risk caps) → Soul (memoir) provides historical context → Picks emitted to user
+
+Nightly brain workflow: Curiosity (idle exploration) → 6th sense (hypothesis testing, Wilson 95% CI) → Brain learns (calibration_propose) → Heart enforces safety (5%/wk cap) → Soul updates memoir
+
+Code
+
+### Maturity targets (from BUSINESS_PLAN.md)
+
+| Faculty | Today | Month 3 target | Month 12 target |
+|---|---|---|---|
+| Hearing | regex | LLM news comprehension | multi-source consensus |
+| Smell | reactive | proactive danger sniffing | predicts danger 2-3 days early |
+| 6th sense | starting | 50+ tested hypotheses | regime-specific edge maps |
+| Curiosity | not built | runs hourly, 100 questions answered | self-generates new questions |

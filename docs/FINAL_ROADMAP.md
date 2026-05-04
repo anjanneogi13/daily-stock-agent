@@ -119,3 +119,53 @@ Revisit after one of these signals appears in production:
 - ✅ Earnings surprises caused >10% of losing trades in a month
 - ✅ Brain stuck (no learning) for >3 weeks despite enough trades
 - ✅ Sunday digest feels robotic in user's actual reading
+
+---
+
+## 🦉 PHASE 9 — The 7-Faculty Agent Build-Out (added 2026-05-04)
+
+**Vision:** Build the agent like an advanced human — brain, heart, soul,
+5 senses, 6th sense, curiosity. Zero emotion. Decisions from data only.
+
+### Priority order (build the weakest faculties first)
+
+| Priority | Faculty | What's missing | Effort | When |
+|---|---|---|---|---|
+| **P0** | 🦉 **Curiosity** | Module doesn't exist; ~14hr/day idle compute wasted | 1 weekend | After 4 weeks of obs data |
+| **P1** | 👂 **Hearing** | News engine is regex-only, misses semantic context | 1 weekend | Month 2-3 (Phase 8 LLM) |
+| **P2** | 👃 **Smell** | Reactive only; should detect danger PROACTIVELY | 1 week | Month 3 |
+| **P3** | 🔮 **6th sense** | Hypothesis engine just started; needs 100+ tests run | Time, not effort | Builds with data |
+
+### Phase 9 ship sequence
+
+**Step 1 — Curiosity Engine (highest leverage, lowest effort)**
+- New module: `src/curiosity_engine.py`
+- New workflow: `.github/workflows/curiosity_hourly.yml` (every hour during idle)
+- Output: `data/curiosity_journal.jsonl` — agent's self-discovered insights
+- Catalog of ~30 curiosity questions to start; agent generates more over time
+
+**Step 2 — Proactive Smell**
+- Refactor `auto_pause.py` to detect danger BEFORE health degrades
+- Add early-warning signals: regime shift detection, vol spike forecasting
+
+**Step 3 — Better Hearing (LLM news, see Phase 8)**
+- Already designed in Phase 8 — just renamed faculty
+
+**Step 4 — Sharper 6th sense**
+- Just keep running. More data = sharper predictions. No code needed.
+
+### Trigger to start Phase 9
+
+After 4 weeks of production observation, IF curiosity gap is real (i.e.,
+agent has answered fewer self-questions than there are open hypotheses),
+start with curiosity_engine.
+
+### Why curiosity is P0
+
+Every other faculty IMPROVES via curiosity:
+- Curiosity tests new hypotheses → 6th sense gets sharper
+- Curiosity finds losing pattern clusters → smell becomes proactive
+- Curiosity studies own losses → brain calibrates better
+- Curiosity narrates findings → soul/memoir gets richer
+
+**Without curiosity, the agent is reactive forever. With it, the agent compounds.**
