@@ -23,6 +23,42 @@
       "url": "",
       "source": "alpaca",
       "added_at": "2026-05-04T16:38:01.889457+00:00"
+    },
+    {
+      "ticker": "TNXP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "TD Cowen initiating coverage with Buy rating and $22 price target represents significant upside potential and institutional validation for small-cap biotech.",
+      "action_window": "next_day",
+      "headline": "TD Cowen Initiates Coverage On Tonix Pharmaceuticals with Buy Rating, Announces Price Target of $22",
+      "url": "https://www.benzinga.com/news/26/05/52259525/td-cowen-initiates-coverage-on-tonix-pharmaceuticals-with-buy-rating-announces-price-target-of-22",
+      "source": "alpaca",
+      "added_at": "2026-05-04T18:01:21.053920+00:00"
+    },
+    {
+      "ticker": "ELBM",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Binding C$20M government investment agreement provides significant capital and strategic validation for battery materials refinery development, a material positive catalyst for a small-cap stock.",
+      "action_window": "intraday",
+      "headline": "Electra Battery Materials Executes Binding C$20M Investment Agreement With Government Of Canada Under Strategic Response Fund To Advance Strategic Refinery",
+      "url": "https://www.benzinga.com/news/26/05/52259466/electra-battery-materials-executes-binding-c-20m-investment-agreement-with-government-of-canada-unde",
+      "source": "alpaca",
+      "added_at": "2026-05-04T18:01:21.053930+00:00"
+    },
+    {
+      "ticker": "L",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 earnings miss with net income decline driven by CNA insurance underperformance offsetting hotel segment gains, creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Loews Stock Falls: CNA Insurance Woes Wipe Out Hotel Gains",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52259417/loews-stock-falls-cna-insurance-woes-wipe-out-hotel-gains",
+      "source": "alpaca",
+      "added_at": "2026-05-04T18:01:21.053935+00:00"
     }
   ]
 }

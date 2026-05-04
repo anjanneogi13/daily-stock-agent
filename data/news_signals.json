@@ -1,13 +1,13 @@
 {
   "NVT": {
     "ticker": "NVT",
-    "score_delta": 0.03,
+    "score_delta": 0.032,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "RBC Capital Maintains Outperform on nVent Electric, Raises Price Target to $180",
-    "added_at": "2026-05-04T16:28:50.368475+00:00",
-    "expires": "2026-05-09T16:28:50.368482+00:00",
+    "tradeable_score": 0.45,
+    "headline": "Goldman Sachs Maintains Buy on nVent Electric, Raises Price Target to $187",
+    "added_at": "2026-05-04T18:01:21.050893+00:00",
+    "expires": "2026-05-09T18:01:21.050901+00:00",
     "hard_block": false
   },
   "WELL": {
@@ -63,6 +63,72 @@
     "headline": "RBC Capital Maintains Outperform on TC Energy, Raises Price Target to C$95",
     "added_at": "2026-05-04T16:28:50.370036+00:00",
     "expires": "2026-05-09T16:28:50.370041+00:00",
+    "hard_block": false
+  },
+  "BDX": {
+    "ticker": "BDX",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "headline": "TD Cowen Maintains Hold on Becton Dickinson, Lowers Price Target to $163",
+    "added_at": "2026-05-04T18:01:21.051383+00:00",
+    "expires": "2026-05-09T18:01:21.051389+00:00",
+    "hard_block": false
+  },
+  "TNXP": {
+    "ticker": "TNXP",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "headline": "TD Cowen Initiates Coverage On Tonix Pharmaceuticals with Buy Rating, Announces Price Target of $22",
+    "added_at": "2026-05-04T18:01:21.051783+00:00",
+    "expires": "2026-05-09T18:01:21.051796+00:00",
+    "hard_block": false
+  },
+  "MTCH": {
+    "ticker": "MTCH",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "TD Cowen Maintains Buy on Match Group, Raises Price Target to $44",
+    "added_at": "2026-05-04T18:01:21.052156+00:00",
+    "expires": "2026-05-09T18:01:21.052161+00:00",
+    "hard_block": false
+  },
+  "L": {
+    "ticker": "L",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "headline": "Loews Stock Falls: CNA Insurance Woes Wipe Out Hotel Gains",
+    "added_at": "2026-05-04T18:01:21.052554+00:00",
+    "expires": "2026-05-11T18:01:21.052560+00:00",
+    "hard_block": false
+  },
+  "DSGN": {
+    "ticker": "DSGN",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "headline": "Oppenheimer Maintains Outperform on Design Therapeutics, Raises Price Target to $21",
+    "added_at": "2026-05-04T18:01:21.052935+00:00",
+    "expires": "2026-05-09T18:01:21.052940+00:00",
+    "hard_block": false
+  },
+  "IAC": {
+    "ticker": "IAC",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "headline": "TD Cowen Maintains Buy on IAC, Raises Price Target to $66",
+    "added_at": "2026-05-04T18:01:21.053346+00:00",
+    "expires": "2026-05-09T18:01:21.053353+00:00",
     "hard_block": false
   }
 }
