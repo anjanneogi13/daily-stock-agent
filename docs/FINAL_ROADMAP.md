@@ -225,3 +225,137 @@ or Minervini — it believes its own backtested data.
 
 After Phase 9 (curiosity_engine) is live AND has run for 2+ weeks AND
 LLM budget is approved (Phase 8).
+
+---
+
+## 🌍 PHASE 10 — Historical Regime Engine (added 2026-05-04 night)
+
+**Vision:** The market is NEVER always in one phase. Crashes, bulls, and
+stagnations alternate forever. An agent built for only one will eventually
+break. Phase 10 makes the agent regime-prescient — it sees transitions
+coming BEFORE they happen.
+
+### Why this is the moat
+
+Most trading agents fail catastrophically at regime transitions because they
+were trained on one regime. 2008 was not in the 2003-2007 bull-trained models.
+COVID March 2020 wiped out 70% of quant funds in 3 weeks. 1973-75 stagflation
+broke every "buy the dip" model.
+
+A regime-prescient agent flags **"today looks 78% like Sept 2007 — reducing
+equity exposure, increasing defensives, will reassess in 7 days."**
+
+This is what separated Bridgewater ($150B fund) from competitors. Ray Dalio
+literally calls this *Principles of a Changing World Order* — pattern matching
+500 years of empire/economic cycles to predict the next transition.
+
+### Architecture sketch (indented code, no fences)
+
+    src/historical_regime_engine.py
+      - load_event_catalog (data/historical_events/*.json)
+      - extract_present_indicators (yield_curve, credit_spreads, vix, housing)
+      - score_similarity (today vs each historical event)
+      - flag_top_matches (ranked by similarity %)
+      - submit_to_hypothesis_engine (NEVER auto-promote — must validate)
+
+    data/historical_events/
+      crashes/
+        1929_great_depression.json
+        1987_black_monday.json
+        2000_dotcom.json
+        2008_lehman.json
+        2020_covid.json
+      bulls/
+        1982_1987_reagan_bull.json
+        1990s_dotcom_runup.json
+        2009_2020_qe_bull.json
+      stagnations/
+        1973_1975_stagflation.json
+        2000_2003_post_dotcom.json
+        2015_2016_china_scare.json
+      precursor_indicators.json (canonical indicator definitions)
+
+    .github/workflows/regime_match_nightly.yml (part of nightly_conductor)
+
+### Each event JSON shape (indented)
+
+    {
+      "event": "2008 Lehman Brothers Collapse",
+      "date": "2008-09-15",
+      "type": "crash",
+      "duration_days": 547,
+      "spx_drawdown_pct": -56.8,
+      "precursors_observed": [
+        {"indicator": "yield_curve_inverted", "lead_days": 720},
+        {"indicator": "housing_starts_declining_3mo", "lead_days": 540},
+        {"indicator": "vix_above_30_persistent", "lead_days": 90},
+        {"indicator": "credit_spreads_widening", "lead_days": 180}
+      ],
+      "what_worked": ["short positions", "treasuries", "gold"],
+      "what_failed": ["buy the dip", "growth stocks", "leverage"],
+      "lessons": [
+        "Credit spreads widen + housing weakens = reduce equity exposure",
+        "Financial sector breakdown precedes broad market by 6-9 months",
+        "Buy-the-dip stops working when liquidity vanishes"
+      ],
+      "recovery_pattern": "U-shaped, 5 years to new highs",
+      "sources": ["When Genius Failed", "Big Short", "Too Big to Fail"]
+    }
+
+### Initial event catalog (minimum to ship Phase 10)
+
+#### Crashes (5 events)
+1. **1929 Great Depression** — fundamental shift, ended Roaring 20s
+2. **1987 Black Monday** — single-day -22% (algorithmic cascade)
+3. **2000 Dotcom Bust** — sector bubble (testing what was overvalued)
+4. **2008 Lehman Brothers** — credit/financial crisis
+5. **2020 COVID Crash** — exogenous shock (pandemic)
+
+#### Bull cycles (4 events)
+1. **1982-1987 Reagan Bull** — secular bull start
+2. **1990s Dotcom Runup** — productivity boom + irrational exuberance
+3. **2009-2020 QE Bull** — central bank-driven, longest in history
+4. **2020-2021 Post-COVID Bull** — stimulus + reopening
+
+#### Stagnations (4 events)
+1. **1973-1975 Stagflation** — oil shock + wage-price spiral
+2. **2000-2003 Post-Dotcom** — tech rebuild, broad index sideways
+3. **2015-2016 China Scare** — global growth fears
+4. **2018 Q4 Pivot** — Fed reversal mid-cycle
+
+**Curation effort:** 40-80 hours for the initial 13 events. Each event needs
+careful research from multiple sources (not Wikipedia copy-paste).
+
+### CRITICAL design rule (mirrors books)
+
+**History PROPOSES. Data DISPOSES.**
+
+A historical pattern match is just a hypothesis. The agent does NOT blindly
+trust history any more than it blindly trusts books. Every "today looks like
+X" claim must:
+1. Pass minimum similarity threshold (e.g. 70%+ across precursor indicators)
+2. Be statistically validated against present-day forward outcomes
+3. Earn weight gradually (heart enforces 5%/wk cap — no panic re-allocations)
+
+### Trigger conditions to start Phase 10
+
+ALL of these must be true:
+- Phase 9 (curiosity_engine) live AND running 2+ weeks
+- Phase 9.5 (reader_engine) live AND has ingested at least 3 books successfully
+- LLM API budget approved + flowing
+- 4+ months of production data exists (so similarity scoring has something to validate against)
+- Founder has time for the 40-80 hour event curation work (or budget to outsource)
+
+### Future expansion (Phase 10.5+)
+
+- **Global events:** Japan 1990 lost decade, China 2015, EU debt crisis 2011
+- **Sector rotations:** energy boom/busts, tech cycles, biotech waves
+- **Yield-driven regimes:** rising rates (1979-81), zero rates (2009-21), normalization
+- **Geopolitical patterns:** wars, oil shocks, currency crises
+
+### Vision quote (Anjan, 2026-05-04 night)
+
+> *"Market is not always in one phase. Agent should learn why crashes happened,
+> why bulls happened, why stagnations happened — then predict transitions.
+> This will help agent in the picks in future."*
+
