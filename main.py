@@ -422,6 +422,55 @@ def run():
     # ═══════════════════════════════════════════════════════════════
 
     # ═══════════════════════════════════════════════════════════════
+    # E4 (May 4 2026): SMELL FACULTY — final sanity filter
+    # Runs sniff() on each pick, drops blockers (CRITICAL severity),
+    # attaches non-blocking warnings to pick['smell_warnings'] for
+    # downstream Telegram display.
+    #
+    # OBSERVE-MODE by default: logs blockers but doesn't filter.
+    # To activate: set SMELL_ENFORCE=true in workflow env.
+    #
+    # Currently catches: stale_price (E2c.2 cross-source disagreement),
+    # tight_stop (SL <0.8% — likely noise), and others in ALL_SMELLS.
+    # ═══════════════════════════════════════════════════════════════
+    enforce_smell = os.getenv("SMELL_ENFORCE", "false").lower() == "true"
+    try:
+        from src.smell_faculty import sniff, has_blocking_smell
+        smell_blockers = []
+        smell_warned = 0
+        for p in top:
+            sig = p.get("signals") or {}
+            blocker = has_blocking_smell(p, sig)
+            if blocker:
+                smell_blockers.append({
+                    "ticker": p["ticker"],
+                    "code": blocker.code,
+                    "message": blocker.message,
+                })
+                continue
+            warnings = sniff(p, sig)
+            if warnings:
+                p["smell_warnings"] = [
+                    {"code": w.code, "severity": w.severity, "message": w.message}
+                    for w in warnings
+                ]
+                smell_warned += 1
+        if smell_blockers:
+            mode = "ENFORCED" if enforce_smell else "OBSERVE-ONLY"
+            rprint(f"  [red]👃 Smell faculty ({mode}): {len(smell_blockers)} pick(s) flagged[/red]")
+            for b in smell_blockers:
+                rprint(f"    {'❌' if enforce_smell else '⚠ '} {b['ticker']:6s}  [{b['code']}]  {b['message']}")
+            if enforce_smell:
+                veto_set = {b["ticker"] for b in smell_blockers}
+                top = [p for p in top if p["ticker"] not in veto_set]
+                rprint(f"  [red]👃 Filtered: {len(top)} picks remain after smell enforcement[/red]")
+        else:
+            rprint(f"  [dim]👃 Smell faculty: 0 blockers (mode={'ENFORCED' if enforce_smell else 'OBSERVE'}, {smell_warned} non-blocking warnings)[/dim]")
+    except Exception as _se:
+        rprint(f"  [yellow]⚠ Smell faculty skipped: {_se}[/yellow]")
+    # ═══════════════════════════════════════════════════════════════
+
+    # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
