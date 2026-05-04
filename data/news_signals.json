@@ -12,13 +12,13 @@
   },
   "WELL": {
     "ticker": "WELL",
-    "score_delta": 0.03,
+    "score_delta": 0.034,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "RBC Capital Maintains Outperform on Welltower, Raises Price Target to $238",
-    "added_at": "2026-05-04T16:28:50.368717+00:00",
-    "expires": "2026-05-09T16:28:50.368722+00:00",
+    "tradeable_score": 0.48,
+    "headline": "UBS Maintains Buy on Welltower, Raises Price Target to $249",
+    "added_at": "2026-05-04T19:48:09.729249+00:00",
+    "expires": "2026-05-09T19:48:09.729254+00:00",
     "hard_block": false
   },
   "TTD": {
@@ -129,6 +129,39 @@
     "headline": "TD Cowen Maintains Buy on IAC, Raises Price Target to $66",
     "added_at": "2026-05-04T18:01:21.053346+00:00",
     "expires": "2026-05-09T18:01:21.053353+00:00",
+    "hard_block": false
+  },
+  "QSR": {
+    "ticker": "QSR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "UBS Maintains Buy on Restaurant Brands Intl, Raises Price Target to $90",
+    "added_at": "2026-05-04T19:48:09.728725+00:00",
+    "expires": "2026-05-09T19:48:09.728732+00:00",
+    "hard_block": false
+  },
+  "FDX": {
+    "ticker": "FDX",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "headline": "Amazon's Logistics Bombshell Just Crashed Dow Transports Into A Bear Market",
+    "added_at": "2026-05-04T19:48:09.730172+00:00",
+    "expires": "2026-05-11T19:48:09.730177+00:00",
+    "hard_block": false
+  },
+  "BTSG": {
+    "ticker": "BTSG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Wells Fargo Maintains Overweight on BrightSpring Health, Raises Price Target to $61",
+    "added_at": "2026-05-04T19:48:09.730619+00:00",
+    "expires": "2026-05-09T19:48:09.730631+00:00",
     "hard_block": false
   }
 }

@@ -59,6 +59,42 @@
       "url": "https://www.benzinga.com/markets/earnings/26/05/52259417/loews-stock-falls-cna-insurance-woes-wipe-out-hotel-gains",
       "source": "alpaca",
       "added_at": "2026-05-04T18:01:21.053935+00:00"
+    },
+    {
+      "ticker": "FDX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "product_launch",
+      "rationale": "Amazon's launch of Supply Chain Services is a major competitive threat triggering bear market conditions in transportation sector, particularly impacting FedEx, UPS, and C.H. Robinson.",
+      "action_window": "intraday",
+      "headline": "Amazon's Logistics Bombshell Just Crashed Dow Transports Into A Bear Market",
+      "url": "https://www.benzinga.com/markets/equities/26/05/52262858/amazon-supply-chain-services-dow-transports-bear-market-fedex-ups-gxo-chrw-may-2026",
+      "source": "alpaca",
+      "added_at": "2026-05-04T19:48:09.731252+00:00"
+    },
+    {
+      "ticker": "RDZN",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registered direct offering of $8M at $1.70/share typically causes immediate dilution pressure and negative price action as nearly 4.7M new shares enter the market.",
+      "action_window": "intraday",
+      "headline": "Roadzen Announces $8M Registered Direct Offering Of 4,705,870 Ordinary Shares At An Offering Price Of $1.70/Share",
+      "url": "https://www.benzinga.com/news/26/05/52262776/roadzen-announces-8m-registered-direct-offering-of-4-705-870-ordinary-shares-at-an-offering-price-of",
+      "source": "alpaca",
+      "added_at": "2026-05-04T19:48:09.731261+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Strait of Hormuz tensions threaten 20% of global oil transit, creating immediate supply risk that drives oil prices higher, benefiting USO directly while CVX faces mixed operational concerns offset by higher crude prices.",
+      "action_window": "intraday",
+      "headline": "'Chevron 'Concerned' Over Hormuz Transit as US, Iran Trade Fire' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/05/52262329/chevron-concerned-over-hormuz-transit-as-us-iran-trade-fire-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-05-04T19:48:09.731267+00:00"
     }
   ]
 }
