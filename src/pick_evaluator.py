@@ -159,12 +159,12 @@ def evaluate_pending() -> dict:
     rows = _load_picks()
     if not rows:
         print("[eval] No picks logged yet.")
-        return {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0}
+        return {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0}
 
     today = datetime.now().date()
     cutoff = today - timedelta(days=EVAL_LOOKBACK_DAYS)
 
-    counts = {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0}
+    counts = {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0}
 
     for row in rows:
         if row["evaluation_status"] != "pending":
@@ -189,6 +189,34 @@ def evaluate_pending() -> dict:
         if df.empty:
             counts["still_open"] += 1
             continue
+
+        # ─── F3 (May 4 2026): unreachable_entry detection ─────────
+        # If logged entry is OUTSIDE [low, high] of the pick_date bar,
+        # the trade was never executable (stale price / overnight gap).
+        # Mark as 'unreachable_entry' instead of letting the day-walk
+        # spuriously mark it sl_hit (because price gapped through SL too).
+        # Discovered Apr 28 SEMI bloodbath: 6 picks logged at prices
+        # $2-$20 ABOVE that day's actual high → impossible to fill.
+        try:
+            pick_bar = df.loc[df.index.date == pick_date]
+        except Exception:
+            pick_bar = df.iloc[0:0]
+        if len(pick_bar):
+            pb_high = float(pick_bar["High"].iloc[0])
+            pb_low = float(pick_bar["Low"].iloc[0])
+            # Allow 0.5% tolerance for data-source rounding differences
+            tol = entry * 0.005
+            if entry > pb_high + tol or entry < pb_low - tol:
+                row["evaluation_status"] = "unreachable_entry"
+                row["evaluated_on"] = pick_date.isoformat()
+                row["exit_price"] = ""
+                row["actual_return_pct"] = ""
+                row["r_multiple"] = ""
+                counts.setdefault("unreachable_entry", 0)
+                counts["unreachable_entry"] += 1
+                print(f"  🚫 {ticker}: unreachable_entry — logged ${entry:.2f} "
+                      f"outside [{pb_low:.2f}, {pb_high:.2f}] on {pick_date}")
+                continue
 
         # Walk day by day from pick_date forward (entry is NEXT trading day after pick)
         outcome = None
