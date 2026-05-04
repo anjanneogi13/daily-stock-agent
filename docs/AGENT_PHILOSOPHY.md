@@ -93,12 +93,33 @@ the entire competitive advantage.
 - **Key principle:** This is the "moat." Anyone can build the 5 senses. Few can build a real 6th sense.
 
 ### 10. 🦉 Curiosity — Always learning (NEW vision 2026-05-04)
-- Uses idle compute time to explore
-- Asks itself questions: "Why did I lose on TSM? What patterns underweight in bull regime?"
-- Writes findings to a curiosity journal
+
+Curiosity has TWO modes:
+
+#### 10a. Inward curiosity (study itself)
+- Uses idle compute to explore its own data
+- Asks: "Why did I lose on TSM? What patterns do I underweight in bull regime?"
+- Writes findings to curiosity_journal.jsonl
 - Generates NEW questions over time
-- **Modules:** `curiosity_engine.py` (PLANNED — Phase 9)
-- **Key principle:** Without curiosity, the agent is reactive. With curiosity, the agent compounds.
+- **Module:** `curiosity_engine.py` (PLANNED — Phase 9)
+
+#### 10b. Outward curiosity (READ BOOKS) — added later same day
+- Reads one trading/investing/finance book per week
+- Extracts testable claims (entry rules, risk patterns, market truisms)
+- **CRITICAL:** Does NOT add claims directly to the codebase.
+  Books PROPOSE. Data DISPOSES. Every claim must pass Wilson 95% CI
+  on OUR own historical data before being promoted to wisdom.
+- **Module:** `reader_engine.py` (PLANNED — Phase 9.5)
+- **Books queue:** Reminiscences of a Stock Operator → Minervini → Murphy → Lynch...
+- **Key principle:** Centuries of accumulated trading wisdom + zero emotion +
+  statistical validation = compounding edge no human trader can match.
+
+**Why this matters:** Top hedge fund managers read 5-6 hours/day for decades.
+A retail trader can never match that bandwidth. An agent can — and unlike
+humans, it forgets nothing AND tests everything before believing it.
+
+- **Key principle (both modes):** Without curiosity, the agent is reactive.
+  With curiosity, the agent compounds.
 
 ---
 

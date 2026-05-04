@@ -169,3 +169,59 @@ Every other faculty IMPROVES via curiosity:
 - Curiosity narrates findings → soul/memoir gets richer
 
 **Without curiosity, the agent is reactive forever. With it, the agent compounds.**
+
+---
+
+## 📚 PHASE 9.5 — Reader Engine (added 2026-05-04 evening)
+
+**Vision:** Agent reads one trading/investing book per week. Extracts claims.
+Tests them against own data. Promotes only what works.
+
+### Why deferred
+
+- Requires LLM API access (Phase 8 budget approval first)
+- PDF parsing + claim extraction + classification = real engineering (2-3 weekends)
+- Needs baseline performance data (4+ weeks production) to measure book impact
+- Risk of poisoning codebase with bad claims if validation pipeline is rushed
+
+### Architecture sketch
+
+src/reader_engine.py
+
+book_intake (PDF/EPUB/txt)
+chunk_into_claims (~50-200 claims/book)
+classify_claim (rule/anecdote/definition/opinion)
+extract_testable_rules
+submit_to_hypothesis_engine (NEVER auto-promote)
+data/library/
+
+books_read.json (consumed inventory)
+claims_extracted.jsonl (every claim ever found)
+claims_under_test.jsonl (validation in progress)
+claims_promoted.jsonl (passed Wilson 95% CI → became wisdom)
+claims_rejected.jsonl (failed validation — kept for transparency)
+scripts/read_book.py BOOK.pdf .github/workflows/weekly_book_read.yml (every Sunday)
+
+Code
+
+### Initial reading queue (priority order)
+
+1. **Reminiscences of a Stock Operator** (Lefèvre) — psychology baseline
+2. **Trade Like a Stock Market Wizard** (Minervini) — testable entry rules
+3. **Technical Analysis of the Financial Markets** (Murphy) — pattern definitions
+4. **One Up On Wall Street** (Lynch) — fundamental scoring
+5. **The Intelligent Investor** (Graham) — value framework (high-risk for outdated specifics)
+
+### CRITICAL design rule
+
+**Books PROPOSE. Data DISPOSES.**
+
+A claim from a book is just a hypothesis. It enters `claims_under_test.jsonl`
+and must pass the same Wilson 95% CI bar as any internal hypothesis before
+being promoted to active wisdom. The agent does not believe Buffett, Lynch,
+or Minervini — it believes its own backtested data.
+
+### Trigger to start Phase 9.5
+
+After Phase 9 (curiosity_engine) is live AND has run for 2+ weeks AND
+LLM budget is approved (Phase 8).

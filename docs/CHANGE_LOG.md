@@ -14,6 +14,34 @@ Code
 
 ---
 
+## 2026-05-04 (evening) — Reader vision added (curiosity mode 10b)
+
+- **WHAT:**
+  1. AGENT_PHILOSOPHY.md: Curiosity faculty extended with TWO modes
+     - 10a: inward curiosity (studies itself) — already planned
+     - 10b: outward curiosity (READS BOOKS) — NEW vision
+  2. FINAL_ROADMAP.md: Phase 9.5 (Reader Engine) appended
+
+- **WHY:**
+  - Founder vision: "Agent must be curious reader, learning from books on
+    trading/investing/finance, adding learnings to codebase if they help."
+  - Centuries of trading wisdom exists in books — humans can't read it all,
+    but an agent can (1 book/week × forever).
+
+- **CRITICAL design rule encoded:**
+  - Books PROPOSE. Data DISPOSES.
+  - No claim from any book auto-promotes to wisdom.
+  - Every claim must pass Wilson 95% CI on OUR data first.
+  - Prevents poisoning codebase with outdated/wrong rules.
+
+- **NOT shipped today:**
+  - reader_engine.py — needs LLM access + 2-3 weekends + baseline data
+  - Phase 9.5 starts only after Phase 9 (curiosity_engine) + 2 weeks live
+
+- **COMMIT:** docs only
+
+---
+
 ## 2026-05-04 (afternoon) — 7-Faculty Agent Vision documented
 
 - **WHAT:**
