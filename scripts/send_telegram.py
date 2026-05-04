@@ -327,9 +327,28 @@ def build_message(rows, pm, today):
         lines.append("")
         lines.append(_cov_line)
 
+    # ─── F1 (May 4 2026): Daily wisdom hint ───────────────────────
+    # Surfaces hypothesis_engine output with sample-size honesty.
+    # Costs nothing when n=0 (shows "no data yet"); becomes
+    # invaluable as post-floor closed picks accumulate.
+    # NEVER block the daily message on wisdom failure.
+    try:
+        from src.daily_wisdom import generate_daily_wisdom
+        _wisdom = generate_daily_wisdom()
+        if _wisdom and "DAILY WISDOM" in _wisdom:
+            lines.append("")
+            lines.append("```")
+            # Telegram code blocks render best with plain ascii.
+            # Keep raw output; daily_wisdom already formats cleanly.
+            lines.append(_wisdom.strip())
+            lines.append("```")
+    except Exception as _we:
+        # Silent fail — wisdom is observability, not core flow
+        pass
+
     lines.append("")
     lines.append("⚠️ _Educational only. Not financial advice._")
-    lines.append("🔧 _PR #66+#67+#68+#69 active · pause v0.1_")
+    lines.append("🔧 _PR #66+#67+#68+#69 active · wisdom v0.1_")
 
     return "\n".join(lines)
 
