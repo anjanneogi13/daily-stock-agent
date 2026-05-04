@@ -23,6 +23,114 @@
       "url": "",
       "source": "alpaca",
       "added_at": "2026-05-04T00:41:16.988836+00:00"
+    },
+    {
+      "ticker": "CNA",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 adjusted EPS missed significantly at $0.83 vs $1.03 YoY (19.4% decline) despite modest revenue growth of 1.4%, indicating margin compression and operational challenges.",
+      "action_window": "intraday",
+      "headline": "CNA Financial Q1 Adj. EPS $0.83 Down From $1.03 YoY, Sales $3.677B Up From $3.627B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52241599/cna-financial-q1-adj-eps-0-83-down-from-1-03-yoy-sales-3-677b-up-from-3-627b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050412+00:00"
+    },
+    {
+      "ticker": "NHP",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed portfolio sale of $528M represents significant asset monetization event for NHP that should unlock shareholder value and provide capital deployment optionality.",
+      "action_window": "intraday",
+      "headline": "National Healthcare Properties Agrees To Sell Portfolio Of 86 Outpatient Medical Facilities For ~$528M",
+      "url": "https://www.benzinga.com/news/26/05/52241588/national-healthcare-properties-agrees-to-sell-portfolio-of-86-outpatient-medical-facilities-for-528m",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050421+00:00"
+    },
+    {
+      "ticker": "L",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS declined 6.3% year-over-year despite modest revenue growth, indicating margin compression and operational challenges that typically trigger negative market reaction.",
+      "action_window": "intraday",
+      "headline": "Loews Q1 EPS $1.63 Down From $1.74 YoY, Sales $4.555B Up From $4.494B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52241574/loews-q1-eps-1-63-down-from-1-74-yoy-sales-4-555b-up-from-4-494b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050426+00:00"
+    },
+    {
+      "ticker": "SITE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stifel upgrade from Hold to Buy is a meaningful positive catalyst that typically drives near-term buying interest, though price target remains unchanged at $157.",
+      "action_window": "intraday",
+      "headline": "Stifel Upgrades SiteOne Landscape Supply to Buy, Maintains Price Target to $157",
+      "url": "https://www.benzinga.com/news/26/05/52241411/stifel-upgrades-siteone-landscape-supply-to-buy-maintains-price-target-to-157",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050431+00:00"
+    },
+    {
+      "ticker": "BX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $1.5B joint venture partnership expands AI services into private equity, representing meaningful business development for Blackstone and Goldman Sachs, though still reported as preliminary.",
+      "action_window": "next_day",
+      "headline": "Anthropic Eyes $1.5 Billion Joint Venture with Blackstone, Goldman Sachs Amid AI Push Into Private Equity: Report",
+      "url": "https://www.benzinga.com/markets/private-markets/26/05/52241380/anthropic-eyes-1-5-billion-joint-venture-with-blackstone-goldman-sachs-amid-ai-push-into-private-equity-report",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050435+00:00"
+    },
+    {
+      "ticker": "ESS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Piper Sandler upgrade to Overweight with raised price target represents a meaningful positive catalyst from a reputable bank that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Piper Sandler Upgrades Essex Property Trust to Overweight, Raises Price Target to $310",
+      "url": "https://www.benzinga.com/news/26/05/52241370/piper-sandler-upgrades-essex-property-trust-to-overweight-raises-price-target-to-310",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050438+00:00"
+    },
+    {
+      "ticker": "TRAX",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Piper Sandler initiating coverage with Overweight rating and $54 price target is a meaningful positive catalyst that typically drives trading interest and upward price momentum.",
+      "action_window": "intraday",
+      "headline": "Piper Sandler Initiates Coverage On First Tracks with Overweight Rating, Announces Price Target of $54",
+      "url": "https://www.benzinga.com/news/26/05/52241351/piper-sandler-initiates-coverage-on-first-tracks-with-overweight-rating-announces-price-target-of-54",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050442+00:00"
+    },
+    {
+      "ticker": "FNMA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Mizuho initiating coverage with Outperform rating and $10 price target represents positive catalyst from a major bank, likely driving near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Mizuho Initiates Coverage On Federal National Mortgage with Outperform Rating, Announces Price Target of $10",
+      "url": "https://www.benzinga.com/news/26/05/52241316/mizuho-initiates-coverage-on-federal-national-mortgage-with-outperform-rating-announces-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050446+00:00"
+    },
+    {
+      "ticker": "AMAT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Strategic M&A expanding AI chip packaging capabilities with confirmed premarket stock gains demonstrates immediate positive market reaction to deal.",
+      "action_window": "intraday",
+      "headline": "Applied Materials Expands AI Arsenal, Acquires NEXX In Packaging Push",
+      "url": "https://www.benzinga.com/m-a/26/05/52241302/applied-materials-expands-ai-arsenal-acquires-nexx-in-packaging-push",
+      "source": "alpaca",
+      "added_at": "2026-05-04T10:10:02.050449+00:00"
     }
   ]
 }
