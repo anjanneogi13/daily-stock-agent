@@ -139,12 +139,15 @@ what works, not fear or greed.
 | 6 | 👅 **Taste** | Discerns quality (good vs bad setups) | `monster_score`, `composite_score` | Strong |
 | 7 | 👃 **Smell** | Detects danger early | `auto_pause.py`, `hard_blocks` | Reactive only |
 | 8 | ✋ **Touch** | Feels market temperature (regime) | `regime.py` (bull/bear/chop) | Strong |
-| 9 | 🔮 **6th sense** | Predicts what others can't see | `hypothesis_engine.py` (Wilson 95% CI) | Just started |
-| 10 | 🦉 **Curiosity** | Uses idle time to study itself | `curiosity_engine.py` (planned) | NOT YET BUILT |
+| 9a | 🔮 **6th sense (tactical)** | Predicts edges per pattern × regime | `hypothesis_engine.py` (Wilson 95% CI) | Just started |
+| 9b | 🌍 **6th sense (strategic regime)** | Pattern-matches today vs historical events; predicts regime transitions | `historical_regime_engine.py` (Phase 10) | NOT YET BUILT |
+| 10a | 🦉 **Curiosity (inward)** | Uses idle time to study itself | `curiosity_engine.py` (Phase 9) | NOT YET BUILT |
+| 10b | 📚 **Curiosity (outward)** | Reads books, extracts claims, validates against own data | `reader_engine.py` (Phase 9.5) | NOT YET BUILT |
 
-(Yes there are 10 modules but only 7 faculties — sight/hearing/taste/smell/touch
-collectively are "the 5 senses" + brain + heart + soul + 6th sense + curiosity = 9.
-Going with 7 in marketing language: brain, heart, soul, 5 senses, 6th sense, curiosity.)
+(Now 12 module slots but still only 7 marketing faculties — sight/hearing/taste/smell/touch
+collectively are "the 5 senses" + brain + heart + soul + 6th sense (tactical+strategic) + curiosity (inward+outward).
+Going with 7 in marketing language: brain, heart, soul, 5 senses, 6th sense, curiosity.
+The 6th sense and curiosity each have 2 horizons — see rows 9a/9b and 10a/10b above.)
 
 ### What makes this different from a human trader
 
@@ -169,5 +172,7 @@ Code
 |---|---|---|---|
 | Hearing | regex | LLM news comprehension | multi-source consensus |
 | Smell | reactive | proactive danger sniffing | predicts danger 2-3 days early |
-| 6th sense | starting | 50+ tested hypotheses | regime-specific edge maps |
-| Curiosity | not built | runs hourly, 100 questions answered | self-generates new questions |
+| 6th sense (tactical) | starting | 50+ tested hypotheses | regime-specific edge maps |
+| 6th sense (strategic regime) | not built | catalog research started | 13-event catalog live, nightly pattern-match running |
+| Curiosity (inward) | not built | runs hourly, 100 questions answered | self-generates new questions |
+| Curiosity (outward / books) | not built | first book ingested + validated | 12+ books ingested, 30+ promoted claims |
