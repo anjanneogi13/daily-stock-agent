@@ -163,5 +163,60 @@
     "added_at": "2026-05-04T19:48:09.730619+00:00",
     "expires": "2026-05-09T19:48:09.730631+00:00",
     "hard_block": false
+  },
+  "FSHP": {
+    "ticker": "FSHP",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "headline": "Flag Ship Acquisition And Great Future Technology Mutually Terminate Merger Agreement On May 3, 2026; No Termination Fee Required For Mutual Termination Of Merger Agreement; Termination Agreement Incl",
+    "added_at": "2026-05-04T21:03:05.801403+00:00",
+    "expires": "2026-06-03T21:03:05.801410+00:00",
+    "hard_block": false
+  },
+  "LIN": {
+    "ticker": "LIN",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "headline": "JP Morgan Maintains Overweight on Linde, Raises Price Target to $530",
+    "added_at": "2026-05-04T21:03:05.801960+00:00",
+    "expires": "2026-05-09T21:03:05.801966+00:00",
+    "hard_block": false
+  },
+  "AGL": {
+    "ticker": "AGL",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "headline": "JP Morgan Downgrades Agilon Health to Underweight, Announces $21 Price Target",
+    "added_at": "2026-05-04T21:03:05.802460+00:00",
+    "expires": "2026-05-09T21:03:05.802468+00:00",
+    "hard_block": false
+  },
+  "PSKY": {
+    "ticker": "PSKY",
+    "score_delta": -0.118,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "headline": "Paramount Skydance Says Anticipates Transformation Costs Of Several Hundred Million In Q2, Which Will Impact Our Reported Free Cash Flow; WBD Transaction OTrack For Q3 Close; Expect Paramount+ Quarter",
+    "added_at": "2026-05-04T21:03:05.802907+00:00",
+    "expires": "2026-05-18T21:03:05.802912+00:00",
+    "hard_block": false
+  },
+  "VOYG": {
+    "ticker": "VOYG",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "headline": "Voyager Technologies Reports Q1 Results, Raises FY26 Outlook On 'Historic' Department Of Defense Demand",
+    "added_at": "2026-05-04T21:03:05.803367+00:00",
+    "expires": "2026-05-18T21:03:05.803372+00:00",
+    "hard_block": false
   }
 }

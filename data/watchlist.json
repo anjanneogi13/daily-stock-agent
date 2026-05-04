@@ -95,6 +95,102 @@
       "url": "https://www.benzinga.com/news/26/05/52262329/chevron-concerned-over-hormuz-transit-as-us-iran-trade-fire-bloomberg",
       "source": "alpaca",
       "added_at": "2026-05-04T19:48:09.731267+00:00"
+    },
+    {
+      "ticker": "FSHP",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Merger termination removes near-term value realization catalyst for SPAC target, likely causing shares to revert toward cash value or below previous trading levels.",
+      "action_window": "next_day",
+      "headline": "Flag Ship Acquisition And Great Future Technology Mutually Terminate Merger Agreement On May 3, 2026; No Termination Fee Required For Mutual Termination Of Merger Agreement; Termination Agreement Includes Mutual Release Of Claims Except For Certain Liabilities",
+      "url": "https://www.benzinga.com/news/26/05/52268163/flag-ship-acquisition-and-great-future-technology-mutually-terminate-merger-agreement-on-may-3-2026",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804044+00:00"
+    },
+    {
+      "ticker": "VRTX",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Mixed Q1 earnings results create uncertainty with both positive and negative elements, requiring detailed review of specifics before taking directional stance.",
+      "action_window": "intraday",
+      "headline": "Vertex Pharmaceuticals Reports Mixed Q1 Results",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52268144/vertex-pharmaceuticals-reports-mixed-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804053+00:00"
+    },
+    {
+      "ticker": "GME",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Michael Burry, a high-profile investor known for predicting the 2008 crisis, selling his entire GME position signals lack of confidence and typically triggers retail investor sentiment shift and near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "'Michael Burry Sells All His GameStop Stock' - Wall Street Journal",
+      "url": "https://www.benzinga.com/news/26/05/52268097/michael-burry-sells-all-his-gamestop-stock-wall-street-journal",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804058+00:00"
+    },
+    {
+      "ticker": "AGL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "JP Morgan downgrade to Underweight with a specific price target represents a clear negative catalyst from a major investment bank that typically drives immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "JP Morgan Downgrades Agilon Health to Underweight, Announces $21 Price Target",
+      "url": "https://www.benzinga.com/news/26/05/52268005/jp-morgan-downgrades-agilon-health-to-underweight-announces-21-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804063+00:00"
+    },
+    {
+      "ticker": "ARTL",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed shelf offering of $75M signals significant dilution risk for existing shareholders, typically causing immediate downward pressure on small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Artelo Biosciences Files Prospectus For Offering $75M Mixed Shelf",
+      "url": "https://www.benzinga.com/news/26/05/52267986/artelo-biosciences-files-prospectus-for-offering-75m-mixed-shelf",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804066+00:00"
+    },
+    {
+      "ticker": "PSKY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Several hundred million in Q2 transformation costs impacting free cash flow is material negative guidance, though partially offset by M&A deal progress and stable subscriber outlook.",
+      "action_window": "next_day",
+      "headline": "Paramount Skydance Says Anticipates Transformation Costs Of Several Hundred Million In Q2, Which Will Impact Our Reported Free Cash Flow; WBD Transaction OTrack For Q3 Close; Expect Paramount+ Quarter Over Quarter Subscribers To Be Flattish In Q2",
+      "url": "https://www.benzinga.com/news/26/05/52267952/paramount-skydance-says-anticipates-transformation-costs-of-several-hundred-million-in-q2-which-will",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804070+00:00"
+    },
+    {
+      "ticker": "VOYG",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raised full-year FY26 outlook citing 'historic' Department of Defense demand, indicating strong Q1 results and accelerating government contract momentum.",
+      "action_window": "intraday",
+      "headline": "Voyager Technologies Reports Q1 Results, Raises FY26 Outlook On 'Historic' Department Of Defense Demand",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52267936/voyager-technologies-reports-q1-results-raises-fy26-outlook-on-historic-department-of-defense-demand",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804073+00:00"
+    },
+    {
+      "ticker": "UDR",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Share repurchase program expansion signals management confidence in valuation and returns capital to shareholders, typically supportive for stock price.",
+      "action_window": "next_day",
+      "headline": "UDR Increases Its Share Repurchase Program By 25M Shares",
+      "url": "https://www.benzinga.com/news/26/05/52267590/udr-increases-its-share-repurchase-program-by-25m-shares",
+      "source": "alpaca",
+      "added_at": "2026-05-04T21:03:05.804078+00:00"
     }
   ]
 }
