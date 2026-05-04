@@ -134,6 +134,7 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "sl_tightens": "[]",  # Phase 2B.5: tighten audit
                 # Monster Hunt Mode
                 "monster_score": p.get("monster_score", ""),
+                "vol_ratio": p.get("vol_ratio", ""),
                 "is_monster": "true" if p.get("is_monster") else "false",
                 # Sector benchmark (T3 May 3 2026)
                 "sector_etf": p.get("sector_etf", ""),
