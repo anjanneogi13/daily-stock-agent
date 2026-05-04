@@ -14,6 +14,41 @@ Code
 
 ---
 
+## 2026-05-04 (night) — Historical Regime Engine vision documented (Phase 10)
+
+- **WHAT:**
+  1. NEXT_SESSION.md: full rewrite — recap of today 3 commits + Phase 9/9.5/10 deferred features + updated homework + new opener
+  2. AGENT_PHILOSOPHY.md: 6th sense extended to include historical regime study (commit pending in this same session)
+  3. ARCHITECTURE.md Section 8: regime-prescience added as endgame for the 6th sense (commit pending)
+  4. FINAL_ROADMAP.md: Phase 10 (Historical Regime Engine) appended (commit pending)
+
+- **WHY:**
+  - Founder vision (2026-05-04 night): "Market is not always in one phase. Agent should learn why crashes happened (1929, 1987, 2000, 2008, 2020), why bulls happened (1982-87, 90s, 2009-20), why stagnations happened (1973-75, 2000-03, 2015-16) — then predict transitions."
+  - Most agents fail catastrophically at regime transitions because they were trained on one regime.
+  - A regime-prescient agent flags "today looks 78% like Sept 2007" and adjusts BEFORE the crash.
+  - This is genuinely the holy grail — what separated Bridgewater from every other fund (Dalio Principles of a Changing World Order).
+
+- **CRITICAL design principles:**
+  - History PROPOSES. Data DISPOSES. (same rule as books: pattern-match candidates must be statistically validated, not blindly trusted)
+  - Catalog must include ALL 3 regime types: crashes, bulls, stagnations (not just crashes)
+  - Each event needs precursor indicators (yield curve, credit spreads, VIX, housing, etc) — not just "what happened"
+  - Pattern-matching today vs history runs nightly as part of the 6th sense
+
+- **NOT shipped today:**
+  - historical_regime_engine.py — major effort (40-80 hours of event curation alone)
+  - Event JSON catalog (data/historical_events/) — needs careful research, not Wikipedia copy
+  - Phase 10 starts only after Phase 9 (curiosity) + Phase 9.5 (reader) prove the validation pipeline works
+
+- **WHY DEFER:**
+  - Cognitive load — 4 commits today is already a lot
+  - Vision needs to settle in writing before implementation
+  - Phase 10 depends on Phase 9.5 reader_engine to ingest historical books (Reminiscences, When Genius Failed, Big Short)
+  - No baseline production data yet — wait 4 weeks before adding more vision modules
+
+- **COMMIT:** see git log (this session = 81274d8 + several follow-ups)
+
+---
+
 ## 2026-05-04 (evening) — Reader vision added (curiosity mode 10b)
 
 - **WHAT:**
