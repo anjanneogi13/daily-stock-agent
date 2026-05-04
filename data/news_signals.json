@@ -262,5 +262,27 @@
     "added_at": "2026-05-04T22:33:38.350108+00:00",
     "expires": "2026-05-11T22:33:38.350114+00:00",
     "hard_block": false
+  },
+  "B": {
+    "ticker": "B",
+    "score_delta": 0.05,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "headline": "Barrick Mining (B) Earnings Expected to Grow: Should You Buy?",
+    "added_at": "2026-05-04T23:47:28.322820+00:00",
+    "expires": "2026-05-11T23:47:28.322828+00:00",
+    "hard_block": false
+  },
+  "CW": {
+    "ticker": "CW",
+    "score_delta": 0.05,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "headline": "Curtiss-Wright (CW) Reports Next Week: Wall Street Expects Earnings Growth",
+    "added_at": "2026-05-04T23:47:28.325055+00:00",
+    "expires": "2026-05-11T23:47:28.325060+00:00",
+    "hard_block": false
   }
 }
