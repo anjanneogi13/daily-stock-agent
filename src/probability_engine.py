@@ -50,6 +50,7 @@ REGIME_ADJUSTMENTS = {
     "bull":         {"sl_mult": 1.0,  "tp_mult": 1.2, "p_win_boost": +0.05},
     "bear":         {"sl_mult": 0.8,  "tp_mult": 0.7, "p_win_boost": -0.10},
     "transition":   {"sl_mult": 0.9,  "tp_mult": 0.9, "p_win_boost": -0.02},
+    "chop":         {"sl_mult": 0.85, "tp_mult": 0.8, "p_win_boost": -0.05},  # Finding #5: SPY -2 to -5% from SMA
     "unknown":      {"sl_mult": 1.0,  "tp_mult": 1.0, "p_win_boost":  0.0},
 }
 
