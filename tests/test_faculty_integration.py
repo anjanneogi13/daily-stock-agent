@@ -250,8 +250,13 @@ def test_full_pipeline_end_to_end():
     assert ok, f"Pipeline: clean pick blocked at sanity gate: {reason}"
     
     # 2. SMELL (Faculty 3) — should be quiet for this pick
-    warnings = sniff(pick, {})
-    blocker = has_blocking_smell(pick, {})
+    # Mock Finnhub so stale_price smell doesn't fire on test fixture prices
+    # (fake AAPL @ $200 vs real ~$276 would correctly trigger blocking smell)
+    from unittest.mock import patch
+    with patch("src.finnhub_data.fetch_finnhub_quote") as _mock_q:
+        _mock_q.return_value = {"current": 200.50, "source": "finnhub"}  # agrees w/ fixture
+        warnings = sniff(pick, {})
+        blocker = has_blocking_smell(pick, {})
     assert blocker is None, f"Pipeline: clean pick has blocking smell: {blocker}"
     
     # 3. SIGNAL JOURNAL (Faculty 5) — must produce real buckets
