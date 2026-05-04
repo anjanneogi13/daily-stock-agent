@@ -97,7 +97,7 @@ def fetch_yahoo_rss(tickers: List[str]) -> List[Dict]:
             # Parse XML loosely (no feedparser dependency)
             text = r.text
             # Extract <item>...</item> blocks
-            for match in re.finditer(r"<item>(.*?)</item>", text, re.DOTALL)[:3]:
+            for match in list(re.finditer(r"<item>(.*?)</item>", text, re.DOTALL))[:3]:
                 block = match.group(1)
                 title = re.search(r"<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", block, re.DOTALL)
                 link = re.search(r"<link>(.*?)</link>", block, re.DOTALL)
