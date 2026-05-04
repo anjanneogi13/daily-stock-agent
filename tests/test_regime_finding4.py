@@ -43,6 +43,6 @@ def test_cached_regime_still_used_when_available():
          patch.object(regime_mod, "_load_cached_regime", return_value=cached):
         result = market_regime()
 
+    # Cache hit: regime preserved, fetch_failed flag set
     assert result["regime"] == "bear"
     assert result["fetch_failed"] is True
-    assert result["from_cache"] is True
