@@ -543,6 +543,7 @@ def run():
                 "brain_sl": brain.get("brain_sl"),
                 "brain_tp": brain.get("brain_tp"),
                 "brain_confidence": brain.get("confidence"),
+                "vol_ratio": p["scores"].get("vol_ratio"),
                 # 💎 Monster Hunt audit
                 "monster_score": p["scores"].get("monster_score", 0),
                 "is_monster": p["scores"].get("is_monster", False),
@@ -552,23 +553,36 @@ def run():
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
         # Pillar 1 Layer 4: signal journal (append signals + bucketed view)
-        try:
-            _regime_str = (reg or {}).get("regime") or "unknown"
-            for _p in top:
+        # HARDENED 2026-05-04: per-pick try/except + LOUD errors.
+        # Previous batch try/except silently swallowed all picks if ONE failed.
+        # Brain operated blind 2026-05-02 to 2026-05-04 due to silent failure.
+        _regime_str = (reg or {}).get("regime") or "unknown"
+        _journal_logged = 0
+        _journal_errors = 0
+        for _p in top:
+            try:
+                _scores = _p.get("scores", {}) or {}
                 _row = {
-                    "ticker":           _p["ticker"],
-                    "scores":           _p["scores"],
-                    "brain":            _p.get("brain", {}),
+                    "ticker":           _p.get("ticker"),
+                    "scores":           _scores,
+                    "brain":            _p.get("brain", {}) or {},
                     "regime":           _regime_str,
                     "trade_type":       _p.get("trade_type", "swing"),
                     "days_to_earnings": _p.get("days_to_earnings"),
-                    "vol_ratio":        _p["scores"].get("vol_ratio"),
-                    "tag":              _p["scores"].get("sector_tag"),
+                    "vol_ratio":        _scores.get("vol_ratio"),
+                    "tag":              _scores.get("sector_tag"),
                 }
                 _journal_log_pick(_row, regime=_regime_str)
-            rprint(f"[dim][journal] Logged {len(top)} picks to signal_journal.jsonl[/dim]")
-        except Exception as _je:
-            rprint(f"[yellow]⚠ signal_journal log skipped: {_je}[/yellow]")
+                _journal_logged += 1
+            except Exception as _je:
+                _journal_errors += 1
+                import traceback
+                rprint(f"[red]🚨 signal_journal FAILED for {_p.get('ticker','?')}: {_je}[/red]")
+                rprint(f"[red]{traceback.format_exc()}[/red]")
+        if _journal_logged > 0:
+            rprint(f"[green][journal] Logged {_journal_logged}/{len(top)} picks to signal_journal.jsonl[/green]")
+        if _journal_errors > 0:
+            rprint(f"[red][journal] ⚠ {_journal_errors} picks FAILED to journal — brain will learn from incomplete data[/red]")
 
         # Pillar 4: pause signal + auto-trigger if enforced
         try:

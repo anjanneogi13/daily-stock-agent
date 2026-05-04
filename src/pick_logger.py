@@ -27,7 +27,7 @@ FIELDS = [
     # Phase 2B.5: adaptive SL tighten audit
     "peak_rsi", "sl_tightens",
     # Monster Hunt Mode (May 3 2026)
-    "monster_score", "is_monster",
+    "monster_score", "vol_ratio", "is_monster",
     # Sector benchmark (May 3 2026 T3) — sector-relative alpha
     "sector_etf", "sector_close", "sector_close_at_exit",
     "sector_return_pct", "sector_alpha_pct",
