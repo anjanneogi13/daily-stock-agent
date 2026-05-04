@@ -8,6 +8,10 @@ if not TOKEN or not CHAT_IDS:
 
 # ─── PR #85: Report-level dedup (skip if already sent today) ─────
 from datetime import datetime as _dt
+import sys
+from pathlib import Path as _P
+sys.path.insert(0, str(_P(__file__).resolve().parent.parent))
+
 from src.dedup_sender import should_send_report, mark_report_sent
 _REPORT_TYPE = "daily_dashboard"
 _TODAY = _dt.now().strftime("%Y-%m-%d")

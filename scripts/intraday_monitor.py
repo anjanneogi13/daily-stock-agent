@@ -4,7 +4,9 @@ import os, sys, json, csv as _csv
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+_HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(_HERE))           # for sibling scripts (intraday_news, intraday_scanner)
+sys.path.insert(0, str(_HERE.parent))    # for src.* (repo root)
 
 from intraday_news import fetch_recent_news, classify_material
 from intraday_scanner import scan_for_new_opportunities, get_live_quote
