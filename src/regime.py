@@ -66,12 +66,14 @@ def market_regime() -> dict:
         if cached:
             cached["fetch_failed"] = True
             return cached
-        # No cache, no data → conservative bull (allows trading)
+        # No cache, no data → DEFENSIVE transition (Finding #4 fix May 4 2026)
+        # Was "bull" but that meant full-size trades on a total data blackout.
+        # transition = 0.8x sizing in atr_trade_plan, more honest about uncertainty.
         return {
-            "regime": "bull",
+            "regime": "transition",
             "spy_close": None,
             "spy_sma200": None,
-            "bullish": True,
+            "bullish": False,
             "sma_window": 0,
             "fetch_failed": True,
             "fallback": "no_data_no_cache",
