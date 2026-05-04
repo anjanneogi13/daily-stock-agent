@@ -120,7 +120,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json 2>/dev/null || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No changes to commit"

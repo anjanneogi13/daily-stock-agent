@@ -1,0 +1,154 @@
+# 🏥 REPO HEALTH — Single Source of Truth
+
+> **Read this FIRST in every new Claude session.**
+> Generated: 2026-05-04 from `scripts/full_repo_audit.py`
+> Refresh: re-run that script weekly. If anything below changes, update this file.
+
+---
+
+## 🎯 30-SECOND SUMMARY
+
+| Metric | Value | Status |
+|---|---|---|
+| Total tests | **985 / 985 passing** | ✅ |
+| Total commits | 367+ | ✅ |
+| `src/*.py` modules | 81 (78 live, 3 intentional CLI/dead) | ✅ |
+| Workflows | 14 (13 scheduled, 1 manual) | ✅ |
+| Defensive layers active | 7 (data trust chain) | ✅ |
+| Audit dashboards | 4 permanent | ✅ |
+| Picks logged | 39 (post-floor closed: 0 → wisdom honest about ANECDOTAL) | ⏳ |
+
+---
+
+## 🛡️ DEFENSIVE LAYERS (data trust chain)
+
+Pre-pick: stale_price smell (E2c.2) ✅ Post-pick: unreachable_entry guard (F3) ✅ Persistence: journal consistency lock (F4) ✅ Workflow: git-add complete (F6,G1-G4) ✅ Analysis: DATA_QUALITY_FLOOR fence (E5-B) ✅ (floor=2026-05-02) Reporting: sample-size honesty (E5-C) ✅ Enforce: readiness scorer (F5) ✅ (3 gates ⏳ waiting on data)
+
+Code
+
+---
+
+## 🚦 OBSERVE-MODE GATES (do NOT flip manually)
+
+⏳ SMELL_ENFORCE n=0/30 blocked: smell verdicts not persisted (P1) ⏳ BRAIN_ENFORCE_EV n=0/30 blocked: no closed post-floor picks ⏳ AUTO_PAUSE_ENABLED n=0/50 blocked: insufficient post-floor data
+
+Code
+
+`scripts/check_enforcement_readiness.py` is the only authority. When it says READY, set the env var. Until then, default false.
+
+---
+
+## 📁 SRC MODULES (81 total, 78 live)
+
+### ❌ Untested but in use (P5 — write tests)
+- `hard_blocks` (326 lines) — 🔴 HIGH PRIORITY (gate logic, no tests)
+- `earnings_analyzer` (214 lines)
+- `llm_agent` (202 lines)
+- `market_news` (210 lines)
+- `performance_stats` (127 lines)
+- Smaller: `monster_data`, `paper_trader`, `picks_csv`, `cape_ratio`
+
+### Intentional dead (locked by `audit_dead_code.py`)
+- `book_ingest` — CLI: `python -m src.book_ingest`
+- `yearly_report` — CLI: `python -m src.yearly_report`
+
+---
+
+## ⚙️ WORKFLOWS (14 total)
+
+| Workflow | Schedule | Persists |
+|---|---|---|
+| `daily-picks.yml` | 12:30+13:30 UTC weekdays | picks_log, learning_journal, last_regime, hard_blocks_log, agent_memoir, weight_history, telegram_sent ✨G1-G4 |
+| `evaluate.yml` | 22:00 UTC weekdays | picks_log, learning_journal, signal_journal ✨G1 |
+| `news_engine.yml` | every 30m, 8-23 UTC | news_log, news_seen, news_signals, watchlist ✨F6 |
+| `nightly_brain.yml` | 23:00 UTC daily | patterns, pattern_stats, weight_proposals, weight_history, learning_journal, agent_memoir ✨G2 |
+| `intraday_monitor.yml` | every 30m, 13-21 UTC | intraday_alerts |
+| `weekend_reflection.yml` | Sat 00:00 UTC | learning/, exec_report |
+| `weekly_report.yml` | Sat 01:00 UTC | metrics_daily, metrics_history |
+| `hypothesis_weekly.yml` | Sun 15:00 UTC | reports/hypothesis/ |
+| `monthly_xray.yml` | 1st of month | learning/monthly_xray |
+| `backup.yml`, `watchdog.yml`, `holiday_renewal_reminder.yml`, `yearly_recap.yml`, `ci.yml` | various | (see file) |
+
+---
+
+## 💾 KEY DATA FILES (status as of 2026-05-04)
+
+| File | Size | Persistence |
+|---|---|---|
+| `news_log.jsonl` | 844 KB | ✅ every 30 min |
+| `learning_journal.jsonl` | 145 KB (788 entries) | ✅ FIXED tonight (G1) |
+| `news_signals.json` | 100 KB | ✅ FIXED tonight (F6) |
+| `signal_journal.jsonl` | 14 KB | ✅ per pick |
+| `picks_log.csv` | 6 KB | ✅ per pick |
+| `agent_memoir.json` | 1 KB | ✅ FIXED tonight (G2) |
+| `last_regime.json` | small | ✅ FIXED tonight (G3) |
+| `hard_blocks_log.json` | 1 KB | ✅ FIXED tonight (G4) |
+
+**Deleted tonight (orphans):** `signal_journal.backup.jsonl`, `signal_journal.recalibrated.jsonl`, `src/backtester.py` (34-line stub).
+
+---
+
+## 🔧 PERMANENT AUDIT DASHBOARDS
+
+python scripts/audit_dead_code.py # detects unused modules python scripts/audit_journal_consistency.py # detects store drift python scripts/check_enforcement_readiness.py # gate-flip readiness python scripts/full_repo_audit.py # full repo scan
+
+Code
+
+Run weekly. Each <2 sec. If output changes meaningfully, update this file.
+
+---
+
+## 🚨 RECURRING BUG PATTERN (now defensively locked)
+
+> **"Code runs. Logs say success. But the OUTPUT doesn't reach where it needs to go."**
+
+Caught and fixed:
+- F1: wisdom generated → never sent to Telegram
+- F2: smell faculty existed → never imported into main
+- F3: outcome `sl_hit` → trade was physically impossible
+- F6: news signals computed → workflow `git add` omitted file
+- G1-G4: 4 more files (learning_journal, agent_memoir, last_regime, hard_blocks_log) → workflows omitted them
+
+**Now locked by `tests/test_workflow_persistence_complete.py` (6 tests).**
+Future YAML changes that strand a data file = CI fails immediately.
+
+---
+
+## 🎯 PENDING WORK (no new features — fixes only)
+
+| # | Issue | Effort | Source |
+|---|---|---|---|
+| P1 | Smell verdicts not persisted on picks_log → unblocks SMELL_ENFORCE | 45 min | F5 |
+| P5a | Write tests for `hard_blocks` (326 lines, gate logic, ZERO tests) | 60 min | This audit |
+| P5b | Write tests for `llm_agent`, `market_news`, `earnings_analyzer` | varies | This audit |
+| P3 | Decide fate of `src/tracker.py` (16 lines, only reads `trades.csv` which is uncommitted) | 5 min | This audit |
+| O1 | Wait for n≥30 closed post-floor picks → 3 gates flip from ⏳ to ✅ READY | 3-6 weeks | F5 (data) |
+| O2 | BUG-3: regime "unknown" rare occurrences | unknown | May 2 carryover |
+
+---
+
+## 🚪 NEXT-SESSION DOOR-OPENERS
+
+"Read docs/REPO_HEALTH.md and tell me what's pending."
+
+"Run all 4 audit dashboards and tell me what changed since REPO_HEALTH.md."
+
+"Persist smell verdicts on picks_log so SMELL_ENFORCE readiness can be measured."
+
+"Write tests for src/hard_blocks.py — 326 lines of gate logic with zero coverage."
+
+"Audit src/tracker.py and src/llm_agent.py — should they exist?"
+
+Code
+
+---
+
+## 📊 PICKS_LOG STATE (start-of-Tue)
+
+- 39 picks total, 5 unique days (2026-04-28 → 2026-05-04)
+- Status: 30 pending, 8 sl_hit (incl. 6 unreachable_entry fossils now fenced), 1 tp_hit
+- Post-floor closed: 0 → wisdom honestly says ⏳ ANECDOTAL
+
+---
+
+*If this file is older than 7 days, re-run `python scripts/full_repo_audit.py` and refresh.*
