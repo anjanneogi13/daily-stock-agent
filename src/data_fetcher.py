@@ -99,3 +99,42 @@ def fetch_info(ticker: str) -> dict:
             print(f"[finnhub] {ticker} skipped: {type(e).__name__}")
 
     return info
+
+
+
+# ═══════════════════════════════════════════════════════════════
+# Data validation (E2c.3 — May 4 2026)
+# ═══════════════════════════════════════════════════════════════
+def is_valid_market_data(info: dict) -> tuple[bool, str]:
+    """Return (is_valid, reason) for fetched info dict.
+
+    Catches:
+      - currentPrice is None (XXYYZZ123 / delisted)
+      - currentPrice <= 0 (corrupted)
+      - currentPrice obviously wrong (>$100k for non-BRK.A)
+      - averageVolume is None or 0 (untradeable)
+
+    Does NOT cross-validate (that's smell_stale_price's job — it's heavier).
+    This is the cheap hard gate.
+    """
+    p = info.get("currentPrice")
+    if p is None:
+        return False, "currentPrice is None (likely delisted or invalid ticker)"
+    try:
+        price = float(p)
+    except (TypeError, ValueError):
+        return False, f"currentPrice not numeric: {p!r}"
+    if price <= 0:
+        return False, f"currentPrice not positive: {price}"
+    if price > 100_000:
+        return False, f"currentPrice suspiciously high: ${price:,.0f}"
+
+    vol = info.get("averageVolume")
+    try:
+        vol = float(vol or 0)
+    except (TypeError, ValueError):
+        vol = 0
+    if vol <= 0:
+        return False, "averageVolume is zero (untradeable)"
+
+    return True, "valid"

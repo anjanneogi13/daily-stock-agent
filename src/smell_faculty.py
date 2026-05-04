@@ -146,6 +146,79 @@ def smell_tight_stop(pick: Dict, sig: Dict) -> Optional[Smell]:
 # ═══════════════════════════════════════════════════════════════
 # Registry — add new smells here
 # ═══════════════════════════════════════════════════════════════
+def smell_stale_price(pick: Dict, sig: Dict) -> Optional[Smell]:
+    """Cross-check pick price against Finnhub /quote (E2c).
+
+    Catches:
+      - Stale yfinance prices (low-volume tickers occasionally lag)
+      - Wrong-ticker disasters (would have caught the XXYYZZ123 case)
+      - Pre/post-market price confusion
+      - Delisted tickers (yfinance returns None or last known price)
+
+    Severity tiers:
+      - >5% disagreement → CRITICAL + blocking (don't trade bad data)
+      - 2-5% disagreement → HIGH (warn in Telegram, allow trade)
+      - <2% or Finnhub down → no smell (clean)
+
+    NOTE: Adds ~0.3-1s per pick (one HTTP call). Acceptable overhead
+    for end-of-day pipeline running on ~5-15 final picks.
+    """
+    ticker = pick.get("ticker")
+    primary_price = pick.get("entry") or pick.get("currentPrice") or pick.get("price")
+    if not ticker or primary_price is None:
+        # Can't validate without inputs — let other smells (or upstream
+        # fetch_info validation) catch the missing-data case.
+        return None
+
+    try:
+        from src.finnhub_data import cross_validate_price
+    except Exception:
+        return None  # if helper missing, skip silently
+
+    try:
+        v = cross_validate_price(ticker, float(primary_price))
+    except Exception:
+        return None
+
+    # Hard block: price disagreement >5% → likely bad data
+    if not v["is_valid"]:
+        # Distinguish "primary invalid" from "disagreement"
+        if v.get("disagreement_pct"):
+            return Smell(
+                code="stale_price",
+                severity="CRITICAL",
+                blocking=True,
+                message=(
+                    f"Price disagreement {v['disagreement_pct']}% "
+                    f"(yfinance ${primary_price:.2f} vs finnhub "
+                    f"${v['second_price']:.2f}) — likely stale or wrong"
+                ),
+            )
+        else:
+            return Smell(
+                code="stale_price",
+                severity="CRITICAL",
+                blocking=True,
+                message=f"Invalid price for {ticker}: {v['reason']}",
+            )
+
+    # Soft warn: 2-5% disagreement (worth flagging but allow trade)
+    if v.get("should_warn"):
+        return Smell(
+            code="stale_price",
+            severity="HIGH",
+            blocking=False,
+            message=(
+                f"Price drift {v['disagreement_pct']}% between sources "
+                f"(yfinance ${primary_price:.2f} vs finnhub "
+                f"${v['second_price']:.2f}) — verify before manual entry"
+            ),
+        )
+
+    # Clean — no smell
+    return None
+
+
 ALL_SMELLS = [
     smell_earnings_imminent,
     smell_extreme_rsi,
@@ -153,6 +226,7 @@ ALL_SMELLS = [
     smell_gap_up,
     smell_low_liquidity,
     smell_tight_stop,
+    smell_stale_price,   # E2c.2 — cross-validate yfinance price vs Finnhub
 ]
 
 
