@@ -1,7 +1,7 @@
 # 🗺️ Daily Stock Agent — Final Roadmap
 
 **Last updated:** 2026-05-05 · monitoring-first update
-**Status:** MVP shipped for monitoring-only use · paper trading deferred
+**Status:** monitoring-ready · data-quality audits green · paper trading deferred
 
 ---
 
@@ -55,8 +55,15 @@ pause state machine, sector caps, news verifier.
 | **Idea 4 — Layman Telegram** | ✅ Live | `layman_translator.py` + 5 `send_layman_*.py` scripts |
 | **Bonus — Calendar awareness** | ✅ Live | `market_calendar.py` + 3-layer renewal reminder |
 
-### Today's stats
+### Historical May 3 stats
 - Tests: 491 → 805 (+314, ZERO regressions)
+
+### Current May 5 status
+- Tests: 1203 passed, 28 skipped
+- Earnings fill-rate audit: green
+- Sector benchmark fill-rate audit: green
+- Journal consistency: green
+- Enforcement gates: waiting on post-floor sample size
 - New modules: 9
 - New workflows: 3 (`nightly_brain.yml`, `yearly_recap.yml`, `holiday_renewal_reminder.yml`)
 - Lines of code: ~3,500 added, ~11,897 total in src/
@@ -64,7 +71,7 @@ pause state machine, sector caps, news verifier.
 
 ---
 
-## 🟡 NEXT — Phase 5: Observation & Polish (no work yet)
+## 🟡 NEXT — Phase 5: Observation & Polish
 
 **Goal: Run for 1-2 weeks. Read the Telegram messages. Find what reads weird.**
 

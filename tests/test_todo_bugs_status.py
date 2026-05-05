@@ -38,7 +38,7 @@ def test_remaining_known_open_items_are_not_lost():
 
     assert "Bug #6" in text and "company-name" in text
     assert "Bug #7" in text and "non-trading days" in text
-    assert "Bug #11" in text and "days_to_earnings" in text
+    assert "Bug #11" in text and "days_to_earnings" in text and "FIXED" in text
     assert "Bug #13" in text and "Tiered TP" in text
 
 
@@ -47,3 +47,13 @@ def test_stale_critical_sector_close_wording_removed():
 
     assert "sector_close never populated at pick time (CRITICAL" not in text
     assert "CRITICAL — unlocks 4 dead columns" not in text
+
+
+def test_data_quality_cleanup_bugs_are_marked_fixed():
+    text = TODO.read_text()
+
+    assert "Bug #8" in text and "Sector alpha" in text and "FIXED" in text
+    assert "Bug #10" in text and "Sector ETF fill rate" in text and "FIXED" in text
+    assert "Bug #11" in text and "Earnings data" in text and "FIXED" in text
+    assert "backfill_earnings_days.py" in text
+    assert "audit_sector_fill_rate.py" in text

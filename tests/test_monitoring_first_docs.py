@@ -56,7 +56,7 @@ def test_final_roadmap_mentions_monitoring_phase_before_features():
 def test_repo_health_current_test_count_and_recent_fixes():
     text = HEALTH.read_text()
 
-    assert "1140 passed, 22 skipped" in text
+    assert "1203 passed, 28 skipped" in text
     assert "report issue upsert" in text
     assert "smell verdict persistence" in text
-    assert "full_repo_audit import-safe" in text
+    assert "full_repo_audit import-safe and CSV-safe" in text

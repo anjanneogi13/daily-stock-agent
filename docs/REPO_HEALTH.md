@@ -1,7 +1,7 @@
 # 🏥 REPO HEALTH — Single Source of Truth
 
 > **Read this FIRST in every new Claude session.**
-> Generated: 2026-05-05 from `scripts/full_repo_audit.py`
+> Generated: 2026-05-05 after commit `79a9890` from `scripts/full_repo_audit.py`
 > Refresh: re-run that script weekly. If anything below changes, update this file.
 
 ---
@@ -10,12 +10,12 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **1140 passed, 22 skipped** | ✅ |
+| Total tests | **1203 passed, 28 skipped** | ✅ |
 | Total commits | 400+ | ✅ |
 | `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
 | Defensive layers active | 7 (data trust chain) | ✅ |
-| Audit dashboards | 4 permanent | ✅ |
+| Audit dashboards | 5 permanent | ✅ |
 | Picks logged | 39+ (post-floor evidence still building) | ⏳ |
 
 ---
@@ -37,7 +37,9 @@ Recent launch-readiness fixes:
 
 - report issue upsert — workflows update same-day report issues instead of duplicating them.
 - smell verdict persistence — smell_codes/smell_severities/smell_messages now persist to picks_log.
-- full_repo_audit import-safe — importing audit script no longer launches nested pytest.
+- earnings fill-rate — post-floor `days_to_earnings` is filled and audited.
+- sector benchmark fill-rate — post-floor sector ETF/close/alpha fields are filled and audited.
+- full_repo_audit import-safe and CSV-safe — importing audit script no longer launches nested pytest; quoted CSV commas no longer corrupt regime counts.
 
 Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
@@ -53,7 +55,9 @@ Code
 
 ## 🚦 OBSERVE-MODE GATES (do NOT flip manually)
 
-⏳ SMELL_ENFORCE n=0/30 blocked: smell verdicts not persisted (P1) ⏳ BRAIN_ENFORCE_EV n=0/30 blocked: no closed post-floor picks ⏳ AUTO_PAUSE_ENABLED n=0/50 blocked: insufficient post-floor data
+⏳ SMELL_ENFORCE n=0/30 blocked: n=0 < 30 smell-tagged closed picks
+🟡 BRAIN_ENFORCE_EV n=1/30 blocked: insufficient closed post-floor picks and not enough EV-tagged outcomes
+🟡 AUTO_PAUSE_ENABLED n=1/50 blocked: insufficient closed post-floor picks
 
 Code
 
@@ -141,12 +145,12 @@ Future YAML changes that strand a data file = CI fails immediately.
 
 | # | Issue | Effort | Source |
 |---|---|---|---|
-| ✅ | smell verdict persistence fixed; wait for enough post-floor smell-tagged outcomes | done | Bug #17A/#17B |
+| O1 | Wait for n≥30 smell-tagged closed post-floor picks before flipping SMELL_ENFORCE | data wait | Bug #17A/#17B |
 | P5a | Write tests for `hard_blocks` (326 lines, gate logic, ZERO tests) | 60 min | This audit |
 | P5b | Write tests for `llm_agent`, `market_news`, `earnings_analyzer` | varies | This audit |
-| P3 | Decide fate of `src/tracker.py` (16 lines, only reads `trades.csv` which is uncommitted) | 5 min | This audit |
-| O1 | Wait for n≥30 closed post-floor picks → 3 gates flip from ⏳ to ✅ READY | 3-6 weeks | F5 (data) |
-| O2 | BUG-3: regime "unknown" rare occurrences | unknown | May 2 carryover |
+| P3 | SPY alpha historical audit/backfill verification (`Bug #9`) | 30-60 min | TODO_BUGS |
+| O2 | Wait for n≥30 closed post-floor picks for BRAIN_ENFORCE_EV and n≥50 for AUTO_PAUSE_ENABLED | 3-6 weeks | F5 (data) |
+| P6 | Company-name fallback cleanup (`Bug #6`) | 30-60 min | TODO_BUGS |
 
 ---
 
@@ -154,23 +158,24 @@ Future YAML changes that strand a data file = CI fails immediately.
 
 "Read docs/REPO_HEALTH.md and tell me what's pending."
 
-"Run all 4 audit dashboards and tell me what changed since REPO_HEALTH.md."
+"Run all 5 audit dashboards and tell me what changed since REPO_HEALTH.md."
 
-"Persist smell verdicts on picks_log so SMELL_ENFORCE readiness can be measured."
+"Check enforcement readiness and monitoring readiness after more closed post-floor picks accumulate."
 
-"Write tests for src/hard_blocks.py — 326 lines of gate logic with zero coverage."
-
-"Audit src/tracker.py and src/llm_agent.py — should they exist?"
+"Write tests for src/hard_blocks.py and audit src/llm_agent.py coverage."
 
 Code
 
 ---
 
-## 📊 PICKS_LOG STATE (start-of-Tue)
+## 📊 PICKS_LOG STATE (after data-quality fix commit `79a9890`)
 
 - 39 picks total, 5 unique days (2026-04-28 → 2026-05-04)
-- Status: 30 pending, 8 sl_hit (incl. 6 unreachable_entry fossils now fenced), 1 tp_hit
-- Post-floor closed: 0 → wisdom honestly says ⏳ ANECDOTAL
+- Post-floor rows: 3
+- Post-floor closed for enforcement readiness: 1 quality-filtered closed row
+- Earnings fill-rate post-floor: 100%
+- Sector benchmark fill-rate post-floor: 100%
+- Smell persistence schema present; waiting for smell-tagged closed outcomes
 
 ---
 

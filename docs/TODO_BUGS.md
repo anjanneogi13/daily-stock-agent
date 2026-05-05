@@ -25,10 +25,10 @@ This file is intentionally status-based. Do not leave stale free-form bug notes 
 |---|---|---|---|---|---|
 | Bug #6 | OPEN | Low | UX / company names | company-name writer falls back to ticker when upstream lookup fails. User sees `NVDA` instead of full company name. | Writer should store empty string when lookup fails, not ticker-as-company. |
 | Bug #7 | FIXED | Low | Calendar / trade type | day trades appeared on non-trading days historically. Picker now downgrades would-be day picks to swing on weekends/holidays; evaluator still handles old rows robustly. | Monitor future manual/backfill runs. |
-| Bug #8 | PARTIAL | Medium | Sector alpha | sector benchmark fields were historically underfilled. Recent `main.py` path now resolves sector ETF and close with SPY fallback. | Verify new post-fix rows have `sector_etf` and `sector_close`; consider shared helper/backfill. |
+| Bug #8 | FIXED | Medium | Sector alpha | sector benchmark fields were historically underfilled. `main.py` now resolves sector ETF and close with SPY fallback; `backfill_sector_alpha.py` repairs post-floor rows; sector audit is green. | Continue monitoring new rows. |
 | Bug #9 | PARTIAL | Medium | SPY alpha | alpha backfill for pre-May-1 picks appears partially addressed, but older rows should be audited. | Run/extend backfill audit for `spy_close_at_exit`, `spy_return_pct`, `alpha_pct`. |
-| Bug #10 | PARTIAL | Medium | Sector ETF fill rate | sector_etf fill should improve after Bug #8 changes, but needs post-fix verification. | Add sector benchmark fill-rate audit. |
-| Bug #11 | OPEN | Medium | Earnings data | `days_to_earnings` fill rate was historically low. Earnings proximity is important for filtering and scoring. | Add error logging/retry/fallback; add earnings fill-rate audit. |
+| Bug #10 | FIXED | Medium | Sector ETF fill rate | sector_etf/sector_close fill is now protected by `audit_sector_fill_rate.py` and regression tests. | Continue monitoring new rows. |
+| Bug #11 | FIXED | Medium | Earnings data | `days_to_earnings` now supports historical `as_of` backfills; `backfill_earnings_days.py` repaired post-floor rows; earnings fill-rate audit is green. | Continue monitoring provider reliability. |
 | Bug #12 | INFO | Informational | Trailing/adaptive fields | trail/adaptive fields are sparse because the feature shipped partway through the dataset. | No action unless new rows fail to populate. |
 | Bug #13 | DEFERRED | Design debt | Tiered exits | Tiered TP system (`tp1`, `tp2`, `qty_t1-3`) is in schema but not actively used. | Decide later: implement tiered exits or mark columns reserved. |
 | Bug #19 | FIXED | High | GitHub workflow reports | report issue upsert prevents duplicate Daily Picks / Performance / Execution Report issues. | Monitor next reruns; old duplicates can be closed separately if desired. |
@@ -65,8 +65,8 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 
 ## Next likely fixes
 
-1. Bug #11 — earnings fill-rate audit and fallback.
-2. Bug #7 — verify no new day trades on non-trading days.
-3. Bug #8/#10 — sector benchmark fill-rate audit and optional backfill.
-4. Bug #6 — company-name fallback cleanup.
-5. Bug #13 — decide tiered TP fate after monitoring window.
+1. Bug #6 — company-name fallback cleanup.
+2. Bug #9 — SPY alpha historical audit/backfill verification.
+3. Bug #13 — decide tiered TP fate after monitoring window.
+4. Add tests for undercovered modules: `hard_blocks`, `llm_agent`, `market_news`, `earnings_analyzer`.
+5. Continue monitoring until post-floor sample-size gates are ready.

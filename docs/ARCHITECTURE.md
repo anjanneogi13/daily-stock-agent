@@ -1,7 +1,7 @@
 # 🏛️ Daily Stock Agent — Architecture
 
 **Last updated:** 2026-05-05
-**Tests:** 1140 passed, 22 skipped · **Modules:** 80+ · **Workflows:** 14 · **Health:** monitoring-ready
+**Tests:** 1203 passed, 28 skipped · **Modules:** 80+ · **Workflows:** 14 · **Health:** monitoring-ready
 
 ---
 
@@ -30,7 +30,7 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 | **Mon-Fri 8:30 PM** | 8:30 AM ET | 🌅 Daily picks → Telegram (layman) | User |
 | Mon-Fri 9:30 PM – 4 AM | 9:30 AM – 4 PM ET | 📊 Intraday monitor every 30 min | Files only |
 | **Tue-Sat 6:00 AM** | 6:00 PM ET (prev day) | 🌆 Performance recap → Telegram (layman) | User |
-| **Daily 7:00 AM** | 11:00 PM UTC | 🌙 Nightly Brain — 7-step self-improvement | Files (`learning_journal.jsonl`) |
+| **Daily 7:00 AM** | 11:00 PM UTC | 🌙 Nightly Brain — 8-step self-improvement incl. memoir | Files (`learning_journal.jsonl`) |
 | **Sat 9:00 AM** | 1:00 UTC Sat | 📅 Weekly recap → Telegram (layman) | User |
 | **Mon 7:00 AM** | 11:00 PM UTC Sun | 🧠 Self-Improvement Report → Telegram | User |
 | **1st of month 6:00 AM** | 22:00 UTC | 📆 Monthly recap → Telegram (layman) | User |
@@ -55,7 +55,7 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 
 ## 2. The Self-Improvement Loop (NEW — May 3 2026)
 
-┌─ EVERY NIGHT 11 PM UTC (Mon-Sun) ─────────────────────────┐ │ src/nightly_conductor.py — single orchestrator │ │ │ │ Step 1: pattern_scan (300 tickers on holidays) │ │ Step 2: pattern_stats (per-pattern × per-regime) │ │ Step 3: pattern_auto_e_d (kill losers, restore good) │ │ Step 4: calibration_propose (per-factor accuracy) │ │ Step 5: weight_apply (under 5%/wk safety cap) │ │ Step 6: auto_promote (winners → wisdom lessons) │ │ Step 7: lesson_gc (drop stale lessons) │ │ │ │ Each step isolated in try/except — one failure can't │ │ break the chain. Single 'nightly_brain_run' event emitted │ │ to learning_journal.jsonl. │ └─────────────────────────────────────────────────────────────┘
+┌─ EVERY NIGHT 11 PM UTC (Mon-Sun) ─────────────────────────┐ │ src/nightly_conductor.py — single orchestrator │ │ │ │ Step 1: pattern_scan (300 tickers on holidays) │ │ Step 2: pattern_stats (per-pattern × per-regime) │ │ Step 3: pattern_auto_e_d (kill losers, restore good) │ │ Step 4: calibration_propose (per-factor accuracy) │ │ Step 5: weight_apply (under 5%/wk safety cap) │ │ Step 6: auto_promote (winners → wisdom lessons) │ │ Step 7: lesson_gc (drop stale lessons) │ │ Step 8: agent_memoir (self-portrait + mission memory) │ │ │ │ Each step isolated in try/except — one failure can't │ │ break the chain. Single 'nightly_brain_run' event emitted │ │ to learning_journal.jsonl. │ └─────────────────────────────────────────────────────────────┘
 
 ┌─ EVERY SUNDAY 11 PM UTC ─────────────────────────────────────┐ │ src/meta_brain.py — reasons about the brain itself │ │ │ │ - recent_mutations(7d) │ │ - categorize by kind │ │ - detect_stuck_areas (no learning in 14d?) │ │ - suggest_hypotheses (outperforming buckets) │ │ - format_telegram_digest → plain English │ └──────────────────────────────────────────────────────────────┘
 
@@ -103,7 +103,7 @@ Code
 | evaluate.yml | 22:00 Mon-Fri | Compute outcomes → layman recap |
 | intraday_monitor.yml | every 30min during US hours | SL/TP proximity alerts |
 | news_engine.yml | every 30min | News → watchlist boost |
-| nightly_brain.yml | 23:00 daily | 7-step self-improvement |
+| nightly_brain.yml | 23:00 daily | 8-step self-improvement incl. memoir |
 | weekend_reflection.yml | 00:00 Sat | LLM-graded reflection |
 | weekly_report.yml | 01:00 Sat | Weekly metrics + layman Telegram |
 | hypothesis_weekly.yml | 15:00 Sun | Statistical edge tests |
