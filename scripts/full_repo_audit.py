@@ -135,6 +135,8 @@ def main() -> int:
     print(sh("python scripts/check_enforcement_readiness.py 2>&1 | head -25"))
     print("\n--- MONITORING READINESS ---")
     print(sh("python scripts/monitoring_readiness.py 2>&1 | head -35"))
+    print("\n--- EARNINGS FILL-RATE ---")
+    print(sh("python scripts/audit_earnings_fill_rate.py 2>&1 | head -30"))
 
     # ════════════════════════════════════════════════════════════════
     section("8. KNOWN PENDING ISSUES (from session notes)")

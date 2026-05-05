@@ -32,3 +32,10 @@ def test_audit_removes_stale_smell_not_persisted_pending_check():
 
     assert "Smell verdicts not persisted on picks_log" not in src
     assert "smell_verdicts_not_persisted" not in src
+
+
+def test_audit_includes_earnings_fill_rate_dashboard():
+    src = AUDIT.read_text()
+
+    assert "EARNINGS FILL-RATE" in src
+    assert "scripts/audit_earnings_fill_rate.py" in src
