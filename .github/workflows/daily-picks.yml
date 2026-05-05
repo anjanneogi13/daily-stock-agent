@@ -5,9 +5,13 @@ on:
     # ⚠ 2026-05-02: Reduced from 13 cron entries to 2.
     # Old design had 13 "backup" slots → workflow fired 2-3x/day
     # → tag cap (per-run) was bypassed → 16 SEMI picks/day
-    # New: ONE primary + ONE backup. main.py also early-exits if today logged.
-    - cron: '30 12 * * 1-5'   # 8:30 AM EDT primary (Mar-Nov)
-    - cron: '30 13 * * 1-5'   # 8:30 AM EST primary (Nov-Mar) / 9:30 EDT backup
+    # New: multiple guarded chances. The picks_log.csv dedup guard below
+    # prevents duplicate picks if more than one schedule fires.
+    - cron: '30 12 * * 1-5'   # 8:30 AM EDT primary (Mar-Nov); 7:30 AM EST guard-skips
+    - cron: '00 13 * * 1-5'   # 9:00 AM EDT backup; 8:00 AM EST early backup
+    - cron: '30 13 * * 1-5'   # 9:30 AM EDT backup; 8:30 AM EST primary (Nov-Mar)
+    - cron: '00 14 * * 1-5'   # 10:00 AM EDT backup; 9:00 AM EST backup
+    - cron: '30 14 * * 1-5'   # 10:30 AM EDT backup; 9:30 AM EST backup
 
   workflow_dispatch:
 
@@ -200,13 +204,39 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl 2>/dev/null || true
+
+          # Include picks_log.csv here as a recovery path: if the first commit/push
+          # was skipped or raced, the post-send commit must still persist today's row.
+          git add -f data/picks_log.csv data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl 2>/dev/null || true
+
           if git diff --staged --quiet; then
             echo "ℹ No post-send changes to commit"
             exit 0
           fi
+
           git commit -m "📲 Post-send state $(date +%Y-%m-%d) [skip ci]"
+
+          POST_PUSH_OK=0
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push && break
-            echo "[push] post-send retry $i/5"; sleep $((i * 2))
-          done || true
+            STASHED=0
+            if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+              git stash push --include-untracked -m "auto-stash-post-send-$i" >/dev/null 2>&1 && STASHED=1
+            fi
+
+            if git pull --rebase origin main && git push; then
+              POST_PUSH_OK=1
+              echo "✅ Post-send push succeeded on attempt $i"
+              [ "$STASHED" -eq 1 ] && git stash pop >/dev/null 2>&1 || true
+              break
+            fi
+
+            [ "$STASHED" -eq 1 ] && git stash pop >/dev/null 2>&1 || true
+            echo "[push] post-send retry $i/5"
+            sleep $((i * 2))
+          done
+
+          if [ "$POST_PUSH_OK" -eq 0 ]; then
+            echo "❌ CRITICAL: post-send artifacts were committed locally but not pushed"
+            git status --short
+            exit 1
+          fi

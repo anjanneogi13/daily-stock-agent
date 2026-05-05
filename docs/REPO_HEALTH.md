@@ -10,7 +10,7 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **1211 passed, 28 skipped** | ✅ |
+| Total tests | **1215 passed, 28 skipped** | ✅ |
 | Total commits | 400+ | ✅ |
 | `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
@@ -42,6 +42,7 @@ Recent launch-readiness fixes:
 - full_repo_audit import-safe and CSV-safe — importing audit script no longer launches nested pytest; quoted CSV commas no longer corrupt regime counts.
 - company-name fallback — future unresolved company names persist blank instead of ticker-as-company; tracked historical rows were backfilled.
 - SPY alpha fill-rate — all closed tracked rows have `spy_close_at_exit`, `spy_return_pct`, and `alpha_pct`.
+- Daily Picks workflow reliability — multiple guarded cron chances; post-send persistence now recovers `picks_log.csv` and fails if push cannot persist state.
 
 Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 

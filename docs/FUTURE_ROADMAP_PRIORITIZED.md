@@ -1,7 +1,7 @@
 # 🗺 FUTURE ROADMAP — Prioritized Backlog
 
 > **As of:** 2026-05-05 (post data-quality/readiness fixes)
-> **Status:** 1211 tests passing, 28 skipped. Core faculties are live; strategic regime, curiosity, and reader extensions remain planned.
+> **Status:** 1215 tests passing, 28 skipped. Core faculties are live; strategic regime, curiosity, and reader extensions remain planned.
 > **Discipline:** One feature per week. Each PR <=1500 lines, fully tested.
 
 ---
@@ -97,7 +97,7 @@ Currently regenerated every run. Easy fix.
 
 ## Success in 6 weeks
 
-- 1211 -> ~1500 tests
+- 1215 -> ~1500 tests
 - 81 -> ~88 modules
 - Backtester runs nightly, posts 30-day stats
 - Curiosity surfaces 1-3 findings/day
