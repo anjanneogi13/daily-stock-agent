@@ -60,21 +60,64 @@ def _is_closed(r: dict) -> bool:
 
 # ── Per-gate readiness checks ──────────────────────────────────
 def check_smell_enforce(rows: list[dict]) -> dict:
-    """SMELL_ENFORCE ready when we\'ve seen enough smells AND they\'re accurate."""
+    """SMELL_ENFORCE ready when we have enough persisted smells and they predict bad outcomes.
+
+    Requires Bug #17A fields in picks_log:
+      - smell_codes
+      - smell_severities
+      - smell_messages
+
+    A smell false-positive is a smell-tagged closed pick that did NOT produce
+    a bad outcome. Bad outcome is intentionally simple and conservative:
+      - evaluation_status == "sl_hit", OR
+      - r_multiple < 0
+    """
     closed = [r for r in filter_to_quality(rows) if _is_closed(r)]
-    # No smell field exists in picks_log — gate uses log-only data today.
-    # Stub: treat as not-ready until smell outcomes are persisted.
+    threshold_n = 30
+    max_fp_rate = 0.20
+
+    # Schema/field not wired yet, or no rows exist to prove persistence.
+    if not rows or not any("smell_codes" in r for r in rows):
+        return {
+            "gate": "SMELL_ENFORCE",
+            "env_var": "SMELL_ENFORCE",
+            "ready": False,
+            "n_observed": 0,
+            "threshold_n": threshold_n,
+            "smell_false_positive_rate": None,
+            "blockers": ["smell_verdicts_not_persisted"],
+        }
+
+    smell_rows = [r for r in closed if (r.get("smell_codes") or "").strip()]
+    n = len(smell_rows)
+    blockers = []
+
+    if n < threshold_n:
+        blockers.append(f"n={n} < {threshold_n} smell-tagged closed picks")
+
+    false_positives = 0
+    fp_rate = None
+    if n:
+        for r in smell_rows:
+            rm = _to_float(r.get("r_multiple"))
+            bad_outcome = (r.get("evaluation_status") == "sl_hit") or (rm is not None and rm < 0)
+            if not bad_outcome:
+                false_positives += 1
+        fp_rate = round(false_positives / n, 4)
+        if n >= threshold_n and fp_rate >= max_fp_rate:
+            blockers.append(
+                f"smell false-positive rate {fp_rate:.0%} >= {max_fp_rate:.0%}"
+            )
+
     return {
         "gate": "SMELL_ENFORCE",
         "env_var": "SMELL_ENFORCE",
-        "ready": False,
-        "n_observed": 0,
-        "threshold_n": 30,
-        "reason": (
-            "smell verdicts are not persisted to picks_log yet — "
-            "wire smell_blockers field first (separate epic)"
-        ),
-        "blockers": ["smell_verdicts_not_persisted"],
+        "ready": not blockers,
+        "n_observed": n,
+        "threshold_n": threshold_n,
+        "smell_false_positive_rate": fp_rate,
+        "false_positives": false_positives,
+        "blockers": blockers,
     }
 
 
