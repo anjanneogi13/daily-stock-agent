@@ -10,7 +10,7 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **1221 passed, 28 skipped** | ✅ |
+| Total tests | **1225 passed, 28 skipped** | ✅ |
 | Total commits | 400+ | ✅ |
 | `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
@@ -44,6 +44,7 @@ Recent launch-readiness fixes:
 - SPY alpha fill-rate — all closed tracked rows have `spy_close_at_exit`, `spy_return_pct`, and `alpha_pct`.
 - Daily Picks workflow reliability — multiple guarded cron chances; post-send persistence now recovers `picks_log.csv` and fails if push cannot persist state.
 - Telegram sender reliability — daily sender marks dedup only after confirmed delivery to at least one configured chat.
+- Tiered exits decision — tiered TP columns are reserved schema in monitoring mode, not active execution logic.
 
 Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 

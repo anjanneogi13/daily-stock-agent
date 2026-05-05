@@ -30,7 +30,7 @@ This file is intentionally status-based. Do not leave stale free-form bug notes 
 | Bug #10 | FIXED | Medium | Sector ETF fill rate | sector_etf/sector_close fill is now protected by `audit_sector_fill_rate.py` and regression tests. | Continue monitoring new rows. |
 | Bug #11 | FIXED | Medium | Earnings data | `days_to_earnings` now supports historical `as_of` backfills; `backfill_earnings_days.py` repaired post-floor rows; earnings fill-rate audit is green. | Continue monitoring provider reliability. |
 | Bug #12 | INFO | Informational | Trailing/adaptive fields | trail/adaptive fields are sparse because the feature shipped partway through the dataset. | No action unless new rows fail to populate. |
-| Bug #13 | DEFERRED | Design debt | Tiered exits | Tiered TP system (`tp1`, `tp2`, `qty_t1-3`) is in schema but not actively used. | Decide later: implement tiered exits or mark columns reserved. |
+| Bug #13 | FIXED | Design debt | Tiered exits | Tiered TP columns (`tp1`, `tp2`, `qty_t1-3`, `tier_status`) are intentionally reserved schema and inactive in current monitoring mode. | Revisit only if/when scale-out execution is implemented. |
 | Bug #19 | FIXED | High | GitHub workflow reports | report issue upsert prevents duplicate Daily Picks / Performance / Execution Report issues. | Monitor next reruns; old duplicates can be closed separately if desired. |
 | Bug #20 | FIXED | High | Product docs | monitoring-first/no-paper-trading decision encoded in docs and tests. | Keep docs in sync if launch policy changes. |
 | Bug #21 | FIXED | High | Monitoring gates | monitoring readiness dashboard calculates day/swing/monster paper-trading gates. | Use during observation windows. |
@@ -65,6 +65,5 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 
 ## Next likely fixes
 
-1. Bug #13 — decide tiered TP fate after monitoring window.
-2. Add tests for undercovered modules: `hard_blocks`, `llm_agent`, `market_news`, `earnings_analyzer`.
-3. Continue monitoring until post-floor sample-size gates are ready.
+1. Add tests for undercovered modules: `hard_blocks`, `llm_agent`, `market_news`, `earnings_analyzer`.
+2. Continue monitoring until post-floor sample-size gates are ready.
