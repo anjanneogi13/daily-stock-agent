@@ -48,7 +48,7 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 | 4 | **Calibration loop** (per-factor accuracy → weight tweaks) | `calibration.py`, `weight_proposer.py`, `weight_applier.py` | ✅ Live (5%/wk safety cap) |
 | 5 | **Auto-pause** (degraded health → pause) | `auto_pause.py`, `pause_state.py`, `self_awareness.py` | ✅ Live |
 | 6 | **Hypothesis engine** (Wilson 95% CI tests) | `hypothesis_engine.py` | ✅ Live |
-| 7 | **News & watchlist** | `news_engine.py`, `watchlist.py` | ✅ Live |
+| 7 | **News & watchlist** | `news_engine.py`, `watchlist_manager.py`, `data/watchlist.json` | ✅ Live |
 | 8 | **Auto-promote + lesson GC** | `auto_promote.py`, `lesson_gc.py` | ✅ Live |
 
 ---

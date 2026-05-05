@@ -10,9 +10,10 @@ from src import wisdom_base
 
 @pytest.fixture(autouse=True)
 def _isolate(tmp_path, monkeypatch):
-    """Hermetic kill-list path."""
-    kill = tmp_path / "kill.json"
-    monkeypatch.setattr(wisdom_base, "KILL", kill)
+    """Hermetic wisdom paths so tests never mutate tracked production data."""
+    monkeypatch.setattr(wisdom_base, "LESSONS", tmp_path / "lessons.jsonl")
+    monkeypatch.setattr(wisdom_base, "PATTERNS", tmp_path / "patterns.jsonl")
+    monkeypatch.setattr(wisdom_base, "KILL", tmp_path / "kill.json")
     yield
 
 

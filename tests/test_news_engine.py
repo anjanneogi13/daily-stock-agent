@@ -2,16 +2,26 @@
 import sys
 import os
 import json
+import pytest
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.news_classifier import _heuristic_fallback, classify_news
+from src import watchlist_manager
 from src.watchlist_manager import (
     add_from_news, get_watchlist, get_watchlist_tickers,
-    watchlist_score_boost, _prune_expired, WATCHLIST_PATH
+    watchlist_score_boost, _prune_expired
 )
+
+
+
+@pytest.fixture(autouse=True)
+def _isolate_watchlist(tmp_path, monkeypatch):
+    """Hermetic watchlist path so tests never mutate tracked production data."""
+    monkeypatch.setattr(watchlist_manager, "WATCHLIST_PATH", tmp_path / "watchlist.json")
+    yield
 
 
 # ═══ News Classifier Tests ═══════════════════════════════════════
@@ -59,8 +69,8 @@ def test_heuristic_neutral_for_routine_news():
 
 # ═══ Watchlist Manager Tests ═════════════════════════════════════
 def _reset_watchlist():
-    if WATCHLIST_PATH.exists():
-        WATCHLIST_PATH.unlink()
+    if watchlist_manager.WATCHLIST_PATH.exists():
+        watchlist_manager.WATCHLIST_PATH.unlink()
 
 
 def test_watchlist_adds_high_score_news():

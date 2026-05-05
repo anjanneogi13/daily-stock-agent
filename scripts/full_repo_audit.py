@@ -31,6 +31,97 @@ def sh(cmd, timeout=60):
     except Exception as e:
         return f"<error: {e}>"
 
+
+def recent_regime_counts(path="data/picks_log.csv", limit=10) -> dict:
+    """Count regimes in recent picks using real CSV parsing.
+
+    Shell parsing with awk -F, breaks when company names contain quoted commas,
+    e.g. "Agilent Technologies, Inc.", which shifts field numbers.
+    """
+    try:
+        with open(path, newline="") as f:
+            rows = list(csv.DictReader(f))
+    except FileNotFoundError:
+        return {}
+
+    out = defaultdict(int)
+    for row in rows[-limit:]:
+        regime = (row.get("regime") or "EMPTY").strip() or "EMPTY"
+        out[regime] += 1
+    return dict(sorted(out.items()))
+
+
+def format_regime_counts(counts: dict) -> str:
+    if not counts:
+        return "no picks_log rows"
+    return "\n".join(f"{count:6d} {regime}" for regime, count in counts.items())
+
+
+
+def documented_python_refs(doc_paths) -> tuple[set[str], set[str]]:
+    """Return documented Python module/file references and planned references.
+
+    planned_refs are docs lines explicitly marked NOT YET BUILT, so they should
+    not be treated as broken drift.
+    """
+    refs = set()
+    planned_refs = set()
+    for doc in doc_paths:
+        try:
+            lines = doc.read_text(errors="ignore").splitlines()
+        except FileNotFoundError:
+            continue
+        for line in lines:
+            line_refs = set()
+            for match in re.finditer(r"`?(?:(?:src|scripts)/)?(\w+)\.py`?", line):
+                name = match.group(1)
+                line_refs.add(name)
+                refs.add(name)
+            if "NOT YET BUILT" in line.upper():
+                planned_refs.update(line_refs)
+    return refs, planned_refs
+
+
+def repo_python_stems(paths=None) -> set[str]:
+    """Return Python file stems that actually exist in root/src/scripts."""
+    if paths is None:
+        paths = (
+            list(ROOT.glob("*.py"))
+            + list((ROOT / "src").glob("*.py"))
+            + list((ROOT / "scripts").glob("*.py"))
+        )
+    return {Path(path).stem for path in paths if Path(path).stem != "__init__"}
+
+
+def classify_docs_drift(doc_paths=None, python_paths=None, src_paths=None) -> dict:
+    """Classify docs/code drift without treating scripts/root files as src ghosts."""
+    if doc_paths is None:
+        doc_paths = list((ROOT / "docs").glob("ARCHITECTURE*.md")) + list(
+            (ROOT / "docs").glob("CONTEXT*.md")
+        )
+    if src_paths is None:
+        src_paths = list((ROOT / "src").glob("*.py"))
+
+    refs, planned_refs = documented_python_refs(doc_paths)
+    real_py = repo_python_stems(python_paths)
+    src_names = {Path(path).stem for path in src_paths if Path(path).stem != "__init__"}
+
+    missing_refs = sorted(
+        name for name in refs
+        if name not in real_py and name not in planned_refs and name not in {"main", "app", "__init__"}
+    )
+    planned_missing = sorted(name for name in planned_refs if name not in real_py)
+    existing_refs = sorted(name for name in refs if name in real_py)
+    src_not_explicitly_documented = sorted(src_names - refs)
+
+    return {
+        "existing_refs": existing_refs,
+        "missing_refs": missing_refs,
+        "planned_missing": planned_missing,
+        "src_not_explicitly_documented": src_not_explicitly_documented,
+    }
+
+
 def main() -> int:
     # ════════════════════════════════════════════════════════════════
     section("1. REPO META")
@@ -150,14 +241,17 @@ def main() -> int:
          "test -f scripts/monitoring_readiness.py && echo 'present' || echo 'MISSING'"),
         ("agent_memoir reads learning_journal?",
          "grep -n 'learning_journal' src/agent_memoir.py 2>/dev/null | head -3 || echo 'NO REFERENCE'"),
-        ("regime 'unknown' in recent picks",
-         "tail -10 data/picks_log.csv | awk -F, '{print $15}' | sort | uniq -c"),
+        ("regime counts in recent picks",
+         None),
         ("tracker.py legacy module exists?",
          "ls -la src/tracker.py 2>/dev/null || echo 'absent'"),
     ]
     for label, cmd in issues:
         print(f"\n  🔍 {label}")
-        print("     " + sh(cmd).replace("\n", "\n     ").strip())
+        if cmd is None and label == "regime counts in recent picks":
+            print("     " + format_regime_counts(recent_regime_counts()).replace("\n", "\n     "))
+        else:
+            print("     " + sh(cmd).replace("\n", "\n     ").strip())
 
     # ════════════════════════════════════════════════════════════════
     section("9. PICKS_LOG STATE")
@@ -192,26 +286,30 @@ def main() -> int:
     # ════════════════════════════════════════════════════════════════
     section("12. POTENTIAL DRIFT — modules in docs but not in code")
     # ════════════════════════════════════════════════════════════════
-    arch_files = list((ROOT/"docs").glob("ARCHITECTURE*.md")) + list((ROOT/"docs").glob("CONTEXT*.md"))
-    src_names = {f.stem for f in src_files}
-    mentioned = set()
-    for d in arch_files:
-        txt = d.read_text(errors='ignore')
-        for m in re.finditer(r'`?(?:src/)?(\w+)\.py`?', txt):
-            mentioned.add(m.group(1))
-    ghosts = mentioned - src_names - {'main', 'app', '__init__'}
-    if ghosts:
-        print(f"  📛 mentioned in docs but no src/ file:")
-        for g in sorted(ghosts)[:20]:
+    drift = classify_docs_drift()
+
+    if drift["missing_refs"]:
+        print("  📛 documented Python refs with no matching root/src/scripts file:")
+        for g in drift["missing_refs"][:20]:
             print(f"     - {g}")
     else:
-        print("  ✅ no ghost references")
+        print("  ✅ no broken Python file references")
 
-    orphans = src_names - mentioned - {'__init__'}
-    if orphans:
-        print(f"\n  📛 src/ files not mentioned in any architecture doc ({len(orphans)} total):")
-        for o in sorted(orphans)[:15]:
+    if drift["planned_missing"]:
+        print("\n  📝 planned/future Python refs explicitly marked NOT YET BUILT:")
+        for g in drift["planned_missing"][:20]:
+            print(f"     - {g}")
+
+    undocumented = drift["src_not_explicitly_documented"]
+    if undocumented:
+        print(
+            f"\n  ℹ️ src modules not explicitly documented by filename "
+            f"({len(undocumented)} total; informational sample):"
+        )
+        for o in undocumented[:15]:
             print(f"     - {o}")
+    else:
+        print("\n  ✅ every src module is explicitly documented by filename")
 
     print()
     print("═" * 72)

@@ -11,6 +11,7 @@ from pathlib import Path
 import yfinance as yf
 import pandas as pd
 from .signal_journal import attach_outcome as _journal_attach
+from .sector_benchmark import resolve_sector_etf
 
 LOG_PATH = Path("data/picks_log.csv")
 MAX_DAYS_OPEN = 20   # mark expired after this many trading days
@@ -38,7 +39,7 @@ def _save_picks(rows: list):
         return
     fields = list(rows[0].keys())
     with LOG_PATH.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -132,22 +133,83 @@ def _etf_close_on(etf: str, date_str: str) -> float | None:
         return None
 
 
+def _resolve_sector_etf_for_row(row: dict) -> str:
+    """Resolve a row's sector benchmark ETF from persisted fields/tag/sector.
+
+    Legacy rows may have blank sector_etf even though their tag contains enough
+    information, e.g. "SEMI / AI" -> SOXX. Fall back to SPY so sector-alpha
+    learning has a benchmark instead of staying blank forever.
+    """
+    existing = (row.get("sector_etf") or "").strip()
+    if existing:
+        return existing
+
+    tag = (
+        row.get("tag")
+        or row.get("sector_tag")
+        or row.get("scores_sector_tag")
+        or ""
+    )
+    sector = (
+        row.get("sector")
+        or row.get("yfinance_sector")
+        or row.get("info_sector")
+        or ""
+    )
+    return resolve_sector_etf(sector=sector, tag=tag) or "SPY"
+
+
+def _ensure_sector_benchmark_anchor(row: dict) -> tuple[str, float | None]:
+    """Ensure row has sector_etf and sector_close at pick time.
+
+    Returns (etf, close). If the resolved ETF cannot be fetched, falls back to
+    SPY and rewrites both anchor fields when SPY succeeds.
+    """
+    pick_date = (row.get("pick_date") or "").strip()
+    etf = _resolve_sector_etf_for_row(row)
+    row["sector_etf"] = etf
+
+    sec_pick_str = (row.get("sector_close") or "").strip()
+    if sec_pick_str:
+        try:
+            return etf, float(sec_pick_str)
+        except Exception:
+            pass
+
+    if not pick_date:
+        return etf, None
+
+    sec_at_pick = _etf_close_on(etf, pick_date)
+    if sec_at_pick is not None:
+        row["sector_close"] = str(round(sec_at_pick, 2))
+        return etf, sec_at_pick
+
+    if etf != "SPY":
+        spy_at_pick = _etf_close_on("SPY", pick_date)
+        if spy_at_pick is not None:
+            row["sector_etf"] = "SPY"
+            row["sector_close"] = str(round(spy_at_pick, 2))
+            return "SPY", spy_at_pick
+
+    return etf, None
+
+
 def _add_sector_alpha(row: dict, exit_date_str: str, pick_return_pct: float) -> str:
-    """Mirror of _add_spy_alpha but for the pick's sector ETF."""
-    etf = row.get("sector_etf") or ""
-    sec_pick_str = row.get("sector_close", "")
-    if not etf or not sec_pick_str:
+    """Mirror of _add_spy_alpha but for the pick's sector ETF.
+
+    Also repairs legacy rows missing sector_etf/sector_close by resolving the
+    benchmark from row metadata and fetching the pick-date ETF close.
+    """
+    etf, sec_at_pick = _ensure_sector_benchmark_anchor(row)
+    if not etf or sec_at_pick is None:
         row["sector_alpha_pct"] = None
         return ""
-    try:
-        sec_at_pick = float(sec_pick_str)
-    except Exception:
-        row["sector_alpha_pct"] = None
-        return ""
+
     sec_at_exit = _etf_close_on(etf, exit_date_str)
     if sec_at_exit is None or sec_at_pick <= 0:
         row["sector_alpha_pct"] = None
         return ""
+
     sec_return = (sec_at_exit - sec_at_pick) / sec_at_pick * 100
     row["sector_return_pct"] = round(sec_return, 2)
     row["sector_alpha_pct"] = round(pick_return_pct - sec_return, 2)

@@ -123,12 +123,34 @@ def _to_date(value):
     return None
 
 
-def days_to_earnings(ticker: str) -> int:
+def _as_of_date(as_of=None):
+    """Normalize an optional historical anchor date.
+
+    None preserves live behavior. A date/datetime/ISO string enables historical
+    backfills where days_to_earnings must be relative to pick_date, not today.
+    """
+    if as_of is None:
+        return datetime.now().date()
+    if isinstance(as_of, datetime):
+        return as_of.date()
+    if isinstance(as_of, date):
+        return as_of
+    if isinstance(as_of, str):
+        return datetime.fromisoformat(as_of).date()
+    raise TypeError(f"Unsupported as_of date value: {as_of!r}")
+
+
+def days_to_earnings(ticker: str, as_of=None) -> int:
     """Returns days until next earnings, or 999 if unknown.
 
     yfinance has changed calendar shapes over time. This parser accepts dict
     and DataFrame-like shapes so earnings-risk filtering does not silently go
     blind when the upstream object format changes.
+
+    Args:
+        ticker: Symbol to query.
+        as_of: Optional historical anchor date. When provided, the returned
+            delta is relative to that date instead of today's date.
     """
     try:
         t = yf.Ticker(ticker, session=SESSION) if SESSION else yf.Ticker(ticker)
@@ -136,7 +158,7 @@ def days_to_earnings(ticker: str) -> int:
         if next_date is None:
             return UNKNOWN_EARNINGS_DAYS
 
-        delta = (next_date - datetime.now().date()).days
+        delta = (next_date - _as_of_date(as_of)).days
         return max(delta, 0)
     except Exception:
         return UNKNOWN_EARNINGS_DAYS

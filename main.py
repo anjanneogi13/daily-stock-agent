@@ -46,6 +46,46 @@ def _safe_trade_type_for_pick(scores: dict, pick_date=None, sig: dict = None, ga
     return ttype
 
 
+def _yf_ticker_for_sector_benchmark(symbol: str):
+    """Small seam for tests around yfinance sector benchmark fetches."""
+    import yfinance as yf
+    return yf.Ticker(symbol)
+
+
+def _latest_close_for_sector_benchmark(symbol: str) -> float | None:
+    """Fetch latest close for an ETF symbol, returning None on empty/error."""
+    try:
+        hist = _yf_ticker_for_sector_benchmark(symbol).history(period="2d")
+        if len(hist):
+            return float(hist["Close"].iloc[-1])
+    except Exception:
+        return None
+    return None
+
+
+def _sector_benchmark_for_pick(pick: dict) -> tuple[str, float | None]:
+    """Return (sector_etf, sector_close) for a pick with SPY fallback.
+
+    Bug #8/#10: sector alpha learning needs sector_close populated at pick time.
+    If the resolved sector ETF has no quote, fall back to SPY so the row still
+    has a usable benchmark rather than a blank sector_close.
+    """
+    sector = pick.get("info_short", {}).get("sector", "")
+    tag = pick.get("scores", {}).get("sector_tag") or ""
+    etf = resolve_sector_etf(sector=sector, tag=tag) or "SPY"
+
+    close = _latest_close_for_sector_benchmark(etf)
+    if close is not None:
+        return etf, close
+
+    if etf != "SPY":
+        spy_close = _latest_close_for_sector_benchmark("SPY")
+        if spy_close is not None:
+            return "SPY", spy_close
+
+    return etf, None
+
+
 
 # Auto-seed wisdom base on every run (idempotent — safe)
 try:
@@ -563,23 +603,18 @@ def run():
             rprint(f"[yellow]⚠ monster treatment skipped: {_e}[/yellow]")
 
         picks_for_log = []
-        # T3 May 3 2026: sector benchmark — fetch each ETF close once
-        from src.data_fetcher import fetch_info as _fi
+        # Bug #8/#10: sector benchmark — fetch each ETF close once, with SPY
+        # fallback when the sector ETF quote is unavailable.
         try:
-            import yfinance as _yf
-            _etf_cache = {}
+            _sector_cache = {}
             for _p in top:
-                _sec = _p.get("info_short", {}).get("sector", "")
-                _tag = _p["scores"].get("sector_tag") or ""
-                _etf = resolve_sector_etf(sector=_sec, tag=_tag)
-                _p["_sector_etf"] = _etf
-                if _etf not in _etf_cache:
-                    try:
-                        _hist = _yf.Ticker(_etf).history(period="2d")
-                        _etf_cache[_etf] = float(_hist["Close"].iloc[-1]) if len(_hist) else None
-                    except Exception:
-                        _etf_cache[_etf] = None
-                _p["_sector_close"] = _etf_cache[_etf]
+                _cache_key = (
+                    _p.get("info_short", {}).get("sector", ""),
+                    _p.get("scores", {}).get("sector_tag") or "",
+                )
+                if _cache_key not in _sector_cache:
+                    _sector_cache[_cache_key] = _sector_benchmark_for_pick(_p)
+                _p["_sector_etf"], _p["_sector_close"] = _sector_cache[_cache_key]
         except Exception as _se:
             rprint(f"[yellow]⚠ sector benchmark fetch skipped: {_se}[/yellow]")
 

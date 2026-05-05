@@ -69,3 +69,9 @@ def test_days_to_earnings_clamps_past_date_to_zero(monkeypatch):
 def test_days_to_earnings_unknown_empty_returns_999(monkeypatch):
     patch_ticker(monkeypatch, pd.DataFrame())
     assert earnings.days_to_earnings("UNKNOWN") == 999
+
+
+def test_days_to_earnings_as_of_uses_historical_anchor(monkeypatch):
+    patch_ticker(monkeypatch, {"Earnings Date": [date(2026, 5, 27)]})
+    assert earnings.days_to_earnings("A", as_of=date(2026, 5, 4)) == 23
+    assert earnings.days_to_earnings("A", as_of="2026-05-04") == 23
