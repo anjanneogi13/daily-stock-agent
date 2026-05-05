@@ -58,9 +58,11 @@ def fetch_universe_data(tickers: List[str], period: str = "6mo",
 def fetch_info(ticker: str) -> dict:
     """Combined info: price/volume from yfinance + fundamentals from Finnhub."""
     info = {
-        "shortName": ticker,            # fallback if longName fetch fails
+        # Bug #6: do not use ticker as a fake company-name fallback.
+        # Downstream layman rendering already hides blank company names.
+        "shortName": "",
         "longName": None,
-        "name": ticker,                 # what main.py reads (info_short.name)
+        "name": "",                     # what main.py reads (info_short.name)
         "currentPrice": None,
         "averageVolume": 1_000_000, "sector": "N/A",
         "marketCap": None, "trailingPE": None,
@@ -79,7 +81,8 @@ def fetch_info(ticker: str) -> dict:
         try:
             full_info = t.info or {}
             long_name = full_info.get("longName") or full_info.get("shortName")
-            if long_name and long_name != ticker:
+            if long_name and str(long_name).strip().upper() != ticker.upper():
+                long_name = str(long_name).strip()
                 info["longName"]  = long_name
                 info["shortName"] = long_name
                 info["name"]      = long_name

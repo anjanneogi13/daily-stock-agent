@@ -154,7 +154,7 @@ def _score_one(tk, df, cfg):
 
         return {
             "ticker": tk, "scores": scores, "plan": plan, "news": news,
-            "info_short": {"name": info.get("shortName", tk),
+            "info_short": {"name": info.get("name") or info.get("longName") or info.get("shortName") or "",
                            "sector": info.get("sector", "N/A")},
             "trade_type": ttype,
         }

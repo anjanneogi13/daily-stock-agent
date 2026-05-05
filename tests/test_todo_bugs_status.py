@@ -36,7 +36,7 @@ def test_recent_cleanup_bugs_are_marked_fixed():
 def test_remaining_known_open_items_are_not_lost():
     text = TODO.read_text()
 
-    assert "Bug #6" in text and "company-name" in text
+    assert "Bug #6" in text and "company-name" in text and "FIXED" in text
     assert "Bug #7" in text and "non-trading days" in text
     assert "Bug #11" in text and "days_to_earnings" in text and "FIXED" in text
     assert "Bug #13" in text and "Tiered TP" in text
@@ -57,3 +57,12 @@ def test_data_quality_cleanup_bugs_are_marked_fixed():
     assert "Bug #11" in text and "Earnings data" in text and "FIXED" in text
     assert "backfill_earnings_days.py" in text
     assert "audit_sector_fill_rate.py" in text
+
+
+def test_company_name_bug_marked_fixed():
+    text = TODO.read_text()
+
+    assert "Bug #6" in text
+    assert "company-name" in text
+    assert "ticker-as-company" in text
+    assert "FIXED" in text

@@ -23,7 +23,7 @@ This file is intentionally status-based. Do not leave stale free-form bug notes 
 
 | Bug | Status | Severity | Area | Summary | Next action |
 |---|---|---|---|---|---|
-| Bug #6 | OPEN | Low | UX / company names | company-name writer falls back to ticker when upstream lookup fails. User sees `NVDA` instead of full company name. | Writer should store empty string when lookup fails, not ticker-as-company. |
+| Bug #6 | FIXED | Low | UX / company names | company-name writer no longer falls back to ticker when upstream lookup fails; future unresolved names persist blank; tracked historical ticker-as-company rows were backfilled to known names. | Continue monitoring new rows. |
 | Bug #7 | FIXED | Low | Calendar / trade type | day trades appeared on non-trading days historically. Picker now downgrades would-be day picks to swing on weekends/holidays; evaluator still handles old rows robustly. | Monitor future manual/backfill runs. |
 | Bug #8 | FIXED | Medium | Sector alpha | sector benchmark fields were historically underfilled. `main.py` now resolves sector ETF and close with SPY fallback; `backfill_sector_alpha.py` repairs post-floor rows; sector audit is green. | Continue monitoring new rows. |
 | Bug #9 | PARTIAL | Medium | SPY alpha | alpha backfill for pre-May-1 picks appears partially addressed, but older rows should be audited. | Run/extend backfill audit for `spy_close_at_exit`, `spy_return_pct`, `alpha_pct`. |
@@ -65,8 +65,7 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 
 ## Next likely fixes
 
-1. Bug #6 — company-name fallback cleanup.
-2. Bug #9 — SPY alpha historical audit/backfill verification.
-3. Bug #13 — decide tiered TP fate after monitoring window.
-4. Add tests for undercovered modules: `hard_blocks`, `llm_agent`, `market_news`, `earnings_analyzer`.
-5. Continue monitoring until post-floor sample-size gates are ready.
+1. Bug #9 — SPY alpha historical audit/backfill verification.
+2. Bug #13 — decide tiered TP fate after monitoring window.
+3. Add tests for undercovered modules: `hard_blocks`, `llm_agent`, `market_news`, `earnings_analyzer`.
+4. Continue monitoring until post-floor sample-size gates are ready.
