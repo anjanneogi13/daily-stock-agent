@@ -683,6 +683,67 @@
       "url": "https://www.benzinga.com/markets/tech/26/05/52308002/alphabet-stock-gains-on-report-of-massive-anthropic-cloud-chip-deal",
       "source": "alpaca",
       "added_at": "2026-05-05T21:35:12.343433+00:00"
+    },
+    {
+      "ticker": "QRVO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Qorvo raised FY2027 adjusted EPS guidance to $7.00, beating consensus estimate of $6.60 by 6%, indicating strong business momentum and likely to drive positive price action.",
+      "action_window": "next_day",
+      "headline": "Qorvo Sees FY2027 Adj EPS $7.00 vs $6.60 Est",
+      "url": "https://www.benzinga.com/news/26/05/52309401/qorvo-sees-fy2027-adj-eps-7-00-vs-6-60-est",
+      "source": "alpaca",
+      "added_at": "2026-05-05T22:52:04.129320+00:00"
+    },
+    {
+      "ticker": "TBI",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company's Q2 sales guidance midpoint of $417.5M barely meets consensus of $416.48M, with the range skewing below expectations indicating potential weakness.",
+      "action_window": "next_day",
+      "headline": "TrueBlue Sees Q2 Sales $405.000M-$430.000M vs $416.480M Est",
+      "url": "https://www.benzinga.com/news/26/05/52309393/trueblue-sees-q2-sales-405-000m-430-000m-vs-416-480m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-05T22:52:04.129331+00:00"
+    },
+    {
+      "ticker": "QLYS",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Qualys Q2 EPS guidance of $1.24-$1.31 meaningfully misses Street estimate of $1.34, representing 2-7% shortfall at midpoint that typically triggers immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "Qualys Sees Q2 GAAP EPS $1.24-$1.31 vs $1.34 Est",
+      "url": "https://www.benzinga.com/news/26/05/52309188/qualys-sees-q2-gaap-eps-1-24-1-31-vs-1-34-est",
+      "source": "alpaca",
+      "added_at": "2026-05-05T22:52:04.129338+00:00",
+      "updated_at": "2026-05-05T22:52:04.129356+00:00"
+    },
+    {
+      "ticker": "SSSS",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with EPS missing estimates by 14% but revenue beating by 80%, creating uncertainty about quality of the beat and operational efficiency.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: SuRo Capital Q1 EPS $(0.16) Misses $(0.14) Estimate, Sales $731.963K Beat $405.500K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52309089/correction-suro-capital-q1-eps-0-16-misses-0-14-estimate-sales-731-963k-beat-405-500k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-05T22:52:04.129366+00:00"
+    },
+    {
+      "ticker": "LIND",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Lindblad Expeditions significantly beat both EPS estimates by 350% ($0.09 vs $0.02) and revenue estimates by 5.5% ($208M vs $197M), representing a strong double beat that typically drives immediate price action.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: Lindblad Expeditions Q1 EPS $0.09 Beats $0.02 Estimate, Sales $208.013M Beat $197.250M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52309068/correction-lindblad-expeditions-q1-eps-0-09-beats-0-02-estimate-sales-208-013m-beat-197-250m-estima",
+      "source": "alpaca",
+      "added_at": "2026-05-05T22:52:04.129372+00:00"
     }
   ]
 }
