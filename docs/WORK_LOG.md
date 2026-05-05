@@ -13,6 +13,32 @@ Rules:
 
 ---
 
+## 2026-05-05 — Signal journal consistency repair
+
+**Type:** data fix
+
+**Summary:**
+
+Added missing signal journal rows for post-send picks:
+
+- `2026-05-05 EXPD`
+- `2026-05-05 GILT`
+
+**Reason:**
+
+The post-send state commit added rows to `data/picks_log.csv` without matching rows in `data/signal_journal.jsonl`, breaking the journal consistency invariant.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_journal_consistency.py -q --tb=short`
+- Full suite
+
+**Follow-up:**
+
+Investigate and harden the post-send persistence path so picks cannot be persisted without matching signal journal entries.
+
+---
+
 ## 2026-05-05 — Documentation consolidation
 
 **Type:** docs / process
