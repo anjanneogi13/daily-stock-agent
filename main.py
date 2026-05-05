@@ -599,7 +599,7 @@ def run():
                 "vol_ratio": p["scores"].get("vol_ratio"),
                 # 💎 Monster Hunt audit
                 "monster_score": p["scores"].get("monster_score") or 0,  # Bug #14
-                "is_monster": p["scores"].get("is_monster") or False,  # Bug #14
+                "is_monster": p.get("is_monster") or p["scores"].get("is_monster") or False,  # Bug #16: preserve root flag
                 # Sector benchmark (T3 May 3 2026)
                 "sector_etf": _setf,
                 "sector_close": _sclose,
