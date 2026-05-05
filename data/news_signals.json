@@ -955,5 +955,38 @@
     "added_at": "2026-05-05T22:52:04.127673+00:00",
     "expires": "2026-05-12T22:52:04.127678+00:00",
     "hard_block": false
+  },
+  "JOBY": {
+    "ticker": "JOBY",
+    "score_delta": -0.139,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "headline": "Joby Aviation Sees FY2026 Sales $105.000M-$115.000M vs $111.775M Est",
+    "added_at": "2026-05-05T23:43:44.608982+00:00",
+    "expires": "2026-05-19T23:43:44.608988+00:00",
+    "hard_block": false
+  },
+  "COTY": {
+    "ticker": "COTY",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "headline": "Coty Sees FY2026 Adj EPS $0.33-$0.35 vs $0.27 Est",
+    "added_at": "2026-05-05T23:43:44.610268+00:00",
+    "expires": "2026-05-19T23:43:44.610274+00:00",
+    "hard_block": false
+  },
+  "AEP": {
+    "ticker": "AEP",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "American Electric Power (AEP) Tops Q1 Earnings and Revenue Estimates",
+    "added_at": "2026-05-05T23:43:44.614487+00:00",
+    "expires": "2026-05-12T23:43:44.614492+00:00",
+    "hard_block": false
   }
 }

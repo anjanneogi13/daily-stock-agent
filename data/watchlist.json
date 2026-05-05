@@ -744,6 +744,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52309068/correction-lindblad-expeditions-q1-eps-0-09-beats-0-02-estimate-sales-208-013m-beat-197-250m-estima",
       "source": "alpaca",
       "added_at": "2026-05-05T22:52:04.129372+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Breakthrough diplomatic agreement with Iran on Strait of Hormuz shipping significantly reduces geopolitical risk to global oil supply and trade routes, bullish for equities and bearish for oil prices.",
+      "action_window": "intraday",
+      "headline": "President Trump Posts On Truth Social \"..Great Progress has been made toward a Complete and Final Agreement with Representatives of Iran, we have mutually agreed that, while the Blockade will remain in full force and effect, Project Freedom (The Movement of Ships through the Strait of Hormuz) will b",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52309845/president-trump-posts-on-truth-social-great-progress-has-been-made-toward-a-compl",
+      "source": "alpaca",
+      "added_at": "2026-05-05T23:43:44.622437+00:00"
+    },
+    {
+      "ticker": "JOBY",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "FY2026 revenue guidance midpoint of $110M falls below consensus estimate of $111.775M, representing a modest miss that typically triggers negative price action.",
+      "action_window": "next_day",
+      "headline": "Joby Aviation Sees FY2026 Sales $105.000M-$115.000M vs $111.775M Est",
+      "url": "https://www.benzinga.com/news/26/05/52309632/joby-aviation-sees-fy2026-sales-105-000m-115-000m-vs-111-775m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-05T23:43:44.622450+00:00"
+    },
+    {
+      "ticker": "COTY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Coty raised FY2026 adjusted EPS guidance to $0.33-$0.35, representing 22-30% above consensus estimate of $0.27, a significant beat that should drive immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Coty Sees FY2026 Adj EPS $0.33-$0.35 vs $0.27 Est",
+      "url": "https://www.benzinga.com/news/26/05/52309611/coty-sees-fy2026-adj-eps-0-33-0-35-vs-0-27-est",
+      "source": "alpaca",
+      "added_at": "2026-05-05T23:43:44.622457+00:00"
+    },
+    {
+      "ticker": "AEP",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "American Electric Power beat both earnings and revenue estimates by approximately 5-6%, representing a meaningful positive catalyst for a utility stock with stable expectations.",
+      "action_window": "intraday",
+      "headline": "American Electric Power (AEP) Tops Q1 Earnings and Revenue Estimates",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/american-electric-power-aep-tops-122502647.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-05-05T23:43:44.622472+00:00"
     }
   ]
 }
