@@ -22,6 +22,10 @@ def _row(ticker, pick_date, outcome):
 
 
 def test_no_closed_picks_returns_empty():
+    # Hermetic: don't read real data/picks_log.csv (other tests in this
+    # file already mock load_closed; this one was missed pre-2026-05-04)
+    import src.auto_cooldown as mod
+    mod.load_closed = lambda: []
     r = ac.scan_and_cool(apply=False)
     assert r["candidates"] == []
     assert r["dry_run"] is True

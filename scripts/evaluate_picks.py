@@ -8,7 +8,7 @@ from src.performance_stats import print_dashboard
 from src.position_monitor import scan_open_positions
 from src.strategy_breakdown import print_all_breakdowns
 from src.risk_metrics import compute_risk_metrics, format_risk_text
-from src.auto_pause import format_paused_summary
+from src.auto_pause import compute_score as _ap_score, format_summary as _ap_summary
 from src.auto_cooldown import scan_and_cool, format_summary as _cd_summary
 
 print("Evaluating pending picks...\n")
@@ -44,7 +44,7 @@ print(format_risk_text(compute_risk_metrics()))
 
 # Auto-pause status (Pillar 5 — Self-Awareness)
 print()
-print(format_paused_summary())
+print(_ap_summary(_ap_score()))
 
 # Auto-cooldown (Pillar 4): cool tickers with 3+ consecutive losses
 print("\n--- AUTO-COOLDOWN ---")
