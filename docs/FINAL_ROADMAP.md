@@ -1,7 +1,34 @@
 # 🗺️ Daily Stock Agent — Final Roadmap
 
-**Last updated:** 2026-05-03 · 17:30 SGT
-**Status:** 100% of MVP shipped · 100% of "Big 4 Ideas" shipped
+**Last updated:** 2026-05-05 · monitoring-first update
+**Status:** MVP shipped for monitoring-only use · paper trading deferred
+
+---
+
+## 🟢 CURRENT — Phase 5: Monitoring & Stabilization
+
+**Goal:** verify the agent in the real daily workflow before adding execution or paper trading.
+
+This phase comes before new feature expansion.
+
+### Monitoring plan
+
+1. Run a **2-week observation** window in monitoring-only mode.
+2. During the same period, fix remaining audit issues and complete architecture documentation.
+3. Run a **second 2-week validation** window after the architecture stabilizes.
+4. Only then evaluate **paper trading eligibility**.
+
+### Paper trading eligibility
+
+Paper trading remains deferred until post-floor data passes all gates:
+
+| Trade type | Required success rate | Extra gate |
+|---|---:|---|
+| day trades | >60% | positive expectancy |
+| swing trades | >66% | positive expectancy |
+| monster / long holder picks | >90% | positive expectancy |
+
+No real-money launch is planned. The agent recommends, monitors, explains, and learns.
 
 ---
 

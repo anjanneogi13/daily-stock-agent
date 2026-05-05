@@ -1,7 +1,25 @@
 # 🏛️ Daily Stock Agent — Architecture
 
-**Last updated:** 2026-05-03
-**Tests:** 805 passing · **Modules:** 78 · **Workflows:** 14 · **Health:** 10/10
+**Last updated:** 2026-05-05
+**Tests:** 1140 passed, 22 skipped · **Modules:** 80+ · **Workflows:** 14 · **Health:** monitoring-ready
+
+---
+
+## 0A. Monitoring-first launch status (2026-05-05)
+
+**Monitoring-first launch** is the current product decision.
+
+- The agent is approved for monitoring-only operation.
+- real-money trading is forbidden.
+- paper trading is deferred until two monitoring windows complete.
+- Window 1: 2-week observation while issue cleanup and architecture work continue.
+- Window 2: second 2-week validation after architecture stabilizes.
+- Paper trading eligibility requires post-floor trade-type gates:
+  - day trades >60% win rate plus positive expectancy
+  - swing trades >66% win rate plus positive expectancy
+  - monster / long holder picks >90% win rate plus positive expectancy
+
+Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
 ---
 

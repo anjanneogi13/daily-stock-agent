@@ -1,7 +1,7 @@
 # 🏥 REPO HEALTH — Single Source of Truth
 
 > **Read this FIRST in every new Claude session.**
-> Generated: 2026-05-04 from `scripts/full_repo_audit.py`
+> Generated: 2026-05-05 from `scripts/full_repo_audit.py`
 > Refresh: re-run that script weekly. If anything below changes, update this file.
 
 ---
@@ -10,13 +10,36 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **985 / 985 passing** | ✅ |
-| Total commits | 367+ | ✅ |
-| `src/*.py` modules | 81 (78 live, 3 intentional CLI/dead) | ✅ |
+| Total tests | **1140 passed, 22 skipped** | ✅ |
+| Total commits | 400+ | ✅ |
+| `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
 | Defensive layers active | 7 (data trust chain) | ✅ |
 | Audit dashboards | 4 permanent | ✅ |
-| Picks logged | 39 (post-floor closed: 0 → wisdom honest about ANECDOTAL) | ⏳ |
+| Picks logged | 39+ (post-floor evidence still building) | ⏳ |
+
+---
+
+## 🚀 CURRENT PRODUCT STATUS — Monitoring-first launch
+
+The agent is **monitoring-ready**, not execution-ready.
+
+- No real-money trading.
+- No paper trading integration yet.
+- 2-week observation window first.
+- Then a second 2-week validation window after architecture stabilizes.
+- Paper trading eligibility requires:
+  - day trades >60% win rate plus positive expectancy
+  - swing trades >66% win rate plus positive expectancy
+  - monster / long holder picks >90% win rate plus positive expectancy
+
+Recent launch-readiness fixes:
+
+- report issue upsert — workflows update same-day report issues instead of duplicating them.
+- smell verdict persistence — smell_codes/smell_severities/smell_messages now persist to picks_log.
+- full_repo_audit import-safe — importing audit script no longer launches nested pytest.
+
+Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
 ---
 
@@ -118,7 +141,7 @@ Future YAML changes that strand a data file = CI fails immediately.
 
 | # | Issue | Effort | Source |
 |---|---|---|---|
-| P1 | Smell verdicts not persisted on picks_log → unblocks SMELL_ENFORCE | 45 min | F5 |
+| ✅ | smell verdict persistence fixed; wait for enough post-floor smell-tagged outcomes | done | Bug #17A/#17B |
 | P5a | Write tests for `hard_blocks` (326 lines, gate logic, ZERO tests) | 60 min | This audit |
 | P5b | Write tests for `llm_agent`, `market_news`, `earnings_analyzer` | varies | This audit |
 | P3 | Decide fate of `src/tracker.py` (16 lines, only reads `trades.csv` which is uncommitted) | 5 min | This audit |
