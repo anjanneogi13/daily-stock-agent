@@ -32,6 +32,20 @@ from src.auto_pause import compute_score as _pause_score, format_summary as _pau
 from src.pause_state import is_paused as _is_paused, maybe_auto_pause as _maybe_pause, format_pause_alert as _pause_alert
 from src.market_calendar import is_trading_day as _is_td, reason_market_closed as _why_closed, next_trading_day as _next_td
 
+def _safe_trade_type_for_pick(scores: dict, pick_date=None, sig: dict = None, gap_pct: float = 0.0) -> str:
+    """Calendar-safe DAY/SWING classifier.
+
+    Bug #7: a day trade should never be emitted for a non-trading day.
+    Manual dispatches, backfills, or calendar mismatches can run the picker
+    when the US market is closed. In that case, downgrade would-be DAY picks
+    to SWING instead of sending an impossible intraday alert.
+    """
+    ttype = classify_trade_type(scores, sig=sig, gap_pct=gap_pct)
+    if ttype == "day" and not _is_td(pick_date):
+        return "swing"
+    return ttype
+
+
 
 # Auto-seed wisdom base on every run (idempotent — safe)
 try:
@@ -477,7 +491,7 @@ def run():
     # ═══════════════════════════════════════════════════════════════
     rprint("[5d/6] Auto-tagging trade type (DAY vs SWING)...")
     for p in top:
-        ttype = classify_trade_type(p["scores"])
+        ttype = _safe_trade_type_for_pick(p["scores"], pick_date=_today)
         p["trade_type"] = ttype
         # Also stamp into plan for downstream LLM prompt
         if "plan" in p and isinstance(p["plan"], dict):

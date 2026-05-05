@@ -24,7 +24,7 @@ This file is intentionally status-based. Do not leave stale free-form bug notes 
 | Bug | Status | Severity | Area | Summary | Next action |
 |---|---|---|---|---|---|
 | Bug #6 | OPEN | Low | UX / company names | company-name writer falls back to ticker when upstream lookup fails. User sees `NVDA` instead of full company name. | Writer should store empty string when lookup fails, not ticker-as-company. |
-| Bug #7 | PARTIAL | Low | Calendar / trade type | day trades appeared on non-trading days historically. Main now has market-calendar skip, evaluator handles next trading bar, but upstream tagging should be verified. | Add/verify test that no new day pick is emitted on weekend/holiday. |
+| Bug #7 | FIXED | Low | Calendar / trade type | day trades appeared on non-trading days historically. Picker now downgrades would-be day picks to swing on weekends/holidays; evaluator still handles old rows robustly. | Monitor future manual/backfill runs. |
 | Bug #8 | PARTIAL | Medium | Sector alpha | sector benchmark fields were historically underfilled. Recent `main.py` path now resolves sector ETF and close with SPY fallback. | Verify new post-fix rows have `sector_etf` and `sector_close`; consider shared helper/backfill. |
 | Bug #9 | PARTIAL | Medium | SPY alpha | alpha backfill for pre-May-1 picks appears partially addressed, but older rows should be audited. | Run/extend backfill audit for `spy_close_at_exit`, `spy_return_pct`, `alpha_pct`. |
 | Bug #10 | PARTIAL | Medium | Sector ETF fill rate | sector_etf fill should improve after Bug #8 changes, but needs post-fix verification. | Add sector benchmark fill-rate audit. |
