@@ -72,23 +72,42 @@ def _today_picks():
     return rows
 
 
-def _send(text):
+def _send(text) -> bool:
+    """Send text to Telegram.
+
+    Returns True when at least one configured chat receives the message.
+    Returns False only when credentials exist but every configured chat fails.
+
+    No credentials is treated as a local dry-run success so tests/developer
+    machines can render messages without failing.
+    """
     if not TOKEN or not CHATS:
         print("[telegram] no creds — dry-run print only")
-        print(text); return
+        print(text)
+        return True
+
+    sent_any = False
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
     for chat in CHATS:
-        url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+        chat_ok = False
         for parse_mode in ("Markdown", None):
             payload = {"chat_id": chat, "text": text}
-            if parse_mode: payload["parse_mode"] = parse_mode
+            if parse_mode:
+                payload["parse_mode"] = parse_mode
             data = urllib.parse.urlencode(payload).encode()
             try:
                 with urllib.request.urlopen(url, data=data, timeout=20) as r:
                     if r.status == 200:
                         print(f"[telegram] chat={chat[:6]}… OK ({parse_mode or 'plain'})")
+                        sent_any = True
+                        chat_ok = True
                         break
+                    print(f"[telegram] chat={chat[:6]}… HTTP status {r.status} ({parse_mode or 'plain'})")
             except Exception as e:
-                print(f"[telegram] {parse_mode} failed: {e}")
+                print(f"[telegram] chat={chat[:6]}… {parse_mode or 'plain'} failed: {e}")
+        if not chat_ok:
+            print(f"[telegram] chat={chat[:6]}… FAILED all parse modes")
+    return sent_any
 
 
 def build_message(picks):
@@ -148,7 +167,10 @@ def main():
     if not should_send(msg):
         print("[dedup] already sent — skipping")
         return 0
-    _send(msg)
+    if not _send(msg):
+        print("[telegram] ❌ all configured chats failed — not marking sent")
+        return 1
+
     mark_sent(msg)
     return 0
 
