@@ -30,6 +30,8 @@ FIELDS = [
     "brain_p_win", "brain_ev_pct", "brain_sl", "brain_tp", "brain_confidence",
     # Monster Hunt Mode (May 3 2026)
     "monster_score", "vol_ratio", "is_monster",
+    # Smell Faculty audit (May 5 2026) — observe-mode verdict persistence
+    "smell_codes", "smell_severities", "smell_messages",
     # SPY benchmark (May 2 2026) — market-relative alpha
     "spy_close_at_exit", "spy_return_pct", "alpha_pct",
     # Sector benchmark (May 3 2026 T3) — sector-relative alpha
@@ -146,6 +148,10 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "monster_score": p.get("monster_score", ""),
                 "vol_ratio": p.get("vol_ratio", ""),
                 "is_monster": "true" if p.get("is_monster") else "false",
+                # Smell Faculty audit (May 5 2026)
+                "smell_codes": p.get("smell_codes", ""),
+                "smell_severities": p.get("smell_severities", ""),
+                "smell_messages": p.get("smell_messages", ""),
                 # SPY benchmark (May 2 2026)
                 "spy_close_at_exit": "",
                 "spy_return_pct": "",
