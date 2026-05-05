@@ -23,6 +23,18 @@
       "url": "",
       "source": "alpaca",
       "added_at": "2026-05-05T09:04:38.780447+00:00"
+    },
+    {
+      "ticker": "AWX",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings show loss narrowing by 16% to $(0.32) from $(0.38) YoY with revenue growth of 9.9%, indicating operational improvement though still unprofitable.",
+      "action_window": "intraday",
+      "headline": "Avalon Holdings Q1 EPS $(0.32) Up From $(0.38) YoY, Sales $17.658M Up From $16.068M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52273337/avalon-holdings-q1-eps-0-32-up-from-0-38-yoy-sales-17-658m-up-from-16-068m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-05T09:57:52.423368+00:00"
     }
   ]
 }

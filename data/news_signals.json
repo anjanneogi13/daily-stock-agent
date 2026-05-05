@@ -265,13 +265,13 @@
   },
   "B": {
     "ticker": "B",
-    "score_delta": 0.05,
+    "score_delta": 0.064,
     "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.35,
+    "tradeable_score": 0.45,
     "headline": "Barrick Mining (B) Earnings Expected to Grow: Should You Buy?",
-    "added_at": "2026-05-04T23:47:28.322820+00:00",
-    "expires": "2026-05-11T23:47:28.322828+00:00",
+    "added_at": "2026-05-05T09:57:52.422607+00:00",
+    "expires": "2026-05-12T09:57:52.422613+00:00",
     "hard_block": false
   },
   "CW": {
@@ -283,6 +283,17 @@
     "headline": "Curtiss-Wright (CW) Reports Next Week: Wall Street Expects Earnings Growth",
     "added_at": "2026-05-04T23:47:28.325055+00:00",
     "expires": "2026-05-11T23:47:28.325060+00:00",
+    "hard_block": false
+  },
+  "AWX": {
+    "ticker": "AWX",
+    "score_delta": 0.083,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "headline": "Avalon Holdings Q1 EPS $(0.32) Up From $(0.38) YoY, Sales $17.658M Up From $16.068M YoY",
+    "added_at": "2026-05-05T09:57:52.421844+00:00",
+    "expires": "2026-05-12T09:57:52.421852+00:00",
     "hard_block": false
   }
 }
