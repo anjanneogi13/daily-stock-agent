@@ -13,6 +13,44 @@ Rules:
 
 ---
 
+## 2026-05-06 — Reviewed 2026-05-05 pick outcomes
+
+**Type:** monitoring / data evaluation
+
+**Summary:**
+
+Reviewed the 2026-05-05 agent picks and current evaluated outcomes:
+
+- `EXPD` had a valid bullish earnings-beat catalyst but hit stop loss: `-1.0R`.
+- `GILT` had a bullish contract-win catalyst and remains pending.
+- `POWI` was evaluated as a strong take-profit win: `+2.0R`.
+
+**Lesson:**
+
+The agent is finding real catalysts, but news action windows are not yet fully connected to trade classification. Both `EXPD` and `GILT` had news classified as `intraday`, while the picks were logged as `swing`.
+
+**Risks observed:**
+
+- Missing company/tag metadata on 2026-05-05 picks.
+- Premarket check could not verify prices and marked both picks half-size.
+- Brain probability / EV fields were blank.
+- Smell faculty did not flag missing verification or intraday/swing mismatch.
+
+**Follow-up:**
+
+Consider adding a guard or scoring adjustment so high-urgency news catalysts with `action_window=intraday` are either:
+
+1. logged as day/intraday trades,
+2. given tighter monitoring rules, or
+3. penalized/blocked as swing picks unless confirmed by stronger multi-day setup.
+
+**Tests:**
+
+- `python scripts/audit_journal_consistency.py --strict`
+- `python3 -m pytest tests/test_journal_consistency.py tests/test_signal_journal_quality.py -q --tb=short`
+
+---
+
 ## 2026-05-05 — Signal journal quality repair
 
 **Type:** data fix
