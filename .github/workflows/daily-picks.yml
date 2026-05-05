@@ -170,6 +170,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const { upsertIssue } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/upsert_issue.js`);
             const date = new Date().toISOString().split('T')[0];
             let body;
             try {
@@ -177,13 +178,13 @@ jobs:
             } catch (e) {
               body = '## Daily Stock Picks\n\n_Formatter failed — see workflow logs._';
             }
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+            await upsertIssue({
+              github,
+              context,
               title: `📈 Daily Picks ${date}`,
-              body: body,
+              body,
               labels: ['daily-picks'],
-              assignees: ['anjanneogi13']
+              assignees: ['anjanneogi13'],
             });
 
       - name: Send picks to Telegram 📲

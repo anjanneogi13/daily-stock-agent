@@ -75,18 +75,19 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const { upsertIssue } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/upsert_issue.js`);
             const date = new Date().toISOString().split('T')[0];
             let body = '## 📊 Performance Dashboard\n\n```\n';
             try { body += fs.readFileSync('/tmp/dashboard.txt', 'utf8'); }
             catch (e) { body += '(no dashboard output)'; }
             body += '\n```\n\n_Auto-generated after US market close._';
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+            await upsertIssue({
+              github,
+              context,
               title: `📊 Performance Update ${date}`,
-              body: body,
+              body,
               labels: ['performance'],
-              assignees: ['anjanneogi13']
+              assignees: ['anjanneogi13'],
             });
 
       - name: Send dashboard to Telegram 📲
@@ -110,18 +111,19 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const { upsertIssue } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/upsert_issue.js`);
             const date = new Date().toISOString().split('T')[0];
             let body = '## 🔬 Daily Execution X-Ray\n\n```\n';
             try { body += fs.readFileSync('/tmp/exec_report.txt', 'utf8'); }
             catch (e) { body += '(no report)'; }
             body += '\n```\n\n_Per-pick breakdown: did fill? SL or TP first? Money left on table?_';
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+            await upsertIssue({
+              github,
+              context,
               title: `🔬 Execution Report ${date}`,
-              body: body,
+              body,
               labels: ['execution-report'],
-              assignees: ['anjanneogi13']
+              assignees: ['anjanneogi13'],
             });
 
       - name: Send execution report to Telegram 📲
