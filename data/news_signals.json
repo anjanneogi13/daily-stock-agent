@@ -504,5 +504,115 @@
     "added_at": "2026-05-05T12:46:36.249031+00:00",
     "expires": "2026-05-12T12:46:36.249036+00:00",
     "hard_block": false
+  },
+  "CI": {
+    "ticker": "CI",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Bernstein Maintains Outperform on Cigna Group, Raises Price Target to $371",
+    "added_at": "2026-05-05T17:04:20.734483+00:00",
+    "expires": "2026-05-10T17:04:20.734491+00:00",
+    "hard_block": false
+  },
+  "FN": {
+    "ticker": "FN",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "headline": "Fabrinet Posts Record Q3, But Don't Thank Nvidia: Analyst",
+    "added_at": "2026-05-05T17:04:20.735273+00:00",
+    "expires": "2026-05-12T17:04:20.735280+00:00",
+    "hard_block": false
+  },
+  "BUD": {
+    "ticker": "BUD",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "headline": "Corona, Budweiser Beer Maker Sees 'Premium' Boom",
+    "added_at": "2026-05-05T17:04:20.735906+00:00",
+    "expires": "2026-05-12T17:04:20.735911+00:00",
+    "hard_block": false
+  },
+  "PAC": {
+    "ticker": "PAC",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "headline": "Banco Bradesco BBI S.A Upgrades Grupo Aeroportuario del to Outperform, Announces $285 Price Target",
+    "added_at": "2026-05-05T17:04:20.736530+00:00",
+    "expires": "2026-05-10T17:04:20.736535+00:00",
+    "hard_block": false
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "headline": "Nvidia, TSM And Broadcom Are Sending The Same Signal\u2014And It's Not Bullish",
+    "added_at": "2026-05-05T17:04:20.737111+00:00",
+    "expires": "2026-05-10T17:04:20.737115+00:00",
+    "hard_block": false
+  },
+  "MGEE": {
+    "ticker": "MGEE",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "headline": "MGE Energy Q1 EPS $1.32 Beats $1.13 Estimate, Sales $242.703M Beat $45.412M Estimate",
+    "added_at": "2026-05-05T17:04:20.737699+00:00",
+    "expires": "2026-05-12T17:04:20.737703+00:00",
+    "hard_block": false
+  },
+  "BMA": {
+    "ticker": "BMA",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "HSBC Upgrades Banco Macro to Buy, Announces $85 Price Target",
+    "added_at": "2026-05-05T17:04:20.738296+00:00",
+    "expires": "2026-05-10T17:04:20.738300+00:00",
+    "hard_block": false
+  },
+  "ETN": {
+    "ticker": "ETN",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "headline": "Eaton Stock Is Under Pressure After Q1 Earnings",
+    "added_at": "2026-05-05T17:04:20.738881+00:00",
+    "expires": "2026-05-19T17:04:20.738885+00:00",
+    "hard_block": false
+  },
+  "TWST": {
+    "ticker": "TWST",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.74,
+    "headline": "Leerink Partners Upgrades Twist Bioscience to Outperform, Announces $70 Price Target",
+    "added_at": "2026-05-05T17:04:20.743448+00:00",
+    "expires": "2026-05-10T17:04:20.743454+00:00",
+    "hard_block": false
+  },
+  "JRVR": {
+    "ticker": "JRVR",
+    "score_delta": -0.039,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "headline": "This James River Group Analyst Is No Longer Bullish; Here Are Top 3 Downgrades For Tuesday",
+    "added_at": "2026-05-05T17:04:20.744117+00:00",
+    "expires": "2026-05-10T17:04:20.744122+00:00",
+    "hard_block": false
   }
 }

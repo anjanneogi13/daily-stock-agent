@@ -287,6 +287,114 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52280036/disc-medicine-q1-eps-1-65-beats-1-73-estimate",
       "source": "alpaca",
       "added_at": "2026-05-05T12:46:36.250088+00:00"
+    },
+    {
+      "ticker": "FN",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Record Q3 earnings beat is positive for FN, but analyst caveat about Nvidia suggests concerns about sustainability or attribution of growth drivers, creating mixed signals.",
+      "action_window": "intraday",
+      "headline": "Fabrinet Posts Record Q3, But Don't Thank Nvidia: Analyst",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52294232/fabrinet-posts-record-q3-but-dont-thank-nvidia-analyst",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745099+00:00"
+    },
+    {
+      "ticker": "BUD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Anheuser-Busch reported Q1 earnings beat with EPS of $0.97 exceeding estimates and revenue of $15.27B, indicating strong premium segment performance.",
+      "action_window": "intraday",
+      "headline": "Corona, Budweiser Beer Maker Sees 'Premium' Boom",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52294130/corona-budweiser-beer-maker-sees-premium-boom",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745108+00:00"
+    },
+    {
+      "ticker": "PAC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Banco Bradesco BBI upgrade to Outperform with $285 price target is a meaningful catalyst from a reputable Latin American bank analyst covering airport infrastructure.",
+      "action_window": "next_day",
+      "headline": "Banco Bradesco BBI S.A Upgrades Grupo Aeroportuario del to Outperform, Announces $285 Price Target",
+      "url": "https://www.benzinga.com/news/26/05/52294087/banco-bradesco-bbi-s-a-upgrades-grupo-aeroportuario-del-to-outperform-announces-285-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745113+00:00"
+    },
+    {
+      "ticker": "HOOD",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CEO announcement on Bloomberg TV that Trump will custody accounts and assets with Robinhood represents a major client win with significant revenue implications and headline attention.",
+      "action_window": "intraday",
+      "headline": "Live On Bloomberg TV, Robinhood CEO Vlad Tenev Says Trump Accounts And Assets Will Be Custodied With Hood; Trump Accounts Will Be Profitable For US",
+      "url": "https://www.benzinga.com/quote/SPY",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745117+00:00"
+    },
+    {
+      "ticker": "MGEE",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "MGE Energy significantly beat EPS estimates by 16.8% and dramatically exceeded sales estimates by over 400%, indicating very strong quarterly performance warranting immediate trading action.",
+      "action_window": "intraday",
+      "headline": "MGE Energy Q1 EPS $1.32 Beats $1.13 Estimate, Sales $242.703M Beat $45.412M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52293940/mge-energy-q1-eps-1-32-beats-1-13-estimate-sales-242-703m-beat-45-412m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745121+00:00"
+    },
+    {
+      "ticker": "BMA",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "HSBC upgrade from lower rating to Buy with $85 price target is a meaningful catalyst from a major global bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "HSBC Upgrades Banco Macro to Buy, Announces $85 Price Target",
+      "url": "https://www.benzinga.com/news/26/05/52293824/hsbc-upgrades-banco-macro-to-buy-announces-85-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745125+00:00"
+    },
+    {
+      "ticker": "ETN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Stock trading lower on Q1 earnings report with soft Q2 guidance, creating immediate selling pressure with clear directional catalyst.",
+      "action_window": "intraday",
+      "headline": "Eaton Stock Is Under Pressure After Q1 Earnings",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52293643/eaton-stock-is-under-pressure-after-q1-earnings",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745131+00:00"
+    },
+    {
+      "ticker": "TWST",
+      "tradeable_score": 0.74,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Leerink Partners upgrade to Outperform with $70 price target represents a meaningful positive catalyst from a reputable biotech-focused investment bank that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "Leerink Partners Upgrades Twist Bioscience to Outperform, Announces $70 Price Target",
+      "url": "https://www.benzinga.com/news/26/05/52293642/leerink-partners-upgrades-twist-bioscience-to-outperform-announces-70-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745134+00:00"
+    },
+    {
+      "ticker": "JRVR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Multiple analyst downgrades across three tickers with JRVR specifically losing bullish rating creates near-term selling pressure but represents routine analyst activity rather than fundamental catalyst.",
+      "action_window": "intraday",
+      "headline": "This James River Group Analyst Is No Longer Bullish; Here Are Top 3 Downgrades For Tuesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/05/52293569/this-james-river-group-analyst-is-no-longer-bullish-here-are-top-3-downgrades-for-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-05-05T17:04:20.745138+00:00"
     }
   ]
 }
