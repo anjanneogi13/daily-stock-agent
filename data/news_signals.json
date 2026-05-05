@@ -595,13 +595,13 @@
   },
   "TWST": {
     "ticker": "TWST",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
     "sentiment": "bullish",
-    "tradeable_score": 0.74,
-    "headline": "Leerink Partners Upgrades Twist Bioscience to Outperform, Announces $70 Price Target",
-    "added_at": "2026-05-05T17:04:20.743448+00:00",
-    "expires": "2026-05-10T17:04:20.743454+00:00",
+    "tradeable_score": 0.72,
+    "headline": "These Analysts Boost Their Forecasts On Twist Bioscience After Q2 Results",
+    "added_at": "2026-05-05T18:53:43.047019+00:00",
+    "expires": "2026-05-19T18:53:43.047024+00:00",
     "hard_block": false
   },
   "JRVR": {
@@ -613,6 +613,105 @@
     "headline": "This James River Group Analyst Is No Longer Bullish; Here Are Top 3 Downgrades For Tuesday",
     "added_at": "2026-05-05T17:04:20.744117+00:00",
     "expires": "2026-05-10T17:04:20.744122+00:00",
+    "hard_block": false
+  },
+  "CRWD": {
+    "ticker": "CRWD",
+    "score_delta": 0.029,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "headline": "What's Going On With CrowdStrike Stock On Tuesday?",
+    "added_at": "2026-05-05T18:53:43.042031+00:00",
+    "expires": "2026-05-12T18:53:43.042036+00:00",
+    "hard_block": false
+  },
+  "BODI": {
+    "ticker": "BODI",
+    "score_delta": 0.044,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "headline": "Canaccord Genuity Maintains Buy on Beachbody Co, Raises Price Target to $19",
+    "added_at": "2026-05-05T18:53:43.042874+00:00",
+    "expires": "2026-05-10T18:53:43.042879+00:00",
+    "hard_block": false
+  },
+  "TVTX": {
+    "ticker": "TVTX",
+    "score_delta": 0.083,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "headline": "Travere Therapeutics Analysts Increase Their Forecasts Following Q1 Earnings",
+    "added_at": "2026-05-05T18:53:43.043699+00:00",
+    "expires": "2026-05-12T18:53:43.043704+00:00",
+    "hard_block": false
+  },
+  "BDSX": {
+    "ticker": "BDSX",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Canaccord Genuity Maintains Buy on Biodesix, Raises Price Target to $22",
+    "added_at": "2026-05-05T18:53:43.044519+00:00",
+    "expires": "2026-05-10T18:53:43.044524+00:00",
+    "hard_block": false
+  },
+  "CRTO": {
+    "ticker": "CRTO",
+    "score_delta": 0.044,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "headline": "Criteo Announces OpenAI Expanding Integration With Launch Of Self-Service Ads",
+    "added_at": "2026-05-05T18:53:43.045312+00:00",
+    "expires": "2026-05-12T18:53:43.045317+00:00",
+    "hard_block": false
+  },
+  "FERG": {
+    "ticker": "FERG",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "headline": "Weak US Housing Demand Hits Ferguson's Revenue Growth",
+    "added_at": "2026-05-05T18:53:43.046143+00:00",
+    "expires": "2026-05-12T18:53:43.046147+00:00",
+    "hard_block": false
+  },
+  "AAPL": {
+    "ticker": "AAPL",
+    "score_delta": 0.039,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "headline": "'Apple to Let Users Choose Rival AI Models Across Its iOS 27 Features' - Bloomberg",
+    "added_at": "2026-05-05T18:53:43.052405+00:00",
+    "expires": "2026-05-12T18:53:43.052412+00:00",
+    "hard_block": false
+  },
+  "GOOG": {
+    "ticker": "GOOG",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "headline": "Perplexity Rolls Out Perplexity Computer For Professional Finance",
+    "added_at": "2026-05-05T18:53:43.053298+00:00",
+    "expires": "2026-05-12T18:53:43.053304+00:00",
+    "hard_block": false
+  },
+  "NCLH": {
+    "ticker": "NCLH",
+    "score_delta": -0.146,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.68,
+    "headline": "Norwegian Cruise Line Analysts Slash Their Forecasts Following Q1 Results",
+    "added_at": "2026-05-05T18:53:43.054189+00:00",
+    "expires": "2026-05-19T18:53:43.054194+00:00",
     "hard_block": false
   }
 }
