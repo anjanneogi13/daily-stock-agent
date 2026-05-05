@@ -117,7 +117,7 @@ def suggest_hypotheses(picks_path: Optional[Path] = None,
     try:
         with p.open() as f:
             for r in csv.DictReader(f):
-                d = r.get("pick_date") or r.get("date")
+                d = r.get("pick_date")  # legacy "date" fallback removed 2026-05-05 (column never existed)
                 if not d: continue
                 try:
                     dd = datetime.fromisoformat(str(d).split("T")[0]).date()
