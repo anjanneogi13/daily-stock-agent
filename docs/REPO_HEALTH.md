@@ -10,7 +10,7 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **1237 passed, 28 skipped** | ✅ |
+| Total tests | **1245 passed, 28 skipped** | ✅ |
 | Total commits | 400+ | ✅ |
 | `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
@@ -46,6 +46,7 @@ Recent launch-readiness fixes:
 - Telegram sender reliability — daily sender marks dedup only after confirmed delivery to at least one configured chat.
 - Tiered exits decision — tiered TP columns are reserved schema in monitoring mode, not active execution logic.
 - Hard-block coverage — penny, stop-loss buffer, cooldown, weak-sector, catastrophic-news, and audit-log behavior are locked by tests.
+- Earnings analyzer coverage — cache, Finnhub fetch fallbacks, recommendations, and composite score math are locked by tests.
 
 Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
@@ -74,7 +75,6 @@ Code
 ## 📁 SRC MODULES (81 total, 78 live)
 
 ### ❌ Untested but in use (P5 — write tests)
-- `earnings_analyzer` (214 lines)
 - `llm_agent` (202 lines)
 - `market_news` (210 lines)
 - `performance_stats` (127 lines)
@@ -152,7 +152,7 @@ Future YAML changes that strand a data file = CI fails immediately.
 |---|---|---|---|
 | O1 | Wait for n≥30 smell-tagged closed post-floor picks before flipping SMELL_ENFORCE | data wait | Bug #17A/#17B |
 | P5a | `hard_blocks` gate logic test coverage | fixed | This audit |
-| P5b | Write tests for `llm_agent`, `market_news`, `earnings_analyzer` | varies | This audit |
+| P5b | Write tests for `llm_agent`, `market_news` | varies | This audit |
 | P3 | SPY alpha historical audit/backfill verification (`Bug #9`) | fixed | TODO_BUGS |
 | O2 | Wait for n≥30 closed post-floor picks for BRAIN_ENFORCE_EV and n≥50 for AUTO_PAUSE_ENABLED | 3-6 weeks | F5 (data) |
 | P6 | Company-name fallback cleanup (`Bug #6`) | fixed | TODO_BUGS |
@@ -167,7 +167,7 @@ Future YAML changes that strand a data file = CI fails immediately.
 
 "Check enforcement readiness and monitoring readiness after more closed post-floor picks accumulate."
 
-"Audit src/llm_agent.py coverage and add tests for llm_agent, market_news, earnings_analyzer."
+"Audit src/llm_agent.py coverage and add tests for llm_agent and market_news."
 
 Code
 
