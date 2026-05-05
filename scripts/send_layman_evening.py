@@ -58,12 +58,19 @@ def build_message(outcomes):
                 "📭 *No closed trades to report yet.*\n"
                 "_(Either no picks today, or picks are still open and will close tomorrow.)_")
 
-    wins = sum(1 for o in outcomes if (o.get("evaluation_status","") or "").lower() in ("tp_hit",) or (o.get("evaluation_status","") or "").upper() in ("WIN",) or
-               _safe_f(o.get("pnl_dollar")) > 0)
+    wins = sum(1 for o in outcomes if (o.get("evaluation_status","") or "").lower() == "tp_hit")
     losses = len(outcomes) - wins
     total_pnl = sum(_safe_f(o.get("pnl_dollar")) for o in outcomes)
-    agent_pct = (total_pnl / max(1, sum(_safe_f(o.get("entry",0)) * _safe_f(o.get("qty",0))
-                                         for o in outcomes))) * 100 if outcomes else 0
+    # Compute pnl per row from CSV fields if missing
+    for o in outcomes:
+        if not o.get("pnl_dollar"):
+            ret = _safe_f(o.get("actual_return_pct"))
+            ent = _safe_f(o.get("entry"))
+            qty = _safe_f(o.get("qty")) or _safe_f(o.get("position_size"))
+            o["pnl_dollar"] = ent * qty * ret / 100
+    total_pnl = sum(_safe_f(o.get("pnl_dollar")) for o in outcomes)
+    cost_basis = sum(_safe_f(o.get("entry",0)) * _safe_f(o.get("qty",0)) for o in outcomes)
+    agent_pct = (total_pnl / max(1, cost_basis)) * 100 if cost_basis else 0
     spy = _spy_change_today()
 
     lines = [header("🌆", "Today's Performance", today)]

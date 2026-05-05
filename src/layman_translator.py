@@ -141,10 +141,29 @@ def pick_to_layman(pick: Dict, idx: int = 1) -> str:
 # Outcome → friend-explains line
 # ═══════════════════════════════════════════════════════════════
 def outcome_to_layman(outcome: Dict) -> str:
+    """Convert one closed pick row → plain English line.
+    Bug fix 2026-05-05: reads REAL csv column names:
+      evaluation_status (not 'status'), actual_return_pct + entry + qty
+      (CSV has no pnl_dollar field — must compute it)."""
     t = outcome.get("ticker", "?")
-    status = (outcome.get("status", "") or "").upper()
-    try: pnl = float(outcome.get("pnl_dollar") or outcome.get("pnl") or 0)
-    except (TypeError, ValueError): pnl = 0
+    # Accept both layman-flavor ("status") and real CSV ("evaluation_status")
+    status = (outcome.get("evaluation_status") or outcome.get("status") or "").upper()
+
+    # Compute pnl from real CSV fields if pnl_dollar absent
+    try:
+        pnl = float(outcome.get("pnl_dollar") or outcome.get("pnl") or 0)
+    except (TypeError, ValueError):
+        pnl = 0
+    if pnl == 0:
+        # CSV has actual_return_pct + entry + qty → compute dollar P&L
+        try:
+            ret_pct = float(outcome.get("actual_return_pct") or 0)
+            entry = float(outcome.get("entry") or 0)
+            qty = float(outcome.get("qty") or outcome.get("position_size") or 0)
+            pnl = entry * qty * ret_pct / 100
+        except (TypeError, ValueError):
+            pnl = 0
+
     try: r = float(outcome.get("r_multiple")) if outcome.get("r_multiple") not in (None, "") else None
     except (TypeError, ValueError): r = None
 
@@ -152,10 +171,12 @@ def outcome_to_layman(outcome: Dict) -> str:
         return f"✅ *{t}* — hit profit target ({money(pnl)})"
     if status in ("SL_HIT", "LOSS"):
         return f"❌ *{t}* — hit stop-loss ({money(pnl)})"
-    if status == "EOD_CLOSE":
+    if status in ("EXPIRED", "EOD_CLOSE"):
         e = "✅" if pnl > 0 else "⚠️"
-        return f"{e} *{t}* — closed at end of day ({money(pnl)})"
-    if status == "OPEN":
+        return f"{e} *{t}* — closed at end of holding period ({money(pnl)})"
+    if status == "UNREACHABLE_ENTRY":
+        return f"🚫 *{t}* — entry price never reached (no fill)"
+    if status in ("OPEN", "PENDING"):
         return f"⏳ *{t}* — still holding"
     return f"❔ *{t}* — {status.lower() or 'unclear'} ({money(pnl)})"
 
