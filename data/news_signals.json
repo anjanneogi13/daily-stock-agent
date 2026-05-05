@@ -405,5 +405,104 @@
     "added_at": "2026-05-05T11:15:53.144021+00:00",
     "expires": "2026-05-19T11:15:53.144026+00:00",
     "hard_block": false
+  },
+  "OCGN": {
+    "ticker": "OCGN",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "headline": "Ocugen Q1 EPS $(0.06) Misses $(0.05) Estimate, Sales $1.533M Beat $540.000K Estimate",
+    "added_at": "2026-05-05T12:46:36.239352+00:00",
+    "expires": "2026-05-12T12:46:36.239358+00:00",
+    "hard_block": false
+  },
+  "SLQT": {
+    "ticker": "SLQT",
+    "score_delta": 0.093,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "headline": "Update: SelectQuote Q3 Adj. EPS $0.15 Beats $(0.04) Estimate, Sales $430.933M Miss $439.022M Estimate",
+    "added_at": "2026-05-05T12:46:36.240156+00:00",
+    "expires": "2026-05-12T12:46:36.240161+00:00",
+    "hard_block": false
+  },
+  "EXPD": {
+    "ticker": "EXPD",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "headline": "Expeditors Intl Q1 EPS $1.71 Beats $1.32 Estimate, Sales $2.783B Beat $2.616B Estimate",
+    "added_at": "2026-05-05T12:46:36.240876+00:00",
+    "expires": "2026-05-12T12:46:36.240881+00:00",
+    "hard_block": false
+  },
+  "PGY": {
+    "ticker": "PGY",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "headline": "Pagaya Partners With Sezzle To Embed An AI Underwriting Platform At The PoS To Help More Qualified Borrowers Access An Installment Loan Product",
+    "added_at": "2026-05-05T12:46:36.241532+00:00",
+    "expires": "2026-05-12T12:46:36.241537+00:00",
+    "hard_block": false
+  },
+  "MBOT": {
+    "ticker": "MBOT",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Microbot Medical Announces LIBERTY System Gains Clinical Validation And Early Commercial Adoption As Global Expansion Accelerates",
+    "added_at": "2026-05-05T12:46:36.242179+00:00",
+    "expires": "2026-05-12T12:46:36.242184+00:00",
+    "hard_block": false
+  },
+  "EBAY": {
+    "ticker": "EBAY",
+    "score_delta": 0.03,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Hertz Car Sales Launches Digital Showroom For Used Vehicles On eBay",
+    "added_at": "2026-05-05T12:46:36.242842+00:00",
+    "expires": "2026-05-12T12:46:36.242847+00:00",
+    "hard_block": false
+  },
+  "AXSM": {
+    "ticker": "AXSM",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "headline": "Mizuho Maintains Outperform on Axsome Therapeutics, Raises Price Target to $310",
+    "added_at": "2026-05-05T12:46:36.243525+00:00",
+    "expires": "2026-05-10T12:46:36.243530+00:00",
+    "hard_block": false
+  },
+  "VVX": {
+    "ticker": "VVX",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "headline": "Citizens Maintains Market Outperform on V2X, Raises Price Target to $90",
+    "added_at": "2026-05-05T12:46:36.244187+00:00",
+    "expires": "2026-05-10T12:46:36.244192+00:00",
+    "hard_block": false
+  },
+  "IRON": {
+    "ticker": "IRON",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "headline": "Disc Medicine Q1 EPS $(1.65) Beats $(1.73) Estimate",
+    "added_at": "2026-05-05T12:46:36.249031+00:00",
+    "expires": "2026-05-12T12:46:36.249036+00:00",
+    "hard_block": false
   }
 }
