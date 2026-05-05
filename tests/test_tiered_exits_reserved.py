@@ -1,5 +1,3 @@
-"""Bug #13: tiered exit fields are reserved schema, not active logic."""
-
 import csv
 from pathlib import Path
 
@@ -30,22 +28,21 @@ def test_existing_picks_do_not_have_active_tiered_exit_fields():
     assert active == []
 
 
-def test_todo_bugs_marks_tiered_exits_as_reserved_schema():
-    text = Path("docs/TODO_BUGS.md").read_text()
+def test_project_blueprint_marks_tiered_exits_as_reserved_schema():
+    text = Path("docs/PROJECT_BLUEPRINT.md").read_text()
 
-    assert "Bug #13" in text
-    assert "Tiered exits" in text
-    assert "FIXED" in text
-    assert "reserved schema" in text
-    assert "Revisit only if/when scale-out execution is implemented" in text
+    assert "Tiered exit fields are reserved schema only" in text
+    assert "tp1" in text
+    assert "tp2" in text
+    assert "qty_t1" in text
+    assert "tier_status" in text
+    assert "not active scale-out execution logic" in text
 
 
-def test_next_likely_fixes_no_longer_lists_tiered_exit_decision():
-    text = Path("docs/TODO_BUGS.md").read_text()
-    next_section = text.split("## Next likely fixes", 1)[1]
+def test_next_session_no_longer_lists_tiered_exit_decision():
+    text = Path("docs/NEXT_SESSION.md").read_text()
 
-    assert "Bug #13" not in next_section
-    assert "decide tiered TP fate" not in next_section
+    assert "decide tiered TP fate" not in text
 
 
 def test_legacy_telegram_only_displays_tiers_when_populated():

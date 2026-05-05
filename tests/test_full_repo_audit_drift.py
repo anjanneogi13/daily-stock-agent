@@ -58,7 +58,7 @@ def test_real_missing_refs_remain_broken_drift(tmp_path):
 
 
 def test_architecture_no_longer_mentions_watchlist_py():
-    text = Path("docs/ARCHITECTURE.md").read_text(errors="ignore")
+    text = Path("docs/PROJECT_BLUEPRINT.md").read_text(errors="ignore")
     assert "`watchlist.py`" not in text
-    assert "`watchlist_manager.py`" in text
+    assert "watchlist_manager.py" in text
     assert "`data/watchlist.json`" in text
