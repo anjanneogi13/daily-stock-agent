@@ -1,81 +1,72 @@
+# TODO / Bugs — Current Status Ledger
 
-## company-name writer falls back to ticker (Bug #6, found 2026-05-05)
+**Last updated:** 2026-05-05  
+**Purpose:** single operational ledger for known bugs, partial fixes, deferred design debt, and recently fixed launch-readiness issues.
 
-**Severity:** Low (UX cosmetic)
-**File:** wherever `picks_log.csv` is written (likely `src/pick_logger.py`)
-**Symptom:** When yfinance/upstream company-name lookup fails, the writer
-stores the ticker as the company name (NVDA company="NVDA"). Translator
-detects this and falls back to ticker-only display. User sees "NVDA"
-instead of "NVDA (NVIDIA Corporation)".
-**Fix idea:** Writer should store empty string when lookup fails, NOT
-echo the ticker. Translator logic stays unchanged (already handles empty).
-**Effort:** 15 min. Do AFTER intraday→CSV write architecture (Step 4).
+This file is intentionally status-based. Do not leave stale free-form bug notes here after a fix lands.
 
-## Bug #7 — Day-trades picked on non-trading days (filed 2026-05-05)
-MPWR was logged as `trade_type=day` on 2026-05-02 (a Saturday). Day
-trades on weekends/holidays make no sense — they cannot execute on
-pick_date. Likely the scanner ran (or backfilled) on a non-market day
-without guarding `trade_type=day` selection.
+---
 
-**Symptoms:** day picks on Sat/Sun, holidays, evenings.
-**Likely culprit:** scanner / picks generator. Investigate:
-- `scripts/morning_brain.py` or whatever produces day-trade tags
-- Should reject `trade_type=day` if today is not a US trading day
-- OR convert the pick to `trade_type=swing` automatically with note
+## Status legend
 
-**Workaround in place (Bug #5 fix):** evaluator now uses next trading
-bar at-or-after pick_date, so weekend day-picks still get closed
-correctly. But the upstream UX is wrong — user receives a "day-trade"
-alert that's actually a swing.
+| Status | Meaning |
+|---|---|
+| OPEN | Real remaining issue; needs fix or investigation |
+| PARTIAL | Some code landed, but verification/backfill/follow-up remains |
+| FIXED | Fix landed and is protected by tests or audit |
+| DEFERRED | Valid design debt, intentionally postponed |
+| INFO | Historical/informational; no action unless it regresses |
 
-**Severity:** Low (cosmetic/UX, not data corruption — eval is correct)
-**Test:** `test_day_pick_on_weekend_uses_next_trading_bar` guards eval
-                                          robustness regardless.
+---
 
-## Bug #8 — `sector_close` never populated at pick time (CRITICAL, filed 2026-05-05)
-`src/pick_logger.py:149` writes `p.get("sector_close", "")` but NOTHING
-upstream ever produces `sector_close`. Result: 0% fill on closed picks.
-Cascades to kill `sector_close_at_exit`, `sector_return_pct`,
-`sector_alpha_pct` — the entire sector-relative-performance pipeline.
+## Current bug ledger
 
-**Impact on brain:** Zero sector-alpha learning. Brain cannot
-distinguish "good pick in a hot sector" from "good pick on its own
-merit". Sector-rotation strategy is invisible.
+| Bug | Status | Severity | Area | Summary | Next action |
+|---|---|---|---|---|---|
+| Bug #6 | OPEN | Low | UX / company names | company-name writer falls back to ticker when upstream lookup fails. User sees `NVDA` instead of full company name. | Writer should store empty string when lookup fails, not ticker-as-company. |
+| Bug #7 | PARTIAL | Low | Calendar / trade type | day trades appeared on non-trading days historically. Main now has market-calendar skip, evaluator handles next trading bar, but upstream tagging should be verified. | Add/verify test that no new day pick is emitted on weekend/holiday. |
+| Bug #8 | PARTIAL | Medium | Sector alpha | sector benchmark fields were historically underfilled. Recent `main.py` path now resolves sector ETF and close with SPY fallback. | Verify new post-fix rows have `sector_etf` and `sector_close`; consider shared helper/backfill. |
+| Bug #9 | PARTIAL | Medium | SPY alpha | alpha backfill for pre-May-1 picks appears partially addressed, but older rows should be audited. | Run/extend backfill audit for `spy_close_at_exit`, `spy_return_pct`, `alpha_pct`. |
+| Bug #10 | PARTIAL | Medium | Sector ETF fill rate | sector_etf fill should improve after Bug #8 changes, but needs post-fix verification. | Add sector benchmark fill-rate audit. |
+| Bug #11 | OPEN | Medium | Earnings data | `days_to_earnings` fill rate was historically low. Earnings proximity is important for filtering and scoring. | Add error logging/retry/fallback; add earnings fill-rate audit. |
+| Bug #12 | INFO | Informational | Trailing/adaptive fields | trail/adaptive fields are sparse because the feature shipped partway through the dataset. | No action unless new rows fail to populate. |
+| Bug #13 | DEFERRED | Design debt | Tiered exits | Tiered TP system (`tp1`, `tp2`, `qty_t1-3`) is in schema but not actively used. | Decide later: implement tiered exits or mark columns reserved. |
+| Bug #19 | FIXED | High | GitHub workflow reports | report issue upsert prevents duplicate Daily Picks / Performance / Execution Report issues. | Monitor next reruns; old duplicates can be closed separately if desired. |
+| Bug #20 | FIXED | High | Product docs | monitoring-first/no-paper-trading decision encoded in docs and tests. | Keep docs in sync if launch policy changes. |
+| Bug #21 | FIXED | High | Monitoring gates | monitoring readiness dashboard calculates day/swing/monster paper-trading gates. | Use during observation windows. |
+| Bug #22 | FIXED | Medium | Audit accuracy | `full_repo_audit.py` now reports python lines accurately and includes monitoring readiness. | Continue protecting via audit tests. |
 
-**Fix path:** In whatever produces the pick dict (likely
-`scripts/morning_brain.py` or `src/parallel_scorer.py`), look up the
-sector ETF Close at pick time using `_etf_close_on(etf, pick_date)`
-already present in `pick_evaluator.py` — refactor to a shared helper.
+---
 
-**Severity:** CRITICAL — unlocks 4 dead columns at once.
+## Monitoring-first policy reminder
 
-## Bug #9 — `alpha_pct` not backfilled for pre-May-1 picks (HIGH, filed 2026-05-05)
-The `_add_spy_alpha` calculator was added 2026-05-01. 9 closed picks
-from 2026-04-28 → 2026-04-29 have `spy_close` populated but BLANK
-`spy_close_at_exit` / `alpha_pct`. Easy backfill via existing
-`_spy_close_on()`.
+The agent is approved for monitoring-only operation.
 
-**Impact:** Lost SPY-relative learning data for 9 picks.
-**Fix:** One-shot backfill script. ~30 min.
+Paper trading remains forbidden until post-floor data clears:
 
-## Bug #10 — `sector_etf` populated only 8.3% (MEDIUM, filed 2026-05-05)
-Same root cause as #8 (sector lookup not happening at pick time).
-Likely auto-resolves when #8 is fixed. Verify post-#8.
+| Trade type | Gate |
+|---|---|
+| day trades | >60% win rate plus positive expectancy |
+| swing trades | >66% win rate plus positive expectancy |
+| monster / long holder picks | >90% win rate plus positive expectancy |
 
-## Bug #11 — `days_to_earnings` populated only 33% (MEDIUM, filed 2026-05-05)
-Earnings proximity is the single highest-alpha known signal in equities
-(post-earnings drift, pre-earnings vol crush). Currently captured 1/3
-of the time. Almost certainly silent yfinance failure.
+Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
-**Fix path:** Find the writer, add error logging, retry, OR fall back
-to a calendar-based approximation.
+---
 
-## Bug #12 — Trail-data 41% (INFORMATIONAL, filed 2026-05-05)
-`original_sl`, `current_sl`, `peak_price`, `trail_active`, `current_tp`,
-`tp_raises`, `sl_tightens` all 41% — feature shipped partway through
-the dataset. New picks populate, old ones don't. Non-actionable.
+## Recently closed in launch-readiness cleanup
 
-## Bug #13 — Tiered TP system (`tp1`, `tp2`, `qty_t1-3`) 0% used (DESIGN DEBT, filed 2026-05-05)
-Schema promises multi-tier exits. Code never activates them.
-**Decision needed:** ship the feature or rip the columns. Half-built
-features are noise in the schema and confuse downstream consumers.
+- Bug #19 — workflow report issue upsert.
+- Bug #20 — monitoring-first product decision docs.
+- Bug #21 — monitoring readiness dashboard.
+- Bug #22 — full_repo_audit accuracy.
+
+---
+
+## Next likely fixes
+
+1. Bug #11 — earnings fill-rate audit and fallback.
+2. Bug #7 — verify no new day trades on non-trading days.
+3. Bug #8/#10 — sector benchmark fill-rate audit and optional backfill.
+4. Bug #6 — company-name fallback cleanup.
+5. Bug #13 — decide tiered TP fate after monitoring window.
