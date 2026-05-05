@@ -10,7 +10,7 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **1208 passed, 28 skipped** | ✅ |
+| Total tests | **1211 passed, 28 skipped** | ✅ |
 | Total commits | 400+ | ✅ |
 | `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
@@ -41,6 +41,7 @@ Recent launch-readiness fixes:
 - sector benchmark fill-rate — post-floor sector ETF/close/alpha fields are filled and audited.
 - full_repo_audit import-safe and CSV-safe — importing audit script no longer launches nested pytest; quoted CSV commas no longer corrupt regime counts.
 - company-name fallback — future unresolved company names persist blank instead of ticker-as-company; tracked historical rows were backfilled.
+- SPY alpha fill-rate — all closed tracked rows have `spy_close_at_exit`, `spy_return_pct`, and `alpha_pct`.
 
 Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
@@ -149,7 +150,7 @@ Future YAML changes that strand a data file = CI fails immediately.
 | O1 | Wait for n≥30 smell-tagged closed post-floor picks before flipping SMELL_ENFORCE | data wait | Bug #17A/#17B |
 | P5a | Write tests for `hard_blocks` (326 lines, gate logic, ZERO tests) | 60 min | This audit |
 | P5b | Write tests for `llm_agent`, `market_news`, `earnings_analyzer` | varies | This audit |
-| P3 | SPY alpha historical audit/backfill verification (`Bug #9`) | 30-60 min | TODO_BUGS |
+| P3 | SPY alpha historical audit/backfill verification (`Bug #9`) | fixed | TODO_BUGS |
 | O2 | Wait for n≥30 closed post-floor picks for BRAIN_ENFORCE_EV and n≥50 for AUTO_PAUSE_ENABLED | 3-6 weeks | F5 (data) |
 | P6 | Company-name fallback cleanup (`Bug #6`) | fixed | TODO_BUGS |
 

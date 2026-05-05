@@ -66,3 +66,12 @@ def test_company_name_bug_marked_fixed():
     assert "company-name" in text
     assert "ticker-as-company" in text
     assert "FIXED" in text
+
+
+def test_spy_alpha_bug_marked_fixed():
+    text = TODO.read_text()
+
+    assert "Bug #9" in text
+    assert "SPY alpha" in text
+    assert "spy_close_at_exit" in text
+    assert "FIXED" in text

@@ -59,7 +59,7 @@ pause state machine, sector caps, news verifier.
 - Tests: 491 → 805 (+314, ZERO regressions)
 
 ### Current May 5 status
-- Tests: 1208 passed, 28 skipped
+- Tests: 1211 passed, 28 skipped
 - Earnings fill-rate audit: green
 - Sector benchmark fill-rate audit: green
 - Journal consistency: green
