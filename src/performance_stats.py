@@ -15,7 +15,7 @@ def compute_stats() -> dict:
     with LOG_PATH.open() as f:
         rows = list(csv.DictReader(f))
 
-    closed = [r for r in rows if r["evaluation_status"] in ("tp_hit", "sl_hit", "expired")
+    closed = [r for r in rows if r["evaluation_status"] in ("tp_hit", "sl_hit", "expired", "day_close")
               and r["actual_return_pct"] not in ("", None)]
 
     if not closed:

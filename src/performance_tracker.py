@@ -25,7 +25,7 @@ def _load_evaluated_picks() -> List[Dict]:
     with PICKS_LOG.open() as f:
         for r in csv.DictReader(f):
             status = r.get("evaluation_status", "")
-            if status in ("tp_hit", "sl_hit", "expired", "closed"):
+            if status in ("tp_hit", "sl_hit", "expired", "closed", "day_close"):
                 rows.append(r)
     return rows
 

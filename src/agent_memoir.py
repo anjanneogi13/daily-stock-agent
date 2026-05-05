@@ -42,7 +42,7 @@ def _load_closed_picks() -> List[Dict]:
     rows = []
     with PICKS_LOG.open() as f:
         for r in csv.DictReader(f):
-            if r.get("evaluation_status") in ("tp_hit", "sl_hit", "expired"):
+            if r.get("evaluation_status") in ("tp_hit", "sl_hit", "expired", "day_close"):
                 rows.append(r)
     return rows
 

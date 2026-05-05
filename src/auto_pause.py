@@ -32,7 +32,7 @@ def _is_enforced() -> bool:
 
 
 PICKS_LOG = Path("data/picks_log.csv")
-CLOSED = {"tp_hit", "sl_hit", "expired"}
+CLOSED = {"tp_hit", "sl_hit", "expired", "day_close"}
 
 
 def _to_float(v, default=None):

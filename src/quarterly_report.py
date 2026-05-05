@@ -61,7 +61,7 @@ def _quarter_label(d: datetime) -> str:
 
 
 def _summary_metrics(picks: List[Dict]) -> Dict:
-    closed_set = {"tp_hit", "sl_hit", "expired"}
+    closed_set = {"tp_hit", "sl_hit", "expired", "day_close"}
     closed = [p for p in picks if p.get("evaluation_status") in closed_set]
 
     wins   = [p for p in closed if p.get("evaluation_status") == "tp_hit"]

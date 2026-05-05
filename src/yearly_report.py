@@ -38,7 +38,7 @@ def build_report(year: Optional[int] = None) -> Dict:
     year = year or datetime.now().year
     picks = _load_year(year)
     closed = [p for p in picks if (p.get("evaluation_status") or "").lower()
-              in ("sl_hit","tp_hit","max_hold","sl_gap","tp_gap")]
+              in ("sl_hit","tp_hit","max_hold","sl_gap","tp_gap","day_close")]
     rs = [r for r in (_to_float(p.get("r_multiple")) for p in closed) if r is not None]
     alphas = [a for a in (_to_float(p.get("alpha_pct")) for p in closed) if a is not None]
     wins = sum(1 for r in rs if r > 0)

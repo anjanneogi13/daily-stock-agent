@@ -21,7 +21,7 @@ from pathlib import Path
 from typing import Iterable
 
 PICKS_LOG = Path("data/picks_log.csv")
-CLOSED_STATUSES = {"tp_hit", "sl_hit", "expired"}
+CLOSED_STATUSES = {"tp_hit", "sl_hit", "expired", "day_close"}
 
 
 def _load_closed() -> list[dict]:

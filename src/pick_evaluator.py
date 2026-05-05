@@ -159,12 +159,12 @@ def evaluate_pending() -> dict:
     rows = _load_picks()
     if not rows:
         print("[eval] No picks logged yet.")
-        return {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0}
+        return {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0, "day_close": 0}
 
     today = datetime.now().date()
     cutoff = today - timedelta(days=EVAL_LOOKBACK_DAYS)
 
-    counts = {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0}
+    counts = {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0, "day_close": 0}
 
     for row in rows:
         if row["evaluation_status"] != "pending":
@@ -284,7 +284,47 @@ def evaluate_pending() -> dict:
             alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
             print(f"  ✅ {ticker}: {outcome.upper()} on {exit_date.date()} | exit ${exit_price:.2f} | {ret:+.2f}% | {row['r_multiple']}R{alpha_str}")
         else:
-            # Days elapsed since pick
+            # ── Day-trade rule (Bug #5, May 5 2026): force-close at pick_date Close ──
+            # Day trades MUST close same session. If neither SL nor TP hit during
+            # pick_date, mark 'day_close' with exit = pick_date Close. Without this,
+            # day-picks like MPWR (2026-05-02) drifted as unintentional swings until
+            # the 20-day expiry caught them — corrupting both win-rate and learning.
+            if (row.get("trade_type", "").lower() == "day"):
+                # Prefer the exact pick_date bar; if pick_date was a non-trading
+                # day (weekend/holiday — see MPWR 2026-05-02 case), fall back to
+                # the FIRST trading bar at-or-after pick_date. evaluated_on
+                # records the actual session date, not the calendar pick_date.
+                pick_bar_match = df[df.index.date == pick_date]
+                if not len(pick_bar_match):
+                    pick_bar_match = df[df.index.date >= pick_date].head(1)
+                if len(pick_bar_match):
+                    pick_close = float(pick_bar_match["Close"].iloc[0])
+                    actual_close_date = pick_bar_match.index[0].date()
+                    row["evaluation_status"] = "day_close"
+                    row["evaluated_on"] = actual_close_date.isoformat()
+                    row["exit_price"] = round(pick_close, 4)
+                    ret = (pick_close - entry) / entry * 100
+                    row["actual_return_pct"] = round(ret, 2)
+                    risk = entry - sl
+                    row["r_multiple"] = round((pick_close - entry) / risk, 2) if risk > 0 else 0
+                    row["spy_close_at_exit"] = _add_spy_alpha(row, actual_close_date.isoformat(), ret)
+                    row["sector_close_at_exit"] = _add_sector_alpha(row, actual_close_date.isoformat(), ret)
+                    try:
+                        _journal_attach(
+                            ticker=row.get("ticker"),
+                            pick_date=row.get("pick_date"),
+                            r_multiple=float(row.get("r_multiple")) if row.get("r_multiple") not in (None, "", "None") else None,
+                            actual_return_pct=float(ret) if ret is not None else None,
+                            evaluated_on=actual_close_date.isoformat(),
+                        )
+                    except Exception as _e:
+                        print(f"[eval] WARN journal_attach (day_close) failed for {row.get('ticker','?')}: {_e}")
+                    counts["day_close"] += 1
+                    counts["evaluated"] += 1
+                    print(f"  📅 {ticker}: DAY_CLOSE on {actual_close_date} | exit ${pick_close:.2f} | {ret:+.2f}% | {row['r_multiple']}R")
+                    continue
+
+            # Days elapsed since pick (existing swing-trade expiry logic)
             days_elapsed = (today - pick_date).days
             if days_elapsed >= MAX_DAYS_OPEN:
                 # Mark expired with last close

@@ -23,7 +23,7 @@ from pathlib import Path
 from statistics import mean, stdev
 
 PICKS_LOG = Path("data/picks_log.csv")
-CLOSED_STATUSES = {"tp_hit", "sl_hit", "expired"}
+CLOSED_STATUSES = {"tp_hit", "sl_hit", "expired", "day_close"}
 TRADING_DAYS_PER_YEAR = 252
 
 

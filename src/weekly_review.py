@@ -39,7 +39,7 @@ def grade(metrics: Dict) -> str:
 
 def what_worked(picks: List[Dict]) -> List[str]:
     notes = []
-    closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit"}]
+    closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit", "day_close"}]
     if not closed:
         return ["(no closed picks this week)"]
 
@@ -102,7 +102,7 @@ def rules_violated_on_losers(picks):
 
 def what_failed(picks: List[Dict]) -> List[str]:
     notes = []
-    closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit"}]
+    closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit", "day_close"}]
     if not closed:
         return []
 
