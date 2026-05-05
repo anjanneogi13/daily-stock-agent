@@ -84,6 +84,47 @@ def load_todays_picks() -> list:
             continue
     return picks
 
+def _close_pick_in_csv(ticker: str, pick: dict, exit_price: float,
+                       status: str, today_str: str) -> None:
+    """Mark a pick CLOSED in picks_log.csv with same column shape as
+    the end-of-day evaluator (src/pick_evaluator.evaluate_pending).
+
+    Added 2026-05-05 to fix the bug where intraday_monitor detected SL/TP
+    hits and alerted on Telegram but never wrote the close to CSV. Effect:
+    the same pick alerted 4× the same day, and end-of-day was the only
+    thing that ever closed a pick.
+
+    Idempotency: caller MUST check pick is still pending before calling.
+    load_todays_picks() already filters non-pending picks, providing the
+    primary idempotency guard. This function does no second check.
+
+    Args:
+      ticker:     stock ticker
+      pick:       in-memory pick dict (needs entry, original_sl)
+      exit_price: SL or TP level (NOT live tick — matches evaluator semantics)
+      status:     "sl_hit" or "tp_hit"
+      today_str:  YYYY-MM-DD evaluation date
+    """
+    entry = float(pick.get("entry") or 0)
+    original_sl = float(pick.get("original_sl") or pick.get("stop_loss") or 0)
+    if entry <= 0:
+        print(f"[close] {ticker} entry={entry} invalid — skipping CSV write")
+        return
+    actual_return_pct = (exit_price - entry) / entry * 100
+    risk_per_share = entry - original_sl
+    r_multiple = ((exit_price - entry) / risk_per_share) if risk_per_share > 0 else 0.0
+    update_pick_row(today_str, ticker, {
+        "evaluation_status":  status,
+        "evaluated_on":       today_str,
+        "exit_price":         round(exit_price, 4),
+        "actual_return_pct":  round(actual_return_pct, 4),
+        "r_multiple":         round(r_multiple, 4),
+    })
+    print(f"[close] {ticker} → {status} @ ${exit_price:.2f} "
+          f"({actual_return_pct:+.2f}%, {r_multiple:+.2f}R)")
+
+
+
 def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
     alerts = []
     for p in picks:
@@ -119,12 +160,16 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             flags.append(("near_sl", f"Within 1% of SL (${sl:.2f})"))
         if sl > 0 and price <= sl:
             flags.append(("hit_sl", f"Hit Stop-Loss (${sl:.2f})"))
+            _close_pick_in_csv(ticker, p, exit_price=sl,
+                               status="sl_hit", today_str=today_str)
         if tp > 0 and entry > 0:
             halfway = entry + 0.5 * (tp - entry)
             if price >= halfway and price < tp:
                 flags.append(("halfway_tp", f"Halfway to TP (${tp:.2f})"))
             if price >= tp:
                 flags.append(("hit_tp", f"Hit Take-Profit (${tp:.2f})"))
+                _close_pick_in_csv(ticker, p, exit_price=tp,
+                                   status="tp_hit", today_str=today_str)
         if live.get("vol_ratio", 0) >= 3.0:
             flags.append(("vol_spike", f"Volume spike ({live['vol_ratio']:.1f}x avg)"))
         if did_raise:
