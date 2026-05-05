@@ -587,6 +587,102 @@
       "url": "https://www.benzinga.com/news/26/05/52299098/cme-group-plans-to-introduce-bitcoin-volatility-futures-on-june-1",
       "source": "alpaca",
       "added_at": "2026-05-05T20:05:10.331042+00:00"
+    },
+    {
+      "ticker": "NVTS",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings beat expectations is a meaningful positive catalyst that typically drives immediate stock price appreciation, especially when reported after market hours.",
+      "action_window": "next_day",
+      "headline": "Navitas Semiconductor Q1 Report Beats Expectations",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52308296/navitas-semiconductor-q1-report-beats-expectations",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343387+00:00"
+    },
+    {
+      "ticker": "TSX:FCR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 FFO beat with 9.4% year-over-year growth ($0.35 vs $0.32) and revenue up 2.9% suggests solid operational performance for this REIT.",
+      "action_window": "next_day",
+      "headline": "First Capital Q1 FFO $0.35 Up From $0.32 YoY, Sales $189.707M Up From $184.367M YoY.",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52308156/first-capital-q1-ffo-0-35-up-from-0-32-yoy-sales-189-707m-up-from-184-367m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343400+00:00"
+    },
+    {
+      "ticker": "OUST",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Headline explicitly states stock falls on Q1 earnings results, indicating a clear negative market reaction to an earnings miss or disappointing guidance.",
+      "action_window": "intraday",
+      "headline": "Ouster Stock Falls On Q1 Earnings: What You Need To Know",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52308148/ouster-stock-falls-on-q1-earnings-what-you-need-to-know",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343407+00:00"
+    },
+    {
+      "ticker": "UPST",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock explicitly described as sinking following Q1 earnings release, indicating significant earnings disappointment with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Upstart Stock Sinks After Q1 Earnings: Here's Why",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52308120/upstart-stock-sinks-after-q1-earnings-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343413+00:00"
+    },
+    {
+      "ticker": "TF",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings results with EPS beat of 12.5% offset by revenue miss of 7.5%, creating uncertainty about operational performance and likely resulting in muted price action.",
+      "action_window": "next_day",
+      "headline": "Timbercreek Financial Q1 Adj. EPS $0.18 Beats $0.16 Estimate, Sales $25.130M Miss $27.180M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52308116/timbercreek-financial-q1-adj-eps-0-18-beats-0-16-estimate-sales-25-130m-miss-27-180m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343418+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Crude oil inventory draw of 8.1M barrels significantly exceeded expectations of 2.8M, indicating stronger demand and tighter supply conditions that typically support higher oil prices.",
+      "action_window": "intraday",
+      "headline": "API Crude Oil Stock 8.1M Barrel Draw Vs 2.800M Barrel Draw Est.",
+      "url": "https://www.benzinga.com/quote/USO",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343423+00:00"
+    },
+    {
+      "ticker": "SU",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q1 results with EPS missing by 2.8% but sales significantly beating by 19.6%, creating uncertainty on trading direction despite meaningful deviations from estimates.",
+      "action_window": "intraday",
+      "headline": "Suncor Energy Q1 Adj. EPS $1.41 Misses $1.45 Estimate, Sales $10.691B Beat $8.940B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52308092/suncor-energy-q1-adj-eps-1-41-misses-1-45-estimate-sales-10-691b-beat-8-940b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343427+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $200 billion cloud and chip commitment from Anthropic represents a massive, multi-year revenue stream for Google Cloud, validating its AI infrastructure competitiveness against MSFT and AMZN.",
+      "action_window": "intraday",
+      "headline": "Alphabet Stock Gains On Report Of Massive Anthropic Cloud, Chip Deal",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52308002/alphabet-stock-gains-on-report-of-massive-anthropic-cloud-chip-deal",
+      "source": "alpaca",
+      "added_at": "2026-05-05T21:35:12.343433+00:00"
     }
   ]
 }

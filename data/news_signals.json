@@ -834,5 +834,71 @@
     "added_at": "2026-05-05T20:05:10.329602+00:00",
     "expires": "2026-05-12T20:05:10.329607+00:00",
     "hard_block": false
+  },
+  "NVTS": {
+    "ticker": "NVTS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Navitas Semiconductor Q1 Report Beats Expectations",
+    "added_at": "2026-05-05T21:35:12.336976+00:00",
+    "expires": "2026-05-12T21:35:12.336983+00:00",
+    "hard_block": false
+  },
+  "TSX:FCR": {
+    "ticker": "TSX:FCR",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "headline": "First Capital Q1 FFO $0.35 Up From $0.32 YoY, Sales $189.707M Up From $184.367M YoY.",
+    "added_at": "2026-05-05T21:35:12.338125+00:00",
+    "expires": "2026-05-12T21:35:12.338131+00:00",
+    "hard_block": false
+  },
+  "OUST": {
+    "ticker": "OUST",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.8,
+    "headline": "Ouster Stock Falls On Q1 Earnings: What You Need To Know",
+    "added_at": "2026-05-05T21:35:12.339094+00:00",
+    "expires": "2026-05-12T21:35:12.339099+00:00",
+    "hard_block": false
+  },
+  "UPST": {
+    "ticker": "UPST",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.8,
+    "headline": "Upstart Stock Sinks After Q1 Earnings: Here's Why",
+    "added_at": "2026-05-05T21:35:12.340070+00:00",
+    "expires": "2026-05-12T21:35:12.340075+00:00",
+    "hard_block": false
+  },
+  "TF": {
+    "ticker": "TF",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "headline": "Timbercreek Financial Q1 Adj. EPS $0.18 Beats $0.16 Estimate, Sales $25.130M Miss $27.180M Estimate",
+    "added_at": "2026-05-05T21:35:12.341009+00:00",
+    "expires": "2026-05-12T21:35:12.341014+00:00",
+    "hard_block": false
+  },
+  "SU": {
+    "ticker": "SU",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "headline": "Suncor Energy Q1 Adj. EPS $1.41 Misses $1.45 Estimate, Sales $10.691B Beat $8.940B Estimate",
+    "added_at": "2026-05-05T21:35:12.341978+00:00",
+    "expires": "2026-05-12T21:35:12.341983+00:00",
+    "hard_block": false
   }
 }
