@@ -65,5 +65,5 @@ Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md
 
 ## Next likely fixes
 
-1. Add tests for undercovered modules: `hard_blocks`, `llm_agent`, `market_news`, `earnings_analyzer`.
+1. Add tests for undercovered modules: `llm_agent`, `market_news`, `earnings_analyzer`.
 2. Continue monitoring until post-floor sample-size gates are ready.

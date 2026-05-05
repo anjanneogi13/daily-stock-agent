@@ -10,7 +10,7 @@
 
 | Metric | Value | Status |
 |---|---|---|
-| Total tests | **1225 passed, 28 skipped** | ✅ |
+| Total tests | **1237 passed, 28 skipped** | ✅ |
 | Total commits | 400+ | ✅ |
 | `src/*.py` modules | 80+ | ✅ |
 | Workflows | 14 (13 scheduled, 1 manual) | ✅ |
@@ -45,6 +45,7 @@ Recent launch-readiness fixes:
 - Daily Picks workflow reliability — multiple guarded cron chances; post-send persistence now recovers `picks_log.csv` and fails if push cannot persist state.
 - Telegram sender reliability — daily sender marks dedup only after confirmed delivery to at least one configured chat.
 - Tiered exits decision — tiered TP columns are reserved schema in monitoring mode, not active execution logic.
+- Hard-block coverage — penny, stop-loss buffer, cooldown, weak-sector, catastrophic-news, and audit-log behavior are locked by tests.
 
 Decision record: `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 
@@ -73,7 +74,6 @@ Code
 ## 📁 SRC MODULES (81 total, 78 live)
 
 ### ❌ Untested but in use (P5 — write tests)
-- `hard_blocks` (326 lines) — 🔴 HIGH PRIORITY (gate logic, no tests)
 - `earnings_analyzer` (214 lines)
 - `llm_agent` (202 lines)
 - `market_news` (210 lines)
@@ -151,7 +151,7 @@ Future YAML changes that strand a data file = CI fails immediately.
 | # | Issue | Effort | Source |
 |---|---|---|---|
 | O1 | Wait for n≥30 smell-tagged closed post-floor picks before flipping SMELL_ENFORCE | data wait | Bug #17A/#17B |
-| P5a | Write tests for `hard_blocks` (326 lines, gate logic, ZERO tests) | 60 min | This audit |
+| P5a | `hard_blocks` gate logic test coverage | fixed | This audit |
 | P5b | Write tests for `llm_agent`, `market_news`, `earnings_analyzer` | varies | This audit |
 | P3 | SPY alpha historical audit/backfill verification (`Bug #9`) | fixed | TODO_BUGS |
 | O2 | Wait for n≥30 closed post-floor picks for BRAIN_ENFORCE_EV and n≥50 for AUTO_PAUSE_ENABLED | 3-6 weeks | F5 (data) |
@@ -167,7 +167,7 @@ Future YAML changes that strand a data file = CI fails immediately.
 
 "Check enforcement readiness and monitoring readiness after more closed post-floor picks accumulate."
 
-"Write tests for src/hard_blocks.py and audit src/llm_agent.py coverage."
+"Audit src/llm_agent.py coverage and add tests for llm_agent, market_news, earnings_analyzer."
 
 Code
 
