@@ -43,6 +43,19 @@ SECTOR_TO_ETF = {
     "Real Estate": "XLRE",
     "Basic Materials": "XLB",
     "Materials": "XLB",
+    # Bug #8a (2026-05-05): yfinance returns specific subsector strings,
+    # not generic top-level sectors. Without these, ~70% of picks fell
+    # through to SPY fallback, corrupting sector-relative alpha learning.
+    "Semiconductors":                  "SOXX",
+    "Biotechnology":                   "XBI",
+    "Life Sciences Tools & Services":  "XLV",
+    "Software":                        "IGV",
+    "Software—Application":            "IGV",  # em-dash, yfinance format
+    "Software—Infrastructure":         "IGV",
+    "Internet Content & Information":  "FDN",
+    "Drug Manufacturers—General":      "XPH",
+    "Drug Manufacturers—Specialty":    "XPH",
+    "Medical Devices":                 "IHI",
 }
 
 

@@ -571,20 +571,24 @@ def run():
 
         for p in top:
             brain = p.get("brain", {}) or {}
-            _setf = p.get("_sector_etf", "SPY")
-            _sclose = p.get("_sector_close", "")
+            # Bug #8b (2026-05-05): dict.get(key, default) returns None when
+            # key exists with None value (cache miss / fetch failure). Use
+            # `or default` to coerce None → fallback. Otherwise None propagates
+            # to csv.DictWriter which writes empty string, killing sector alpha.
+            _setf = p.get("_sector_etf") or "SPY"
+            _sclose = p.get("_sector_close") or ""
             picks_for_log.append({
                 "ticker": p["ticker"],
                 "company": p.get("info_short", {}).get("name", ""),
                 "tag": p["scores"].get("sector_tag") or "",
-                "trade_type": p.get("trade_type", "swing"),
-                "score": p["scores"].get("composite", 0),
-                "multiplier": p["scores"].get("sector_mult", 1.0),
+                "trade_type": p.get("trade_type") or "swing",  # Bug #14: coerce None
+                "score": p["scores"].get("composite") or 0,  # Bug #14: coerce None
+                "multiplier": p["scores"].get("sector_mult") or 1.0,  # Bug #14
                 "entry": p["plan"].get("entry"),
                 "stop_loss": p["plan"].get("stop_loss"),
                 "take_profit": p["plan"].get("take_profit"),
-                "risk_reward": p["plan"].get("risk_reward", 2.0),
-                "qty": p["plan"].get("quantity", 0),
+                "risk_reward": p["plan"].get("risk_reward") or 2.0,  # Bug #14
+                "qty": p["plan"].get("quantity") or 0,  # Bug #14: coerce None
                 "days_to_earnings": p.get("days_to_earnings"),
                 # PILLAR 1 audit fields (May 2 2026)
                 "brain_p_win": brain.get("p_win"),
@@ -594,8 +598,8 @@ def run():
                 "brain_confidence": brain.get("confidence"),
                 "vol_ratio": p["scores"].get("vol_ratio"),
                 # 💎 Monster Hunt audit
-                "monster_score": p["scores"].get("monster_score", 0),
-                "is_monster": p["scores"].get("is_monster", False),
+                "monster_score": p["scores"].get("monster_score") or 0,  # Bug #14
+                "is_monster": p["scores"].get("is_monster") or False,  # Bug #14
                 # Sector benchmark (T3 May 3 2026)
                 "sector_etf": _setf,
                 "sector_close": _sclose,
