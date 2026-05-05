@@ -295,5 +295,115 @@
     "added_at": "2026-05-05T09:57:52.421844+00:00",
     "expires": "2026-05-12T09:57:52.421852+00:00",
     "hard_block": false
+  },
+  "RGEN": {
+    "ticker": "RGEN",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Repligen Q1 Adj. EPS $0.48 Beats $0.39 Estimate, Sales $194.255M Beat $192.279M Estimate",
+    "added_at": "2026-05-05T11:15:53.138802+00:00",
+    "expires": "2026-05-12T11:15:53.138809+00:00",
+    "hard_block": false
+  },
+  "EVGO": {
+    "ticker": "EVGO",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "headline": "EVgo Sees Q2 Sales $75.000M-$85.000M vs $106.457M Est",
+    "added_at": "2026-05-05T11:15:53.139486+00:00",
+    "expires": "2026-05-19T11:15:53.139492+00:00",
+    "hard_block": false
+  },
+  "HOOD": {
+    "ticker": "HOOD",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Robinhood's New Playbook: Why Cathie Wood's Ark Invest Calls Gold Tier The Next Amazon Prime",
+    "added_at": "2026-05-05T11:15:53.140037+00:00",
+    "expires": "2026-05-10T11:15:53.140042+00:00",
+    "hard_block": false
+  },
+  "PMTS": {
+    "ticker": "PMTS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "headline": "CPI Card Q1 EPS $0.17 Misses $0.23 Estimate, Sales $147.108M Beat $134.691M Estimate",
+    "added_at": "2026-05-05T11:15:53.140621+00:00",
+    "expires": "2026-05-12T11:15:53.140626+00:00",
+    "hard_block": false
+  },
+  "QTTB": {
+    "ticker": "QTTB",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "headline": "Q32 Bio Q1 EPS $(0.54) Beats $(0.68) Estimate",
+    "added_at": "2026-05-05T11:15:53.141156+00:00",
+    "expires": "2026-05-12T11:15:53.141161+00:00",
+    "hard_block": false
+  },
+  "PYPL": {
+    "ticker": "PYPL",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "headline": "PayPal Holdings Q1 Adj. EPS $1.34 Beats $1.27 Estimate, Sales $8.353B Beat $8.046B Estimate",
+    "added_at": "2026-05-05T11:15:53.141721+00:00",
+    "expires": "2026-05-12T11:15:53.141726+00:00",
+    "hard_block": false
+  },
+  "SHOP": {
+    "ticker": "SHOP",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Shopify Q1 Adj. EPS $0.36 Beats $0.33 Estimate, Sales $3.170B Beat $3.083B Estimate",
+    "added_at": "2026-05-05T11:15:53.142288+00:00",
+    "expires": "2026-05-12T11:15:53.142292+00:00",
+    "hard_block": false
+  },
+  "TSAT": {
+    "ticker": "TSAT",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "headline": "Telesat Q1 EPS $(2.22) Misses $(0.44) Estimate, Sales $63.478M Miss $63.700M Estimate",
+    "added_at": "2026-05-05T11:15:53.142851+00:00",
+    "expires": "2026-05-12T11:15:53.142856+00:00",
+    "hard_block": false
+  },
+  "ALKS": {
+    "ticker": "ALKS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "headline": "Alkermes Q1 EPS $(0.40) Beats $(0.52) Estimate, Sales $392.911M Beat $359.848M Estimate",
+    "added_at": "2026-05-05T11:15:53.143447+00:00",
+    "expires": "2026-05-12T11:15:53.143452+00:00",
+    "hard_block": false
+  },
+  "DFIN": {
+    "ticker": "DFIN",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "headline": "Donnelley Financial Solns Sees Q2 Sales $215.000M-$225.000M vs $227.581M Est",
+    "added_at": "2026-05-05T11:15:53.144021+00:00",
+    "expires": "2026-05-19T11:15:53.144026+00:00",
+    "hard_block": false
   }
 }
