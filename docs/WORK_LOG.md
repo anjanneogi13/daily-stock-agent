@@ -13,6 +13,26 @@ Rules:
 
 ---
 
+## 2026-05-05 — Signal journal quality repair
+
+**Type:** data fix
+
+**Summary:**
+
+Set post-fix `vol_ratio_bucket` values for the newly repaired 2026-05-05 signal journal rows:
+
+- `EXPD` -> `low`
+- `GILT` -> `low`
+
+Also reset full-suite evaluation side effects on those signal rows so they match the pending state in `data/picks_log.csv`.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_signal_journal_quality.py tests/test_journal_consistency.py -q --tb=short`
+- Full suite
+
+---
+
 ## 2026-05-05 — Signal journal consistency repair
 
 **Type:** data fix
