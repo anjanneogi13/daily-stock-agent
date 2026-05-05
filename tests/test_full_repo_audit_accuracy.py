@@ -39,3 +39,10 @@ def test_audit_includes_earnings_fill_rate_dashboard():
 
     assert "EARNINGS FILL-RATE" in src
     assert "scripts/audit_earnings_fill_rate.py" in src
+
+
+def test_audit_includes_sector_fill_rate_dashboard():
+    src = AUDIT.read_text()
+
+    assert "SECTOR BENCHMARK FILL-RATE" in src
+    assert "scripts/audit_sector_fill_rate.py" in src
