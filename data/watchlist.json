@@ -491,6 +491,102 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52297862/norwegian-cruise-line-analysts-slash-their-forecasts-following-q1-results",
       "source": "alpaca",
       "added_at": "2026-05-05T18:53:43.055566+00:00"
+    },
+    {
+      "ticker": "CCOI",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "upgrade",
+      "rationale": "JP Morgan upgrade to Overweight is bullish but offset by lowered price target to $22, creating mixed signals that limit clear directional conviction.",
+      "action_window": "next_day",
+      "headline": "JP Morgan Upgrades Cogent Comms Hldgs to Overweight, Lowers Price Target to $22",
+      "url": "https://www.benzinga.com/news/26/05/52300695/jp-morgan-upgrades-cogent-comms-hldgs-to-overweight-lowers-price-target-to-22",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.330997+00:00"
+    },
+    {
+      "ticker": "BLDP",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Lake Street upgrade to Buy with $5 price target is a positive catalyst but impact limited as Lake Street is a smaller regional firm rather than a bulge bracket bank.",
+      "action_window": "next_day",
+      "headline": "Lake Street Upgrades Ballard Power Systems to Buy, Raises Price Target to $5",
+      "url": "https://www.benzinga.com/news/26/05/52300232/lake-street-upgrades-ballard-power-systems-to-buy-raises-price-target-to-5",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331008+00:00"
+    },
+    {
+      "ticker": "ZIM",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "ZIM appears to be the target of a $4.5B Israeli takeover bid that has beaten out a competing Hapag-Lloyd offer, representing a significant M&A catalyst with competing bidders likely driving premium valuation.",
+      "action_window": "intraday",
+      "headline": "'Israeli $4.5 Billion Takeover Bid Beats Hapag-Lloyd's' Ynet",
+      "url": "https://www.benzinga.com/news/26/05/52299747/israeli-4-5-billion-takeover-bid-beats-hapag-lloyds-ynet",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331016+00:00"
+    },
+    {
+      "ticker": "IPGP",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Despite earnings beat and patent resolution, margin pressure and softer outlook drove shares down, indicating guidance concerns outweigh positive factors.",
+      "action_window": "intraday",
+      "headline": "What's Going On With IPG Photonics Stock Today?",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52299745/whats-going-on-with-ipg-photonics-stock-today",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331021+00:00"
+    },
+    {
+      "ticker": "CRWV",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Jefferies maintains Buy rating with significant price target increase to $160, indicating strong conviction in CoreWeave's upside potential from a reputable investment bank.",
+      "action_window": "next_day",
+      "headline": "Jefferies Maintains Buy on CoreWeave, Raises Price Target to $160",
+      "url": "https://www.benzinga.com/news/26/05/52299418/jefferies-maintains-buy-on-coreweave-raises-price-target-to-160",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331027+00:00"
+    },
+    {
+      "ticker": "APUS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Settlement of disputes removes legal overhang and uncertainty around business combination with MindWave Innovations, clearing path forward for M&A completion.",
+      "action_window": "next_day",
+      "headline": "Apimeds Pharmaceuticals US Settles All Resolving Disputes With Inscobee Regarding Apimeds Business Combination With MindWave Innovations",
+      "url": "https://www.benzinga.com/news/26/05/52299214/apimeds-pharmaceuticals-us-settles-all-resolving-disputes-with-inscobee-regarding-apimeds-business-c",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331033+00:00"
+    },
+    {
+      "ticker": "ON",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analyst target raises with specific $110 price target and AI data center revenue doubling projection by 2026 represents meaningful positive catalyst.",
+      "action_window": "next_day",
+      "headline": "ON Semiconductor Data Center Revenue Seen Doubling As Cycle Turns",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52299213/on-semiconductor-data-center-revenue-seen-doubling-as-cycle-turns",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331037+00:00"
+    },
+    {
+      "ticker": "CME",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New Bitcoin volatility futures product launch expands CME's crypto derivatives portfolio, potentially generating additional trading volume and revenue streams in a high-growth market segment.",
+      "action_window": "this_week",
+      "headline": "CME Group Plans To Introduce Bitcoin Volatility Futures On June 1",
+      "url": "https://www.benzinga.com/news/26/05/52299098/cme-group-plans-to-introduce-bitcoin-volatility-futures-on-june-1",
+      "source": "alpaca",
+      "added_at": "2026-05-05T20:05:10.331042+00:00"
     }
   ]
 }

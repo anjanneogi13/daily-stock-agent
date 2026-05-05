@@ -713,5 +713,126 @@
     "added_at": "2026-05-05T18:53:43.054189+00:00",
     "expires": "2026-05-19T18:53:43.054194+00:00",
     "hard_block": false
+  },
+  "H": {
+    "ticker": "H",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "JP Morgan Maintains Overweight on Hyatt Hotels, Raises Price Target to $186",
+    "added_at": "2026-05-05T20:05:10.316271+00:00",
+    "expires": "2026-05-10T20:05:10.316278+00:00",
+    "hard_block": false
+  },
+  "CCOI": {
+    "ticker": "CCOI",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "headline": "JP Morgan Upgrades Cogent Comms Hldgs to Overweight, Lowers Price Target to $22",
+    "added_at": "2026-05-05T20:05:10.317279+00:00",
+    "expires": "2026-05-10T20:05:10.317285+00:00",
+    "hard_block": false
+  },
+  "BLDP": {
+    "ticker": "BLDP",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "headline": "Lake Street Upgrades Ballard Power Systems to Buy, Raises Price Target to $5",
+    "added_at": "2026-05-05T20:05:10.318207+00:00",
+    "expires": "2026-05-10T20:05:10.318212+00:00",
+    "hard_block": false
+  },
+  "BLZE": {
+    "ticker": "BLZE",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "headline": "Lake Street Maintains Buy on Backblaze, Raises Price Target to $11",
+    "added_at": "2026-05-05T20:05:10.319093+00:00",
+    "expires": "2026-05-10T20:05:10.319098+00:00",
+    "hard_block": false
+  },
+  "ZIM": {
+    "ticker": "ZIM",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "headline": "'Israeli $4.5 Billion Takeover Bid Beats Hapag-Lloyd's' Ynet",
+    "added_at": "2026-05-05T20:05:10.319976+00:00",
+    "expires": "2026-06-04T20:05:10.319981+00:00",
+    "hard_block": false
+  },
+  "IPGP": {
+    "ticker": "IPGP",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "headline": "What's Going On With IPG Photonics Stock Today?",
+    "added_at": "2026-05-05T20:05:10.320853+00:00",
+    "expires": "2026-05-19T20:05:10.320858+00:00",
+    "hard_block": false
+  },
+  "CRWV": {
+    "ticker": "CRWV",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "headline": "Jefferies Maintains Buy on CoreWeave, Raises Price Target to $160",
+    "added_at": "2026-05-05T20:05:10.321769+00:00",
+    "expires": "2026-05-10T20:05:10.321773+00:00",
+    "hard_block": false
+  },
+  "DINE": {
+    "ticker": "DINE",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "headline": "Simplify Debuts Tax-Aware ETFs As Investors Chase Higher After-Tax Returns",
+    "added_at": "2026-05-05T20:05:10.322673+00:00",
+    "expires": "2026-05-12T20:05:10.322678+00:00",
+    "hard_block": false
+  },
+  "APUS": {
+    "ticker": "APUS",
+    "score_delta": -0.097,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "headline": "Apimeds Pharmaceuticals US Settles All Resolving Disputes With Inscobee Regarding Apimeds Business Combination With MindWave Innovations",
+    "added_at": "2026-05-05T20:05:10.327670+00:00",
+    "expires": "2026-05-19T20:05:10.327676+00:00",
+    "hard_block": false
+  },
+  "ON": {
+    "ticker": "ON",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "headline": "ON Semiconductor Data Center Revenue Seen Doubling As Cycle Turns",
+    "added_at": "2026-05-05T20:05:10.328635+00:00",
+    "expires": "2026-05-10T20:05:10.328640+00:00",
+    "hard_block": false
+  },
+  "CME": {
+    "ticker": "CME",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "headline": "CME Group Plans To Introduce Bitcoin Volatility Futures On June 1",
+    "added_at": "2026-05-05T20:05:10.329602+00:00",
+    "expires": "2026-05-12T20:05:10.329607+00:00",
+    "hard_block": false
   }
 }
