@@ -1,85 +1,27 @@
 {
-  "date": "2026-04-28",
+  "date": "2026-05-05",
   "market": {
-    "spy_change_pct": -0.43,
-    "qqq_change_pct": -1.0,
-    "soxx_change_pct": -3.05,
-    "vix": 18.98,
-    "warnings": [
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -3.1% \u2014 semis at risk"
-    ],
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
+    "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "LRCX",
+      "ticker": "EXPD",
       "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "gapped -3.8% \u2014 wait for limit fill",
-      "current_price": 249.6,
-      "gap_pct": -3.8
+      "reason": "could not verify price",
+      "current_price": null,
+      "gap_pct": null
     },
     {
-      "ticker": "NVDA",
-      "tag": "\ud83d\udeab SKIP TODAY",
-      "reason": "gapped -2.6%, only 1.3% to SL",
-      "current_price": 211.06,
-      "gap_pct": -2.56
-    },
-    {
-      "ticker": "TSM",
+      "ticker": "GILT",
       "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "gapped -2.8% \u2014 wait for limit fill",
-      "current_price": 393.75,
-      "gap_pct": -2.77
-    },
-    {
-      "ticker": "ALAB",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "gapped -4.6% \u2014 wait for limit fill",
-      "current_price": 187.64,
-      "gap_pct": -4.58
-    },
-    {
-      "ticker": "ARM",
-      "tag": "\ud83d\udeab SKIP TODAY",
-      "reason": "gapped -6.4%, only 2.4% to SL",
-      "current_price": 202.05,
-      "gap_pct": -6.41
-    },
-    {
-      "ticker": "AVGO",
-      "tag": "\ud83d\udeab SKIP TODAY",
-      "reason": "gapped -3.8%, only 0.7% to SL",
-      "current_price": 402.36,
-      "gap_pct": -3.79
-    },
-    {
-      "ticker": "ASML",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "gapped -3.3% \u2014 wait for limit fill",
-      "current_price": 1385.6,
-      "gap_pct": -3.27
-    },
-    {
-      "ticker": "SMCI",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "gapped -3.0% \u2014 wait for limit fill",
-      "current_price": 27.02,
-      "gap_pct": -2.98
-    },
-    {
-      "ticker": "ONTO",
-      "tag": "\ud83d\udeab SKIP TODAY",
-      "reason": "gapped -5.8%, only 2.2% to SL",
-      "current_price": 280.91,
-      "gap_pct": -5.82
-    },
-    {
-      "ticker": "RMBS",
-      "tag": "\ud83d\udeab SKIP TODAY",
-      "reason": "price $111.58 already at/below SL $128.28",
-      "current_price": 111.58,
-      "gap_pct": -21.04
+      "reason": "could not verify price",
+      "current_price": null,
+      "gap_pct": null
     }
   ]
 }

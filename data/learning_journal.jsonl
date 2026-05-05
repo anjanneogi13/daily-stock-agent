@@ -1,0 +1,13 @@
+{"ts": "2026-05-05T14:31:05+00:00", "kind": "nightly_brain_run", "steps_ok": 0, "steps_failed": 8, "summary": {"pattern_scan": "FAIL", "pattern_stats": "FAIL", "pattern_auto_e_d": "FAIL", "calibration_propose": "FAIL", "weight_apply": "FAIL", "auto_promote": "FAIL", "lesson_gc": "FAIL", "agent_memoir": "FAIL"}}
+{"ts": "2026-05-05T14:31:05+00:00", "kind": "pattern_disabled", "pattern": "bad_pattern", "reason": "negative_edge"}
+{"ts": "2026-05-05T14:31:05+00:00", "kind": "pattern_enabled", "pattern": "recovered", "reason": "edge_recovered"}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "penalize", "delta_pct": 4.0, "old": 1.0, "new": 0.96}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "boost", "delta_pct": 4.0, "old": 1.0, "new": 1.04}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "kill", "delta_pct": 0.0, "old": 1.0, "new": 0.0}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "penalize", "delta_pct": 3.0, "old": 1.0, "new": 0.97}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "penalize", "delta_pct": 4.0, "old": 1.0, "new": 0.96}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "penalize", "delta_pct": 4.0, "old": 0.96, "new": 0.9216}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "penalize", "delta_pct": 3.0, "old": 1.0, "new": 0.97}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "penalize", "delta_pct": 3.0, "old": 1.0, "new": 0.97}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "rsi", "bucket": "oversold", "action": "boost", "delta_pct": 2.0, "old": 1.0, "new": 1.02}
+{"ts": "2026-05-05T14:31:12+00:00", "kind": "weight_applied", "factor": "atrpct", "bucket": "high", "action": "kill", "delta_pct": 0.0, "old": 1.0, "new": 0.0}
