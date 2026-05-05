@@ -20,6 +20,21 @@ from .signal_journal import build_signals as _build_signals
 from .earnings import days_to_earnings as _d2e
 
 
+
+
+def _resolve_regime(cfg):
+    """M1 fix: cache market_regime() result on cfg so we call it once per run.
+    Defensive: if regime fetch fails, returns 'unknown' (no exception bubble)."""
+    if cfg.get("_regime"):
+        return cfg["_regime"]
+    try:
+        from .regime import market_regime as _mr
+        r = (_mr() or {}).get("regime", "unknown")
+    except Exception:
+        r = "unknown"
+    cfg["_regime"] = r
+    return r
+
 def _score_one(tk, df, cfg):
     try:
         d = add_indicators(df)

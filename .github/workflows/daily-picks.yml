@@ -193,3 +193,19 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
         run: python scripts/send_layman_daily.py
+
+      - name: Commit post-send artifacts (M-B fix)
+        if: always() && steps.guard.outputs.should_run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "ℹ No post-send changes to commit"
+            exit 0
+          fi
+          git commit -m "📲 Post-send state $(date +%Y-%m-%d) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "[push] post-send retry $i/5"; sleep $((i * 2))
+          done || true

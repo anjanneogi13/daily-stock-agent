@@ -149,7 +149,7 @@ jobs:
           python scripts/daily_observation.py $DATE
 
       - name: Commit observations + exec report
-        if: steps.guard.outputs.skip != 'true'
+        if: always() && steps.guard.outputs.skip != 'true'
         run: |
           git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/learning_journal.jsonl data/signal_journal.jsonl 2>/dev/null || true
           git diff --staged --quiet || git commit -m "📓 Daily observations + exec report [skip ci]"
