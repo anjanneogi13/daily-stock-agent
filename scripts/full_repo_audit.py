@@ -54,7 +54,7 @@ def main() -> int:
     print(f"  .github/workflows/*.yml: {count('.github/workflows/*.yml')}")
     print(f"  docs/*.md:               {count('docs/*.md')}")
     print(f"  data/* (top-level):      {len([p for p in (ROOT/'data').glob('*') if p.is_file()])}")
-    print(f"  TOTAL python lines:      {sh('find src scripts tests -name *.py -exec cat {} + 2>/dev/null | wc -l').strip()}")
+    print(f"  TOTAL python lines:      {sh("find src scripts tests -name '*.py' -exec cat {} + 2>/dev/null | wc -l").strip()}")
 
     # ════════════════════════════════════════════════════════════════
     section("3. SRC MODULE MAP — imports + lines + test coverage")
@@ -133,13 +133,17 @@ def main() -> int:
     print(sh("python scripts/audit_journal_consistency.py 2>&1 | head -10"))
     print("\n--- ENFORCEMENT READINESS ---")
     print(sh("python scripts/check_enforcement_readiness.py 2>&1 | head -25"))
+    print("\n--- MONITORING READINESS ---")
+    print(sh("python scripts/monitoring_readiness.py 2>&1 | head -35"))
 
     # ════════════════════════════════════════════════════════════════
     section("8. KNOWN PENDING ISSUES (from session notes)")
     # ════════════════════════════════════════════════════════════════
     issues = [
-        ("Smell verdicts not persisted on picks_log",
-         "grep -l 'smell' src/*.py | xargs grep -l 'picks_log' 2>/dev/null || echo 'NOT WIRED'"),
+        ("report issue upsert helper wired?",
+         "grep -R 'upsert_issue.js' .github/workflows/*.yml | wc -l"),
+        ("monitoring readiness dashboard present?",
+         "test -f scripts/monitoring_readiness.py && echo 'present' || echo 'MISSING'"),
         ("agent_memoir reads learning_journal?",
          "grep -n 'learning_journal' src/agent_memoir.py 2>/dev/null | head -3 || echo 'NO REFERENCE'"),
         ("regime 'unknown' in recent picks",
