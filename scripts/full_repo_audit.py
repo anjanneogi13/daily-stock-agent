@@ -145,7 +145,8 @@ def main() -> int:
     print(f"  .github/workflows/*.yml: {count('.github/workflows/*.yml')}")
     print(f"  docs/*.md:               {count('docs/*.md')}")
     print(f"  data/* (top-level):      {len([p for p in (ROOT/'data').glob('*') if p.is_file()])}")
-    print(f"  TOTAL python lines:      {sh("find src scripts tests -name '*.py' -exec cat {} + 2>/dev/null | wc -l").strip()}")
+    total_python_lines = sh("find src scripts tests -name '*.py' -exec cat {} + 2>/dev/null | wc -l").strip()
+    print(f"  TOTAL python lines:      {total_python_lines}")
 
     # ════════════════════════════════════════════════════════════════
     section("3. SRC MODULE MAP — imports + lines + test coverage")
