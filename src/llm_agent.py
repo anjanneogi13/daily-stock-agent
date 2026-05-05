@@ -4,7 +4,7 @@ Caches per (ticker, scores, plan) for 12h. Throttles + handles quota exhaustion.
 """
 import os, time, random, json, hashlib
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 _CACHE_DIR = Path("data/llm_cache")
 _CACHE_DIR.mkdir(parents=True, exist_ok=True)
@@ -25,7 +25,11 @@ def _cache_get(key):
         return None
     try:
         d = json.loads(p.read_text())
-        if datetime.now(timezone.utc) - datetime.fromisoformat(d["at"]) < _CACHE_TTL:
+        cached_at = datetime.fromisoformat(d["at"])
+        if cached_at.tzinfo is None:
+            # Backward-compatible with older naive cache files.
+            cached_at = cached_at.replace(tzinfo=timezone.utc)
+        if datetime.now(timezone.utc) - cached_at < _CACHE_TTL:
             return d["text"]
     except Exception:
         pass
@@ -35,7 +39,7 @@ def _cache_get(key):
 def _cache_put(key, text):
     try:
         (_CACHE_DIR / f"{key}.json").write_text(
-            json.dumps({"at": datetime.now().isoformat(), "text": text})
+            json.dumps({"at": datetime.now(timezone.utc).isoformat(), "text": text})
         )
     except Exception:
         pass
