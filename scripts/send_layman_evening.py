@@ -19,14 +19,26 @@ CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
 
 
 def _today_outcomes():
+    """Return picks that CLOSED today (sl_hit/tp_hit/expired), regardless of
+    when they were originally picked. Bug fix 2026-05-05:
+      (1) was reading 'status' column — CSV uses 'evaluation_status'
+      (2) was filtering on pick_date == today — should be evaluated_on == today
+          so that a pick made yesterday and closed today actually shows up."""
     p = Path("data/picks_log.csv")
     if not p.exists(): return []
     today = os.environ.get("PICK_DATE") or datetime.now().strftime("%Y-%m-%d")
+    CLOSED = ("tp_hit", "sl_hit", "expired", "unreachable_entry")
+    from datetime import timedelta
+    cutoff = (datetime.strptime(today, "%Y-%m-%d") - timedelta(days=3)).strftime("%Y-%m-%d")
     out = []
     with p.open() as f:
         for r in csv.DictReader(f):
-            d = (r.get("pick_date") or "")[:10]
-            if d == today and r.get("status") not in (None, "", "OPEN"):
+            evaluated_on = (r.get("evaluated_on") or "")[:10]
+            status = (r.get("evaluation_status") or "").lower()
+            # Lookback 3 days so trades closed Fri/Sat get shown in Mon's report,
+            # AND so a same-day intraday SL hit (evaluated_on=yesterday because
+            # eval cron runs after market close UTC = next morning SGT) shows up.
+            if status in CLOSED and evaluated_on >= cutoff:
                 out.append(r)
     return out
 
@@ -46,7 +58,7 @@ def build_message(outcomes):
                 "📭 *No closed trades to report yet.*\n"
                 "_(Either no picks today, or picks are still open and will close tomorrow.)_")
 
-    wins = sum(1 for o in outcomes if (o.get("status","") or "").upper() in ("TP_HIT","WIN") or
+    wins = sum(1 for o in outcomes if (o.get("evaluation_status","") or "").lower() in ("tp_hit",) or (o.get("evaluation_status","") or "").upper() in ("WIN",) or
                _safe_f(o.get("pnl_dollar")) > 0)
     losses = len(outcomes) - wins
     total_pnl = sum(_safe_f(o.get("pnl_dollar")) for o in outcomes)
