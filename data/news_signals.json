@@ -1156,5 +1156,101 @@
     "added_at": "2026-05-06T10:13:29.876194+00:00",
     "expires": "2026-05-13T10:13:29.876199+00:00",
     "hard_block": false
+  },
+  "PODD": {
+    "ticker": "PODD",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Insulet Boosts 2026 Outlook Fueled By Strong Omnipod Growth",
+    "added_at": "2026-05-06T12:16:48.993014+00:00",
+    "expires": "2026-05-13T12:16:48.993022+00:00",
+    "hard_block": false
+  },
+  "OKLO": {
+    "ticker": "OKLO",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Oklo Says U.S. Nuclear Regulatory Commission Approves Principal Design Criteria Topical Report For Aurora Powerhouse Currently Under Construction In Idaho",
+    "added_at": "2026-05-06T12:16:48.994437+00:00",
+    "expires": "2026-06-05T12:16:48.994443+00:00",
+    "hard_block": false
+  },
+  "VFC": {
+    "ticker": "VFC",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "BTIG Upgrades VF to Buy, Announces $23 Price Target",
+    "added_at": "2026-05-06T12:16:48.995728+00:00",
+    "expires": "2026-05-11T12:16:48.995736+00:00",
+    "hard_block": false
+  },
+  "CURR": {
+    "ticker": "CURR",
+    "score_delta": 0.157,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Currenc Group Extends Exclusivity Period With Proposed Reverse Merger Partner Animoca Brands Until June 30",
+    "added_at": "2026-05-06T12:16:48.996943+00:00",
+    "expires": "2026-06-05T12:16:48.996949+00:00",
+    "hard_block": false
+  },
+  "OSS": {
+    "ticker": "OSS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "One Stop Systems Q1 Adj. EPS $0.01 Beats $(0.04) Estimate, Sales $8.069M Beat $6.997M Estimate",
+    "added_at": "2026-05-06T12:16:48.998165+00:00",
+    "expires": "2026-05-13T12:16:48.998170+00:00",
+    "hard_block": false
+  },
+  "FUBO": {
+    "ticker": "FUBO",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Fubo Reaffirms FY26 Pro Forma Adjusted EBITDA Guidance Of $80M-$100M, Sees FY28 Adjusted EBITDA Of At Least $300M",
+    "added_at": "2026-05-06T12:16:48.999454+00:00",
+    "expires": "2026-05-20T12:16:48.999462+00:00",
+    "hard_block": false
+  },
+  "CART": {
+    "ticker": "CART",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Maplebear Q1 EPS $0.57, Inline, Sales $1.019B Beat $1.006B Estimate",
+    "added_at": "2026-05-06T12:16:49.000702+00:00",
+    "expires": "2026-05-13T12:16:49.000707+00:00",
+    "hard_block": false
+  },
+  "TSHA": {
+    "ticker": "TSHA",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Taysha Gene Therapies Q1 EPS $(0.12) Misses $(0.10) Estimate",
+    "added_at": "2026-05-06T12:16:49.006696+00:00",
+    "expires": "2026-05-13T12:16:49.006703+00:00",
+    "hard_block": false
   }
 }

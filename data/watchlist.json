@@ -914,6 +914,126 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52313492/lineage-q1-eps-0-18-misses-0-14-estimate-sales-1-297b-miss-1-322b-estimate",
       "source": "alpaca",
       "added_at": "2026-05-06T10:13:29.877891+00:00"
+    },
+    {
+      "ticker": "PODD",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat combined with raised 2026 outlook driven by core product growth creates significant positive catalyst for immediate trading.",
+      "action_window": "intraday",
+      "headline": "Insulet Boosts 2026 Outlook Fueled By Strong Omnipod Growth",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52318227/insulet-boosts-2026-outlook-fueled-by-strong-omnipod-growth",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008614+00:00"
+    },
+    {
+      "ticker": "APVO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong clinical trial results with 87% clinical benefit rate and 81% remission rate in AML treatment represent a meaningful positive catalyst for a biotech stock, though not final FDA approval.",
+      "action_window": "intraday",
+      "headline": "Aptevo Therapeutic Announces 87% clinical benefit rate And 81% Remission Rate In Its RAINIER Frontline Acute Myeloid Leukemia Trial, RAINIER Remains On Schedule For 2026 Completion And Phase 2 Dose Selection",
+      "url": "https://www.benzinga.com/news/26/05/52318175/aptevo-therapeutic-announces-87-clinical-benefit-rate-and-81-remission-rate-in-its-rainier-frontline",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008628+00:00"
+    },
+    {
+      "ticker": "OKLO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "NRC approval of principal design criteria for a nuclear facility under construction represents a significant regulatory milestone that de-risks the project and validates the technology, comparable to FDA approval in pharma.",
+      "action_window": "intraday",
+      "headline": "Oklo Says U.S. Nuclear Regulatory Commission Approves Principal Design Criteria Topical Report For Aurora Powerhouse Currently Under Construction In Idaho",
+      "url": "https://www.benzinga.com/news/26/05/52318137/oklo-says-u-s-nuclear-regulatory-commission-approves-principal-design-criteria-topical-report-for-au",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008638+00:00"
+    },
+    {
+      "ticker": "VFC",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BTIG upgrade to Buy with price target represents meaningful analyst endorsement that typically drives institutional interest and near-term price appreciation.",
+      "action_window": "intraday",
+      "headline": "BTIG Upgrades VF to Buy, Announces $23 Price Target",
+      "url": "https://www.benzinga.com/news/26/05/52318106/btig-upgrades-vf-to-buy-announces-23-price-target",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008645+00:00"
+    },
+    {
+      "ticker": "OBIO",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "OBIO receives $15M payment under existing agreement, representing material cash influx for smaller biotech though LGND experiences corresponding cash outflow under pre-disclosed arrangement.",
+      "action_window": "intraday",
+      "headline": "Orchestra BioMed Receives $15M Payment From Ligand Pharma Under Previously Disclosed Revenue Participation Right Purchase And Sale Agreement",
+      "url": "https://www.benzinga.com/news/26/05/52318072/orchestra-biomed-receives-15m-payment-from-ligand-pharma-under-previously-disclosed-revenue-particip",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008652+00:00"
+    },
+    {
+      "ticker": "CURR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Extension of exclusivity period signals continued commitment to reverse merger with Animoca Brands, reducing deal break risk but not yet confirmed completion.",
+      "action_window": "intraday",
+      "headline": "Currenc Group Extends Exclusivity Period With Proposed Reverse Merger Partner Animoca Brands Until June 30",
+      "url": "https://www.benzinga.com/news/26/05/52318069/currenc-group-extends-exclusivity-period-with-proposed-reverse-merger-partner-animoca-brands-until-j",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008658+00:00"
+    },
+    {
+      "ticker": "OSS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong double beat with Q1 EPS significantly exceeding estimates (turned positive vs expected loss) and revenue beating by 15.3%, indicating substantial operational outperformance.",
+      "action_window": "intraday",
+      "headline": "One Stop Systems Q1 Adj. EPS $0.01 Beats $(0.04) Estimate, Sales $8.069M Beat $6.997M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52318058/one-stop-systems-q1-adj-eps-0-01-beats-0-04-estimate-sales-8-069m-beat-6-997m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008664+00:00"
+    },
+    {
+      "ticker": "FUBO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company reaffirms FY26 guidance and provides new FY28 EBITDA target of $300M+, signaling strong confidence in significant profitability trajectory over next 2-3 years.",
+      "action_window": "intraday",
+      "headline": "Fubo Reaffirms FY26 Pro Forma Adjusted EBITDA Guidance Of $80M-$100M, Sees FY28 Adjusted EBITDA Of At Least $300M",
+      "url": "https://www.benzinga.com/quote/FUBO",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008670+00:00"
+    },
+    {
+      "ticker": "CART",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Sales beat estimate by 1.3% while EPS met expectations, providing modest positive momentum for intraday trading.",
+      "action_window": "intraday",
+      "headline": "Maplebear Q1 EPS $0.57, Inline, Sales $1.019B Beat $1.006B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52318009/maplebear-q1-eps-0-57-inline-sales-1-019b-beat-1-006b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008678+00:00"
+    },
+    {
+      "ticker": "TSHA",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 EPS missed estimates by 20% ($0.12 actual vs $0.10 expected), representing a significant earnings miss that typically triggers immediate selling pressure in small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Taysha Gene Therapies Q1 EPS $(0.12) Misses $(0.10) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52317998/taysha-gene-therapies-q1-eps-0-12-misses-0-10-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T12:16:49.008684+00:00"
     }
   ]
 }
