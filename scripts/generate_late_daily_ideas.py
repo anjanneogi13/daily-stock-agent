@@ -328,12 +328,12 @@ def _level_text(idea: dict) -> list[str]:
 def format_markdown(ideas: list[dict], *, now: datetime | None = None) -> str:
     now_et = _now_et(now)
     lines = [
-        "⚠️ LATE WATCH-ONLY DAILY IDEAS",
+        "⚠️ PREMARKET WINDOW MISSED — LATE WATCH-ONLY DAILY IDEAS",
         "",
-        f"Generated: {now_et.strftime('%Y-%m-%d %H:%M ET')}",
+        f"Time: {now_et.strftime('%Y-%m-%d %H:%M ET')}",
         "",
-        "IMPORTANT: These are NOT official premarket daily picks.",
-        "They were generated after the 09:20 ET cutoff.",
+        "Official daily picks were NOT sent because the 09:20 ET cutoff has passed.",
+        "The ideas below are late watch-only monitoring ideas, not official premarket picks.",
         "Monitoring-only. Not buy instructions. Not paper trades.",
         "",
     ]

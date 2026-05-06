@@ -80,22 +80,6 @@ jobs:
           python scripts/record_daily_picks_run_status.py --event guard_passed --result should_run --reason "inside official premarket window and no duplicate picks"
           echo "should_run=true" >> $GITHUB_OUTPUT
 
-      - name: Send missed-window Telegram alert
-        if: steps.guard.outputs.missed_window == 'true'
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
-        run: |
-          python scripts/send_missed_premarket_alert.py
-          rc=$?
-          if [ "$rc" -eq 0 ]; then
-            python scripts/record_daily_picks_run_status.py --event missed_window_alert --result success --reason "missed-window Telegram alert sent" --telegram-sent success
-          else
-            python scripts/record_daily_picks_run_status.py --event missed_window_alert --result failed --reason "missed-window Telegram alert failed" --telegram-sent failed
-          fi
-          exit "$rc"
-
       - name: Set up Python for late watch-only ideas
         if: steps.guard.outputs.missed_window == 'true'
         uses: actions/setup-python@v5
@@ -125,9 +109,9 @@ jobs:
           python scripts/send_late_daily_ideas_telegram.py
           rc=$?
           if [ "$rc" -eq 0 ]; then
-            python scripts/record_daily_picks_run_status.py --event late_ideas_telegram --result success --reason "late watch-only ideas Telegram sender completed" --telegram-sent success
+            python scripts/record_daily_picks_run_status.py --event late_ideas_telegram --result success --reason "combined missed-window and late watch-only ideas Telegram sender completed" --telegram-sent success
           else
-            python scripts/record_daily_picks_run_status.py --event late_ideas_telegram --result failed --reason "late watch-only ideas Telegram sender failed" --telegram-sent failed
+            python scripts/record_daily_picks_run_status.py --event late_ideas_telegram --result failed --reason "combined missed-window and late watch-only ideas Telegram sender failed" --telegram-sent failed
           fi
           exit "$rc"
 

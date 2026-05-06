@@ -116,8 +116,9 @@ def test_write_outputs_writes_jsonl_and_markdown(tmp_path):
     rows = [json.loads(line) for line in jsonl.read_text().splitlines()]
     assert rows[0]["ticker"] == "ERNA"
     body = md.read_text()
-    assert "LATE WATCH-ONLY DAILY IDEAS" in body
-    assert "NOT official premarket daily picks" in body
+    assert "PREMARKET WINDOW MISSED — LATE WATCH-ONLY DAILY IDEAS" in body
+    assert "Official daily picks were NOT sent" in body
+    assert "not official premarket picks" in body
     assert "ERNA — Ernexa Therapeutics" in body
     assert "Watch-only BUY/Entry: $10.00" in body
     assert "Watch-only SL: $9.85" in body
@@ -128,7 +129,7 @@ def test_write_outputs_writes_jsonl_and_markdown(tmp_path):
 def test_format_markdown_no_ideas_is_still_safe():
     msg = format_markdown([], now=datetime(2026, 5, 6, 11, 30, tzinfo=ET))
 
-    assert "LATE WATCH-ONLY DAILY IDEAS" in msg
+    assert "PREMARKET WINDOW MISSED — LATE WATCH-ONLY DAILY IDEAS" in msg
     assert "No qualified late watch-only ideas" in msg
     assert "Not buy instructions" in msg
 

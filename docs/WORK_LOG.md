@@ -13,6 +13,32 @@ Rules:
 
 ---
 
+## 2026-05-06 — Combined missed-window and late-ideas Telegram notice
+
+**Type:** UX fix / monitoring-only / alert clarity
+
+**Summary:**
+
+After late watch-only daily ideas were added, manual after-cutoff daily-picks runs sent two Telegram messages:
+
+1. missed premarket window alert,
+2. late watch-only ideas.
+
+This was noisy and confusing. The workflow now sends a single combined message:
+
+- premarket window missed,
+- official daily picks were not sent,
+- late watch-only ideas are monitoring-only,
+- BUY/Entry, SL, TP, and R/R are watch-only levels.
+
+Safety:
+
+- Official picks remain blocked after 09:20 ET.
+- Late ideas remain separate from `picks_log.csv`.
+- No paper/live trading is enabled.
+
+---
+
 ## 2026-05-06 — Improved late watch-only idea quality and levels
 
 **Type:** reliability fallback / monitoring-only / content quality

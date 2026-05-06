@@ -63,13 +63,14 @@ def test_post_send_push_failure_is_not_hidden():
     assert "exit 1" in post_send
 
 
-def test_daily_picks_sends_missed_window_alert_instead_of_normal_picks():
+def test_daily_picks_uses_single_combined_missed_window_late_ideas_message():
     text = _text()
 
     assert "missed_window=true" in text
-    assert "Send missed-window Telegram alert" in text
-    assert "steps.guard.outputs.missed_window == 'true'" in text
-    assert "scripts/send_missed_premarket_alert.py" in text
+    assert "Send missed-window Telegram alert" not in text
+    assert "scripts/send_missed_premarket_alert.py" not in text
+    assert "Send late watch-only daily ideas to Telegram" in text
+    assert "combined missed-window and late watch-only ideas Telegram sender completed" in text
 
 
 def test_watchdog_runs_before_market_open_and_cutoff():
@@ -151,3 +152,12 @@ def test_late_watch_only_ideas_install_quote_dependency():
     assert "Install late watch-only idea dependencies" in text
     assert "pip install yfinance==0.2.65 curl_cffi==0.7.4" in text
     assert "scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40 --require-quote" in text
+
+
+def test_late_watch_only_message_is_single_combined_notice():
+    text = _text()
+
+    assert text.count("Send late watch-only daily ideas to Telegram") == 1
+    assert "Send missed-window Telegram alert" not in text
+    assert "--event missed_window_alert" not in text
+    assert "--event late_ideas_telegram" in text
