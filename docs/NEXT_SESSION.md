@@ -273,3 +273,37 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## Daily-picks reliability hardening — 2026-05-06
+
+A live operational miss showed no daily picks were logged for 2026-05-06 by 10:06 ET.
+
+Reliability fix applied:
+
+- Daily-picks workflow now has frequent guarded premarket cron attempts.
+- The 09:20 ET hard cutoff remains in place.
+- Morning watchdog now runs before cutoff at 09:10 and 09:18 ET.
+- Watchdog checks `data/picks_log.csv`, not stale `premarket_check.json`.
+- Watchdog sends Telegram alerts while there is still time to manually trigger daily picks.
+
+Next verification:
+
+1. Confirm GitHub Actions schedules fire on the next market day.
+2. Confirm daily picks are logged before 09:20 ET.
+3. Confirm Telegram receives either picks or an early watchdog alert.
+4. Keep paper/live trading disabled.
+
+## Import-safety fix — 2026-05-06
+
+During the daily-picks reliability work, the full suite revealed that `tests/test_scripts_import.py` could mutate tracked `data/picks_log.csv`.
+
+Root cause:
+
+- `scripts/evaluate_picks.py` ran evaluation logic at import time.
+
+Fix:
+
+- `scripts/evaluate_picks.py` is now import-safe.
+- Execution is behind `main()` and `if __name__ == "__main__"`.
+
+Continue to verify tracked data stays clean after full-suite runs.

@@ -13,6 +13,68 @@ Rules:
 
 ---
 
+## 2026-05-06 — Fixed evaluate_picks import side effect
+
+**Type:** bug fix / test isolation / data safety
+
+**Summary:**
+
+Fixed a tracked-data mutation discovered during the daily-picks reliability audit.
+
+Root cause:
+
+- `tests/test_scripts_import.py` smoke-imports scripts to catch broken imports.
+- `scripts/evaluate_picks.py` executed evaluation logic at import time.
+- Importing the script could run `evaluate_pending()` and mutate `data/picks_log.csv`.
+
+Fix:
+
+- Moved evaluation execution into `main()`.
+- Added an explicit `if __name__ == "__main__"` guard.
+- Importing `scripts/evaluate_picks.py` is now safe and should not mutate tracked data.
+
+Safety:
+
+- Reset accidental `data/picks_log.csv` side effects before continuing.
+- Paper trading remains disabled.
+- No enforcement flags changed.
+
+---
+
+## 2026-05-06 — Hardened daily-picks premarket reliability
+
+**Type:** workflow reliability / monitoring safety
+
+**Summary:**
+
+Hardened the daily-picks automation after a live operational miss where no 2026-05-06 daily picks were logged by 10:06 ET.
+
+Root cause:
+
+- GitHub scheduled workflows are best-effort and cannot be prioritized.
+- The prior design had too few useful premarket attempts before the 09:20 ET hard cutoff.
+- The watchdog ran at 09:35 ET, after market open, which was too late to help.
+- The watchdog checked `premarket_check.json` instead of the authoritative `data/picks_log.csv`.
+
+Fix:
+
+- Replaced sparse daily-picks cron slots with frequent guarded premarket attempts:
+  - `5,20,35,50 12-14 * * 1-5`
+- Kept the 09:20 ET hard cutoff for normal official daily picks.
+- Reworked the morning watchdog to run at 09:10 and 09:18 ET.
+- Watchdog now checks today's rows in `data/picks_log.csv`.
+- Watchdog alerts Telegram before cutoff if no picks are logged.
+- Added workflow reliability tests.
+
+Safety:
+
+- No paper trading enabled.
+- No live trading enabled.
+- No enforcement flags changed.
+- Late/missed windows still do not send normal actionable picks.
+
+---
+
 ## 2026-05-06 — Final closing audit passed
 
 **Type:** audit / documentation / session closeout

@@ -1,12 +1,22 @@
 name: Morning Run Watchdog
 
-# Fires at 9:35 ET (5 min AFTER market open). Checks if today's picks ran.
-# If not, sends Telegram alert.
+# Pre-market reliability watchdog.
+#
+# GitHub scheduled workflows are best-effort, so this checks BEFORE market open
+# whether official daily picks have actually been logged. If not, it sends an
+# urgent Telegram alert while there is still time to manually trigger
+# daily-picks before the 09:20 ET hard cutoff.
+#
+# Safety:
+# - This workflow does not create picks.
+# - This workflow does not bypass the daily-picks timing gate.
+# - This workflow does not enable paper/live trading.
 
 on:
   schedule:
-    - cron: '35 13 * * 1-5'   # 9:35 AM EDT
-    - cron: '35 14 * * 1-5'   # 9:35 AM EST
+    # 09:10 and 09:18 ET, covered for both EDT and EST.
+    # The ET guard below skips the duplicate/wrong DST hour.
+    - cron: '10,18 13-14 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -18,39 +28,64 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check if today's picks ran
+      - name: Check if today's picks are logged before cutoff
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
         run: |
           ET_HOUR=$(TZ='America/New_York' date +%H)
+          ET_MIN=$(TZ='America/New_York' date +%M)
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
-          echo "Watchdog firing at $ET_HOUR ET ($ET_DATE)"
+          ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
+          OFFICIAL_CUTOFF=$((9 * 60 + 20))
 
-          # Skip duplicate DST fire — only run at 9 ET hour
+          echo "Watchdog firing at $ET_DATE $ET_HOUR:$ET_MIN ET"
+
+          # Skip duplicate DST fire — only run in the 09:xx ET hour.
           if [ "$ET_HOUR" != "09" ]; then
-            echo "⏭  Wrong DST slot ($ET_HOUR ET) — skipping"
+            echo "⏭ Wrong DST slot ($ET_HOUR:$ET_MIN ET) — skipping"
             exit 0
           fi
 
-          # Check premarket_check.json date
-          LAST_DATE=""
-          if [ -f data/premarket_check.json ]; then
-            LAST_DATE=$(python3 -c "import json; print(json.load(open('data/premarket_check.json')).get('date',''))" 2>/dev/null || echo "")
+          TODAY_ROWS=0
+          if [ -f data/picks_log.csv ]; then
+            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
           fi
 
-          if [ "$LAST_DATE" = "$ET_DATE" ]; then
-            echo "✅ Picks ran today ($LAST_DATE) — all good"
+          if [ "$TODAY_ROWS" -gt 0 ]; then
+            echo "✅ Picks already logged for $ET_DATE: $TODAY_ROWS row(s)"
             exit 0
           fi
 
-          # ALERT: morning run missed
-          MSG="🚨 *Morning run MISSED for $ET_DATE*%0A%0AGitHub Actions cron didn't fire in time.%0AYour picks for today are NOT generated.%0A%0A👉 Manually trigger: https://github.com/${{ github.repository }}/actions/workflows/daily-picks.yml"
+          if [ "$ET_MINUTES_OF_DAY" -gt "$OFFICIAL_CUTOFF" ]; then
+            WINDOW_NOTE="The 09:20 ET cutoff has passed. Do not send normal premarket picks now; use intraday monitor only."
+          else
+            WINDOW_NOTE="There is still time before the 09:20 ET cutoff. Manually trigger Daily Stock Picks now if needed."
+          fi
 
-          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
-            -d "chat_id=$TELEGRAM_CHAT_ID" \
-            -d "text=$MSG" \
-            -d "parse_mode=Markdown"
+          MSG="🚨 *Daily picks not logged for $ET_DATE*%0A%0ATime: $ET_HOUR:$ET_MIN ET%0A%0AThe premarket picks workflow has not produced rows in data/picks_log.csv yet.%0A%0A$WINDOW_NOTE%0A%0AManual trigger:%0Ahttps://github.com/${{ github.repository }}/actions/workflows/daily-picks.yml%0A%0A_Monitoring only. No paper/live trading._"
 
-          echo "🚨 Alert sent — picks missed today"
+          SENT=0
+          for CHAT in "$TELEGRAM_CHAT_ID" "$TELEGRAM_GROUP_CHAT_ID"; do
+            if [ -z "$CHAT" ]; then
+              continue
+            fi
+            curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage"               -d "chat_id=$CHAT"               -d "text=$MSG"               -d "parse_mode=Markdown" >/tmp/watchdog_telegram_response.txt || true
+
+            if grep -q '"ok":true' /tmp/watchdog_telegram_response.txt; then
+              echo "✅ Watchdog alert sent to chat ${CHAT:0:6}…"
+              SENT=1
+            else
+              echo "⚠️ Watchdog alert may have failed for chat ${CHAT:0:6}…"
+              cat /tmp/watchdog_telegram_response.txt || true
+            fi
+          done
+
+          if [ "$SENT" -eq 0 ]; then
+            echo "❌ No watchdog Telegram alert was confirmed"
+            exit 1
+          fi
+
+          echo "🚨 Watchdog alert sent — daily picks missing before cutoff"
           exit 1

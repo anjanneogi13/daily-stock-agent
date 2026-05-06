@@ -2,16 +2,16 @@ name: Daily Stock Picks
 
 on:
   schedule:
-    # ⚠ 2026-05-02: Reduced from 13 cron entries to 2.
-    # Old design had 13 "backup" slots → workflow fired 2-3x/day
-    # → tag cap (per-run) was bypassed → 16 SEMI picks/day
-    # New: multiple guarded chances. The picks_log.csv dedup guard below
-    # prevents duplicate picks if more than one schedule fires.
-    - cron: '30 12 * * 1-5'   # 8:30 AM EDT primary (Mar-Nov); 7:30 AM EST guard-skips
-    - cron: '00 13 * * 1-5'   # 9:00 AM EDT backup; 8:00 AM EST early backup
-    - cron: '30 13 * * 1-5'   # 9:30 AM EDT/8:30 AM EST backup; hard gate blocks after 09:20 ET
-    - cron: '00 14 * * 1-5'   # late backup; sends missed-window alert after 09:20 ET
-    - cron: '30 14 * * 1-5'   # late backup; sends missed-window alert after 09:20 ET
+    # Reliability hardening:
+    # GitHub scheduled workflows are best-effort and can be delayed.
+    # Use frequent guarded premarket attempts, then let the ET guard below decide:
+    # - run official picks only during the safe premarket window,
+    # - skip duplicates if picks are already logged via the picks_log.csv dedup guard,
+    # - send missed-window alerts after the 09:20 ET cutoff.
+    #
+    # Minute offsets avoid the most crowded top-of-hour cron slots.
+    # The 12-14 UTC range covers both EDT and EST premarket windows.
+    - cron: '5,20,35,50 12-14 * * 1-5'
 
   workflow_dispatch:
 

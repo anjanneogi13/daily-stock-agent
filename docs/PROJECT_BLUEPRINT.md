@@ -18,6 +18,7 @@ The repo is healthy for monitoring mode:
 - Core data-quality audits are green.
 - Recent persistence and Telegram dedup bugs are fixed.
 - Daily-picks timing hard gate is implemented.
+- Daily-picks workflow reliability was hardened with frequent guarded premarket attempts and pre-cutoff watchdog alerts.
 - Stale/unverified premarket prices become watch-only instead of actionable.
 - Intraday news cannot silently become normal swing picks; it is marked watch-only until intraday planning matures.
 - Closed-status logic is aligned between enforcement and monitoring readiness dashboards.
