@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-06
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1284 passed, 28 skipped
+**Test suite:** 1348 passed, 29 skipped
 **Mode:** monitoring-only
 
 ## Purpose
@@ -29,6 +29,10 @@ The repo is healthy for monitoring mode:
 - Major undercovered modules now have tests.
 - Paper trading remains intentionally deferred.
 - Paper trading activation checklist added on 2026-05-06.
+- Intraday Monitor force-adds intended runtime artifacts under ignored `data/` so operational evidence persists from GitHub Actions.
+- Opening-range run-status artifacts record whether the intraday/opening-range scanner ran, skipped, completed, found candidates, wrote observations, and sent/skipped Telegram.
+- Missed-window Telegram and late watch-only ideas are sent as one combined warning message.
+- Late watch-only daily ideas now include quote-enriched watch-only BUY/Entry, SL, TP, and R/R levels after missed official premarket windows.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
 
@@ -121,7 +125,7 @@ These are not urgent blockers:
    - `picks_csv`
    - `monster_data`
    - `cape_ratio`
-3. Closed-status logic should be aligned between readiness scripts.
+3. Closed-status logic is aligned between readiness scripts as of 2026-05-06.
 4. Backtester exists but needs hardening.
 
 ## Reserved / Inactive Schema
@@ -141,12 +145,14 @@ They are not active scale-out execution logic.
 
 Immediate next work:
 
-1. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
-2. Add tests for `performance_stats`.
-3. Add tests for smaller modules.
-4. Add tests for smaller modules.
-5. Harden backtester.
-6. Build opening-range intraday scanner.
+1. Validate GitHub Actions persistence for `data/opening_range_run_status_YYYY-MM-DD.jsonl` after commit `27d92f0`.
+2. Monitor the next market-day Daily Stock Picks schedule:
+   - picks before 09:20 ET, or
+   - combined missed-window late watch-only message after cutoff.
+3. Monitor Intraday Monitor / opening-range scheduled runs and review status artifacts.
+4. Keep paper/live trading disabled.
+5. Next weekend feature candidate: opening-range bar artifact capture for future outcome/backtest joins.
+6. Continue adding tests for undercovered smaller modules and hardening backtest tooling.
 
 Planned future features:
 

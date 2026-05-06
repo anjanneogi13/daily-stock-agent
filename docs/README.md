@@ -21,3 +21,17 @@ Documentation policy:
 - Update `PROJECT_BLUEPRINT.md` when product, architecture, or roadmap status changes.
 - Update `WORK_LOG.md` after every meaningful codebase move.
 - Update `NEXT_SESSION.md` at the end of each work session.
+
+## Latest handoff status
+
+As of 2026-05-06 closeout:
+
+- Start with `NEXT_SESSION.md`.
+- Then read `PROJECT_BLUEPRINT.md` and `WORK_LOG.md`.
+- The repo is monitoring-only.
+- Paper/live trading remain disabled.
+- Latest completed reliability lanes:
+  - daily-picks missed-window late watch-only ideas,
+  - combined missed-window Telegram alert,
+  - opening-range run-status ledger,
+  - forced persistence of ignored runtime artifacts.

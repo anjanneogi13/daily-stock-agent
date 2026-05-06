@@ -13,6 +13,50 @@ Rules:
 
 ---
 
+## 2026-05-06 — Session closeout after late-picks reliability and opening-range status work
+
+**Type:** closeout / audit / documentation / monitoring-only
+
+**Summary:**
+
+Closed the session after completing the late-picks reliability lane and opening-range run-status observability lane.
+
+Completed:
+
+- Added late watch-only daily ideas for missed official premarket windows.
+- Improved late idea quality with evidence filtering, ticker validation, quote enrichment, company names, watch-only BUY/Entry, SL, TP, and R/R.
+- Combined the missed-window warning and late watch-only ideas into one Telegram message.
+- Added `data/opening_range_run_status_YYYY-MM-DD.jsonl`.
+- Recorded intraday/opening-range monitor start, skip, completion, candidate counts, alert counts, observation counts, and Telegram send/skipped/failed state.
+- Fixed artifact persistence by force-adding ignored runtime files in Intraday Monitor.
+
+Audit result:
+
+- CI green through `27d92f0`.
+- Full local audit passed before documentation closeout:
+  - full suite: `1348 passed, 29 skipped`,
+  - journal consistency: `41/41 matched`,
+  - readiness dashboards remain blocked as expected,
+  - opening-range audits remain monitoring-only,
+  - tracked data side-effect check clean.
+
+Remaining validation:
+
+- Rerun GitHub Actions `Intraday Monitor` after commit `27d92f0`.
+- Pull and confirm `data/opening_range_run_status_YYYY-MM-DD.jsonl` is committed from Actions with non-empty GitHub metadata.
+- If this does not happen, inspect workflow logs before adding features.
+
+Safety:
+
+- Official premarket picks remain blocked after 09:20 ET.
+- Late watch-only ideas remain separate from `picks_log.csv`.
+- Opening-range observations/status remain watch-only and monitoring-only.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- Enforcement flags remain disabled.
+
+---
+
 ## 2026-05-06 — Forced commit of opening-range status artifacts
 
 **Type:** workflow reliability / artifact persistence

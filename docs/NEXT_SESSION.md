@@ -17,6 +17,7 @@ Do not start paper trading yet.
 5. `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 6. `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
 7. `docs/decisions/2026-05-06-opening-range-outcome-join-design.md`
+8. `docs/decisions/2026-05-06-session-closeout-reliability-and-opening-range.md`
 
 ---
 
@@ -254,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean.
-- Full suite passed: `1323 passed, 28 skipped`.
+- Full suite passed: `1348 passed, 29 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -336,3 +337,71 @@ Added a missed-window fallback:
 - These ideas are not official picks and do not enter `picks_log.csv`.
 
 Use this to avoid wasting the entire day when GitHub scheduled workflows miss the official window, while keeping official statistics clean.
+
+## Session closeout — 2026-05-06 late-picks reliability and opening-range observability
+
+Final status at closeout:
+
+- Main branch head after code work: `27d92f0 intraday: force-add opening-range status artifacts`.
+- Latest CI observed green: CI #141.
+- Full local audit before closeout passed:
+  - full test suite: `1348 passed, 29 skipped`,
+  - journal consistency: `41/41 matched`,
+  - readiness dashboards remain blocked as expected,
+  - opening-range review/backtest remain monitoring-only,
+  - tracked data side-effect check clean.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- Enforcement flags remain disabled.
+
+Completed in this session:
+
+1. Daily-picks missed-window fallback:
+   - official premarket picks remain blocked after 09:20 ET,
+   - after-cutoff runs generate separate late watch-only ideas,
+   - late ideas do not enter `data/picks_log.csv`,
+   - late ideas are not official stats.
+
+2. Late idea quality upgrade:
+   - filters weak rows such as one-letter headline/evidence,
+   - validates ticker shape,
+   - requires quote enrichment in workflow,
+   - includes company name when available,
+   - includes watch-only BUY/Entry, SL, TP, and R/R.
+
+3. Telegram UX fix:
+   - missed-window notice and late watch-only ideas are now one combined message,
+   - expected heading:
+     - `PREMARKET WINDOW MISSED — LATE WATCH-ONLY DAILY IDEAS`.
+
+4. Opening-range run-status ledger:
+   - new artifact:
+     - `data/opening_range_run_status_YYYY-MM-DD.jsonl`,
+   - records monitor started/skipped/completed,
+   - records candidate count, alert count, observation count,
+   - records Telegram send/skipped/failed result,
+   - always monitoring-only/watch-only.
+
+5. Opening-range artifact persistence fix:
+   - `.gitignore` ignores `data/`, so Intraday Monitor now uses `git add -f` for:
+     - `data/intraday_alerts_*.json`,
+     - `data/opening_range_observations_*.jsonl`,
+     - `data/opening_range_run_status_*.jsonl`.
+
+Important remaining validation:
+
+- Rerun GitHub Actions `Intraday Monitor` after commit `27d92f0`.
+- Pull afterward and confirm a new commit/artifact exists with non-empty GitHub metadata:
+  - `github.run_id`,
+  - `github.sha`,
+  - `github.workflow`.
+- If no artifact commit appears, inspect the workflow logs before adding new features.
+
+Next best task:
+
+1. Validate Step 4B artifact persistence from GitHub Actions.
+2. If validated, close the reliability lane.
+3. Next feature candidate, preferably weekend-only:
+   - opening-range bar artifact capture for future backtest joins.
+4. Continue monitoring-only mode.
+5. Do not enable paper/live trading.
