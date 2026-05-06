@@ -325,3 +325,14 @@ Use it to answer:
 Next reliability feature after this is clean:
 
 - Add late watch-only daily ideas in a separate ledger, not official picks.
+
+## Late watch-only daily ideas — 2026-05-06
+
+Added a missed-window fallback:
+
+- Official premarket picks remain blocked after 09:20 ET.
+- The workflow can generate `data/late_daily_ideas_YYYY-MM-DD.jsonl`.
+- Telegram receives a clearly labeled late watch-only message.
+- These ideas are not official picks and do not enter `picks_log.csv`.
+
+Use this to avoid wasting the entire day when GitHub scheduled workflows miss the official window, while keeping official statistics clean.

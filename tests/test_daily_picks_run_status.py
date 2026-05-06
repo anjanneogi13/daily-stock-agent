@@ -35,6 +35,19 @@ def test_build_record_is_monitoring_only_and_safe(monkeypatch):
     assert record["github"]["run_id"] == "123"
 
 
+def test_build_record_can_store_late_ideas_count():
+    record = build_record(
+        event="late_ideas_generated",
+        result="success",
+        late_ideas_count=3,
+        picks_logged=0,
+        now=datetime(2026, 5, 6, 11, 30, tzinfo=ZoneInfo("America/New_York")),
+    )
+
+    assert record["late_ideas_count"] == 3
+    assert record["official_premarket_pick"] is False
+
+
 def test_append_record_writes_jsonl(tmp_path):
     record = build_record(
         event="watchdog_checked",

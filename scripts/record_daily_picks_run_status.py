@@ -53,6 +53,7 @@ def build_record(
     reason: str = "",
     picks_logged: int | None = None,
     telegram_sent: str | None = None,
+    late_ideas_count: int | None = None,
     workflow: str = "daily-picks",
     mode: str = "monitoring_only",
     now: datetime | None = None,
@@ -72,6 +73,7 @@ def build_record(
         "reason": reason,
         "picks_logged": int(picks_logged),
         "telegram_sent": _parse_bool(telegram_sent),
+        "late_ideas_count": late_ideas_count,
         "mode": mode,
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
@@ -108,6 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--reason", default="")
     parser.add_argument("--picks-logged", type=int, default=None)
     parser.add_argument("--telegram-sent", default=None)
+    parser.add_argument("--late-ideas-count", type=int, default=None)
     parser.add_argument("--workflow", default="daily-picks")
     parser.add_argument("--mode", default="monitoring_only")
     args = parser.parse_args(argv)
@@ -118,6 +121,7 @@ def main(argv: list[str] | None = None) -> int:
         reason=args.reason,
         picks_logged=args.picks_logged,
         telegram_sent=args.telegram_sent,
+        late_ideas_count=args.late_ideas_count,
         workflow=args.workflow,
         mode=args.mode,
     )

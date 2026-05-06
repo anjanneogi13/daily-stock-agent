@@ -129,3 +129,16 @@ def test_watchdog_records_and_commits_run_status():
     assert "--event watchdog_alert --result success" in text
     assert "Commit watchdog run-status artifact" in text
     assert "data/daily_picks_run_status_*.jsonl" in text
+
+
+def test_missed_window_generates_late_watch_only_ideas():
+    text = _text()
+
+    assert "Generate late watch-only daily ideas" in text
+    assert "steps.guard.outputs.missed_window == 'true'" in text
+    assert "scripts/generate_late_daily_ideas.py" in text
+    assert "scripts/send_late_daily_ideas_telegram.py" in text
+    assert "--event late_ideas_generated" in text
+    assert "--event late_ideas_telegram" in text
+    assert "data/late_daily_ideas_*.jsonl" in text
+    assert "data/late_daily_ideas_*.md" in text

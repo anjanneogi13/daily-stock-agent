@@ -20,6 +20,7 @@ The repo is healthy for monitoring mode:
 - Daily-picks timing hard gate is implemented.
 - Daily-picks workflow reliability was hardened with frequent guarded premarket attempts and pre-cutoff watchdog alerts.
 - Daily-picks run-status artifacts record workflow/watchdog outcomes for operational learning.
+- Late watch-only daily ideas preserve learning evidence after missed official premarket windows without polluting official pick stats.
 - Stale/unverified premarket prices become watch-only instead of actionable.
 - Intraday news cannot silently become normal swing picks; it is marked watch-only until intraday planning matures.
 - Closed-status logic is aligned between enforcement and monitoring readiness dashboards.

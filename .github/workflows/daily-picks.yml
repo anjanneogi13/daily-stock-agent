@@ -96,12 +96,35 @@ jobs:
           fi
           exit "$rc"
 
+      - name: Generate late watch-only daily ideas
+        if: steps.guard.outputs.missed_window == 'true'
+        run: |
+          python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40
+          COUNT=$(cat /tmp/late_daily_ideas_count 2>/dev/null || echo 0)
+          python scripts/record_daily_picks_run_status.py --event late_ideas_generated --result success --reason "generated late watch-only daily ideas after missed official window" --late-ideas-count "$COUNT"
+
+      - name: Send late watch-only daily ideas to Telegram
+        if: steps.guard.outputs.missed_window == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: |
+          python scripts/send_late_daily_ideas_telegram.py
+          rc=$?
+          if [ "$rc" -eq 0 ]; then
+            python scripts/record_daily_picks_run_status.py --event late_ideas_telegram --result success --reason "late watch-only ideas Telegram sender completed" --telegram-sent success
+          else
+            python scripts/record_daily_picks_run_status.py --event late_ideas_telegram --result failed --reason "late watch-only ideas Telegram sender failed" --telegram-sent failed
+          fi
+          exit "$rc"
+
       - name: Commit run-status artifacts for skipped daily-picks attempt
         if: always() && steps.guard.outputs.should_run != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/daily_picks_run_status_*.jsonl 2>/dev/null || true
+          git add -f data/daily_picks_run_status_*.jsonl data/late_daily_ideas_*.jsonl data/late_daily_ideas_*.md 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "ℹ No run-status changes to commit"
             exit 0

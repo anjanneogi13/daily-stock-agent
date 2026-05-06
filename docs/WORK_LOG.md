@@ -13,6 +13,40 @@ Rules:
 
 ---
 
+## 2026-05-06 — Added late watch-only daily ideas
+
+**Type:** reliability fallback / monitoring-only / learning evidence
+
+**Summary:**
+
+Added a late-day monitoring fallback for missed official daily picks.
+
+If the Daily Stock Picks workflow runs after the 09:20 ET official cutoff, it still refuses to create normal premarket picks, but it can now generate a separate watch-only idea artifact from current news/watchlist evidence.
+
+New artifacts:
+
+- `data/late_daily_ideas_YYYY-MM-DD.jsonl`
+- `data/late_daily_ideas_YYYY-MM-DD.md`
+
+Behavior:
+
+- Official daily picks remain blocked after 09:20 ET.
+- Late ideas are labeled `late_daily_watch_only`.
+- Late ideas are sent to Telegram with explicit warnings.
+- Late ideas are not written to `data/picks_log.csv`.
+- Late ideas are not treated as official pick statistics.
+- Run status records `late_ideas_generated` and `late_ideas_telegram`.
+
+Safety:
+
+- Monitoring-only.
+- Not buy instructions.
+- Not paper trades.
+- Not live trades.
+- Does not enable enforcement flags.
+
+---
+
 ## 2026-05-06 — Fixed intraday scanner opening-range priority
 
 **Type:** bug fix / monitoring-only / test stability
