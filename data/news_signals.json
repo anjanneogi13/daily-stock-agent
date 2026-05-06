@@ -155,13 +155,14 @@
   },
   "BTSG": {
     "ticker": "BTSG",
-    "score_delta": 0.03,
+    "score_delta": 0.032,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "Wells Fargo Maintains Overweight on BrightSpring Health, Raises Price Target to $61",
-    "added_at": "2026-05-04T19:48:09.730619+00:00",
-    "expires": "2026-05-09T19:48:09.730631+00:00",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Morgan Stanley Maintains Overweight on BrightSpring Health, Raises Price Target to $62",
+    "added_at": "2026-05-06T17:00:34.455518+00:00",
+    "expires": "2026-05-11T17:00:34.455523+00:00",
     "hard_block": false
   },
   "FSHP": {
@@ -1279,14 +1280,14 @@
   },
   "CYTK": {
     "ticker": "CYTK",
-    "score_delta": 0.032,
+    "score_delta": 0.049,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
+    "tradeable_score": 0.68,
     "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on Cytokinetics, Raises Price Target to $119",
-    "added_at": "2026-05-06T15:10:39.870891+00:00",
-    "expires": "2026-05-11T15:10:39.870896+00:00",
+    "headline": "Morgan Stanley Maintains Overweight on Cytokinetics, Raises Price Target to $103",
+    "added_at": "2026-05-06T17:00:34.450000+00:00",
+    "expires": "2026-05-11T17:00:34.450006+00:00",
     "hard_block": false
   },
   "NBIX": {
@@ -1311,6 +1312,78 @@
     "headline": "Piper Sandler Maintains Overweight on Arista Networks, Raises Price Target to $181",
     "added_at": "2026-05-06T15:10:39.874815+00:00",
     "expires": "2026-05-11T15:10:39.874820+00:00",
+    "hard_block": false
+  },
+  "WIFUSD": {
+    "ticker": "WIFUSD",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "Forget Dogecoin, Shiba Inu: This Dog Coin Jumped 25% After A Shock Exchange Listing",
+    "added_at": "2026-05-06T17:00:34.448437+00:00",
+    "expires": "2026-05-13T17:00:34.448445+00:00",
+    "hard_block": false
+  },
+  "CMI": {
+    "ticker": "CMI",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Morgan Stanley Maintains Overweight on Cummins, Raises Price Target to $752",
+    "added_at": "2026-05-06T17:00:34.451399+00:00",
+    "expires": "2026-05-11T17:00:34.451405+00:00",
+    "hard_block": false
+  },
+  "NRG": {
+    "ticker": "NRG",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "What Hurt NRG's Quarterly Earnings Despite Higher Revenue, Asset Contributions",
+    "added_at": "2026-05-06T17:00:34.452743+00:00",
+    "expires": "2026-05-13T17:00:34.452748+00:00",
+    "hard_block": false
+  },
+  "EVC": {
+    "ticker": "EVC",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.92,
+    "action_window": "intraday",
+    "headline": "Entravision Stock Surges Following Massive Q1 Revenue Beat",
+    "added_at": "2026-05-06T17:00:34.454114+00:00",
+    "expires": "2026-05-13T17:00:34.454119+00:00",
+    "hard_block": false
+  },
+  "MDLN": {
+    "ticker": "MDLN",
+    "score_delta": -0.2,
+    "catalyst": "fda_rejection",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "FDA Announces Medline Recalls All Of Its Stock Keeping Units In Medline Branded Neuro Sponge Category With No Definite Market Re-Entry Date",
+    "added_at": "2026-05-06T17:00:34.456882+00:00",
+    "expires": "2026-06-05T17:00:34.456887+00:00",
+    "hard_block": false
+  },
+  "MNST": {
+    "ticker": "MNST",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Rothschild & Co Upgrades Monster Beverage to Buy, Raises Price Target to $90",
+    "added_at": "2026-05-06T17:00:34.458262+00:00",
+    "expires": "2026-05-11T17:00:34.458267+00:00",
     "hard_block": false
   }
 }
