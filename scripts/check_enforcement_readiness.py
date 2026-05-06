@@ -54,8 +54,16 @@ def _to_float(v, default=None):
         return default
 
 
+CLOSED_STATUSES = {
+    "tp_hit",
+    "sl_hit",
+    "expired",
+    "day_close",
+}
+
+
 def _is_closed(r: dict) -> bool:
-    return (r.get("evaluation_status") or "") in ("tp_hit", "sl_hit", "expired")
+    return (r.get("evaluation_status") or "").strip() in CLOSED_STATUSES
 
 
 # ── Per-gate readiness checks ──────────────────────────────────

@@ -13,6 +13,57 @@ Rules:
 
 ---
 
+## 2026-05-06 — Aligned readiness closed-status logic
+
+**Type:** bug fix / readiness dashboard consistency / test
+
+**Summary:**
+
+Aligned closed-trade status handling between readiness dashboards.
+
+Problem:
+
+- `scripts/monitoring_readiness.py` counted `day_close` as a closed outcome.
+- `scripts/check_enforcement_readiness.py` only counted `tp_hit`, `sl_hit`, and `expired`.
+- This made enforcement readiness undercount post-floor closed picks compared with monitoring readiness.
+
+Fix:
+
+- Added shared-style `CLOSED_STATUSES` in `scripts/check_enforcement_readiness.py`.
+- Included `day_close`.
+- Added regression tests that:
+  - enforcement closed statuses match monitoring readiness statuses.
+  - `day_close` rows are counted as closed by enforcement readiness.
+
+Current effect:
+
+- Enforcement readiness post-floor closed count moved from `2` to `3`.
+- Monitoring readiness still reports day `1` + swing `2` = total `3`.
+- Both dashboards remain correctly blocked by minimum sample requirements.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_enforcement_readiness.py tests/test_monitoring_readiness.py tests/test_smell_enforcement_readiness.py -q --tb=short --disable-warnings`
+  - `22 passed`
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+  - `1286 passed, 28 skipped`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff -- data/learning_journal.jsonl`
+  - no diff
+- `git diff --check`
+
+**Follow-up:**
+
+Remaining lower-severity cleanup:
+
+1. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
+2. Clean minor documentation consistency issues.
+3. Then resume feature roadmap with opening-range intraday scanner.
+
+---
+
 ## 2026-05-06 — Fixed learning journal test/data isolation
 
 **Type:** test / data isolation / hygiene

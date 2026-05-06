@@ -20,6 +20,7 @@ The repo is healthy for monitoring mode:
 - Daily-picks timing hard gate is implemented.
 - Stale/unverified premarket prices become watch-only instead of actionable.
 - Intraday news cannot silently become normal swing picks; it is marked watch-only until intraday planning matures.
+- Closed-status logic is aligned between enforcement and monitoring readiness dashboards.
 - Legacy local paper logging is opt-in only and disabled by default.
 - Major undercovered modules now have tests.
 - Paper trading remains intentionally deferred.
@@ -135,9 +136,9 @@ They are not active scale-out execution logic.
 
 Immediate next work:
 
-1. Align readiness closed statuses.
-2. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
-3. Add tests for `performance_stats`.
+1. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
+2. Add tests for `performance_stats`.
+3. Add tests for smaller modules.
 4. Add tests for smaller modules.
 5. Harden backtester.
 6. Build opening-range intraday scanner.

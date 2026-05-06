@@ -4,9 +4,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scripts.check_enforcement_readiness import (
+    CLOSED_STATUSES,
     check_smell_enforce, check_brain_enforce_ev, check_auto_pause,
     run_all, format_report,
 )
+from scripts.monitoring_readiness import CLOSED_STATUSES as MONITORING_CLOSED_STATUSES
 
 
 def _row(status="tp_hit", tag="none", brain_ev=None, r_mult=None,
@@ -121,3 +123,15 @@ def test_no_gate_is_falsely_ready_today():
         f"Gate marked ready prematurely with current data: "
         f"{[r['gate'] for r in ready]}"
     )
+
+def test_enforcement_closed_statuses_align_with_monitoring_readiness():
+    assert CLOSED_STATUSES == MONITORING_CLOSED_STATUSES
+
+
+def test_enforcement_counts_day_close_as_closed():
+    rows = [_row(status="day_close", brain_ev=1.0, r_mult=0.2) for _ in range(30)]
+
+    result = check_brain_enforce_ev(rows)
+
+    assert result["n_observed"] == 30
+    assert not any("n=0" in b for b in result["blockers"])

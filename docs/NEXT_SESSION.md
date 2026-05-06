@@ -46,13 +46,14 @@ Now fixed from the comprehensive audit:
 
 Next cleanup before feature work:
 
-1. Align closed-status logic between readiness scripts.
-2. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
-3. Clean documentation consistency issues.
+1. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
+2. Clean documentation consistency issues.
+3. Resume feature roadmap with opening-range intraday scanner.
 
 Completed 2026-05-06:
 
 - Fix test/data isolation: `data/learning_journal.jsonl` test side effects are isolated.
+- Align closed-status logic between readiness scripts.
 
 After those are clean, resume feature work with opening-range intraday scanner.
 
@@ -172,9 +173,8 @@ Required pieces:
 
 Still important:
 
-1. Align readiness closed statuses.
-2. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
-3. Add tests for:
+1. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
+2. Add tests for:
    - `src/performance_stats.py`
    - `src/paper_trader.py`
    - `src/picks_csv.py`
