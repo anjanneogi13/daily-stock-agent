@@ -1142,6 +1142,103 @@
       "url": "https://www.benzinga.com/news/26/05/52333350/rothschild-co-upgrades-monster-beverage-to-buy-raises-price-target-to-90",
       "source": "alpaca",
       "added_at": "2026-05-06T17:00:34.460357+00:00"
+    },
+    {
+      "ticker": "APLD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock hitting 52-week high on ChronoScale Nasdaq debut with APLD retaining 97% stake creates significant value unlock catalyst in hot AI sector.",
+      "action_window": "intraday",
+      "headline": "Applied Digital Stock Hits 52-Week High - Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52337623/applied-digital-stock-hits-52-week-high-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613487+00:00"
+    },
+    {
+      "ticker": "DOCN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with raised 2026 guidance and multiple analyst forecast increases creates meaningful positive catalyst, though mixed analyst views temper conviction.",
+      "action_window": "next_day",
+      "headline": "DigitalOcean Analysts Increase Their Forecasts Following Strong Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52337601/digitalocean-analysts-increase-their-forecasts-following-strong-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613501+00:00"
+    },
+    {
+      "ticker": "MMA",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $5M unsecured revolving credit facility provides additional liquidity and financial flexibility, moderately positive for a smaller company but size limits material impact.",
+      "action_window": "next_day",
+      "headline": "Mixed Martial Arts Group Enters $5M Unsecured Revolving Loan Agreement With Private Family Office Investor",
+      "url": "https://www.benzinga.com/news/26/05/52337447/mixed-martial-arts-group-enters-5m-unsecured-revolving-loan-agreement-with-private-family-office-inv",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613516+00:00"
+    },
+    {
+      "ticker": "BRBR",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Disappointing Q2 earnings miss with below-estimate sales and reduced FY26 guidance prompting multiple analyst downgrades, though modest 1.6% decline suggests partial price-in.",
+      "action_window": "next_day",
+      "headline": "These Analysts Lower Their Forecasts On BellRing Brands After Downbeat Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52337435/these-analysts-lower-their-forecasts-on-bellring-brands-after-downbeat-q2-results",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613524+00:00"
+    },
+    {
+      "ticker": "MAR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Marriott exceeded Q1 earnings estimates with strong EPS beat and solid revenue growth despite geopolitical headwinds, demonstrating operational resilience.",
+      "action_window": "intraday",
+      "headline": "Marriott's Global Strength Offsets Middle East Conflict Pressure",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52337311/marriotts-global-strength-offsets-middle-east-conflict-pressure",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613531+00:00",
+      "updated_at": "2026-05-06T18:20:58.613546+00:00"
+    },
+    {
+      "ticker": "AVTX",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial results (LOTUS) represent a major clinical catalyst with shares already surging, supported by capital raise and analyst upgrades.",
+      "action_window": "intraday",
+      "headline": "Avalo Therapeutics Stock Soars After Positive LOTUS Trial Results",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52337325/avalo-therapeutics-stock-soars-after-positive-lotus-trial-results",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613538+00:00"
+    },
+    {
+      "ticker": "TSM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $56B AI infrastructure expansion signals strong demand and addresses supply concerns, with stock already rallying on the news indicating immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "TSMC Stock Rallies: $56 Billion AI Expansion Crushes Apple Supply Chain Fears",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52337222/tsmc-stock-rallies-56-billion-ai-expansion-crushes-apple-supply-chain-fears",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613554+00:00"
+    },
+    {
+      "ticker": "RYTM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Beat Q1 earnings with analyst forecast upgrades, strong product demand, and positive international expansion catalysts create meaningful upside momentum.",
+      "action_window": "next_day",
+      "headline": "Rhythm Pharmaceuticals Analysts Boost Their Forecasts Following Upbeat Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52337131/rhythm-pharmaceuticals-analysts-boost-their-forecasts-following-upbeat-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-06T18:20:58.613562+00:00"
     }
   ]
 }

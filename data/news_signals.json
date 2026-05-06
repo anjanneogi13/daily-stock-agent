@@ -1385,5 +1385,77 @@
     "added_at": "2026-05-06T17:00:34.458262+00:00",
     "expires": "2026-05-11T17:00:34.458267+00:00",
     "hard_block": false
+  },
+  "APLD": {
+    "ticker": "APLD",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Applied Digital Stock Hits 52-Week High - Here's Why",
+    "added_at": "2026-05-06T18:20:58.602443+00:00",
+    "expires": "2026-05-13T18:20:58.602449+00:00",
+    "hard_block": false
+  },
+  "DOCN": {
+    "ticker": "DOCN",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "DigitalOcean Analysts Increase Their Forecasts Following Strong Q1 Results",
+    "added_at": "2026-05-06T18:20:58.604186+00:00",
+    "expires": "2026-05-13T18:20:58.604191+00:00",
+    "hard_block": false
+  },
+  "AJG": {
+    "ticker": "AJG",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Citigroup Upgrades Arthur J. Gallagher to Buy, Lowers Price Target to $250",
+    "added_at": "2026-05-06T18:20:58.605632+00:00",
+    "expires": "2026-05-11T18:20:58.605637+00:00",
+    "hard_block": false
+  },
+  "BRBR": {
+    "ticker": "BRBR",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "These Analysts Lower Their Forecasts On BellRing Brands After Downbeat Q2 Results",
+    "added_at": "2026-05-06T18:20:58.607066+00:00",
+    "expires": "2026-05-13T18:20:58.607072+00:00",
+    "hard_block": false
+  },
+  "MAR": {
+    "ticker": "MAR",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "UPDATE: Marriott International Sees FY2026 Adj EPS $11.38-$11.63 vs $11.60 Est",
+    "added_at": "2026-05-06T18:20:58.608475+00:00",
+    "expires": "2026-05-20T18:20:58.608480+00:00",
+    "hard_block": false
+  },
+  "RYTM": {
+    "ticker": "RYTM",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Rhythm Pharmaceuticals Analysts Boost Their Forecasts Following Upbeat Q1 Results",
+    "added_at": "2026-05-06T18:20:58.611355+00:00",
+    "expires": "2026-05-13T18:20:58.611360+00:00",
+    "hard_block": false
   }
 }
