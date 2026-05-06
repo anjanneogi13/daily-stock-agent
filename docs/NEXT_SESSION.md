@@ -246,3 +246,30 @@ After every bug fix, feature, audit, or process change:
 
 
 Backtest tool: `python scripts/backtest_opening_range_observations.py`
+
+## Closing audit status — 2026-05-06
+
+Final closing audit passed.
+
+Current state:
+
+- Repository clean.
+- Full suite passed: `1323 passed, 28 skipped`.
+- Targeted opening-range / monitoring tests passed.
+- Journal consistency green.
+- Enforcement readiness blocked as expected.
+- Monitoring readiness blocks paper trading as expected.
+- Paper trading remains disabled.
+- Opening-range review and backtest tools are available.
+
+Before next work:
+
+1. Run full repo audit.
+2. If issues are found, fix issues first.
+3. If clean and it is Saturday/Sunday, implement the next planned feature slice.
+4. If weekday, prefer monitoring/audit/review work unless urgent.
+5. Never enable paper/live trading without readiness gates and founder approval.
+
+Recommended next weekend feature:
+
+- Optional opening-range bar artifact capture, still monitoring-only.

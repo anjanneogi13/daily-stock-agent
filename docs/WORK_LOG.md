@@ -13,6 +13,40 @@ Rules:
 
 ---
 
+## 2026-05-06 — Final closing audit passed
+
+**Type:** audit / documentation / session closeout
+
+**Summary:**
+
+Completed final repository closing audit after the opening-range monitoring rollout and outcome-backtest stub work.
+
+Audit result: clean.
+
+Verified:
+
+- Python compile passed.
+- Targeted opening-range / monitoring tests passed: `39 passed`.
+- Dead-code audit passed: `9 passed`.
+- Full test suite passed: `1323 passed, 28 skipped`.
+- Journal consistency audit passed with 41 matched entries and no mismatches.
+- Enforcement readiness remains blocked due to insufficient evidence.
+- Monitoring readiness remains blocked; paper trading remains forbidden.
+- Opening-range review and backtest smoke tests passed.
+- Safety grep found no true paper/live trading enablement flags.
+- Tracked data files remained clean.
+- Final working tree was clean after removing local audit logs.
+
+Created closeout doc:
+
+- `docs/decisions/2026-05-06-closing-audit-and-weekend-plan.md`
+
+**Policy:**
+
+New feature implementation should wait for weekends, Saturday/Sunday. Weekdays should prioritize monitoring, audits, observation review, and fixes if issues appear.
+
+---
+
 ## 2026-05-06 — Added opening-range outcome-join/backtest skeleton
 
 **Type:** tooling / monitoring-only / backtest design
