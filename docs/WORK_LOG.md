@@ -13,6 +13,38 @@ Rules:
 
 ---
 
+## 2026-05-06 — Fixed Intraday Monitor Telegram sender import path
+
+**Type:** bug fix / workflow reliability / GitHub Actions
+
+**Summary:**
+
+The manual GitHub Actions `Intraday Monitor` validation failed in
+`scripts/send_intraday_telegram.py`:
+
+- `ModuleNotFoundError: No module named 'src'`
+
+Root cause:
+
+- `send_intraday_telegram.py` imports `intraday_scanner`.
+- `intraday_scanner.py` imports `src.opening_range_scanner`.
+- When Actions runs `python scripts/send_intraday_telegram.py`, the script directory is on `sys.path`, but the repo root may not be.
+- Therefore `src.*` imports can fail.
+
+Fix:
+
+- Add both `scripts/` and repo root to `sys.path` before importing `intraday_scanner`.
+- Add a regression test that executes the sender from a temporary working directory with no Telegram credentials and confirms it exits successfully while writing the run-status artifact.
+
+Safety:
+
+- Monitoring-only.
+- No official picks.
+- No paper/live trading.
+- No enforcement flags.
+
+---
+
 ## 2026-05-06 — Session closeout after late-picks reliability and opening-range status work
 
 **Type:** closeout / audit / documentation / monitoring-only

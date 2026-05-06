@@ -4,6 +4,11 @@ import os, sys, json, urllib.parse, urllib.request
 from pathlib import Path
 from datetime import datetime, timezone
 
+_HERE = Path(__file__).resolve().parent
+_ROOT = _HERE.parent
+sys.path.insert(0, str(_HERE))
+sys.path.insert(0, str(_ROOT))
+
 from intraday_scanner import append_opening_range_run_status
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
