@@ -1431,6 +1431,115 @@
       "url": "https://www.benzinga.com/news/26/05/52342467/argenx-appoints-karen-massey-ceo-tim-van-hauwermeiren-board-chairperson",
       "source": "alpaca",
       "added_at": "2026-05-06T20:09:39.192280+00:00"
+    },
+    {
+      "ticker": "XRN",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "A 36% dividend cut signals deteriorating cash flow or financial stress, typically triggering immediate selling pressure from income-focused investors.",
+      "action_window": "next_day",
+      "headline": "Chiron Real Estate Lowered Monthly Dividend From $0.25/Share To $0.16/Share",
+      "url": "https://www.benzinga.com/quote/XRN",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355904+00:00",
+      "updated_at": "2026-05-06T21:39:56.355964+00:00"
+    },
+    {
+      "ticker": "RDW",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Heavy after-hours selling indicates a significant negative catalyst that warrants immediate attention, though specific details are not provided in the headline.",
+      "action_window": "next_day",
+      "headline": "Redwire Stock Sees Heavy Selling After The Close: Here's Why",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52350778/redwire-stock-sees-heavy-selling-after-the-close-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355917+00:00"
+    },
+    {
+      "ticker": "CCRN",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive all-cash acquisition at $13.25/share represents a significant premium and creates immediate arbitrage opportunity for CCRN shareholders.",
+      "action_window": "intraday",
+      "headline": "Knox Lane To Acquire All Outstanding Shares Of Cross Country Healthcare Common Stock For $13.25/Shr In All-Cash Transaction Valued At $437M",
+      "url": "https://www.benzinga.com/m-a/26/05/52350761/knox-lane-to-acquire-all-outstanding-shares-of-cross-country-healthcare-common-stock-for-13-25shr-in",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355926+00:00"
+    },
+    {
+      "ticker": "HLF",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Herbalife's Q2 sales guidance midpoint of $1.303B falls approximately 0.5% below consensus estimate of $1.310B, signaling weaker-than-expected revenue outlook.",
+      "action_window": "intraday",
+      "headline": "Herbalife Sees Q2 Sales $1.278-$1.328B vs $1.310B Est",
+      "url": "https://www.benzinga.com/news/26/05/52350749/herbalife-sees-q2-sales-1-278-1-328b-vs-1-310b-est",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355934+00:00"
+    },
+    {
+      "ticker": "EHTH",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 adjusted EPS missed estimates by 36% ($0.38 loss vs $0.28 expected) despite modest revenue beat of 2.6%, indicating margin pressure and profitability concerns that typically drive near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "Update - eHealth Q1 Adj. EPS $(0.38) Misses $(0.28) Estimate, Sales $88.018M Beat $85.762M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52350704/update-ehealth-q1-adj-eps-0-38-misses-0-28-estimate-sales-88-018m-beat-85-762m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355955+00:00"
+    },
+    {
+      "ticker": "WHR",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Dividend suspension signals financial distress and prioritization of balance sheet repair, typically resulting in immediate selling pressure from income-focused investors and negative reassessment of financial health.",
+      "action_window": "intraday",
+      "headline": "Whirlpool Suspends Dividend To Prioritize Debt Paydown",
+      "url": "https://www.benzinga.com/quote/WHR",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355972+00:00"
+    },
+    {
+      "ticker": "LUN",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q1 results with EPS meeting expectations but revenue missing estimates by $5M (0.4% miss), creating slight negative pressure but limited overall impact.",
+      "action_window": "next_day",
+      "headline": "Lundin Mining Q1 Adj. EPS $0.31, Inline, Sales $1.159B Miss $1.164B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52350641/lundin-mining-q1-adj-eps-0-31-inline-sales-1-159b-miss-1-164b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355980+00:00"
+    },
+    {
+      "ticker": "CORZ",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Wider-than-expected Q1 loss represents a meaningful earnings miss that typically drives immediate selling pressure and downward price action.",
+      "action_window": "intraday",
+      "headline": "Core Scientific Stock Drops On Wider-Than-Expected Q1 Loss",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52350544/core-scientific-stock-drops-on-wider-than-expected-q1-loss",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355988+00:00"
+    },
+    {
+      "ticker": "EFR",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Energy Fuels missed both EPS by 100% ($0.04 loss vs $0.02 expected) and revenue by 17.4% ($35.8M vs $43.4M), representing a significant double miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Energy Fuels Q1 EPS $(0.04) Misses $(0.02) Estimate, Sales $35.838M Miss $43.413M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52350492/energy-fuels-q1-eps-0-04-misses-0-02-estimate-sales-35-838m-miss-43-413m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T21:39:56.355995+00:00"
     }
   ]
 }

@@ -1661,5 +1661,101 @@
     "added_at": "2026-05-06T20:09:39.189795+00:00",
     "expires": "2026-05-20T20:09:39.189802+00:00",
     "hard_block": false
+  },
+  "BALL": {
+    "ticker": "BALL",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Neutral on Ball, Lowers Price Target to $64",
+    "added_at": "2026-05-06T21:39:56.337365+00:00",
+    "expires": "2026-05-11T21:39:56.337372+00:00",
+    "hard_block": false
+  },
+  "XRN": {
+    "ticker": "XRN",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Chiron Real Estate Withdraws 2026 Outlook Over Execution Of Portfolio Transition, Building Long-Term Per-Share Value",
+    "added_at": "2026-05-06T21:39:56.339224+00:00",
+    "expires": "2026-05-20T21:39:56.339229+00:00",
+    "hard_block": false
+  },
+  "CCRN": {
+    "ticker": "CCRN",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "Knox Lane To Acquire All Outstanding Shares Of Cross Country Healthcare Common Stock For $13.25/Shr In All-Cash Transaction Valued At $437M",
+    "added_at": "2026-05-06T21:39:56.340823+00:00",
+    "expires": "2026-06-05T21:39:56.340828+00:00",
+    "hard_block": false
+  },
+  "HLF": {
+    "ticker": "HLF",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Herbalife Sees Q2 Sales $1.278-$1.328B vs $1.310B Est",
+    "added_at": "2026-05-06T21:39:56.342383+00:00",
+    "expires": "2026-05-20T21:39:56.342388+00:00",
+    "hard_block": false
+  },
+  "EHTH": {
+    "ticker": "EHTH",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Update - eHealth Q1 Adj. EPS $(0.38) Misses $(0.28) Estimate, Sales $88.018M Beat $85.762M Estimate",
+    "added_at": "2026-05-06T21:39:56.347108+00:00",
+    "expires": "2026-05-13T21:39:56.347113+00:00",
+    "hard_block": false
+  },
+  "LUN": {
+    "ticker": "LUN",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Lundin Mining Q1 Adj. EPS $0.31, Inline, Sales $1.159B Miss $1.164B Estimate",
+    "added_at": "2026-05-06T21:39:56.350301+00:00",
+    "expires": "2026-05-13T21:39:56.350306+00:00",
+    "hard_block": false
+  },
+  "CORZ": {
+    "ticker": "CORZ",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Core Scientific Stock Drops On Wider-Than-Expected Q1 Loss",
+    "added_at": "2026-05-06T21:39:56.351924+00:00",
+    "expires": "2026-05-13T21:39:56.351929+00:00",
+    "hard_block": false
+  },
+  "EFR": {
+    "ticker": "EFR",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Energy Fuels Q1 EPS $(0.04) Misses $(0.02) Estimate, Sales $35.838M Miss $43.413M Estimate",
+    "added_at": "2026-05-06T21:39:56.353507+00:00",
+    "expires": "2026-05-13T21:39:56.353512+00:00",
+    "hard_block": false
   }
 }
