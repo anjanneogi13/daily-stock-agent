@@ -13,6 +13,62 @@ Rules:
 
 ---
 
+## 2026-05-06 — Added opening-range observation review tool
+
+**Type:** tooling / monitoring-only / review
+
+**Summary:**
+
+Added a read-only review tool for opening-range observation artifacts.
+
+New script:
+
+- `scripts/review_opening_range_observations.py`
+
+Reads:
+
+- `data/opening_range_observations_*.jsonl`
+
+Reports:
+
+- total observations,
+- unique tickers,
+- observations by date,
+- watch-only / monitoring-only compliance,
+- average breakout percentage,
+- average volume ratio,
+- top observations by score,
+- explicit paper-trading-disabled reminder.
+
+Safety:
+
+- Tool is read-only.
+- Tool does not create official picks.
+- Tool does not create paper trades.
+- Tool does not imply buy instructions.
+- `ready_for_paper_trading` is always `false`; readiness still belongs to the monitoring readiness dashboards and founder approval.
+
+Usage:
+
+- `python scripts/review_opening_range_observations.py`
+- `python scripts/review_opening_range_observations.py --json`
+
+**Tests:**
+
+- `python3 -m pytest tests/test_opening_range_observation_review.py -q --tb=short --disable-warnings`
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff -- data/picks_log.csv data/signal_journal.jsonl data/learning_journal.jsonl`
+- `git diff --check`
+
+**Next:**
+
+Use review output after market sessions to decide what outcome-join/backtest tooling is needed.
+
+---
+
 ## 2026-05-06 — Refined opening-range workflow schedule
 
 **Type:** workflow / monitoring-only / intraday scanner

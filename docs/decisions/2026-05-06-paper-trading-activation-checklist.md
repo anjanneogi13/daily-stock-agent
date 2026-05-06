@@ -106,6 +106,10 @@ The opening-range scanner is monitoring-only.
 
 Workflow cadence includes 09:35 / 09:45 / 10:00 ET monitoring checks.
 
+Review command:
+
+- `python scripts/review_opening_range_observations.py`
+
 It may produce:
 
 - `watch_only=True`

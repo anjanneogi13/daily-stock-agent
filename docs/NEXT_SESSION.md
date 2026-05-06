@@ -53,11 +53,12 @@ Audit/hygiene work completed:
 Next feature work:
 
 1. Continue opening-range intraday scanner rollout in monitoring-only mode.
-2. Review `data/opening_range_observations_YYYY-MM-DD.jsonl` artifacts after market sessions.
-3. Add review/backtest tooling once enough observations exist.
-4. Keep outputs observe/watch-only until enough intraday evidence exists.
-5. Do not enable paper trading.
-6. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
+2. Run `python scripts/review_opening_range_observations.py` after market sessions.
+3. Review `data/opening_range_observations_YYYY-MM-DD.jsonl` artifacts after market sessions.
+4. Add outcome-join/backtest tooling once enough observations exist.
+5. Keep outputs observe/watch-only until enough intraday evidence exists.
+6. Do not enable paper trading.
+7. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
 
 Completed 2026-05-06:
 
