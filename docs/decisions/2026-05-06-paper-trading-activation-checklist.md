@@ -110,6 +110,10 @@ It may produce:
 - `mode=monitoring_only`
 - `scanner=opening_range`
 
+It may persist observations to:
+
+- `data/opening_range_observations_YYYY-MM-DD.jsonl`
+
 It must not produce:
 
 - real orders,

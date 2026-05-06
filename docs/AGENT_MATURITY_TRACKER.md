@@ -172,6 +172,7 @@ Before enabling `TRADING_MODE=paper`, future sessions must follow:
 Key rule:
 
 - opening-range scanner outputs are `WATCH ONLY` / `monitoring_only`.
+- opening-range observations persist to `data/opening_range_observations_YYYY-MM-DD.jsonl`.
 - watch-only observations must not become paper trades.
 - paper trading requires explicit founder approval plus readiness gates.
 

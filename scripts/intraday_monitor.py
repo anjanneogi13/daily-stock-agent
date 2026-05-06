@@ -9,7 +9,11 @@ sys.path.insert(0, str(_HERE))           # for sibling scripts (intraday_news, i
 sys.path.insert(0, str(_HERE.parent))    # for src.* (repo root)
 
 from intraday_news import fetch_recent_news, classify_material
-from intraday_scanner import scan_for_new_opportunities, get_live_quote
+from intraday_scanner import (
+    scan_for_new_opportunities,
+    get_live_quote,
+    append_opening_range_observations,
+)
 from src.trailing_stop import compute_trailing_sl, trail_status
 from src.picks_csv import update_pick_row
 from src.adaptive_tp import should_raise_tp, append_raise_audit, last_raise_ts
@@ -296,6 +300,9 @@ def main():
     new_opps = scan_for_new_opportunities(exclude=existing_tickers,
                                           sent_alerts=sent_alerts, max_results=3)
     print(f"[monitor] {len(new_opps)} new opportunities found.")
+    n_or_obs = append_opening_range_observations(new_opps)
+    if n_or_obs:
+        print(f"[monitor] {n_or_obs} opening-range observation(s) recorded.")
     msg = build_message(monitor_alerts, new_opps)
     if not msg:
         print("[monitor] Nothing material — no message sent.")

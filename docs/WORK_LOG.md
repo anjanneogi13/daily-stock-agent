@@ -13,6 +13,67 @@ Rules:
 
 ---
 
+## 2026-05-06 — Persist opening-range observations
+
+**Type:** feature / monitoring-only / observability / data artifact
+
+**Summary:**
+
+Added a dedicated monitoring-only observation artifact for opening-range scanner output.
+
+New artifact:
+
+- `data/opening_range_observations_YYYY-MM-DD.jsonl`
+
+Purpose:
+
+- Preserve opening-range scanner observations for later review/backtesting.
+- Keep these observations separate from:
+  - official picks,
+  - paper trades,
+  - future live trades.
+- Avoid confusing future agents by explicitly marking rows as:
+  - `watch_only=true`
+  - `mode=monitoring_only`
+  - `scanner=opening_range`
+
+Implementation:
+
+- `scripts/intraday_scanner.py`
+  - added `opening_range_observation_path()`
+  - added `build_opening_range_observation()`
+  - added `append_opening_range_observations()`
+- `scripts/intraday_monitor.py`
+  - records opening-range observations after scanning new opportunities.
+- `.github/workflows/intraday_monitor.yml`
+  - commits `data/opening_range_observations_*.jsonl` alongside alert dedupe logs.
+
+Safety:
+
+- Non-opening-range opportunities are ignored by the observation writer.
+- Non-watch-only opportunities are ignored by the observation writer.
+- This artifact does not create trades or paper trades.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_intraday_scanner_opening_range.py tests/test_intraday_monitor_workflow_observations.py -q --tb=short --disable-warnings`
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff -- data/picks_log.csv data/signal_journal.jsonl data/learning_journal.jsonl`
+- `git diff --check`
+
+**Next:**
+
+Continue opening-range scanner rollout one slice at a time:
+
+1. Consider 09:35 / 09:45 / 10:00 ET workflow schedule refinement.
+2. Keep all opening-range output watch-only until evidence proves edge.
+3. Do not enable paper trading.
+
+---
+
 ## 2026-05-06 — Opening-range scanner slice and paper-trading checklist
 
 **Type:** feature / monitoring-only / documentation

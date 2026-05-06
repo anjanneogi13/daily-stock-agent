@@ -1,0 +1,8 @@
+from pathlib import Path
+
+
+def test_intraday_workflow_commits_opening_range_observations():
+    workflow = Path(".github/workflows/intraday_monitor.yml").read_text()
+
+    assert "data/opening_range_observations_*.jsonl" in workflow
+    assert "data/intraday_alerts_*.json" in workflow

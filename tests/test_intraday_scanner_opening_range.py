@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from unittest.mock import patch
@@ -99,3 +100,60 @@ def test_intraday_message_labels_new_opportunities_watch_only():
     assert "Monitoring-only. Do not treat as a buy instruction." in msg
     assert "Scanner: opening_range" in msg
     assert "Observe levels:" in msg
+
+def test_append_opening_range_observations_writes_jsonl(tmp_path):
+    path = tmp_path / "opening_range_observations_2026-05-06.jsonl"
+    candidate = {
+        "ticker": "NET",
+        "price": 101.6,
+        "score": 80,
+        "entry": 101.6,
+        "sl": 99.7,
+        "tp": 104.45,
+        "reason": "opening-range breakout",
+        "watch_only": True,
+        "mode": "monitoring_only",
+        "scanner": "opening_range",
+        "opening_range": {
+            "start": "2026-05-06T09:30:00-04:00",
+            "end": "2026-05-06T09:45:00-04:00",
+            "high": 101.0,
+            "low": 99.7,
+            "width_pct": 1.3039,
+            "volume": 3300,
+        },
+        "breakout_pct": 0.5941,
+        "volume_ratio": 3.1818,
+    }
+
+    written = scanner.append_opening_range_observations(
+        [candidate],
+        path=path,
+        now=datetime(2026, 5, 6, 14, 0, tzinfo=ET),
+    )
+
+    assert written == 1
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["ticker"] == "NET"
+    assert row["scanner"] == "opening_range"
+    assert row["mode"] == "monitoring_only"
+    assert row["watch_only"] is True
+    assert row["entry_observe"] == 101.6
+    assert row["stop_loss_observe"] == 99.7
+    assert row["take_profit_observe"] == 104.45
+    assert row["opening_range_high"] == 101.0
+    assert row["source"] == "intraday_scanner"
+
+
+def test_append_opening_range_observations_ignores_non_or_or_non_watch_only(tmp_path):
+    path = tmp_path / "opening_range_observations_2026-05-06.jsonl"
+
+    written = scanner.append_opening_range_observations([
+        {"ticker": "AAPL", "scanner": "momentum", "watch_only": True},
+        {"ticker": "MSFT", "scanner": "opening_range", "watch_only": False},
+    ], path=path)
+
+    assert written == 0
+    assert not path.exists()

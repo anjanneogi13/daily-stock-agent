@@ -51,10 +51,12 @@ Audit/hygiene work completed:
 
 Next feature work:
 
-1. Finish opening-range intraday scanner in monitoring-only mode.
-2. Keep outputs observe/watch-only until enough intraday evidence exists.
-3. Do not enable paper trading.
-4. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
+1. Continue opening-range intraday scanner rollout in monitoring-only mode.
+2. Review `data/opening_range_observations_YYYY-MM-DD.jsonl` artifacts after market sessions.
+3. Consider 09:35 / 09:45 / 10:00 ET workflow schedule refinement.
+4. Keep outputs observe/watch-only until enough intraday evidence exists.
+5. Do not enable paper trading.
+6. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
 
 Completed 2026-05-06:
 

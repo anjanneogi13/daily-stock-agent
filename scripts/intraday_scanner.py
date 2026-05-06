@@ -161,6 +161,72 @@ def scan_opening_range_opportunities(exclude: set, sent_alerts: set,
     return candidates[:max_results]
 
 
+def opening_range_observation_path(today: str | None = None) -> Path:
+    """Return the JSONL artifact path for opening-range observations."""
+    day = today or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return Path("data") / f"opening_range_observations_{day}.jsonl"
+
+
+def build_opening_range_observation(candidate: dict, now: datetime | None = None) -> dict:
+    """Normalize an opening-range candidate into an auditable observation row.
+
+    This is not a trade record. It is a monitoring-only observation for later
+    review/backtesting.
+    """
+    ts = (now or datetime.now(timezone.utc)).isoformat(timespec="seconds")
+    opening_range = candidate.get("opening_range") or {}
+
+    return {
+        "ts": ts,
+        "ticker": candidate.get("ticker"),
+        "scanner": "opening_range",
+        "mode": "monitoring_only",
+        "watch_only": True,
+        "candidate": True,
+        "price": candidate.get("price"),
+        "score": candidate.get("score"),
+        "entry_observe": candidate.get("entry"),
+        "stop_loss_observe": candidate.get("sl"),
+        "take_profit_observe": candidate.get("tp"),
+        "reason": candidate.get("reason", ""),
+        "opening_range_start": opening_range.get("start"),
+        "opening_range_end": opening_range.get("end"),
+        "opening_range_high": opening_range.get("high"),
+        "opening_range_low": opening_range.get("low"),
+        "opening_range_width_pct": opening_range.get("width_pct"),
+        "opening_range_volume": opening_range.get("volume"),
+        "breakout_pct": candidate.get("breakout_pct"),
+        "volume_ratio": candidate.get("volume_ratio"),
+        "source": "intraday_scanner",
+    }
+
+
+def append_opening_range_observations(candidates: list[dict],
+                                      path: Path | None = None,
+                                      now: datetime | None = None) -> int:
+    """Append watch-only opening-range observations to a JSONL artifact.
+
+    Returns number of rows written. Non-opening-range or non-watch-only
+    opportunities are ignored so legacy momentum alerts do not pollute this
+    artifact.
+    """
+    rows = [
+        build_opening_range_observation(c, now=now)
+        for c in candidates
+        if c.get("scanner") == "opening_range" and c.get("watch_only") is True
+    ]
+
+    if not rows:
+        return 0
+
+    out = path or opening_range_observation_path()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("a") as f:
+        for row in rows:
+            f.write(json.dumps(row, sort_keys=True) + "\n")
+    return len(rows)
+
+
 
 def scan_for_new_opportunities(exclude: set, sent_alerts: set, max_results: int = 3) -> list:
     """Scan watchlist for new intraday opportunities.
