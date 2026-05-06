@@ -13,6 +13,34 @@ Rules:
 
 ---
 
+## 2026-05-06 — Improved late watch-only idea quality and levels
+
+**Type:** reliability fallback / monitoring-only / content quality
+
+**Summary:**
+
+Improved the late watch-only daily ideas after the first live run showed low-quality rows such as a one-letter headline and no trade-plan-style levels.
+
+Fix:
+
+- Filter weak evidence rows with too-short headlines/rationales.
+- Validate ticker shape before surfacing ideas.
+- Enrich late ideas with current quote context when available.
+- Require quote enrichment in the workflow before sending late ideas.
+- Add watch-only BUY/Entry, SL, TP, and R/R fields.
+- Include company name when available.
+- Avoid Markdown parsing issues in Telegram by sending the late-ideas message as plain text.
+- Display source labels as `news-signal` instead of Markdown-sensitive `news_signal`.
+
+Safety:
+
+- Still monitoring-only.
+- Still not official premarket picks.
+- Still not written to `picks_log.csv`.
+- Still not paper/live trades.
+
+---
+
 ## 2026-05-06 — Added late watch-only daily ideas
 
 **Type:** reliability fallback / monitoring-only / learning evidence

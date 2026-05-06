@@ -51,7 +51,6 @@ def main() -> int:
         data = urllib.parse.urlencode({
             "chat_id": chat_id,
             "text": msg,
-            "parse_mode": "Markdown",
             "disable_web_page_preview": "true",
         }).encode()
         try:

@@ -33,6 +33,13 @@ def test_build_late_ideas_uses_news_and_watchlist_without_official_picks(tmp_pat
             "action_window": "intraday",
             "headline": "RBC raises price target",
         },
+        "BAD": {
+            "ticker": "A",
+            "tradeable_score": 1.0,
+            "sentiment": "bullish",
+            "action_window": "intraday",
+            "headline": "h",
+        },
         "IGN": {
             "ticker": "IGN",
             "tradeable_score": 0.80,
@@ -86,6 +93,7 @@ def test_write_outputs_writes_jsonl_and_markdown(tmp_path):
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
         "ticker": "ERNA",
+        "company_name": "Ernexa Therapeutics",
         "source": "watchlist",
         "score": 75.0,
         "tradeable_score": 0.75,
@@ -95,6 +103,11 @@ def test_write_outputs_writes_jsonl_and_markdown(tmp_path):
         "headline": "Breakthrough data",
         "reason": "Breakthrough data",
         "url": "",
+        "current_price": 10.0,
+        "watch_buy_price": 10.0,
+        "watch_stop_loss": 9.85,
+        "watch_take_profit": 10.3,
+        "risk_reward": 2.0,
         "warning": "Monitoring-only.",
     }]
 
@@ -102,9 +115,14 @@ def test_write_outputs_writes_jsonl_and_markdown(tmp_path):
 
     rows = [json.loads(line) for line in jsonl.read_text().splitlines()]
     assert rows[0]["ticker"] == "ERNA"
-    assert "LATE WATCH-ONLY DAILY IDEAS" in md.read_text()
-    assert "NOT official premarket daily picks" in md.read_text()
-    assert "WATCH ONLY" in md.read_text()
+    body = md.read_text()
+    assert "LATE WATCH-ONLY DAILY IDEAS" in body
+    assert "NOT official premarket daily picks" in body
+    assert "ERNA — Ernexa Therapeutics" in body
+    assert "Watch-only BUY/Entry: $10.00" in body
+    assert "Watch-only SL: $9.85" in body
+    assert "Watch-only TP: $10.30" in body
+    assert "WATCH ONLY" in body
 
 
 def test_format_markdown_no_ideas_is_still_safe():
@@ -113,3 +131,19 @@ def test_format_markdown_no_ideas_is_still_safe():
     assert "LATE WATCH-ONLY DAILY IDEAS" in msg
     assert "No qualified late watch-only ideas" in msg
     assert "Not buy instructions" in msg
+
+
+def test_format_markdown_without_quote_warns_levels_unavailable():
+    msg = format_markdown([{
+        "ticker": "ALAB",
+        "score": 48.0,
+        "source": "news_signal",
+        "action_window": "intraday",
+        "headline": "RBC raises price target",
+        "watch_only": True,
+        "official_premarket_pick": False,
+    }], now=datetime(2026, 5, 6, 11, 30, tzinfo=ET))
+
+    assert "Source: news-signal" in msg
+    assert "Price levels: unavailable" in msg
+    assert "WATCH ONLY" in msg

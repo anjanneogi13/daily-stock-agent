@@ -18,13 +18,23 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 
+try:
+    import yfinance as yf
+except Exception:  # pragma: no cover - dependency may be unavailable locally
+    yf = None
+
+
 ET = ZoneInfo("America/New_York")
 DATA_DIR = Path("data")
+
+MIN_TEXT_LEN = 12
+VALID_TICKER_RE = re.compile(r"^[A-Z][A-Z0-9.\-]{0,6}$")
 
 
 def _as_float(value, default: float = 0.0) -> float:
@@ -57,9 +67,110 @@ def load_json(path: Path, default):
         return default
 
 
-def _candidate_from_payload(payload: dict, *, source: str, now: datetime, min_score: float) -> dict | None:
-    ticker = str(payload.get("ticker") or payload.get("primary_ticker") or "").strip().upper()
+def is_valid_ticker(ticker: str) -> bool:
     if not ticker:
+        return False
+    if not VALID_TICKER_RE.match(ticker):
+        return False
+    # Avoid known non-US/non-equity style symbols until we have a better
+    # multi-asset late-ideas architecture.
+    if ":" in ticker or ticker.endswith("USD"):
+        return False
+    return True
+
+
+def has_enough_evidence(payload: dict) -> bool:
+    headline = str(payload.get("headline") or "").strip()
+    rationale = str(payload.get("rationale") or "").strip()
+    return len(headline) >= MIN_TEXT_LEN or len(rationale) >= MIN_TEXT_LEN
+
+
+def fetch_market_context(ticker: str) -> dict:
+    """Best-effort quote/company enrichment.
+
+    If yfinance is unavailable or quote lookup fails, return {}. The caller can
+    decide whether to skip or keep the idea.
+    """
+    if yf is None:
+        return {}
+
+    try:
+        t = yf.Ticker(ticker)
+        hist = t.history(period="5d", interval="5m", prepost=False)
+        if hist is None or hist.empty:
+            return {}
+
+        price = float(hist["Close"].iloc[-1])
+        day_low = float(hist["Low"].tail(78).min()) if "Low" in hist else None
+        day_high = float(hist["High"].tail(78).max()) if "High" in hist else None
+
+        prev_close = None
+        daily = t.history(period="5d", interval="1d")
+        if daily is not None and len(daily) >= 2:
+            prev_close = float(daily["Close"].iloc[-2])
+
+        company_name = ""
+        try:
+            info = getattr(t, "info", {}) or {}
+            company_name = (
+                info.get("shortName")
+                or info.get("longName")
+                or info.get("displayName")
+                or ""
+            )
+        except Exception:
+            company_name = ""
+
+        change_pct = None
+        if prev_close and prev_close > 0:
+            change_pct = ((price - prev_close) / prev_close) * 100
+
+        return {
+            "company_name": company_name,
+            "current_price": round(price, 2),
+            "day_low": round(day_low, 2) if day_low else None,
+            "day_high": round(day_high, 2) if day_high else None,
+            "prev_close": round(prev_close, 2) if prev_close else None,
+            "change_pct": round(change_pct, 2) if change_pct is not None else None,
+        }
+    except Exception as exc:
+        print(f"[late-ideas] quote enrichment skipped for {ticker}: {exc}")
+        return {}
+
+
+def build_watch_only_levels(price: float) -> dict:
+    """Create simple watch-only levels similar to a normal pick layout.
+
+    These are observation levels only, not orders.
+    """
+    entry = round(price, 2)
+    stop_loss = round(price * 0.985, 2)  # approx 1.5% risk
+    take_profit = round(price * 1.03, 2)  # approx 3.0% upside
+    risk = max(entry - stop_loss, 0.01)
+    reward = max(take_profit - entry, 0.0)
+
+    return {
+        "watch_buy_price": entry,
+        "watch_stop_loss": stop_loss,
+        "watch_take_profit": take_profit,
+        "risk_reward": round(reward / risk, 2) if risk else None,
+        "level_basis": "current delayed quote; simple 1.5% SL / 3.0% TP observation levels",
+    }
+
+
+def _candidate_from_payload(
+    payload: dict,
+    *,
+    source: str,
+    now: datetime,
+    min_score: float,
+    require_quote: bool,
+) -> dict | None:
+    ticker = str(payload.get("ticker") or payload.get("primary_ticker") or "").strip().upper()
+    if not is_valid_ticker(ticker):
+        return None
+
+    if not has_enough_evidence(payload):
         return None
 
     sentiment = str(payload.get("sentiment") or "").strip().lower()
@@ -76,15 +187,23 @@ def _candidate_from_payload(payload: dict, *, source: str, now: datetime, min_sc
 
     tradeable_score = _as_float(payload.get("tradeable_score"), 0.0)
     score_delta = _as_float(payload.get("score_delta"), 0.0)
-
-    # Normalize to a 0-100 display score. Keep it simple and auditable.
-    score = round(max(0.0, min(100.0, tradeable_score * 100.0 + max(0.0, score_delta) * 100.0)), 2)
     if tradeable_score < min_score:
         return None
 
     headline = str(payload.get("headline") or "").strip()
     rationale = str(payload.get("rationale") or "").strip()
     reason = rationale or headline or f"{source} late watch-only idea"
+
+    market = fetch_market_context(ticker)
+    if require_quote and not market.get("current_price"):
+        return None
+
+    levels = {}
+    if market.get("current_price"):
+        levels = build_watch_only_levels(float(market["current_price"]))
+
+    # Normalize to a 0-100 display score. Keep it simple and auditable.
+    score = round(max(0.0, min(100.0, tradeable_score * 100.0 + max(0.0, score_delta) * 100.0)), 2)
 
     generated_at = _now_et(now)
     date_str = generated_at.strftime("%Y-%m-%d")
@@ -99,6 +218,7 @@ def _candidate_from_payload(payload: dict, *, source: str, now: datetime, min_sc
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
         "ticker": ticker,
+        "company_name": market.get("company_name") or payload.get("company_name") or "",
         "source": source,
         "score": score,
         "tradeable_score": tradeable_score,
@@ -108,6 +228,12 @@ def _candidate_from_payload(payload: dict, *, source: str, now: datetime, min_sc
         "headline": headline,
         "reason": reason,
         "url": payload.get("url") or "",
+        "current_price": market.get("current_price"),
+        "day_low": market.get("day_low"),
+        "day_high": market.get("day_high"),
+        "prev_close": market.get("prev_close"),
+        "change_pct": market.get("change_pct"),
+        **levels,
         "warning": (
             "Generated after the official 09:20 ET premarket cutoff. "
             "Monitoring-only. Not a buy instruction. Not an official daily pick."
@@ -122,6 +248,7 @@ def build_late_ideas(
     max_results: int = 5,
     min_score: float = 0.40,
     now: datetime | None = None,
+    require_quote: bool = False,
 ) -> list[dict]:
     now_dt = now or datetime.now(timezone.utc)
     by_ticker: dict[str, dict] = {}
@@ -131,7 +258,13 @@ def build_late_ideas(
         for payload in news_signals.values():
             if not isinstance(payload, dict):
                 continue
-            cand = _candidate_from_payload(payload, source="news_signal", now=now_dt, min_score=min_score)
+            cand = _candidate_from_payload(
+                payload,
+                source="news_signal",
+                now=now_dt,
+                min_score=min_score,
+                require_quote=require_quote,
+            )
             if cand and cand["score"] > by_ticker.get(cand["ticker"], {}).get("score", -1):
                 by_ticker[cand["ticker"]] = cand
 
@@ -147,13 +280,20 @@ def build_late_ideas(
     for payload in items:
         if not isinstance(payload, dict):
             continue
-        cand = _candidate_from_payload(payload, source="watchlist", now=now_dt, min_score=min_score)
+        cand = _candidate_from_payload(
+            payload,
+            source="watchlist",
+            now=now_dt,
+            min_score=min_score,
+            require_quote=require_quote,
+        )
         if cand and cand["score"] > by_ticker.get(cand["ticker"], {}).get("score", -1):
             by_ticker[cand["ticker"]] = cand
 
     out = sorted(
         by_ticker.values(),
         key=lambda x: (
+            1 if x.get("current_price") else 0,  # quoted ideas first
             -float(x.get("score") or 0),
             str(x.get("ticker") or ""),
         ),
@@ -161,14 +301,38 @@ def build_late_ideas(
     return out[:max_results]
 
 
+def _display_name(idea: dict) -> str:
+    name = str(idea.get("company_name") or "").strip()
+    return f"{idea['ticker']} — {name}" if name else idea["ticker"]
+
+
+def _source_label(source: str) -> str:
+    return str(source or "unknown").replace("_", "-")
+
+
+def _level_text(idea: dict) -> list[str]:
+    if idea.get("watch_buy_price") is None:
+        return [
+            "   Price levels: unavailable — quote lookup failed.",
+            "   Do not act without manually checking live price, spread, and news.",
+        ]
+
+    return [
+        f"   Watch-only BUY/Entry: ${float(idea['watch_buy_price']):.2f}",
+        f"   Watch-only SL: ${float(idea['watch_stop_loss']):.2f}",
+        f"   Watch-only TP: ${float(idea['watch_take_profit']):.2f}",
+        f"   R/R: {float(idea.get('risk_reward') or 0):.2f}",
+    ]
+
+
 def format_markdown(ideas: list[dict], *, now: datetime | None = None) -> str:
     now_et = _now_et(now)
     lines = [
-        "⚠️ *LATE WATCH-ONLY DAILY IDEAS*",
+        "⚠️ LATE WATCH-ONLY DAILY IDEAS",
         "",
         f"Generated: {now_et.strftime('%Y-%m-%d %H:%M ET')}",
         "",
-        "*Important:* These are NOT official premarket daily picks.",
+        "IMPORTANT: These are NOT official premarket daily picks.",
         "They were generated after the 09:20 ET cutoff.",
         "Monitoring-only. Not buy instructions. Not paper trades.",
         "",
@@ -178,24 +342,28 @@ def format_markdown(ideas: list[dict], *, now: datetime | None = None) -> str:
         lines.extend([
             "No qualified late watch-only ideas were found from current news/watchlist evidence.",
             "",
-            "_Educational only. Not financial advice._",
+            "Educational only. Not financial advice.",
         ])
         return "\n".join(lines)
 
     for i, idea in enumerate(ideas, 1):
         action = idea.get("action_window") or "unspecified"
         headline = idea.get("headline") or idea.get("reason") or ""
+        change = idea.get("change_pct")
+        change_text = f" | Change: {change:+.2f}%" if isinstance(change, (int, float)) else ""
+
         lines.extend([
-            f"{i}. *{idea['ticker']}* — score {idea['score']:.1f}/100",
-            f"   Source: {idea.get('source', 'unknown')} | Window: {action}",
-            f"   {headline[:220]}",
+            f"{i}. { _display_name(idea) } — score {float(idea['score']):.1f}/100",
+            f"   Source: {_source_label(idea.get('source', 'unknown'))} | Window: {action}{change_text}",
+            *_level_text(idea),
+            f"   Catalyst: {headline[:220]}",
             "   WATCH ONLY — do not treat as an official pick or buy instruction.",
             "",
         ])
 
-    lines.append("_Educational only. Not financial advice._")
+    lines.append("Educational only. Not financial advice.")
     msg = "\n".join(lines)
-    return msg[:3950] + "\n\n_(truncated)_" if len(msg) > 4000 else msg
+    return msg[:3950] + "\n\n(truncated)" if len(msg) > 4000 else msg
 
 
 def write_outputs(ideas: list[dict], *, data_dir: Path = DATA_DIR, now: datetime | None = None) -> tuple[Path, Path]:
@@ -217,9 +385,18 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-results", type=int, default=5)
     parser.add_argument("--min-score", type=float, default=0.40)
+    parser.add_argument(
+        "--require-quote",
+        action="store_true",
+        help="Skip ideas without current quote enrichment.",
+    )
     args = parser.parse_args(argv)
 
-    ideas = build_late_ideas(max_results=args.max_results, min_score=args.min_score)
+    ideas = build_late_ideas(
+        max_results=args.max_results,
+        min_score=args.min_score,
+        require_quote=args.require_quote,
+    )
     jsonl, md = write_outputs(ideas)
     count_file = Path("/tmp/late_daily_ideas_count")
     count_file.write_text(str(len(ideas)))

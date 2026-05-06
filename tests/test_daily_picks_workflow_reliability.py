@@ -142,3 +142,12 @@ def test_missed_window_generates_late_watch_only_ideas():
     assert "--event late_ideas_telegram" in text
     assert "data/late_daily_ideas_*.jsonl" in text
     assert "data/late_daily_ideas_*.md" in text
+
+
+def test_late_watch_only_ideas_install_quote_dependency():
+    text = _text()
+
+    assert "Set up Python for late watch-only ideas" in text
+    assert "Install late watch-only idea dependencies" in text
+    assert "pip install yfinance==0.2.65 curl_cffi==0.7.4" in text
+    assert "scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40 --require-quote" in text

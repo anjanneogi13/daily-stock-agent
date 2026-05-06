@@ -96,10 +96,22 @@ jobs:
           fi
           exit "$rc"
 
+      - name: Set up Python for late watch-only ideas
+        if: steps.guard.outputs.missed_window == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install late watch-only idea dependencies
+        if: steps.guard.outputs.missed_window == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance==0.2.65 curl_cffi==0.7.4
+
       - name: Generate late watch-only daily ideas
         if: steps.guard.outputs.missed_window == 'true'
         run: |
-          python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40
+          python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40 --require-quote
           COUNT=$(cat /tmp/late_daily_ideas_count 2>/dev/null || echo 0)
           python scripts/record_daily_picks_run_status.py --event late_ideas_generated --result success --reason "generated late watch-only daily ideas after missed official window" --late-ideas-count "$COUNT"
 
