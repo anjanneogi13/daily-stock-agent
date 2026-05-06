@@ -28,7 +28,8 @@ def test_project_blueprint_is_canonical_current_state():
     text = BLUEPRINT.read_text()
 
     assert "monitoring-ready" in text
-    assert "1284 passed, 28 skipped" in text
+    assert "Test suite:" in text
+    assert "1348 passed, 29 skipped" in text
     assert "monitoring-only" in text
     assert "must not execute real-money trades" in text
     assert "Paper trading stays blocked" in text
