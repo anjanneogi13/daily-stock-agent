@@ -21,6 +21,7 @@ The repo is healthy for monitoring mode:
 - Stale/unverified premarket prices become watch-only instead of actionable.
 - Intraday news cannot silently become normal swing picks; it is marked watch-only until intraday planning matures.
 - Closed-status logic is aligned between enforcement and monitoring readiness dashboards.
+- Minor documentation consistency cleanup completed on 2026-05-06.
 - Legacy local paper logging is opt-in only and disabled by default.
 - Major undercovered modules now have tests.
 - Paper trading remains intentionally deferred.

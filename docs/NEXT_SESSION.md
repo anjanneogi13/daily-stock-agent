@@ -34,26 +34,32 @@ Observed:
 
 ## Best next task
 
-### Priority 1 — Fix lower-severity audit hygiene before new features
+### Priority 1 — Resume feature roadmap: opening-range intraday scanner
 
-Now fixed from the comprehensive audit:
+Audit/hygiene work completed:
 
 - Daily-picks timing hard gate.
 - Missed-window Telegram alert.
 - Stale/unverified price watch-only protection.
 - Monitoring-only default for paper logging.
 - News action-window watch-only guard.
+- `data/learning_journal.jsonl` test side effects isolated.
+- Remaining tracked data isolation audited clean for `data/picks_log.csv` and `data/signal_journal.jsonl`.
+- Closed-status logic aligned between readiness scripts.
+- Minor documentation consistency cleanup completed.
 
-Next cleanup before feature work:
+Next feature work:
 
-1. Clean documentation consistency issues.
-2. Resume feature roadmap with opening-range intraday scanner.
+1. Build opening-range intraday scanner in monitoring-only mode.
+2. Keep outputs observe/watch-only until enough intraday evidence exists.
+3. Do not enable paper trading.
 
 Completed 2026-05-06:
 
 - Fix test/data isolation: `data/learning_journal.jsonl` test side effects are isolated.
 - Remaining tracked data isolation audited clean for `data/picks_log.csv` and `data/signal_journal.jsonl`.
 - Align closed-status logic between readiness scripts.
+- Clean minor documentation consistency issues.
 
 After those are clean, resume feature work with opening-range intraday scanner.
 

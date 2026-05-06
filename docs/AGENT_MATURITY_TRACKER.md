@@ -187,11 +187,15 @@ Implemented:
 5. **Intraday monitor close persistence**
    - SL/TP hits detected intraday now update the correct `pick_date` in CSV.
 
-Remaining lower-severity hygiene before new features:
+Lower-severity hygiene completed before new features:
 
-1. Fix test/data isolation.
-2. Align closed-status logic between readiness scripts.
-3. Then build opening-range intraday scanner.
+1. `data/learning_journal.jsonl` test side effects are isolated.
+2. Remaining tracked data isolation audited clean for `data/picks_log.csv` and `data/signal_journal.jsonl`.
+3. Closed-status logic is aligned between enforcement and monitoring readiness dashboards.
+
+Next feature roadmap item:
+
+1. Build opening-range intraday scanner.
 
 ---
 

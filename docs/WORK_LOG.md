@@ -13,6 +13,39 @@ Rules:
 
 ---
 
+## 2026-05-06 — Minor documentation consistency cleanup
+
+**Type:** documentation / roadmap hygiene
+
+**Summary:**
+
+Cleaned up stale documentation after completing audit/hygiene work.
+
+Updated docs to reflect that:
+
+- `data/learning_journal.jsonl` test side effects are isolated.
+- Remaining tracked-data isolation was audited clean for:
+  - `data/picks_log.csv`
+  - `data/signal_journal.jsonl`
+- Closed-status logic is aligned between enforcement and monitoring readiness dashboards.
+- The next roadmap item is now the opening-range intraday scanner.
+- Paper trading remains forbidden.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_monitoring_first_docs.py -q --tb=short --disable-warnings`
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff --check`
+
+**Next:**
+
+Resume feature roadmap with opening-range intraday scanner in monitoring-only mode.
+
+---
+
 ## 2026-05-06 — Audited remaining tracked-data test isolation
 
 **Type:** test / data isolation / audit
