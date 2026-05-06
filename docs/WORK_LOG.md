@@ -13,6 +13,46 @@ Rules:
 
 ---
 
+## 2026-05-06 — Audited remaining tracked-data test isolation
+
+**Type:** test / data isolation / audit
+
+**Summary:**
+
+Audited the full test suite for remaining tracked-data side effects after fixing `data/learning_journal.jsonl` isolation.
+
+Checked tracked files:
+
+- `data/picks_log.csv`
+- `data/signal_journal.jsonl`
+- `data/learning_journal.jsonl`
+
+Method:
+
+- Reset all three tracked data files.
+- Ran every `tests/test_*.py` file individually.
+- After each test file, checked `git diff` for all three tracked data files.
+- Reset any side-effect file before continuing.
+
+Result:
+
+- No tests mutate `data/picks_log.csv`.
+- No tests mutate `data/signal_journal.jsonl`.
+- No regressions mutate `data/learning_journal.jsonl`.
+
+**Conclusion:**
+
+Tracked-data test isolation is clean as of 2026-05-06.
+
+**Follow-up:**
+
+Remaining lower-severity cleanup:
+
+1. Clean minor documentation consistency issues.
+2. Then resume feature roadmap with opening-range intraday scanner.
+
+---
+
 ## 2026-05-06 — Aligned readiness closed-status logic
 
 **Type:** bug fix / readiness dashboard consistency / test

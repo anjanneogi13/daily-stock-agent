@@ -106,10 +106,10 @@ Key areas:
 
 These are not urgent blockers:
 
-1. Remaining test/data isolation watch item:
-   - `data/picks_log.csv`
-   - `data/signal_journal.jsonl`
-   - `data/learning_journal.jsonl` side effects fixed on 2026-05-06.
+1. Tracked-data test isolation is clean as of 2026-05-06:
+   - `data/learning_journal.jsonl` side effects fixed.
+   - `data/picks_log.csv` audited clean.
+   - `data/signal_journal.jsonl` audited clean.
 2. Remaining undercovered modules:
    - `performance_stats`
    - `paper_trader`
