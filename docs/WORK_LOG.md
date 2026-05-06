@@ -13,6 +13,41 @@ Rules:
 
 ---
 
+## 2026-05-06 — Opening-range scanner slice and paper-trading checklist
+
+**Type:** feature / monitoring-only / documentation
+
+**Summary:**
+
+Started opening-range intraday scanner implementation.
+
+Implemented so far:
+
+- Pure opening-range scanner core in `src/opening_range_scanner.py`.
+- Opening-range breakout detection with:
+  - opening range completeness checks,
+  - volume confirmation,
+  - anti-chase extension guard,
+  - large-gap guard,
+  - watch-only / monitoring-only candidate output.
+- Wired opening-range candidates into `scripts/intraday_scanner.py` ahead of legacy momentum opportunities.
+- Updated intraday Telegram message generation to label new opportunities as `WATCH ONLY`.
+- Added paper-trading activation checklist:
+  - `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
+
+Important policy:
+
+- Opening-range scanner outputs are monitoring-only.
+- They must not create trades, orders, or paper-trade artifacts.
+- Paper trading remains disabled until readiness dashboards pass and founder explicitly approves activation.
+
+**Next:**
+
+- Finish tests and commit the opening-range scanner batch.
+- Continue keeping all intraday scanner candidates watch-only.
+
+---
+
 ## 2026-05-06 — Minor documentation consistency cleanup
 
 **Type:** documentation / roadmap hygiene

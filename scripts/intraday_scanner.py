@@ -13,6 +13,7 @@ except ImportError:
     yf = None
 
 from intraday_news import fetch_recent_news, classify_material
+from src.opening_range_scanner import detect_opening_range_breakout
 
 # Default watchlist — top liquid US names. Override by creating data/watchlist.txt
 DEFAULT_WATCHLIST = [
@@ -79,10 +80,104 @@ def score_opportunity(quote: dict, has_catalyst: bool) -> float:
     if has_catalyst: score += 15
     return max(0, min(100, score))
 
-def scan_for_new_opportunities(exclude: set, sent_alerts: set, max_results: int = 3) -> list:
-    """Scan watchlist for high-momentum tickers not in morning picks."""
-    watchlist = [t for t in load_watchlist() if t not in exclude]
+def fetch_opening_range_bars(ticker: str) -> list:
+    """Fetch today's 5-minute regular-session bars for opening-range scan.
+
+    Returns list[dict] in the pure scanner bar shape. Empty list on any
+    failure. This function is intentionally best-effort: opening-range scans
+    must never break existing intraday monitoring.
+    """
+    if yf is None:
+        return []
+    try:
+        hist = yf.Ticker(ticker).history(period="1d", interval="5m", prepost=False)
+        if hist is None or hist.empty:
+            return []
+
+        bars = []
+        for idx, row in hist.iterrows():
+            bars.append({
+                "ts": idx.to_pydatetime() if hasattr(idx, "to_pydatetime") else idx,
+                "open": float(row.get("Open", 0) or 0),
+                "high": float(row.get("High", 0) or 0),
+                "low": float(row.get("Low", 0) or 0),
+                "close": float(row.get("Close", 0) or 0),
+                "volume": float(row.get("Volume", 0) or 0),
+            })
+        return bars
+    except Exception as e:
+        print(f"[opening-range] {ticker}: {e}")
+        return []
+
+
+def scan_opening_range_opportunities(exclude: set, sent_alerts: set,
+                                     max_results: int = 3,
+                                     watchlist: list | None = None) -> list:
+    """Scan watchlist for opening-range breakouts.
+
+    Monitoring-only: returned candidates are watch_only and must not be treated
+    as trade instructions.
+    """
+    tickers = [t for t in (watchlist or load_watchlist()) if t not in exclude]
     candidates = []
+
+    for ticker in tickers:
+        quote = get_live_quote(ticker)
+        bars = fetch_opening_range_bars(ticker)
+        if not quote or not bars:
+            continue
+
+        result = detect_opening_range_breakout(
+            ticker,
+            bars,
+            prev_close=quote.get("prev_close"),
+        )
+        if not result.get("candidate"):
+            continue
+
+        fp = f"OR|{ticker}|{result.get('opening_range', {}).get('start', '')[:16]}"
+        if fp in sent_alerts:
+            continue
+        sent_alerts.add(fp)
+
+        price = result["price"]
+        candidates.append({
+            "ticker": ticker,
+            "price": price,
+            "score": 75 + min(float(result.get("breakout_pct") or 0) * 3, 15),
+            "entry": result["entry"],
+            "sl": result["stop_loss"],
+            "tp": result["take_profit"],
+            "reason": result["reason"],
+            "watch_only": True,
+            "mode": "monitoring_only",
+            "scanner": "opening_range",
+            "opening_range": result["opening_range"],
+            "breakout_pct": result["breakout_pct"],
+            "volume_ratio": result["volume_ratio"],
+        })
+
+    candidates.sort(key=lambda x: x["score"], reverse=True)
+    return candidates[:max_results]
+
+
+
+def scan_for_new_opportunities(exclude: set, sent_alerts: set, max_results: int = 3) -> list:
+    """Scan watchlist for new intraday opportunities.
+
+    Opening-range breakouts are checked first and returned as monitoring-only
+    watch-only ideas. The legacy momentum scan remains as a fallback.
+    """
+    opening_range = scan_opening_range_opportunities(
+        exclude=exclude,
+        sent_alerts=sent_alerts,
+        max_results=max_results,
+    )
+    if len(opening_range) >= max_results:
+        return opening_range[:max_results]
+
+    watchlist = [t for t in load_watchlist() if t not in exclude]
+    candidates = list(opening_range)
 
     for ticker in watchlist:
         quote = get_live_quote(ticker)
@@ -121,6 +216,9 @@ def scan_for_new_opportunities(exclude: set, sent_alerts: set, max_results: int 
             "sl": round(price * 0.985, 2),
             "tp": round(price * 1.03, 2),
             "reason": catalyst_headline or f"+{quote['change_pct']:.1f}% on {quote['vol_ratio']:.1f}× volume",
+            "watch_only": True,
+            "mode": "monitoring_only",
+            "scanner": "momentum",
         })
 
     candidates.sort(key=lambda x: x["score"], reverse=True)

@@ -269,12 +269,16 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
                 lines.append(f"   - [{cat}] {headline}")
             lines.append("")
     if new_opps:
-        lines.append("*New Opportunities Detected*\n")
+        lines.append("*New Opportunities Detected — WATCH ONLY*\n")
         for o in new_opps:
-            lines.append(f"*{o['ticker']}* @ ${o['price']:.2f}\n"
+            prefix = "👀 WATCH ONLY — " if o.get("watch_only") else ""
+            scanner = o.get("scanner", "intraday")
+            lines.append(f"{prefix}*{o['ticker']}* @ ${o['price']:.2f}\n"
+                         f"   Scanner: {scanner}\n"
                          f"   Score: {o['score']:.1f}\n"
-                         f"   Entry ${o['entry']:.2f} | SL ${o['sl']:.2f} | TP ${o['tp']:.2f}\n"
-                         f"   {o.get('reason','Live momentum')}\n")
+                         f"   Observe levels: Entry ${o['entry']:.2f} | SL ${o['sl']:.2f} | TP ${o['tp']:.2f}\n"
+                         f"   {o.get('reason','Live momentum')}\n"
+                         f"   Monitoring-only. Do not treat as a buy instruction.\n")
     lines.append("_Educational only. Not financial advice._")
     msg = "\n".join(lines)
     return msg[:3950] + "\n\n_(truncated)_" if len(msg) > 4000 else msg

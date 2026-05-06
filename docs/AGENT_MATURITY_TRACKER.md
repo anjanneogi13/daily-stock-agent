@@ -161,6 +161,22 @@ Monster entries should not use tight day/swing stops. They should use:
 
 ---
 
+## 2026-05-06 Paper Trading Activation Checklist
+
+Paper trading remains disabled.
+
+Before enabling `TRADING_MODE=paper`, future sessions must follow:
+
+- `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
+
+Key rule:
+
+- opening-range scanner outputs are `WATCH ONLY` / `monitoring_only`.
+- watch-only observations must not become paper trades.
+- paper trading requires explicit founder approval plus readiness gates.
+
+---
+
 ## 2026-05-06 Audit Fixes Implemented
 
 The comprehensive repo audit fixed the most important operational safety gaps before new feature work.

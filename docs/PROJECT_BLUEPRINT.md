@@ -25,6 +25,7 @@ The repo is healthy for monitoring mode:
 - Legacy local paper logging is opt-in only and disabled by default.
 - Major undercovered modules now have tests.
 - Paper trading remains intentionally deferred.
+- Paper trading activation checklist added on 2026-05-06.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
 

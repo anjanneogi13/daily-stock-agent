@@ -15,6 +15,7 @@ Do not start paper trading yet.
 3. `docs/AGENT_MATURITY_TRACKER.md`
 4. This file
 5. `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
+6. `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
 
 ---
 
@@ -50,9 +51,10 @@ Audit/hygiene work completed:
 
 Next feature work:
 
-1. Build opening-range intraday scanner in monitoring-only mode.
+1. Finish opening-range intraday scanner in monitoring-only mode.
 2. Keep outputs observe/watch-only until enough intraday evidence exists.
 3. Do not enable paper trading.
+4. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
 
 Completed 2026-05-06:
 
