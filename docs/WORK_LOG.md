@@ -13,6 +13,70 @@ Rules:
 
 ---
 
+## 2026-05-06 — Fixed intraday scanner opening-range priority
+
+**Type:** bug fix / monitoring-only / test stability
+
+**Summary:**
+
+The full suite exposed that legacy momentum candidates could outrank opening-range candidates in `scan_for_new_opportunities()` because the combined candidate list was sorted only by numeric score.
+
+Fix:
+
+- Preserve opening-range priority over legacy momentum candidates.
+- Sort opening-range candidates first, then by score.
+- Keeps all intraday candidates watch-only and monitoring-only.
+
+Safety:
+
+- No paper trading enabled.
+- No live trading enabled.
+- No official picks created.
+- Intraday outputs remain watch-only observations.
+
+---
+
+## 2026-05-06 — Added daily-picks run-status artifact
+
+**Type:** workflow observability / reliability / monitoring-only
+
+**Summary:**
+
+Added durable run-status logging for daily-picks and watchdog workflows.
+
+New artifact:
+
+- `data/daily_picks_run_status_YYYY-MM-DD.jsonl`
+
+Records events such as:
+
+- guard started,
+- before-window skip,
+- missed-window skip,
+- duplicate-picks skip,
+- guard passed,
+- agent started/completed,
+- CSV verification success/failure,
+- Telegram send success/failure,
+- watchdog checked,
+- watchdog alert sent/failed.
+
+Purpose:
+
+- Distinguish "workflow did not run" from "workflow ran but skipped".
+- Preserve operational evidence when GitHub cron/external scheduler timing is unreliable.
+- Support future missed-run learning without mixing late/failed runs into official pick statistics.
+
+Safety:
+
+- Monitoring-only artifact.
+- Does not create picks.
+- Does not create paper trades.
+- Does not enable live trading.
+- Does not flip enforcement flags.
+
+---
+
 ## 2026-05-06 — Fixed evaluate_picks import side effect
 
 **Type:** bug fix / test isolation / data safety

@@ -307,3 +307,21 @@ Fix:
 - Execution is behind `main()` and `if __name__ == "__main__"`.
 
 Continue to verify tracked data stays clean after full-suite runs.
+
+## Daily-picks run-status artifact — 2026-05-06
+
+Added `data/daily_picks_run_status_YYYY-MM-DD.jsonl` as the operational ledger for daily-picks and watchdog attempts.
+
+Use it to answer:
+
+- Did daily-picks workflow start?
+- Did the guard skip or proceed?
+- Were picks already logged?
+- Did main.py run?
+- Did CSV verification pass?
+- Did Telegram send?
+- Did watchdog check and alert?
+
+Next reliability feature after this is clean:
+
+- Add late watch-only daily ideas in a separate ledger, not official picks.

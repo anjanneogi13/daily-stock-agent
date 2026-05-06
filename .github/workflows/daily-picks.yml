@@ -41,6 +41,7 @@ jobs:
           ET_MIN=$(TZ='America/New_York' date +%M)
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
           echo "Now: $ET_DATE $ET_HOUR:$ET_MIN ET"
+          python scripts/record_daily_picks_run_status.py --event guard_started --result started --reason "daily-picks guard evaluating timing and dedup"
 
           # Official premarket picks are allowed only before 09:20 ET.
           # Manual dispatch must not bypass this freshness/timing gate.
@@ -51,12 +52,14 @@ jobs:
 
           if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ]; then
             echo "⏭ Before 08:00 ET window — skipping"
+            python scripts/record_daily_picks_run_status.py --event before_window_skip --result skipped --reason "before 08:00 ET premarket window"
             echo "should_run=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
           if [ $ET_MINUTES_OF_DAY -gt $OFFICIAL_CUTOFF ]; then
             echo "⏭ Official premarket window missed after 09:20 ET — no normal daily picks"
+            python scripts/record_daily_picks_run_status.py --event missed_window_skip --result skipped --reason "after 09:20 ET official cutoff"
             echo "should_run=false" >> $GITHUB_OUTPUT
             echo "missed_window=true" >> $GITHUB_OUTPUT
             exit 0
@@ -67,12 +70,14 @@ jobs:
             TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
             if [ "$TODAY_ROWS" -gt 0 ]; then
               echo "⏭ Already have $TODAY_ROWS picks logged for $ET_DATE — skipping"
+              python scripts/record_daily_picks_run_status.py --event already_logged_skip --result skipped --reason "picks already logged for ET date" --picks-logged "$TODAY_ROWS"
               echo "should_run=false" >> $GITHUB_OUTPUT
               exit 0
             fi
           fi
 
           echo "✅ Proceeding with daily picks at $ET_HOUR:$ET_MIN ET"
+          python scripts/record_daily_picks_run_status.py --event guard_passed --result should_run --reason "inside official premarket window and no duplicate picks"
           echo "should_run=true" >> $GITHUB_OUTPUT
 
       - name: Send missed-window Telegram alert
@@ -83,6 +88,32 @@ jobs:
           TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
         run: |
           python scripts/send_missed_premarket_alert.py
+          rc=$?
+          if [ "$rc" -eq 0 ]; then
+            python scripts/record_daily_picks_run_status.py --event missed_window_alert --result success --reason "missed-window Telegram alert sent" --telegram-sent success
+          else
+            python scripts/record_daily_picks_run_status.py --event missed_window_alert --result failed --reason "missed-window Telegram alert failed" --telegram-sent failed
+          fi
+          exit "$rc"
+
+      - name: Commit run-status artifacts for skipped daily-picks attempt
+        if: always() && steps.guard.outputs.should_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f data/daily_picks_run_status_*.jsonl 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "ℹ No run-status changes to commit"
+            exit 0
+          fi
+          git commit -m "status: daily picks attempt $(TZ='America/New_York' date +%Y-%m-%dT%H:%M%z) [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "[status-push] retry $i/3"
+            sleep $((i * 2))
+          done
+          echo "❌ Failed to push daily-picks run-status artifact"
+          exit 1
 
       - name: Set up Python
         if: steps.guard.outputs.should_run == 'true'
@@ -115,7 +146,15 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           mkdir -p logs data
+          python scripts/record_daily_picks_run_status.py --event agent_started --result started --reason "main.py starting"
           python main.py 2>&1 | tee logs/run-$(date +%Y%m%d).log
+          rc=${PIPESTATUS[0]}
+          if [ "$rc" -eq 0 ]; then
+            python scripts/record_daily_picks_run_status.py --event agent_completed --result success --reason "main.py completed"
+          else
+            python scripts/record_daily_picks_run_status.py --event agent_completed --result failed --reason "main.py failed"
+          fi
+          exit "$rc"
 
       - name: Verify CSV was written
         if: steps.guard.outputs.should_run == 'true'
@@ -124,11 +163,13 @@ jobs:
           TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
           if [ "$TODAY_ROWS" -eq 0 ]; then
             echo "❌ CRITICAL: main.py ran but no picks logged for $ET_DATE!"
+            python scripts/record_daily_picks_run_status.py --event verify_csv_failed --result failed --reason "main.py ran but no picks logged" --picks-logged 0
             echo "Last 5 dates in CSV:"
             cut -d',' -f1 data/picks_log.csv | sort -u | tail -5
             exit 1
           else
             echo "✅ Verified $TODAY_ROWS picks logged for $ET_DATE"
+            python scripts/record_daily_picks_run_status.py --event verify_csv_success --result success --reason "picks logged for ET date" --picks-logged "$TODAY_ROWS"
           fi
 
       - name: Commit results (with retry safety)
@@ -136,7 +177,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl 2>/dev/null || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No changes to commit"
@@ -209,7 +250,15 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
-        run: python scripts/send_layman_daily.py
+        run: |
+          python scripts/send_layman_daily.py
+          rc=$?
+          if [ "$rc" -eq 0 ]; then
+            python scripts/record_daily_picks_run_status.py --event telegram_daily_success --result success --reason "daily Telegram sender completed" --telegram-sent success
+          else
+            python scripts/record_daily_picks_run_status.py --event telegram_daily_failed --result failed --reason "daily Telegram sender failed" --telegram-sent failed
+          fi
+          exit "$rc"
 
       - name: Commit post-send artifacts (M-B fix)
         if: always() && steps.guard.outputs.should_run == 'true'
@@ -219,7 +268,7 @@ jobs:
 
           # Include picks_log.csv here as a recovery path: if the first commit/push
           # was skipped or raced, the post-send commit must still persist today's row.
-          git add -f data/picks_log.csv data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl 2>/dev/null || true
+          git add -f data/picks_log.csv data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/daily_picks_run_status_*.jsonl 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No post-send changes to commit"

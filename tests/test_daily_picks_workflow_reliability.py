@@ -97,3 +97,35 @@ def test_watchdog_does_not_create_picks_or_bypass_safety():
     assert "does not bypass the daily-picks timing gate" in text
     assert "does not enable paper/live trading" in text
     assert "Manually trigger Daily Stock Picks" in text
+
+
+def test_daily_picks_records_run_status_events():
+    text = _text()
+
+    assert "scripts/record_daily_picks_run_status.py --event guard_started" in text
+    assert "--event before_window_skip" in text
+    assert "--event missed_window_skip" in text
+    assert "--event already_logged_skip" in text
+    assert "--event guard_passed" in text
+    assert "--event verify_csv_success" in text
+    assert "--event telegram_daily_success" in text
+    assert "data/daily_picks_run_status_*.jsonl" in text
+
+
+def test_skipped_daily_picks_attempts_commit_status_artifact():
+    text = _text()
+
+    assert "Commit run-status artifacts for skipped daily-picks attempt" in text
+    assert "steps.guard.outputs.should_run != 'true'" in text
+    assert "status: daily picks attempt" in text
+
+
+def test_watchdog_records_and_commits_run_status():
+    text = _watchdog_text()
+
+    assert "contents: write" in text
+    assert "--workflow watchdog --event watchdog_started" in text
+    assert "--event watchdog_checked --result missing_picks" in text
+    assert "--event watchdog_alert --result success" in text
+    assert "Commit watchdog run-status artifact" in text
+    assert "data/daily_picks_run_status_*.jsonl" in text

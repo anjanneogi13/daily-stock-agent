@@ -287,5 +287,13 @@ def scan_for_new_opportunities(exclude: set, sent_alerts: set, max_results: int 
             "scanner": "momentum",
         })
 
-    candidates.sort(key=lambda x: x["score"], reverse=True)
+    # Opening-range candidates are intentionally prioritized over legacy
+    # momentum alerts. They are time-sensitive early-session observations and
+    # should remain first even if a generic momentum score is slightly higher.
+    candidates.sort(
+        key=lambda x: (
+            0 if x.get("scanner") == "opening_range" else 1,
+            -float(x.get("score") or 0),
+        )
+    )
     return candidates[:max_results]

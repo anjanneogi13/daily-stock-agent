@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   watchdog:
@@ -41,10 +41,12 @@ jobs:
           OFFICIAL_CUTOFF=$((9 * 60 + 20))
 
           echo "Watchdog firing at $ET_DATE $ET_HOUR:$ET_MIN ET"
+          python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_started --result started --reason "watchdog checking daily picks status"
 
           # Skip duplicate DST fire — only run in the 09:xx ET hour.
           if [ "$ET_HOUR" != "09" ]; then
             echo "⏭ Wrong DST slot ($ET_HOUR:$ET_MIN ET) — skipping"
+            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_wrong_slot_skip --result skipped --reason "wrong DST slot"
             exit 0
           fi
 
@@ -55,8 +57,11 @@ jobs:
 
           if [ "$TODAY_ROWS" -gt 0 ]; then
             echo "✅ Picks already logged for $ET_DATE: $TODAY_ROWS row(s)"
+            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_checked --result picks_present --reason "picks already logged before cutoff" --picks-logged "$TODAY_ROWS"
             exit 0
           fi
+
+          python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_checked --result missing_picks --reason "no daily picks rows before cutoff" --picks-logged 0
 
           if [ "$ET_MINUTES_OF_DAY" -gt "$OFFICIAL_CUTOFF" ]; then
             WINDOW_NOTE="The 09:20 ET cutoff has passed. Do not send normal premarket picks now; use intraday monitor only."
@@ -83,9 +88,30 @@ jobs:
           done
 
           if [ "$SENT" -eq 0 ]; then
+            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_alert --result failed --reason "no Telegram alert confirmed" --telegram-sent failed
             echo "❌ No watchdog Telegram alert was confirmed"
             exit 1
           fi
 
+          python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_alert --result success --reason "missing-picks Telegram alert sent" --telegram-sent success
           echo "🚨 Watchdog alert sent — daily picks missing before cutoff"
+          exit 1
+
+      - name: Commit watchdog run-status artifact
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f data/daily_picks_run_status_*.jsonl 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "ℹ No watchdog run-status changes to commit"
+            exit 0
+          fi
+          git commit -m "status: watchdog daily picks check $(TZ='America/New_York' date +%Y-%m-%dT%H:%M%z) [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "[watchdog-status-push] retry $i/3"
+            sleep $((i * 2))
+          done
+          echo "❌ Failed to push watchdog run-status artifact"
           exit 1
