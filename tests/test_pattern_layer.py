@@ -6,12 +6,14 @@ from pathlib import Path
 
 from src import pattern_layer as pl
 from src import pattern_stats as ps
+from src import learning_journal as lj
 
 
 @pytest.fixture
 def isolated(tmp_path, monkeypatch):
     out = tmp_path / "stats.json"
     monkeypatch.setattr(ps, "STATS", out)
+    monkeypatch.setattr(lj, "JOURNAL", tmp_path / "learning_journal.jsonl")
     return out
 
 

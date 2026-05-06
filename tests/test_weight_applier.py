@@ -7,6 +7,7 @@ import pytest
 
 from src import weight_applier as wa
 from src import weight_proposer as wp
+from src import learning_journal as lj
 
 
 @pytest.fixture
@@ -18,6 +19,7 @@ def isolated(tmp_path, monkeypatch):
     monkeypatch.setattr(wa, "HISTORY", history)
     monkeypatch.setattr(wa, "PROPOSALS", proposals)
     monkeypatch.setattr(wp, "PROPOSALS", proposals)
+    monkeypatch.setattr(lj, "JOURNAL", tmp_path / "learning_journal.jsonl")
     return weights, history, proposals
 
 

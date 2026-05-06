@@ -105,9 +105,10 @@ Key areas:
 
 These are not urgent blockers:
 
-1. Full test suite can mutate tracked data files:
+1. Remaining test/data isolation watch item:
    - `data/picks_log.csv`
    - `data/signal_journal.jsonl`
+   - `data/learning_journal.jsonl` side effects fixed on 2026-05-06.
 2. Remaining undercovered modules:
    - `performance_stats`
    - `paper_trader`
@@ -134,8 +135,8 @@ They are not active scale-out execution logic.
 
 Immediate next work:
 
-1. Fix test/data isolation.
-2. Align readiness closed statuses.
+1. Align readiness closed statuses.
+2. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
 3. Add tests for `performance_stats`.
 4. Add tests for smaller modules.
 5. Harden backtester.

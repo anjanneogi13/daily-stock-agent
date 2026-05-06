@@ -46,9 +46,13 @@ Now fixed from the comprehensive audit:
 
 Next cleanup before feature work:
 
-1. Fix test/data isolation so full test suite does not mutate tracked data.
-2. Align closed-status logic between readiness scripts.
+1. Align closed-status logic between readiness scripts.
+2. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
 3. Clean documentation consistency issues.
+
+Completed 2026-05-06:
+
+- Fix test/data isolation: `data/learning_journal.jsonl` test side effects are isolated.
 
 After those are clean, resume feature work with opening-range intraday scanner.
 
@@ -168,14 +172,14 @@ Required pieces:
 
 Still important:
 
-1. Fix test/data isolation.
-2. Add tests for:
+1. Align readiness closed statuses.
+2. Audit remaining test/data isolation for `picks_log.csv` and `signal_journal.jsonl`.
+3. Add tests for:
    - `src/performance_stats.py`
    - `src/paper_trader.py`
    - `src/picks_csv.py`
    - `src/monster_data.py`
    - `src/cape_ratio.py`
-3. Align readiness closed statuses.
 4. Backtester hardening.
 
 ---

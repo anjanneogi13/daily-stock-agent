@@ -13,6 +13,50 @@ Rules:
 
 ---
 
+## 2026-05-06 — Fixed learning journal test/data isolation
+
+**Type:** test / data isolation / hygiene
+
+**Summary:**
+
+Fixed full-suite side effects that mutated tracked `data/learning_journal.jsonl`.
+
+Root cause:
+
+- `tests/test_nightly_conductor.py`
+- `tests/test_pattern_layer.py`
+- `tests/test_weight_applier.py`
+
+were exercising code paths that append to `src.learning_journal.JOURNAL` without monkeypatching it away from the tracked production data file.
+
+Fix:
+
+- Patched each test/fixture to redirect `learning_journal.JOURNAL` to `tmp_path / "learning_journal.jsonl"`.
+- Verified targeted and full-suite runs no longer mutate tracked `data/learning_journal.jsonl`.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_nightly_conductor.py tests/test_pattern_layer.py tests/test_weight_applier.py -q --tb=short --disable-warnings`
+  - `26 passed`
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+  - `1284 passed, 28 skipped`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff -- data/learning_journal.jsonl`
+  - no diff
+- `git diff --check`
+
+**Follow-up:**
+
+Continue lower-severity audit cleanup:
+
+1. Align closed-status logic between readiness scripts.
+2. Clean minor documentation consistency issues.
+3. Then resume feature roadmap with opening-range intraday scanner.
+
+---
+
 ## 2026-05-06 — Comprehensive audit fixes for monitoring safety
 
 **Type:** audit / bug fix / workflow hardening / monitoring safety

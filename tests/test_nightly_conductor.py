@@ -4,6 +4,7 @@ import pytest
 from pathlib import Path
 
 from src import nightly_conductor as nc
+from src import learning_journal as lj
 
 
 def test_step_wraps_success():
@@ -63,6 +64,7 @@ def test_load_universe_for_scan_picks_only(monkeypatch, tmp_path):
 
 def test_run_nightly_executes_all_steps_with_isolation(monkeypatch, tmp_path):
     """Even if every real step fails, conductor must produce a summary."""
+    monkeypatch.setattr(lj, "JOURNAL", tmp_path / "learning_journal.jsonl")
     # Force each step to raise — verify isolation
     monkeypatch.setattr(nc, "_step_pattern_scan",        lambda *a,**k: (_ for _ in ()).throw(RuntimeError("x")))
     monkeypatch.setattr(nc, "_step_pattern_stats",       lambda: (_ for _ in ()).throw(RuntimeError("x")))
