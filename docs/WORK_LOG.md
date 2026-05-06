@@ -13,6 +13,25 @@ Rules:
 
 ---
 
+## 2026-05-06 — Forced commit of opening-range status artifacts
+
+**Type:** workflow reliability / artifact persistence
+
+**Summary:**
+
+`data/` is ignored by `.gitignore`, so the Intraday Monitor workflow must use
+`git add -f` for runtime artifacts that are intended to be committed.
+
+Updated the workflow to force-add:
+
+- `data/intraday_alerts_*.json`
+- `data/opening_range_observations_*.jsonl`
+- `data/opening_range_run_status_*.jsonl`
+
+This ensures opening-range run-status evidence persists after GitHub Actions runs.
+
+---
+
 ## 2026-05-06 — Added opening-range run-status ledger
 
 **Type:** workflow observability / monitoring-only / intraday reliability
