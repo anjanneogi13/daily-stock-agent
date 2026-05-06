@@ -13,6 +13,56 @@ Rules:
 
 ---
 
+## 2026-05-06 — Refined opening-range workflow schedule
+
+**Type:** workflow / monitoring-only / intraday scanner
+
+**Summary:**
+
+Refined `.github/workflows/intraday_monitor.yml` so the opening-range scanner can run early enough to catch moves closer to market open.
+
+Schedule now includes:
+
+- 09:35 ET targeted opening-range check
+- 09:45 ET targeted opening-range check
+- 10:00 ET follow-up through the baseline 30-minute monitor
+
+Implementation details:
+
+- Added targeted cron:
+  - `35,45 13-14 * * 1-5`
+- Kept baseline cron:
+  - `0,30 13-21 * * 1-5`
+- Added ET guard logic so `:35` / `:45` scheduled runs are allowed only when they are actually 09:35 / 09:45 ET.
+- This avoids DST/EST duplicate off-target scans such as 10:35 / 10:45 ET.
+
+Safety:
+
+- Output remains `WATCH ONLY`.
+- Observations persist only to `data/opening_range_observations_YYYY-MM-DD.jsonl`.
+- No paper trades are created.
+- Paper trading remains disabled.
+
+**Tests:**
+
+- `python3 -m pytest tests/test_intraday_monitor_workflow_schedule.py tests/test_intraday_monitor_workflow_observations.py -q --tb=short --disable-warnings`
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff -- data/picks_log.csv data/signal_journal.jsonl data/learning_journal.jsonl`
+- `git diff --check`
+
+**Next:**
+
+Continue monitoring-only rollout:
+
+1. Review opening-range observation artifacts after market sessions.
+2. Add review/backtest tooling once enough observations exist.
+3. Do not enable paper trading.
+
+---
+
 ## 2026-05-06 — Persist opening-range observations
 
 **Type:** feature / monitoring-only / observability / data artifact

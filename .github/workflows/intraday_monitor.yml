@@ -2,13 +2,16 @@ name: Intraday Monitor
 
 on:
   schedule:
-    # Every 30 min during US market hours (9:30 AM - 4:00 PM ET)
-    # Two cron sets to handle DST — guard step skips off-hours
-    # EDT (Mar-Nov): 13:30-20:00 UTC
-    # EST (Nov-Mar): 14:30-21:00 UTC
-    # Single cron range covers both EDT (13:30-20:00 UTC) and EST (14:30-21:00 UTC)
-    # market windows. The internal ET-hour guard below skips off-hours fires.
-    # This eliminates the 2x duplicate runs that occurred in EDT-EST overlap.
+    # Targeted opening-range checks:
+    # - 09:35 ET and 09:45 ET are covered by 13/14 UTC during DST/EST.
+    # - The guard below skips off-target 35/45-minute fires, so these do not
+    #   become random 10:35/10:45 scans during DST.
+    - cron: '35,45 13-14 * * 1-5'
+    # Baseline intraday monitor:
+    # - Every 30 min during US market hours (9:30 AM - 4:00 PM ET).
+    # - Single cron range covers both EDT (13:30-20:00 UTC) and EST
+    #   (14:30-21:00 UTC); the ET guard below skips off-hours fires.
+    # - This also covers the 10:00 ET opening-range follow-up.
     - cron: '0,30 13-21 * * 1-5'
   workflow_dispatch:
 
@@ -37,6 +40,15 @@ jobs:
           # Skip weekends
           if [ "$ET_DOW" -gt 5 ]; then
             echo "⏭  Weekend — skipping"; exit 0
+          fi
+          # Opening-range targeted cron fires at :35/:45 in two UTC hours to
+          # cover both EDT and EST. Only allow those minute-specific scheduled
+          # runs when they are actually 09:35/09:45 ET.
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$ET_MIN" = "35" ] || [ "$ET_MIN" = "45" ]; }; then
+            if [ "$ET_HOUR" != "09" ]; then
+              echo "⏭  Off-target opening-range fire ($ET_HOUR:$ET_MIN ET) — skipping"
+              exit 0
+            fi
           fi
           # Market hours: 9:30 AM - 4:00 PM ET
           # Allow 9:30, 10:00, 10:30, ..., 16:00

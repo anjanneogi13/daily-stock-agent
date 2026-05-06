@@ -104,6 +104,8 @@ Before `TRADING_MODE=paper` is enabled, verify:
 
 The opening-range scanner is monitoring-only.
 
+Workflow cadence includes 09:35 / 09:45 / 10:00 ET monitoring checks.
+
 It may produce:
 
 - `watch_only=True`

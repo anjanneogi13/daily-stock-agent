@@ -48,12 +48,13 @@ Audit/hygiene work completed:
 - Remaining tracked data isolation audited clean for `data/picks_log.csv` and `data/signal_journal.jsonl`.
 - Closed-status logic aligned between readiness scripts.
 - Minor documentation consistency cleanup completed.
+- 09:35 / 09:45 / 10:00 ET opening-range workflow cadence is wired.
 
 Next feature work:
 
 1. Continue opening-range intraday scanner rollout in monitoring-only mode.
 2. Review `data/opening_range_observations_YYYY-MM-DD.jsonl` artifacts after market sessions.
-3. Consider 09:35 / 09:45 / 10:00 ET workflow schedule refinement.
+3. Add review/backtest tooling once enough observations exist.
 4. Keep outputs observe/watch-only until enough intraday evidence exists.
 5. Do not enable paper trading.
 6. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
