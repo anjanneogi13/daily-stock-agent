@@ -7,6 +7,7 @@ Use these docs first:
 | `PROJECT_BLUEPRINT.md` | Canonical architecture, current state, feature inventory, roadmap, and known gaps |
 | `WORK_LOG.md` | Append-only history of meaningful work |
 | `NEXT_SESSION.md` | Daily refreshed next-session handoff |
+| `AGENT_MATURITY_TRACKER.md` | Real-world trading lessons, maturity scorecard, and intelligence roadmap |
 
 Historical docs should be archived under `docs/archive/`.
 

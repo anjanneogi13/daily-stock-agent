@@ -13,6 +13,44 @@ Rules:
 
 ---
 
+## 2026-05-06 — Created agent maturity tracker and intelligence roadmap
+
+**Type:** documentation / product strategy
+
+**Summary:**
+
+Created `docs/AGENT_MATURITY_TRACKER.md` to preserve the May 5 trading-day analysis and track how the agent matures.
+
+Documented:
+
+- Premarket swing, intraday, and monster-hunt lanes.
+- POWI as an older 2026-04-28 swing pick that hit `+2.0R` on 2026-05-05.
+- EXPD as a valid earnings catalyst but poor intraday/swing classification case.
+- GILT as a valid catalyst with speculative/pump-risk concerns.
+- NET as a strong intraday opportunity detected too late.
+- Daily Telegram timing and stale-price issues.
+- Fundamental/P&L analysis roadmap.
+- Reader/wisdom learning roadmap.
+- Historical regime learning roadmap.
+- Historical chart/pattern replay roadmap.
+- Monster-hunt long-term compounder roadmap.
+
+Updated:
+
+- `docs/README.md`
+- `docs/PROJECT_BLUEPRINT.md`
+- `docs/NEXT_SESSION.md`
+
+**Follow-up:**
+
+Next implementation should start with daily-picks timing and stale-price protection before deeper intelligence features.
+
+**Tests:**
+
+Documentation-only change. Run markdown/file sanity and startup health before next coding task.
+
+---
+
 ## 2026-05-06 — Reviewed 2026-05-05 pick outcomes
 
 **Type:** monitoring / data evaluation

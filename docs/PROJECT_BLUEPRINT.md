@@ -1,6 +1,6 @@
 # Daily Stock Agent — Project Blueprint
 
-**Last updated:** 2026-05-05
+**Last updated:** 2026-05-06
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
 **Test suite:** 1273 passed, 28 skipped
 **Mode:** monitoring-only
@@ -154,6 +154,31 @@ Planned future features:
    - Backtest rerunner.
    - Read-only dashboard.
 
+## Agent Maturity / Intelligence Roadmap
+
+The project now tracks real-world trading intelligence maturity in `docs/AGENT_MATURITY_TRACKER.md`.
+
+Key maturity lanes:
+
+1. Premarket swing picks.
+2. Intraday opportunities.
+3. Monster hunt / long-term compounders.
+
+Major roadmap additions:
+
+- Premarket timing hard gate.
+- Price freshness / stale-entry protection.
+- News action-window enforcement.
+- Opening-range intraday scanner.
+- Fundamental-quality and pump-risk smell.
+- Monster-hunt thesis engine.
+- Quarterly/yearly P&L and earnings analyzer.
+- Reader/wisdom ingestion from legal market-learning sources.
+- Historical regime learning.
+- Historical chart and pattern replay learning.
+
+These features remain monitoring-only until tested and readiness gates approve promotion.
+
 ## Documentation Policy
 
 Use these canonical docs:
@@ -163,6 +188,7 @@ Use these canonical docs:
 | `docs/PROJECT_BLUEPRINT.md` | Architecture, current state, feature inventory, roadmap |
 | `docs/WORK_LOG.md` | Append-only record of every meaningful change |
 | `docs/NEXT_SESSION.md` | Daily next-session handoff |
+| `docs/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
 
 After every bug fix, feature, or process change:
 
