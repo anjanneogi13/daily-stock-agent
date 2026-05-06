@@ -13,6 +13,7 @@ from intraday_scanner import (
     scan_for_new_opportunities,
     get_live_quote,
     append_opening_range_observations,
+    append_opening_range_run_status,
 )
 from src.trailing_stop import compute_trailing_sl, trail_status
 from src.picks_csv import update_pick_row
@@ -288,9 +289,20 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
     return msg[:3950] + "\n\n_(truncated)_" if len(msg) > 4000 else msg
 
 def main():
+    append_opening_range_run_status(
+        event="monitor_started",
+        result="started",
+        reason="intraday monitor workflow started",
+    )
+
     picks = load_todays_picks()
     if not picks:
         print("[monitor] No picks to monitor — exiting.")
+        append_opening_range_run_status(
+            event="monitor_skipped",
+            result="no_picks",
+            reason="no picks available to monitor; opening-range scan skipped",
+        )
         return
     sent_alerts = load_sent_alerts()
     print(f"[monitor] Monitoring {len(picks)} picks. {len(sent_alerts)} alerts already sent.")
@@ -300,10 +312,23 @@ def main():
     new_opps = scan_for_new_opportunities(exclude=existing_tickers,
                                           sent_alerts=sent_alerts, max_results=3)
     print(f"[monitor] {len(new_opps)} new opportunities found.")
+    opening_range_count = sum(1 for o in new_opps if o.get("scanner") == "opening_range")
     n_or_obs = append_opening_range_observations(new_opps)
     if n_or_obs:
         print(f"[monitor] {n_or_obs} opening-range observation(s) recorded.")
+
     msg = build_message(monitor_alerts, new_opps)
+    total_alert_count = len(monitor_alerts) + len(new_opps)
+    append_opening_range_run_status(
+        event="monitor_completed",
+        result="alerts_ready" if msg else "no_alerts",
+        reason="intraday monitor completed; Telegram sender records send/skipped result",
+        candidate_count=opening_range_count,
+        alert_count=total_alert_count,
+        observation_count=n_or_obs,
+        telegram_sent=None,
+    )
+
     if not msg:
         print("[monitor] Nothing material — no message sent.")
         return

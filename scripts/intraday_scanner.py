@@ -6,6 +6,7 @@ that weren't in the morning picks.
 import os, json
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 
 try:
     import yfinance as yf
@@ -165,6 +166,90 @@ def opening_range_observation_path(today: str | None = None) -> Path:
     """Return the JSONL artifact path for opening-range observations."""
     day = today or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     return Path("data") / f"opening_range_observations_{day}.jsonl"
+
+
+ET = ZoneInfo("America/New_York")
+
+
+def opening_range_run_status_path(today: str | None = None) -> Path:
+    """Return the JSONL artifact path for opening-range run status.
+
+    Date is ET-scoped because this artifact answers operational questions about
+    the US trading session.
+    """
+    day = today or datetime.now(ET).strftime("%Y-%m-%d")
+    return Path("data") / f"opening_range_run_status_{day}.jsonl"
+
+
+def build_opening_range_run_status(
+    *,
+    event: str,
+    result: str,
+    reason: str = "",
+    candidate_count: int = 0,
+    alert_count: int = 0,
+    observation_count: int = 0,
+    telegram_sent: bool | None = None,
+    now: datetime | None = None,
+) -> dict:
+    """Build a monitoring-only run-status row for opening-range/intraday scans."""
+    now_et = (now or datetime.now(timezone.utc)).astimezone(ET)
+    return {
+        "date": now_et.strftime("%Y-%m-%d"),
+        "timestamp_et": now_et.isoformat(timespec="seconds"),
+        "timestamp_utc": now_et.astimezone(timezone.utc).isoformat(timespec="seconds"),
+        "workflow": "intraday-monitor",
+        "scanner": "opening_range",
+        "event": event,
+        "result": result,
+        "reason": reason,
+        "candidate_count": int(candidate_count or 0),
+        "alert_count": int(alert_count or 0),
+        "observation_count": int(observation_count or 0),
+        "telegram_sent": telegram_sent,
+        "mode": "monitoring_only",
+        "watch_only": True,
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
+        "github": {
+            "workflow": os.getenv("GITHUB_WORKFLOW", ""),
+            "event_name": os.getenv("GITHUB_EVENT_NAME", ""),
+            "run_id": os.getenv("GITHUB_RUN_ID", ""),
+            "run_attempt": os.getenv("GITHUB_RUN_ATTEMPT", ""),
+            "sha": os.getenv("GITHUB_SHA", ""),
+            "ref": os.getenv("GITHUB_REF", ""),
+        },
+    }
+
+
+def append_opening_range_run_status(
+    *,
+    event: str,
+    result: str,
+    reason: str = "",
+    candidate_count: int = 0,
+    alert_count: int = 0,
+    observation_count: int = 0,
+    telegram_sent: bool | None = None,
+    path: Path | None = None,
+    now: datetime | None = None,
+) -> Path:
+    """Append one opening-range run-status row and return the path written."""
+    record = build_opening_range_run_status(
+        event=event,
+        result=result,
+        reason=reason,
+        candidate_count=candidate_count,
+        alert_count=alert_count,
+        observation_count=observation_count,
+        telegram_sent=telegram_sent,
+        now=now,
+    )
+    out = path or opening_range_run_status_path(record["date"])
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record, sort_keys=True) + "\n")
+    return out
 
 
 def build_opening_range_observation(candidate: dict, now: datetime | None = None) -> dict:

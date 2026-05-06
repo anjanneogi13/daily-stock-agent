@@ -147,6 +147,40 @@ def test_append_opening_range_observations_writes_jsonl(tmp_path):
     assert row["source"] == "intraday_scanner"
 
 
+def test_opening_range_run_status_is_monitoring_only(tmp_path):
+    path = tmp_path / "opening_range_run_status_2026-05-06.jsonl"
+
+    out = scanner.append_opening_range_run_status(
+        event="monitor_completed",
+        result="no_alerts",
+        reason="scanner ran with no qualifying opening-range candidates",
+        candidate_count=0,
+        alert_count=0,
+        observation_count=0,
+        telegram_sent=False,
+        path=path,
+        now=datetime(2026, 5, 6, 10, 0, tzinfo=ET),
+    )
+
+    assert out == path
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["date"] == "2026-05-06"
+    assert row["workflow"] == "intraday-monitor"
+    assert row["scanner"] == "opening_range"
+    assert row["event"] == "monitor_completed"
+    assert row["result"] == "no_alerts"
+    assert row["candidate_count"] == 0
+    assert row["alert_count"] == 0
+    assert row["observation_count"] == 0
+    assert row["telegram_sent"] is False
+    assert row["watch_only"] is True
+    assert row["mode"] == "monitoring_only"
+    assert row["paper_trading_enabled"] is False
+    assert row["live_trading_enabled"] is False
+
+
 def test_append_opening_range_observations_ignores_non_or_or_non_watch_only(tmp_path):
     path = tmp_path / "opening_range_observations_2026-05-06.jsonl"
 

@@ -13,6 +13,44 @@ Rules:
 
 ---
 
+## 2026-05-06 — Added opening-range run-status ledger
+
+**Type:** workflow observability / monitoring-only / intraday reliability
+
+**Summary:**
+
+Added a durable run-status artifact for intraday/opening-range monitoring.
+
+New artifact:
+
+- `data/opening_range_run_status_YYYY-MM-DD.jsonl`
+
+Records:
+
+- intraday monitor start,
+- monitor skip reason,
+- monitor completion,
+- opening-range candidate count,
+- total alert count,
+- opening-range observation count,
+- Telegram send/skipped/failed result.
+
+Purpose:
+
+- Distinguish “scanner did not run” from “scanner ran and found no qualified observations.”
+- Preserve operational evidence even when no Telegram alert is sent.
+- Keep opening-range monitoring watch-only and separate from official picks.
+
+Safety:
+
+- Monitoring-only.
+- watch_only=true.
+- No paper trading.
+- No live trading.
+- Does not write official picks.
+
+---
+
 ## 2026-05-06 — Combined missed-window and late-ideas Telegram notice
 
 **Type:** UX fix / monitoring-only / alert clarity
