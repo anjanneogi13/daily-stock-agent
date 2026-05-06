@@ -1252,5 +1252,65 @@
     "added_at": "2026-05-06T12:16:49.006696+00:00",
     "expires": "2026-05-13T12:16:49.006703+00:00",
     "hard_block": false
+  },
+  "AMD": {
+    "ticker": "AMD",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "AMD Stock Hits New All-Time Highs: Well Positioned 'To Ride That Demand Wave'",
+    "added_at": "2026-05-06T15:10:39.867923+00:00",
+    "expires": "2026-05-13T15:10:39.867930+00:00",
+    "hard_block": false
+  },
+  "ALAB": {
+    "ticker": "ALAB",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "RBC Capital Maintains Outperform on Astera Labs, Raises Price Target to $270",
+    "added_at": "2026-05-06T15:10:39.869457+00:00",
+    "expires": "2026-05-11T15:10:39.869462+00:00",
+    "hard_block": false
+  },
+  "CYTK": {
+    "ticker": "CYTK",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Cytokinetics, Raises Price Target to $119",
+    "added_at": "2026-05-06T15:10:39.870891+00:00",
+    "expires": "2026-05-11T15:10:39.870896+00:00",
+    "hard_block": false
+  },
+  "NBIX": {
+    "ticker": "NBIX",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Piper Sandler Maintains Overweight on Neurocrine Biosciences, Raises Price Target to $207",
+    "added_at": "2026-05-06T15:10:39.872195+00:00",
+    "expires": "2026-05-11T15:10:39.872200+00:00",
+    "hard_block": false
+  },
+  "ANET": {
+    "ticker": "ANET",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Overweight on Arista Networks, Raises Price Target to $181",
+    "added_at": "2026-05-06T15:10:39.874815+00:00",
+    "expires": "2026-05-11T15:10:39.874820+00:00",
+    "hard_block": false
   }
 }
