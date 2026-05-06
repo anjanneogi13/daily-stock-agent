@@ -16,6 +16,7 @@ Do not start paper trading yet.
 4. This file
 5. `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 6. `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
+7. `docs/decisions/2026-05-06-opening-range-outcome-join-design.md`
 
 ---
 
@@ -242,3 +243,6 @@ After every bug fix, feature, audit, or process change:
 3. Update `docs/PROJECT_BLUEPRINT.md` if architecture, roadmap, or product state changed.
 4. Update `docs/AGENT_MATURITY_TRACKER.md` when trading lessons or intelligence roadmap changes.
 5. Keep CI/tests green.
+
+
+Backtest tool: `python scripts/backtest_opening_range_observations.py`

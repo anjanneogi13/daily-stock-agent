@@ -13,6 +13,36 @@ Rules:
 
 ---
 
+## 2026-05-06 — Added opening-range outcome-join/backtest skeleton
+
+**Type:** tooling / monitoring-only / backtest design
+
+**Summary:**
+
+Added a read-only outcome-join/backtest skeleton for opening-range observations.
+
+New script:
+
+- `scripts/backtest_opening_range_observations.py`
+
+New design doc:
+
+- `docs/decisions/2026-05-06-opening-range-outcome-join-design.md`
+
+Safety:
+
+- Script is read-only.
+- `paper_trading_enabled=false`.
+- `ready_for_paper_trading=false`.
+- Conservative same-bar ambiguity: if TP and SL both touch in the same bar, count `sl_hit`.
+- Missing bar data is explicit and does not imply readiness.
+
+**Next:**
+
+Collect real opening-range observation and bar artifacts before using backtest results for any policy decision.
+
+---
+
 ## 2026-05-06 — Added opening-range observation review tool
 
 **Type:** tooling / monitoring-only / review

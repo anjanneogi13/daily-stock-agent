@@ -109,6 +109,7 @@ Workflow cadence includes 09:35 / 09:45 / 10:00 ET monitoring checks.
 Review command:
 
 - `python scripts/review_opening_range_observations.py`
+- `python scripts/backtest_opening_range_observations.py`
 
 It may produce:
 
@@ -127,3 +128,8 @@ It must not produce:
 - official buy instructions.
 
 Promotion from observation to paper candidate requires a later evidence-backed policy change.
+
+
+Related outcome-join design:
+
+- `docs/decisions/2026-05-06-opening-range-outcome-join-design.md`
