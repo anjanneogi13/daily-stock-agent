@@ -1338,15 +1338,16 @@
     },
     {
       "ticker": "HPK",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q1 sales beat estimates by 1.1% ($215.585M vs $213.190M), a modest beat that is positive but not substantial enough for major trading action.",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings with significant EPS miss (-$0.06 vs estimate) outweighing modest revenue beat (+1.1%), likely to pressure stock in near-term trading.",
       "action_window": "next_day",
-      "headline": "HighPeak Energy Q1 Sales $215.585M Beat $213.190M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52342686/highpeak-energy-q1-sales-215-585m-beat-213-190m-estimate",
+      "headline": "UPDATE: HighPeak Energy Q1 Adj. EPS $(0.02) Misses $0.04 Estimate, Sales $215.585M Beat $213.190M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52352164/update-highpeak-energy-q1-adj-eps-0-02-misses-0-04-estimate-sales-215-585m-beat-213-190m-estimate",
       "source": "alpaca",
-      "added_at": "2026-05-06T20:09:39.192212+00:00"
+      "added_at": "2026-05-06T20:09:39.192212+00:00",
+      "updated_at": "2026-05-06T23:44:32.630949+00:00"
     },
     {
       "ticker": "CLFD",
@@ -1636,6 +1637,54 @@
       "url": "https://www.benzinga.com/news/26/05/52351604/magnite-sees-q2-contribution-ex-tac-177-000m-181-000m-vs-177-852m-est",
       "source": "alpaca",
       "added_at": "2026-05-06T22:44:06.139524+00:00"
+    },
+    {
+      "ticker": "CODI",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed Q1 results with significant EPS beat (actual $0.078 vs est. -$0.06) offset by revenue miss ($426.9M vs est. $437.7M), creating uncertain trading direction.",
+      "action_window": "next_day",
+      "headline": "UPDATE: Compass Diversified Hldgs Q1 Adj. EPS $0.078 Beats $(0.06) Estimate, Sales $426.855M Miss $437.745M Estimate",
+      "url": "https://www.benzinga.com/quote/CODI",
+      "source": "alpaca",
+      "added_at": "2026-05-06T23:44:32.630907+00:00"
+    },
+    {
+      "ticker": "RYZ",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Q2 EPS guidance midpoint of $0.40 misses consensus estimate of $0.43 by 7%, while sales guidance range is essentially in-line, indicating margin pressure.",
+      "action_window": "next_day",
+      "headline": "Ryerson Holding Sees Q2 GAAP EPS $0.38-$0.42 vs $0.43 Est; Sees Sales $1.860B-$1.930B vs $1.862B Est",
+      "url": "https://www.benzinga.com/news/26/05/52352337/ryerson-holding-sees-q2-gaap-eps-0-38-0-42-vs-0-43-est-sees-sales-1-860b-1-930b-vs-1-862b-est",
+      "source": "alpaca",
+      "added_at": "2026-05-06T23:44:32.630921+00:00"
+    },
+    {
+      "ticker": "HNST",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS inline but revenue miss ($78.099M vs $78.263M est) creates modest negative pressure with high urgency due to after-hours earnings release timing.",
+      "action_window": "next_day",
+      "headline": "Honest Co Q1 Adj. EPS $0.01, Inline, Sales $78.099M Miss $78.263M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52352296/honest-co-q1-adj-eps-0-01-inline-sales-78-099m-miss-78-263m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T23:44:32.630931+00:00"
+    },
+    {
+      "ticker": "KRO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Kronos Worldwide beat EPS estimates by $0.12 (75% better than expected loss) and exceeded revenue estimates, representing a strong double beat on quarterly earnings.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: Kronos Worldwide Q1 EPS $(0.04) Beats $(0.16) Estimate, Sales $509.800M Beat $508.755M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52352204/correction-kronos-worldwide-q1-eps-0-04-beats-0-16-estimate-sales-509-800m-beat-508-755m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-06T23:44:32.630941+00:00"
     }
   ]
 }
