@@ -136,8 +136,10 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
         price = live["price"]
 
         # Phase 2B.2: update peak price + trailing SL per check
-        from datetime import datetime
-        today_str = datetime.now().strftime("%Y-%m-%d")
+        # Use module TODAY, not wall-clock date, so tests/backfills/manual
+        # monitoring runs update the same pick_date that load_todays_picks()
+        # selected. Wall-clock date caused close writes to miss rows.
+        today_str = TODAY
         original_sl = float(p.get("original_sl") or sl)
         current_sl = float(p.get("current_sl") or sl)
         peak_price = float(p.get("peak_price") or entry)

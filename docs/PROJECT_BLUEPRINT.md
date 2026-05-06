@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-06
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1273 passed, 28 skipped
+**Test suite:** 1284 passed, 28 skipped
 **Mode:** monitoring-only
 
 ## Purpose
@@ -17,6 +17,10 @@ The repo is healthy for monitoring mode:
 - Main workflows are present.
 - Core data-quality audits are green.
 - Recent persistence and Telegram dedup bugs are fixed.
+- Daily-picks timing hard gate is implemented.
+- Stale/unverified premarket prices become watch-only instead of actionable.
+- Intraday news cannot silently become normal swing picks; it is marked watch-only until intraday planning matures.
+- Legacy local paper logging is opt-in only and disabled by default.
 - Major undercovered modules now have tests.
 - Paper trading remains intentionally deferred.
 
@@ -131,10 +135,11 @@ They are not active scale-out execution logic.
 Immediate next work:
 
 1. Fix test/data isolation.
-2. Add tests for `performance_stats`.
-3. Add tests for smaller modules.
-4. Align readiness closed statuses.
+2. Align readiness closed statuses.
+3. Add tests for `performance_stats`.
+4. Add tests for smaller modules.
 5. Harden backtester.
+6. Build opening-range intraday scanner.
 
 Planned future features:
 

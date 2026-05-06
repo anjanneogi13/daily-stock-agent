@@ -101,3 +101,43 @@ def test_main_dedup_skip_does_not_send_or_mark(monkeypatch):
     assert sld.main() == 0
     send.assert_not_called()
     mark_sent.assert_not_called()
+
+def test_build_message_marks_watch_only_without_actionable_buy():
+    import scripts.send_layman_daily as sld
+
+    msg = sld.build_message([{
+        "ticker": "GILT",
+        "trade_type": "swing",
+        "score": "0.75",
+        "entry": "18.34",
+        "stop_loss": "17.50",
+        "take_profit": "20.00",
+        "qty": "10",
+        "premarket_tag": "👀 WATCH ONLY",
+        "premarket_reason": "could not verify fresh price — require fresh quote before entry",
+        "premarket_actionable": False,
+    }])
+
+    assert "WATCH ONLY" in msg
+    assert "No buy price is actionable" in msg
+    assert "Require a fresh live quote" in msg
+    assert "Buy at:" not in msg
+
+def test_build_message_marks_generic_watch_only_without_actionable_buy():
+    import scripts.send_layman_daily as sld
+
+    msg = sld.build_message([{
+        "ticker": "EXPD",
+        "trade_type": "swing",
+        "score": "0.75",
+        "entry": "149.14",
+        "stop_loss": "146.60",
+        "take_profit": "153.37",
+        "qty": "10",
+        "watch_only": "True",
+        "watch_only_reason": "news action window is intraday; not enough confirmation for a normal swing entry",
+    }])
+
+    assert "WATCH ONLY" in msg
+    assert "news action window is intraday" in msg
+    assert "Buy at:" not in msg

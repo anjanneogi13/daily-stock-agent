@@ -4,9 +4,10 @@ Reads today's picks from data/picks_log.csv, checks market conditions,
 and writes a tagged version to data/picks_today_tagged.json for the formatters.
 
 Tags each pick:
-  ✅ SAFE         — proceed normally
-  ⚠️ HALF SIZE    — reduce position by 50%
-  🚫 SKIP TODAY   — don't enter, gap too risky
+  ✅ SAFE          — proceed normally
+  ⚠️ HALF SIZE     — reduce position by 50%
+  🚫 SKIP TODAY    — don't enter, gap too risky
+  👀 WATCH ONLY    — no actionable entry until fresh quote is verified
 """
 import csv, json, sys
 from datetime import datetime
@@ -83,7 +84,7 @@ for p_ in picks:
 
     _, last_close, _ = safe_last(ticker)
     if last_close is None:
-        tag, reason = "⚠️ HALF SIZE", "could not verify price"
+        tag, reason = "👀 WATCH ONLY", "could not verify fresh price — require fresh quote before entry"
     else:
         gap_pct = (last_close - entry) / entry * 100
         sl_buffer = (entry - sl) / entry * 100  # how much room before SL
@@ -110,6 +111,7 @@ for p_ in picks:
         "reason": reason,
         "current_price": round(last_close, 2) if last_close else None,
         "gap_pct": round((last_close - entry) / entry * 100, 2) if last_close else None,
+        "actionable": tag not in ("👀 WATCH ONLY", "🚫 SKIP TODAY"),
     })
     print(f"  {tag}  {ticker:6s}  {reason}")
 

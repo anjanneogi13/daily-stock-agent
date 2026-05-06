@@ -60,3 +60,37 @@ def test_pick_logger_fields_include_sector_alpha_contract():
     """Sector alpha fields are written by pick_evaluator and must be durable."""
     missing = sorted(SECTOR_ALPHA_FIELDS - set(FIELDS))
     assert missing == [], f"Missing sector alpha fields from pick_logger.FIELDS: {missing}"
+
+
+def test_pick_logger_persists_watch_only_news_action_fields(tmp_path, monkeypatch):
+    import csv
+    import src.pick_logger as pl
+
+    log_path = tmp_path / "picks_log.csv"
+    monkeypatch.setattr(pl, "LOG_PATH", log_path)
+
+    saved = pl.log_picks(
+        [{
+            "ticker": "EXPD",
+            "company": "Expeditors",
+            "trade_type": "swing",
+            "watch_only": True,
+            "watch_only_reason": "news action window is intraday",
+            "news_action_window": "intraday",
+            "score": 0.75,
+            "entry": 149.14,
+            "stop_loss": 146.60,
+            "take_profit": 153.37,
+            "qty": 10,
+        }],
+        regime={"regime": "bull", "spy_close": 500},
+        cape={},
+    )
+
+    assert saved == 1
+    with log_path.open() as f:
+        row = next(csv.DictReader(f))
+
+    assert row["watch_only"] == "true"
+    assert row["watch_only_reason"] == "news action window is intraday"
+    assert row["news_action_window"] == "intraday"

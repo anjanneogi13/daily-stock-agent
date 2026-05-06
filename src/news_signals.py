@@ -163,6 +163,7 @@ def add_signal_from_classification(item: Dict) -> Optional[Dict]:
             "catalyst": category,
             "sentiment": sentiment,
             "tradeable_score": score_pct,
+            "action_window": cls.get("action_window"),
             "headline": headline[:200],
             "added_at": _now_iso(),
             "expires": (datetime.now(timezone.utc) + timedelta(days=ttl)).isoformat(),
@@ -193,6 +194,23 @@ def add_signal_from_classification(item: Dict) -> Optional[Dict]:
 
 
 # ─── Public API: read signals during scoring ─────────────────────
+
+def get_ticker_signal(ticker: str) -> dict:
+    """Return the active, unexpired news signal for a ticker, or {}."""
+    signals = _load_signals()
+    sig = signals.get(ticker)
+    if not sig:
+        return {}
+
+    try:
+        expires = datetime.fromisoformat(sig["expires"].replace("Z", "+00:00"))
+        if expires < datetime.now(timezone.utc):
+            return {}
+    except (KeyError, ValueError, TypeError):
+        return {}
+
+    return sig
+
 
 def get_ticker_boost(ticker: str) -> float:
     """

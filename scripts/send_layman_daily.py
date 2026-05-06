@@ -6,7 +6,7 @@ Reads data/picks_log.csv for today's picks → outputs one Telegram message
 per amateur user. Keeps ALL actionable data (entry/SL/TP/qty/hold time)
 but wraps it in plain English.
 """
-import csv, os, sys, urllib.request, urllib.parse
+import csv, json, os, sys, urllib.request, urllib.parse
 from datetime import datetime
 from pathlib import Path
 
@@ -53,9 +53,48 @@ def _is_pick_sane(pick: dict) -> tuple[bool, str]:
 
 
 
+def _is_watch_only(pick: dict) -> bool:
+    tag = str(pick.get("premarket_tag") or "").upper()
+    actionable = pick.get("premarket_actionable")
+    actionable_false = actionable is False or str(actionable).strip().lower() == "false"
+    row_watch_only = str(pick.get("watch_only") or "").strip().lower() in {"1", "true", "yes"}
+    return "WATCH ONLY" in tag or actionable_false or row_watch_only
+
+
+def _watch_only_message(pick: dict, idx: int) -> str:
+    ticker = pick.get("ticker", "?")
+    reason = (
+        pick.get("watch_only_reason")
+        or pick.get("premarket_reason")
+        or "fresh quote unavailable"
+    )
+    return (
+        f"*{idx}. {ticker}* — 👀 *WATCH ONLY*\n"
+        f"Reason: {reason}.\n"
+        "No buy price is actionable from this alert. "
+        "Require a fresh live quote before considering entry."
+    )
+
+
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
                       os.environ.get("TELEGRAM_GROUP_CHAT_ID")] if c]
+
+
+def _premarket_tags() -> dict:
+    """Return premarket-check metadata keyed by ticker."""
+    path = Path("data/premarket_check.json")
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text())
+    except Exception:
+        return {}
+    return {
+        (p.get("ticker") or "").strip(): p
+        for p in data.get("picks", [])
+        if (p.get("ticker") or "").strip()
+    }
 
 
 def _today_picks():
@@ -63,11 +102,18 @@ def _today_picks():
     if not path.exists(): return []
     today = os.environ.get("PICK_DATE") or \
             datetime.now().strftime("%Y-%m-%d")
+    tags = _premarket_tags()
     rows = []
     with path.open() as f:
         for r in csv.DictReader(f):
             d = (r.get("pick_date") or "")[:10]
             if d == today:
+                meta = tags.get((r.get("ticker") or "").strip())
+                if meta:
+                    r["premarket_tag"] = meta.get("tag", "")
+                    r["premarket_reason"] = meta.get("reason", "")
+                    r["premarket_current_price"] = meta.get("current_price")
+                    r["premarket_actionable"] = meta.get("actionable")
                 rows.append(r)
     return rows
 
@@ -130,6 +176,10 @@ def build_message(picks):
         lines.append("━━━━━ 🌤 *DAY TRADES* (sell before market closes) ━━━━━")
         lines.append("")
         for p in day_picks:
+            if _is_watch_only(p):
+                lines.append(_watch_only_message(p, idx))
+                idx += 1; lines.append("")
+                continue
             _sane, _why = _is_pick_sane(p)
             if not _sane:
                 print(f"[SANITY GATE] BLOCKED pick {p.get('ticker','?')}: {_why}")
@@ -144,6 +194,10 @@ def build_message(picks):
         lines.append("━━━━━ 📈 *SWING TRADES* (hold a few days/weeks) ━━━━━")
         lines.append("")
         for p in swing_picks:
+            if _is_watch_only(p):
+                lines.append(_watch_only_message(p, idx))
+                idx += 1; lines.append("")
+                continue
             _sane, _why = _is_pick_sane(p)
             if not _sane:
                 print(f"[SANITY GATE] BLOCKED pick {p.get('ticker','?')}: {_why}")

@@ -47,3 +47,21 @@ def test_post_send_push_failure_is_not_hidden():
     assert "CRITICAL: post-send artifacts were committed locally but not pushed" in post_send
     assert "done || true" not in post_send
     assert "exit 1" in post_send
+
+def test_daily_picks_hard_blocks_normal_picks_after_0920_et():
+    text = _text()
+
+    assert "OFFICIAL_CUTOFF=$((9 * 60 + 20))" in text
+    assert "Official premarket window missed after 09:20 ET" in text
+    assert "Manual dispatch must not bypass this freshness/timing gate" in text
+    assert "Manual run — bypassing time guard" not in text
+    assert "WINDOW_END=$((11 * 60))" not in text
+
+
+def test_daily_picks_sends_missed_window_alert_instead_of_normal_picks():
+    text = _text()
+
+    assert "missed_window=true" in text
+    assert "Send missed-window Telegram alert" in text
+    assert "steps.guard.outputs.missed_window == 'true'" in text
+    assert "scripts/send_missed_premarket_alert.py" in text

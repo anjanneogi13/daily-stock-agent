@@ -161,6 +161,40 @@ Monster entries should not use tight day/swing stops. They should use:
 
 ---
 
+## 2026-05-06 Audit Fixes Implemented
+
+The comprehensive repo audit fixed the most important operational safety gaps before new feature work.
+
+Implemented:
+
+1. **Premarket timing hard gate**
+   - Normal daily picks are blocked after 09:20 ET.
+   - Manual dispatch cannot bypass the gate.
+   - Late workflow runs send a missed-window alert.
+
+2. **Price freshness / stale-entry protection**
+   - Unverified prices become `WATCH ONLY`.
+   - Telegram avoids actionable buy instructions for watch-only ideas.
+
+3. **News action-window enforcement**
+   - News signals preserve `action_window`.
+   - Intraday-news swing candidates become watch-only instead of silent normal swing picks.
+
+4. **Monitoring-only paper safety**
+   - Local paper logging is disabled by default.
+   - `TRADING_MODE=paper` is now required to write legacy paper-trade artifacts.
+
+5. **Intraday monitor close persistence**
+   - SL/TP hits detected intraday now update the correct `pick_date` in CSV.
+
+Remaining lower-severity hygiene before new features:
+
+1. Fix test/data isolation.
+2. Align closed-status logic between readiness scripts.
+3. Then build opening-range intraday scanner.
+
+---
+
 ## 2026-05-05 Trading Day Review
 
 ### Summary
@@ -519,14 +553,14 @@ Track these over time:
 
 ## Near-Term Implementation Priorities
 
-1. **Premarket timing hard gate**
+1. **Premarket timing hard gate** — implemented 2026-05-06
    - no normal daily picks after 09:20 ET.
    - send missed-window alert instead.
 
-2. **Price freshness and stale-entry protection**
+2. **Price freshness and stale-entry protection** — implemented 2026-05-06
    - no actionable buy price if quote unavailable/stale.
 
-3. **News action-window enforcement**
+3. **News action-window enforcement** — implemented 2026-05-06
    - `intraday` news must not silently become `swing`.
 
 4. **Opening-range intraday scanner**

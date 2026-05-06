@@ -13,6 +13,68 @@ Rules:
 
 ---
 
+## 2026-05-06 — Comprehensive audit fixes for monitoring safety
+
+**Type:** audit / bug fix / workflow hardening / monitoring safety
+
+**Summary:**
+
+Performed comprehensive repo-health audit before new feature work and fixed the highest-severity issues first.
+
+Fixed:
+
+- Intraday monitor CSV close regression:
+  - `scripts/intraday_monitor.py` now uses module `TODAY` when closing picks, so test/backfill/manual monitor runs update the same `pick_date` selected by `load_todays_picks()`.
+  - Prevents repeated SL/TP alerts from leaving rows stuck as `pending`.
+
+- Daily-picks timing hard gate:
+  - `.github/workflows/daily-picks.yml` now blocks normal daily picks after 09:20 ET.
+  - Manual dispatch no longer bypasses the official premarket timing gate.
+  - Late runs send a missed-window Telegram alert instead of normal actionable picks.
+
+- Stale/unverified price protection:
+  - `scripts/premarket_check.py` now marks unverified prices as `👀 WATCH ONLY`.
+  - Telegram daily sender does not show actionable buy instructions for watch-only picks.
+  - GitHub issue formatter documents the watch-only state.
+
+- Monitoring-only paper logging safety:
+  - `main.py` no longer defaults to paper-trade logging when `TRADING_MODE` is unset.
+  - Legacy local paper logging is now opt-in only with `TRADING_MODE=paper`.
+
+- News action-window guard:
+  - `src/news_signals.py` preserves `action_window`.
+  - `main.py` marks intraday-news swing candidates as watch-only instead of silently presenting them as normal swing entries.
+  - `src/pick_logger.py` persists `watch_only`, `watch_only_reason`, and `news_action_window`.
+
+Added tests for:
+
+- Missed premarket-window alert.
+- Daily-picks 09:20 ET hard cutoff.
+- Watch-only stale-price behavior.
+- Monitoring mode paper-logging default.
+- News action-window preservation and watch-only guard.
+- Pick logger watch-only/news-action-window persistence.
+
+**Tests:**
+
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings`
+  - `1284 passed, 28 skipped`
+- `python scripts/audit_journal_consistency.py --strict`
+- `python scripts/check_enforcement_readiness.py`
+- `python scripts/monitoring_readiness.py`
+- `git diff --check`
+
+**Follow-up:**
+
+Highest-severity audit issues are fixed. Next lower-severity cleanup should address:
+
+1. Test/data isolation for `data/learning_journal.jsonl` and related tracked data side effects.
+2. Closed-status alignment between readiness scripts.
+3. Documentation consistency cleanup.
+4. Then resume feature roadmap with opening-range intraday scanner.
+
+---
+
 ## 2026-05-06 — Created agent maturity tracker and intelligence roadmap
 
 **Type:** documentation / product strategy

@@ -101,6 +101,15 @@ def load_config(path: str = "config.yaml") -> dict:
         return yaml.safe_load(f)
 
 
+def _should_log_paper_trade() -> bool:
+    """Return True only when legacy local paper-trade logging is explicit.
+
+    The project is monitoring-only by default. Leaving TRADING_MODE unset must
+    not create paper-trade artifacts or imply paper-trading readiness.
+    """
+    return os.getenv("TRADING_MODE", "monitoring").strip().lower() == "paper"
+
+
 def run():
     load_dotenv()
     cfg = load_config()
@@ -305,10 +314,17 @@ def run():
     # ═══════════════════════════════════════════════════════════════
     rprint("[5c.5/6] Applying news signals (boost/penalty from classified news)...")
     try:
-        from src.news_signals import get_ticker_boost
+        from src.news_signals import get_ticker_boost, get_ticker_signal
         boosted_count = 0
         for p in capped:
+            signal = get_ticker_signal(p["ticker"])
             boost = get_ticker_boost(p["ticker"])
+            if signal:
+                p["news_signal"] = signal
+                action_window = signal.get("action_window")
+                if action_window:
+                    p["scores"]["news_action_window"] = action_window
+                    p.setdefault("news", {})["action_window"] = action_window
             if abs(boost) >= 0.01:
                 old = p["scores"]["composite"]
                 new = round(max(0.0, min(1.0, old + boost)), 4)
@@ -533,6 +549,24 @@ def run():
     for p in top:
         ttype = _safe_trade_type_for_pick(p["scores"], pick_date=_today)
         p["trade_type"] = ttype
+
+        # Product guard: intraday news must not silently become a normal
+        # multi-day swing pick. Until intraday execution planning is mature,
+        # mark these as watch-only instead of actionable swing trades.
+        action_window = (
+            p.get("news", {}).get("action_window")
+            or p.get("scores", {}).get("news_action_window")
+        )
+        if action_window == "intraday" and ttype == "swing":
+            p["watch_only"] = True
+            p["watch_only_reason"] = (
+                "news action window is intraday; not enough confirmation "
+                "for a normal swing entry"
+            )
+            if "plan" in p and isinstance(p["plan"], dict):
+                p["plan"]["watch_only"] = True
+                p["plan"]["watch_only_reason"] = p["watch_only_reason"]
+
         # Also stamp into plan for downstream LLM prompt
         if "plan" in p and isinstance(p["plan"], dict):
             p["plan"]["trade_type"] = ttype
@@ -567,7 +601,7 @@ def run():
         emoji = "🔥" if p["trade_type"] == "day" else "⚡"
         rprint(f"[bold yellow]{emoji} {p['ticker']}[/bold yellow] - {p['info_short'].get('name','')} ({p['trade_type'].upper()})")
         rprint(rationale); rprint("")
-        if os.getenv("TRADING_MODE", "paper") == "paper":
+        if _should_log_paper_trade():
             log_paper_trade(p, cfg["output"]["csv_path"].replace("picks","trades"))
 
     # ===== Log picks (now includes trade_type) =====
@@ -643,6 +677,13 @@ def run():
                 "company": p.get("info_short", {}).get("name", ""),
                 "tag": p["scores"].get("sector_tag") or "",
                 "trade_type": p.get("trade_type") or "swing",  # Bug #14: coerce None
+                "watch_only": p.get("watch_only") or False,
+                "watch_only_reason": p.get("watch_only_reason") or "",
+                "news_action_window": (
+                    p.get("news", {}).get("action_window")
+                    or p.get("scores", {}).get("news_action_window")
+                    or ""
+                ),
                 "score": p["scores"].get("composite") or 0,  # Bug #14: coerce None
                 "multiplier": p["scores"].get("sector_mult") or 1.0,  # Bug #14
                 "entry": p["plan"].get("entry"),

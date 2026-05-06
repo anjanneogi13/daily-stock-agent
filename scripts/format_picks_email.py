@@ -60,5 +60,5 @@ for i, r in enumerate(rows, 1):
 print(f"\n## 📋 Tag Legend")
 print("- ✅ **SAFE** — proceed normally with planned size")
 print("- ⚠️ **HALF SIZE** — reduce position by 50%")
-print("- 🚫 **SKIP TODAY** — don't enter, gap risk too high\n")
+print("- 🚫 **SKIP TODAY** — don't enter, gap risk too high\n- 👀 **WATCH ONLY** — no actionable entry until a fresh quote is verified\n")
 print("> ⚠️ Educational only. Not financial advice. Always use limit orders.")

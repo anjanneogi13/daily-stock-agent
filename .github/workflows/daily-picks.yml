@@ -9,9 +9,9 @@ on:
     # prevents duplicate picks if more than one schedule fires.
     - cron: '30 12 * * 1-5'   # 8:30 AM EDT primary (Mar-Nov); 7:30 AM EST guard-skips
     - cron: '00 13 * * 1-5'   # 9:00 AM EDT backup; 8:00 AM EST early backup
-    - cron: '30 13 * * 1-5'   # 9:30 AM EDT backup; 8:30 AM EST primary (Nov-Mar)
-    - cron: '00 14 * * 1-5'   # 10:00 AM EDT backup; 9:00 AM EST backup
-    - cron: '30 14 * * 1-5'   # 10:30 AM EDT backup; 9:30 AM EST backup
+    - cron: '30 13 * * 1-5'   # 9:30 AM EDT/8:30 AM EST backup; hard gate blocks after 09:20 ET
+    - cron: '00 14 * * 1-5'   # late backup; sends missed-window alert after 09:20 ET
+    - cron: '30 14 * * 1-5'   # late backup; sends missed-window alert after 09:20 ET
 
   workflow_dispatch:
 
@@ -42,20 +42,23 @@ jobs:
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
           echo "Now: $ET_DATE $ET_HOUR:$ET_MIN ET"
 
-          # Manual dispatch always allowed
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "✅ Manual run — bypassing time guard"
-            echo "should_run=true" >> $GITHUB_OUTPUT
+          # Official premarket picks are allowed only before 09:20 ET.
+          # Manual dispatch must not bypass this freshness/timing gate.
+          ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
+          WINDOW_START=$((8 * 60))
+          OFFICIAL_CUTOFF=$((9 * 60 + 20))
+          echo "missed_window=false" >> $GITHUB_OUTPUT
+
+          if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ]; then
+            echo "⏭ Before 08:00 ET window — skipping"
+            echo "should_run=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          # Allow only between 08:00 and 11:00 ET (before market open at 09:30)
-          ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
-          WINDOW_START=$((8 * 60))
-          WINDOW_END=$((11 * 60))  # Widened from 09:25 to 11:00 ET to accommodate GitHub cron delays (1-3hr late)
-          if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ] || [ $ET_MINUTES_OF_DAY -gt $WINDOW_END ]; then
-            echo "⏭ Outside 08:00–11:00 ET window — skipping"
+          if [ $ET_MINUTES_OF_DAY -gt $OFFICIAL_CUTOFF ]; then
+            echo "⏭ Official premarket window missed after 09:20 ET — no normal daily picks"
             echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "missed_window=true" >> $GITHUB_OUTPUT
             exit 0
           fi
 
@@ -71,6 +74,15 @@ jobs:
 
           echo "✅ Proceeding with daily picks at $ET_HOUR:$ET_MIN ET"
           echo "should_run=true" >> $GITHUB_OUTPUT
+
+      - name: Send missed-window Telegram alert
+        if: steps.guard.outputs.missed_window == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: |
+          python scripts/send_missed_premarket_alert.py
 
       - name: Set up Python
         if: steps.guard.outputs.should_run == 'true'

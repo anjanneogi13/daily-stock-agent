@@ -1,7 +1,7 @@
 # Daily Stock Agent — Next Session
 
 **Refresh date:** 2026-05-06
-**Status:** monitoring-ready, monitoring evidence updated
+**Status:** monitoring-ready, highest-severity audit issues fixed
 **Mode:** monitoring-only
 
 Do not start paper trading yet.
@@ -34,14 +34,36 @@ Observed:
 
 ## Best next task
 
+### Priority 1 — Fix lower-severity audit hygiene before new features
+
+Now fixed from the comprehensive audit:
+
+- Daily-picks timing hard gate.
+- Missed-window Telegram alert.
+- Stale/unverified price watch-only protection.
+- Monitoring-only default for paper logging.
+- News action-window watch-only guard.
+
+Next cleanup before feature work:
+
+1. Fix test/data isolation so full test suite does not mutate tracked data.
+2. Align closed-status logic between readiness scripts.
+3. Clean documentation consistency issues.
+
+After those are clean, resume feature work with opening-range intraday scanner.
+
+---
+
+## Completed from prior Priority 1 — Daily-picks timing and stale-price protection
+
 ### Priority 1 — Fix daily-picks timing and stale-price protection
 
 Problem:
 
-- Daily picks can run/send after market open because `.github/workflows/daily-picks.yml` allows runs until 11:00 ET.
-- Manual dispatch bypasses time guard.
-- Late messages can look like official premarket picks even when they are live-market chase trades.
-- Stale/unverified prices can appear actionable.
+- Fixed 2026-05-06: normal daily picks are blocked after 09:20 ET.
+- Fixed 2026-05-06: manual dispatch no longer bypasses the time guard.
+- Fixed 2026-05-06: late runs send missed-window alert instead of normal picks.
+- Fixed 2026-05-06: stale/unverified prices are marked watch-only.
 
 Goal:
 
@@ -58,12 +80,12 @@ Suggested policy:
 
 ---
 
-## Priority 2 — Enforce news action window
+## Completed from prior Priority 2 — Enforce news action window
 
 Problem:
 
-- `EXPD` and `GILT` had news classified as `action_window=intraday`.
-- Both were logged as `trade_type=swing`.
+- Fixed 2026-05-06: news signals preserve `action_window`.
+- Fixed 2026-05-06: intraday-news swing candidates are marked watch-only instead of normal actionable swing picks.
 
 Goal:
 
@@ -154,7 +176,7 @@ Still important:
    - `src/monster_data.py`
    - `src/cape_ratio.py`
 3. Align readiness closed statuses.
-4. Harden backtester.
+4. Backtester hardening.
 
 ---
 
