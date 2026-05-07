@@ -12,30 +12,31 @@ Read-only monitoring report. Does not mutate official picks, journals, paper tra
 
 ## Run status
 
-- Run-status rows for date: **4**
-- Items fetched total: **220**
-- Items classified total: **40**
-- Signals added total: **19**
-- Watchlist additions total: **19**
+- Run-status rows for date: **16**
+- Items fetched total: **880**
+- Items classified total: **160**
+- Signals added total: **72**
+- Watchlist additions total: **48**
 - Latest result: **completed**
 - Latest lookback minutes: **120**
 
 ## News log
 
-- Classified news rows: **1527**
-- Unique tickers mentioned: **1455**
-- High-tradeable rows (>=0.85): **75**
-- Sources: `{'alpaca': 1490, 'yahoo': 37}`
-- Sentiment: `{'bearish': 306, 'bullish': 742, 'neutral': 479}`
+- Classified news rows: **1647**
+- Unique tickers mentioned: **1541**
+- High-tradeable rows (>=0.85): **82**
+- Sources: `{'alpaca': 1610, 'yahoo': 37}`
+- Sentiment: `{'bearish': 330, 'bullish': 809, 'neutral': 508}`
 
 ## Active news signals
 
-- Active signals: **191**
-- Bullish: **135**
-- Bearish: **56**
+- Active signals: **237**
+- Bullish: **173**
+- Bearish: **64**
 - Hard blocks: **0**
 - **CCRN** +0.200 ma_target window=intraday hard_block=false
 - **FSHP** +0.200 ma_target window= hard_block=false
+- **MAT** +0.200 ma_target window=intraday hard_block=false
 - **MDLN** -0.200 fda_rejection window=intraday hard_block=false
 - **ZIM** +0.200 ma_target window= hard_block=false
 - **CVE** +0.194 ma_target window=intraday hard_block=false
@@ -51,50 +52,49 @@ Read-only monitoring report. Does not mutate official picks, journals, paper tra
 - **LPX** -0.150 guidance_cut window=intraday hard_block=false
 - **MAR** -0.150 guidance_cut window=intraday hard_block=false
 - **OKLO** +0.150 fda_approval window=intraday hard_block=false
+- **OWLT** -0.150 guidance_cut window=intraday hard_block=false
 - **QLYS** -0.150 guidance_cut window= hard_block=false
-- **RYZ** -0.150 guidance_cut window=next_day hard_block=false
-- **XRN** -0.150 guidance_cut window=next_day hard_block=false
 
 ## Watchlist
 
-- Watchlist items: **159**
-- Bullish watchlist items: **102**
-- Bearish watchlist items: **43**
+- Watchlist items: **188**
+- Bullish watchlist items: **119**
+- Bearish watchlist items: **55**
 - **A** score=1.00 sentiment=bullish category=earnings_beat window=intraday
 - **B** score=1.00 sentiment=bearish category=downgrade window=intraday
 - **BLLN** score=0.95 sentiment=bullish category=earnings_beat window=intraday
 - **CCRN** score=0.95 sentiment=bullish category=ma_target window=intraday
 - **ONC** score=0.95 sentiment=bullish category=earnings_beat window=intraday
+- **PRAA** score=0.95 sentiment=bullish category=earnings_beat window=intraday
 - **EVC** score=0.92 sentiment=bullish category=earnings_beat window=intraday
 - **LPX** score=0.92 sentiment=bearish category=guidance_cut window=intraday
 - **TKO** score=0.92 sentiment=bearish category=earnings_miss window=next_day
+- **ALB** score=0.88 sentiment=bullish category=earnings_beat window=intraday
 - **COTY** score=0.88 sentiment=bullish category=guidance_raise window=intraday
 - **CRI** score=0.88 sentiment=bullish category=earnings_beat window=intraday
 - **EXPD** score=0.88 sentiment=bullish category=earnings_beat window=intraday
 - **GCT** score=0.88 sentiment=bullish category=earnings_beat window=intraday
+- **IREN** score=0.88 sentiment=bearish category=earnings_miss window=next_day
+- **JYNT** score=0.88 sentiment=bullish category=earnings_beat window=intraday
 - **LIND** score=0.88 sentiment=bullish category=earnings_beat window=next_day
+- **LPCN** score=0.88 sentiment=bullish category=earnings_beat window=intraday
 - **MGEE** score=0.88 sentiment=bullish category=earnings_beat window=intraday
 - **MUX** score=0.88 sentiment=bullish category=earnings_beat window=next_day
-- **PTRN** score=0.88 sentiment=bullish category=earnings_beat window=intraday
-- **ZIM** score=0.88 sentiment=bullish category=ma_target window=intraday
-- **AVTX** score=0.85 sentiment=bullish category=other window=intraday
-- **EVGO** score=0.85 sentiment=bearish category=guidance_cut window=intraday
-- **MDLN** score=0.85 sentiment=bearish category=fda_rejection window=intraday
 
 ## News signal outcomes
 
-- Outcome rows: **3**
+- Outcome rows: **100**
 - Evaluated rows: **0**
-- Status counts: `{'missing_price_data': 3}`
+- Status counts: `{'missing_future_data': 97, 'missing_price_data': 3}`
 - Average 1D return: **n/a**
 - Average horizon return: **n/a**
 - No evaluated news signal outcomes found for this date.
 
 ## Late daily ideas
 
-- Late ideas: **0**
-- From news/watchlist: **0**
-- News/watchlist tickers: `[]`
+- Late ideas: **5**
+- From news/watchlist: **5**
+- News/watchlist tickers: `['BLLN', 'CCRN', 'EVC', 'ONC', 'X']`
 
 ## Official picks news usage
 
