@@ -1914,6 +1914,30 @@
       "url": "https://www.benzinga.com/news/26/05/52362976/alx-oncology-holdings-announces-new-data-supporting-phase-1b2-clinical-trial-for-evoracept-in-combin",
       "source": "alpaca",
       "added_at": "2026-05-07T12:17:46.151870+00:00"
+    },
+    {
+      "ticker": "ALB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Albemarle posted strong Q1 earnings beat with raised guidance, resulting in immediate 9.8% stock price surge indicating significant positive market reaction.",
+      "action_window": "intraday",
+      "headline": "Albemarle Posts Upbeat Q1 Results, Joins Himax Technologies, Datadog And Other Big Stocks Moving Higher On Thursday",
+      "url": "https://www.benzinga.com/news/26/05/52373336/albemarle-posts-upbeat-q1-results-joins-himax-technologies-datadog-and-other-big-stocks-moving-higher-on-thursday",
+      "source": "alpaca",
+      "added_at": "2026-05-07T15:12:42.461249+00:00"
+    },
+    {
+      "ticker": "IONQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Strong revenue growth offset by persistent profitability concerns creates mixed post-earnings trading opportunity with bearish lean.",
+      "action_window": "intraday",
+      "headline": "IonQ's Blowout Quarter Has One Big Catch",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52373184/ionqs-blowout-quarter-has-one-big-catch",
+      "source": "alpaca",
+      "added_at": "2026-05-07T15:12:42.461261+00:00"
     }
   ]
 }

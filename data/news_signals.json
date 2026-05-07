@@ -2202,5 +2202,65 @@
     "added_at": "2026-05-07T12:17:46.148707+00:00",
     "expires": "2026-06-06T12:17:46.148713+00:00",
     "hard_block": false
+  },
+  "UBCP": {
+    "ticker": "UBCP",
+    "score_delta": 0.06,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "United Bancorp Q1 EPS $0.33 Up From $0.32 YoY, Sales $7.936M Up From $7.528M YoY",
+    "added_at": "2026-05-07T15:12:42.434302+00:00",
+    "expires": "2026-05-14T15:12:42.434308+00:00",
+    "hard_block": false
+  },
+  "MNKD": {
+    "ticker": "MNKD",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "Wells Fargo Maintains Overweight on MannKind, Raises Price Target to $10",
+    "added_at": "2026-05-07T15:12:42.436382+00:00",
+    "expires": "2026-05-12T15:12:42.436388+00:00",
+    "hard_block": false
+  },
+  "ALB": {
+    "ticker": "ALB",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Albemarle Posts Upbeat Q1 Results, Joins Himax Technologies, Datadog And Other Big Stocks Moving Higher On Thursday",
+    "added_at": "2026-05-07T15:12:42.455515+00:00",
+    "expires": "2026-05-14T15:12:42.455522+00:00",
+    "hard_block": false
+  },
+  "IONQ": {
+    "ticker": "IONQ",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "IonQ's Blowout Quarter Has One Big Catch",
+    "added_at": "2026-05-07T15:12:42.457211+00:00",
+    "expires": "2026-05-14T15:12:42.457215+00:00",
+    "hard_block": false
+  },
+  "NYT": {
+    "ticker": "NYT",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Evercore ISI Group Maintains Outperform on New York Times, Raises Price Target to $92",
+    "added_at": "2026-05-07T15:12:42.458831+00:00",
+    "expires": "2026-05-12T15:12:42.458835+00:00",
+    "hard_block": false
   }
 }
