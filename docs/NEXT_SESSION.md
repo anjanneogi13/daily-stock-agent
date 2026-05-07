@@ -255,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean after import-side-effect fixes.
-- Full suite passed: `1363 passed, 29 skipped`.
+- Full suite passed: `1366 passed, 30 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -274,6 +274,38 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## News Signal Evidence Report — 2026-05-07
+
+Added a read-only report for news evidence:
+
+- script: `scripts/news_signal_evidence_report.py`,
+- outputs:
+  - `data/news_signal_evidence_report_YYYY-MM-DD.json`,
+  - `data/news_signal_evidence_report_YYYY-MM-DD.md`,
+- supports `--no-write` for read-only smoke/audit.
+
+The report inventories:
+
+- `data/news_log.jsonl`,
+- active `data/news_signals.json`,
+- `data/watchlist.json`,
+- `data/news_engine_run_status_YYYY-MM-DD.jsonl`,
+- `data/late_daily_ideas_YYYY-MM-DD.jsonl`,
+- `data/picks_log.csv` rows with news-related fields for the date.
+
+Safety:
+
+- read-only inventory,
+- no official pick stats mutated,
+- no paper/live trading behavior changed,
+- no learning journal mutation.
+
+Remaining evidence gap:
+
+- outcome attribution is not implemented yet. The next layer should join news signal timestamps to 1D/3D future price outcomes.
+
+---
 
 ## News Engine lookback hardening — 2026-05-07
 
@@ -399,7 +431,7 @@ Safety remains unchanged:
 
 Comprehensive audit after overnight workflow/data commits:
 
-- Full suite passed: `1363 passed, 29 skipped`.
+- Full suite passed: `1366 passed, 30 skipped`.
 - Journal consistency remained green: `41/41 matched`.
 - Enforcement readiness remained blocked as expected.
 - Monitoring readiness continued blocking paper trading as expected.

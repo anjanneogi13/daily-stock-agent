@@ -13,6 +13,53 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added News Signal Evidence Report
+
+**Type:** feature / read-only reporting / news evidence
+
+**Summary:**
+
+Added a read-only News Signal Evidence Report.
+
+New script:
+
+- `scripts/news_signal_evidence_report.py`
+
+Outputs:
+
+- `data/news_signal_evidence_report_YYYY-MM-DD.json`
+- `data/news_signal_evidence_report_YYYY-MM-DD.md`
+
+The report inventories:
+
+- news log rows,
+- active news signals,
+- watchlist state,
+- News Engine run-status rows,
+- late daily ideas,
+- official picks with news-related fields.
+
+Safety:
+
+- No official pick stats are mutated.
+- No paper/live trading behavior changed.
+- No learning journal mutation.
+- This is an evidence inventory only.
+
+Verification:
+
+- targeted tests passed,
+- full suite passed: `1366 passed, 30 skipped`,
+- journal consistency remained green,
+- readiness dashboards remained blocked as expected,
+- no official data artifacts were mutated.
+
+Next:
+
+- Add outcome attribution for news signals by joining signal timestamps to future price movement.
+
+---
+
 ## 2026-05-07 — Hardened News Engine lookback
 
 **Type:** feature / reliability / observability
