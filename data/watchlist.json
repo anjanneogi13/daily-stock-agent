@@ -542,15 +542,16 @@
     },
     {
       "ticker": "CRWV",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Jefferies maintains Buy rating with significant price target increase to $160, indicating strong conviction in CoreWeave's upside potential from a reputable investment bank.",
+      "category": "other",
+      "rationale": "Company reports near-complete capacity sales through 2026, reaffirms full-year guidance, and provides strong Q2 revenue guidance of $2.45B+, indicating robust demand execution despite rising operational expenses from scaling.",
       "action_window": "next_day",
-      "headline": "Jefferies Maintains Buy on CoreWeave, Raises Price Target to $160",
-      "url": "https://www.benzinga.com/news/26/05/52299418/jefferies-maintains-buy-on-coreweave-raises-price-target-to-160",
+      "headline": "CoreWeave CFO Says CoreWeave Remains Largely Sold Out Of Its 2026 Capacity;  Increase In Q1 Operating Expenses Was A Direct Result Of Continuing To Scale Active Power Capacity Converting Backlog Into Revenue; Reaffirming Full Year Revenue Guidance; For Q2, Expect Revenue In The Range Of $2.45B To $2",
+      "url": "https://www.benzinga.com/news/26/05/52396325/coreweave-cfo-says-coreweave-remains-largely-sold-out-of-its-2026-capacity-increase-in-q1-operating",
       "source": "alpaca",
-      "added_at": "2026-05-05T20:05:10.331027+00:00"
+      "added_at": "2026-05-05T20:05:10.331027+00:00",
+      "updated_at": "2026-05-07T21:51:41.873017+00:00"
     },
     {
       "ticker": "APUS",
@@ -2049,16 +2050,16 @@
     },
     {
       "ticker": "IREN",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major infrastructure partnership with 5GW deployment and $2.1B investment option from NVIDIA represents transformative strategic deal for IREN with significant capital commitment.",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Iris Energy missed Q3 sales estimates by 35% ($144.8M actual vs $223.4M expected), representing a significant negative earnings surprise that typically triggers immediate selling pressure.",
       "action_window": "next_day",
-      "headline": "NVIDIA And IREN Partner To Deploy Up To 5GW of AI Infrastructure; NVIDIA Receives Option To Invest Up To $2.1B In IREN",
-      "url": "https://www.benzinga.com/m-a/26/05/52392446/nvidia-and-iren-partner-to-deploy-up-to-5gw-of-ai-infrastructure-nvidia-receives-option-to-invest-up",
+      "headline": "UPDATE: Iris Energy Q3 Sales $144.800M Miss $223.393M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52396591/update-iris-energy-q3-sales-144-800m-miss-223-393m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-07T20:48:23.453196+00:00",
-      "updated_at": "2026-05-07T20:48:23.453294+00:00"
+      "updated_at": "2026-05-07T21:51:41.872966+00:00"
     },
     {
       "ticker": "PRAA",
@@ -2179,6 +2180,90 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52392431/siriuspoint-q1-eps-0-82-beats-0-71-estimate-sales-774-600m-beat-768-106m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-07T20:48:23.453305+00:00"
+    },
+    {
+      "ticker": "XYZ",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Shares climbing immediately after Q1 earnings report indicates a meaningful positive earnings surprise that is actively being traded.",
+      "action_window": "intraday",
+      "headline": "Block Shares Climb After Q1 Report \u2014 Here's Why",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52396622/block-shares-climb-after-q1-report-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.872929+00:00"
+    },
+    {
+      "ticker": "CARG",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Company reaffirms FY2026 guidance with midpoint of $1.011B slightly below consensus $1.013B estimate, signaling no upside revision and modest miss versus expectations.",
+      "action_window": "next_day",
+      "headline": "CarGurus Affirms FY2026 Sales Guidance of $997.700M-$1.025B vs $1.013B Est",
+      "url": "https://www.benzinga.com/news/26/05/52396620/cargurus-affirms-fy2026-sales-guidance-of-997-700m-1-025b-vs-1-013b-est",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.872946+00:00"
+    },
+    {
+      "ticker": "SENS",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raised FY2026 sales guidance with new midpoint of $62M slightly above consensus estimate of $60.2M, indicating modest improvement in business outlook but limited upside surprise.",
+      "action_window": "next_day",
+      "headline": "Senseonics Holdings Raises FY2026 Sales Guidance from $58.000M-$62.000M to $60.000M-$64.000M vs $60.197M Est",
+      "url": "https://www.benzinga.com/news/26/05/52396602/senseonics-holdings-raises-fy2026-sales-guidance-from-58-000m-62-000m-to-60-000m-64-000m-vs-60-197m",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.872955+00:00"
+    },
+    {
+      "ticker": "JBIO",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of up to $200M signals potential dilution for existing shareholders, typically causing immediate downward pressure on stock price.",
+      "action_window": "intraday",
+      "headline": "Jade Biosciences May Offer And Sell Up To $200M Common Stock Under Sales Agreement With Jefferies",
+      "url": "https://www.benzinga.com/news/26/05/52396573/jade-biosciences-may-offer-and-sell-up-to-200m-common-stock-under-sales-agreement-with-jefferies",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.872976+00:00"
+    },
+    {
+      "ticker": "HUBS",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "guidance_raise",
+      "rationale": "Despite raising guidance, shares are getting hammered after Q1 results, indicating guidance raise fell short of elevated market expectations or other metrics disappointed.",
+      "action_window": "intraday",
+      "headline": "HubSpot Raises Guidance, Here's Why Shares Are Getting Hammered Thursday",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52396532/hubspot-raises-guidance-heres-why-shares-are-getting-hammered-thursday",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.872991+00:00"
+    },
+    {
+      "ticker": "WLDN",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Significant guidance raise with FY2026 EPS midpoint up 10.2% and revenue midpoint up 5.9%, both meaningfully exceeding consensus estimates.",
+      "action_window": "next_day",
+      "headline": "Willdan Group Raises FY2026 Adj EPS Guidance from $4.50-$4.70 to $4.90-$5.05 vs $4.58 Est; Raises FY2026 Sales Guidance from $390.000M-$405.000M to $410.000M-$425.000M vs $399.467M Est",
+      "url": "https://www.benzinga.com/news/26/05/52396529/willdan-group-raises-fy2026-adj-eps-guidance-from-4-50-4-70-to-4-90-5-05-vs-4-58-est-raises-fy2026-s",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.872999+00:00"
+    },
+    {
+      "ticker": "GPCR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Increasing ATM offering by $150M to $400M total signals significant equity dilution ahead, typically pressuring share price in near-term despite providing capital runway.",
+      "action_window": "next_day",
+      "headline": "Structure Therapeutics Amends And Restates Sales Agreement With Leerink Partners LLC And Cantor Fitzgerald & Co. On May 7, 2026; Increases ATM Shares Offering By $150M To Aggregate $400M",
+      "url": "https://www.benzinga.com/news/26/05/52396369/structure-therapeutics-amends-and-restates-sales-agreement-with-leerink-partners-llc-and-cantor-fitz",
+      "source": "alpaca",
+      "added_at": "2026-05-07T21:51:41.873013+00:00"
     }
   ]
 }

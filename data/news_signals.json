@@ -2433,14 +2433,14 @@
   },
   "IREN": {
     "ticker": "IREN",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "IREN Strikes Agreement To Acquire Spain-Based Data Center Developer Ingenostrum; Financial Terms Undisclosed",
-    "added_at": "2026-05-07T20:48:23.423876+00:00",
-    "expires": "2026-05-21T20:48:23.423881+00:00",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "UPDATE: Iris Energy Q3 Sales $144.800M Miss $223.393M Estimate",
+    "added_at": "2026-05-07T21:51:41.866572+00:00",
+    "expires": "2026-05-14T21:51:41.866576+00:00",
     "hard_block": false
   },
   "PRAA": {
@@ -2573,6 +2573,66 @@
     "headline": "SiriusPoint Q1 EPS $0.82 Beats $0.71 Estimate, Sales $774.600M Beat $768.106M Estimate",
     "added_at": "2026-05-07T20:48:23.449685+00:00",
     "expires": "2026-05-14T20:48:23.449690+00:00",
+    "hard_block": false
+  },
+  "XYZ": {
+    "ticker": "XYZ",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Block Shares Climb After Q1 Report \u2014 Here's Why",
+    "added_at": "2026-05-07T21:51:41.860741+00:00",
+    "expires": "2026-05-14T21:51:41.860747+00:00",
+    "hard_block": false
+  },
+  "OKE": {
+    "ticker": "OKE",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on ONEOK, Raises Price Target to $97",
+    "added_at": "2026-05-07T21:51:41.862991+00:00",
+    "expires": "2026-05-12T21:51:41.862995+00:00",
+    "hard_block": false
+  },
+  "SENS": {
+    "ticker": "SENS",
+    "score_delta": 0.079,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Senseonics Holdings Raises FY2026 Sales Guidance from $58.000M-$62.000M to $60.000M-$64.000M vs $60.197M Est",
+    "added_at": "2026-05-07T21:51:41.864772+00:00",
+    "expires": "2026-05-21T21:51:41.864776+00:00",
+    "hard_block": false
+  },
+  "HUBS": {
+    "ticker": "HUBS",
+    "score_delta": 0.093,
+    "catalyst": "guidance_raise",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "HubSpot Raises Guidance, Here's Why Shares Are Getting Hammered Thursday",
+    "added_at": "2026-05-07T21:51:41.868323+00:00",
+    "expires": "2026-05-21T21:51:41.868328+00:00",
+    "hard_block": false
+  },
+  "WLDN": {
+    "ticker": "WLDN",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Willdan Group Raises FY2026 Adj EPS Guidance from $4.50-$4.70 to $4.90-$5.05 vs $4.58 Est; Raises FY2026 Sales Guidance from $390.000M-$405.000M to $410.000M-$425.000M vs $399.467M Est",
+    "added_at": "2026-05-07T21:51:41.870139+00:00",
+    "expires": "2026-05-21T21:51:41.870144+00:00",
     "hard_block": false
   }
 }
