@@ -48,7 +48,7 @@ def test_scan_opening_range_opportunities_returns_watch_only_candidate():
              "vol_ratio": 2.0,
          }), \
          patch.object(scanner, "fetch_opening_range_bars", return_value=breakout_bars()):
-        out = scanner.scan_opening_range_opportunities(exclude=set(), sent_alerts=sent)
+        out = scanner.scan_opening_range_opportunities(exclude=set(), sent_alerts=sent, now=datetime(2026, 5, 6, 10, 0, tzinfo=ET))
 
     assert len(out) == 1
     cand = out[0]
@@ -318,3 +318,23 @@ def test_append_opening_range_observations_also_writes_candidate_bars(tmp_path, 
     assert {row["ticker"] for row in bars} == {"NET"}
     assert all(row["mode"] == "monitoring_only" for row in bars)
     assert all(row["watch_only"] is True for row in bars)
+
+def test_scan_opening_range_opportunities_skips_stale_session_bars():
+    sent = set()
+
+    with patch.object(scanner, "load_watchlist", return_value=["NET"]), \
+         patch.object(scanner, "get_live_quote", return_value={
+             "price": 101.6,
+             "prev_close": 100.0,
+             "change_pct": 1.6,
+             "vol_ratio": 2.0,
+         }), \
+         patch.object(scanner, "fetch_opening_range_bars", return_value=breakout_bars()):
+        out = scanner.scan_opening_range_opportunities(
+            exclude=set(),
+            sent_alerts=sent,
+            now=datetime(2026, 5, 7, 8, 50, tzinfo=ET),
+        )
+
+    assert out == []
+    assert sent == set()

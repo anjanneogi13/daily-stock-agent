@@ -113,7 +113,8 @@ def fetch_opening_range_bars(ticker: str) -> list:
 
 def scan_opening_range_opportunities(exclude: set, sent_alerts: set,
                                      max_results: int = 3,
-                                     watchlist: list | None = None) -> list:
+                                     watchlist: list | None = None,
+                                     now: datetime | None = None) -> list:
     """Scan watchlist for opening-range breakouts.
 
     Monitoring-only: returned candidates are watch_only and must not be treated
@@ -126,6 +127,15 @@ def scan_opening_range_opportunities(exclude: set, sent_alerts: set,
         quote = get_live_quote(ticker)
         bars = fetch_opening_range_bars(ticker)
         if not quote or not bars:
+            continue
+
+        if not opening_range_bars_match_session(bars, now=now):
+            session_date = opening_range_bar_session_date(bars, now=now)
+            expected_date = (now or datetime.now(timezone.utc)).astimezone(ET).strftime("%Y-%m-%d")
+            print(
+                f"[opening-range] {ticker}: stale bar session "
+                f"{session_date or 'unknown'}; expected {expected_date}; skipping"
+            )
             continue
 
         result = detect_opening_range_breakout(
@@ -189,6 +199,29 @@ def _bar_ts_to_et(value, now: datetime | None = None) -> datetime:
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(ET)
+
+
+def opening_range_bar_session_date(bars: list[dict], now: datetime | None = None) -> str | None:
+    """Return the ET session date represented by fetched opening-range bars."""
+    dates = []
+    for bar in bars or []:
+        if not bar.get("ts"):
+            continue
+        dates.append(_bar_ts_to_et(bar.get("ts"), now=now).strftime("%Y-%m-%d"))
+    return dates[-1] if dates else None
+
+
+def opening_range_bars_match_session(
+    bars: list[dict],
+    now: datetime | None = None,
+) -> bool:
+    """True when fetched bars belong to the current ET session.
+
+    yfinance can return the previous trading day before the current session has
+    bars. Opening-range observations must not be emitted from stale-session bars.
+    """
+    now_et = (now or datetime.now(timezone.utc)).astimezone(ET)
+    return opening_range_bar_session_date(bars, now=now) == now_et.strftime("%Y-%m-%d")
 
 
 def opening_range_bar_path(ticker: str, today: str | None = None) -> Path:
