@@ -2298,5 +2298,77 @@
     "added_at": "2026-05-07T17:16:24.313511+00:00",
     "expires": "2026-05-14T17:16:24.313516+00:00",
     "hard_block": false
+  },
+  "GROY": {
+    "ticker": "GROY",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "HC Wainwright & Co. Maintains Buy on Gold Royalty, Raises Price Target to $7.75",
+    "added_at": "2026-05-07T19:14:04.602581+00:00",
+    "expires": "2026-05-12T19:14:04.602588+00:00",
+    "hard_block": false
+  },
+  "ELAN": {
+    "ticker": "ELAN",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Elanco Animal Health, Raises Price Target to $30",
+    "added_at": "2026-05-07T19:14:04.605076+00:00",
+    "expires": "2026-05-12T19:14:04.605081+00:00",
+    "hard_block": false
+  },
+  "AXON": {
+    "ticker": "AXON",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Axon Enterprise, Raises Price Target to $755",
+    "added_at": "2026-05-07T19:14:04.613436+00:00",
+    "expires": "2026-05-12T19:14:04.613465+00:00",
+    "hard_block": false
+  },
+  "WRBY": {
+    "ticker": "WRBY",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "BTIG Maintains Buy on Warby Parker, Raises Price Target to $34",
+    "added_at": "2026-05-07T19:14:04.615536+00:00",
+    "expires": "2026-05-12T19:14:04.615540+00:00",
+    "hard_block": false
+  },
+  "RHHBY": {
+    "ticker": "RHHBY",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Roche To Acquire PathAI In Up To $1.05 Billion Deal To Expand Digital Pathology Push",
+    "added_at": "2026-05-07T19:14:04.617647+00:00",
+    "expires": "2026-05-21T19:14:04.617652+00:00",
+    "hard_block": false
+  },
+  "ARRY": {
+    "ticker": "ARRY",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Array Technologies, Raises Price Target to $10",
+    "added_at": "2026-05-07T19:14:04.619727+00:00",
+    "expires": "2026-05-12T19:14:04.619732+00:00",
+    "hard_block": false
   }
 }

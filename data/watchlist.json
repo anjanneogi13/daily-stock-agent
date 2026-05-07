@@ -1974,6 +1974,18 @@
       "url": "https://www.benzinga.com/general/biotech/26/05/52379434/glucotrack-submits-fda-investigational-device-exemption-for-u-s-clinical-study-of-fully-implantab",
       "source": "alpaca",
       "added_at": "2026-05-07T17:16:24.316712+00:00"
+    },
+    {
+      "ticker": "RHHBY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major $1.05B acquisition confirms Roche's strategic commitment to AI-powered digital pathology, expanding precision medicine capabilities with immediate market impact.",
+      "action_window": "intraday",
+      "headline": "Roche To Acquire PathAI In Up To $1.05 Billion Deal To Expand Digital Pathology Push",
+      "url": "https://www.benzinga.com/m-a/26/05/52383978/roche-to-acquire-pathai-in-up-to-1-05-billion-deal-to-expand-digital-pathology-push",
+      "source": "alpaca",
+      "added_at": "2026-05-07T19:14:04.625080+00:00"
     }
   ]
 }
