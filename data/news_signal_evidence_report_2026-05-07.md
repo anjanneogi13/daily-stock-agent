@@ -12,27 +12,27 @@ Read-only monitoring report. Does not mutate official picks, journals, paper tra
 
 ## Run status
 
-- Run-status rows for date: **2**
-- Items fetched total: **110**
-- Items classified total: **20**
-- Signals added total: **13**
-- Watchlist additions total: **9**
+- Run-status rows for date: **4**
+- Items fetched total: **220**
+- Items classified total: **40**
+- Signals added total: **19**
+- Watchlist additions total: **19**
 - Latest result: **completed**
 - Latest lookback minutes: **120**
 
 ## News log
 
-- Classified news rows: **1507**
-- Unique tickers mentioned: **1415**
+- Classified news rows: **1527**
+- Unique tickers mentioned: **1455**
 - High-tradeable rows (>=0.85): **75**
-- Sources: `{'alpaca': 1470, 'yahoo': 37}`
-- Sentiment: `{'bearish': 304, 'bullish': 730, 'neutral': 473}`
+- Sources: `{'alpaca': 1490, 'yahoo': 37}`
+- Sentiment: `{'bearish': 306, 'bullish': 742, 'neutral': 479}`
 
 ## Active news signals
 
-- Active signals: **185**
-- Bullish: **130**
-- Bearish: **55**
+- Active signals: **191**
+- Bullish: **135**
+- Bearish: **56**
 - Hard blocks: **0**
 - **CCRN** +0.200 ma_target window=intraday hard_block=false
 - **FSHP** +0.200 ma_target window= hard_block=false
@@ -41,6 +41,7 @@ Read-only monitoring report. Does not mutate official picks, journals, paper tra
 - **CVE** +0.194 ma_target window=intraday hard_block=false
 - **CURR** +0.157 ma_target window=intraday hard_block=false
 - **ARHS** -0.150 guidance_cut window=intraday hard_block=false
+- **AVBP** +0.150 fda_approval window=intraday hard_block=false
 - **DFIN** -0.150 guidance_cut window= hard_block=false
 - **ETN** -0.150 guidance_cut window= hard_block=false
 - **EVGO** -0.150 guidance_cut window= hard_block=false
@@ -53,13 +54,12 @@ Read-only monitoring report. Does not mutate official picks, journals, paper tra
 - **QLYS** -0.150 guidance_cut window= hard_block=false
 - **RYZ** -0.150 guidance_cut window=next_day hard_block=false
 - **XRN** -0.150 guidance_cut window=next_day hard_block=false
-- **NCLH** -0.146 guidance_cut window= hard_block=false
 
 ## Watchlist
 
-- Watchlist items: **149**
-- Bullish watchlist items: **93**
-- Bearish watchlist items: **42**
+- Watchlist items: **159**
+- Bullish watchlist items: **102**
+- Bearish watchlist items: **43**
 - **A** score=1.00 sentiment=bullish category=earnings_beat window=intraday
 - **B** score=1.00 sentiment=bearish category=downgrade window=intraday
 - **BLLN** score=0.95 sentiment=bullish category=earnings_beat window=intraday
