@@ -1,6 +1,6 @@
 # Daily Stock Agent — Next Session
 
-**Refresh date:** 2026-05-06
+**Refresh date:** 2026-05-07
 **Status:** monitoring-ready, highest-severity audit issues fixed
 **Mode:** monitoring-only
 
@@ -254,8 +254,8 @@ Final closing audit passed.
 
 Current state:
 
-- Repository clean.
-- Full suite passed: `1348 passed, 29 skipped`.
+- Repository clean after import-side-effect fixes.
+- Full suite passed: `1351 passed, 29 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -274,6 +274,40 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## 2026-05-07 audit checkpoint — watch-only learning direction
+
+Comprehensive audit after overnight workflow/data commits:
+
+- Full suite passed: `1351 passed, 29 skipped`.
+- Journal consistency remained green: `41/41 matched`.
+- Enforcement readiness remained blocked as expected.
+- Monitoring readiness continued blocking paper trading as expected.
+- Opening-range observations now exist:
+  - total observations: 4,
+  - tickers: AAPL, NET, SPY, XLK,
+  - all are `watch_only=true`,
+  - all are `mode=monitoring_only`,
+  - all are `scanner=opening_range`.
+- Opening-range backtest cannot evaluate them yet because bar data is missing:
+  - `missing_bar_data: 4`.
+
+Audit fixes completed:
+
+- `scripts/send_intraday_telegram.py` no longer executes Telegram/run-status logic at import time.
+- `tests/test_intraday_monitor_opening_range_observations.py` no longer mutates tracked `data/opening_range_run_status_2026-05-06.jsonl`.
+
+Product direction agreed:
+
+- The agent should learn from official premarket picks, late watch-only daily ideas, intraday watch-only ideas, and opening-range observations.
+- These must remain separated by evidence type.
+- Watch-only ideas must not contaminate official pick stats, paper trading readiness, or live trading readiness.
+- Recommended next feature after health is clean:
+  - build a watch-only learning evidence layer and daily learning report,
+  - still monitoring-only,
+  - no paper/live trading.
+
+---
 
 ## Daily-picks reliability hardening — 2026-05-06
 
@@ -345,7 +379,7 @@ Final status at closeout:
 - Main branch head after code work: `27d92f0 intraday: force-add opening-range status artifacts`.
 - Latest CI observed green: CI #141.
 - Full local audit before closeout passed:
-  - full test suite: `1348 passed, 29 skipped`,
+  - full test suite: `1351 passed, 29 skipped`,
   - journal consistency: `41/41 matched`,
   - readiness dashboards remain blocked as expected,
   - opening-range review/backtest remain monitoring-only,

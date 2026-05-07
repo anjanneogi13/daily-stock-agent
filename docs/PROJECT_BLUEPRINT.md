@@ -1,8 +1,8 @@
 # Daily Stock Agent — Project Blueprint
 
-**Last updated:** 2026-05-06
+**Last updated:** 2026-05-07
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1348 passed, 29 skipped
+**Test suite:** 1351 passed, 29 skipped
 **Mode:** monitoring-only
 
 ## Purpose
@@ -33,6 +33,8 @@ The repo is healthy for monitoring mode:
 - Opening-range run-status artifacts record whether the intraday/opening-range scanner ran, skipped, completed, found candidates, wrote observations, and sent/skipped Telegram.
 - Missed-window Telegram and late watch-only ideas are sent as one combined warning message.
 - Late watch-only daily ideas now include quote-enriched watch-only BUY/Entry, SL, TP, and R/R levels after missed official premarket windows.
+- Opening-range observation collection has begun; 4 watch-only observations existed after the 2026-05-06 session, all safety-compliant.
+- Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
 
@@ -145,13 +147,13 @@ They are not active scale-out execution logic.
 
 Immediate next work:
 
-1. Validate GitHub Actions persistence for `data/opening_range_run_status_YYYY-MM-DD.jsonl` after commit `27d92f0`.
-2. Monitor the next market-day Daily Stock Picks schedule:
-   - picks before 09:20 ET, or
+1. Keep paper/live trading disabled.
+2. Continue monitoring the next market-day Daily Stock Picks schedule:
+   - official picks before 09:20 ET, or
    - combined missed-window late watch-only message after cutoff.
-3. Monitor Intraday Monitor / opening-range scheduled runs and review status artifacts.
-4. Keep paper/live trading disabled.
-5. Next weekend feature candidate: opening-range bar artifact capture for future outcome/backtest joins.
+3. Continue reviewing Intraday Monitor / opening-range scheduled runs and status artifacts.
+4. Next product feature candidate: watch-only learning evidence layer so late daily ideas, intraday monitor ideas, and opening-range observations can be evaluated separately from official picks.
+5. Next opening-range feature candidate: bar artifact capture for future outcome/backtest joins.
 6. Continue adding tests for undercovered smaller modules and hardening backtest tooling.
 
 Planned future features:

@@ -13,6 +13,70 @@ Rules:
 
 ---
 
+## 2026-05-07 — Isolated intraday monitor run-status test side effect
+
+**Type:** bug fix / test isolation / runtime artifact safety
+
+**Summary:**
+
+The comprehensive audit found that `tests/test_intraday_monitor_opening_range_observations.py`
+mutated the tracked runtime artifact:
+
+- `data/opening_range_run_status_2026-05-06.jsonl`
+
+Root cause:
+
+- The test calls `intraday_monitor.main()`.
+- `main()` correctly records `monitor_started` and `monitor_completed` run-status rows.
+- The test monkeypatched opening-range observation persistence but did not monkeypatch
+  `append_opening_range_run_status`.
+
+Fix:
+
+- Monkeypatch `monitor.append_opening_range_run_status` inside the test.
+- Assert the expected status events and counts without writing to tracked data.
+
+Safety:
+
+- Production run-status behavior is unchanged.
+- GitHub Actions still records operational evidence.
+- Tests no longer mutate tracked runtime artifacts.
+
+---
+
+## 2026-05-07 — Fixed intraday Telegram sender import side effect
+
+**Type:** bug fix / test isolation / runtime artifact safety
+
+**Summary:**
+
+The comprehensive audit found that running the full test suite left
+`data/opening_range_run_status_2026-05-06.jsonl` modified.
+
+Root cause:
+
+- `tests/test_scripts_import.py` imports scripts to catch broken imports.
+- `scripts/send_intraday_telegram.py` still executed Telegram/run-status logic at import time.
+- Importing the sender could append to the tracked opening-range run-status artifact.
+
+Fix:
+
+- Moved Telegram sender runtime behavior into `main()`.
+- Kept `if __name__ == "__main__": raise SystemExit(main())`.
+- Added regression tests proving:
+  - importing the sender has no run-status side effects,
+  - executing `main()` still records operational status when credentials are missing.
+
+Safety:
+
+- Monitoring-only.
+- No official picks.
+- No paper trades.
+- No live trades.
+- No enforcement flags changed.
+
+---
+
 ## 2026-05-06 — Fixed Intraday Monitor Telegram sender import path
 
 **Type:** bug fix / workflow reliability / GitHub Actions

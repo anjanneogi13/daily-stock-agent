@@ -130,3 +130,35 @@ If the artifact persistence validation passes:
    - opening-range bar artifact capture for future outcome/backtest joins.
 
 Do not enable paper trading or live trading without passing readiness gates and explicit founder approval.
+
+## 2026-05-07 follow-up audit
+
+A follow-up audit after overnight workflow commits found two test-isolation issues:
+
+1. `scripts/send_intraday_telegram.py` executed runtime behavior at import time.
+2. `tests/test_intraday_monitor_opening_range_observations.py` called `intraday_monitor.main()` without isolating run-status persistence.
+
+Both were fixed without changing production monitoring behavior.
+
+Updated audit result:
+
+- full suite passed: `1351 passed, 29 skipped`,
+- journal consistency remained `41/41 matched`,
+- readiness dashboards remained blocked as expected,
+- tracked runtime artifacts stayed clean after the fix.
+
+New observation state:
+
+- opening-range observations now exist for 2026-05-06,
+- count: 4,
+- tickers: AAPL, NET, SPY, XLK,
+- all monitoring-only/watch-only,
+- backtest reports `missing_bar_data: 4`.
+
+Product implication:
+
+- The next high-value product layer is watch-only learning evidence:
+  - evaluate late daily watch-only ideas,
+  - evaluate intraday monitor ideas,
+  - evaluate opening-range observations,
+  - keep them separate from official picks and readiness statistics.

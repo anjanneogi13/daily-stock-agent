@@ -52,3 +52,53 @@ def test_intraday_telegram_sender_runs_from_actions_script_path(tmp_path):
     assert result.returncode == 0
     assert "Missing creds" in result.stdout
     assert list((tmp_path / "data").glob("opening_range_run_status_*.jsonl"))
+
+
+def test_intraday_telegram_sender_import_has_no_side_effects(tmp_path, monkeypatch):
+    """Importing the sender must not append run-status rows.
+
+    Regression: tests/test_scripts_import.py imports scripts. Importing
+    send_intraday_telegram.py used to execute runtime Telegram/status logic and
+    mutate tracked data/opening_range_run_status_*.jsonl.
+    """
+    import importlib.util
+    import os
+    from pathlib import Path
+
+    repo = Path(__file__).resolve().parent.parent
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.delenv("TELEGRAM_BOT_TOKEN", raising=False)
+    monkeypatch.delenv("TELEGRAM_CHAT_ID", raising=False)
+    monkeypatch.delenv("TELEGRAM_GROUP_CHAT_ID", raising=False)
+
+    spec = importlib.util.spec_from_file_location(
+        "send_intraday_telegram_import_probe",
+        repo / "scripts/send_intraday_telegram.py",
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    assert hasattr(module, "main")
+    assert not list((tmp_path / "data").glob("opening_range_run_status_*.jsonl"))
+
+
+def test_intraday_telegram_sender_main_records_missing_creds_status(tmp_path, monkeypatch):
+    """Executing main() still records run status for operational observability."""
+    import importlib.util
+    from pathlib import Path
+
+    repo = Path(__file__).resolve().parent.parent
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.delenv("TELEGRAM_BOT_TOKEN", raising=False)
+    monkeypatch.delenv("TELEGRAM_CHAT_ID", raising=False)
+    monkeypatch.delenv("TELEGRAM_GROUP_CHAT_ID", raising=False)
+
+    spec = importlib.util.spec_from_file_location(
+        "send_intraday_telegram_main_probe",
+        repo / "scripts/send_intraday_telegram.py",
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    assert module.main() == 0
+    assert list((tmp_path / "data").glob("opening_range_run_status_*.jsonl"))

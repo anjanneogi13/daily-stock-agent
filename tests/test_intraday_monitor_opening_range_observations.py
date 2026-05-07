@@ -22,7 +22,9 @@ def test_intraday_monitor_records_opening_range_observations(tmp_path, monkeypat
         "scanner": "opening_range",
     }
     calls = []
+    status_calls = []
 
+    monkeypatch.setattr(monitor, "append_opening_range_run_status", lambda **kwargs: status_calls.append(kwargs))
     monkeypatch.setattr(monitor, "load_todays_picks", lambda: [{"ticker": "AAPL"}])
     monkeypatch.setattr(monitor, "load_sent_alerts", lambda: set())
     monkeypatch.setattr(monitor, "monitor_existing_picks", lambda picks, sent_alerts: [])
@@ -42,5 +44,9 @@ def test_intraday_monitor_records_opening_range_observations(tmp_path, monkeypat
     monitor.main()
 
     assert calls == [[candidate]]
+    assert [c["event"] for c in status_calls] == ["monitor_started", "monitor_completed"]
+    assert status_calls[-1]["candidate_count"] == 1
+    assert status_calls[-1]["alert_count"] == 1
+    assert status_calls[-1]["observation_count"] == 1
     assert monitor.OUT_FILE.exists()
     assert "WATCH ONLY" in monitor.OUT_FILE.read_text()
