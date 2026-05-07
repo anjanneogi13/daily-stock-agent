@@ -57,7 +57,7 @@ Audit/hygiene and the first News Evidence layers are complete:
 
 Next feature work:
 
-1. Add a scheduled/manual News Evidence workflow in monitoring-only mode.
+1. Validate the scheduled/manual News Evidence workflow in monitoring-only mode.
 2. The workflow may generate only reporting artifacts:
    - `data/news_signal_outcomes_YYYY-MM-DD.jsonl`,
    - `data/news_signal_evidence_report_YYYY-MM-DD.json`,
@@ -67,7 +67,7 @@ Next feature work:
    - `data/signal_journal.jsonl`,
    - `data/learning_journal.jsonl`,
    - paper/live trading state.
-4. Add manual-run documentation for news evidence and outcome reports.
+4. Add/expand manual-run documentation for news evidence and outcome reports.
 5. After that, continue with optional opening-range bar artifact capture, still monitoring-only.
 6. Do not enable paper trading.
 7. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.

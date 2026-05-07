@@ -13,6 +13,44 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added News Evidence workflow
+
+**Type:** workflow / monitoring-only / evidence automation
+
+**Summary:**
+
+Added a scheduled/manual News Evidence workflow:
+
+- `.github/workflows/news_evidence.yml`
+
+The workflow:
+
+- runs after market close on weekdays,
+- supports manual dispatch with optional date, max-items, and horizon-days inputs,
+- runs no-write preflights before writing artifacts,
+- generates news signal outcome attribution,
+- generates the News Signal Evidence Report,
+- commits only news reporting artifacts:
+  - `data/news_signal_outcomes_YYYY-MM-DD.jsonl`,
+  - `data/news_signal_evidence_report_YYYY-MM-DD.json`,
+  - `data/news_signal_evidence_report_YYYY-MM-DD.md`.
+
+Safety:
+
+- Monitoring-only.
+- No paper trading.
+- No live trading.
+- No enforcement flags.
+- Does not commit official pick stats or journals.
+- Checks official state files are not mutated before committing artifacts.
+
+Next:
+
+- Manually validate the workflow from GitHub Actions after CI passes.
+- Add/expand operator docs for manual report runs if needed.
+
+---
+
 ## 2026-05-07 — Comprehensive audit after News Engine runtime update
 
 **Type:** audit / documentation / monitoring-only

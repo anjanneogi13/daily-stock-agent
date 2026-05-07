@@ -41,6 +41,7 @@ The repo is healthy for monitoring mode:
 - News Signal Evidence Report inventories news logs, active signals, watchlist, run status, late ideas, and official pick news fields without mutating stats.
 - News signal outcome attribution scaffold can evaluate 1D/3D future returns for news evidence while preserving monitoring-only safety.
 - News Signal Evidence Report now includes optional news signal outcome summaries when `data/news_signal_outcomes_YYYY-MM-DD.jsonl` exists.
+- News Evidence workflow can generate outcome/report artifacts after market close while preserving monitoring-only safety.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
