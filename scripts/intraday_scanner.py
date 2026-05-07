@@ -156,6 +156,7 @@ def scan_opening_range_opportunities(exclude: set, sent_alerts: set,
             "opening_range": result["opening_range"],
             "breakout_pct": result["breakout_pct"],
             "volume_ratio": result["volume_ratio"],
+            "_opening_range_bars": bars,
         })
 
     candidates.sort(key=lambda x: x["score"], reverse=True)
@@ -169,6 +170,81 @@ def opening_range_observation_path(today: str | None = None) -> Path:
 
 
 ET = ZoneInfo("America/New_York")
+
+
+def _bar_ts_to_et(value, now: datetime | None = None) -> datetime:
+    """Normalize a bar timestamp to America/New_York.
+
+    This helper is intentionally forgiving because yfinance index timestamps
+    can arrive as pandas timestamps, Python datetimes, or strings.
+    """
+    if isinstance(value, datetime):
+        dt = value
+    else:
+        try:
+            dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        except Exception:
+            dt = now or datetime.now(timezone.utc)
+
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(ET)
+
+
+def opening_range_bar_path(ticker: str, today: str | None = None) -> Path:
+    """Return the JSONL artifact path for one ticker's opening-range bars."""
+    day = today or datetime.now(ET).strftime("%Y-%m-%d")
+    safe_ticker = str(ticker or "UNKNOWN").upper().replace("/", "-")
+    return Path("data") / "opening_range_bars" / day / f"{safe_ticker}.jsonl"
+
+
+def normalize_opening_range_bar(ticker: str, bar: dict, now: datetime | None = None) -> dict:
+    """Normalize a raw 5-minute bar into an auditable JSONL artifact row."""
+    ts_et = _bar_ts_to_et(bar.get("ts"), now=now)
+    return {
+        "date": ts_et.strftime("%Y-%m-%d"),
+        "ts": ts_et.isoformat(timespec="seconds"),
+        "timestamp_utc": ts_et.astimezone(timezone.utc).isoformat(timespec="seconds"),
+        "ticker": str(ticker or "").upper(),
+        "artifact": "opening_range_bar",
+        "scanner": "opening_range",
+        "mode": "monitoring_only",
+        "watch_only": True,
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
+        "official_pick_stats_mutated": False,
+        "open": float(bar.get("open") or 0),
+        "high": float(bar.get("high") or 0),
+        "low": float(bar.get("low") or 0),
+        "close": float(bar.get("close") or 0),
+        "volume": float(bar.get("volume") or 0),
+        "source": "intraday_scanner",
+    }
+
+
+def write_opening_range_bar_artifact(
+    ticker: str,
+    bars: list[dict],
+    path: Path | None = None,
+    now: datetime | None = None,
+) -> Path | None:
+    """Write read-only opening-range bar rows for one ticker.
+
+    Returns the path written, or None when there are no bars. The file is
+    overwritten per ticker/date so repeated intraday monitor runs keep the
+    latest available 5-minute bar set without duplicate rows.
+    """
+    if not bars:
+        return None
+
+    rows = [normalize_opening_range_bar(ticker, bar, now=now) for bar in bars]
+    out = path or opening_range_bar_path(ticker, rows[0]["date"])
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", encoding="utf-8") as f:
+        for row in rows:
+            f.write(json.dumps(row, sort_keys=True) + "\n")
+    return out
+
 
 
 def intraday_momentum_observation_path(today: str | None = None) -> Path:
@@ -373,9 +449,17 @@ def append_opening_range_observations(candidates: list[dict],
 
     out = path or opening_range_observation_path()
     out.parent.mkdir(parents=True, exist_ok=True)
-    with out.open("a") as f:
+    with out.open("a", encoding="utf-8") as f:
         for row in rows:
             f.write(json.dumps(row, sort_keys=True) + "\n")
+
+    for candidate in candidates:
+        if candidate.get("scanner") != "opening_range" or candidate.get("watch_only") is not True:
+            continue
+        bars = candidate.get("_opening_range_bars") or []
+        if bars:
+            write_opening_range_bar_artifact(str(candidate.get("ticker") or ""), bars, now=now)
+
     return len(rows)
 
 

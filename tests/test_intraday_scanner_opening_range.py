@@ -240,3 +240,81 @@ def test_append_intraday_momentum_observations_ignores_non_momentum_or_non_watch
 
     assert written == 0
     assert not path.exists()
+
+def test_write_opening_range_bar_artifact_is_monitoring_only(tmp_path):
+    path = tmp_path / "opening_range_bars" / "2026-05-06" / "NET.jsonl"
+
+    out = scanner.write_opening_range_bar_artifact(
+        "net",
+        breakout_bars(),
+        path=path,
+        now=datetime(2026, 5, 6, 10, 0, tzinfo=ET),
+    )
+
+    assert out == path
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(rows) == 4
+    first = rows[0]
+    assert first["date"] == "2026-05-06"
+    assert first["ticker"] == "NET"
+    assert first["artifact"] == "opening_range_bar"
+    assert first["scanner"] == "opening_range"
+    assert first["mode"] == "monitoring_only"
+    assert first["watch_only"] is True
+    assert first["paper_trading_enabled"] is False
+    assert first["live_trading_enabled"] is False
+    assert first["official_pick_stats_mutated"] is False
+    assert first["high"] == 100.4
+    assert first["low"] == 99.7
+    assert first["close"] == 100.1
+    assert first["volume"] == 1000.0
+
+
+def test_append_opening_range_observations_also_writes_candidate_bars(tmp_path, monkeypatch):
+    observation_path = tmp_path / "opening_range_observations_2026-05-06.jsonl"
+    bars_path = tmp_path / "opening_range_bars" / "2026-05-06" / "NET.jsonl"
+
+    monkeypatch.setattr(scanner, "opening_range_bar_path", lambda ticker, today=None: bars_path)
+
+    candidate = {
+        "ticker": "NET",
+        "price": 101.6,
+        "score": 80,
+        "entry": 101.6,
+        "sl": 99.7,
+        "tp": 104.45,
+        "reason": "opening-range breakout",
+        "watch_only": True,
+        "mode": "monitoring_only",
+        "scanner": "opening_range",
+        "opening_range": {
+            "start": "2026-05-06T09:30:00-04:00",
+            "end": "2026-05-06T09:45:00-04:00",
+            "high": 101.0,
+            "low": 99.7,
+            "width_pct": 1.3039,
+            "volume": 3300,
+        },
+        "breakout_pct": 0.5941,
+        "volume_ratio": 3.1818,
+        "_opening_range_bars": breakout_bars(),
+    }
+
+    written = scanner.append_opening_range_observations(
+        [candidate],
+        path=observation_path,
+        now=datetime(2026, 5, 6, 10, 0, tzinfo=ET),
+    )
+
+    assert written == 1
+    assert observation_path.exists()
+    assert bars_path.exists()
+
+    observation = json.loads(observation_path.read_text().splitlines()[0])
+    assert "_opening_range_bars" not in observation
+
+    bars = [json.loads(line) for line in bars_path.read_text().splitlines()]
+    assert len(bars) == 4
+    assert {row["ticker"] for row in bars} == {"NET"}
+    assert all(row["mode"] == "monitoring_only" for row in bars)
+    assert all(row["watch_only"] is True for row in bars)

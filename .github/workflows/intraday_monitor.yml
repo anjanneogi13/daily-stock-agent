@@ -93,6 +93,9 @@ jobs:
           git add -f data/intraday_momentum_observations_*.jsonl 2>/dev/null || true
           git add -f data/opening_range_observations_*.jsonl 2>/dev/null || true
           git add -f data/opening_range_run_status_*.jsonl 2>/dev/null || true
+          if [ -d data/opening_range_bars ]; then
+            find data/opening_range_bars -type f -name '*.jsonl' -print0 | xargs -0 -r git add -f
+          fi
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
