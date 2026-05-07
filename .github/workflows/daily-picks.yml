@@ -287,7 +287,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Recovery path: include picks_log.csv only when today's official rows exist.
+          # recovery path: include picks_log.csv only when today's official rows exist.
           # This avoids committing header/line-ending churn after a failed zero-pick run.
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
           TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
