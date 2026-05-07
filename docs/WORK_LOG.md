@@ -13,6 +13,37 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added News Evidence operator playbook
+
+**Type:** documentation / operations / monitoring-only
+
+**Summary:**
+
+Added an operator playbook for News Evidence reports:
+
+- `docs/playbook/NEWS_EVIDENCE_REPORTS.md`
+
+The playbook documents:
+
+- no-write smoke commands,
+- local write commands,
+- GitHub Actions manual workflow usage,
+- expected reporting artifacts,
+- official-data diff checks,
+- safety fields,
+- common outcome statuses,
+- sample-size warning before score tuning.
+
+Safety:
+
+- Monitoring-only.
+- No paper trading.
+- No live trading.
+- No official pick or journal mutation.
+- Reinforces that news outcomes are evidence only until enough evaluated rows accumulate.
+
+---
+
 ## 2026-05-07 — Added News Evidence workflow
 
 **Type:** workflow / monitoring-only / evidence automation

@@ -217,6 +217,7 @@ Use these canonical docs:
 | `docs/WORK_LOG.md` | Append-only record of every meaningful change |
 | `docs/NEXT_SESSION.md` | Daily next-session handoff |
 | `docs/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
+| `docs/playbook/NEWS_EVIDENCE_REPORTS.md` | Operator playbook for News Evidence workflow and manual report generation |
 
 After every bug fix, feature, or process change:
 
