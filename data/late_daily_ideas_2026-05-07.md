@@ -1,6 +1,6 @@
 ⚠️ PREMARKET WINDOW MISSED — LATE WATCH-ONLY DAILY IDEAS
 
-Time: 2026-05-07 11:03 ET
+Time: 2026-05-07 11:05 ET
 
 Official daily picks were NOT sent because the 09:20 ET cutoff has passed.
 The ideas below are late watch-only monitoring ideas, not official premarket picks.
@@ -14,11 +14,11 @@ Monitoring-only. Not buy instructions. Not paper trades.
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
 2. BLLN — BillionToOne, Inc. — score 100.0/100
-   Source: news-signal | Window: intraday | Change: +2.29%
-   Watch-only BUY/Entry: $83.26
-   Watch-only SL: $82.01
-   Watch-only TP: $85.76
-   R/R: 2.00
+   Source: news-signal | Window: intraday | Change: +1.98%
+   Watch-only BUY/Entry: $83.01
+   Watch-only SL: $81.76
+   Watch-only TP: $85.50
+   R/R: 1.99
    Catalyst: BillionToOne Q2 EPS $0.34 Beats $0.04 Estimate, Sales $108.388M Beat $96.885M Estimate
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
@@ -32,16 +32,16 @@ Monitoring-only. Not buy instructions. Not paper trades.
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
 4. EVC — Entravision Communications Corp — score 100.0/100
-   Source: news-signal | Window: intraday | Change: -1.50%
-   Watch-only BUY/Entry: $7.57
-   Watch-only SL: $7.46
-   Watch-only TP: $7.80
+   Source: news-signal | Window: intraday | Change: -1.88%
+   Watch-only BUY/Entry: $7.55
+   Watch-only SL: $7.44
+   Watch-only TP: $7.78
    R/R: 2.09
    Catalyst: Entravision Stock Surges Following Massive Q1 Revenue Beat
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
 5. ONC — BeOne Medicines Ltd. — score 100.0/100
-   Source: news-signal | Window: intraday | Change: -0.62%
+   Source: news-signal | Window: intraday | Change: -0.63%
    Watch-only BUY/Entry: $311.36
    Watch-only SL: $306.69
    Watch-only TP: $320.70
