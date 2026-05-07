@@ -121,6 +121,14 @@ jobs:
           python scripts/news_signal_evidence_report.py \
             --date "${{ steps.params.outputs.report_date }}"
 
+      - name: Upload full JSON evidence report
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-signal-evidence-report-json-${{ steps.params.outputs.report_date }}
+          path: data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.json
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Safety check official state was not mutated
         run: |
           git diff --exit-code -- \
@@ -135,9 +143,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Keep large JSON reports out of git. They are uploaded above as
+          # short-retention workflow artifacts. Git keeps only compact review
+          # summaries and small outcome rows.
           git add -f \
             "data/news_signal_outcomes_${{ steps.params.outputs.report_date }}.jsonl" \
-            "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.json" \
             "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.md" \
             2>/dev/null || true
 

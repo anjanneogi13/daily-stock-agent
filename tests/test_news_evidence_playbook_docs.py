@@ -11,6 +11,7 @@ def test_news_evidence_playbook_exists_and_documents_artifacts():
     assert "data/news_signal_outcomes_YYYY-MM-DD.jsonl" in text
     assert "data/news_signal_evidence_report_YYYY-MM-DD.json" in text
     assert "data/news_signal_evidence_report_YYYY-MM-DD.md" in text
+    assert "short-retention GitHub Actions artifact" in text
     assert ".github/workflows/news_evidence.yml" in text
 
 
@@ -41,3 +42,11 @@ def test_news_evidence_playbook_warns_against_small_sample_tuning():
     assert "30–50 evaluated rows" in text
     assert "Do not tune catalyst scoring from a tiny sample" in text
     assert "paper/live trading readiness" in text
+
+def test_news_evidence_playbook_documents_json_retention_policy():
+    text = PLAYBOOK.read_text()
+
+    assert "full JSON report is larger" in text
+    assert "uploaded as a short-retention GitHub Actions artifact" in text
+    assert "keep the JSON report out of git" in text
+    assert "Download the full JSON report from the GitHub Actions artifact" in text

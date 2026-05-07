@@ -13,6 +13,35 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added News Evidence artifact retention policy
+
+**Type:** workflow / repository hygiene / monitoring-only
+
+**Summary:**
+
+Updated News Evidence artifact retention:
+
+- compact Markdown summaries stay tracked in git,
+- small outcome JSONL rows stay tracked in git,
+- full JSON evidence reports are uploaded as short-retention GitHub Actions artifacts,
+- full JSON evidence reports are no longer committed by the workflow.
+
+Reason:
+
+- the first full JSON evidence report was already about 117 KB,
+- committing one full JSON report per day would bloat the repository,
+- Markdown summaries are sufficient for normal review,
+- full JSON remains available from workflow artifacts for deeper inspection.
+
+Safety:
+
+- Monitoring-only.
+- No paper trading.
+- No live trading.
+- No official pick or journal mutation.
+
+---
+
 ## 2026-05-07 — Added News Evidence operator playbook
 
 **Type:** documentation / operations / monitoring-only

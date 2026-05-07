@@ -14,8 +14,11 @@ These reports are for evidence collection only. They must not create official pi
 For a report date YYYY-MM-DD, the News Evidence workflow/scripts may create:
 
 - data/news_signal_outcomes_YYYY-MM-DD.jsonl
-- data/news_signal_evidence_report_YYYY-MM-DD.json
 - data/news_signal_evidence_report_YYYY-MM-DD.md
+
+The full JSON report is larger and should be uploaded as a short-retention GitHub Actions artifact instead of committed to git:
+
+- data/news_signal_evidence_report_YYYY-MM-DD.json
 
 These are reporting artifacts only.
 
@@ -69,11 +72,13 @@ Only write reporting artifacts after no-write smoke passes:
 - python scripts/news_signal_outcome_attribution.py --date YYYY-MM-DD --max-items 100 --horizon-days 3
 - python scripts/news_signal_evidence_report.py --date YYYY-MM-DD
 
-Expected files:
+Expected local files:
 
 - data/news_signal_outcomes_YYYY-MM-DD.jsonl
 - data/news_signal_evidence_report_YYYY-MM-DD.json
 - data/news_signal_evidence_report_YYYY-MM-DD.md
+
+When committing, keep the JSON report out of git unless deliberately debugging a one-off issue.
 
 Then verify official data did not change:
 
@@ -101,10 +106,9 @@ For normal scheduled/report generation:
 - max_items: 100
 - horizon_days: 3
 
-After it completes, verify the bot commit changed only:
+After it completes, verify the workflow uploaded the full JSON report as an Actions artifact and the bot commit changed only:
 
 - data/news_signal_outcomes_YYYY-MM-DD.jsonl
-- data/news_signal_evidence_report_YYYY-MM-DD.json
 - data/news_signal_evidence_report_YYYY-MM-DD.md
 
 The commit message should look like:
@@ -119,11 +123,12 @@ After a successful workflow run:
 - git pull --ff-only origin main
 - git log -5 --oneline --decorate
 
-Then verify artifacts exist:
+Then verify tracked artifacts exist:
 
 - data/news_signal_outcomes_YYYY-MM-DD.jsonl
-- data/news_signal_evidence_report_YYYY-MM-DD.json
 - data/news_signal_evidence_report_YYYY-MM-DD.md
+
+Download the full JSON report from the GitHub Actions artifact if deeper inspection is needed.
 
 ## Interpreting common outcome statuses
 

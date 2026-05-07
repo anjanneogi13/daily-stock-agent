@@ -59,9 +59,9 @@ Next feature work:
 
 1. Validate the scheduled/manual News Evidence workflow in monitoring-only mode.
 2. The workflow may generate only reporting artifacts:
-   - `data/news_signal_outcomes_YYYY-MM-DD.jsonl`,
-   - `data/news_signal_evidence_report_YYYY-MM-DD.json`,
-   - `data/news_signal_evidence_report_YYYY-MM-DD.md`.
+   - tracked: `data/news_signal_outcomes_YYYY-MM-DD.jsonl`,
+   - tracked: `data/news_signal_evidence_report_YYYY-MM-DD.md`,
+   - uploaded artifact only: `data/news_signal_evidence_report_YYYY-MM-DD.json`.
 3. It must not mutate:
    - `data/picks_log.csv`,
    - `data/signal_journal.jsonl`,
@@ -353,8 +353,8 @@ Added a read-only report for news evidence:
 
 - script: `scripts/news_signal_evidence_report.py`,
 - outputs:
-  - `data/news_signal_evidence_report_YYYY-MM-DD.json`,
   - `data/news_signal_evidence_report_YYYY-MM-DD.md`,
+  - full JSON reports as short-retention workflow artifacts,
 - supports `--no-write` for read-only smoke/audit.
 
 The report inventories:

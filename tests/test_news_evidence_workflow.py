@@ -44,6 +44,9 @@ def test_news_evidence_workflow_commits_only_reporting_artifacts():
     assert "data/news_signal_outcomes_${{ steps.params.outputs.report_date }}.jsonl" in text
     assert "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.json" in text
     assert "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.md" in text
+    assert "Upload full JSON evidence report" in text
+    assert "actions/upload-artifact@v4" in text
+    assert "retention-days: 14" in text
     assert "news evidence report ${{ steps.params.outputs.report_date }} [skip ci]" in text
 
     commit_block = text.split("Commit news evidence artifacts", 1)[1]
@@ -58,6 +61,7 @@ def test_news_evidence_workflow_commits_only_reporting_artifacts():
         "data/learning_journal.jsonl",
         "data/premarket_check.json",
         "data/telegram_sent.json",
+        "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.json",
     ]
     for path in forbidden:
         assert path not in git_add_lines
@@ -91,3 +95,15 @@ def test_news_evidence_workflow_has_manual_parameters_and_validation():
     assert "Invalid MAX_ITEMS" in text
     assert "Invalid HORIZON_DAYS" in text
     assert re.search(r"grep -Eq '\^\[0-9\]\{4\}-\[0-9\]\{2\}-\[0-9\]\{2\}\$'", text)
+
+def test_news_evidence_workflow_uploads_large_json_instead_of_committing_it():
+    text = _text()
+
+    assert "Upload full JSON evidence report" in text
+    assert "actions/upload-artifact@v4" in text
+    assert "news-signal-evidence-report-json-${{ steps.params.outputs.report_date }}" in text
+    assert "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.json" in text
+    assert "retention-days: 14" in text
+
+    commit_block = text.split("Commit news evidence artifacts", 1)[1]
+    assert "data/news_signal_evidence_report_${{ steps.params.outputs.report_date }}.json" not in commit_block
