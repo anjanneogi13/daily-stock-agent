@@ -1685,6 +1685,115 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52352204/correction-kronos-worldwide-q1-eps-0-04-beats-0-16-estimate-sales-509-800m-beat-508-755m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-06T23:44:32.630941+00:00"
+    },
+    {
+      "ticker": "PAX",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 adjusted EPS missed consensus estimate by approximately 3.6%, creating immediate selling pressure on market open.",
+      "action_window": "intraday",
+      "headline": "Patria Investments Q1 Adj. EPS $0.27 Misses $0.28 Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52357304/patria-investments-q1-adj-eps-0-27-misses-0-28-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159819+00:00"
+    },
+    {
+      "ticker": "GTN",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Gray Media issued Q2 revenue guidance significantly below consensus estimates (midpoint of $790M vs $812.3M expected, representing a 2.7% miss), indicating operational weakness that warrants immediate trading attention.",
+      "action_window": "intraday",
+      "headline": "Gray Media Sees Q2 Sales $780.000M-$800.000M vs $812.267M Est",
+      "url": "https://www.benzinga.com/news/26/05/52357282/gray-media-sees-q2-sales-780-000m-800-000m-vs-812-267m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159834+00:00"
+    },
+    {
+      "ticker": "KPLT",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Significant EPS beat ($0.07 vs -$0.04 estimate) offset by revenue miss ($79M vs $82M), creating mixed signals with likely volatile intraday price action.",
+      "action_window": "intraday",
+      "headline": "Katapult Holdings Q1 Adj. EPS $0.07 Beats $(0.04) Estimate, Sales $79.000M Miss $82.000M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52357209/katapult-holdings-q1-adj-eps-0-07-beats-0-04-estimate-sales-79-000m-miss-82-000m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159853+00:00"
+    },
+    {
+      "ticker": "MFI",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Maple Leaf Foods beat both EPS estimates by 13.3% and revenue estimates by 0.7%, representing a meaningful positive earnings surprise that typically drives immediate price action.",
+      "action_window": "intraday",
+      "headline": "Maple Leaf Foods Q1 Adj. EPS $0.34 Beats $0.30 Estimate, Sales $962.900M Beat $955.775M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52357048/maple-leaf-foods-q1-adj-eps-0-34-beats-0-30-estimate-sales-962-900m-beat-955-775m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159862+00:00"
+    },
+    {
+      "ticker": "ENOV",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Enovis beat both EPS estimates by 8.5% and revenue estimates by 3.2%, representing a solid double-beat that typically drives positive intraday trading momentum.",
+      "action_window": "intraday",
+      "headline": "Enovis Q1 Adj. EPS $0.89 Beats $0.82 Estimate, Sales $589.200M Beat $571.131M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52357010/enovis-q1-adj-eps-0-89-beats-0-82-estimate-sales-589-200m-beat-571-131m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159871+00:00"
+    },
+    {
+      "ticker": "ARHS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Q2 sales guidance midpoint of $360M falls short of $369.1M consensus estimate, representing approximately 2.5% miss which typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Arhaus Sees Q2 Sales $350.000M-$370.000M vs $369.105M Est",
+      "url": "https://www.benzinga.com/news/26/05/52356942/arhaus-sees-q2-sales-350-000m-370-000m-vs-369-105m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159879+00:00"
+    },
+    {
+      "ticker": "GCT",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "GigaCloud beat EPS estimate by 51% ($1.24 vs $0.82) and revenue estimate by 4.9%, representing a significant earnings surprise that typically drives immediate stock price momentum.",
+      "action_window": "intraday",
+      "headline": "GigaCloud Tech Q1 Adj. EPS $1.24 Beats $0.82 Estimate, Sales $359.488M Beat $342.571M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52356905/gigacloud-tech-q1-adj-eps-1-24-beats-0-82-estimate-sales-359-488m-beat-342-571m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159887+00:00",
+      "updated_at": "2026-05-07T10:17:44.159912+00:00"
+    },
+    {
+      "ticker": "LFST",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Q2 sales guidance midpoint of $415M exceeds consensus estimate of $401.5M by 3.4%, representing a meaningful positive catalyst for near-term trading.",
+      "action_window": "intraday",
+      "headline": "LifeStance Health Gr Sees Q2 Sales $405.000M-$425.000M vs $401.519M Est",
+      "url": "https://www.benzinga.com/news/26/05/52356924/lifestance-health-gr-sees-q2-sales-405-000m-425-000m-vs-401-519m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159895+00:00"
+    },
+    {
+      "ticker": "STNG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America Securities upgrade to Buy with substantial price target increase represents a meaningful positive catalyst from a major investment bank that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Upgrades Scorpio Tankers to Buy, Raises Price Target to $100",
+      "url": "https://www.benzinga.com/news/26/05/52356873/b-of-a-securities-upgrades-scorpio-tankers-to-buy-raises-price-target-to-100",
+      "source": "alpaca",
+      "added_at": "2026-05-07T10:17:44.159922+00:00"
     }
   ]
 }
