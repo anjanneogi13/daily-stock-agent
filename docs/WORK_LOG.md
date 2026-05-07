@@ -13,6 +13,52 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added news signal outcome attribution scaffold
+
+**Type:** feature / read-only outcome attribution / news evidence
+
+**Summary:**
+
+Added a monitoring-only scaffold to attribute news signals to future price movement.
+
+New script:
+
+- `scripts/news_signal_outcome_attribution.py`
+
+Optional output:
+
+- `data/news_signal_outcomes_YYYY-MM-DD.jsonl`
+
+The scaffold:
+
+- loads evidence from `news_signals.json`, `watchlist.json`, and `news_log.jsonl`,
+- dedupes evidence rows,
+- fetches daily price history with `yfinance` when available,
+- computes 1D and configurable horizon returns,
+- records structured unavailable statuses instead of failing.
+
+Safety:
+
+- No official pick stats are mutated.
+- No signal journal mutation.
+- No learning journal mutation.
+- No paper/live trading behavior changed.
+
+Verification:
+
+- targeted tests passed,
+- full suite passed: `1372 passed, 30 skipped`,
+- journal consistency remained green,
+- readiness dashboards remained blocked as expected,
+- no official data artifacts were mutated.
+
+Next:
+
+- Feed outcome summaries into the News Signal Evidence Report.
+- Use a sufficient sample size later to tune catalyst score deltas.
+
+---
+
 ## 2026-05-07 — Added News Signal Evidence Report
 
 **Type:** feature / read-only reporting / news evidence

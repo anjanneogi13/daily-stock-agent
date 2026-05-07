@@ -255,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean after import-side-effect fixes.
-- Full suite passed: `1366 passed, 30 skipped`.
+- Full suite passed: `1372 passed, 30 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -274,6 +274,45 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## News signal outcome attribution scaffold — 2026-05-07
+
+Added a monitoring-only scaffold for news signal outcome attribution:
+
+- script: `scripts/news_signal_outcome_attribution.py`,
+- optional output: `data/news_signal_outcomes_YYYY-MM-DD.jsonl`,
+- supports `--no-write` for read-only smoke/audit.
+
+The scaffold:
+
+- loads evidence from:
+  - `data/news_signals.json`,
+  - `data/watchlist.json`,
+  - `data/news_log.jsonl`,
+- dedupes evidence rows,
+- fetches daily price history with `yfinance` when available,
+- computes:
+  - 1D return,
+  - configurable horizon return, default 3 trading days,
+- marks unavailable cases as structured statuses instead of failing:
+  - `quote_unavailable`,
+  - `missing_price_data`,
+  - `missing_future_data`,
+  - `invalid_ticker`.
+
+Safety:
+
+- no official pick stats mutated,
+- no signal journal mutation,
+- no learning journal mutation,
+- no paper/live trading behavior changed.
+
+Next:
+
+- Integrate outcome summaries into the News Signal Evidence Report.
+- Later: use enough sample size to tune catalyst score deltas.
+
+---
 
 ## News Signal Evidence Report — 2026-05-07
 
@@ -431,7 +470,7 @@ Safety remains unchanged:
 
 Comprehensive audit after overnight workflow/data commits:
 
-- Full suite passed: `1366 passed, 30 skipped`.
+- Full suite passed: `1372 passed, 30 skipped`.
 - Journal consistency remained green: `41/41 matched`.
 - Enforcement readiness remained blocked as expected.
 - Monitoring readiness continued blocking paper trading as expected.
