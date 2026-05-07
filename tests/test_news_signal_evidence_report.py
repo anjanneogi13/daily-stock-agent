@@ -78,6 +78,28 @@ def test_news_signal_evidence_report_summarizes_artifacts(tmp_path):
         }) + "\n"
     )
 
+    (data / "news_signal_outcomes_2026-05-06.jsonl").write_text(
+        json.dumps({
+            "ticker": "NET",
+            "source": "news_signals",
+            "status": "evaluated",
+            "signal_timestamp": "2026-05-06T12:00:00+00:00",
+            "sentiment": "bullish",
+            "category": "earnings_beat",
+            "tradeable_score": 0.92,
+            "score_delta": 0.1,
+            "one_d_return_pct": 3.0,
+            "horizon_return_pct": 6.0,
+            "headline": "NET beats earnings",
+        }) + "\n" +
+        json.dumps({
+            "ticker": "AAPL",
+            "source": "watchlist",
+            "status": "missing_future_data",
+            "signal_timestamp": "2026-05-06T12:00:00+00:00",
+        }) + "\n"
+    )
+
     with (data / "picks_log.csv").open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=[
             "pick_date", "ticker", "trade_type", "watch_only",
@@ -110,12 +132,23 @@ def test_news_signal_evidence_report_summarizes_artifacts(tmp_path):
     assert report["news_engine_run_status"]["totals"]["items_fetched"] == 3
     assert report["news_engine_run_status"]["lookback_minutes_latest"] == 120
     assert report["late_daily_ideas"]["news_or_watchlist_count"] == 1
+    assert report["news_signal_outcomes"]["count"] == 2
+    assert report["news_signal_outcomes"]["evaluated_count"] == 1
+    assert report["news_signal_outcomes"]["by_status"] == {
+        "evaluated": 1,
+        "missing_future_data": 1,
+    }
+    assert report["news_signal_outcomes"]["avg_one_d_return_pct"] == 3.0
+    assert report["news_signal_outcomes"]["avg_horizon_return_pct"] == 6.0
+    assert report["news_signal_outcomes"]["top_evaluated"][0]["ticker"] == "NET"
     assert report["official_picks_news_usage"]["with_news_fields_count"] == 1
 
     md = format_markdown(report)
     assert "News Signal Evidence Report" in md
     assert "NET" in md
     assert "Read-only" in md
+    assert "News signal outcomes" in md
+    assert "Outcome rows" in md
     assert "Next evidence gap" in md
 
 

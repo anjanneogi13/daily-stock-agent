@@ -10,6 +10,7 @@ Reads:
 - data/watchlist.json
 - data/news_engine_run_status_YYYY-MM-DD.jsonl
 - data/late_daily_ideas_YYYY-MM-DD.jsonl
+- data/news_signal_outcomes_YYYY-MM-DD.jsonl
 - data/picks_log.csv
 
 Writes, unless --no-write:
@@ -280,17 +281,76 @@ def _official_picks_news_summary(rows: list[dict], date_str: str) -> dict:
     }
 
 
+def _outcomes_summary(rows: list[dict]) -> dict:
+    by_status: dict[str, int] = {}
+    evaluated = []
+
+    for row in rows:
+        status = str(row.get("status") or "unknown")
+        by_status[status] = by_status.get(status, 0) + 1
+        if status == "evaluated":
+            evaluated.append(row)
+
+    one_d_vals = [
+        _safe_float(r.get("one_d_return_pct"), None)
+        for r in evaluated
+        if _safe_float(r.get("one_d_return_pct"), None) is not None
+    ]
+    horizon_vals = [
+        _safe_float(r.get("horizon_return_pct"), None)
+        for r in evaluated
+        if _safe_float(r.get("horizon_return_pct"), None) is not None
+    ]
+
+    avg_one_d = round(sum(one_d_vals) / len(one_d_vals), 4) if one_d_vals else None
+    avg_horizon = round(sum(horizon_vals) / len(horizon_vals), 4) if horizon_vals else None
+
+    top_evaluated = sorted(
+        [
+            {
+                "ticker": r.get("ticker") or "",
+                "source": r.get("source") or "",
+                "signal_timestamp": r.get("signal_timestamp") or "",
+                "sentiment": r.get("sentiment") or "",
+                "category": r.get("category") or "",
+                "tradeable_score": _safe_float(r.get("tradeable_score")),
+                "score_delta": _safe_float(r.get("score_delta")),
+                "one_d_return_pct": _safe_float(r.get("one_d_return_pct"), None),
+                "horizon_return_pct": _safe_float(r.get("horizon_return_pct"), None),
+                "headline": r.get("headline") or "",
+            }
+            for r in evaluated
+        ],
+        key=lambda x: (
+            -abs(x["horizon_return_pct"] or 0),
+            -abs(x["one_d_return_pct"] or 0),
+            str(x["ticker"]),
+        ),
+    )[:20]
+
+    return {
+        "count": len(rows),
+        "by_status": dict(sorted(by_status.items())),
+        "evaluated_count": len(evaluated),
+        "avg_one_d_return_pct": avg_one_d,
+        "avg_horizon_return_pct": avg_horizon,
+        "top_evaluated": top_evaluated,
+    }
+
+
 def build_report(date_str: str, data_dir: Path = DATA_DIR) -> dict:
     news_log_path = data_dir / "news_log.jsonl"
     signals_path = data_dir / "news_signals.json"
     watchlist_path = data_dir / "watchlist.json"
     run_status_path = data_dir / f"news_engine_run_status_{date_str}.jsonl"
     late_ideas_path = data_dir / f"late_daily_ideas_{date_str}.jsonl"
+    outcomes_path = data_dir / f"news_signal_outcomes_{date_str}.jsonl"
     picks_path = data_dir / "picks_log.csv"
 
     news_rows, news_invalid = load_jsonl(news_log_path)
     status_rows, status_invalid = load_jsonl(run_status_path)
     late_rows, late_invalid = load_jsonl(late_ideas_path)
+    outcome_rows, outcome_invalid = load_jsonl(outcomes_path)
 
     report = {
         "artifact": "news_signal_evidence_report",
@@ -307,6 +367,7 @@ def build_report(date_str: str, data_dir: Path = DATA_DIR) -> dict:
             "watchlist": str(watchlist_path),
             "news_engine_run_status": str(run_status_path),
             "late_daily_ideas": str(late_ideas_path),
+            "news_signal_outcomes": str(outcomes_path),
             "picks_log": str(picks_path),
         },
         "exists": {
@@ -315,18 +376,21 @@ def build_report(date_str: str, data_dir: Path = DATA_DIR) -> dict:
             "watchlist": watchlist_path.exists(),
             "news_engine_run_status": run_status_path.exists(),
             "late_daily_ideas": late_ideas_path.exists(),
+            "news_signal_outcomes": outcomes_path.exists(),
             "picks_log": picks_path.exists(),
         },
         "invalid_json_lines": {
             "news_log": news_invalid,
             "news_engine_run_status": status_invalid,
             "late_daily_ideas": late_invalid,
+            "news_signal_outcomes": outcome_invalid,
         },
         "news_log": _news_log_summary(news_rows),
         "active_news_signals": _signals_summary(load_json(signals_path, {})),
         "watchlist": _watchlist_summary(load_json(watchlist_path, {})),
         "news_engine_run_status": _run_status_summary(status_rows),
         "late_daily_ideas": _late_ideas_summary(late_rows),
+        "news_signal_outcomes": _outcomes_summary(outcome_rows),
         "official_picks_news_usage": _official_picks_news_summary(load_csv(picks_path), date_str),
     }
 
@@ -412,6 +476,26 @@ def format_markdown(report: dict) -> str:
             )
     else:
         lines.append("- No watchlist items found.")
+
+    outcomes = report["news_signal_outcomes"]
+    lines.extend([
+        "",
+        "## News signal outcomes",
+        "",
+        f"- Outcome rows: **{outcomes['count']}**",
+        f"- Evaluated rows: **{outcomes['evaluated_count']}**",
+        f"- Status counts: `{outcomes['by_status']}`",
+        f"- Average 1D return: **{outcomes['avg_one_d_return_pct'] if outcomes['avg_one_d_return_pct'] is not None else 'n/a'}**",
+        f"- Average horizon return: **{outcomes['avg_horizon_return_pct'] if outcomes['avg_horizon_return_pct'] is not None else 'n/a'}**",
+    ])
+    if outcomes["top_evaluated"]:
+        for item in outcomes["top_evaluated"][:10]:
+            lines.append(
+                f"- **{item['ticker']}** 1D={item['one_d_return_pct']}% "
+                f"horizon={item['horizon_return_pct']}% source={item['source']}"
+            )
+    else:
+        lines.append("- No evaluated news signal outcomes found for this date.")
 
     late = report["late_daily_ideas"]
     official = report["official_picks_news_usage"]

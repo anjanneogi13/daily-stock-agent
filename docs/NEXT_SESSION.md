@@ -275,6 +275,36 @@ Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
 
+## News Signal Evidence Report outcome integration — 2026-05-07
+
+Integrated news signal outcome summaries into the News Signal Evidence Report.
+
+The evidence report now reads this optional artifact when present:
+
+- `data/news_signal_outcomes_YYYY-MM-DD.jsonl`
+
+It summarizes:
+
+- total outcome rows,
+- status counts,
+- evaluated rows,
+- average 1D return,
+- average horizon return,
+- top evaluated rows.
+
+Safety:
+
+- report remains read-only,
+- no official pick stats mutation,
+- no signal/learning journal mutation,
+- no paper/live trading behavior changed.
+
+Next:
+
+- Once enough outcome rows exist, review catalyst categories and score deltas.
+
+---
+
 ## News signal outcome attribution scaffold — 2026-05-07
 
 Added a monitoring-only scaffold for news signal outcome attribution:

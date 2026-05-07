@@ -13,6 +13,41 @@ Rules:
 
 ---
 
+## 2026-05-07 — Integrated news outcomes into evidence report
+
+**Type:** feature / read-only reporting / outcome evidence
+
+**Summary:**
+
+Integrated news signal outcome summaries into the News Signal Evidence Report.
+
+The report now reads the optional artifact:
+
+- `data/news_signal_outcomes_YYYY-MM-DD.jsonl`
+
+It summarizes:
+
+- total outcome rows,
+- status counts,
+- evaluated count,
+- average 1D return,
+- average horizon return,
+- top evaluated rows.
+
+Safety:
+
+- Report remains read-only.
+- No official pick stats are mutated.
+- No signal journal mutation.
+- No learning journal mutation.
+- No paper/live trading behavior changed.
+
+Next:
+
+- Review catalyst outcomes once enough rows accumulate.
+
+---
+
 ## 2026-05-07 — Added news signal outcome attribution scaffold
 
 **Type:** feature / read-only outcome attribution / news evidence
