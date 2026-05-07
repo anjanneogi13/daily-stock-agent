@@ -255,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean after import-side-effect fixes.
-- Full suite passed: `1360 passed, 29 skipped`.
+- Full suite passed: `1363 passed, 29 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -274,6 +274,29 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## News Engine lookback hardening — 2026-05-07
+
+Changed News Engine fetch lookback from a fixed 60 minutes to a safer configurable lookback:
+
+- default: `120` minutes,
+- env override: `NEWS_LOOKBACK_MINUTES`,
+- clamp range: `30` to `360` minutes,
+- run-status now records `lookback_minutes`.
+
+Why:
+
+- GitHub scheduled workflows are best-effort and can be delayed or skipped.
+- A 120-minute lookback reduces missed broad-market news.
+- Existing `data/news_seen.json` dedupe prevents already-seen items from being reprocessed.
+
+Safety:
+
+- no official pick logic changed,
+- no paper/live trading behavior changed,
+- no readiness-gate changes.
+
+---
 
 ## News Engine run-status observability — 2026-05-07
 
@@ -376,7 +399,7 @@ Safety remains unchanged:
 
 Comprehensive audit after overnight workflow/data commits:
 
-- Full suite passed: `1360 passed, 29 skipped`.
+- Full suite passed: `1363 passed, 29 skipped`.
 - Journal consistency remained green: `41/41 matched`.
 - Enforcement readiness remained blocked as expected.
 - Monitoring readiness continued blocking paper trading as expected.

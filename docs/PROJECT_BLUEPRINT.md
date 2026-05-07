@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-07
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1360 passed, 29 skipped
+**Test suite:** 1363 passed, 29 skipped
 **Mode:** monitoring-only
 
 ## Purpose
@@ -37,6 +37,7 @@ The repo is healthy for monitoring mode:
 - Watch-only learning report v1 inventories late daily ideas, opening-range observations, and intraday dedupe fingerprints without touching official pick stats.
 - Intraday momentum watch-only observations are now persisted structurally for future watch-only outcome learning.
 - News Engine run-status artifacts now record fetch/classify/signal/watchlist counts for schedule observability.
+- News Engine now uses a 120-minute default lookback, configurable via `NEWS_LOOKBACK_MINUTES`, and records the lookback in run-status artifacts.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.

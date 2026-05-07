@@ -22,6 +22,9 @@ from src.news_signals import add_signal_from_classification, stats as signals_st
 
 TELEGRAM_THRESHOLD = 0.85  # PR #77: raised from 0.7 to cut noise (~60% fewer alerts)
 MAX_ALERTS_PER_RUN = 3    # PR #77: lowered from 5 to focus on signal
+DEFAULT_NEWS_LOOKBACK_MINUTES = 120
+MIN_NEWS_LOOKBACK_MINUTES = 30
+MAX_NEWS_LOOKBACK_MINUTES = 360
 ET = ZoneInfo("America/New_York")
 
 
@@ -29,6 +32,21 @@ def news_engine_run_status_path(today: str | None = None, data_dir: Path = Path(
     """Return the JSONL run-status artifact path for the US trading session."""
     day = today or datetime.now(timezone.utc).astimezone(ET).strftime("%Y-%m-%d")
     return data_dir / f"news_engine_run_status_{day}.jsonl"
+
+
+def news_lookback_minutes() -> int:
+    """Return News Engine fetch lookback.
+
+    GitHub scheduled workflows are best-effort and may be delayed or skipped.
+    A 120-minute default gives safe overlap while existing news_seen dedupe
+    prevents repeated processing of already-seen items.
+    """
+    raw = os.getenv("NEWS_LOOKBACK_MINUTES", str(DEFAULT_NEWS_LOOKBACK_MINUTES))
+    try:
+        minutes = int(raw)
+    except (TypeError, ValueError):
+        return DEFAULT_NEWS_LOOKBACK_MINUTES
+    return max(MIN_NEWS_LOOKBACK_MINUTES, min(MAX_NEWS_LOOKBACK_MINUTES, minutes))
 
 
 def build_news_engine_run_status(
@@ -44,6 +62,7 @@ def build_news_engine_run_status(
     high_impact_count: int = 0,
     telegram_enabled: bool = False,
     telegram_attempted: int = 0,
+    lookback_minutes: int = DEFAULT_NEWS_LOOKBACK_MINUTES,
     now: datetime | None = None,
 ) -> dict:
     """Build an auditable, monitoring-only News Engine run-status row."""
@@ -64,6 +83,7 @@ def build_news_engine_run_status(
         "high_impact_count": int(high_impact_count or 0),
         "telegram_enabled": bool(telegram_enabled),
         "telegram_attempted": int(telegram_attempted or 0),
+        "lookback_minutes": int(lookback_minutes or DEFAULT_NEWS_LOOKBACK_MINUTES),
         "mode": "monitoring_only",
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
@@ -92,6 +112,7 @@ def append_news_engine_run_status(
     high_impact_count: int = 0,
     telegram_enabled: bool = False,
     telegram_attempted: int = 0,
+    lookback_minutes: int = DEFAULT_NEWS_LOOKBACK_MINUTES,
     path: Path | None = None,
     now: datetime | None = None,
 ) -> Path:
@@ -108,6 +129,7 @@ def append_news_engine_run_status(
         high_impact_count=high_impact_count,
         telegram_enabled=telegram_enabled,
         telegram_attempted=telegram_attempted,
+        lookback_minutes=lookback_minutes,
         now=now,
     )
     out = path or news_engine_run_status_path(record["date"])
@@ -164,6 +186,7 @@ def main():
         "high_impact_count": 0,
         "telegram_enabled": False,
         "telegram_attempted": 0,
+        "lookback_minutes": news_lookback_minutes(),
     }
 
     append_news_engine_run_status(
@@ -173,9 +196,14 @@ def main():
     )
 
     try:
-        # Pull news from last 60 min, plus Yahoo on current watchlist
+        # Pull news with overlap, plus Yahoo on current watchlist.
+        # GitHub scheduled workflows can be delayed/skipped; 120 minutes is the
+        # safe default and data/news_seen.json dedupes already-seen items.
         watchlist_tickers = get_watchlist_tickers()[:20]
-        items = fetch_all_news(watchlist_tickers=watchlist_tickers, since_minutes=60)
+        items = fetch_all_news(
+            watchlist_tickers=watchlist_tickers,
+            since_minutes=counters["lookback_minutes"],
+        )
         counters["items_fetched"] = len(items)
         print(f"[news_engine] Fetched {len(items)} fresh items")
 

@@ -13,6 +13,35 @@ Rules:
 
 ---
 
+## 2026-05-07 — Hardened News Engine lookback
+
+**Type:** feature / reliability / observability
+
+**Summary:**
+
+Changed News Engine fetch lookback from a fixed 60 minutes to a safer configurable lookback.
+
+Behavior:
+
+- default lookback: `120` minutes,
+- env override: `NEWS_LOOKBACK_MINUTES`,
+- clamp range: `30` to `360` minutes,
+- `lookback_minutes` is now recorded in `data/news_engine_run_status_YYYY-MM-DD.jsonl`.
+
+Why:
+
+- GitHub scheduled workflows are best-effort and can be delayed or skipped.
+- A 120-minute lookback reduces risk of missing broad-market news when a scheduled run is late.
+- Existing `data/news_seen.json` dedupe prevents repeated processing of already-seen items.
+
+Safety:
+
+- No official pick logic changed.
+- No paper/live trading behavior changed.
+- No readiness gates changed.
+
+---
+
 ## 2026-05-07 — Added News Engine run-status artifacts
 
 **Type:** feature / observability / workflow safety

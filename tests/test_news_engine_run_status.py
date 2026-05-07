@@ -35,6 +35,7 @@ def test_build_news_engine_run_status_is_monitoring_only():
     assert row["items_classified"] == 2
     assert row["signals_added"] == 1
     assert row["watchlist_added"] == 1
+    assert row["lookback_minutes"] == runner.DEFAULT_NEWS_LOOKBACK_MINUTES
 
 
 def test_append_news_engine_run_status_writes_jsonl(tmp_path):
@@ -76,3 +77,45 @@ def test_news_engine_workflow_commits_run_status_artifact():
     assert "data/news_engine_run_status_*.jsonl" in text
     assert "data/watchlist.json" in text
     assert "data/news_signals.json" in text
+
+
+def test_news_lookback_minutes_defaults_to_120(monkeypatch):
+    monkeypatch.delenv("NEWS_LOOKBACK_MINUTES", raising=False)
+
+    assert runner.news_lookback_minutes() == 120
+
+
+def test_news_lookback_minutes_is_configurable_and_clamped(monkeypatch):
+    monkeypatch.setenv("NEWS_LOOKBACK_MINUTES", "180")
+    assert runner.news_lookback_minutes() == 180
+
+    monkeypatch.setenv("NEWS_LOOKBACK_MINUTES", "5")
+    assert runner.news_lookback_minutes() == runner.MIN_NEWS_LOOKBACK_MINUTES
+
+    monkeypatch.setenv("NEWS_LOOKBACK_MINUTES", "999")
+    assert runner.news_lookback_minutes() == runner.MAX_NEWS_LOOKBACK_MINUTES
+
+    monkeypatch.setenv("NEWS_LOOKBACK_MINUTES", "not-a-number")
+    assert runner.news_lookback_minutes() == runner.DEFAULT_NEWS_LOOKBACK_MINUTES
+
+
+def test_news_engine_main_uses_default_lookback(tmp_path, monkeypatch):
+    captured = {}
+
+    def fake_fetch_all_news(**kwargs):
+        captured.update(kwargs)
+        return []
+
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.delenv("NEWS_LOOKBACK_MINUTES", raising=False)
+    monkeypatch.setattr(runner, "get_watchlist_tickers", lambda: ["AAPL"])
+    monkeypatch.setattr(runner, "fetch_all_news", fake_fetch_all_news)
+
+    runner.main()
+
+    assert captured["watchlist_tickers"] == ["AAPL"]
+    assert captured["since_minutes"] == 120
+
+    paths = list((tmp_path / "data").glob("news_engine_run_status_*.jsonl"))
+    rows = [json.loads(line) for line in paths[0].read_text().splitlines()]
+    assert rows[-1]["lookback_minutes"] == 120
