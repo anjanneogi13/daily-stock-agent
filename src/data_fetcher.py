@@ -5,6 +5,12 @@ import os
 from typing import Dict, List
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from .market_data_health import (
+    classify_provider_error,
+    record_market_data_event,
+    write_market_data_run_summary,
+)
+
 try:
     from curl_cffi import requests as cf_requests
     SESSION = cf_requests.Session(impersonate="chrome")
@@ -27,16 +33,19 @@ def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.Da
     is per-instance and safe to use in ThreadPoolExecutor.
     """
     try:
-        t = yf.Ticker(ticker)
+        t = yf.Ticker(ticker, session=SESSION) if SESSION else yf.Ticker(ticker)
         df = t.history(period=period, interval=interval,
                        auto_adjust=False, timeout=20)
         if df is None or df.empty:
+            record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="empty", message="empty OHLCV dataframe")
             return pd.DataFrame()
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)
         df.columns = [c.lower() for c in df.columns]
+        record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="success")
         return df
     except Exception as e:
+        record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="error", error_type=classify_provider_error(e), message=str(e))
         print(f"[data] {ticker}: {type(e).__name__}: {str(e)[:120]}")
         return pd.DataFrame()
 
@@ -52,6 +61,7 @@ def fetch_universe_data(tickers: List[str], period: str = "6mo",
             if not df.empty and len(df) > 50:
                 results[t] = df
     print(f"[data] Fetched {len(results)}/{len(tickers)} tickers.")
+    write_market_data_run_summary(universe_count=len(tickers), fetched_count=len(results))
     return results
 
 
@@ -88,8 +98,11 @@ def fetch_info(ticker: str) -> dict:
                 info["name"]      = long_name
         except Exception:
             pass
-    except Exception:
+    except Exception as e:
+        record_market_data_event(provider="yfinance", stage="info", ticker=ticker, result="error", error_type=classify_provider_error(e), message=str(e))
         pass
+    else:
+        record_market_data_event(provider="yfinance", stage="info", ticker=ticker, result="success")
 
     # 2. Real fundamentals from Finnhub (if key set)
     if HAS_FINNHUB and os.getenv("FINNHUB_API_KEY"):

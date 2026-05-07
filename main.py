@@ -124,8 +124,15 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None)
             "ready_for_paper_trading": False,
             "reason": reason,
             "pipeline": pipeline or {},
+            "market_data_health": {},
             "next_action": "Use watch-only fallback only; do not fabricate official picks.",
         }
+
+        try:
+            from src.market_data_health import summarize_market_data_health
+            payload["market_data_health"] = summarize_market_data_health() or {}
+        except Exception:
+            payload["market_data_health"] = {}
 
         (data_dir / f"daily_picks_no_pick_report_{date_str}.json").write_text(
             json.dumps(payload, indent=2, sort_keys=True) + "\n"
@@ -146,6 +153,18 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None)
         ]
         for key, value in sorted((pipeline or {}).items()):
             lines.append(f"- {key}: **{value}**")
+
+        if payload.get("market_data_health"):
+            lines.extend(["", "## Market Data Health"])
+            providers = payload["market_data_health"].get("providers", {})
+            for provider, stats in sorted(providers.items()):
+                lines.append(
+                    f"- {provider}: attempts=**{stats.get('attempts', 0)}**, "
+                    f"successes=**{stats.get('successes', 0)}**, "
+                    f"errors=**{stats.get('errors', 0)}**, "
+                    f"rate_limited=**{stats.get('rate_limited', 0)}**, "
+                    f"unauthorized=**{stats.get('unauthorized', 0)}**"
+                )
 
         (data_dir / f"daily_picks_no_pick_report_{date_str}.md").write_text(
             "\n".join(lines) + "\n"
@@ -177,6 +196,7 @@ def run():
         "hard_blocked_count": 0,
         "post_hard_block_pick_count": 0,
         "final_pick_count": 0,
+        "scorer_workers": 0,
     }
     rprint("[bold cyan]Daily Stock Picker Agent[/bold cyan]")
     rprint("[dim]Not financial advice. Educational only.[/dim]\n")
@@ -306,8 +326,16 @@ def run():
 
     rprint("[4/6] Computing indicators + scoring (parallel, all candidates)...")
     from src.parallel_scorer import score_all
-    candidates = score_all(data, cfg, max_workers=10)
+    scorer_workers = int(os.getenv("DAILY_SCORER_WORKERS", "4"))
+    pipeline["scorer_workers"] = scorer_workers
+    rprint(f"[dim]Scoring workers: {scorer_workers} (set DAILY_SCORER_WORKERS to override)[/dim]")
+    candidates = score_all(data, cfg, max_workers=scorer_workers)
     pipeline["scored_count"] = len(candidates)
+    try:
+        from src.market_data_health import write_market_data_run_summary
+        write_market_data_run_summary(scored_count=len(candidates))
+    except Exception:
+        pass
 
     rprint("[5/6] Filtering for earnings risk + wisdom kill list...")
     filtered = []
@@ -620,6 +648,11 @@ def run():
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
     pipeline["final_pick_count"] = len(top)
+    try:
+        from src.market_data_health import write_market_data_run_summary
+        write_market_data_run_summary(final_pick_count=len(top))
+    except Exception:
+        pass
     if not top:
         reason = (
             "No official picks generated after scoring/filtering/gating. "

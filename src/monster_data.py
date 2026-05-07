@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Dict, Optional
 from datetime import datetime, timedelta
 
+from .market_data_health import classify_provider_error, record_market_data_event
+
 CACHE_DIR = Path("data/monster_cache")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_TTL_HOURS = 24
@@ -46,7 +48,9 @@ def get_monster_data(ticker: str) -> Dict[str, Optional[float]]:
         if fs is not None:
             result["float_shares"] = float(fs)
         cp.write_text(json.dumps(result))
+        record_market_data_event(provider="yfinance", stage="monster_info", ticker=ticker, result="success")
     except Exception as e:
+        record_market_data_event(provider="yfinance", stage="monster_info", ticker=ticker, result="error", error_type=classify_provider_error(e), message=str(e))
         print(f"[monster_data] {ticker}: {type(e).__name__}: {str(e)[:60]}")
 
     return result

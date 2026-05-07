@@ -32,3 +32,19 @@ def test_main_writes_no_pick_evidence_report_before_zero_pick_failure():
     assert "pipeline[\"final_pick_count\"] = len(top)" in text
     assert "_write_daily_picks_no_pick_report(reason, pipeline)" in text
     assert "data-provider/rate-limit/no-candidate" in text
+
+
+def test_main_includes_market_data_health_in_no_pick_report():
+    text = Path("main.py").read_text()
+
+    assert "market_data_health" in text
+    assert "summarize_market_data_health" in text
+    assert "write_market_data_run_summary" in text
+
+
+def test_main_limits_scoring_workers_to_reduce_provider_rate_limits():
+    text = Path("main.py").read_text()
+
+    assert "DAILY_SCORER_WORKERS" in text
+    assert 'os.getenv("DAILY_SCORER_WORKERS", "4")' in text
+    assert "max_workers=scorer_workers" in text
