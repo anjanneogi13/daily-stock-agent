@@ -172,3 +172,12 @@ def test_watchdog_can_trigger_daily_picks_before_cutoff():
     assert '"ref":"main"' in text
     assert "Rescue triggered: $RESCUE_TRIGGERED" in text
     assert "does not create picks itself" in text
+
+def test_daily_picks_sends_failure_alert_and_commits_no_pick_report():
+    text = _text()
+
+    assert "Send daily picks failure alert" in text
+    assert "Daily picks failed for $ET_DATE" in text
+    assert "telegram_daily_failed" in text
+    assert "data/daily_picks_no_pick_report_*.json" in text
+    assert "data/daily_picks_no_pick_report_*.md" in text

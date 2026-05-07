@@ -23,3 +23,12 @@ def test_daily_picks_workflow_does_not_stage_picks_log_on_zero_pick_failure():
     assert "No picks_log.csv rows for $ET_DATE; not staging picks_log.csv" in text
     assert 'if [ "$TODAY_ROWS" -gt 0 ]; then' in text
     assert "git add -f data/picks_log.csv" in text
+
+def test_main_writes_no_pick_evidence_report_before_zero_pick_failure():
+    text = Path("main.py").read_text()
+
+    assert "def _write_daily_picks_no_pick_report" in text
+    assert "daily_picks_no_pick_report_" in text
+    assert "pipeline[\"final_pick_count\"] = len(top)" in text
+    assert "_write_daily_picks_no_pick_report(reason, pipeline)" in text
+    assert "data-provider/rate-limit/no-candidate" in text

@@ -101,6 +101,60 @@ def load_config(path: str = "config.yaml") -> dict:
         return yaml.safe_load(f)
 
 
+def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None) -> None:
+    """Persist a no-pick evidence artifact for operational learning."""
+    try:
+        import json
+        from datetime import datetime
+        from pathlib import Path
+
+        data_dir = Path("data")
+        data_dir.mkdir(exist_ok=True)
+        now_utc = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+        date_str = now_utc[:10]
+
+        payload = {
+            "artifact": "daily_picks_no_pick_report",
+            "date": date_str,
+            "timestamp_utc": now_utc,
+            "mode": "monitoring_only",
+            "official_premarket_pick": False,
+            "paper_trading_enabled": False,
+            "live_trading_enabled": False,
+            "ready_for_paper_trading": False,
+            "reason": reason,
+            "pipeline": pipeline or {},
+            "next_action": "Use watch-only fallback only; do not fabricate official picks.",
+        }
+
+        (data_dir / f"daily_picks_no_pick_report_{date_str}.json").write_text(
+            json.dumps(payload, indent=2, sort_keys=True) + "\n"
+        )
+
+        lines = [
+            "# Daily Picks No-Pick Report",
+            "",
+            "Monitoring-only failure evidence. No official picks were generated.",
+            "",
+            f"- Date: **{date_str}**",
+            f"- Reason: **{reason}**",
+            "- Paper trading enabled: **false**",
+            "- Live trading enabled: **false**",
+            "- Official premarket pick: **false**",
+            "",
+            "## Pipeline",
+        ]
+        for key, value in sorted((pipeline or {}).items()):
+            lines.append(f"- {key}: **{value}**")
+
+        (data_dir / f"daily_picks_no_pick_report_{date_str}.md").write_text(
+            "\n".join(lines) + "\n"
+        )
+    except Exception:
+        # Do not hide the original no-pick failure if reporting fails.
+        pass
+
+
 def _should_log_paper_trade() -> bool:
     """Return True only when legacy local paper-trade logging is explicit.
 
@@ -113,6 +167,17 @@ def _should_log_paper_trade() -> bool:
 def run():
     load_dotenv()
     cfg = load_config()
+    pipeline = {
+        "universe_count": 0,
+        "fetched_count": 0,
+        "scored_count": 0,
+        "filtered_count": 0,
+        "capped_count": 0,
+        "pre_hard_block_pick_count": 0,
+        "hard_blocked_count": 0,
+        "post_hard_block_pick_count": 0,
+        "final_pick_count": 0,
+    }
     rprint("[bold cyan]Daily Stock Picker Agent[/bold cyan]")
     rprint("[dim]Not financial advice. Educational only.[/dim]\n")
 
@@ -233,13 +298,16 @@ def run():
 
     rprint("[2/6] Loading universe...")
     tickers = get_universe(cfg)
+    pipeline["universe_count"] = len(tickers)
 
     rprint("[3/6] Fetching market data...")
     data = fetch_universe_data(tickers, period=f"{cfg['strategy']['lookback_days']}d")
+    pipeline["fetched_count"] = len(data)
 
     rprint("[4/6] Computing indicators + scoring (parallel, all candidates)...")
     from src.parallel_scorer import score_all
     candidates = score_all(data, cfg, max_workers=10)
+    pipeline["scored_count"] = len(candidates)
 
     rprint("[5/6] Filtering for earnings risk + wisdom kill list...")
     filtered = []
@@ -288,6 +356,7 @@ def run():
             rprint(f"  [dim]earnings err for {p['ticker']}: {e}[/dim]")
             p["earnings"] = {}
     filtered.sort(key=lambda x: x["scores"]["composite"], reverse=True)
+    pipeline["filtered_count"] = len(filtered)
 
     # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Sector concentration cap (with weak-sector tightening)
@@ -307,6 +376,7 @@ def run():
     capped = apply_tag_cap(capped, max_per_tag=2)
     if len(capped) < pre:
         print(f'[tag_cap] {pre} → {len(capped)} after tag cap (max 2 per primary tag)')
+    pipeline["capped_count"] = len(capped)
     rprint(f"  [dim]Sector cap: {pre_cap} → {len(capped)} (max 4/sector, weak={list(weak_sectors.keys()) or 'none'})[/dim]")
 
     # ═══════════════════════════════════════════════════════════════
@@ -345,13 +415,8 @@ def run():
 
     # Trim to final pick count
     top = capped[: cfg["output"]["top_n_picks"]]
+    pipeline["pre_hard_block_pick_count"] = len(top)
 
-    if not top:
-        raise RuntimeError(
-            "No official picks generated after scoring/filtering. "
-            "This is not safe to treat as a successful daily-picks run; "
-            "check data-provider/rate-limit logs and use watch-only fallback if needed."
-        )
 
     # ═══════════════════════════════════════════════════════════════
     # PR #84: HARD ENFORCEMENT LAYER (the prefrontal cortex)
@@ -361,6 +426,8 @@ def run():
     from src.hard_blocks import apply_hard_blocks
     pre_block_count = len(top)
     top, blocked = apply_hard_blocks(top, check_sectors=True)
+    pipeline["hard_blocked_count"] = len(blocked)
+    pipeline["post_hard_block_pick_count"] = len(top)
     if blocked:
         rprint(f"  [red]🚫 HARD BLOCKED: {len(blocked)} picks[/red]")
         for b in blocked:
@@ -552,6 +619,16 @@ def run():
     # ═══════════════════════════════════════════════════════════════
     # WEEK 3: Auto-tag DAY vs SWING
     # ═══════════════════════════════════════════════════════════════
+    pipeline["final_pick_count"] = len(top)
+    if not top:
+        reason = (
+            "No official picks generated after scoring/filtering/gating. "
+            "This is not safe to treat as a successful daily-picks run; "
+            "check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed."
+        )
+        _write_daily_picks_no_pick_report(reason, pipeline)
+        raise RuntimeError(reason)
+
     rprint("[5d/6] Auto-tagging trade type (DAY vs SWING)...")
     for p in top:
         ttype = _safe_trade_type_for_pick(p["scores"], pick_date=_today)

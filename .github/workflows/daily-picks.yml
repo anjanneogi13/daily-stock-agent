@@ -176,6 +176,29 @@ jobs:
           fi
           exit "$rc"
 
+      - name: Send daily picks failure alert
+        if: failure() && steps.guard.outputs.should_run == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          MSG="🚨 *Daily picks failed for $ET_DATE*%0A%0AOfficial picks were not produced successfully.%0A%0ACommon causes:%0A- data provider/rate-limit errors%0A- zero final candidates after filters/gates%0A- workflow/runtime failure%0A%0ANo official picks should be used. Use watch-only fallback only."
+          SENT=0
+          for CHAT in "$TELEGRAM_CHAT_ID" "$TELEGRAM_GROUP_CHAT_ID"; do
+            [ -z "$CHAT" ] && continue
+            curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+              -d "chat_id=$CHAT" -d "text=$MSG" -d "parse_mode=Markdown" \
+              >/tmp/daily_picks_failure_telegram_response.txt || true
+            grep -q '"ok":true' /tmp/daily_picks_failure_telegram_response.txt && SENT=1
+          done
+          if [ "$SENT" -eq 1 ]; then
+            python scripts/record_daily_picks_run_status.py --event telegram_daily_failed --result success --reason "daily picks failure Telegram alert sent" --telegram-sent success
+          else
+            python scripts/record_daily_picks_run_status.py --event telegram_daily_failed --result failed --reason "daily picks failure Telegram alert not confirmed" --telegram-sent failed
+          fi
+
       - name: Verify CSV was written
         if: steps.guard.outputs.should_run == 'true'
         run: |
@@ -198,7 +221,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl 2>/dev/null || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No changes to commit"
@@ -299,7 +322,7 @@ jobs:
             echo "No picks_log.csv rows for $ET_DATE; not staging picks_log.csv"
           fi
 
-          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/daily_picks_run_status_*.jsonl 2>/dev/null || true
+          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No post-send changes to commit"
