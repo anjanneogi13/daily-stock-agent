@@ -2130,5 +2130,77 @@
     "added_at": "2026-05-07T10:17:44.156856+00:00",
     "expires": "2026-05-12T10:17:44.156861+00:00",
     "hard_block": false
+  },
+  "NOMD": {
+    "ticker": "NOMD",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Nomad Foods Lifts Outlook Despite Inflation Squeeze",
+    "added_at": "2026-05-07T12:17:46.138141+00:00",
+    "expires": "2026-05-14T12:17:46.138147+00:00",
+    "hard_block": false
+  },
+  "CSPI": {
+    "ticker": "CSPI",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "CSP Q2 EPS $0.03 Up From $(0.01) YoY, Sales $16.012M Up From $13.147M YoY",
+    "added_at": "2026-05-07T12:17:46.140624+00:00",
+    "expires": "2026-05-14T12:17:46.140630+00:00",
+    "hard_block": false
+  },
+  "GCMG": {
+    "ticker": "GCMG",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "GCM Grosvenor Q1 Adj. EPS $0.18, Inline, Sales $124.800M Miss $130.133M Estimate",
+    "added_at": "2026-05-07T12:17:46.142636+00:00",
+    "expires": "2026-05-14T12:17:46.142641+00:00",
+    "hard_block": false
+  },
+  "BGC": {
+    "ticker": "BGC",
+    "score_delta": 0.089,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "intraday",
+    "headline": "BGC Group Q1 Adj. EPS $0.41, Inline, Sales $955.481M Beat $923.355M Estimate",
+    "added_at": "2026-05-07T12:17:46.144642+00:00",
+    "expires": "2026-05-14T12:17:46.144651+00:00",
+    "hard_block": false
+  },
+  "MCRP": {
+    "ticker": "MCRP",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Micropolis AI Robotics Announces $1.2M Deployment Agreement With ESMTEEL",
+    "added_at": "2026-05-07T12:17:46.146657+00:00",
+    "expires": "2026-05-14T12:17:46.146662+00:00",
+    "hard_block": false
+  },
+  "AVBP": {
+    "ticker": "AVBP",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "ArriVent BioPharma Receives IND Application Clearance From FDA For ARR-002 Treatment For Ovarian And Endometrial Cancers",
+    "added_at": "2026-05-07T12:17:46.148707+00:00",
+    "expires": "2026-06-06T12:17:46.148713+00:00",
+    "hard_block": false
   }
 }
