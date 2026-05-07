@@ -346,6 +346,13 @@ def run():
     # Trim to final pick count
     top = capped[: cfg["output"]["top_n_picks"]]
 
+    if not top:
+        raise RuntimeError(
+            "No official picks generated after scoring/filtering. "
+            "This is not safe to treat as a successful daily-picks run; "
+            "check data-provider/rate-limit logs and use watch-only fallback if needed."
+        )
+
     # ═══════════════════════════════════════════════════════════════
     # PR #84: HARD ENFORCEMENT LAYER (the prefrontal cortex)
     # Blocks: penny stocks, tight SL, weak sector ETF

@@ -67,7 +67,8 @@ jobs:
 
           # 🚨 NEW: Check picks_log.csv directly (more reliable than premarket_check.json)
           if [ -f data/picks_log.csv ]; then
-            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
+            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
+          TODAY_ROWS="${TODAY_ROWS:-0}"
             if [ "$TODAY_ROWS" -gt 0 ]; then
               echo "⏭ Already have $TODAY_ROWS picks logged for $ET_DATE — skipping"
               python scripts/record_daily_picks_run_status.py --event already_logged_skip --result skipped --reason "picks already logged for ET date" --picks-logged "$TODAY_ROWS"
@@ -179,7 +180,8 @@ jobs:
         if: steps.guard.outputs.should_run == 'true'
         run: |
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
-          TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
+          TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
+          TODAY_ROWS="${TODAY_ROWS:-0}"
           if [ "$TODAY_ROWS" -eq 0 ]; then
             echo "❌ CRITICAL: main.py ran but no picks logged for $ET_DATE!"
             python scripts/record_daily_picks_run_status.py --event verify_csv_failed --result failed --reason "main.py ran but no picks logged" --picks-logged 0
@@ -285,9 +287,19 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Include picks_log.csv here as a recovery path: if the first commit/push
-          # was skipped or raced, the post-send commit must still persist today's row.
-          git add -f data/picks_log.csv data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/daily_picks_run_status_*.jsonl 2>/dev/null || true
+          # Include picks_log.csv only when today's official rows exist. This avoids
+          # committing header/line-ending churn after a failed zero-pick run.
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
+          TODAY_ROWS="${TODAY_ROWS:-0}"
+
+          if [ "$TODAY_ROWS" -gt 0 ]; then
+            git add -f data/picks_log.csv
+          else
+            echo "No picks_log.csv rows for $ET_DATE; not staging picks_log.csv"
+          fi
+
+          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/daily_picks_run_status_*.jsonl 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No post-send changes to commit"
