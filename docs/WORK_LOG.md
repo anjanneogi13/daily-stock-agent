@@ -13,6 +13,43 @@ Rules:
 
 ---
 
+## 2026-05-07 — Comprehensive audit after News Engine runtime update
+
+**Type:** audit / documentation / monitoring-only
+
+**Summary:**
+
+Ran a comprehensive repository audit after the scheduled News Engine committed runtime evidence:
+
+- latest head: `e362d44 🔔 News engine update [skip ci]`,
+- News Engine runtime commit added only news evidence artifacts,
+- local `main` and `origin/main` matched after fast-forward.
+
+Verified:
+
+- Python compile passed,
+- full suite passed: `1372 passed, 30 skipped`,
+- journal consistency remained green: `41/41 matched`,
+- enforcement readiness remained blocked as expected,
+- monitoring readiness continued blocking paper trading,
+- opening-range observations remained watch-only and monitoring-only,
+- news evidence and outcome smoke tests passed,
+- official tracked data side-effect check was clean.
+
+Safety:
+
+- No paper trading enabled.
+- No live trading enabled.
+- No enforcement flags changed.
+- No official pick stats were mutated by tests/audits.
+
+Follow-up:
+
+- Updated next-session priority to avoid stale guidance about the already-implemented opening-range scanner.
+- Next recommended feature remains a scheduled/manual News Evidence workflow.
+
+---
+
 ## 2026-05-07 — Integrated news outcomes into evidence report
 
 **Type:** feature / read-only reporting / outcome evidence

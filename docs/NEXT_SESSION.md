@@ -37,41 +37,43 @@ Observed:
 
 ## Best next task
 
-### Priority 1 — Resume feature roadmap: opening-range intraday scanner
+### Priority 1 — Add scheduled/manual News Evidence workflow
 
-Audit/hygiene work completed:
+Audit/hygiene and the first News Evidence layers are complete:
 
+- Fix test/data isolation: `data/learning_journal.jsonl`, `data/picks_log.csv`, and `data/signal_journal.jsonl` stayed isolated/clean.
 - Daily-picks timing hard gate.
-- Missed-window Telegram alert.
+- Missed-window Telegram alert and late watch-only ideas.
 - Stale/unverified price watch-only protection.
 - Monitoring-only default for paper logging.
 - News action-window watch-only guard.
-- `data/learning_journal.jsonl` test side effects isolated.
-- Remaining tracked data isolation audited clean for `data/picks_log.csv` and `data/signal_journal.jsonl`.
-- Closed-status logic aligned between readiness scripts.
-- Minor documentation consistency cleanup completed.
-- 09:35 / 09:45 / 10:00 ET opening-range workflow cadence is wired.
+- Opening-range scanner rollout, workflow cadence, observation persistence, run-status, review tool, and read-only backtest skeleton.
+- Watch-only learning report v1.
+- News Engine run-status artifacts.
+- News Engine 120-minute configurable lookback.
+- News Signal Evidence Report.
+- News signal outcome attribution scaffold.
+- News outcomes integrated into the evidence report.
 
 Next feature work:
 
-1. Continue opening-range intraday scanner rollout in monitoring-only mode.
-2. Run `python scripts/review_opening_range_observations.py` after market sessions.
-3. Review `data/opening_range_observations_YYYY-MM-DD.jsonl` artifacts after market sessions.
-4. Add outcome-join/backtest tooling once enough observations exist.
-5. Keep outputs observe/watch-only until enough intraday evidence exists.
+1. Add a scheduled/manual News Evidence workflow in monitoring-only mode.
+2. The workflow may generate only reporting artifacts:
+   - `data/news_signal_outcomes_YYYY-MM-DD.jsonl`,
+   - `data/news_signal_evidence_report_YYYY-MM-DD.json`,
+   - `data/news_signal_evidence_report_YYYY-MM-DD.md`.
+3. It must not mutate:
+   - `data/picks_log.csv`,
+   - `data/signal_journal.jsonl`,
+   - `data/learning_journal.jsonl`,
+   - paper/live trading state.
+4. Add manual-run documentation for news evidence and outcome reports.
+5. After that, continue with optional opening-range bar artifact capture, still monitoring-only.
 6. Do not enable paper trading.
 7. Use `docs/decisions/2026-05-06-paper-trading-activation-checklist.md` before any future paper-trading integration.
 
-Completed 2026-05-06:
-
-- Fix test/data isolation: `data/learning_journal.jsonl` test side effects are isolated.
-- Remaining tracked data isolation audited clean for `data/picks_log.csv` and `data/signal_journal.jsonl`.
-- Align closed-status logic between readiness scripts.
-- Clean minor documentation consistency issues.
-
-After those are clean, resume feature work with opening-range intraday scanner.
-
 ---
+
 
 ## Completed from prior Priority 1 — Daily-picks timing and stale-price protection
 
@@ -271,9 +273,10 @@ Before next work:
 4. If weekday, prefer monitoring/audit/review work unless urgent.
 5. Never enable paper/live trading without readiness gates and founder approval.
 
-Recommended next weekend feature:
+Recommended next feature:
 
-- Optional opening-range bar artifact capture, still monitoring-only.
+- Scheduled/manual News Evidence workflow, still monitoring-only.
+- Then optional opening-range bar artifact capture, still monitoring-only.
 
 ## News Signal Evidence Report outcome integration — 2026-05-07
 
