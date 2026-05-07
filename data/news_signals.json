@@ -2262,5 +2262,41 @@
     "added_at": "2026-05-07T15:12:42.458831+00:00",
     "expires": "2026-05-12T15:12:42.458835+00:00",
     "hard_block": false
+  },
+  "USFD": {
+    "ticker": "USFD",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "US Foods Battles Severe Weather, Weak Spending And Fuel Inflation In Tough Quarter",
+    "added_at": "2026-05-07T17:16:24.308956+00:00",
+    "expires": "2026-05-14T17:16:24.308963+00:00",
+    "hard_block": false
+  },
+  "ARM": {
+    "ticker": "ARM",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on ARM Holdings, Raises Price Target to $260",
+    "added_at": "2026-05-07T17:16:24.311413+00:00",
+    "expires": "2026-05-12T17:16:24.311419+00:00",
+    "hard_block": false
+  },
+  "DIS": {
+    "ticker": "DIS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Disney Stock Hits Three-Month High On Q2 Results: New CEO Passes First Test",
+    "added_at": "2026-05-07T17:16:24.313511+00:00",
+    "expires": "2026-05-14T17:16:24.313516+00:00",
+    "hard_block": false
   }
 }
