@@ -255,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean after import-side-effect fixes.
-- Full suite passed: `1356 passed, 29 skipped`.
+- Full suite passed: `1360 passed, 29 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -274,6 +274,42 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## News Engine run-status observability — 2026-05-07
+
+Added run-status persistence for News Engine:
+
+- artifact: `data/news_engine_run_status_YYYY-MM-DD.jsonl`,
+- records:
+  - items fetched,
+  - items classified,
+  - signals added,
+  - hard blocks,
+  - watchlist additions,
+  - high-impact internal alerts,
+  - Telegram enabled/attempted,
+  - GitHub workflow metadata.
+
+Purpose:
+
+- Prove whether the News Engine ran throughout the day.
+- Distinguish no-news runs from failed runs.
+- Preserve schedule/fetch/classify/signal evidence without changing stock-picking behavior.
+
+Safety:
+
+- no official picks created by News Engine,
+- no paper trading,
+- no live trading,
+- no readiness-gate changes.
+
+Next News Engine fixes:
+
+1. Increase or dynamicize fetch lookback to reduce missed news during GitHub schedule delays.
+2. Add a News Signal Evidence Report.
+3. Add outcome attribution for news signals.
+
+---
 
 ## Intraday momentum observation persistence — 2026-05-07
 
@@ -340,7 +376,7 @@ Safety remains unchanged:
 
 Comprehensive audit after overnight workflow/data commits:
 
-- Full suite passed: `1356 passed, 29 skipped`.
+- Full suite passed: `1360 passed, 29 skipped`.
 - Journal consistency remained green: `41/41 matched`.
 - Enforcement readiness remained blocked as expected.
 - Monitoring readiness continued blocking paper trading as expected.

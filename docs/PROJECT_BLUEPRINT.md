@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-07
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1356 passed, 29 skipped
+**Test suite:** 1360 passed, 29 skipped
 **Mode:** monitoring-only
 
 ## Purpose
@@ -34,7 +34,9 @@ The repo is healthy for monitoring mode:
 - Missed-window Telegram and late watch-only ideas are sent as one combined warning message.
 - Late watch-only daily ideas now include quote-enriched watch-only BUY/Entry, SL, TP, and R/R levels after missed official premarket windows.
 - Opening-range observation collection has begun; 4 watch-only observations existed after the 2026-05-06 session, all safety-compliant.
-- Watch-only learning report v1 inventories late daily ideas, opening-range observations, and intraday dedupe fingerprints without touching official pick stats.\n- Intraday momentum watch-only observations are now persisted structurally for future watch-only outcome learning.
+- Watch-only learning report v1 inventories late daily ideas, opening-range observations, and intraday dedupe fingerprints without touching official pick stats.
+- Intraday momentum watch-only observations are now persisted structurally for future watch-only outcome learning.
+- News Engine run-status artifacts now record fetch/classify/signal/watchlist counts for schedule observability.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.

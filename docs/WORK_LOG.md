@@ -13,6 +13,48 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added News Engine run-status artifacts
+
+**Type:** feature / observability / workflow safety
+
+**Summary:**
+
+Added News Engine run-status persistence so scheduled news runs are auditable.
+
+New artifact:
+
+- `data/news_engine_run_status_YYYY-MM-DD.jsonl`
+
+Each run records:
+
+- start/completion/failure event,
+- result,
+- items fetched,
+- items classified,
+- signals added,
+- hard blocks,
+- watchlist additions,
+- high-impact internal alerts,
+- Telegram enabled/attempted,
+- GitHub workflow metadata.
+
+Safety:
+
+- News Engine still does not create official picks.
+- No paper/live trading behavior changed.
+- No readiness gates changed.
+- This is observability only.
+
+Verification:
+
+- targeted tests passed,
+- full suite passed: `1360 passed, 29 skipped`,
+- journal consistency remained green,
+- readiness dashboards remained blocked as expected,
+- no official data artifacts were mutated.
+
+---
+
 ## 2026-05-07 — Persisted intraday momentum watch-only observations
 
 **Type:** feature / monitoring-only evidence / learning foundation
