@@ -1,6 +1,6 @@
 ⚠️ PREMARKET WINDOW MISSED — LATE WATCH-ONLY DAILY IDEAS
 
-Time: 2026-05-07 10:59 ET
+Time: 2026-05-07 11:03 ET
 
 Official daily picks were NOT sent because the 09:20 ET cutoff has passed.
 The ideas below are late watch-only monitoring ideas, not official premarket picks.
@@ -14,10 +14,10 @@ Monitoring-only. Not buy instructions. Not paper trades.
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
 2. BLLN — BillionToOne, Inc. — score 100.0/100
-   Source: news-signal | Window: intraday | Change: +2.30%
-   Watch-only BUY/Entry: $83.28
-   Watch-only SL: $82.03
-   Watch-only TP: $85.78
+   Source: news-signal | Window: intraday | Change: +2.29%
+   Watch-only BUY/Entry: $83.26
+   Watch-only SL: $82.01
+   Watch-only TP: $85.76
    R/R: 2.00
    Catalyst: BillionToOne Q2 EPS $0.34 Beats $0.04 Estimate, Sales $108.388M Beat $96.885M Estimate
    WATCH ONLY — do not treat as an official pick or buy instruction.
@@ -32,19 +32,19 @@ Monitoring-only. Not buy instructions. Not paper trades.
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
 4. EVC — Entravision Communications Corp — score 100.0/100
-   Source: news-signal | Window: intraday | Change: -1.42%
-   Watch-only BUY/Entry: $7.58
-   Watch-only SL: $7.47
-   Watch-only TP: $7.81
+   Source: news-signal | Window: intraday | Change: -1.50%
+   Watch-only BUY/Entry: $7.57
+   Watch-only SL: $7.46
+   Watch-only TP: $7.80
    R/R: 2.09
    Catalyst: Entravision Stock Surges Following Massive Q1 Revenue Beat
    WATCH ONLY — do not treat as an official pick or buy instruction.
 
 5. ONC — BeOne Medicines Ltd. — score 100.0/100
-   Source: news-signal | Window: intraday | Change: -0.42%
-   Watch-only BUY/Entry: $312.01
-   Watch-only SL: $307.33
-   Watch-only TP: $321.37
+   Source: news-signal | Window: intraday | Change: -0.62%
+   Watch-only BUY/Entry: $311.36
+   Watch-only SL: $306.69
+   Watch-only TP: $320.70
    R/R: 2.00
    Catalyst: BeiGene Q1 Adj. EPS $3.24 Beats $0.79 Estimate, Sales $1.513B Beat $1.441B Estimate.
    WATCH ONLY — do not treat as an official pick or buy instruction.
