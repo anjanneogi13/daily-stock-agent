@@ -8,7 +8,7 @@ name: Morning Run Watchdog
 # daily-picks before the 09:20 ET hard cutoff.
 #
 # Safety:
-# - This workflow does not create picks.
+# - This workflow does not create picks itself.
 # - This workflow does not bypass the daily-picks timing gate.
 # - This workflow does not enable paper/live trading.
 
@@ -21,6 +21,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   watchdog:
@@ -52,7 +53,8 @@ jobs:
 
           TODAY_ROWS=0
           if [ -f data/picks_log.csv ]; then
-            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || echo 0)
+            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
+            TODAY_ROWS="${TODAY_ROWS:-0}"
           fi
 
           if [ "$TODAY_ROWS" -gt 0 ]; then
@@ -63,13 +65,31 @@ jobs:
 
           python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_checked --result missing_picks --reason "no daily picks rows before cutoff" --picks-logged 0
 
+          RESCUE_TRIGGERED=0
           if [ "$ET_MINUTES_OF_DAY" -gt "$OFFICIAL_CUTOFF" ]; then
             WINDOW_NOTE="The 09:20 ET cutoff has passed. Do not send normal premarket picks now; use intraday monitor only."
           else
-            WINDOW_NOTE="There is still time before the 09:20 ET cutoff. Manually trigger Daily Stock Picks now if needed."
+            WINDOW_NOTE="There is still time before the 09:20 ET cutoff. Watchdog is attempting to trigger Daily Stock Picks automatically now."
+            HTTP_CODE=$(curl -sS -X POST \
+              -H "Authorization: Bearer ${{ github.token }}" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/daily-picks.yml/dispatches" \
+              -d '{"ref":"main"}' \
+              -o /tmp/daily_picks_dispatch_response.txt \
+              -w "%{http_code}" || true)
+
+            if echo "$HTTP_CODE" | grep -Eq '^(204|201)$'; then
+              RESCUE_TRIGGERED=1
+              python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_rescue_dispatch --result success --reason "watchdog triggered Daily Stock Picks workflow before cutoff" --picks-logged 0
+              echo "✅ Watchdog triggered Daily Stock Picks workflow"
+            else
+              python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_rescue_dispatch --result failed --reason "watchdog failed to trigger Daily Stock Picks workflow before cutoff" --picks-logged 0
+              echo "⚠️ Watchdog failed to trigger Daily Stock Picks workflow; HTTP=$HTTP_CODE"
+              cat /tmp/daily_picks_dispatch_response.txt || true
+            fi
           fi
 
-          MSG="🚨 *Daily picks not logged for $ET_DATE*%0A%0ATime: $ET_HOUR:$ET_MIN ET%0A%0AThe premarket picks workflow has not produced rows in data/picks_log.csv yet.%0A%0A$WINDOW_NOTE%0A%0AManual trigger:%0Ahttps://github.com/${{ github.repository }}/actions/workflows/daily-picks.yml%0A%0A_Monitoring only. No paper/live trading._"
+          MSG="🚨 *Daily picks not logged for $ET_DATE*%0A%0ATime: $ET_HOUR:$ET_MIN ET%0A%0AThe premarket picks workflow has not produced rows in data/picks_log.csv yet.%0A%0A$WINDOW_NOTE%0A%0ARescue triggered: $RESCUE_TRIGGERED%0A%0AManual run: Actions → Daily Stock Picks → Run workflow"
 
           SENT=0
           for CHAT in "$TELEGRAM_CHAT_ID" "$TELEGRAM_GROUP_CHAT_ID"; do

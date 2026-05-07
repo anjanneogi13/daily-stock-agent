@@ -94,10 +94,11 @@ def test_watchdog_checks_picks_log_not_stale_premarket_check():
 def test_watchdog_does_not_create_picks_or_bypass_safety():
     text = _watchdog_text()
 
-    assert "does not create picks" in text
+    assert "does not create picks itself" in text
     assert "does not bypass the daily-picks timing gate" in text
     assert "does not enable paper/live trading" in text
-    assert "Manually trigger Daily Stock Picks" in text
+    assert "Watchdog is attempting to trigger Daily Stock Picks automatically now" in text
+    assert "Manual run: Actions → Daily Stock Picks → Run workflow" in text
 
 
 def test_daily_picks_records_run_status_events():
@@ -161,3 +162,13 @@ def test_late_watch_only_message_is_single_combined_notice():
     assert "Send missed-window Telegram alert" not in text
     assert "--event missed_window_alert" not in text
     assert "--event late_ideas_telegram" in text
+
+def test_watchdog_can_trigger_daily_picks_before_cutoff():
+    text = _watchdog_text()
+
+    assert "actions: write" in text
+    assert "watchdog_rescue_dispatch" in text
+    assert "actions/workflows/daily-picks.yml/dispatches" in text
+    assert '"ref":"main"' in text
+    assert "Rescue triggered: $RESCUE_TRIGGERED" in text
+    assert "does not create picks itself" in text
