@@ -96,7 +96,7 @@ jobs:
       - name: Generate late watch-only daily ideas
         if: steps.guard.outputs.missed_window == 'true'
         run: |
-          python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40 --require-quote
+          python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40
           COUNT=$(cat /tmp/late_daily_ideas_count 2>/dev/null || echo 0)
           python scripts/record_daily_picks_run_status.py --event late_ideas_generated --result success --reason "generated late watch-only daily ideas after missed official window" --late-ideas-count "$COUNT"
 

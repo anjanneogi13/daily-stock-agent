@@ -152,7 +152,8 @@ def test_late_watch_only_ideas_install_quote_dependency():
     assert "Set up Python for late watch-only ideas" in text
     assert "Install late watch-only idea dependencies" in text
     assert "pip install yfinance==0.2.65 curl_cffi==0.7.4" in text
-    assert "scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40 --require-quote" in text
+    assert "scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40" in text
+    assert "--require-quote" not in text
 
 
 def test_late_watch_only_message_is_single_combined_notice():
@@ -181,3 +182,21 @@ def test_daily_picks_sends_failure_alert_and_commits_no_pick_report():
     assert "telegram_daily_failed" in text
     assert "data/daily_picks_no_pick_report_*.json" in text
     assert "data/daily_picks_no_pick_report_*.md" in text
+
+def test_independent_late_watch_only_workflow_exists_and_is_safe():
+    path = Path(".github/workflows/late_watch_only.yml")
+    assert path.exists()
+    text = path.read_text()
+
+    crons = re.findall(r"cron:\s*'([^']+)'", text)
+    assert "25,40 13-14 * * 1-5" in crons
+    assert "OFFICIAL_CUTOFF=$((9 * 60 + 20))" in text
+    assert "Does not create official picks" in text
+    assert "Does not write data/picks_log.csv" in text
+    assert "Does not enable live trading" in text
+    assert "late_watch_only_guard_passed" in text
+    assert "scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40" in text
+    assert "--require-quote" not in text
+    assert "scripts/send_late_daily_ideas_telegram.py" in text
+    assert "data/late_daily_ideas_*.jsonl" in text
+    assert "data/late_daily_ideas_*.md" in text

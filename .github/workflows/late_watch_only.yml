@@ -1,0 +1,144 @@
+name: Late Watch-Only Daily Ideas
+
+# Independent post-cutoff fallback.
+#
+# Purpose:
+# - If official Daily Stock Picks did not produce rows before/near market open,
+#   send monitoring-only late daily ideas.
+#
+# Safety:
+# - Does not create official picks.
+# - Does not write data/picks_log.csv.
+# - Does not create paper trades.
+# - Does not enable live trading.
+# - Does not bypass the 09:20 ET official-picks cutoff.
+
+on:
+  schedule:
+    # 09:25 and 09:40 ET, covered for both EDT and EST.
+    # ET guard below skips duplicate/wrong DST slot.
+    - cron: '25,40 13-14 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: late-watch-only-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  late-watch-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Guard late watch-only fallback
+        id: guard
+        run: |
+          ET_HOUR=$(TZ='America/New_York' date +%H)
+          ET_MIN=$(TZ='America/New_York' date +%M)
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
+          OFFICIAL_CUTOFF=$((9 * 60 + 20))
+
+          echo "Late watch-only guard at $ET_DATE $ET_HOUR:$ET_MIN ET"
+          python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_started --result started --reason "late watch-only fallback guard evaluating"
+
+          if [ "$ET_HOUR" != "09" ]; then
+            echo "⏭ Wrong DST slot ($ET_HOUR:$ET_MIN ET) — skipping"
+            python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_wrong_slot_skip --result skipped --reason "wrong DST slot"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ "$ET_MINUTES_OF_DAY" -le "$OFFICIAL_CUTOFF" ]; then
+            echo "⏭ Before/at official cutoff — late watch-only fallback must not run yet"
+            python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_before_cutoff_skip --result skipped --reason "before or at 09:20 ET cutoff"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          TODAY_ROWS=0
+          if [ -f data/picks_log.csv ]; then
+            TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
+            TODAY_ROWS="${TODAY_ROWS:-0}"
+          fi
+
+          if [ "$TODAY_ROWS" -gt 0 ]; then
+            echo "✅ Official picks already logged for $ET_DATE: $TODAY_ROWS row(s). Skipping late watch-only fallback."
+            python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_official_picks_present_skip --result skipped --reason "official picks already logged" --picks-logged "$TODAY_ROWS"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "✅ No official picks logged after cutoff — generating late watch-only ideas"
+          python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_guard_passed --result should_run --reason "no official picks after cutoff"
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        if: steps.guard.outputs.should_run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install late watch-only dependencies
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance==0.2.65 curl_cffi==0.7.4
+
+      - name: Generate late watch-only daily ideas
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          # Do not require quotes. Quote providers can rate-limit; late watch-only
+          # ideas should still send with "levels unavailable" safety text.
+          python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40
+          COUNT=$(cat /tmp/late_daily_ideas_count 2>/dev/null || echo 0)
+          python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_generated --result success --reason "generated independent late watch-only ideas" --late-ideas-count "$COUNT"
+
+      - name: Send late watch-only daily ideas to Telegram
+        if: steps.guard.outputs.should_run == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: |
+          python scripts/send_late_daily_ideas_telegram.py
+          rc=$?
+          if [ "$rc" -eq 0 ]; then
+            python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_telegram --result success --reason "late watch-only Telegram sender completed" --telegram-sent success
+          else
+            python scripts/record_daily_picks_run_status.py --workflow late_watch_only --event late_watch_only_telegram --result failed --reason "late watch-only Telegram sender failed" --telegram-sent failed
+          fi
+          exit "$rc"
+
+      - name: Commit late watch-only artifacts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -f data/daily_picks_run_status_*.jsonl data/late_daily_ideas_*.jsonl data/late_daily_ideas_*.md 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "ℹ No late watch-only artifacts to commit"
+            exit 0
+          fi
+
+          git commit -m "status: late watch-only fallback $(TZ='America/New_York' date +%Y-%m-%dT%H:%M%z) [skip ci]"
+
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              echo "✅ Late watch-only artifact push succeeded"
+              exit 0
+            fi
+            echo "[late-watch-only-push] retry $i/5"
+            sleep $((i * 2))
+          done
+
+          echo "❌ Failed to push late watch-only artifacts"
+          exit 1
