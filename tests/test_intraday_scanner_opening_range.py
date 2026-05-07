@@ -191,3 +191,52 @@ def test_append_opening_range_observations_ignores_non_or_or_non_watch_only(tmp_
 
     assert written == 0
     assert not path.exists()
+
+def test_append_intraday_momentum_observations_writes_jsonl(tmp_path):
+    path = tmp_path / "intraday_momentum_observations_2026-05-06.jsonl"
+    candidate = {
+        "ticker": "SMCI",
+        "price": 32.15,
+        "score": 75,
+        "entry": 32.15,
+        "sl": 31.67,
+        "tp": 33.11,
+        "reason": "+15.5% on 1.8× volume",
+        "watch_only": True,
+        "mode": "monitoring_only",
+        "scanner": "momentum",
+    }
+
+    written = scanner.append_intraday_momentum_observations(
+        [candidate],
+        path=path,
+        now=datetime(2026, 5, 6, 11, 38, tzinfo=ET),
+    )
+
+    assert written == 1
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["date"] == "2026-05-06"
+    assert row["ticker"] == "SMCI"
+    assert row["scanner"] == "momentum"
+    assert row["mode"] == "monitoring_only"
+    assert row["watch_only"] is True
+    assert row["entry_observe"] == 32.15
+    assert row["stop_loss_observe"] == 31.67
+    assert row["take_profit_observe"] == 33.11
+    assert row["paper_trading_enabled"] is False
+    assert row["live_trading_enabled"] is False
+    assert row["ready_for_paper_trading"] is False
+
+
+def test_append_intraday_momentum_observations_ignores_non_momentum_or_non_watch_only(tmp_path):
+    path = tmp_path / "intraday_momentum_observations_2026-05-06.jsonl"
+
+    written = scanner.append_intraday_momentum_observations([
+        {"ticker": "NET", "scanner": "opening_range", "watch_only": True},
+        {"ticker": "AAPL", "scanner": "momentum", "watch_only": False},
+    ], path=path)
+
+    assert written == 0
+    assert not path.exists()

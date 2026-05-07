@@ -175,6 +175,43 @@ def summarize_opening_range(rows: list[dict]) -> dict:
     }
 
 
+def summarize_intraday_momentum(rows: list[dict]) -> dict:
+    tickers = sorted({str(r.get("ticker") or "").upper() for r in rows if r.get("ticker")})
+    unsafe = [
+        r.get("ticker")
+        for r in rows
+        if r.get("watch_only") is not True
+        or r.get("mode") != "monitoring_only"
+        or r.get("scanner") != "momentum"
+        or r.get("paper_trading_enabled") is not False
+        or r.get("live_trading_enabled") is not False
+    ]
+    return {
+        "count": len(rows),
+        "tickers": tickers,
+        "unsafe_count": len(unsafe),
+        "invalid_safety_tickers": unsafe,
+        "with_observation_levels": sum(
+            1 for r in rows
+            if r.get("entry_observe") is not None
+            and r.get("stop_loss_observe") is not None
+            and r.get("take_profit_observe") is not None
+        ),
+        "items": [
+            {
+                "ticker": r.get("ticker"),
+                "scanner": r.get("scanner"),
+                "score": _safe_float(r.get("score")),
+                "entry_observe": r.get("entry_observe"),
+                "stop_loss_observe": r.get("stop_loss_observe"),
+                "take_profit_observe": r.get("take_profit_observe"),
+                "reason": r.get("reason") or "",
+            }
+            for r in rows
+        ],
+    }
+
+
 def summarize_run_status(rows: list[dict]) -> dict:
     events = Counter(str(r.get("event") or "unknown") for r in rows)
     results = Counter(str(r.get("result") or "unknown") for r in rows)
@@ -194,12 +231,14 @@ def build_summary(date_str: str, data_dir: Path = DATA_DIR) -> dict:
     late_path = data_dir / f"late_daily_ideas_{date_str}.jsonl"
     or_path = data_dir / f"opening_range_observations_{date_str}.jsonl"
     status_path = data_dir / f"opening_range_run_status_{date_str}.jsonl"
+    momentum_path = data_dir / f"intraday_momentum_observations_{date_str}.jsonl"
     dedupe_path = data_dir / f"intraday_alerts_{date_str}.json"
     markdown_path = data_dir / f"intraday_alert_{date_str}.md"
 
     late_rows, late_invalid = load_jsonl(late_path)
     or_rows, or_invalid = load_jsonl(or_path)
     status_rows, status_invalid = load_jsonl(status_path)
+    momentum_rows, momentum_invalid = load_jsonl(momentum_path)
     fingerprints = _dedupe_fingerprints(dedupe_path)
 
     momentum = _momentum_fingerprints(fingerprints)
@@ -222,6 +261,7 @@ def build_summary(date_str: str, data_dir: Path = DATA_DIR) -> dict:
             "late_daily_ideas": str(late_path),
             "opening_range_observations": str(or_path),
             "opening_range_run_status": str(status_path),
+            "intraday_momentum_observations": str(momentum_path),
             "intraday_alerts_dedupe": str(dedupe_path),
             "intraday_alert_markdown": str(markdown_path),
         },
@@ -229,6 +269,7 @@ def build_summary(date_str: str, data_dir: Path = DATA_DIR) -> dict:
             "late_daily_ideas": late_path.exists(),
             "opening_range_observations": or_path.exists(),
             "opening_range_run_status": status_path.exists(),
+            "intraday_momentum_observations": momentum_path.exists(),
             "intraday_alerts_dedupe": dedupe_path.exists(),
             "intraday_alert_markdown": markdown_path.exists(),
         },
@@ -236,9 +277,11 @@ def build_summary(date_str: str, data_dir: Path = DATA_DIR) -> dict:
             "late_daily_ideas": late_invalid,
             "opening_range_observations": or_invalid,
             "opening_range_run_status": status_invalid,
+            "intraday_momentum_observations": momentum_invalid,
         },
         "late_daily_watch_only": summarize_late_ideas(late_rows),
         "opening_range_watch_only": summarize_opening_range(or_rows),
+        "intraday_momentum_watch_only": summarize_intraday_momentum(momentum_rows),
         "intraday_dedupe_fingerprints": {
             "count": len(fingerprints),
             "prefix_counts": _fingerprint_prefix_counts(fingerprints),
@@ -257,7 +300,7 @@ def build_summary(date_str: str, data_dir: Path = DATA_DIR) -> dict:
             "No official P&L is counted in this report.",
             "Late watch-only ideas have observation levels but no outcome join yet.",
             "Opening-range observations need bar artifacts before backtest outcomes can evaluate.",
-            "Generic intraday momentum alerts need structured persistence beyond dedupe fingerprints.",
+            "Generic intraday momentum alerts now have structured persistence when the latest monitor code runs; older days may only have dedupe fingerprints.",
         ],
     }
 
@@ -265,6 +308,7 @@ def build_summary(date_str: str, data_dir: Path = DATA_DIR) -> dict:
 def format_markdown(summary: dict) -> str:
     late = summary["late_daily_watch_only"]
     opening = summary["opening_range_watch_only"]
+    momentum = summary["intraday_momentum_watch_only"]
     dedupe = summary["intraday_dedupe_fingerprints"]
     status = summary["opening_range_run_status"]
 
@@ -282,8 +326,9 @@ def format_markdown(summary: dict) -> str:
         "",
         f"- Late daily watch-only ideas: **{late['count']}**",
         f"- Opening-range observations: **{opening['count']}**",
+        f"- Structured intraday momentum observations: **{momentum['count']}**",
         f"- Intraday dedupe fingerprints: **{dedupe['count']}**",
-        f"- Momentum fingerprints without structured observations: **{dedupe['momentum_count']}**",
+        f"- Momentum fingerprints: **{dedupe['momentum_count']}**",
         f"- Opening-range run-status rows: **{status['count']}**",
         "",
         "## Late daily watch-only ideas",
@@ -318,11 +363,26 @@ def format_markdown(summary: dict) -> str:
 
     lines += [
         "",
-        "## Intraday momentum evidence",
+        "## Intraday momentum observations",
+        "",
+    ]
+    if momentum["items"]:
+        for item in momentum["items"]:
+            lines.append(
+                f"- **{item['ticker']}** score={item['score']} "
+                f"entry={item['entry_observe']} SL={item['stop_loss_observe']} "
+                f"TP={item['take_profit_observe']} reason={item['reason']}"
+            )
+    else:
+        lines.append("- No structured momentum observations found.")
+
+    lines += [
+        "",
+        "## Intraday momentum dedupe evidence",
         "",
     ]
     if dedupe["momentum_fingerprints"]:
-        lines.append("Structured momentum observations are not available yet. Dedupe fingerprints found:")
+        lines.append("Dedupe fingerprints found:")
         for fp in dedupe["momentum_fingerprints"]:
             lines.append(f"- `{fp}`")
     else:

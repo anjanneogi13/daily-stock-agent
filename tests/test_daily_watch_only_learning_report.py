@@ -49,6 +49,22 @@ def test_watch_only_learning_report_summarizes_artifacts(tmp_path):
         }) + "\n"
     )
 
+    (data / "intraday_momentum_observations_2026-05-06.jsonl").write_text(
+        json.dumps({
+            "ticker": "SMCI",
+            "scanner": "momentum",
+            "mode": "monitoring_only",
+            "watch_only": True,
+            "paper_trading_enabled": False,
+            "live_trading_enabled": False,
+            "entry_observe": 32.15,
+            "stop_loss_observe": 31.67,
+            "take_profit_observe": 33.11,
+            "score": 75,
+            "reason": "+15.5% on 1.8× volume",
+        }) + "\n"
+    )
+
     (data / "intraday_alerts_2026-05-06.json").write_text(
         json.dumps(["NEW|SMCI|7", "OR|NET|2026-05-06T09:30"])
     )
@@ -62,6 +78,7 @@ def test_watch_only_learning_report_summarizes_artifacts(tmp_path):
     assert summary["live_trading_enabled"] is False
     assert summary["late_daily_watch_only"]["count"] == 1
     assert summary["opening_range_watch_only"]["count"] == 1
+    assert summary["intraday_momentum_watch_only"]["count"] == 1
     assert summary["intraday_dedupe_fingerprints"]["momentum_count"] == 1
     assert summary["intraday_dedupe_fingerprints"]["opening_range_count"] == 1
     assert summary["opening_range_run_status"]["latest_github_run_id"] == "123"
@@ -71,6 +88,7 @@ def test_watch_only_learning_report_summarizes_artifacts(tmp_path):
     assert "Official P&L counted:** no" in md
     assert "ONC" in md
     assert "NET" in md
+    assert "SMCI" in md
     assert "NEW|SMCI|7" in md
 
 

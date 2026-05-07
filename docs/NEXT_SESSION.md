@@ -255,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean after import-side-effect fixes.
-- Full suite passed: `1354 passed, 29 skipped`.
+- Full suite passed: `1356 passed, 29 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -274,6 +274,33 @@ Before next work:
 Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
+
+## Intraday momentum observation persistence — 2026-05-07
+
+Added structured persistence for generic intraday momentum watch-only ideas:
+
+- artifact: `data/intraday_momentum_observations_YYYY-MM-DD.jsonl`,
+- scanner: `momentum`,
+- mode: `monitoring_only`,
+- watch-only only,
+- no official picks,
+- no paper trades,
+- no live trades.
+
+The watch-only learning report now reads this artifact and can distinguish:
+
+- structured momentum observations from current/future runs,
+- older dedupe-only momentum evidence from prior runs.
+
+Still not implemented:
+
+- outcome join for momentum observations,
+- learning-journal integration,
+- promotion to paper trading.
+
+Safety remains unchanged.
+
+---
 
 ## Watch-only learning report v1 — 2026-05-07
 
@@ -313,7 +340,7 @@ Safety remains unchanged:
 
 Comprehensive audit after overnight workflow/data commits:
 
-- Full suite passed: `1354 passed, 29 skipped`.
+- Full suite passed: `1356 passed, 29 skipped`.
 - Journal consistency remained green: `41/41 matched`.
 - Enforcement readiness remained blocked as expected.
 - Monitoring readiness continued blocking paper trading as expected.

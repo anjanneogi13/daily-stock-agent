@@ -13,6 +13,57 @@ Rules:
 
 ---
 
+## 2026-05-07 — Persisted intraday momentum watch-only observations
+
+**Type:** feature / monitoring-only evidence / learning foundation
+
+**Summary:**
+
+Added structured persistence for generic intraday momentum watch-only ideas.
+
+New artifact:
+
+- `data/intraday_momentum_observations_YYYY-MM-DD.jsonl`
+
+Each row records:
+
+- ticker,
+- timestamp,
+- scanner=`momentum`,
+- source=`intraday_scanner`,
+- watch-only observation levels,
+- score,
+- reason,
+- safety flags:
+  - `watch_only=true`,
+  - `mode=monitoring_only`,
+  - `paper_trading_enabled=false`,
+  - `live_trading_enabled=false`,
+  - `ready_for_paper_trading=false`.
+
+The Intraday Monitor now writes generic momentum observations separately from
+opening-range observations. The GitHub Actions workflow force-adds the new
+runtime artifact.
+
+The watch-only learning report now reads:
+
+- late daily watch-only ideas,
+- opening-range observations,
+- intraday momentum observations,
+- intraday dedupe fingerprints,
+- opening-range run status.
+
+Safety:
+
+- No official pick mutation.
+- No `picks_log.csv` mutation.
+- No `signal_journal.jsonl` mutation.
+- No `learning_journal.jsonl` mutation.
+- No paper trading.
+- No live trading.
+
+---
+
 ## 2026-05-07 — Added read-only watch-only learning report v1
 
 **Type:** feature / observability / monitoring-only learning evidence

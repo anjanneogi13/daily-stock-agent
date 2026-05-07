@@ -171,6 +171,73 @@ def opening_range_observation_path(today: str | None = None) -> Path:
 ET = ZoneInfo("America/New_York")
 
 
+def intraday_momentum_observation_path(today: str | None = None) -> Path:
+    """Return the JSONL artifact path for generic momentum observations.
+
+    Date is ET-scoped because this artifact answers questions about the US
+    trading session.
+    """
+    day = today or datetime.now(ET).strftime("%Y-%m-%d")
+    return Path("data") / f"intraday_momentum_observations_{day}.jsonl"
+
+
+def build_intraday_momentum_observation(candidate: dict, now: datetime | None = None) -> dict:
+    """Normalize a generic momentum candidate into an auditable observation row.
+
+    This is not a trade record. It is monitoring-only evidence for later review
+    and outcome joins.
+    """
+    now_et = (now or datetime.now(timezone.utc)).astimezone(ET)
+    return {
+        "date": now_et.strftime("%Y-%m-%d"),
+        "ts": now_et.isoformat(timespec="seconds"),
+        "timestamp_utc": now_et.astimezone(timezone.utc).isoformat(timespec="seconds"),
+        "ticker": candidate.get("ticker"),
+        "scanner": "momentum",
+        "source": "intraday_scanner",
+        "mode": "monitoring_only",
+        "watch_only": True,
+        "candidate": True,
+        "price": candidate.get("price"),
+        "score": candidate.get("score"),
+        "entry_observe": candidate.get("entry"),
+        "stop_loss_observe": candidate.get("sl"),
+        "take_profit_observe": candidate.get("tp"),
+        "reason": candidate.get("reason", ""),
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
+        "ready_for_paper_trading": False,
+        "warning": "Monitoring-only. Not an official pick, not a paper trade, not a buy instruction.",
+    }
+
+
+def append_intraday_momentum_observations(
+    candidates: list[dict],
+    path: Path | None = None,
+    now: datetime | None = None,
+) -> int:
+    """Append watch-only generic momentum observations to a JSONL artifact.
+
+    Returns number of rows written. Non-momentum or non-watch-only opportunities
+    are ignored so opening-range observations remain in their dedicated artifact.
+    """
+    rows = [
+        build_intraday_momentum_observation(c, now=now)
+        for c in candidates
+        if c.get("scanner") == "momentum" and c.get("watch_only") is True
+    ]
+
+    if not rows:
+        return 0
+
+    out = path or intraday_momentum_observation_path(rows[0]["date"])
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("a", encoding="utf-8") as f:
+        for row in rows:
+            f.write(json.dumps(row, sort_keys=True) + "\n")
+    return len(rows)
+
+
 def opening_range_run_status_path(today: str | None = None) -> Path:
     """Return the JSONL artifact path for opening-range run status.
 

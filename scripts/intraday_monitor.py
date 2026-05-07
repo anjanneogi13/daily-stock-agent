@@ -13,6 +13,7 @@ from intraday_scanner import (
     scan_for_new_opportunities,
     get_live_quote,
     append_opening_range_observations,
+    append_intraday_momentum_observations,
     append_opening_range_run_status,
 )
 from src.trailing_stop import compute_trailing_sl, trail_status
@@ -316,6 +317,9 @@ def main():
     n_or_obs = append_opening_range_observations(new_opps)
     if n_or_obs:
         print(f"[monitor] {n_or_obs} opening-range observation(s) recorded.")
+    n_momentum_obs = append_intraday_momentum_observations(new_opps)
+    if n_momentum_obs:
+        print(f"[monitor] {n_momentum_obs} intraday momentum observation(s) recorded.")
 
     msg = build_message(monitor_alerts, new_opps)
     total_alert_count = len(monitor_alerts) + len(new_opps)
