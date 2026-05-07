@@ -48,3 +48,9 @@ def test_main_limits_scoring_workers_to_reduce_provider_rate_limits():
     assert "DAILY_SCORER_WORKERS" in text
     assert 'os.getenv("DAILY_SCORER_WORKERS", "4")' in text
     assert "max_workers=scorer_workers" in text
+
+def test_daily_picks_workflow_commits_market_data_health_artifacts():
+    text = Path(".github/workflows/daily-picks.yml").read_text()
+
+    assert "data/market_data_health_*.json" in text
+    assert text.count("data/market_data_health_*.json") >= 2
