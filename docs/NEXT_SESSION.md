@@ -255,7 +255,7 @@ Final closing audit passed.
 Current state:
 
 - Repository clean after import-side-effect fixes.
-- Full suite passed: `1351 passed, 29 skipped`.
+- Full suite passed: `1354 passed, 29 skipped`.
 - Targeted opening-range / monitoring tests passed.
 - Journal consistency green.
 - Enforcement readiness blocked as expected.
@@ -275,11 +275,45 @@ Recommended next weekend feature:
 
 - Optional opening-range bar artifact capture, still monitoring-only.
 
+## Watch-only learning report v1 — 2026-05-07
+
+Added the first safe slice of the watch-only learning evidence layer:
+
+- script: `scripts/daily_watch_only_learning_report.py`,
+- tests: `tests/test_daily_watch_only_learning_report.py`,
+- outputs:
+  - `data/watch_only_learning_report_YYYY-MM-DD.json`,
+  - `data/watch_only_learning_report_YYYY-MM-DD.md`.
+
+Purpose:
+
+- Inventory late daily watch-only ideas.
+- Inventory opening-range observations.
+- Inventory intraday dedupe fingerprints.
+- Explain why some watch-only ideas cannot be outcome-scored yet.
+- Keep all of this separate from official picks and readiness statistics.
+
+Still not implemented:
+
+- Generic intraday momentum structured observation persistence.
+- Watch-only outcome join for late ideas.
+- Bar artifact capture for opening-range backtest.
+- Learning-journal integration.
+
+Safety remains unchanged:
+
+- monitoring-only,
+- no official pick mutation,
+- no paper trading,
+- no live trading.
+
+---
+
 ## 2026-05-07 audit checkpoint — watch-only learning direction
 
 Comprehensive audit after overnight workflow/data commits:
 
-- Full suite passed: `1351 passed, 29 skipped`.
+- Full suite passed: `1354 passed, 29 skipped`.
 - Journal consistency remained green: `41/41 matched`.
 - Enforcement readiness remained blocked as expected.
 - Monitoring readiness continued blocking paper trading as expected.

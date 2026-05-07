@@ -13,6 +13,50 @@ Rules:
 
 ---
 
+## 2026-05-07 — Added read-only watch-only learning report v1
+
+**Type:** feature / observability / monitoring-only learning evidence
+
+**Summary:**
+
+Added `scripts/daily_watch_only_learning_report.py` as the first safe slice of the
+watch-only learning evidence layer.
+
+The script inventories existing non-official evidence for a date:
+
+- `data/late_daily_ideas_YYYY-MM-DD.jsonl`,
+- `data/opening_range_observations_YYYY-MM-DD.jsonl`,
+- `data/opening_range_run_status_YYYY-MM-DD.jsonl`,
+- `data/intraday_alerts_YYYY-MM-DD.json`,
+- optional `data/intraday_alert_YYYY-MM-DD.md`.
+
+Outputs:
+
+- `data/watch_only_learning_report_YYYY-MM-DD.json`,
+- `data/watch_only_learning_report_YYYY-MM-DD.md`.
+
+Safety:
+
+- Read-only with respect to official trade state.
+- Does not write `data/picks_log.csv`.
+- Does not write `data/signal_journal.jsonl`.
+- Does not write `data/learning_journal.jsonl`.
+- Does not create paper trades.
+- Does not enable paper/live trading.
+- Keeps official pick statistics separate from watch-only evidence.
+
+Product result:
+
+- Late daily watch-only ideas, opening-range observations, and intraday dedupe
+  fingerprints can now be reviewed together even on days with no official
+  premarket picks.
+- The report explicitly documents gaps before outcome learning:
+  - late ideas need outcome joins,
+  - opening-range observations need bar artifacts,
+  - generic momentum alerts need structured persistence beyond dedupe fingerprints.
+
+---
+
 ## 2026-05-07 — Isolated intraday monitor run-status test side effect
 
 **Type:** bug fix / test isolation / runtime artifact safety
