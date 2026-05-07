@@ -2754,5 +2754,89 @@
     "added_at": "2026-05-07T22:56:31.450513+00:00",
     "expires": "2026-05-12T22:56:31.450518+00:00",
     "hard_block": false
+  },
+  "APP": {
+    "ticker": "APP",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Macquarie Maintains Outperform on AppLovin, Raises Price Target to $730",
+    "added_at": "2026-05-07T23:48:07.066866+00:00",
+    "expires": "2026-05-12T23:48:07.066873+00:00",
+    "hard_block": false
+  },
+  "AATC": {
+    "ticker": "AATC",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Autoscope Technologies Q1 EPS $0.06 Down From $0.07 YoY, Sales $2.110M Down From $2.193M YoY",
+    "added_at": "2026-05-07T23:48:07.073561+00:00",
+    "expires": "2026-05-14T23:48:07.073566+00:00",
+    "hard_block": false
+  },
+  "COR": {
+    "ticker": "COR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Cencora, Raises Price Target to $412",
+    "added_at": "2026-05-07T23:48:07.075779+00:00",
+    "expires": "2026-05-12T23:48:07.075784+00:00",
+    "hard_block": false
+  },
+  "DVA": {
+    "ticker": "DVA",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on DaVita, Raises Price Target to $235",
+    "added_at": "2026-05-07T23:48:07.080178+00:00",
+    "expires": "2026-05-12T23:48:07.080183+00:00",
+    "hard_block": false
+  },
+  "RC": {
+    "ticker": "RC",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "UPDATED: Ready Capital Q1 Adj. EPS $(1.00) Misses $(0.21) Estimate, Sales $(15.104M) Miss $14.800M Estimate",
+    "added_at": "2026-05-07T23:48:07.082361+00:00",
+    "expires": "2026-05-14T23:48:07.082366+00:00",
+    "hard_block": false
+  },
+  "SHLS": {
+    "ticker": "SHLS",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Shoals Technologies Group, Raises Price Target to $12",
+    "added_at": "2026-05-07T23:48:07.084574+00:00",
+    "expires": "2026-05-12T23:48:07.084580+00:00",
+    "hard_block": false
+  },
+  "SITM": {
+    "ticker": "SITM",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on SiTime, Raises Price Target to $775",
+    "added_at": "2026-05-07T23:48:07.086760+00:00",
+    "expires": "2026-05-12T23:48:07.086765+00:00",
+    "hard_block": false
   }
 }
