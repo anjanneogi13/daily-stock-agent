@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AWX",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q1 earnings show loss narrowing by 16% to $(0.32) from $(0.38) YoY with revenue growth of 9.9%, indicating operational improvement though still unprofitable.",
-      "action_window": "intraday",
-      "headline": "Avalon Holdings Q1 EPS $(0.32) Up From $(0.38) YoY, Sales $17.658M Up From $16.068M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52273337/avalon-holdings-q1-eps-0-32-up-from-0-38-yoy-sales-17-658m-up-from-16-068m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-05-05T09:57:52.423368+00:00"
-    },
-    {
       "ticker": "REGN",
       "tradeable_score": 0.58,
       "sentiment": "bullish",
@@ -2207,15 +2195,16 @@
     },
     {
       "ticker": "HUBS",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
-      "category": "guidance_raise",
-      "rationale": "Despite raising guidance, shares are getting hammered after Q1 results, indicating guidance raise fell short of elevated market expectations or other metrics disappointed.",
+      "category": "downgrade",
+      "rationale": "Bank of America downgrade to Underperform with lowered price target represents a significant negative catalyst from a major Wall Street bank that typically drives immediate selling pressure.",
       "action_window": "intraday",
-      "headline": "HubSpot Raises Guidance, Here's Why Shares Are Getting Hammered Thursday",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52396532/hubspot-raises-guidance-heres-why-shares-are-getting-hammered-thursday",
+      "headline": "B of A Securities Downgrades HubSpot to Underperform, Lowers Price Target to $180",
+      "url": "https://www.benzinga.com/news/26/05/52403086/b-of-a-securities-downgrades-hubspot-to-underperform-lowers-price-target-to-180",
       "source": "alpaca",
-      "added_at": "2026-05-07T21:51:41.872991+00:00"
+      "added_at": "2026-05-07T21:51:41.872991+00:00",
+      "updated_at": "2026-05-08T10:54:42.507564+00:00"
     },
     {
       "ticker": "WLDN",
@@ -2288,6 +2277,127 @@
       "url": "https://www.benzinga.com/quote/AIIO",
       "source": "alpaca",
       "added_at": "2026-05-08T09:10:23.167339+00:00"
+    },
+    {
+      "ticker": "TM",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Toyota announcing a massive $4.3B hit from geopolitical conflict and 22% profit drop is a significant negative guidance event requiring immediate position evaluation.",
+      "action_window": "intraday",
+      "headline": "Toyota Expects $4.3 Billion Hit From Iran War, Forecasts 22% Profit Drop",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52403341/toyota-expects-4-3-billion-hit-from-iran-war-forecasts-22-profit-drop",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507472+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock is actively soaring on Friday indicating a significant intraday catalyst, though the headline lacks specifics on the underlying reason which creates some uncertainty.",
+      "action_window": "intraday",
+      "headline": "Why Is Rocket Lab Stock Soaring Friday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52403322/why-is-rocket-lab-stock-soaring-friday",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507491+00:00"
+    },
+    {
+      "ticker": "ANIP",
+      "tradeable_score": 0.93,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings beat with adjusted EPS exceeding estimates by 58% and revenue beating by 14%, representing a major positive catalyst for immediate trading.",
+      "action_window": "intraday",
+      "headline": "ANI Pharmaceuticals Q1 Adj. EPS $2.05 Beats $1.30 Estimate, Sales $237.462M Beat $207.565M Estimate.",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52403287/ani-pharmaceuticals-q1-adj-eps-2-05-beats-1-30-estimate-sales-237-462m-beat-207-565m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507504+00:00",
+      "updated_at": "2026-05-08T10:54:42.507519+00:00"
+    },
+    {
+      "ticker": "CTM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 sales beat estimates by 8.9% ($14.291M vs $13.125M expected), representing a meaningful positive earnings surprise that typically drives immediate price action.",
+      "action_window": "intraday",
+      "headline": "Castellum Q1 Sales $14.291M Beat $13.125M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52403264/castellum-q1-sales-14-291m-beat-13-125m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507531+00:00"
+    },
+    {
+      "ticker": "BBUC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Brookfield Business reported Q1 EPS down 50% YoY ($0.19 vs $0.38) and revenue decline of 4.6% ($6.436B vs $6.749B), representing a clear earnings miss with deteriorating fundamentals.",
+      "action_window": "intraday",
+      "headline": "Brookfield Business Q1 EPS $0.19 Down From $0.38 YoY, Sales $6.436B Down From $6.749B YoY.",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52403229/brookfield-business-q1-eps-0-19-down-from-0-38-yoy-sales-6-436b-down-from-6-749b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507542+00:00"
+    },
+    {
+      "ticker": "BAM",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Brookfield Asset Management reported modest earnings beat with EPS up 5.6% YoY and revenue up 23.8% YoY, representing solid but not exceptional growth that warrants moderate trading attention.",
+      "action_window": "intraday",
+      "headline": "Brookfield Asset Mgmt Q1 EPS $0.38 Up From $0.36 YoY, Sales $1.338B Up From $1.081B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52403208/brookfield-asset-mgmt-q1-eps-0-38-up-from-0-36-yoy-sales-1-338b-up-from-1-081b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507553+00:00"
+    },
+    {
+      "ticker": "ARTV",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Suspension of ATM offering removes near-term dilution overhang, typically positive for share price as it signals either sufficient cash position or improved market conditions.",
+      "action_window": "intraday",
+      "headline": "Artiva Biotherapeutics Suspends Share Offering Under Sales Agreement With Leerink Partners",
+      "url": "https://www.benzinga.com/news/26/05/52403072/artiva-biotherapeutics-suspends-share-offering-under-sales-agreement-with-leerink-partners",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507577+00:00"
+    },
+    {
+      "ticker": "EMBJ",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Embraer beat Q1 sales estimates by 4.6% ($1.447B vs $1.384B expected) with positive adjusted EPS of $0.15, indicating stronger-than-expected operational performance warranting immediate trading consideration.",
+      "action_window": "intraday",
+      "headline": "Embraer Q1 Adj EPADS $0.15, Sales $1.447B Beat $1.384B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52403053/embraer-q1-adj-epads-0-15-sales-1-447b-beat-1-384b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507587+00:00"
+    },
+    {
+      "ticker": "PLNT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Bank of America downgrade from a higher rating to Neutral with reduced price target represents negative analyst sentiment that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Downgrades Planet Fitness to Neutral, Lowers Price Target to $59",
+      "url": "https://www.benzinga.com/news/26/05/52403043/b-of-a-securities-downgrades-planet-fitness-to-neutral-lowers-price-target-to-59",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507598+00:00"
+    },
+    {
+      "ticker": "TSX:AQN",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Algonquin Power beat both EPS estimates by 18% and sales estimates by 11.5%, representing a significant double beat that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Algonquin Power Q1 Adj. EPS $0.13 Beats $0.11 Estimate, Sales $792.400M Beat $710.532M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52403028/algonquin-power-q1-adj-eps-0-13-beats-0-11-estimate-sales-792-400m-beat-710-532m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-08T10:54:42.507606+00:00"
     }
   ]
 }
