@@ -65,6 +65,25 @@ Still important after this cleanup:
 
 ---
 
+
+## 2026-05-08 official OHLCV provider fallback
+
+Implemented/active architecture direction:
+
+- official daily OHLCV path now uses yfinance primary,
+- Stooq daily OHLCV is available as no-key fallback,
+- fallback is limited to `fetch_ohlcv()` / official daily OHLCV path,
+- all-provider failure remains a safe empty dataframe with provider-health evidence.
+
+Still important after this cleanup:
+
+1. Observe the next Daily Picks run and inspect `data/market_data_health_YYYY-MM-DD.json`.
+2. Consider provider cooldown/backoff only after evidence shows it is needed.
+3. Add quote/company-identity validation improvements for news/intraday paths separately.
+4. Keep monitoring-only mode. Do not enable paper/live trading.
+
+---
+
 ## Current product lesson
 
 The 2026-05-05 monitoring review showed that the agent can find real catalysts, but it still needs stronger execution intelligence.

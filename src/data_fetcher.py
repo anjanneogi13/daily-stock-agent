@@ -10,6 +10,7 @@ from .market_data_health import (
     record_market_data_event,
     write_market_data_run_summary,
 )
+from .market_data_providers.stooq_provider import fetch_stooq_ohlcv
 
 try:
     from curl_cffi import requests as cf_requests
@@ -25,29 +26,95 @@ except Exception:
     HAS_FINNHUB = False
 
 
-def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
-    """Thread-safe OHLCV fetch.
+def _normalize_ohlcv(df: pd.DataFrame) -> pd.DataFrame:
+    """Normalize OHLCV dataframe columns to lowercase."""
+    if df is None or df.empty:
+        return pd.DataFrame()
+    out = df.copy()
+    if isinstance(out.columns, pd.MultiIndex):
+        out.columns = out.columns.get_level_values(0)
+    out.columns = [str(c).lower() for c in out.columns]
+    return out
 
-    NOTE: yf.download() is NOT thread-safe (shares module-level cache,
-    causes data leakage across parallel ticker fetches). yf.Ticker().history()
-    is per-instance and safe to use in ThreadPoolExecutor.
+
+def _fetch_yfinance_ohlcv(ticker: str, period: str, interval: str) -> pd.DataFrame:
+    t = yf.Ticker(ticker, session=SESSION) if SESSION else yf.Ticker(ticker)
+    df = t.history(period=period, interval=interval, auto_adjust=False, timeout=20)
+    return _normalize_ohlcv(df)
+
+
+def _fetch_stooq_fallback_ohlcv(ticker: str, period: str, interval: str) -> pd.DataFrame:
+    return fetch_stooq_ohlcv(ticker, period=period, interval=interval)
+
+
+def fetch_ohlcv(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
+    """Thread-safe OHLCV fetch with official daily fallback.
+
+    Primary provider:
+    - yfinance
+
+    Fallback provider:
+    - Stooq for daily OHLCV only
+
+    Safety:
+    - no stale/cache fabrication,
+    - no paper/live trading behavior,
+    - empty dataframe if all providers fail.
+
+    Thread-safety note:
+    - do not replace this with yf.download() in parallel fetches;
+      yf.download() uses shared module-level state and previously caused
+      cross-ticker data leakage. yf.Ticker().history() is per-instance.
     """
     try:
-        t = yf.Ticker(ticker, session=SESSION) if SESSION else yf.Ticker(ticker)
-        df = t.history(period=period, interval=interval,
-                       auto_adjust=False, timeout=20)
-        if df is None or df.empty:
-            record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="empty", message="empty OHLCV dataframe")
-            return pd.DataFrame()
-        if isinstance(df.columns, pd.MultiIndex):
-            df.columns = df.columns.get_level_values(0)
-        df.columns = [c.lower() for c in df.columns]
-        record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="success")
-        return df
+        df = _fetch_yfinance_ohlcv(ticker, period, interval)
+        if df is not None and not df.empty:
+            record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="success")
+            return df
+
+        record_market_data_event(
+            provider="yfinance",
+            stage="ohlcv",
+            ticker=ticker,
+            result="empty",
+            message="empty OHLCV dataframe",
+        )
     except Exception as e:
-        record_market_data_event(provider="yfinance", stage="ohlcv", ticker=ticker, result="error", error_type=classify_provider_error(e), message=str(e))
-        print(f"[data] {ticker}: {type(e).__name__}: {str(e)[:120]}")
-        return pd.DataFrame()
+        record_market_data_event(
+            provider="yfinance",
+            stage="ohlcv",
+            ticker=ticker,
+            result="error",
+            error_type=classify_provider_error(e),
+            message=str(e),
+        )
+        print(f"[data] {ticker}: yfinance {type(e).__name__}: {str(e)[:120]}")
+
+    try:
+        fallback = _fetch_stooq_fallback_ohlcv(ticker, period, interval)
+        if fallback is not None and not fallback.empty:
+            record_market_data_event(provider="stooq", stage="ohlcv", ticker=ticker, result="success")
+            return fallback
+
+        record_market_data_event(
+            provider="stooq",
+            stage="ohlcv",
+            ticker=ticker,
+            result="empty",
+            message="empty OHLCV dataframe",
+        )
+    except Exception as e:
+        record_market_data_event(
+            provider="stooq",
+            stage="ohlcv",
+            ticker=ticker,
+            result="error",
+            error_type=classify_provider_error(e),
+            message=str(e),
+        )
+        print(f"[data] {ticker}: stooq {type(e).__name__}: {str(e)[:120]}")
+
+    return pd.DataFrame()
 
 
 def fetch_universe_data(tickers: List[str], period: str = "6mo",

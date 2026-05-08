@@ -1639,3 +1639,23 @@ Safety remains unchanged:
 - no `picks_log.csv` mutation,
 - no paper trading,
 - no live trading.
+
+## 2026-05-08 — Official OHLCV Stooq fallback
+
+Added the first safe market-data provider fallback slice for official Daily Picks:
+
+- yfinance remains the primary OHLCV provider,
+- Stooq is used as a no-key fallback for daily OHLCV only,
+- fallback is wired only into `src/data_fetcher.fetch_ohlcv()`,
+- no intraday/quote/fundamentals paths were refactored,
+- no stale/cache fallback was added,
+- all-provider failure still returns an empty dataframe,
+- provider-health records yfinance empty/error and Stooq success/empty/error.
+
+Safety remains unchanged:
+
+- monitoring-only,
+- no official pick fabrication,
+- no paper trading,
+- no live trading,
+- no readiness-gate changes.

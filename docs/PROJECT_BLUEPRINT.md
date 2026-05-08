@@ -47,6 +47,7 @@ The repo is healthy for monitoring mode:
 - Late watch-only copy avoids action-like BUY wording and suppresses unresolved ticker/entity ideas.
 - New intraday opportunity Telegram pushes are suppressed after 15:15 ET to avoid late-day chase/overnight-risk alerts.
 - Intraday Telegram copy uses observed/reference-level wording rather than implying executable entries.
+- Official daily OHLCV now has a Stooq fallback behind yfinance for the Daily Picks data-fetch path.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
