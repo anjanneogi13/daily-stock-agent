@@ -1,140 +1,184 @@
-# 🗓 Agent Schedule — What Runs When
+# Agent Schedule
 
-**Last updated:** 2026-05-04
-**Timezone:** All times in **Singapore Time (SGT, UTC+8)**
-**Purpose:** Single reference for "when does the agent do X?"
+This document is a human-readable schedule overview.
 
----
+The implementation source of truth is always:
 
-## 📆 Weekly Schedule (SGT)
+    .github/workflows/
 
-| Day | SGT Time | What fires | Output channel | Auto/Manual |
-|---|---|---|---|---|
-| **Sunday** | 7:00 AM | 🌙 Nightly brain (deep mode, 300 tickers) | Files | Auto |
-| | 11:00 PM | 🧠 Self-Improvement Report → Telegram | **You** 📲 | Auto |
-| **Monday** | 7:00 AM | 🌙 Nightly brain | Files | Auto |
-| | 8:30 PM | 🌅 Daily picks → Telegram | **You** 📲 | Auto |
-| | 9:30 PM-4 AM | 📊 Intraday monitor every 30 min | Files | Auto |
-| **Tuesday** | 6:00 AM | 🌆 Mon evening recap → Telegram | **You** 📲 | Auto |
-| | 7:00 AM | 🌙 Nightly brain | Files | Auto |
-| | 8:30 PM | 🌅 Daily picks → Telegram | **You** 📲 | Auto |
-| | 9:30 PM-4 AM | 📊 Intraday monitor | Files | Auto |
-| **Wednesday** | 6:00 AM | 🌆 Tue evening recap → Telegram | **You** 📲 | Auto |
-| | 7:00 AM | 🌙 Nightly brain | Files | Auto |
-| | 8:30 PM | 🌅 Daily picks → Telegram | **You** 📲 | Auto |
-| | 9:30 PM-4 AM | 📊 Intraday monitor | Files | Auto |
-| **Thursday** | 6:00 AM | 🌆 Wed evening recap → Telegram | **You** 📲 | Auto |
-| | 7:00 AM | 🌙 Nightly brain | Files | Auto |
-| | 8:30 PM | 🌅 Daily picks → Telegram | **You** 📲 | Auto |
-| | 9:30 PM-4 AM | 📊 Intraday monitor | Files | Auto |
-| **Friday** | 6:00 AM | 🌆 Thu evening recap → Telegram | **You** 📲 | Auto |
-| | 7:00 AM | 🌙 Nightly brain | Files | Auto |
-| | 8:30 PM | 🌅 Daily picks → Telegram | **You** 📲 | Auto |
-| | 9:30 PM-4 AM | 📊 Intraday monitor | Files | Auto |
-| **Saturday** | 6:00 AM | 🌆 Fri evening recap → Telegram | **You** 📲 | Auto |
-| | 7:00 AM | 🌙 Nightly brain (deep mode, weekend) | Files | Auto |
-| | 8:00 AM | 🧘 Weekend Reflection (LLM-graded) | Files + GitHub issue | Auto |
-| | 9:00 AM | 📅 Weekly recap → Telegram | **You** 📲 | Auto |
-| | 11:00 PM | 🔬 Hypothesis tests (Wilson 95% CI) | Files | Auto |
+If this document conflicts with workflow YAML, trust the workflow YAML and update this document.
 
----
+## Current Operating Mode
 
-## 📅 Monthly + Yearly
+Daily Stock Agent currently runs in:
 
-| When | What | Channel |
+- monitoring-only mode
+- no paper trading
+- no live trading
+- official picks separated from watch-only ideas
+- research-only lanes separated from official statistics
+
+## Timezone Rule
+
+Most trading logic is guarded in America/New_York time.
+
+Some cron expressions are written in UTC because GitHub Actions schedules use UTC. Workflow guards convert to ET and skip wrong DST slots.
+
+## Core Weekday Workflows
+
+| Workflow | File | Purpose |
 |---|---|---|
-| **1st of every month, 6:00 AM SGT** | 📆 Monthly recap | Telegram 📲 |
-| **Jan 1 + Jul 1 yearly, 8:00 PM SGT** | 🚨 Calendar renewal reminder (auto-issue if holiday buffer <12 months) | GitHub issue |
-| **Jan 2 yearly, 8:00 PM SGT** | 🎊 Year-in-Review | Telegram 📲 |
+| Daily Stock Picks | `.github/workflows/daily-picks.yml` | Runs guarded official premarket pick generation attempts before the 09:20 ET cutoff |
+| Morning Run Watchdog | `.github/workflows/watchdog.yml` | Checks before cutoff whether official picks were logged and alerts if missing |
+| Late Watch-Only Daily Ideas | `.github/workflows/late_watch_only.yml` | After cutoff, sends clearly labeled watch-only fallback ideas only if official picks are missing |
+| Intraday Monitor | `.github/workflows/intraday_monitor.yml` | Runs intraday monitoring, opening-range checks, alerts, observations, and run-status artifacts |
+| News Engine | `.github/workflows/news_engine.yml` | Fetches/classifies news, updates watchlist/news evidence, and records run status |
+| News Evidence | `.github/workflows/news_evidence.yml` | Generates monitoring-only news evidence and outcome reports |
+| Evaluate | `.github/workflows/evaluate.yml` | Evaluates official picks after market close |
 
----
+## Recurring Report / Reflection Workflows
 
-## 📲 Just the Telegram messages (your phone view)
-
-Mon-Fri 8:30 PM SGT 🌅 Daily picks (5 days/week) Tue-Sat 6:00 AM SGT 🌆 Evening recap (5 days/week) Sat 9:00 AM SGT 📅 Weekly recap Mon 7:00 AM SGT 🧠 Self-Improvement Report (Sunday brain analysis) 1st mo 6:00 AM SGT 📆 Monthly recap Jan 2 8:00 PM SGT 🎊 Year-in-Review
-
-Code
-
-**~12 Telegram messages per week.** Everything else (brain calibration, pattern scans, intraday monitoring, hypothesis testing) happens silently in files.
-
----
-
-## 🌙 What "Nightly Brain" actually does (every night 7 AM SGT)
-
-The nightly conductor (`src/nightly_conductor.py`) runs 7 steps in sequence:
-
-| Step | Module | Purpose |
+| Workflow | File | Purpose |
 |---|---|---|
-| 1 | `pattern_scan` | Scans 100-300 tickers for chart patterns |
-| 2 | `pattern_stats` | Calculates win rate per pattern × per regime |
-| 3 | `pattern_auto_e_d` | DISABLES patterns with <30% win rate over 30+ trades; restores recovered ones |
-| 4 | `calibration_propose` | Proposes weight changes based on per-factor accuracy |
-| 5 | `weight_apply` | Applies changes (capped at 5%/factor/week for safety) |
-| 6 | `auto_promote` | Promotes consistent winners → wisdom lessons |
-| 7 | `lesson_gc` | Garbage-collects stale lessons (>90 days unused) |
+| Nightly Brain | `.github/workflows/nightly_brain.yml` | Runs learning/reflection style routines where enabled |
+| Weekly Report | `.github/workflows/weekly_report.yml` | Generates weekly reporting |
+| Weekend Reflection | `.github/workflows/weekend_reflection.yml` | Generates weekend reflection / review artifacts |
+| Monthly X-Ray | `.github/workflows/monthly_xray.yml` | Generates monthly analysis |
+| Yearly Recap | `.github/workflows/yearly_recap.yml` | Generates yearly recap |
+| Hypothesis Weekly | `.github/workflows/hypothesis_weekly.yml` | Runs weekly hypothesis review |
 
-Each step is isolated in `try/except` — one failure can't break the chain.
-Every run logs a single `nightly_brain_run` event to `data/learning_journal.jsonl`.
+## Maintenance Workflows
 
-**Deep mode (Sat/Sun + US holidays):** scans 300 tickers vs 100 on weekdays — the agent uses non-trading days for heavier historical chart analysis.
+| Workflow | File | Purpose |
+|---|---|---|
+| CI | `.github/workflows/ci.yml` | Runs tests and repository checks |
+| Backup | `.github/workflows/backup.yml` | Backs up important data/artifacts |
+| Holiday Renewal Reminder | `.github/workflows/holiday_renewal_reminder.yml` | Reminds maintainers to update market holiday/calendar support |
 
----
+## Daily Picks Safety Schedule
 
-## 🧠 What "Self-Improvement Report" tells you (every Sunday 11 PM SGT)
+Official daily picks are allowed only during the guarded premarket window.
 
-Generated by `src/meta_brain.py` — the brain reasons about itself:
-- How many mutations happened in the last 7 days?
-- Categorized by type (weights changed, patterns killed, lessons promoted)
-- Detect "stuck" areas (no learning in 14+ days?)
-- Suggest hypotheses (which buckets are outperforming?)
-- Calendar warnings (holiday buffer running low?)
+Important behavior:
 
-Format: plain English, friend-explaining-over-coffee voice.
+- normal official picks must run before the cutoff
+- cutoff is 09:20 ET
+- manual dispatch does not bypass the cutoff
+- duplicate official rows are skipped if picks already exist for the ET date
+- failed or zero-pick runs should preserve diagnostics
+- no-pick days are acceptable when explained by candidate rejection or data-quality evidence
 
----
+Related artifacts include:
 
-## 🚨 Holiday handling
+- `data/picks_log.csv`
+- `data/daily_picks_run_status_YYYY-MM-DD.jsonl`
+- `data/market_data_health_YYYY-MM-DD.json`
+- `data/daily_picks_candidate_rejections_YYYY-MM-DD.json`
+- `data/daily_picks_candidate_rejections_YYYY-MM-DD.md`
+- `data/daily_picks_no_pick_report_YYYY-MM-DD.md`
 
-`src/market_calendar.py` knows US market holidays for 2026, 2027, 2028.
+## Watchdog Safety Schedule
 
-- **Trading day:** Daily picks fire normally
-- **Weekend / holiday:** No picks generated; nightly brain runs in deep mode
-- **Half-day (Black Friday, Christmas Eve):** Picks fire; intraday monitor adjusts
+The watchdog checks before the official cutoff whether picks have been logged.
 
-When buffer drops below 12 months, **3 escalating reminders** trigger:
-1. 📅 Soft mention in Sunday Self-Improvement Report
-2. ⚠️ Bold mention in monthly Telegram recap
-3. 🚨 GitHub issue auto-opened Jan 1 / Jul 1
+It may:
 
----
+- send an urgent Telegram alert
+- attempt to dispatch Daily Stock Picks before cutoff
+- record run-status evidence
 
-## 📂 Where everything is logged (silent files)
+It must not:
 
-| File | What goes here |
-|---|---|
-| `data/picks_log.csv` | Every pick the agent made (entry/SL/TP/qty/outcome) |
-| `data/signal_journal.jsonl` | Every signal that influenced a decision |
-| `data/learning_journal.jsonl` | Every brain mutation (weights changed, patterns killed) |
-| `data/exec_report_YYYY-MM-DD.json` | Daily execution summary |
-| `data/telegram_sent.json` | Dedup tracker (prevents duplicate Telegram messages) |
-| `data/wisdom_lessons.json` | Active wisdom rules the brain follows |
+- create picks itself
+- bypass the official-picks timing gate
+- enable paper/live trading
 
----
+## Late Watch-Only Safety Schedule
 
-## 🔧 What you (Anjan) need to do
+Late watch-only fallback ideas run only after the official window is missed.
 
-**Daily:** Nothing. Read Telegram messages when they arrive.
-**Weekly:** Read the Saturday recap + Monday Self-Improvement Report.
-**Monthly:** Read the 1st-of-month recap.
-**Yearly:** ~30 seconds — respond to the Jan 1 / Jul 1 calendar renewal reminder when GitHub auto-opens an issue.
+They must:
 
-**Total annual maintenance: ~5 minutes.**
+- be clearly labeled watch-only
+- avoid buy/sell instruction language
+- avoid mutating `data/picks_log.csv`
+- avoid official pick statistics
+- avoid paper/live trading state
 
----
+Related artifacts include:
 
-## 📝 Related docs
+- `data/late_daily_ideas_YYYY-MM-DD.jsonl`
+- `data/late_daily_ideas_YYYY-MM-DD.md`
+- `data/late_daily_ideas_sent_YYYY-MM-DD.json`
 
-- `docs/ARCHITECTURE.md` — what the system is (technical)
-- `docs/FINAL_ROADMAP.md` — what's next (tactical)
-- `docs/BUSINESS_PLAN.md` — 24-month strategy
-- `docs/NEXT_SESSION.md` — start-of-session opener
+## Intraday Monitor Schedule
+
+Intraday Monitor covers:
+
+- opening-range checks
+- intraday momentum observations
+- active official-pick monitoring
+- Telegram alerts where appropriate
+- run-status and observation persistence
+
+Important safety rules:
+
+- opening-range and intraday momentum ideas are watch-only unless explicit official logic promotes them in the future
+- new intraday opportunity alerts should avoid late-day chase behavior
+- notification copy should use observed/reference-level wording, not action-like entry language
+- watch-only observations must not affect official statistics
+
+Related artifacts include:
+
+- `data/intraday_alerts_YYYY-MM-DD.json`
+- `data/intraday_momentum_observations_YYYY-MM-DD.jsonl`
+- `data/opening_range_observations_YYYY-MM-DD.jsonl`
+- `data/opening_range_run_status_YYYY-MM-DD.jsonl`
+- `data/opening_range_bars/`
+
+## News Schedule
+
+News Engine runs throughout premarket, market hours, and postmarket windows according to the workflow cron and internal guards.
+
+It may:
+
+- fetch news
+- classify headlines
+- update watchlist/news evidence
+- record run status
+- produce watch-only or research evidence
+
+It must not:
+
+- silently create official picks
+- mutate official pick statistics
+- enable paper/live trading
+
+Related artifacts include:
+
+- `data/news_log.jsonl`
+- `data/news_seen.json`
+- `data/news_signals.json`
+- `data/watchlist.json`
+- `data/news_engine_run_status_YYYY-MM-DD.jsonl`
+- `data/news_signal_outcomes_YYYY-MM-DD.jsonl`
+- `data/news_signal_evidence_report_YYYY-MM-DD.md`
+
+## Reports
+
+Generated reports live under:
+
+    reports/
+
+Treat generated reports as outputs, not canonical documentation.
+
+## Update Rule
+
+When workflow schedules or guards change:
+
+1. update the workflow YAML first
+2. update this document second
+3. update `docs/PROJECT_BLUEPRINT.md` if operating policy changed
+4. update `docs/planning/DATA_CONTRACTS.md` if artifacts changed
+5. update `docs/planning/NOTIFICATION_ARCHITECTURE.md` if notification behavior changed
+6. update `docs/planning/CANDIDATE_LIFECYCLE.md` if lifecycle states or transitions changed

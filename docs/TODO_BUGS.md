@@ -1,13 +1,24 @@
 # TODO / Bugs
 
-This content has moved to the canonical project document:
+This file is a compatibility entry point.
+
+Active next work lives in:
+
+- `docs/NEXT_SESSION.md`
+
+Current architecture, known gaps, and operating status live in:
 
 - `docs/PROJECT_BLUEPRINT.md`
 
-Companion docs:
+Future feature backlog lives in:
 
-- Work history: `docs/WORK_LOG.md`
-- Next session handoff: `docs/NEXT_SESSION.md`
+- `docs/planning/FEATURE_BACKLOG.md`
+
+Data, notification, and lifecycle safety planning lives in:
+
+- `docs/planning/DATA_CONTRACTS.md`
+- `docs/planning/NOTIFICATION_ARCHITECTURE.md`
+- `docs/planning/CANDIDATE_LIFECYCLE.md`
 
 Historical copy:
 

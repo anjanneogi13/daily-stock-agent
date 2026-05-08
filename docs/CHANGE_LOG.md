@@ -1,4 +1,28 @@
-# 📜 Change Log — Permanent Timeline
+# Change Log
+
+Historical note:
+
+This file is preserved as an older append-only timeline.
+
+Active work history should now be recorded in:
+
+- `docs/WORK_LOG.md`
+
+Current handoff and next work should be recorded in:
+
+- `docs/NEXT_SESSION.md`
+
+Current architecture/status should be recorded in:
+
+- `docs/PROJECT_BLUEPRINT.md`
+
+Future planning should be recorded under:
+
+- `docs/planning/`
+
+---
+
+## 📜 Original Change Log — Permanent Timeline
 
 This file records every meaningful change to the agent.
 **Append-only.** Newest entries on top. Never edit history.

@@ -1,8 +1,8 @@
 # Daily Stock Agent — Project Blueprint
 
-**Last updated:** 2026-05-07
+**Last updated:** 2026-05-08
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1372 passed, 30 skipped
+**Test suite:** 1433 passed, 30 skipped
 **Mode:** monitoring-only
 
 ## Purpose
@@ -51,6 +51,7 @@ The repo is healthy for monitoring mode:
 - News signals fade bullish boosts into small penalties when headlines indicate negative market reaction.
 - Monster Hunter / Long-Term Compounder Analyst architecture is documented as a research-only, monitoring-only future lane in `docs/MONSTER_HUNTER_DESIGN.md`.
 - Product failure modes, mitigations, and market win strategy are documented in `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`.
+- Planning documentation now separates future backlog, data contracts, notification architecture, and candidate lifecycle rules under `docs/planning/`.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
@@ -236,14 +237,21 @@ Use these canonical docs:
 | `docs/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
 | `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 | `docs/playbook/NEWS_EVIDENCE_REPORTS.md` | Operator playbook for News Evidence workflow and manual report generation |
+| `docs/planning/README.md` | Planning documentation index |
+| `docs/planning/FEATURE_BACKLOG.md` | Long-term feature backlog and implementation phases |
+| `docs/planning/DATA_CONTRACTS.md` | Data artifact contracts, ownership rules, and safety boundaries |
+| `docs/planning/NOTIFICATION_ARCHITECTURE.md` | Notification classifications, wording rules, and shared sender design |
+| `docs/planning/CANDIDATE_LIFECYCLE.md` | Candidate states, transitions, readiness gates, and anti-corruption rules |
 
 After every bug fix, feature, or process change:
 
 1. Update `docs/WORK_LOG.md`.
 2. Update `docs/NEXT_SESSION.md`.
 3. Update this file if architecture/current state/roadmap changed.
-4. Keep CI green.
-- Session handoff for 2026-05-08 is documented in `docs/SESSION_HANDOFF_2026-05-08.md`.
+4. Update relevant `docs/planning/` files if future design, data contracts, notification rules, or candidate lifecycle rules changed.
+5. Keep CI green.
+
+Session handoff for 2026-05-08 is documented in `docs/SESSION_HANDOFF_2026-05-08.md`.
 
 ## 2026-05-08 Daily Picks reliability addendum
 

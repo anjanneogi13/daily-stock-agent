@@ -1,14 +1,23 @@
 # Architecture
 
-This content has moved to the canonical project document:
+This file is a compatibility entry point.
+
+Current architecture and operating status live in:
 
 - `docs/PROJECT_BLUEPRINT.md`
 
-Companion docs:
+Related planning/design docs:
 
-- Work history: `docs/WORK_LOG.md`
-- Next session handoff: `docs/NEXT_SESSION.md`
+- `docs/planning/DATA_CONTRACTS.md`
+- `docs/planning/NOTIFICATION_ARCHITECTURE.md`
+- `docs/planning/CANDIDATE_LIFECYCLE.md`
+- `docs/planning/FEATURE_BACKLOG.md`
 
 Historical copy:
 
 - `docs/archive/2026-05-05-doc-consolidation/ARCHITECTURE.md`
+
+Update rule:
+
+- update `docs/PROJECT_BLUEPRINT.md` for current implemented architecture
+- update `docs/planning/` for future design guidance

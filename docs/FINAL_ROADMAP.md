@@ -1,13 +1,21 @@
 # Roadmap
 
-This content has moved to the canonical project document:
+This file is a compatibility entry point.
+
+Current roadmap/status live in:
 
 - `docs/PROJECT_BLUEPRINT.md`
+- `docs/NEXT_SESSION.md`
 
-Companion docs:
+Future feature planning lives in:
 
-- Work history: `docs/WORK_LOG.md`
-- Next session handoff: `docs/NEXT_SESSION.md`
+- `docs/planning/FEATURE_BACKLOG.md`
+
+Related planning docs:
+
+- `docs/planning/DATA_CONTRACTS.md`
+- `docs/planning/NOTIFICATION_ARCHITECTURE.md`
+- `docs/planning/CANDIDATE_LIFECYCLE.md`
 
 Historical copy:
 

@@ -420,6 +420,28 @@ If tests mutate tracked data, reset only data side effects:
 
 ---
 
+## Planning docs added — 2026-05-08
+
+New planning-only documentation now lives under:
+
+- `docs/planning/README.md`
+- `docs/planning/FEATURE_BACKLOG.md`
+- `docs/planning/DATA_CONTRACTS.md`
+- `docs/planning/NOTIFICATION_ARCHITECTURE.md`
+- `docs/planning/CANDIDATE_LIFECYCLE.md`
+
+Before implementing future features, check the planning docs for:
+
+- official vs watch-only separation
+- research-only separation
+- data artifact ownership
+- notification wording safety
+- candidate lifecycle readiness gates
+
+These documents are design guidance only until matching code, tests, and workflows exist.
+
+---
+
 ## Documentation update rule
 
 After every bug fix, feature, audit, or process change:

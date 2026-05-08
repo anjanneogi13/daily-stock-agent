@@ -10,6 +10,46 @@ Rules:
 4. Update this file after every meaningful codebase move.
 5. If architecture, roadmap, or product state changes, update `docs/PROJECT_BLUEPRINT.md`.
 6. If next work changes, update `docs/NEXT_SESSION.md`.
+7. If future design, data contracts, notification rules, or candidate lifecycle rules change, update `docs/planning/`.
+
+---
+
+## 2026-05-08 — Cleaned documentation map and stale docs
+
+**Type:** documentation / repository hygiene / planning alignment
+
+**Summary:**
+
+Updated repository documentation after adding planning docs.
+
+Changed:
+
+- refreshed root `README.md` with current monitoring-only status and safety boundaries,
+- refreshed `docs/README.md` as the documentation map,
+- updated `docs/PROJECT_BLUEPRINT.md` date, test count, and planning-doc references,
+- rewrote `docs/AGENT_SCHEDULE.md` from a stale old schedule into a current workflow index,
+- updated compatibility stubs:
+  - `docs/ARCHITECTURE.md`,
+  - `docs/FINAL_ROADMAP.md`,
+  - `docs/FUTURE_ROADMAP_PRIORITIZED.md`,
+  - `docs/TODO_BUGS.md`,
+- marked `docs/CHANGE_LOG.md` as historical and pointed active work history to `docs/WORK_LOG.md`,
+- added planning-doc guidance to `docs/NEXT_SESSION.md`.
+
+Purpose:
+
+- reduce stale/duplicated documentation,
+- make source-of-truth docs clearer,
+- separate current runtime behavior from future planning,
+- preserve historical docs instead of deleting them.
+
+Safety:
+
+- Documentation-only.
+- No runtime behavior changed.
+- No paper trading enabled.
+- No live trading enabled.
+- No official/watch-only/research-only data behavior changed.
 
 ---
 
