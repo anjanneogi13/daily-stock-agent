@@ -3308,5 +3308,44 @@
     "expires": "2026-05-13T15:59:01.257045+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "FROG": {
+    "ticker": "FROG",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Truist Securities Maintains Buy on JFrog, Raises Price Target to $80",
+    "added_at": "2026-05-08T17:16:51.498466+00:00",
+    "expires": "2026-05-13T17:16:51.498471+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LGND": {
+    "ticker": "LGND",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Ligand Pharmaceuticals, Raises Price Target to $262",
+    "added_at": "2026-05-08T17:16:51.500758+00:00",
+    "expires": "2026-05-13T17:16:51.500762+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JAN": {
+    "ticker": "JAN",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Janus Living, Raises Price Target to $30",
+    "added_at": "2026-05-08T17:16:51.503031+00:00",
+    "expires": "2026-05-13T17:16:51.503035+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
