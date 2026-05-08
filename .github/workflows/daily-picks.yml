@@ -124,11 +124,33 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          STATUS_FILE="data/daily_picks_run_status_${ET_DATE}.jsonl"
+
+          # Self-heal skipped/late observability: if this run's status records
+          # did not survive into the working tree for any reason, append one
+          # explicit marker before staging. This marker is monitoring-only and
+          # exists solely so skipped/missed-window workflow attempts are auditable.
+          if [ ! -f "$STATUS_FILE" ] || ! grep -Fq '"run_id": "'"${GITHUB_RUN_ID}"'"' "$STATUS_FILE"; then
+            echo "⚠ Current run_id ${GITHUB_RUN_ID} missing from $STATUS_FILE; appending persistence marker"
+            python scripts/record_daily_picks_run_status.py \
+              --event skipped_run_persistence_marker \
+              --result success \
+              --reason "ensured skipped/late daily-picks run-status persistence"
+          fi
+
+          echo "Status file tail before staging:"
+          tail -8 "$STATUS_FILE" 2>/dev/null || true
+
           git add -f data/daily_picks_run_status_*.jsonl data/market_data_health_*.json data/late_daily_ideas_*.jsonl data/late_daily_ideas_*.md data/late_daily_ideas_sent_*.json 2>/dev/null || true
+          git status --short
+
           if git diff --staged --quiet; then
             echo "ℹ No run-status changes to commit"
             exit 0
           fi
+
           git commit -m "status: daily picks attempt $(TZ='America/New_York' date +%Y-%m-%dT%H:%M%z) [skip ci]"
           for i in 1 2 3; do
             git pull --rebase origin main && git push && exit 0

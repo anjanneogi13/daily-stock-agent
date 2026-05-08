@@ -200,3 +200,21 @@ def test_independent_late_watch_only_workflow_exists_and_is_safe():
     assert "scripts/send_late_daily_ideas_telegram.py" in text
     assert "data/late_daily_ideas_*.jsonl" in text
     assert "data/late_daily_ideas_*.md" in text
+
+
+def test_skipped_daily_picks_attempt_self_heals_missing_run_status_marker():
+    text = Path(".github/workflows/daily-picks.yml").read_text()
+
+    skipped_block = text.split("- name: Commit run-status artifacts for skipped daily-picks attempt", 1)[1]
+    skipped_block = skipped_block.split("- name: Set up Python", 1)[0]
+
+    assert "skipped_run_persistence_marker" in skipped_block
+    assert "GITHUB_RUN_ID" in skipped_block
+    assert "grep -Fq" in skipped_block
+    assert "'\"run_id\": \"'" in skipped_block
+    assert '"${GITHUB_RUN_ID}"' in skipped_block
+    assert 'grep -q ""run_id": "${GITHUB_RUN_ID}""' not in skipped_block
+    assert r"\\\\run_id" not in skipped_block
+    assert "daily_picks_run_status_${ET_DATE}.jsonl" in skipped_block
+    assert "tail -8" in skipped_block
+    assert "git status --short" in skipped_block
