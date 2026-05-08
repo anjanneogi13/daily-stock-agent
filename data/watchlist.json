@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "A",
-      "tradeable_score": 1.0,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "",
-      "action_window": "intraday",
-      "headline": "h",
-      "url": "",
-      "source": "alpaca",
-      "added_at": "2026-05-05T09:04:38.780433+00:00"
-    },
-    {
-      "ticker": "B",
-      "tradeable_score": 1.0,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "",
-      "action_window": "intraday",
-      "headline": "h",
-      "url": "",
-      "source": "alpaca",
-      "added_at": "2026-05-05T09:04:38.780447+00:00"
-    },
-    {
       "ticker": "AWX",
       "tradeable_score": 0.58,
       "sentiment": "bullish",
@@ -2300,6 +2276,18 @@
       "url": "https://www.benzinga.com/news/26/05/52397998/ubs-maintains-buy-on-sitime-raises-price-target-to-775",
       "source": "alpaca",
       "added_at": "2026-05-07T23:48:07.092531+00:00"
+    },
+    {
+      "ticker": "AIIO",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major M&A announcement with Robo.ai acquiring 100% of Neurovia AI for $100M represents significant strategic expansion and confirmed material catalyst for the acquirer.",
+      "action_window": "intraday",
+      "headline": "Robo.ai Announced An Agreement To Acquire 100% Of The Equity Interest In Neurovia AI Limited For A Total Consideration Of $100M",
+      "url": "https://www.benzinga.com/quote/AIIO",
+      "source": "alpaca",
+      "added_at": "2026-05-08T09:10:23.167339+00:00"
     }
   ]
 }

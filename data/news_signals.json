@@ -1041,15 +1041,16 @@
   },
   "ONC": {
     "ticker": "ONC",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
     "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "BeiGene Q1 Adj. EPS $3.24 Beats $0.79 Estimate, Sales $1.513B Beat $1.441B Estimate.",
-    "added_at": "2026-05-06T10:13:29.863111+00:00",
-    "expires": "2026-05-13T10:13:29.863116+00:00",
-    "hard_block": false
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Did FDA Fast-Track HER2 Regimen Just Shift BeOne Medicines' (ONC) Investment Narrative?",
+    "added_at": "2026-05-08T09:10:23.155914+00:00",
+    "expires": "2026-06-07T09:10:23.155921+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   },
   "WMT": {
     "ticker": "WMT",
@@ -1605,15 +1606,16 @@
   },
   "WBD": {
     "ticker": "WBD",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
     "sentiment": "bearish",
-    "tradeable_score": 0.82,
+    "tradeable_score": 0.78,
     "action_window": "intraday",
-    "headline": "Warner Bros. Discovery Q1 EPS $(1.17) Misses $(0.04) Estimate, Sales $8.893B Miss $8.905B Estimate",
-    "added_at": "2026-05-06T20:09:39.182323+00:00",
-    "expires": "2026-05-13T20:09:39.182328+00:00",
-    "hard_block": false
+    "headline": "Paramount Skydance-WBD Merger: $2.9 Billion Loss, Netflix 'Termination Fee' And Tech Overhaul",
+    "added_at": "2026-05-08T09:10:23.148158+00:00",
+    "expires": "2026-06-07T09:10:23.148164+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   },
   "MIRM": {
     "ticker": "MIRM",
@@ -2838,5 +2840,31 @@
     "added_at": "2026-05-07T23:48:07.086760+00:00",
     "expires": "2026-05-12T23:48:07.086765+00:00",
     "hard_block": false
+  },
+  "AIIO": {
+    "ticker": "AIIO",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Robo.ai Announced An Agreement To Acquire 100% Of The Equity Interest In Neurovia AI Limited For A Total Consideration Of $100M",
+    "added_at": "2026-05-08T09:10:23.144939+00:00",
+    "expires": "2026-05-22T09:10:23.144946+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AMCX": {
+    "ticker": "AMCX",
+    "score_delta": -0.064,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "AMC Global Media Likely To Report Lower Q1 Earnings; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+    "added_at": "2026-05-08T09:10:23.150771+00:00",
+    "expires": "2026-05-15T09:10:23.150778+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
