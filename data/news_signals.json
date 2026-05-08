@@ -3460,5 +3460,44 @@
     "expires": "2026-05-13T20:06:25.405907+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "ARGX": {
+    "ticker": "ARGX",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.93,
+    "action_window": "next_day",
+    "headline": "argenx Announces FDA Approval Expanding VYVGART And VYVGART Hytrulo Label To Treat All Serotypes Of Generalized Myasthenia Gravis Based On ADAPT SERON Phase 3 Results",
+    "added_at": "2026-05-08T21:34:31.896179+00:00",
+    "expires": "2026-06-07T21:34:31.896186+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ICCC": {
+    "ticker": "ICCC",
+    "score_delta": -0.097,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "ImmuCell And Norbrook Laboratories Reach Settlement Agreement, Norbrook To Pay $2M Following Expiration Of 2019 Supply Deal",
+    "added_at": "2026-05-08T21:34:31.902851+00:00",
+    "expires": "2026-05-22T21:34:31.902859+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GM": {
+    "ticker": "GM",
+    "score_delta": -0.03,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.15,
+    "action_window": "ignore",
+    "headline": "LA District Attorney's Office Says General Motors To Pay $12.75M To Settle California Consumer Protection Lawsuit Alleging Data Privacy Violations",
+    "added_at": "2026-05-08T21:34:31.905866+00:00",
+    "expires": "2026-05-22T21:34:31.905871+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

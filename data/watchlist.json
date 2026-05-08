@@ -835,15 +835,16 @@
     },
     {
       "ticker": "ARGX",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "CEO appointment with founder moving to board chair represents planned leadership transition that could signal either continuity or strategic shift depending on new CEO's background.",
+      "tradeable_score": 0.93,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval expanding label to all serotypes of generalized myasthenia gravis significantly broadens the addressable patient population for VYVGART products based on Phase 3 data.",
       "action_window": "next_day",
-      "headline": "Argenx Appoints Karen Massey CEO, Tim Van Hauwermeiren Board Chairperson",
-      "url": "https://www.benzinga.com/news/26/05/52342467/argenx-appoints-karen-massey-ceo-tim-van-hauwermeiren-board-chairperson",
+      "headline": "argenx Announces FDA Approval Expanding VYVGART And VYVGART Hytrulo Label To Treat All Serotypes Of Generalized Myasthenia Gravis Based On ADAPT SERON Phase 3 Results",
+      "url": "https://www.benzinga.com/general/biotech/26/05/52431703/argenx-announces-fda-approval-expanding-vyvgart-and-vyvgart-hytrulo-label-to-treat-all-serotypes-",
       "source": "alpaca",
-      "added_at": "2026-05-06T20:09:39.192280+00:00"
+      "added_at": "2026-05-06T20:09:39.192280+00:00",
+      "updated_at": "2026-05-08T21:34:31.910275+00:00"
     },
     {
       "ticker": "XRN",
@@ -2027,6 +2028,66 @@
       "url": "https://www.benzinga.com/quote/CCEL",
       "source": "alpaca",
       "added_at": "2026-05-08T20:06:25.410322+00:00"
+    },
+    {
+      "ticker": "REAL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed shelf offering signals potential dilution for shareholders, though uncertainty around size and timing limits immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "The RealReal Files For Mixed Shelf Offering, Size Not Disclosed",
+      "url": "https://www.benzinga.com/news/26/05/52431744/the-realreal-files-for-mixed-shelf-offering-size-not-disclosed",
+      "source": "alpaca",
+      "added_at": "2026-05-08T21:34:31.910228+00:00"
+    },
+    {
+      "ticker": "SVCO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Expansion of ATM offering by $15M signals potential dilution and near-term equity financing needs, typically creating selling pressure as shares can be issued directly into the market.",
+      "action_window": "next_day",
+      "headline": "Silvaco Group Expands At-The-Market Common Stock Program By $20M To $35M Total",
+      "url": "https://www.benzinga.com/news/26/05/52431732/silvaco-group-expands-at-the-market-common-stock-program-by-20m-to-35m-total",
+      "source": "alpaca",
+      "added_at": "2026-05-08T21:34:31.910263+00:00"
+    },
+    {
+      "ticker": "LTRX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of $30M signals dilution concerns and potential capital needs, typically pressuring stock price in near-term though provides liquidity runway.",
+      "action_window": "next_day",
+      "headline": "Lantronix Enters $30M At-The-Market Common Stock Sales Agreement Through Sales Agents",
+      "url": "https://www.benzinga.com/news/26/05/52431660/lantronix-enters-30m-at-the-market-common-stock-sales-agreement-through-sales-agents",
+      "source": "alpaca",
+      "added_at": "2026-05-08T21:34:31.910288+00:00"
+    },
+    {
+      "ticker": "ICCC",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Settlement with $2M payment to ImmuCell resolves legal uncertainty and provides non-recurring cash inflow, positive for small-cap company.",
+      "action_window": "next_day",
+      "headline": "ImmuCell And Norbrook Laboratories Reach Settlement Agreement, Norbrook To Pay $2M Following Expiration Of 2019 Supply Deal",
+      "url": "https://www.benzinga.com/news/26/05/52431522/immucell-and-norbrook-laboratories-reach-settlement-agreement-norbrook-to-pay-2m-following-expiratio",
+      "source": "alpaca",
+      "added_at": "2026-05-08T21:34:31.910299+00:00"
+    },
+    {
+      "ticker": "NKTR",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of $150M indicates dilution and potential cash needs, typically causing immediate selling pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Nektar Therapeutics To Offer Up To $150M In Common Stock Via Equity Distribution Agreement",
+      "url": "https://www.benzinga.com/news/26/05/52431419/nektar-therapeutics-to-offer-up-to-150m-in-common-stock-via-equity-distribution-agreement",
+      "source": "alpaca",
+      "added_at": "2026-05-08T21:34:31.910309+00:00"
     }
   ]
 }
