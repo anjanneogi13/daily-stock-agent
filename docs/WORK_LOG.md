@@ -1751,3 +1751,52 @@ Recommended first implementation slice:
    - watch-only Monster Research Report.
 4. Do not wire Monster Hunter into production scoring yet.
 5. Do not enable paper/live trading.
+
+## 2026-05-08 — Product failure and win strategy documented
+
+Documented the product failure modes, mitigation strategy, and market win strategy.
+
+New strategic product doc:
+
+- `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
+
+Purpose:
+
+- identify where Daily Stock Agent can fail as a product,
+- document realistic mitigations without pretending failures can be eliminated completely,
+- define where the product can win loudly in the market,
+- reinforce that trust is the product,
+- clarify that the best positioning is transparent AI market research for busy working professionals, not a magic stock-picking bot.
+
+Key product risks documented:
+
+- signal spam,
+- failure to beat simple alternatives,
+- lack of user trust,
+- silent data-provider failure,
+- premature paper/live trading,
+- over-engineering before customer validation,
+- regulatory or advice-positioning risk,
+- historical-learning overfit,
+- Monster Hunter hype risk,
+- inability to explain outputs simply.
+
+Key win areas documented:
+
+- trust through transparency,
+- time-saving research for working professionals,
+- monitoring-first safety culture,
+- evidence-separated learning lanes,
+- Monster Hunter long-term research,
+- historical learning and probability discipline.
+
+Safety posture:
+
+- no paper trading,
+- no live trading,
+- no execution changes,
+- no production-scoring changes.
+
+Strategic conclusion:
+
+- the company can win if it becomes trusted before it becomes automated.

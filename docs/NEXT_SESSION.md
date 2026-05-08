@@ -163,6 +163,47 @@ Recommended weekend-safe first slice:
 5. Do not enable paper/live trading.
 
 
+
+---
+
+## 2026-05-08 product failure and win strategy update
+
+A new strategic product document has been added:
+
+```text
+docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md
+```
+
+Purpose:
+
+- document where the product can fail,
+- define mitigations without pretending failures can be eliminated completely,
+- document where the product can win loudly,
+- keep the company focused on trust, evidence, and customer value.
+
+Core strategic message:
+
+```text
+Trust is the product.
+The company can win if it becomes trusted before it becomes automated.
+```
+
+Important product positioning:
+
+- do not position as a magic AI stock picker,
+- do not position as guaranteed buy/sell signals,
+- do not rush paper/live trading,
+- position as transparent AI market research for busy working professionals.
+
+Near-term product focus:
+
+1. reliability and evidence,
+2. public trust assets,
+3. customer discovery,
+4. first product wedge: 5-minute market copilot / watchlist,
+5. avoid premature auto-execution or overbuilt SaaS.
+
+
 ## Current product lesson
 
 The 2026-05-05 monitoring review showed that the agent can find real catalysts, but it still needs stronger execution intelligence.

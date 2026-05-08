@@ -9,6 +9,7 @@ Use these docs first:
 | `NEXT_SESSION.md` | Daily refreshed next-session handoff |
 | `AGENT_MATURITY_TRACKER.md` | Real-world trading lessons, maturity scorecard, and intelligence roadmap |
 | `MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
+| `PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 
 Historical docs should be archived under `docs/archive/`.
 

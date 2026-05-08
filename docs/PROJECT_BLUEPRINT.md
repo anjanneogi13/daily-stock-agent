@@ -50,6 +50,7 @@ The repo is healthy for monitoring mode:
 - Official daily OHLCV now has a Stooq fallback behind yfinance for the Daily Picks data-fetch path.
 - News signals fade bullish boosts into small penalties when headlines indicate negative market reaction.
 - Monster Hunter / Long-Term Compounder Analyst architecture is documented as a research-only, monitoring-only future lane in `docs/MONSTER_HUNTER_DESIGN.md`.
+- Product failure modes, mitigations, and market win strategy are documented in `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
@@ -233,6 +234,7 @@ Use these canonical docs:
 | `docs/NEXT_SESSION.md` | Daily next-session handoff |
 | `docs/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
 | `docs/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
+| `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 | `docs/playbook/NEWS_EVIDENCE_REPORTS.md` | Operator playbook for News Evidence workflow and manual report generation |
 
 After every bug fix, feature, or process change:
