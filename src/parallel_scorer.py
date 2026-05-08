@@ -107,7 +107,7 @@ def _score_one(tk, df, cfg):
 
         # 💎 Monster Hunt scoring (additive, never blocks)
         try:
-            mdata = get_monster_data(tk) if cfg.get("monster", {}).get("fetch_short_float", True) else {}
+            mdata = get_monster_data(tk) if cfg.get("monster", {}).get("fetch_short_float", False) else {}
             d2e_val = _d2e(tk)
             d2e_norm = d2e_val if d2e_val is not None and d2e_val < 999 else None
             mres = score_monster(

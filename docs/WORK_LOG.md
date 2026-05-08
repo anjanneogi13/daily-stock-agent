@@ -1800,3 +1800,83 @@ Safety posture:
 Strategic conclusion:
 
 - the company can win if it becomes trusted before it becomes automated.
+
+## 2026-05-08 — Daily Picks no-pick diagnostics and provider-pressure hardening
+
+Context:
+- Daily Stock Picks failed on 2026-05-08 after producing zero official picks.
+- Investigation showed the agent did not simply find nothing:
+  - universe_count: 624
+  - fetched_count: 621
+  - scored_count: 332
+  - filtered_count: 30
+  - pre_hard_block_pick_count: 2
+  - hard_blocked_count: 2
+  - final_pick_count: 0
+- The run correctly failed loudly, sent Telegram failure alert, and kept paper/live trading disabled.
+- The failure exposed reliability and trust gaps:
+  - stale standalone `data/market_data_health_2026-05-08.json` after failed run recovery,
+  - insufficient hard-block / rejection explainability,
+  - high yfinance pressure from `monster_data` and heavy `.info` calls,
+  - noisy Stooq parser errors for unsupported `TSX:*` symbols.
+
+Changes:
+- Daily Picks failed-run artifact recovery now stages:
+  - `data/market_data_health_*.json`
+  - `data/hard_blocks_log.json`
+  - `data/daily_picks_candidate_rejections_*.json`
+  - `data/daily_picks_candidate_rejections_*.md`
+  - no-pick reports and run-status ledgers.
+- Added no-pick cause classification:
+  - `NO_PICK_DATA_PROVIDER_DEGRADED`
+  - `NO_PICK_NO_SCORED_CANDIDATES`
+  - `NO_PICK_FILTERS_REMOVED_ALL`
+  - `NO_PICK_ALL_FINALISTS_HARD_BLOCKED`
+  - `NO_PICK_RUNTIME_FAILURE`
+  - `NO_PICK_UNKNOWN_POST_FILTER_GATING`
+- Added candidate rejection diagnostics for no-pick days:
+  - pre-hard-block candidates,
+  - hard-blocked finalists,
+  - blocking rule,
+  - blocking reason,
+  - compact candidate score/plan/context.
+- Added candidate rejection artifacts:
+  - `data/daily_picks_candidate_rejections_YYYY-MM-DD.json`
+  - `data/daily_picks_candidate_rejections_YYYY-MM-DD.md`
+- Reduced yfinance pressure in official Daily Picks:
+  - `monster_data` / short-float enrichment is disabled by default unless `monster.fetch_short_float=true`.
+  - Daily Picks workflow sets `DAILY_FETCH_YF_FULL_INFO=false` to avoid heavy yfinance `.info` calls during broad candidate scoring.
+  - `fetch_info()` keeps its existing default contract outside the workflow, so local/product code can still retrieve real company names unless disabled.
+- Hardened Stooq fallback symbol hygiene:
+  - unsupported exchange-prefixed symbols such as `TSX:AQN` and `TSX:FCR` are rejected before HTTP/CSV parsing,
+  - avoids noisy Stooq parser errors,
+  - does not fabricate data.
+
+Validation:
+- `python -m compileall -q scripts src tests` passed.
+- `python3 -m pytest tests/ -q --tb=short --disable-warnings` passed:
+  - 1433 passed
+  - 30 skipped
+- `python scripts/audit_journal_consistency.py --strict` passed:
+  - 41/41 matched.
+- `python scripts/check_enforcement_readiness.py` remained blocked as expected.
+- `python scripts/monitoring_readiness.py` kept paper trading disabled.
+- Opening-range review passed as watch-only.
+- Opening-range backtest remained read-only with known `missing_bar_data`.
+- News evidence smoke passed.
+- News outcome smoke passed.
+- `git diff --check` passed.
+- Protected tracked data diff check was clean.
+
+Product interpretation:
+- The correct product behavior is not to force picks.
+- The correct product behavior is to explain why official picks were not produced.
+- A no-pick day can build trust only if the system shows whether the cause was data degradation, no candidates, filters, hard blocks, timing, or runtime failure.
+
+Safety:
+- Monitoring-only remains intact.
+- Paper trading remains forbidden.
+- Live trading remains forbidden.
+- No execution path was added.
+- No thresholds were loosened.
+- No forced-pick behavior was added.

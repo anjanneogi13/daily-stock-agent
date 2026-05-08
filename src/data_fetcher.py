@@ -154,17 +154,24 @@ def fetch_info(ticker: str) -> dict:
         info["regularMarketPrice"] = getattr(fast, "last_price", None)
         info["averageVolume"] = getattr(fast, "ten_day_average_volume", None) or 1_000_000
         info["marketCap"] = getattr(fast, "market_cap", None)
-        # Fetch real company name (yfinance .info is heavier — separate try)
-        try:
-            full_info = t.info or {}
-            long_name = full_info.get("longName") or full_info.get("shortName")
-            if long_name and str(long_name).strip().upper() != ticker.upper():
-                long_name = str(long_name).strip()
-                info["longName"]  = long_name
-                info["shortName"] = long_name
-                info["name"]      = long_name
-        except Exception:
-            pass
+        # Fetch real company name only when explicitly enabled.
+        #
+        # yfinance .info is substantially heavier than fast_info and can trigger
+        # rate limits across hundreds of Daily Picks candidates. Company name is
+        # useful presentation metadata, but it must not destabilize official
+        # monitoring runs. Default remains lightweight; opt in only for small
+        # debug/reporting contexts.
+        if os.getenv("DAILY_FETCH_YF_FULL_INFO", "true").strip().lower() == "true":
+            try:
+                full_info = t.info or {}
+                long_name = full_info.get("longName") or full_info.get("shortName")
+                if long_name and str(long_name).strip().upper() != ticker.upper():
+                    long_name = str(long_name).strip()
+                    info["longName"]  = long_name
+                    info["shortName"] = long_name
+                    info["name"]      = long_name
+            except Exception:
+                pass
     except Exception as e:
         record_market_data_event(provider="yfinance", stage="info", ticker=ticker, result="error", error_type=classify_provider_error(e), message=str(e))
         pass

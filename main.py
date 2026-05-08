@@ -101,7 +101,106 @@ def load_config(path: str = "config.yaml") -> dict:
         return yaml.safe_load(f)
 
 
-def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None) -> None:
+def _candidate_report_value(value):
+    """Return a JSON-safe compact representation for candidate diagnostics."""
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+    if isinstance(value, list):
+        return [_candidate_report_value(v) for v in value[:10]]
+    if isinstance(value, dict):
+        return {
+            str(k): _candidate_report_value(v)
+            for k, v in list(value.items())[:30]
+            if k not in {"df", "dataframe", "history"}
+        }
+    return str(value)
+
+
+def _summarize_candidate_for_report(candidate: dict) -> dict:
+    """Compact candidate summary for no-pick / rejection diagnostics."""
+    scores = candidate.get("scores") or {}
+    plan = candidate.get("plan") or {}
+    info = candidate.get("info_short") or {}
+    news_signal = candidate.get("news_signal") or {}
+    news = candidate.get("news") or {}
+
+    return {
+        "ticker": candidate.get("ticker"),
+        "company": info.get("name") or candidate.get("company") or "",
+        "sector": info.get("sector") or "",
+        "score": scores.get("composite"),
+        "trade_type": candidate.get("trade_type") or scores.get("trade_type"),
+        "sector_tag": scores.get("sector_tag"),
+        "day_score": scores.get("day_score"),
+        "news_boost": scores.get("news_boost"),
+        "news_action_window": (
+            scores.get("news_action_window")
+            or news_signal.get("action_window")
+            or (news.get("action_window") if isinstance(news, dict) else None)
+        ),
+        "entry": plan.get("entry"),
+        "stop_loss": plan.get("stop_loss"),
+        "take_profit": plan.get("take_profit"),
+        "risk_reward": plan.get("risk_reward"),
+        "days_to_earnings": candidate.get("days_to_earnings"),
+        "watch_only": bool(candidate.get("watch_only") or plan.get("watch_only")),
+        "watch_only_reason": candidate.get("watch_only_reason") or plan.get("watch_only_reason") or "",
+    }
+
+
+def _classify_no_pick_cause(pipeline: dict | None, market_data_health: dict | None, diagnostics: dict | None = None) -> tuple[str, list[str], str]:
+    """Classify why official Daily Picks produced no final picks."""
+    pipe = pipeline or {}
+    health = market_data_health or {}
+    diag = diagnostics or {}
+    secondary = []
+
+    providers = health.get("providers") or {}
+    yf_stats = providers.get("yfinance") or {}
+    yf_errors = int(yf_stats.get("errors") or 0)
+    yf_attempts = int(yf_stats.get("attempts") or 0)
+    yf_rate_limited = int(yf_stats.get("rate_limited") or 0)
+
+    if yf_attempts and (yf_rate_limited > 0 or yf_errors / max(yf_attempts, 1) >= 0.20):
+        secondary.append("YFINANCE_PROVIDER_DEGRADED")
+
+    if (health.get("by_stage") or {}).get("ohlcv", {}).get("errors", 0):
+        secondary.append("OHLCV_PROVIDER_ERRORS_PRESENT")
+
+    final_count = int(pipe.get("final_pick_count") or 0)
+    scored_count = int(pipe.get("scored_count") or 0)
+    fetched_count = int(pipe.get("fetched_count") or 0)
+    filtered_count = int(pipe.get("filtered_count") or 0)
+    pre_hard = int(pipe.get("pre_hard_block_pick_count") or 0)
+    hard_blocked = int(pipe.get("hard_blocked_count") or 0)
+
+    if final_count > 0:
+        primary = "PICKS_AVAILABLE"
+        summary = f"{final_count} official pick(s) were available."
+    elif fetched_count == 0:
+        primary = "NO_PICK_DATA_PROVIDER_DEGRADED"
+        summary = "No official picks were generated because no market data was fetched."
+    elif scored_count == 0:
+        primary = "NO_PICK_NO_SCORED_CANDIDATES"
+        summary = "No official picks were generated because no candidates survived scoring."
+    elif filtered_count == 0:
+        primary = "NO_PICK_FILTERS_REMOVED_ALL"
+        summary = "No official picks were generated because filters removed all scored candidates."
+    elif pre_hard > 0 and hard_blocked >= pre_hard:
+        primary = "NO_PICK_ALL_FINALISTS_HARD_BLOCKED"
+        summary = f"No official picks were generated because all {pre_hard} finalist candidate(s) were hard-blocked."
+    elif diag.get("runtime_failure"):
+        primary = "NO_PICK_RUNTIME_FAILURE"
+        summary = "No official picks were generated because the runtime failed."
+    else:
+        primary = "NO_PICK_UNKNOWN_POST_FILTER_GATING"
+        summary = "No official picks were generated after scoring/filtering/gating; inspect candidate diagnostics."
+
+    return primary, sorted(set(secondary)), summary
+
+
+
+def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None, diagnostics: dict | None = None) -> None:
     """Persist a no-pick evidence artifact for operational learning."""
     try:
         import json
@@ -134,6 +233,16 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None)
         except Exception:
             payload["market_data_health"] = {}
 
+        primary_cause, secondary_causes, human_summary = _classify_no_pick_cause(
+            pipeline or {},
+            payload.get("market_data_health") or {},
+            diagnostics or {},
+        )
+        payload["primary_no_pick_cause"] = primary_cause
+        payload["secondary_causes"] = secondary_causes
+        payload["human_readable_summary"] = human_summary
+        payload["diagnostics"] = diagnostics or {}
+
         (data_dir / f"daily_picks_no_pick_report_{date_str}.json").write_text(
             json.dumps(payload, indent=2, sort_keys=True) + "\n"
         )
@@ -145,6 +254,8 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None)
             "",
             f"- Date: **{date_str}**",
             f"- Reason: **{reason}**",
+            f"- Primary no-pick cause: **{payload.get('primary_no_pick_cause')}**",
+            f"- Summary: **{payload.get('human_readable_summary')}**",
             "- Paper trading enabled: **false**",
             "- Live trading enabled: **false**",
             "- Official premarket pick: **false**",
@@ -166,9 +277,67 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None)
                     f"unauthorized=**{stats.get('unauthorized', 0)}**"
                 )
 
+        if payload.get("secondary_causes"):
+            lines.extend(["", "## Secondary Causes"])
+            for cause in payload["secondary_causes"]:
+                lines.append(f"- {cause}")
+
+        diag = payload.get("diagnostics") or {}
+        if diag.get("hard_blocked_candidates"):
+            lines.extend(["", "## Hard-Blocked Finalists"])
+            for item in diag["hard_blocked_candidates"]:
+                lines.append(
+                    f"- {item.get('ticker')}: **{item.get('block_type')}** — {item.get('reason')}"
+                )
+
         (data_dir / f"daily_picks_no_pick_report_{date_str}.md").write_text(
             "\n".join(lines) + "\n"
         )
+
+        diag = payload.get("diagnostics") or {}
+        if diag:
+            rejection_payload = {
+                "artifact": "daily_picks_candidate_rejections",
+                "date": date_str,
+                "timestamp_utc": now_utc,
+                "mode": "monitoring_only",
+                "official_premarket_pick": False,
+                "paper_trading_enabled": False,
+                "live_trading_enabled": False,
+                "ready_for_paper_trading": False,
+                "primary_no_pick_cause": payload.get("primary_no_pick_cause"),
+                "secondary_causes": payload.get("secondary_causes", []),
+                "pipeline": pipeline or {},
+                "diagnostics": diag,
+            }
+            (data_dir / f"daily_picks_candidate_rejections_{date_str}.json").write_text(
+                json.dumps(rejection_payload, indent=2, sort_keys=True) + "\n"
+            )
+
+            rejection_lines = [
+                "# Daily Picks Candidate Rejection Report",
+                "",
+                "Monitoring-only diagnostic artifact. Not official picks. Not buy instructions.",
+                "",
+                f"- Date: **{date_str}**",
+                f"- Primary no-pick cause: **{payload.get('primary_no_pick_cause')}**",
+                f"- Summary: **{payload.get('human_readable_summary')}**",
+                "- Paper trading enabled: **false**",
+                "- Live trading enabled: **false**",
+                "",
+                "## Hard-Blocked Finalists",
+            ]
+            hard_blocked = diag.get("hard_blocked_candidates") or []
+            if hard_blocked:
+                for item in hard_blocked:
+                    rejection_lines.append(
+                        f"- {item.get('ticker')}: **{item.get('block_type')}** — {item.get('reason')}"
+                    )
+            else:
+                rejection_lines.append("- None recorded.")
+            (data_dir / f"daily_picks_candidate_rejections_{date_str}.md").write_text(
+                "\n".join(rejection_lines) + "\n"
+            )
     except Exception:
         # Do not hide the original no-pick failure if reporting fails.
         pass
@@ -443,6 +612,7 @@ def run():
 
     # Trim to final pick count
     top = capped[: cfg["output"]["top_n_picks"]]
+    pre_hard_block_candidates = list(top)
     pipeline["pre_hard_block_pick_count"] = len(top)
 
 
@@ -659,7 +829,23 @@ def run():
             "This is not safe to treat as a successful daily-picks run; "
             "check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed."
         )
-        _write_daily_picks_no_pick_report(reason, pipeline)
+        hard_blocked_candidates = []
+        for b in blocked:
+            item = dict(b)
+            match = next(
+                (p for p in pre_hard_block_candidates if p.get("ticker") == b.get("ticker")),
+                {},
+            )
+            item["candidate"] = _summarize_candidate_for_report(match) if match else {}
+            hard_blocked_candidates.append(item)
+
+        diagnostics = {
+            "pre_hard_block_candidates": [
+                _summarize_candidate_for_report(p) for p in pre_hard_block_candidates
+            ],
+            "hard_blocked_candidates": hard_blocked_candidates,
+        }
+        _write_daily_picks_no_pick_report(reason, pipeline, diagnostics)
         raise RuntimeError(reason)
 
     rprint("[5d/6] Auto-tagging trade type (DAY vs SWING)...")

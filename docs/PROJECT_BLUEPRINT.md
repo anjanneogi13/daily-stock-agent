@@ -244,3 +244,20 @@ After every bug fix, feature, or process change:
 3. Update this file if architecture/current state/roadmap changed.
 4. Keep CI green.
 - Session handoff for 2026-05-08 is documented in `docs/SESSION_HANDOFF_2026-05-08.md`.
+
+## 2026-05-08 Daily Picks reliability addendum
+
+Daily Picks now treats zero official picks as an explainable monitored event, not a silent success.
+
+Reliability additions:
+- No-pick reports classify the primary no-pick cause.
+- Candidate rejection artifacts explain pre-hard-block and hard-blocked finalists.
+- Failed-run recovery persists market-data health and hard-block evidence.
+- Official Daily Picks reduces yfinance pressure by disabling heavy full-info calls in workflow context.
+- `monster_data` enrichment is opt-in by default to prevent Monster Hunter research plumbing from destabilizing official Daily Picks.
+- Stooq fallback rejects unsupported exchange-prefixed symbols conservatively instead of creating parser-error noise.
+
+Product rule:
+- The agent must not force a pick to look useful.
+- The agent must clearly explain when it found candidates but rejected them.
+- Trust is improved by explainable no-pick discipline, not by lowering standards.

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 from io import StringIO
+import re
 
 import pandas as pd
 
@@ -29,16 +30,23 @@ except Exception:  # pragma: no cover - optional dependency
 
 STOOQ_URL = "https://stooq.com/q/d/l/"
 DAILY_INTERVALS = {"1d", "1D", "d", "D"}
+SUPPORTED_STOOQ_SYMBOL_RE = re.compile(r"^[a-z0-9.-]+$")
 
 
 def stooq_symbol(ticker: str) -> str:
-    """Convert a US ticker to Stooq's daily symbol format.
+    """Convert a simple US ticker to Stooq's daily symbol format.
 
-    Keep this conservative. If a ticker already contains an exchange suffix,
-    preserve it; otherwise append `.US`.
+    Keep this deliberately conservative. Exchange-prefixed symbols such as
+    ``TSX:AQN`` are not safely mappable to Stooq's US daily endpoint. Returning
+    an empty symbol prevents noisy parser errors and avoids pretending we have
+    provider coverage that we do not actually have.
     """
     raw = str(ticker or "").strip().lower()
     if not raw:
+        return ""
+    if ":" in raw or "/" in raw or raw.startswith("^"):
+        return ""
+    if not SUPPORTED_STOOQ_SYMBOL_RE.match(raw):
         return ""
     if "." in raw:
         return raw

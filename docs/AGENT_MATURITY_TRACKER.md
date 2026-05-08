@@ -640,3 +640,22 @@ Track these over time:
 - Do not let Monster Hunter outputs become official picks, paper trades, or live trades without explicit validation and founder approval.
 - Do not promote any Monster Hunter rule beyond observe mode until historical and forward evidence support it.
 - Do not send stale/unverified prices as actionable entries.
+
+## 2026-05-08 — Lesson: no-pick explainability is part of intelligence
+
+Observation:
+- Three straight days had zero official Daily Picks rows.
+- May 8 proved the agent did find finalists but hard-blocked both.
+- Therefore the key intelligence gap was not only pick selection; it was explainability of rejection.
+
+Maturity upgrade:
+- No-pick cause classification added.
+- Candidate rejection diagnostics added.
+- Hard-blocked finalist context is now preserved for review.
+- Provider-health evidence is now persisted on failed Daily Picks recovery.
+- yfinance pressure reduced in official scoring paths.
+
+Lesson:
+- A mature agent must explain what it rejected, not only what it selected.
+- "No pick" is acceptable only when supported by evidence.
+- The next intelligence milestone is not more aggression; it is better attribution of rejection, data quality, and opportunity quality.

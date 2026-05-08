@@ -714,3 +714,35 @@ Do not skip steps.
 If the agent cannot explain why it is right, why it might be wrong, what data it used, what would invalidate the idea, and how past similar ideas performed, then the product should not ask users for trust.
 
 Trust is the product.
+
+## 2026-05-08 No-pick failure turned into trust artifact
+
+The 2026-05-08 Daily Picks failure validated an important product principle: a no-pick day is not automatically a product failure, but an unexplained no-pick day is a trust failure.
+
+Observed failure mode:
+- Official Daily Picks produced zero final picks.
+- The pipeline found finalists but hard-blocked them.
+- yfinance provider pressure was high.
+- Standalone market-data health evidence was stale before the recovery fix.
+- Stooq fallback produced noisy parser errors for unsupported exchange-prefixed symbols.
+
+Mitigation added:
+- no-pick cause classification,
+- candidate rejection reports,
+- persisted market-data health on failed-run recovery,
+- persisted hard-block evidence,
+- reduced yfinance pressure in official Daily Picks,
+- conservative Stooq symbol hygiene.
+
+Product lesson:
+- Do not force picks to satisfy user expectation.
+- Explain no-pick decisions clearly.
+- Separate "nothing worth official use" from "data degraded" and "candidate rejected by safety rules."
+- A transparent no-pick day can build credibility.
+- An opaque no-pick day damages trust.
+
+This supports the core positioning:
+- transparent AI market research for busy professionals,
+- not a magic stock-picking bot,
+- not an auto-trading system,
+- not a forced daily signal service.

@@ -846,3 +846,70 @@ Next best task:
    - opening-range bar artifact capture for future backtest joins.
 4. Continue monitoring-only mode.
 5. Do not enable paper/live trading.
+
+## 2026-05-08 Daily Picks no-pick reliability follow-up
+
+Latest Daily Picks incident:
+- 2026-05-08 Daily Stock Picks failed loudly after zero official final picks.
+- The pipeline did not find zero ideas; it found 2 finalists and hard-blocked both:
+  - pre_hard_block_pick_count=2
+  - hard_blocked_count=2
+  - final_pick_count=0
+- The failure alert was correct and safety-preserving:
+  - no official picks should be used,
+  - watch-only fallback only,
+  - paper trading disabled,
+  - live trading disabled.
+
+Fixes completed:
+1. Failed Daily Picks artifact recovery now persists:
+   - `data/market_data_health_*.json`
+   - `data/hard_blocks_log.json`
+   - `data/daily_picks_candidate_rejections_*.json`
+   - `data/daily_picks_candidate_rejections_*.md`
+   - no-pick reports and run-status ledgers.
+2. No-pick reports now classify primary cause and secondary causes.
+3. Candidate rejection diagnostics now capture:
+   - pre-hard-block candidates,
+   - hard-blocked finalists,
+   - block type,
+   - block reason,
+   - compact candidate context.
+4. Official Daily Picks yfinance pressure was reduced:
+   - `monster_data` enrichment is disabled by default unless explicitly enabled,
+   - Daily Picks workflow sets `DAILY_FETCH_YF_FULL_INFO=false`,
+   - `fetch_info()` default company-name contract remains intact outside workflow.
+5. Stooq fallback now rejects unsupported symbols such as `TSX:AQN` before HTTP/CSV parsing.
+
+Validation completed after these fixes:
+- Full test suite passed:
+  - 1433 passed
+  - 30 skipped
+- Python compile passed.
+- Journal consistency passed.
+- Enforcement readiness remained blocked as expected.
+- Monitoring readiness kept paper trading disabled.
+- Opening-range review passed as watch-only.
+- Opening-range backtest remained read-only with known missing bar data.
+- News evidence smoke passed.
+- News outcome smoke passed.
+- `git diff --check` passed.
+- Protected data diff check was clean.
+
+Next recommended action:
+1. Final documentation review and final full audit.
+2. Commit and push only if final audit remains clean.
+3. Watch the next official-window Daily Picks run.
+4. Inspect new artifacts if another no-pick day occurs:
+   - no-pick report,
+   - candidate rejection report,
+   - market-data health,
+   - hard-block log.
+5. Do not add Finnhub yet unless real telemetry still proves official OHLCV/provider coverage is insufficient.
+
+Important:
+- Do not loosen filters blindly.
+- Do not force official picks.
+- No-pick days are acceptable only when clearly explained.
+- Paper trading remains forbidden.
+- Live trading remains forbidden.

@@ -1,5 +1,8 @@
 name: Daily Stock Picks
 
+env:
+  DAILY_FETCH_YF_FULL_INFO: false
+
 on:
   schedule:
     # Reliability hardening:
@@ -221,7 +224,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/market_data_health_*.json 2>/dev/null || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/daily_picks_candidate_rejections_*.json data/daily_picks_candidate_rejections_*.md data/market_data_health_*.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No changes to commit"
@@ -322,7 +325,7 @@ jobs:
             echo "No picks_log.csv rows for $ET_DATE; not staging picks_log.csv"
           fi
 
-          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md 2>/dev/null || true
+          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/hard_blocks_log.json data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/daily_picks_candidate_rejections_*.json data/daily_picks_candidate_rejections_*.md data/market_data_health_*.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No post-send changes to commit"

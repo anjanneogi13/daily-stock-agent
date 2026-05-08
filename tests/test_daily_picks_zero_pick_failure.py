@@ -30,7 +30,7 @@ def test_main_writes_no_pick_evidence_report_before_zero_pick_failure():
     assert "def _write_daily_picks_no_pick_report" in text
     assert "daily_picks_no_pick_report_" in text
     assert "pipeline[\"final_pick_count\"] = len(top)" in text
-    assert "_write_daily_picks_no_pick_report(reason, pipeline)" in text
+    assert "_write_daily_picks_no_pick_report(reason, pipeline, diagnostics)" in text
     assert "data-provider/rate-limit/no-candidate" in text
 
 
@@ -54,3 +54,16 @@ def test_daily_picks_workflow_commits_market_data_health_artifacts():
 
     assert "data/market_data_health_*.json" in text
     assert text.count("data/market_data_health_*.json") >= 2
+
+
+def test_daily_picks_failure_recovery_commits_market_health_and_hard_block_evidence():
+    text = Path(".github/workflows/daily-picks.yml").read_text()
+
+    post_send = text.split("- name: Commit post-send artifacts", 1)[1]
+
+    assert "data/market_data_health_*.json" in post_send
+    assert "data/hard_blocks_log.json" in post_send
+    assert "data/daily_picks_no_pick_report_*.json" in post_send
+    assert "data/daily_picks_no_pick_report_*.md" in post_send
+    assert "data/daily_picks_candidate_rejections_*.json" in post_send
+    assert "data/daily_picks_candidate_rejections_*.md" in post_send
