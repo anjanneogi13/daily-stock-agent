@@ -2267,6 +2267,30 @@
       "url": "https://www.benzinga.com/quote/PAGP",
       "source": "alpaca",
       "added_at": "2026-05-08T14:23:33.404926+00:00"
+    },
+    {
+      "ticker": "MCD",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "McDonald's reported disappointing Q1 results with cautious April outlook prompting multiple analyst downgrades, creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "McDonald's Value Focus Fails To Drive Results: Analysts Cut Forecasts On Cautious Outlook",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52417396/mcdonalds-value-focus-fails-to-drive-results-analysts-cut-forecasts-on-cautious-outlook",
+      "source": "alpaca",
+      "added_at": "2026-05-08T15:59:01.261208+00:00"
+    },
+    {
+      "ticker": "WARP",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New ETF launch provides direct investment vehicle for space economy sector exposure, creating immediate buying interest from thematic investors targeting $600B addressable market.",
+      "action_window": "next_day",
+      "headline": "VanEck Launches ETF WARP To Tap Satellites, AI And The $600 Billion Space Economy",
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/05/52417228/vaneck-launches-etf-warp-to-tap-satellites-ai-and-the-600-billion-space-economy",
+      "source": "alpaca",
+      "added_at": "2026-05-08T15:59:01.261226+00:00"
     }
   ]
 }
