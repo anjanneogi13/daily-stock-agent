@@ -45,6 +45,26 @@ Still important after this cleanup:
 
 ---
 
+
+## 2026-05-08 intraday alert quality hardening
+
+Implemented/active safety direction:
+
+- new intraday opportunities are suppressed after 15:15 ET,
+- existing-pick monitoring can continue separately,
+- intraday Telegram copy uses `Reference levels: Observed` instead of action-like entry wording,
+- timestamps use real America/New_York timezone.
+
+Still important after this cleanup:
+
+1. Add quote/bar freshness metadata to intraday alerts if available.
+2. Improve outcome joins for intraday momentum/opening-range observations.
+3. Implement official OHLCV provider fallback:
+   - yfinance → Stooq → safe empty/failure with provider-health evidence.
+4. Keep monitoring-only mode. Do not enable paper/live trading.
+
+---
+
 ## Current product lesson
 
 The 2026-05-05 monitoring review showed that the agent can find real catalysts, but it still needs stronger execution intelligence.

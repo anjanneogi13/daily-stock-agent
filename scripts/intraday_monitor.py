@@ -2,7 +2,8 @@
 """Intraday Monitor — runs every 30 min during US market hours."""
 import os, sys, json, csv as _csv
 from pathlib import Path
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 _HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(_HERE))           # for sibling scripts (intraday_news, intraday_scanner)
@@ -36,6 +37,7 @@ except Exception as _e:
     print(f"[market-calendar] guard failed: {_e} — proceeding")
 
 
+ET = ZoneInfo("America/New_York")
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 
@@ -261,7 +263,7 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
 def build_message(monitor_alerts: list, new_opps: list) -> str:
     if not monitor_alerts and not new_opps:
         return ""
-    et_now = datetime.now(timezone.utc) - timedelta(hours=5)
+    et_now = datetime.now(timezone.utc).astimezone(ET)
     lines = [f"*INTRADAY UPDATE* — {et_now.strftime('%H:%M')} ET\n"]
     if monitor_alerts:
         lines.append("*Pick Status*\n")
@@ -282,7 +284,7 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
             lines.append(f"{prefix}*{o['ticker']}* @ ${o['price']:.2f}\n"
                          f"   Scanner: {scanner}\n"
                          f"   Score: {o['score']:.1f}\n"
-                         f"   Observe levels: Entry ${o['entry']:.2f} | SL ${o['sl']:.2f} | TP ${o['tp']:.2f}\n"
+                         f"   Reference levels: Observed ${o['entry']:.2f} | SL ref ${o['sl']:.2f} | TP ref ${o['tp']:.2f}\n"
                          f"   {o.get('reason','Live momentum')}\n"
                          f"   Monitoring-only. Do not treat as a buy instruction.\n")
     lines.append("_Educational only. Not financial advice._")

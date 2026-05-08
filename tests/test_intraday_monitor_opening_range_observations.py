@@ -49,4 +49,7 @@ def test_intraday_monitor_records_opening_range_observations(tmp_path, monkeypat
     assert status_calls[-1]["alert_count"] == 1
     assert status_calls[-1]["observation_count"] == 1
     assert monitor.OUT_FILE.exists()
-    assert "WATCH ONLY" in monitor.OUT_FILE.read_text()
+    body = monitor.OUT_FILE.read_text()
+    assert "WATCH ONLY" in body
+    assert "Reference levels: Observed $101.60" in body
+    assert "Observe levels: Entry" not in body

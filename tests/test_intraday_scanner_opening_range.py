@@ -73,7 +73,12 @@ def test_scan_for_new_opportunities_prioritizes_opening_range_before_legacy_mome
         "mode": "monitoring_only",
         "scanner": "opening_range",
     }]):
-        out = scanner.scan_for_new_opportunities(exclude=set(), sent_alerts=set(), max_results=3)
+        out = scanner.scan_for_new_opportunities(
+            exclude=set(),
+            sent_alerts=set(),
+            max_results=3,
+            now=datetime(2026, 5, 6, 10, 0, tzinfo=ET),
+        )
 
     assert out, "opening-range candidate should be present"
     assert out[0]["scanner"] == "opening_range"
@@ -99,7 +104,8 @@ def test_intraday_message_labels_new_opportunities_watch_only():
     assert "WATCH ONLY" in msg
     assert "Monitoring-only. Do not treat as a buy instruction." in msg
     assert "Scanner: opening_range" in msg
-    assert "Observe levels:" in msg
+    assert "Reference levels: Observed $101.60" in msg
+    assert "Observe levels: Entry" not in msg
 
 def test_append_opening_range_observations_writes_jsonl(tmp_path):
     path = tmp_path / "opening_range_observations_2026-05-06.jsonl"

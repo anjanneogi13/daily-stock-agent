@@ -1615,3 +1615,27 @@ Safety remains unchanged:
 - no signal/learning journal mutation,
 - no paper trading,
 - no live trading.
+
+## 2026-05-08 — Intraday alert quality hardening
+
+Added a small monitoring-only quality patch for intraday Telegram alerts:
+
+- suppress new intraday opportunities after 15:15 ET,
+- keep existing-pick monitoring separate from new-opportunity pushes,
+- replace action-like `Entry` wording with `Reference levels: Observed`,
+- use real `America/New_York` timezone for the intraday Telegram timestamp instead of a fixed UTC-5 offset,
+- add tests for cutoff behavior and safer Telegram copy.
+
+Rationale:
+
+- 2026-05-07 produced late-day UNH/SNOW alerts close to market close,
+- DDOG/CRWD exposed confusion between observed scanner price and actionable entry,
+- near-close fresh opportunities create chase/overnight risk and should not be pushed as normal new opportunities.
+
+Safety remains unchanged:
+
+- monitoring-only,
+- no official pick mutation,
+- no `picks_log.csv` mutation,
+- no paper trading,
+- no live trading.

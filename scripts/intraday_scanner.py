@@ -180,6 +180,20 @@ def opening_range_observation_path(today: str | None = None) -> Path:
 
 
 ET = ZoneInfo("America/New_York")
+NEW_OPPORTUNITY_CUTOFF_MINUTES = 15 * 60 + 15  # 15:15 ET
+
+
+def new_opportunity_window_open(now: datetime | None = None) -> bool:
+    """Return True when it is still reasonable to send new intraday ideas.
+
+    Existing-pick monitoring can continue until close, but new watch-only
+    opportunities after 15:15 ET create chase/overnight risk and confused
+    product semantics. They should be recorded in future evidence layers,
+    not pushed as fresh Telegram opportunities.
+    """
+    now_et = (now or datetime.now(timezone.utc)).astimezone(ET)
+    minutes = now_et.hour * 60 + now_et.minute
+    return minutes < NEW_OPPORTUNITY_CUTOFF_MINUTES
 
 
 def _bar_ts_to_et(value, now: datetime | None = None) -> datetime:
@@ -497,16 +511,27 @@ def append_opening_range_observations(candidates: list[dict],
 
 
 
-def scan_for_new_opportunities(exclude: set, sent_alerts: set, max_results: int = 3) -> list:
+def scan_for_new_opportunities(
+    exclude: set,
+    sent_alerts: set,
+    max_results: int = 3,
+    now: datetime | None = None,
+) -> list:
     """Scan watchlist for new intraday opportunities.
 
     Opening-range breakouts are checked first and returned as monitoring-only
     watch-only ideas. The legacy momentum scan remains as a fallback.
     """
+    if not new_opportunity_window_open(now=now):
+        now_et = (now or datetime.now(timezone.utc)).astimezone(ET)
+        print(f"[scanner] New intraday opportunities suppressed after 15:15 ET ({now_et.strftime('%H:%M')} ET)")
+        return []
+
     opening_range = scan_opening_range_opportunities(
         exclude=exclude,
         sent_alerts=sent_alerts,
         max_results=max_results,
+        now=now,
     )
     if len(opening_range) >= max_results:
         return opening_range[:max_results]
