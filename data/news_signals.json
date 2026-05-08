@@ -3100,5 +3100,70 @@
     "expires": "2026-05-13T12:07:45.003974+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "ABNB": {
+    "ticker": "ABNB",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Wells Fargo Maintains Overweight on Airbnb, Raises Price Target to $181",
+    "added_at": "2026-05-08T14:23:33.385971+00:00",
+    "expires": "2026-05-13T14:23:33.385978+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "U": {
+    "ticker": "U",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Wells Fargo Maintains Overweight on Unity Software, Raises Price Target to $35",
+    "added_at": "2026-05-08T14:23:33.389514+00:00",
+    "expires": "2026-05-13T14:23:33.389527+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ROAD": {
+    "ticker": "ROAD",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Construction Partners Raises FY2026 Sales Guidance from $3.480B-$3.560B to $3.590B-$3.650B vs $3.524B Est",
+    "added_at": "2026-05-08T14:23:33.395167+00:00",
+    "expires": "2026-05-22T14:23:33.395174+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PAGP": {
+    "ticker": "PAGP",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "CORRECTION: Plains GP Holdings Q1 EPS (Cont Ops) $0.24 Beats $0.12 Estimate, Sales $12.470B Beat $11.716B Estimate",
+    "added_at": "2026-05-08T14:23:33.397933+00:00",
+    "expires": "2026-05-15T14:23:33.397938+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WMG": {
+    "ticker": "WMG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Evercore ISI Group Maintains Outperform on Warner Music Gr, Raises Price Target to $43",
+    "added_at": "2026-05-08T14:23:33.400811+00:00",
+    "expires": "2026-05-13T14:23:33.400817+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
