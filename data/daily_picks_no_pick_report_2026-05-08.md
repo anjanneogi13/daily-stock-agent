@@ -22,4 +22,4 @@ Monitoring-only failure evidence. No official picks were generated.
 
 ## Market Data Health
 - stooq: attempts=**2**, successes=**0**, errors=**2**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1573**, successes=**1143**, errors=**428**, rate_limited=**427**, unauthorized=**0**
+- yfinance: attempts=**1573**, successes=**1089**, errors=**482**, rate_limited=**482**, unauthorized=**0**
