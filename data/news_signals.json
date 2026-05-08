@@ -3616,5 +3616,18 @@
     "expires": "2026-05-13T22:51:31.754561+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "QCOM": {
+    "ticker": "QCOM",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Tigress Financial Maintains Buy on Qualcomm, Raises Price Target to $280",
+    "added_at": "2026-05-08T23:52:17.309604+00:00",
+    "expires": "2026-05-13T23:52:17.309611+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
