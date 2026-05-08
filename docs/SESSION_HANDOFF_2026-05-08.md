@@ -324,3 +324,54 @@ Opening-range observations: watch-only
 Provider fallback: yfinance → Stooq only for official daily OHLCV
 Finnhub candles: deferred
 ```
+
+---
+
+## Final session-close audit — clean
+
+A comprehensive read-only audit was run before closing the session.
+
+Audit result:
+
+- No new bugs found.
+- No code fixes required before wrap-up.
+
+Checks passed:
+
+- Repo up to date at 2dd7e45
+- Full test suite: 1422 passed, 30 skipped
+- Python compile check passed
+- git diff --check passed
+- Journal consistency passed: 41/41 matched
+- Enforcement readiness remained safely blocked
+- Monitoring readiness kept paper trading disabled
+- News evidence smoke passed
+- News outcome smoke passed
+- Opening-range review passed as watch-only
+- Opening-range backtest remained read-only
+- JSON/JSONL parse audit passed
+- CSV basic audit passed
+- Safety keyword audit passed
+- Protected data side-effect check clean
+- Working tree clean after audit
+
+Expected non-bug findings:
+
+- No Daily Picks current-head run-status rows yet.
+  This is expected until tonight's automatic official-window run.
+
+- market_data_health still shows by_stage.ohlcv as None.
+  This is expected until the official Daily Picks OHLCV path runs.
+
+- Opening-range backtest has missing_bar_data rows.
+  This is not urgent because opening-range remains watch-only evidence.
+
+- Monitoring/enforcement readiness gates are still blocked.
+  This is correct because closed-pick evidence is still too small.
+
+Final operational decision at close:
+
+- Do not add Finnhub yet.
+- Wait for tonight's automatic Daily Picks run.
+- Validate yfinance/Stooq telemetry first.
+- Then decide provider direction together.

@@ -1684,3 +1684,25 @@ Documented:
 - decision to defer Finnhub until after tonight's official Daily Picks telemetry,
 - exact validation command for the next session,
 - monitoring-only safety posture.
+
+## 2026-05-08 — Final session-close audit clean
+
+Ran comprehensive read-only closeout audit.
+
+Result:
+
+- no new bugs found,
+- full test suite passed,
+- compile passed,
+- journal consistency passed,
+- JSON/JSONL artifacts parse cleanly,
+- protected data unchanged,
+- monitoring and enforcement gates remain safely blocked,
+- opening-range remains watch-only,
+- Daily Picks/Stooq validation remains pending until tonight's automatic official-window run.
+
+Decision preserved:
+
+- do not add Finnhub yet,
+- wait for real yfinance/Stooq telemetry,
+- decide provider direction together afterward.
