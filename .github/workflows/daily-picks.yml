@@ -143,7 +143,19 @@ jobs:
           echo "Status file tail before staging:"
           tail -8 "$STATUS_FILE" 2>/dev/null || true
 
-          git add -f data/daily_picks_run_status_*.jsonl data/market_data_health_*.json data/late_daily_ideas_*.jsonl data/late_daily_ideas_*.md data/late_daily_ideas_sent_*.json 2>/dev/null || true
+          # Stage only existing artifacts. Plain unmatched globs can make
+          # `git add` fail and leave real modified files unstaged.
+          shopt -s nullglob
+          status_artifacts=(
+            data/daily_picks_run_status_*.jsonl
+            data/market_data_health_*.json
+            data/late_daily_ideas_*.jsonl
+            data/late_daily_ideas_*.md
+            data/late_daily_ideas_sent_*.json
+          )
+          if [ "${#status_artifacts[@]}" -gt 0 ]; then
+            git add -f "${status_artifacts[@]}"
+          fi
           git status --short
 
           if git diff --staged --quiet; then

@@ -217,4 +217,7 @@ def test_skipped_daily_picks_attempt_self_heals_missing_run_status_marker():
     assert r"\\\\run_id" not in skipped_block
     assert "daily_picks_run_status_${ET_DATE}.jsonl" in skipped_block
     assert "tail -8" in skipped_block
+    assert "shopt -s nullglob" in skipped_block
+    assert "status_artifacts=(" in skipped_block
+    assert 'git add -f "${status_artifacts[@]}"' in skipped_block
     assert "git status --short" in skipped_block
