@@ -1706,3 +1706,48 @@ Decision preserved:
 - do not add Finnhub yet,
 - wait for real yfinance/Stooq telemetry,
 - decide provider direction together afterward.
+
+## 2026-05-08 — Monster Hunter architecture documented
+
+Documented the Monster Hunter / Long-Term Compounder Analyst architecture track.
+
+New canonical design doc:
+
+- `docs/MONSTER_HUNTER_DESIGN.md`
+
+Purpose:
+
+- create a dedicated 6-month to 5-year compounder / multi-bagger research lane,
+- keep Monster Hunter separate from day trades, swing picks, intraday alerts, opening-range observations, and late watch-only ideas,
+- make the agent a stronger long-term analyst by studying fundamentals, P&L trends, secular 5-10 year themes, ETF/mutual fund focus, institutional accumulation, competitive moat, valuation risk, and thesis invalidation.
+
+Documentation updated:
+
+- `docs/PROJECT_BLUEPRINT.md`
+- `docs/AGENT_MATURITY_TRACKER.md`
+- `docs/NEXT_SESSION.md`
+
+Safety posture:
+
+- Monster Hunter is research-only / monitoring-only.
+- Monster Hunter must not create official picks.
+- Monster Hunter must not create paper trades.
+- Monster Hunter must not create live trades.
+- Monster Hunter must not contaminate official pick statistics.
+- No failed swing trade may silently become a monster hold.
+- No speculative news spike may be called a monster without fundamental evidence.
+- No Monster Hunter rule may affect production scoring until validated and approved.
+
+Recommended first implementation slice:
+
+1. Validate tonight's Daily Picks yfinance/Stooq telemetry first.
+2. Keep Finnhub candles deferred until telemetry is reviewed.
+3. If repo health is clean, implement Monster Hunter v0 as docs/schema/report-only:
+   - monster theme schema,
+   - monster candidate schema,
+   - monster thesis schema,
+   - thesis state machine,
+   - semiconductor / AI memory pilot universe,
+   - watch-only Monster Research Report.
+4. Do not wire Monster Hunter into production scoring yet.
+5. Do not enable paper/live trading.

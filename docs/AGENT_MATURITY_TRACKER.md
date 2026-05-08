@@ -105,6 +105,26 @@ The agent must mature into three separate lanes. These lanes should not be mixed
 
 ### Lane 3 — Monster Hunt / Long-Term Compounders
 
+Canonical design:
+
+- `docs/MONSTER_HUNTER_DESIGN.md`
+
+Monster Hunt is a dedicated long-term research lane, not an extension of swing trading.
+
+It should mature into a serious compounder analyst that studies:
+
+- 6-month to 5-year multi-bagger potential,
+- quarterly and yearly P&L trends,
+- revenue, EPS, margin, and free-cash-flow durability,
+- management execution,
+- moat and competitive positioning,
+- secular 5-10 year themes,
+- ETF, mutual fund, and institutional focus,
+- sector rotation and long-term capital flows,
+- valuation versus growth,
+- thesis-break conditions.
+
+
 **Goal:** Find fundamentally strong stocks that may compound over months/years and produce multi-fold returns.
 
 Founder examples and thesis candidates include:
@@ -591,7 +611,12 @@ Track these over time:
    - protect swing/monster lanes from speculative low-quality names.
 
 6. **Monster-hunt foundation**
-   - separate watchlist, thesis states, and long-term exit logic.
+   - separate watchlist, thesis states, and long-term exit logic,
+   - dedicated Monster Hunter design in `docs/MONSTER_HUNTER_DESIGN.md`,
+   - long-term theme radar,
+   - full fundamental and P&L analysis,
+   - ETF/mutual fund/institutional focus analysis,
+   - research-only reports before any scoring influence.
 
 7. **P&L / earnings analyzer**
    - quarterly/yearly fundamentals for swing and monster picks.
@@ -612,4 +637,6 @@ Track these over time:
 - Do not manually enable enforcement flags.
 - Do not convert failed swings into long-term holds without explicit thesis validation.
 - Do not classify speculative news spikes as monster candidates without fundamentals.
+- Do not let Monster Hunter outputs become official picks, paper trades, or live trades without explicit validation and founder approval.
+- Do not promote any Monster Hunter rule beyond observe mode until historical and forward evidence support it.
 - Do not send stale/unverified prices as actionable entries.

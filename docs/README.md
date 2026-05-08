@@ -8,6 +8,7 @@ Use these docs first:
 | `WORK_LOG.md` | Append-only history of meaningful work |
 | `NEXT_SESSION.md` | Daily refreshed next-session handoff |
 | `AGENT_MATURITY_TRACKER.md` | Real-world trading lessons, maturity scorecard, and intelligence roadmap |
+| `MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
 
 Historical docs should be archived under `docs/archive/`.
 

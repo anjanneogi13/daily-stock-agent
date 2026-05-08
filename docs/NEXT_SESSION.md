@@ -119,6 +119,50 @@ Next validation:
 
 ---
 
+
+---
+
+## 2026-05-08 Monster Hunter architecture update
+
+A new long-term research architecture track has been documented:
+
+```text
+docs/MONSTER_HUNTER_DESIGN.md
+```
+
+Purpose:
+
+- build a dedicated 6-month to 5-year compounder / multi-bagger research lane,
+- keep Monster Hunter separate from day trades, swing picks, intraday alerts, and opening-range observations,
+- make the agent a serious long-term analyst for fundamentals, P&L trends, secular themes, ETF/mutual fund focus, institutional accumulation, competitive moat, valuation risk, and thesis invalidation.
+
+Important safety posture:
+
+```text
+Monster Hunter is research-only / monitoring-only.
+It must not create official picks.
+It must not create paper trades.
+It must not create live trades.
+It must not contaminate official pick statistics.
+No failed swing trade may silently become a monster hold.
+No speculative news spike may be called a monster without fundamental evidence.
+```
+
+Recommended weekend-safe first slice:
+
+1. Validate tonight's Daily Picks yfinance/Stooq telemetry first.
+2. Keep provider/Finnhub decisions deferred until telemetry is reviewed.
+3. If repo health is clean, implement Monster Hunter v0 as docs/schema/report-only:
+   - monster theme schema,
+   - monster candidate schema,
+   - monster thesis schema,
+   - thesis state machine,
+   - semiconductor / AI memory pilot universe,
+   - watch-only Monster Research Report.
+4. Do not wire Monster Hunter into production scoring yet.
+5. Do not enable paper/live trading.
+
+
 ## Current product lesson
 
 The 2026-05-05 monitoring review showed that the agent can find real catalysts, but it still needs stronger execution intelligence.

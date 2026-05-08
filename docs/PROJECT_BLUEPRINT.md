@@ -49,6 +49,7 @@ The repo is healthy for monitoring mode:
 - Intraday Telegram copy uses observed/reference-level wording rather than implying executable entries.
 - Official daily OHLCV now has a Stooq fallback behind yfinance for the Daily Picks data-fetch path.
 - News signals fade bullish boosts into small penalties when headlines indicate negative market reaction.
+- Monster Hunter / Long-Term Compounder Analyst architecture is documented as a research-only, monitoring-only future lane in `docs/MONSTER_HUNTER_DESIGN.md`.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
@@ -180,7 +181,14 @@ Planned future features:
 5. Reader engine.
 6. Historical regime engine.
 7. Proactive smell.
-8. Deferred power-user features:
+8. Monster Hunter / Long-Term Compounder Analyst:
+   - 6-month to 5-year research lane,
+   - secular theme radar,
+   - full fundamental and P&L analysis,
+   - ETF/mutual fund/institutional focus analysis,
+   - thesis state machine,
+   - research-only reports before any scoring influence.
+9. Deferred power-user features:
    - Telegram inline buttons.
    - Sector rotation alerts.
    - Earnings-week awareness.
@@ -224,6 +232,7 @@ Use these canonical docs:
 | `docs/WORK_LOG.md` | Append-only record of every meaningful change |
 | `docs/NEXT_SESSION.md` | Daily next-session handoff |
 | `docs/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
+| `docs/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
 | `docs/playbook/NEWS_EVIDENCE_REPORTS.md` | Operator playbook for News Evidence workflow and manual report generation |
 
 After every bug fix, feature, or process change:
