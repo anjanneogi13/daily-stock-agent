@@ -49,8 +49,8 @@ The repo is healthy for monitoring mode:
 - Intraday Telegram copy uses observed/reference-level wording rather than implying executable entries.
 - Official daily OHLCV now has a Stooq fallback behind yfinance for the Daily Picks data-fetch path.
 - News signals fade bullish boosts into small penalties when headlines indicate negative market reaction.
-- Monster Hunter / Long-Term Compounder Analyst architecture is documented as a research-only, monitoring-only future lane in `docs/MONSTER_HUNTER_DESIGN.md`.
-- Product failure modes, mitigations, and market win strategy are documented in `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`.
+- Monster Hunter / Long-Term Compounder Analyst architecture is documented as a research-only, monitoring-only future lane in `docs/strategy/MONSTER_HUNTER_DESIGN.md`.
+- Product failure modes, mitigations, and market win strategy are documented in `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`.
 - Planning documentation now separates future backlog, data contracts, notification architecture, and candidate lifecycle rules under `docs/planning/`.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
@@ -234,8 +234,8 @@ Use these canonical docs:
 | `docs/WORK_LOG.md` | Append-only record of every meaningful change |
 | `docs/NEXT_SESSION.md` | Daily next-session handoff |
 | `docs/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
-| `docs/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
-| `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
+| `docs/strategy/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
+| `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 | `docs/playbook/NEWS_EVIDENCE_REPORTS.md` | Operator playbook for News Evidence workflow and manual report generation |
 | `docs/planning/README.md` | Planning documentation index |
 | `docs/planning/FEATURE_BACKLOG.md` | Long-term feature backlog and implementation phases |

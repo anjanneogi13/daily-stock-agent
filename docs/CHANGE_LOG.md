@@ -104,7 +104,7 @@ Code
 ## 2026-05-04 (afternoon) — 7-Faculty Agent Vision documented
 
 - **WHAT:**
-  1. NEW DOC: `docs/AGENT_PHILOSOPHY.md` — canonical vision (7 faculties + zero emotion)
+  1. NEW DOC: `docs/strategy/AGENT_PHILOSOPHY.md` — canonical vision (7 faculties + zero emotion)
   2. ARCHITECTURE.md: added Section 8 (7-Faculty Agent Model with module mapping)
   3. FINAL_ROADMAP.md: appended Phase 9 (build curiosity_engine + sharpen weak faculties)
 

@@ -59,9 +59,9 @@ Specifically:
 
 ## Implementation
 
-See `docs/PROBABILITY_ENGINE_DESIGN.md` for full 5-layer architecture and 4-phase rollout plan.
+See `docs/reference/PROBABILITY_ENGINE_DESIGN.md` for full 5-layer architecture and 4-phase rollout plan.
 
 ## References
 
 - Original chat session: May 2, 2026 PM
-- Related: `docs/PROBABILITY_ENGINE_DESIGN.md`
+- Related: `docs/reference/PROBABILITY_ENGINE_DESIGN.md`

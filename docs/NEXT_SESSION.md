@@ -127,7 +127,7 @@ Next validation:
 A new long-term research architecture track has been documented:
 
 ```text
-docs/MONSTER_HUNTER_DESIGN.md
+docs/strategy/MONSTER_HUNTER_DESIGN.md
 ```
 
 Purpose:
@@ -171,7 +171,7 @@ Recommended weekend-safe first slice:
 A new strategic product document has been added:
 
 ```text
-docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md
+docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md
 ```
 
 Purpose:

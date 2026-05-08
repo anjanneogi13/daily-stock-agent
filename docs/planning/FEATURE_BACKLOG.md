@@ -60,10 +60,10 @@ Important existing docs:
 
 - `docs/PROJECT_BLUEPRINT.md`
 - `docs/AGENT_MATURITY_TRACKER.md`
-- `docs/MONSTER_HUNTER_DESIGN.md`
-- `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
-- `docs/intraday_model_strategy.md`
-- `docs/intraday_technical_indicators.md`
+- `docs/strategy/MONSTER_HUNTER_DESIGN.md`
+- `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
+- `docs/reference/intraday_model_strategy.md`
+- `docs/reference/intraday_technical_indicators.md`
 - `docs/WORK_LOG.md`
 - `docs/NEXT_SESSION.md`
 
@@ -418,7 +418,7 @@ Current gap:
 
 Likely docs:
 
-- `docs/MONSTER_HUNTER_DESIGN.md`
+- `docs/strategy/MONSTER_HUNTER_DESIGN.md`
 - `docs/AGENT_MATURITY_TRACKER.md`
 
 Likely files:
@@ -1536,7 +1536,7 @@ Likely files affected:
 - future `scripts/intraday_readiness.py`
 - future `src/intraday_readiness.py`
 - future learning/recalibration reports
-- `docs/intraday_model_strategy.md`
+- `docs/reference/intraday_model_strategy.md`
 
 Data artifacts:
 
@@ -1959,7 +1959,7 @@ Why it matters:
 
 Current gap:
 
-- `docs/MONSTER_HUNTER_DESIGN.md` defines the concept
+- `docs/strategy/MONSTER_HUNTER_DESIGN.md` defines the concept
 - `monster_score` exists
 - but no formal thesis state artifact exists yet
 

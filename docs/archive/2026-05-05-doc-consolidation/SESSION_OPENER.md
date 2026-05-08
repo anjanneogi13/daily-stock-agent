@@ -15,7 +15,7 @@ Last session was 2026-05-04 (Monday) where we shipped 8 commits transforming the
 Before you ask me anything, please read these docs in this exact order:
 
 docs/CHANGE_LOG.md (newest entries on top — what changed when)
-docs/AGENT_PHILOSOPHY.md (the 7-faculty vision + 8 design rules)
+docs/strategy/AGENT_PHILOSOPHY.md (the 7-faculty vision + 8 design rules)
 docs/ARCHITECTURE.md (especially Section 8 — faculty map)
 docs/FINAL_ROADMAP.md (Phases 9, 9.5, 10 are the future)
 docs/NEXT_SESSION.md (homework + path A/B/C/D options)

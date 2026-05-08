@@ -14,6 +14,39 @@ Rules:
 
 ---
 
+## 2026-05-08 — Organized strategy and reference documentation folders
+
+**Type:** documentation / repository hygiene / folder organization
+
+**Summary:**
+
+Moved clearly categorized documentation into dedicated folders:
+
+Strategy docs moved to `docs/strategy/`:
+
+- `docs/strategy/AGENT_PHILOSOPHY.md`
+- `docs/strategy/BUSINESS_PLAN.md`
+- `docs/strategy/MONSTER_HUNTER_DESIGN.md`
+- `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
+
+Reference docs moved to `docs/reference/`:
+
+- `docs/reference/BACKTESTER_DESIGN.md`
+- `docs/reference/PROBABILITY_ENGINE_DESIGN.md`
+- `docs/reference/intraday_model_strategy.md`
+- `docs/reference/intraday_technical_indicators.md`
+
+Updated Markdown references and `docs/README.md` so the documentation map reflects the new structure.
+
+Safety:
+
+- Documentation-only.
+- No runtime behavior changed.
+- No paper trading enabled.
+- No live trading enabled.
+
+---
+
 ## 2026-05-08 — Cleaned documentation map and stale docs
 
 **Type:** documentation / repository hygiene / planning alignment
@@ -1753,7 +1786,7 @@ Documented the Monster Hunter / Long-Term Compounder Analyst architecture track.
 
 New canonical design doc:
 
-- `docs/MONSTER_HUNTER_DESIGN.md`
+- `docs/strategy/MONSTER_HUNTER_DESIGN.md`
 
 Purpose:
 
@@ -1798,7 +1831,7 @@ Documented the product failure modes, mitigation strategy, and market win strate
 
 New strategic product doc:
 
-- `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
+- `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
 
 Purpose:
 

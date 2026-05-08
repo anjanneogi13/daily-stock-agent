@@ -107,7 +107,7 @@ The agent must mature into three separate lanes. These lanes should not be mixed
 
 Canonical design:
 
-- `docs/MONSTER_HUNTER_DESIGN.md`
+- `docs/strategy/MONSTER_HUNTER_DESIGN.md`
 
 Monster Hunt is a dedicated long-term research lane, not an extension of swing trading.
 
@@ -612,7 +612,7 @@ Track these over time:
 
 6. **Monster-hunt foundation**
    - separate watchlist, thesis states, and long-term exit logic,
-   - dedicated Monster Hunter design in `docs/MONSTER_HUNTER_DESIGN.md`,
+   - dedicated Monster Hunter design in `docs/strategy/MONSTER_HUNTER_DESIGN.md`,
    - long-term theme radar,
    - full fundamental and P&L analysis,
    - ETF/mutual fund/institutional focus analysis,

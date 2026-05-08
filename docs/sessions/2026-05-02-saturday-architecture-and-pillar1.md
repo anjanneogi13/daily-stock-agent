@@ -19,7 +19,7 @@
 
 ### Architecture Locked
 - `docs/BRAIN_ARCHITECTURE.md` — 5-pillar design (+ Pillar 6 P&L)
-- `docs/PROBABILITY_ENGINE_DESIGN.md` — Pillar 1 detailed spec
+- `docs/reference/PROBABILITY_ENGINE_DESIGN.md` — Pillar 1 detailed spec
 - `docs/decisions/ADR-001` — probability over rules
 - `docs/decisions/ADR-002` — 5-pillar brain decision
 

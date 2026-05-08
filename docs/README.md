@@ -45,10 +45,28 @@ Planning docs are not runtime behavior by themselves. Treat them as design guida
 |---|---|
 | `docs/PROJECT_BLUEPRINT.md` | Current source of truth for architecture and operating posture |
 | `docs/AGENT_MATURITY_TRACKER.md` | Real-world trading lessons, maturity scorecard, and intelligence roadmap |
-| `docs/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
-| `docs/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
+| `docs/strategy/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
+| `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 | `docs/DATA_QUALITY_FLOOR.md` | Data-quality expectations and minimum safety floor |
 | `docs/REPO_HEALTH.md` | Repository health and audit status, if actively maintained |
+
+## Strategy Docs
+
+| File | Purpose |
+|---|---|
+| `docs/strategy/AGENT_PHILOSOPHY.md` | Agent product philosophy and faculty model |
+| `docs/strategy/BUSINESS_PLAN.md` | Business and go-to-market planning |
+| `docs/strategy/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
+| `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
+
+## Reference Docs
+
+| File | Purpose |
+|---|---|
+| `docs/reference/BACKTESTER_DESIGN.md` | Backtester design reference |
+| `docs/reference/PROBABILITY_ENGINE_DESIGN.md` | Probability engine design reference |
+| `docs/reference/intraday_model_strategy.md` | Intraday model strategy reference |
+| `docs/reference/intraday_technical_indicators.md` | Intraday technical indicators reference |
 
 ## Operational Docs
 

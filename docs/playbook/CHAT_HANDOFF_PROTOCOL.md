@@ -11,7 +11,7 @@ Resuming work on daily-stock-agent. Before doing anything, read:
 
 1. docs/CONTEXT.md (project identity + principles)
 2. docs/ROADMAP.md (current state + phases)
-3. docs/PROBABILITY_ENGINE_DESIGN.md (architecture)
+3. docs/reference/PROBABILITY_ENGINE_DESIGN.md (architecture)
 4. Most recent file in docs/sessions/
 5. Recent files in docs/decisions/
 

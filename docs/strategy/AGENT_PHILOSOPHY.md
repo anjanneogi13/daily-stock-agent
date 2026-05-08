@@ -240,7 +240,7 @@ Or alternately:
 
 - `docs/ARCHITECTURE.md` — what the system IS (technical, see Section 8 for faculty mapping)
 - `docs/FINAL_ROADMAP.md` — what's next (Phase 9 = build curiosity)
-- `docs/BUSINESS_PLAN.md` — 24-month strategy
+- `docs/strategy/BUSINESS_PLAN.md` — 24-month strategy
 - `docs/AGENT_SCHEDULE.md` — when each faculty fires
 - `docs/CHANGE_LOG.md` — every change to the agent
 - `data/agent_memoir.json` — the agent's living self-portrait (regenerated nightly)

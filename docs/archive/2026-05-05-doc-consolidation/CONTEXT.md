@@ -125,7 +125,7 @@
 
 Every price decision (SL, TP, buy, sell, trigger) MUST be PROBABILITY-BASED, not rule-based. The agent must know its own probability of working at all times.
 
-See: `docs/PROBABILITY_ENGINE_DESIGN.md`
+See: `docs/reference/PROBABILITY_ENGINE_DESIGN.md`
 
 This replaces all arbitrary thresholds (1.5×ATR, RSI 30, 3% SL) with empirically-derived probabilistic decisions.
 
@@ -214,7 +214,7 @@ When starting a new chat session, paste this prompt:
 > "Resuming work on daily-stock-agent. Read these files in order:
 > 1. `docs/CONTEXT.md` (this file)
 > 2. `docs/ROADMAP.md` (current state + plan)
-> 3. `docs/PROBABILITY_ENGINE_DESIGN.md` (architecture)
+> 3. `docs/reference/PROBABILITY_ENGINE_DESIGN.md` (architecture)
 > 4. `docs/sessions/` (most recent file — last session handoff)
 > 5. `docs/decisions/` (recent ADRs)
 >
@@ -229,7 +229,7 @@ When starting a new chat session, paste this prompt:
 | `docs/CONTEXT.md` | THIS FILE — read first |
 | `docs/ROADMAP.md` | Current phased roadmap, updated weekly |
 | `docs/MASTER_PLAN_24_MONTH.md` | 24-month strategic plan |
-| `docs/PROBABILITY_ENGINE_DESIGN.md` | Statistical engine architecture |
+| `docs/reference/PROBABILITY_ENGINE_DESIGN.md` | Statistical engine architecture |
 | `docs/decisions/` | Architecture Decision Records |
 | `docs/sessions/` | Chat session handoffs |
 | `docs/playbook/` | How we work |
