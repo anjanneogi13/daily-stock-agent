@@ -10,16 +10,16 @@ Monitoring-only failure evidence. No official picks were generated.
 
 ## Pipeline
 - capped_count: **2**
-- fetched_count: **621**
+- fetched_count: **616**
 - filtered_count: **30**
 - final_pick_count: **0**
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **332**
+- scored_count: **329**
 - scorer_workers: **4**
-- universe_count: **624**
+- universe_count: **619**
 
 ## Market Data Health
 - stooq: attempts=**2**, successes=**0**, errors=**2**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1586**, successes=**1087**, errors=**497**, rate_limited=**497**, unauthorized=**0**
+- yfinance: attempts=**1573**, successes=**1143**, errors=**428**, rate_limited=**427**, unauthorized=**0**
