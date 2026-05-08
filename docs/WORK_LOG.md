@@ -1589,3 +1589,29 @@ Keep this file updated after every bug fix, feature, audit, or process change.
 **Summary:** Repaired full repo audit syntax/import-safety issues.
 
 **CI:** green
+
+## 2026-05-08 — Late watch-only Telegram safety cleanup
+
+Planned/implemented safety patch for the 2026-05-07 late-watch-only issues:
+
+- add per-ET-day Telegram sent ledger for late watch-only ideas,
+- prevent duplicate late-watch-only Telegram sends unless `--force` is used,
+- remove action-like `BUY/Entry` wording from late watch-only messages,
+- suppress unresolved no-quote + blank-company late ideas,
+- skip acquisition/event-arb late ideas until a proper event-arb lane exists.
+
+Rationale:
+
+- 2026-05-07 produced repeated fallback Telegram messages,
+- `X` surfaced with a TMX Group catalyst and no verified company/quote,
+- CCRN was an acquisition/deal-price situation but was treated like normal momentum,
+- watch-only language was still too close to a buy instruction.
+
+Safety remains unchanged:
+
+- monitoring-only,
+- no official pick mutation,
+- no `picks_log.csv` mutation,
+- no signal/learning journal mutation,
+- no paper trading,
+- no live trading.

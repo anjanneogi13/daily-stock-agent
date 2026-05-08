@@ -32,6 +32,7 @@ def test_build_late_ideas_uses_news_and_watchlist_without_official_picks(tmp_pat
             "sentiment": "bullish",
             "action_window": "intraday",
             "headline": "RBC raises price target",
+            "company_name": "Astera Labs",
         },
         "BAD": {
             "ticker": "A",
@@ -63,6 +64,7 @@ def test_build_late_ideas_uses_news_and_watchlist_without_official_picks(tmp_pat
                 "sentiment": "bullish",
                 "action_window": "intraday",
                 "headline": "Breakthrough preclinical data",
+                "company_name": "Ernexa Therapeutics",
             }
         ]
     }))
@@ -120,7 +122,8 @@ def test_write_outputs_writes_jsonl_and_markdown(tmp_path):
     assert "Official daily picks were NOT sent" in body
     assert "not official premarket picks" in body
     assert "ERNA — Ernexa Therapeutics" in body
-    assert "Watch-only BUY/Entry: $10.00" in body
+    assert "Watch-only reference level: $10.00" in body
+    assert "BUY/Entry" not in body
     assert "Watch-only SL: $9.85" in body
     assert "Watch-only TP: $10.30" in body
     assert "WATCH ONLY" in body
@@ -148,3 +151,52 @@ def test_format_markdown_without_quote_warns_levels_unavailable():
     assert "Source: news-signal" in msg
     assert "Price levels: unavailable" in msg
     assert "WATCH ONLY" in msg
+
+
+def test_build_late_ideas_suppresses_unresolved_no_quote_identity(tmp_path):
+    news = tmp_path / "news_signals.json"
+    watch = tmp_path / "watchlist.json"
+    watch.write_text(json.dumps({"items": []}))
+
+    news.write_text(json.dumps({
+        "X": {
+            "ticker": "X",
+            "tradeable_score": 0.95,
+            "sentiment": "bullish",
+            "headline": "TMX Group Q1 Adj. EPS beats estimates",
+        }
+    }))
+
+    ideas = build_late_ideas(
+        news_signals_path=news,
+        watchlist_path=watch,
+        now=datetime(2026, 5, 7, 11, 30, tzinfo=ET),
+        max_results=5,
+    )
+
+    assert ideas == []
+
+
+def test_build_late_ideas_skips_acquisition_event_arbitrage(tmp_path):
+    news = tmp_path / "news_signals.json"
+    watch = tmp_path / "watchlist.json"
+    watch.write_text(json.dumps({"items": []}))
+
+    news.write_text(json.dumps({
+        "CCRN": {
+            "ticker": "CCRN",
+            "company_name": "Cross Country Healthcare, Inc.",
+            "tradeable_score": 1.0,
+            "sentiment": "bullish",
+            "headline": "Knox Lane to acquire all outstanding shares for $13.25/shr in all-cash transaction",
+        }
+    }))
+
+    ideas = build_late_ideas(
+        news_signals_path=news,
+        watchlist_path=watch,
+        now=datetime(2026, 5, 7, 11, 30, tzinfo=ET),
+        max_results=5,
+    )
+
+    assert ideas == []

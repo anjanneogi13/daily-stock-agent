@@ -35,6 +35,11 @@ DATA_DIR = Path("data")
 
 MIN_TEXT_LEN = 12
 VALID_TICKER_RE = re.compile(r"^[A-Z][A-Z0-9.\-]{0,6}$")
+ACQUISITION_EVENT_RE = re.compile(
+    r"(to acquire|acquire all|all outstanding shares|all-cash transaction|"
+    r"per share|/shr|merger agreement|definitive agreement|take private|buyout)",
+    re.IGNORECASE,
+)
 
 
 def _as_float(value, default: float = 0.0) -> float:
@@ -83,6 +88,14 @@ def has_enough_evidence(payload: dict) -> bool:
     headline = str(payload.get("headline") or "").strip()
     rationale = str(payload.get("rationale") or "").strip()
     return len(headline) >= MIN_TEXT_LEN or len(rationale) >= MIN_TEXT_LEN
+
+
+def classify_catalyst_type(text: str) -> str:
+    """Classify catalysts that need special watch-only handling."""
+    raw = str(text or "").strip()
+    if ACQUISITION_EVENT_RE.search(raw):
+        return "acquisition_event_arbitrage"
+    return "standard"
 
 
 def fetch_market_context(ticker: str) -> dict:
@@ -194,8 +207,23 @@ def _candidate_from_payload(
     rationale = str(payload.get("rationale") or "").strip()
     reason = rationale or headline or f"{source} late watch-only idea"
 
+    catalyst_type = classify_catalyst_type(f"{headline} {rationale}")
+
+    # Acquisition / all-cash deal headlines are not normal momentum setups.
+    # Until the product has a proper event-arb lane with deal-price parsing and
+    # spread/risk display, suppress them from late watch-only ideas.
+    if catalyst_type == "acquisition_event_arbitrage":
+        return None
+
     market = fetch_market_context(ticker)
+    company_name = market.get("company_name") or payload.get("company_name") or ""
+
     if require_quote and not market.get("current_price"):
+        return None
+
+    # Product safety: do not surface unresolved ticker/entity ideas. This blocks
+    # cases like a blank-company, no-quote "X" row from a TMX Group headline.
+    if not market.get("current_price") and not str(company_name).strip():
         return None
 
     levels = {}
@@ -218,13 +246,14 @@ def _candidate_from_payload(
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
         "ticker": ticker,
-        "company_name": market.get("company_name") or payload.get("company_name") or "",
+        "company_name": company_name,
         "source": source,
         "score": score,
         "tradeable_score": tradeable_score,
         "score_delta": score_delta,
         "sentiment": sentiment or "unknown",
         "action_window": action_window,
+        "catalyst_type": catalyst_type,
         "headline": headline,
         "reason": reason,
         "url": payload.get("url") or "",
@@ -318,7 +347,7 @@ def _level_text(idea: dict) -> list[str]:
         ]
 
     return [
-        f"   Watch-only BUY/Entry: ${float(idea['watch_buy_price']):.2f}",
+        f"   Watch-only reference level: ${float(idea['watch_buy_price']):.2f}",
         f"   Watch-only SL: ${float(idea['watch_stop_loss']):.2f}",
         f"   Watch-only TP: ${float(idea['watch_take_profit']):.2f}",
         f"   R/R: {float(idea.get('risk_reward') or 0):.2f}",

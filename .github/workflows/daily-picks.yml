@@ -121,7 +121,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/daily_picks_run_status_*.jsonl data/market_data_health_*.json data/late_daily_ideas_*.jsonl data/late_daily_ideas_*.md 2>/dev/null || true
+          git add -f data/daily_picks_run_status_*.jsonl data/market_data_health_*.json data/late_daily_ideas_*.jsonl data/late_daily_ideas_*.md data/late_daily_ideas_sent_*.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "ℹ No run-status changes to commit"
             exit 0

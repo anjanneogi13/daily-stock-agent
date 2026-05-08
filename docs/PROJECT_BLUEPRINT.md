@@ -43,6 +43,8 @@ The repo is healthy for monitoring mode:
 - News Signal Evidence Report now includes optional news signal outcome summaries when `data/news_signal_outcomes_YYYY-MM-DD.jsonl` exists.
 - News Evidence workflow can generate outcome/report artifacts after market close while preserving monitoring-only safety.
 - News Evidence workflow keeps compact Markdown/outcome artifacts in git and uploads the larger JSON report as a short-retention workflow artifact.
+- Late watch-only Telegram dedupe prevents repeated fallback sends for the same ET date unless forced manually.
+- Late watch-only copy avoids action-like BUY wording and suppresses unresolved ticker/entity ideas.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.

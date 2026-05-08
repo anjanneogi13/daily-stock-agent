@@ -1,6 +1,6 @@
 # Daily Stock Agent — Next Session
 
-**Refresh date:** 2026-05-07
+**Refresh date:** 2026-05-08
 **Status:** monitoring-ready, highest-severity audit issues fixed
 **Mode:** monitoring-only
 
@@ -18,6 +18,30 @@ Do not start paper trading yet.
 6. `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
 7. `docs/decisions/2026-05-06-opening-range-outcome-join-design.md`
 8. `docs/decisions/2026-05-06-session-closeout-reliability-and-opening-range.md`
+
+---
+
+
+## 2026-05-08 product-quality priority update
+
+The 2026-05-07 fallback day showed that reliability improved, but late-watch-only product quality needed hardening.
+
+Completed/active safety direction:
+
+- prevent duplicate late-watch-only Telegram sends,
+- remove action-like `BUY/Entry` wording from watch-only late ideas,
+- suppress unresolved no-quote + blank-company ideas,
+- skip acquisition/event-arb ideas until a separate event-arb lane exists.
+
+Still important after this cleanup:
+
+1. Implement official OHLCV provider fallback:
+   - yfinance → Stooq → safe empty/failure with provider-health evidence.
+2. Add intraday alert quality protections:
+   - near-close cutoff,
+   - quote/bar freshness,
+   - clearer observed/reference level wording.
+3. Keep monitoring-only mode. Do not enable paper/live trading.
 
 ---
 
