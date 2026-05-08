@@ -3347,5 +3347,57 @@
     "expires": "2026-05-13T17:16:51.503035+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TRIP": {
+    "ticker": "TRIP",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Underweight on Tripadvisor, Lowers Price Target to $11",
+    "added_at": "2026-05-08T18:52:25.470184+00:00",
+    "expires": "2026-05-13T18:52:25.470190+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SHAK": {
+    "ticker": "SHAK",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Neutral on Shake Shack, Lowers Price Target to $85",
+    "added_at": "2026-05-08T18:52:25.473115+00:00",
+    "expires": "2026-05-13T18:52:25.473120+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PSAI": {
+    "ticker": "PSAI",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "AI Stock Picking Comes To ETFs As Pacer Launches New US, Global Funds",
+    "added_at": "2026-05-08T18:52:25.475429+00:00",
+    "expires": "2026-05-15T18:52:25.475434+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TCAN": {
+    "ticker": "TCAN",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "New Crypto ETF Brings Wall Street Access To Canton Network's Institutional Blockchain",
+    "added_at": "2026-05-08T18:52:25.479882+00:00",
+    "expires": "2026-05-15T18:52:25.479886+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
