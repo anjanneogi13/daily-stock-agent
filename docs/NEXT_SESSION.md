@@ -84,6 +84,24 @@ Still important after this cleanup:
 
 ---
 
+
+## 2026-05-08 negative-reaction news penalty
+
+Implemented a conservative news scoring guard:
+
+- positive headline + negative market reaction is not treated as a clean bullish catalyst,
+- explicit sold-news phrases now fade bullish boosts into a small penalty,
+- catastrophic news still hard-blocks before this logic,
+- provider fallback work remains paused pending the next official Daily Picks run.
+
+Next validation:
+
+1. Run targeted/full tests after the patch.
+2. Observe future news_signal_evidence reports for `negative_reaction=true`.
+3. Continue waiting for the post-Stooq official Daily Picks run before adding Finnhub candles.
+
+---
+
 ## Current product lesson
 
 The 2026-05-05 monitoring review showed that the agent can find real catalysts, but it still needs stronger execution intelligence.

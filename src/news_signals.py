@@ -76,6 +76,40 @@ CATASTROPHIC_KEYWORDS = [
     "wipeout", "worthless",
 ]
 
+# Positive headline + negative price reaction is not the same as a clean
+# bullish catalyst. This catches EVC-style cases where "good" news is sold.
+NEGATIVE_REACTION_PHRASES = [
+    "shares fall",
+    "shares fell",
+    "shares drop",
+    "shares dropped",
+    "stock falls",
+    "stock fell",
+    "stock drops",
+    "stock dropped",
+    "falls after",
+    "fell after",
+    "drops after",
+    "dropped after",
+    "down after",
+    "lower after",
+    "slumps after",
+    "slumped after",
+    "tumbles after",
+    "tumbled after",
+    "falls despite",
+    "fell despite",
+    "drops despite",
+    "dropped despite",
+    "down despite",
+    "lower despite",
+    "slumps despite",
+    "tumbles despite",
+    "selloff after",
+    "sell-off after",
+    "sold off after",
+]
+
 
 def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -85,6 +119,27 @@ def _is_catastrophic(headline: str, summary: str = "") -> bool:
     """Detect bankruptcy/wind-down language in news text."""
     text = (headline + " " + summary).lower()
     return any(kw in text for kw in CATASTROPHIC_KEYWORDS)
+
+
+def _has_negative_reaction(headline: str, summary: str = "") -> bool:
+    """Return True when headline/summary says the stock sold off despite news."""
+    text = " ".join(
+        " ".join(str(x or "").lower().replace("—", " ").replace("–", " ").split())
+        for x in [headline, summary]
+    )
+    return any(phrase in text for phrase in NEGATIVE_REACTION_PHRASES)
+
+
+def _apply_negative_reaction_penalty(delta: float) -> tuple[float, bool]:
+    """Fade bullish boosts when the market reaction is explicitly negative.
+
+    A positive catalyst that is sold should not receive a normal boost.
+    Convert it into a small penalty so the scorer treats it as evidence of
+    distribution/expectations risk rather than a clean catalyst.
+    """
+    if delta <= 0:
+        return delta, False
+    return -min(0.03, max(0.01, abs(delta) * 0.30)), True
 
 
 def _load_signals() -> Dict:
@@ -156,6 +211,10 @@ def add_signal_from_classification(item: Dict) -> Optional[Dict]:
         # tradeable_score 0.7 → 100% delta, 0.5 → 71% delta, 0.3 → 43% delta
         confidence = min(1.0, max(0.3, score_pct / 0.7))
         adjusted_delta = round(delta * confidence, 3)
+        negative_reaction = _has_negative_reaction(headline, summary)
+        if negative_reaction:
+            adjusted_delta, _ = _apply_negative_reaction_penalty(adjusted_delta)
+            adjusted_delta = round(adjusted_delta, 3)
         
         signal = {
             "ticker": ticker,
@@ -168,6 +227,7 @@ def add_signal_from_classification(item: Dict) -> Optional[Dict]:
             "added_at": _now_iso(),
             "expires": (datetime.now(timezone.utc) + timedelta(days=ttl)).isoformat(),
             "hard_block": False,
+            "negative_reaction": negative_reaction,
         }
     else:
         return None  # category not in our rule set (e.g. "other", "rumor")

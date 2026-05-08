@@ -1659,3 +1659,13 @@ Safety remains unchanged:
 - no paper trading,
 - no live trading,
 - no readiness-gate changes.
+
+## 2026-05-08 — News signal negative-reaction penalty
+
+Added an EVC-style guard to news signal scoring:
+
+- bullish catalysts are no longer treated as clean boosts when the headline/summary says the stock sold off,
+- phrases like "shares fall despite", "stock drops after", and "down after" convert the boost into a small penalty,
+- bearish catalysts remain bearish,
+- catastrophic bankruptcy/going-concern language still hard-blocks first,
+- implementation remains monitoring-only and only changes score evidence, not trading mode.
