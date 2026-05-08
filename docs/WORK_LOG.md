@@ -14,6 +14,29 @@ Rules:
 
 ---
 
+## 2026-05-08 — Moved maturity tracker and session handoffs into proper folders
+
+**Type:** documentation / repository hygiene / folder organization
+
+**Summary:**
+
+Moved remaining clearly categorized top-level docs into proper folders:
+
+- `docs/strategy/AGENT_MATURITY_TRACKER.md`
+- `docs/sessions/SESSION_HANDOFF_2026-05-07_RELIABILITY.md`
+- `docs/sessions/SESSION_HANDOFF_2026-05-08.md`
+
+Kept primary current docs at top-level `docs/` and left compatibility stubs in place to avoid breaking old links.
+
+Safety:
+
+- Documentation-only.
+- No runtime behavior changed.
+- No paper trading enabled.
+- No live trading enabled.
+
+---
+
 ## 2026-05-08 — Organized strategy and reference documentation folders
 
 **Type:** documentation / repository hygiene / folder organization
@@ -1428,7 +1451,7 @@ Highest-severity audit issues are fixed. Next lower-severity cleanup should addr
 
 **Summary:**
 
-Created `docs/AGENT_MATURITY_TRACKER.md` to preserve the May 5 trading-day analysis and track how the agent matures.
+Created `docs/strategy/AGENT_MATURITY_TRACKER.md` to preserve the May 5 trading-day analysis and track how the agent matures.
 
 Documented:
 
@@ -1745,7 +1768,7 @@ Added an EVC-style guard to news signal scoring:
 
 ## 2026-05-08 — Session handoff documented
 
-Created `docs/SESSION_HANDOFF_2026-05-08.md` to preserve next-session context.
+Created `docs/sessions/SESSION_HANDOFF_2026-05-08.md` to preserve next-session context.
 
 Documented:
 
@@ -1797,7 +1820,7 @@ Purpose:
 Documentation updated:
 
 - `docs/PROJECT_BLUEPRINT.md`
-- `docs/AGENT_MATURITY_TRACKER.md`
+- `docs/strategy/AGENT_MATURITY_TRACKER.md`
 - `docs/NEXT_SESSION.md`
 
 Safety posture:

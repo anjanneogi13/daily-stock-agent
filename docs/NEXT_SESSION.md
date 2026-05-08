@@ -3,7 +3,7 @@
 A complete handoff is available at:
 
 ```text
-docs/SESSION_HANDOFF_2026-05-08.md
+docs/sessions/SESSION_HANDOFF_2026-05-08.md
 ```
 
 Critical next step:
@@ -29,7 +29,7 @@ Do not start paper trading yet.
 
 1. `docs/PROJECT_BLUEPRINT.md`
 2. `docs/WORK_LOG.md`
-3. `docs/AGENT_MATURITY_TRACKER.md`
+3. `docs/strategy/AGENT_MATURITY_TRACKER.md`
 4. This file
 5. `docs/decisions/2026-05-05-monitoring-first-no-paper-trading.md`
 6. `docs/decisions/2026-05-06-paper-trading-activation-checklist.md`
@@ -449,7 +449,7 @@ After every bug fix, feature, audit, or process change:
 1. Update `docs/WORK_LOG.md`.
 2. Update `docs/NEXT_SESSION.md`.
 3. Update `docs/PROJECT_BLUEPRINT.md` if architecture, roadmap, or product state changed.
-4. Update `docs/AGENT_MATURITY_TRACKER.md` when trading lessons or intelligence roadmap changes.
+4. Update `docs/strategy/AGENT_MATURITY_TRACKER.md` when trading lessons or intelligence roadmap changes.
 5. Keep CI/tests green.
 
 

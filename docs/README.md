@@ -44,7 +44,7 @@ Planning docs are not runtime behavior by themselves. Treat them as design guida
 | File | Purpose |
 |---|---|
 | `docs/PROJECT_BLUEPRINT.md` | Current source of truth for architecture and operating posture |
-| `docs/AGENT_MATURITY_TRACKER.md` | Real-world trading lessons, maturity scorecard, and intelligence roadmap |
+| `docs/strategy/AGENT_MATURITY_TRACKER.md` | Real-world trading lessons, maturity scorecard, and intelligence roadmap |
 | `docs/strategy/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
 | `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 | `docs/DATA_QUALITY_FLOOR.md` | Data-quality expectations and minimum safety floor |

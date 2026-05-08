@@ -59,7 +59,7 @@ The repo already has important documentation. This backlog should complement tho
 Important existing docs:
 
 - `docs/PROJECT_BLUEPRINT.md`
-- `docs/AGENT_MATURITY_TRACKER.md`
+- `docs/strategy/AGENT_MATURITY_TRACKER.md`
 - `docs/strategy/MONSTER_HUNTER_DESIGN.md`
 - `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`
 - `docs/reference/intraday_model_strategy.md`
@@ -419,7 +419,7 @@ Current gap:
 Likely docs:
 
 - `docs/strategy/MONSTER_HUNTER_DESIGN.md`
-- `docs/AGENT_MATURITY_TRACKER.md`
+- `docs/strategy/AGENT_MATURITY_TRACKER.md`
 
 Likely files:
 

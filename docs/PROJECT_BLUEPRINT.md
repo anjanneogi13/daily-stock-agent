@@ -201,7 +201,7 @@ Planned future features:
 
 ## Agent Maturity / Intelligence Roadmap
 
-The project now tracks real-world trading intelligence maturity in `docs/AGENT_MATURITY_TRACKER.md`.
+The project now tracks real-world trading intelligence maturity in `docs/strategy/AGENT_MATURITY_TRACKER.md`.
 
 Key maturity lanes:
 
@@ -233,7 +233,7 @@ Use these canonical docs:
 | `docs/PROJECT_BLUEPRINT.md` | Architecture, current state, feature inventory, roadmap |
 | `docs/WORK_LOG.md` | Append-only record of every meaningful change |
 | `docs/NEXT_SESSION.md` | Daily next-session handoff |
-| `docs/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
+| `docs/strategy/AGENT_MATURITY_TRACKER.md` | Trading intelligence maturity, daily lessons, and future learning roadmap |
 | `docs/strategy/MONSTER_HUNTER_DESIGN.md` | Long-term compounder / monster-stock research architecture |
 | `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md` | Product failure modes, mitigations, and market win strategy |
 | `docs/playbook/NEWS_EVIDENCE_REPORTS.md` | Operator playbook for News Evidence workflow and manual report generation |
@@ -251,7 +251,7 @@ After every bug fix, feature, or process change:
 4. Update relevant `docs/planning/` files if future design, data contracts, notification rules, or candidate lifecycle rules changed.
 5. Keep CI green.
 
-Session handoff for 2026-05-08 is documented in `docs/SESSION_HANDOFF_2026-05-08.md`.
+Session handoff for 2026-05-08 is documented in `docs/sessions/SESSION_HANDOFF_2026-05-08.md`.
 
 ## 2026-05-08 Daily Picks reliability addendum
 

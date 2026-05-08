@@ -699,7 +699,7 @@ Use this prompt at the start of the next AI session:
 ```text
 We are continuing work on anjanneogi13/daily-stock-agent.
 
-Read docs/SESSION_HANDOFF_2026-05-07_RELIABILITY.md first.
+Read docs/sessions/SESSION_HANDOFF_2026-05-07_RELIABILITY.md first.
 
 Current status:
 - Reliability hardening for missed Daily Picks is complete.
