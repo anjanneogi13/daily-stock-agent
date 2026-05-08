@@ -1669,3 +1669,18 @@ Added an EVC-style guard to news signal scoring:
 - bearish catalysts remain bearish,
 - catastrophic bankruptcy/going-concern language still hard-blocks first,
 - implementation remains monitoring-only and only changes score evidence, not trading mode.
+
+## 2026-05-08 — Session handoff documented
+
+Created `docs/SESSION_HANDOFF_2026-05-08.md` to preserve next-session context.
+
+Documented:
+
+- completed commits and CI status,
+- late watch-only Telegram safety,
+- intraday alert quality hardening,
+- Stooq official OHLCV fallback,
+- sold-news negative-reaction penalty,
+- decision to defer Finnhub until after tonight's official Daily Picks telemetry,
+- exact validation command for the next session,
+- monitoring-only safety posture.

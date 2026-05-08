@@ -232,3 +232,4 @@ After every bug fix, feature, or process change:
 2. Update `docs/NEXT_SESSION.md`.
 3. Update this file if architecture/current state/roadmap changed.
 4. Keep CI green.
+- Session handoff for 2026-05-08 is documented in `docs/SESSION_HANDOFF_2026-05-08.md`.

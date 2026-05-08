@@ -1,3 +1,20 @@
+## 2026-05-08 session handoff
+
+A complete handoff is available at:
+
+```text
+docs/SESSION_HANDOFF_2026-05-08.md
+```
+
+Critical next step:
+
+```text
+Wait for tonight's automatic Daily Picks official-window run, then validate Stooq/OHLCV telemetry before deciding whether to add Finnhub.
+```
+
+Do not add Finnhub yet. The decision is intentionally deferred until real provider-health evidence exists.
+
+
 # Daily Stock Agent — Next Session
 
 **Refresh date:** 2026-05-08
