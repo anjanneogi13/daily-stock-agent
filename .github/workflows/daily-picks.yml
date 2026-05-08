@@ -84,27 +84,47 @@ jobs:
           python scripts/record_daily_picks_run_status.py --event guard_passed --result should_run --reason "inside official premarket window and no duplicate picks"
           echo "should_run=true" >> $GITHUB_OUTPUT
 
-      - name: Set up Python for late watch-only ideas
+      - name: Late watch-only dedup guard
+        id: late_guard
         if: steps.guard.outputs.missed_window == 'true'
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          SENT_FILE="data/late_daily_ideas_sent_${ET_DATE}.json"
+
+          if [ -s "$SENT_FILE" ]; then
+            echo "⏭ Late watch-only ideas already sent for $ET_DATE; skipping duplicate late send"
+            python scripts/record_daily_picks_run_status.py \
+              --event late_ideas_already_sent_skip \
+              --result skipped \
+              --reason "late watch-only ideas already sent for ET date" \
+              --telegram-sent success
+            echo "should_send=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "✅ No late watch-only sent ledger for $ET_DATE; late ideas may run"
+            echo "should_send=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python for late watch-only ideas
+        if: steps.guard.outputs.missed_window == 'true' && steps.late_guard.outputs.should_send == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install late watch-only idea dependencies
-        if: steps.guard.outputs.missed_window == 'true'
+        if: steps.guard.outputs.missed_window == 'true' && steps.late_guard.outputs.should_send == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install yfinance==0.2.65 curl_cffi==0.7.4
 
       - name: Generate late watch-only daily ideas
-        if: steps.guard.outputs.missed_window == 'true'
+        if: steps.guard.outputs.missed_window == 'true' && steps.late_guard.outputs.should_send == 'true'
         run: |
           python scripts/generate_late_daily_ideas.py --max-results 5 --min-score 0.40
           COUNT=$(cat /tmp/late_daily_ideas_count 2>/dev/null || echo 0)
           python scripts/record_daily_picks_run_status.py --event late_ideas_generated --result success --reason "generated late watch-only daily ideas after missed official window" --late-ideas-count "$COUNT"
 
       - name: Send late watch-only daily ideas to Telegram
-        if: steps.guard.outputs.missed_window == 'true'
+        if: steps.guard.outputs.missed_window == 'true' && steps.late_guard.outputs.should_send == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

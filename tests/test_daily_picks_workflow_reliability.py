@@ -221,3 +221,21 @@ def test_skipped_daily_picks_attempt_self_heals_missing_run_status_marker():
     assert "status_artifacts=(" in skipped_block
     assert 'git add -f "${status_artifacts[@]}"' in skipped_block
     assert "git status --short" in skipped_block
+
+
+def test_late_watch_only_ideas_are_deduped_after_sent_ledger_exists():
+    text = Path(".github/workflows/daily-picks.yml").read_text()
+
+    assert "- name: Late watch-only dedup guard" in text
+    assert "id: late_guard" in text
+    assert 'SENT_FILE="data/late_daily_ideas_sent_${ET_DATE}.json"' in text
+    assert '[ -s "$SENT_FILE" ]' in text
+    assert "late_ideas_already_sent_skip" in text
+    assert "should_send=false" in text
+    assert "should_send=true" in text
+
+    late_setup = text.split("- name: Set up Python for late watch-only ideas", 1)[1]
+    late_setup = late_setup.split("- name: Commit run-status artifacts for skipped daily-picks attempt", 1)[0]
+
+    assert "steps.late_guard.outputs.should_send == 'true'" in late_setup
+    assert late_setup.count("steps.late_guard.outputs.should_send == 'true'") >= 4
