@@ -165,3 +165,44 @@ def test_theme_pick_bridge_writes_outputs(tmp_path):
     assert "Observe-only bridge" in md
     assert "ai" in md
     assert "NVDA" in md
+
+def test_theme_pick_bridge_preserves_theme_market_evidence(tmp_path):
+    import json
+    from scripts.build_theme_pick_bridge import build_theme_pick_bridge, format_markdown
+
+    theme_path = tmp_path / "theme_discovery_2026-05-09.json"
+    theme_path.write_text(json.dumps({
+        "artifact": "theme_discovery",
+        "date": "2026-05-09",
+        "themes": [
+            {
+                "theme": "ai",
+                "theme_id": "ai",
+                "lifecycle_state": "emerging_theme",
+                "theme_score": 99.0,
+                "tickers": ["AAPL", "NVDA"],
+                "risk_flags": ["observe_only_theme", "market_evidence_available"],
+                "market_evidence": {
+                    "market_evidence_status": "available_from_existing_evidence_fields",
+                    "relative_strength_vs_spy_pct": 3.2,
+                    "market_quality_score_adjustment": 1.4,
+                },
+            }
+        ],
+    }))
+
+    report = build_theme_pick_bridge(
+        date_str="2026-05-09",
+        data_dir=tmp_path,
+        theme_path=theme_path,
+    )
+
+    theme = report["themes"][0]
+    assert theme["theme"] == "ai"
+    assert theme["market_evidence"]["market_evidence_status"] == "available_from_existing_evidence_fields"
+    assert theme["market_evidence"]["relative_strength_vs_spy_pct"] == 3.2
+    assert "market_evidence_available" in theme["risk_flags"]
+
+    md = format_markdown(report)
+    assert "Market evidence" in md
+    assert "available_from_existing_evidence_fields" in md

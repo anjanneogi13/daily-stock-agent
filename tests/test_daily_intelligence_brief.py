@@ -181,3 +181,52 @@ def test_format_markdown_includes_safety_status(tmp_path):
     assert "Daily Intelligence Brief" in md
     assert "Scoring Safety" in md
     assert "Does not alter official scoring" in md
+
+def test_daily_brief_top_themes_preserve_market_evidence(tmp_path):
+    date = "2026-05-09"
+    write_json(tmp_path / f"artifact_completeness_{date}.json", {
+        "completeness_status": "missing_critical_artifacts",
+        "summary": {"missing_critical": ["daily_run_status"], "warnings": []},
+    })
+    write_json(tmp_path / f"data_readiness_{date}.json", {
+        "official_pick_count": 0,
+        "official_pick_tickers": [],
+        "official_pick_readiness_status": "not_ready_pipeline_incomplete",
+        "no_pick_classification": "pipeline_incomplete",
+        "data_provider_status": "",
+        "readiness_warnings": [],
+    })
+    write_json(tmp_path / f"candidate_lifecycle_{date}.json", {
+        "summary": {"candidate_count": 0, "state_counts": {}},
+        "candidates": [],
+    })
+    write_json(tmp_path / f"theme_discovery_{date}.json", {
+        "theme_count": 1,
+        "themes": [
+            {
+                "theme": "ai",
+                "theme_id": "ai",
+                "lifecycle_state": "emerging_theme",
+                "theme_score": 100.0,
+                "breadth": 2,
+                "tickers": ["AAPL", "NVDA"],
+                "risk_flags": ["observe_only_theme", "market_evidence_available"],
+                "market_evidence": {
+                    "market_evidence_status": "available_from_existing_evidence_fields",
+                    "relative_strength_vs_spy_pct": 2.5,
+                    "market_quality_score_adjustment": 1.2,
+                },
+            }
+        ],
+    })
+
+    report = build_daily_intelligence_brief(date_str=date, data_dir=tmp_path)
+    theme = report["theme_discovery"]["top_themes"][0]
+
+    assert theme["theme"] == "ai"
+    assert theme["market_evidence_status"] == "available_from_existing_evidence_fields"
+    assert theme["market_quality_score_adjustment"] == 1.2
+    assert theme["market_evidence"]["relative_strength_vs_spy_pct"] == 2.5
+
+    md = format_markdown(report)
+    assert "market_evidence=`available_from_existing_evidence_fields`" in md

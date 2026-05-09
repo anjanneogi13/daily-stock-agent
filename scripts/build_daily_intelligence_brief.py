@@ -67,6 +67,7 @@ def _top_themes(theme_discovery: dict, limit: int = 8) -> list[dict]:
     themes = theme_discovery.get("themes", []) if isinstance(theme_discovery, dict) else []
     out = []
     for theme in themes[:limit]:
+        market_evidence = theme.get("market_evidence", {}) if isinstance(theme.get("market_evidence"), dict) else {}
         out.append({
             "theme": theme.get("theme"),
             "theme_id": theme.get("theme_id"),
@@ -75,6 +76,9 @@ def _top_themes(theme_discovery: dict, limit: int = 8) -> list[dict]:
             "breadth": theme.get("breadth"),
             "tickers": theme.get("tickers", [])[:15],
             "risk_flags": theme.get("risk_flags", []),
+            "market_evidence": market_evidence,
+            "market_evidence_status": market_evidence.get("market_evidence_status", ""),
+            "market_quality_score_adjustment": market_evidence.get("market_quality_score_adjustment"),
         })
     return out
 
@@ -465,6 +469,8 @@ def format_markdown(report: dict) -> str:
             lines.append(
                 f"- **{theme['theme']}** — state=`{theme['lifecycle_state']}`, "
                 f"score=`{theme['theme_score']}`, breadth=`{theme['breadth']}`, "
+                f"market_evidence=`{theme.get('market_evidence_status') or 'unknown'}`, "
+                f"market_adjustment=`{theme.get('market_quality_score_adjustment')}`, "
                 f"tickers=`{', '.join(theme['tickers'][:10])}`"
             )
     else:

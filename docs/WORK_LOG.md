@@ -13,6 +13,47 @@ Rules:
 
 ---
 
+## 2026-05-09 — Propagated theme market evidence downstream
+
+**Type:** observe-only report propagation / Priority 16 follow-up
+
+**Summary:**
+
+Propagated upgraded theme discovery market-evidence fields into downstream observe-only reports.
+
+Changed files:
+
+- `scripts/build_theme_pick_bridge.py`
+- `scripts/build_daily_intelligence_brief.py`
+- `tests/test_theme_pick_bridge.py`
+- `tests/test_daily_intelligence_brief.py`
+
+Regenerated artifacts:
+
+- `data/theme_pick_bridge_2026-05-09.json`
+- `data/theme_pick_bridge_2026-05-09.md`
+- `data/daily_intelligence_brief_2026-05-09.json`
+- `data/daily_intelligence_brief_2026-05-09.md`
+
+Changes:
+
+- Theme-to-pick bridge now preserves per-theme `market_evidence`.
+- Theme-to-pick bridge now preserves theme `risk_flags`.
+- Daily intelligence brief top themes now include:
+  - `market_evidence`,
+  - `market_evidence_status`,
+  - `market_quality_score_adjustment`.
+
+Safety:
+
+- Observe-only report propagation.
+- No official scoring effect.
+- No pick creation.
+- No paper/live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Upgraded observe-only theme discovery market evidence
 
 **Type:** product intelligence / observe-only market evidence / Priority 16 repair

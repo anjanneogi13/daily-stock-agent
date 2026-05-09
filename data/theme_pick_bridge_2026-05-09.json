@@ -2,7 +2,7 @@
   "artifact": "theme_pick_bridge",
   "buy_instructions_enabled": false,
   "date": "2026-05-09",
-  "generated_at_utc": "2026-05-09T05:01:18+00:00",
+  "generated_at_utc": "2026-05-09T07:01:09+00:00",
   "input_status": {
     "daily_rejection_artifact_exists": false,
     "hard_blocked_candidate_count": 0,
@@ -85,6 +85,33 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "available_from_existing_evidence_fields",
+        "market_quality_score_adjustment": -0.4887,
+        "missing_market_evidence_reason": "",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": -5.0367,
+        "sector_alpha_pct": 0.15,
+        "sector_etf_confirmation_status": "available_from_picks_log",
+        "sector_etfs": [
+          "SOXX"
+        ],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "AAPL",
         "AIIO",
@@ -117,6 +144,10 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "market_evidence_available"
+      ],
       "theme": "ai",
       "theme_id": "ai",
       "theme_score": 100.0,
@@ -156,6 +187,33 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "available_from_existing_evidence_fields",
+        "market_quality_score_adjustment": 0.0396,
+        "missing_market_evidence_reason": "",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": -3.044,
+        "sector_alpha_pct": 3.44,
+        "sector_etf_confirmation_status": "available_from_picks_log",
+        "sector_etfs": [
+          "SOXX"
+        ],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "ADI",
         "ALAB",
@@ -184,9 +242,14 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "missing_tradeable_score",
+        "market_evidence_available"
+      ],
       "theme": "semi",
       "theme_id": "semi",
-      "theme_score": 97.19,
+      "theme_score": 97.23,
       "watch_only_match_count": 0,
       "watch_only_matches": []
     },
@@ -217,6 +280,33 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "available_from_existing_evidence_fields",
+        "market_quality_score_adjustment": -0.4887,
+        "missing_market_evidence_reason": "",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": -5.0367,
+        "sector_alpha_pct": 0.15,
+        "sector_etf_confirmation_status": "available_from_picks_log",
+        "sector_etfs": [
+          "SOXX"
+        ],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "ALAB",
         "ANET",
@@ -239,9 +329,14 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "missing_tradeable_score",
+        "market_evidence_available"
+      ],
       "theme": "semi ai",
       "theme_id": "semi_ai",
-      "theme_score": 95.02,
+      "theme_score": 94.53,
       "watch_only_match_count": 0,
       "watch_only_matches": []
     },
@@ -269,6 +364,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "ARHS",
         "DCOY",
@@ -288,6 +408,11 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "negative_or_deteriorating_evidence",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "selling",
       "theme_id": "selling",
       "theme_score": 92.48,
@@ -313,6 +438,33 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "available_from_existing_evidence_fields",
+        "market_quality_score_adjustment": 0.86,
+        "missing_market_evidence_reason": "",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": 4.16,
+        "sector_alpha_pct": 4.44,
+        "sector_etf_confirmation_status": "available_from_picks_log",
+        "sector_etfs": [
+          "SPY"
+        ],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "ADIL",
         "ANIP",
@@ -327,9 +479,13 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "market_evidence_available"
+      ],
       "theme": "pharmaceuticals",
       "theme_id": "pharmaceuticals",
-      "theme_score": 90.15,
+      "theme_score": 91.01,
       "watch_only_match_count": 0,
       "watch_only_matches": []
     },
@@ -354,6 +510,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "CART",
         "ENOV",
@@ -370,6 +551,10 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "momentum",
       "theme_id": "momentum",
       "theme_score": 88.78,
@@ -397,6 +582,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "AGL",
         "ARDT",
@@ -413,6 +623,10 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "health",
       "theme_id": "health",
       "theme_score": 88.75,
@@ -439,6 +653,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "BLLN",
         "CRI",
@@ -454,6 +693,10 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "massive",
       "theme_id": "massive",
       "theme_score": 86.31,
@@ -480,6 +723,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "EFR",
         "GIG",
@@ -495,6 +763,11 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "negative_or_deteriorating_evidence",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "energy",
       "theme_id": "energy",
       "theme_score": 82.37,
@@ -521,6 +794,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "BAM",
         "EVC",
@@ -536,6 +834,10 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "growth",
       "theme_id": "growth",
       "theme_score": 79.78,
@@ -563,6 +865,31 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "unavailable_missing_market_evidence_fields",
+        "market_quality_score_adjustment": 0.0,
+        "missing_market_evidence_reason": "No 1D/5D/20D/60D return, relative-strength, sector ETF, new-high, breakout, or overextension fields were available in theme evidence rows.",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": null,
+        "sector_alpha_pct": null,
+        "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+        "sector_etfs": [],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "CARG",
         "CART",
@@ -579,6 +906,10 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "price_relative_strength_unavailable_v0"
+      ],
       "theme": "modest",
       "theme_id": "modest",
       "theme_score": 79.56,
@@ -605,6 +936,33 @@
         "missing_from_official_and_watch_only",
         "no_daily_rejection_artifact_available"
       ],
+      "market_evidence": {
+        "breakout_count": 0,
+        "five_day_return_pct": null,
+        "market_evidence_status": "available_from_existing_evidence_fields",
+        "market_quality_score_adjustment": -0.341,
+        "missing_market_evidence_reason": "",
+        "new_high_count": 0,
+        "one_day_return_pct": null,
+        "overextension_count": 0,
+        "provider_evidence": {
+          "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+          "data_readiness_available": true,
+          "failure_type_totals": {},
+          "market_data_health_available": false,
+          "official_pick_readiness_status": "not_ready_pipeline_incomplete"
+        },
+        "relative_strength_vs_qqq_pct": null,
+        "relative_strength_vs_spy_pct": -1.52,
+        "sector_alpha_pct": -1.89,
+        "sector_etf_confirmation_status": "available_from_picks_log",
+        "sector_etfs": [
+          "SPY"
+        ],
+        "sixty_day_return_pct": null,
+        "tickers_with_return_evidence": 0,
+        "twenty_day_return_pct": null
+      },
       "missing_from_official_and_watch_only": [
         "A",
         "AATC",
@@ -620,9 +978,13 @@
       "official_pick_matches": [],
       "rejected_match_count": 0,
       "rejected_matches": [],
+      "risk_flags": [
+        "observe_only_theme",
+        "market_evidence_available"
+      ],
       "theme": "technologi",
       "theme_id": "technologi",
-      "theme_score": 79.0,
+      "theme_score": 78.66,
       "watch_only_match_count": 0,
       "watch_only_matches": []
     }

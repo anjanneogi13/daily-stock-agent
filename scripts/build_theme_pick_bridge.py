@@ -262,6 +262,8 @@ def build_theme_pick_bridge(
             "theme_id": theme.get("theme_id"),
             "lifecycle_state": theme.get("lifecycle_state"),
             "theme_score": theme.get("theme_score"),
+            "risk_flags": theme.get("risk_flags", []),
+            "market_evidence": theme.get("market_evidence", {}),
             "leader_count": len(leaders),
             "leaders": leaders,
             "official_pick_matches": _simplify_rows(official_matches + selected_matches),
@@ -370,6 +372,13 @@ def format_markdown(report: dict) -> str:
                     f"theme_score={theme['theme_score']}, coverage={theme['coverage_ratio']})"
                 ),
                 f"  - Leaders: `{', '.join(theme['leaders'][:15])}`",
+                (
+                    "  - Market evidence: "
+                    f"status={theme.get('market_evidence', {}).get('market_evidence_status')}, "
+                    f"adjustment={theme.get('market_evidence', {}).get('market_quality_score_adjustment')}, "
+                    f"vs_spy={theme.get('market_evidence', {}).get('relative_strength_vs_spy_pct')}"
+                ),
+                f"  - Risk flags: `{', '.join(theme.get('risk_flags') or []) or 'none'}`",
                 f"  - Official matches ({theme['official_pick_match_count']}): `{', '.join(r['ticker'] for r in theme['official_pick_matches']) or 'none'}`",
                 f"  - Rejected/filtered matches ({theme['rejected_match_count']}): `{', '.join(r['ticker'] for r in theme['rejected_matches']) or 'none'}`",
                 f"  - Hard-blocked matches ({theme['hard_blocked_match_count']}): `{', '.join(r['ticker'] for r in theme['hard_blocked_matches']) or 'none'}`",

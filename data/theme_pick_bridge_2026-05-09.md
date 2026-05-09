@@ -26,22 +26,28 @@ Observe-only comparison. Not production scoring. Not buy instructions.
 ## Theme Bridge
 - **ai** (emerging_theme, theme_score=100.0, coverage=0.0)
   - Leaders: `AAPL, AIIO, ALAB, ANET, APLD, ARM, ASML, AVGO, CDNS, CRDO, FIS, LRCX, MCRP, MPWR, MSFT`
+  - Market evidence: status=available_from_existing_evidence_fields, adjustment=-0.4887, vs_spy=-5.0367
+  - Risk flags: `observe_only_theme, market_evidence_available`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
   - Watch-only matches (0): `none`
   - Missing from official/watch-only: `AAPL, AIIO, ALAB, ANET, APLD, ARM, ASML, AVGO, CDNS, CRDO, FIS, LRCX, MCRP, MPWR, MSFT, NVDA, PGY, PSAI, RMBS, SMCI`
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
-- **semi** (candidate_theme, theme_score=97.19, coverage=0.0)
+- **semi** (candidate_theme, theme_score=97.23, coverage=0.0)
   - Leaders: `ADI, ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, DELL, LRCX, MPWR, NVDA, ONTO, POWI, RMBS`
+  - Market evidence: status=available_from_existing_evidence_fields, adjustment=0.0396, vs_spy=-3.044
+  - Risk flags: `observe_only_theme, missing_tradeable_score, market_evidence_available`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
   - Watch-only matches (0): `none`
   - Missing from official/watch-only: `ADI, ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, DELL, LRCX, MPWR, NVDA, ONTO, POWI, RMBS, SMCI, SMH, SNPS, TSM, TXN`
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
-- **semi ai** (candidate_theme, theme_score=95.02, coverage=0.0)
+- **semi ai** (candidate_theme, theme_score=94.53, coverage=0.0)
   - Leaders: `ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, LRCX, MPWR, NVDA, RMBS, SMCI, SMH, SNPS, TSM`
+  - Market evidence: status=available_from_existing_evidence_fields, adjustment=-0.4887, vs_spy=-5.0367
+  - Risk flags: `observe_only_theme, missing_tradeable_score, market_evidence_available`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -50,14 +56,18 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **selling** (distribution_warning, theme_score=92.48, coverage=0.0)
   - Leaders: `ARHS, DCOY, DV, EFR, FLOC, HRTG, IREN, MSFT, OWLT, PAX, RDW, TSHA`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, negative_or_deteriorating_evidence, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
   - Watch-only matches (0): `none`
   - Missing from official/watch-only: `ARHS, DCOY, DV, EFR, FLOC, HRTG, IREN, MSFT, OWLT, PAX, RDW, TSHA`
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
-- **pharmaceuticals** (confirmed_leadership, theme_score=90.15, coverage=0.0)
+- **pharmaceuticals** (confirmed_leadership, theme_score=91.01, coverage=0.0)
   - Leaders: `ADIL, ANIP, ARWR, LGND, MIRM, RYTM, TNXP`
+  - Market evidence: status=available_from_existing_evidence_fields, adjustment=0.86, vs_spy=4.16
+  - Risk flags: `observe_only_theme, market_evidence_available`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -66,6 +76,8 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **momentum** (confirmed_leadership, theme_score=88.78, coverage=0.0)
   - Leaders: `CART, ENOV, GCMG, GCT, IIIV, MIRM, RYTM, SEZL, SMCI`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -74,6 +86,8 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **health** (emerging_theme, theme_score=88.75, coverage=0.0)
   - Leaders: `AGL, ARDT, BTSG, CLOV, CVS, ELAN, LFST, OMDA, WHR`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -82,6 +96,8 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **massive** (confirmed_leadership, theme_score=86.31, coverage=0.0)
   - Leaders: `BLLN, CRI, DCH, EVC, ONC, PRAA, TKO, WBD`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -90,6 +106,8 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **energy** (distribution_warning, theme_score=82.37, coverage=0.0)
   - Leaders: `EFR, GIG, HNRG, HPK, IREN, MGEE, SU, TRP`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, negative_or_deteriorating_evidence, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -98,6 +116,8 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **growth** (emerging_theme, theme_score=79.78, coverage=0.0)
   - Leaders: `BAM, EVC, FERG, FLOC, KODK, NRG, PODD, TGB`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
@@ -106,14 +126,18 @@ Observe-only comparison. Not production scoring. Not buy instructions.
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
 - **modest** (candidate_theme, theme_score=79.56, coverage=0.0)
   - Leaders: `CARG, CART, CW, EHTH, HPK, LIVN, SENS, TIMB, UPWK`
+  - Market evidence: status=unavailable_missing_market_evidence_fields, adjustment=0.0, vs_spy=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`
   - Watch-only matches (0): `none`
   - Missing from official/watch-only: `CARG, CART, CW, EHTH, HPK, LIVN, SENS, TIMB, UPWK`
   - Likely gap reasons: `missing_from_official_and_watch_only, no_daily_rejection_artifact_available`
-- **technologi** (emerging_theme, theme_score=79.0, coverage=0.0)
+- **technologi** (emerging_theme, theme_score=78.66, coverage=0.0)
   - Leaders: `A, AATC, ARRY, DELL, OPEN, ORA, SHLS, UBER`
+  - Market evidence: status=available_from_existing_evidence_fields, adjustment=-0.341, vs_spy=-1.52
+  - Risk flags: `observe_only_theme, market_evidence_available`
   - Official matches (0): `none`
   - Rejected/filtered matches (0): `none`
   - Hard-blocked matches (0): `none`

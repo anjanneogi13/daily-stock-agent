@@ -1,3 +1,28 @@
+## 2026-05-09 checkpoint — Theme market evidence propagated downstream
+
+Priority 16 downstream follow-up is complete.
+
+Changed files:
+
+- `scripts/build_theme_pick_bridge.py`
+- `scripts/build_daily_intelligence_brief.py`
+- `tests/test_theme_pick_bridge.py`
+- `tests/test_daily_intelligence_brief.py`
+
+Regenerated artifacts:
+
+- `data/theme_pick_bridge_2026-05-09.json`
+- `data/theme_pick_bridge_2026-05-09.md`
+- `data/daily_intelligence_brief_2026-05-09.json`
+- `data/daily_intelligence_brief_2026-05-09.md`
+
+Validation:
+
+- Theme-to-pick bridge preserves per-theme market evidence.
+- Daily intelligence brief top themes preserve market evidence.
+- No official scoring behavior changes.
+
+
 ## 2026-05-09 checkpoint — Theme discovery market evidence upgraded
 
 Priority 16 is implemented observe-only.

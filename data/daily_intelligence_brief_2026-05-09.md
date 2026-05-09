@@ -36,14 +36,14 @@ Observe-only founder operating report. This report does not alter scoring or cre
 - No no-pick report available.
 
 ## Discovered Themes
-- **ai** — state=`emerging_theme`, score=`100.0`, breadth=`25`, tickers=`AAPL, AIIO, ALAB, ANET, APLD, ARM, ASML, AVGO, CDNS, CRDO`
-- **semi** — state=`candidate_theme`, score=`97.19`, breadth=`21`, tickers=`ADI, ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, DELL, LRCX`
-- **semi ai** — state=`candidate_theme`, score=`95.02`, breadth=`15`, tickers=`ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, LRCX, MPWR, NVDA`
-- **selling** — state=`distribution_warning`, score=`92.48`, breadth=`12`, tickers=`ARHS, DCOY, DV, EFR, FLOC, HRTG, IREN, MSFT, OWLT, PAX`
-- **pharmaceuticals** — state=`confirmed_leadership`, score=`90.15`, breadth=`7`, tickers=`ADIL, ANIP, ARWR, LGND, MIRM, RYTM, TNXP`
-- **momentum** — state=`confirmed_leadership`, score=`88.78`, breadth=`9`, tickers=`CART, ENOV, GCMG, GCT, IIIV, MIRM, RYTM, SEZL, SMCI`
-- **health** — state=`emerging_theme`, score=`88.75`, breadth=`9`, tickers=`AGL, ARDT, BTSG, CLOV, CVS, ELAN, LFST, OMDA, WHR`
-- **massive** — state=`confirmed_leadership`, score=`86.31`, breadth=`8`, tickers=`BLLN, CRI, DCH, EVC, ONC, PRAA, TKO, WBD`
+- **ai** — state=`emerging_theme`, score=`100.0`, breadth=`25`, market_evidence=`available_from_existing_evidence_fields`, market_adjustment=`-0.4887`, tickers=`AAPL, AIIO, ALAB, ANET, APLD, ARM, ASML, AVGO, CDNS, CRDO`
+- **semi** — state=`candidate_theme`, score=`97.23`, breadth=`21`, market_evidence=`available_from_existing_evidence_fields`, market_adjustment=`0.0396`, tickers=`ADI, ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, DELL, LRCX`
+- **semi ai** — state=`candidate_theme`, score=`94.53`, breadth=`15`, market_evidence=`available_from_existing_evidence_fields`, market_adjustment=`-0.4887`, tickers=`ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, LRCX, MPWR, NVDA`
+- **selling** — state=`distribution_warning`, score=`92.48`, breadth=`12`, market_evidence=`unavailable_missing_market_evidence_fields`, market_adjustment=`0.0`, tickers=`ARHS, DCOY, DV, EFR, FLOC, HRTG, IREN, MSFT, OWLT, PAX`
+- **pharmaceuticals** — state=`confirmed_leadership`, score=`91.01`, breadth=`7`, market_evidence=`available_from_existing_evidence_fields`, market_adjustment=`0.86`, tickers=`ADIL, ANIP, ARWR, LGND, MIRM, RYTM, TNXP`
+- **momentum** — state=`confirmed_leadership`, score=`88.78`, breadth=`9`, market_evidence=`unavailable_missing_market_evidence_fields`, market_adjustment=`0.0`, tickers=`CART, ENOV, GCMG, GCT, IIIV, MIRM, RYTM, SEZL, SMCI`
+- **health** — state=`emerging_theme`, score=`88.75`, breadth=`9`, market_evidence=`unavailable_missing_market_evidence_fields`, market_adjustment=`0.0`, tickers=`AGL, ARDT, BTSG, CLOV, CVS, ELAN, LFST, OMDA, WHR`
+- **massive** — state=`confirmed_leadership`, score=`86.31`, breadth=`8`, market_evidence=`unavailable_missing_market_evidence_fields`, market_adjustment=`0.0`, tickers=`BLLN, CRI, DCH, EVC, ONC, PRAA, TKO, WBD`
 
 ## Theme-to-Pick Bridge
 - Themes analyzed: **12**
