@@ -997,6 +997,52 @@ Follow-up needed:
 - run monster-treatment sizing before final risk gate or add post-monster risk validation.
 
 
+## Priority 7 Implementation Status
+
+Initial missing-data fail-closed behavior added:
+
+- `src/missing_data_gate.py`
+- `tests/test_missing_data_gate.py`
+- updated `src/candidate_diagnostics.py`
+- updated `main.py`
+
+Behavior change:
+
+- `main.py` now applies a final missing-data gate after portfolio risk and before official logging,
+- candidates with missing/malformed critical official-pick fields are blocked from normal official logging,
+- if all finalists are blocked by missing data, the run writes a contract-compatible official no-pick artifact and exits successfully,
+- successful and no-pick candidate diagnostics now include missing-data blocks.
+
+Current required official-pick data checks:
+
+- ticker present,
+- numeric non-negative score,
+- trade type is `day` or `swing`,
+- positive entry,
+- positive stop loss,
+- positive take profit,
+- positive quantity,
+- positive risk/reward,
+- stop loss below entry,
+- take profit above entry,
+- prior premarket sanity did not mark candidate non-actionable,
+- prior portfolio risk did not mark candidate failed.
+
+Safety:
+
+- No fake picks are created.
+- No scoring behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted when all candidates are missing-data blocked.
+
+Follow-up needed:
+
+- decide whether company/sector should be hard-required or warning-only,
+- add provider freshness timestamps to required field snapshot,
+- validate final logged row against the full official decision contract when Priority 8 wires the official decision artifact.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

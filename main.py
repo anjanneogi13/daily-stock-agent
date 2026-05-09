@@ -181,6 +181,18 @@ def _classify_no_pick_cause(pipeline: dict | None, market_data_health: dict | No
         summary = "No official picks were generated because all finalists were blocked by the portfolio risk gate."
         return primary, sorted(set(secondary)), summary
 
+    missing_data_blocked = diag.get("missing_data_blocked_candidates")
+    pre_missing_data = diag.get("pre_missing_data_candidates")
+    if (
+        isinstance(missing_data_blocked, list)
+        and missing_data_blocked
+        and isinstance(pre_missing_data, list)
+        and len(missing_data_blocked) >= len(pre_missing_data)
+    ):
+        primary = "NO_PICK_DATA_READINESS_FAILED"
+        summary = "No official picks were generated because all finalists had missing or malformed required official-pick data."
+        return primary, sorted(set(secondary)), summary
+
     readiness_gate = diag.get("readiness_gate") if isinstance(diag.get("readiness_gate"), dict) else {}
     if readiness_gate and readiness_gate.get("passed") is False:
         primary = readiness_gate.get("primary_no_pick_cause") or "NO_PICK_DATA_READINESS_FAILED"
@@ -1324,6 +1336,105 @@ def run():
         rprint("[green]Done. No official premarket pick today.[/green]")
         return
 
+    rprint("[5h/6] Applying missing-data fail-closed gate before official logging...")
+    pre_missing_data_candidates = list(top)
+    pipeline["pre_missing_data_pick_count"] = len(pre_missing_data_candidates)
+    try:
+        from src.missing_data_gate import apply_missing_data_gate
+
+        top, missing_data_blocked, missing_data_summary = apply_missing_data_gate(top)
+        pipeline["missing_data_blocked_count"] = len(missing_data_blocked)
+        pipeline["post_missing_data_pick_count"] = len(top)
+        pipeline["final_pick_count"] = len(top)
+
+        if missing_data_blocked:
+            rprint(f"  [yellow]⚠ Missing-data gate blocked {len(missing_data_blocked)} candidate(s)[/yellow]")
+            for item in missing_data_blocked:
+                rprint(f"    • {item.get('ticker')}: {item.get('reason')}")
+        else:
+            rprint("  [green]✓ All candidates passed missing-data gate[/green]")
+
+        if not top:
+            try:
+                from src.candidate_diagnostics import build_candidate_diagnostics
+                diagnostics = build_candidate_diagnostics(
+                    pipeline=pipeline,
+                    scored_candidates=candidates,
+                    filtered_candidates=filtered,
+                    capped_candidates=capped,
+                    pre_hard_block_candidates=pre_hard_block_candidates,
+                    hard_blocked_candidates=blocked,
+                    post_hard_block_candidates=pre_sanity_candidates,
+                    pre_premarket_sanity_candidates=pre_sanity_candidates,
+                    premarket_sanity_blocked_candidates=sanity_blocked,
+                    portfolio_risk_blocked_candidates=risk_blocked,
+                    missing_data_blocked_candidates=missing_data_blocked,
+                    selected_picks=[],
+                    extra_rejections=_killed_dropped + _earnings_dropped,
+                    extra={
+                        "premarket_sanity_summary": sanity_summary,
+                        "portfolio_risk_summary": risk_summary,
+                        "missing_data_summary": missing_data_summary,
+                        "pre_portfolio_risk_candidates": [
+                            _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                        ],
+                        "pre_missing_data_candidates": [
+                            _summarize_candidate_for_report(p) for p in pre_missing_data_candidates
+                        ],
+                    },
+                )
+                diagnostics["pre_portfolio_risk_candidates"] = [
+                    _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                ]
+                diagnostics["pre_missing_data_candidates"] = [
+                    _summarize_candidate_for_report(p) for p in pre_missing_data_candidates
+                ]
+            except Exception:
+                diagnostics = {
+                    "pre_missing_data_candidates": [
+                        _summarize_candidate_for_report(p) for p in pre_missing_data_candidates
+                    ],
+                    "missing_data_blocked_candidates": [
+                        {
+                            "ticker": item.get("ticker"),
+                            "block_type": item.get("block_type"),
+                            "reason": item.get("reason"),
+                            "missing_or_invalid_fields": item.get("missing_or_invalid_fields", []),
+                            "required_field_snapshot": item.get("required_field_snapshot", {}),
+                            "candidate": _summarize_candidate_for_report(item.get("candidate", {})),
+                        }
+                        for item in missing_data_blocked
+                    ],
+                    "missing_data_summary": missing_data_summary,
+                    "rejected_candidates": _killed_dropped + _earnings_dropped,
+                }
+
+            _write_daily_picks_no_pick_report(
+                "No official picks generated because all finalists had missing or malformed required official-pick data.",
+                pipeline,
+                diagnostics,
+            )
+            rprint("[yellow]No official picks generated after missing-data gate.[/yellow]")
+            rprint("[green]Done. No official premarket pick today.[/green]")
+            return
+    except Exception as e:
+        pipeline["missing_data_gate_error"] = str(e)
+        pipeline["final_pick_count"] = 0
+        diagnostics = {
+            "pre_missing_data_candidates": [
+                _summarize_candidate_for_report(p) for p in pre_missing_data_candidates
+            ],
+            "missing_data_gate_error": str(e),
+        }
+        _write_daily_picks_no_pick_report(
+            "No official picks generated because the missing-data gate failed unexpectedly.",
+            pipeline,
+            diagnostics,
+        )
+        rprint(f"[red]Missing-data gate failed unexpectedly: {e}[/red]")
+        rprint("[green]Done. No official premarket pick today.[/green]")
+        return
+
     try:
         from src.candidate_diagnostics import build_candidate_diagnostics
         selection_diagnostics = build_candidate_diagnostics(
@@ -1337,18 +1448,26 @@ def run():
             pre_premarket_sanity_candidates=pre_sanity_candidates,
             premarket_sanity_blocked_candidates=sanity_blocked,
             portfolio_risk_blocked_candidates=risk_blocked,
+            missing_data_blocked_candidates=missing_data_blocked,
             selected_picks=top,
             extra_rejections=_killed_dropped + _earnings_dropped,
             extra={
                 "premarket_sanity_summary": sanity_summary,
                 "portfolio_risk_summary": risk_summary,
+                "missing_data_summary": missing_data_summary,
                 "pre_portfolio_risk_candidates": [
                     _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                ],
+                "pre_missing_data_candidates": [
+                    _summarize_candidate_for_report(p) for p in pre_missing_data_candidates
                 ],
             },
         )
         selection_diagnostics["pre_portfolio_risk_candidates"] = [
             _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+        ]
+        selection_diagnostics["pre_missing_data_candidates"] = [
+            _summarize_candidate_for_report(p) for p in pre_missing_data_candidates
         ]
         _write_daily_picks_candidate_diagnostics_report(
             pipeline,

@@ -1,3 +1,40 @@
+## 2026-05-09 — Added Lane 1 missing-data fail-closed gate
+
+**Type:** Lane 1 / premarket official pick / missing-data fail-closed behavior
+
+**Summary:**
+
+Implemented Priority 7 foundation: final missing-data validation now runs before finalists are logged as official picks.
+
+New files:
+
+- `src/missing_data_gate.py`
+- `tests/test_missing_data_gate.py`
+
+Updated files:
+
+- `src/candidate_diagnostics.py`
+- `tests/test_candidate_diagnostics.py`
+- `main.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- finalists are checked for required official-pick data before official logging,
+- malformed or incomplete finalists are blocked,
+- if all finalists are incomplete, the run writes an official no-pick artifact and exits successfully,
+- candidate diagnostics now include missing-data rejection details.
+
+Safety:
+
+- No fake picks are created.
+- No scoring behavior changes.
+- No trading behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 portfolio risk gate
 
 **Type:** Lane 1 / premarket official pick / portfolio risk gate

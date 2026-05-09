@@ -122,3 +122,30 @@ def test_build_candidate_diagnostics_includes_portfolio_risk_blocks():
     assert diagnostics["stage_counts"]["portfolio_risk_blocked_count"] == 1
     assert diagnostics["portfolio_risk_blocked_candidates"][0]["ticker"] == "AAPL"
     assert diagnostics["portfolio_risk_blocked_candidates"][0]["rejection_stage"] == "portfolio_risk"
+
+def test_build_candidate_diagnostics_includes_missing_data_blocks():
+    aapl = candidate("AAPL")
+    blocked = [{
+        "ticker": "AAPL",
+        "block_type": "missing_or_malformed_required_data",
+        "reason": "entry must be positive",
+        "missing_or_invalid_fields": ["entry must be positive"],
+        "required_field_snapshot": {"ticker": "AAPL", "entry": None},
+        "candidate": aapl,
+    }]
+
+    diagnostics = build_candidate_diagnostics(
+        pipeline={},
+        scored_candidates=[aapl],
+        filtered_candidates=[aapl],
+        capped_candidates=[aapl],
+        pre_hard_block_candidates=[aapl],
+        post_hard_block_candidates=[aapl],
+        pre_premarket_sanity_candidates=[aapl],
+        missing_data_blocked_candidates=blocked,
+        selected_picks=[],
+    )
+
+    assert diagnostics["stage_counts"]["missing_data_blocked_count"] == 1
+    assert diagnostics["missing_data_blocked_candidates"][0]["ticker"] == "AAPL"
+    assert diagnostics["missing_data_blocked_candidates"][0]["rejection_stage"] == "missing_data"
