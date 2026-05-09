@@ -462,6 +462,35 @@ Track every ticker from universe to final outcome/rejection state.
 - If it entered but failed, state exact failure category when available.
 - No production scoring effect.
 
+### Current implementation notes
+
+Implemented in:
+
+- `scripts/build_candidate_lifecycle.py`
+- `tests/test_candidate_lifecycle.py`
+
+Outputs:
+
+- `data/candidate_lifecycle_YYYY-MM-DD.json`
+- `data/candidate_lifecycle_YYYY-MM-DD.md`
+
+Current lifecycle states:
+
+- `selected_official`
+- `hard_blocked`
+- `filtered`
+- `watch_only`
+- `diagnostics_unavailable`
+- `missing_from_universe`
+- `data_fetch_failed`
+- `unknown`
+
+Validation:
+
+- `2026-05-08` reconstructs 8 watch-only lifecycle rows.
+- `2026-05-09` reconstructs 98 theme leaders from the theme bridge and marks them `diagnostics_unavailable` because the daily pipeline artifacts are incomplete.
+- This remains observe-only and has no production scoring effect.
+
 ---
 
 ## Priority 11 — Daily Diagnostic Artifact Completeness Check

@@ -1,3 +1,31 @@
+## 2026-05-09 checkpoint — Candidate lifecycle ledger added
+
+Priority 10 is implemented observe-only.
+
+New files:
+
+- `scripts/build_candidate_lifecycle.py`
+- `tests/test_candidate_lifecycle.py`
+
+Generated artifacts:
+
+- `data/candidate_lifecycle_2026-05-08.json`
+- `data/candidate_lifecycle_2026-05-08.md`
+- `data/candidate_lifecycle_2026-05-09.json`
+- `data/candidate_lifecycle_2026-05-09.md`
+
+Validation:
+
+- May 8 lifecycle: 8 watch-only candidates reconstructed.
+- May 9 lifecycle: 98 theme leaders reconstructed as `diagnostics_unavailable` because daily pipeline artifacts were incomplete.
+
+Recommended next task:
+
+Priority 11 — Daily Diagnostic Artifact Completeness Check.
+
+Goal: generate a daily artifact present/missing matrix so missing critical artifacts are visible instead of silently interpreted as success.
+
+
 ## 2026-05-09 checkpoint — Daily data readiness report added
 
 Priority 9 is implemented observe-only.

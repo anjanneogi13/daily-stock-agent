@@ -1,0 +1,365 @@
+# Candidate Lifecycle Ledger
+
+Observe-only reconstruction. This report does not alter scoring or create picks.
+
+- Date: **2026-05-09**
+- Candidate count: **98**
+- Readiness status: **not_ready_pipeline_incomplete**
+- No-pick classification: **pipeline_incomplete**
+
+## State Counts
+- diagnostics_unavailable: **98**
+
+## Input Status
+- picks_log_available: **True**
+- official_pick_count: **0**
+- candidate_rejection_artifact_available: **False**
+- candidate_diagnostics_available: **False**
+- watch_only_row_count: **0**
+- watch_only_parse_errors: **{'late_daily_watch_only': 0, 'opening_range_watch_only': 0, 'intraday_momentum_watch_only': 0}**
+- theme_leader_source_available: **True**
+- theme_leader_source: **{'source': 'data/theme_pick_bridge_2026-05-09.json', 'source_type': 'theme_pick_bridge', 'available': True}**
+- theme_count: **12**
+
+## Theme Leader Coverage
+- **ai**: `AAPL, AIIO, ALAB, ANET, APLD, ARM, ASML, AVGO, CDNS, CRDO, FIS, LRCX, MCRP, MPWR, MSFT, NVDA, PGY, PSAI, RMBS, SMCI`
+- **semi**: `ADI, ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, DELL, LRCX, MPWR, NVDA, ONTO, POWI, RMBS, SMCI, SMH, SNPS, TSM, TXN`
+- **semi ai**: `ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, LRCX, MPWR, NVDA, RMBS, SMCI, SMH, SNPS, TSM`
+- **selling**: `ARHS, DCOY, DV, EFR, FLOC, HRTG, IREN, MSFT, OWLT, PAX, RDW, TSHA`
+- **pharmaceuticals**: `ADIL, ANIP, ARWR, LGND, MIRM, RYTM, TNXP`
+- **momentum**: `CART, ENOV, GCMG, GCT, IIIV, MIRM, RYTM, SEZL, SMCI`
+- **health**: `AGL, ARDT, BTSG, CLOV, CVS, ELAN, LFST, OMDA, WHR`
+- **massive**: `BLLN, CRI, DCH, EVC, ONC, PRAA, TKO, WBD`
+- **energy**: `EFR, GIG, HNRG, HPK, IREN, MGEE, SU, TRP`
+- **growth**: `BAM, EVC, FERG, FLOC, KODK, NRG, PODD, TGB`
+- **modest**: `CARG, CART, CW, EHTH, HPK, LIVN, SENS, TIMB, UPWK`
+- **technologi**: `A, AATC, ARRY, DELL, OPEN, ORA, SHLS, UBER`
+
+## Candidate Lifecycle
+- **A** — `diagnostics_unavailable`
+  - Themes: `technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)
+- **AAPL** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **AATC** — `diagnostics_unavailable`
+  - Themes: `technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)
+- **ADI** — `diagnostics_unavailable`
+  - Themes: `semi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)
+- **ADIL** — `diagnostics_unavailable`
+  - Themes: `pharmaceuticals`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)
+- **AGL** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **AIIO** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **ALAB** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **ANET** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **ANIP** — `diagnostics_unavailable`
+  - Themes: `pharmaceuticals`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)
+- **APLD** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **ARDT** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **ARHS** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **ARM** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **ARRY** — `diagnostics_unavailable`
+  - Themes: `technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)
+- **ARWR** — `diagnostics_unavailable`
+  - Themes: `pharmaceuticals`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)
+- **ASML** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **AVGO** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **BAM** — `diagnostics_unavailable`
+  - Themes: `growth`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)
+- **BLLN** — `diagnostics_unavailable`
+  - Themes: `massive`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)
+- **BTSG** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **CARG** — `diagnostics_unavailable`
+  - Themes: `modest`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)
+- **CART** — `diagnostics_unavailable`
+  - Themes: `modest, momentum`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)
+- **CDNS** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **CLOV** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **CRDO** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **CRI** — `diagnostics_unavailable`
+  - Themes: `massive`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)
+- **CVS** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **CW** — `diagnostics_unavailable`
+  - Themes: `modest`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)
+- **DCH** — `diagnostics_unavailable`
+  - Themes: `massive`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)
+- **DCOY** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **DELL** — `diagnostics_unavailable`
+  - Themes: `semi, technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)
+- **DV** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **EFR** — `diagnostics_unavailable`
+  - Themes: `energy, selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **EHTH** — `diagnostics_unavailable`
+  - Themes: `modest`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)
+- **ELAN** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **ENOV** — `diagnostics_unavailable`
+  - Themes: `momentum`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)
+- **EVC** — `diagnostics_unavailable`
+  - Themes: `growth, massive`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)
+- **FERG** — `diagnostics_unavailable`
+  - Themes: `growth`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)
+- **FIS** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **FLOC** — `diagnostics_unavailable`
+  - Themes: `growth, selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **GCMG** — `diagnostics_unavailable`
+  - Themes: `momentum`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)
+- **GCT** — `diagnostics_unavailable`
+  - Themes: `momentum`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)
+- **GIG** — `diagnostics_unavailable`
+  - Themes: `energy`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)
+- **HNRG** — `diagnostics_unavailable`
+  - Themes: `energy`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)
+- **HPK** — `diagnostics_unavailable`
+  - Themes: `energy, modest`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)
+- **HRTG** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **IIIV** — `diagnostics_unavailable`
+  - Themes: `momentum`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)
+- **IREN** — `diagnostics_unavailable`
+  - Themes: `energy, selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **KODK** — `diagnostics_unavailable`
+  - Themes: `growth`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)
+- **LFST** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **LGND** — `diagnostics_unavailable`
+  - Themes: `pharmaceuticals`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)
+- **LIVN** — `diagnostics_unavailable`
+  - Themes: `modest`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)
+- **LRCX** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **MCRP** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **MGEE** — `diagnostics_unavailable`
+  - Themes: `energy`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)
+- **MIRM** — `diagnostics_unavailable`
+  - Themes: `momentum, pharmaceuticals`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)
+- **MPWR** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **MSFT** — `diagnostics_unavailable`
+  - Themes: `ai, selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **NRG** — `diagnostics_unavailable`
+  - Themes: `growth`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)
+- **NVDA** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **OMDA** — `diagnostics_unavailable`
+  - Themes: `health`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from health; no matching daily candidate artifact (pipeline_incomplete)
+- **ONC** — `diagnostics_unavailable`
+  - Themes: `massive`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)
+- **ONTO** — `diagnostics_unavailable`
+  - Themes: `semi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)
+- **OPEN** — `diagnostics_unavailable`
+  - Themes: `technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)
+- **ORA** — `diagnostics_unavailable`
+  - Themes: `technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)
+- **OWLT** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **PAX** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **PGY** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **PODD** — `diagnostics_unavailable`
+  - Themes: `growth`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)
+- **POWI** — `diagnostics_unavailable`
+  - Themes: `semi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)
+- **PRAA** — `diagnostics_unavailable`
+  - Themes: `massive`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)
+- **PSAI** — `diagnostics_unavailable`
+  - Themes: `ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **RDW** — `diagnostics_unavailable`
+  - Themes: `selling`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)
+- **RMBS** — `diagnostics_unavailable`
+  - Themes: `ai, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+- **RYTM** — `diagnostics_unavailable`
+  - Themes: `momentum, pharmaceuticals`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)
+- **SENS** — `diagnostics_unavailable`
+  - Themes: `modest`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)
+- **SEZL** — `diagnostics_unavailable`
+  - Themes: `momentum`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)
+- **SHLS** — `diagnostics_unavailable`
+  - Themes: `technologi`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)
+- **SMCI** — `diagnostics_unavailable`
+  - Themes: `ai, momentum, semi, semi ai`
+  - Sources: `theme_pick_bridge`
+  - Reason: theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)
+
+## Safety
+- Observe-only lifecycle ledger.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.

@@ -1,0 +1,2468 @@
+{
+  "artifact": "candidate_lifecycle",
+  "buy_instructions_enabled": false,
+  "candidates": [
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "A"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "AAPL"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "AATC"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from semi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "semi"
+      ],
+      "ticker": "ADI"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "pharmaceuticals"
+      ],
+      "ticker": "ADIL"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "AGL"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "AIIO"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "ALAB"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "ANET"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "pharmaceuticals"
+      ],
+      "ticker": "ANIP"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "APLD"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "ARDT"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "ARHS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "ARM"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "ARRY"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "pharmaceuticals"
+      ],
+      "ticker": "ARWR"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "ASML"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "AVGO"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from growth; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth"
+      ],
+      "ticker": "BAM"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "BLLN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "BTSG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "CARG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from momentum; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest",
+        "momentum"
+      ],
+      "ticker": "CART"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "CDNS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "CLOV"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "CRDO"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "CRI"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "CVS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "CW"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "DCH"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "DCOY"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from semi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "semi",
+        "technologi"
+      ],
+      "ticker": "DELL"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "DV"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy",
+        "selling"
+      ],
+      "ticker": "EFR"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "EHTH"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "ELAN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from momentum; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum"
+      ],
+      "ticker": "ENOV"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth",
+        "massive"
+      ],
+      "ticker": "EVC"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from growth; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth"
+      ],
+      "ticker": "FERG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "FIS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth",
+        "selling"
+      ],
+      "ticker": "FLOC"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from momentum; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum"
+      ],
+      "ticker": "GCMG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from momentum; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum"
+      ],
+      "ticker": "GCT"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from energy; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy"
+      ],
+      "ticker": "GIG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from energy; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy"
+      ],
+      "ticker": "HNRG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from energy; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy",
+        "modest"
+      ],
+      "ticker": "HPK"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "HRTG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from momentum; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum"
+      ],
+      "ticker": "IIIV"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy",
+        "selling"
+      ],
+      "ticker": "IREN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from growth; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth"
+      ],
+      "ticker": "KODK"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "LFST"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "pharmaceuticals"
+      ],
+      "ticker": "LGND"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "LIVN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "LRCX"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "MCRP"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from energy; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy"
+      ],
+      "ticker": "MGEE"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum",
+        "pharmaceuticals"
+      ],
+      "ticker": "MIRM"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "MPWR"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "selling"
+      ],
+      "ticker": "MSFT"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from growth; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth"
+      ],
+      "ticker": "NRG"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "NVDA"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "OMDA"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "ONC"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from semi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "semi"
+      ],
+      "ticker": "ONTO"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "OPEN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "ORA"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "OWLT"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "PAX"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "PGY"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from growth; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth"
+      ],
+      "ticker": "PODD"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from semi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "semi"
+      ],
+      "ticker": "POWI"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "PRAA"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "PSAI"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "RDW"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "RMBS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum",
+        "pharmaceuticals"
+      ],
+      "ticker": "RYTM"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "SENS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from momentum; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from momentum; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "momentum"
+      ],
+      "ticker": "SEZL"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "SHLS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "momentum",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "SMCI"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "SMH"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "SNPS"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "SOUN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from energy; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy"
+      ],
+      "ticker": "SU"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from growth; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from growth; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "growth"
+      ],
+      "ticker": "TGB"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "TIMB"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "TKO"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "pharmaceuticals"
+      ],
+      "ticker": "TNXP"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from energy; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from energy; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "energy"
+      ],
+      "ticker": "TRP"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from selling; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from selling; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "selling"
+      ],
+      "ticker": "TSHA"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai",
+        "semi",
+        "semi ai"
+      ],
+      "ticker": "TSM"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from semi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "semi"
+      ],
+      "ticker": "TXN"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from technologi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "technologi"
+      ],
+      "ticker": "UBER"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from modest; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from modest; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "modest"
+      ],
+      "ticker": "UPWK"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from semi; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "semi"
+      ],
+      "ticker": "VICR"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from ai; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "ai"
+      ],
+      "ticker": "WARP"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from massive; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from massive; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "massive"
+      ],
+      "ticker": "WBD"
+    },
+    {
+      "company": "",
+      "events": [
+        {
+          "quality_status": "",
+          "reason": "theme leader from health; no matching daily candidate artifact",
+          "score": "",
+          "source": "theme_pick_bridge",
+          "state": "diagnostics_unavailable"
+        }
+      ],
+      "evidence_sources": [
+        "theme_pick_bridge"
+      ],
+      "lifecycle_state": "diagnostics_unavailable",
+      "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+      "tag": "",
+      "themes": [
+        "health"
+      ],
+      "ticker": "WHR"
+    }
+  ],
+  "date": "2026-05-09",
+  "generated_at_utc": "2026-05-09T06:11:07+00:00",
+  "input_status": {
+    "candidate_diagnostics_available": false,
+    "candidate_rejection_artifact_available": false,
+    "official_pick_count": 0,
+    "picks_log_available": true,
+    "theme_count": 12,
+    "theme_leader_source": {
+      "available": true,
+      "source": "data/theme_pick_bridge_2026-05-09.json",
+      "source_type": "theme_pick_bridge"
+    },
+    "theme_leader_source_available": true,
+    "watch_only_parse_errors": {
+      "intraday_momentum_watch_only": 0,
+      "late_daily_watch_only": 0,
+      "opening_range_watch_only": 0
+    },
+    "watch_only_row_count": 0
+  },
+  "live_trading_enabled": false,
+  "observe_only": true,
+  "official_score_boost_enabled": false,
+  "paper_trading_enabled": false,
+  "production_scoring_effect": false,
+  "readiness_context": {
+    "data_readiness_available": true,
+    "no_pick_classification": "pipeline_incomplete",
+    "official_pick_readiness_status": "not_ready_pipeline_incomplete",
+    "readiness_warnings": [
+      "daily_run_status_missing",
+      "no_pick_report_missing",
+      "candidate_rejection_artifact_missing",
+      "candidate_diagnostics_missing",
+      "watch_only_lanes_missing_or_empty",
+      "theme_bridge_reports_missing_daily_inputs"
+    ]
+  },
+  "safety_flags": [
+    "observe_only",
+    "not_official_scoring",
+    "no_production_scoring_effect",
+    "not_paper_trade",
+    "not_live_trade",
+    "no_buy_instructions"
+  ],
+  "source_files": {
+    "candidate_rejections": "data/daily_picks_candidate_rejections_2026-05-09.json",
+    "data_readiness": "data/data_readiness_2026-05-09.json",
+    "intraday_momentum_observations": "data/intraday_momentum_observations_2026-05-09.jsonl",
+    "late_daily_ideas": "data/late_daily_ideas_2026-05-09.jsonl",
+    "opening_range_observations": "data/opening_range_observations_2026-05-09.jsonl",
+    "picks_log": "data/picks_log.csv",
+    "theme_discovery": "data/theme_discovery_2026-05-09.json",
+    "theme_pick_bridge": "data/theme_pick_bridge_2026-05-09.json"
+  },
+  "summary": {
+    "candidate_count": 98,
+    "state_counts": {
+      "diagnostics_unavailable": 98
+    },
+    "theme_leader_count": 98
+  },
+  "themes": [
+    {
+      "leaders": [
+        "AAPL",
+        "AIIO",
+        "ALAB",
+        "ANET",
+        "APLD",
+        "ARM",
+        "ASML",
+        "AVGO",
+        "CDNS",
+        "CRDO",
+        "FIS",
+        "LRCX",
+        "MCRP",
+        "MPWR",
+        "MSFT",
+        "NVDA",
+        "PGY",
+        "PSAI",
+        "RMBS",
+        "SMCI",
+        "SMH",
+        "SNPS",
+        "SOUN",
+        "TSM",
+        "WARP"
+      ],
+      "theme": "ai"
+    },
+    {
+      "leaders": [
+        "ADI",
+        "ALAB",
+        "ANET",
+        "ARM",
+        "ASML",
+        "AVGO",
+        "CDNS",
+        "CRDO",
+        "DELL",
+        "LRCX",
+        "MPWR",
+        "NVDA",
+        "ONTO",
+        "POWI",
+        "RMBS",
+        "SMCI",
+        "SMH",
+        "SNPS",
+        "TSM",
+        "TXN",
+        "VICR"
+      ],
+      "theme": "semi"
+    },
+    {
+      "leaders": [
+        "ALAB",
+        "ANET",
+        "ARM",
+        "ASML",
+        "AVGO",
+        "CDNS",
+        "CRDO",
+        "LRCX",
+        "MPWR",
+        "NVDA",
+        "RMBS",
+        "SMCI",
+        "SMH",
+        "SNPS",
+        "TSM"
+      ],
+      "theme": "semi ai"
+    },
+    {
+      "leaders": [
+        "ARHS",
+        "DCOY",
+        "DV",
+        "EFR",
+        "FLOC",
+        "HRTG",
+        "IREN",
+        "MSFT",
+        "OWLT",
+        "PAX",
+        "RDW",
+        "TSHA"
+      ],
+      "theme": "selling"
+    },
+    {
+      "leaders": [
+        "ADIL",
+        "ANIP",
+        "ARWR",
+        "LGND",
+        "MIRM",
+        "RYTM",
+        "TNXP"
+      ],
+      "theme": "pharmaceuticals"
+    },
+    {
+      "leaders": [
+        "CART",
+        "ENOV",
+        "GCMG",
+        "GCT",
+        "IIIV",
+        "MIRM",
+        "RYTM",
+        "SEZL",
+        "SMCI"
+      ],
+      "theme": "momentum"
+    },
+    {
+      "leaders": [
+        "AGL",
+        "ARDT",
+        "BTSG",
+        "CLOV",
+        "CVS",
+        "ELAN",
+        "LFST",
+        "OMDA",
+        "WHR"
+      ],
+      "theme": "health"
+    },
+    {
+      "leaders": [
+        "BLLN",
+        "CRI",
+        "DCH",
+        "EVC",
+        "ONC",
+        "PRAA",
+        "TKO",
+        "WBD"
+      ],
+      "theme": "massive"
+    },
+    {
+      "leaders": [
+        "EFR",
+        "GIG",
+        "HNRG",
+        "HPK",
+        "IREN",
+        "MGEE",
+        "SU",
+        "TRP"
+      ],
+      "theme": "energy"
+    },
+    {
+      "leaders": [
+        "BAM",
+        "EVC",
+        "FERG",
+        "FLOC",
+        "KODK",
+        "NRG",
+        "PODD",
+        "TGB"
+      ],
+      "theme": "growth"
+    },
+    {
+      "leaders": [
+        "CARG",
+        "CART",
+        "CW",
+        "EHTH",
+        "HPK",
+        "LIVN",
+        "SENS",
+        "TIMB",
+        "UPWK"
+      ],
+      "theme": "modest"
+    },
+    {
+      "leaders": [
+        "A",
+        "AATC",
+        "ARRY",
+        "DELL",
+        "OPEN",
+        "ORA",
+        "SHLS",
+        "UBER"
+      ],
+      "theme": "technologi"
+    }
+  ]
+}

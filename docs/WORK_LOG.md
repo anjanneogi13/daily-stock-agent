@@ -13,6 +13,64 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added candidate lifecycle ledger
+
+**Type:** reliability hardening / candidate traceability / Priority 10 repair
+
+**Summary:**
+
+Added an observe-only candidate lifecycle ledger that reconstructs where candidates and theme leaders appeared or disappeared using existing daily artifacts.
+
+New files:
+
+- `scripts/build_candidate_lifecycle.py`
+- `tests/test_candidate_lifecycle.py`
+
+New artifacts:
+
+- `data/candidate_lifecycle_YYYY-MM-DD.json`
+- `data/candidate_lifecycle_YYYY-MM-DD.md`
+
+The ledger reconstructs lifecycle states including:
+
+- `selected_official`
+- `hard_blocked`
+- `filtered`
+- `watch_only`
+- `diagnostics_unavailable`
+- `missing_from_universe`
+- `data_fetch_failed`
+- `unknown`
+
+Validation runs:
+
+- `2026-05-08` reconstructed 8 watch-only lifecycle rows from late-daily and opening-range artifacts.
+- `2026-05-09` reconstructed 98 theme leaders from the theme bridge and correctly marked them as `diagnostics_unavailable` because daily run status, no-pick report, rejection artifact, and watch-only lanes were missing.
+
+The ledger includes:
+
+- data-readiness context,
+- official pick count,
+- candidate rejection artifact availability,
+- diagnostic availability,
+- watch-only row counts,
+- theme leader source,
+- state counts,
+- per-candidate lifecycle state,
+- per-candidate themes,
+- evidence sources,
+- traceability reason.
+
+Safety:
+
+- Observe-only.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added daily data readiness report
 
 **Type:** reliability hardening / data readiness / Priority 9 repair
