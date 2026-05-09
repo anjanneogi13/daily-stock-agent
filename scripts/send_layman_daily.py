@@ -156,9 +156,40 @@ def _send(text) -> bool:
     return sent_any
 
 
-def build_message(picks):
+def _today_no_pick_report() -> dict:
+    today = os.environ.get("PICK_DATE") or datetime.now().strftime("%Y-%m-%d")
+    path = Path(f"data/daily_picks_no_pick_report_{today}.json")
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text())
+        return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def build_message(picks, no_pick_report=None):
+    no_pick_report = no_pick_report or {}
     today = datetime.now().strftime("%A, %B %d %Y")
     if not picks:
+        if no_pick_report:
+            summary = (
+                no_pick_report.get("human_readable_summary")
+                or no_pick_report.get("reason")
+                or "No qualified official pick today."
+            )
+            cause = no_pick_report.get("primary_no_pick_cause", "unknown")
+            readiness = no_pick_report.get("data_readiness_status", "unknown")
+            provider = no_pick_report.get("provider_status", "unknown")
+            return (
+                header("🌅", "Today's Stock Picks", today)
+                + "📭 *Official no-pick today.*\n"
+                + f"Reason: {summary}\n"
+                + f"Primary cause: `{cause}`\n"
+                + f"Data readiness: `{readiness}`\n"
+                + f"Provider status: `{provider}`\n\n"
+                + "_This is a valid safety outcome. The agent prefers no trade over a forced bad trade._"
+            )
         return (header("🌅", "Today's Stock Picks", today) +
                 "📭 *No picks today.* The agent didn't find anything worth recommending.\n"
                 "_(This is normal on quiet market days or after losing streaks — "
@@ -216,7 +247,7 @@ def build_message(picks):
 
 def main():
     picks = _today_picks()
-    msg = build_message(picks)
+    msg = build_message(picks, no_pick_report=_today_no_pick_report())
     print(msg); print("")
     if not should_send(msg):
         print("[dedup] already sent — skipping")

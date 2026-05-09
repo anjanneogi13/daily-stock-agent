@@ -9,6 +9,18 @@ p = Path("data/picks_log.csv")
 if p.exists():
     rows = [r for r in csv.DictReader(p.open()) if r.get("pick_date") == today]
 
+def _load_no_pick_report():
+    report_path = Path(f"data/daily_picks_no_pick_report_{today}.json")
+    if not report_path.exists():
+        return {}
+    try:
+        data = json.loads(report_path.read_text())
+        return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+no_pick_report = _load_no_pick_report()
+
 pm = {}
 pmp = Path("data/premarket_check.json")
 if pmp.exists():
@@ -19,7 +31,17 @@ mkt = pm.get("market", {})
 
 print(f"# 📈 Daily Stock Picks — {today}\n")
 if not rows:
-    print("_No picks today._"); raise SystemExit
+    if no_pick_report:
+        print("## 📭 Official No-Pick Decision\n")
+        print(f"**Reason:** {no_pick_report.get('human_readable_summary') or no_pick_report.get('reason') or 'No qualified official pick today.'}\n")
+        print(f"- Primary cause: `{no_pick_report.get('primary_no_pick_cause', 'unknown')}`")
+        print(f"- Data readiness: `{no_pick_report.get('data_readiness_status', 'unknown')}`")
+        print(f"- Provider status: `{no_pick_report.get('provider_status', 'unknown')}`")
+        print(f"- Next action: {no_pick_report.get('next_action', 'Do not fabricate official picks.')}\n")
+        print("_No official premarket pick was generated. This is a valid safety outcome, not a buy instruction._")
+    else:
+        print("_No picks today._")
+    raise SystemExit
 
 print(f"**{len(rows)} picks** • Regime: `{rows[0].get('regime','?')}` • CAPE: `{rows[0].get('cape','?')}`\n")
 

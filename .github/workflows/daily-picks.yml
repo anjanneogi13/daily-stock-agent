@@ -263,8 +263,15 @@ jobs:
           TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
           TODAY_ROWS="${TODAY_ROWS:-0}"
           if [ "$TODAY_ROWS" -eq 0 ]; then
-            echo "❌ CRITICAL: main.py ran but no picks logged for $ET_DATE!"
-            python scripts/record_daily_picks_run_status.py --event verify_csv_failed --result failed --reason "main.py ran but no picks logged" --picks-logged 0
+            echo "ℹ main.py logged no picks for $ET_DATE; checking for valid official no-pick artifact"
+            if python scripts/validate_daily_no_pick.py --date "$ET_DATE"; then
+              echo "✅ Verified valid official no-pick artifact for $ET_DATE"
+              python scripts/record_daily_picks_run_status.py --event verify_no_pick_success --result success --reason "valid official no-pick artifact" --picks-logged 0
+              exit 0
+            fi
+
+            echo "❌ CRITICAL: main.py ran but no picks logged and no valid official no-pick artifact exists for $ET_DATE!"
+            python scripts/record_daily_picks_run_status.py --event verify_csv_failed --result failed --reason "main.py ran but no picks logged and no valid official no-pick artifact" --picks-logged 0
             echo "Last 5 dates in CSV:"
             cut -d',' -f1 data/picks_log.csv | sort -u | tail -5
             exit 1

@@ -798,6 +798,32 @@ Runtime wiring belongs to later phases:
 - Phase 4: premarket sanity as an official gate.
 
 
+## Priority 2 Implementation Status
+
+Initial first-class no-pick runtime support added:
+
+- `scripts/validate_daily_no_pick.py`
+- `tests/test_validate_daily_no_pick.py`
+- updated `main.py`
+- updated `.github/workflows/daily-picks.yml`
+- updated `scripts/format_picks_email.py`
+- updated `scripts/send_layman_daily.py`
+
+Behavior change:
+
+- `main.py` now writes an official no-pick artifact and exits successfully when no official candidates survive scoring/filtering/gating.
+- The daily-picks workflow now treats zero CSV rows as success only when `scripts/validate_daily_no_pick.py` validates the official no-pick artifact.
+- Zero CSV rows without a valid no-pick artifact still fail loudly.
+- GitHub issue and Telegram formatting now surface official no-pick reasoning when a no-pick report exists.
+
+Safety:
+
+- No fake picks are created.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted for official no-pick days.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

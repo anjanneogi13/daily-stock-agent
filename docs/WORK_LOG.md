@@ -1,3 +1,42 @@
+## 2026-05-09 — Made Lane 1 no-pick a first-class outcome
+
+**Type:** Lane 1 / premarket official pick / no-pick runtime behavior
+
+**Summary:**
+
+Implemented Priority 2 foundation: first-class official no-pick handling for the premarket lane.
+
+New files:
+
+- `scripts/validate_daily_no_pick.py`
+- `tests/test_validate_daily_no_pick.py`
+
+Updated files:
+
+- `main.py`
+- `.github/workflows/daily-picks.yml`
+- `scripts/format_picks_email.py`
+- `scripts/send_layman_daily.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- `main.py` writes a contract-compatible official no-pick artifact when no candidates survive.
+- `main.py` no longer raises a runtime failure solely because no official pick was generated.
+- The daily-picks workflow accepts zero CSV rows only when the official no-pick artifact validates.
+- Zero CSV rows without a valid no-pick artifact remain a hard failure.
+- User-facing GitHub/Telegram messages now include no-pick reason/status when available.
+
+Safety:
+
+- No fake picks are created.
+- No scoring behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted for no-pick days.
+
+---
+
 ## 2026-05-09 — Added Lane 1 official decision contract
 
 **Type:** Lane 1 / premarket official pick / contract implementation

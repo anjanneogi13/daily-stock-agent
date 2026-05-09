@@ -209,13 +209,33 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
 
         data_dir = Path("data")
         data_dir.mkdir(exist_ok=True)
-        now_utc = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-        date_str = now_utc[:10]
+        from zoneinfo import ZoneInfo
+        from src.premarket_decision_contract import (
+            CONTRACT_VERSION,
+            DECISION_OFFICIAL_NO_PICK,
+            SCORING_VERSION,
+            STRATEGY_LANE,
+            STRATEGY_VERSION,
+        )
+
+        now_dt_utc = datetime.now(timezone.utc).replace(microsecond=0)
+        now_utc = now_dt_utc.isoformat().replace("+00:00", "Z")
+        now_et = now_dt_utc.astimezone(ZoneInfo("America/New_York")).isoformat()
+        date_str = now_et[:10]
 
         payload = {
             "artifact": "daily_picks_no_pick_report",
             "date": date_str,
             "timestamp_utc": now_utc,
+            "decision": DECISION_OFFICIAL_NO_PICK,
+            "strategy_lane": STRATEGY_LANE,
+            "contract_version": CONTRACT_VERSION,
+            "strategy_version": STRATEGY_VERSION,
+            "scoring_version": SCORING_VERSION,
+            "config_version": os.getenv("CONFIG_VERSION", "config.yaml"),
+            "selection_time_et": now_et,
+            "workflow_run_id": os.getenv("GITHUB_RUN_ID", "local"),
+            "commit_sha": os.getenv("GITHUB_SHA", "local"),
             "mode": "monitoring_only",
             "official_premarket_pick": False,
             "paper_trading_enabled": False,
@@ -224,6 +244,8 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
             "reason": reason,
             "pipeline": pipeline or {},
             "market_data_health": {},
+            "candidate_diagnostics": diagnostics or {},
+            "watch_only_available": False,
             "next_action": "Use watch-only fallback only; do not fabricate official picks.",
         }
 
@@ -242,6 +264,24 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
         payload["secondary_causes"] = secondary_causes
         payload["human_readable_summary"] = human_summary
         payload["diagnostics"] = diagnostics or {}
+        payload["candidate_diagnostics"] = diagnostics or {}
+
+        if primary_cause == "NO_PICK_DATA_PROVIDER_DEGRADED":
+            payload["data_readiness_status"] = "not_ready_data_provider_degraded"
+            payload["provider_status"] = "degraded"
+        elif primary_cause in {"NO_PICK_NO_SCORED_CANDIDATES", "NO_PICK_FILTERS_REMOVED_ALL"}:
+            payload["data_readiness_status"] = "ready_no_qualified_candidates"
+            payload["provider_status"] = "healthy"
+        elif primary_cause == "NO_PICK_ALL_FINALISTS_HARD_BLOCKED":
+            payload["data_readiness_status"] = "ready_all_finalists_hard_blocked"
+            payload["provider_status"] = "healthy"
+        elif primary_cause == "NO_PICK_RUNTIME_FAILURE":
+            payload["data_readiness_status"] = "not_ready_runtime_failure"
+            payload["provider_status"] = "unknown"
+        else:
+            payload["data_readiness_status"] = "readiness_uncertain"
+            payload["provider_status"] = "unknown"
+        payload["market_session_status"] = "premarket"
 
         (data_dir / f"daily_picks_no_pick_report_{date_str}.json").write_text(
             json.dumps(payload, indent=2, sort_keys=True) + "\n"
@@ -881,7 +921,9 @@ def run():
             "hard_blocked_candidates": hard_blocked_candidates,
         }
         _write_daily_picks_no_pick_report(reason, pipeline, diagnostics)
-        raise RuntimeError(reason)
+        rprint("[yellow]No official picks generated. Valid no-pick diagnostics were written.[/yellow]")
+        rprint("[green]Done. No official premarket pick today.[/green]")
+        return
 
     rprint("[5d/6] Auto-tagging trade type (DAY vs SWING)...")
     for p in top:
