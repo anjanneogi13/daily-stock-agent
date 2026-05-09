@@ -29,7 +29,7 @@ def test_project_blueprint_is_canonical_current_state():
 
     assert "monitoring-ready" in text
     assert "Test suite:" in text
-    assert "1372 passed, 30 skipped" in text
+    assert "1561 passed, 30 skipped" in text
     assert "monitoring-only" in text
     assert "must not execute real-money trades" in text
     assert "Paper trading stays blocked" in text

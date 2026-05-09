@@ -5,6 +5,7 @@ This file is a compatibility entry point.
 Active next work lives in:
 
 - `docs/NEXT_SESSION.md`
+- `docs/WORK_LOG.md`
 
 Current architecture, known gaps, and operating status live in:
 

@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-08
 **Status:** monitoring-ready, not paper-trading-ready, not live-execution-ready
-**Test suite:** 1433 passed, 30 skipped
+**Test suite:** 1561 passed, 30 skipped
 **Mode:** monitoring-only
 
 ## Purpose

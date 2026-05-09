@@ -204,12 +204,12 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
     """Persist a no-pick evidence artifact for operational learning."""
     try:
         import json
-        from datetime import datetime
+        from datetime import datetime, timezone
         from pathlib import Path
 
         data_dir = Path("data")
         data_dir.mkdir(exist_ok=True)
-        now_utc = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+        now_utc = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
         date_str = now_utc[:10]
 
         payload = {
