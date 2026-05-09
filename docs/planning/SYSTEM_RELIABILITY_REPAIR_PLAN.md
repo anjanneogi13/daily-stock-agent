@@ -628,6 +628,39 @@ Create one founder-readable daily summary.
 - It provides no buy instructions.
 - It does not alter scoring.
 
+### Current implementation notes
+
+Implemented in:
+
+- `scripts/build_daily_intelligence_brief.py`
+- `tests/test_daily_intelligence_brief.py`
+
+Outputs:
+
+- `data/daily_intelligence_brief_YYYY-MM-DD.json`
+- `data/daily_intelligence_brief_YYYY-MM-DD.md`
+
+Current sections:
+
+- daily operating status,
+- official pick status,
+- artifact completeness,
+- data readiness,
+- candidate lifecycle,
+- watch-only evidence,
+- no-pick diagnostics,
+- discovered themes,
+- theme-to-pick bridge,
+- tomorrow observe-only monitoring priorities,
+- scoring safety.
+
+Validation:
+
+- `2026-05-08` is classified as `data_failed_or_degraded`.
+- `2026-05-09` is classified as `incomplete_pipeline`.
+- Scoring safety passes with legacy sector boosts disabled and theme-aware official scoring disabled.
+- This remains observe-only and has no production scoring effect.
+
 ---
 
 ## Priority 14 — Opening-Range Bar Retention Repair

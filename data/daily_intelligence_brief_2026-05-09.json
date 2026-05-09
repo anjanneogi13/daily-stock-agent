@@ -1,0 +1,652 @@
+{
+  "artifact": "daily_intelligence_brief",
+  "artifact_completeness": {
+    "available": true,
+    "completeness_status": "missing_critical_artifacts",
+    "missing_critical": [
+      "daily_run_status",
+      "no_pick_report",
+      "candidate_rejections"
+    ],
+    "warnings": [
+      "late_daily_ideas",
+      "opening_range_observations",
+      "intraday_momentum_observations"
+    ]
+  },
+  "buy_instructions_enabled": false,
+  "candidate_lifecycle": {
+    "available": true,
+    "candidate_count": 98,
+    "diagnostics_unavailable_count": 98,
+    "sample_candidates": [
+      {
+        "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "technologi"
+        ],
+        "ticker": "A"
+      },
+      {
+        "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "ai"
+        ],
+        "ticker": "AAPL"
+      },
+      {
+        "reason": "theme leader from technologi; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "technologi"
+        ],
+        "ticker": "AATC"
+      },
+      {
+        "reason": "theme leader from semi; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "semi"
+        ],
+        "ticker": "ADI"
+      },
+      {
+        "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "pharmaceuticals"
+        ],
+        "ticker": "ADIL"
+      },
+      {
+        "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "health"
+        ],
+        "ticker": "AGL"
+      },
+      {
+        "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "ai"
+        ],
+        "ticker": "AIIO"
+      },
+      {
+        "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "ai",
+          "semi",
+          "semi ai"
+        ],
+        "ticker": "ALAB"
+      },
+      {
+        "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "ai",
+          "semi",
+          "semi ai"
+        ],
+        "ticker": "ANET"
+      },
+      {
+        "reason": "theme leader from pharmaceuticals; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "pharmaceuticals"
+        ],
+        "ticker": "ANIP"
+      },
+      {
+        "reason": "theme leader from ai; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "ai"
+        ],
+        "ticker": "APLD"
+      },
+      {
+        "reason": "theme leader from health; no matching daily candidate artifact (pipeline_incomplete)",
+        "state": "diagnostics_unavailable",
+        "themes": [
+          "health"
+        ],
+        "ticker": "ARDT"
+      }
+    ],
+    "state_counts": {
+      "diagnostics_unavailable": 98
+    },
+    "watch_only_tickers": []
+  },
+  "daily_operating_status": "incomplete_pipeline",
+  "daily_operating_summary": "Daily operating evidence is incomplete. Do not interpret the day as a strategy-driven no-pick outcome.",
+  "data_readiness": {
+    "available": true,
+    "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+    "readiness_warnings": [
+      "daily_run_status_missing",
+      "no_pick_report_missing",
+      "candidate_rejection_artifact_missing",
+      "candidate_diagnostics_missing",
+      "watch_only_lanes_missing_or_empty",
+      "theme_bridge_reports_missing_daily_inputs"
+    ]
+  },
+  "date": "2026-05-09",
+  "generated_at_utc": "2026-05-09T06:26:34+00:00",
+  "live_trading_enabled": false,
+  "no_pick_report": {
+    "available": false
+  },
+  "observe_only": true,
+  "official_pick_status": {
+    "no_pick_classification": "pipeline_incomplete",
+    "official_pick_count": 0,
+    "official_pick_tickers": [],
+    "readiness_status": "not_ready_pipeline_incomplete"
+  },
+  "official_score_boost_enabled": false,
+  "paper_trading_enabled": false,
+  "production_scoring_effect": false,
+  "safety_flags": [
+    "observe_only",
+    "not_official_scoring",
+    "no_production_scoring_effect",
+    "not_paper_trade",
+    "not_live_trade",
+    "no_buy_instructions"
+  ],
+  "scoring_safety": {
+    "available": true,
+    "configured_ai_boost": 0.0,
+    "configured_semi_boost": 1.0,
+    "legacy_sector_boosts_disabled": true,
+    "max_allowed_ai_boost": 0.0,
+    "max_allowed_semi_boost": 1.0,
+    "production_scoring_effect": false,
+    "status": "passed",
+    "theme_aware_official_scoring_enabled": false
+  },
+  "source_files": {
+    "artifact_completeness": "data/artifact_completeness_2026-05-09.json",
+    "candidate_lifecycle": "data/candidate_lifecycle_2026-05-09.json",
+    "data_readiness": "data/data_readiness_2026-05-09.json",
+    "no_pick_report": "data/daily_picks_no_pick_report_2026-05-09.json",
+    "theme_discovery": "data/theme_discovery_2026-05-09.json",
+    "theme_pick_bridge": "data/theme_pick_bridge_2026-05-09.json"
+  },
+  "theme_discovery": {
+    "available": true,
+    "theme_count": 626,
+    "top_themes": [
+      {
+        "breadth": 25,
+        "lifecycle_state": "emerging_theme",
+        "risk_flags": [
+          "observe_only_theme",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "ai",
+        "theme_id": "ai",
+        "theme_score": 100.0,
+        "tickers": [
+          "AAPL",
+          "AIIO",
+          "ALAB",
+          "ANET",
+          "APLD",
+          "ARM",
+          "ASML",
+          "AVGO",
+          "CDNS",
+          "CRDO",
+          "FIS",
+          "LRCX",
+          "MCRP",
+          "MPWR",
+          "MSFT"
+        ]
+      },
+      {
+        "breadth": 21,
+        "lifecycle_state": "candidate_theme",
+        "risk_flags": [
+          "observe_only_theme",
+          "missing_tradeable_score",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "semi",
+        "theme_id": "semi",
+        "theme_score": 97.19,
+        "tickers": [
+          "ADI",
+          "ALAB",
+          "ANET",
+          "ARM",
+          "ASML",
+          "AVGO",
+          "CDNS",
+          "CRDO",
+          "DELL",
+          "LRCX",
+          "MPWR",
+          "NVDA",
+          "ONTO",
+          "POWI",
+          "RMBS"
+        ]
+      },
+      {
+        "breadth": 15,
+        "lifecycle_state": "candidate_theme",
+        "risk_flags": [
+          "observe_only_theme",
+          "missing_tradeable_score",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "semi ai",
+        "theme_id": "semi_ai",
+        "theme_score": 95.02,
+        "tickers": [
+          "ALAB",
+          "ANET",
+          "ARM",
+          "ASML",
+          "AVGO",
+          "CDNS",
+          "CRDO",
+          "LRCX",
+          "MPWR",
+          "NVDA",
+          "RMBS",
+          "SMCI",
+          "SMH",
+          "SNPS",
+          "TSM"
+        ]
+      },
+      {
+        "breadth": 12,
+        "lifecycle_state": "distribution_warning",
+        "risk_flags": [
+          "observe_only_theme",
+          "negative_or_deteriorating_evidence",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "selling",
+        "theme_id": "selling",
+        "theme_score": 92.48,
+        "tickers": [
+          "ARHS",
+          "DCOY",
+          "DV",
+          "EFR",
+          "FLOC",
+          "HRTG",
+          "IREN",
+          "MSFT",
+          "OWLT",
+          "PAX",
+          "RDW",
+          "TSHA"
+        ]
+      },
+      {
+        "breadth": 7,
+        "lifecycle_state": "confirmed_leadership",
+        "risk_flags": [
+          "observe_only_theme",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "pharmaceuticals",
+        "theme_id": "pharmaceuticals",
+        "theme_score": 90.15,
+        "tickers": [
+          "ADIL",
+          "ANIP",
+          "ARWR",
+          "LGND",
+          "MIRM",
+          "RYTM",
+          "TNXP"
+        ]
+      },
+      {
+        "breadth": 9,
+        "lifecycle_state": "confirmed_leadership",
+        "risk_flags": [
+          "observe_only_theme",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "momentum",
+        "theme_id": "momentum",
+        "theme_score": 88.78,
+        "tickers": [
+          "CART",
+          "ENOV",
+          "GCMG",
+          "GCT",
+          "IIIV",
+          "MIRM",
+          "RYTM",
+          "SEZL",
+          "SMCI"
+        ]
+      },
+      {
+        "breadth": 9,
+        "lifecycle_state": "emerging_theme",
+        "risk_flags": [
+          "observe_only_theme",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "health",
+        "theme_id": "health",
+        "theme_score": 88.75,
+        "tickers": [
+          "AGL",
+          "ARDT",
+          "BTSG",
+          "CLOV",
+          "CVS",
+          "ELAN",
+          "LFST",
+          "OMDA",
+          "WHR"
+        ]
+      },
+      {
+        "breadth": 8,
+        "lifecycle_state": "confirmed_leadership",
+        "risk_flags": [
+          "observe_only_theme",
+          "price_relative_strength_unavailable_v0"
+        ],
+        "theme": "massive",
+        "theme_id": "massive",
+        "theme_score": 86.31,
+        "tickers": [
+          "BLLN",
+          "CRI",
+          "DCH",
+          "EVC",
+          "ONC",
+          "PRAA",
+          "TKO",
+          "WBD"
+        ]
+      }
+    ]
+  },
+  "theme_pick_bridge": {
+    "available": true,
+    "gap_reason_counts": {
+      "missing_from_official_and_watch_only": 12,
+      "no_daily_rejection_artifact_available": 12
+    },
+    "input_status": {
+      "daily_rejection_artifact_exists": false,
+      "hard_blocked_candidate_count": 0,
+      "invalid_watch_only_lines": {
+        "intraday_momentum_watch_only": 0,
+        "late_daily_watch_only": 0,
+        "opening_range_watch_only": 0
+      },
+      "picks_log_official_rows_for_date": 0,
+      "rejected_candidate_count": 0,
+      "theme_count_available": 626,
+      "theme_discovery_exists": true,
+      "watch_only_lane_count": 0
+    },
+    "themes_analyzed": 12,
+    "top_theme_gaps": [
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "AAPL",
+          "AIIO",
+          "ALAB",
+          "ANET",
+          "APLD",
+          "ARM",
+          "ASML",
+          "AVGO",
+          "CDNS",
+          "CRDO",
+          "FIS",
+          "LRCX",
+          "MCRP",
+          "MPWR",
+          "MSFT"
+        ],
+        "lifecycle_state": "emerging_theme",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "ai",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "ADI",
+          "ALAB",
+          "ANET",
+          "ARM",
+          "ASML",
+          "AVGO",
+          "CDNS",
+          "CRDO",
+          "DELL",
+          "LRCX",
+          "MPWR",
+          "NVDA",
+          "ONTO",
+          "POWI",
+          "RMBS"
+        ],
+        "lifecycle_state": "candidate_theme",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "semi",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "ALAB",
+          "ANET",
+          "ARM",
+          "ASML",
+          "AVGO",
+          "CDNS",
+          "CRDO",
+          "LRCX",
+          "MPWR",
+          "NVDA",
+          "RMBS",
+          "SMCI",
+          "SMH",
+          "SNPS",
+          "TSM"
+        ],
+        "lifecycle_state": "candidate_theme",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "semi ai",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "ARHS",
+          "DCOY",
+          "DV",
+          "EFR",
+          "FLOC",
+          "HRTG",
+          "IREN",
+          "MSFT",
+          "OWLT",
+          "PAX",
+          "RDW",
+          "TSHA"
+        ],
+        "lifecycle_state": "distribution_warning",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "selling",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "ADIL",
+          "ANIP",
+          "ARWR",
+          "LGND",
+          "MIRM",
+          "RYTM",
+          "TNXP"
+        ],
+        "lifecycle_state": "confirmed_leadership",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "pharmaceuticals",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "CART",
+          "ENOV",
+          "GCMG",
+          "GCT",
+          "IIIV",
+          "MIRM",
+          "RYTM",
+          "SEZL",
+          "SMCI"
+        ],
+        "lifecycle_state": "confirmed_leadership",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "momentum",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "AGL",
+          "ARDT",
+          "BTSG",
+          "CLOV",
+          "CVS",
+          "ELAN",
+          "LFST",
+          "OMDA",
+          "WHR"
+        ],
+        "lifecycle_state": "emerging_theme",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "health",
+        "watch_only_match_count": 0
+      },
+      {
+        "hard_blocked_match_count": 0,
+        "leaders": [
+          "BLLN",
+          "CRI",
+          "DCH",
+          "EVC",
+          "ONC",
+          "PRAA",
+          "TKO",
+          "WBD"
+        ],
+        "lifecycle_state": "confirmed_leadership",
+        "likely_gap_reasons": [
+          "missing_from_official_and_watch_only",
+          "no_daily_rejection_artifact_available"
+        ],
+        "official_pick_match_count": 0,
+        "rejected_match_count": 0,
+        "theme": "massive",
+        "watch_only_match_count": 0
+      }
+    ]
+  },
+  "tomorrow_observe_only_monitoring_priorities": [
+    "Restore missing critical daily artifacts: daily_run_status, no_pick_report, candidate_rejections",
+    "Review data readiness warnings: daily_run_status_missing, no_pick_report_missing, candidate_rejection_artifact_missing, candidate_diagnostics_missing, watch_only_lanes_missing_or_empty, theme_bridge_reports_missing_daily_inputs",
+    "Trace 98 diagnostics-unavailable candidates/theme leaders after pipeline diagnostics are restored.",
+    "Observe top discovered themes without score boosts: ai, semi, semi ai, selling, pharmaceuticals",
+    "Review theme-to-pick gaps: missing_from_official_and_watch_only=12, no_daily_rejection_artifact_available=12"
+  ],
+  "watch_only": {
+    "lanes": {
+      "intraday_momentum_observations": {
+        "exists": false,
+        "parse_errors": 0,
+        "quality_status_counts": {},
+        "row_count": 0,
+        "samples": [],
+        "tickers": []
+      },
+      "late_daily_ideas": {
+        "exists": false,
+        "parse_errors": 0,
+        "quality_status_counts": {},
+        "row_count": 0,
+        "samples": [],
+        "tickers": []
+      },
+      "opening_range_observations": {
+        "exists": false,
+        "parse_errors": 0,
+        "quality_status_counts": {},
+        "row_count": 0,
+        "samples": [],
+        "tickers": []
+      }
+    },
+    "total_watch_only_rows": 0,
+    "unique_watch_only_tickers": []
+  }
+}

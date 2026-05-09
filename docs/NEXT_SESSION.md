@@ -1,3 +1,32 @@
+## 2026-05-09 checkpoint — Daily intelligence brief added
+
+Priority 13 is implemented observe-only.
+
+New files:
+
+- `scripts/build_daily_intelligence_brief.py`
+- `tests/test_daily_intelligence_brief.py`
+
+Generated artifacts:
+
+- `data/daily_intelligence_brief_2026-05-08.json`
+- `data/daily_intelligence_brief_2026-05-08.md`
+- `data/daily_intelligence_brief_2026-05-09.json`
+- `data/daily_intelligence_brief_2026-05-09.md`
+
+Validation:
+
+- May 8 daily operating status: `data_failed_or_degraded`
+- May 9 daily operating status: `incomplete_pipeline`
+- Scoring safety status: `passed`
+
+Recommended next task:
+
+Priority 14 — Opening-Range Bar Retention Repair.
+
+Goal: make more opening-range observations evaluable by retaining enough forward bars when possible and explicitly reporting why bars are unavailable.
+
+
 ## 2026-05-09 checkpoint — Legacy sector boost safety guard added
 
 Priority 12 is implemented.

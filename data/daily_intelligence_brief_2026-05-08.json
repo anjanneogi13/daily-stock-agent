@@ -1,0 +1,281 @@
+{
+  "artifact": "daily_intelligence_brief",
+  "artifact_completeness": {
+    "available": true,
+    "completeness_status": "missing_or_empty_noncritical_artifacts",
+    "missing_critical": [],
+    "warnings": [
+      "theme_discovery",
+      "theme_pick_bridge",
+      "intraday_momentum_observations"
+    ]
+  },
+  "buy_instructions_enabled": false,
+  "candidate_lifecycle": {
+    "available": true,
+    "candidate_count": 8,
+    "diagnostics_unavailable_count": 0,
+    "sample_candidates": [
+      {
+        "reason": "opening-range breakout: +1.09% above OR high, 4.2x OR bar volume",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "AMD"
+      },
+      {
+        "reason": "BillionToOne Q2 EPS $0.34 Beats $0.04 Estimate, Sales $108.388M Beat $96.885M Estimate",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "BLLN"
+      },
+      {
+        "reason": "Entravision Stock Surges Following Massive Q1 Revenue Beat",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "EVC"
+      },
+      {
+        "reason": "GigCapital7 Shareholders Approve Proposed Business Combination Between GigCapital7, Hadron Energy And MMR Merger Sub, As Well As All Other Proposals Related To Business Combination",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "GIG"
+      },
+      {
+        "reason": "PRA Group Q1 EPS $0.73 Beats $0.21 Estimate, Sales $314.533M Beat $295.247M Estimate",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "PRAA"
+      },
+      {
+        "reason": "opening-range breakout: +0.66% above OR high, 8.6x OR bar volume",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "QQQ"
+      },
+      {
+        "reason": "opening-range breakout: +1.58% above OR high, 6.7x OR bar volume",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "TSLA"
+      },
+      {
+        "reason": "'Israeli $4.5 Billion Takeover Bid Beats Hapag-Lloyd's' Ynet",
+        "state": "watch_only",
+        "themes": [],
+        "ticker": "ZIM"
+      }
+    ],
+    "state_counts": {
+      "watch_only": 8
+    },
+    "watch_only_tickers": [
+      "AMD",
+      "BLLN",
+      "EVC",
+      "GIG",
+      "PRAA",
+      "QQQ",
+      "TSLA",
+      "ZIM"
+    ]
+  },
+  "daily_operating_status": "data_failed_or_degraded",
+  "daily_operating_summary": "Daily operating evidence indicates data/provider degradation. Official pick quality cannot be judged normally.",
+  "data_readiness": {
+    "available": true,
+    "data_provider_status": "provider_or_market_data_failure_evidence_detected",
+    "readiness_warnings": [
+      "provider_or_market_data_failure_evidence_detected"
+    ]
+  },
+  "date": "2026-05-08",
+  "generated_at_utc": "2026-05-09T06:26:33+00:00",
+  "live_trading_enabled": false,
+  "no_pick_report": {
+    "available": true,
+    "market_data_run": {
+      "fetched_count": 616,
+      "final_pick_count": 0,
+      "scored_count": 329,
+      "universe_count": 619
+    },
+    "mode": "monitoring_only",
+    "next_action": "Use watch-only fallback only; do not fabricate official picks.",
+    "pipeline": {
+      "capped_count": 2,
+      "fetched_count": 616,
+      "filtered_count": 30,
+      "final_pick_count": 0,
+      "hard_blocked_count": 2,
+      "post_hard_block_pick_count": 0,
+      "pre_hard_block_pick_count": 2,
+      "scored_count": 329,
+      "scorer_workers": 4,
+      "universe_count": 619
+    },
+    "provider_summary": {
+      "stooq": {
+        "attempts": 2,
+        "empty": 0,
+        "errors": 2,
+        "rate_limited": 0,
+        "successes": 0
+      },
+      "yfinance": {
+        "attempts": 1573,
+        "empty": 2,
+        "errors": 482,
+        "rate_limited": 482,
+        "successes": 1089
+      }
+    }
+  },
+  "observe_only": true,
+  "official_pick_status": {
+    "no_pick_classification": "data_provider_failure",
+    "official_pick_count": 0,
+    "official_pick_tickers": [],
+    "readiness_status": "not_ready_data_provider_failure"
+  },
+  "official_score_boost_enabled": false,
+  "paper_trading_enabled": false,
+  "production_scoring_effect": false,
+  "safety_flags": [
+    "observe_only",
+    "not_official_scoring",
+    "no_production_scoring_effect",
+    "not_paper_trade",
+    "not_live_trade",
+    "no_buy_instructions"
+  ],
+  "scoring_safety": {
+    "available": true,
+    "configured_ai_boost": 0.0,
+    "configured_semi_boost": 1.0,
+    "legacy_sector_boosts_disabled": true,
+    "max_allowed_ai_boost": 0.0,
+    "max_allowed_semi_boost": 1.0,
+    "production_scoring_effect": false,
+    "status": "passed",
+    "theme_aware_official_scoring_enabled": false
+  },
+  "source_files": {
+    "artifact_completeness": "data/artifact_completeness_2026-05-08.json",
+    "candidate_lifecycle": "data/candidate_lifecycle_2026-05-08.json",
+    "data_readiness": "data/data_readiness_2026-05-08.json",
+    "no_pick_report": "data/daily_picks_no_pick_report_2026-05-08.json",
+    "theme_discovery": "data/theme_discovery_2026-05-08.json",
+    "theme_pick_bridge": "data/theme_pick_bridge_2026-05-08.json"
+  },
+  "theme_discovery": {
+    "available": false,
+    "theme_count": 0,
+    "top_themes": []
+  },
+  "theme_pick_bridge": {
+    "available": false,
+    "gap_reason_counts": {},
+    "themes_analyzed": 0,
+    "top_theme_gaps": []
+  },
+  "tomorrow_observe_only_monitoring_priorities": [
+    "Review data readiness warnings: provider_or_market_data_failure_evidence_detected",
+    "Investigate provider/rate-limit/data-health degradation before judging model quality.",
+    "Review watch-only candidates for lessons, not official performance: AMD, BLLN, EVC, GIG, PRAA, QQQ, TSLA, ZIM"
+  ],
+  "watch_only": {
+    "lanes": {
+      "intraday_momentum_observations": {
+        "exists": false,
+        "parse_errors": 0,
+        "quality_status_counts": {},
+        "row_count": 0,
+        "samples": [],
+        "tickers": []
+      },
+      "late_daily_ideas": {
+        "exists": true,
+        "parse_errors": 0,
+        "quality_status_counts": {
+          "unknown": 5
+        },
+        "row_count": 5,
+        "samples": [
+          {
+            "quality_status": "",
+            "reason": "BillionToOne Q2 EPS $0.34 Beats $0.04 Estimate, Sales $108.388M Beat $96.885M Estimate",
+            "ticker": "BLLN"
+          },
+          {
+            "quality_status": "",
+            "reason": "Entravision Stock Surges Following Massive Q1 Revenue Beat",
+            "ticker": "EVC"
+          },
+          {
+            "quality_status": "",
+            "reason": "GigCapital7 Shareholders Approve Proposed Business Combination Between GigCapital7, Hadron Energy And MMR Merger Sub, As Well As All Other Proposals Related To Business Combination",
+            "ticker": "GIG"
+          },
+          {
+            "quality_status": "",
+            "reason": "PRA Group Q1 EPS $0.73 Beats $0.21 Estimate, Sales $314.533M Beat $295.247M Estimate",
+            "ticker": "PRAA"
+          },
+          {
+            "quality_status": "",
+            "reason": "'Israeli $4.5 Billion Takeover Bid Beats Hapag-Lloyd's' Ynet",
+            "ticker": "ZIM"
+          }
+        ],
+        "tickers": [
+          "BLLN",
+          "EVC",
+          "GIG",
+          "PRAA",
+          "ZIM"
+        ]
+      },
+      "opening_range_observations": {
+        "exists": true,
+        "parse_errors": 0,
+        "quality_status_counts": {
+          "unknown": 3
+        },
+        "row_count": 3,
+        "samples": [
+          {
+            "quality_status": "",
+            "reason": "opening-range breakout: +1.58% above OR high, 6.7x OR bar volume",
+            "ticker": "TSLA"
+          },
+          {
+            "quality_status": "",
+            "reason": "opening-range breakout: +1.09% above OR high, 4.2x OR bar volume",
+            "ticker": "AMD"
+          },
+          {
+            "quality_status": "",
+            "reason": "opening-range breakout: +0.66% above OR high, 8.6x OR bar volume",
+            "ticker": "QQQ"
+          }
+        ],
+        "tickers": [
+          "TSLA",
+          "AMD",
+          "QQQ"
+        ]
+      }
+    },
+    "total_watch_only_rows": 8,
+    "unique_watch_only_tickers": [
+      "AMD",
+      "BLLN",
+      "EVC",
+      "GIG",
+      "PRAA",
+      "QQQ",
+      "TSLA",
+      "ZIM"
+    ]
+  }
+}

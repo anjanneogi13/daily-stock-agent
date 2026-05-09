@@ -13,6 +13,54 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added daily intelligence brief
+
+**Type:** reliability UX / founder daily brief / Priority 13 repair
+
+**Summary:**
+
+Added an observe-only daily intelligence brief that synthesizes reliability, diagnostics, lifecycle, watch-only, theme, bridge, and scoring safety evidence into one founder-readable operating report.
+
+New files:
+
+- `scripts/build_daily_intelligence_brief.py`
+- `tests/test_daily_intelligence_brief.py`
+
+New artifacts:
+
+- `data/daily_intelligence_brief_YYYY-MM-DD.json`
+- `data/daily_intelligence_brief_YYYY-MM-DD.md`
+
+The brief includes:
+
+- daily operating status,
+- official pick status,
+- artifact completeness,
+- data readiness,
+- candidate lifecycle summary,
+- watch-only evidence,
+- no-pick diagnostics,
+- discovered themes,
+- theme-to-pick bridge gaps,
+- tomorrow observe-only monitoring priorities,
+- scoring safety status.
+
+Validation runs:
+
+- `2026-05-08` classified as `data_failed_or_degraded`.
+- `2026-05-09` classified as `incomplete_pipeline`.
+- Scoring safety passes with legacy sector boosts disabled and theme-aware official scoring disabled.
+
+Safety:
+
+- Observe-only.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added legacy sector boost safety guard
 
 **Type:** scoring safety / legacy boost guardrail / Priority 12 repair
