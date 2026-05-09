@@ -13,6 +13,55 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added watch-only outcome attribution v1
+
+**Type:** watch-only evidence / outcome attribution / Priority 2 repair
+
+**Summary:**
+
+Added a monitoring-only watch-only outcome builder.
+
+New script:
+
+- `scripts/build_watch_only_outcomes.py`
+
+Outputs:
+
+- `data/watch_only_outcomes_YYYY-MM-DD.jsonl`
+- `data/watch_only_outcome_report_YYYY-MM-DD.md`
+
+The v1 evaluator handles:
+
+- late daily watch-only ideas using retained same-day high/low range only,
+- opening-range watch-only observations using retained opening-range bar artifacts where forward bars exist.
+
+May 8 backfill:
+
+- evaluated 8 watch-only observations:
+  - BLLN
+  - EVC
+  - GIG
+  - PRAA
+  - ZIM
+  - TSLA
+  - AMD
+  - QQQ
+- late ideas are marked `range_only_no_intraday_sequence`,
+- opening-range rows with retained bars but no forward bars after the observation are marked `bar_sequence_available_no_forward_bars_after_observation`,
+- ambiguous late-day TP/SL ordering is marked `unknown_same_day_range_only`.
+
+Safety:
+
+- Monitoring-only evidence.
+- Does not write `data/picks_log.csv`.
+- Does not write `data/signal_journal.jsonl`.
+- Does not write `data/learning_journal.jsonl`.
+- Does not create paper trades.
+- Does not enable live trading.
+- Does not mutate official pick statistics.
+
+---
+
 ## 2026-05-09 — Backfilled May 8 no-pick rejection artifact honestly
 
 **Type:** historical observability backfill / monitoring-only / Priority 1 repair

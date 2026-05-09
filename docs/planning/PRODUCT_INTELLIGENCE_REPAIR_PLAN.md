@@ -188,6 +188,15 @@ Expected artifacts:
 - `data/watch_only_outcomes_YYYY-MM-DD.jsonl`
 - `data/watch_only_outcome_report_YYYY-MM-DD.md`
 
+Current implementation notes:
+
+- `scripts/build_watch_only_outcomes.py` builds monitoring-only outcome artifacts.
+- Late daily watch-only ideas are evaluated from retained same-day range only.
+- Late range-only TP/SL ordering is marked unknown when both levels are inside the range.
+- Opening-range observations use retained bar artifacts when forward bars after the observation are available.
+- Opening-range rows with retained bars but no forward bars after the observation are marked as data-insufficient, not failed trades.
+- May 8 watch-only outcome artifacts were generated for BLLN, EVC, GIG, PRAA, ZIM, TSLA, AMD, and QQQ.
+
 Outcome fields should include:
 
 - ticker,
