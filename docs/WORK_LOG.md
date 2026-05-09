@@ -13,6 +13,50 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added theme-aware scoring disabled guardrails
+
+**Type:** scoring safety / ADR / Priority 8 repair
+
+**Summary:**
+
+Added explicit guardrails documenting that theme-aware official scoring remains disabled until validation and approval requirements are met.
+
+Changes:
+
+- Added `src/theme_scoring_guardrails.py`.
+- Added `tests/test_theme_scoring_guardrails.py`.
+- Added `docs/decisions/ADR-002-theme-aware-scoring-disabled.md`.
+
+Guardrails verify:
+
+- theme-aware official scoring is disabled by default,
+- production scoring effect is false,
+- official score boost is false,
+- paper/live trading remain disabled,
+- buy instructions remain disabled,
+- attempted config enablement raises an error,
+- production scorer modules do not import theme discovery or bridge artifacts,
+- `config.yaml` does not enable theme scoring.
+
+Reserved future fields remain documentation-only:
+
+- `theme_strength_score`
+- `theme_breadth_score`
+- `theme_quality_score`
+- `theme_overextension_penalty`
+- `theme_confirmation_count`
+
+Safety:
+
+- No production scoring changes.
+- No official score boosts.
+- No pick creation.
+- No readiness-gate bypass.
+- No paper/live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added observe-only theme-to-pick bridge v0
 
 **Type:** theme-to-pick bridge / observe-only intelligence / Priority 7 repair

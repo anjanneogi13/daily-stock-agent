@@ -1,3 +1,14 @@
+## 2026-05-09 checkpoint — Theme-aware scoring remains disabled
+
+Priority 8 added guardrails, not scoring:
+
+- `src/theme_scoring_guardrails.py`
+- `tests/test_theme_scoring_guardrails.py`
+- `docs/decisions/ADR-002-theme-aware-scoring-disabled.md`
+
+Theme discovery and bridge artifacts remain observe-only. Do not enable production theme-aware scoring until historical validation, forward observation, train/test discipline, overfitting review, clear tests, founder approval, and readiness-gate preservation are complete.
+
+
 ## 2026-05-08 session handoff
 
 A complete handoff is available at:

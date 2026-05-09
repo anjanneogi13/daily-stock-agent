@@ -503,6 +503,19 @@ Safety:
 - Not active now.
 - Do not implement production scoring changes in v0.
 
+Current implementation notes:
+
+- `src/theme_scoring_guardrails.py` records that theme-aware official scoring is disabled.
+- `tests/test_theme_scoring_guardrails.py` verifies no production scorer imports theme discovery/bridge artifacts or reserved theme scoring fields.
+- `docs/decisions/ADR-002-theme-aware-scoring-disabled.md` documents the decision and prerequisites.
+- Future scoring fields remain reserved/documentation-only until validation and approval:
+  - `theme_strength_score`
+  - `theme_breadth_score`
+  - `theme_quality_score`
+  - `theme_overextension_penalty`
+  - `theme_confirmation_count`
+- This priority intentionally makes no production scoring changes.
+
 ## Implementation discipline
 
 Work must proceed one priority at a time.
