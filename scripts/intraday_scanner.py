@@ -15,6 +15,7 @@ except ImportError:
 
 from intraday_news import fetch_recent_news, classify_material
 from src.opening_range_scanner import detect_opening_range_breakout
+from src.provider_failure_taxonomy import classify_provider_failure
 
 # Default watchlist — top liquid US names. Override by creating data/watchlist.txt
 DEFAULT_WATCHLIST = [
@@ -388,21 +389,25 @@ def refresh_opening_range_bar_artifacts_for_observations(
     for ticker in tickers:
         bars = fetch(ticker)
         if not bars:
+            reason = "provider returned no opening-range bars"
             ticker_status[ticker] = {
                 "status": "not_refreshed_no_bars",
+                "failure_type": classify_provider_failure(reason, stage="opening_range_bars"),
                 "bar_count": 0,
-                "reason": "provider returned no opening-range bars",
+                "reason": reason,
             }
             continue
 
         if not opening_range_bars_match_session(bars, now=now):
+            reason = (
+                f"bar session {opening_range_bar_session_date(bars, now=now) or 'unknown'} "
+                f"does not match expected session {day}"
+            )
             ticker_status[ticker] = {
                 "status": "not_refreshed_stale_session",
+                "failure_type": classify_provider_failure(reason, status="not_refreshed_stale_session"),
                 "bar_count": len(bars),
-                "reason": (
-                    f"bar session {opening_range_bar_session_date(bars, now=now) or 'unknown'} "
-                    f"does not match expected session {day}"
-                ),
+                "reason": reason,
             }
             continue
 
@@ -410,6 +415,7 @@ def refresh_opening_range_bar_artifacts_for_observations(
         retained_rows = _load_existing_opening_range_bar_rows(path) if path else []
         ticker_status[ticker] = {
             "status": "refreshed",
+            "failure_type": "",
             "bar_count": len(bars),
             "retained_bar_count": len(retained_rows),
             "path": str(path) if path else "",

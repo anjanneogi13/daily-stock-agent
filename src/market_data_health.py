@@ -16,6 +16,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from .provider_failure_taxonomy import (
+    CANONICAL_FAILURE_TYPES,
+    classify_legacy_provider_error,
+    classify_provider_failure_detail,
+    failure_type_for_legacy_error_bucket,
+)
+
 DATA_DIR = Path("data")
 ET = ZoneInfo("America/New_York")
 _LOCK = threading.Lock()
@@ -32,24 +39,12 @@ def health_path(date_str: str | None = None, data_dir: Path | None = None) -> Pa
 
 
 def classify_provider_error(exc_or_message) -> str:
-    """Normalize provider errors into operationally useful buckets."""
-    if isinstance(exc_or_message, BaseException):
-        raw = f"{type(exc_or_message).__name__}: {exc_or_message}"
-    else:
-        raw = str(exc_or_message or "")
+    """Normalize provider errors into historical market-data health buckets.
 
-    msg = raw.lower()
-    if "yfratelimiterror" in msg or "too many requests" in msg or "rate limit" in msg:
-        return "rate_limited"
-    if "http error 401" in msg or "unauthorized" in msg:
-        return "unauthorized"
-    if "http error 404" in msg or "no data found" in msg or "possibly delisted" in msg:
-        return "not_found"
-    if "timeout" in msg or "timed out" in msg:
-        return "timeout"
-    if "empty" in msg or "no price data" in msg:
-        return "empty"
-    return "provider_error"
+    Backward-compatible wrapper. New reports should prefer the canonical
+    ``failure_type`` stored in samples/provider buckets.
+    """
+    return classify_legacy_provider_error(exc_or_message)
 
 
 def _blank_summary(date_str: str) -> dict:
@@ -95,6 +90,7 @@ def _provider_bucket(payload: dict, provider: str) -> dict:
         "not_found": 0,
         "timeout": 0,
         "provider_error": 0,
+        "failure_types": {failure_type: 0 for failure_type in sorted(CANONICAL_FAILURE_TYPES)},
     })
 
 
@@ -126,6 +122,17 @@ def record_market_data_event(
     path = health_path(date)
     safe_result = result if result in {"success", "empty", "error"} else "error"
     safe_error = error_type or (classify_provider_error(message) if safe_result != "success" else "")
+    failure_detail = (
+        classify_provider_failure_detail(
+            message,
+            result=safe_result,
+            stage=stage,
+            legacy_error_bucket=safe_error,
+        )
+        if safe_result != "success"
+        else None
+    )
+    safe_failure_type = failure_detail.failure_type if failure_detail else ""
 
     try:
         with _LOCK:
@@ -152,6 +159,15 @@ def record_market_data_event(
                     pb["provider_error"] += 1
 
             if safe_result != "success":
+                failure_types = pb.setdefault(
+                    "failure_types",
+                    {failure_type: 0 for failure_type in sorted(CANONICAL_FAILURE_TYPES)},
+                )
+                if safe_failure_type in failure_types:
+                    failure_types[safe_failure_type] += 1
+                else:
+                    failure_types["unknown_provider_failure"] += 1
+
                 samples = payload.setdefault("samples", [])
                 if len(samples) < MAX_SAMPLES:
                     samples.append({
@@ -160,6 +176,7 @@ def record_market_data_event(
                         "ticker": ticker,
                         "result": safe_result,
                         "error_type": safe_error,
+                        "failure_type": safe_failure_type or failure_type_for_legacy_error_bucket(safe_error),
                         "message": str(message or "")[:240],
                     })
 

@@ -739,6 +739,47 @@ Standardize provider failure labels across reports.
 - Unknown failures are captured.
 - No scoring behavior changes.
 
+### Current implementation notes
+
+Implemented in:
+
+- `src/provider_failure_taxonomy.py`
+- `tests/test_provider_failure_taxonomy.py`
+
+Integrated with:
+
+- `src/market_data_health.py`
+- `scripts/intraday_scanner.py`
+- `tests/test_market_data_health.py`
+- `tests/test_intraday_scanner_opening_range.py`
+
+Canonical failure types:
+
+- `rate_limited`
+- `timeout`
+- `empty_response`
+- `stale_data`
+- `missing_quote`
+- `missing_history`
+- `missing_intraday_bars`
+- `market_closed`
+- `symbol_not_found`
+- `provider_exception`
+- `unknown_provider_failure`
+
+Compatibility:
+
+- Historical `market_data_health.classify_provider_error()` buckets are preserved.
+- Provider summaries now include canonical `failure_types` counters.
+- Samples now include canonical `failure_type`.
+- Opening-range bar retention refresh reports canonical `stale_data` and `missing_intraday_bars` for stale-session/no-bar refresh failures.
+
+Validation:
+
+- Unknown failures are captured as `unknown_provider_failure`.
+- Current public market-data health buckets remain stable.
+- This remains observe-only and has no production scoring effect.
+
 ---
 
 ## Priority 16 — Theme Discovery Quality Upgrade

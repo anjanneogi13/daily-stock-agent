@@ -485,4 +485,5 @@ def test_refresh_opening_range_bar_artifacts_reports_stale_session(tmp_path, mon
     assert summary["refreshed_count"] == 0
     assert summary["skipped_count"] == 1
     assert summary["ticker_status"]["STALE"]["status"] == "not_refreshed_stale_session"
+    assert summary["ticker_status"]["STALE"]["failure_type"] == "stale_data"
     assert not (tmp_path / "opening_range_bars" / "2026-05-06" / "STALE.jsonl").exists()

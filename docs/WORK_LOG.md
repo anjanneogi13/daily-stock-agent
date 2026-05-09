@@ -13,6 +13,67 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added provider failure taxonomy
+
+**Type:** reliability hardening / provider diagnostics / Priority 15 repair
+
+**Summary:**
+
+Added a canonical observe-only provider failure taxonomy while preserving existing `market_data_health` legacy buckets.
+
+New files:
+
+- `src/provider_failure_taxonomy.py`
+- `tests/test_provider_failure_taxonomy.py`
+
+Changed files:
+
+- `src/market_data_health.py`
+- `scripts/intraday_scanner.py`
+- `tests/test_market_data_health.py`
+- `tests/test_intraday_scanner_opening_range.py`
+
+Canonical failure types:
+
+- `rate_limited`
+- `timeout`
+- `empty_response`
+- `stale_data`
+- `missing_quote`
+- `missing_history`
+- `missing_intraday_bars`
+- `market_closed`
+- `symbol_not_found`
+- `provider_exception`
+- `unknown_provider_failure`
+
+Compatibility:
+
+- `market_data_health.classify_provider_error()` still returns historical buckets:
+  - `rate_limited`
+  - `unauthorized`
+  - `not_found`
+  - `timeout`
+  - `empty`
+  - `provider_error`
+- Market-data health provider summaries now also include canonical `failure_types`.
+- Market-data health samples now include canonical `failure_type`.
+
+Opening-range retention integration:
+
+- `not_refreshed_stale_session` now includes `failure_type: stale_data`.
+- `not_refreshed_no_bars` now includes `failure_type: missing_intraday_bars`.
+
+Safety:
+
+- Observe-only taxonomy/reporting change.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added opening-range bar retention repair
 
 **Type:** reliability hardening / opening-range outcome evaluability / Priority 14 repair

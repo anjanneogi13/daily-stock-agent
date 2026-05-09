@@ -1,3 +1,29 @@
+## 2026-05-09 checkpoint — Provider failure taxonomy added
+
+Priority 15 is implemented.
+
+New files:
+
+- `src/provider_failure_taxonomy.py`
+- `tests/test_provider_failure_taxonomy.py`
+
+Validation:
+
+- Canonical provider failure taxonomy is available.
+- Existing `market_data_health.classify_provider_error()` legacy buckets are preserved.
+- Market-data health summaries include canonical `failure_types`.
+- Market-data health samples include canonical `failure_type`.
+- Opening-range retention refresh reports:
+  - stale sessions as `stale_data`
+  - missing bars as `missing_intraday_bars`
+
+Recommended next task:
+
+Priority 16 — Theme Discovery Quality Upgrade.
+
+Goal: add stronger market evidence to theme discovery now that data readiness, artifact completeness, lifecycle, daily brief, and provider failure taxonomy are in place.
+
+
 ## 2026-05-09 checkpoint — Opening-range bar retention repair added
 
 Priority 14 is implemented.
