@@ -768,6 +768,36 @@ Status:
 
 ---
 
+## Priority 1 Implementation Status
+
+Initial contract implementation added:
+
+- `src/premarket_decision_contract.py`
+- `tests/test_premarket_decision_contract.py`
+
+This implementation defines:
+
+- Lane 1 strategy-lane identifier,
+- contract version,
+- strategy version,
+- scoring version,
+- official pick decision type,
+- official no-pick decision type,
+- required official pick fields,
+- required official no-pick fields,
+- allowed no-pick primary causes,
+- safety flags requiring paper/live trading to remain false,
+- validation helpers for official pick and official no-pick payloads.
+
+This phase is intentionally behavior-neutral. It does not wire the contract into `main.py` or the GitHub Actions workflow yet.
+
+Runtime wiring belongs to later phases:
+
+- Phase 2: first-class official no-pick outcome,
+- Phase 3: pre-selection data readiness gate,
+- Phase 4: premarket sanity as an official gate.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

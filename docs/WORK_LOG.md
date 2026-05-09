@@ -1,3 +1,40 @@
+## 2026-05-09 — Added Lane 1 official decision contract
+
+**Type:** Lane 1 / premarket official pick / contract implementation
+
+**Summary:**
+
+Added the first implementation step for Lane 1 Priority 1: official premarket decision contract.
+
+New files:
+
+- `src/premarket_decision_contract.py`
+- `tests/test_premarket_decision_contract.py`
+
+Updated file:
+
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+The contract defines:
+
+- official pick payload requirements,
+- official no-pick payload requirements,
+- Lane 1 strategy-lane identifier,
+- contract/strategy/scoring version constants,
+- allowed no-pick primary causes,
+- safety validation requiring paper/live trading to remain disabled,
+- validation helpers for future runtime wiring.
+
+Safety:
+
+- No runtime behavior changes.
+- No scoring behavior changes.
+- No workflow behavior changes.
+- No paper/live trading changes.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Documented Lane 1 premarket production plan
 
 **Type:** product planning / production readiness / Lane 1
