@@ -1,3 +1,26 @@
+## 2026-05-09 checkpoint — Legacy sector boost safety guard added
+
+Priority 12 is implemented.
+
+New files:
+
+- `src/scoring_safety.py`
+- `tests/test_scoring_safety.py`
+- `docs/decisions/ADR-003-legacy-sector-boosts-disabled.md`
+
+Guardrails:
+
+- `sector.semi_boost <= 1.0`
+- `sector.ai_boost <= 0.0`
+- theme-aware official scoring remains disabled
+
+Recommended next task:
+
+Priority 13 — Daily Intelligence Brief.
+
+Goal: synthesize data readiness, artifact completeness, candidate lifecycle, watch-only evidence, opening-range quality, theme discovery, and theme-pick bridge into one founder-readable daily operating report.
+
+
 ## 2026-05-09 checkpoint — Daily artifact completeness report added
 
 Priority 11 is implemented observe-only.

@@ -576,6 +576,26 @@ Prevent accidental reactivation of blanket semi/AI sector boosts.
 - Old blanket boost config fails.
 - No official scoring behavior changes.
 
+### Current implementation notes
+
+Implemented in:
+
+- `src/scoring_safety.py`
+- `tests/test_scoring_safety.py`
+- `docs/decisions/ADR-003-legacy-sector-boosts-disabled.md`
+
+Guardrails:
+
+- `sector.semi_boost <= 1.0`
+- `sector.ai_boost <= 0.0`
+- theme-aware official scoring remains disabled via the existing theme scoring guardrail.
+
+Validation:
+
+- Current `config.yaml` passes.
+- Old unsafe config with `semi_boost: 1.1` and `ai_boost: 0.2` fails.
+- This makes no production scoring behavior changes.
+
 ---
 
 ## Priority 13 — Daily Intelligence Brief

@@ -13,6 +13,38 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added legacy sector boost safety guard
+
+**Type:** scoring safety / legacy boost guardrail / Priority 12 repair
+
+**Summary:**
+
+Added an explicit scoring safety guard to prevent accidental reactivation of legacy blanket SEMI/AI sector boosts.
+
+New files:
+
+- `src/scoring_safety.py`
+- `tests/test_scoring_safety.py`
+- `docs/decisions/ADR-003-legacy-sector-boosts-disabled.md`
+
+Guardrails:
+
+- `sector.semi_boost` must be `<= 1.0`
+- `sector.ai_boost` must be `<= 0.0`
+- theme-aware official scoring remains disabled
+- current `config.yaml` must pass
+- old unsafe config with `semi_boost: 1.1` and `ai_boost: 0.2` must fail
+
+Safety:
+
+- No production scoring behavior changes.
+- No official score boosts.
+- No theme-aware scoring.
+- No paper/live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added daily artifact completeness report
 
 **Type:** reliability hardening / artifact completeness / Priority 11 repair
