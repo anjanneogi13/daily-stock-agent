@@ -243,6 +243,22 @@ jobs:
             /tmp/lane1-official-dry-run/**
             /tmp/lane1-official-no-pick-dry-run/**
 
+      - name: Lane 1 production-readiness audit
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          python scripts/audit_lane1_production_readiness.py --date "$ET_DATE" --output-dir /tmp/lane1-production-readiness-audit
+          cat "/tmp/lane1-production-readiness-audit/lane1_production_readiness_audit_${ET_DATE}.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Lane 1 production-readiness audit
+        if: always() && steps.guard.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lane1-production-readiness-audit-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            /tmp/lane1-production-readiness-audit/**
+
       - name: Run smoke tests
         if: steps.guard.outputs.should_run == 'true'
         run: pytest tests/ -v --tb=short || (echo "❌ tests failed — check before deploying" && exit 1)

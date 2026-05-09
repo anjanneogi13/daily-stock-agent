@@ -1232,6 +1232,38 @@ Follow-up needed:
 - add skipped-run summary for guard exits.
 
 
+## Priority 14 Implementation Status
+
+Initial production-readiness checklist and final Lane 1 audit gate added:
+
+- `scripts/audit_lane1_production_readiness.py`
+- `tests/test_audit_lane1_production_readiness.py`
+- updated `.github/workflows/daily-picks.yml`
+
+Behavior change:
+
+- the daily-picks workflow now runs a Lane 1 production-readiness audit before normal smoke tests,
+- the audit validates the decision contract, required files, pick/no-pick dry-runs, workflow wiring, artifact validators, user-facing artifact consumption, and explicit trading-disabled safety flags,
+- the audit writes JSON and Markdown reports,
+- the audit Markdown is appended to `$GITHUB_STEP_SUMMARY`,
+- audit artifacts are uploaded to the workflow run.
+
+Safety:
+
+- Audit-only workflow change.
+- No real picks are generated.
+- No live provider calls are added.
+- No alerts are added.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+Follow-up needed:
+
+- add branch protection / required check policy once the workflow has run green in production,
+- convert this checklist into a release-readiness document,
+- decide whether to mark Lane 1 as production-ready after the next successful scheduled run.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

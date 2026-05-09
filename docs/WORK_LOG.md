@@ -1,3 +1,40 @@
+## 2026-05-09 — Added Lane 1 production-readiness audit gate
+
+**Type:** Lane 1 / workflow / production-readiness audit
+
+**Summary:**
+
+Implemented Priority 14 foundation: final production-readiness checklist and audit gate for Lane 1.
+
+New files:
+
+- `scripts/audit_lane1_production_readiness.py`
+- `tests/test_audit_lane1_production_readiness.py`
+
+Updated files:
+
+- `.github/workflows/daily-picks.yml`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- workflow now runs a Lane 1 production-readiness audit before normal smoke tests,
+- audit checks the official decision contract, required files, dry-runs, validators, workflow wiring, user-facing artifact consumption, and safety flags,
+- audit writes JSON and Markdown reports,
+- audit Markdown is appended to `$GITHUB_STEP_SUMMARY`,
+- audit artifacts are uploaded to the workflow run.
+
+Safety:
+
+- Audit-only workflow change.
+- No real picks are generated.
+- No live provider calls are added.
+- No Telegram/GitHub messages are added.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 workflow summary observability
 
 **Type:** Lane 1 / workflow / observability
