@@ -5,6 +5,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.performance_tracker import save_metrics
+from src.performance_source_separation import PERFORMANCE_SOURCE_NOTE
 
 
 def format_report(m: dict) -> str:
@@ -33,6 +34,10 @@ def format_report(m: dict) -> str:
         f"  💎 Profit factor: {overall['profit_factor']} {emoji(overall['profit_factor'], 1.5)}",
         f"  🎯 Expectancy: {overall['expectancy_r']}R per trade",
         f"  📦 Total trades: {overall['n_trades']}",
+        "",
+        "*Source separation*",
+        f"  {PERFORMANCE_SOURCE_NOTE}",
+        f"  Watch-only rows excluded: {m.get('source_separation', {}).get('excluded_watch_only_rows', 0)}",
         "",
     ]
 

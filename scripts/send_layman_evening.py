@@ -12,6 +12,7 @@ from src.layman_translator import (
     money, pct, header, footer_explainer
 )
 from src.dedup_sender import should_send, mark_sent
+from src.performance_source_separation import LAYMAN_PERFORMANCE_SOURCE_NOTE, is_watch_only_row
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -38,7 +39,7 @@ def _today_outcomes():
             # Lookback 3 days so trades closed Fri/Sat get shown in Mon's report,
             # AND so a same-day intraday SL hit (evaluated_on=yesterday because
             # eval cron runs after market close UTC = next morning SGT) shows up.
-            if status in CLOSED and evaluated_on >= cutoff:
+            if status in CLOSED and evaluated_on >= cutoff and not is_watch_only_row(r):
                 out.append(r)
     return out
 
@@ -56,7 +57,8 @@ def build_message(outcomes):
     if not outcomes:
         return (header("🌆", "Today's Performance", today) +
                 "📭 *No closed trades to report yet.*\n"
-                "_(Either no picks today, or picks are still open and will close tomorrow.)_")
+                "_(Either no picks today, or picks are still open and will close tomorrow.)_\n\n" +
+                LAYMAN_PERFORMANCE_SOURCE_NOTE)
 
     wins = sum(1 for o in outcomes if (o.get("evaluation_status","") or "").lower() == "tp_hit")
     losses = len(outcomes) - wins
@@ -86,6 +88,7 @@ def build_message(outcomes):
         lines.append(outcome_to_layman(o))
     lines.append("")
     lines.append("_Tomorrow morning the agent will use today's results to refine its picks._")
+    lines.append(LAYMAN_PERFORMANCE_SOURCE_NOTE)
     lines.append(footer_explainer())
     return "\n".join(lines)
 

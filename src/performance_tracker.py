@@ -12,13 +12,15 @@ from datetime import datetime, timedelta
 from typing import List, Dict
 from collections import defaultdict
 
+from src.performance_source_separation import count_watch_only_rows, filter_official_performance_rows
+
 PICKS_LOG = Path("data/picks_log.csv")
 METRICS_DAILY = Path("data/metrics_daily.json")
 METRICS_HISTORY = Path("data/metrics_history.jsonl")
 
 
-def _load_evaluated_picks() -> List[Dict]:
-    """Load only picks that have been evaluated (closed positions)."""
+def _load_all_evaluated_picks() -> List[Dict]:
+    """Load closed/evaluated picks_log rows before source separation."""
     if not PICKS_LOG.exists():
         return []
     rows = []
@@ -28,6 +30,11 @@ def _load_evaluated_picks() -> List[Dict]:
             if status in ("tp_hit", "sl_hit", "expired", "closed", "day_close"):
                 rows.append(r)
     return rows
+
+
+def _load_evaluated_picks() -> List[Dict]:
+    """Load evaluated rows eligible for official/legacy performance stats."""
+    return filter_official_performance_rows(_load_all_evaluated_picks())
 
 
 def _safe_float(v, default=0.0):
@@ -145,7 +152,9 @@ def compute_metrics(picks: List[Dict] = None, label: str = "all") -> Dict:
 
 def compute_segmented_metrics() -> Dict:
     """Compute metrics overall + by trade_type + by recency."""
-    all_picks = _load_evaluated_picks()
+    all_evaluated_rows = _load_all_evaluated_picks()
+    excluded_watch_only_count = count_watch_only_rows(all_evaluated_rows)
+    all_picks = filter_official_performance_rows(all_evaluated_rows)
     today = datetime.now().date()
 
     # Filter helpers
@@ -166,6 +175,17 @@ def compute_segmented_metrics() -> Dict:
 
     return {
         "computed_at": datetime.now().isoformat(),
+        "source_separation": {
+            "included_source": "data/picks_log.csv closed non-watch-only rows",
+            "excluded_watch_only_rows": excluded_watch_only_count,
+            "excluded_sources": [
+                "watch-only late ideas",
+                "opening-range observations",
+                "generic intraday observations",
+                "research-only outcomes",
+                "paper-like simulations",
+            ],
+        },
         "overall": compute_metrics(all_picks, "overall"),
         "day_trades": compute_metrics(day_picks, "day_trades"),
         "swing_trades": compute_metrics(swing_picks, "swing_trades"),

@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.layman_translator import (
     money, pct, header, footer_explainer
 )
+from src.performance_source_separation import LAYMAN_PERFORMANCE_SOURCE_NOTE, is_watch_only_row
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -29,7 +30,7 @@ def _last_month_outcomes():
             try:
                 dd = datetime.fromisoformat(d).date()
             except: continue
-            if dd >= cutoff and r.get("status") not in (None,"","OPEN"):
+            if dd >= cutoff and r.get("status") not in (None,"","OPEN") and not is_watch_only_row(r):
                 out.append(r)
     return out
 
@@ -38,7 +39,8 @@ def build_message(outcomes):
     month = datetime.now().strftime("%B %Y")
     if not outcomes:
         return (header("📆", f"{month} Recap", "monthly performance") +
-                "📭 *No closed trades this month.*")
+                "📭 *No closed trades this month.*\n\n" +
+                LAYMAN_PERFORMANCE_SOURCE_NOTE)
 
     wins = sum(1 for o in outcomes if _safe_f(o.get("pnl_dollar")) > 0)
     losses = len(outcomes) - wins
@@ -72,6 +74,7 @@ def build_message(outcomes):
     elif wr >= 45: lines.append("🟡 Win rate is okay — agent is tuning itself nightly.")
     else: lines.append("🔴 Win rate is low this month — agent has auto-paused weak strategies and will retry.")
     lines.append("")
+    lines.append(LAYMAN_PERFORMANCE_SOURCE_NOTE)
     lines.append(footer_explainer())
     return "\n".join(lines)
 

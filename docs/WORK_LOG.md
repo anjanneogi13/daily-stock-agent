@@ -13,6 +13,37 @@ Rules:
 
 ---
 
+## 2026-05-09 — Separated performance reports from watch-only evidence
+
+**Type:** performance reporting / source separation / Priority 3 repair
+
+**Summary:**
+
+Added source-separation guardrails so official/legacy performance messages do not blend watch-only or research-only evidence into win-rate, P/L, or performance summaries.
+
+New helper:
+
+- `src/performance_source_separation.py`
+
+Changes:
+
+- `src/performance_tracker.py` now excludes rows where `watch_only` is true.
+- Metrics include a `source_separation` block with the number of excluded watch-only rows.
+- Weekly report-card messages disclose their source and exclusions.
+- Layman weekly, monthly, evening, and yearly performance messages:
+  - filter out watch-only rows,
+  - disclose the source,
+  - explicitly exclude late watch-only ideas, opening-range observations, research-only outcomes, and paper-like simulations.
+
+Safety:
+
+- Does not modify historical picks.
+- Does not modify watch-only evidence artifacts.
+- Does not enable paper or live trading.
+- Prevents watch-only outcomes from being mistaken for official performance.
+
+---
+
 ## 2026-05-09 — Added watch-only outcome attribution v1
 
 **Type:** watch-only evidence / outcome attribution / Priority 2 repair

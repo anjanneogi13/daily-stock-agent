@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.layman_translator import money, pct, header, footer_explainer
+from src.performance_source_separation import LAYMAN_PERFORMANCE_SOURCE_NOTE, is_watch_only_row
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -26,7 +27,7 @@ def _year_outcomes(year: int):
     with p.open() as f:
         for r in csv.DictReader(f):
             d = (r.get("pick_date") or "")[:10]
-            if d.startswith(str(year)) and r.get("status") not in (None,"","OPEN"):
+            if d.startswith(str(year)) and r.get("status") not in (None,"","OPEN") and not is_watch_only_row(r):
                 out.append(r)
     return out
 
@@ -50,7 +51,8 @@ def build_message(year: int):
     mutations = _count_brain_mutations(year)
     if not outcomes:
         return (header("🎊", f"{year} Year-in-Review", "first full year of the agent") +
-                f"📭 No trades to recap for {year}.")
+                f"📭 No trades to recap for {year}.\n\n" +
+                LAYMAN_PERFORMANCE_SOURCE_NOTE)
 
     wins = sum(1 for o in outcomes if _safe_f(o.get("pnl_dollar")) > 0)
     losses = len(outcomes) - wins
@@ -91,6 +93,7 @@ def build_message(year: int):
     lines.append(f"*Verdict:* {verdict}")
     lines.append("")
     lines.append(f"_Onwards to {year+1} — the brain is smarter than it was last January._")
+    lines.append(LAYMAN_PERFORMANCE_SOURCE_NOTE)
     lines.append(footer_explainer())
     return "\n".join(lines)
 

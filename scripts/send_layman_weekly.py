@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.layman_translator import (
     money, pct, verdict_line, header, footer_explainer, outcome_to_layman
 )
+from src.performance_source_separation import LAYMAN_PERFORMANCE_SOURCE_NOTE, is_watch_only_row
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
@@ -28,7 +29,7 @@ def _last_week_outcomes():
             try:
                 dd = datetime.fromisoformat(d).date()
             except: continue
-            if dd >= cutoff and r.get("status") not in (None,"","OPEN"):
+            if dd >= cutoff and r.get("status") not in (None,"","OPEN") and not is_watch_only_row(r):
                 out.append(r)
     return out
 
@@ -42,7 +43,8 @@ def build_message(outcomes):
     period = f"{(datetime.now()-timedelta(days=7)).strftime('%b %d')} → {datetime.now().strftime('%b %d')}"
     if not outcomes:
         return (header("📅", "This Week's Performance", period) +
-                "📭 *No closed trades this week.*")
+                "📭 *No closed trades this week.*\n\n" +
+                LAYMAN_PERFORMANCE_SOURCE_NOTE)
 
     wins = sum(1 for o in outcomes if _safe_f(o.get("pnl_dollar")) > 0)
     losses = len(outcomes) - wins
@@ -62,6 +64,7 @@ def build_message(outcomes):
     lines.append("")
     lines.append("_Over the weekend the agent will study this week's trades and quietly tune itself._")
     lines.append("_Sunday evening you'll get a separate 'Self-Improvement Report' in plain English._")
+    lines.append(LAYMAN_PERFORMANCE_SOURCE_NOTE)
     lines.append(footer_explainer())
     return "\n".join(lines)
 

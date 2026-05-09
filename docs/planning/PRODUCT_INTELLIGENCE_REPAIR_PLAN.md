@@ -257,6 +257,15 @@ Expected work:
 - Ensure reports clearly state what is included and excluded.
 - Prevent users from mistaking watch-only or legacy monitored-position results for same-day official pick performance.
 
+Current implementation notes:
+
+- `src/performance_source_separation.py` centralizes source-separation wording and watch-only row detection.
+- `src/performance_tracker.py` excludes `watch_only` rows from performance metrics.
+- Performance metrics include `source_separation.excluded_watch_only_rows`.
+- Weekly report-card messages disclose that performance uses closed non-watch-only `data/picks_log.csv` rows.
+- Layman weekly/monthly/evening/yearly performance messages filter watch-only rows and disclose exclusions.
+- Watch-only late ideas, opening-range observations, research-only outcomes, and paper-like simulations are explicitly excluded from performance copy.
+
 Safety:
 
 - No blending of official and watch-only statistics.
