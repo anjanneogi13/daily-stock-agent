@@ -1,3 +1,99 @@
+## 2026-05-12 (Tue) investigation queue — Weekly review Telegram message ambiguity
+
+**Trigger:** On 2026-05-09 (Sat) the founder received this Telegram message from the bot:
+
+🧠 Weekend Review Ready
+
+Weekly review not generated.
+
+📋 Full review + action items in your GitHub issues.
+
+📅 This Week's Performance May 02 → May 09 📭 No closed trades this week.
+
+Source: closed non-watch-only rows from data/picks_log.csv. Excludes watch-only late ideas, opening-range observations, research-only outcomes, and paper-like simulations.
+
+Code
+
+**Investigation rules:**
+
+- Investigation only. Do not change any code on Monday.
+- Investigate on Tuesday 2026-05-12 AFTER Monday Lane 1 P19 cert is complete.
+- Read-only audit first. No fixes until root cause is confirmed and scope agreed.
+
+**Hypothesis (most likely):** Working as intended.
+
+- Lane 1 has been monitoring-only and audit-mode for the past week.
+- No real official picks have been written to `data/picks_log.csv` as closed
+  non-watch-only rows during 2026-05-02 → 2026-05-09.
+- The weekly review correctly reports "no closed trades."
+- The "Weekly review not generated" line is the confusing part — it could
+  mean either "I tried and failed" or "there is nothing to generate."
+
+**Three things to verify Tuesday (read-only commands first):**
+
+1. **Data check:** What does `data/picks_log.csv` actually contain for
+   2026-05-02 → 2026-05-09? Are there any rows? Any closed rows?
+   Any non-watch-only rows? Confirm "no closed trades this week" is factually
+   correct.
+
+2. **Code-path check:** Find the script that generates the weekend Telegram
+   message (likely `scripts/weekend_review*.py` or `scripts/weekly_*.py`
+   or in `src/notifications/`). Determine which branch fired the
+   "Weekly review not generated" line. Was it:
+   - (a) the script tried to generate the weekly review file/artifact and
+     failed silently, OR
+   - (b) the script intentionally short-circuits when there is nothing to
+     review, OR
+   - (c) a stale/placeholder message that was never wired to actual logic?
+
+3. **Workflow check:** Was the workflow that produces the weekend review
+   actually scheduled/triggered on 2026-05-09? Did it complete successfully?
+   Check `.github/workflows/` for any weekend/weekly review workflow and
+   inspect the latest run.
+
+**Possible outcomes and proposed fixes:**
+
+- **Outcome 1 — working as intended, copy is just confusing.**
+  - Fix: improve user-facing wording. e.g. "No weekly review generated this
+    week — there were no closed trades to analyze. Audit trail and watch-only
+    activity for the week is in [link]." Plus: include weekly observed
+    activity (no-pick decisions made, watch-only ideas observed, opening-range
+    observations recorded) in a "what the agent did this week" section so
+    monitoring-only users see real evidence of work, not an empty summary.
+  - Scope: small UX/copy patch + new "weekly observed activity" section.
+
+- **Outcome 2 — silent generation failure.**
+  - Fix: surface the actual failure reason in the Telegram message (or at
+    least log it loudly in the workflow run). Add a regression test that
+    catches the failure path.
+  - Scope: small bug fix + test.
+
+- **Outcome 3 — stale/placeholder code.**
+  - Fix: either wire it correctly or remove the stale message.
+  - Scope: small cleanup.
+
+**Hard rules for Tuesday investigation and any resulting fix:**
+
+- No paper trading enabled.
+- No live trading enabled.
+- No scoring, gate, or trading behavior changed.
+- No `data/picks_log.csv` mutation (read-only investigation only).
+- Use the same review pattern as P17.1 (preview → local apply → push → CI →
+  merge) for any resulting fix.
+- If investigation reveals the issue is larger than a UX patch (e.g. weekly
+  reporting architecture is fundamentally too narrow for monitoring-only
+  product), STOP, document findings, do not start a redesign without explicit
+  founder approval.
+
+**Why this is a Tuesday investigation, not a Saturday emergency:**
+
+- Markets are closed; nothing user-facing is missing.
+- The message is misleading but not actively wrong (no closed trades is true).
+- Monday Lane 1 P19 cert is the higher-priority work and must not be
+  destabilized by parallel changes over the weekend.
+- Founder explicitly chose to defer per session discipline (2026-05-09 chat).
+
+
 ## 2026-05-09 checkpoint — Extended product/business/operational lanes 23–31 added
 
 After a co-founder review of the original 22 technical lanes, added 9 new lanes covering customer validation, latency contract, runbooks, cost, legal/regulatory, agent observability, data lineage, privacy/secrets, and onboarding.
