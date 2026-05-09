@@ -614,6 +614,170 @@ boundaries:
 - no hidden self-modifying production behavior,
 - no paper/live trading without explicit readiness and founder approval.
 
+## Extended product, business, and operational lanes (23–31)
+
+These lanes were added on 2026-05-09 after a brutally honest co-founder review of the original 22 lanes. They cover product/business and operational pillars that were missing from the technical lane list but materially affect whether the product can succeed.
+
+### Lane 23 — Customer / product validation
+
+The product is currently strong on engineering discipline and weak on customer evidence.
+
+- Goal: prove (or disprove) that target users will pay for the product before scaling lane work.
+- Evidence required:
+  - structured customer interviews (call, email, WhatsApp),
+  - documented pain points in users' own words,
+  - real willingness-to-pay data (not polite yes),
+  - referrals as a leading indicator.
+- Safety:
+  - interview notes stay outside the repo (privacy, personal data),
+  - no public claims about user demand without evidence,
+  - no over-promising features to prospects.
+- Trigger to advance other lanes: at least 5 strangers (not friends) describe the same core pain.
+- Trigger to pivot: 4+ of 5 say they only care about a different market (e.g. Indian stocks vs US-only product).
+
+### Lane 24 — Latency / freshness contract
+
+The "premarket pick before market open" promise is a latency contract. There is currently no formal latency budget.
+
+- Goal: make freshness/latency a first-class, measured pillar.
+- Required artifacts (future):
+  - per-stage latency budget (fetch, score, decide, format, send),
+  - per-run latency telemetry,
+  - alerting if any stage exceeds budget,
+  - clear "data freshness" labels in user-facing output.
+- Safety:
+  - no official pick may be sent past the official cutoff,
+  - if budget is breached, prefer no-pick over late-pick,
+  - never silently relax freshness requirements.
+
+### Lane 25 — Failure mode + incident response runbooks
+
+`PRODUCT_FAILURE_AND_WIN_STRATEGY.md` lists failure modes. There are no documented runbooks for what to do when each one fires.
+
+- Goal: every known failure mode has a written response procedure.
+- Required artifacts (future):
+  - `docs/runbooks/` directory,
+  - per-failure runbook (Telegram down, providers down, schedule missed, workflow failed, secret expired, etc.),
+  - clear escalation path,
+  - post-incident review template.
+- Safety:
+  - runbooks must default to safe-stop (no-pick) over risky-recover,
+  - no runbook may bypass paper/live trading prohibitions,
+  - founder must be notified for any incident affecting users.
+
+### Lane 26 — Cost / budget / unit economics
+
+Solo founders die from compounding infrastructure costs (GitHub Actions minutes, LLM API calls, data provider fees, hosting). There is currently no explicit budget tracking.
+
+- Goal: make cost a first-class pillar tracked per-run and per-month.
+- Required artifacts (future):
+  - per-run cost telemetry,
+  - monthly cost roll-up,
+  - per-user cost projection at hypothetical scale,
+  - kill-switch if a run exceeds N× normal cost.
+- Safety:
+  - no production behavior may silently increase cost beyond a budget threshold without alert,
+  - LLM/provider keys must have hard spend caps where supported.
+
+### Lane 27 — Legal / regulatory / disclaimer / marketing-copy boundaries
+
+US stock-picking software has SEC implications (Investment Advisers Act considerations, "investment advice" boundaries, marketing rules). The product is currently safe because monitoring-only and not commercially distributed, but the boundary becomes existential the moment users pay or marketing copy claims advice.
+
+- Goal: explicit, lawyer-reviewed legal boundaries before public/paid launch.
+- Required artifacts (future):
+  - disclaimer copy for every user-facing surface,
+  - documented "research, not advice" positioning,
+  - terms of service,
+  - privacy policy,
+  - separation of "research output" vs "advice",
+  - if Indian-stocks expansion happens later: SEBI considerations.
+- Safety:
+  - no marketing copy may claim alpha, guaranteed returns, advisory service, or trade execution capability,
+  - "not investment advice" disclaimer required on every official user-facing artifact before public distribution,
+  - founder may not give individualized investment advice in any user channel.
+
+### Lane 28 — Observability + alerting on the agent itself (not on stocks)
+
+We monitor markets and provider health, but we do not yet monitor the agent system as an operational system. Silent agent failures are invisible until users complain — and we don't have users yet.
+
+- Goal: treat the agent system as a production system with operational telemetry, alerts, and uptime tracking.
+- Required artifacts (future):
+  - workflow run success-rate dashboard,
+  - missed-cron alerts,
+  - secret-expiry alerts,
+  - Telegram-send failure alerts,
+  - GitHub-Actions-minute usage tracking,
+  - simple uptime page (internal).
+- Safety:
+  - agent-self alerts go only to founder,
+  - no user data exposed in agent telemetry,
+  - alert fatigue is a real risk; tune thresholds before adding more.
+
+### Lane 29 — Data lineage + reproducibility
+
+P16 traceability adds decision/artifact IDs. Full reproducibility requires more — anyone should be able to ask "why did the agent pick AAPL on 2026-04-15" and get the exact data, config, code, prompt, and model versions used, deterministically.
+
+- Goal: every official decision is reproducible from inputs to output.
+- Required artifacts (future):
+  - data snapshot per official run,
+  - config snapshot per official run,
+  - code commit SHA per official run (already partially done),
+  - LLM prompt + response capture (sanitized),
+  - "replay" tool to re-run a past decision deterministically.
+- Safety:
+  - reproducibility data may contain prompt content; classify as private,
+  - no PII may enter prompts or get captured,
+  - replay must never trigger live external calls (no LLM, no Telegram).
+
+### Lane 30 — Privacy + secrets management
+
+API keys, Telegram tokens, future broker tokens, and (eventually) user data live in this system. Current setup is fine for solo development. It is not fine for any of: a co-founder, an employee, a customer-data path, or a public open-sourcing decision.
+
+- Goal: explicit secrets and privacy posture suitable for the next-stage company.
+- Required artifacts (future):
+  - secrets inventory + rotation schedule,
+  - documented access boundaries,
+  - encryption-at-rest policy for any future user data,
+  - data retention policy,
+  - documented deletion path for any future user data,
+  - explicit "no PII in logs / artifacts / commits" rule.
+- Safety:
+  - no secret may be committed to the repo (already enforced),
+  - no LLM call may include a secret in the prompt,
+  - any future user data must default to deny-by-default access.
+
+### Lane 31 — Onboarding / setup-from-scratch
+
+A future collaborator (or future-you on a fresh machine) should be able to clone the repo, follow a README, and have a working agent running locally inside ~30 minutes. Current state: not verified, possibly broken.
+
+- Goal: a reproducible, friction-free setup path that does not require tribal knowledge.
+- Required artifacts (future):
+  - tested `make setup` or equivalent,
+  - dev-environment doc with version pins,
+  - sample `.env.example` with every required key,
+  - one-command smoke test post-setup,
+  - quarterly verification that setup still works.
+- Safety:
+  - sample `.env.example` must contain only placeholders (never real keys),
+  - smoke-test must not write to live providers, send Telegram, or hit the real GitHub API,
+  - new-collaborator setup must default to monitoring-only flags.
+
+### Honest sequencing recommendation for lanes 23–31
+
+These do not all need to happen now, and they cannot all happen at once. Suggested order based on co-founder review:
+
+1. **Lane 23 (Customer validation)** — start now, in parallel with Lane 1 cert. Highest ROI activity in the entire product.
+2. **Lane 27 (Legal boundaries)** — needed before any public/paid launch, but can be quietly drafted in parallel.
+3. **Lane 25 (Runbooks)** — needed before the first real user-facing failure.
+4. **Lane 30 (Privacy/secrets)** — needed before second contributor or first user data.
+5. **Lane 28 (Agent observability)** — needed before scaling beyond founder use.
+6. **Lane 24 (Latency contract)** — formalize after Lane 1 P19 cert observed live.
+7. **Lane 26 (Cost)** — needed before scaling LLM/provider usage.
+8. **Lane 29 (Reproducibility)** — needed for trust marketing and post-incident analysis.
+9. **Lane 31 (Onboarding)** — needed before second contributor.
+
+None of these justify pausing Lane 1 P19 certification or postponing the first 5 customer interviews. Customer validation comes first.
+
 ## Current lag / improvement map
 
 ### Strong areas

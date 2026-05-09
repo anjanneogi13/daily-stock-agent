@@ -620,6 +620,81 @@ Current status:
 - paper trading forbidden,
 - live trading forbidden.
 
+## Extended Lanes (23–31) — sequencing, dependencies, and safety
+
+Added 2026-05-09 after a brutally honest co-founder review.
+
+These nine lanes were missing from the original 22-lane technical list. They are product, business, and operational lanes that materially affect commercial success but are not direct stock-picking features. Full descriptions live in `docs/strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md`.
+
+### Lane 23 — Customer / product validation
+- Dependency: none. Can start in parallel with Lane 1 cert.
+- Output: structured customer interview log (kept outside the repo).
+- Safety: no public claims about user demand without evidence.
+- Trigger to keep building lanes: 5 strangers describe the same core pain.
+
+### Lane 24 — Latency / freshness contract
+- Dependency: Lane 1 P19 cert observed live.
+- Output: per-stage latency budget + per-run telemetry.
+- Safety: prefer no-pick over late-pick on budget breach.
+
+### Lane 25 — Failure mode + incident response runbooks
+- Dependency: existing `PRODUCT_FAILURE_AND_WIN_STRATEGY.md`.
+- Output: `docs/runbooks/` per failure mode.
+- Safety: runbooks default to safe-stop, never bypass paper/live prohibitions.
+
+### Lane 26 — Cost / budget / unit economics
+- Dependency: none structural; before scaling LLM/provider usage.
+- Output: per-run cost telemetry + monthly roll-up.
+- Safety: hard spend caps; kill-switch on N× normal cost.
+
+### Lane 27 — Legal / regulatory / disclaimer / marketing-copy boundaries
+- Dependency: lawyer review before any public/paid launch.
+- Output: ToS, privacy policy, disclaimer copy, "research not advice" boundaries.
+- Safety: no marketing copy may claim alpha, advice, or guaranteed returns.
+
+### Lane 28 — Observability + alerting on the agent itself
+- Dependency: none.
+- Output: workflow success-rate dashboard, missed-cron alerts, secret-expiry alerts.
+- Safety: agent-self alerts go only to founder; no user data exposed.
+
+### Lane 29 — Data lineage + reproducibility
+- Dependency: P16 traceability (already done).
+- Output: per-run data + config + prompt snapshot; replay tool.
+- Safety: replay must never trigger live external calls.
+
+### Lane 30 — Privacy + secrets management
+- Dependency: needed before second contributor or any user data.
+- Output: secrets inventory, rotation schedule, retention policy.
+- Safety: no secret in repo, no secret in LLM prompt, no PII in logs/artifacts.
+
+### Lane 31 — Onboarding / setup-from-scratch
+- Dependency: needed before second contributor.
+- Output: tested `make setup`, dev-env doc, `.env.example` with placeholders.
+- Safety: sample env contains only placeholders; smoke-test must not hit live providers.
+
+### Suggested implementation order
+
+1. Lane 23 (Customer validation) — start now in parallel with Lane 1 cert.
+2. Lane 27 (Legal boundaries) — quietly draft in parallel.
+3. Lane 25 (Runbooks) — before first real user-facing failure.
+4. Lane 30 (Privacy/secrets) — before second contributor or user data.
+5. Lane 28 (Agent observability) — before scaling beyond founder use.
+6. Lane 24 (Latency contract) — after Lane 1 P19 live cert.
+7. Lane 26 (Cost) — before scaling LLM/provider usage.
+8. Lane 29 (Reproducibility) — for trust marketing and post-incident analysis.
+9. Lane 31 (Onboarding) — before second contributor.
+
+### Hard rule
+
+None of these lanes justify:
+
+- pausing Lane 1 P19 certification,
+- postponing the first 5 customer interviews,
+- enabling paper or live trading,
+- weakening any existing safety boundary.
+
+Customer validation (Lane 23) comes first. Everything else waits on real evidence.
+
 ## Implementation discipline for every phase
 
 For every implementation:
