@@ -30,6 +30,7 @@ DATA_DIR = Path("data")
 SAFETY = {
     "observe_only": True,
     "official_score_boost_enabled": False,
+    "production_scoring_effect": False,
     "paper_trading_enabled": False,
     "live_trading_enabled": False,
     "buy_instructions_enabled": False,
@@ -282,6 +283,185 @@ def _pick_returns(rows: list[dict]) -> list[float]:
     return out
 
 
+RETURN_FIELD_ALIASES = {
+    "one_day_return_pct": ("return_1d_pct", "one_day_return_pct", "1d_return_pct"),
+    "five_day_return_pct": ("return_5d_pct", "five_day_return_pct", "5d_return_pct"),
+    "twenty_day_return_pct": ("return_20d_pct", "twenty_day_return_pct", "20d_return_pct"),
+    "sixty_day_return_pct": ("return_60d_pct", "sixty_day_return_pct", "60d_return_pct"),
+}
+
+RELATIVE_STRENGTH_FIELD_ALIASES = {
+    "relative_strength_vs_spy_pct": ("relative_strength_vs_spy_pct", "spy_relative_strength_pct", "alpha_pct"),
+    "relative_strength_vs_qqq_pct": ("relative_strength_vs_qqq_pct", "qqq_relative_strength_pct"),
+    "sector_alpha_pct": ("sector_alpha_pct",),
+}
+
+
+def _first_float(row: dict, keys: tuple[str, ...]) -> float | None:
+    for key in keys:
+        value = _safe_float(row.get(key), None)
+        if value is not None:
+            return value
+    return None
+
+
+def _boolish(value) -> bool:
+    if isinstance(value, bool):
+        return value
+    return str(value or "").strip().lower() in {"1", "true", "yes", "y", "breakout", "new_high"}
+
+
+def _count_boolish(rows: list[dict], keys: tuple[str, ...]) -> int:
+    count = 0
+    for row in rows:
+        if any(_boolish(row.get(key)) for key in keys):
+            count += 1
+    return count
+
+
+def _avg(values: list[float]) -> float | None:
+    return round(mean(values), 4) if values else None
+
+
+def _provider_evidence(date_str: str, data_dir: Path) -> dict:
+    readiness = load_json(data_dir / f"data_readiness_{date_str}.json", {})
+    health = load_json(data_dir / f"market_data_health_{date_str}.json", {})
+
+    failure_type_totals: Counter[str] = Counter()
+    if isinstance(health, dict):
+        for provider in (health.get("providers") or {}).values():
+            if not isinstance(provider, dict):
+                continue
+            for failure_type, value in (provider.get("failure_types") or {}).items():
+                try:
+                    failure_type_totals[str(failure_type)] += int(value or 0)
+                except Exception:
+                    continue
+
+    return {
+        "data_readiness_available": bool(readiness),
+        "market_data_health_available": bool(health),
+        "data_provider_status": readiness.get("data_provider_status", "") if isinstance(readiness, dict) else "",
+        "official_pick_readiness_status": readiness.get("official_pick_readiness_status", "") if isinstance(readiness, dict) else "",
+        "failure_type_totals": dict(sorted(failure_type_totals.items())),
+    }
+
+
+def _theme_market_evidence(rows: list[dict], *, date_str: str, data_dir: Path) -> dict:
+    """Build observe-only market-evidence enrichment from existing fields only.
+
+    No live fetches are performed. Missing evidence is explicitly reported.
+    """
+    return_values: dict[str, list[float]] = {}
+    for output_key, aliases in RETURN_FIELD_ALIASES.items():
+        vals = [
+            value for value in (_first_float(row, aliases) for row in rows)
+            if value is not None
+        ]
+        return_values[output_key] = vals
+
+    relative_values: dict[str, list[float]] = {}
+    for output_key, aliases in RELATIVE_STRENGTH_FIELD_ALIASES.items():
+        vals = [
+            value for value in (_first_float(row, aliases) for row in rows)
+            if value is not None
+        ]
+        relative_values[output_key] = vals
+
+    sector_etfs = sorted({
+        str(row.get("sector_etf") or "").upper()
+        for row in rows
+        if str(row.get("sector_etf") or "").strip()
+    })
+
+    new_high_count = _count_boolish(rows, ("new_high", "is_new_high", "new_52w_high"))
+    breakout_count = _count_boolish(rows, ("breakout", "is_breakout", "breakout_signal"))
+    overextension_count = _count_boolish(rows, ("overextended", "is_overextended", "crowding_warning"))
+
+    avg_returns = {key: _avg(vals) for key, vals in return_values.items()}
+    avg_relative = {key: _avg(vals) for key, vals in relative_values.items()}
+
+    evidence_points = (
+        sum(len(vals) for vals in return_values.values())
+        + sum(len(vals) for vals in relative_values.values())
+        + len(sector_etfs)
+        + new_high_count
+        + breakout_count
+        + overextension_count
+    )
+
+    provider = _provider_evidence(date_str, data_dir)
+
+    if evidence_points == 0:
+        return {
+            "market_evidence_status": "unavailable_missing_market_evidence_fields",
+            "missing_market_evidence_reason": (
+                "No 1D/5D/20D/60D return, relative-strength, sector ETF, "
+                "new-high, breakout, or overextension fields were available in theme evidence rows."
+            ),
+            "tickers_with_return_evidence": 0,
+            **avg_returns,
+            **avg_relative,
+            "sector_etfs": [],
+            "sector_etf_confirmation_status": "unavailable_missing_sector_etf_evidence",
+            "new_high_count": 0,
+            "breakout_count": 0,
+            "overextension_count": 0,
+            "market_quality_score_adjustment": 0.0,
+            "provider_evidence": provider,
+        }
+
+    tickers_with_return_evidence = len({
+        str(row.get("ticker") or "").upper()
+        for row in rows
+        if any(_first_float(row, aliases) is not None for aliases in RETURN_FIELD_ALIASES.values())
+    })
+
+    # Observe-only theme quality adjustment. This affects only this theme-radar
+    # artifact, never official scoring.
+    positive_return_avg = mean([
+        value for value in [
+            avg_returns.get("one_day_return_pct"),
+            avg_returns.get("five_day_return_pct"),
+            avg_returns.get("twenty_day_return_pct"),
+            avg_returns.get("sixty_day_return_pct"),
+        ]
+        if value is not None
+    ]) if any(v is not None for v in avg_returns.values()) else 0.0
+
+    relative_avg = mean([
+        value for value in [
+            avg_relative.get("relative_strength_vs_spy_pct"),
+            avg_relative.get("relative_strength_vs_qqq_pct"),
+            avg_relative.get("sector_alpha_pct"),
+        ]
+        if value is not None
+    ]) if any(v is not None for v in avg_relative.values()) else 0.0
+
+    adjustment = 0.0
+    adjustment += max(-5.0, min(5.0, positive_return_avg * 0.15))
+    adjustment += max(-5.0, min(5.0, relative_avg * 0.20))
+    adjustment += min(4.0, (new_high_count + breakout_count) * 0.75)
+    adjustment -= min(4.0, overextension_count * 0.75)
+
+    return {
+        "market_evidence_status": "available_from_existing_evidence_fields",
+        "missing_market_evidence_reason": "",
+        "tickers_with_return_evidence": tickers_with_return_evidence,
+        **avg_returns,
+        **avg_relative,
+        "sector_etfs": sector_etfs,
+        "sector_etf_confirmation_status": (
+            "available_from_picks_log" if sector_etfs else "unavailable_missing_sector_etf_evidence"
+        ),
+        "new_high_count": new_high_count,
+        "breakout_count": breakout_count,
+        "overextension_count": overextension_count,
+        "market_quality_score_adjustment": round(adjustment, 4),
+        "provider_evidence": provider,
+    }
+
+
 def classify_lifecycle(metrics: dict) -> str:
     breadth = metrics["breadth"]
     news_count = metrics["news_count"]
@@ -305,8 +485,10 @@ def classify_lifecycle(metrics: dict) -> str:
     return "candidate_theme"
 
 
-def _theme_risk_flags(metrics: dict, lifecycle_state: str) -> list[str]:
+def _theme_risk_flags(metrics: dict, lifecycle_state: str, market_evidence: dict | None = None) -> list[str]:
     flags = ["observe_only_theme"]
+    market_evidence = market_evidence or {}
+
     if lifecycle_state == "news_hype_unconfirmed":
         flags.append("news_hype_unconfirmed")
     if lifecycle_state == "crowded_momentum":
@@ -317,7 +499,14 @@ def _theme_risk_flags(metrics: dict, lifecycle_state: str) -> list[str]:
         flags.append("low_breadth")
     if metrics["avg_tradeable_score"] is None:
         flags.append("missing_tradeable_score")
-    flags.append("price_relative_strength_unavailable_v0")
+
+    if market_evidence.get("market_evidence_status") == "available_from_existing_evidence_fields":
+        flags.append("market_evidence_available")
+        if market_evidence.get("overextension_count", 0):
+            flags.append("overextension_or_crowding_evidence")
+    else:
+        flags.append("price_relative_strength_unavailable_v0")
+
     return list(dict.fromkeys(flags))
 
 
@@ -368,6 +557,8 @@ def build_theme_discovery(
             continue
 
         lifecycle_state = classify_lifecycle(metrics)
+        market_evidence = _theme_market_evidence(rows, date_str=date_str, data_dir=data_dir)
+        metrics["market_quality_score_adjustment"] = market_evidence["market_quality_score_adjustment"]
 
         theme_score = (
             min(metrics["breadth"], 12) * 5
@@ -377,6 +568,7 @@ def build_theme_discovery(
         )
         if metrics["avg_pick_return_pct"] is not None:
             theme_score += max(-10, min(10, metrics["avg_pick_return_pct"]))
+        theme_score += market_evidence["market_quality_score_adjustment"]
 
         evidence_examples = []
         seen_tickers = set()
@@ -401,7 +593,8 @@ def build_theme_discovery(
             "lifecycle_state": lifecycle_state,
             "tickers": tickers[:25],
             "evidence_examples": evidence_examples,
-            "risk_flags": _theme_risk_flags(metrics, lifecycle_state),
+            "market_evidence": market_evidence,
+            "risk_flags": _theme_risk_flags(metrics, lifecycle_state, market_evidence),
         })
 
     themes.sort(key=lambda t: (-t["theme_score"], -t["breadth"], t["theme"]))
@@ -415,26 +608,33 @@ def build_theme_discovery(
             "watchlist": str(data_dir / "watchlist.json"),
             "news_signals": str(data_dir / "news_signals.json"),
             "picks_log": str(data_dir / "picks_log.csv"),
+            "data_readiness": str(data_dir / f"data_readiness_{date_str}.json"),
+            "market_data_health": str(data_dir / f"market_data_health_{date_str}.json"),
         },
         "input_status": input_status,
         "data_provider_status": {
-            "price_leadership": "not_available_v0",
-            "one_day_return": "not_available_v0",
-            "five_day_return": "not_available_v0",
-            "twenty_day_return": "not_available_v0",
-            "sixty_day_return": "not_available_v0",
-            "relative_strength_vs_spy_qqq": "not_available_v0",
-            "sector_etf_confirmation": "partial_from_picks_log_sector_etf_if_present",
+            "market_evidence": "available_when_existing_evidence_fields_present_else_reported_missing",
+            "price_leadership": "derived_from_existing_new_high_breakout_fields_when_present",
+            "one_day_return": "available_when_return_1d_pct_or_alias_present",
+            "five_day_return": "available_when_return_5d_pct_or_alias_present",
+            "twenty_day_return": "available_when_return_20d_pct_or_alias_present",
+            "sixty_day_return": "available_when_return_60d_pct_or_alias_present",
+            "relative_strength_vs_spy_qqq": "available_when_relative_strength_fields_or_alpha_pct_present",
+            "sector_etf_confirmation": "available_from_picks_log_sector_etf_when_present",
+            "overextension_crowding": "available_when_overextension_fields_present",
+            "provider_status": _provider_evidence(date_str, data_dir),
             "news_clustering": "available",
             "watchlist_breadth": "available",
             "pick_log_return_evidence": "available_when_evaluated_rows_exist",
         },
         "method": {
-            "version": "v0_observe_only",
+            "version": "v1_observe_only_market_evidence",
             "description": (
                 "Extracts candidate theme terms from watchlist, news-signal, and picks-log text; "
-                "scores breadth, sentiment, tradeable-score evidence, and pick-log outcomes. "
-                "Does not apply score boosts or trading instructions."
+                "scores breadth, sentiment, tradeable-score evidence, pick-log outcomes, and "
+                "observe-only market evidence when existing artifact fields are present. "
+                "Missing market evidence is reported, not guessed. Does not apply official score boosts "
+                "or trading instructions."
             ),
             "min_evidence": min_evidence,
         },
@@ -468,6 +668,7 @@ def format_markdown(report: dict) -> str:
         f"- Date: **{report['date']}**",
         f"- Theme candidates: **{report['theme_count']}**",
         f"- Official score boost enabled: **{str(report['official_score_boost_enabled']).lower()}**",
+        f"- Production scoring effect: **{str(report.get('production_scoring_effect')).lower()}**",
         f"- Paper trading enabled: **{str(report['paper_trading_enabled']).lower()}**",
         f"- Live trading enabled: **{str(report['live_trading_enabled']).lower()}**",
         "",
@@ -497,6 +698,16 @@ def format_markdown(report: dict) -> str:
                     f"avg_tradeable={theme['avg_tradeable_score']}, "
                     f"sentiment={theme['sentiment_score']}, "
                     f"avg_pick_return={theme['avg_pick_return_pct']}"
+                ),
+                (
+                    "  - Market evidence: "
+                    f"status={theme.get('market_evidence', {}).get('market_evidence_status')}, "
+                    f"1d={theme.get('market_evidence', {}).get('one_day_return_pct')}, "
+                    f"5d={theme.get('market_evidence', {}).get('five_day_return_pct')}, "
+                    f"20d={theme.get('market_evidence', {}).get('twenty_day_return_pct')}, "
+                    f"60d={theme.get('market_evidence', {}).get('sixty_day_return_pct')}, "
+                    f"vs_spy={theme.get('market_evidence', {}).get('relative_strength_vs_spy_pct')}, "
+                    f"adjustment={theme.get('market_evidence', {}).get('market_quality_score_adjustment')}"
                 ),
                 f"  - Risk flags: `{', '.join(theme['risk_flags'])}`",
             ])

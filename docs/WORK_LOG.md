@@ -13,6 +13,59 @@ Rules:
 
 ---
 
+## 2026-05-09 — Upgraded observe-only theme discovery market evidence
+
+**Type:** product intelligence / observe-only market evidence / Priority 16 repair
+
+**Summary:**
+
+Upgraded theme discovery from text/breadth-only evidence toward observe-only market-evidence enrichment using only existing artifact fields.
+
+Changed files:
+
+- `scripts/discover_themes.py`
+- `tests/test_theme_discovery.py`
+
+Regenerated artifacts:
+
+- `data/theme_discovery_2026-05-09.json`
+- `data/theme_discovery_2026-05-09.md`
+
+Market evidence additions:
+
+- explicit `production_scoring_effect: false`,
+- method version `v1_observe_only_market_evidence`,
+- per-theme `market_evidence` block,
+- missing-market-evidence status when fields are unavailable,
+- average return fields when present:
+  - 1D,
+  - 5D,
+  - 20D,
+  - 60D,
+- relative-strength fields when present,
+- sector ETF evidence when present,
+- new-high / breakout / overextension counts when present,
+- provider evidence from data readiness and market-data health artifacts,
+- observe-only market quality adjustment inside the theme radar only.
+
+Validation:
+
+- Missing market evidence is reported, not guessed.
+- Existing market evidence fields improve theme-radar quality only when present.
+- Provider evidence uses data readiness and market-data health artifacts.
+- `production_scoring_effect` is explicitly `false`.
+- No official scoring behavior changes.
+
+Safety:
+
+- Observe-only.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added provider failure taxonomy
 
 **Type:** reliability hardening / provider diagnostics / Priority 15 repair

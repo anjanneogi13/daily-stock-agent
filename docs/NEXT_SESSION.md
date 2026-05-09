@@ -1,3 +1,42 @@
+## 2026-05-09 checkpoint — Theme discovery market evidence upgraded
+
+Priority 16 is implemented observe-only.
+
+Changed files:
+
+- `scripts/discover_themes.py`
+- `tests/test_theme_discovery.py`
+
+Regenerated artifacts:
+
+- `data/theme_discovery_2026-05-09.json`
+- `data/theme_discovery_2026-05-09.md`
+
+Validation:
+
+- Theme discovery now has explicit `production_scoring_effect: false`.
+- Method version is `v1_observe_only_market_evidence`.
+- Missing market evidence is reported, not guessed.
+- Existing market evidence fields improve theme-radar quality only when present.
+- Provider evidence uses data readiness and market-data health artifacts.
+- No official scoring behavior changes.
+
+Current reliability/product-intelligence sequence completed:
+
+- Priority 9 — Daily Data Readiness Report
+- Priority 10 — Candidate Lifecycle Ledger
+- Priority 11 — Daily Diagnostic Artifact Completeness Check
+- Priority 12 — Legacy Sector Boost Safety Guard
+- Priority 13 — Daily Intelligence Brief
+- Priority 14 — Opening-Range Bar Retention Repair
+- Priority 15 — Provider Failure Taxonomy
+- Priority 16 — Theme Discovery Quality Upgrade
+
+Recommended next task:
+
+Regenerate downstream observe-only reports if needed so the upgraded theme discovery market-evidence fields flow into bridge and daily founder summaries.
+
+
 ## 2026-05-09 checkpoint — Provider failure taxonomy added
 
 Priority 15 is implemented.

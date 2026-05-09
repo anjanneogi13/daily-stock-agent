@@ -98,6 +98,7 @@ def test_theme_discovery_outputs_observe_only_artifact(tmp_path):
     assert report["artifact"] == "theme_discovery"
     assert report["observe_only"] is True
     assert report["official_score_boost_enabled"] is False
+    assert report["production_scoring_effect"] is False
     assert report["paper_trading_enabled"] is False
     assert report["live_trading_enabled"] is False
     assert report["buy_instructions_enabled"] is False
@@ -183,3 +184,145 @@ def test_theme_discovery_writes_json_and_markdown(tmp_path):
     assert "Observe-only" in body
     assert "Does not change official scoring" in body
     assert "cloud" in body
+
+def test_theme_discovery_reports_missing_market_evidence_not_guessed(tmp_path):
+    write_json(tmp_path / "watchlist.json", {
+        "items": [
+            {
+                "ticker": "A",
+                "headline": "Cloud security demand rises",
+                "rationale": "Cloud security demand rises",
+                "sentiment": "bullish",
+                "tradeable_score": 0.7,
+            },
+            {
+                "ticker": "B",
+                "headline": "Cloud security vendor raises guidance",
+                "rationale": "Cloud security vendor raises guidance",
+                "sentiment": "bullish",
+                "tradeable_score": 0.75,
+            },
+        ]
+    })
+    write_json(tmp_path / "news_signals.json", {})
+    write_picks(tmp_path / "picks_log.csv", [])
+
+    report = build_theme_discovery(date_str="2026-05-09", data_dir=tmp_path, min_evidence=2)
+    cloud = next(t for t in report["themes"] if t["theme"] == "cloud")
+
+    assert cloud["market_evidence"]["market_evidence_status"] == "unavailable_missing_market_evidence_fields"
+    assert cloud["market_evidence"]["market_quality_score_adjustment"] == 0.0
+    assert cloud["market_evidence"]["one_day_return_pct"] is None
+    assert "price_relative_strength_unavailable_v0" in cloud["risk_flags"]
+
+
+def test_theme_discovery_uses_existing_market_evidence_fields_observe_only(tmp_path):
+    base_items = [
+        {
+            "ticker": "A",
+            "headline": "Cloud security demand rises",
+            "rationale": "Cloud security demand rises",
+            "sentiment": "bullish",
+            "tradeable_score": 0.7,
+        },
+        {
+            "ticker": "B",
+            "headline": "Cloud security vendor raises guidance",
+            "rationale": "Cloud security vendor raises guidance",
+            "sentiment": "bullish",
+            "tradeable_score": 0.75,
+        },
+    ]
+
+    write_json(tmp_path / "watchlist.json", {"items": base_items})
+    write_json(tmp_path / "news_signals.json", {})
+    write_picks(tmp_path / "picks_log.csv", [])
+    baseline = build_theme_discovery(date_str="2026-05-09", data_dir=tmp_path, min_evidence=2)
+    baseline_cloud = next(t for t in baseline["themes"] if t["theme"] == "cloud")
+
+    enriched_items = [
+        {
+            **base_items[0],
+            "return_1d_pct": 2.0,
+            "return_5d_pct": 5.0,
+            "return_20d_pct": 11.0,
+            "relative_strength_vs_spy_pct": 3.5,
+            "breakout": True,
+            "new_high": True,
+        },
+        {
+            **base_items[1],
+            "return_1d_pct": 1.0,
+            "return_5d_pct": 4.0,
+            "return_20d_pct": 8.0,
+            "relative_strength_vs_spy_pct": 2.5,
+            "breakout": True,
+        },
+    ]
+    write_json(tmp_path / "watchlist.json", {"items": enriched_items})
+
+    enriched = build_theme_discovery(date_str="2026-05-09", data_dir=tmp_path, min_evidence=2)
+    cloud = next(t for t in enriched["themes"] if t["theme"] == "cloud")
+
+    assert enriched["production_scoring_effect"] is False
+    assert cloud["market_evidence"]["market_evidence_status"] == "available_from_existing_evidence_fields"
+    assert cloud["market_evidence"]["tickers_with_return_evidence"] == 2
+    assert cloud["market_evidence"]["one_day_return_pct"] == 1.5
+    assert cloud["market_evidence"]["five_day_return_pct"] == 4.5
+    assert cloud["market_evidence"]["twenty_day_return_pct"] == 9.5
+    assert cloud["market_evidence"]["relative_strength_vs_spy_pct"] == 3.0
+    assert cloud["market_evidence"]["breakout_count"] == 2
+    assert cloud["market_evidence"]["new_high_count"] == 1
+    assert cloud["market_evidence"]["market_quality_score_adjustment"] > 0
+    assert cloud["theme_score"] > baseline_cloud["theme_score"]
+    assert "market_evidence_available" in cloud["risk_flags"]
+    assert "price_relative_strength_unavailable_v0" not in cloud["risk_flags"]
+
+
+def test_theme_discovery_provider_evidence_uses_readiness_and_market_health(tmp_path):
+    write_json(tmp_path / "watchlist.json", {
+        "items": [
+            {
+                "ticker": "A",
+                "headline": "AI chip breakout",
+                "rationale": "AI chip breakout",
+                "sentiment": "bullish",
+                "tradeable_score": 0.8,
+                "return_1d_pct": 2.0,
+            },
+            {
+                "ticker": "B",
+                "headline": "AI chip new high",
+                "rationale": "AI chip new high",
+                "sentiment": "bullish",
+                "tradeable_score": 0.85,
+                "return_1d_pct": 3.0,
+            },
+        ]
+    })
+    write_json(tmp_path / "news_signals.json", {})
+    write_picks(tmp_path / "picks_log.csv", [])
+    write_json(tmp_path / "data_readiness_2026-05-09.json", {
+        "data_provider_status": "provider_or_market_data_failure_evidence_detected",
+        "official_pick_readiness_status": "not_ready_data_provider_failure",
+    })
+    write_json(tmp_path / "market_data_health_2026-05-09.json", {
+        "providers": {
+            "yfinance": {
+                "failure_types": {
+                    "rate_limited": 2,
+                    "missing_history": 1,
+                }
+            }
+        }
+    })
+
+    report = build_theme_discovery(date_str="2026-05-09", data_dir=tmp_path, min_evidence=2)
+    ai = next(t for t in report["themes"] if t["theme"] == "ai")
+
+    provider = ai["market_evidence"]["provider_evidence"]
+    assert provider["data_readiness_available"] is True
+    assert provider["market_data_health_available"] is True
+    assert provider["data_provider_status"] == "provider_or_market_data_failure_evidence_detected"
+    assert provider["failure_type_totals"]["rate_limited"] == 2
+    assert provider["failure_type_totals"]["missing_history"] == 1

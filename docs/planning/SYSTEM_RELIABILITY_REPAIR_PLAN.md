@@ -803,6 +803,40 @@ Add market evidence to theme discovery after data readiness exists.
 - Theme quality improves only when evidence exists.
 - No scoring effect.
 
+### Current implementation notes
+
+Implemented in:
+
+- `scripts/discover_themes.py`
+- `tests/test_theme_discovery.py`
+
+Regenerated artifacts:
+
+- `data/theme_discovery_2026-05-09.json`
+- `data/theme_discovery_2026-05-09.md`
+
+Changes:
+
+- Theme discovery now reports explicit `production_scoring_effect: false`.
+- Method version is now `v1_observe_only_market_evidence`.
+- Per-theme `market_evidence` is included.
+- Missing market evidence is reported as `unavailable_missing_market_evidence_fields`.
+- Existing market evidence fields are used when present:
+  - 1D / 5D / 20D / 60D returns,
+  - relative strength vs SPY/QQQ or alpha fields,
+  - sector ETF evidence,
+  - new-high / breakout counts,
+  - overextension/crowding fields,
+  - provider status from data readiness and market-data health.
+- Theme-radar quality may adjust only inside the observe-only artifact when evidence exists.
+
+Validation:
+
+- Missing data is reported, not guessed.
+- Theme quality improves only when evidence exists.
+- Provider evidence is surfaced from existing artifacts.
+- This remains observe-only and has no official scoring effect.
+
 ---
 
 ## Priority 17 — Theme Signal Validation Harness
