@@ -204,6 +204,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt pytest
 
+      - name: Lane 1 official pick dry-run validation
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          python scripts/dry_run_official_premarket_pick.py --date "$ET_DATE" --output-dir /tmp/lane1-official-dry-run
+
       - name: Run smoke tests
         if: steps.guard.outputs.should_run == 'true'
         run: pytest tests/ -v --tb=short || (echo "❌ tests failed — check before deploying" && exit 1)

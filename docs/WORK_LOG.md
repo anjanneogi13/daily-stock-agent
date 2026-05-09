@@ -1,3 +1,37 @@
+## 2026-05-09 — Added Lane 1 end-to-end dry-run validation
+
+**Type:** Lane 1 / workflow / dry-run validation
+
+**Summary:**
+
+Implemented Priority 11 foundation: synthetic end-to-end official-pick dry-run validation.
+
+New files:
+
+- `scripts/dry_run_official_premarket_pick.py`
+- `tests/test_dry_run_official_premarket_pick.py`
+
+Updated files:
+
+- `.github/workflows/daily-picks.yml`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- workflow now runs a synthetic Lane 1 official-pick dry-run before normal smoke tests,
+- dry-run exercises candidate diagnostics, portfolio risk gate, missing-data gate, official artifact generation, contract validation, and artifact validation,
+- dry-run uses only local synthetic data and writes to an isolated output directory.
+
+Safety:
+
+- No real picks are generated.
+- No live provider calls are made.
+- No Telegram/GitHub messages are sent.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Wired user-facing output to official pick artifacts
 
 **Type:** Lane 1 / Telegram / GitHub issue / official artifact consumption
