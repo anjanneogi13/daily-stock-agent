@@ -1078,6 +1078,37 @@ Follow-up needed:
 - persist artifact path or decision ID in `picks_log.csv`.
 
 
+## Priority 9 Implementation Status
+
+Initial workflow official artifact validation/upload integration added:
+
+- `scripts/validate_official_pick_artifacts.py`
+- `tests/test_validate_official_pick_artifacts.py`
+- updated `.github/workflows/daily-picks.yml`
+
+Behavior change:
+
+- after CSV/no-pick verification, the workflow validates official decision artifacts,
+- pick days require valid contract-compatible official pick artifacts matching the logged row count,
+- no-pick days require a valid official no-pick artifact,
+- official decision artifacts are uploaded with `actions/upload-artifact`,
+- official pick, no-pick, diagnostics, and rejection artifacts are included in commit staging.
+
+Safety:
+
+- Validation-only workflow change.
+- No fake picks are created.
+- No scoring behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+Follow-up needed:
+
+- add workflow summary Markdown links to uploaded artifacts,
+- include official artifact paths in Telegram/GitHub issue output,
+- add retention policy if artifact volume becomes large.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

@@ -280,12 +280,45 @@ jobs:
             python scripts/record_daily_picks_run_status.py --event verify_csv_success --result success --reason "picks logged for ET date" --picks-logged "$TODAY_ROWS"
           fi
 
+      - name: Verify official decision artifacts
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
+          TODAY_ROWS="${TODAY_ROWS:-0}"
+
+          if [ "$TODAY_ROWS" -gt 0 ]; then
+            echo "Verifying official pick artifacts for $TODAY_ROWS logged pick(s)"
+            python scripts/validate_official_pick_artifacts.py --date "$ET_DATE" --expected-count "$TODAY_ROWS"
+            python scripts/record_daily_picks_run_status.py --event verify_official_pick_artifacts_success --result success --reason "valid official pick artifacts" --picks-logged "$TODAY_ROWS"
+          else
+            echo "Verifying official no-pick artifact"
+            python scripts/validate_daily_no_pick.py --date "$ET_DATE"
+            python scripts/record_daily_picks_run_status.py --event verify_official_no_pick_artifact_success --result success --reason "valid official no-pick artifact" --picks-logged 0
+          fi
+
+      - name: Upload official decision artifacts
+        if: always() && steps.guard.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-decision-artifacts-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            data/premarket_official_pick_*.json
+            data/premarket_official_pick_summary_*.json
+            data/daily_picks_no_pick_report_*.json
+            data/daily_picks_no_pick_report_*.md
+            data/daily_picks_candidate_diagnostics_*.json
+            data/daily_picks_candidate_diagnostics_*.md
+            data/daily_picks_candidate_rejections_*.json
+            data/daily_picks_candidate_rejections_*.md
+
       - name: Commit results (with retry safety)
         if: steps.guard.outputs.should_run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/daily_picks_candidate_rejections_*.json data/daily_picks_candidate_rejections_*.md data/market_data_health_*.json 2>/dev/null || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/telegram_sent.json data/learning_journal.jsonl data/last_regime.json data/hard_blocks_log.json data/agent_memoir.json data/weight_history.jsonl data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/daily_picks_candidate_rejections_*.json data/daily_picks_candidate_rejections_*.md data/market_data_health_*.json data/daily_picks_candidate_diagnostics_*.json data/daily_picks_candidate_diagnostics_*.md data/premarket_official_pick_*.json data/premarket_official_pick_summary_*.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No changes to commit"
@@ -386,7 +419,7 @@ jobs:
             echo "No picks_log.csv rows for $ET_DATE; not staging picks_log.csv"
           fi
 
-          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/hard_blocks_log.json data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/daily_picks_candidate_rejections_*.json data/daily_picks_candidate_rejections_*.md data/market_data_health_*.json 2>/dev/null || true
+          git add -f data/telegram_sent.json data/premarket_check.json data/learning_journal.jsonl data/hard_blocks_log.json data/daily_picks_run_status_*.jsonl data/daily_picks_no_pick_report_*.json data/daily_picks_no_pick_report_*.md data/daily_picks_candidate_rejections_*.json data/daily_picks_candidate_rejections_*.md data/market_data_health_*.json data/daily_picks_candidate_diagnostics_*.json data/daily_picks_candidate_diagnostics_*.md data/premarket_official_pick_*.json data/premarket_official_pick_summary_*.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ No post-send changes to commit"

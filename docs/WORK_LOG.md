@@ -1,3 +1,38 @@
+## 2026-05-09 — Added workflow validation/upload for official decision artifacts
+
+**Type:** Lane 1 / workflow / official decision artifact validation
+
+**Summary:**
+
+Implemented Priority 9 foundation: workflow validation and upload integration for official decision artifacts.
+
+New files:
+
+- `scripts/validate_official_pick_artifacts.py`
+- `tests/test_validate_official_pick_artifacts.py`
+
+Updated files:
+
+- `.github/workflows/daily-picks.yml`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- pick days must have valid official pick artifacts matching logged CSV rows,
+- no-pick days must have a valid official no-pick artifact,
+- official decision artifacts are uploaded to the workflow run,
+- official pick/no-pick/diagnostics/rejection artifacts are staged for commit.
+
+Safety:
+
+- Validation-only workflow change.
+- No scoring behavior changes.
+- No trading behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 official pick artifacts
 
 **Type:** Lane 1 / premarket official pick / official artifact generation
