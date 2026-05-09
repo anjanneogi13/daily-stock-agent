@@ -1200,6 +1200,38 @@ Follow-up needed:
 - make production no-pick artifact builder share more code with this fixture builder.
 
 
+## Priority 13 Implementation Status
+
+Initial workflow summary and observability for official dry-runs/artifacts added:
+
+- `scripts/write_official_workflow_summary.py`
+- `tests/test_write_official_workflow_summary.py`
+- updated `.github/workflows/daily-picks.yml`
+
+Behavior change:
+
+- pick and no-pick dry-run workflow steps now append pass/status details to `$GITHUB_STEP_SUMMARY`,
+- dry-run output directories are uploaded as workflow artifacts,
+- after official artifact validation, the workflow writes a consolidated Lane 1 official decision summary,
+- the consolidated summary includes dry-run status, production official pick/no-pick artifacts, and candidate diagnostics/rejections when available,
+- the consolidated summary Markdown is included in uploaded official decision artifacts.
+
+Safety:
+
+- Reporting-only workflow change.
+- No real picks are generated.
+- No live provider calls are added.
+- No alerts are added.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+Follow-up needed:
+
+- add direct GitHub artifact download links if/when stable artifact URLs are available in the job context,
+- include summary path/decision artifact path in daily GitHub issue output,
+- add skipped-run summary for guard exits.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

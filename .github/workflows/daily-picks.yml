@@ -209,12 +209,39 @@ jobs:
         run: |
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
           python scripts/dry_run_official_premarket_pick.py --date "$ET_DATE" --output-dir /tmp/lane1-official-dry-run
+          {
+            echo "## Lane 1 official pick dry-run"
+            echo ""
+            echo "- ET date: **$ET_DATE**"
+            echo "- Result: **passed**"
+            echo "- Output directory: \`/tmp/lane1-official-dry-run\`"
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Lane 1 official no-pick dry-run validation
         if: steps.guard.outputs.should_run == 'true'
         run: |
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
           python scripts/dry_run_official_no_pick.py --date "$ET_DATE" --output-dir /tmp/lane1-official-no-pick-dry-run --cause all
+          {
+            echo "## Lane 1 official no-pick dry-run"
+            echo ""
+            echo "- ET date: **$ET_DATE**"
+            echo "- Result: **passed**"
+            echo "- Cause fixtures: **all allowed causes**"
+            echo "- Output directory: \`/tmp/lane1-official-no-pick-dry-run\`"
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload official dry-run artifacts
+        if: always() && steps.guard.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-dry-run-artifacts-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            /tmp/lane1-official-dry-run/**
+            /tmp/lane1-official-no-pick-dry-run/**
 
       - name: Run smoke tests
         if: steps.guard.outputs.should_run == 'true'
@@ -309,6 +336,13 @@ jobs:
             python scripts/record_daily_picks_run_status.py --event verify_official_no_pick_artifact_success --result success --reason "valid official no-pick artifact" --picks-logged 0
           fi
 
+      - name: Write official decision workflow summary
+        if: always() && steps.guard.outputs.should_run == 'true'
+        run: |
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          python scripts/write_official_workflow_summary.py --date "$ET_DATE" --output /tmp/official_decision_workflow_summary.md
+          cat /tmp/official_decision_workflow_summary.md >> "$GITHUB_STEP_SUMMARY"
+
       - name: Upload official decision artifacts
         if: always() && steps.guard.outputs.should_run == 'true'
         uses: actions/upload-artifact@v4
@@ -324,6 +358,7 @@ jobs:
             data/daily_picks_candidate_diagnostics_*.md
             data/daily_picks_candidate_rejections_*.json
             data/daily_picks_candidate_rejections_*.md
+            /tmp/official_decision_workflow_summary.md
 
       - name: Commit results (with retry safety)
         if: steps.guard.outputs.should_run == 'true'

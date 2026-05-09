@@ -1,3 +1,40 @@
+## 2026-05-09 — Added Lane 1 workflow summary observability
+
+**Type:** Lane 1 / workflow / observability
+
+**Summary:**
+
+Implemented Priority 13 foundation: workflow summary and artifact observability for official dry-runs and production decision artifacts.
+
+New files:
+
+- `scripts/write_official_workflow_summary.py`
+- `tests/test_write_official_workflow_summary.py`
+
+Updated files:
+
+- `.github/workflows/daily-picks.yml`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- pick/no-pick dry-run steps append status to `$GITHUB_STEP_SUMMARY`,
+- dry-run artifacts are uploaded to the workflow run,
+- a consolidated Lane 1 official decision summary is generated after artifact validation,
+- the summary covers dry-runs, official pick/no-pick artifacts, diagnostics, and rejection artifacts,
+- the summary Markdown is included in uploaded official decision artifacts.
+
+Safety:
+
+- Reporting-only workflow change.
+- No real picks are generated.
+- No live provider calls are added.
+- No Telegram/GitHub messages are added.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 synthetic no-pick dry-run validation
 
 **Type:** Lane 1 / workflow / no-pick dry-run validation
