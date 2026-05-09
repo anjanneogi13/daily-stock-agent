@@ -13,6 +13,64 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added observe-only dynamic theme discovery radar v0
+
+**Type:** theme discovery / observe-only intelligence / Priority 6 repair
+
+**Summary:**
+
+Added an observe-only dynamic theme discovery radar that derives theme candidates from existing evidence instead of hardcoding founder-named themes.
+
+New artifacts:
+
+- `data/theme_discovery_YYYY-MM-DD.json`
+- `data/theme_discovery_YYYY-MM-DD.md`
+
+Inputs:
+
+- `data/watchlist.json`
+- `data/news_signals.json`
+- `data/picks_log.csv`
+
+Implementation:
+
+- Added `scripts/discover_themes.py`.
+- Added `tests/test_theme_discovery.py`.
+- Extracts candidate theme terms from category, sector/tag, company, headline, and rationale text.
+- Groups evidence by discovered theme term.
+- Scores themes using:
+  - breadth across tickers,
+  - evidence row count,
+  - watchlist/news/pick-log source mix,
+  - average tradeable score when available,
+  - sentiment balance,
+  - evaluated pick-log return evidence when available.
+- Assigns lifecycle states:
+  - `candidate_theme`
+  - `emerging_theme`
+  - `confirmed_leadership`
+  - `crowded_momentum`
+  - `distribution_warning`
+  - `failed_theme`
+  - `news_hype_unconfirmed`
+- Adds data-provider status fields for unavailable v0 evidence layers such as price leadership and relative strength.
+
+Validation:
+
+- The radar independently discovered AI-related leadership from evidence.
+- Related semiconductor / semi-AI terms also emerged from existing evidence.
+- The implementation does not hardcode AI / Semiconductor / Memory / Storage as the answer.
+
+Safety:
+
+- Observe-only.
+- Does not change official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added opening-range watch-only quality evaluation
 
 **Type:** opening-range outcome quality / watch-only evidence / Priority 5 repair

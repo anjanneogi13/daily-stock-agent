@@ -1,0 +1,170 @@
+# Dynamic Theme Discovery Radar
+
+Observe-only. Not official scoring. Not buy instructions. Not paper/live trading.
+
+- Date: **2026-05-09**
+- Theme candidates: **626**
+- Official score boost enabled: **false**
+- Paper trading enabled: **false**
+- Live trading enabled: **false**
+
+## Data Provider Status
+- price_leadership: **not_available_v0**
+- one_day_return: **not_available_v0**
+- five_day_return: **not_available_v0**
+- twenty_day_return: **not_available_v0**
+- sixty_day_return: **not_available_v0**
+- relative_strength_vs_spy_qqq: **not_available_v0**
+- sector_etf_confirmation: **partial_from_picks_log_sector_etf_if_present**
+- news_clustering: **available**
+- watchlist_breadth: **available**
+- pick_log_return_evidence: **available_when_evaluated_rows_exist**
+
+## Top Themes
+- **ai** (emerging_theme, score=100.0, breadth=25, evidence=42)
+  - Tickers: `AAPL, AIIO, ALAB, ANET, APLD, ARM, ASML, AVGO, CDNS, CRDO, FIS, LRCX`
+  - Evidence: news=9, watchlist=7, pick_log=26, avg_tradeable=0.6506, sentiment=0.2143, avg_pick_return=-4.9822
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - APLD [watchlist]: Applied Digital Stock Hits 52-Week High - Here's Why
+    - TSM [watchlist]: TSMC Stock Rallies: $56 Billion AI Expansion Crushes Apple Supply Chain Fears
+    - MCRP [watchlist]: Micropolis AI Robotics Announces $1.2M Deployment Agreement With ESMTEEL
+- **semi** (candidate_theme, score=97.19, breadth=21, evidence=34)
+  - Tickers: `ADI, ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, DELL, LRCX, MPWR, NVDA`
+  - Evidence: news=0, watchlist=0, pick_log=34, avg_tradeable=None, sentiment=0.0, avg_pick_return=-2.808
+  - Risk flags: `observe_only_theme, missing_tradeable_score, price_relative_strength_unavailable_v0`
+    - LRCX [picks_log]: Lam Research Corporation
+    - NVDA [picks_log]: NVIDIA Corp
+    - TSM [picks_log]: Taiwan Semiconductor Manufacturing Co Ltd
+- **semi ai** (candidate_theme, score=95.02, breadth=15, evidence=26)
+  - Tickers: `ALAB, ANET, ARM, ASML, AVGO, CDNS, CRDO, LRCX, MPWR, NVDA, RMBS, SMCI`
+  - Evidence: news=0, watchlist=0, pick_log=26, avg_tradeable=None, sentiment=0.0, avg_pick_return=-4.9822
+  - Risk flags: `observe_only_theme, missing_tradeable_score, price_relative_strength_unavailable_v0`
+    - LRCX [picks_log]: Lam Research Corporation
+    - NVDA [picks_log]: NVIDIA Corp
+    - TSM [picks_log]: Taiwan Semiconductor Manufacturing Co Ltd
+- **selling** (distribution_warning, score=92.48, breadth=12, evidence=12)
+  - Tickers: `ARHS, DCOY, DV, EFR, FLOC, HRTG, IREN, MSFT, OWLT, PAX, RDW, TSHA`
+  - Evidence: news=0, watchlist=12, pick_log=0, avg_tradeable=0.7392, sentiment=-1.0, avg_pick_return=None
+  - Risk flags: `observe_only_theme, negative_or_deteriorating_evidence, price_relative_strength_unavailable_v0`
+    - FLOC [watchlist]: Flowco Holdings Q1 Adj. EPS $1.09 Down From $1.25 YoY, Sales $209.530M Up From $192.350M YoY
+    - TSHA [watchlist]: Taysha Gene Therapies Q1 EPS $(0.12) Misses $(0.10) Estimate
+    - DV [watchlist]: DoubleVerify Hldgs Q1 Adj. EPS $0.04 Misses $0.06 Estimate, Sales $180.800M Miss $181.415M Estimate
+- **pharmaceuticals** (confirmed_leadership, score=90.15, breadth=7, evidence=11)
+  - Tickers: `ADIL, ANIP, ARWR, LGND, MIRM, RYTM, TNXP`
+  - Evidence: news=6, watchlist=4, pick_log=1, avg_tradeable=0.771, sentiment=0.9091, avg_pick_return=4.78
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - RYTM [watchlist]: Rhythm Pharmaceuticals Analysts Boost Their Forecasts Following Upbeat Q1 Results
+    - MIRM [watchlist]: Mirum Pharmaceuticals Raises FY2026 Sales Guidance from $630.000M-$650.000M to $660.000M-$680.000M vs $644.905M Est
+    - ANIP [watchlist]: ANI Pharmaceuticals Q1 Adj. EPS $2.05 Beats $1.30 Estimate, Sales $237.462M Beat $207.565M Estimate.
+- **momentum** (confirmed_leadership, score=88.78, breadth=9, evidence=9)
+  - Tickers: `CART, ENOV, GCMG, GCT, IIIV, MIRM, RYTM, SEZL, SMCI`
+  - Evidence: news=1, watchlist=8, pick_log=0, avg_tradeable=0.72, sentiment=0.7778, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - CART [watchlist]: Maplebear Q1 EPS $0.57, Inline, Sales $1.019B Beat $1.006B Estimate
+    - RYTM [watchlist]: Rhythm Pharmaceuticals Analysts Boost Their Forecasts Following Upbeat Q1 Results
+    - SEZL [watchlist]: Sezzle Raises FY2026 Adj EPS Guidance from $4.70 to $5.10 vs $4.70 Est; Raises FY2026 Sales Guidance from $562.849M-$585.363M to $585.363M-$
+- **health** (emerging_theme, score=88.75, breadth=9, evidence=11)
+  - Tickers: `AGL, ARDT, BTSG, CLOV, CVS, ELAN, LFST, OMDA, WHR`
+  - Evidence: news=8, watchlist=3, pick_log=0, avg_tradeable=0.6155, sentiment=0.6364, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - CLOV [watchlist]: Clover Health Investments Q1 EPS $0.05 Beats $0.03 Estimate, Sales $749.200M Beat $714.893M Estimate
+    - WHR [watchlist]: Whirlpool Suspends Dividend To Prioritize Debt Paydown
+    - LFST [watchlist]: LifeStance Health Gr Sees Q2 Sales $405.000M-$425.000M vs $401.519M Est
+- **massive** (confirmed_leadership, score=86.31, breadth=8, evidence=9)
+  - Tickers: `BLLN, CRI, DCH, EVC, ONC, PRAA, TKO, WBD`
+  - Evidence: news=1, watchlist=8, pick_log=0, avg_tradeable=0.91, sentiment=0.5556, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - CRI [watchlist]: Carter's Q1 Adj. EPS $0.39 Beats $0.13 Estimate, Sales $681.113M Beat $660.582M Estimate
+    - ONC [watchlist]: BeiGene Q1 Adj. EPS $3.24 Beats $0.79 Estimate, Sales $1.513B Beat $1.441B Estimate.
+    - EVC [watchlist]: Entravision Stock Surges Following Massive Q1 Revenue Beat
+- **energy** (distribution_warning, score=82.37, breadth=8, evidence=13)
+  - Tickers: `EFR, GIG, HNRG, HPK, IREN, MGEE, SU, TRP`
+  - Evidence: news=8, watchlist=5, pick_log=0, avg_tradeable=0.7777, sentiment=-0.3077, avg_pick_return=None
+  - Risk flags: `observe_only_theme, negative_or_deteriorating_evidence, price_relative_strength_unavailable_v0`
+    - HNRG [watchlist]: Hallador Energy Q1 EPS $(0.20) Misses $(0.01) Estimate, Sales $101.807M Miss $102.279M Estimate
+    - HPK [watchlist]: UPDATE: HighPeak Energy Q1 Adj. EPS $(0.02) Misses $0.04 Estimate, Sales $215.585M Beat $213.190M Estimate
+    - EFR [watchlist]: Energy Fuels Q1 EPS $(0.04) Misses $(0.02) Estimate, Sales $35.838M Miss $43.413M Estimate
+- **growth** (emerging_theme, score=79.78, breadth=8, evidence=9)
+  - Tickers: `BAM, EVC, FERG, FLOC, KODK, NRG, PODD, TGB`
+  - Evidence: news=2, watchlist=7, pick_log=0, avg_tradeable=0.7378, sentiment=0.3333, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - FLOC [watchlist]: Flowco Holdings Q1 Adj. EPS $1.09 Down From $1.25 YoY, Sales $209.530M Up From $192.350M YoY
+    - PODD [watchlist]: Insulet Boosts 2026 Outlook Fueled By Strong Omnipod Growth
+    - NRG [watchlist]: What Hurt NRG's Quarterly Earnings Despite Higher Revenue, Asset Contributions
+- **modest** (candidate_theme, score=79.56, breadth=9, evidence=9)
+  - Tickers: `CARG, CART, CW, EHTH, HPK, LIVN, SENS, TIMB, UPWK`
+  - Evidence: news=0, watchlist=9, pick_log=0, avg_tradeable=0.6178, sentiment=0.1111, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - LIVN [watchlist]: LivaNova Raises FY2026 Adj EPS Guidance from $4.15-$4.25 to $4.20-$4.30 vs $4.21 Est;
+    - CART [watchlist]: Maplebear Q1 EPS $0.57, Inline, Sales $1.019B Beat $1.006B Estimate
+    - HPK [watchlist]: UPDATE: HighPeak Energy Q1 Adj. EPS $(0.02) Misses $0.04 Estimate, Sales $215.585M Beat $213.190M Estimate
+- **technologi** (emerging_theme, score=79.0, breadth=8, evidence=11)
+  - Tickers: `A, AATC, ARRY, DELL, OPEN, ORA, SHLS, UBER`
+  - Evidence: news=6, watchlist=2, pick_log=3, avg_tradeable=0.61, sentiment=0.3636, avg_pick_return=-1.89
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - OPEN [watchlist]: Opendoor Technologies Q1 Adj. EPS $(0.05) Beats $(0.07) Estimate, Sales $720.000M Beat $666.540M Estimate
+    - AATC [watchlist]: Autoscope Technologies Q1 EPS $0.06 Down From $0.07 YoY, Sales $2.110M Down From $2.193M YoY
+    - UBER [news_signal]: DA Davidson Maintains Buy on Uber Technologies, Raises Price Target to $107
+- **barclays** (emerging_theme, score=77.06, breadth=8, evidence=8)
+  - Tickers: `FUN, OMDA, ORA, RGA, RPC, RXO, SKWD, SRRK`
+  - Evidence: news=8, watchlist=0, pick_log=0, avg_tradeable=0.4425, sentiment=1.0, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - SKWD [news_signal]: Barclays Maintains Overweight on Skyward Specialty, Raises Price Target to $60
+    - FUN [news_signal]: Barclays Maintains Overweight on Six Flags Entertainment, Raises Price Target to $26
+    - SRRK [news_signal]: Barclays Maintains Overweight on Scholar Rock Holding, Raises Price Target to $55
+- **financial** (distribution_warning, score=76.31, breadth=9, evidence=10)
+  - Tickers: `AATC, AMP, DFIN, FIS, QCOM, TF, TSX:IAG, WHR, XRN`
+  - Evidence: news=5, watchlist=4, pick_log=1, avg_tradeable=0.6122, sentiment=-0.4, avg_pick_return=None
+  - Risk flags: `observe_only_theme, negative_or_deteriorating_evidence, price_relative_strength_unavailable_v0`
+    - TSX:IAG [watchlist]: TD Cowen Downgrades iA Financial Corp to Hold, Lowers Price Target to C$190
+    - XRN [watchlist]: Chiron Real Estate Lowered Monthly Dividend From $0.25/Share To $0.16/Share
+    - WHR [watchlist]: Whirlpool Suspends Dividend To Prioritize Debt Paydown
+- **upgrade** (emerging_theme, score=75.72, breadth=7, evidence=7)
+  - Tickers: `ABNB, CRWV, CYTK, MNST, SITM, STNG, VFC`
+  - Evidence: news=0, watchlist=7, pick_log=0, avg_tradeable=0.6686, sentiment=1.0, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - VFC [watchlist]: BTIG Upgrades VF to Buy, Announces $23 Price Target
+    - CYTK [watchlist]: Morgan Stanley Maintains Overweight on Cytokinetics, Raises Price Target to $103
+    - MNST [watchlist]: Rothschild & Co Upgrades Monster Beverage to Buy, Raises Price Target to $90
+- **launch** (emerging_theme, score=74.88, breadth=7, evidence=8)
+  - Tickers: `ADBE, APLD, CRTO, EBAY, MCRP, PSAI, WARP`
+  - Evidence: news=4, watchlist=4, pick_log=0, avg_tradeable=0.605, sentiment=0.875, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - ADBE [watchlist]: Adobe Launches Productivity Agent To Help Tools And Models To Generate Images, Text And Content
+    - APLD [watchlist]: Applied Digital Stock Hits 52-Week High - Here's Why
+    - MCRP [watchlist]: Micropolis AI Robotics Announces $1.2M Deployment Agreement With ESMTEEL
+- **deliver** (confirmed_leadership, score=73.75, breadth=6, evidence=6)
+  - Tickers: `CRI, DCH, JWEL, MUX, PAGP, PTRN`
+  - Evidence: news=0, watchlist=6, pick_log=0, avg_tradeable=0.87, sentiment=1.0, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - CRI [watchlist]: Carter's Q1 Adj. EPS $0.39 Beats $0.13 Estimate, Sales $681.113M Beat $660.582M Estimate
+    - PTRN [watchlist]: Pattern Group Q1 EPS $0.16 Beats $0.10 Estimate, Sales $773.727M Beat $715.904M Estimate
+    - MUX [watchlist]: McEwen Mining Q1 EPS $0.56 Beats $0.32 Estimate, Sales $74.049M Beat $67.481M Estimate
+- **outlook** (candidate_theme, score=73.0, breadth=7, evidence=9)
+  - Tickers: `HLF, MCD, NOMD, PODD, SENS, VOYG, XRN`
+  - Evidence: news=5, watchlist=4, pick_log=0, avg_tradeable=0.7556, sentiment=0.1111, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - PODD [watchlist]: Insulet Boosts 2026 Outlook Fueled By Strong Omnipod Growth
+    - HLF [watchlist]: Herbalife Sees Q2 Sales $1.278-$1.328B vs $1.310B Est
+    - SENS [watchlist]: Senseonics Holdings Raises FY2026 Sales Guidance from $58.000M-$62.000M to $60.000M-$64.000M vs $60.197M Est
+- **new** (emerging_theme, score=72.82, breadth=7, evidence=7)
+  - Tickers: `AMD, CW, DIS, LIVN, NYT, SENS, SITM`
+  - Evidence: news=3, watchlist=4, pick_log=0, avg_tradeable=0.5529, sentiment=1.0, avg_pick_return=None
+  - Risk flags: `observe_only_theme, price_relative_strength_unavailable_v0`
+    - LIVN [watchlist]: LivaNova Raises FY2026 Adj EPS Guidance from $4.15-$4.25 to $4.20-$4.30 vs $4.21 Est;
+    - CW [watchlist]: CORRECTION: Curtiss-Wright Raises FY2026 Adj EPS Guidance from $14.70-$15.15 to $14.90-$15.30 vs $15.06 Est; Raises FY2026 Sales Guidance fr
+    - SENS [watchlist]: Senseonics Holdings Raises FY2026 Sales Guidance from $58.000M-$62.000M to $60.000M-$64.000M vs $60.197M Est
+- **missed** (distribution_warning, score=72.11, breadth=9, evidence=9)
+  - Tickers: `DCOY, DV, EFR, EHTH, IREN, LINE, PAX, RC, TSHA`
+  - Evidence: news=0, watchlist=9, pick_log=0, avg_tradeable=0.7644, sentiment=-1.0, avg_pick_return=None
+  - Risk flags: `observe_only_theme, negative_or_deteriorating_evidence, price_relative_strength_unavailable_v0`
+    - LINE [watchlist]: Lineage Q1 EPS $(0.18) Misses $(0.14) Estimate, Sales $1.297B Miss $1.322B Estimate
+    - TSHA [watchlist]: Taysha Gene Therapies Q1 EPS $(0.12) Misses $(0.10) Estimate
+    - DV [watchlist]: DoubleVerify Hldgs Q1 Adj. EPS $0.04 Misses $0.06 Estimate, Sales $180.800M Miss $181.415M Estimate
+
+## Safety
+- Observe-only theme radar.
+- Does not change official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.

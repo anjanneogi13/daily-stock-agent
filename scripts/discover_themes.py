@@ -1,0 +1,551 @@
+#!/usr/bin/env python3
+"""Dynamic Theme Discovery Radar v0 — observe-only.
+
+Outputs:
+- data/theme_discovery_YYYY-MM-DD.json
+- data/theme_discovery_YYYY-MM-DD.md
+
+Safety:
+- observe-only
+- no official score boost
+- no paper trading
+- no live trading
+- no buy instructions
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import re
+from collections import Counter, defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+from statistics import mean
+
+
+DATA_DIR = Path("data")
+
+SAFETY = {
+    "observe_only": True,
+    "official_score_boost_enabled": False,
+    "paper_trading_enabled": False,
+    "live_trading_enabled": False,
+    "buy_instructions_enabled": False,
+}
+
+THEME_STOPWORDS = {
+    "a", "about", "above", "adj", "after", "ahead", "all", "and", "announces",
+    "are", "as", "at", "be", "beat", "beats", "between", "billion", "boost",
+    "buy", "by", "cash", "close", "company", "conference", "corp", "corporation",
+    "day", "down", "eps", "estimate", "estimates", "following", "for", "forecast",
+    "from", "group", "guidance", "has", "holdings", "in", "inc", "international",
+    "into", "its", "llc", "ltd", "maintains", "market", "million", "monday",
+    "news", "of", "on", "over", "plc", "price", "q1", "q2", "q3", "q4",
+    "raises", "rating", "report", "reports", "revenue", "sales", "shares",
+    "stock", "target", "the", "their", "to", "today", "up", "update", "versus",
+    "with", "yoy",
+
+    # Generic market/news-provider words. These are evidence types, not themes.
+    "analyst", "analysts", "buy", "capital", "earnings", "eps", "est", "estimate",
+    "estimates", "estim", "estimat", "fy2026", "guidance", "maintain", "maintains",
+    "miss", "misses", "outperform", "overweight", "pt", "sees", "ubs", "underweight",
+
+    # Generic phrasing from classifier rationales/headlines.
+    "action", "announc", "both", "but", "catalyst", "consensus", "creat", "drives",
+    "expect", "expectations", "immediate", "indicat", "loss", "meaningful", "midpoint",
+    "positive", "pressure", "represent", "result", "results", "significant",
+
+    # Still too generic for theme leadership.
+    "agreement", "business", "cut", "despite", "double", "forecasts", "lowers",
+    "morgan", "operational", "stanley", "surprise", "that", "typically",
+
+    # Broad non-theme labels that tend to come from classifier wording.
+    "adjust", "beating", "exceed", "follow", "increase", "other", "performance",
+    "raise", "strong", "trading", "upgrad",
+
+    # Common analyst/provider names; useful evidence, not theme labels.
+    "canaccord", "genuity",
+}
+
+
+def _safe_float(value, default: float | None = 0.0) -> float | None:
+    try:
+        if value in (None, "", "None"):
+            return default
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def load_json(path: Path, default):
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text())
+    except Exception:
+        return default
+
+
+def _normalize_token(token: str) -> str:
+    token = token.lower().strip("-_ ")
+    replacements = {
+        "semiconductors": "semiconductor",
+        "chips": "chip",
+        "agents": "agent",
+        "models": "model",
+        "launches": "launch",
+        "launched": "launch",
+    }
+    if token in replacements:
+        return replacements[token]
+    if token.endswith("ing") and len(token) > 7:
+        return token[:-3]
+    if token.endswith("ed") and len(token) > 7:
+        return token[:-2]
+    if token.endswith("es") and len(token) > 7:
+        return token[:-2]
+    return token
+
+
+def _tokenize(text: str) -> list[str]:
+    raw = re.findall(r"[A-Za-z][A-Za-z0-9+\-]{1,}", str(text or ""))
+    terms = []
+    for token in raw:
+        t = _normalize_token(token)
+        if not t or t in THEME_STOPWORDS:
+            continue
+        if len(t) < 3 and t not in {"ai", "ev"}:
+            continue
+        if t.isdigit():
+            continue
+        terms.append(t)
+    return terms
+
+
+def extract_theme_terms(evidence: dict, *, max_terms: int = 12) -> list[str]:
+    """Extract candidate theme terms from evidence text.
+
+    Candidate themes are derived from the input evidence, not selected from a
+    fixed founder-provided answer list.
+    """
+    category_text = str(evidence.get("category") or "").replace("_", " ")
+    priority_tokens = _tokenize(category_text)
+
+    fields = [
+        evidence.get("category"),
+        evidence.get("sector"),
+        evidence.get("tag"),
+        evidence.get("sector_tag"),
+        evidence.get("company_name"),
+        evidence.get("company"),
+        evidence.get("headline"),
+        evidence.get("rationale"),
+    ]
+    tokens = _tokenize(" ".join(str(x or "") for x in fields))
+
+    bigrams = [
+        f"{tokens[i]} {tokens[i + 1]}"
+        for i in range(len(tokens) - 1)
+        if tokens[i] != tokens[i + 1]
+    ]
+
+    # Keep unigrams first so direct evidence terms such as "ai", "cloud",
+    # "robotics", or "security" are not crowded out by many one-off bigrams.
+    token_counts = Counter(tokens)
+    bigram_counts = Counter(bigrams)
+
+    ranked_tokens = sorted(token_counts, key=lambda t: (-token_counts[t], t))
+    ranked_bigrams = sorted(bigram_counts, key=lambda t: (-bigram_counts[t], t))
+
+    # Preserve explicit structured labels (for example product_launch) before
+    # free-text terms compete for the remaining slots.
+    ranked: list[str] = []
+    for term in priority_tokens:
+        if term not in ranked:
+            ranked.append(term)
+
+    priority_bigram = " ".join(priority_tokens[:2]) if len(priority_tokens) >= 2 else ""
+    if priority_bigram and priority_bigram not in ranked:
+        ranked.append(priority_bigram)
+
+    unigram_limit = min(len(ranked_tokens), max(6, max_terms // 2))
+    for term in ranked_tokens[:unigram_limit]:
+        if term not in ranked:
+            ranked.append(term)
+        if len(ranked) >= max_terms:
+            return ranked[:max_terms]
+
+    # Reserve room for phrase evidence so "generative ai" / "cloud security"
+    # style themes survive, while direct unigrams still lead.
+    for term in ranked_bigrams:
+        if term not in ranked:
+            ranked.append(term)
+        if len(ranked) >= max_terms:
+            break
+    return ranked[:max_terms]
+
+
+def _watchlist_items(raw) -> list[dict]:
+    if isinstance(raw, dict):
+        items = raw.get("items", [])
+        return [x for x in items if isinstance(x, dict)] if isinstance(items, list) else []
+    if isinstance(raw, list):
+        return [x for x in raw if isinstance(x, dict)]
+    return []
+
+
+def _news_signal_items(raw) -> list[dict]:
+    if isinstance(raw, dict):
+        return [x for x in raw.values() if isinstance(x, dict)]
+    if isinstance(raw, list):
+        return [x for x in raw if isinstance(x, dict)]
+    return []
+
+
+def load_evidence(*, data_dir: Path) -> tuple[list[dict], dict]:
+    watchlist_path = data_dir / "watchlist.json"
+    news_signals_path = data_dir / "news_signals.json"
+    picks_log_path = data_dir / "picks_log.csv"
+
+    evidence: list[dict] = []
+
+    for item in _watchlist_items(load_json(watchlist_path, {})):
+        ticker = str(item.get("ticker") or "").upper()
+        if ticker:
+            evidence.append({**item, "ticker": ticker, "source": "watchlist", "watch_only": True})
+
+    for item in _news_signal_items(load_json(news_signals_path, {})):
+        ticker = str(item.get("ticker") or "").upper()
+        if ticker:
+            evidence.append({**item, "ticker": ticker, "source": "news_signal", "watch_only": True})
+
+    if picks_log_path.exists():
+        try:
+            with picks_log_path.open(newline="") as f:
+                for row in csv.DictReader(f):
+                    ticker = str(row.get("ticker") or "").upper()
+                    if ticker:
+                        evidence.append({
+                            **row,
+                            "ticker": ticker,
+                            "source": "picks_log",
+                            "watch_only": str(row.get("watch_only") or "").lower() in {"1", "true", "yes"},
+                        })
+        except Exception:
+            pass
+
+    input_status = {
+        "watchlist": {
+            "path": str(watchlist_path),
+            "exists": watchlist_path.exists(),
+            "rows": sum(1 for e in evidence if e["source"] == "watchlist"),
+        },
+        "news_signals": {
+            "path": str(news_signals_path),
+            "exists": news_signals_path.exists(),
+            "rows": sum(1 for e in evidence if e["source"] == "news_signal"),
+        },
+        "picks_log": {
+            "path": str(picks_log_path),
+            "exists": picks_log_path.exists(),
+            "rows": sum(1 for e in evidence if e["source"] == "picks_log"),
+        },
+    }
+    return evidence, input_status
+
+
+def _theme_id(term: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", term.lower()).strip("_") or "unknown_theme"
+
+
+def _sentiment_score(rows: list[dict]) -> float:
+    score = 0
+    for row in rows:
+        sentiment = str(row.get("sentiment") or "").lower()
+        if sentiment == "bullish":
+            score += 1
+        elif sentiment == "bearish":
+            score -= 1
+    return score / len(rows) if rows else 0.0
+
+
+def _pick_returns(rows: list[dict]) -> list[float]:
+    out = []
+    for row in rows:
+        if row.get("source") != "picks_log":
+            continue
+        value = _safe_float(row.get("actual_return_pct"), None)
+        if value is not None:
+            out.append(value)
+    return out
+
+
+def classify_lifecycle(metrics: dict) -> str:
+    breadth = metrics["breadth"]
+    news_count = metrics["news_count"]
+    watchlist_count = metrics["watchlist_count"]
+    avg_tradeable = metrics["avg_tradeable_score"] or 0.0
+    sentiment = metrics["sentiment_score"]
+    avg_pick_return = metrics["avg_pick_return_pct"]
+
+    if avg_pick_return is not None and avg_pick_return <= -5 and breadth >= 3:
+        return "failed_theme"
+    if sentiment < -0.25 and breadth >= 3:
+        return "distribution_warning"
+    if breadth >= 10 and avg_tradeable >= 0.80 and sentiment >= 0.45:
+        return "crowded_momentum"
+    if breadth >= 5 and avg_tradeable >= 0.70 and sentiment >= 0.35:
+        return "confirmed_leadership"
+    if breadth >= 3 and (news_count + watchlist_count) >= 3 and sentiment >= 0.20:
+        return "emerging_theme"
+    if (news_count + watchlist_count) >= 2 and breadth < 3:
+        return "news_hype_unconfirmed"
+    return "candidate_theme"
+
+
+def _theme_risk_flags(metrics: dict, lifecycle_state: str) -> list[str]:
+    flags = ["observe_only_theme"]
+    if lifecycle_state == "news_hype_unconfirmed":
+        flags.append("news_hype_unconfirmed")
+    if lifecycle_state == "crowded_momentum":
+        flags.append("crowding_risk")
+    if lifecycle_state in {"distribution_warning", "failed_theme"}:
+        flags.append("negative_or_deteriorating_evidence")
+    if metrics["breadth"] < 3:
+        flags.append("low_breadth")
+    if metrics["avg_tradeable_score"] is None:
+        flags.append("missing_tradeable_score")
+    flags.append("price_relative_strength_unavailable_v0")
+    return list(dict.fromkeys(flags))
+
+
+def build_theme_discovery(
+    *,
+    date_str: str,
+    data_dir: Path = DATA_DIR,
+    min_evidence: int = 2,
+) -> dict:
+    evidence, input_status = load_evidence(data_dir=data_dir)
+
+    buckets: dict[str, list[dict]] = defaultdict(list)
+    for row in evidence:
+        for term in extract_theme_terms(row):
+            buckets[term].append(row)
+
+    themes = []
+    for term, rows in buckets.items():
+        tickers = sorted({str(r.get("ticker") or "").upper() for r in rows if r.get("ticker")})
+        source_counts = Counter(str(r.get("source") or "unknown") for r in rows)
+        tradeable_scores = [
+            _safe_float(r.get("tradeable_score"), None)
+            for r in rows
+            if _safe_float(r.get("tradeable_score"), None) is not None
+        ]
+        score_deltas = [
+            _safe_float(r.get("score_delta"), None)
+            for r in rows
+            if _safe_float(r.get("score_delta"), None) is not None
+        ]
+        returns = _pick_returns(rows)
+
+        metrics = {
+            "theme": term,
+            "theme_id": _theme_id(term),
+            "breadth": len(tickers),
+            "evidence_rows": len(rows),
+            "news_count": source_counts.get("news_signal", 0),
+            "watchlist_count": source_counts.get("watchlist", 0),
+            "pick_log_count": source_counts.get("picks_log", 0),
+            "avg_tradeable_score": round(mean(tradeable_scores), 4) if tradeable_scores else None,
+            "avg_score_delta": round(mean(score_deltas), 4) if score_deltas else None,
+            "sentiment_score": round(_sentiment_score(rows), 4),
+            "avg_pick_return_pct": round(mean(returns), 4) if returns else None,
+        }
+
+        if metrics["evidence_rows"] < min_evidence or metrics["breadth"] < 1:
+            continue
+
+        lifecycle_state = classify_lifecycle(metrics)
+
+        theme_score = (
+            min(metrics["breadth"], 12) * 5
+            + min(metrics["evidence_rows"], 20) * 2
+            + max(metrics["sentiment_score"], -1) * 10
+            + ((metrics["avg_tradeable_score"] or 0) * 25)
+        )
+        if metrics["avg_pick_return_pct"] is not None:
+            theme_score += max(-10, min(10, metrics["avg_pick_return_pct"]))
+
+        evidence_examples = []
+        seen_tickers = set()
+        for row in rows:
+            ticker = str(row.get("ticker") or "").upper()
+            if ticker in seen_tickers:
+                continue
+            seen_tickers.add(ticker)
+            evidence_examples.append({
+                "ticker": ticker,
+                "source": row.get("source"),
+                "sentiment": row.get("sentiment") or "",
+                "tradeable_score": _safe_float(row.get("tradeable_score"), None),
+                "headline": row.get("headline") or row.get("rationale") or row.get("company") or "",
+            })
+            if len(evidence_examples) >= 6:
+                break
+
+        themes.append({
+            **metrics,
+            "theme_score": round(max(0.0, min(100.0, theme_score)), 2),
+            "lifecycle_state": lifecycle_state,
+            "tickers": tickers[:25],
+            "evidence_examples": evidence_examples,
+            "risk_flags": _theme_risk_flags(metrics, lifecycle_state),
+        })
+
+    themes.sort(key=lambda t: (-t["theme_score"], -t["breadth"], t["theme"]))
+
+    return {
+        "artifact": "theme_discovery",
+        "date": date_str,
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        **SAFETY,
+        "source_files": {
+            "watchlist": str(data_dir / "watchlist.json"),
+            "news_signals": str(data_dir / "news_signals.json"),
+            "picks_log": str(data_dir / "picks_log.csv"),
+        },
+        "input_status": input_status,
+        "data_provider_status": {
+            "price_leadership": "not_available_v0",
+            "one_day_return": "not_available_v0",
+            "five_day_return": "not_available_v0",
+            "twenty_day_return": "not_available_v0",
+            "sixty_day_return": "not_available_v0",
+            "relative_strength_vs_spy_qqq": "not_available_v0",
+            "sector_etf_confirmation": "partial_from_picks_log_sector_etf_if_present",
+            "news_clustering": "available",
+            "watchlist_breadth": "available",
+            "pick_log_return_evidence": "available_when_evaluated_rows_exist",
+        },
+        "method": {
+            "version": "v0_observe_only",
+            "description": (
+                "Extracts candidate theme terms from watchlist, news-signal, and picks-log text; "
+                "scores breadth, sentiment, tradeable-score evidence, and pick-log outcomes. "
+                "Does not apply score boosts or trading instructions."
+            ),
+            "min_evidence": min_evidence,
+        },
+        "themes": themes,
+        "theme_count": len(themes),
+        "safety_flags": [
+            "observe_only",
+            "not_official_scoring",
+            "not_paper_trade",
+            "not_live_trade",
+            "no_buy_instructions",
+            "theme_candidates_derived_from_evidence",
+        ],
+    }
+
+
+def theme_json_path(date_str: str, data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / f"theme_discovery_{date_str}.json"
+
+
+def theme_markdown_path(date_str: str, data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / f"theme_discovery_{date_str}.md"
+
+
+def format_markdown(report: dict) -> str:
+    lines = [
+        "# Dynamic Theme Discovery Radar",
+        "",
+        "Observe-only. Not official scoring. Not buy instructions. Not paper/live trading.",
+        "",
+        f"- Date: **{report['date']}**",
+        f"- Theme candidates: **{report['theme_count']}**",
+        f"- Official score boost enabled: **{str(report['official_score_boost_enabled']).lower()}**",
+        f"- Paper trading enabled: **{str(report['paper_trading_enabled']).lower()}**",
+        f"- Live trading enabled: **{str(report['live_trading_enabled']).lower()}**",
+        "",
+        "## Data Provider Status",
+    ]
+
+    for key, value in report["data_provider_status"].items():
+        lines.append(f"- {key}: **{value}**")
+
+    lines.extend(["", "## Top Themes"])
+    if not report["themes"]:
+        lines.append("- No candidate themes met the evidence threshold.")
+    else:
+        for theme in report["themes"][:20]:
+            tickers = ", ".join(theme["tickers"][:12]) or "n/a"
+            lines.extend([
+                (
+                    f"- **{theme['theme']}** "
+                    f"({theme['lifecycle_state']}, score={theme['theme_score']}, "
+                    f"breadth={theme['breadth']}, evidence={theme['evidence_rows']})"
+                ),
+                f"  - Tickers: `{tickers}`",
+                (
+                    "  - Evidence: "
+                    f"news={theme['news_count']}, watchlist={theme['watchlist_count']}, "
+                    f"pick_log={theme['pick_log_count']}, "
+                    f"avg_tradeable={theme['avg_tradeable_score']}, "
+                    f"sentiment={theme['sentiment_score']}, "
+                    f"avg_pick_return={theme['avg_pick_return_pct']}"
+                ),
+                f"  - Risk flags: `{', '.join(theme['risk_flags'])}`",
+            ])
+            for ex in theme["evidence_examples"][:3]:
+                headline = str(ex.get("headline") or "")[:140]
+                lines.append(f"    - {ex.get('ticker')} [{ex.get('source')}]: {headline}")
+
+    lines.extend([
+        "",
+        "## Safety",
+        "- Observe-only theme radar.",
+        "- Does not change official scoring.",
+        "- Does not create picks.",
+        "- Does not enable paper or live trading.",
+        "- No buy instructions.",
+    ])
+    return "\n".join(lines)
+
+
+def write_outputs(report: dict, *, data_dir: Path = DATA_DIR) -> tuple[Path, Path]:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    date_str = report["date"]
+
+    json_path = theme_json_path(date_str, data_dir=data_dir)
+    json_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    md_path = theme_markdown_path(date_str, data_dir=data_dir)
+    md_path.write_text(format_markdown(report) + "\n", encoding="utf-8")
+    return json_path, md_path
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--date", default=datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+    parser.add_argument("--data-dir", default=str(DATA_DIR))
+    parser.add_argument("--min-evidence", type=int, default=2)
+    args = parser.parse_args(argv)
+
+    report = build_theme_discovery(
+        date_str=args.date,
+        data_dir=Path(args.data_dir),
+        min_evidence=args.min_evidence,
+    )
+    json_path, md_path = write_outputs(report, data_dir=Path(args.data_dir))
+
+    print(f"[theme-discovery] wrote {report['theme_count']} theme(s) to {json_path}")
+    print(f"[theme-discovery] markdown: {md_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

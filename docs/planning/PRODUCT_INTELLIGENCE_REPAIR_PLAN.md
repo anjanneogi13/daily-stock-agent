@@ -408,6 +408,16 @@ Expected artifacts:
 - `data/theme_discovery_YYYY-MM-DD.json`
 - `data/theme_discovery_YYYY-MM-DD.md`
 
+Current implementation notes:
+
+- `scripts/discover_themes.py` now produces observe-only theme discovery artifacts.
+- Candidate themes are derived from evidence text in watchlist, news signals, and pick-log rows.
+- The radar scores breadth, source mix, sentiment, tradeable-score evidence, and pick-log return evidence when available.
+- Lifecycle states are assigned for candidate, emerging, confirmed, crowded, warning, failed, and hype-unconfirmed themes.
+- Data-provider availability is explicitly reported for v0 missing layers such as price leadership, 1D/5D/20D/60D returns, and relative strength versus SPY/QQQ.
+- Validation run discovered AI and semi/semi-AI themes from evidence without hardcoding them as the answer.
+- This remains observe-only and does not alter official scores or trading behavior.
+
 Safety:
 
 - Observe-only.
