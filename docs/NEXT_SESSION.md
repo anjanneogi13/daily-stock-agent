@@ -1,3 +1,28 @@
+## 2026-05-09 checkpoint — Opening-range bar retention repair added
+
+Priority 14 is implemented.
+
+Changed files:
+
+- `scripts/intraday_scanner.py`
+- `scripts/intraday_monitor.py`
+- `tests/test_intraday_scanner_opening_range.py`
+
+Validation:
+
+- Opening-range bar artifacts now merge existing and newly fetched bars.
+- Bar rows are deduped by timestamp.
+- Existing opening-range observations can refresh retained bar artifacts in later monitor runs.
+- Stale-session bars are skipped and explicitly reported.
+- No trading behavior changes.
+
+Recommended next task:
+
+Priority 15 — Provider Failure Taxonomy.
+
+Goal: classify provider failures consistently across artifacts so rate limits, provider errors, empty data, stale sessions, and parse errors are easy to distinguish.
+
+
 ## 2026-05-09 checkpoint — Daily intelligence brief added
 
 Priority 13 is implemented observe-only.

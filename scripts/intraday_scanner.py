@@ -269,17 +269,42 @@ def normalize_opening_range_bar(ticker: str, bar: dict, now: datetime | None = N
     }
 
 
+def _load_existing_opening_range_bar_rows(path: Path) -> list[dict]:
+    """Load existing opening-range bar artifact rows, ignoring bad lines."""
+    rows: list[dict] = []
+    if not path.exists():
+        return rows
+    for line in path.read_text().splitlines():
+        if not line.strip():
+            continue
+        try:
+            obj = json.loads(line)
+        except Exception:
+            continue
+        if isinstance(obj, dict):
+            rows.append(obj)
+    return rows
+
+
+def _opening_range_bar_dedupe_key(row: dict) -> str:
+    return str(row.get("ts") or row.get("timestamp_utc") or "")
+
+
 def write_opening_range_bar_artifact(
     ticker: str,
     bars: list[dict],
     path: Path | None = None,
     now: datetime | None = None,
+    merge_existing: bool = True,
 ) -> Path | None:
     """Write read-only opening-range bar rows for one ticker.
 
-    Returns the path written, or None when there are no bars. The file is
-    overwritten per ticker/date so repeated intraday monitor runs keep the
-    latest available 5-minute bar set without duplicate rows.
+    Returns the path written, or None when there are no bars.
+
+    The artifact is merge-safe by default. This matters because the first
+    opening-range observation often occurs before enough forward bars exist for
+    review. Later monitor runs should retain newly available bars without
+    duplicating older rows or deleting already retained evidence.
     """
     if not bars:
         return None
@@ -287,10 +312,128 @@ def write_opening_range_bar_artifact(
     rows = [normalize_opening_range_bar(ticker, bar, now=now) for bar in bars]
     out = path or opening_range_bar_path(ticker, rows[0]["date"])
     out.parent.mkdir(parents=True, exist_ok=True)
+
+    merged: dict[str, dict] = {}
+    if merge_existing:
+        for row in _load_existing_opening_range_bar_rows(out):
+            key = _opening_range_bar_dedupe_key(row)
+            if key:
+                merged[key] = row
+
+    for row in rows:
+        key = _opening_range_bar_dedupe_key(row)
+        if key:
+            merged[key] = row
+
+    final_rows = sorted(
+        merged.values() if merge_existing else rows,
+        key=lambda r: str(r.get("ts") or r.get("timestamp_utc") or ""),
+    )
+
     with out.open("w", encoding="utf-8") as f:
-        for row in rows:
+        for row in final_rows:
             f.write(json.dumps(row, sort_keys=True) + "\n")
     return out
+
+
+def _load_opening_range_observation_rows(path: Path) -> tuple[list[dict], int]:
+    """Load opening-range observation rows, returning rows and parse errors."""
+    rows: list[dict] = []
+    bad = 0
+    if not path.exists():
+        return rows, bad
+    for line in path.read_text().splitlines():
+        if not line.strip():
+            continue
+        try:
+            obj = json.loads(line)
+        except Exception:
+            bad += 1
+            continue
+        if isinstance(obj, dict):
+            rows.append(obj)
+    return rows, bad
+
+
+def refresh_opening_range_bar_artifacts_for_observations(
+    observation_path: Path | None = None,
+    today: str | None = None,
+    now: datetime | None = None,
+    fetcher=None,
+) -> dict:
+    """Refresh bar artifacts for already-recorded opening-range observations.
+
+    This repairs the retention gap where a candidate is observed before enough
+    forward bars exist. Existing sent-alert de-duping can prevent the same
+    candidate from being emitted again, so this function independently refreshes
+    bar artifacts for tickers already present in the observation artifact.
+
+    Observe-only: this does not create candidates, alerts, picks, or trades.
+    """
+    now_et = (now or datetime.now(timezone.utc)).astimezone(ET)
+    day = today or now_et.strftime("%Y-%m-%d")
+    obs_path = observation_path or opening_range_observation_path(day)
+    rows, parse_errors = _load_opening_range_observation_rows(obs_path)
+
+    tickers = sorted({
+        str(r.get("ticker") or "").upper()
+        for r in rows
+        if r.get("scanner") == "opening_range" and r.get("watch_only") is True and r.get("ticker")
+    })
+
+    fetch = fetcher or fetch_opening_range_bars
+    ticker_status: dict[str, dict] = {}
+    refreshed_count = 0
+
+    for ticker in tickers:
+        bars = fetch(ticker)
+        if not bars:
+            ticker_status[ticker] = {
+                "status": "not_refreshed_no_bars",
+                "bar_count": 0,
+                "reason": "provider returned no opening-range bars",
+            }
+            continue
+
+        if not opening_range_bars_match_session(bars, now=now):
+            ticker_status[ticker] = {
+                "status": "not_refreshed_stale_session",
+                "bar_count": len(bars),
+                "reason": (
+                    f"bar session {opening_range_bar_session_date(bars, now=now) or 'unknown'} "
+                    f"does not match expected session {day}"
+                ),
+            }
+            continue
+
+        path = write_opening_range_bar_artifact(ticker, bars, now=now, merge_existing=True)
+        retained_rows = _load_existing_opening_range_bar_rows(path) if path else []
+        ticker_status[ticker] = {
+            "status": "refreshed",
+            "bar_count": len(bars),
+            "retained_bar_count": len(retained_rows),
+            "path": str(path) if path else "",
+            "reason": "bar artifact refreshed/merged for existing opening-range observation",
+        }
+        refreshed_count += 1
+
+    return {
+        "artifact": "opening_range_bar_retention_refresh",
+        "date": day,
+        "observation_path": str(obs_path),
+        "observation_file_exists": obs_path.exists(),
+        "observation_count": len(rows),
+        "observation_parse_errors": parse_errors,
+        "ticker_count": len(tickers),
+        "refreshed_count": refreshed_count,
+        "skipped_count": len(tickers) - refreshed_count,
+        "ticker_status": ticker_status,
+        "observe_only": True,
+        "production_scoring_effect": False,
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
+        "buy_instructions_enabled": False,
+    }
 
 
 

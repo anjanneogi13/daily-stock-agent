@@ -686,6 +686,31 @@ May 8 TSLA / AMD / QQQ had no forward bars after observation.
 - If bars are unavailable, the reason is explicit.
 - No trading behavior changes.
 
+### Current implementation notes
+
+Implemented in:
+
+- `scripts/intraday_scanner.py`
+- `scripts/intraday_monitor.py`
+- `tests/test_intraday_scanner_opening_range.py`
+
+Changes:
+
+- `write_opening_range_bar_artifact()` is now merge-safe by default.
+- Existing and newly fetched opening-range bars are deduped by timestamp.
+- `refresh_opening_range_bar_artifacts_for_observations()` refreshes/merges bar artifacts for existing opening-range observations.
+- `intraday_monitor.py` runs the observe-only retention refresh during monitor runs.
+- Stale-session provider bars are explicitly reported as `not_refreshed_stale_session`.
+- Missing provider bars are explicitly reported as `not_refreshed_no_bars`.
+
+Validation:
+
+- Existing bar artifact rows are retained.
+- Later bars are merged without duplicates.
+- Stale-session bars are skipped and reported.
+- Existing no-forward-bars outcome behavior remains covered.
+- This remains observe-only and has no trading behavior changes.
+
 ---
 
 ## Priority 15 — Provider Failure Taxonomy

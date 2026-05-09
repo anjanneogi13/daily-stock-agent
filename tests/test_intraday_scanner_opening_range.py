@@ -344,3 +344,145 @@ def test_scan_opening_range_opportunities_skips_stale_session_bars():
 
     assert out == []
     assert sent == set()
+
+def test_opening_range_bar_artifact_merges_existing_rows_without_duplicates(tmp_path):
+    path = tmp_path / "opening_range_bars" / "2026-05-06" / "MERGE.jsonl"
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps({
+        "ticker": "MERGE",
+        "ts": "2026-05-06T09:30:00-04:00",
+        "timestamp_utc": "2026-05-06T13:30:00+00:00",
+        "open": 100,
+        "high": 101,
+        "low": 99,
+        "close": 100.5,
+        "volume": 1000,
+    }) + "\n")
+
+    bars = [
+        {
+            "ts": datetime(2026, 5, 6, 9, 30, tzinfo=ET),
+            "open": 100,
+            "high": 101,
+            "low": 99,
+            "close": 100.5,
+            "volume": 1000,
+        },
+        {
+            "ts": datetime(2026, 5, 6, 9, 35, tzinfo=ET),
+            "open": 100.5,
+            "high": 102,
+            "low": 100,
+            "close": 101.5,
+            "volume": 1200,
+        },
+    ]
+
+    out = scanner.write_opening_range_bar_artifact(
+        "MERGE",
+        bars,
+        path=path,
+        now=datetime(2026, 5, 6, 10, 0, tzinfo=ET),
+    )
+
+    assert out == path
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(rows) == 2
+    assert [r["ts"] for r in rows] == [
+        "2026-05-06T09:30:00-04:00",
+        "2026-05-06T09:35:00-04:00",
+    ]
+
+
+def test_refresh_opening_range_bar_artifacts_for_existing_observations(tmp_path, monkeypatch):
+    obs_path = tmp_path / "opening_range_observations_2026-05-06.jsonl"
+    obs_path.write_text(json.dumps({
+        "ticker": "KEEP",
+        "scanner": "opening_range",
+        "watch_only": True,
+        "ts": "2026-05-06T14:00:00+00:00",
+    }) + "\n")
+
+    def fake_bar_path(ticker, today=None):
+        return tmp_path / "opening_range_bars" / (today or "2026-05-06") / f"{ticker}.jsonl"
+
+    monkeypatch.setattr(scanner, "opening_range_bar_path", fake_bar_path)
+
+    def fake_fetcher(ticker):
+        assert ticker == "KEEP"
+        return [
+            {
+                "ts": datetime(2026, 5, 6, 9, 30, tzinfo=ET),
+                "open": 100,
+                "high": 101,
+                "low": 99,
+                "close": 100.5,
+                "volume": 1000,
+            },
+            {
+                "ts": datetime(2026, 5, 6, 10, 5, tzinfo=ET),
+                "open": 101,
+                "high": 103,
+                "low": 100.8,
+                "close": 102,
+                "volume": 1500,
+            },
+        ]
+
+    summary = scanner.refresh_opening_range_bar_artifacts_for_observations(
+        observation_path=obs_path,
+        today="2026-05-06",
+        now=datetime(2026, 5, 6, 10, 10, tzinfo=ET),
+        fetcher=fake_fetcher,
+    )
+
+    assert summary["observe_only"] is True
+    assert summary["production_scoring_effect"] is False
+    assert summary["ticker_count"] == 1
+    assert summary["refreshed_count"] == 1
+    assert summary["ticker_status"]["KEEP"]["status"] == "refreshed"
+
+    bar_path = tmp_path / "opening_range_bars" / "2026-05-06" / "KEEP.jsonl"
+    rows = [json.loads(line) for line in bar_path.read_text().splitlines()]
+    assert len(rows) == 2
+    assert rows[-1]["ts"] == "2026-05-06T10:05:00-04:00"
+
+
+def test_refresh_opening_range_bar_artifacts_reports_stale_session(tmp_path, monkeypatch):
+    obs_path = tmp_path / "opening_range_observations_2026-05-06.jsonl"
+    obs_path.write_text(json.dumps({
+        "ticker": "STALE",
+        "scanner": "opening_range",
+        "watch_only": True,
+        "ts": "2026-05-06T14:00:00+00:00",
+    }) + "\n")
+
+    def fake_bar_path(ticker, today=None):
+        return tmp_path / "opening_range_bars" / (today or "2026-05-06") / f"{ticker}.jsonl"
+
+    monkeypatch.setattr(scanner, "opening_range_bar_path", fake_bar_path)
+
+    def stale_fetcher(_ticker):
+        return [
+            {
+                "ts": datetime(2026, 5, 5, 9, 30, tzinfo=ET),
+                "open": 100,
+                "high": 101,
+                "low": 99,
+                "close": 100.5,
+                "volume": 1000,
+            }
+        ]
+
+    summary = scanner.refresh_opening_range_bar_artifacts_for_observations(
+        observation_path=obs_path,
+        today="2026-05-06",
+        now=datetime(2026, 5, 6, 10, 10, tzinfo=ET),
+        fetcher=stale_fetcher,
+    )
+
+    assert summary["ticker_count"] == 1
+    assert summary["refreshed_count"] == 0
+    assert summary["skipped_count"] == 1
+    assert summary["ticker_status"]["STALE"]["status"] == "not_refreshed_stale_session"
+    assert not (tmp_path / "opening_range_bars" / "2026-05-06" / "STALE.jsonl").exists()

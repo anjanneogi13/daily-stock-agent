@@ -16,6 +16,7 @@ from intraday_scanner import (
     append_opening_range_observations,
     append_intraday_momentum_observations,
     append_opening_range_run_status,
+    refresh_opening_range_bar_artifacts_for_observations,
 )
 from src.trailing_stop import compute_trailing_sl, trail_status
 from src.picks_csv import update_pick_row
@@ -30,7 +31,8 @@ try:
     _now_et = datetime.now(zoneinfo.ZoneInfo("America/New_York"))
     if not _is_td(_now_et):
         print(f"🗓 US market CLOSED ({_why(_now_et)}) — intraday monitor skipping")
-        import sys; sys.exit(0)
+        if __name__ == "__main__":
+            import sys; sys.exit(0)
 except ImportError:
     pass  # zoneinfo missing, proceed
 except Exception as _e:
@@ -319,6 +321,17 @@ def main():
     n_or_obs = append_opening_range_observations(new_opps)
     if n_or_obs:
         print(f"[monitor] {n_or_obs} opening-range observation(s) recorded.")
+
+    # Refresh retained bars for previously recorded opening-range observations.
+    # This is observe-only evidence retention; it does not create alerts/picks.
+    or_retention = refresh_opening_range_bar_artifacts_for_observations()
+    if or_retention.get("ticker_count"):
+        print(
+            "[monitor] opening-range bar retention refresh: "
+            f"{or_retention.get('refreshed_count', 0)}/"
+            f"{or_retention.get('ticker_count', 0)} ticker artifact(s) refreshed."
+        )
+
     n_momentum_obs = append_intraday_momentum_observations(new_opps)
     if n_momentum_obs:
         print(f"[monitor] {n_momentum_obs} intraday momentum observation(s) recorded.")

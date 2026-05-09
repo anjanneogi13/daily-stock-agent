@@ -13,6 +13,50 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added opening-range bar retention repair
+
+**Type:** reliability hardening / opening-range outcome evaluability / Priority 14 repair
+
+**Summary:**
+
+Added a future-facing opening-range bar retention repair so opening-range observations can retain forward bars after the initial observation.
+
+Root cause:
+
+- Opening-range bar artifacts were written only when a watch-only candidate was first emitted.
+- Later intraday monitor runs could skip the same candidate via sent-alert de-duping.
+- That meant the bar artifact could stop at or before the observation timestamp, causing outcome review to report `no_forward_bars_after_observation`.
+
+Changes:
+
+- Made `write_opening_range_bar_artifact()` merge-safe by default.
+- Existing and newly fetched bars are deduped by timestamp.
+- Added `refresh_opening_range_bar_artifacts_for_observations()` to refresh/merge bar artifacts for already-recorded opening-range observations.
+- Patched `intraday_monitor.py` to run the observe-only retention refresh after opening-range observations are appended.
+- Added explicit refresh statuses:
+  - `refreshed`
+  - `not_refreshed_no_bars`
+  - `not_refreshed_stale_session`
+- Made the intraday monitor market-calendar guard safe to import during tests.
+
+Validation:
+
+- Existing rows are retained and deduped.
+- Later bars are merged into the same ticker/date artifact.
+- Stale-session provider bars are skipped and explicitly reported.
+- Existing watch-only outcome behavior still handles no-forward-bars cases.
+- No trading behavior changes.
+
+Safety:
+
+- Observe-only evidence retention.
+- Does not create alerts, picks, or trades.
+- Does not alter official scoring.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added daily intelligence brief
 
 **Type:** reliability UX / founder daily brief / Priority 13 repair
