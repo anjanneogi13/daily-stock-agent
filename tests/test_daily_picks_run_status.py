@@ -4,6 +4,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from scripts.record_daily_picks_run_status import (
+    _daily_picks_diagnostics,
     append_record,
     build_record,
     status_path,
@@ -78,3 +79,59 @@ def test_today_picks_count_counts_csv_rows_for_date(tmp_path):
 
     assert today_picks_count("2026-05-06", csv_path) == 2
     assert today_picks_count("2026-05-04", csv_path) == 0
+
+
+def test_daily_picks_diagnostics_reads_no_pick_report(tmp_path):
+    (tmp_path / "daily_picks_no_pick_report_2026-05-06.json").write_text(json.dumps({
+        "primary_no_pick_cause": "NO_PICK_ALL_FINALISTS_HARD_BLOCKED",
+        "secondary_causes": ["YFINANCE_PROVIDER_DEGRADED"],
+        "pipeline": {
+            "pre_hard_block_pick_count": 2,
+            "hard_blocked_count": 2,
+            "final_pick_count": 0,
+        },
+        "diagnostics": {
+            "pre_hard_block_candidates": [{"ticker": "AAA"}, {"ticker": "BBB"}],
+            "hard_blocked_candidates": [{"ticker": "AAA"}, {"ticker": "BBB"}],
+        },
+    }))
+
+    diag = _daily_picks_diagnostics("2026-05-06", data_dir=tmp_path)
+
+    assert diag["no_pick_report_path"].endswith("daily_picks_no_pick_report_2026-05-06.json")
+    assert diag["candidate_rejections_path"] == ""
+    assert diag["primary_no_pick_cause"] == "NO_PICK_ALL_FINALISTS_HARD_BLOCKED"
+    assert diag["secondary_causes"] == ["YFINANCE_PROVIDER_DEGRADED"]
+    assert diag["pipeline"]["final_pick_count"] == 0
+    assert diag["diagnostics_available"] is True
+    assert diag["pre_hard_block_candidate_count"] == 2
+    assert diag["hard_blocked_candidate_count"] == 2
+
+
+def test_build_record_can_include_daily_picks_diagnostics(tmp_path):
+    (tmp_path / "daily_picks_no_pick_report_2026-05-06.json").write_text(json.dumps({
+        "primary_no_pick_cause": "NO_PICK_ALL_FINALISTS_HARD_BLOCKED",
+        "pipeline": {
+            "pre_hard_block_pick_count": 2,
+            "hard_blocked_count": 2,
+            "final_pick_count": 0,
+        },
+    }))
+
+    record = build_record(
+        event="agent_completed",
+        result="failed",
+        reason="main.py failed",
+        picks_logged=0,
+        include_diagnostics=True,
+        data_dir=tmp_path,
+        now=datetime(2026, 5, 6, 8, 35, tzinfo=ZoneInfo("America/New_York")),
+    )
+
+    diag = record["daily_picks_diagnostics"]
+    assert diag["primary_no_pick_cause"] == "NO_PICK_ALL_FINALISTS_HARD_BLOCKED"
+    assert diag["diagnostics_available"] is False
+    assert diag["pre_hard_block_candidate_count"] == 2
+    assert diag["hard_blocked_candidate_count"] == 2
+    assert record["paper_trading_enabled"] is False
+    assert record["live_trading_enabled"] is False

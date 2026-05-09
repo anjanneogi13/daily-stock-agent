@@ -138,6 +138,7 @@ Current state:
 Implementation direction:
 
 - Validate current diagnostics with tests/smoke.
+- Future failure run-status rows now include compact no-pick diagnostics via `--include-diagnostics`.
 - If missing, ensure no-pick artifacts include:
   - finalist tickers,
   - score summary,

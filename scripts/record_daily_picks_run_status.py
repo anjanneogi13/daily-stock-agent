@@ -46,6 +46,58 @@ def _parse_bool(value: str | None):
     return str(value).strip().lower() in {"1", "true", "yes", "y", "sent", "success"}
 
 
+def _load_json(path: Path) -> dict:
+    try:
+        if path.exists():
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            return payload if isinstance(payload, dict) else {}
+    except Exception:
+        return {}
+    return {}
+
+
+def _daily_picks_diagnostics(date_str: str, data_dir: Path | None = None) -> dict:
+    """Return compact no-pick diagnostics for run-status observability.
+
+    This is monitoring-only metadata. It does not generate picks, mutate official
+    journals, create paper trades, or enable live trading.
+    """
+    data_dir = data_dir or Path(os.getenv("DAILY_PICKS_STATUS_DATA_DIR", "data"))
+    no_pick_path = data_dir / f"daily_picks_no_pick_report_{date_str}.json"
+    rejections_path = data_dir / f"daily_picks_candidate_rejections_{date_str}.json"
+
+    report = _load_json(no_pick_path)
+    rejection_report = _load_json(rejections_path)
+
+    pipeline = report.get("pipeline") if isinstance(report.get("pipeline"), dict) else {}
+    diagnostics = report.get("diagnostics") if isinstance(report.get("diagnostics"), dict) else {}
+    if not diagnostics and isinstance(rejection_report.get("diagnostics"), dict):
+        diagnostics = rejection_report.get("diagnostics") or {}
+
+    hard_blocked = diagnostics.get("hard_blocked_candidates") if isinstance(diagnostics, dict) else []
+    pre_hard = diagnostics.get("pre_hard_block_candidates") if isinstance(diagnostics, dict) else []
+
+    out = {
+        "no_pick_report_path": str(no_pick_path) if no_pick_path.exists() else "",
+        "candidate_rejections_path": str(rejections_path) if rejections_path.exists() else "",
+        "primary_no_pick_cause": report.get("primary_no_pick_cause", ""),
+        "secondary_causes": report.get("secondary_causes", []) if isinstance(report.get("secondary_causes"), list) else [],
+        "pipeline": pipeline,
+        "diagnostics_available": bool(diagnostics),
+        "pre_hard_block_candidate_count": len(pre_hard) if isinstance(pre_hard, list) else 0,
+        "hard_blocked_candidate_count": len(hard_blocked) if isinstance(hard_blocked, list) else 0,
+    }
+
+    # If candidate diagnostics were not available yet, keep the aggregate counts
+    # visible from the pipeline so failed status rows still explain what happened.
+    if not out["pre_hard_block_candidate_count"]:
+        out["pre_hard_block_candidate_count"] = int(pipeline.get("pre_hard_block_pick_count") or 0)
+    if not out["hard_blocked_candidate_count"]:
+        out["hard_blocked_candidate_count"] = int(pipeline.get("hard_blocked_count") or 0)
+
+    return out
+
+
 def build_record(
     *,
     event: str,
@@ -57,13 +109,15 @@ def build_record(
     workflow: str = "daily-picks",
     mode: str = "monitoring_only",
     now: datetime | None = None,
+    include_diagnostics: bool = False,
+    data_dir: Path | None = None,
 ) -> dict:
     now_et = now.astimezone(ET) if now else datetime.now(ET)
     date_str = now_et.strftime("%Y-%m-%d")
     if picks_logged is None:
         picks_logged = today_picks_count(date_str)
 
-    return {
+    record = {
         "date": date_str,
         "timestamp_et": now_et.isoformat(),
         "timestamp_utc": now_et.astimezone(timezone.utc).isoformat(),
@@ -94,6 +148,11 @@ def build_record(
         },
     }
 
+    if include_diagnostics:
+        record["daily_picks_diagnostics"] = _daily_picks_diagnostics(date_str, data_dir=data_dir)
+
+    return record
+
 
 def append_record(record: dict, data_dir: Path | None = None) -> Path:
     path = status_path(record["date"], data_dir=data_dir)
@@ -113,6 +172,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--late-ideas-count", type=int, default=None)
     parser.add_argument("--workflow", default="daily-picks")
     parser.add_argument("--mode", default="monitoring_only")
+    parser.add_argument(
+        "--include-diagnostics",
+        action="store_true",
+        help="Include compact no-pick diagnostics from existing report artifacts.",
+    )
     args = parser.parse_args(argv)
 
     record = build_record(
@@ -124,6 +188,7 @@ def main(argv: list[str] | None = None) -> int:
         late_ideas_count=args.late_ideas_count,
         workflow=args.workflow,
         mode=args.mode,
+        include_diagnostics=args.include_diagnostics,
     )
     path = append_record(record)
     print(

@@ -229,7 +229,7 @@ jobs:
           if [ "$rc" -eq 0 ]; then
             python scripts/record_daily_picks_run_status.py --event agent_completed --result success --reason "main.py completed"
           else
-            python scripts/record_daily_picks_run_status.py --event agent_completed --result failed --reason "main.py failed"
+            python scripts/record_daily_picks_run_status.py --event agent_completed --result failed --reason "main.py failed" --include-diagnostics
           fi
           exit "$rc"
 

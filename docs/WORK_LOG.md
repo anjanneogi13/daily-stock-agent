@@ -13,6 +13,38 @@ Rules:
 
 ---
 
+## 2026-05-09 — Improved daily-picks failure-status diagnostics
+
+**Type:** observability / monitoring-only reliability
+
+**Summary:**
+
+Enhanced `scripts/record_daily_picks_run_status.py` so future daily-picks failure/status rows can include compact no-pick diagnostics from existing report artifacts.
+
+New optional run-status metadata includes:
+
+- no-pick report path,
+- candidate rejection report path,
+- primary no-pick cause,
+- secondary causes,
+- pipeline counts,
+- whether candidate diagnostics are available,
+- pre-hard-block finalist count,
+- hard-blocked finalist count.
+
+The daily-picks workflow now passes `--include-diagnostics` on the `agent_completed failed` row so future failures are more explainable than just `main.py failed`.
+
+Safety:
+
+- Monitoring-only observability change.
+- Does not generate official picks.
+- Does not modify scoring or gates.
+- Does not write official pick logs.
+- Does not create paper trades.
+- Does not enable live trading.
+
+---
+
 ## 2026-05-09 — Documented product intelligence repair priority plan
 
 **Type:** product strategy / planning / monitoring-only architecture
