@@ -1,4 +1,7 @@
 import json
+import subprocess
+import sys
+from pathlib import Path
 
 from scripts.write_official_workflow_summary import build_summary
 
@@ -100,3 +103,32 @@ def test_build_summary_includes_github_observability_metadata(tmp_path, monkeypa
     assert "Workflow run: https://github.com/anjanneogi13/daily-stock-agent/actions/runs/987654" in summary
     assert "Commit: https://github.com/anjanneogi13/daily-stock-agent/commit/abcdef1234567890" in summary
     assert "Official artifact bundle: `official-decision-artifacts-987654`" in summary
+
+def test_cli_runs_from_repo_root(tmp_path):
+    script = Path(__file__).resolve().parents[1] / "scripts/write_official_workflow_summary.py"
+    output = tmp_path / "summary.md"
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(script),
+            "--date",
+            "2026-05-09",
+            "--data-dir",
+            str(tmp_path / "data"),
+            "--pick-dry-run-dir",
+            str(tmp_path / "pick-dry"),
+            "--no-pick-dry-run-dir",
+            str(tmp_path / "no-pick-dry"),
+            "--output",
+            str(output),
+        ],
+        cwd=Path(__file__).resolve().parents[1],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 0, result.stderr
+    assert "# Lane 1 Official Decision Observability" in result.stdout
+    assert output.exists()
+    assert "# Lane 1 Official Decision Observability" in output.read_text()
