@@ -127,3 +127,11 @@ If documentation conflicts with code behavior:
 3. document the current behavior
 4. decide whether code or docs should change
 5. add tests before changing runtime behavior
+
+## Multi-lane product architecture
+
+The current product architecture and long-term lane separation are documented in:
+
+- [Multi-Lane Product Architecture and Learning System](strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md)
+
+This document explains the separation between premarket official picks, post-open watch-only opportunities, intraday observations, Monster Hunter / compounder research, reporting, backtesting, learning loops, risk management, and safety gates.

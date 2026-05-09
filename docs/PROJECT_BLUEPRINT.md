@@ -306,3 +306,18 @@ The active product-intelligence repair roadmap is documented in:
 - `docs/planning/PRODUCT_INTELLIGENCE_REPAIR_PLAN.md`
 
 This plan prioritizes official no-pick explainability, watch-only outcome attribution, performance-source separation, late-news score calibration, opening-range quality evaluation, dynamic theme discovery, and observe-only theme-to-pick analysis before any paper trading, live trading, or production theme-aware scoring.
+
+## Multi-lane product architecture checkpoint
+
+The product is evolving into a monitoring-first, multi-lane stock intelligence system. The canonical architecture note is:
+
+- `docs/strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md`
+
+Key current interpretation:
+
+- Lane 1 is the premarket official daily decision lane.
+- Lane 1 accepts either a validated official pick or a validated official no-pick.
+- Lane 1 is code-complete / pre-cert ready, but still awaiting Priority 19 real scheduled-run certification.
+- Lane 2 should be introduced as a post-open watch-only opportunity lane, not as official after-open picks.
+- Intraday/opening-range, Monster Hunter, compounder, long-term opportunity, and future learning systems must remain separate until independently validated.
+- Paper trading and live trading remain forbidden until explicit readiness gates pass and founder approval is given.

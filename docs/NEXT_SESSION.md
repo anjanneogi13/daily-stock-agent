@@ -1299,3 +1299,29 @@ Priority order:
 8. Future theme-aware scoring only after validation.
 
 Do not start paper trading, live trading, production theme-aware scoring, or official gate-loosening before these evidence and trust gaps are addressed.
+
+## Fresh-session recovery checkpoint — 2026-05-09
+
+Before starting new feature work, the next session should audit the repository and read:
+
+- `docs/strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md`
+- `docs/planning/LANE1_FINAL_PRODUCTION_HARDENING_PLAN.md`
+- `docs/PROJECT_BLUEPRINT.md`
+- `docs/WORK_LOG.md`
+
+Current known product state to verify:
+
+- Lane 1 premarket official daily decision is code-complete / pre-cert ready.
+- Priorities 15-18 are complete.
+- Priority 18 hotfix for `scripts/write_official_workflow_summary.py` CLI imports is complete.
+- CI #232 was green for the latest known pushed main.
+- Priority 19 remains pending: certify the next real scheduled Daily Stock Picks premarket run.
+- A valid official no-pick artifact is a valid Lane 1 outcome.
+- Missing both valid official pick artifacts and a valid official no-pick artifact is a failure.
+- Do not start major Lane 2 work until Priority 19 is certified unless fixing a repo-health or scheduled-run blocker.
+
+Next strategic lane after certification:
+
+- Start Lane 2 as a post-open / late-daily watch-only opportunity lane.
+- Do not label it official after-open picks yet.
+- Keep it monitoring-only, separate from `data/picks_log.csv`, and separate from official premarket statistics until validated.

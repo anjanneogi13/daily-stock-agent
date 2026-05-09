@@ -3638,3 +3638,13 @@ Safety:
 - No execution path was added.
 - No thresholds were loosened.
 - No forced-pick behavior was added.
+
+## 2026-05-09 — Multi-lane product architecture documentation checkpoint
+
+- Added `docs/strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md`.
+- Documented the intended product as a multi-strategy, monitoring-first stock intelligence system.
+- Clarified Lane 1 as the premarket official daily decision lane where either a validated official pick or a validated official no-pick is acceptable.
+- Clarified that Lane 2 should start as a post-open / late-daily watch-only opportunity lane, not official after-open picks.
+- Documented future lanes for intraday/opening-range, Monster Hunter, compounders, long-term opportunities, reports, backtesting, learning loops, provider readiness, risk management, regime awareness, experiment tracking, and safety gates.
+- Reaffirmed that paper trading and live trading remain forbidden until readiness gates pass and founder approval is explicit.
+- Added fresh-session recovery guidance so a new chat agent can recover product direction from repository docs rather than chat memory alone.
