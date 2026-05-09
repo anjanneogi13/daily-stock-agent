@@ -60,7 +60,9 @@ def test_main_does_not_mark_sent_when_delivery_fails(monkeypatch):
     import scripts.send_layman_daily as sld
 
     monkeypatch.setattr(sld, "_today_picks", lambda: [{"ticker": "AAPL"}])
-    monkeypatch.setattr(sld, "build_message", lambda picks: "message")
+    monkeypatch.setattr(sld, "_today_no_pick_report", lambda: {})
+    monkeypatch.setattr(sld, "validate_official_user_output_state", lambda picks, no_pick_report=None: [])
+    monkeypatch.setattr(sld, "build_message", lambda picks, no_pick_report=None: "message")
     monkeypatch.setattr(sld, "should_send", lambda msg: True)
     monkeypatch.setattr(sld, "_send", lambda msg: False)
 
@@ -75,7 +77,9 @@ def test_main_marks_sent_after_delivery_success(monkeypatch):
     import scripts.send_layman_daily as sld
 
     monkeypatch.setattr(sld, "_today_picks", lambda: [{"ticker": "AAPL"}])
-    monkeypatch.setattr(sld, "build_message", lambda picks: "message")
+    monkeypatch.setattr(sld, "_today_no_pick_report", lambda: {})
+    monkeypatch.setattr(sld, "validate_official_user_output_state", lambda picks, no_pick_report=None: [])
+    monkeypatch.setattr(sld, "build_message", lambda picks, no_pick_report=None: "message")
     monkeypatch.setattr(sld, "should_send", lambda msg: True)
     monkeypatch.setattr(sld, "_send", lambda msg: True)
 
@@ -90,7 +94,9 @@ def test_main_dedup_skip_does_not_send_or_mark(monkeypatch):
     import scripts.send_layman_daily as sld
 
     monkeypatch.setattr(sld, "_today_picks", lambda: [{"ticker": "AAPL"}])
-    monkeypatch.setattr(sld, "build_message", lambda picks: "message")
+    monkeypatch.setattr(sld, "_today_no_pick_report", lambda: {})
+    monkeypatch.setattr(sld, "validate_official_user_output_state", lambda picks, no_pick_report=None: [])
+    monkeypatch.setattr(sld, "build_message", lambda picks, no_pick_report=None: "message")
     monkeypatch.setattr(sld, "should_send", lambda msg: False)
 
     send = Mock()
