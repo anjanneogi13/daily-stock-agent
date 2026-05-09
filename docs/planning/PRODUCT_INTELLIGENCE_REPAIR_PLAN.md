@@ -348,6 +348,15 @@ Expected artifact integration:
 - May share infrastructure with Priority 2.
 - Opening-range outcomes must remain separate from official picks.
 
+Current implementation notes:
+
+- Opening-range quality is integrated into `scripts/build_watch_only_outcomes.py`.
+- Opening-range watch-only outcomes now include quality status, quality score, sustained/false-breakout markers, retest status, volume-confirmation status, overextension marker, and time-of-day bucket.
+- If retained bars end before the observation timestamp, quality is marked `data_insufficient_no_forward_bars`.
+- May 8 TSLA/AMD/QQQ opening-range observations are explicitly marked data-insufficient because no forward bars exist after observation.
+- Watch-only outcome Markdown renders opening-range quality details.
+- This remains watch-only and separate from official picks/performance.
+
 Safety:
 
 - Opening-range remains watch-only.

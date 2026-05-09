@@ -13,6 +13,60 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added opening-range watch-only quality evaluation
+
+**Type:** opening-range outcome quality / watch-only evidence / Priority 5 repair
+
+**Summary:**
+
+Added a watch-only opening-range quality evaluator to explain whether an opening-range observation had enough retained bar data to judge breakout quality and, when data exists, whether the breakout was sustained or failed.
+
+Changes:
+
+- `scripts/build_watch_only_outcomes.py` now enriches opening-range watch-only outcomes with:
+  - `opening_range_quality_status`
+  - `opening_range_quality_score`
+  - `opening_range_quality_flags`
+  - `sustained_breakout`
+  - `false_breakout`
+  - `breakout_retest_status`
+  - `overextended_at_observation`
+  - `volume_confirmation_status`
+  - `volume_confirmation_ratio`
+  - `relative_strength_status`
+  - `time_of_day_bucket`
+  - `quality_window_minutes`
+- Watch-only outcome Markdown now renders opening-range quality notes.
+- Added tests for:
+  - no forward bars after observation,
+  - sustained breakout with TP first,
+  - false breakout with SL first.
+
+May 8 result:
+
+The retained bar files ended before the opening-range observation timestamps:
+
+- TSLA: observation after last retained bar
+- AMD: observation after last retained bar
+- QQQ: observation after last retained bar
+
+Therefore all three May 8 opening-range observations are honestly marked:
+
+- `opening_range_quality_status=data_insufficient_no_forward_bars`
+- `volume_confirmation_status=not_evaluable_no_forward_bars`
+- `sustained_breakout=null`
+- `false_breakout=null`
+
+Safety:
+
+- Opening-range remains watch-only.
+- Does not create official picks.
+- Does not mutate official performance.
+- Does not enable paper or live trading.
+- Does not provide buy instructions.
+
+---
+
 ## 2026-05-09 — Calibrated late-news watch-only scores and corporate-action risk flags
 
 **Type:** late-news scoring / watch-only safety / Priority 4 repair

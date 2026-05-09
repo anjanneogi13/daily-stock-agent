@@ -18,6 +18,7 @@ import sys
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from statistics import mean
 from typing import Iterable
 
@@ -170,6 +171,181 @@ def evaluate_late_daily_idea(row: dict) -> dict:
     return out
 
 
+def _time_of_day_bucket(ts: datetime | None) -> str:
+    if not ts:
+        return "unknown"
+    try:
+        local = ts.astimezone(ZoneInfo("America/New_York"))
+    except Exception:
+        local = ts
+
+    minutes = local.hour * 60 + local.minute
+    if minutes < 9 * 60 + 30:
+        return "pre_open"
+    if minutes < 10 * 60:
+        return "opening_30m"
+    if minutes < 11 * 60:
+        return "morning_followthrough"
+    if minutes < 12 * 60:
+        return "late_morning"
+    if minutes < 14 * 60:
+        return "midday"
+    if minutes < 16 * 60:
+        return "afternoon"
+    return "after_hours"
+
+
+def evaluate_opening_range_quality(
+    row: dict,
+    *,
+    forward_bars: list[dict],
+    entry: float | None,
+    stop_loss: float | None,
+    take_profit: float | None,
+    which_hit_first: str,
+    max_hold_minutes: int,
+) -> dict:
+    """Evaluate watch-only opening-range breakout quality.
+
+    This is not official performance and not paper trading. It explains whether
+    the retained bar sequence is sufficient to judge breakout follow-through.
+    """
+    obs_ts = _as_dt(row.get("ts"))
+    flags: list[str] = ["watch_only_opening_range_quality"]
+    time_bucket = _time_of_day_bucket(obs_ts)
+
+    base = {
+        "opening_range_quality_status": "unknown",
+        "opening_range_quality_score": None,
+        "opening_range_quality_flags": flags,
+        "sustained_breakout": None,
+        "false_breakout": None,
+        "breakout_retest_status": "unknown",
+        "overextended_at_observation": None,
+        "volume_confirmation_status": "unknown",
+        "volume_confirmation_ratio": None,
+        "relative_strength_status": "not_available_no_benchmark_series",
+        "time_of_day_bucket": time_bucket,
+        "quality_window_minutes": max_hold_minutes,
+    }
+
+    if not forward_bars:
+        flags.append("no_forward_bars_after_observation")
+        base.update({
+            "opening_range_quality_status": "data_insufficient_no_forward_bars",
+            "breakout_retest_status": "not_evaluable_no_forward_bars",
+            "volume_confirmation_status": "not_evaluable_no_forward_bars",
+        })
+        return base
+
+    or_high = _safe_float(row.get("opening_range_high"))
+    or_low = _safe_float(row.get("opening_range_low"))
+    or_width_pct = _safe_float(row.get("opening_range_width_pct"))
+    breakout_pct = _safe_float(row.get("breakout_pct"))
+    or_volume = _safe_float(row.get("opening_range_volume"))
+
+    highs = [_safe_float(b.get("high")) for b in forward_bars]
+    lows = [_safe_float(b.get("low")) for b in forward_bars]
+    closes = [_safe_float(b.get("close")) for b in forward_bars]
+    vols = [_safe_float(b.get("volume")) for b in forward_bars]
+    highs = [x for x in highs if x is not None]
+    lows = [x for x in lows if x is not None]
+    closes = [x for x in closes if x is not None]
+    vols = [x for x in vols if x is not None]
+
+    overextended = False
+    if breakout_pct is not None:
+        overextended = breakout_pct >= 2.0
+        if or_width_pct is not None and or_width_pct > 0:
+            overextended = overextended or breakout_pct >= or_width_pct
+    if overextended:
+        flags.append("overextended_at_observation")
+
+    retest_status = "not_available"
+    false_breakout = False
+    sustained_breakout = False
+
+    if lows and or_high is not None:
+        if min(lows) <= or_high:
+            retest_status = "retested_or_high_or_failed_inside_range"
+            false_breakout = True
+            flags.append("retested_or_high_or_failed_inside_range")
+        else:
+            retest_status = "held_above_opening_range_high"
+            sustained_breakout = True
+
+    if which_hit_first == "tp":
+        sustained_breakout = True
+        false_breakout = False
+        flags.append("tp_hit_before_stop")
+    elif which_hit_first == "sl":
+        false_breakout = True
+        sustained_breakout = False
+        flags.append("stop_hit_before_target")
+
+    if closes and or_high is not None and closes[-1] > or_high and which_hit_first not in {"tp", "sl"}:
+        sustained_breakout = True
+        flags.append("end_of_window_above_opening_range_high")
+
+    volume_ratio = None
+    volume_status = "not_available"
+    if vols and or_volume and or_volume > 0:
+        # Opening range is normally six 5-minute bars; use average OR bar volume
+        # as a simple v1 confirmation baseline.
+        avg_or_bar_volume = or_volume / 6.0
+        if avg_or_bar_volume > 0:
+            volume_ratio = round(vols[0] / avg_or_bar_volume, 4)
+            if volume_ratio >= 1.2:
+                volume_status = "confirmed"
+                flags.append("volume_confirmed")
+            elif volume_ratio < 0.8:
+                volume_status = "weak"
+                flags.append("volume_weak")
+            else:
+                volume_status = "neutral"
+
+    score = 50
+    if sustained_breakout:
+        score += 20
+    if false_breakout:
+        score -= 25
+    if which_hit_first == "tp":
+        score += 20
+    elif which_hit_first == "sl":
+        score -= 20
+    if volume_status == "confirmed":
+        score += 5
+    elif volume_status == "weak":
+        score -= 5
+    if overextended:
+        score -= 10
+    score = max(0, min(100, score))
+
+    if which_hit_first == "tp":
+        quality_status = "sustained_breakout_tp_hit"
+    elif which_hit_first == "sl":
+        quality_status = "false_breakout_stop_hit"
+    elif false_breakout:
+        quality_status = "failed_retest_or_range_reentry"
+    elif sustained_breakout:
+        quality_status = "sustained_breakout_no_target_yet"
+    else:
+        quality_status = "inconclusive_forward_bars"
+
+    base.update({
+        "opening_range_quality_status": quality_status,
+        "opening_range_quality_score": score,
+        "opening_range_quality_flags": list(dict.fromkeys(flags)),
+        "sustained_breakout": sustained_breakout,
+        "false_breakout": false_breakout,
+        "breakout_retest_status": retest_status,
+        "overextended_at_observation": overextended,
+        "volume_confirmation_status": volume_status,
+        "volume_confirmation_ratio": volume_ratio,
+    })
+    return base
+
+
 def evaluate_opening_range_observation(row: dict, *, data_dir: Path, max_hold_minutes: int = 240) -> dict:
     out = _base_outcome(row, source=str(row.get("source") or "opening_range_observations"), observation_type="opening_range_watch_only")
     bars_dir = data_dir / "opening_range_bars"
@@ -210,6 +386,16 @@ def evaluate_opening_range_observation(row: dict, *, data_dir: Path, max_hold_mi
     else:
         which = "unknown"
 
+    quality = evaluate_opening_range_quality(
+        row,
+        forward_bars=forward_bars,
+        entry=entry,
+        stop_loss=stop_loss,
+        take_profit=take_profit,
+        which_hit_first=which,
+        max_hold_minutes=max_hold_minutes,
+    )
+
     out.update({
         "first_observed_timestamp": row.get("ts"),
         "reference_price": entry,
@@ -236,6 +422,7 @@ def evaluate_opening_range_observation(row: dict, *, data_dir: Path, max_hold_mi
         ),
         "bar_file": str(bar_path) if bar_path else "",
         "invalid_bar_lines": invalid_bar_lines,
+        **quality,
         "safety_flags": [
             "watch_only_evidence",
             "not_official_performance",
@@ -349,6 +536,16 @@ def format_markdown(summary: dict, outcomes: Iterable[dict]) -> str:
             f"end_return=**{_display(o.get('end_of_window_return_pct'))}**, "
             f"data=**{o.get('data_sufficiency_status')}**"
         )
+        if o.get("observation_type") == "opening_range_watch_only":
+            lines.append(
+                f"  - OR quality=**{o.get('opening_range_quality_status')}**, "
+                f"quality_score=**{_display(o.get('opening_range_quality_score'))}**, "
+                f"sustained=**{str(o.get('sustained_breakout')).lower() if o.get('sustained_breakout') is not None else 'n/a'}**, "
+                f"false_breakout=**{str(o.get('false_breakout')).lower() if o.get('false_breakout') is not None else 'n/a'}**, "
+                f"volume=**{o.get('volume_confirmation_status')}**, "
+                f"time=**{o.get('time_of_day_bucket')}**, "
+                f"flags=**{', '.join(o.get('opening_range_quality_flags') or []) or 'none'}**"
+            )
     if not outcomes:
         lines.append("- None")
 

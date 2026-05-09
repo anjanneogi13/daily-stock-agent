@@ -23,8 +23,11 @@ Monitoring-only evidence. Not official picks. Not buy instructions. Not paper tr
 - PRAA (late_daily_watch_only): status=**tp_and_sl_inside_range_order_unknown**, tp_hit=**true**, sl_hit=**true**, which_hit_first=**unknown_same_day_range_only**, mfe=**23.5599**, mae=**-3.8594**, end_return=**n/a**, data=**range_only_no_intraday_sequence**
 - ZIM (late_daily_watch_only): status=**sl_hit_range_only**, tp_hit=**false**, sl_hit=**true**, which_hit_first=**sl**, mfe=**1.9512**, mae=**-2.0638**, end_return=**n/a**, data=**range_only_no_intraday_sequence**
 - TSLA (opening_range_watch_only): status=**missing_bar_data**, tp_hit=**false**, sl_hit=**false**, which_hit_first=**unknown**, mfe=**n/a**, mae=**n/a**, end_return=**n/a**, data=**bar_sequence_available_no_forward_bars_after_observation**
+  - OR quality=**data_insufficient_no_forward_bars**, quality_score=**n/a**, sustained=**n/a**, false_breakout=**n/a**, volume=**not_evaluable_no_forward_bars**, time=**late_morning**, flags=**watch_only_opening_range_quality, no_forward_bars_after_observation**
 - AMD (opening_range_watch_only): status=**missing_bar_data**, tp_hit=**false**, sl_hit=**false**, which_hit_first=**unknown**, mfe=**n/a**, mae=**n/a**, end_return=**n/a**, data=**bar_sequence_available_no_forward_bars_after_observation**
+  - OR quality=**data_insufficient_no_forward_bars**, quality_score=**n/a**, sustained=**n/a**, false_breakout=**n/a**, volume=**not_evaluable_no_forward_bars**, time=**late_morning**, flags=**watch_only_opening_range_quality, no_forward_bars_after_observation**
 - QQQ (opening_range_watch_only): status=**missing_bar_data**, tp_hit=**false**, sl_hit=**false**, which_hit_first=**unknown**, mfe=**n/a**, mae=**n/a**, end_return=**n/a**, data=**bar_sequence_available_no_forward_bars_after_observation**
+  - OR quality=**data_insufficient_no_forward_bars**, quality_score=**n/a**, sustained=**n/a**, false_breakout=**n/a**, volume=**not_evaluable_no_forward_bars**, time=**late_morning**, flags=**watch_only_opening_range_quality, no_forward_bars_after_observation**
 
 ## Safety
 
