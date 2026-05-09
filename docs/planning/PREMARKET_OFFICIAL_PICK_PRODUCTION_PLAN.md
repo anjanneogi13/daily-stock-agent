@@ -1232,6 +1232,27 @@ Follow-up needed:
 - add skipped-run summary for guard exits.
 
 
+## Final Production Hardening Plan
+
+The remaining Lane 1 production-hardening work is tracked in:
+
+- `docs/planning/LANE1_FINAL_PRODUCTION_HARDENING_PLAN.md`
+
+Remaining priorities before production certification:
+
+- Priority 15 — fail user-facing sends when official artifacts are missing,
+- Priority 16 — add official decision/artifact ID traceability,
+- Priority 17 — formal no-pick artifacts for guard-level skips,
+- Priority 18 — add workflow/run/artifact links to outputs,
+- Priority 19 — certify after next green scheduled premarket run.
+
+The intended sequence is:
+
+1. complete Priorities 15-18 before Monday,
+2. use Monday's live scheduled premarket run as production validation,
+3. keep paper trading and live trading disabled until multiple clean production observations exist.
+
+
 ## Priority 14 Implementation Status
 
 Initial production-readiness checklist and final Lane 1 audit gate added:

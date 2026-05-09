@@ -1,3 +1,32 @@
+## 2026-05-09 — Documented final Lane 1 production-hardening plan
+
+**Type:** Lane 1 / documentation / production readiness
+
+**Summary:**
+
+Documented the remaining production-hardening plan before implementation.
+
+New file:
+
+- `docs/planning/LANE1_FINAL_PRODUCTION_HARDENING_PLAN.md`
+
+The plan defines:
+
+- Priority 15 — fail user-facing sends when official artifacts are missing,
+- Priority 16 — add official decision/artifact ID traceability,
+- Priority 17 — formal no-pick artifacts for market-closed/missed-window guard skips,
+- Priority 18 — add workflow/run/artifact links to outputs,
+- Priority 19 — live scheduled-run production certification.
+
+Position:
+
+- implement all known structural safeguards before Monday,
+- use Monday's scheduled premarket run for production validation, not architecture discovery,
+- keep paper trading disabled,
+- keep live trading disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 production-readiness audit gate
 
 **Type:** Lane 1 / workflow / production-readiness audit
