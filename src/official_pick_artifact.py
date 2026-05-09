@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
+from .github_observability import github_observability_metadata
+
 from .premarket_decision_contract import (
     CONTRACT_VERSION,
     DECISION_OFFICIAL_PICK,
@@ -189,6 +191,7 @@ def build_official_pick_artifact(
     workflow_run = workflow_run_id or os.getenv("GITHUB_RUN_ID", "local")
     commit = commit_sha or os.getenv("GITHUB_SHA", "local")
     artifact_filename = official_pick_artifact_filename(date, ticker)
+    observability = github_observability_metadata()
 
     payload = {
         "artifact": "premarket_official_pick",
@@ -208,6 +211,7 @@ def build_official_pick_artifact(
         "selection_time_et": selection_time,
         "workflow_run_id": workflow_run,
         "commit_sha": commit,
+        **observability,
         "data_readiness_status": data_readiness_status,
         "provider_status": provider_status,
         "market_session_status": market_session_status,
@@ -280,6 +284,9 @@ def write_official_pick_artifacts(
             "artifact_filename": payload["artifact_filename"],
             "path": str(path),
             "contract_version": payload["contract_version"],
+            "workflow_run_url": payload.get("workflow_run_url", ""),
+            "commit_url": payload.get("commit_url", ""),
+            "artifact_bundle_name": payload.get("artifact_bundle_name", ""),
             "score": payload["score"],
             "entry": payload["entry"],
             "stop_loss": payload["stop_loss"],
@@ -297,6 +304,7 @@ def write_official_pick_artifacts(
         "requested_pick_count": len(picks),
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
+        **github_observability_metadata(),
         "pipeline": _json_safe(pipeline or {}),
         "candidate_diagnostics_available": bool(candidate_diagnostics),
         "artifacts": artifacts,

@@ -212,14 +212,26 @@ def build_message(picks, no_pick_report=None):
             cause = no_pick_report.get("primary_no_pick_cause", "unknown")
             readiness = no_pick_report.get("data_readiness_status", "unknown")
             provider = no_pick_report.get("provider_status", "unknown")
+            trace = no_pick_report.get("decision_id") or no_pick_report.get("artifact_id") or ""
+            run_url = no_pick_report.get("workflow_run_url") or ""
+            artifact_path = no_pick_report.get("artifact_path") or ""
+            audit_lines = []
+            if trace:
+                audit_lines.append(f"🔎 Official trace: `{trace}`")
+            if run_url:
+                audit_lines.append(f"🏃 Workflow run: {run_url}")
+            if artifact_path:
+                audit_lines.append(f"📦 Artifact: `{artifact_path}`")
+            audit_block = ("\n" + "\n".join(audit_lines) + "\n") if audit_lines else "\n"
             return (
                 header("🌅", "Today's Stock Picks", today)
                 + "📭 *Official no-pick today.*\n"
                 + f"Reason: {summary}\n"
                 + f"Primary cause: `{cause}`\n"
                 + f"Data readiness: `{readiness}`\n"
-                + f"Provider status: `{provider}`\n\n"
-                + "_This is a valid safety outcome. The agent prefers no trade over a forced bad trade._"
+                + f"Provider status: `{provider}`\n"
+                + audit_block
+                + "\n_This is a valid safety outcome. The agent prefers no trade over a forced bad trade._"
             )
         return (header("🌅", "Today's Stock Picks", today) +
                 "📭 *No picks today.* The agent didn't find anything worth recommending.\n"
@@ -262,6 +274,10 @@ def build_message(picks, no_pick_report=None):
                 lines.append(f"🧾 *Official reason:* {p.get('official_selection_reason')}")
             if p.get("official_decision_id") or p.get("official_artifact_id"):
                 lines.append(f"🔎 *Official trace:* `{p.get('official_decision_id') or p.get('official_artifact_id')}`")
+            if p.get("official_workflow_run_url"):
+                lines.append(f"🏃 *Workflow run:* {p.get('official_workflow_run_url')}")
+            if p.get("official_artifact_path"):
+                lines.append(f"📦 *Artifact:* `{p.get('official_artifact_path')}`")
             if p.get("official_risk_flags"):
                 lines.append("⚠️ *Official risk flags:* " + ", ".join(map(str, p.get("official_risk_flags") or [])))
             _warns = _sniff(p, {})
@@ -286,6 +302,10 @@ def build_message(picks, no_pick_report=None):
                 lines.append(f"🧾 *Official reason:* {p.get('official_selection_reason')}")
             if p.get("official_decision_id") or p.get("official_artifact_id"):
                 lines.append(f"🔎 *Official trace:* `{p.get('official_decision_id') or p.get('official_artifact_id')}`")
+            if p.get("official_workflow_run_url"):
+                lines.append(f"🏃 *Workflow run:* {p.get('official_workflow_run_url')}")
+            if p.get("official_artifact_path"):
+                lines.append(f"📦 *Artifact:* `{p.get('official_artifact_path')}`")
             if p.get("official_risk_flags"):
                 lines.append("⚠️ *Official risk flags:* " + ", ".join(map(str, p.get("official_risk_flags") or [])))
             _warns = _sniff(p, {})

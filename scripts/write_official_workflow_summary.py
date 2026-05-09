@@ -24,6 +24,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from src.github_observability import github_observability_metadata
+
 
 def _load_json(path: Path) -> dict:
     try:
@@ -216,14 +218,21 @@ def build_summary(
     pick_dry_run_dir: Path = Path("/tmp/lane1-official-dry-run"),
     no_pick_dry_run_dir: Path = Path("/tmp/lane1-official-no-pick-dry-run"),
 ) -> str:
+    observability = github_observability_metadata()
     lines = [
         "# Lane 1 Official Decision Observability",
         "",
         f"- ET date: **{date_str}**",
         "- Safety: **paper trading disabled; live trading disabled**",
         "- Scope: official dry-runs, official decision artifacts, diagnostics",
-        "",
     ]
+    if observability.get("workflow_run_url"):
+        lines.append(f"- Workflow run: {observability['workflow_run_url']}")
+    if observability.get("commit_url"):
+        lines.append(f"- Commit: {observability['commit_url']}")
+    if observability.get("artifact_bundle_name"):
+        lines.append(f"- Official artifact bundle: `{observability['artifact_bundle_name']}`")
+    lines.append("")
 
     lines.extend(_dry_run_pick_section(date_str, pick_dry_run_dir))
     lines.extend(_dry_run_no_pick_section(date_str, no_pick_dry_run_dir))

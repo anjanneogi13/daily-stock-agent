@@ -106,3 +106,19 @@ def test_official_pick_trace_id_helpers_are_deterministic():
     assert official_pick_decision_id("2026-05-09", "brk.b", "123", "abcdef1234567890") == (
         "premarket_official_daily_pick:2026-05-09:BRKB:123:abcdef123456"
     )
+
+def test_official_pick_artifact_includes_github_observability_metadata(monkeypatch):
+    monkeypatch.setenv("GITHUB_SERVER_URL", "https://github.com")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "anjanneogi13/daily-stock-agent")
+    monkeypatch.setenv("GITHUB_RUN_ID", "987654")
+    monkeypatch.setenv("GITHUB_SHA", "abcdef1234567890")
+
+    payload = build_official_pick_artifact(
+        pick(),
+        date_str="2026-05-09",
+        selection_time_et="2026-05-09T08:45:00-04:00",
+    )
+
+    assert payload["workflow_run_url"] == "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/987654"
+    assert payload["commit_url"] == "https://github.com/anjanneogi13/daily-stock-agent/commit/abcdef1234567890"
+    assert payload["artifact_bundle_name"] == "official-decision-artifacts-987654"

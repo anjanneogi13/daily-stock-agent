@@ -32,6 +32,7 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.validate_daily_no_pick import validate_no_pick_report
+from src.github_observability import github_observability_metadata
 from src.market_calendar import next_trading_day, reason_market_closed
 from src.premarket_decision_contract import (
     CONTRACT_VERSION,
@@ -112,6 +113,7 @@ def build_guard_no_pick_artifact(
         raise ValueError(f"unsupported guard no-pick cause: {cause}")
 
     timestamp_utc, selection_time_et = _now_utc_and_et()
+    observability = github_observability_metadata()
     data_readiness_status, provider_status, market_session_status = _status_for_cause(cause)
     summary = reason or _default_reason(cause, date_str)
     trace = _trace_ids(date_str, cause)
@@ -147,6 +149,7 @@ def build_guard_no_pick_artifact(
         "selection_time_et": selection_time_et,
         "workflow_run_id": os.getenv("GITHUB_RUN_ID", "local"),
         "commit_sha": os.getenv("GITHUB_SHA", "local"),
+        **observability,
         "mode": "monitoring_only",
         "official_premarket_pick": False,
         "primary_no_pick_cause": cause,

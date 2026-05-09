@@ -83,3 +83,20 @@ def test_build_summary_handles_missing_artifacts(tmp_path):
     assert "Dry-run summary not found." in summary
     assert "No production official pick artifacts found." in summary
     assert "No production official no-pick artifact found." in summary
+
+def test_build_summary_includes_github_observability_metadata(tmp_path, monkeypatch):
+    monkeypatch.setenv("GITHUB_SERVER_URL", "https://github.com")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "anjanneogi13/daily-stock-agent")
+    monkeypatch.setenv("GITHUB_RUN_ID", "987654")
+    monkeypatch.setenv("GITHUB_SHA", "abcdef1234567890")
+
+    summary = build_summary(
+        date_str="2026-05-09",
+        data_dir=tmp_path / "missing-data",
+        pick_dry_run_dir=tmp_path / "missing-pick-dry",
+        no_pick_dry_run_dir=tmp_path / "missing-no-pick-dry",
+    )
+
+    assert "Workflow run: https://github.com/anjanneogi13/daily-stock-agent/actions/runs/987654" in summary
+    assert "Commit: https://github.com/anjanneogi13/daily-stock-agent/commit/abcdef1234567890" in summary
+    assert "Official artifact bundle: `official-decision-artifacts-987654`" in summary

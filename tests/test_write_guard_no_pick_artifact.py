@@ -54,3 +54,19 @@ def test_write_guard_no_pick_artifact_writes_json_and_markdown(tmp_path):
     assert payload["primary_no_pick_cause"] == "NO_PICK_WINDOW_MISSED"
     assert validate_no_pick_report(payload) == []
     assert "Official No-Pick Guard Decision" in markdown_path.read_text()
+
+def test_guard_no_pick_artifact_includes_github_observability_metadata(monkeypatch):
+    monkeypatch.setenv("GITHUB_SERVER_URL", "https://github.com")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "anjanneogi13/daily-stock-agent")
+    monkeypatch.setenv("GITHUB_RUN_ID", "987654")
+    monkeypatch.setenv("GITHUB_SHA", "abcdef1234567890")
+
+    payload = build_guard_no_pick_artifact(
+        date_str="2026-05-09",
+        cause="NO_PICK_WINDOW_MISSED",
+    )
+
+    assert payload["workflow_run_url"] == "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/987654"
+    assert payload["commit_url"] == "https://github.com/anjanneogi13/daily-stock-agent/commit/abcdef1234567890"
+    assert payload["artifact_bundle_name"] == "official-decision-artifacts-987654"
+    assert validate_no_pick_report(payload) == []

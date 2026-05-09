@@ -85,6 +85,14 @@ if not rows:
         print(f"- Primary cause: `{no_pick_report.get('primary_no_pick_cause', 'unknown')}`")
         print(f"- Data readiness: `{no_pick_report.get('data_readiness_status', 'unknown')}`")
         print(f"- Provider status: `{no_pick_report.get('provider_status', 'unknown')}`")
+        if no_pick_report.get("decision_id") or no_pick_report.get("artifact_id"):
+            print(f"- Official trace: `{no_pick_report.get('decision_id') or no_pick_report.get('artifact_id')}`")
+        if no_pick_report.get("workflow_run_url"):
+            print(f"- Workflow run: {no_pick_report.get('workflow_run_url')}")
+        if no_pick_report.get("artifact_bundle_name"):
+            print(f"- Artifact bundle: `{no_pick_report.get('artifact_bundle_name')}`")
+        if no_pick_report.get("artifact_path"):
+            print(f"- Artifact path: `{no_pick_report.get('artifact_path')}`")
         print(f"- Next action: {no_pick_report.get('next_action', 'Do not fabricate official picks.')}\n")
         print("_No official premarket pick was generated. This is a valid safety outcome, not a buy instruction._")
     raise SystemExit
@@ -152,9 +160,12 @@ if any(r.get("official_artifact_present") for r in rows):
     for r in rows:
         if r.get("official_artifact_present"):
             trace = r.get("official_decision_id") or r.get("official_artifact_id") or "trace unavailable"
+            run_ref = r.get("official_workflow_run_url") or "run URL unavailable"
+            bundle_ref = r.get("official_artifact_bundle_name") or "artifact bundle unavailable"
             print(
                 f"- **{r.get('ticker')}**: `{r.get('official_contract_version')}` — "
-                f"`{trace}` — {r.get('official_artifact_path')}"
+                f"`{trace}` — {r.get('official_artifact_path')} — "
+                f"run: {run_ref} — bundle: `{bundle_ref}`"
             )
 
 print("\n## 📋 Tag Legend")
