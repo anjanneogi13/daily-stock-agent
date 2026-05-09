@@ -15,6 +15,10 @@ from src.layman_translator import (
     pick_to_layman, header, footer_explainer, score_to_words
 )
 from src.dedup_sender import should_send, mark_sent
+from src.official_artifact_loader import (
+    enrich_pick_rows_with_artifacts,
+    official_pick_summary_for_date,
+)
 from src.smell_faculty import sniff as _sniff, has_blocking_smell, format_for_telegram as _smell_fmt
 
 
@@ -44,10 +48,14 @@ def _is_pick_sane(pick: dict) -> tuple[bool, str]:
     rr = reward_pct / risk_pct
     if rr < 1.0:                  return False, f"R/R too low ({rr:.2f}x < 1.0)"
     
-    # SMELL GATE — block on CRITICAL+blocking smells (earnings tomorrow, RSI 85+, etc)
-    blocker = has_blocking_smell(pick, {})
-    if blocker:
-        return False, f"SMELL: {blocker.code} ({blocker.message})"
+    # SMELL GATE — block on CRITICAL+blocking smells (earnings tomorrow, RSI 85+, etc).
+    # Priority 10: official-artifact rows have already passed the official
+    # production gates before artifact creation. Keep numeric sanity checks above,
+    # but do not let legacy output-only smell checks suppress a validated artifact.
+    if not pick.get("official_artifact_present"):
+        blocker = has_blocking_smell(pick, {})
+        if blocker:
+            return False, f"SMELL: {blocker.code} ({blocker.message})"
     
     return True, "ok"
 
@@ -115,7 +123,7 @@ def _today_picks():
                     r["premarket_current_price"] = meta.get("current_price")
                     r["premarket_actionable"] = meta.get("actionable")
                 rows.append(r)
-    return rows
+    return enrich_pick_rows_with_artifacts(rows, today)
 
 
 def _send(text) -> bool:
@@ -199,7 +207,18 @@ def build_message(picks, no_pick_report=None):
     swing_picks = [p for p in picks if (p.get("trade_type","") or "").lower() != "day"]
 
     lines = [header("🌅", "Today's Stock Picks", today)]
-    lines.append(f"The agent found *{len(picks)} stock(s)* worth watching today.")
+    official_count = sum(1 for p in picks if p.get("official_artifact_present"))
+    summary = official_pick_summary_for_date(os.environ.get("PICK_DATE") or datetime.now().strftime("%Y-%m-%d"))
+    if official_count:
+        lines.append(
+            f"The agent found *{len(picks)} official stock pick(s)* today. "
+            f"All shown picks have validated official decision artifacts."
+        )
+        if summary.get("contract_version"):
+            lines.append(f"Decision contract: `{summary.get('contract_version')}`")
+    else:
+        lines.append(f"The agent found *{len(picks)} stock(s)* worth watching today.")
+        lines.append("⚠️ Official pick artifacts were not found for these rows.")
     lines.append("")
 
     idx = 1
@@ -216,6 +235,10 @@ def build_message(picks, no_pick_report=None):
                 print(f"[SANITY GATE] BLOCKED pick {p.get('ticker','?')}: {_why}")
                 continue
             lines.append(pick_to_layman(p, idx))
+            if p.get("official_selection_reason"):
+                lines.append(f"🧾 *Official reason:* {p.get('official_selection_reason')}")
+            if p.get("official_risk_flags"):
+                lines.append("⚠️ *Official risk flags:* " + ", ".join(map(str, p.get("official_risk_flags") or [])))
             _warns = _sniff(p, {})
             if _warns:
                 lines.append(_smell_fmt(_warns))
@@ -234,6 +257,10 @@ def build_message(picks, no_pick_report=None):
                 print(f"[SANITY GATE] BLOCKED pick {p.get('ticker','?')}: {_why}")
                 continue
             lines.append(pick_to_layman(p, idx))
+            if p.get("official_selection_reason"):
+                lines.append(f"🧾 *Official reason:* {p.get('official_selection_reason')}")
+            if p.get("official_risk_flags"):
+                lines.append("⚠️ *Official risk flags:* " + ", ".join(map(str, p.get("official_risk_flags") or [])))
             _warns = _sniff(p, {})
             if _warns:
                 lines.append(_smell_fmt(_warns))

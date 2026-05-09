@@ -1109,6 +1109,38 @@ Follow-up needed:
 - add retention policy if artifact volume becomes large.
 
 
+## Priority 10 Implementation Status
+
+Initial Telegram/GitHub issue official-artifact consumption added:
+
+- `src/official_artifact_loader.py`
+- `tests/test_official_artifact_loader.py`
+- `tests/test_official_artifact_outputs.py`
+- updated `scripts/format_picks_email.py`
+- updated `scripts/send_layman_daily.py`
+
+Behavior change:
+
+- GitHub daily-picks issue output now enriches CSV rows from validated official pick artifacts,
+- Telegram daily-picks output now enriches CSV rows from validated official pick artifacts,
+- user-facing output now displays official artifact presence, contract version, official reason, and official risk flags when available,
+- CSV remains a fallback source if artifacts are missing.
+
+Safety:
+
+- Reporting-only output change.
+- No scoring behavior changes.
+- No pick creation behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+Follow-up needed:
+
+- include direct GitHub artifact links once workflow run artifact URLs are available,
+- add official decision IDs to `picks_log.csv`,
+- make artifact absence fail user-facing sends once production readiness is declared.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

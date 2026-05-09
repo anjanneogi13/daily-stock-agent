@@ -1,13 +1,31 @@
-"""Markdown formatter for GitHub issue (email)."""
-import csv, json
+"""Markdown formatter for GitHub issue (email).
+
+Priority 10: enrich user-facing output from validated official pick artifacts.
+CSV remains the fallback row source, but official artifacts are preferred for
+official decision details.
+"""
+import csv
+import json
+import sys
 from datetime import datetime
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from src.official_artifact_loader import (
+    enrich_pick_rows_with_artifacts,
+    official_pick_summary_for_date,
+)
+
 
 today = datetime.now().strftime("%Y-%m-%d")
 rows = []
 p = Path("data/picks_log.csv")
 if p.exists():
     rows = [r for r in csv.DictReader(p.open()) if r.get("pick_date") == today]
+rows = enrich_pick_rows_with_artifacts(rows, today)
+official_summary = official_pick_summary_for_date(today)
+
 
 def _load_no_pick_report():
     report_path = Path(f"data/daily_picks_no_pick_report_{today}.json")
@@ -19,21 +37,29 @@ def _load_no_pick_report():
     except Exception:
         return {}
 
+
 no_pick_report = _load_no_pick_report()
 
 pm = {}
 pmp = Path("data/premarket_check.json")
 if pmp.exists():
-    try: pm = json.loads(pmp.read_text())
-    except Exception: pm = {}
+    try:
+        pm = json.loads(pmp.read_text())
+    except Exception:
+        pm = {}
+
 tags = {x["ticker"]: x for x in pm.get("picks", [])}
 mkt = pm.get("market", {})
 
 print(f"# 📈 Daily Stock Picks — {today}\n")
+
 if not rows:
     if no_pick_report:
         print("## 📭 Official No-Pick Decision\n")
-        print(f"**Reason:** {no_pick_report.get('human_readable_summary') or no_pick_report.get('reason') or 'No qualified official pick today.'}\n")
+        print(
+            f"**Reason:** "
+            f"{no_pick_report.get('human_readable_summary') or no_pick_report.get('reason') or 'No qualified official pick today.'}\n"
+        )
         print(f"- Primary cause: `{no_pick_report.get('primary_no_pick_cause', 'unknown')}`")
         print(f"- Data readiness: `{no_pick_report.get('data_readiness_status', 'unknown')}`")
         print(f"- Provider status: `{no_pick_report.get('provider_status', 'unknown')}`")
@@ -43,12 +69,21 @@ if not rows:
         print("_No picks today._")
     raise SystemExit
 
-print(f"**{len(rows)} picks** • Regime: `{rows[0].get('regime','?')}` • CAPE: `{rows[0].get('cape','?')}`\n")
+artifact_count = official_summary.get("official_pick_count")
+artifact_note = (
+    f" • Official artifacts: `{artifact_count}`"
+    if artifact_count not in (None, "")
+    else ""
+)
+print(
+    f"**{len(rows)} picks** • Regime: `{rows[0].get('regime','?')}` "
+    f"• CAPE: `{rows[0].get('cape','?')}`{artifact_note}\n"
+)
 
 if mkt:
-    print(f"## 🌐 Market Conditions\n")
-    print(f"| Index | Change |")
-    print(f"|-------|--------|")
+    print("## 🌐 Market Conditions\n")
+    print("| Index | Change |")
+    print("|-------|--------|")
     print(f"| SPY (S&P 500) | {mkt.get('spy_change_pct',0):+.2f}% |")
     print(f"| QQQ (Nasdaq) | {mkt.get('qqq_change_pct',0):+.2f}% |")
     print(f"| SOXX (Semis) | {mkt.get('soxx_change_pct',0):+.2f}% |")
@@ -56,31 +91,54 @@ if mkt:
     for w in mkt.get("warnings", []):
         print(f"- {w}")
     if mkt.get("global_action") == "skip_all":
-        print(f"\n### 🚫 RECOMMENDATION: SKIP ALL TRADES TODAY\n")
+        print("\n### 🚫 RECOMMENDATION: SKIP ALL TRADES TODAY\n")
     elif mkt.get("global_action") == "half":
-        print(f"\n### ⚠️ RECOMMENDATION: Reduce all positions by 50% today\n")
+        print("\n### ⚠️ RECOMMENDATION: Reduce all positions by 50% today\n")
 
-print(f"\n## 🎯 Picks\n")
-print("| # | Type | Ticker | Tag | Score | Entry | Now | SL | TP | R:R | Qty | Note |")
-print("|---|------|--------|-----|-------|-------|-----|----|----|-----|-----|------|")
+print("\n## 🎯 Picks\n")
+print("| # | Type | Ticker | Tag | Score | Entry | Now | SL | TP | R:R | Qty | Official | Note |")
+print("|---|------|--------|-----|-------|-------|-----|----|----|-----|-----|----------|------|")
 
 for i, r in enumerate(rows, 1):
     try:
-        entry = float(r["entry"]); sl = float(r["stop_loss"]); tp = float(r["take_profit"])
-        risk = (entry - sl) / entry * 100; reward = (tp - entry) / entry * 100
-    except Exception: entry=sl=tp=0; risk=reward=0
-    t = tags.get(r["ticker"], {})
+        entry = float(r["entry"])
+        sl = float(r["stop_loss"])
+        tp = float(r["take_profit"])
+        risk = (entry - sl) / entry * 100
+        reward = (tp - entry) / entry * 100
+    except Exception:
+        entry = sl = tp = 0
+        risk = reward = 0
+
+    ticker = r.get("ticker", "")
+    t = tags.get(ticker, {})
     tag = t.get("tag", "—")
     cur = t.get("current_price")
     cur_str = f"${cur:.2f}" if cur else "—"
-    note = t.get("reason", "")[:40]
-    tt = r.get("trade_type","swing"); type_emoji = "🔥 DAY" if tt == "day" else "⚡ SWG"
-    print(f"| {i} | {type_emoji} | **{r['ticker']}** | {tag} | {float(r['score']):.2f} | "
-          f"${entry:.2f} | {cur_str} | ${sl:.2f} (−{risk:.1f}%) | ${tp:.2f} (+{reward:.1f}%) | "
-          f"{r.get('risk_reward','2.0')} | {r.get('qty','-')} | {note} |")
+    note = (r.get("official_selection_reason") or t.get("reason", ""))[:80]
+    official = "✅ artifact" if r.get("official_artifact_present") else "⚠️ missing"
+    tt = r.get("trade_type", "swing")
+    type_emoji = "🔥 DAY" if tt == "day" else "⚡ SWG"
 
-print(f"\n## 📋 Tag Legend")
+    print(
+        f"| {i} | {type_emoji} | **{ticker}** | {tag} | {float(r['score']):.2f} | "
+        f"${entry:.2f} | {cur_str} | ${sl:.2f} (−{risk:.1f}%) | ${tp:.2f} (+{reward:.1f}%) | "
+        f"{r.get('risk_reward','2.0')} | {r.get('qty','-')} | {official} | {note} |"
+    )
+
+if any(r.get("official_artifact_present") for r in rows):
+    print("\n## 🧾 Official Decision Artifacts")
+    print("- This issue is generated from validated official pick artifacts plus the CSV log.")
+    for r in rows:
+        if r.get("official_artifact_present"):
+            print(
+                f"- **{r.get('ticker')}**: `{r.get('official_contract_version')}` — "
+                f"{r.get('official_artifact_path')}"
+            )
+
+print("\n## 📋 Tag Legend")
 print("- ✅ **SAFE** — proceed normally with planned size")
 print("- ⚠️ **HALF SIZE** — reduce position by 50%")
-print("- 🚫 **SKIP TODAY** — don't enter, gap risk too high\n- 👀 **WATCH ONLY** — no actionable entry until a fresh quote is verified\n")
+print("- 🚫 **SKIP TODAY** — don't enter, gap risk too high")
+print("- 👀 **WATCH ONLY** — no actionable entry until a fresh quote is verified\n")
 print("> ⚠️ Educational only. Not financial advice. Always use limit orders.")

@@ -1,3 +1,40 @@
+## 2026-05-09 — Wired user-facing output to official pick artifacts
+
+**Type:** Lane 1 / Telegram / GitHub issue / official artifact consumption
+
+**Summary:**
+
+Implemented Priority 10 foundation: Telegram and GitHub issue output now consume official pick artifacts.
+
+New files:
+
+- `src/official_artifact_loader.py`
+- `tests/test_official_artifact_loader.py`
+- `tests/test_official_artifact_outputs.py`
+
+Updated files:
+
+- `scripts/format_picks_email.py`
+- `scripts/send_layman_daily.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- daily-picks GitHub issue output is enriched from official pick artifacts,
+- Telegram daily-picks output is enriched from official pick artifacts,
+- output includes official artifact presence, contract version, official reason, and official risk flags,
+- CSV remains available as fallback if official artifacts are missing.
+
+Safety:
+
+- Reporting-only output change.
+- No scoring behavior changes.
+- No trading behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added workflow validation/upload for official decision artifacts
 
 **Type:** Lane 1 / workflow / official decision artifact validation
