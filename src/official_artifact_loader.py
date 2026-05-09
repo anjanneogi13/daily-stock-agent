@@ -64,7 +64,10 @@ def enrich_pick_row_with_artifact(row: dict, artifact: dict | None) -> dict:
         return out
 
     out["official_artifact_present"] = True
-    out["official_artifact_path"] = artifact.get("_artifact_path", "")
+    out["official_decision_id"] = artifact.get("decision_id", "")
+    out["official_artifact_id"] = artifact.get("artifact_id", "")
+    out["official_artifact_filename"] = artifact.get("artifact_filename", "")
+    out["official_artifact_path"] = artifact.get("_artifact_path", "") or artifact.get("artifact_path", "")
     out["official_decision"] = artifact.get("decision", "")
     out["official_contract_version"] = artifact.get("contract_version", "")
     out["official_strategy_lane"] = artifact.get("strategy_lane", "")

@@ -197,6 +197,28 @@ Any user-facing pick should be traceable to exactly one official artifact.
 
 ---
 
+## Priority 16 Implementation Status
+
+Implemented official decision/artifact ID traceability:
+
+- official pick artifacts now include deterministic `decision_id`, `artifact_id`, `artifact_filename`, and `artifact_path`,
+- official pick summary artifacts include those trace fields per ticker,
+- `main.py` propagates artifact trace metadata into pick rows before CSV logging,
+- `picks_log.csv` schema now includes official trace columns,
+- the official artifact loader exposes trace fields to user-facing output,
+- GitHub issue output displays the official trace,
+- Telegram output displays the official trace,
+- tests cover deterministic IDs and artifact-to-output trace propagation.
+
+Safety:
+
+- Traceability-only change.
+- No scoring behavior changed.
+- No user-facing official pick alert may be sent without a validated official artifact.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+
 # Priority 17 — Formal No-Pick Artifacts for Guard Skips
 
 ## Problem

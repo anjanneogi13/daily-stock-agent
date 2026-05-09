@@ -32,6 +32,24 @@ from .premarket_decision_contract import (
 ET = ZoneInfo("America/New_York")
 
 
+
+def _safe_ticker(ticker: str) -> str:
+    return "".join(ch for ch in str(ticker).upper() if ch.isalnum() or ch in {"_", "-"})
+
+
+def official_pick_artifact_filename(date_str: str, ticker: str) -> str:
+    return f"premarket_official_pick_{date_str}_{_safe_ticker(ticker)}.json"
+
+
+def official_pick_artifact_id(date_str: str, ticker: str) -> str:
+    return f"premarket_official_pick:{date_str}:{_safe_ticker(ticker)}"
+
+
+def official_pick_decision_id(date_str: str, ticker: str, workflow_run_id: str, commit_sha: str) -> str:
+    short_sha = str(commit_sha or "local")[:12]
+    return f"{STRATEGY_LANE}:{date_str}:{_safe_ticker(ticker)}:{workflow_run_id or 'local'}:{short_sha}"
+
+
 def _safe_float(value: Any, default: float = 0.0) -> float:
     try:
         if value in (None, ""):
@@ -167,10 +185,19 @@ def build_official_pick_artifact(
     plan = pick.get("plan") if isinstance(pick.get("plan"), dict) else {}
     info = pick.get("info_short") if isinstance(pick.get("info_short"), dict) else {}
 
+    ticker = str(pick.get("ticker") or "").strip().upper()
+    workflow_run = workflow_run_id or os.getenv("GITHUB_RUN_ID", "local")
+    commit = commit_sha or os.getenv("GITHUB_SHA", "local")
+    artifact_filename = official_pick_artifact_filename(date, ticker)
+
     payload = {
         "artifact": "premarket_official_pick",
         "date": date,
         "decision": DECISION_OFFICIAL_PICK,
+        "decision_id": official_pick_decision_id(date, ticker, workflow_run, commit),
+        "artifact_id": official_pick_artifact_id(date, ticker),
+        "artifact_filename": artifact_filename,
+        "artifact_path": str(Path("data") / artifact_filename),
         "ticker": pick.get("ticker"),
         "company": info.get("name") or pick.get("company") or "",
         "strategy_lane": STRATEGY_LANE,
@@ -179,8 +206,8 @@ def build_official_pick_artifact(
         "scoring_version": SCORING_VERSION,
         "config_version": config_version or os.getenv("CONFIG_VERSION", "config.yaml"),
         "selection_time_et": selection_time,
-        "workflow_run_id": workflow_run_id or os.getenv("GITHUB_RUN_ID", "local"),
-        "commit_sha": commit_sha or os.getenv("GITHUB_SHA", "local"),
+        "workflow_run_id": workflow_run,
+        "commit_sha": commit,
         "data_readiness_status": data_readiness_status,
         "provider_status": provider_status,
         "market_session_status": market_session_status,
@@ -204,8 +231,7 @@ def build_official_pick_artifact(
 
 
 def official_pick_artifact_path(data_dir: Path, date_str: str, ticker: str) -> Path:
-    safe_ticker = "".join(ch for ch in ticker.upper() if ch.isalnum() or ch in {"_", "-"})
-    return data_dir / f"premarket_official_pick_{date_str}_{safe_ticker}.json"
+    return data_dir / official_pick_artifact_filename(date_str, ticker)
 
 
 def write_official_pick_artifacts(
@@ -239,16 +265,21 @@ def write_official_pick_artifacts(
             provider_status=provider_status,
             market_session_status=market_session_status,
         )
+        path = official_pick_artifact_path(data_dir, date_str, ticker)
+        payload["artifact_path"] = str(path)
         errors = validate_official_pick(payload)
         if errors:
             validation_errors[ticker or "?"] = errors
             continue
 
-        path = official_pick_artifact_path(data_dir, date_str, ticker)
         path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         artifacts.append({
             "ticker": ticker,
+            "decision_id": payload["decision_id"],
+            "artifact_id": payload["artifact_id"],
+            "artifact_filename": payload["artifact_filename"],
             "path": str(path),
+            "contract_version": payload["contract_version"],
             "score": payload["score"],
             "entry": payload["entry"],
             "stop_loss": payload["stop_loss"],

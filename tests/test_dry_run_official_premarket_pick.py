@@ -27,6 +27,8 @@ def test_run_dry_run_creates_valid_official_pick_artifact(tmp_path):
 
     assert payload["ticker"] == "DRYRUN"
     assert payload["decision"] == "official_pick"
+    assert payload["decision_id"]
+    assert payload["artifact_id"] == "premarket_official_pick:2026-05-09:DRYRUN"
     assert validate_official_pick(payload) == []
 
 

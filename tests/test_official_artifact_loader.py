@@ -13,6 +13,10 @@ def artifact(ticker="AAPL"):
         "artifact": "premarket_official_pick",
         "date": "2026-05-09",
         "decision": "official_pick",
+        "decision_id": f"premarket_official_daily_pick:2026-05-09:{ticker}:local:local",
+        "artifact_id": f"premarket_official_pick:2026-05-09:{ticker}",
+        "artifact_filename": f"premarket_official_pick_2026-05-09_{ticker}.json",
+        "artifact_path": f"data/premarket_official_pick_2026-05-09_{ticker}.json",
         "ticker": ticker,
         "company": "Apple Inc.",
         "contract_version": "premarket_decision_contract_v1",
@@ -49,6 +53,8 @@ def test_enrich_pick_row_with_artifact_preserves_csv_shape():
     assert enriched["official_artifact_present"] is True
     assert enriched["entry"] == 100.0
     assert enriched["qty"] == 10
+    assert enriched["official_decision_id"] == "premarket_official_daily_pick:2026-05-09:AAPL:local:local"
+    assert enriched["official_artifact_id"] == "premarket_official_pick:2026-05-09:AAPL"
     assert enriched["official_selection_reason"] == "AAPL selected."
     assert enriched["official_risk_flags"] == ["PREMARKET_HALF_SIZE"]
 

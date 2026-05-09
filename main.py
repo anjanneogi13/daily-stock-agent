@@ -1508,6 +1508,18 @@ def run():
             rprint("[green]Done. No official premarket pick today.[/green]")
             return
 
+        official_artifact_trace = {
+            item.get("ticker"): item
+            for item in artifact_summary.get("artifacts", [])
+            if isinstance(item, dict) and item.get("ticker")
+        }
+        for pick in top:
+            trace = official_artifact_trace.get(str(pick.get("ticker") or "").strip().upper())
+            if trace:
+                pick["official_decision_id"] = trace.get("decision_id", "")
+                pick["official_artifact_id"] = trace.get("artifact_id", "")
+                pick["official_artifact_path"] = trace.get("path", "")
+                pick["official_contract_version"] = trace.get("contract_version", "")
         rprint(f"  [green]✓ Wrote {artifact_summary.get('official_pick_count', 0)} official pick artifact(s)[/green]")
     except Exception as e:
         pipeline["official_pick_artifact_error"] = str(e)
@@ -1635,6 +1647,10 @@ def run():
                     or p.get("scores", {}).get("news_action_window")
                     or ""
                 ),
+                "official_decision_id": p.get("official_decision_id", ""),
+                "official_artifact_id": p.get("official_artifact_id", ""),
+                "official_artifact_path": p.get("official_artifact_path", ""),
+                "official_contract_version": p.get("official_contract_version", ""),
                 "score": p["scores"].get("composite") or 0,  # Bug #14: coerce None
                 "multiplier": p["scores"].get("sector_mult") or 1.0,  # Bug #14
                 "entry": p["plan"].get("entry"),

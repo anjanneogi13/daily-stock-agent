@@ -2,7 +2,9 @@ import json
 
 from src.official_pick_artifact import (
     build_official_pick_artifact,
+    official_pick_artifact_id,
     official_pick_artifact_path,
+    official_pick_decision_id,
     write_official_pick_artifacts,
 )
 from src.premarket_decision_contract import (
@@ -49,6 +51,9 @@ def test_build_official_pick_artifact_satisfies_contract():
     assert payload["decision"] == DECISION_OFFICIAL_PICK
     assert payload["strategy_lane"] == STRATEGY_LANE
     assert payload["ticker"] == "AAPL"
+    assert payload["decision_id"] == "premarket_official_daily_pick:2026-05-09:AAPL:123:abc"
+    assert payload["artifact_id"] == "premarket_official_pick:2026-05-09:AAPL"
+    assert payload["artifact_filename"] == "premarket_official_pick_2026-05-09_AAPL.json"
     assert payload["risk_dollars"] == 50.0
     assert payload["paper_trading_enabled"] is False
     assert payload["live_trading_enabled"] is False
@@ -77,6 +82,9 @@ def test_write_official_pick_artifacts_writes_pick_and_summary(tmp_path):
     payload = json.loads(artifact_path.read_text())
 
     assert payload["ticker"] == "AAPL"
+    assert payload["decision_id"] == summary["artifacts"][0]["decision_id"]
+    assert payload["artifact_id"] == summary["artifacts"][0]["artifact_id"]
+    assert payload["artifact_path"] == summary["artifacts"][0]["path"]
     assert validate_official_pick(payload) == []
 
     summary_files = list(tmp_path.glob("premarket_official_pick_summary_*.json"))
@@ -91,3 +99,10 @@ def test_write_official_pick_artifacts_records_validation_errors(tmp_path):
 
     assert summary["official_pick_count"] == 0
     assert "?" in summary["validation_errors"]
+
+
+def test_official_pick_trace_id_helpers_are_deterministic():
+    assert official_pick_artifact_id("2026-05-09", "brk.b") == "premarket_official_pick:2026-05-09:BRKB"
+    assert official_pick_decision_id("2026-05-09", "brk.b", "123", "abcdef1234567890") == (
+        "premarket_official_daily_pick:2026-05-09:BRKB:123:abcdef123456"
+    )

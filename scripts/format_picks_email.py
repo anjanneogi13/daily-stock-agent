@@ -151,9 +151,10 @@ if any(r.get("official_artifact_present") for r in rows):
     print("- This issue is generated from validated official pick artifacts plus the CSV log.")
     for r in rows:
         if r.get("official_artifact_present"):
+            trace = r.get("official_decision_id") or r.get("official_artifact_id") or "trace unavailable"
             print(
                 f"- **{r.get('ticker')}**: `{r.get('official_contract_version')}` — "
-                f"{r.get('official_artifact_path')}"
+                f"`{trace}` — {r.get('official_artifact_path')}"
             )
 
 print("\n## 📋 Tag Legend")

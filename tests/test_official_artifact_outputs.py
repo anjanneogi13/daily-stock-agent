@@ -47,6 +47,10 @@ def write_artifact(data_dir: Path):
         "artifact": "premarket_official_pick",
         "date": "2026-05-09",
         "decision": "official_pick",
+        "decision_id": "premarket_official_daily_pick:2026-05-09:AAPL:local:local",
+        "artifact_id": "premarket_official_pick:2026-05-09:AAPL",
+        "artifact_filename": "premarket_official_pick_2026-05-09_AAPL.json",
+        "artifact_path": "data/premarket_official_pick_2026-05-09_AAPL.json",
         "ticker": "AAPL",
         "company": "Apple Inc.",
         "contract_version": "premarket_decision_contract_v1",
@@ -106,6 +110,7 @@ def test_format_picks_email_uses_official_artifact(tmp_path, monkeypatch):
     assert "Official artifacts: `1`" in result.stdout
     assert "✅ artifact" in result.stdout
     assert "AAPL selected from official artifact." in result.stdout
+    assert "premarket_official_daily_pick:2026-05-09:AAPL:local:local" in result.stdout
 
 
 def test_send_layman_daily_uses_official_artifact(tmp_path, monkeypatch):
@@ -127,6 +132,7 @@ def test_send_layman_daily_uses_official_artifact(tmp_path, monkeypatch):
     assert "validated official decision artifacts" in result.stdout
     assert "Official reason:* AAPL selected from official artifact." in result.stdout
     assert "Official risk flags:* PREMARKET_SAFE" in result.stdout
+    assert "Official trace:* `premarket_official_daily_pick:2026-05-09:AAPL:local:local`" in result.stdout
 
 
 

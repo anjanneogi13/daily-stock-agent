@@ -260,6 +260,8 @@ def build_message(picks, no_pick_report=None):
             lines.append(pick_to_layman(p, idx))
             if p.get("official_selection_reason"):
                 lines.append(f"🧾 *Official reason:* {p.get('official_selection_reason')}")
+            if p.get("official_decision_id") or p.get("official_artifact_id"):
+                lines.append(f"🔎 *Official trace:* `{p.get('official_decision_id') or p.get('official_artifact_id')}`")
             if p.get("official_risk_flags"):
                 lines.append("⚠️ *Official risk flags:* " + ", ".join(map(str, p.get("official_risk_flags") or [])))
             _warns = _sniff(p, {})
@@ -282,6 +284,8 @@ def build_message(picks, no_pick_report=None):
             lines.append(pick_to_layman(p, idx))
             if p.get("official_selection_reason"):
                 lines.append(f"🧾 *Official reason:* {p.get('official_selection_reason')}")
+            if p.get("official_decision_id") or p.get("official_artifact_id"):
+                lines.append(f"🔎 *Official trace:* `{p.get('official_decision_id') or p.get('official_artifact_id')}`")
             if p.get("official_risk_flags"):
                 lines.append("⚠️ *Official risk flags:* " + ", ".join(map(str, p.get("official_risk_flags") or [])))
             _warns = _sniff(p, {})

@@ -13,6 +13,7 @@ LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 FIELDS = [
     "pick_date", "pick_time", "ticker", "company", "tag", "trade_type", "watch_only", "watch_only_reason", "news_action_window",
+    "official_decision_id", "official_artifact_id", "official_artifact_path", "official_contract_version",
     "score", "multiplier", "entry", "stop_loss", "take_profit",
     "risk_reward", "qty", "days_to_earnings",
     "regime", "spy_close", "cape",
@@ -108,6 +109,10 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "watch_only": "true" if p.get("watch_only") else "false",
                 "watch_only_reason": p.get("watch_only_reason", ""),
                 "news_action_window": p.get("news_action_window", ""),
+                "official_decision_id": p.get("official_decision_id", ""),
+                "official_artifact_id": p.get("official_artifact_id", ""),
+                "official_artifact_path": p.get("official_artifact_path", ""),
+                "official_contract_version": p.get("official_contract_version", ""),
                 "score": round(p.get("score", 0), 3),
                 "multiplier": p.get("multiplier", 1.0),
                 "entry": p.get("entry"),

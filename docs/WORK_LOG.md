@@ -1,3 +1,38 @@
+## 2026-05-09 — Added official decision traceability
+
+**Type:** Lane 1 / Priority 16 / traceability
+
+**Summary:**
+
+Implemented Priority 16: official decision/artifact ID traceability from artifact generation through CSV and user-facing output.
+
+Changed files:
+
+- `src/official_pick_artifact.py`
+- `src/official_artifact_loader.py`
+- `src/pick_logger.py`
+- `main.py`
+- `scripts/format_picks_email.py`
+- `scripts/send_layman_daily.py`
+- tests and Lane 1 hardening docs
+
+Behavior:
+
+- official pick artifacts include deterministic decision/artifact IDs,
+- official pick summaries include trace fields,
+- CSV rows include official trace fields,
+- GitHub issue output displays official trace metadata,
+- Telegram output displays official trace metadata.
+
+Safety:
+
+- Traceability-only change.
+- No scoring changes.
+- No paper trading.
+- No live trading.
+
+---
+
 ## 2026-05-09 — Added fail-closed official artifact validation for user-facing outputs
 
 **Type:** Lane 1 / Priority 15 / user-facing safety
