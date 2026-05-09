@@ -1,0 +1,41 @@
+{
+  "artifact": "daily_picks_candidate_rejections",
+  "artifact_historical_backfill": true,
+  "candidate_detail_recovery_status": "unavailable_in_retained_artifacts",
+  "date": "2026-05-08",
+  "diagnostics": {
+    "hard_blocked_candidates": [],
+    "pre_hard_block_candidates": []
+  },
+  "diagnostics_available": false,
+  "hard_blocked_candidate_count": 2,
+  "live_trading_enabled": false,
+  "mode": "monitoring_only",
+  "official_premarket_pick": false,
+  "paper_trading_enabled": false,
+  "pipeline": {
+    "capped_count": 2,
+    "fetched_count": 616,
+    "filtered_count": 30,
+    "final_pick_count": 0,
+    "hard_blocked_count": 2,
+    "post_hard_block_pick_count": 0,
+    "pre_hard_block_pick_count": 2,
+    "scored_count": 329,
+    "scorer_workers": 4,
+    "universe_count": 619
+  },
+  "pre_hard_block_candidate_count": 2,
+  "primary_no_pick_cause": "NO_PICK_ALL_FINALISTS_HARD_BLOCKED",
+  "primary_no_pick_cause_inferred": true,
+  "ready_for_paper_trading": false,
+  "recovery_notes": [
+    "Historical backfill created from retained pipeline counts only.",
+    "No retained hard-block rows or finalist ticker details were available for this date.",
+    "Candidate tickers were intentionally not fabricated.",
+    "Future no-pick runs now write candidate rejection diagnostics directly."
+  ],
+  "secondary_causes": [],
+  "source_no_pick_report_path": "data/daily_picks_no_pick_report_2026-05-08.json",
+  "timestamp_utc": "2026-05-09T03:45:52Z"
+}

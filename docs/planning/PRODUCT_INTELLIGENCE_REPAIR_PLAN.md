@@ -141,6 +141,7 @@ Implementation direction:
 - Future failure run-status rows now include compact no-pick diagnostics via `--include-diagnostics`.
 - Candidate rejection markdown now includes pre-hard-block finalists and hard-blocked finalist details.
 - Pipeline-only historical reports can now infer the primary no-pick cause for run-status diagnostics.
+- May 8 candidate rejection artifacts were backfilled honestly from retained pipeline counts only; finalist ticker details were unavailable and not fabricated.
 - If missing, ensure no-pick artifacts include:
   - finalist tickers,
   - score summary,

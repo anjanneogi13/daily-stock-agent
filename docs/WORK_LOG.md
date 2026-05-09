@@ -13,6 +13,37 @@ Rules:
 
 ---
 
+## 2026-05-09 — Backfilled May 8 no-pick rejection artifact honestly
+
+**Type:** historical observability backfill / monitoring-only / Priority 1 repair
+
+**Summary:**
+
+Created historical May 8 candidate rejection artifacts from retained pipeline counts.
+
+The backfill records:
+
+- primary cause: `NO_PICK_ALL_FINALISTS_HARD_BLOCKED`,
+- pre-hard-block finalist count: `2`,
+- hard-blocked finalist count: `2`,
+- candidate-level detail recovery status: `unavailable_in_retained_artifacts`.
+
+Important limitation:
+
+- No retained hard-block rows or finalist ticker details were available for May 8.
+- Candidate tickers were intentionally not fabricated.
+- Future no-pick runs now write candidate rejection diagnostics directly.
+
+Safety:
+
+- Monitoring-only historical artifact.
+- Does not generate official picks.
+- Does not alter scoring or gates.
+- Does not create paper trades.
+- Does not enable live trading.
+
+---
+
 ## 2026-05-09 — Improved no-pick root-cause explainability
 
 **Type:** observability / monitoring-only reliability / Priority 1 repair
