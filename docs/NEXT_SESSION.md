@@ -1,3 +1,38 @@
+## 2026-05-09 checkpoint — Lane 1 P1-P19 audit complete; P17.1 closed
+
+Completed a full Lane 1 Priority 1–19 audit verifying L1 (code), L2 (tests), and L3 (production wiring) for each priority.
+
+Audit grades:
+
+- 17 priorities: GREEN
+- 1 priority (P16): GREEN with one Monday on-disk auto-verify of `picks_log.csv` header migration on first real pick
+- 1 priority (P17): had a latent main.py wiring gap — now closed as P17.1
+- 1 priority (P19): pending live scheduled-run certification on Monday 2026-05-11 ~08:05 ET
+
+P17.1 fix:
+
+- `main.py` T51 market-closed guard now writes the official no-pick artifact via a new helper that delegates to the existing `scripts.write_guard_no_pick_artifact` writer,
+- helper is best-effort and never raises,
+- 3 new regression tests added.
+
+Deferred to Priority 17.2 (small follow-up):
+
+- agent-paused guard wiring (`NO_PICK_AGENT_PAUSED` cause needed),
+- same-day-already-logged guard wiring (`NO_PICK_DUPLICATE_ALREADY_LOGGED` cause needed).
+
+Recommended next task:
+
+- Watch the Monday 2026-05-11 ~08:05 ET (~20:05 SGT) scheduled Daily Picks run for Priority 19 live certification.
+- After that run, certify Lane 1 production-ready (Outcome A or B per LANE1_FINAL_PRODUCTION_HARDENING_PLAN) by updating `docs/WORK_LOG.md` and `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md` with workflow run URL, decision type, and validation result.
+- Then implement Priority 17.2 follow-up.
+
+Safety unchanged:
+
+- monitoring-only,
+- paper trading disabled,
+- live trading disabled.
+
+
 ## 2026-05-09 checkpoint — Premarket official pick production plan documented
 
 Added Lane 1 production-readiness plan:

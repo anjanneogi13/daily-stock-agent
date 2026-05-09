@@ -550,6 +550,44 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
         pass
 
 
+def _write_guard_no_pick_artifact_for_main(cause: str, reason: str = "") -> bool:
+    """Priority 17.1: write the formal official no-pick artifact for guard
+    early-returns in main.py.
+
+    Mirrors the daily-picks workflow YAML's pre-main guard step so the
+    Priority 17 no-pick contract holds end-to-end regardless of caller
+    (GitHub Actions workflow, manual dispatch, codespace, future tools).
+
+    Returns True if the artifact was written, False otherwise. Never raises:
+    callers must still perform their hard-stop return; this writer is a
+    best-effort audit-trail layer, not the safety stop itself.
+
+    Discovered 2026-05-09 during the Lane 1 P1-P19 audit: workflow YAML
+    correctly wrote the artifact, but main.py's own T51 guard returned bare,
+    leaving zero artifact when main.py was invoked outside the workflow.
+    """
+    try:
+        from datetime import datetime as _dt
+        from pathlib import Path as _P
+        from zoneinfo import ZoneInfo as _ZI
+        from scripts.write_guard_no_pick_artifact import write_guard_no_pick_artifact
+
+        date_str = _dt.now(_ZI("America/New_York")).strftime("%Y-%m-%d")
+        write_guard_no_pick_artifact(
+            date_str=date_str,
+            cause=cause,
+            data_dir=_P("data"),
+            reason=reason or None,
+        )
+        return True
+    except Exception as e:
+        try:
+            rprint(f"[dim]guard no-pick artifact writer failed: {e} — proceeding with bare return[/dim]")
+        except Exception:
+            pass
+        return False
+
+
 def _should_log_paper_trade() -> bool:
     """Return True only when legacy local paper-trade logging is explicit.
 
@@ -586,6 +624,13 @@ def run():
             _reason = _why_closed() or "unknown"
             _nxt = _next_td()
             rprint(f"[yellow bold]🗓 US market CLOSED today ({_reason}). Next trading day: {_nxt}. Skipping picks.[/yellow bold]")
+            # 🔒 Priority 17.1 — write the formal official no-pick guard artifact
+            # so the no-pick contract holds end-to-end regardless of caller.
+            # Best-effort: never raises; the bare return below is the hard stop.
+            _write_guard_no_pick_artifact_for_main(
+                cause="NO_PICK_MARKET_CLOSED",
+                reason=f"US market closed ({_reason}); next trading day {_nxt}.",
+            )
             return
     except Exception as _e:
         rprint(f"[dim]market-calendar check failed: {_e} — proceeding[/dim]")
