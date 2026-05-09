@@ -1,10 +1,10 @@
 # Lane 1 Final Production Hardening Plan
 
-**Date:** 2026-05-09  
-**Status:** Pending implementation  
-**Mode:** Monitoring-only  
-**Paper trading:** Disabled  
-**Live trading:** Disabled  
+**Date:** 2026-05-09
+**Status:** Pending implementation
+**Mode:** Monitoring-only
+**Paper trading:** Disabled
+**Live trading:** Disabled
 
 ## Purpose
 
