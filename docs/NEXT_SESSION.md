@@ -1,3 +1,32 @@
+## 2026-05-09 checkpoint — Daily artifact completeness report added
+
+Priority 11 is implemented observe-only.
+
+New files:
+
+- `scripts/check_daily_artifact_completeness.py`
+- `tests/test_artifact_completeness.py`
+
+Generated artifacts:
+
+- `data/artifact_completeness_2026-05-08.json`
+- `data/artifact_completeness_2026-05-08.md`
+- `data/artifact_completeness_2026-05-09.json`
+- `data/artifact_completeness_2026-05-09.md`
+
+Validation:
+
+- May 8 completeness status: `missing_or_empty_noncritical_artifacts`
+- May 9 completeness status: `missing_critical_artifacts`
+- May 9 correctly marks missing daily run status, no-pick report, and candidate rejection artifacts as critical.
+
+Recommended next task:
+
+Priority 12 — Legacy Sector Boost Safety Guard.
+
+Goal: prevent accidental reactivation of blanket semi/AI sector boosts from `config.yaml` or scoring configuration.
+
+
 ## 2026-05-09 checkpoint — Candidate lifecycle ledger added
 
 Priority 10 is implemented observe-only.

@@ -13,6 +13,52 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added daily artifact completeness report
+
+**Type:** reliability hardening / artifact completeness / Priority 11 repair
+
+**Summary:**
+
+Added an observe-only daily artifact completeness report that builds a present/missing matrix for critical and non-critical daily diagnostic artifacts.
+
+New files:
+
+- `scripts/check_daily_artifact_completeness.py`
+- `tests/test_artifact_completeness.py`
+
+New artifacts:
+
+- `data/artifact_completeness_YYYY-MM-DD.json`
+- `data/artifact_completeness_YYYY-MM-DD.md`
+
+The report checks:
+
+- daily run status,
+- no-pick report,
+- candidate rejection diagnostics,
+- data readiness,
+- candidate lifecycle,
+- theme discovery,
+- theme-to-pick bridge,
+- late daily ideas,
+- opening-range observations,
+- intraday momentum observations.
+
+Validation runs:
+
+- `2026-05-08` classified as `missing_or_empty_noncritical_artifacts` because critical artifacts exist but observe-only/theme/intraday artifacts are missing.
+- `2026-05-09` classified as `missing_critical_artifacts` because daily run status, no-pick report, and candidate rejection artifacts are missing.
+
+Safety:
+
+- Observe-only.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added candidate lifecycle ledger
 
 **Type:** reliability hardening / candidate traceability / Priority 10 repair

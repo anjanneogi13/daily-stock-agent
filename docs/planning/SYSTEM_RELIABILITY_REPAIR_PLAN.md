@@ -521,6 +521,38 @@ Ensure missing artifacts are visible and zero-row diagnostics are preferred over
 - Missing artifacts do not produce false success.
 - The report is observe-only.
 
+### Current implementation notes
+
+Implemented in:
+
+- `scripts/check_daily_artifact_completeness.py`
+- `tests/test_artifact_completeness.py`
+
+Outputs:
+
+- `data/artifact_completeness_YYYY-MM-DD.json`
+- `data/artifact_completeness_YYYY-MM-DD.md`
+
+Current checks:
+
+- daily run status,
+- no-pick report,
+- candidate rejection diagnostics,
+- data readiness,
+- candidate lifecycle,
+- theme discovery,
+- theme-to-pick bridge,
+- late daily ideas,
+- opening-range observations,
+- intraday momentum observations.
+
+Validation:
+
+- `2026-05-08` is classified as `missing_or_empty_noncritical_artifacts`.
+- `2026-05-09` is classified as `missing_critical_artifacts`.
+- Missing daily run status, no-pick report, and candidate rejection diagnostics are marked critical.
+- This remains observe-only and has no production scoring effect.
+
 ---
 
 ## Priority 12 — Legacy Sector Boost Safety Guard
