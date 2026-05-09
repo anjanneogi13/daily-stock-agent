@@ -13,6 +13,46 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added system reliability repair plan
+
+**Type:** planning / reliability hardening / product gap documentation
+
+**Summary:**
+
+Documented the next repair phase after completing Priorities 1–8.
+
+New document:
+
+- `docs/planning/SYSTEM_RELIABILITY_REPAIR_PLAN.md`
+
+The plan documents current product lag, confirmed and suspected issues, and the recommended implementation order for the next hardening phase.
+
+Top priorities:
+
+1. Daily Data Readiness Report
+2. Candidate Lifecycle Ledger
+3. Daily Diagnostic Artifact Completeness Check
+4. Legacy Sector Boost Safety Guard
+5. Daily Intelligence Brief
+6. Opening-Range Bar Retention Repair
+7. Provider Failure Taxonomy
+8. Theme Discovery Quality Upgrade
+9. Theme Signal Validation Harness
+
+Key product diagnosis:
+
+The system is now much more intelligent, but its largest remaining weakness is reliability and proof. It must be able to prove whether no-pick days are caused by discipline, weak candidates, data provider failure, incomplete runs, or missing diagnostics.
+
+Safety:
+
+- No code behavior changes.
+- No production scoring changes.
+- No paper/live trading.
+- No buy instructions.
+- Theme-aware scoring remains disabled.
+
+---
+
 ## 2026-05-09 — Added theme-aware scoring disabled guardrails
 
 **Type:** scoring safety / ADR / Priority 8 repair

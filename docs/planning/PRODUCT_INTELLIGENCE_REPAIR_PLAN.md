@@ -516,6 +516,34 @@ Current implementation notes:
   - `theme_confirmation_count`
 - This priority intentionally makes no production scoring changes.
 
+
+## Next reliability-hardening phase
+
+The product-intelligence repair sequence through Priority 8 is implemented.
+
+The next phase is documented in:
+
+- `docs/planning/SYSTEM_RELIABILITY_REPAIR_PLAN.md`
+
+Recommended next priorities:
+
+1. Daily Data Readiness Report
+2. Candidate Lifecycle Ledger
+3. Daily Diagnostic Artifact Completeness Check
+4. Legacy Sector Boost Safety Guard
+5. Daily Intelligence Brief
+6. Opening-Range Bar Retention Repair
+7. Provider Failure Taxonomy
+8. Theme Discovery Quality Upgrade
+9. Theme Signal Validation Harness
+
+Rationale:
+
+The system now has better intelligence, but still needs stronger reliability proof. It must be able to distinguish disciplined no-pick days from data-provider failures, incomplete runs, missing diagnostics, and candidate lifecycle failures.
+
+Do not enable paper trading, live trading, or production theme-aware scoring until this reliability phase is substantially complete.
+
+
 ## Implementation discipline
 
 Work must proceed one priority at a time.

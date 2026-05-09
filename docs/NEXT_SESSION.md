@@ -1,3 +1,20 @@
+## 2026-05-09 checkpoint — Next phase is reliability hardening
+
+After completing product-intelligence priorities 1–8, the next implementation phase should follow:
+
+`docs/planning/SYSTEM_RELIABILITY_REPAIR_PLAN.md`
+
+Recommended next task:
+
+1. Build Daily Data Readiness Report:
+   - `scripts/build_data_readiness_report.py`
+   - `tests/test_data_readiness_report.py`
+   - `data/data_readiness_YYYY-MM-DD.json`
+   - `data/data_readiness_YYYY-MM-DD.md`
+
+Do not start paper trading, live trading, or production theme-aware scoring. The current product lag is reliability/proof: the system must prove whether no-pick days are strategic, data-failed, pipeline-incomplete, or diagnostics-missing.
+
+
 ## 2026-05-09 checkpoint — Theme-aware scoring remains disabled
 
 Priority 8 added guardrails, not scoring:
