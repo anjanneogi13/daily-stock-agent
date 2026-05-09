@@ -131,6 +131,35 @@ Key areas:
 - Data-quality audits.
 - Monitoring and enforcement readiness dashboards.
 
+## Product Architecture Roadmap
+
+The canonical product vision and remaining roadmap live in:
+
+- `docs/planning/PRODUCT_ARCHITECTURE_ROADMAP.md`
+
+This roadmap documents the intended multi-strategy stock intelligence system, including:
+
+- premarket official daily picks,
+- post-open daily opportunities,
+- intraday picks,
+- monster hunter,
+- consistent compounders,
+- long-term opportunities,
+- performance, execution, and x-ray reports,
+- missed-opportunity analysis,
+- no-pick intelligence,
+- market regime awareness,
+- chart and technical analysis,
+- book/research learning,
+- historical backtesting,
+- walk-forward validation,
+- risk management,
+- paper/live execution promotion gates,
+- explainability, auditability, and strategy versioning.
+
+Safety remains unchanged: observe-only is the default until explicit strategy, risk, reporting, and execution gates pass.
+
+
 ## Current Known Gaps
 
 These are not urgent blockers:

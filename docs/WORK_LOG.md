@@ -1,3 +1,52 @@
+## 2026-05-09 — Documented product architecture roadmap
+
+**Type:** product planning / architecture documentation
+
+**Summary:**
+
+Added a canonical product architecture roadmap documenting the intended full product direction beyond the current reliability foundation.
+
+New file:
+
+- `docs/planning/PRODUCT_ARCHITECTURE_ROADMAP.md`
+
+Updated files:
+
+- `docs/PROJECT_BLUEPRINT.md`
+- `docs/NEXT_SESSION.md`
+
+The roadmap covers:
+
+- premarket official daily picks,
+- post-open daily opportunities,
+- intraday picks,
+- monster hunter,
+- consistent compounders,
+- long-term opportunities,
+- daily/weekly/monthly/quarterly/yearly reports,
+- execution and x-ray reports,
+- missed-opportunity analysis,
+- no-pick intelligence,
+- market regime awareness,
+- chart/technical analysis,
+- book/research learning,
+- historical backtesting,
+- walk-forward validation,
+- risk management,
+- execution promotion gates,
+- explainability,
+- auditability and versioning.
+
+Safety:
+
+- Documents observe-only as the default.
+- Paper/live trading require explicit future gates.
+- No scoring behavior changes.
+- No runtime behavior changes.
+- No buy instructions.
+
+---
+
 # Daily Stock Agent — Work Log
 
 Append-only history of every meaningful bug fix, feature, audit, and documentation change.

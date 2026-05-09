@@ -1,3 +1,35 @@
+## 2026-05-09 checkpoint — Product architecture roadmap documented
+
+Added canonical product vision and roadmap:
+
+- `docs/planning/PRODUCT_ARCHITECTURE_ROADMAP.md`
+
+The roadmap documents the intended product architecture:
+
+- premarket official daily picks,
+- post-open daily opportunities,
+- intraday picks,
+- monster hunter,
+- consistent compounders,
+- long-term opportunities,
+- daily/weekly/monthly/quarterly/yearly performance reports,
+- execution and x-ray reports,
+- missed-opportunity analysis,
+- no-pick intelligence,
+- market regime awareness,
+- chart/technical analysis,
+- book/research learning,
+- historical backtesting,
+- walk-forward validation,
+- risk management,
+- paper/live execution promotion gates,
+- auditability and strategy versioning.
+
+Important safety note:
+
+The roadmap keeps observe-only as the default until explicit strategy, risk, reporting, and execution gates pass.
+
+
 ## 2026-05-09 checkpoint — Theme market evidence propagated downstream
 
 Priority 16 downstream follow-up is complete.
