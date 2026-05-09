@@ -13,6 +13,60 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added daily data readiness report
+
+**Type:** reliability hardening / data readiness / Priority 9 repair
+
+**Summary:**
+
+Added an observe-only daily data readiness report that determines whether the system had enough daily artifacts and data to judge official pick behavior.
+
+New files:
+
+- `scripts/build_data_readiness_report.py`
+- `tests/test_data_readiness_report.py`
+
+New artifacts:
+
+- `data/data_readiness_YYYY-MM-DD.json`
+- `data/data_readiness_YYYY-MM-DD.md`
+
+The report classifies no-pick/readiness outcomes as:
+
+- `strategy_driven_no_qualified_candidates`
+- `data_provider_failure`
+- `pipeline_incomplete`
+- `diagnostics_missing`
+- `market_closed_or_no_run_expected`
+- `mixed_or_uncertain`
+
+Validation runs:
+
+- `2026-05-08` classified as `data_provider_failure` because available artifacts contain market-data/provider failure evidence.
+- `2026-05-09` classified as `pipeline_incomplete` because daily run status, no-pick report, candidate rejection artifact, and watch-only lanes are missing while the theme bridge exists.
+
+The report includes:
+
+- official pick readiness status,
+- official pick count and tickers,
+- daily run status availability,
+- no-pick report availability,
+- candidate rejection/diagnostic availability,
+- watch-only lane availability,
+- opening-range no-forward-bars detection,
+- theme bridge input status,
+- readiness warnings.
+
+Safety:
+
+- Observe-only.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added system reliability repair plan
 
 **Type:** planning / reliability hardening / product gap documentation

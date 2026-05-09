@@ -1,0 +1,111 @@
+{
+  "artifact": "data_readiness",
+  "buy_instructions_enabled": false,
+  "candidate_diagnostics": {
+    "available": true,
+    "hard_blocked_candidate_count": 0,
+    "path": "data/daily_picks_candidate_rejections_2026-05-08.json",
+    "pre_hard_block_candidate_count": 0,
+    "rejected_candidate_count": 0,
+    "selected_pick_count": 0
+  },
+  "data_provider_status": "provider_or_market_data_failure_evidence_detected",
+  "date": "2026-05-08",
+  "generated_at_utc": "2026-05-09T06:04:05+00:00",
+  "input_status": {
+    "candidate_diagnostics_available": true,
+    "daily_run_status_available": true,
+    "daily_run_status_parse_errors": 0,
+    "intraday_momentum_observations_available": false,
+    "late_daily_ideas_available": true,
+    "no_pick_report_available": true,
+    "opening_range_observations_available": true,
+    "picks_log_available": true,
+    "rejection_artifact_available": true,
+    "theme_bridge_available": false
+  },
+  "latest_run_status": {
+    "date": "2026-05-08",
+    "event": "late_ideas_already_sent_skip",
+    "github": {
+      "event_name": "schedule",
+      "ref": "refs/heads/main",
+      "run_attempt": "1",
+      "run_id": "25565373112",
+      "sha": "f3853fb4663f5df2fb4b0c8878cca69210ba1239",
+      "workflow": "Daily Stock Picks"
+    },
+    "late_ideas_count": null,
+    "live_trading_enabled": false,
+    "mode": "monitoring_only",
+    "official_premarket_pick": false,
+    "paper_trading_enabled": false,
+    "picks_logged": 0,
+    "reason": "late watch-only ideas already sent for ET date",
+    "result": "skipped",
+    "telegram_sent": true,
+    "timestamp_et": "2026-05-08T11:54:29.718138-04:00",
+    "timestamp_utc": "2026-05-08T15:54:29.718138+00:00",
+    "workflow": "daily-picks"
+  },
+  "live_trading_enabled": false,
+  "no_pick_classification": "data_provider_failure",
+  "observe_only": true,
+  "official_pick_count": 0,
+  "official_pick_readiness_status": "not_ready_data_provider_failure",
+  "official_pick_tickers": [],
+  "official_score_boost_enabled": false,
+  "paper_trading_enabled": false,
+  "production_scoring_effect": false,
+  "readiness_warnings": [
+    "provider_or_market_data_failure_evidence_detected"
+  ],
+  "safety_flags": [
+    "observe_only",
+    "not_official_scoring",
+    "no_production_scoring_effect",
+    "not_paper_trade",
+    "not_live_trade",
+    "no_buy_instructions"
+  ],
+  "source_files": {
+    "candidate_rejections": "data/daily_picks_candidate_rejections_2026-05-08.json",
+    "daily_run_status": "data/daily_picks_run_status_2026-05-08.jsonl",
+    "intraday_momentum_observations": "data/intraday_momentum_observations_2026-05-08.jsonl",
+    "late_daily_ideas": "data/late_daily_ideas_2026-05-08.jsonl",
+    "no_pick_report": "data/daily_picks_no_pick_report_2026-05-08.json",
+    "opening_range_observations": "data/opening_range_observations_2026-05-08.jsonl",
+    "picks_log": "data/picks_log.csv",
+    "theme_pick_bridge": "data/theme_pick_bridge_2026-05-08.json"
+  },
+  "theme_bridge_input_status": {},
+  "watch_only_lanes": {
+    "intraday_momentum_observations": {
+      "exists": false,
+      "parse_errors": 0,
+      "path": "data/intraday_momentum_observations_2026-05-08.jsonl",
+      "rows": 0
+    },
+    "late_daily_ideas": {
+      "exists": true,
+      "parse_errors": 0,
+      "path": "data/late_daily_ideas_2026-05-08.jsonl",
+      "rows": 5
+    },
+    "opening_range_observations": {
+      "exists": true,
+      "has_no_forward_bars": false,
+      "no_forward_bars_count": 0,
+      "observation_count": 3,
+      "parse_errors": 0,
+      "path": "data/opening_range_observations_2026-05-08.jsonl",
+      "quality_status_counts": {
+        "unknown": 3
+      },
+      "rows": 3,
+      "volume_status_counts": {
+        "unknown": 3
+      }
+    }
+  }
+}

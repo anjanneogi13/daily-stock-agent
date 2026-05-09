@@ -1,3 +1,31 @@
+## 2026-05-09 checkpoint — Daily data readiness report added
+
+Priority 9 is implemented observe-only.
+
+New files:
+
+- `scripts/build_data_readiness_report.py`
+- `tests/test_data_readiness_report.py`
+
+Generated artifacts:
+
+- `data/data_readiness_2026-05-08.json`
+- `data/data_readiness_2026-05-08.md`
+- `data/data_readiness_2026-05-09.json`
+- `data/data_readiness_2026-05-09.md`
+
+Validation:
+
+- May 8 readiness classification: `data_provider_failure`
+- May 9 readiness classification: `pipeline_incomplete`
+
+Recommended next task:
+
+Priority 10 — Candidate Lifecycle Ledger.
+
+Goal: reconstruct and report where each candidate/theme leader disappeared in the daily pipeline, starting from existing artifacts before wiring direct lifecycle emission into production code.
+
+
 ## 2026-05-09 checkpoint — Next phase is reliability hardening
 
 After completing product-intelligence priorities 1–8, the next implementation phase should follow:

@@ -1,0 +1,102 @@
+{
+  "artifact": "data_readiness",
+  "buy_instructions_enabled": false,
+  "candidate_diagnostics": {
+    "available": false,
+    "hard_blocked_candidate_count": 0,
+    "path": "data/daily_picks_candidate_rejections_2026-05-09.json",
+    "pre_hard_block_candidate_count": 0,
+    "rejected_candidate_count": 0,
+    "selected_pick_count": 0
+  },
+  "data_provider_status": "no_provider_failure_evidence_in_available_artifacts",
+  "date": "2026-05-09",
+  "generated_at_utc": "2026-05-09T06:04:06+00:00",
+  "input_status": {
+    "candidate_diagnostics_available": false,
+    "daily_run_status_available": false,
+    "daily_run_status_parse_errors": 0,
+    "intraday_momentum_observations_available": false,
+    "late_daily_ideas_available": false,
+    "no_pick_report_available": false,
+    "opening_range_observations_available": false,
+    "picks_log_available": true,
+    "rejection_artifact_available": false,
+    "theme_bridge_available": true
+  },
+  "latest_run_status": {},
+  "live_trading_enabled": false,
+  "no_pick_classification": "pipeline_incomplete",
+  "observe_only": true,
+  "official_pick_count": 0,
+  "official_pick_readiness_status": "not_ready_pipeline_incomplete",
+  "official_pick_tickers": [],
+  "official_score_boost_enabled": false,
+  "paper_trading_enabled": false,
+  "production_scoring_effect": false,
+  "readiness_warnings": [
+    "daily_run_status_missing",
+    "no_pick_report_missing",
+    "candidate_rejection_artifact_missing",
+    "candidate_diagnostics_missing",
+    "watch_only_lanes_missing_or_empty",
+    "theme_bridge_reports_missing_daily_inputs"
+  ],
+  "safety_flags": [
+    "observe_only",
+    "not_official_scoring",
+    "no_production_scoring_effect",
+    "not_paper_trade",
+    "not_live_trade",
+    "no_buy_instructions"
+  ],
+  "source_files": {
+    "candidate_rejections": "data/daily_picks_candidate_rejections_2026-05-09.json",
+    "daily_run_status": "data/daily_picks_run_status_2026-05-09.jsonl",
+    "intraday_momentum_observations": "data/intraday_momentum_observations_2026-05-09.jsonl",
+    "late_daily_ideas": "data/late_daily_ideas_2026-05-09.jsonl",
+    "no_pick_report": "data/daily_picks_no_pick_report_2026-05-09.json",
+    "opening_range_observations": "data/opening_range_observations_2026-05-09.jsonl",
+    "picks_log": "data/picks_log.csv",
+    "theme_pick_bridge": "data/theme_pick_bridge_2026-05-09.json"
+  },
+  "theme_bridge_input_status": {
+    "daily_rejection_artifact_exists": false,
+    "hard_blocked_candidate_count": 0,
+    "invalid_watch_only_lines": {
+      "intraday_momentum_watch_only": 0,
+      "late_daily_watch_only": 0,
+      "opening_range_watch_only": 0
+    },
+    "picks_log_official_rows_for_date": 0,
+    "rejected_candidate_count": 0,
+    "theme_count_available": 626,
+    "theme_discovery_exists": true,
+    "watch_only_lane_count": 0
+  },
+  "watch_only_lanes": {
+    "intraday_momentum_observations": {
+      "exists": false,
+      "parse_errors": 0,
+      "path": "data/intraday_momentum_observations_2026-05-09.jsonl",
+      "rows": 0
+    },
+    "late_daily_ideas": {
+      "exists": false,
+      "parse_errors": 0,
+      "path": "data/late_daily_ideas_2026-05-09.jsonl",
+      "rows": 0
+    },
+    "opening_range_observations": {
+      "exists": false,
+      "has_no_forward_bars": false,
+      "no_forward_bars_count": 0,
+      "observation_count": 0,
+      "parse_errors": 0,
+      "path": "data/opening_range_observations_2026-05-09.jsonl",
+      "quality_status_counts": {},
+      "rows": 0,
+      "volume_status_counts": {}
+    }
+  }
+}
