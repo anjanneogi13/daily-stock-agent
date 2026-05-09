@@ -261,6 +261,40 @@ If the official premarket decision cannot be made due to timing/session constrai
 
 ---
 
+## Priority 17 Implementation Status
+
+Implemented Priority 17 — formal official no-pick artifacts for guard skips:
+
+- `scripts/write_guard_no_pick_artifact.py` builds and writes valid official no-pick artifacts for `NO_PICK_MARKET_CLOSED` and `NO_PICK_WINDOW_MISSED`.
+- `.github/workflows/daily-picks.yml` invokes the writer in both guard paths before main.py runs.
+- Workflow uploads and commits guard no-pick artifacts.
+- Tests cover the writer for both supported causes.
+
+### Priority 17.1 — main.py T51 wiring (2026-05-09 audit)
+
+A 2026-05-09 Lane 1 P1–P19 audit discovered that `main.py`'s own T51 market-closed guard (lines ~583–589) did a bare `return` without writing the official no-pick artifact. The workflow YAML guard correctly covered the production path, but any caller invoking `main.py` outside the workflow (manual dispatch, codespace, future tools) silently violated the Priority 17 contract.
+
+Fix:
+
+- added `_write_guard_no_pick_artifact_for_main()` helper to `main.py` that delegates to `scripts.write_guard_no_pick_artifact.write_guard_no_pick_artifact()`,
+- T51 market-closed guard now calls the helper with `cause=NO_PICK_MARKET_CLOSED` before its hard-stop return,
+- helper is best-effort and never raises so the guard's bare return remains the actual safety stop,
+- new regression test file `tests/test_main_t51_guard_no_pick_artifact.py` covers helper success, helper failure-safety, and T51 guard wiring.
+
+Deferred to follow-up ticket Priority 17.2:
+
+- agent-paused guard (`main.py` line ~604) and same-day-already-logged guard (`main.py` line ~661) require extending `SUPPORTED_GUARD_CAUSES` in `scripts/write_guard_no_pick_artifact.py` with `NO_PICK_AGENT_PAUSED` and `NO_PICK_DUPLICATE_ALREADY_LOGGED`. Not done in this slice to keep the change small and focused.
+
+Safety:
+
+- additive change in main.py only,
+- workflow YAML unchanged,
+- no scoring, gate, or trading behavior changed,
+- paper trading remains disabled,
+- live trading remains disabled.
+
+---
+
 # Priority 18 — Add Workflow / Run / Artifact Links to Outputs
 
 ## Problem

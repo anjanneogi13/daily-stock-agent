@@ -1,3 +1,45 @@
+## 2026-05-09 — Wired main.py T51 market-closed guard to Priority 17 no-pick artifact (P17.1)
+
+**Type:** Lane 1 / Priority 17.1 / audit-trail repair
+
+**Summary:**
+
+Closed a structural gap discovered during the 2026-05-09 Lane 1 P1–P19 audit. The daily-picks workflow YAML correctly invoked `scripts/write_guard_no_pick_artifact.py` on closed-market days, but `main.py`'s own T51 market-closed guard early-returned without writing any official no-pick artifact. Any caller invoking `main.py` outside the workflow (manual dispatch, codespace, future tools) silently violated the Priority 17 contract.
+
+Changed files:
+
+- `main.py`
+- `tests/test_main_t51_guard_no_pick_artifact.py` (new)
+- `docs/planning/LANE1_FINAL_PRODUCTION_HARDENING_PLAN.md`
+- `docs/WORK_LOG.md`
+- `docs/NEXT_SESSION.md`
+
+Behavior:
+
+- new helper `_write_guard_no_pick_artifact_for_main()` in main.py delegates to the existing `scripts.write_guard_no_pick_artifact.write_guard_no_pick_artifact()` writer,
+- T51 market-closed guard now writes a valid official no-pick artifact (`NO_PICK_MARKET_CLOSED`) before its hard-stop return,
+- helper is best-effort and never raises, so the guard's bare return remains the actual safety stop,
+- 3 new regression tests cover helper success, helper failure-safety, and T51 wiring.
+
+Deferred to Priority 17.2:
+
+- agent-paused guard wiring (`main.py` ~line 604) — needs new cause `NO_PICK_AGENT_PAUSED`,
+- same-day-already-logged guard wiring (`main.py` ~line 661) — needs new cause `NO_PICK_DUPLICATE_ALREADY_LOGGED`.
+
+Audit context:
+
+- Lane 1 P1–P19 audit graded 17 priorities green, 1 pending Monday auto-verification (P16 on-disk header migration), 1 pending live cert (P19), and this 1 latent gap (P17.1) — now closed.
+
+Safety:
+
+- additive main.py change,
+- no workflow YAML changes,
+- no scoring, gate, or trading behavior changed,
+- paper trading remains disabled,
+- live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added official decision traceability
 
 **Type:** Lane 1 / Priority 16 / traceability
