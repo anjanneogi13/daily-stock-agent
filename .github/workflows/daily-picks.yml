@@ -53,6 +53,15 @@ jobs:
           OFFICIAL_CUTOFF=$((9 * 60 + 20))
           echo "missed_window=false" >> $GITHUB_OUTPUT
 
+          MARKET_OPEN=$(python -c "from src.market_calendar import is_trading_day; print('true' if is_trading_day('$ET_DATE') else 'false')")
+          if [ "$MARKET_OPEN" != "true" ]; then
+            echo "US market closed for $ET_DATE — writing official no-pick artifact"
+            python scripts/write_guard_no_pick_artifact.py --date "$ET_DATE" --cause NO_PICK_MARKET_CLOSED
+            python scripts/record_daily_picks_run_status.py --event market_closed_skip --result skipped --reason "US market closed; official no-pick artifact written"
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           if [ $ET_MINUTES_OF_DAY -lt $WINDOW_START ]; then
             echo "⏭ Before 08:00 ET window — skipping"
             python scripts/record_daily_picks_run_status.py --event before_window_skip --result skipped --reason "before 08:00 ET premarket window"
@@ -61,8 +70,9 @@ jobs:
           fi
 
           if [ $ET_MINUTES_OF_DAY -gt $OFFICIAL_CUTOFF ]; then
-            echo "⏭ Official premarket window missed after 09:20 ET — no normal daily picks"
-            python scripts/record_daily_picks_run_status.py --event missed_window_skip --result skipped --reason "after 09:20 ET official cutoff"
+            echo "Official premarket window missed after 09:20 ET — writing official no-pick artifact"
+            python scripts/write_guard_no_pick_artifact.py --date "$ET_DATE" --cause NO_PICK_WINDOW_MISSED
+            python scripts/record_daily_picks_run_status.py --event missed_window_skip --result skipped --reason "after 09:20 ET official cutoff; official no-pick artifact written"
             echo "should_run=false" >> $GITHUB_OUTPUT
             echo "missed_window=true" >> $GITHUB_OUTPUT
             exit 0
@@ -172,6 +182,8 @@ jobs:
             data/late_daily_ideas_*.jsonl
             data/late_daily_ideas_*.md
             data/late_daily_ideas_sent_*.json
+            data/daily_picks_no_pick_report_*.json
+            data/daily_picks_no_pick_report_*.md
           )
           if [ "${#status_artifacts[@]}" -gt 0 ]; then
             git add -f "${status_artifacts[@]}"
