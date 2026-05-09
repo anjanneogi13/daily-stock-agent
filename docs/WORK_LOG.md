@@ -1,3 +1,54 @@
+## 2026-05-09 — Documented Lane 1 premarket production plan
+
+**Type:** product planning / production readiness / Lane 1
+
+**Summary:**
+
+Documented the production-readiness audit and completion plan for Lane 1: Premarket Official Daily Stock Pick.
+
+New file:
+
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Updated file:
+
+- `docs/planning/PRODUCT_ARCHITECTURE_ROADMAP.md`
+- `docs/NEXT_SESSION.md`
+
+Current assessment:
+
+- Lane 1 is operationally runnable and monitoring-ready.
+- Lane 1 is not production-ready.
+- Estimated readiness is 4.5 / 10.
+
+Major gaps documented:
+
+- no-pick is not yet a first-class successful official outcome,
+- data readiness does not fully gate official selection,
+- premarket sanity check runs after picks are logged,
+- official pick/no-pick contract is unclear,
+- strategy lanes are mixed,
+- risk management is not portfolio-grade,
+- missing data can be too permissive,
+- execution modeling is approximate,
+- learning loop is not production-controlled.
+
+Recommended first work items:
+
+1. define and enforce official premarket pick contract,
+2. make no-pick a first-class successful official outcome,
+3. add pre-selection data readiness gate.
+
+Safety:
+
+- Documentation only.
+- No scoring behavior changes.
+- No runtime behavior changes.
+- No paper/live trading changes.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Documented product architecture roadmap
 
 **Type:** product planning / architecture documentation

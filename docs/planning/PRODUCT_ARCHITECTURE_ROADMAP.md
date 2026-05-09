@@ -540,6 +540,13 @@ These are foundations, not the finished product.
 
 ---
 
+## Lane-Specific Production Plans
+
+Detailed lane-specific production plans:
+
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md` — Lane 1: Premarket Official Daily Stock Pick
+
+
 ## Major Remaining Work
 
 High-level remaining work:

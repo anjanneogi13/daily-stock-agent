@@ -1,3 +1,36 @@
+## 2026-05-09 checkpoint — Premarket official pick production plan documented
+
+Added Lane 1 production-readiness plan:
+
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+The plan documents:
+
+- current Lane 1 maturity,
+- implemented pieces,
+- major production gaps,
+- no-pick requirements,
+- data-readiness gating needs,
+- premarket sanity ordering issue,
+- official pick/no-pick contract needs,
+- risk and portfolio gaps,
+- missing-data fail-closed requirements,
+- evaluation and learning gaps,
+- ordered Lane 1 completion priorities.
+
+Current readiness estimate:
+
+- 4.5 / 10,
+- alpha / monitoring-ready,
+- not production-ready.
+
+Immediate recommendation:
+
+1. define and enforce official premarket pick contract,
+2. make no-pick a first-class successful official outcome,
+3. add pre-selection data readiness gate.
+
+
 ## 2026-05-09 checkpoint — Product architecture roadmap documented
 
 Added canonical product vision and roadmap:
