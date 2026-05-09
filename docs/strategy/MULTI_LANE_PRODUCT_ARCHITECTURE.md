@@ -674,3 +674,11 @@ But the agent must verify reality from:
 - git history.
 
 Docs are the map. Code/tests/workflows/actions are reality.
+
+## Companion implementation roadmap
+
+The executable implementation plan for this architecture is:
+
+- `docs/planning/MULTI_LANE_IMPLEMENTATION_ROADMAP.md`
+
+Use the architecture document to understand what the product should become. Use the implementation roadmap to decide what to build next, in what order, with what safety gates.

@@ -321,3 +321,17 @@ Key current interpretation:
 - Lane 2 should be introduced as a post-open watch-only opportunity lane, not as official after-open picks.
 - Intraday/opening-range, Monster Hunter, compounder, long-term opportunity, and future learning systems must remain separate until independently validated.
 - Paper trading and live trading remain forbidden until explicit readiness gates pass and founder approval is given.
+
+## Multi-lane implementation roadmap checkpoint
+
+Implementation guidance for the multi-lane product is tracked in:
+
+- `docs/planning/MULTI_LANE_IMPLEMENTATION_ROADMAP.md`
+
+Current interpretation:
+
+- Certify Lane 1 Priority 19 from the next real scheduled premarket run before major new feature work.
+- Lane 2 should begin as post-open / late-daily watch-only opportunities.
+- Intraday/opening-range improvements should focus on artifact capture and outcome quality before promotion.
+- Monster Hunter, compounder, and long-term lanes remain research-only.
+- All learning loops must produce auditable hypotheses and reviewed changes, not silent self-modifying behavior.

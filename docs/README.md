@@ -135,3 +135,11 @@ The current product architecture and long-term lane separation are documented in
 - [Multi-Lane Product Architecture and Learning System](strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md)
 
 This document explains the separation between premarket official picks, post-open watch-only opportunities, intraday observations, Monster Hunter / compounder research, reporting, backtesting, learning loops, risk management, and safety gates.
+
+## Multi-lane implementation roadmap
+
+The step-by-step implementation plan for the product lanes is documented in:
+
+- [Multi-Lane Implementation Roadmap](planning/MULTI_LANE_IMPLEMENTATION_ROADMAP.md)
+
+Use this together with the multi-lane architecture document. The architecture document explains what the product should become; the roadmap explains how to implement it safely.

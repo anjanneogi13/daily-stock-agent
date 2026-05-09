@@ -109,3 +109,11 @@ The feature should preserve:
 - explicit data ownership
 - no paper/live trading by default
 - no automatic promotion without evidence and approval
+
+## Multi-lane implementation roadmap
+
+The current implementation roadmap for the product lanes is:
+
+- [Multi-Lane Implementation Roadmap](MULTI_LANE_IMPLEMENTATION_ROADMAP.md)
+
+Use this roadmap before starting Lane 2 or any larger product-lane work. It defines implementation phases, artifacts, safety boundaries, acceptance criteria, and non-goals for premarket, post-open, intraday, reports, learning loops, risk, market regime, Monster Hunter, and promotion gates.

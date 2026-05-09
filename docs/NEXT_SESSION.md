@@ -1325,3 +1325,19 @@ Next strategic lane after certification:
 - Start Lane 2 as a post-open / late-daily watch-only opportunity lane.
 - Do not label it official after-open picks yet.
 - Keep it monitoring-only, separate from `data/picks_log.csv`, and separate from official premarket statistics until validated.
+
+## Implementation roadmap checkpoint — 2026-05-09
+
+A new session should read:
+
+- `docs/strategy/MULTI_LANE_PRODUCT_ARCHITECTURE.md`
+- `docs/planning/MULTI_LANE_IMPLEMENTATION_ROADMAP.md`
+
+The roadmap converts the product architecture into implementation phases.
+
+Immediate rule:
+
+- If the next real scheduled Daily Stock Picks run has completed, certify Priority 19 first.
+- If it has not completed, do not start major new feature work unless fixing a repo-health or scheduled-run blocker.
+- The next planned implementation lane after certification is Lane 2: post-open / late-daily watch-only opportunity lane.
+- Lane 2 must remain watch-only, monitoring-only, and separate from official premarket statistics.
