@@ -1475,7 +1475,55 @@ def run():
             official_premarket_pick=True,
         )
     except Exception as e:
+        selection_diagnostics = {}
         rprint(f"[yellow]⚠ candidate diagnostics skipped: {e}[/yellow]")
+
+    rprint("[5i/6] Writing official pick artifacts...")
+    try:
+        from src.official_pick_artifact import write_official_pick_artifacts
+
+        artifact_summary = write_official_pick_artifacts(
+            top,
+            pipeline=pipeline,
+            candidate_diagnostics=selection_diagnostics,
+            regime=reg,
+            data_readiness_status=pipeline.get("data_readiness_status") or "ready",
+            provider_status="healthy",
+            market_session_status="premarket",
+        )
+        if artifact_summary.get("validation_errors"):
+            pipeline["official_pick_artifact_validation_errors"] = artifact_summary["validation_errors"]
+            _write_daily_picks_no_pick_report(
+                "No official picks generated because official pick artifact validation failed.",
+                pipeline,
+                {
+                    "selected_picks": [
+                        _summarize_candidate_for_report(p) for p in top
+                    ],
+                    "artifact_validation_errors": artifact_summary["validation_errors"],
+                    "artifact_summary": artifact_summary,
+                },
+            )
+            rprint("[red]Official pick artifact validation failed; no official picks will be logged.[/red]")
+            rprint("[green]Done. No official premarket pick today.[/green]")
+            return
+
+        rprint(f"  [green]✓ Wrote {artifact_summary.get('official_pick_count', 0)} official pick artifact(s)[/green]")
+    except Exception as e:
+        pipeline["official_pick_artifact_error"] = str(e)
+        _write_daily_picks_no_pick_report(
+            "No official picks generated because official pick artifact generation failed unexpectedly.",
+            pipeline,
+            {
+                "selected_picks": [
+                    _summarize_candidate_for_report(p) for p in top
+                ],
+                "official_pick_artifact_error": str(e),
+            },
+        )
+        rprint(f"[red]Official pick artifact generation failed unexpectedly: {e}[/red]")
+        rprint("[green]Done. No official premarket pick today.[/green]")
+        return
 
     rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} final official picks\n")
 

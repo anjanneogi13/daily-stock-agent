@@ -1,3 +1,38 @@
+## 2026-05-09 — Added Lane 1 official pick artifacts
+
+**Type:** Lane 1 / premarket official pick / official artifact generation
+
+**Summary:**
+
+Implemented Priority 8 foundation: official pick artifact generation.
+
+New files:
+
+- `src/official_pick_artifact.py`
+- `tests/test_official_pick_artifact.py`
+
+Updated files:
+
+- `main.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- final official picks now write contract-compatible official pick JSON artifacts before CSV logging,
+- a daily official pick summary artifact is written,
+- artifacts are validated against the official premarket decision contract,
+- validation failure produces an official no-pick artifact and prevents invalid pick logging.
+
+Safety:
+
+- No fake picks are created.
+- No scoring behavior changes.
+- No trading behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 missing-data fail-closed gate
 
 **Type:** Lane 1 / premarket official pick / missing-data fail-closed behavior

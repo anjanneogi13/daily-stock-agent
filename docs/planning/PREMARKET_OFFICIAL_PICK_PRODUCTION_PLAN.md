@@ -1043,6 +1043,41 @@ Follow-up needed:
 - validate final logged row against the full official decision contract when Priority 8 wires the official decision artifact.
 
 
+## Priority 8 Implementation Status
+
+Initial official pick artifact generation added:
+
+- `src/official_pick_artifact.py`
+- `tests/test_official_pick_artifact.py`
+- updated `main.py`
+
+Behavior change:
+
+- after all gates pass and before CSV logging, `main.py` writes one contract-compatible official pick artifact per final official pick,
+- `main.py` also writes a daily official pick summary artifact,
+- official pick artifacts are validated against `src.premarket_decision_contract.validate_official_pick`,
+- if artifact validation fails, the run writes a valid official no-pick artifact and exits successfully instead of logging invalid official picks.
+
+New artifacts:
+
+- `data/premarket_official_pick_YYYY-MM-DD_TICKER.json`
+- `data/premarket_official_pick_summary_YYYY-MM-DD.json`
+
+Safety:
+
+- No fake picks are created.
+- No scoring behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- Artifact validation failure prevents invalid official logging.
+
+Follow-up needed:
+
+- publish artifact path in GitHub workflow summary,
+- include artifact metadata in Telegram/GitHub issue output,
+- persist artifact path or decision ID in `picks_log.csv`.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.
