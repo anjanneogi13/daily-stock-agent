@@ -1,3 +1,44 @@
+## 2026-05-09 — Added Lane 1 portfolio risk gate
+
+**Type:** Lane 1 / premarket official pick / portfolio risk gate
+
+**Summary:**
+
+Implemented Priority 6 foundation: portfolio risk now runs before finalists are logged as official picks.
+
+New files:
+
+- `src/portfolio_risk_gate.py`
+- `tests/test_portfolio_risk_gate.py`
+
+Updated files:
+
+- `src/candidate_diagnostics.py`
+- `tests/test_candidate_diagnostics.py`
+- `main.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- finalists are checked by a portfolio risk gate before official logging,
+- max open-position limits are enforced,
+- available new-pick slots are enforced,
+- malformed risk fields are blocked,
+- per-trade risk percent is enforced,
+- minimum risk/reward is enforced,
+- sector and tag exposure caps are enforced,
+- if all finalists are risk-blocked, the run writes an official no-pick artifact and exits successfully,
+- no-pick classifier now records `NO_PICK_RISK_GATE_BLOCKED_ALL`.
+
+Safety:
+
+- No fake picks are created.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted for risk-gated no-pick days.
+
+---
+
 ## 2026-05-09 — Added Lane 1 candidate diagnostics
 
 **Type:** Lane 1 / premarket official pick / diagnostics

@@ -174,6 +174,13 @@ def _classify_no_pick_cause(pipeline: dict | None, market_data_health: dict | No
         summary = "No official picks were generated because all finalists were blocked by the premarket sanity gate."
         return primary, sorted(set(secondary)), summary
 
+    risk_blocked = diag.get("portfolio_risk_blocked_candidates")
+    pre_risk = diag.get("pre_portfolio_risk_candidates")
+    if isinstance(risk_blocked, list) and risk_blocked and isinstance(pre_risk, list) and len(risk_blocked) >= len(pre_risk):
+        primary = "NO_PICK_RISK_GATE_BLOCKED_ALL"
+        summary = "No official picks were generated because all finalists were blocked by the portfolio risk gate."
+        return primary, sorted(set(secondary)), summary
+
     readiness_gate = diag.get("readiness_gate") if isinstance(diag.get("readiness_gate"), dict) else {}
     if readiness_gate and readiness_gate.get("passed") is False:
         primary = readiness_gate.get("primary_no_pick_cause") or "NO_PICK_DATA_READINESS_FAILED"
@@ -377,6 +384,9 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
             payload["provider_status"] = "healthy"
         elif primary_cause == "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL":
             payload["data_readiness_status"] = "ready_all_finalists_blocked_by_premarket_sanity"
+            payload["provider_status"] = "healthy"
+        elif primary_cause == "NO_PICK_RISK_GATE_BLOCKED_ALL":
+            payload["data_readiness_status"] = "ready_all_finalists_blocked_by_portfolio_risk"
             payload["provider_status"] = "healthy"
         elif primary_cause == "NO_PICK_RUNTIME_FAILURE":
             payload["data_readiness_status"] = "not_ready_runtime_failure"
@@ -1216,6 +1226,104 @@ def run():
         rprint("[green]Done. No official premarket pick today.[/green]")
         return
 
+    rprint("[5g/6] Applying portfolio risk gate before official logging...")
+    pre_portfolio_risk_candidates = list(top)
+    pipeline["pre_portfolio_risk_pick_count"] = len(pre_portfolio_risk_candidates)
+    try:
+        from src.portfolio_risk_gate import apply_portfolio_risk_gate, load_open_positions_from_picks_log
+
+        open_positions = load_open_positions_from_picks_log()
+        top, risk_blocked, risk_summary = apply_portfolio_risk_gate(
+            top,
+            cfg,
+            existing_positions=open_positions,
+        )
+        pipeline["portfolio_risk_blocked_count"] = len(risk_blocked)
+        pipeline["post_portfolio_risk_pick_count"] = len(top)
+        pipeline["final_pick_count"] = len(top)
+
+        if risk_blocked:
+            rprint(f"  [yellow]⚠ Portfolio risk gate blocked {len(risk_blocked)} candidate(s)[/yellow]")
+            for item in risk_blocked:
+                rprint(
+                    f"    • {item.get('ticker')}: "
+                    f"{item.get('block_type')} — {item.get('reason')}"
+                )
+        else:
+            rprint("  [green]✓ All candidates passed portfolio risk gate[/green]")
+
+        if not top:
+            try:
+                from src.candidate_diagnostics import build_candidate_diagnostics
+                diagnostics = build_candidate_diagnostics(
+                    pipeline=pipeline,
+                    scored_candidates=candidates,
+                    filtered_candidates=filtered,
+                    capped_candidates=capped,
+                    pre_hard_block_candidates=pre_hard_block_candidates,
+                    hard_blocked_candidates=blocked,
+                    post_hard_block_candidates=pre_sanity_candidates,
+                    pre_premarket_sanity_candidates=pre_sanity_candidates,
+                    premarket_sanity_blocked_candidates=sanity_blocked,
+                    portfolio_risk_blocked_candidates=risk_blocked,
+                    selected_picks=[],
+                    extra_rejections=_killed_dropped + _earnings_dropped,
+                    extra={
+                        "premarket_sanity_summary": sanity_summary,
+                        "portfolio_risk_summary": risk_summary,
+                        "pre_portfolio_risk_candidates": [
+                            _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                        ],
+                    },
+                )
+                diagnostics["pre_portfolio_risk_candidates"] = [
+                    _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                ]
+            except Exception:
+                diagnostics = {
+                    "pre_portfolio_risk_candidates": [
+                        _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                    ],
+                    "portfolio_risk_blocked_candidates": [
+                        {
+                            "ticker": item.get("ticker"),
+                            "block_type": item.get("block_type"),
+                            "reason": item.get("reason"),
+                            "detail": item.get("detail", {}),
+                            "candidate": _summarize_candidate_for_report(item.get("candidate", {})),
+                        }
+                        for item in risk_blocked
+                    ],
+                    "portfolio_risk_summary": risk_summary,
+                    "rejected_candidates": _killed_dropped + _earnings_dropped,
+                }
+
+            _write_daily_picks_no_pick_report(
+                "No official picks generated because all finalists were blocked by the portfolio risk gate.",
+                pipeline,
+                diagnostics,
+            )
+            rprint("[yellow]No official picks generated after portfolio risk gate.[/yellow]")
+            rprint("[green]Done. No official premarket pick today.[/green]")
+            return
+    except Exception as e:
+        pipeline["portfolio_risk_gate_error"] = str(e)
+        pipeline["final_pick_count"] = 0
+        diagnostics = {
+            "pre_portfolio_risk_candidates": [
+                _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+            ],
+            "portfolio_risk_gate_error": str(e),
+        }
+        _write_daily_picks_no_pick_report(
+            "No official picks generated because the portfolio risk gate failed unexpectedly.",
+            pipeline,
+            diagnostics,
+        )
+        rprint(f"[red]Portfolio risk gate failed unexpectedly: {e}[/red]")
+        rprint("[green]Done. No official premarket pick today.[/green]")
+        return
+
     try:
         from src.candidate_diagnostics import build_candidate_diagnostics
         selection_diagnostics = build_candidate_diagnostics(
@@ -1228,10 +1336,20 @@ def run():
             post_hard_block_candidates=pre_sanity_candidates,
             pre_premarket_sanity_candidates=pre_sanity_candidates,
             premarket_sanity_blocked_candidates=sanity_blocked,
+            portfolio_risk_blocked_candidates=risk_blocked,
             selected_picks=top,
             extra_rejections=_killed_dropped + _earnings_dropped,
-            extra={"premarket_sanity_summary": sanity_summary},
+            extra={
+                "premarket_sanity_summary": sanity_summary,
+                "portfolio_risk_summary": risk_summary,
+                "pre_portfolio_risk_candidates": [
+                    _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+                ],
+            },
         )
+        selection_diagnostics["pre_portfolio_risk_candidates"] = [
+            _summarize_candidate_for_report(p) for p in pre_portfolio_risk_candidates
+        ]
         _write_daily_picks_candidate_diagnostics_report(
             pipeline,
             selection_diagnostics,

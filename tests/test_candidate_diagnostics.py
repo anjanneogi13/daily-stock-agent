@@ -96,3 +96,29 @@ def test_build_candidate_diagnostics_counts_scored_not_filtered():
     )
 
     assert diagnostics["stage_counts"]["scored_not_filtered_count"] == 1
+
+def test_build_candidate_diagnostics_includes_portfolio_risk_blocks():
+    aapl = candidate("AAPL")
+    blocked = [{
+        "ticker": "AAPL",
+        "block_type": "risk_limit",
+        "reason": "per-trade risk exceeds limit",
+        "candidate": aapl,
+        "detail": {"risk_profile": {"risk_pct": 2.0}},
+    }]
+
+    diagnostics = build_candidate_diagnostics(
+        pipeline={},
+        scored_candidates=[aapl],
+        filtered_candidates=[aapl],
+        capped_candidates=[aapl],
+        pre_hard_block_candidates=[aapl],
+        post_hard_block_candidates=[aapl],
+        pre_premarket_sanity_candidates=[aapl],
+        portfolio_risk_blocked_candidates=blocked,
+        selected_picks=[],
+    )
+
+    assert diagnostics["stage_counts"]["portfolio_risk_blocked_count"] == 1
+    assert diagnostics["portfolio_risk_blocked_candidates"][0]["ticker"] == "AAPL"
+    assert diagnostics["portfolio_risk_blocked_candidates"][0]["rejection_stage"] == "portfolio_risk"

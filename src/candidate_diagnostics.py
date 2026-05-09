@@ -121,6 +121,21 @@ def _sanity_blocked_details(blocked: list[dict] | None) -> list[dict]:
     return out
 
 
+def _portfolio_risk_blocked_details(blocked: list[dict] | None) -> list[dict]:
+    out = []
+    for item in blocked or []:
+        candidate = item.get("candidate") if isinstance(item.get("candidate"), dict) else {}
+        out.append({
+            "ticker": item.get("ticker"),
+            "rejection_stage": "portfolio_risk",
+            "block_type": item.get("block_type"),
+            "reason": item.get("reason"),
+            "detail": _safe_value(item.get("detail") or {}),
+            "candidate": summarize_candidate(candidate),
+        })
+    return out
+
+
 def build_candidate_diagnostics(
     *,
     pipeline: dict | None = None,
@@ -132,6 +147,7 @@ def build_candidate_diagnostics(
     post_hard_block_candidates: list[dict] | None = None,
     pre_premarket_sanity_candidates: list[dict] | None = None,
     premarket_sanity_blocked_candidates: list[dict] | None = None,
+    portfolio_risk_blocked_candidates: list[dict] | None = None,
     selected_picks: list[dict] | None = None,
     extra_rejections: list[dict] | None = None,
     extra: dict | None = None,
@@ -141,6 +157,7 @@ def build_candidate_diagnostics(
     selected = _summaries(selected_picks)
     hard_blocked = _hard_blocked_details(hard_blocked_candidates, pre_hard_block_candidates)
     sanity_blocked = _sanity_blocked_details(premarket_sanity_blocked_candidates)
+    portfolio_risk_blocked = _portfolio_risk_blocked_details(portfolio_risk_blocked_candidates)
 
     scored_set = _ticker_set(scored_candidates)
     filtered_set = _ticker_set(filtered_candidates)
@@ -150,6 +167,7 @@ def build_candidate_diagnostics(
     rejected_candidates = []
     rejected_candidates.extend(hard_blocked)
     rejected_candidates.extend(sanity_blocked)
+    rejected_candidates.extend(portfolio_risk_blocked)
     for item in extra_rejections or []:
         rejected_candidates.append(_safe_value(item))
 
@@ -167,6 +185,7 @@ def build_candidate_diagnostics(
             "post_hard_block_pick_count": len(post_hard_block_candidates or []),
             "pre_premarket_sanity_pick_count": len(pre_premarket_sanity_candidates or []),
             "premarket_sanity_blocked_count": len(sanity_blocked),
+            "portfolio_risk_blocked_count": len(portfolio_risk_blocked),
             "selected_pick_count": len(selected),
             "rejected_candidate_count": len(rejected_candidates),
             "scored_not_filtered_count": len(scored_set - filtered_set) if scored_set and filtered_candidates is not None else 0,
@@ -180,6 +199,7 @@ def build_candidate_diagnostics(
         "post_hard_block_candidates": _summaries(post_hard_block_candidates),
         "pre_premarket_sanity_candidates": _summaries(pre_premarket_sanity_candidates),
         "premarket_sanity_blocked_candidates": sanity_blocked,
+        "portfolio_risk_blocked_candidates": portfolio_risk_blocked,
     }
 
     if extra:

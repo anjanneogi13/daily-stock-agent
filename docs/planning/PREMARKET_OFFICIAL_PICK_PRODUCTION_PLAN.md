@@ -947,6 +947,56 @@ Follow-up needed:
 - connect diagnostics into daily intelligence brief and readiness reports.
 
 
+## Priority 6 Implementation Status
+
+Initial portfolio risk gate added:
+
+- `src/portfolio_risk_gate.py`
+- `tests/test_portfolio_risk_gate.py`
+- updated `src/candidate_diagnostics.py`
+- updated `main.py`
+
+Behavior change:
+
+- `main.py` now applies a portfolio risk gate after premarket sanity and before official logging,
+- candidates that exceed risk constraints are blocked from normal official logging,
+- if all finalists are blocked by portfolio risk, the run writes a contract-compatible official no-pick artifact and exits successfully,
+- successful runs include portfolio-risk diagnostics.
+
+Current gate checks:
+
+- max open positions,
+- available new-pick slots,
+- malformed entry/stop/target/quantity,
+- per-trade risk percent,
+- minimum risk/reward,
+- sector exposure cap,
+- tag exposure cap.
+
+Current config sources:
+
+- `risk.account_size`,
+- `risk.risk_per_trade_pct`,
+- `risk.max_positions`,
+- optional `risk.max_per_sector`,
+- optional `risk.max_per_tag`,
+- optional `risk.min_risk_reward`.
+
+Safety:
+
+- No fake picks are created.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted when all candidates are risk-blocked.
+
+Follow-up needed:
+
+- add correlation-aware exposure,
+- add daily/weekly loss lockout,
+- add existing-position sector metadata backfill,
+- run monster-treatment sizing before final risk gate or add post-monster risk validation.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.
