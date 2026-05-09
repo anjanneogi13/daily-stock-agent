@@ -314,6 +314,28 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
                 json.dumps(rejection_payload, indent=2, sort_keys=True) + "\n"
             )
 
+            def _candidate_markdown_details(candidate: dict) -> str:
+                if not isinstance(candidate, dict) or not candidate:
+                    return "details unavailable"
+                parts = []
+                for key in (
+                    "score",
+                    "sector",
+                    "sector_tag",
+                    "trade_type",
+                    "entry",
+                    "stop_loss",
+                    "take_profit",
+                    "risk_reward",
+                    "news_action_window",
+                    "watch_only",
+                    "watch_only_reason",
+                ):
+                    value = candidate.get(key)
+                    if value not in (None, ""):
+                        parts.append(f"{key}={value}")
+                return ", ".join(parts) if parts else "details unavailable"
+
             rejection_lines = [
                 "# Daily Picks Candidate Rejection Report",
                 "",
@@ -325,13 +347,26 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
                 "- Paper trading enabled: **false**",
                 "- Live trading enabled: **false**",
                 "",
-                "## Hard-Blocked Finalists",
+                "## Pre-Hard-Block Finalists",
             ]
+
+            pre_hard = diag.get("pre_hard_block_candidates") or []
+            if pre_hard:
+                for item in pre_hard:
+                    rejection_lines.append(
+                        f"- {item.get('ticker')}: {_candidate_markdown_details(item)}"
+                    )
+            else:
+                rejection_lines.append("- None recorded.")
+
+            rejection_lines.extend(["", "## Hard-Blocked Finalists"])
             hard_blocked = diag.get("hard_blocked_candidates") or []
             if hard_blocked:
                 for item in hard_blocked:
+                    candidate = item.get("candidate") if isinstance(item.get("candidate"), dict) else {}
                     rejection_lines.append(
-                        f"- {item.get('ticker')}: **{item.get('block_type')}** — {item.get('reason')}"
+                        f"- {item.get('ticker')}: **{item.get('block_type')}** — "
+                        f"{item.get('reason')} ({_candidate_markdown_details(candidate)})"
                     )
             else:
                 rejection_lines.append("- None recorded.")

@@ -56,6 +56,31 @@ def _load_json(path: Path) -> dict:
     return {}
 
 
+def _infer_no_pick_cause_from_pipeline(pipeline: dict) -> str:
+    """Infer a compact no-pick cause for older reports with pipeline counts only."""
+    if not isinstance(pipeline, dict):
+        return ""
+
+    final_count = int(pipeline.get("final_pick_count") or 0)
+    fetched_count = int(pipeline.get("fetched_count") or 0)
+    scored_count = int(pipeline.get("scored_count") or 0)
+    filtered_count = int(pipeline.get("filtered_count") or 0)
+    pre_hard = int(pipeline.get("pre_hard_block_pick_count") or 0)
+    hard_blocked = int(pipeline.get("hard_blocked_count") or 0)
+
+    if final_count > 0:
+        return "PICKS_AVAILABLE"
+    if fetched_count == 0:
+        return "NO_PICK_DATA_PROVIDER_DEGRADED"
+    if scored_count == 0:
+        return "NO_PICK_NO_SCORED_CANDIDATES"
+    if filtered_count == 0:
+        return "NO_PICK_FILTERS_REMOVED_ALL"
+    if pre_hard > 0 and hard_blocked >= pre_hard:
+        return "NO_PICK_ALL_FINALISTS_HARD_BLOCKED"
+    return "NO_PICK_UNKNOWN_POST_FILTER_GATING"
+
+
 def _daily_picks_diagnostics(date_str: str, data_dir: Path | None = None) -> dict:
     """Return compact no-pick diagnostics for run-status observability.
 
@@ -77,10 +102,17 @@ def _daily_picks_diagnostics(date_str: str, data_dir: Path | None = None) -> dic
     hard_blocked = diagnostics.get("hard_blocked_candidates") if isinstance(diagnostics, dict) else []
     pre_hard = diagnostics.get("pre_hard_block_candidates") if isinstance(diagnostics, dict) else []
 
+    primary_no_pick_cause = report.get("primary_no_pick_cause", "")
+    inferred_primary_no_pick_cause = ""
+    if not primary_no_pick_cause:
+        inferred_primary_no_pick_cause = _infer_no_pick_cause_from_pipeline(pipeline)
+        primary_no_pick_cause = inferred_primary_no_pick_cause
+
     out = {
         "no_pick_report_path": str(no_pick_path) if no_pick_path.exists() else "",
         "candidate_rejections_path": str(rejections_path) if rejections_path.exists() else "",
-        "primary_no_pick_cause": report.get("primary_no_pick_cause", ""),
+        "primary_no_pick_cause": primary_no_pick_cause,
+        "primary_no_pick_cause_inferred": bool(inferred_primary_no_pick_cause),
         "secondary_causes": report.get("secondary_causes", []) if isinstance(report.get("secondary_causes"), list) else [],
         "pipeline": pipeline,
         "diagnostics_available": bool(diagnostics),

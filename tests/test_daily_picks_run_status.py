@@ -135,3 +135,23 @@ def test_build_record_can_include_daily_picks_diagnostics(tmp_path):
     assert diag["hard_blocked_candidate_count"] == 2
     assert record["paper_trading_enabled"] is False
     assert record["live_trading_enabled"] is False
+
+
+def test_daily_picks_diagnostics_infers_cause_from_pipeline_only_report(tmp_path):
+    (tmp_path / "daily_picks_no_pick_report_2026-05-08.json").write_text(json.dumps({
+        "pipeline": {
+            "fetched_count": 616,
+            "scored_count": 329,
+            "filtered_count": 30,
+            "pre_hard_block_pick_count": 2,
+            "hard_blocked_count": 2,
+            "final_pick_count": 0,
+        },
+    }))
+
+    diag = _daily_picks_diagnostics("2026-05-08", data_dir=tmp_path)
+
+    assert diag["primary_no_pick_cause"] == "NO_PICK_ALL_FINALISTS_HARD_BLOCKED"
+    assert diag["primary_no_pick_cause_inferred"] is True
+    assert diag["pre_hard_block_candidate_count"] == 2
+    assert diag["hard_blocked_candidate_count"] == 2

@@ -139,6 +139,8 @@ Implementation direction:
 
 - Validate current diagnostics with tests/smoke.
 - Future failure run-status rows now include compact no-pick diagnostics via `--include-diagnostics`.
+- Candidate rejection markdown now includes pre-hard-block finalists and hard-blocked finalist details.
+- Pipeline-only historical reports can now infer the primary no-pick cause for run-status diagnostics.
 - If missing, ensure no-pick artifacts include:
   - finalist tickers,
   - score summary,

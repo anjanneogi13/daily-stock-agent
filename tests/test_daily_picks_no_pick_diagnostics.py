@@ -71,12 +71,31 @@ def test_no_pick_report_writes_candidate_rejection_artifacts(tmp_path, monkeypat
             "final_pick_count": 0,
         },
         {
+            "pre_hard_block_candidates": [
+                {
+                    "ticker": "TEST",
+                    "score": 0.91,
+                    "sector": "Technology",
+                    "entry": 10.0,
+                    "stop_loss": 9.5,
+                    "take_profit": 11.0,
+                    "risk_reward": 2.0,
+                }
+            ],
             "hard_blocked_candidates": [
                 {
                     "ticker": "TEST",
                     "block_type": "recent_pick",
                     "reason": "recent pick",
-                    "candidate": {"ticker": "TEST", "score": 0.91},
+                    "candidate": {
+                        "ticker": "TEST",
+                        "score": 0.91,
+                        "sector": "Technology",
+                        "entry": 10.0,
+                        "stop_loss": 9.5,
+                        "take_profit": 11.0,
+                        "risk_reward": 2.0,
+                    },
                 }
             ]
         },
@@ -97,5 +116,10 @@ def test_no_pick_report_writes_candidate_rejection_artifacts(tmp_path, monkeypat
 
     md = md_files[0].read_text()
     assert "Daily Picks Candidate Rejection Report" in md
+    assert "Pre-Hard-Block Finalists" in md
+    assert "Hard-Blocked Finalists" in md
     assert "TEST" in md
+    assert "score=0.91" in md
+    assert "entry=10.0" in md
+    assert "recent_pick" in md
     assert "Not official picks" in md

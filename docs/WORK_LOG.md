@@ -13,6 +13,32 @@ Rules:
 
 ---
 
+## 2026-05-09 — Improved no-pick root-cause explainability
+
+**Type:** observability / monitoring-only reliability / Priority 1 repair
+
+**Summary:**
+
+Improved official no-pick explainability for future daily-picks failures.
+
+Changes:
+
+- Candidate rejection markdown now includes pre-hard-block finalists.
+- Hard-blocked finalists now include block reason plus candidate details where available.
+- Run-status diagnostics can infer a no-pick cause from older pipeline-only reports.
+- May 8-style reports with `pre_hard_block_pick_count=2`, `hard_blocked_count=2`, and `final_pick_count=0` classify as `NO_PICK_ALL_FINALISTS_HARD_BLOCKED`.
+
+Safety:
+
+- Monitoring-only observability change.
+- Does not generate official picks.
+- Does not loosen hard blocks.
+- Does not modify scoring.
+- Does not create paper trades.
+- Does not enable live trading.
+
+---
+
 ## 2026-05-09 — Improved daily-picks failure-status diagnostics
 
 **Type:** observability / monitoring-only reliability
