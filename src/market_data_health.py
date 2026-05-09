@@ -51,7 +51,7 @@ def _blank_summary(date_str: str) -> dict:
     return {
         "artifact": "market_data_health",
         "date": date_str,
-        "timestamp_utc": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "timestamp_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "providers": {},
         "by_stage": {},
         "run": {},
@@ -72,7 +72,7 @@ def _load(path: Path, date_str: str) -> dict:
 
 def _save(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    payload["timestamp_utc"] = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    payload["timestamp_utc"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
     tmp.replace(path)
