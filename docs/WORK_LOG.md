@@ -3,7 +3,6 @@
 Append-only history of every meaningful bug fix, feature, audit, and documentation change.
 
 Rules:
-
 1. Newest entries go first.
 2. Include date, type, summary, tests, and follow-up.
 3. Do not delete historical entries.
@@ -13,6 +12,38 @@ Rules:
 7. If future design, data contracts, notification rules, or candidate lifecycle rules change, update `docs/planning/`.
 
 ---
+
+## 2026-05-09 — Documented product intelligence repair priority plan
+
+**Type:** product strategy / planning / monitoring-only architecture
+
+**Summary:**
+
+Documented the next fundamental product-intelligence repair plan after reviewing the 2026-05-08 operating evidence:
+
+- Official premarket Daily Picks produced zero official picks.
+- Safety behavior worked: no fabricated picks, no paper trading, no live trading, no official stats pollution.
+- Product gaps remain in explainability, watch-only outcome attribution, score calibration, performance-source separation, opening-range evaluation, and dynamic theme discovery.
+- Added a prioritized plan in `docs/planning/PRODUCT_INTELLIGENCE_REPAIR_PLAN.md`.
+
+Final priority order:
+
+1. Official no-pick root-cause explainability.
+2. Watch-only outcome attribution v1.
+3. Performance report source separation audit.
+4. Late-news score calibration / GIG-style risk caps.
+5. Opening-range quality evaluator.
+6. Dynamic Theme Discovery Radar v0 — observe-only.
+7. Theme-to-pick bridge v0 — observe-only.
+8. Future theme-aware scoring only after validation.
+
+Safety:
+
+- Documentation-only.
+- No runtime behavior changed.
+- No paper trading enabled.
+- No live trading enabled.
+- No official scoring changed.
 
 ## 2026-05-08 — Moved maturity tracker and session handoffs into proper folders
 

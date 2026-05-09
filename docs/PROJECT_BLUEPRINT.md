@@ -269,3 +269,11 @@ Product rule:
 - The agent must not force a pick to look useful.
 - The agent must clearly explain when it found candidates but rejected them.
 - Trust is improved by explainable no-pick discipline, not by lowering standards.
+
+## Active Product-Intelligence Repair Plan
+
+The active product-intelligence repair roadmap is documented in:
+
+- `docs/planning/PRODUCT_INTELLIGENCE_REPAIR_PLAN.md`
+
+This plan prioritizes official no-pick explainability, watch-only outcome attribution, performance-source separation, late-news score calibration, opening-range quality evaluation, dynamic theme discovery, and observe-only theme-to-pick analysis before any paper trading, live trading, or production theme-aware scoring.

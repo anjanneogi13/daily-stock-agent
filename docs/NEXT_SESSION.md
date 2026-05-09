@@ -935,3 +935,22 @@ Important:
 - No-pick days are acceptable only when clearly explained.
 - Paper trading remains forbidden.
 - Live trading remains forbidden.
+
+## Active product-intelligence repair plan
+
+The current priority roadmap for product-intelligence repair is documented in:
+
+- `docs/planning/PRODUCT_INTELLIGENCE_REPAIR_PLAN.md`
+
+Priority order:
+
+1. Official no-pick root-cause explainability.
+2. Watch-only outcome attribution v1.
+3. Performance report source separation audit.
+4. Late-news score calibration / GIG-style risk caps.
+5. Opening-range quality evaluator.
+6. Dynamic Theme Discovery Radar v0 — observe-only.
+7. Theme-to-pick bridge v0 — observe-only.
+8. Future theme-aware scoring only after validation.
+
+Do not start paper trading, live trading, production theme-aware scoring, or official gate-loosening before these evidence and trust gaps are addressed.
