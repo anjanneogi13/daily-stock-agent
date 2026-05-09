@@ -167,6 +167,17 @@ def _classify_no_pick_cause(pipeline: dict | None, market_data_health: dict | No
     if (health.get("by_stage") or {}).get("ohlcv", {}).get("errors", 0):
         secondary.append("OHLCV_PROVIDER_ERRORS_PRESENT")
 
+    readiness_gate = diag.get("readiness_gate") if isinstance(diag.get("readiness_gate"), dict) else {}
+    if readiness_gate and readiness_gate.get("passed") is False:
+        primary = readiness_gate.get("primary_no_pick_cause") or "NO_PICK_DATA_READINESS_FAILED"
+        summary = (
+            readiness_gate.get("human_readable_summary")
+            or "No official picks were generated because premarket data readiness failed."
+        )
+        for warning in readiness_gate.get("warnings") or []:
+            secondary.append(str(warning).upper())
+        return primary, sorted(set(secondary)), summary
+
     final_count = int(pipe.get("final_pick_count") or 0)
     scored_count = int(pipe.get("scored_count") or 0)
     fetched_count = int(pipe.get("fetched_count") or 0)
@@ -269,6 +280,9 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
         if primary_cause == "NO_PICK_DATA_PROVIDER_DEGRADED":
             payload["data_readiness_status"] = "not_ready_data_provider_degraded"
             payload["provider_status"] = "degraded"
+        elif primary_cause == "NO_PICK_DATA_READINESS_FAILED":
+            payload["data_readiness_status"] = "not_ready_data_readiness_failed"
+            payload["provider_status"] = "unknown"
         elif primary_cause in {"NO_PICK_NO_SCORED_CANDIDATES", "NO_PICK_FILTERS_REMOVED_ALL"}:
             payload["data_readiness_status"] = "ready_no_qualified_candidates"
             payload["provider_status"] = "healthy"
@@ -567,6 +581,48 @@ def run():
     rprint("[3/6] Fetching market data...")
     data = fetch_universe_data(tickers, period=f"{cfg['strategy']['lookback_days']}d")
     pipeline["fetched_count"] = len(data)
+
+    rprint("[3b/6] Checking premarket data readiness...")
+    try:
+        from src.market_data_health import summarize_market_data_health
+        from src.premarket_readiness_gate import build_premarket_readiness_decision
+
+        market_data_health = summarize_market_data_health() or {}
+        readiness = build_premarket_readiness_decision(
+            universe_count=pipeline["universe_count"],
+            fetched_count=pipeline["fetched_count"],
+            market_data_health=market_data_health,
+            min_fetch_coverage=float(os.getenv("PREMARKET_MIN_FETCH_COVERAGE", "0.25")),
+            min_fetched_count=int(os.getenv("PREMARKET_MIN_FETCHED_COUNT", "25")),
+        )
+        pipeline["data_readiness_status"] = readiness.get("status")
+        pipeline["data_readiness_passed"] = bool(readiness.get("passed"))
+
+        if not readiness.get("passed"):
+            diagnostics = {"readiness_gate": readiness}
+            _write_daily_picks_no_pick_report(
+                readiness.get("human_readable_summary")
+                or "Official premarket pick skipped because data readiness failed.",
+                pipeline,
+                diagnostics,
+            )
+            rprint(f"[yellow]Premarket data readiness failed: {readiness.get('status')}[/yellow]")
+            rprint("[green]Done. No official premarket pick today.[/green]")
+            return
+
+        rprint(f"  [green]✓ Data readiness passed ({readiness.get('fetched_count')}/{readiness.get('universe_count')} fetched)[/green]")
+    except Exception as e:
+        pipeline["data_readiness_status"] = "readiness_gate_error"
+        pipeline["data_readiness_passed"] = False
+        diagnostics = {"readiness_gate_error": str(e)}
+        _write_daily_picks_no_pick_report(
+            "Official premarket pick skipped because the data-readiness gate failed unexpectedly.",
+            pipeline,
+            diagnostics,
+        )
+        rprint(f"[red]Premarket data readiness gate failed unexpectedly: {e}[/red]")
+        rprint("[green]Done. No official premarket pick today.[/green]")
+        return
 
     rprint("[4/6] Computing indicators + scoring (parallel, all candidates)...")
     from src.parallel_scorer import score_all

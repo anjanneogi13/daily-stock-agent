@@ -1,3 +1,47 @@
+## 2026-05-09 — Added Lane 1 pre-selection data readiness gate
+
+**Type:** Lane 1 / premarket official pick / data readiness gate
+
+**Summary:**
+
+Implemented Priority 3 foundation: a pre-selection data readiness gate for the premarket official pick lane.
+
+New files:
+
+- `src/premarket_readiness_gate.py`
+- `tests/test_premarket_readiness_gate.py`
+
+Updated files:
+
+- `main.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- `main.py` now checks data readiness after universe/OHLCV fetch and before scoring.
+- If readiness passes, scoring proceeds.
+- If readiness fails, the run writes an official no-pick artifact and exits successfully.
+- The no-pick classifier now preserves readiness-gate no-pick causes.
+
+Gate currently checks:
+
+- empty universe,
+- zero fetched OHLCV data,
+- low fetched-data coverage,
+- low fetched ticker count,
+- fully degraded OHLCV provider state,
+- provider warning signals.
+
+Safety:
+
+- No fake picks are created.
+- No scoring behavior changes when readiness passes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted for readiness no-pick days.
+
+---
+
 ## 2026-05-09 — Made Lane 1 no-pick a first-class outcome
 
 **Type:** Lane 1 / premarket official pick / no-pick runtime behavior

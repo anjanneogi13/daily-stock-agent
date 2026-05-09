@@ -824,6 +824,49 @@ Safety:
 - No buy instructions are emitted for official no-pick days.
 
 
+## Priority 3 Implementation Status
+
+Initial pre-selection data readiness gate added:
+
+- `src/premarket_readiness_gate.py`
+- `tests/test_premarket_readiness_gate.py`
+- updated `main.py`
+
+Behavior change:
+
+- after universe and OHLCV fetch, `main.py` now runs a premarket data-readiness gate before scoring,
+- if the gate passes, scoring proceeds normally,
+- if the gate fails, the run writes a contract-compatible official no-pick artifact and exits successfully,
+- no fake picks are created when data readiness is poor.
+
+Current gate checks:
+
+- non-empty candidate universe,
+- at least some OHLCV data fetched,
+- minimum fetched-data coverage,
+- minimum fetched ticker count,
+- severe OHLCV provider degradation,
+- provider warnings such as rate limits, empty results, and OHLCV errors.
+
+Configurable environment variables:
+
+- `PREMARKET_MIN_FETCH_COVERAGE`, default `0.25`,
+- `PREMARKET_MIN_FETCHED_COUNT`, default `25`.
+
+Safety:
+
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted on readiness-gated no-pick days.
+
+Follow-up needed:
+
+- add freshness/staleness checks,
+- add SPY/QQQ benchmark availability checks,
+- add provider-specific confidence scoring,
+- integrate readiness output into daily intelligence/reporting.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.
