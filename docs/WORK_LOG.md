@@ -1,3 +1,35 @@
+## 2026-05-09 — Added fail-closed official artifact validation for user-facing outputs
+
+**Type:** Lane 1 / Priority 15 / user-facing safety
+
+**Summary:**
+
+Implemented Priority 15: Telegram and GitHub issue output now fail closed when official decision artifacts are missing or invalid.
+
+Changed files:
+
+- `src/official_artifact_loader.py`
+- `scripts/format_picks_email.py`
+- `scripts/send_layman_daily.py`
+- `tests/test_official_artifact_loader.py`
+- `tests/test_official_artifact_outputs.py`
+- `docs/planning/LANE1_FINAL_PRODUCTION_HARDENING_PLAN.md`
+
+Behavior:
+
+- CSV pick rows require matching valid official pick artifacts before user-facing output proceeds.
+- Zero-pick output requires a valid official no-pick artifact.
+- Missing/invalid artifacts block Telegram and GitHub issue output.
+- Valid official no-pick artifacts still allow no-pick user-facing output.
+
+Safety:
+
+- No normal official pick alert may be sent without a validated official artifact.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Documented final Lane 1 production-hardening plan
 
 **Type:** Lane 1 / documentation / production readiness

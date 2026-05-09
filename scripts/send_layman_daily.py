@@ -15,11 +15,35 @@ from src.layman_translator import (
     pick_to_layman, header, footer_explainer, score_to_words
 )
 from src.dedup_sender import should_send, mark_sent
+from scripts.validate_daily_no_pick import validate_no_pick_report
 from src.official_artifact_loader import (
     enrich_pick_rows_with_artifacts,
     official_pick_summary_for_date,
+    validate_official_artifacts_for_rows,
 )
 from src.smell_faculty import sniff as _sniff, has_blocking_smell, format_for_telegram as _smell_fmt
+
+
+def _today_date() -> str:
+    return os.environ.get("PICK_DATE") or datetime.now().strftime("%Y-%m-%d")
+
+
+def validate_official_user_output_state(picks: list[dict], no_pick_report: dict | None = None) -> list[str]:
+    """Fail-closed validation before any user-facing Telegram output.
+
+    If picks exist, every pick must have a matching valid official artifact.
+    If no picks exist, a valid official no-pick artifact must exist.
+    """
+    date_str = _today_date()
+    no_pick_report = no_pick_report or {}
+
+    if picks:
+        return validate_official_artifacts_for_rows(picks, date_str)
+
+    if not no_pick_report:
+        return [f"no picks logged and no valid official no-pick artifact found for {date_str}"]
+
+    return validate_no_pick_report(no_pick_report)
 
 
 def _is_pick_sane(pick: dict) -> tuple[bool, str]:
@@ -108,8 +132,7 @@ def _premarket_tags() -> dict:
 def _today_picks():
     path = Path("data/picks_log.csv")
     if not path.exists(): return []
-    today = os.environ.get("PICK_DATE") or \
-            datetime.now().strftime("%Y-%m-%d")
+    today = _today_date()
     tags = _premarket_tags()
     rows = []
     with path.open() as f:
@@ -165,7 +188,7 @@ def _send(text) -> bool:
 
 
 def _today_no_pick_report() -> dict:
-    today = os.environ.get("PICK_DATE") or datetime.now().strftime("%Y-%m-%d")
+    today = _today_date()
     path = Path(f"data/daily_picks_no_pick_report_{today}.json")
     if not path.exists():
         return {}
@@ -274,7 +297,15 @@ def build_message(picks, no_pick_report=None):
 
 def main():
     picks = _today_picks()
-    msg = build_message(picks, no_pick_report=_today_no_pick_report())
+    no_pick_report = _today_no_pick_report()
+    validation_errors = validate_official_user_output_state(picks, no_pick_report=no_pick_report)
+    if validation_errors:
+        print("[official-output] ❌ blocked user-facing Telegram output")
+        for error in validation_errors:
+            print(f"- {error}")
+        return 1
+
+    msg = build_message(picks, no_pick_report=no_pick_report)
     print(msg); print("")
     if not should_send(msg):
         print("[dedup] already sent — skipping")

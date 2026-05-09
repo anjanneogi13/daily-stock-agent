@@ -51,6 +51,15 @@ def write_artifact(data_dir: Path):
         "company": "Apple Inc.",
         "contract_version": "premarket_decision_contract_v1",
         "strategy_lane": "premarket_official_daily_pick",
+        "strategy_version": "premarket_official_v1",
+        "scoring_version": "legacy_composite_v1",
+        "config_version": "config.yaml",
+        "selection_time_et": "2026-05-09T08:30:00-04:00",
+        "workflow_run_id": "local",
+        "commit_sha": "local",
+        "data_readiness_status": "ready",
+        "provider_status": "healthy",
+        "market_session_status": "premarket",
         "score": 0.82,
         "entry": 100,
         "stop_loss": 95,
@@ -62,6 +71,9 @@ def write_artifact(data_dir: Path):
         "invalidation_conditions": ["Do not enter if fresh quote is unavailable."],
         "risk_flags": ["PREMARKET_SAFE"],
         "score_components": {"composite": 0.82},
+        "regime": "bullish",
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
     }
     (data_dir / "premarket_official_pick_2026-05-09_AAPL.json").write_text(
         json.dumps(payload),
@@ -115,3 +127,108 @@ def test_send_layman_daily_uses_official_artifact(tmp_path, monkeypatch):
     assert "validated official decision artifacts" in result.stdout
     assert "Official reason:* AAPL selected from official artifact." in result.stdout
     assert "Official risk flags:* PREMARKET_SAFE" in result.stdout
+
+
+
+def write_no_pick_report(data_dir: Path):
+    payload = {
+        "artifact": "daily_picks_no_pick_report",
+        "date": "2026-05-09",
+        "decision": "official_no_pick",
+        "strategy_lane": "premarket_official_daily_pick",
+        "contract_version": "premarket_decision_contract_v1",
+        "strategy_version": "premarket_official_v1",
+        "scoring_version": "legacy_composite_v1",
+        "config_version": "config.yaml",
+        "selection_time_et": "2026-05-09T08:30:00-04:00",
+        "workflow_run_id": "local",
+        "commit_sha": "local",
+        "primary_no_pick_cause": "NO_PICK_DATA_READINESS_FAILED",
+        "secondary_causes": [],
+        "human_readable_summary": "Synthetic valid no-pick.",
+        "data_readiness_status": "not_ready_data_readiness_failed",
+        "provider_status": "unknown",
+        "market_session_status": "premarket",
+        "pipeline": {"final_pick_count": 0},
+        "candidate_diagnostics": {},
+        "watch_only_available": False,
+        "next_action": "Do not fabricate official picks.",
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
+    }
+    (data_dir / "daily_picks_no_pick_report_2026-05-09.json").write_text(
+        json.dumps(payload),
+        encoding="utf-8",
+    )
+
+
+def test_format_picks_email_blocks_missing_official_artifact(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    write_csv(tmp_path / "data/picks_log.csv")
+
+    result = subprocess.run(
+        [sys.executable, str(Path(__file__).resolve().parents[1] / "scripts/format_picks_email.py")],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 1
+    assert "Official decision artifact validation failed" in result.stderr
+    assert "no official pick artifacts found" in result.stderr
+
+
+def test_send_layman_daily_blocks_missing_official_artifact(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("PICK_DATE", "2026-05-09")
+    monkeypatch.delenv("TELEGRAM_BOT_TOKEN", raising=False)
+    monkeypatch.delenv("TELEGRAM_CHAT_ID", raising=False)
+    monkeypatch.delenv("TELEGRAM_GROUP_CHAT_ID", raising=False)
+    write_csv(tmp_path / "data/picks_log.csv")
+
+    result = subprocess.run(
+        [sys.executable, str(Path(__file__).resolve().parents[1] / "scripts/send_layman_daily.py")],
+        text=True,
+        capture_output=True,
+    )
+
+    assert result.returncode == 1
+    assert "blocked user-facing Telegram output" in result.stdout
+    assert "no official pick artifacts found" in result.stdout
+
+
+def test_format_picks_email_allows_valid_no_pick_artifact(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    write_no_pick_report(data_dir)
+
+    result = subprocess.run(
+        [sys.executable, str(Path(__file__).resolve().parents[1] / "scripts/format_picks_email.py")],
+        check=True,
+        text=True,
+        capture_output=True,
+    )
+
+    assert "Official No-Pick Decision" in result.stdout
+    assert "Synthetic valid no-pick." in result.stdout
+
+
+def test_send_layman_daily_allows_valid_no_pick_artifact(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("PICK_DATE", "2026-05-09")
+    monkeypatch.delenv("TELEGRAM_BOT_TOKEN", raising=False)
+    monkeypatch.delenv("TELEGRAM_CHAT_ID", raising=False)
+    monkeypatch.delenv("TELEGRAM_GROUP_CHAT_ID", raising=False)
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    write_no_pick_report(data_dir)
+
+    result = subprocess.run(
+        [sys.executable, str(Path(__file__).resolve().parents[1] / "scripts/send_layman_daily.py")],
+        check=True,
+        text=True,
+        capture_output=True,
+    )
+
+    assert "Official no-pick today" in result.stdout
+    assert "Synthetic valid no-pick." in result.stdout

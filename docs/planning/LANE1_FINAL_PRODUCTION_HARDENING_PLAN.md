@@ -137,6 +137,23 @@ No user-facing official pick alert may be sent unless it can be traced to a vali
 
 ---
 
+## Priority 15 Implementation Status
+
+Implemented fail-closed user-facing output validation:
+
+- `src/official_artifact_loader.py` now exposes `validate_official_artifacts_for_rows`,
+- `scripts/format_picks_email.py` blocks output when CSV rows lack valid official pick artifacts,
+- `scripts/send_layman_daily.py` blocks Telegram output when CSV rows lack valid official pick artifacts,
+- zero-pick user-facing output now requires a valid official no-pick artifact,
+- tests cover missing-artifact blocking and valid no-pick output.
+
+Safety:
+
+- No user-facing official pick alert may be sent unless backed by a validated official decision artifact.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+
 # Priority 16 — Add Official Decision / Artifact ID Traceability
 
 ## Problem

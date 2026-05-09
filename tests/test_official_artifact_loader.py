@@ -4,6 +4,7 @@ from src.official_artifact_loader import (
     enrich_pick_row_with_artifact,
     enrich_pick_rows_with_artifacts,
     official_pick_artifacts_for_date,
+    validate_official_artifacts_for_rows,
 )
 
 
@@ -59,3 +60,35 @@ def test_enrich_pick_rows_with_artifacts_marks_missing_artifact(tmp_path):
 
     assert enriched[0]["official_artifact_present"] is False
     assert enriched[0]["entry"] == "50"
+
+
+def test_validate_official_artifacts_for_rows_blocks_missing_artifact(tmp_path):
+    rows = [{"ticker": "AAPL"}]
+
+    errors = validate_official_artifacts_for_rows(rows, "2026-05-09", tmp_path)
+
+    assert errors == ["no official pick artifacts found for 2026-05-09"]
+
+
+def test_validate_official_artifacts_for_rows_passes_valid_artifact(tmp_path):
+    path = tmp_path / "premarket_official_pick_2026-05-09_AAPL.json"
+    payload = artifact()
+    payload.update({
+        "strategy_version": "premarket_official_v1",
+        "scoring_version": "legacy_composite_v1",
+        "config_version": "config.yaml",
+        "selection_time_et": "2026-05-09T08:30:00-04:00",
+        "workflow_run_id": "local",
+        "commit_sha": "local",
+        "data_readiness_status": "ready",
+        "provider_status": "healthy",
+        "market_session_status": "premarket",
+        "regime": "bullish",
+        "paper_trading_enabled": False,
+        "live_trading_enabled": False,
+    })
+    path.write_text(json.dumps(payload), encoding="utf-8")
+
+    errors = validate_official_artifacts_for_rows([{"ticker": "AAPL"}], "2026-05-09", tmp_path)
+
+    assert errors == []

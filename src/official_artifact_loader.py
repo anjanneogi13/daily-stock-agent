@@ -15,6 +15,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from src.premarket_decision_contract import validate_official_pick
+
 
 def _load_json(path: Path) -> dict:
     try:
@@ -92,3 +94,47 @@ def enrich_pick_rows_with_artifacts(rows: list[dict], date_str: str, data_dir: P
         ticker = str(row.get("ticker") or "").strip().upper()
         enriched.append(enrich_pick_row_with_artifact(row, artifacts.get(ticker)))
     return enriched
+
+
+def validate_official_artifacts_for_rows(
+    rows: list[dict],
+    date_str: str,
+    data_dir: Path = Path("data"),
+) -> list[str]:
+    """Validate that every CSV row has a matching valid official pick artifact.
+
+    This is used as the fail-closed guard for user-facing outputs. If rows exist
+    for the day, Telegram/GitHub issue output must not proceed unless each row is
+    backed by a validated official artifact.
+    """
+    errors: list[str] = []
+    artifacts = official_pick_artifacts_for_date(date_str, data_dir=data_dir)
+
+    if rows and not artifacts:
+        return [f"no official pick artifacts found for {date_str}"]
+
+    expected_tickers: list[str] = []
+    for row in rows:
+        ticker = str(row.get("ticker") or "").strip().upper()
+        if ticker:
+            expected_tickers.append(ticker)
+        else:
+            errors.append("CSV row is missing ticker")
+            continue
+
+        artifact = artifacts.get(ticker)
+        if not artifact:
+            errors.append(f"missing official pick artifact for {ticker}")
+            continue
+
+        if artifact.get("date") != date_str:
+            errors.append(f"{ticker}: artifact date {artifact.get('date')!r} does not match {date_str!r}")
+
+        for message in validate_official_pick(artifact):
+            errors.append(f"{ticker}: {message}")
+
+    extra_tickers = sorted(set(artifacts) - set(expected_tickers))
+    if extra_tickers:
+        errors.append(f"official pick artifacts exist without CSV rows: {', '.join(extra_tickers)}")
+
+    return errors

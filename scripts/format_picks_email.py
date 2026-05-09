@@ -12,9 +12,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from scripts.validate_daily_no_pick import validate_no_pick_report
 from src.official_artifact_loader import (
     enrich_pick_rows_with_artifacts,
     official_pick_summary_for_date,
+    validate_official_artifacts_for_rows,
 )
 
 
@@ -39,6 +41,26 @@ def _load_no_pick_report():
 
 
 no_pick_report = _load_no_pick_report()
+
+
+def _fail_user_output(errors):
+    print("# Daily Stock Picks — blocked\n", file=sys.stderr)
+    print("Official decision artifact validation failed; user-facing output is blocked.", file=sys.stderr)
+    for error in errors:
+        print(f"- {error}", file=sys.stderr)
+    raise SystemExit(1)
+
+
+if rows:
+    artifact_errors = validate_official_artifacts_for_rows(rows, today)
+    if artifact_errors:
+        _fail_user_output(artifact_errors)
+elif no_pick_report:
+    no_pick_errors = validate_no_pick_report(no_pick_report)
+    if no_pick_errors:
+        _fail_user_output(no_pick_errors)
+else:
+    _fail_user_output([f"no picks logged and no valid official no-pick artifact found for {today}"])
 
 pm = {}
 pmp = Path("data/premarket_check.json")
@@ -65,8 +87,6 @@ if not rows:
         print(f"- Provider status: `{no_pick_report.get('provider_status', 'unknown')}`")
         print(f"- Next action: {no_pick_report.get('next_action', 'Do not fabricate official picks.')}\n")
         print("_No official premarket pick was generated. This is a valid safety outcome, not a buy instruction._")
-    else:
-        print("_No picks today._")
     raise SystemExit
 
 artifact_count = official_summary.get("official_pick_count")
