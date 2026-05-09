@@ -297,6 +297,16 @@ Required changes:
 - Add `score_explanation`.
 - Add `risk_flags`.
 
+Current implementation notes:
+
+- `scripts/generate_late_daily_ideas.py` now computes a capped display score instead of blindly summing `tradeable_score` and positive `score_delta`.
+- Standard late news-only display scores are capped below casual `100/100`.
+- Corporate-action / event-structure-uncertain ideas are capped lower.
+- GIG-style business-combination / merger-sub / deal-vote headlines are classified as `corporate_action_event_structure_uncertain`.
+- Late idea JSONL rows include `score_explanation` and `risk_flags`.
+- Late idea Markdown reports show the score note and risk flags.
+- This remains watch-only and does not affect official pick scoring.
+
 Potential risk flags:
 
 - `business_combination`

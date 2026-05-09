@@ -13,6 +13,56 @@ Rules:
 
 ---
 
+## 2026-05-09 — Calibrated late-news watch-only scores and corporate-action risk flags
+
+**Type:** late-news scoring / watch-only safety / Priority 4 repair
+
+**Summary:**
+
+Added conservative display-score calibration for late watch-only daily ideas.
+
+Problem fixed:
+
+- Late news-only ideas could display as `100/100` by adding `tradeable_score * 100` and positive `score_delta * 100`.
+- GIG-style business-combination / merger-sub / deal-vote headlines were classified as `standard`.
+- Corporate-action/event-structure ideas did not expose enough risk context.
+
+Changes:
+
+- Added capped display-score calculation for late watch-only ideas.
+- Standard news-only late ideas are capped below casual `100/100` display.
+- Corporate-action / event-structure-uncertain ideas are capped lower.
+- Added `score_explanation`.
+- Added `risk_flags`.
+- Added detection for:
+  - `business_combination`
+  - `spac_or_de_spac`
+  - `merger_sub`
+  - `deal_vote`
+  - `corporate_action`
+  - `event_structure_uncertain`
+  - `no_event_arb_model`
+  - `news_only_no_breadth_confirmation`
+- Markdown late-idea reports now show score explanations and risk flags.
+
+May 8 rescore simulation:
+
+- BLLN: `100.0` → `95.0`
+- EVC: `100.0` → `95.0`
+- GIG: `100.0` → `75.0`, flagged as business-combination / merger-sub / deal-vote / no-event-arb-model
+- PRAA: `100.0` → `95.0`
+- ZIM: `100.0` → `75.0`, flagged as corporate-action / event-structure-uncertain / no-event-arb-model
+
+Safety:
+
+- Still watch-only.
+- Does not create official picks.
+- Does not write `data/picks_log.csv`.
+- Does not enable paper or live trading.
+- No official scoring behavior changed.
+
+---
+
 ## 2026-05-09 — Separated performance reports from watch-only evidence
 
 **Type:** performance reporting / source separation / Priority 3 repair

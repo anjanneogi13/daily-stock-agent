@@ -41,6 +41,22 @@ ACQUISITION_EVENT_RE = re.compile(
     re.IGNORECASE,
 )
 
+BUSINESS_COMBINATION_RE = re.compile(r"business combination|de-?spac|de spac", re.IGNORECASE)
+MERGER_SUB_RE = re.compile(r"merger sub|merger subsidiary", re.IGNORECASE)
+DEAL_VOTE_RE = re.compile(
+    r"(shareholders? approve|shareholder vote|stockholder vote|special meeting|"
+    r"proposals? related to business combination)",
+    re.IGNORECASE,
+)
+CORPORATE_ACTION_RE = re.compile(
+    r"(reverse split|stock split|redemption|warrant|rights offering|"
+    r"exchange offer|tender offer|going private|takeover bid)",
+    re.IGNORECASE,
+)
+
+STANDARD_NEWS_ONLY_SCORE_CAP = 95.0
+EVENT_STRUCTURE_UNCERTAIN_SCORE_CAP = 75.0
+
 
 def _as_float(value, default: float = 0.0) -> float:
     try:
@@ -95,7 +111,82 @@ def classify_catalyst_type(text: str) -> str:
     raw = str(text or "").strip()
     if ACQUISITION_EVENT_RE.search(raw):
         return "acquisition_event_arbitrage"
+    if (
+        BUSINESS_COMBINATION_RE.search(raw)
+        or MERGER_SUB_RE.search(raw)
+        or DEAL_VOTE_RE.search(raw)
+        or CORPORATE_ACTION_RE.search(raw)
+    ):
+        return "corporate_action_event_structure_uncertain"
     return "standard"
+
+
+def detect_risk_flags(text: str, *, source: str) -> list[str]:
+    """Detect late-news risks that should reduce score confidence."""
+    raw = str(text or "")
+    flags: list[str] = []
+
+    if BUSINESS_COMBINATION_RE.search(raw):
+        flags.append("business_combination")
+    if re.search(r"\bspac\b|de-?spac|de spac", raw, re.IGNORECASE):
+        flags.append("spac_or_de_spac")
+    if MERGER_SUB_RE.search(raw):
+        flags.append("merger_sub")
+    if DEAL_VOTE_RE.search(raw):
+        flags.append("deal_vote")
+    if CORPORATE_ACTION_RE.search(raw):
+        flags.append("corporate_action")
+
+    if flags:
+        flags.extend(["event_structure_uncertain", "no_event_arb_model"])
+
+    if source in {"news_signal", "watchlist"}:
+        flags.append("news_only_no_breadth_confirmation")
+
+    # Preserve order while de-duping.
+    return list(dict.fromkeys(flags))
+
+
+def compute_display_score(
+    *,
+    tradeable_score: float,
+    score_delta: float,
+    risk_flags: list[str],
+) -> tuple[float, str]:
+    """Compute a capped 0-100 display score for late watch-only ideas.
+
+    The display score is intentionally more conservative than the raw
+    tradeable_score + positive score_delta sum. Late watch-only ideas are
+    evidence, not official picks, and news-only ideas should not casually
+    display as 100/100.
+    """
+    base = max(0.0, min(100.0, tradeable_score * 100.0))
+    positive_delta = max(0.0, score_delta) * 100.0
+    raw = max(0.0, min(100.0, base + positive_delta))
+
+    cap = STANDARD_NEWS_ONLY_SCORE_CAP
+    cap_reason = "standard late-news cap prevents news-only 100/100 display"
+    event_flags = {
+        "business_combination",
+        "spac_or_de_spac",
+        "merger_sub",
+        "deal_vote",
+        "corporate_action",
+        "event_structure_uncertain",
+        "no_event_arb_model",
+    }
+    if any(flag in event_flags for flag in risk_flags):
+        cap = EVENT_STRUCTURE_UNCERTAIN_SCORE_CAP
+        cap_reason = "corporate-action/event-structure cap; no event-arb model"
+
+    score = round(min(raw, cap), 2)
+    explanation = (
+        f"base={base:.1f} from tradeable_score={tradeable_score:.3f}; "
+        f"positive_score_delta_boost={positive_delta:.1f}; "
+        f"raw={raw:.1f}; cap={cap:.1f} ({cap_reason}); "
+        f"display_score={score:.1f}"
+    )
+    return score, explanation
 
 
 def fetch_market_context(ticker: str) -> dict:
@@ -207,7 +298,9 @@ def _candidate_from_payload(
     rationale = str(payload.get("rationale") or "").strip()
     reason = rationale or headline or f"{source} late watch-only idea"
 
-    catalyst_type = classify_catalyst_type(f"{headline} {rationale}")
+    evidence_text = f"{headline} {rationale}"
+    catalyst_type = classify_catalyst_type(evidence_text)
+    risk_flags = detect_risk_flags(evidence_text, source=source)
 
     # Acquisition / all-cash deal headlines are not normal momentum setups.
     # Until the product has a proper event-arb lane with deal-price parsing and
@@ -230,8 +323,11 @@ def _candidate_from_payload(
     if market.get("current_price"):
         levels = build_watch_only_levels(float(market["current_price"]))
 
-    # Normalize to a 0-100 display score. Keep it simple and auditable.
-    score = round(max(0.0, min(100.0, tradeable_score * 100.0 + max(0.0, score_delta) * 100.0)), 2)
+    score, score_explanation = compute_display_score(
+        tradeable_score=tradeable_score,
+        score_delta=score_delta,
+        risk_flags=risk_flags,
+    )
 
     generated_at = _now_et(now)
     date_str = generated_at.strftime("%Y-%m-%d")
@@ -251,6 +347,8 @@ def _candidate_from_payload(
         "score": score,
         "tradeable_score": tradeable_score,
         "score_delta": score_delta,
+        "score_explanation": score_explanation,
+        "risk_flags": risk_flags,
         "sentiment": sentiment or "unknown",
         "action_window": action_window,
         "catalyst_type": catalyst_type,
@@ -381,9 +479,15 @@ def format_markdown(ideas: list[dict], *, now: datetime | None = None) -> str:
         change = idea.get("change_pct")
         change_text = f" | Change: {change:+.2f}%" if isinstance(change, (int, float)) else ""
 
+        risk_flags = idea.get("risk_flags") or []
+        risk_text = ", ".join(risk_flags) if risk_flags else "none"
+        explanation = idea.get("score_explanation") or "score explanation unavailable"
+
         lines.extend([
             f"{i}. { _display_name(idea) } — score {float(idea['score']):.1f}/100",
             f"   Source: {_source_label(idea.get('source', 'unknown'))} | Window: {action}{change_text}",
+            f"   Score note: {explanation}",
+            f"   Risk flags: {risk_text}",
             *_level_text(idea),
             f"   Catalyst: {headline[:220]}",
             "   WATCH ONLY — do not treat as an official pick or buy instruction.",
