@@ -1,3 +1,38 @@
+## 2026-05-09 — Added Lane 1 synthetic no-pick dry-run validation
+
+**Type:** Lane 1 / workflow / no-pick dry-run validation
+
+**Summary:**
+
+Implemented Priority 12 foundation: synthetic end-to-end official no-pick dry-run and fixture coverage for all allowed no-pick causes.
+
+New files:
+
+- `scripts/dry_run_official_no_pick.py`
+- `tests/test_dry_run_official_no_pick.py`
+
+Updated files:
+
+- `.github/workflows/daily-picks.yml`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- workflow now runs a synthetic Lane 1 official no-pick dry-run before normal smoke tests,
+- dry-run validates all allowed official no-pick causes from the decision contract,
+- generated no-pick fixtures are validated with the same validator used by the workflow,
+- dry-run uses only local synthetic data and writes to an isolated output directory.
+
+Safety:
+
+- No real picks are generated.
+- No live provider calls are made.
+- No Telegram/GitHub messages are sent.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 end-to-end dry-run validation
 
 **Type:** Lane 1 / workflow / dry-run validation
