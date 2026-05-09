@@ -13,6 +13,68 @@ Rules:
 
 ---
 
+## 2026-05-09 — Added observe-only theme-to-pick bridge v0
+
+**Type:** theme-to-pick bridge / observe-only intelligence / Priority 7 repair
+
+**Summary:**
+
+Added an observe-only bridge report that compares discovered themes against official picks, rejection diagnostics, and watch-only lanes.
+
+New artifacts:
+
+- `data/theme_pick_bridge_YYYY-MM-DD.json`
+- `data/theme_pick_bridge_YYYY-MM-DD.md`
+
+Inputs:
+
+- `data/theme_discovery_YYYY-MM-DD.json`
+- `data/picks_log.csv`
+- `data/daily_picks_candidate_rejections_YYYY-MM-DD.json`
+- `data/late_daily_ideas_YYYY-MM-DD.jsonl`
+- `data/opening_range_observations_YYYY-MM-DD.jsonl`
+- `data/intraday_momentum_observations_YYYY-MM-DD.jsonl`
+
+Implementation:
+
+- Added `scripts/build_theme_pick_bridge.py`.
+- Added `tests/test_theme_pick_bridge.py`.
+- For each top discovered theme, the bridge reports:
+  - theme leaders,
+  - official pick matches,
+  - rejected/filtered matches,
+  - hard-blocked matches,
+  - watch-only lane matches,
+  - leaders missing from official and watch-only lanes,
+  - likely gap reasons.
+
+Gap reasons include:
+
+- `official_pick_included`
+- `hard_blocked`
+- `filtered_or_rejected`
+- `watch_only_only`
+- `missing_from_official_and_watch_only`
+- `missing_from_daily_universe_or_no_candidate_evidence`
+- `no_daily_rejection_artifact_available`
+
+May 9 validation:
+
+- The bridge analyzed the top discovered themes from `theme_discovery_2026-05-09`.
+- Because May 9 has no official pick rows, no rejection artifact, and no watch-only lane artifacts yet, top themes are correctly marked with:
+  - `missing_from_official_and_watch_only`
+  - `no_daily_rejection_artifact_available`
+
+Safety:
+
+- Observe-only.
+- Does not alter official scoring.
+- Does not create picks.
+- Does not enable paper or live trading.
+- No buy instructions.
+
+---
+
 ## 2026-05-09 — Added observe-only dynamic theme discovery radar v0
 
 **Type:** theme discovery / observe-only intelligence / Priority 6 repair

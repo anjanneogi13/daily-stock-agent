@@ -450,6 +450,23 @@ Expected artifact:
 
 - section inside theme-discovery report or a separate bridge report.
 
+Current implementation notes:
+
+- `scripts/build_theme_pick_bridge.py` now produces a separate observe-only bridge report.
+- Outputs:
+  - `data/theme_pick_bridge_YYYY-MM-DD.json`
+  - `data/theme_pick_bridge_YYYY-MM-DD.md`
+- The bridge compares discovered theme leaders against:
+  - official pick rows from `picks_log.csv`,
+  - daily candidate rejection diagnostics,
+  - hard-blocked candidates,
+  - late daily watch-only ideas,
+  - opening-range watch-only observations,
+  - intraday momentum watch-only observations.
+- For each theme, the report explains whether leaders were included, rejected, hard-blocked, watch-only only, or missing from available daily artifacts.
+- May 9 validation correctly reports missing daily pick/rejection/watch-only artifacts instead of inventing reasons.
+- This remains observe-only and does not affect production scoring.
+
 Safety:
 
 - Observe-only.
