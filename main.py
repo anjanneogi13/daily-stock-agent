@@ -167,6 +167,13 @@ def _classify_no_pick_cause(pipeline: dict | None, market_data_health: dict | No
     if (health.get("by_stage") or {}).get("ohlcv", {}).get("errors", 0):
         secondary.append("OHLCV_PROVIDER_ERRORS_PRESENT")
 
+    sanity_blocked = diag.get("premarket_sanity_blocked_candidates")
+    pre_sanity = diag.get("pre_premarket_sanity_candidates")
+    if isinstance(sanity_blocked, list) and sanity_blocked and isinstance(pre_sanity, list) and len(sanity_blocked) >= len(pre_sanity):
+        primary = "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL"
+        summary = "No official picks were generated because all finalists were blocked by the premarket sanity gate."
+        return primary, sorted(set(secondary)), summary
+
     readiness_gate = diag.get("readiness_gate") if isinstance(diag.get("readiness_gate"), dict) else {}
     if readiness_gate and readiness_gate.get("passed") is False:
         primary = readiness_gate.get("primary_no_pick_cause") or "NO_PICK_DATA_READINESS_FAILED"
@@ -288,6 +295,9 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
             payload["provider_status"] = "healthy"
         elif primary_cause == "NO_PICK_ALL_FINALISTS_HARD_BLOCKED":
             payload["data_readiness_status"] = "ready_all_finalists_hard_blocked"
+            payload["provider_status"] = "healthy"
+        elif primary_cause == "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL":
+            payload["data_readiness_status"] = "ready_all_finalists_blocked_by_premarket_sanity"
             payload["provider_status"] = "healthy"
         elif primary_cause == "NO_PICK_RUNTIME_FAILURE":
             payload["data_readiness_status"] = "not_ready_runtime_failure"
@@ -1010,7 +1020,74 @@ def run():
     swing_n = sum(1 for p in top if p["trade_type"] == "swing")
     rprint(f"  [dim]Tagged: 🔥 {day_n} DAY · ⚡ {swing_n} SWING[/dim]")
 
-    rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} final picks\n")
+    rprint("[5f/6] Applying premarket sanity gate before official logging...")
+    pre_sanity_candidates = list(top)
+    pipeline["pre_premarket_sanity_pick_count"] = len(pre_sanity_candidates)
+    try:
+        from src.premarket_sanity_gate import run_premarket_sanity_gate
+
+        top, sanity_blocked, sanity_summary = run_premarket_sanity_gate(pre_sanity_candidates)
+        pipeline["premarket_sanity_blocked_count"] = len(sanity_blocked)
+        pipeline["post_premarket_sanity_pick_count"] = len(top)
+        pipeline["final_pick_count"] = len(top)
+
+        if sanity_blocked:
+            rprint(f"  [yellow]⚠ Premarket sanity blocked {len(sanity_blocked)} candidate(s)[/yellow]")
+            for item in sanity_blocked:
+                rprint(
+                    f"    • {item.get('ticker')}: "
+                    f"{item.get('action')} — {item.get('reason')}"
+                )
+        else:
+            rprint("  [green]✓ All candidates passed premarket sanity[/green]")
+
+        if not top:
+            diagnostics = {
+                "pre_hard_block_candidates": [
+                    _summarize_candidate_for_report(p) for p in pre_hard_block_candidates
+                ],
+                "pre_premarket_sanity_candidates": [
+                    _summarize_candidate_for_report(p) for p in pre_sanity_candidates
+                ],
+                "premarket_sanity_blocked_candidates": [
+                    {
+                        "ticker": item.get("ticker"),
+                        "action": item.get("action"),
+                        "reason": item.get("reason"),
+                        "sanity": item.get("sanity", {}),
+                        "candidate": _summarize_candidate_for_report(item.get("candidate", {})),
+                    }
+                    for item in sanity_blocked
+                ],
+                "premarket_sanity_summary": sanity_summary,
+            }
+            _write_daily_picks_no_pick_report(
+                "No official picks generated because all finalists were blocked by the premarket sanity gate.",
+                pipeline,
+                diagnostics,
+            )
+            rprint("[yellow]No official picks generated after premarket sanity gate.[/yellow]")
+            rprint("[green]Done. No official premarket pick today.[/green]")
+            return
+    except Exception as e:
+        pipeline["premarket_sanity_gate_error"] = str(e)
+        pipeline["final_pick_count"] = 0
+        diagnostics = {
+            "pre_premarket_sanity_candidates": [
+                _summarize_candidate_for_report(p) for p in pre_sanity_candidates
+            ],
+            "premarket_sanity_gate_error": str(e),
+        }
+        _write_daily_picks_no_pick_report(
+            "No official picks generated because the premarket sanity gate failed unexpectedly.",
+            pipeline,
+            diagnostics,
+        )
+        rprint(f"[red]Premarket sanity gate failed unexpectedly: {e}[/red]")
+        rprint("[green]Done. No official premarket pick today.[/green]")
+        return
+
+    rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} final official picks\n")
 
     table = Table(title="Top Picks")
     for col in ["#","Type","Ticker","Sector","Score","EQ","Beat%","Entry","SL","TP","R:R","Qty","Earn"]:

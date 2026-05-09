@@ -1,3 +1,39 @@
+## 2026-05-09 — Added Lane 1 premarket sanity gate before official logging
+
+**Type:** Lane 1 / premarket official pick / premarket sanity gate
+
+**Summary:**
+
+Implemented Priority 4 foundation: premarket sanity now runs before finalists are logged as official picks.
+
+New files:
+
+- `src/premarket_sanity_gate.py`
+- `tests/test_premarket_sanity_gate.py`
+
+Updated files:
+
+- `main.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- finalists are checked by the premarket sanity gate before official logging,
+- `SAFE` candidates remain official,
+- `HALF_SIZE` candidates remain official with reduced quantity,
+- `SKIP_TODAY` and `WATCH_ONLY` candidates are blocked from normal official logging,
+- if all finalists are blocked, the run writes an official no-pick artifact and exits successfully,
+- no-pick classifier now records `NO_PICK_PREMARKET_SANITY_BLOCKED_ALL`.
+
+Safety:
+
+- No fake picks are created.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted for sanity-gated no-pick days.
+
+---
+
 ## 2026-05-09 — Added Lane 1 pre-selection data readiness gate
 
 **Type:** Lane 1 / premarket official pick / data readiness gate

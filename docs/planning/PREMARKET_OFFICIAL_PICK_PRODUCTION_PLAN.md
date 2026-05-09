@@ -867,6 +867,43 @@ Follow-up needed:
 - integrate readiness output into daily intelligence/reporting.
 
 
+## Priority 4 Implementation Status
+
+Initial premarket sanity gate before official status added:
+
+- `src/premarket_sanity_gate.py`
+- `tests/test_premarket_sanity_gate.py`
+- updated `main.py`
+
+Behavior change:
+
+- `main.py` now applies premarket sanity after finalist selection and trade-type tagging but before official logging,
+- candidates marked `SKIP_TODAY` or `WATCH_ONLY` are not logged as normal official picks,
+- candidates marked `HALF_SIZE` remain official but have quantity reduced before logging,
+- if all finalists are blocked by premarket sanity, the run writes a contract-compatible official no-pick artifact and exits successfully.
+
+Current sanity outcomes:
+
+- `SAFE`,
+- `HALF_SIZE`,
+- `SKIP_TODAY`,
+- `WATCH_ONLY`.
+
+Safety:
+
+- No fake picks are created.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+- No buy instructions are emitted when all candidates are blocked.
+
+Follow-up needed:
+
+- migrate legacy `scripts/premarket_check.py` into the reusable gate or make it pure reporting,
+- persist premarket sanity fields directly in `picks_log.csv`,
+- add richer live quote/provider confidence checks,
+- separate official skipped candidates from watch-only candidates in evaluation.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.
