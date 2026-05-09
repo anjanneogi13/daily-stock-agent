@@ -904,6 +904,49 @@ Follow-up needed:
 - separate official skipped candidates from watch-only candidates in evaluation.
 
 
+## Priority 5 Implementation Status
+
+Initial complete candidate diagnostics added:
+
+- `src/candidate_diagnostics.py`
+- `tests/test_candidate_diagnostics.py`
+- updated `main.py`
+
+Behavior change:
+
+- official successful runs now write `data/daily_picks_candidate_diagnostics_YYYY-MM-DD.json`,
+- official successful runs also write `data/daily_picks_candidate_diagnostics_YYYY-MM-DD.md`,
+- no-pick runs now also write the same candidate diagnostics artifact when diagnostics are available,
+- hard-block no-pick diagnostics now include stage counts, selected count, rejected count, and rejection details,
+- premarket-sanity no-pick diagnostics now include stage counts and sanity-blocked candidates,
+- wisdom-kill and earnings-risk drops are captured as extra rejection diagnostics.
+
+Current diagnostic categories:
+
+- selected official picks,
+- rejected candidates,
+- hard-blocked candidates,
+- premarket-sanity-blocked candidates,
+- scored-not-filtered count,
+- filtered-not-capped count,
+- stage counts,
+- pipeline counts.
+
+Safety:
+
+- Reporting-only change.
+- No scoring behavior changes.
+- No pick creation behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+Follow-up needed:
+
+- add lower-level score-threshold rejection reasons from the scorer,
+- persist diagnostics for every intermediate candidate if artifact size remains manageable,
+- connect diagnostics into daily intelligence brief and readiness reports.
+
+
 ## Implementation Playbook
 
 This section translates the roadmap into concrete code work.

@@ -218,6 +218,85 @@ def _classify_no_pick_cause(pipeline: dict | None, market_data_health: dict | No
 
 
 
+def _write_daily_picks_candidate_diagnostics_report(pipeline: dict | None, diagnostics: dict | None, *, official_premarket_pick: bool) -> None:
+    """Persist candidate diagnostics for successful or no-pick official runs."""
+    try:
+        import json
+        from datetime import datetime, timezone
+        from pathlib import Path
+        from zoneinfo import ZoneInfo
+
+        data_dir = Path("data")
+        data_dir.mkdir(exist_ok=True)
+        now_dt_utc = datetime.now(timezone.utc).replace(microsecond=0)
+        now_utc = now_dt_utc.isoformat().replace("+00:00", "Z")
+        date_str = now_dt_utc.astimezone(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+        diag = diagnostics or {}
+
+        payload = {
+            "artifact": "daily_picks_candidate_diagnostics",
+            "date": date_str,
+            "timestamp_utc": now_utc,
+            "mode": "monitoring_only",
+            "official_premarket_pick": bool(official_premarket_pick),
+            "paper_trading_enabled": False,
+            "live_trading_enabled": False,
+            "ready_for_paper_trading": False,
+            "pipeline": pipeline or {},
+            "diagnostics": diag,
+            "diagnostics_available": bool(diag),
+        }
+
+        (data_dir / f"daily_picks_candidate_diagnostics_{date_str}.json").write_text(
+            json.dumps(payload, indent=2, sort_keys=True) + "\n"
+        )
+
+        lines = [
+            "# Daily Picks Candidate Diagnostics",
+            "",
+            "Monitoring-only diagnostic artifact. Not buy instructions.",
+            "",
+            f"- Date: **{date_str}**",
+            f"- Official premarket pick available: **{str(bool(official_premarket_pick)).lower()}**",
+            "- Paper trading enabled: **false**",
+            "- Live trading enabled: **false**",
+            "",
+            "## Stage Counts",
+        ]
+        for key, value in sorted((diag.get("stage_counts") or {}).items()):
+            lines.append(f"- {key}: **{value}**")
+
+        selected = diag.get("selected_picks") or []
+        lines.extend(["", "## Selected Official Picks"])
+        if selected:
+            for item in selected:
+                lines.append(
+                    f"- {item.get('ticker')}: score=**{item.get('score')}**, "
+                    f"action=**{item.get('premarket_action') or 'official'}**, "
+                    f"R:R=**{item.get('risk_reward')}**"
+                )
+        else:
+            lines.append("- None.")
+
+        rejected = diag.get("rejected_candidates") or []
+        lines.extend(["", "## Rejected Candidates"])
+        if rejected:
+            for item in rejected:
+                lines.append(
+                    f"- {item.get('ticker')}: **{item.get('rejection_stage', 'unknown')}** — "
+                    f"{item.get('reason') or item.get('block_type') or item.get('action') or 'no reason recorded'}"
+                )
+        else:
+            lines.append("- None recorded.")
+
+        (data_dir / f"daily_picks_candidate_diagnostics_{date_str}.md").write_text(
+            "\n".join(lines) + "\n"
+        )
+    except Exception:
+        pass
+
+
+
 def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None, diagnostics: dict | None = None) -> None:
     """Persist a no-pick evidence artifact for operational learning."""
     try:
@@ -360,6 +439,11 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
 
         diag = payload.get("diagnostics") or {}
         if diag:
+            _write_daily_picks_candidate_diagnostics_report(
+                pipeline or {},
+                diag,
+                official_premarket_pick=False,
+            )
             rejection_payload = {
                 "artifact": "daily_picks_candidate_rejections",
                 "date": date_str,
@@ -650,11 +734,17 @@ def run():
     rprint("[5/6] Filtering for earnings risk + wisdom kill list...")
     filtered = []
     _killed_dropped = []
+    _earnings_dropped = []
     _wisdom_alerts  = []
     for p in candidates[: cfg["output"]["top_n_picks"] * 4]:  # 4x buffer for sector cap
         # Pillar 2/4: hard-drop tickers on the wisdom kill list
         if p["scores"].get("wisdom_kill"):
-            _killed_dropped.append(p["ticker"])
+            _killed_dropped.append({
+                "ticker": p["ticker"],
+                "rejection_stage": "wisdom_kill",
+                "reason": "on cooldown or kill list",
+                "candidate": _summarize_candidate_for_report(p),
+            })
             rprint(f"  [red]🥶 DROP {p['ticker']} — on cooldown (kill list)[/red]")
             continue
 
@@ -671,6 +761,12 @@ def run():
         d2e = days_to_earnings(p["ticker"])
         p["days_to_earnings"] = d2e if d2e < 999 else None
         if d2e < 5:
+            _earnings_dropped.append({
+                "ticker": p["ticker"],
+                "rejection_stage": "earnings_risk",
+                "reason": f"earnings in {d2e}d",
+                "candidate": _summarize_candidate_for_report(p),
+            })
             rprint(f"  [dim]Skipping {p['ticker']} — earnings in {d2e}d[/dim]")
             continue
         if d2e >= 999:
@@ -980,12 +1076,27 @@ def run():
             item["candidate"] = _summarize_candidate_for_report(match) if match else {}
             hard_blocked_candidates.append(item)
 
-        diagnostics = {
-            "pre_hard_block_candidates": [
-                _summarize_candidate_for_report(p) for p in pre_hard_block_candidates
-            ],
-            "hard_blocked_candidates": hard_blocked_candidates,
-        }
+        try:
+            from src.candidate_diagnostics import build_candidate_diagnostics
+            diagnostics = build_candidate_diagnostics(
+                pipeline=pipeline,
+                scored_candidates=candidates,
+                filtered_candidates=filtered,
+                capped_candidates=capped,
+                pre_hard_block_candidates=pre_hard_block_candidates,
+                hard_blocked_candidates=hard_blocked_candidates,
+                post_hard_block_candidates=top,
+                selected_picks=[],
+                extra_rejections=_killed_dropped + _earnings_dropped,
+            )
+        except Exception:
+            diagnostics = {
+                "pre_hard_block_candidates": [
+                    _summarize_candidate_for_report(p) for p in pre_hard_block_candidates
+                ],
+                "hard_blocked_candidates": hard_blocked_candidates,
+                "rejected_candidates": _killed_dropped + _earnings_dropped,
+            }
         _write_daily_picks_no_pick_report(reason, pipeline, diagnostics)
         rprint("[yellow]No official picks generated. Valid no-pick diagnostics were written.[/yellow]")
         rprint("[green]Done. No official premarket pick today.[/green]")
@@ -1042,25 +1153,43 @@ def run():
             rprint("  [green]✓ All candidates passed premarket sanity[/green]")
 
         if not top:
-            diagnostics = {
-                "pre_hard_block_candidates": [
-                    _summarize_candidate_for_report(p) for p in pre_hard_block_candidates
-                ],
-                "pre_premarket_sanity_candidates": [
-                    _summarize_candidate_for_report(p) for p in pre_sanity_candidates
-                ],
-                "premarket_sanity_blocked_candidates": [
-                    {
-                        "ticker": item.get("ticker"),
-                        "action": item.get("action"),
-                        "reason": item.get("reason"),
-                        "sanity": item.get("sanity", {}),
-                        "candidate": _summarize_candidate_for_report(item.get("candidate", {})),
-                    }
-                    for item in sanity_blocked
-                ],
-                "premarket_sanity_summary": sanity_summary,
-            }
+            try:
+                from src.candidate_diagnostics import build_candidate_diagnostics
+                diagnostics = build_candidate_diagnostics(
+                    pipeline=pipeline,
+                    scored_candidates=candidates,
+                    filtered_candidates=filtered,
+                    capped_candidates=capped,
+                    pre_hard_block_candidates=pre_hard_block_candidates,
+                    hard_blocked_candidates=blocked,
+                    post_hard_block_candidates=pre_sanity_candidates,
+                    pre_premarket_sanity_candidates=pre_sanity_candidates,
+                    premarket_sanity_blocked_candidates=sanity_blocked,
+                    selected_picks=[],
+                    extra_rejections=_killed_dropped + _earnings_dropped,
+                    extra={"premarket_sanity_summary": sanity_summary},
+                )
+            except Exception:
+                diagnostics = {
+                    "pre_hard_block_candidates": [
+                        _summarize_candidate_for_report(p) for p in pre_hard_block_candidates
+                    ],
+                    "pre_premarket_sanity_candidates": [
+                        _summarize_candidate_for_report(p) for p in pre_sanity_candidates
+                    ],
+                    "premarket_sanity_blocked_candidates": [
+                        {
+                            "ticker": item.get("ticker"),
+                            "action": item.get("action"),
+                            "reason": item.get("reason"),
+                            "sanity": item.get("sanity", {}),
+                            "candidate": _summarize_candidate_for_report(item.get("candidate", {})),
+                        }
+                        for item in sanity_blocked
+                    ],
+                    "premarket_sanity_summary": sanity_summary,
+                    "rejected_candidates": _killed_dropped + _earnings_dropped,
+                }
             _write_daily_picks_no_pick_report(
                 "No official picks generated because all finalists were blocked by the premarket sanity gate.",
                 pipeline,
@@ -1086,6 +1215,30 @@ def run():
         rprint(f"[red]Premarket sanity gate failed unexpectedly: {e}[/red]")
         rprint("[green]Done. No official premarket pick today.[/green]")
         return
+
+    try:
+        from src.candidate_diagnostics import build_candidate_diagnostics
+        selection_diagnostics = build_candidate_diagnostics(
+            pipeline=pipeline,
+            scored_candidates=candidates,
+            filtered_candidates=filtered,
+            capped_candidates=capped,
+            pre_hard_block_candidates=pre_hard_block_candidates,
+            hard_blocked_candidates=blocked,
+            post_hard_block_candidates=pre_sanity_candidates,
+            pre_premarket_sanity_candidates=pre_sanity_candidates,
+            premarket_sanity_blocked_candidates=sanity_blocked,
+            selected_picks=top,
+            extra_rejections=_killed_dropped + _earnings_dropped,
+            extra={"premarket_sanity_summary": sanity_summary},
+        )
+        _write_daily_picks_candidate_diagnostics_report(
+            pipeline,
+            selection_diagnostics,
+            official_premarket_pick=True,
+        )
+    except Exception as e:
+        rprint(f"[yellow]⚠ candidate diagnostics skipped: {e}[/yellow]")
 
     rprint(f"\n[6/6] {len(candidates)} candidates -> {len(top)} final official picks\n")
 

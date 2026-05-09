@@ -1,3 +1,40 @@
+## 2026-05-09 — Added Lane 1 candidate diagnostics
+
+**Type:** Lane 1 / premarket official pick / diagnostics
+
+**Summary:**
+
+Implemented Priority 5 foundation: complete candidate selection/rejection diagnostics.
+
+New files:
+
+- `src/candidate_diagnostics.py`
+- `tests/test_candidate_diagnostics.py`
+
+Updated files:
+
+- `main.py`
+- `docs/planning/PREMARKET_OFFICIAL_PICK_PRODUCTION_PLAN.md`
+
+Behavior:
+
+- successful official-pick runs now write daily candidate diagnostics artifacts,
+- no-pick runs also write candidate diagnostics when diagnostics are available,
+- hard-blocked candidates are captured with rejection stage and reason,
+- premarket-sanity-blocked candidates are captured with action and reason,
+- wisdom-kill and earnings-risk drops are captured as extra rejections,
+- diagnostics include selected picks, rejected candidates, stage counts, and pipeline counts.
+
+Safety:
+
+- Reporting-only change.
+- No scoring behavior changes.
+- No trading behavior changes.
+- Paper trading remains disabled.
+- Live trading remains disabled.
+
+---
+
 ## 2026-05-09 — Added Lane 1 premarket sanity gate before official logging
 
 **Type:** Lane 1 / premarket official pick / premarket sanity gate
