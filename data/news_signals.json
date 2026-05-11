@@ -903,18 +903,6 @@
     "expires": "2026-05-13T15:10:39.867930+00:00",
     "hard_block": false
   },
-  "ALAB": {
-    "ticker": "ALAB",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "RBC Capital Maintains Outperform on Astera Labs, Raises Price Target to $270",
-    "added_at": "2026-05-06T15:10:39.869457+00:00",
-    "expires": "2026-05-11T15:10:39.869462+00:00",
-    "hard_block": false
-  },
   "CYTK": {
     "ticker": "CYTK",
     "score_delta": 0.049,
@@ -925,30 +913,6 @@
     "headline": "Morgan Stanley Maintains Overweight on Cytokinetics, Raises Price Target to $103",
     "added_at": "2026-05-06T17:00:34.450000+00:00",
     "expires": "2026-05-11T17:00:34.450006+00:00",
-    "hard_block": false
-  },
-  "NBIX": {
-    "ticker": "NBIX",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Piper Sandler Maintains Overweight on Neurocrine Biosciences, Raises Price Target to $207",
-    "added_at": "2026-05-06T15:10:39.872195+00:00",
-    "expires": "2026-05-11T15:10:39.872200+00:00",
-    "hard_block": false
-  },
-  "ANET": {
-    "ticker": "ANET",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Piper Sandler Maintains Overweight on Arista Networks, Raises Price Target to $181",
-    "added_at": "2026-05-06T15:10:39.874815+00:00",
-    "expires": "2026-05-11T15:10:39.874820+00:00",
     "hard_block": false
   },
   "WIFUSD": {
@@ -3444,6 +3408,71 @@
     "headline": "American Battery Tech Q3 EPS $(0.26) Misses $(0.08) Estimate, Sales $7.811M Beat $3.526M Estimate",
     "added_at": "2026-05-11T13:42:48.003788+00:00",
     "expires": "2026-05-18T13:42:48.003793+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:AFN": {
+    "ticker": "TSX:AFN",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "RBC Capital Upgrades Ag Growth International to Outperform, Raises Price Target to C$30",
+    "added_at": "2026-05-11T16:28:36.183773+00:00",
+    "expires": "2026-05-16T16:28:36.183778+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WULF": {
+    "ticker": "WULF",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "TeraWulf Posts Q1 Strength: Analysts Remain Bullish On HPC Strength",
+    "added_at": "2026-05-11T16:28:36.186730+00:00",
+    "expires": "2026-05-18T16:28:36.186735+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NFLX": {
+    "ticker": "NFLX",
+    "score_delta": -0.079,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Texas Attor\u00adney Gen\u00ader\u00adal Ken Pax\u00adton Sues Net\u00adflix For Spy\u00ading On Texas Kids And Con\u00adsumers By Ille\u00adgal\u00adly Col\u00adlect\u00ading Users' Data With\u00adout Their Knowl\u00adedge Or Consent",
+    "added_at": "2026-05-11T16:28:36.192537+00:00",
+    "expires": "2026-05-25T16:28:36.192542+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TWO": {
+    "ticker": "TWO",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "UWM Escalates Fight For Two Harbors With Sweeter Bid",
+    "added_at": "2026-05-11T16:28:36.195472+00:00",
+    "expires": "2026-06-10T16:28:36.195477+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ZD": {
+    "ticker": "ZD",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Ziff Davis, Raises Price Target to $48",
+    "added_at": "2026-05-11T16:28:36.198386+00:00",
+    "expires": "2026-05-16T16:28:36.198391+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

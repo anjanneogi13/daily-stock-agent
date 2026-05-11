@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ODTX",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "IPO security released for quotation after trading halt represents first opportunity to trade but carries high volatility risk with no fundamental catalyst.",
-      "action_window": "intraday",
-      "headline": "Trading Halt: Halt status updated at 10:10:00 AM ET: Quotation Resumption: IPO Security - Released for Quotation",
-      "url": "https://www.benzinga.com/quote/ODTX",
-      "source": "alpaca",
-      "added_at": "2026-05-08T14:23:33.404883+00:00"
-    },
-    {
-      "ticker": "ROAD",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Significant guidance raise with midpoint increasing from $3.52B to $3.62B (2.8% above consensus), indicating stronger-than-expected business performance.",
-      "action_window": "intraday",
-      "headline": "Construction Partners Raises FY2026 Sales Guidance from $3.480B-$3.560B to $3.590B-$3.650B vs $3.524B Est",
-      "url": "https://www.benzinga.com/news/26/05/52411836/construction-partners-raises-fy2026-sales-guidance-from-3-480b-3-560b-to-3-590b-3-650b-vs-3-524b-est",
-      "source": "alpaca",
-      "added_at": "2026-05-08T14:23:33.404901+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Prominent activist investor Chris Hohn selling $8bn stake signals significant bearish positioning on Microsoft's AI strategy, likely to create near-term selling pressure and investor concern.",
-      "action_window": "intraday",
-      "headline": "'Chris Hohn slashes $8bn Microsoft stake in warning over AI disruption'- Financial Times",
-      "url": "https://www.benzinga.com/news/26/05/52411778/chris-hohn-slashes-8bn-microsoft-stake-in-warning-over-ai-disruption-financial-times",
-      "source": "alpaca",
-      "added_at": "2026-05-08T14:23:33.404914+00:00"
-    },
-    {
-      "ticker": "PAGP",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Plains GP Holdings delivered a substantial double beat with EPS exceeding estimates by 100% ($0.24 vs $0.12) and revenue beating by 6.4%, presenting a highly tradeable earnings surprise.",
-      "action_window": "intraday",
-      "headline": "CORRECTION: Plains GP Holdings Q1 EPS (Cont Ops) $0.24 Beats $0.12 Estimate, Sales $12.470B Beat $11.716B Estimate",
-      "url": "https://www.benzinga.com/quote/PAGP",
-      "source": "alpaca",
-      "added_at": "2026-05-08T14:23:33.404926+00:00"
-    },
-    {
-      "ticker": "MCD",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "McDonald's reported disappointing Q1 results with cautious April outlook prompting multiple analyst downgrades, creating immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "McDonald's Value Focus Fails To Drive Results: Analysts Cut Forecasts On Cautious Outlook",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52417396/mcdonalds-value-focus-fails-to-drive-results-analysts-cut-forecasts-on-cautious-outlook",
-      "source": "alpaca",
-      "added_at": "2026-05-08T15:59:01.261208+00:00"
-    },
-    {
-      "ticker": "WARP",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New ETF launch provides direct investment vehicle for space economy sector exposure, creating immediate buying interest from thematic investors targeting $600B addressable market.",
-      "action_window": "next_day",
-      "headline": "VanEck Launches ETF WARP To Tap Satellites, AI And The $600 Billion Space Economy",
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/05/52417228/vaneck-launches-etf-warp-to-tap-satellites-ai-and-the-600-billion-space-economy",
-      "source": "alpaca",
-      "added_at": "2026-05-08T15:59:01.261226+00:00"
-    },
-    {
       "ticker": "ABNB",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
@@ -395,6 +323,78 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52447408/american-battery-tech-q3-eps-0-26-misses-0-08-estimate-sales-7-811m-beat-3-526m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-11T13:42:48.010561+00:00"
+    },
+    {
+      "ticker": "GM",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Cost-cutting measures targeting 500-600 white collar positions signals improved operational efficiency and margin expansion efforts, typically viewed positively by markets but impact is moderate given headcount represents small fraction of workforce.",
+      "action_window": "intraday",
+      "headline": "'GM to Cut Hundreds of White Collar Workers in Push to Trim Costs; The Reductions Will Affect About 500 To 600 Employees In GM' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/05/52457952/gm-to-cut-hundreds-of-white-collar-workers-in-push-to-trim-costs-the-reductions-will-affect-about-50",
+      "source": "alpaca",
+      "added_at": "2026-05-11T16:28:36.202318+00:00"
+    },
+    {
+      "ticker": "XYZ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Strong Q1 earnings beat combined with raised guidance and Bank of America reaffirming Buy rating creates a meaningful positive catalyst, though some impact may already be reflected if reported earlier.",
+      "action_window": "next_day",
+      "headline": "This Block Analyst Remains Bullish On Earnings Power Inflection, Improving Execution",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52457998/block-analyst-remains-bullish-earnings-power-inflection-improving-execution",
+      "source": "alpaca",
+      "added_at": "2026-05-11T16:28:36.202328+00:00"
+    },
+    {
+      "ticker": "TSX:AFN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgrade to Outperform with raised price target represents a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
+      "action_window": "next_day",
+      "headline": "RBC Capital Upgrades Ag Growth International to Outperform, Raises Price Target to C$30",
+      "url": "https://www.benzinga.com/news/26/05/52457971/rbc-capital-upgrades-ag-growth-international-to-outperform-raises-price-target-to-c-30",
+      "source": "alpaca",
+      "added_at": "2026-05-11T16:28:36.202333+00:00"
+    },
+    {
+      "ticker": "WULF",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings strength with shares rising and multiple analyst Buy reaffirmations on HPC revenue growth presents a meaningful near-term catalyst.",
+      "action_window": "intraday",
+      "headline": "TeraWulf Posts Q1 Strength: Analysts Remain Bullish On HPC Strength",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52457906/terawulf-posts-q1-strength-analysts-remain-bullish-on-hpc-strength",
+      "source": "alpaca",
+      "added_at": "2026-05-11T16:28:36.202338+00:00"
+    },
+    {
+      "ticker": "NFLX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "State Attorney General lawsuit alleging illegal data collection from minors creates regulatory and reputational risk, though legal battles typically have delayed financial impact.",
+      "action_window": "intraday",
+      "headline": "Texas Attor\u00adney Gen\u00ader\u00adal Ken Pax\u00adton Sues Net\u00adflix For Spy\u00ading On Texas Kids And Con\u00adsumers By Ille\u00adgal\u00adly Col\u00adlect\u00ading Users' Data With\u00adout Their Knowl\u00adedge Or Consent",
+      "url": "https://www.benzinga.com/news/26/05/52457769/texas-attor-ney-gen-er-al-ken-pax-ton-sues-net-flix-for-spy-ing-on-texas-kids-and-con-sumers-by-ille",
+      "source": "alpaca",
+      "added_at": "2026-05-11T16:28:36.202343+00:00"
+    },
+    {
+      "ticker": "TWO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "UWM increased its takeover bid for Two Harbors to $12.50/share, creating a competitive bidding situation that typically drives target stock price toward the higher offer.",
+      "action_window": "intraday",
+      "headline": "UWM Escalates Fight For Two Harbors With Sweeter Bid",
+      "url": "https://www.benzinga.com/m-a/26/05/52457678/uwm-escalates-fight-for-two-harbors-with-sweeter-bid",
+      "source": "alpaca",
+      "added_at": "2026-05-11T16:28:36.202347+00:00"
     }
   ]
 }
