@@ -117,13 +117,41 @@ def _candidate_report_value(value):
     return str(value)
 
 
+
+def _news_action_window(news_field, scores_field=None) -> str | None:
+    """Defensively extract action_window from a pick's news field.
+
+    Bug discovered 2026-05-11: p["news"] is sometimes a list of articles
+    (from the news_engine) and sometimes a dict shaped as
+    {"action_window": "intraday", ...}. Calling .get() on a list raises
+    AttributeError and crashes main.py:1183 right after scoring completes.
+
+    This helper returns the action_window string regardless of shape:
+    - dict: returns news.get("action_window")
+    - list: scans articles for the first one carrying an action_window key
+    - None / other: returns None
+    Falls back to scores["news_action_window"] when no inline value exists.
+    """
+    aw = None
+    if isinstance(news_field, dict):
+        aw = news_field.get("action_window")
+    elif isinstance(news_field, list):
+        for item in news_field:
+            if isinstance(item, dict) and item.get("action_window"):
+                aw = item.get("action_window")
+                break
+    if not aw and isinstance(scores_field, dict):
+        aw = scores_field.get("news_action_window")
+    return aw or None
+
+
 def _summarize_candidate_for_report(candidate: dict) -> dict:
     """Compact candidate summary for no-pick / rejection diagnostics."""
     scores = candidate.get("scores") or {}
     plan = candidate.get("plan") or {}
     info = candidate.get("info_short") or {}
     news_signal = candidate.get("news_signal") or {}
-    news = candidate.get("news") or {}
+    news = candidate.get("news")
 
     return {
         "ticker": candidate.get("ticker"),
@@ -136,8 +164,8 @@ def _summarize_candidate_for_report(candidate: dict) -> dict:
         "news_boost": scores.get("news_boost"),
         "news_action_window": (
             scores.get("news_action_window")
-            or news_signal.get("action_window")
-            or (news.get("action_window") if isinstance(news, dict) else None)
+            or (news_signal.get("action_window") if isinstance(news_signal, dict) else None)
+            or _news_action_window(news, scores)
         ),
         "entry": plan.get("entry"),
         "stop_loss": plan.get("stop_loss"),
@@ -897,7 +925,15 @@ def run():
                 action_window = signal.get("action_window")
                 if action_window:
                     p["scores"]["news_action_window"] = action_window
-                    p.setdefault("news", {})["action_window"] = action_window
+                    # Hardened 2026-05-11: only stash inside p["news"] if it
+                    # is dict-shaped. If the news producer returned a list
+                    # (articles), we record the action_window on scores only —
+                    # never crash by calling [...] on a list.
+                    _news_field = p.get("news")
+                    if _news_field is None:
+                        p["news"] = {"action_window": action_window}
+                    elif isinstance(_news_field, dict):
+                        _news_field["action_window"] = action_window
             if abs(boost) >= 0.01:
                 old = p["scores"]["composite"]
                 new = round(max(0.0, min(1.0, old + boost)), 4)
@@ -1179,10 +1215,9 @@ def run():
         # Product guard: intraday news must not silently become a normal
         # multi-day swing pick. Until intraday execution planning is mature,
         # mark these as watch-only instead of actionable swing trades.
-        action_window = (
-            p.get("news", {}).get("action_window")
-            or p.get("scores", {}).get("news_action_window")
-        )
+        # Hardened 2026-05-11: p["news"] can be either dict OR list depending
+        # on the upstream news producer; use _news_action_window for both.
+        action_window = _news_action_window(p.get("news"), p.get("scores"))
         if action_window == "intraday" and ttype == "swing":
             p["watch_only"] = True
             p["watch_only_reason"] = (
@@ -1689,11 +1724,7 @@ def run():
                 "trade_type": p.get("trade_type") or "swing",  # Bug #14: coerce None
                 "watch_only": p.get("watch_only") or False,
                 "watch_only_reason": p.get("watch_only_reason") or "",
-                "news_action_window": (
-                    p.get("news", {}).get("action_window")
-                    or p.get("scores", {}).get("news_action_window")
-                    or ""
-                ),
+                "news_action_window": _news_action_window(p.get("news"), p.get("scores")) or "",
                 "official_decision_id": p.get("official_decision_id", ""),
                 "official_artifact_id": p.get("official_artifact_id", ""),
                 "official_artifact_path": p.get("official_artifact_path", ""),
