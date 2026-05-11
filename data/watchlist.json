@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "NTDOY",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Nintendo issued guidance significantly below consensus with EPS missing by 16% and sales missing by 12%, indicating substantial business weakness ahead.",
-      "action_window": "intraday",
-      "headline": "Nintendo Co Sees FY2026 GAAP EPS $0.43 vs $0.51 Est; Sees Sales $13.071B vs $14.810B Est",
-      "url": "https://www.benzinga.com/news/26/05/52405414/nintendo-co-sees-fy2026-gaap-eps-0-43-vs-0-51-est-sees-sales-13-071b-vs-14-810b-est",
-      "source": "alpaca",
-      "added_at": "2026-05-08T12:07:45.008054+00:00"
-    },
-    {
-      "ticker": "GIG",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Shareholder approval of SPAC merger with Hadron Energy is a major confirmed de-SPAC catalyst that typically drives significant trading activity and price movement.",
-      "action_window": "intraday",
-      "headline": "GigCapital7 Shareholders Approve Proposed Business Combination Between GigCapital7, Hadron Energy And MMR Merger Sub, As Well As All Other Proposals Related To Business Combination",
-      "url": "https://www.benzinga.com/m-a/26/05/52405377/gigcapital7-shareholders-approve-proposed-business-combination-between-gigcapital7-hadron-energy-and",
-      "source": "alpaca",
-      "added_at": "2026-05-08T12:07:45.008085+00:00"
-    },
-    {
-      "ticker": "FWRD",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Forward Air posted downbeat Q1 results with shares plunging 42.8% in pre-market, indicating a severe earnings miss with immediate market reaction already underway.",
-      "action_window": "intraday",
-      "headline": "Forward Air Posts Downbeat Q1 Results, Joins Upwork, HubSpot And Other Big Stocks Moving Lower In Friday's Pre-Market Session",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52405362/forward-air-posts-downbeat-q1-results-joins-upwork-hubspot-and-other-big-stocks-moving-lower-in-fridays-pre-market-session",
-      "source": "alpaca",
-      "added_at": "2026-05-08T12:07:45.008096+00:00"
-    },
-    {
-      "ticker": "ASRT",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "Tender offer delays typically signal deal complications or uncertainty, creating negative price pressure for target company shareholders awaiting transaction completion.",
-      "action_window": "intraday",
-      "headline": "Assertio and Garda Delay Tender Offer",
-      "url": "https://www.benzinga.com/quote/ASRT",
-      "source": "alpaca",
-      "added_at": "2026-05-08T12:07:45.008156+00:00"
-    },
-    {
-      "ticker": "DCH",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Dauch delivered a massive earnings surprise with Q1 adjusted EPS of $0.34 versus an estimate of -$0.02 (beating by $0.36 or turning a loss into significant profit) while also beating revenue estimates by 3.9%, representing a highly significant positive catalyst.",
-      "action_window": "intraday",
-      "headline": "Dauch Q1 Adj. EPS $0.34 Beats $(0.02) Estimate, Sales $2.379B Beat $2.289B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52405325/dauch-q1-adj-eps-0-34-beats-0-02-estimate-sales-2-379b-beat-2-289b-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-08T12:07:45.008167+00:00"
-    },
-    {
-      "ticker": "TRDA",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Analyst downgrade from HC Wainwright to Neutral represents a negative shift in sell-side outlook, typically triggering immediate selling pressure on the stock.",
-      "action_window": "intraday",
-      "headline": "HC Wainwright & Co. Downgrades Entrada Therapeutics to Neutral",
-      "url": "https://www.benzinga.com/news/26/05/52405179/hc-wainwright-co-downgrades-entrada-therapeutics-to-neutral",
-      "source": "alpaca",
-      "added_at": "2026-05-08T12:07:45.008177+00:00"
-    },
-    {
       "ticker": "ODTX",
       "tradeable_score": 0.65,
       "sentiment": "neutral",
@@ -407,6 +335,66 @@
       "url": "https://www.benzinga.com/news/26/05/52442206/b-of-a-securities-upgrades-pitney-bowes-to-neutral-raises-price-target-to-16-5",
       "source": "alpaca",
       "added_at": "2026-05-11T10:57:06.961973+00:00"
+    },
+    {
+      "ticker": "MRX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Barclays maintains bullish stance with raised price target, signaling increased confidence in Marex Group's valuation potential and likely driving positive momentum.",
+      "action_window": "intraday",
+      "headline": "Barclays Maintains Overweight on Marex Group, Raises Price Target to $60",
+      "url": "https://www.benzinga.com/news/26/05/52447983/barclays-maintains-overweight-on-marex-group-raises-price-target-to-60",
+      "source": "alpaca",
+      "added_at": "2026-05-11T13:42:48.010529+00:00"
+    },
+    {
+      "ticker": "BBIO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial data for lead drug candidate acoramidis showing consistent clinical benefit is a significant catalyst for a biotech company, likely to drive immediate price movement.",
+      "action_window": "intraday",
+      "headline": "BridgeBio Pharma Announces New Data From Its Phase 3 ATTRibute-CM Study At Heart Failure 2026 Meeting, With Data Further Demonstrating Acoramidis's Consistent And Clinically Meaningful Benefit",
+      "url": "https://www.benzinga.com/news/26/05/52447587/bridgebio-pharma-announces-new-data-from-its-phase-3-attribute-cm-study-at-heart-failure-2026-meetin",
+      "source": "alpaca",
+      "added_at": "2026-05-11T13:42:48.010542+00:00"
+    },
+    {
+      "ticker": "B",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Massive 180% earnings beat combined with substantial $3B share buyback announcement creates strong dual catalyst for immediate price appreciation.",
+      "action_window": "intraday",
+      "headline": "Gold Prices Are Booming, And Barrick Is Cashing In Big",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52447434/gold-prices-are-booming-and-barrick-is-cashing-in-big",
+      "source": "alpaca",
+      "added_at": "2026-05-11T13:42:48.010551+00:00"
+    },
+    {
+      "ticker": "BW",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Stock is actively trading higher on confirmed better-than-expected Q1 earnings results, representing a clear positive catalyst with immediate price action.",
+      "action_window": "intraday",
+      "headline": "Babcock & Wilcox Stock Gains Following Strong Q1 Results",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52447419/babcock-wilcox-stock-gains-following-strong-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-11T13:42:48.010556+00:00"
+    },
+    {
+      "ticker": "ABAT",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of $0.18 (325% worse than expected) outweighs the revenue beat of 122%, indicating poor profitability despite growth.",
+      "action_window": "intraday",
+      "headline": "American Battery Tech Q3 EPS $(0.26) Misses $(0.08) Estimate, Sales $7.811M Beat $3.526M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52447408/american-battery-tech-q3-eps-0-26-misses-0-08-estimate-sales-7-811m-beat-3-526m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-11T13:42:48.010561+00:00"
     }
   ]
 }

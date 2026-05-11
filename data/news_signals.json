@@ -123,14 +123,16 @@
   },
   "B": {
     "ticker": "B",
-    "score_delta": 0.064,
+    "score_delta": 0.1,
     "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "headline": "Barrick Mining (B) Earnings Expected to Grow: Should You Buy?",
-    "added_at": "2026-05-05T09:57:52.422607+00:00",
-    "expires": "2026-05-12T09:57:52.422613+00:00",
-    "hard_block": false
+    "tradeable_score": 0.92,
+    "action_window": "intraday",
+    "headline": "Gold Prices Are Booming, And Barrick Is Cashing In Big",
+    "added_at": "2026-05-11T13:42:47.997871+00:00",
+    "expires": "2026-05-18T13:42:47.997876+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   },
   "CW": {
     "ticker": "CW",
@@ -827,18 +829,6 @@
     "headline": "Oklo Says U.S. Nuclear Regulatory Commission Approves Principal Design Criteria Topical Report For Aurora Powerhouse Currently Under Construction In Idaho",
     "added_at": "2026-05-06T12:16:48.994437+00:00",
     "expires": "2026-06-05T12:16:48.994443+00:00",
-    "hard_block": false
-  },
-  "VFC": {
-    "ticker": "VFC",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "BTIG Upgrades VF to Buy, Announces $23 Price Target",
-    "added_at": "2026-05-06T12:16:48.995728+00:00",
-    "expires": "2026-05-11T12:16:48.995736+00:00",
     "hard_block": false
   },
   "CURR": {
@@ -3389,6 +3379,71 @@
     "headline": "B of A Securities Upgrades Pitney Bowes to Neutral, Raises Price Target to $16.5",
     "added_at": "2026-05-11T10:57:06.957652+00:00",
     "expires": "2026-05-16T10:57:06.957658+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MRX": {
+    "ticker": "MRX",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Barclays Maintains Overweight on Marex Group, Raises Price Target to $60",
+    "added_at": "2026-05-11T13:42:47.984884+00:00",
+    "expires": "2026-05-16T13:42:47.984892+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "STRL": {
+    "ticker": "STRL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Cantor Fitzgerald Maintains Overweight on Sterling Infrastructure, Raises Price Target to $956",
+    "added_at": "2026-05-11T13:42:47.988906+00:00",
+    "expires": "2026-05-16T13:42:47.988915+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KTB": {
+    "ticker": "KTB",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on Kontoor Brands, Raises Price Target to $96",
+    "added_at": "2026-05-11T13:42:47.991991+00:00",
+    "expires": "2026-05-16T13:42:47.991998+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BW": {
+    "ticker": "BW",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Babcock & Wilcox Stock Gains Following Strong Q1 Results",
+    "added_at": "2026-05-11T13:42:48.000801+00:00",
+    "expires": "2026-05-18T13:42:48.000806+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ABAT": {
+    "ticker": "ABAT",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "American Battery Tech Q3 EPS $(0.26) Misses $(0.08) Estimate, Sales $7.811M Beat $3.526M Estimate",
+    "added_at": "2026-05-11T13:42:48.003788+00:00",
+    "expires": "2026-05-18T13:42:48.003793+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
