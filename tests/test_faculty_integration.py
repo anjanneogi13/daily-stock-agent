@@ -27,6 +27,18 @@ import pytest
 # ═══════════════════════════════════════════════════════════════
 # FACULTY 1 — EYES (data_fetcher)
 # ═══════════════════════════════════════════════════════════════
+@pytest.mark.xfail(
+    strict=False,
+    reason=(
+        "Real-network yfinance call; passes when yfinance.info returns "
+        "company metadata, fails when yfinance is rate-limited or has "
+        "had an upstream API change. Marked xfail strict=False so CI "
+        "tolerates yfinance flakiness without blocking production "
+        "(the May 11 incident root cause). The mocked equivalent "
+        "test_fetch_info_uses_real_company_name in tests/test_company_name_fallback.py "
+        "still asserts the contract deterministically."
+    ),
+)
 def test_eyes_data_fetcher_returns_real_company_name():
     """Bug #7 root cause regression test."""
     from src.data_fetcher import fetch_info

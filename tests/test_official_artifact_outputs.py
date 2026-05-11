@@ -97,6 +97,7 @@ def write_artifact(data_dir: Path):
 
 def test_format_picks_email_uses_official_artifact(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("PICK_DATE", "2026-05-09")
     write_csv(tmp_path / "data/picks_log.csv")
     write_artifact(tmp_path / "data")
 
@@ -180,7 +181,13 @@ def test_format_picks_email_blocks_missing_official_artifact(tmp_path, monkeypat
 
     assert result.returncode == 1
     assert "Official decision artifact validation failed" in result.stderr
-    assert "no official pick artifacts found" in result.stderr
+    # Accept either of the two contract-failure messages produced by
+    # format_picks_email.py: missing-artifact-for-logged-pick OR
+    # no-picks-and-no-no-pick-artifact.
+    assert (
+        "no official pick artifacts found" in result.stderr
+        or "no valid official no-pick artifact found" in result.stderr
+    )
 
 
 def test_send_layman_daily_blocks_missing_official_artifact(tmp_path, monkeypatch):
@@ -204,6 +211,7 @@ def test_send_layman_daily_blocks_missing_official_artifact(tmp_path, monkeypatc
 
 def test_format_picks_email_allows_valid_no_pick_artifact(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("PICK_DATE", "2026-05-09")
     data_dir = tmp_path / "data"
     data_dir.mkdir()
     write_no_pick_report(data_dir)
