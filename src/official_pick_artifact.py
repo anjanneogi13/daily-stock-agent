@@ -248,12 +248,22 @@ def write_official_pick_artifacts(
     data_readiness_status: str = "ready",
     provider_status: str = "healthy",
     market_session_status: str = "premarket",
+    date_str: str | None = None,
+    selection_time_et: str | None = None,
 ) -> dict:
-    """Write official pick artifacts and a daily summary artifact."""
+    """Write official pick artifacts and a daily summary artifact.
+
+    date_str and selection_time_et default to current ET when omitted.
+    Callers (notably the dry-run script and any backfill tooling) may
+    override both so generated artifact filenames/timestamps match the
+    caller's target ET date instead of "now".
+    """
     data_dir.mkdir(parents=True, exist_ok=True)
     now_dt = datetime.now(timezone.utc).astimezone(ET).replace(microsecond=0)
-    date_str = now_dt.strftime("%Y-%m-%d")
-    selection_time_et = now_dt.isoformat()
+    if date_str is None:
+        date_str = now_dt.strftime("%Y-%m-%d")
+    if selection_time_et is None:
+        selection_time_et = now_dt.isoformat()
 
     artifacts = []
     validation_errors: dict[str, list[str]] = {}

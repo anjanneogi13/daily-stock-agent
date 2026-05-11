@@ -220,6 +220,7 @@ def run_dry_run(*, output_dir: Path, date_str: str, keep: bool = False, ticker: 
         data_readiness_status="ready_dry_run",
         provider_status="healthy_dry_run",
         market_session_status="premarket_dry_run",
+        date_str=date_str,
     )
 
     # write_official_pick_artifacts uses current ET date by design. The dry-run

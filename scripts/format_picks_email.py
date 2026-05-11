@@ -6,6 +6,7 @@ official decision details.
 """
 import csv
 import json
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -20,7 +21,10 @@ from src.official_artifact_loader import (
 )
 
 
-today = datetime.now().strftime("%Y-%m-%d")
+# Honor PICK_DATE override so tests / backfills / replays can format a specific
+# ET date rather than always defaulting to "today". Mirrors the same pattern
+# already used by scripts/send_layman_daily.py.
+today = (os.getenv("PICK_DATE") or datetime.now().strftime("%Y-%m-%d")).strip()
 rows = []
 p = Path("data/picks_log.csv")
 if p.exists():

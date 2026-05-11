@@ -35,13 +35,23 @@ def _load_picks() -> list:
 
 
 def _save_picks(rows: list):
+    """Atomically rewrite picks_log.csv.
+
+    Crash-safety (May 11 2026): write to a sibling .tmp file then atomically
+    rename onto the real path. If the process is killed mid-write, the real
+    picks_log.csv is left intact rather than truncated/empty. tmp.replace()
+    is atomic on POSIX filesystems.
+    """
     if not rows:
         return
     fields = list(rows[0].keys())
-    with LOG_PATH.open("w", newline="") as f:
+    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = LOG_PATH.with_suffix(LOG_PATH.suffix + ".tmp")
+    with tmp.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
+    tmp.replace(LOG_PATH)
 
 
 def _fetch_ohlc(ticker: str, start: str) -> pd.DataFrame:
