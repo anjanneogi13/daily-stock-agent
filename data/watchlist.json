@@ -395,6 +395,54 @@
       "url": "https://www.benzinga.com/m-a/26/05/52457678/uwm-escalates-fight-for-two-harbors-with-sweeter-bid",
       "source": "alpaca",
       "added_at": "2026-05-11T16:28:36.202347+00:00"
+    },
+    {
+      "ticker": "MNDY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat combined with raised 2026 guidance, 32% growth in large customers, and new AI platform launch creates multiple positive catalysts with stock already rallying.",
+      "action_window": "intraday",
+      "headline": "Monday.com Stock Jumps: AI Work Platform And 32% Surge In Big Clients Fuel Rally",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52462719/monday-com-stock-jumps-ai-work-platform-and-32-surge-in-big-clients-fuel-rally",
+      "source": "alpaca",
+      "added_at": "2026-05-11T18:18:15.682143+00:00"
+    },
+    {
+      "ticker": "NIO",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Legislative bill to ban Chinese vehicles represents significant regulatory risk for Chinese EV makers (NIO, LI, XPEV) with U.S. market exposure, though actual passage and implementation remain uncertain.",
+      "action_window": "intraday",
+      "headline": "U.S. House Lawmakers Introducing Bill To Ban Chinese Vehicles In United States",
+      "url": "https://www.benzinga.com/news/26/05/52462558/u-s-house-lawmakers-introducing-bill-to-ban-chinese-vehicles-in-united-states",
+      "source": "alpaca",
+      "added_at": "2026-05-11T18:18:15.682155+00:00"
+    },
+    {
+      "ticker": "IONQ",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "IONQ shares surged 15% on confirmed Q1 revenue beat with raised 2026 guidance plus M&A activity, representing a significant multi-catalyst event already reflecting in price action.",
+      "action_window": "intraday",
+      "headline": "What's Going On With IonQ Stock Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52462290/whats-going-on-with-ionq-stock-monday",
+      "source": "alpaca",
+      "added_at": "2026-05-11T18:18:15.682162+00:00"
+    },
+    {
+      "ticker": "INBX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 2 clinical trial data showing high response rates is a significant catalyst for a small-cap biotech, with shares already rising on the news.",
+      "action_window": "intraday",
+      "headline": "Inhibrx Cancer Treatment Shows High Response Rates In Head And Neck Cancer Study",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52462244/inhibrx-cancer-treatment-shows-high-response-rates-in-head-and-neck-cancer-study",
+      "source": "alpaca",
+      "added_at": "2026-05-11T18:18:15.682169+00:00"
     }
   ]
 }

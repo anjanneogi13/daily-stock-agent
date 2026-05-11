@@ -1,26 +1,4 @@
 {
-  "CHD": {
-    "ticker": "CHD",
-    "score_delta": 0.093,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "headline": "Church & Dwight Analysts Boost Their Forecasts Following Upbeat Q1 Results",
-    "added_at": "2026-05-04T16:28:50.369718+00:00",
-    "expires": "2026-05-11T16:28:50.369723+00:00",
-    "hard_block": false
-  },
-  "L": {
-    "ticker": "L",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "headline": "Loews Stock Falls: CNA Insurance Woes Wipe Out Hotel Gains",
-    "added_at": "2026-05-04T18:01:21.052554+00:00",
-    "expires": "2026-05-11T18:01:21.052560+00:00",
-    "hard_block": false
-  },
   "FDX": {
     "ticker": "FDX",
     "score_delta": 0.05,
@@ -30,18 +8,6 @@
     "headline": "Amazon's Logistics Bombshell Just Crashed Dow Transports Into A Bear Market",
     "added_at": "2026-05-04T19:48:09.730172+00:00",
     "expires": "2026-05-11T19:48:09.730177+00:00",
-    "hard_block": false
-  },
-  "BTSG": {
-    "ticker": "BTSG",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on BrightSpring Health, Raises Price Target to $62",
-    "added_at": "2026-05-06T17:00:34.455518+00:00",
-    "expires": "2026-05-11T17:00:34.455523+00:00",
     "hard_block": false
   },
   "FSHP": {
@@ -903,18 +869,6 @@
     "expires": "2026-05-13T15:10:39.867930+00:00",
     "hard_block": false
   },
-  "CYTK": {
-    "ticker": "CYTK",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Cytokinetics, Raises Price Target to $103",
-    "added_at": "2026-05-06T17:00:34.450000+00:00",
-    "expires": "2026-05-11T17:00:34.450006+00:00",
-    "hard_block": false
-  },
   "WIFUSD": {
     "ticker": "WIFUSD",
     "score_delta": 0.032,
@@ -925,18 +879,6 @@
     "headline": "Forget Dogecoin, Shiba Inu: This Dog Coin Jumped 25% After A Shock Exchange Listing",
     "added_at": "2026-05-06T17:00:34.448437+00:00",
     "expires": "2026-05-13T17:00:34.448445+00:00",
-    "hard_block": false
-  },
-  "CMI": {
-    "ticker": "CMI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Cummins, Raises Price Target to $752",
-    "added_at": "2026-05-06T17:00:34.451399+00:00",
-    "expires": "2026-05-11T17:00:34.451405+00:00",
     "hard_block": false
   },
   "NRG": {
@@ -973,18 +915,6 @@
     "headline": "FDA Announces Medline Recalls All Of Its Stock Keeping Units In Medline Branded Neuro Sponge Category With No Definite Market Re-Entry Date",
     "added_at": "2026-05-06T17:00:34.456882+00:00",
     "expires": "2026-06-05T17:00:34.456887+00:00",
-    "hard_block": false
-  },
-  "MNST": {
-    "ticker": "MNST",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Rothschild & Co Upgrades Monster Beverage to Buy, Raises Price Target to $90",
-    "added_at": "2026-05-06T17:00:34.458262+00:00",
-    "expires": "2026-05-11T17:00:34.458267+00:00",
     "hard_block": false
   },
   "APLD": {
@@ -1842,15 +1772,16 @@
   },
   "IONQ": {
     "ticker": "IONQ",
-    "score_delta": 0.079,
+    "score_delta": 0.1,
     "catalyst": "earnings_beat",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
     "action_window": "intraday",
-    "headline": "IonQ's Blowout Quarter Has One Big Catch",
-    "added_at": "2026-05-07T15:12:42.457211+00:00",
-    "expires": "2026-05-14T15:12:42.457215+00:00",
-    "hard_block": false
+    "headline": "What's Going On With IonQ Stock Monday?",
+    "added_at": "2026-05-11T18:18:15.669233+00:00",
+    "expires": "2026-05-18T18:18:15.669239+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   },
   "NYT": {
     "ticker": "NYT",
@@ -3473,6 +3404,123 @@
     "headline": "RBC Capital Maintains Outperform on Ziff Davis, Raises Price Target to $48",
     "added_at": "2026-05-11T16:28:36.198386+00:00",
     "expires": "2026-05-16T16:28:36.198391+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ARBE": {
+    "ticker": "ARBE",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Amerx Initiates Coverage On Arbe Robotics with Buy Rating, Announces Price Target of $2.21",
+    "added_at": "2026-05-11T18:18:15.647492+00:00",
+    "expires": "2026-05-16T18:18:15.647499+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LIDR": {
+    "ticker": "LIDR",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Amerx Initiates Coverage On AEye with Buy Rating, Announces Price Target of $3.67",
+    "added_at": "2026-05-11T18:18:15.651290+00:00",
+    "expires": "2026-05-16T18:18:15.651296+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GME": {
+    "ticker": "GME",
+    "score_delta": 0.025,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "intraday",
+    "headline": "Big Short Legend Steve Eisman Sides With Michael Burry On GameStop's $56 Billion eBay Bid: 'The Debt Is The Problem'",
+    "added_at": "2026-05-11T18:18:15.654301+00:00",
+    "expires": "2026-05-25T18:18:15.654306+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MNDY": {
+    "ticker": "MNDY",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Monday.com Stock Jumps: AI Work Platform And 32% Surge In Big Clients Fuel Rally",
+    "added_at": "2026-05-11T18:18:15.657314+00:00",
+    "expires": "2026-05-18T18:18:15.657319+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SSP": {
+    "ticker": "SSP",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Benchmark Maintains Buy on E W Scripps, Lowers Price Target to $8",
+    "added_at": "2026-05-11T18:18:15.660266+00:00",
+    "expires": "2026-05-16T18:18:15.660272+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WEST": {
+    "ticker": "WEST",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Benchmark Maintains Buy on Westrock Coffee, Raises Price Target to $10",
+    "added_at": "2026-05-11T18:18:15.663225+00:00",
+    "expires": "2026-05-16T18:18:15.663230+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AMPH": {
+    "ticker": "AMPH",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Reiterates Neutral on Amphastar Pharma, Lowers Price Target to $21",
+    "added_at": "2026-05-11T18:18:15.666234+00:00",
+    "expires": "2026-05-16T18:18:15.666240+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AIZ": {
+    "ticker": "AIZ",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Overweight on Assurant, Raises Price Target to $268",
+    "added_at": "2026-05-11T18:18:15.675147+00:00",
+    "expires": "2026-05-16T18:18:15.675152+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RSG": {
+    "ticker": "RSG",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Argus Research Downgrades Republic Services to Hold",
+    "added_at": "2026-05-11T18:18:15.678131+00:00",
+    "expires": "2026-05-16T18:18:15.678136+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
