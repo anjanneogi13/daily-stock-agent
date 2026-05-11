@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CRWV",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Macquarie maintains positive rating with price target increase to $140, indicating continued confidence but not a rating upgrade, creating moderate positive momentum.",
-      "action_window": "next_day",
-      "headline": "Macquarie Maintains Outperform on CoreWeave, Raises Price Target to $140",
-      "url": "https://www.benzinga.com/news/26/05/52432760/macquarie-maintains-outperform-on-coreweave-raises-price-target-to-140",
-      "source": "alpaca",
-      "added_at": "2026-05-08T22:51:31.760181+00:00"
-    },
-    {
-      "ticker": "DCOY",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q1 EPS missed estimates by approximately 2.5% ($4.18 vs $4.08 expected), representing a meaningful negative earnings surprise that typically drives immediate selling pressure in biotech stocks.",
-      "action_window": "next_day",
-      "headline": "Decoy Therapeutics Q1 EPS $(4.18) Misses $(4.08) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52432523/decoy-therapeutics-q1-eps-4-18-misses-4-08-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-08T22:51:31.760200+00:00"
-    },
-    {
-      "ticker": "ADIL",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Significant earnings beat with actual loss of $1.48 versus estimated loss of $2.73 represents a 46% improvement over expectations, which typically drives strong positive reaction in small-cap biotech stocks.",
-      "action_window": "next_day",
-      "headline": "Adial Pharmaceuticals Q1 EPS $(1.48) Beats $(2.73) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52432505/adial-pharmaceuticals-q1-eps-1-48-beats-2-73-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-08T22:51:31.760212+00:00"
-    },
-    {
-      "ticker": "OGEN",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Significant 86% improvement in quarterly loss from $(3.60) to $(0.51) EPS represents strong operational progress and potential path to profitability.",
-      "action_window": "next_day",
-      "headline": "Oragenics Q1 EPS $(0.51) Up From $(3.60) YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52432486/oragenics-q1-eps-0-51-up-from-3-60-yoy",
-      "source": "alpaca",
-      "added_at": "2026-05-08T22:51:31.760222+00:00"
-    },
-    {
       "ticker": "ARXS",
       "tradeable_score": 0.75,
       "sentiment": "bullish",

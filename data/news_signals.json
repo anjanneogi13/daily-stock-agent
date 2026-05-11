@@ -645,18 +645,6 @@
     "expires": "2026-05-13T10:13:29.867751+00:00",
     "hard_block": false
   },
-  "CIFR": {
-    "ticker": "CIFR",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Rosenblatt Maintains Buy on Cipher Digital, Raises Price Target to $30",
-    "added_at": "2026-05-06T23:44:32.608234+00:00",
-    "expires": "2026-05-11T23:44:32.608239+00:00",
-    "hard_block": false
-  },
   "LIVN": {
     "ticker": "LIVN",
     "score_delta": 0.079,
@@ -1294,18 +1282,6 @@
     "expires": "2026-05-20T22:44:06.136819+00:00",
     "hard_block": false
   },
-  "ADTN": {
-    "ticker": "ADTN",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Rosenblatt Maintains Buy on Adtran Holdings, Raises Price Target to $20",
-    "added_at": "2026-05-06T23:44:32.605019+00:00",
-    "expires": "2026-05-11T23:44:32.605025+00:00",
-    "hard_block": false
-  },
   "CODI": {
     "ticker": "CODI",
     "score_delta": 0.079,
@@ -1330,18 +1306,6 @@
     "expires": "2026-05-20T23:44:32.609856+00:00",
     "hard_block": false
   },
-  "LMAT": {
-    "ticker": "LMAT",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Barrington Research Maintains Outperform on LeMaitre Vascular, Raises Price Target to $120",
-    "added_at": "2026-05-06T23:44:32.611416+00:00",
-    "expires": "2026-05-11T23:44:32.611421+00:00",
-    "hard_block": false
-  },
   "HNST": {
     "ticker": "HNST",
     "score_delta": -0.093,
@@ -1354,42 +1318,6 @@
     "expires": "2026-05-13T23:44:32.612992+00:00",
     "hard_block": false
   },
-  "CMPR": {
-    "ticker": "CMPR",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Barrington Research Maintains Outperform on Cimpress, Raises Price Target to $113",
-    "added_at": "2026-05-06T23:44:32.614582+00:00",
-    "expires": "2026-05-11T23:44:32.614587+00:00",
-    "hard_block": false
-  },
-  "UBER": {
-    "ticker": "UBER",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "DA Davidson Maintains Buy on Uber Technologies, Raises Price Target to $107",
-    "added_at": "2026-05-06T23:44:32.616151+00:00",
-    "expires": "2026-05-11T23:44:32.616155+00:00",
-    "hard_block": false
-  },
-  "AMRC": {
-    "ticker": "AMRC",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Buy on Ameresco, Raises Price Target to $59",
-    "added_at": "2026-05-06T23:44:32.617721+00:00",
-    "expires": "2026-05-11T23:44:32.617726+00:00",
-    "hard_block": false
-  },
   "KRO": {
     "ticker": "KRO",
     "score_delta": 0.1,
@@ -1400,42 +1328,6 @@
     "headline": "CORRECTION: Kronos Worldwide Q1 EPS $(0.04) Beats $(0.16) Estimate, Sales $509.800M Beat $508.755M Estimate",
     "added_at": "2026-05-06T23:44:32.619307+00:00",
     "expires": "2026-05-13T23:44:32.619312+00:00",
-    "hard_block": false
-  },
-  "DAVE": {
-    "ticker": "DAVE",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Buy on Dave, Raises Price Target to $342",
-    "added_at": "2026-05-06T23:44:32.620913+00:00",
-    "expires": "2026-05-11T23:44:32.620918+00:00",
-    "hard_block": false
-  },
-  "DRS": {
-    "ticker": "DRS",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Buy on Leonardo DRS, Raises Price Target to $54",
-    "added_at": "2026-05-06T23:44:32.625798+00:00",
-    "expires": "2026-05-11T23:44:32.625803+00:00",
-    "hard_block": false
-  },
-  "ENR": {
-    "ticker": "ENR",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Hold on Energizer Holdings, Lowers Price Target to $19",
-    "added_at": "2026-05-06T23:44:32.627410+00:00",
-    "expires": "2026-05-11T23:44:32.627414+00:00",
     "hard_block": false
   },
   "PAX": {
