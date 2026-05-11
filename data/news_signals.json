@@ -1,48 +1,4 @@
 {
-  "NVT": {
-    "ticker": "NVT",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "headline": "Goldman Sachs Maintains Buy on nVent Electric, Raises Price Target to $187",
-    "added_at": "2026-05-04T18:01:21.050893+00:00",
-    "expires": "2026-05-09T18:01:21.050901+00:00",
-    "hard_block": false
-  },
-  "WELL": {
-    "ticker": "WELL",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "headline": "UBS Maintains Buy on Welltower, Raises Price Target to $249",
-    "added_at": "2026-05-04T19:48:09.729249+00:00",
-    "expires": "2026-05-09T19:48:09.729254+00:00",
-    "hard_block": false
-  },
-  "TTD": {
-    "ticker": "TTD",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "headline": "This Trade Desk Analyst Upgrades Rating Ahead Of Q1 Print",
-    "added_at": "2026-05-04T16:28:50.369036+00:00",
-    "expires": "2026-05-09T16:28:50.369041+00:00",
-    "hard_block": false
-  },
-  "WFRD": {
-    "ticker": "WFRD",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "headline": "Citigroup Maintains Buy on Weatherford International, Raises Price Target to $134",
-    "added_at": "2026-05-04T16:28:50.369393+00:00",
-    "expires": "2026-05-09T16:28:50.369398+00:00",
-    "hard_block": false
-  },
   "CHD": {
     "ticker": "CHD",
     "score_delta": 0.093,
@@ -54,50 +10,6 @@
     "expires": "2026-05-11T16:28:50.369723+00:00",
     "hard_block": false
   },
-  "TRP": {
-    "ticker": "TRP",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "RBC Capital Maintains Outperform on TC Energy, Raises Price Target to C$95",
-    "added_at": "2026-05-04T16:28:50.370036+00:00",
-    "expires": "2026-05-09T16:28:50.370041+00:00",
-    "hard_block": false
-  },
-  "BDX": {
-    "ticker": "BDX",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "headline": "TD Cowen Maintains Hold on Becton Dickinson, Lowers Price Target to $163",
-    "added_at": "2026-05-04T18:01:21.051383+00:00",
-    "expires": "2026-05-09T18:01:21.051389+00:00",
-    "hard_block": false
-  },
-  "TNXP": {
-    "ticker": "TNXP",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "headline": "TD Cowen Initiates Coverage On Tonix Pharmaceuticals with Buy Rating, Announces Price Target of $22",
-    "added_at": "2026-05-04T18:01:21.051783+00:00",
-    "expires": "2026-05-09T18:01:21.051796+00:00",
-    "hard_block": false
-  },
-  "MTCH": {
-    "ticker": "MTCH",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "TD Cowen Maintains Buy on Match Group, Raises Price Target to $44",
-    "added_at": "2026-05-04T18:01:21.052156+00:00",
-    "expires": "2026-05-09T18:01:21.052161+00:00",
-    "hard_block": false
-  },
   "L": {
     "ticker": "L",
     "score_delta": -0.1,
@@ -107,39 +19,6 @@
     "headline": "Loews Stock Falls: CNA Insurance Woes Wipe Out Hotel Gains",
     "added_at": "2026-05-04T18:01:21.052554+00:00",
     "expires": "2026-05-11T18:01:21.052560+00:00",
-    "hard_block": false
-  },
-  "DSGN": {
-    "ticker": "DSGN",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "headline": "Oppenheimer Maintains Outperform on Design Therapeutics, Raises Price Target to $21",
-    "added_at": "2026-05-04T18:01:21.052935+00:00",
-    "expires": "2026-05-09T18:01:21.052940+00:00",
-    "hard_block": false
-  },
-  "IAC": {
-    "ticker": "IAC",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "headline": "TD Cowen Maintains Buy on IAC, Raises Price Target to $66",
-    "added_at": "2026-05-04T18:01:21.053346+00:00",
-    "expires": "2026-05-09T18:01:21.053353+00:00",
-    "hard_block": false
-  },
-  "QSR": {
-    "ticker": "QSR",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "UBS Maintains Buy on Restaurant Brands Intl, Raises Price Target to $90",
-    "added_at": "2026-05-04T19:48:09.728725+00:00",
-    "expires": "2026-05-09T19:48:09.728732+00:00",
     "hard_block": false
   },
   "FDX": {
@@ -174,28 +53,6 @@
     "headline": "Flag Ship Acquisition And Great Future Technology Mutually Terminate Merger Agreement On May 3, 2026; No Termination Fee Required For Mutual Termination Of Merger Agreement; Termination Agreement Incl",
     "added_at": "2026-05-04T21:03:05.801403+00:00",
     "expires": "2026-06-03T21:03:05.801410+00:00",
-    "hard_block": false
-  },
-  "LIN": {
-    "ticker": "LIN",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "headline": "JP Morgan Maintains Overweight on Linde, Raises Price Target to $530",
-    "added_at": "2026-05-04T21:03:05.801960+00:00",
-    "expires": "2026-05-09T21:03:05.801966+00:00",
-    "hard_block": false
-  },
-  "AGL": {
-    "ticker": "AGL",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "headline": "JP Morgan Downgrades Agilon Health to Underweight, Announces $21 Price Target",
-    "added_at": "2026-05-04T21:03:05.802460+00:00",
-    "expires": "2026-05-09T21:03:05.802468+00:00",
     "hard_block": false
   },
   "PSKY": {
@@ -318,17 +175,6 @@
     "headline": "EVgo Sees Q2 Sales $75.000M-$85.000M vs $106.457M Est",
     "added_at": "2026-05-05T11:15:53.139486+00:00",
     "expires": "2026-05-19T11:15:53.139492+00:00",
-    "hard_block": false
-  },
-  "HOOD": {
-    "ticker": "HOOD",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "Robinhood's New Playbook: Why Cathie Wood's Ark Invest Calls Gold Tier The Next Amazon Prime",
-    "added_at": "2026-05-05T11:15:53.140037+00:00",
-    "expires": "2026-05-10T11:15:53.140042+00:00",
     "hard_block": false
   },
   "PMTS": {
@@ -474,28 +320,6 @@
     "expires": "2026-05-12T12:46:36.242847+00:00",
     "hard_block": false
   },
-  "AXSM": {
-    "ticker": "AXSM",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "headline": "Mizuho Maintains Outperform on Axsome Therapeutics, Raises Price Target to $310",
-    "added_at": "2026-05-05T12:46:36.243525+00:00",
-    "expires": "2026-05-10T12:46:36.243530+00:00",
-    "hard_block": false
-  },
-  "VVX": {
-    "ticker": "VVX",
-    "score_delta": 0.029,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "headline": "Citizens Maintains Market Outperform on V2X, Raises Price Target to $90",
-    "added_at": "2026-05-05T12:46:36.244187+00:00",
-    "expires": "2026-05-10T12:46:36.244192+00:00",
-    "hard_block": false
-  },
   "IRON": {
     "ticker": "IRON",
     "score_delta": 0.1,
@@ -505,17 +329,6 @@
     "headline": "Disc Medicine Q1 EPS $(1.65) Beats $(1.73) Estimate",
     "added_at": "2026-05-05T12:46:36.249031+00:00",
     "expires": "2026-05-12T12:46:36.249036+00:00",
-    "hard_block": false
-  },
-  "CI": {
-    "ticker": "CI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "Bernstein Maintains Outperform on Cigna Group, Raises Price Target to $371",
-    "added_at": "2026-05-05T17:04:20.734483+00:00",
-    "expires": "2026-05-10T17:04:20.734491+00:00",
     "hard_block": false
   },
   "FN": {
@@ -540,28 +353,6 @@
     "expires": "2026-05-12T17:04:20.735911+00:00",
     "hard_block": false
   },
-  "PAC": {
-    "ticker": "PAC",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "headline": "Banco Bradesco BBI S.A Upgrades Grupo Aeroportuario del to Outperform, Announces $285 Price Target",
-    "added_at": "2026-05-05T17:04:20.736530+00:00",
-    "expires": "2026-05-10T17:04:20.736535+00:00",
-    "hard_block": false
-  },
-  "NVDA": {
-    "ticker": "NVDA",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "headline": "Nvidia, TSM And Broadcom Are Sending The Same Signal\u2014And It's Not Bullish",
-    "added_at": "2026-05-05T17:04:20.737111+00:00",
-    "expires": "2026-05-10T17:04:20.737115+00:00",
-    "hard_block": false
-  },
   "MGEE": {
     "ticker": "MGEE",
     "score_delta": 0.1,
@@ -571,17 +362,6 @@
     "headline": "MGE Energy Q1 EPS $1.32 Beats $1.13 Estimate, Sales $242.703M Beat $45.412M Estimate",
     "added_at": "2026-05-05T17:04:20.737699+00:00",
     "expires": "2026-05-12T17:04:20.737703+00:00",
-    "hard_block": false
-  },
-  "BMA": {
-    "ticker": "BMA",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "HSBC Upgrades Banco Macro to Buy, Announces $85 Price Target",
-    "added_at": "2026-05-05T17:04:20.738296+00:00",
-    "expires": "2026-05-10T17:04:20.738300+00:00",
     "hard_block": false
   },
   "ETN": {
@@ -606,17 +386,6 @@
     "expires": "2026-05-19T18:53:43.047024+00:00",
     "hard_block": false
   },
-  "JRVR": {
-    "ticker": "JRVR",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "headline": "This James River Group Analyst Is No Longer Bullish; Here Are Top 3 Downgrades For Tuesday",
-    "added_at": "2026-05-05T17:04:20.744117+00:00",
-    "expires": "2026-05-10T17:04:20.744122+00:00",
-    "hard_block": false
-  },
   "CRWD": {
     "ticker": "CRWD",
     "score_delta": 0.029,
@@ -628,17 +397,6 @@
     "expires": "2026-05-12T18:53:43.042036+00:00",
     "hard_block": false
   },
-  "BODI": {
-    "ticker": "BODI",
-    "score_delta": 0.044,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.62,
-    "headline": "Canaccord Genuity Maintains Buy on Beachbody Co, Raises Price Target to $19",
-    "added_at": "2026-05-05T18:53:43.042874+00:00",
-    "expires": "2026-05-10T18:53:43.042879+00:00",
-    "hard_block": false
-  },
   "TVTX": {
     "ticker": "TVTX",
     "score_delta": 0.083,
@@ -648,17 +406,6 @@
     "headline": "Travere Therapeutics Analysts Increase Their Forecasts Following Q1 Earnings",
     "added_at": "2026-05-05T18:53:43.043699+00:00",
     "expires": "2026-05-12T18:53:43.043704+00:00",
-    "hard_block": false
-  },
-  "BDSX": {
-    "ticker": "BDSX",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "Canaccord Genuity Maintains Buy on Biodesix, Raises Price Target to $22",
-    "added_at": "2026-05-05T18:53:43.044519+00:00",
-    "expires": "2026-05-10T18:53:43.044524+00:00",
     "hard_block": false
   },
   "CRTO": {
@@ -716,50 +463,6 @@
     "expires": "2026-05-19T18:53:43.054194+00:00",
     "hard_block": false
   },
-  "H": {
-    "ticker": "H",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "JP Morgan Maintains Overweight on Hyatt Hotels, Raises Price Target to $186",
-    "added_at": "2026-05-05T20:05:10.316271+00:00",
-    "expires": "2026-05-10T20:05:10.316278+00:00",
-    "hard_block": false
-  },
-  "CCOI": {
-    "ticker": "CCOI",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "headline": "JP Morgan Upgrades Cogent Comms Hldgs to Overweight, Lowers Price Target to $22",
-    "added_at": "2026-05-05T20:05:10.317279+00:00",
-    "expires": "2026-05-10T20:05:10.317285+00:00",
-    "hard_block": false
-  },
-  "BLDP": {
-    "ticker": "BLDP",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "headline": "Lake Street Upgrades Ballard Power Systems to Buy, Raises Price Target to $5",
-    "added_at": "2026-05-05T20:05:10.318207+00:00",
-    "expires": "2026-05-10T20:05:10.318212+00:00",
-    "hard_block": false
-  },
-  "BLZE": {
-    "ticker": "BLZE",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "headline": "Lake Street Maintains Buy on Backblaze, Raises Price Target to $11",
-    "added_at": "2026-05-05T20:05:10.319093+00:00",
-    "expires": "2026-05-10T20:05:10.319098+00:00",
-    "hard_block": false
-  },
   "ZIM": {
     "ticker": "ZIM",
     "score_delta": 0.2,
@@ -782,17 +485,6 @@
     "expires": "2026-05-19T20:05:10.320858+00:00",
     "hard_block": false
   },
-  "CRWV": {
-    "ticker": "CRWV",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "headline": "Jefferies Maintains Buy on CoreWeave, Raises Price Target to $160",
-    "added_at": "2026-05-05T20:05:10.321769+00:00",
-    "expires": "2026-05-10T20:05:10.321773+00:00",
-    "hard_block": false
-  },
   "DINE": {
     "ticker": "DINE",
     "score_delta": 0.025,
@@ -813,17 +505,6 @@
     "headline": "Apimeds Pharmaceuticals US Settles All Resolving Disputes With Inscobee Regarding Apimeds Business Combination With MindWave Innovations",
     "added_at": "2026-05-05T20:05:10.327670+00:00",
     "expires": "2026-05-19T20:05:10.327676+00:00",
-    "hard_block": false
-  },
-  "ON": {
-    "ticker": "ON",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "headline": "ON Semiconductor Data Center Revenue Seen Doubling As Cycle Turns",
-    "added_at": "2026-05-05T20:05:10.328635+00:00",
-    "expires": "2026-05-10T20:05:10.328640+00:00",
     "hard_block": false
   },
   "CME": {
@@ -1003,30 +684,6 @@
     "expires": "2026-05-13T10:13:29.856961+00:00",
     "hard_block": false
   },
-  "MSFT": {
-    "ticker": "MSFT",
-    "score_delta": -0.03,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Microsoft And Amazon Aren't Cheap: Analyst Says Earnings 'Mirage' Driven By OpenAI, Anthropic Dominating 50% Of Cloud Backlog",
-    "added_at": "2026-05-06T10:13:29.858206+00:00",
-    "expires": "2026-05-11T10:13:29.858213+00:00",
-    "hard_block": false
-  },
-  "PANW": {
-    "ticker": "PANW",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "BTIG Maintains Buy on Palo Alto Networks, Raises Price Target to $216",
-    "added_at": "2026-05-06T10:13:29.859256+00:00",
-    "expires": "2026-05-11T10:13:29.859261+00:00",
-    "hard_block": false
-  },
   "ADBE": {
     "ticker": "ADBE",
     "score_delta": 0.049,
@@ -1051,18 +708,6 @@
     "expires": "2026-06-07T09:10:23.155921+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "WMT": {
-    "ticker": "WMT",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "ignore",
-    "headline": "BTIG Maintains Buy on Walmart, Raises Price Target to $145",
-    "added_at": "2026-05-06T10:13:29.862142+00:00",
-    "expires": "2026-05-11T10:13:29.862146+00:00",
-    "hard_block": false
   },
   "FLOC": {
     "ticker": "FLOC",
@@ -3627,6 +3272,123 @@
     "headline": "Tigress Financial Maintains Buy on Qualcomm, Raises Price Target to $280",
     "added_at": "2026-05-08T23:52:17.309604+00:00",
     "expires": "2026-05-13T23:52:17.309611+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ARXS": {
+    "ticker": "ARXS",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Morgan Stanley Initiates Coverage On Arxis with Overweight Rating, Announces Price Target of $44",
+    "added_at": "2026-05-11T10:57:06.928156+00:00",
+    "expires": "2026-05-16T10:57:06.928163+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TH": {
+    "ticker": "TH",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Target Hospitality Q1 EPS $(0.13) Misses $(0.10) Estimate, Sales $72.781M Miss $73.200M Estimate",
+    "added_at": "2026-05-11T10:57:06.931839+00:00",
+    "expires": "2026-05-18T10:57:06.931845+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OLPX": {
+    "ticker": "OLPX",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Olaplex Hldgs Q1 Adj. EPS $0.02 Beats $0.01 Estimate, Sales $99.369M Beat $94.174M Estimate",
+    "added_at": "2026-05-11T10:57:06.934767+00:00",
+    "expires": "2026-05-18T10:57:06.934773+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SBH": {
+    "ticker": "SBH",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Sally Beauty Holdings Sees Q3 Adj EPS $0.52-$0.56 vs $0.58 Est; Sees Sales $932.000M-$942.000M vs $949.575M Est",
+    "added_at": "2026-05-11T10:57:06.940466+00:00",
+    "expires": "2026-05-25T10:57:06.940472+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNTG": {
+    "ticker": "SNTG",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Sentage Hldgs FY EPS $(0.81) Up From $(0.84) YoY, Sales $68.909K Down From $107.507K YoY",
+    "added_at": "2026-05-11T10:57:06.946226+00:00",
+    "expires": "2026-05-18T10:57:06.946232+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SATS": {
+    "ticker": "SATS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "EchoStar Q1 EPS $(0.51) Beats $(1.19) Estimate, Sales $3.667B Beat $3.660B Estimate",
+    "added_at": "2026-05-11T10:57:06.949077+00:00",
+    "expires": "2026-05-18T10:57:06.949083+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RKLB": {
+    "ticker": "RKLB",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Needham Maintains Buy on Rocket Lab, Raises Price Target to $120",
+    "added_at": "2026-05-11T10:57:06.951916+00:00",
+    "expires": "2026-05-16T10:57:06.951921+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BR": {
+    "ticker": "BR",
+    "score_delta": 0.044,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "this_week",
+    "headline": "Broadridge Financial Solutions Deploys Agentic AI Across Its Capital Markets And Wealth Management Workflows",
+    "added_at": "2026-05-11T10:57:06.954788+00:00",
+    "expires": "2026-05-18T10:57:06.954793+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PBI": {
+    "ticker": "PBI",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "B of A Securities Upgrades Pitney Bowes to Neutral, Raises Price Target to $16.5",
+    "added_at": "2026-05-11T10:57:06.957652+00:00",
+    "expires": "2026-05-16T10:57:06.957658+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
