@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-25673782054",
+  "artifact_bundle_name": "official-decision-artifacts-25679971163",
   "artifact_filename": "daily_picks_no_pick_report_2026-05-11.json",
   "artifact_id": "daily_picks_no_pick_report:2026-05-11:NO_PICK_WINDOW_MISSED",
   "artifact_path": "data/daily_picks_no_pick_report_2026-05-11.json",
@@ -8,21 +8,21 @@
     "guard_cause": "NO_PICK_WINDOW_MISSED",
     "guard_reason": "No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.",
     "guard_skip": true,
-    "workflow_run_id": "25673782054"
+    "workflow_run_id": "25679971163"
   },
-  "commit_sha": "814a4fb75dac05717b8ddb5d63d8cbfc0bb2b112",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/814a4fb75dac05717b8ddb5d63d8cbfc0bb2b112",
+  "commit_sha": "b83c6c0dab405d4c14f02ae6b63f6bc4c4024e91",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/b83c6c0dab405d4c14f02ae6b63f6bc4c4024e91",
   "config_version": "config.yaml",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "not_ready_window_missed",
   "date": "2026-05-11",
   "decision": "official_no_pick",
-  "decision_id": "premarket_official_daily_pick:2026-05-11:NO_PICK:NO_PICK_WINDOW_MISSED:25673782054:814a4fb75dac",
+  "decision_id": "premarket_official_daily_pick:2026-05-11:NO_PICK:NO_PICK_WINDOW_MISSED:25679971163:b83c6c0dab40",
   "diagnostics": {
     "guard_cause": "NO_PICK_WINDOW_MISSED",
     "guard_reason": "No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.",
     "guard_skip": true,
-    "workflow_run_id": "25673782054"
+    "workflow_run_id": "25679971163"
   },
   "human_readable_summary": "No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.",
   "live_trading_enabled": false,
@@ -47,11 +47,11 @@
   "reason": "No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-05-11T09:40:22-04:00",
+  "selection_time_et": "2026-05-11T11:32:11-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-05-11T13:40:22Z",
+  "timestamp_utc": "2026-05-11T15:32:11Z",
   "watch_only_available": false,
-  "workflow_run_id": "25673782054",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/25673782054"
+  "workflow_run_id": "25679971163",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/25679971163"
 }
