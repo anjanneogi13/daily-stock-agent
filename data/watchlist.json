@@ -647,6 +647,66 @@
       "url": "https://www.benzinga.com/quote/MGNX",
       "source": "alpaca",
       "added_at": "2026-05-11T21:49:49.824178+00:00"
+    },
+    {
+      "ticker": "MARA",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Significant EPS beat ($0.61 vs $2.15 loss expected) offset by revenue miss ($174.6M vs $179.2M), creating mixed signals with after-hours volatility likely.",
+      "action_window": "intraday",
+      "headline": "UPDATE: Marathon Digital Holdings Q1 Adj. EPS $(0.61) Beats $(2.15) Estimate, Sales $174.614M Miss $179.152M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52473499/update-marathon-digital-holdings-q1-adj-eps-0-61-beats-2-15-estimate-sales-174-614m-miss-179-152m-e",
+      "source": "alpaca",
+      "added_at": "2026-05-11T22:49:40.582612+00:00"
+    },
+    {
+      "ticker": "GTLB",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "GitLab announces significant restructuring to reduce operational footprint by 30% in some countries, flatten management by up to 3 layers, and reorganize R&D - typical cost-cutting/efficiency measures that often improve margins and are viewed positively by markets in the current environment.",
+      "action_window": "next_day",
+      "headline": "GitLab Says Reevaluating Operational Footprint, Planning To Reduce Number Of Countries By Up To 30% Where We Have Small Teams; Planning To Flatten The Organization, Removing Up To Three Layers Of Management In Some Functions So Leaders Are Closer To The Work;  Re-Organizing R&D To Create Roughly 60 ",
+      "url": "https://www.benzinga.com/news/26/05/52473245/gitlab-says-reevaluating-operational-footprint-planning-to-reduce-number-of-countries-by-up-to-30-wh",
+      "source": "alpaca",
+      "added_at": "2026-05-11T22:49:40.582626+00:00"
+    },
+    {
+      "ticker": "TSX:DCM",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating by 43% but revenue missing estimates by 0.6%, creating uncertain trading direction.",
+      "action_window": "next_day",
+      "headline": "DATA Comms Mgmt Q1 Adj. EPS $0.10 Beats $0.07 Estimate, Sales $117.443M Miss $118.200M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52473204/data-comms-mgmt-q1-adj-eps-0-10-beats-0-07-estimate-sales-117-443m-miss-118-200m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-11T22:49:40.582634+00:00"
+    },
+    {
+      "ticker": "GME",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Potential hacking of influential Roaring Kitty account with deleted posts creates immediate uncertainty and bearish sentiment for meme stock GME, which is already trading lower on the news.",
+      "action_window": "intraday",
+      "headline": "Watching GameStop; Shares Now Trading Lower, All Roaring Kitty Posts Deleted; Traders Believe The Account May Have Been Hacked",
+      "url": "https://www.benzinga.com/quote/GME",
+      "source": "alpaca",
+      "added_at": "2026-05-11T22:49:40.582641+00:00"
+    },
+    {
+      "ticker": "BIOX",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS missing by 220% ($0.16 vs $0.05 estimate) and revenue missing by 28% ($39.4M vs $54.5M estimate) indicating major operational challenges.",
+      "action_window": "intraday",
+      "headline": "Bioceres Crop Solutions Q3 EPS $(0.16) Misses $(0.05) Estimate, Sales $39.400M Miss $54.500M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52473002/bioceres-crop-solutions-q3-eps-0-16-misses-0-05-estimate-sales-39-400m-miss-54-500m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-11T22:49:40.582647+00:00"
     }
   ]
 }
