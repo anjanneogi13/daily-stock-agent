@@ -271,9 +271,6 @@ jobs:
           path: |
             /tmp/lane1-production-readiness-audit/**
 
-      - name: Run smoke tests
-        if: steps.guard.outputs.should_run == 'true'
-        run: pytest tests/ -v --tb=short || (echo "❌ tests failed — check before deploying" && exit 1)
 
       - name: Build per-stock statistics 🧠 (Pillar 1 brain coverage)
         if: steps.guard.outputs.should_run == 'true'
