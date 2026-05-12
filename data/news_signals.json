@@ -68,17 +68,6 @@
     "expires": "2026-05-20T22:44:06.131653+00:00",
     "hard_block": false
   },
-  "RGEN": {
-    "ticker": "RGEN",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "Repligen Q1 Adj. EPS $0.48 Beats $0.39 Estimate, Sales $194.255M Beat $192.279M Estimate",
-    "added_at": "2026-05-05T11:15:53.138802+00:00",
-    "expires": "2026-05-12T11:15:53.138809+00:00",
-    "hard_block": false
-  },
   "EVGO": {
     "ticker": "EVGO",
     "score_delta": -0.15,
@@ -88,72 +77,6 @@
     "headline": "EVgo Sees Q2 Sales $75.000M-$85.000M vs $106.457M Est",
     "added_at": "2026-05-05T11:15:53.139486+00:00",
     "expires": "2026-05-19T11:15:53.139492+00:00",
-    "hard_block": false
-  },
-  "PMTS": {
-    "ticker": "PMTS",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "headline": "CPI Card Q1 EPS $0.17 Misses $0.23 Estimate, Sales $147.108M Beat $134.691M Estimate",
-    "added_at": "2026-05-05T11:15:53.140621+00:00",
-    "expires": "2026-05-12T11:15:53.140626+00:00",
-    "hard_block": false
-  },
-  "QTTB": {
-    "ticker": "QTTB",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "headline": "Q32 Bio Q1 EPS $(0.54) Beats $(0.68) Estimate",
-    "added_at": "2026-05-05T11:15:53.141156+00:00",
-    "expires": "2026-05-12T11:15:53.141161+00:00",
-    "hard_block": false
-  },
-  "PYPL": {
-    "ticker": "PYPL",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "headline": "PayPal Holdings Q1 Adj. EPS $1.34 Beats $1.27 Estimate, Sales $8.353B Beat $8.046B Estimate",
-    "added_at": "2026-05-05T11:15:53.141721+00:00",
-    "expires": "2026-05-12T11:15:53.141726+00:00",
-    "hard_block": false
-  },
-  "SHOP": {
-    "ticker": "SHOP",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "Shopify Q1 Adj. EPS $0.36 Beats $0.33 Estimate, Sales $3.170B Beat $3.083B Estimate",
-    "added_at": "2026-05-05T11:15:53.142288+00:00",
-    "expires": "2026-05-12T11:15:53.142292+00:00",
-    "hard_block": false
-  },
-  "TSAT": {
-    "ticker": "TSAT",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "headline": "Telesat Q1 EPS $(2.22) Misses $(0.44) Estimate, Sales $63.478M Miss $63.700M Estimate",
-    "added_at": "2026-05-05T11:15:53.142851+00:00",
-    "expires": "2026-05-12T11:15:53.142856+00:00",
-    "hard_block": false
-  },
-  "ALKS": {
-    "ticker": "ALKS",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "Alkermes Q1 EPS $(0.40) Beats $(0.52) Estimate, Sales $392.911M Beat $359.848M Estimate",
-    "added_at": "2026-05-05T11:15:53.143447+00:00",
-    "expires": "2026-05-12T11:15:53.143452+00:00",
     "hard_block": false
   },
   "DFIN": {
@@ -3821,6 +3744,97 @@
     "headline": "OrganiGram Holdings Q2 Sales $43.597M Miss $52.060M Estimate",
     "added_at": "2026-05-12T10:27:36.352584+00:00",
     "expires": "2026-05-19T10:27:36.352590+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RGTI": {
+    "ticker": "RGTI",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "Rigetti Stock's Momentum Triples As Q1 Revenue Beats Estimates And Monthly Returns Hit Nearly 40%",
+    "added_at": "2026-05-12T12:25:33.742640+00:00",
+    "expires": "2026-05-19T12:25:33.742647+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TOST": {
+    "ticker": "TOST",
+    "score_delta": -0.041,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "This Toast Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Tuesday",
+    "added_at": "2026-05-12T12:25:33.746435+00:00",
+    "expires": "2026-05-17T12:25:33.746454+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BRAI": {
+    "ticker": "BRAI",
+    "score_delta": 0.032,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Braiin Limited Enters Non-Binding Term Sheet To Advance Proposed Acquisition Of Home.cc From Living Technology",
+    "added_at": "2026-05-12T12:25:33.752919+00:00",
+    "expires": "2026-05-26T12:25:33.752925+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IQST": {
+    "ticker": "IQST",
+    "score_delta": 0.034,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "EXCLUSIVE: IQSTEL Expands AI Digital Agents Partnership In Europe",
+    "added_at": "2026-05-12T12:25:33.756100+00:00",
+    "expires": "2026-05-19T12:25:33.756105+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KOPN": {
+    "ticker": "KOPN",
+    "score_delta": 0.089,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "intraday",
+    "headline": "Kopin Q1 Sales $10.600M Beat $10.245M Estimate",
+    "added_at": "2026-05-12T12:25:33.759547+00:00",
+    "expires": "2026-05-19T12:25:33.759552+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HIMS": {
+    "ticker": "HIMS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Why Is Hims & Hers Stock Sinking Tuesday?",
+    "added_at": "2026-05-12T12:25:33.762732+00:00",
+    "expires": "2026-05-19T12:25:33.762737+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "ADGM": {
+    "ticker": "ADGM",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Adagio Medical Holdings Q1 EPS $(0.31) Misses $(0.29) Estimate",
+    "added_at": "2026-05-12T12:25:33.765917+00:00",
+    "expires": "2026-05-19T12:25:33.765922+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
