@@ -103,39 +103,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FN": {
-    "ticker": "FN",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "headline": "Fabrinet Posts Record Q3, But Don't Thank Nvidia: Analyst",
-    "added_at": "2026-05-05T17:04:20.735273+00:00",
-    "expires": "2026-05-12T17:04:20.735280+00:00",
-    "hard_block": false
-  },
-  "BUD": {
-    "ticker": "BUD",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "headline": "Corona, Budweiser Beer Maker Sees 'Premium' Boom",
-    "added_at": "2026-05-05T17:04:20.735906+00:00",
-    "expires": "2026-05-12T17:04:20.735911+00:00",
-    "hard_block": false
-  },
-  "MGEE": {
-    "ticker": "MGEE",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "headline": "MGE Energy Q1 EPS $1.32 Beats $1.13 Estimate, Sales $242.703M Beat $45.412M Estimate",
-    "added_at": "2026-05-05T17:04:20.737699+00:00",
-    "expires": "2026-05-12T17:04:20.737703+00:00",
-    "hard_block": false
-  },
   "ETN": {
     "ticker": "ETN",
     "score_delta": -0.15,
@@ -1405,18 +1372,6 @@
     "headline": "US Foods Battles Severe Weather, Weak Spending And Fuel Inflation In Tough Quarter",
     "added_at": "2026-05-07T17:16:24.308956+00:00",
     "expires": "2026-05-14T17:16:24.308963+00:00",
-    "hard_block": false
-  },
-  "ARM": {
-    "ticker": "ARM",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on ARM Holdings, Raises Price Target to $260",
-    "added_at": "2026-05-07T17:16:24.311413+00:00",
-    "expires": "2026-05-12T17:16:24.311419+00:00",
     "hard_block": false
   },
   "DIS": {
@@ -3849,6 +3804,32 @@
     "headline": "TD Cowen Maintains Buy on Astrana Health, Raises Price Target to $45",
     "added_at": "2026-05-12T15:20:45.978222+00:00",
     "expires": "2026-05-17T15:20:45.978226+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UAA": {
+    "ticker": "UAA",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "CORRECTION: Under Armour Sees FY2027 GAAP EPS $(0.04)-$0.00 vs $0.18 Est",
+    "added_at": "2026-05-12T17:33:15.014534+00:00",
+    "expires": "2026-05-26T17:33:15.014540+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AMZN": {
+    "ticker": "AMZN",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "What's Going On With Amazon Stock Today?",
+    "added_at": "2026-05-12T17:33:15.017858+00:00",
+    "expires": "2026-05-19T17:33:15.017863+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

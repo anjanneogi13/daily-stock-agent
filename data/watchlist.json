@@ -362,15 +362,16 @@
     },
     {
       "ticker": "ACM",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "AECOM raised FY2026 EPS guidance modestly with new midpoint of $6.00 slightly above consensus $5.93, indicating incremental operational confidence but limited upside surprise.",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Hot CPI data triggered broad market selloff with Nasdaq 100 declining and semiconductors (Sandisk, Micron) dropping 9%, indicating immediate macro risk-off pressure affecting tech and chip sectors.",
       "action_window": "next_day",
-      "headline": "AECOM Raises FY2026 Adj EPS Guidance from $5.85-$6.05 to $5.90-$6.10 vs $5.93 Est",
-      "url": "https://www.benzinga.com/news/26/05/52468235/aecom-raises-fy2026-adj-eps-guidance-from-5-85-6-05-to-5-90-6-10-vs-5-93-est",
+      "headline": "Nasdaq 100 Dips On Hot CPI, Sandisk And Micron Tumble 9%: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/equities/26/05/52499209/nasdaq-100-dips-hot-cpi-sandisk-micron-tumble-stock-market-today",
       "source": "alpaca",
-      "added_at": "2026-05-11T20:15:07.857039+00:00"
+      "added_at": "2026-05-11T20:15:07.857039+00:00",
+      "updated_at": "2026-05-12T17:33:15.025482+00:00"
     },
     {
       "ticker": "ABCL",
@@ -949,6 +950,55 @@
       "url": "https://www.benzinga.com/news/26/05/52492341/jp-morgan-maintains-overweight-on-vista-energy-raises-price-target-to-93",
       "source": "alpaca",
       "added_at": "2026-05-12T15:20:45.985750+00:00"
+    },
+    {
+      "ticker": "UAA",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Under Armour slashed FY2027 EPS guidance to potentially negative range ($-0.04-$0.00) versus consensus estimate of $0.18, representing a massive ~100% miss indicating severe operational distress.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: Under Armour Sees FY2027 GAAP EPS $(0.04)-$0.00 vs $0.18 Est",
+      "url": "https://www.benzinga.com/quote/UAA",
+      "source": "alpaca",
+      "added_at": "2026-05-12T17:33:15.025494+00:00",
+      "updated_at": "2026-05-12T17:33:15.025506+00:00"
+    },
+    {
+      "ticker": "AMBQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Multiple stocks posting gains on better-than-expected results but headline aggregates numerous tickers diluting individual trading signals, with Wendy's buyout rumor adding noise.",
+      "action_window": "next_day",
+      "headline": "Zebra Technologies, Vishay Precision Group, Quantum Computing, Aramark And Other Big Stocks Moving Higher On Tuesday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52499010/zebra-technologies-vishay-precision-group-quantum-computing-aramark-and-other-big-stocks-moving-higher-on-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-05-12T17:33:15.025519+00:00"
+    },
+    {
+      "ticker": "OWL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Retail fundraising evaporation signals serious business model pressure for Blue Owl amid broader private credit market concerns, directly impacting revenue and growth prospects.",
+      "action_window": "intraday",
+      "headline": "'Blue Owl Retail Fundraising Evaporates Amid Private Credit Concerns' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/05/52498976/blue-owl-retail-fundraising-evaporates-amid-private-credit-concerns-financial-times",
+      "source": "alpaca",
+      "added_at": "2026-05-12T17:33:15.025526+00:00"
+    },
+    {
+      "ticker": "NVO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong clinical data on higher-dose Wegovy demonstrating enhanced efficacy supports competitive positioning in the high-growth obesity treatment market and potential for expanded market share.",
+      "action_window": "intraday",
+      "headline": "Novo Nordisk Presents New Wegovy Data Showing Strong Weight Loss, Fat Reduction",
+      "url": "https://www.benzinga.com/news/health-care/26/05/52498930/novo-nordisk-presents-new-wegovy-data-showing-strong-weight-loss-fat-reduction",
+      "source": "alpaca",
+      "added_at": "2026-05-12T17:33:15.025533+00:00"
     }
   ]
 }
