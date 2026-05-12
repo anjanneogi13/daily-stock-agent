@@ -202,28 +202,6 @@
     "expires": "2026-05-19T22:52:04.120413+00:00",
     "hard_block": false
   },
-  "SSSS": {
-    "ticker": "SSSS",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "headline": "CORRECTION: SuRo Capital Q1 EPS $(0.16) Misses $(0.14) Estimate, Sales $731.963K Beat $405.500K Estimate",
-    "added_at": "2026-05-05T22:52:04.122506+00:00",
-    "expires": "2026-05-12T22:52:04.122513+00:00",
-    "hard_block": false
-  },
-  "LIND": {
-    "ticker": "LIND",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "headline": "CORRECTION: Lindblad Expeditions Q1 EPS $0.09 Beats $0.02 Estimate, Sales $208.013M Beat $197.250M Estimate",
-    "added_at": "2026-05-05T22:52:04.127673+00:00",
-    "expires": "2026-05-12T22:52:04.127678+00:00",
-    "hard_block": false
-  },
   "JOBY": {
     "ticker": "JOBY",
     "score_delta": -0.139,
@@ -244,17 +222,6 @@
     "headline": "Coty Sees FY2026 Adj EPS $0.33-$0.35 vs $0.27 Est",
     "added_at": "2026-05-05T23:43:44.610268+00:00",
     "expires": "2026-05-19T23:43:44.610274+00:00",
-    "hard_block": false
-  },
-  "AEP": {
-    "ticker": "AEP",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "American Electric Power (AEP) Tops Q1 Earnings and Revenue Estimates",
-    "added_at": "2026-05-05T23:43:44.614487+00:00",
-    "expires": "2026-05-12T23:43:44.614492+00:00",
     "hard_block": false
   },
   "CRI": {
@@ -1244,18 +1211,6 @@
     "expires": "2026-05-21T19:14:04.617652+00:00",
     "hard_block": false
   },
-  "ARRY": {
-    "ticker": "ARRY",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Array Technologies, Raises Price Target to $11",
-    "added_at": "2026-05-07T22:56:31.438763+00:00",
-    "expires": "2026-05-12T22:56:31.438768+00:00",
-    "hard_block": false
-  },
   "SOUN": {
     "ticker": "SOUN",
     "score_delta": -0.1,
@@ -1496,138 +1451,6 @@
     "expires": "2026-05-21T21:51:41.870144+00:00",
     "hard_block": false
   },
-  "PRM": {
-    "ticker": "PRM",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Perimeter Solutions, Raises Price Target to $34",
-    "added_at": "2026-05-07T22:56:31.424257+00:00",
-    "expires": "2026-05-12T22:56:31.424264+00:00",
-    "hard_block": false
-  },
-  "GLW": {
-    "ticker": "GLW",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Corning, Raises Price Target to $223",
-    "added_at": "2026-05-07T22:56:31.426999+00:00",
-    "expires": "2026-05-12T22:56:31.427004+00:00",
-    "hard_block": false
-  },
-  "ADM": {
-    "ticker": "ADM",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Archer-Daniels-Midland, Raises Price Target to $90",
-    "added_at": "2026-05-07T22:56:31.429372+00:00",
-    "expires": "2026-05-12T22:56:31.429377+00:00",
-    "hard_block": false
-  },
-  "JCI": {
-    "ticker": "JCI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Johnson Controls Intl, Raises Price Target to $170",
-    "added_at": "2026-05-07T22:56:31.431696+00:00",
-    "expires": "2026-05-12T22:56:31.431701+00:00",
-    "hard_block": false
-  },
-  "CVS": {
-    "ticker": "CVS",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on CVS Health, Raises Price Target to $100",
-    "added_at": "2026-05-07T22:56:31.434033+00:00",
-    "expires": "2026-05-12T22:56:31.434038+00:00",
-    "hard_block": false
-  },
-  "ARDT": {
-    "ticker": "ARDT",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Ardent Health, Raises Price Target to $13.5",
-    "added_at": "2026-05-07T22:56:31.436430+00:00",
-    "expires": "2026-05-12T22:56:31.436435+00:00",
-    "hard_block": false
-  },
-  "Z": {
-    "ticker": "Z",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Hold on Zillow Group, Lowers Price Target to $52",
-    "added_at": "2026-05-07T22:56:31.441148+00:00",
-    "expires": "2026-05-12T22:56:31.441153+00:00",
-    "hard_block": false
-  },
-  "MSTR": {
-    "ticker": "MSTR",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Buy on Strategy, Raises Price Target to $224",
-    "added_at": "2026-05-07T22:56:31.445795+00:00",
-    "expires": "2026-05-12T22:56:31.445800+00:00",
-    "hard_block": false
-  },
-  "MRCY": {
-    "ticker": "MRCY",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Buy on Mercury System, Raises Price Target to $106",
-    "added_at": "2026-05-07T22:56:31.448164+00:00",
-    "expires": "2026-05-12T22:56:31.448168+00:00",
-    "hard_block": false
-  },
-  "KTOS": {
-    "ticker": "KTOS",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Canaccord Genuity Maintains Buy on Kratos Defense & Security, Raises Price Target to $130",
-    "added_at": "2026-05-07T22:56:31.450513+00:00",
-    "expires": "2026-05-12T22:56:31.450518+00:00",
-    "hard_block": false
-  },
-  "APP": {
-    "ticker": "APP",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Macquarie Maintains Outperform on AppLovin, Raises Price Target to $730",
-    "added_at": "2026-05-07T23:48:07.066866+00:00",
-    "expires": "2026-05-12T23:48:07.066873+00:00",
-    "hard_block": false
-  },
   "AATC": {
     "ticker": "AATC",
     "score_delta": -0.1,
@@ -1640,30 +1463,6 @@
     "expires": "2026-05-14T23:48:07.073566+00:00",
     "hard_block": false
   },
-  "COR": {
-    "ticker": "COR",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Cencora, Raises Price Target to $412",
-    "added_at": "2026-05-07T23:48:07.075779+00:00",
-    "expires": "2026-05-12T23:48:07.075784+00:00",
-    "hard_block": false
-  },
-  "DVA": {
-    "ticker": "DVA",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on DaVita, Raises Price Target to $235",
-    "added_at": "2026-05-07T23:48:07.080178+00:00",
-    "expires": "2026-05-12T23:48:07.080183+00:00",
-    "hard_block": false
-  },
   "RC": {
     "ticker": "RC",
     "score_delta": -0.1,
@@ -1674,30 +1473,6 @@
     "headline": "UPDATED: Ready Capital Q1 Adj. EPS $(1.00) Misses $(0.21) Estimate, Sales $(15.104M) Miss $14.800M Estimate",
     "added_at": "2026-05-07T23:48:07.082361+00:00",
     "expires": "2026-05-14T23:48:07.082366+00:00",
-    "hard_block": false
-  },
-  "SHLS": {
-    "ticker": "SHLS",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Shoals Technologies Group, Raises Price Target to $12",
-    "added_at": "2026-05-07T23:48:07.084574+00:00",
-    "expires": "2026-05-12T23:48:07.084580+00:00",
-    "hard_block": false
-  },
-  "SITM": {
-    "ticker": "SITM",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on SiTime, Raises Price Target to $775",
-    "added_at": "2026-05-07T23:48:07.086760+00:00",
-    "expires": "2026-05-12T23:48:07.086765+00:00",
     "hard_block": false
   },
   "AIIO": {
