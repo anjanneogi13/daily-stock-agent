@@ -90,61 +90,6 @@
     "expires": "2026-05-19T11:15:53.144026+00:00",
     "hard_block": false
   },
-  "OCGN": {
-    "ticker": "OCGN",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "headline": "Ocugen Q1 EPS $(0.06) Misses $(0.05) Estimate, Sales $1.533M Beat $540.000K Estimate",
-    "added_at": "2026-05-05T12:46:36.239352+00:00",
-    "expires": "2026-05-12T12:46:36.239358+00:00",
-    "hard_block": false
-  },
-  "SLQT": {
-    "ticker": "SLQT",
-    "score_delta": 0.093,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "headline": "Update: SelectQuote Q3 Adj. EPS $0.15 Beats $(0.04) Estimate, Sales $430.933M Miss $439.022M Estimate",
-    "added_at": "2026-05-05T12:46:36.240156+00:00",
-    "expires": "2026-05-12T12:46:36.240161+00:00",
-    "hard_block": false
-  },
-  "EXPD": {
-    "ticker": "EXPD",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "headline": "Expeditors Intl Q1 EPS $1.71 Beats $1.32 Estimate, Sales $2.783B Beat $2.616B Estimate",
-    "added_at": "2026-05-05T12:46:36.240876+00:00",
-    "expires": "2026-05-12T12:46:36.240881+00:00",
-    "hard_block": false
-  },
-  "PGY": {
-    "ticker": "PGY",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "headline": "Pagaya Partners With Sezzle To Embed An AI Underwriting Platform At The PoS To Help More Qualified Borrowers Access An Installment Loan Product",
-    "added_at": "2026-05-05T12:46:36.241532+00:00",
-    "expires": "2026-05-12T12:46:36.241537+00:00",
-    "hard_block": false
-  },
-  "MBOT": {
-    "ticker": "MBOT",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "Microbot Medical Announces LIBERTY System Gains Clinical Validation And Early Commercial Adoption As Global Expansion Accelerates",
-    "added_at": "2026-05-05T12:46:36.242179+00:00",
-    "expires": "2026-05-12T12:46:36.242184+00:00",
-    "hard_block": false
-  },
   "EBAY": {
     "ticker": "EBAY",
     "score_delta": 0.194,
@@ -157,17 +102,6 @@
     "expires": "2026-06-11T10:27:36.338816+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "IRON": {
-    "ticker": "IRON",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "headline": "Disc Medicine Q1 EPS $(1.65) Beats $(1.73) Estimate",
-    "added_at": "2026-05-05T12:46:36.249031+00:00",
-    "expires": "2026-05-12T12:46:36.249036+00:00",
-    "hard_block": false
   },
   "FN": {
     "ticker": "FN",
@@ -1436,18 +1370,6 @@
     "expires": "2026-05-14T15:12:42.434308+00:00",
     "hard_block": false
   },
-  "MNKD": {
-    "ticker": "MNKD",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Wells Fargo Maintains Overweight on MannKind, Raises Price Target to $10",
-    "added_at": "2026-05-07T15:12:42.436382+00:00",
-    "expires": "2026-05-12T15:12:42.436388+00:00",
-    "hard_block": false
-  },
   "ALB": {
     "ticker": "ALB",
     "score_delta": 0.1,
@@ -1472,18 +1394,6 @@
     "expires": "2026-05-18T18:18:15.669239+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "NYT": {
-    "ticker": "NYT",
-    "score_delta": 0.029,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Evercore ISI Group Maintains Outperform on New York Times, Raises Price Target to $92",
-    "added_at": "2026-05-07T15:12:42.458831+00:00",
-    "expires": "2026-05-12T15:12:42.458835+00:00",
-    "hard_block": false
   },
   "USFD": {
     "ticker": "USFD",
@@ -3835,6 +3745,110 @@
     "headline": "Adagio Medical Holdings Q1 EPS $(0.31) Misses $(0.29) Estimate",
     "added_at": "2026-05-12T12:25:33.765917+00:00",
     "expires": "2026-05-19T12:25:33.765922+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CE": {
+    "ticker": "CE",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "This Celanese Analyst Turns Bullish; Here Are Top 3 Upgrades For Tuesday",
+    "added_at": "2026-05-12T15:20:45.952488+00:00",
+    "expires": "2026-05-17T15:20:45.952495+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OUT": {
+    "ticker": "OUT",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "TD Cowen Maintains Buy on Outfront Media, Raises Price Target to $38",
+    "added_at": "2026-05-12T15:20:45.956329+00:00",
+    "expires": "2026-05-17T15:20:45.956334+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BL": {
+    "ticker": "BL",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "B of A Securities Reinstates Underperform on BlackLine, Announces $26 Price Target",
+    "added_at": "2026-05-12T15:20:45.959493+00:00",
+    "expires": "2026-05-17T15:20:45.959498+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "XENE": {
+    "ticker": "XENE",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on Xenon Pharmaceuticals, Raises Price Target to $80",
+    "added_at": "2026-05-12T15:20:45.962624+00:00",
+    "expires": "2026-05-17T15:20:45.962629+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VIST": {
+    "ticker": "VIST",
+    "score_delta": 0.041,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on Vista Energy, Raises Price Target to $93",
+    "added_at": "2026-05-12T15:20:45.968837+00:00",
+    "expires": "2026-05-17T15:20:45.968842+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CEVA": {
+    "ticker": "CEVA",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "TD Cowen Maintains Buy on CEVA, Raises Price Target to $45",
+    "added_at": "2026-05-12T15:20:45.971960+00:00",
+    "expires": "2026-05-17T15:20:45.971965+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SWX": {
+    "ticker": "SWX",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "This Southwest Gas Analyst Begins Coverage On A Bullish Note; Here Are Top 5 Initiations For Tuesday",
+    "added_at": "2026-05-12T15:20:45.975096+00:00",
+    "expires": "2026-05-17T15:20:45.975101+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ASTH": {
+    "ticker": "ASTH",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "TD Cowen Maintains Buy on Astrana Health, Raises Price Target to $45",
+    "added_at": "2026-05-12T15:20:45.978222+00:00",
+    "expires": "2026-05-17T15:20:45.978226+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
