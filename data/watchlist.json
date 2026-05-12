@@ -1168,6 +1168,30 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52508855/immunome-q1-eps-0-48-beats-0-57-estimate",
       "source": "alpaca",
       "added_at": "2026-05-12T21:13:54.715622+00:00"
+    },
+    {
+      "ticker": "GH",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "While EPS beat by 150%, the massive sales miss (71% below estimate at $21.2M vs $72.7M) is a critical red flag indicating severe revenue deterioration that overwhelms the earnings beat.",
+      "action_window": "next_day",
+      "headline": "Gamehost Q1 EPS $0.15 Beats $0.06 Estimate, Sales $21.156M Miss $72.664M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52510985/gamehost-q1-eps-0-15-beats-0-06-estimate-sales-21-156m-miss-72-664m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-12T22:41:43.217598+00:00"
+    },
+    {
+      "ticker": "IFS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with EPS 13% above estimate and revenue 11% above consensus indicates solid operational performance deserving immediate attention.",
+      "action_window": "next_day",
+      "headline": "Intercorp Financial Servs Q1 EPS $1.54 Beats $1.36 Estimate, Sales $553.917M Beat $497.206M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52510859/intercorp-financial-servs-q1-eps-1-54-beats-1-36-estimate-sales-553-917m-beat-497-206m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-12T22:41:43.217613+00:00"
     }
   ]
 }
