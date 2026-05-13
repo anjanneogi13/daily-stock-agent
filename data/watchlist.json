@@ -1662,6 +1662,42 @@
       "url": "https://www.benzinga.com/news/26/05/52546403/kodiak-gas-services-launches-750m-common-stock-offering-to-repay-debt-and-fund-growth-initiatives",
       "source": "alpaca",
       "added_at": "2026-05-13T21:22:23.636103+00:00"
+    },
+    {
+      "ticker": "TSX:GDC",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS down 91% YoY ($0.01 vs $0.11) and revenue decline of 12% signals fundamental deterioration in Genesis Land Development's business performance.",
+      "action_window": "next_day",
+      "headline": "Genesis Land Development Q1 EPS $0.01 Down From $0.11 YoY, Sales $51.453M Down From $58.209M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52548393/genesis-land-development-q1-eps-0-01-down-from-0-11-yoy-sales-51-453m-down-from-58-209m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-13T22:44:39.998969+00:00"
+    },
+    {
+      "ticker": "IMP",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Severe earnings miss with EPS missing by $0.11 (275% miss) and revenue missing by $16.5M (92% shortfall) represents a catastrophic quarterly performance that will likely trigger significant selling pressure.",
+      "action_window": "next_day",
+      "headline": "Intermap Techs Q1 EPS $(0.04) Misses $0.07 Estimate, Sales $1.400M Miss $17.900M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52548159/intermap-techs-q1-eps-0-04-misses-0-07-estimate-sales-1-400m-miss-17-900m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-13T22:44:39.998985+00:00"
+    },
+    {
+      "ticker": "TSX:CDR",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Condor Energies missed EPS expectations significantly (posting loss of $0.05 vs estimate of $0.01 profit), though revenue showed modest YoY growth of 1.4%.",
+      "action_window": "next_day",
+      "headline": "Condor Energies Q1 EPS $(0.05) Misses $0.01 Estimate, Sales $22.580M Up From $22.270M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52548116/condor-energies-q1-eps-0-05-misses-0-01-estimate-sales-22-580m-up-from-22-270m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-13T22:44:39.998995+00:00"
     }
   ]
 }
