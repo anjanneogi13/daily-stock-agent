@@ -1698,6 +1698,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52548116/condor-energies-q1-eps-0-05-misses-0-01-estimate-sales-22-580m-up-from-22-270m-yoy",
       "source": "alpaca",
       "added_at": "2026-05-13T22:44:39.998995+00:00"
+    },
+    {
+      "ticker": "DOX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Amdocs beat Q2 guidance on revenue and earnings with new CEO announcing AI-focused strategy, though modest beat and CEO transition create mixed signals.",
+      "action_window": "next_day",
+      "headline": "Amdocs Q2 Earnings Call Highlights",
+      "url": "https://www.marketbeat.com/instant-alerts/amdocs-q2-earnings-call-highlights-2026-05-13/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-05-13T23:53:10.559357+00:00"
     }
   ]
 }
