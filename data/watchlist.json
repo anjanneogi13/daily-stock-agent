@@ -1456,6 +1456,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52519515/red-cat-shares-are-sliding-in-premarket-trading-today",
       "source": "alpaca",
       "added_at": "2026-05-13T12:30:28.659190+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BofA nearly doubled Micron's price target to $950 and upgraded multiple AI chip stocks, signaling strong conviction on memory pricing trends with immediate trading implications.",
+      "action_window": "intraday",
+      "headline": "Micron Just Got A New $950 Price Tag: BofA Raised 4 Other AI Chip Stocks Too",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52530222/micron-950-price-boost-bofa-raises-nvidia-amd-marvell-coherent",
+      "source": "alpaca",
+      "added_at": "2026-05-13T15:24:56.325933+00:00"
+    },
+    {
+      "ticker": "MTZ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains bullish stance with significant price target increase, indicating strong conviction but not a rating change from neutral to positive.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Maintains Overweight on MasTec, Raises Price Target to $491",
+      "url": "https://www.benzinga.com/news/26/05/52529618/jp-morgan-maintains-overweight-on-mastec-raises-price-target-to-491",
+      "source": "alpaca",
+      "added_at": "2026-05-13T15:24:56.325949+00:00"
+    },
+    {
+      "ticker": "CMPS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings report with explicit mention of shares surging indicates a meaningful positive earnings surprise with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Compass Pathways Reports Strong Q1 Results, Shares Surge",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52529465/compass-pathways-reports-strong-q1-results-shares-surge",
+      "source": "alpaca",
+      "added_at": "2026-05-13T15:24:56.325960+00:00"
+    },
+    {
+      "ticker": "RIVN",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CEO launching separate robotics venture raises concerns about management focus and potential talent/resource diversion from core EV business during critical scaling phase.",
+      "action_window": "intraday",
+      "headline": "'Rivian CEO's Robotics Spinoff Raises $400 Million' - Wall Street Journal Exclusive",
+      "url": "https://www.benzinga.com/news/26/05/52529322/rivian-ceos-robotics-spinoff-raises-400-million-wall-street-journal-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-05-13T15:24:56.325968+00:00"
     }
   ]
 }
