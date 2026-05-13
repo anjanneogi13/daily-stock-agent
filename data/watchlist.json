@@ -1360,6 +1360,102 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52515894/pan-pacific-international-q3-eps-0-06-down-from-0-10-yoy-sales-3-930b-up-from-3-669b-yoy",
       "source": "alpaca",
       "added_at": "2026-05-13T10:17:13.160270+00:00"
+    },
+    {
+      "ticker": "IPSC",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings beat with actual loss of $0.11 vs expected $0.17 represents a 35% positive surprise, likely to drive immediate positive price action in a biotech stock.",
+      "action_window": "intraday",
+      "headline": "Century Therapeutics Q1 EPS $(0.11) Beats $(0.17) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52519818/century-therapeutics-q1-eps-0-11-beats-0-17-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659126+00:00"
+    },
+    {
+      "ticker": "VNET",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large strategic investment of 650M+ shares at $8.69/ADS represents significant capital infusion and institutional confidence, creating immediate price discovery catalyst.",
+      "action_window": "intraday",
+      "headline": "VNET Group Announces New Strategic Investors PJ Millennium Funds To Purchase 650,424,192 Shares At $1.4486 Per Share In Cash, Equivalent To $8.6914 Per ADS",
+      "url": "https://www.benzinga.com/news/26/05/52519790/vnet-group-announces-new-strategic-investors-pj-millennium-funds-to-purchase-650-424-192-shares-at-1",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659141+00:00"
+    },
+    {
+      "ticker": "CNTN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 EPS loss of $0.23 represents 77% improvement from prior year loss of $0.99, indicating significant operational improvement and trend toward profitability.",
+      "action_window": "intraday",
+      "headline": "Canton Strategic Holdings, Inc. - Common Stock Q1 EPS $(0.23) Up From $(0.99) YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52519758/canton-strategic-holdings-inc-common-stock-q1-eps-0-23-up-from-0-99-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659150+00:00"
+    },
+    {
+      "ticker": "ZBRA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analyst upgrades including ZBRA turning bullish with raised price targets, but impact diluted across 5 stocks and lacks specific price target details.",
+      "action_window": "intraday",
+      "headline": "This Zebra Technologies Analyst Turns Bullish; Here Are Top 5 Upgrades For Wednesday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52519756/this-zebra-technologies-analyst-turns-bullish-here-are-top-5-upgrades-for-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659158+00:00"
+    },
+    {
+      "ticker": "NBIS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Significant capex guidance increase to $20B-$25B signals aggressive growth investment and strong business confidence, likely driving immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Nebius Raises 2026 Capex Guidance To Between $20B-$25B",
+      "url": "https://www.benzinga.com/news/26/05/52519585/nebius-raises-2026-capex-guidance-to-between-20b-25b",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659168+00:00"
+    },
+    {
+      "ticker": "ASTC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Quarterly earnings miss with losses widening 3% YoY and revenue declining 36% YoY represents meaningful deterioration in fundamentals warranting immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "Astrotech Q3 EPS $(2.25) Down From $(2.18) YoY, Sales $343.000K Down From $534.000K YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52519573/astrotech-q3-eps-2-25-down-from-2-18-yoy-sales-343-000k-down-from-534-000k-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659175+00:00"
+    },
+    {
+      "ticker": "WHWK",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Significant PIPE financing with massive warrant dilution (17.9M warrants vs 4.3M shares sold) creates substantial shareholder dilution and typically pressures stock price near-term despite capital raise.",
+      "action_window": "intraday",
+      "headline": "Whitehawk Therapeutics Enters PIPE Financing With Expected Gross Proceeds Of ~$87.5M From Sale Of 4,330,866 Shares At $3.92 Per Share And Warrants To Purchase 17,991,021 Shares At $3.9199 Per Warrant",
+      "url": "https://www.benzinga.com/news/26/05/52519564/whitehawk-therapeutics-enters-pipe-financing-with-expected-gross-proceeds-of-87-5m-from-sale-of-4-33",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659182+00:00"
+    },
+    {
+      "ticker": "RCAT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large $225M public offering at $9.40 per share causes immediate dilution and typically creates selling pressure as existing shareholders face share count increase of ~25M shares.",
+      "action_window": "intraday",
+      "headline": "Why Is Red Cat Stock Tumbling Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52519515/red-cat-shares-are-sliding-in-premarket-trading-today",
+      "source": "alpaca",
+      "added_at": "2026-05-13T12:30:28.659190+00:00"
     }
   ]
 }
