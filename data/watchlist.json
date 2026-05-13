@@ -1504,6 +1504,55 @@
       "url": "https://www.benzinga.com/news/26/05/52529322/rivian-ceos-robotics-spinoff-raises-400-million-wall-street-journal-exclusive",
       "source": "alpaca",
       "added_at": "2026-05-13T15:24:56.325968+00:00"
+    },
+    {
+      "ticker": "PLUG",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Earnings beat combined with multiple analyst price target raises creates strong bullish momentum with actionable trading opportunity.",
+      "action_window": "next_day",
+      "headline": "Plug Power Gains Momentum After Earnings As Analysts Raise Forecast",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52535831/plug-power-gains-momentum-after-earnings-as-analysts-raise-forecast",
+      "source": "alpaca",
+      "added_at": "2026-05-13T17:34:13.718449+00:00",
+      "updated_at": "2026-05-13T17:34:13.718488+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Apple exploring AI agent integration in App Store signals strategic positioning in the AI race, but remains exploratory without concrete product announcement or timeline.",
+      "action_window": "this_week",
+      "headline": "'Apple Explores Ways to Welcome AI Agents in the App Store' - The Information",
+      "url": "https://www.benzinga.com/news/26/05/52535971/apple-explores-ways-to-welcome-ai-agents-in-the-app-store-the-information",
+      "source": "alpaca",
+      "added_at": "2026-05-13T17:34:13.718467+00:00"
+    },
+    {
+      "ticker": "JD",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analyst estimate raise following strong Q1 earnings beat with positive profitability inflection represents meaningful positive catalyst with shares already rallying on the news.",
+      "action_window": "next_day",
+      "headline": "JD.Com Analyst Raises Estimates On Recovering Profitability, Earnings Inflection",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52535756/jd-com-analyst-raises-estimates-on-recovering-profitability-earnings-inflection",
+      "source": "alpaca",
+      "added_at": "2026-05-13T17:34:13.718477+00:00"
+    },
+    {
+      "ticker": "SONY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Sony Music Publishing acquiring 45,000 iconic songs in a major $4B deal significantly expands their catalog and revenue-generating assets, representing a transformative M&A transaction.",
+      "action_window": "intraday",
+      "headline": "Sony Music Publishing Lands Iconic Song Catalog In Major Blackstone Deal",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52535516/sony-music-publishing-lands-iconic-song-catalog-in-major-blackstone-deal",
+      "source": "alpaca",
+      "added_at": "2026-05-13T17:34:13.718499+00:00"
     }
   ]
 }
