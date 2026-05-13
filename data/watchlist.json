@@ -1590,6 +1590,78 @@
       "url": "https://www.benzinga.com/markets/prediction-markets/26/05/52541126/as-jensen-huang-joins-trumps-china-summit-bombshell-report-claims-nvidias-china-revenue-never-went-to-zero",
       "source": "alpaca",
       "added_at": "2026-05-13T19:46:24.054314+00:00"
+    },
+    {
+      "ticker": "TSX:HLF",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q1 results with EPS missing by 15% but sales beating by 12% creates uncertainty requiring immediate assessment of margin pressure versus growth trajectory.",
+      "action_window": "intraday",
+      "headline": "High Liner Foods Q1 Adj. EPS $0.39 Misses $0.46 Estimate, Sales $334.917M Beat $299.490M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52546666/high-liner-foods-q1-adj-eps-0-39-misses-0-46-estimate-sales-334-917m-beat-299-490m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-13T21:22:23.636050+00:00"
+    },
+    {
+      "ticker": "NOA",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Both Q1 EPS and revenue missed estimates meaningfully (EPS missed by 10%, revenue by 3.5%), creating immediate downward pressure on the stock price.",
+      "action_window": "intraday",
+      "headline": "North American Q1 Adj. EPS $0.27 Misses $0.30 Estimate, Sales $232.753M Miss $241.270M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52546554/north-american-q1-adj-eps-0-27-misses-0-30-estimate-sales-232-753m-miss-241-270m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-13T21:22:23.636066+00:00"
+    },
+    {
+      "ticker": "TSX:APR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 FFO increased 4% and sales grew 21.7% YoY, showing moderate growth but modest beat on FFO for a REIT with limited immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "Automotive Props REIT Q1 FFO $0.26 Up From $0.25 YoY, Sales $29.096M Up From $23.902M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52546528/automotive-props-reit-q1-ffo-0-26-up-from-0-25-yoy-sales-29-096m-up-from-23-902m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-13T21:22:23.636076+00:00"
+    },
+    {
+      "ticker": "TSX:NOA",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q1 earnings with EPS missing by 7.5% but revenue beating by 5.7% creates uncertain trading dynamics requiring immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "North American Q1 Adj. EPS $0.37 Misses $0.40 Estimate, Sales $319.219M Beat $302.041M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52546505/north-american-q1-adj-eps-0-37-misses-0-40-estimate-sales-319-219m-beat-302-041m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-13T21:22:23.636084+00:00"
+    },
+    {
+      "ticker": "TSX:BDT",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Bird Construction beat Q1 EPS estimates by 25% ($0.25 vs $0.20) and revenue estimates by 5.5% ($783.4M vs $742.7M), representing a strong double beat that typically drives immediate positive price action.",
+      "action_window": "next_day",
+      "headline": "Bird Construction Q1 Adj. EPS $0.25 Beats $0.20 Estimate, Sales $783.368M Beat $742.671M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52546426/bird-construction-q1-adj-eps-0-25-beats-0-20-estimate-sales-783-368m-beat-742-671m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-13T21:22:23.636095+00:00"
+    },
+    {
+      "ticker": "KGS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large $750M equity offering will significantly dilute existing shareholders, typically causing immediate stock price pressure despite positive use of proceeds for debt reduction and growth.",
+      "action_window": "intraday",
+      "headline": "Kodiak Gas Services Launches $750M Common Stock Offering To Repay Debt And Fund Growth Initiatives",
+      "url": "https://www.benzinga.com/news/26/05/52546403/kodiak-gas-services-launches-750m-common-stock-offering-to-repay-debt-and-fund-growth-initiatives",
+      "source": "alpaca",
+      "added_at": "2026-05-13T21:22:23.636103+00:00"
     }
   ]
 }

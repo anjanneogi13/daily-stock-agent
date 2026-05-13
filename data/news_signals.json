@@ -345,78 +345,6 @@
     "expires": "2026-05-20T18:20:58.608480+00:00",
     "hard_block": false
   },
-  "DV": {
-    "ticker": "DV",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "DoubleVerify Hldgs Q1 Adj. EPS $0.04 Misses $0.06 Estimate, Sales $180.800M Miss $181.415M Estimate",
-    "added_at": "2026-05-06T20:09:39.163924+00:00",
-    "expires": "2026-05-13T20:09:39.163931+00:00",
-    "hard_block": false
-  },
-  "RXST": {
-    "ticker": "RXST",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "RxSight Q1 Adj. EPS $(0.19) Beats $(0.28) Estimate, Sales $30.893M Beat $29.744M Estimate",
-    "added_at": "2026-05-06T20:09:39.165750+00:00",
-    "expires": "2026-05-13T20:09:39.165756+00:00",
-    "hard_block": false
-  },
-  "CLOV": {
-    "ticker": "CLOV",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Clover Health Investments Q1 EPS $0.05 Beats $0.03 Estimate, Sales $749.200M Beat $714.893M Estimate",
-    "added_at": "2026-05-06T20:09:39.168730+00:00",
-    "expires": "2026-05-13T20:09:39.168735+00:00",
-    "hard_block": false
-  },
-  "BLLN": {
-    "ticker": "BLLN",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "BillionToOne Q2 EPS $0.34 Beats $0.04 Estimate, Sales $108.388M Beat $96.885M Estimate",
-    "added_at": "2026-05-06T20:09:39.170187+00:00",
-    "expires": "2026-05-13T20:09:39.170192+00:00",
-    "hard_block": false
-  },
-  "HNRG": {
-    "ticker": "HNRG",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Hallador Energy Q1 EPS $(0.20) Misses $(0.01) Estimate, Sales $101.807M Miss $102.279M Estimate",
-    "added_at": "2026-05-06T20:09:39.171659+00:00",
-    "expires": "2026-05-13T20:09:39.171680+00:00",
-    "hard_block": false
-  },
-  "PR": {
-    "ticker": "PR",
-    "score_delta": 0.064,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Permian Resources Q1 Sales $1.388B Beat $1.377B Estimate",
-    "added_at": "2026-05-06T20:09:39.173139+00:00",
-    "expires": "2026-05-13T20:09:39.173145+00:00",
-    "hard_block": false
-  },
   "SEZL": {
     "ticker": "SEZL",
     "score_delta": 0.1,
@@ -429,18 +357,6 @@
     "expires": "2026-05-20T20:09:39.174645+00:00",
     "hard_block": false
   },
-  "KRMD": {
-    "ticker": "KRMD",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "KORU Medical Systems Q1 Sales $11.765M Beat $11.284M Estimate",
-    "added_at": "2026-05-06T20:09:39.176140+00:00",
-    "expires": "2026-05-13T20:09:39.176146+00:00",
-    "hard_block": false
-  },
   "HPK": {
     "ticker": "HPK",
     "score_delta": -0.1,
@@ -451,18 +367,6 @@
     "headline": "UPDATE: HighPeak Energy Q1 Adj. EPS $(0.02) Misses $0.04 Estimate, Sales $215.585M Beat $213.190M Estimate",
     "added_at": "2026-05-06T23:44:32.624168+00:00",
     "expires": "2026-05-13T23:44:32.624173+00:00",
-    "hard_block": false
-  },
-  "CLFD": {
-    "ticker": "CLFD",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Clearfield Q2 EPS $(0.04) Beats $(0.05) Estimate, Sales $34.391M Beat $33.575M Estimate",
-    "added_at": "2026-05-06T20:09:39.179202+00:00",
-    "expires": "2026-05-13T20:09:39.179207+00:00",
     "hard_block": false
   },
   "NAGE": {
@@ -500,30 +404,6 @@
     "headline": "Mirum Pharmaceuticals Raises FY2026 Sales Guidance from $630.000M-$650.000M to $660.000M-$680.000M vs $644.905M Est",
     "added_at": "2026-05-06T20:09:39.183906+00:00",
     "expires": "2026-05-20T20:09:39.183912+00:00",
-    "hard_block": false
-  },
-  "MATV": {
-    "ticker": "MATV",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Mativ Holdings Q1 Adj. EPS $0.06 Beats $0.02 Estimate, Sales $479.600M Miss $486.900M Estimate",
-    "added_at": "2026-05-06T20:09:39.185483+00:00",
-    "expires": "2026-05-13T20:09:39.185488+00:00",
-    "hard_block": false
-  },
-  "PTRN": {
-    "ticker": "PTRN",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Pattern Group Q1 EPS $0.16 Beats $0.10 Estimate, Sales $773.727M Beat $715.904M Estimate",
-    "added_at": "2026-05-06T20:09:39.187047+00:00",
-    "expires": "2026-05-13T20:09:39.187052+00:00",
     "hard_block": false
   },
   "RVMD": {
@@ -1466,19 +1346,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ABNB": {
-    "ticker": "ABNB",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "Benchmark Maintains Buy on Airbnb, Raises Price Target to $160",
-    "added_at": "2026-05-08T20:06:25.381521+00:00",
-    "expires": "2026-05-13T20:06:25.381529+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ROAD": {
     "ticker": "ROAD",
     "score_delta": 0.1,
@@ -1565,58 +1432,6 @@
     "added_at": "2026-05-08T20:06:25.385086+00:00",
     "expires": "2026-11-04T20:06:25.385114+00:00",
     "hard_block": true
-  },
-  "TTAM": {
-    "ticker": "TTAM",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Titan America, Raises Price Target to $20",
-    "added_at": "2026-05-08T20:06:25.388066+00:00",
-    "expires": "2026-05-13T20:06:25.388088+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LOCO": {
-    "ticker": "LOCO",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Benchmark Maintains Buy on El Pollo Loco Holdings, Raises Price Target to $18",
-    "added_at": "2026-05-08T20:06:25.391055+00:00",
-    "expires": "2026-05-13T20:06:25.391061+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MEC": {
-    "ticker": "MEC",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Mayville Engineering, Raises Price Target to $33",
-    "added_at": "2026-05-08T20:06:25.396923+00:00",
-    "expires": "2026-05-13T20:06:25.396928+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DDOG": {
-    "ticker": "DDOG",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Bernstein Maintains Outperform on Datadog, Raises Price Target to $180",
-    "added_at": "2026-05-08T20:06:25.405902+00:00",
-    "expires": "2026-05-13T20:06:25.405907+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "ARGX": {
     "ticker": "ARGX",
@@ -3760,6 +3575,97 @@
     "headline": "Seagate, SanDisk Stocks Get 2X ETF Boost As Themes Expands Leveraged AI Trade With 9 Funds",
     "added_at": "2026-05-13T19:46:24.043496+00:00",
     "expires": "2026-05-20T19:46:24.043501+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SPRO": {
+    "ticker": "SPRO",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Spero Therapeutics Q1 EPS $(0.13) Beats $(0.18) Estimate, Sales $258.000K Down From $5.874M YoY",
+    "added_at": "2026-05-13T21:22:23.607850+00:00",
+    "expires": "2026-05-20T21:22:23.607858+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CANF": {
+    "ticker": "CANF",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "D. Boral Capital Upgrades Can Fite Biopharma to Buy, Announces $7 Price Target",
+    "added_at": "2026-05-13T21:22:23.616097+00:00",
+    "expires": "2026-05-18T21:22:23.616104+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:HLF": {
+    "ticker": "TSX:HLF",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "High Liner Foods Q1 Adj. EPS $0.39 Misses $0.46 Estimate, Sales $334.917M Beat $299.490M Estimate",
+    "added_at": "2026-05-13T21:22:23.619272+00:00",
+    "expires": "2026-05-20T21:22:23.619292+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NOA": {
+    "ticker": "NOA",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "North American Q1 Adj. EPS $0.27 Misses $0.30 Estimate, Sales $232.753M Miss $241.270M Estimate",
+    "added_at": "2026-05-13T21:22:23.622350+00:00",
+    "expires": "2026-05-20T21:22:23.622355+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:APR": {
+    "ticker": "TSX:APR",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Automotive Props REIT Q1 FFO $0.26 Up From $0.25 YoY, Sales $29.096M Up From $23.902M YoY",
+    "added_at": "2026-05-13T21:22:23.625425+00:00",
+    "expires": "2026-05-20T21:22:23.625430+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:NOA": {
+    "ticker": "TSX:NOA",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "North American Q1 Adj. EPS $0.37 Misses $0.40 Estimate, Sales $319.219M Beat $302.041M Estimate",
+    "added_at": "2026-05-13T21:22:23.628577+00:00",
+    "expires": "2026-05-20T21:22:23.628583+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:BDT": {
+    "ticker": "TSX:BDT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Bird Construction Q1 Adj. EPS $0.25 Beats $0.20 Estimate, Sales $783.368M Beat $742.671M Estimate",
+    "added_at": "2026-05-13T21:22:23.631734+00:00",
+    "expires": "2026-05-20T21:22:23.631740+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
