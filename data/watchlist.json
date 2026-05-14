@@ -1,126 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SATL",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Massive EPS miss of $0.84 vs $0.08 estimate (10x worse than expected) significantly outweighs the modest 16% revenue beat, indicating severe profitability issues.",
-      "action_window": "intraday",
-      "headline": "Satellogic Q1 EPS $(0.84) Misses $(0.08) Estimate, Sales $6.107M Beat $5.273M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472956/satellogic-q1-eps-0-84-misses-0-08-estimate-sales-6-107m-beat-5-273m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824122+00:00"
-    },
-    {
-      "ticker": "STRR",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant EPS miss of 48% ($0.99 loss vs $0.67 loss expected) despite substantial sales beat suggests deteriorating margins and profitability concerns that outweigh the revenue surprise.",
-      "action_window": "next_day",
-      "headline": "Star Equity Hldgs Q1 Adj. EPS $(0.99) Misses $(0.67) Estimate, Sales $50.061M Beat $17.850M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472892/star-equity-hldgs-q1-adj-eps-0-99-misses-0-67-estimate-sales-50-061m-beat-17-850m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824134+00:00"
-    },
-    {
-      "ticker": "AKTS",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Aktis Oncology delivered a significant double beat with EPS 14% better than expected and sales beating estimates by 84%, representing a highly material positive surprise.",
-      "action_window": "intraday",
-      "headline": "Aktis Oncology Q1 EPS $(0.38) Beats $(0.44) Estimate, Sales $3.227M Beat $1.750M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472867/aktis-oncology-q1-eps-0-38-beats-0-44-estimate-sales-3-227m-beat-1-750m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824142+00:00"
-    },
-    {
-      "ticker": "EXOD",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant earnings miss with EPS of -$1.08 versus estimate of -$0.08 (13.5x worse than expected) and revenue miss of 5.2% creates immediate negative trading catalyst.",
-      "action_window": "next_day",
-      "headline": "Exodus Movement Q1 EPS $(1.08) Misses $(0.08) Estimate, Sales $22.747M Miss $24.000M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472826/exodus-movement-q1-eps-1-08-misses-0-08-estimate-sales-22-747m-miss-24-000m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824148+00:00"
-    },
-    {
-      "ticker": "ASTS",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Company's FY2026 revenue guidance midpoint of $175M falls short of analyst consensus estimate of $185.673M by approximately 6%, signaling a meaningful guidance miss that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "AST SpaceMobile Sees FY2026 Sales $150.000M-$200.000M vs $185.673M Est",
-      "url": "https://www.benzinga.com/news/26/05/52472815/ast-spacemobile-sees-fy2026-sales-150-000m-200-000m-vs-185-673m-est",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824153+00:00"
-    },
-    {
-      "ticker": "AURA",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q1 EPS miss of $0.50 vs $0.39 estimate represents a 28% earnings miss, which is a significant negative surprise likely to trigger immediate selling pressure.",
-      "action_window": "next_day",
-      "headline": "Aura Biosciences Q1 EPS $(0.50) Misses $(0.39) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472745/aura-biosciences-q1-eps-0-50-misses-0-39-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824158+00:00"
-    },
-    {
-      "ticker": "ITRG",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "earnings_miss",
-      "rationale": "Mixed earnings with EPS missing by 22% but revenue beating by 3%, creating offsetting signals that warrant monitoring but not decisive action.",
-      "action_window": "intraday",
-      "headline": "Integra Resources Q1 Adj. EPS $0.07 Misses $0.09 Estimate, Sales $61.724M Beat $59.880M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472679/integra-resources-q1-adj-eps-0-07-misses-0-09-estimate-sales-61-724m-beat-59-880m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824163+00:00"
-    },
-    {
-      "ticker": "ERAS",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Erasca missed Q1 EPS estimates by 173% ($0.60 loss vs $0.22 expected), representing a severe earnings miss that will likely trigger immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Erasca Q1 EPS $(0.60) Misses $(0.22) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52472658/erasca-q1-eps-0-60-misses-0-22-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824168+00:00"
-    },
-    {
-      "ticker": "MVST",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Stock is crashing (plummeting) immediately following Q1 earnings release, indicating a significant earnings miss or negative guidance that warrants immediate trading attention.",
-      "action_window": "intraday",
-      "headline": "Microvast Stock Crashes After Q1 Earnings \u2014 What You Need To Know",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52472602/microvast-stock-crashes-after-q1-earnings-what-you-need-to-know",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824173+00:00"
-    },
-    {
-      "ticker": "MGNX",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Significant upfront cash payment of $122.5M from asset sale provides immediate liquidity and validates asset value, likely material relative to market cap for a biotech company.",
-      "action_window": "intraday",
-      "headline": "MacroGenics To Sell GMP Manufacturing Operations to Bora Pharmaceuticals; Co. To Receive $122.5M Upfront Payment From Bora Upon Closing",
-      "url": "https://www.benzinga.com/quote/MGNX",
-      "source": "alpaca",
-      "added_at": "2026-05-11T21:49:49.824178+00:00"
-    },
-    {
       "ticker": "MARA",
       "tradeable_score": 0.65,
       "sentiment": "neutral",
@@ -1688,6 +1568,66 @@
       "url": "https://www.benzinga.com/markets/private-markets/26/05/52582431/spacexs-latest-big-money-backer-brookfield-with-a-1-billion-stake",
       "source": "alpaca",
       "added_at": "2026-05-14T20:52:44.919305+00:00"
+    },
+    {
+      "ticker": "LSF",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company issued FY2026 sales guidance significantly above consensus estimates (midpoint of $143M vs $132.7M est represents ~7.8% beat), indicating strong business momentum.",
+      "action_window": "next_day",
+      "headline": "Laird Superfood Sees FY2026 Sales $138.000M-$148.000M vs $132.742M Est",
+      "url": "https://www.benzinga.com/news/26/05/52585619/laird-superfood-sees-fy2026-sales-138-000m-148-000m-vs-132-742m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-14T22:05:48.385272+00:00"
+    },
+    {
+      "ticker": "BAP",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Credicorp missed both EPS and revenue estimates significantly (EPS miss of 6.7%, revenue miss of 11.2%), representing a meaningful double-miss that typically triggers immediate negative price action.",
+      "action_window": "intraday",
+      "headline": "Credicorp Q1 EPS $6.59 Misses $7.06 Estimate, Sales $1.554B Miss $1.750B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52585615/credicorp-q1-eps-6-59-misses-7-06-estimate-sales-1-554b-miss-1-750b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-14T22:05:48.385287+00:00"
+    },
+    {
+      "ticker": "NU",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings with EPS missing by 5% but revenue beating estimates by 11%, creating uncertainty that warrants immediate monitoring for market reaction.",
+      "action_window": "intraday",
+      "headline": "Nu Holdings Q1 EPS $0.18 Misses $0.19 Estimate, Sales $4.968B Beat $4.480B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52585486/nu-holdings-q1-eps-0-18-misses-0-19-estimate-sales-4-968b-beat-4-480b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-14T22:05:48.385298+00:00"
+    },
+    {
+      "ticker": "CSAN",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 loss narrowed significantly to $(0.31) from $(0.66) YoY showing 53% improvement while revenue grew 3.9%, indicating positive operational momentum though still unprofitable.",
+      "action_window": "next_day",
+      "headline": "Cosan Q1 EPS $(0.31) Up From $(0.66) YoY, Sales $1.715B Up From $1.650B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52585480/cosan-q1-eps-0-31-up-from-0-66-yoy-sales-1-715b-up-from-1-650b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-14T22:05:48.385307+00:00"
+    },
+    {
+      "ticker": "EU",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant double beat with EPS swinging from expected loss of $(0.08) to profit of $0.03 (375% beat) and revenue beating by 19.6%, indicating strong operational performance.",
+      "action_window": "intraday",
+      "headline": "enCore Energy Q1 EPS $0.03 Beats $(0.08) Estimate, Sales $18.301M Beat $15.300M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52585367/encore-energy-q1-eps-0-03-beats-0-08-estimate-sales-18-301m-beat-15-300m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-14T22:05:48.385315+00:00"
     }
   ]
 }

@@ -575,18 +575,6 @@
     "expires": "2026-05-21T20:48:23.421636+00:00",
     "hard_block": false
   },
-  "IREN": {
-    "ticker": "IREN",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "UPDATE: Iris Energy Q3 Sales $144.800M Miss $223.393M Estimate",
-    "added_at": "2026-05-07T21:51:41.866572+00:00",
-    "expires": "2026-05-14T21:51:41.866576+00:00",
-    "hard_block": false
-  },
   "UPWK": {
     "ticker": "UPWK",
     "score_delta": -0.15,
@@ -597,18 +585,6 @@
     "headline": "Upwork Raises FY2026 Adj EPS Guidance from $1.43-$1.48 to $1.50-$1.55 vs $1.45 Est; Lowers FY2026 Sales Guidance from $835.000M-$850.000M to $760.000M-$790.000M vs $842.323M Est",
     "added_at": "2026-05-07T20:48:23.447295+00:00",
     "expires": "2026-05-21T20:48:23.447300+00:00",
-    "hard_block": false
-  },
-  "XYZ": {
-    "ticker": "XYZ",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Block Shares Climb After Q1 Report \u2014 Here's Why",
-    "added_at": "2026-05-07T21:51:41.860741+00:00",
-    "expires": "2026-05-14T21:51:41.860747+00:00",
     "hard_block": false
   },
   "SENS": {
@@ -3784,6 +3760,71 @@
     "headline": "BT Brands Q1 EPS $(0.12) Down From $(0.05) YoY, Sales $2.844M Down From $3.231M YoY",
     "added_at": "2026-05-14T20:52:44.914775+00:00",
     "expires": "2026-05-21T20:52:44.914780+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LSF": {
+    "ticker": "LSF",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Laird Superfood Sees FY2026 Sales $138.000M-$148.000M vs $132.742M Est",
+    "added_at": "2026-05-14T22:05:48.362605+00:00",
+    "expires": "2026-05-28T22:05:48.362613+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BAP": {
+    "ticker": "BAP",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Credicorp Q1 EPS $6.59 Misses $7.06 Estimate, Sales $1.554B Miss $1.750B Estimate",
+    "added_at": "2026-05-14T22:05:48.371088+00:00",
+    "expires": "2026-05-21T22:05:48.371094+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NU": {
+    "ticker": "NU",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Nu Holdings Q1 EPS $0.18 Misses $0.19 Estimate, Sales $4.968B Beat $4.480B Estimate",
+    "added_at": "2026-05-14T22:05:48.374411+00:00",
+    "expires": "2026-05-21T22:05:48.374422+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSAN": {
+    "ticker": "CSAN",
+    "score_delta": 0.089,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "next_day",
+    "headline": "Cosan Q1 EPS $(0.31) Up From $(0.66) YoY, Sales $1.715B Up From $1.650B YoY",
+    "added_at": "2026-05-14T22:05:48.377558+00:00",
+    "expires": "2026-05-21T22:05:48.377563+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EU": {
+    "ticker": "EU",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "enCore Energy Q1 EPS $0.03 Beats $(0.08) Estimate, Sales $18.301M Beat $15.300M Estimate",
+    "added_at": "2026-05-14T22:05:48.380783+00:00",
+    "expires": "2026-05-21T22:05:48.380789+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
