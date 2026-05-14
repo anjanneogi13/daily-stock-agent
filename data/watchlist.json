@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GM",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Cost-cutting measures targeting 500-600 white collar positions signals improved operational efficiency and margin expansion efforts, typically viewed positively by markets but impact is moderate given headcount represents small fraction of workforce.",
-      "action_window": "intraday",
-      "headline": "'GM to Cut Hundreds of White Collar Workers in Push to Trim Costs; The Reductions Will Affect About 500 To 600 Employees In GM' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/05/52457952/gm-to-cut-hundreds-of-white-collar-workers-in-push-to-trim-costs-the-reductions-will-affect-about-50",
-      "source": "alpaca",
-      "added_at": "2026-05-11T16:28:36.202318+00:00"
-    },
-    {
-      "ticker": "XYZ",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Strong Q1 earnings beat combined with raised guidance and Bank of America reaffirming Buy rating creates a meaningful positive catalyst, though some impact may already be reflected if reported earlier.",
-      "action_window": "next_day",
-      "headline": "This Block Analyst Remains Bullish On Earnings Power Inflection, Improving Execution",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52457998/block-analyst-remains-bullish-earnings-power-inflection-improving-execution",
-      "source": "alpaca",
-      "added_at": "2026-05-11T16:28:36.202328+00:00"
-    },
-    {
-      "ticker": "TSX:AFN",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "RBC Capital upgrade to Outperform with raised price target represents a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
-      "action_window": "next_day",
-      "headline": "RBC Capital Upgrades Ag Growth International to Outperform, Raises Price Target to C$30",
-      "url": "https://www.benzinga.com/news/26/05/52457971/rbc-capital-upgrades-ag-growth-international-to-outperform-raises-price-target-to-c-30",
-      "source": "alpaca",
-      "added_at": "2026-05-11T16:28:36.202333+00:00"
-    },
-    {
-      "ticker": "WULF",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q1 earnings strength with shares rising and multiple analyst Buy reaffirmations on HPC revenue growth presents a meaningful near-term catalyst.",
-      "action_window": "intraday",
-      "headline": "TeraWulf Posts Q1 Strength: Analysts Remain Bullish On HPC Strength",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52457906/terawulf-posts-q1-strength-analysts-remain-bullish-on-hpc-strength",
-      "source": "alpaca",
-      "added_at": "2026-05-11T16:28:36.202338+00:00"
-    },
-    {
-      "ticker": "NFLX",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "State Attorney General lawsuit alleging illegal data collection from minors creates regulatory and reputational risk, though legal battles typically have delayed financial impact.",
-      "action_window": "intraday",
-      "headline": "Texas Attor\u00adney Gen\u00ader\u00adal Ken Pax\u00adton Sues Net\u00adflix For Spy\u00ading On Texas Kids And Con\u00adsumers By Ille\u00adgal\u00adly Col\u00adlect\u00ading Users' Data With\u00adout Their Knowl\u00adedge Or Consent",
-      "url": "https://www.benzinga.com/news/26/05/52457769/texas-attor-ney-gen-er-al-ken-pax-ton-sues-net-flix-for-spy-ing-on-texas-kids-and-con-sumers-by-ille",
-      "source": "alpaca",
-      "added_at": "2026-05-11T16:28:36.202343+00:00"
-    },
-    {
-      "ticker": "TWO",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "UWM increased its takeover bid for Two Harbors to $12.50/share, creating a competitive bidding situation that typically drives target stock price toward the higher offer.",
-      "action_window": "intraday",
-      "headline": "UWM Escalates Fight For Two Harbors With Sweeter Bid",
-      "url": "https://www.benzinga.com/m-a/26/05/52457678/uwm-escalates-fight-for-two-harbors-with-sweeter-bid",
-      "source": "alpaca",
-      "added_at": "2026-05-11T16:28:36.202347+00:00"
-    },
-    {
       "ticker": "MNDY",
       "tradeable_score": 0.88,
       "sentiment": "bullish",
@@ -1232,15 +1160,16 @@
     },
     {
       "ticker": "NBIS",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Significant capex guidance increase to $20B-$25B signals aggressive growth investment and strong business confidence, likely driving immediate positive price action.",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with revenue surge, multiple analyst price target raises, and major contract expansion with Meta creates significant positive catalyst.",
       "action_window": "intraday",
-      "headline": "Nebius Raises 2026 Capex Guidance To Between $20B-$25B",
-      "url": "https://www.benzinga.com/news/26/05/52519585/nebius-raises-2026-capex-guidance-to-between-20b-25b",
+      "headline": "Why Are Nebius Shares Surging On Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52572181/why-are-nebius-shares-surging-on-thursday",
       "source": "alpaca",
-      "added_at": "2026-05-13T12:30:28.659168+00:00"
+      "added_at": "2026-05-13T12:30:28.659168+00:00",
+      "updated_at": "2026-05-14T17:19:17.220892+00:00"
     },
     {
       "ticker": "ASTC",
@@ -1377,15 +1306,16 @@
     },
     {
       "ticker": "AVGO",
-      "tradeable_score": 0.58,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
       "category": "upgrade",
-      "rationale": "Citi selecting Broadcom as top semiconductor pick ahead of earnings provides positive analyst sentiment but impact is moderated as it's pre-earnings positioning rather than post-results confirmation.",
+      "rationale": "Major Wells Fargo upgrade with new framework predicting 40% AI revenue surge by 2026, already driving 4% stock surge indicating strong market reaction.",
       "action_window": "next_day",
-      "headline": "Broadcom Enters Earnings As Citi's Top Semiconductor Pick",
-      "url": "https://www.benzinga.com/Opinion/26/05/52541387/broadcom-enters-earnings-as-citi-top-semiconductor-pick",
+      "headline": "Broadcom Surges On New Data Center Framework: Wall Street Vastly Underestimating AI Power Needs",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/05/52572208/broadcom-surges-on-new-data-center-framework-wall-street-vastly-underestimating-ai-power-needs",
       "source": "alpaca",
-      "added_at": "2026-05-13T19:46:24.054287+00:00"
+      "added_at": "2026-05-13T19:46:24.054287+00:00",
+      "updated_at": "2026-05-14T17:19:17.220883+00:00"
     },
     {
       "ticker": "OPHC",
@@ -1759,6 +1689,66 @@
       "url": "https://www.benzinga.com/markets/large-cap/26/05/52565695/ford-stock-extends-rally-as-morgan-stanley-sees-10-billion-energy-opportunity",
       "source": "alpaca",
       "added_at": "2026-05-14T15:05:46.108470+00:00"
+    },
+    {
+      "ticker": "STUB",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with profitability turnaround from year-ago loss and confirmed intraday price surge creates high-conviction bullish catalyst.",
+      "action_window": "intraday",
+      "headline": "StubHub Stock Soars After Strong Q1 Results",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52572625/stubhub-stock-soars-after-strong-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-14T17:19:17.220846+00:00"
+    },
+    {
+      "ticker": "DDS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Dillard's posted Q1 earnings that drove share gains amid a broader Nasdaq rally of 200+ points, indicating both company-specific strength and favorable market conditions.",
+      "action_window": "intraday",
+      "headline": "Nasdaq Jumps Over 200 Points; Dillard's Shares Gain After Q1 Earnings",
+      "url": "https://www.benzinga.com/markets/market-summary/26/05/52572524/nasdaq-jumps-over-200-points-dillards-shares-gain-after-q1-earnings",
+      "source": "alpaca",
+      "added_at": "2026-05-14T17:19:17.220860+00:00"
+    },
+    {
+      "ticker": "BWEN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Earnings beat combined with record backlog and strategic expansion creates multiple positive catalysts driving share price appreciation.",
+      "action_window": "intraday",
+      "headline": "Why Broadwind Shares Are Climbing After Wind Business Exit Strategy",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52572226/why-broadwind-shares-are-climbing-after-wind-business-exit-strategy",
+      "source": "alpaca",
+      "added_at": "2026-05-14T17:19:17.220872+00:00"
+    },
+    {
+      "ticker": "CBRS",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "IPO opened 89% above offering price indicating extremely strong institutional and retail demand, creating significant momentum trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Cerebras Systems Shares Open At $350 In NASDAQ Debut Vs $185 IPO Price",
+      "url": "https://www.benzinga.com/quote/CBRS",
+      "source": "alpaca",
+      "added_at": "2026-05-14T17:19:17.220902+00:00"
+    },
+    {
+      "ticker": "CRCL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Senate committee advancement of crypto legislation represents meaningful regulatory clarity that typically drives strong positive momentum in crypto-related equities.",
+      "action_window": "intraday",
+      "headline": "Long-Stalled Crypto Market Bill Wins Key Senate Committee Vote",
+      "url": "https://www.benzinga.com/news/26/05/52571946/long-stalled-crypto-market-bill-wins-key-senate-committee-vote",
+      "source": "alpaca",
+      "added_at": "2026-05-14T17:19:17.220911+00:00"
     }
   ]
 }
