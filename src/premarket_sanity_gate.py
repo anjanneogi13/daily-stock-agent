@@ -1,19 +1,23 @@
-"""Premarket sanity gate for Lane 1 official picks.
+"""Premarket sanity gate for Lane 1 official premarket SUGGESTIONS.
 
-This gate runs after candidate selection but before official logging.
+PR-A (2026-05-14) behavior changes:
+  1. Multi-provider fetch with per-call timeout:
+     yfinance intraday -> finnhub -> stooq -> yfinance daily.
+     Batch runs in parallel via ThreadPoolExecutor.
+  2. When fresh price cannot be verified, candidate is NOT blocked.
+     It is marked HALF_SIZE with provider_unverified=True. The agent's
+     job is to suggest daily; "couldn't fetch" is not a reason to deny
+     all suggestions for the day.
+  3. Block-all may only be triggered by REAL safety conditions:
+     price already <= stop_loss, gap too negative, or market skip_all.
 
-It prevents candidates from becoming normal official picks when fresh market
-conditions make them unsafe or non-actionable.
-
-Safety:
-- no fake picks,
-- no paper trading enablement,
-- no live trading enablement,
-- fail closed to watch-only/skip when fresh price cannot be verified.
+Safety: no fake picks, no paper trading, no live trading.
 """
 
 from __future__ import annotations
 
+import concurrent.futures
+import time
 from typing import Any
 
 
@@ -23,6 +27,11 @@ ACTION_SKIP_TODAY = "SKIP_TODAY"
 ACTION_WATCH_ONLY = "WATCH_ONLY"
 
 ACTIONABLE_ACTIONS = {ACTION_SAFE, ACTION_HALF_SIZE}
+
+_PRICE_CACHE: dict = {}
+_PRICE_CACHE_TTL = 60.0
+_FETCH_TIMEOUT = 5.0
+_BATCH_TIMEOUT = 60.0
 
 
 def _safe_float(value: Any, default: float | None = None) -> float | None:
@@ -41,16 +50,106 @@ def _extract_entry_stop(pick: dict) -> tuple[float | None, float | None]:
     return entry, stop_loss
 
 
+# ── Provider fallback chain ──────────────────────────────────────────────────
+
+def _yf_intraday(ticker: str) -> float | None:
+    import yfinance as yf
+    hist = yf.Ticker(ticker).history(period="1d", interval="1m", auto_adjust=False)
+    if len(hist):
+        return float(hist["Close"].iloc[-1])
+    return None
+
+
+def _yf_daily(ticker: str) -> float | None:
+    import yfinance as yf
+    hist = yf.Ticker(ticker).history(period="5d", auto_adjust=False)
+    if len(hist):
+        return float(hist["Close"].iloc[-1])
+    return None
+
+
+def _finnhub_quote(ticker: str) -> float | None:
+    try:
+        from src import finnhub_data
+    except Exception:
+        return None
+    fn = (
+        getattr(finnhub_data, "get_latest_price", None)
+        or getattr(finnhub_data, "get_quote", None)
+        or getattr(finnhub_data, "latest_price", None)
+    )
+    if not callable(fn):
+        return None
+    try:
+        v = fn(ticker)
+        if isinstance(v, dict):
+            v = v.get("c") or v.get("price") or v.get("close")
+        return float(v) if v else None
+    except Exception:
+        return None
+
+
+def _stooq_daily(ticker: str) -> float | None:
+    try:
+        from src.market_data_providers import stooq
+    except Exception:
+        return None
+    fn = (
+        getattr(stooq, "get_latest_price", None)
+        or getattr(stooq, "fetch_latest", None)
+    )
+    if not callable(fn):
+        return None
+    try:
+        v = fn(ticker)
+        if isinstance(v, dict):
+            v = v.get("close") or v.get("price")
+        return float(v) if v else None
+    except Exception:
+        return None
+
+
+def _call_with_timeout(fn, ticker: str, timeout: float = _FETCH_TIMEOUT) -> float | None:
+    try:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as ex:
+            return ex.submit(fn, ticker).result(timeout=timeout)
+    except Exception:
+        return None
+
+
+def _fetch_with_fallbacks(ticker: str) -> float | None:
+    """Try providers in order with per-call timeout. 60s in-process cache."""
+    now = time.monotonic()
+    cached = _PRICE_CACHE.get(ticker)
+    if cached and (now - cached[0]) < _PRICE_CACHE_TTL:
+        return cached[1]
+
+    for fn in (_yf_intraday, _finnhub_quote, _stooq_daily, _yf_daily):
+        try:
+            v = _call_with_timeout(fn, ticker)
+            if v is not None and v > 0:
+                _PRICE_CACHE[ticker] = (now, float(v))
+                return float(v)
+        except Exception:
+            continue
+
+    _PRICE_CACHE[ticker] = (now, None)
+    return None
+
+
+# Public alias kept for backward compat
+def fetch_latest_price(ticker: str) -> float | None:
+    return _fetch_with_fallbacks(ticker)
+
+
+# ── Sanity decision ──────────────────────────────────────────────────────────
+
 def evaluate_premarket_sanity(
     pick: dict,
     *,
     current_price: float | None,
     market_snapshot: dict | None = None,
 ) -> dict:
-    """Evaluate one candidate for official premarket sanity.
-
-    Returns a JSON-safe decision object.
-    """
     ticker = pick.get("ticker", "?")
     entry, stop_loss = _extract_entry_stop(pick)
     market = market_snapshot or {}
@@ -62,33 +161,40 @@ def evaluate_premarket_sanity(
         "entry": entry,
         "stop_loss": stop_loss,
         "gap_pct": None,
-        "action": ACTION_WATCH_ONLY,
-        "actionable": False,
-        "reason": "fresh quote unavailable",
-        "size_multiplier": 0.0,
+        "action": ACTION_SAFE,
+        "actionable": True,
+        "reason": "normal official premarket entry conditions",
+        "size_multiplier": 1.0,
+        "provider_unverified": False,
     }
 
     if entry is None or entry <= 0:
         base.update({
-            "action": ACTION_WATCH_ONLY,
-            "actionable": False,
-            "reason": "missing or invalid entry price",
+            "action": ACTION_WATCH_ONLY, "actionable": False,
+            "reason": "missing or invalid entry price", "size_multiplier": 0.0,
         })
         return base
 
     if stop_loss is None or stop_loss <= 0:
         base.update({
-            "action": ACTION_WATCH_ONLY,
-            "actionable": False,
-            "reason": "missing or invalid stop loss",
+            "action": ACTION_WATCH_ONLY, "actionable": False,
+            "reason": "missing or invalid stop loss", "size_multiplier": 0.0,
         })
         return base
 
+    # PR-A change: provider failure does NOT block the daily suggestion.
     if current_price is None or current_price <= 0:
+        if global_action == "skip_all":
+            base.update({
+                "action": ACTION_SKIP_TODAY, "actionable": False,
+                "reason": "broad market risk and provider unverified",
+                "size_multiplier": 0.0, "provider_unverified": True,
+            })
+            return base
         base.update({
-            "action": ACTION_WATCH_ONLY,
-            "actionable": False,
-            "reason": "could not verify fresh price before official selection",
+            "action": ACTION_HALF_SIZE, "actionable": True,
+            "reason": "fresh price unavailable from any provider; reduced size",
+            "size_multiplier": 0.5, "provider_unverified": True,
         })
         return base
 
@@ -97,62 +203,44 @@ def evaluate_premarket_sanity(
     base["gap_pct"] = round(gap_pct, 2)
 
     if global_action == "skip_all":
-        base.update({
-            "action": ACTION_SKIP_TODAY,
-            "actionable": False,
-            "reason": "broad market risk",
-        })
+        base.update({"action": ACTION_SKIP_TODAY, "actionable": False,
+                     "reason": "broad market risk", "size_multiplier": 0.0})
         return base
 
     if current_price <= stop_loss:
         base.update({
-            "action": ACTION_SKIP_TODAY,
-            "actionable": False,
+            "action": ACTION_SKIP_TODAY, "actionable": False,
             "reason": f"price ${current_price:.2f} already at or below stop loss ${stop_loss:.2f}",
+            "size_multiplier": 0.0,
         })
         return base
 
     if sl_buffer_pct > 0 and gap_pct <= -sl_buffer_pct * 0.6:
         base.update({
-            "action": ACTION_SKIP_TODAY,
-            "actionable": False,
+            "action": ACTION_SKIP_TODAY, "actionable": False,
             "reason": f"negative gap {gap_pct:+.1f}% leaves too little stop-loss buffer",
+            "size_multiplier": 0.0,
         })
         return base
 
     if gap_pct >= 3.0:
-        base.update({
-            "action": ACTION_HALF_SIZE,
-            "actionable": True,
-            "reason": f"gapped up {gap_pct:+.1f}%; chasing risk requires half size",
-            "size_multiplier": 0.5,
-        })
+        base.update({"action": ACTION_HALF_SIZE,
+                     "reason": f"gapped up {gap_pct:+.1f}%; chasing risk requires half size",
+                     "size_multiplier": 0.5})
         return base
 
     if global_action == "half":
-        base.update({
-            "action": ACTION_HALF_SIZE,
-            "actionable": True,
-            "reason": "market caution requires half size",
-            "size_multiplier": 0.5,
-        })
+        base.update({"action": ACTION_HALF_SIZE,
+                     "reason": "market caution requires half size",
+                     "size_multiplier": 0.5})
         return base
 
     if gap_pct <= -1.5:
-        base.update({
-            "action": ACTION_HALF_SIZE,
-            "actionable": True,
-            "reason": f"negative gap {gap_pct:+.1f}%; reduce size and require careful fill",
-            "size_multiplier": 0.5,
-        })
+        base.update({"action": ACTION_HALF_SIZE,
+                     "reason": f"negative gap {gap_pct:+.1f}%; reduce size and require careful fill",
+                     "size_multiplier": 0.5})
         return base
 
-    base.update({
-        "action": ACTION_SAFE,
-        "actionable": True,
-        "reason": "normal official premarket entry conditions",
-        "size_multiplier": 1.0,
-    })
     return base
 
 
@@ -167,12 +255,9 @@ def _apply_half_size(candidate: dict, sanity: dict) -> None:
 
 
 def apply_premarket_sanity_decisions(
-    candidates: list[dict],
-    *,
-    current_prices: dict[str, float | None],
+    candidates: list[dict], *, current_prices: dict[str, float | None],
     market_snapshot: dict | None = None,
 ) -> tuple[list[dict], list[dict]]:
-    """Split candidates into official/actionable and blocked-by-sanity lists."""
     official: list[dict] = []
     blocked: list[dict] = []
 
@@ -201,38 +286,18 @@ def apply_premarket_sanity_decisions(
                 "candidate": candidate,
                 "sanity": sanity,
             })
-
     return official, blocked
 
 
-def fetch_latest_price(ticker: str) -> float | None:
-    """Fetch latest available daily close defensively.
-
-    This intentionally mirrors the legacy premarket_check safety behavior.
-    If a fresh quote cannot be verified, callers should fail closed.
-    """
-    try:
-        import yfinance as yf
-
-        hist = yf.Ticker(ticker).history(period="5d", auto_adjust=False)
-        if len(hist):
-            return float(hist["Close"].iloc[-1])
-    except Exception:
-        return None
-    return None
-
-
 def fetch_market_snapshot() -> dict:
-    """Fetch broad-market snapshot used by the sanity gate."""
-    spy = fetch_latest_price("SPY")
-    qqq = fetch_latest_price("QQQ")
-    soxx = fetch_latest_price("SOXX")
-    vix = fetch_latest_price("^VIX")
+    spy = _fetch_with_fallbacks("SPY")
+    qqq = _fetch_with_fallbacks("QQQ")
+    soxx = _fetch_with_fallbacks("SOXX")
+    vix = _fetch_with_fallbacks("^VIX")
 
     def _pct_change(ticker: str) -> float:
         try:
             import yfinance as yf
-
             hist = yf.Ticker(ticker).history(period="5d", auto_adjust=False)
             if len(hist) >= 2:
                 prev = float(hist["Close"].iloc[-2])
@@ -267,10 +332,7 @@ def fetch_market_snapshot() -> dict:
         warnings.append(f"SOXX down {soxx_chg:.1f}% — semiconductor sector risk")
 
     return {
-        "spy": spy,
-        "qqq": qqq,
-        "soxx": soxx,
-        "vix": vix,
+        "spy": spy, "qqq": qqq, "soxx": soxx, "vix": vix,
         "spy_change_pct": round(spy_chg, 2),
         "qqq_change_pct": round(qqq_chg, 2),
         "soxx_change_pct": round(soxx_chg, 2),
@@ -280,13 +342,31 @@ def fetch_market_snapshot() -> dict:
 
 
 def run_premarket_sanity_gate(candidates: list[dict]) -> tuple[list[dict], list[dict], dict]:
-    """Fetch fresh prices and apply the premarket sanity gate."""
+    """Parallel multi-provider price fetch with timeouts, then apply gate."""
     market_snapshot = fetch_market_snapshot()
-    current_prices = {
-        (candidate.get("ticker") or "").strip(): fetch_latest_price((candidate.get("ticker") or "").strip())
-        for candidate in candidates
-        if (candidate.get("ticker") or "").strip()
-    }
+
+    tickers = [
+        (c.get("ticker") or "").strip()
+        for c in candidates
+        if (c.get("ticker") or "").strip()
+    ]
+    current_prices: dict[str, float | None] = {t: None for t in tickers}
+
+    if tickers:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+            futures = {ex.submit(_fetch_with_fallbacks, t): t for t in tickers}
+            try:
+                for fut in concurrent.futures.as_completed(futures, timeout=_BATCH_TIMEOUT):
+                    t = futures[fut]
+                    try:
+                        current_prices[t] = fut.result()
+                    except Exception:
+                        current_prices[t] = None
+            except concurrent.futures.TimeoutError:
+                # Whole-batch wall clock exceeded; remaining tickers stay None.
+                # Sanity gate now treats None as HALF_SIZE, not block.
+                pass
+
     official, blocked = apply_premarket_sanity_decisions(
         candidates,
         current_prices=current_prices,
@@ -297,4 +377,8 @@ def run_premarket_sanity_gate(candidates: list[dict]) -> tuple[list[dict], list[
         "current_prices": current_prices,
         "official_count": len(official),
         "blocked_count": len(blocked),
+        "provider_unverified_count": sum(
+            1 for c in candidates
+            if (c.get("premarket_sanity") or {}).get("provider_unverified")
+        ),
     }
