@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MRX",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Barclays maintains bullish stance with raised price target, signaling increased confidence in Marex Group's valuation potential and likely driving positive momentum.",
-      "action_window": "intraday",
-      "headline": "Barclays Maintains Overweight on Marex Group, Raises Price Target to $60",
-      "url": "https://www.benzinga.com/news/26/05/52447983/barclays-maintains-overweight-on-marex-group-raises-price-target-to-60",
-      "source": "alpaca",
-      "added_at": "2026-05-11T13:42:48.010529+00:00"
-    },
-    {
-      "ticker": "BBIO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive Phase 3 trial data for lead drug candidate acoramidis showing consistent clinical benefit is a significant catalyst for a biotech company, likely to drive immediate price movement.",
-      "action_window": "intraday",
-      "headline": "BridgeBio Pharma Announces New Data From Its Phase 3 ATTRibute-CM Study At Heart Failure 2026 Meeting, With Data Further Demonstrating Acoramidis's Consistent And Clinically Meaningful Benefit",
-      "url": "https://www.benzinga.com/news/26/05/52447587/bridgebio-pharma-announces-new-data-from-its-phase-3-attribute-cm-study-at-heart-failure-2026-meetin",
-      "source": "alpaca",
-      "added_at": "2026-05-11T13:42:48.010542+00:00"
-    },
-    {
-      "ticker": "B",
-      "tradeable_score": 0.92,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Massive 180% earnings beat combined with substantial $3B share buyback announcement creates strong dual catalyst for immediate price appreciation.",
-      "action_window": "intraday",
-      "headline": "Gold Prices Are Booming, And Barrick Is Cashing In Big",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52447434/gold-prices-are-booming-and-barrick-is-cashing-in-big",
-      "source": "alpaca",
-      "added_at": "2026-05-11T13:42:48.010551+00:00"
-    },
-    {
-      "ticker": "BW",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Stock is actively trading higher on confirmed better-than-expected Q1 earnings results, representing a clear positive catalyst with immediate price action.",
-      "action_window": "intraday",
-      "headline": "Babcock & Wilcox Stock Gains Following Strong Q1 Results",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52447419/babcock-wilcox-stock-gains-following-strong-q1-results",
-      "source": "alpaca",
-      "added_at": "2026-05-11T13:42:48.010556+00:00"
-    },
-    {
-      "ticker": "ABAT",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant EPS miss of $0.18 (325% worse than expected) outweighs the revenue beat of 122%, indicating poor profitability despite growth.",
-      "action_window": "intraday",
-      "headline": "American Battery Tech Q3 EPS $(0.26) Misses $(0.08) Estimate, Sales $7.811M Beat $3.526M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52447408/american-battery-tech-q3-eps-0-26-misses-0-08-estimate-sales-7-811m-beat-3-526m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-11T13:42:48.010561+00:00"
-    },
-    {
       "ticker": "GM",
       "tradeable_score": 0.52,
       "sentiment": "bullish",
@@ -1783,6 +1723,42 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52556336/forum-markets-q1-eps-0-06-beats-0-22-estimate-sales-2-859m-beat-1-400m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-14T12:12:29.470189+00:00"
+    },
+    {
+      "ticker": "INVZ",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Worse-than-expected Q1 earnings with shares already diving creates immediate bearish trading opportunity with high conviction.",
+      "action_window": "intraday",
+      "headline": "Innoviz Posts Worse-Than-Expected Q1 Results, Shares Dive",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52566121/innoviz-posts-worse-than-expected-q1-results-shares-dive",
+      "source": "alpaca",
+      "added_at": "2026-05-14T15:05:46.108443+00:00"
+    },
+    {
+      "ticker": "AIAI",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "IPO security released for quotation after trading halt represents the beginning of public trading with immediate but uncertain price discovery ahead.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halt status updated at 11:00:00 AM ET: Quotation Resumption: IPO Security - Released for Quotation",
+      "url": "https://www.benzinga.com/quote/AIAI",
+      "source": "alpaca",
+      "added_at": "2026-05-14T15:05:46.108458+00:00"
+    },
+    {
+      "ticker": "F",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley analyst highlighting $10B valuation opportunity in energy storage represents meaningful positive catalyst driving ongoing rally, though impact is forward-looking rather than immediate.",
+      "action_window": "intraday",
+      "headline": "Ford Stock Extends Rally As Morgan Stanley Sees $10 Billion Energy Opportunity",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52565695/ford-stock-extends-rally-as-morgan-stanley-sees-10-billion-energy-opportunity",
+      "source": "alpaca",
+      "added_at": "2026-05-14T15:05:46.108470+00:00"
     }
   ]
 }
