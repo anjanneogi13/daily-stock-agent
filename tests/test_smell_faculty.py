@@ -7,9 +7,10 @@ from src.smell_faculty import (
 
 
 # ── earnings ──
-def test_earnings_tomorrow_blocks():
+def test_earnings_tomorrow_warns_critical_but_does_not_block():
+    """PR-A2 F1-2: suggestion-only — show CRITICAL warning, user decides."""
     s = smell_earnings_imminent({"days_to_earnings": 1}, {})
-    assert s and s.severity == "CRITICAL" and s.blocking
+    assert s and s.severity == "CRITICAL" and not s.blocking
 
 
 def test_earnings_in_5_days_warns_med():
@@ -27,9 +28,10 @@ def test_earnings_none_no_smell():
 
 
 # ── RSI ──
-def test_rsi_blowoff_blocks():
+def test_rsi_blowoff_warns_high_but_does_not_block():
+    """PR-A2 F1-3: NVDA/AVGO routinely run RSI 85-95. Warn, don't block."""
     s = smell_extreme_rsi({}, {"rsi": 88})
-    assert s and s.blocking
+    assert s and s.severity == "HIGH" and not s.blocking
 
 
 def test_rsi_overbought_warns():
@@ -89,10 +91,12 @@ def test_sniff_returns_sorted_by_severity():
 
 
 def test_has_blocking_smell_finds_blocker():
+    """PR-A2: earnings/rsi no longer block. Liquidity_critical still does."""
     pick = {"days_to_earnings": 1}
-    blocker = has_blocking_smell(pick, {})
+    sig = {"avg_volume": 50_000}  # liquidity_critical IS still blocking (F1-4 KEEP)
+    blocker = has_blocking_smell(pick, sig)
     assert blocker is not None
-    assert blocker.code == "earnings_tomorrow"
+    assert blocker.code == "liquidity_critical"
 
 
 def test_has_blocking_smell_returns_none_for_clean_pick():

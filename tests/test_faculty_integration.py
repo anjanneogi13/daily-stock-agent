@@ -81,10 +81,14 @@ def test_brain_composite_score_in_valid_range():
 # ═══════════════════════════════════════════════════════════════
 # FACULTY 3 — SMELL (smell_faculty)
 # ═══════════════════════════════════════════════════════════════
-def test_smell_blocks_earnings_tomorrow():
-    from src.smell_faculty import has_blocking_smell
-    blocker = has_blocking_smell({"days_to_earnings": 1}, {})
-    assert blocker is not None and blocker.code == "earnings_tomorrow"
+def test_smell_warns_but_does_not_block_earnings_tomorrow():
+    """PR-A2 F1-2: suggestion-only contract — show warning, don't block."""
+    from src.smell_faculty import sniff, has_blocking_smell
+    warnings = sniff({"days_to_earnings": 1}, {})
+    codes = [w.code for w in warnings]
+    assert "earnings_tomorrow" in codes
+    # No longer a hard blocker:
+    assert has_blocking_smell({"days_to_earnings": 1}, {}) is None
 
 
 def test_smell_passes_clean_pick():
@@ -120,13 +124,19 @@ def test_judgment_passes_clean_pick():
     assert ok, f"Judgment over-blocked clean pick: {reason}"
 
 
-def test_judgment_AND_smell_block_earnings_trap():
-    """Faculty 3+4 fusion — earnings tomorrow must die at the gate."""
+def test_judgment_AND_smell_warn_but_pass_earnings_trap():
+    """PR-A2 F1-2: suggestion-only — earnings warning surfaces, pick still flows.
+    User reads the warning and decides. Sanity gate only blocks for math errors."""
     from scripts.send_layman_daily import _is_pick_sane
+    from src.smell_faculty import sniff
     trap = {"entry": 100, "stop_loss": 97, "take_profit": 110,
             "days_to_earnings": 1}
-    ok, reason = _is_pick_sane(trap)
-    assert not ok and "SMELL" in reason
+    # Sanity gate (math) passes:
+    ok, _reason = _is_pick_sane(trap)
+    assert ok, "sanity gate should pass clean math even with earnings warning"
+    # But the warning is loudly present for the user:
+    codes = [w.code for w in sniff(trap, {})]
+    assert "earnings_tomorrow" in codes
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -289,14 +299,26 @@ def test_full_pipeline_end_to_end():
     assert "1.5x" in out or "Reward vs Risk" in out
 
 
-def test_pipeline_blocks_dangerous_pick():
-    """End-to-end danger check — earnings-tomorrow pick must not ship."""
+def test_pipeline_warns_but_ships_earnings_tomorrow_pick():
+    """PR-A2: suggestion-only — earnings tomorrow ships WITH a critical warning.
+    To still block dangerous picks, use math-broken or liquidity-broken inputs."""
     from scripts.send_layman_daily import _is_pick_sane
-    
-    pick = {
+    from src.smell_faculty import sniff
+
+    # Earnings-tomorrow now ships (warning visible, no block):
+    earnings_pick = {
         "ticker": "RISKY",
         "entry": 100, "stop_loss": 97, "take_profit": 110,
-        "days_to_earnings": 1,  # 🚨
+        "days_to_earnings": 1,
     }
-    ok, reason = _is_pick_sane(pick)
-    assert not ok and ("SMELL" in reason or "earnings" in reason.lower())
+    ok, _ = _is_pick_sane(earnings_pick)
+    assert ok, "earnings-tomorrow should ship with warning, not be blocked"
+    assert "earnings_tomorrow" in [w.code for w in sniff(earnings_pick, {})]
+
+    # But math-broken picks ARE still blocked at sanity gate:
+    broken_pick = {
+        "ticker": "BROKEN",
+        "entry": 100, "stop_loss": 110, "take_profit": 105,  # SL above entry
+    }
+    ok2, _ = _is_pick_sane(broken_pick)
+    assert not ok2, "math-broken picks must still be blocked"

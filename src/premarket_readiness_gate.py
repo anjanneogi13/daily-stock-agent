@@ -15,8 +15,8 @@ from __future__ import annotations
 from typing import Any
 
 
-DEFAULT_MIN_FETCH_COVERAGE = 0.25
-DEFAULT_MIN_FETCHED_COUNT = 25
+DEFAULT_MIN_FETCH_COVERAGE = 0.05  # PR-A2 F4-1: was 0.25, too strict on slow-yfinance mornings
+DEFAULT_MIN_FETCHED_COUNT = 15  # PR-A2 F4-1: was 25; we only need ~5 finalists
 
 
 def _safe_int(value: Any, default: int = 0) -> int:

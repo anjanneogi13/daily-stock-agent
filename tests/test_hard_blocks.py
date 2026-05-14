@@ -60,18 +60,22 @@ def test_block_sl_buffer_missing_stop_loss_fail_closed_when_entry_present():
     assert "missing stop_loss" in reason
 
 
-def test_get_recent_pick_dates_reads_most_recent_per_ticker(tmp_path, monkeypatch):
+def test_get_recent_pick_dates_only_returns_losing_picks(tmp_path, monkeypatch):
+    """PR-A2 F2-2b: cooldown only triggers on LOSING trades, not winners or open."""
     picks_log = tmp_path / "picks_log.csv"
     picks_log.write_text(
-        "pick_date,ticker\n"
-        "2026-05-01,AAPL\n"
-        "2026-05-03,AAPL\n"
-        "2026-05-02,MSFT\n"
+        "pick_date,ticker,evaluation_status\n"
+        "2026-05-01,AAPL,sl_hit\n"          # loss → counted
+        "2026-05-03,AAPL,tp_hit\n"          # win → NOT counted (latest AAPL row)
+        "2026-05-02,MSFT,sl_hit\n"          # loss → counted
+        "2026-05-04,NVDA,pending\n"         # open → NOT counted
+        "2026-05-05,GOOG,tp_hit\n"          # win → NOT counted
     )
     monkeypatch.setattr(hb, "PICKS_LOG_PATH", picks_log)
 
+    # Only AAPL+MSFT have LOSING rows. AAPL's most recent loss is 2026-05-01.
     assert hb._get_recent_pick_dates() == {
-        "AAPL": "2026-05-03",
+        "AAPL": "2026-05-01",
         "MSFT": "2026-05-02",
     }
 
