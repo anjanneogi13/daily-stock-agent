@@ -125,7 +125,9 @@ def fetch_universe_data(tickers: List[str], period: str = "6mo",
         for fut in as_completed(futs):
             t = futs[fut]
             df = fut.result()
-            if not df.empty and len(df) > 50:
+            # PR-A2 F9-1: was >50 which silently dropped IPOs/post-halt resumes.
+            # 20 days is enough for short-term technical signal.
+            if not df.empty and len(df) > 20:
                 results[t] = df
     print(f"[data] Fetched {len(results)}/{len(tickers)} tickers.")
     write_market_data_run_summary(universe_count=len(tickers), fetched_count=len(results))

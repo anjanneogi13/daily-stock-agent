@@ -22,14 +22,17 @@ def test_smell_warns_on_2_5_pct_drift():
     assert s.blocking is False
 
 
-def test_smell_blocks_on_5pct_plus_disagreement():
+def test_smell_warns_on_5pct_plus_disagreement():
+    """PR-A2 F1-1: yf↔finnhub disagreements >5% are NORMAL in premarket
+    (finnhub returns last regular close, yfinance has early premarket prints).
+    Now warns at HIGH severity instead of blocking."""
     pick = {"ticker": "NVDA", "entry": 200.0}
     with patch("src.finnhub_data.fetch_finnhub_quote") as mq:
         mq.return_value = {"current": 180.0, "source": "finnhub"}  # ~10%
         s = smell_stale_price(pick, {})
     assert s is not None
-    assert s.severity == "CRITICAL"
-    assert s.blocking is True
+    assert s.severity == "HIGH"
+    assert s.blocking is False
 
 
 def test_smell_silent_when_no_entry_price():
@@ -55,16 +58,17 @@ def test_stale_price_registered_in_all_smells():
     assert "smell_stale_price" in names
 
 
-def test_sniff_includes_stale_price_in_critical_block():
-    """End-to-end: sniff() picks up a 10% disagreement and blocks."""
+def test_sniff_includes_stale_price_warning_but_not_blocker():
+    """PR-A2 F1-1: stale_price now surfaces as a warning, not a hard block."""
     pick = {"ticker": "NVDA", "entry": 200.0}
     with patch("src.finnhub_data.fetch_finnhub_quote") as mq:
         mq.return_value = {"current": 180.0, "source": "finnhub"}
         warnings = sniff(pick, {})
     kinds = [w.code for w in warnings]
-    assert "stale_price" in kinds
+    assert "stale_price" in kinds, "warning must still surface"
     blockers = [w for w in warnings if w.blocking]
-    assert any(w.code == "stale_price" for w in blockers)
+    # No longer a blocker:
+    assert not any(w.code == "stale_price" for w in blockers)
 
 
 # ── is_valid_market_data ────────────────────────────────────────

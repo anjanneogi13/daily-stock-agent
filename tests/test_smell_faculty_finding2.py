@@ -17,12 +17,14 @@ from src.smell_faculty import (
 # ─── Each smell must work with the REAL pick shape (scores nested) ───
 
 def test_extreme_rsi_fires_from_scores_nested():
+    """PR-A2 F1-3: RSI blowoff is now HIGH warning, not blocking.
+    Detection from pick['scores']['rsi'] still works (Finding #2 contract)."""
     pick = {"ticker": "AAA", "scores": {"rsi": 86}}
     smell = smell_extreme_rsi(pick, {})
     assert smell is not None, "RSI 86 must trigger blowoff smell from pick['scores']['rsi']"
     assert smell.code == "rsi_blowoff"
-    assert smell.severity == "CRITICAL"
-    assert smell.blocking is True
+    assert smell.severity == "HIGH"
+    assert smell.blocking is False
 
 
 def test_extreme_rsi_overbought_from_scores():

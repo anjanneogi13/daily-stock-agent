@@ -60,18 +60,27 @@ def get_min_sl_pct(price: float) -> float:
 # ─── Ticker cooldown (BUG-4 fix, May 2 2026) ──────────────────────
 # Prevent same ticker from being picked repeatedly within N days.
 # Aligns with Pillar 4 (Feedback Loop): wait for outcome before re-picking.
-COOLDOWN_DAYS = 5
+COOLDOWN_DAYS = 3  # PR-A2 F2-2: was 5, too restrictive for daily-pick cadence
 PICKS_LOG_PATH = Path("data/picks_log.csv")
 
 
 def _get_recent_pick_dates() -> Dict[str, str]:
     """
-    Read picks_log.csv and return {ticker: most_recent_pick_date}.
+    Read picks_log.csv and return {ticker: most_recent_LOSING_pick_date}.
+
+    PR-A2 F2-2b: Only LOSING trades trigger cooldown. Winners and still-open
+    positions do NOT cool the ticker — the agent must be free to follow through
+    on momentum and to re-evaluate tickers it has not actually lost on.
+
     Returns empty dict on any failure (fail-safe).
     """
     recent = {}
     if not PICKS_LOG_PATH.exists():
         return recent
+    LOSING_STATUSES = {
+        "sl_hit", "expired_loss", "max_hold_loss",
+        "max_hold_exceeded_force_closed",  # treated as effective loss for safety
+    }
     try:
         import csv
         with open(PICKS_LOG_PATH, "r", encoding="utf-8") as f:
@@ -79,14 +88,17 @@ def _get_recent_pick_dates() -> Dict[str, str]:
             for row in reader:
                 ticker = (row.get("ticker") or "").strip().upper()
                 pick_date = (row.get("pick_date") or "").strip()
+                status = (row.get("evaluation_status") or "").strip().lower()
+                # PR-A2 F2-2b: skip non-losses
+                if status not in LOSING_STATUSES:
+                    continue
                 if ticker and pick_date:
-                    # Keep most recent date per ticker (rows are chronological)
                     if ticker not in recent or pick_date > recent[ticker]:
                         recent[ticker] = pick_date
     except Exception:
         pass
     return recent
-SECTOR_ETF_DROP_THRESHOLD = -2.0  # Sector ETF down ≥2% blocks all stocks in it
+SECTOR_ETF_DROP_THRESHOLD = -5.0  # PR-A2 F2-3: was -2%, killed mean-reversion plays. Block only on genuine sector crisis.
 
 # Sector → ETF mapping (for premarket sector check)
 SECTOR_ETF = {

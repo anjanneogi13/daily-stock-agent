@@ -44,9 +44,10 @@ def smell_earnings_imminent(pick: Dict, sig: Dict) -> Optional[Smell]:
     if d < 0:
         return None
     if d <= 1:
+        # PR-A2 F1-2: suggestion-only — show prominent warning, let user decide.
         return Smell("earnings_tomorrow", "CRITICAL",
-                     f"⚠ Earnings in {d} day — gap risk extreme. Consider waiting.",
-                     blocking=True)
+                     f"⚠ Earnings in {d} day — gap risk extreme. Consider waiting or small size.",
+                     blocking=False)
     if d <= 3:
         return Smell("earnings_imminent", "HIGH",
                      f"⚠ Earnings in {d} days — expect volatility. Use smaller size.")
@@ -67,9 +68,11 @@ def smell_extreme_rsi(pick: Dict, sig: Dict) -> Optional[Smell]:
     except (TypeError, ValueError):
         return None
     if r >= 85:
-        return Smell("rsi_blowoff", "CRITICAL",
-                     f"⚠ RSI {r:.0f} — extreme overbought, blowoff risk. Wait for pullback.",
-                     blocking=True)
+        # PR-A2 F1-3: agent SUGGESTS, user decides. Strong momentum names
+        # (NVDA, AVGO) regularly run RSI 85-95 for weeks. Warn loudly, don't block.
+        return Smell("rsi_blowoff", "HIGH",
+                     f"⚠ RSI {r:.0f} — extreme overbought, blowoff risk. Consider waiting for pullback.",
+                     blocking=False)
     if r >= 75:
         return Smell("rsi_overbought", "HIGH",
                      f"⚠ RSI {r:.0f} — overbought, may pull back before continuing.")
@@ -185,18 +188,20 @@ def smell_stale_price(pick: Dict, sig: Dict) -> Optional[Smell]:
     except Exception:
         return None
 
-    # Hard block: price disagreement >5% → likely bad data
+    # PR-A2 F1-1: provider disagreement is COMMON in premarket because finnhub
+    # returns last regular-session close while yfinance has early premarket prints.
+    # >5% disagreement is normal on volatile mornings — warn, do not block.
+    # Truly invalid price (None, negative, etc.) still blocks below.
     if not v["is_valid"]:
-        # Distinguish "primary invalid" from "disagreement"
         if v.get("disagreement_pct"):
             return Smell(
                 code="stale_price",
-                severity="CRITICAL",
-                blocking=True,
+                severity="HIGH",
+                blocking=False,
                 message=(
-                    f"Price disagreement {v['disagreement_pct']}% "
+                    f"Price drift {v['disagreement_pct']}% between providers "
                     f"(yfinance ${primary_price:.2f} vs finnhub "
-                    f"${v['second_price']:.2f}) — likely stale or wrong"
+                    f"${v['second_price']:.2f}) — common in premarket, verify before entry"
                 ),
             )
         else:

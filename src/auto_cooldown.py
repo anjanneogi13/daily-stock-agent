@@ -22,10 +22,19 @@ DEFAULT_COOL_OFF_DAYS      = 14
 
 
 def _consecutive_losses_by_ticker(closed: List[Dict]) -> Dict[str, int]:
-    """For each ticker, count trailing consecutive losses (most-recent end of journal)."""
+    """For each ticker, count trailing consecutive losses (most-recent end of journal).
+
+    PR-A2 F6-1: Synthetic losses from `max_hold_force_close` DO NOT count toward
+    cooldown — they are bookkeeping closures, not real signal failures. Without
+    this filter, the upcoming force-close mechanism could mass-cool 9+ tickers
+    on day one.
+    """
     # Group by ticker, sort each list by evaluated_on (or pick_date) ascending
     by_ticker: Dict[str, List[Dict]] = defaultdict(list)
     for r in closed:
+        # PR-A2 F6-1: skip synthetic force-close events
+        if r.get("exit_status") == "max_hold_force_close":
+            continue
         if r.get("outcome") in ("win", "loss"):
             by_ticker[r["ticker"]].append(r)
 
