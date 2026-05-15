@@ -170,7 +170,19 @@ def build_signals(pick: Dict) -> Dict[str, str]:
 # Append + outcome attachment
 # ═══════════════════════════════════════════════════════════════
 def log_pick(pick: Dict, regime: Optional[str] = None) -> None:
-    """Append a new pick row to the journal."""
+    """Append a new pick row to the journal.
+
+    PR-A4.5 (2026-05-15): atomic write hardening (audit SJ-33).
+    Previously: plain f.write() + implicit close. A crash mid-write produced
+    a partial JSON line that broke every subsequent reader (load_closed,
+    audit_journal_consistency, hypothesis_engine).
+
+    Now: build the full line in memory FIRST, then issue a single os.write()
+    of the complete bytes. POSIX guarantees atomic writes up to PIPE_BUF
+    (typically 4096 bytes); journal rows are well under that. Followed by
+    fsync so the write survives a power loss.
+    """
+    import os
     entry_pick = dict(pick)
     if regime and not entry_pick.get("regime"):
         entry_pick["regime"] = regime
@@ -184,8 +196,20 @@ def log_pick(pick: Dict, regime: Optional[str] = None) -> None:
         "actual_return_pct": None,
         "evaluated_on":      None,
     }
-    with JOURNAL.open("a") as f:
-        f.write(json.dumps(row) + "\n")
+    line_bytes = (json.dumps(row) + "\n").encode("utf-8")
+    if len(line_bytes) > 4000:
+        # Defensive: if a journal row ever exceeds PIPE_BUF safety margin,
+        # we cannot guarantee atomic append. Loudly fail rather than risk
+        # silent partial-line corruption of the entire learning journal.
+        raise ValueError(
+            f"signal_journal row too large for atomic append: {len(line_bytes)} bytes"
+        )
+    fd = os.open(str(JOURNAL), os.O_WRONLY | os.O_APPEND | os.O_CREAT, 0o644)
+    try:
+        os.write(fd, line_bytes)
+        os.fsync(fd)
+    finally:
+        os.close(fd)
 
 
 def attach_outcome(ticker: str, pick_date: str,
@@ -214,9 +238,20 @@ def attach_outcome(ticker: str, pick_date: str,
                 found = True
             rows.append(r)
     if found:
-        with JOURNAL.open("w") as f:
+        # PR-A4.5: atomic full-file rewrite via tmp+rename (audit SJ-13).
+        # Previously: opened JOURNAL "w" directly. A crash between truncate
+        # and final flush produced an empty or half-written journal —
+        # permanent loss of every prior signal record.
+        # Now: write to .tmp sibling, fsync, then os.replace which is
+        # guaranteed atomic on POSIX (and atomic on NTFS too).
+        import os
+        tmp = JOURNAL.with_suffix(JOURNAL.suffix + ".tmp")
+        with tmp.open("w") as f:
             for r in rows:
                 f.write(json.dumps(r) + "\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(str(tmp), str(JOURNAL))
     return found
 
 
