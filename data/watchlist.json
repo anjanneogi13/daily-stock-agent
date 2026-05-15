@@ -1343,15 +1343,16 @@
     },
     {
       "ticker": "AZ",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Significant $30M credit line approval provides concrete funding for production scaling and deployment, reducing financing risk and enabling growth execution for smart shopping cart technology.",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS more than double the expected loss (-$0.19 vs -$0.08) and revenue missing by 23% ($3.317M vs $4.329M), creating immediate selling pressure.",
       "action_window": "next_day",
-      "headline": "A2Z Cust2Mate Solutions Receives $30M Line Of Credit Approval From Israeli Bank To Support Production, Deployment Of Smart Shopping Carts",
-      "url": "https://www.benzinga.com/news/26/05/52576913/a2z-cust2mate-solutions-receives-30m-line-of-credit-approval-from-israeli-bank-to-support-production",
+      "headline": "A2Z Smart Techs Q1 EPS $(0.19) Misses $(0.08) Estimate, Sales $3.317M Miss $4.329M Estimate",
+      "url": "https://www.benzinga.com/quote/AZ",
       "source": "alpaca",
-      "added_at": "2026-05-14T19:18:07.175595+00:00"
+      "added_at": "2026-05-14T19:18:07.175595+00:00",
+      "updated_at": "2026-05-15T10:16:27.886871+00:00"
     },
     {
       "ticker": "WDRN",
@@ -1592,6 +1593,102 @@
       "url": "https://www.benzinga.com/quote/BTBT",
       "source": "alpaca",
       "added_at": "2026-05-14T23:29:33.640075+00:00"
+    },
+    {
+      "ticker": "SRG",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS declining 33% year-over-year and revenue collapsing 55% from $4.6M to $2.0M, indicating severe operational deterioration.",
+      "action_window": "intraday",
+      "headline": "Seritage Growth Props Q1 EPS $(0.56) Down From $(0.42) YoY, Sales $2.050M Down From $4.599M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52590168/seritage-growth-props-q1-eps-0-56-down-from-0-42-yoy-sales-2-050m-down-from-4-599m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886785+00:00"
+    },
+    {
+      "ticker": "AUUD",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "S-4 filing confirms definitive merger agreement with material corporate transformation including rebranding and new ticker, representing significant corporate action catalyst for AUUD shareholders.",
+      "action_window": "intraday",
+      "headline": "Auddia Files S-4 For Thramann Holdings Merger, Combined Company To Rebrand As McCarthy Finney And Trade As MCFN",
+      "url": "https://www.benzinga.com/quote/AUUD",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886801+00:00"
+    },
+    {
+      "ticker": "TNYA",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong Phase 1b/2 interim data showing 84% reduction in arrhythmia burden represents a significant clinical milestone for a biotech with potential to drive substantial upward price movement.",
+      "action_window": "intraday",
+      "headline": "Tenaya Therapeutics Reports Interim Phase 1b/2 TN-401 Data Showing Up To 84% Reduction In Arrhythmia Burden In PKP2-Associated ARVC Patients",
+      "url": "https://www.benzinga.com/quote/TNYA",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886811+00:00"
+    },
+    {
+      "ticker": "BWXT",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Deutsche Bank upgrade to Buy with substantial price target raise to $255 represents a strong positive catalyst from a major investment bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Deutsche Bank Upgrades BWX Technologies to Buy, Raises Price Target to $255",
+      "url": "https://www.benzinga.com/news/26/05/52590074/deutsche-bank-upgrades-bwx-technologies-to-buy-raises-price-target-to-255",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886821+00:00"
+    },
+    {
+      "ticker": "NYC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 earnings show significant revenue decline of 40% YoY ($12.3M to $7.3M) despite improved but still deeply negative EPS, indicating serious operational deterioration warranting immediate reaction.",
+      "action_window": "intraday",
+      "headline": "American Strategic Q1 EPS $(3.04) Up From $(3.39) YoY, Sales $7.348M Down From $12.308M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52590061/american-strategic-q1-eps-3-04-up-from-3-39-yoy-sales-7-348m-down-from-12-308m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886838+00:00"
+    },
+    {
+      "ticker": "AMAT",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Applied Materials beat Q2 earnings estimates, raised guidance, and achieved highest margins in 25 years driven by AI demand surge, representing a strong fundamental catalyst with positive sector implications.",
+      "action_window": "intraday",
+      "headline": "AI Demand Pushes Applied Materials To Highest Margins In 25 Years",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52589990/ai-demand-pushes-applied-materials-to-highest-margins-in-25-years",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886862+00:00"
+    },
+    {
+      "ticker": "SPRY",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q1 results with significant EPS miss (17% worse than estimate) offset by modest revenue beat (2% above estimate), creating uncertainty but immediate trading volatility.",
+      "action_window": "intraday",
+      "headline": "ARS Pharmaceuticals Q1 EPS $(0.61) Misses $(0.52) Estimate, Sales $22.681M Beat $22.230M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52590032/ars-pharmaceuticals-q1-eps-0-61-misses-0-52-estimate-sales-22-681m-beat-22-230m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886881+00:00"
+    },
+    {
+      "ticker": "MAURY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q4 earnings miss with EPS declining 7.4% YoY despite revenue growth of 3.8%, indicating margin compression and profitability concerns.",
+      "action_window": "intraday",
+      "headline": "Marui Group Q4 EPS $0.50 Down From $0.54 YoY, Sales $453.225M Up From $436.788M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52589983/marui-group-q4-eps-0-50-down-from-0-54-yoy-sales-453-225m-up-from-436-788m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-15T10:16:27.886889+00:00"
     }
   ]
 }
