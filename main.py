@@ -1783,6 +1783,29 @@ def run():
                 import traceback
                 rprint(f"[red]🚨 signal_journal FAILED for {_p.get('ticker','?')}: {_je}[/red]")
                 rprint(f"[red]{traceback.format_exc()}[/red]")
+                # PR-A4.5: quarantine the failed row so we have an audit
+                # trail (audit BUG-M107). Without this, journal failures
+                # were lost the moment the runner was destroyed. With this,
+                # scripts/recover_missing_journal_entries.py can replay
+                # them and we get a permanent record of what went wrong.
+                try:
+                    from pathlib import Path as _QP
+                    import json as _qj
+                    from datetime import datetime as _qdt
+                    _quarantine = _QP("data/signal_journal_failures.jsonl")
+                    _quarantine.parent.mkdir(parents=True, exist_ok=True)
+                    _qrow = {
+                        "failed_at_utc": _qdt.utcnow().isoformat() + "Z",
+                        "ticker":        _p.get("ticker"),
+                        "error":         str(_je),
+                        "traceback":     traceback.format_exc(),
+                        "pick_row":      _row,
+                    }
+                    with _quarantine.open("a") as _qf:
+                        _qf.write(_qj.dumps(_qrow, default=str) + "\n")
+                    rprint(f"[dim]   (quarantined to {_quarantine})[/dim]")
+                except Exception as _qe:
+                    rprint(f"[red]   ALSO failed to quarantine: {_qe}[/red]")
         if _journal_logged > 0:
             rprint(f"[green][journal] Logged {_journal_logged}/{len(top)} picks to signal_journal.jsonl[/green]")
         if _journal_errors > 0:

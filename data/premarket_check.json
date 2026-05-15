@@ -1,21 +1,24 @@
 {
   "date": "2026-05-15",
   "market": {
-    "spy_change_pct": 0.79,
-    "qqq_change_pct": 0.71,
-    "soxx_change_pct": 0.33,
-    "vix": 19.03,
-    "warnings": [],
-    "global_action": "normal"
+    "spy_change_pct": -1.17,
+    "qqq_change_pct": -1.69,
+    "soxx_change_pct": -4.26,
+    "vix": 18.67,
+    "warnings": [
+      "\u26a0\ufe0f SPY down -1.2% \u2014 caution",
+      "\u26a0\ufe0f Semiconductor sector (SOXX) down -4.3% \u2014 semis at risk"
+    ],
+    "global_action": "half"
   },
   "picks": [
     {
       "ticker": "AMAT",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 440.56,
-      "gap_pct": -0.0,
-      "actionable": true
+      "tag": "\ud83d\udeab SKIP TODAY",
+      "reason": "gapped -2.3%, only 0.2% to SL",
+      "current_price": 430.21,
+      "gap_pct": -2.35,
+      "actionable": false
     }
   ]
 }
