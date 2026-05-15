@@ -100,7 +100,9 @@ def test_validator_rejects_zero_volume():
 
 
 def test_validator_rejects_suspicious_high_price():
-    ok, _ = is_valid_market_data({"currentPrice": 500_000, "averageVolume": 1000})
+    # PR-A7 (audit DF-45): threshold raised from 100k to 1M to admit BRK.A (~$700k).
+    # Use 2M which is unambiguously suspicious.
+    ok, _ = is_valid_market_data({"currentPrice": 2_000_000, "averageVolume": 1000})
     assert ok is False
 
 

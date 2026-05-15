@@ -31,6 +31,9 @@ def test_fetch_info_uses_real_company_name(monkeypatch):
     fake_ticker.fast_info.market_cap = 2_000_000_000
     fake_ticker.info = {"longName": "Example Technologies Inc.", "shortName": "EX"}
 
+    # PR-A7 (audit DF-33): heavy t.info default is now "false". This test
+    # exercises the OPT-IN heavy path so company name reaches info["name"].
+    monkeypatch.setenv("DAILY_FETCH_YF_FULL_INFO", "true")
     monkeypatch.setattr(data_fetcher.yf, "Ticker", lambda *args, **kwargs: fake_ticker)
     monkeypatch.setattr(data_fetcher, "HAS_FINNHUB", False)
 

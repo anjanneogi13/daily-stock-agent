@@ -53,6 +53,7 @@ def _score_one(tk, df, cfg):
         # Phase 2A: News watchlist boost
         wl_boost = watchlist_score_boost(tk)
         if wl_boost != 0:
+            scores["composite_pre_watchlist"] = scores["composite"]  # PR-A7 (audit PS-49): snapshot pre-mutation
             scores["watchlist_boost"] = round(wl_boost, 3)
             scores["composite"] = max(0.0, min(1.0, scores["composite"] + wl_boost))
             scores["composite"] = round(scores["composite"], 4)
@@ -69,6 +70,7 @@ def _score_one(tk, df, cfg):
             if _pmatches:
                 scores["pattern_matches"] = ",".join(m.get("pattern","") for m in _pmatches)[:200]
             if _pmul_val != 1.0:
+                scores["composite_pre_pattern"] = scores["composite"]  # PR-A7 (audit PS-49): snapshot pre-mutation
                 scores["composite"] = max(0.0, min(1.0, round(scores["composite"] * _pmul_val, 4)))
         except Exception:
             scores["pattern_multiplier"] = 1.0
@@ -143,6 +145,7 @@ def _score_one(tk, df, cfg):
             scores["wisdom_kill"]     = bool(_wis.get("kill"))
             scores["wisdom_score_adj"] = _wis.get("score_adj", 0.0)
             # Tiny score tilt (capped ±0.05 in observe-mode)
+            scores["composite_pre_wisdom"] = scores["composite"]  # PR-A7 (audit PS-49): snapshot pre-mutation
             scores["composite"] = max(0.0, min(1.0,
                 scores["composite"] + _wis.get("score_adj", 0.0)))
             scores["composite"] = round(scores["composite"], 4)
@@ -157,6 +160,7 @@ def _score_one(tk, df, cfg):
             "info_short": {"name": info.get("name") or info.get("longName") or info.get("shortName") or "",
                            "sector": info.get("sector", "N/A")},
             "trade_type": ttype,
+            "signals": sig,  # PR-A7 (audit PS-48): was DROPPED — revives 5 dead smells in smell_faculty
         }
     except Exception as e:
         print(f"[score] {tk}: {type(e).__name__}: {str(e)[:80]}")

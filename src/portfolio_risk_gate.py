@@ -102,6 +102,9 @@ def load_open_positions_from_picks_log(path: Path = PICKS_LOG_PATH) -> list[dict
     risk gate for slot accounting.
     """
     if not path.exists():
+        # PR-A7 (audit PRG-21): was a SILENT fail-open. Now LOUD: operator
+        # sees that downstream slot/concentration math has no history input.
+        print(f"[portfolio_risk_gate] WARN: {path} missing — gate operating on empty history")
         return []
     rows: list[dict] = []
     try:
