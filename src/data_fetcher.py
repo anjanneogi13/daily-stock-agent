@@ -163,7 +163,9 @@ def fetch_info(ticker: str) -> dict:
         # useful presentation metadata, but it must not destabilize official
         # monitoring runs. Default remains lightweight; opt in only for small
         # debug/reporting contexts.
-        if os.getenv("DAILY_FETCH_YF_FULL_INFO", "false")  # PR-A7 (audit DF-33): match docstring "Default remains lightweight".strip().lower() == "true":
+        # PR-A7 (audit DF-33): default flipped from "true" to "false" to match
+        # the docstring promise "Default remains lightweight".
+        if os.getenv("DAILY_FETCH_YF_FULL_INFO", "false").strip().lower() == "true":
             try:
                 full_info = t.info or {}
                 long_name = full_info.get("longName") or full_info.get("shortName")
