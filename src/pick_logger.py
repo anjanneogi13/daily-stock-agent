@@ -9,7 +9,9 @@ from pathlib import Path
 from typing import List, Dict
 
 LOG_PATH = Path("data/picks_log.csv")
-LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+# PR-A6 (audit PL-7): mkdir moved from module-import time into
+# _ensure_header(). Importing pick_logger no longer creates
+# directories on disk as a side effect.
 
 FIELDS = [
     "pick_date", "pick_time", "ticker", "company", "tag", "trade_type", "watch_only", "watch_only_reason", "news_action_window",
@@ -72,9 +74,15 @@ def _migrate_header_if_needed():
 
 
 def _ensure_header():
+    # PR-A6 (audit PL-7): mkdir lives here now, not at module top.
+    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     if not LOG_PATH.exists() or LOG_PATH.stat().st_size == 0:
         with LOG_PATH.open("w", newline="") as f:
-            csv.DictWriter(f, fieldnames=FIELDS).writeheader()
+            # PR-A6 (audit PL-25): extrasaction="ignore" on first write
+            # too — was previously asymmetric with subsequent appends
+            # (line 98) and would crash on the first pick of a fresh
+            # deployment if any extra field were ever passed.
+            csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore").writeheader()
     else:
         _migrate_header_if_needed()
 
@@ -90,16 +98,34 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
     if LOG_PATH.exists():
         with LOG_PATH.open() as f:
             for row in csv.DictReader(f):
-                if row["pick_date"] == today:
-                    existing_today.add(row["ticker"])
+                # PR-A6 (audit PL-31): use .get() so a corrupted or
+                # mid-migration row missing pick_date does not crash
+                # the entire log_picks call.
+                if row.get("pick_date") == today:
+                    t = row.get("ticker")
+                    if t:
+                        existing_today.add(t)
 
     saved = 0
+    failed = 0  # PR-A6 (audit PL-33+49): count per-pick write failures
     with LOG_PATH.open("a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         for p in picks:
-            if p["ticker"] in existing_today:
+            # PR-A6 (audit PL-32): use .get() so a pick missing ticker
+            # is skipped gracefully rather than crashing the whole batch.
+            ptkr = p.get("ticker")
+            if not ptkr:
+                failed += 1
+                print(f"[pick_logger] SKIP: pick missing ticker (keys={list(p.keys())[:5]}...)")
                 continue
-            w.writerow({
+            if ptkr in existing_today:
+                continue
+            # PR-A6 (audit PL-33+49): per-pick try/except so ONE bad
+            # pick (None score, missing field, type error, etc.) does
+            # not kill the entire batch. Picks after the bad one used
+            # to be silently dropped.
+            try:
+                w.writerow({
                 "pick_date": today,
                 "pick_time": timestr,
                 "ticker": p.get("ticker"),
@@ -113,12 +139,17 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "official_artifact_id": p.get("official_artifact_id", ""),
                 "official_artifact_path": p.get("official_artifact_path", ""),
                 "official_contract_version": p.get("official_contract_version", ""),
-                "score": round(p.get("score", 0), 3),
+                # PR-A6 (audit PL-34): None-safe round. Composite is
+                # sometimes None (per audit PRG-12); round(None,3) raises.
+                "score": round(p.get("score") or 0, 3),
                 "multiplier": p.get("multiplier", 1.0),
                 "entry": p.get("entry"),
                 "stop_loss": p.get("stop_loss"),
                 "take_profit": p.get("take_profit"),
-                "risk_reward": p.get("risk_reward", 2.0),
+                # PR-A6 (audit PL-37): do NOT default risk_reward to
+                # 2.0. If pick did not specify R:R, log empty string —
+                # do not lie about what the pick actually decided.
+                "risk_reward": p.get("risk_reward", ""),
                 "qty": p.get("qty", 0),
                 "days_to_earnings": p.get("days_to_earnings", ""),
                 "regime": (regime or {}).get("regime") or "unknown",
@@ -170,9 +201,21 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "sector_close_at_exit": "",
                 "sector_return_pct": "",
                 "sector_alpha_pct": "",
-            })
-            saved += 1
-    skipped_dupes = len(picks) - saved
-    if skipped_dupes > 0:
-        print(f"[pick_logger] {saved} new, {skipped_dupes} skipped (already logged today)")
+                })
+                saved += 1
+            except Exception as _ple:
+                # PR-A6 (audit PL-33+49): catch + log, do NOT re-raise.
+                # File handle stays open so subsequent picks still write.
+                failed += 1
+                import traceback
+                print(
+                    f"[pick_logger] FAILED to write {ptkr!r}: {_ple}\n"
+                    f"{traceback.format_exc()}"
+                )
+    skipped_dupes = len(picks) - saved - failed
+    if skipped_dupes > 0 or failed > 0:
+        print(
+            f"[pick_logger] {saved} new, {skipped_dupes} skipped (already logged today)"
+            + (f", {failed} FAILED" if failed > 0 else "")
+        )
     return saved
