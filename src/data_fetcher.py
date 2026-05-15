@@ -143,7 +143,7 @@ def fetch_info(ticker: str) -> dict:
         "longName": None,
         "name": "",                     # what main.py reads (info_short.name)
         "currentPrice": None,
-        "averageVolume": 1_000_000, "sector": "N/A",
+        "averageVolume": None, "sector": "N/A",  # PR-A7 (audit DF-28): was 1_000_000 default → silent fail-open
         "marketCap": None, "trailingPE": None,
         "earningsQuarterlyGrowth": None, "profitMargins": None,
         "debtToEquity": None,
@@ -154,7 +154,7 @@ def fetch_info(ticker: str) -> dict:
         fast = t.fast_info
         info["currentPrice"] = getattr(fast, "last_price", None)
         info["regularMarketPrice"] = getattr(fast, "last_price", None)
-        info["averageVolume"] = getattr(fast, "ten_day_average_volume", None) or 1_000_000
+        info["averageVolume"] = getattr(fast, "ten_day_average_volume", None)  # PR-A7 (audit DF-28): no 1M fallback; preserve None
         info["marketCap"] = getattr(fast, "market_cap", None)
         # Fetch real company name only when explicitly enabled.
         #
@@ -163,7 +163,7 @@ def fetch_info(ticker: str) -> dict:
         # useful presentation metadata, but it must not destabilize official
         # monitoring runs. Default remains lightweight; opt in only for small
         # debug/reporting contexts.
-        if os.getenv("DAILY_FETCH_YF_FULL_INFO", "true").strip().lower() == "true":
+        if os.getenv("DAILY_FETCH_YF_FULL_INFO", "false")  # PR-A7 (audit DF-33): match docstring "Default remains lightweight".strip().lower() == "true":
             try:
                 full_info = t.info or {}
                 long_name = full_info.get("longName") or full_info.get("shortName")
@@ -218,10 +218,13 @@ def is_valid_market_data(info: dict) -> tuple[bool, str]:
         return False, f"currentPrice not numeric: {p!r}"
     if price <= 0:
         return False, f"currentPrice not positive: {price}"
-    if price > 100_000:
+    if price > 1_000_000  # PR-A7 (audit DF-45): was 100k which flagged BRK.A (~$700k):
         return False, f"currentPrice suspiciously high: ${price:,.0f}"
 
     vol = info.get("averageVolume")
+    # PR-A7 (audit DF-28): None volume now invalid with clear reason
+    if vol is None:
+        return False, "averageVolume missing (untradeable, was silently defaulted to 1M)"
     try:
         vol = float(vol or 0)
     except (TypeError, ValueError):

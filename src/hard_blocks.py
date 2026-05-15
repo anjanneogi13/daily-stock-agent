@@ -83,7 +83,7 @@ def _get_recent_pick_dates() -> Dict[str, str]:
     }
     try:
         import csv
-        with open(PICKS_LOG_PATH, "r", encoding="utf-8") as f:
+        with open(PICKS_LOG_PATH, "r", encoding="utf-8-sig") as f:  # PR-A7 (audit HB-12): handle BOM
             reader = csv.DictReader(f)
             for row in reader:
                 ticker = (row.get("ticker") or "").strip().upper()
@@ -116,10 +116,13 @@ SECTOR_ETF = {
     "Materials":              "XLB",
 }
 
+# PR-A7 (audit HB-29): real per-date cache (docstring previously lied about caching)
+_WEAK_SECTORS_CACHE: dict = {}
+
 # Tag-based ETF mapping (catches what yfinance sector misses)
 TAG_ETF = {
     "SEMI":  "SOXX",   # semiconductors
-    "AI":    "SOXX",   # AI plays often = semis
+    "AI":    "QQQ",    # PR-A7 (audit HB-22): was SOXX which wrongly blocked META/MSFT/GOOGL
     "BIOTECH": "XBI",
     "BANK":  "XLF",
     "OIL":   "XLE",
@@ -147,7 +150,12 @@ def get_weak_sectors() -> Dict[str, float]:
     down ≥ SECTOR_ETF_DROP_THRESHOLD.
     
     Cached to avoid repeated yfinance calls within a single run.
+    PR-A7 (audit HB-29): cache is now REAL (per-date in-process).
     """
+    from datetime import date as _d
+    _key = _d.today().isoformat()
+    if _key in _WEAK_SECTORS_CACHE:
+        return _WEAK_SECTORS_CACHE[_key]
     weak = {}
     
     # Check sector ETFs
@@ -162,6 +170,7 @@ def get_weak_sectors() -> Dict[str, float]:
         if chg <= SECTOR_ETF_DROP_THRESHOLD:
             weak[tag] = round(chg, 2)
     
+    _WEAK_SECTORS_CACHE[_key] = weak  # PR-A7 (audit HB-29)
     return weak
 
 
@@ -334,7 +343,7 @@ def apply_hard_blocks(picks: List[Dict],
                 "passed_count": len(passed),
                 "blocked": blocked,
             })
-            log_path.write_text(json.dumps(existing[-100:], indent=2))
+            log_path.write_text(json.dumps(existing[-1000:], indent=2))  # PR-A7 (audit HB-72): was 100 (~100d), now 1000 (~3yr)
         except Exception as e:
             print(f"[hard_blocks] Could not write audit log: {e}")
     
