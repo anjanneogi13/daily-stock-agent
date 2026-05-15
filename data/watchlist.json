@@ -1,56 +1,6 @@
 {
   "items": [
     {
-      "ticker": "UAA",
-      "tradeable_score": 0.88,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Under Armour slashed FY2027 EPS guidance to potentially negative range ($-0.04-$0.00) versus consensus estimate of $0.18, representing a massive ~100% miss indicating severe operational distress.",
-      "action_window": "intraday",
-      "headline": "CORRECTION: Under Armour Sees FY2027 GAAP EPS $(0.04)-$0.00 vs $0.18 Est",
-      "url": "https://www.benzinga.com/quote/UAA",
-      "source": "alpaca",
-      "added_at": "2026-05-12T17:33:15.025494+00:00",
-      "updated_at": "2026-05-12T17:33:15.025506+00:00"
-    },
-    {
-      "ticker": "AMBQ",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Stock already up 40% on Q1 earnings beat with bullish AI outlook represents a massive confirmed catalyst with immediate market reaction.",
-      "action_window": "next_day",
-      "headline": "Ambiq Micro Shares Soar 40% On Q1 Beat And Bullish AI Outlook",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52503819/ambiq-micro-shares-soar-40-on-q1-beat-and-bullish-ai-outlook",
-      "source": "alpaca",
-      "added_at": "2026-05-12T17:33:15.025519+00:00",
-      "updated_at": "2026-05-12T19:42:03.810547+00:00"
-    },
-    {
-      "ticker": "OWL",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Retail fundraising evaporation signals serious business model pressure for Blue Owl amid broader private credit market concerns, directly impacting revenue and growth prospects.",
-      "action_window": "intraday",
-      "headline": "'Blue Owl Retail Fundraising Evaporates Amid Private Credit Concerns' - Financial Times",
-      "url": "https://www.benzinga.com/news/26/05/52498976/blue-owl-retail-fundraising-evaporates-amid-private-credit-concerns-financial-times",
-      "source": "alpaca",
-      "added_at": "2026-05-12T17:33:15.025526+00:00"
-    },
-    {
-      "ticker": "NVO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strong clinical data on higher-dose Wegovy demonstrating enhanced efficacy supports competitive positioning in the high-growth obesity treatment market and potential for expanded market share.",
-      "action_window": "intraday",
-      "headline": "Novo Nordisk Presents New Wegovy Data Showing Strong Weight Loss, Fat Reduction",
-      "url": "https://www.benzinga.com/news/health-care/26/05/52498930/novo-nordisk-presents-new-wegovy-data-showing-strong-weight-loss-fat-reduction",
-      "source": "alpaca",
-      "added_at": "2026-05-12T17:33:15.025533+00:00"
-    },
-    {
       "ticker": "ETOR",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1555,6 +1505,54 @@
       "url": "https://www.benzinga.com/markets/earnings/26/05/52606365/trio-tech-gains-after-q3-results-highlight-ai-ev-chip-demand",
       "source": "alpaca",
       "added_at": "2026-05-15T16:49:39.919728+00:00"
+    },
+    {
+      "ticker": "KRYS",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "MHRA (UK regulatory) approval of Beremagene Geperpavec for dystrophic epidermolysis bullosa represents a major regulatory milestone and significant commercial catalyst for KRYS.",
+      "action_window": "intraday",
+      "headline": "MHRA Approves Beremagene Geperpavec For The Treatment Of Dystrophic Epidermolysis Bullosa",
+      "url": "https://www.benzinga.com/general/biotech/26/05/52610754/mhra-approves-beremagene-geperpavec-for-the-treatment-of-dystrophic-epidermolysis-bullosa",
+      "source": "alpaca",
+      "added_at": "2026-05-15T18:20:18.332492+00:00"
+    },
+    {
+      "ticker": "STNE",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Citigroup downgrade from Buy/Overweight to Neutral with price target reduction creates immediate selling pressure on STNE shares.",
+      "action_window": "intraday",
+      "headline": "Citigroup Downgrades StoneCo to Neutral, Lowers Price Target to $11",
+      "url": "https://www.benzinga.com/news/26/05/52609967/citigroup-downgrades-stoneco-to-neutral-lowers-price-target-to-11",
+      "source": "alpaca",
+      "added_at": "2026-05-15T18:20:18.332509+00:00"
+    },
+    {
+      "ticker": "VRT",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America maintains Buy rating while raising price target to $440, signaling increased confidence in Vertiv's valuation and prospects from a major bulge bracket firm.",
+      "action_window": "next_day",
+      "headline": "B of A Securities Maintains Buy on Vertiv Holdings, Raises Price Target to $440",
+      "url": "https://www.benzinga.com/news/26/05/52609933/b-of-a-securities-maintains-buy-on-vertiv-holdings-raises-price-target-to-440",
+      "source": "alpaca",
+      "added_at": "2026-05-15T18:20:18.332517+00:00"
+    },
+    {
+      "ticker": "CHRW",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Citigroup upgrade to Buy from a major bank typically drives institutional buying interest and positive price momentum in the near term.",
+      "action_window": "next_day",
+      "headline": "Citigroup Upgrades C.H. Robinson Worldwide to Buy, Maintains Price Target to $199",
+      "url": "https://www.benzinga.com/news/26/05/52609818/citigroup-upgrades-c-h-robinson-worldwide-to-buy-maintains-price-target-to-199",
+      "source": "alpaca",
+      "added_at": "2026-05-15T18:20:18.332524+00:00"
     }
   ]
 }
