@@ -1,21 +1,21 @@
 {
   "date": "2026-05-15",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
+    "spy_change_pct": 0.79,
+    "qqq_change_pct": 0.71,
+    "soxx_change_pct": 0.33,
+    "vix": 19.03,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
       "ticker": "AMAT",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 440.56,
+      "gap_pct": -0.0,
+      "actionable": true
     }
   ]
 }

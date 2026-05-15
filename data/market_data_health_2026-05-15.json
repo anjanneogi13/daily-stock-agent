@@ -2,10 +2,10 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1738,
+      "attempts": 1750,
       "empty": 0,
       "errors": 104,
-      "successes": 1634
+      "successes": 1646
     },
     "monster_info": {
       "attempts": 825,
@@ -14,10 +14,10 @@
       "successes": 733
     },
     "ohlcv": {
-      "attempts": 1780,
+      "attempts": 1784,
       "empty": 24,
       "errors": 0,
-      "successes": 1756
+      "successes": 1760
     }
   },
   "date": "2026-05-15",
@@ -47,7 +47,7 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 4331,
+      "attempts": 4347,
       "empty": 12,
       "errors": 196,
       "failure_types": {
@@ -66,7 +66,7 @@
       "not_found": 0,
       "provider_error": 0,
       "rate_limited": 196,
-      "successes": 4123,
+      "successes": 4139,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "DDS"
     }
   ],
-  "timestamp_utc": "2026-05-15T12:56:27Z"
+  "timestamp_utc": "2026-05-15T13:22:38Z"
 }
