@@ -1,0 +1,113 @@
+{
+  "artifact": "daily_picks_candidate_rejections",
+  "date": "2026-05-15",
+  "diagnostics": {
+    "artifact_summary": {
+      "artifact": "premarket_official_pick_summary",
+      "artifact_bundle_name": "official-decision-artifacts-25916837093",
+      "artifacts": [],
+      "candidate_diagnostics_available": true,
+      "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/70ca8f8a54d40414fdb9730244f5de19ec8a8824",
+      "contract_version": "premarket_decision_contract_v1",
+      "date": "2026-05-15",
+      "live_trading_enabled": false,
+      "official_pick_count": 0,
+      "paper_trading_enabled": false,
+      "pipeline": {
+        "capped_count": 2,
+        "data_readiness_passed": true,
+        "data_readiness_status": "ready",
+        "fetched_count": 576,
+        "filtered_count": 30,
+        "final_pick_count": 1,
+        "hard_blocked_count": 1,
+        "missing_data_blocked_count": 0,
+        "portfolio_risk_blocked_count": 0,
+        "post_hard_block_pick_count": 1,
+        "post_missing_data_pick_count": 1,
+        "post_portfolio_risk_pick_count": 1,
+        "post_premarket_sanity_pick_count": 1,
+        "pre_hard_block_pick_count": 2,
+        "pre_missing_data_pick_count": 1,
+        "pre_portfolio_risk_pick_count": 1,
+        "pre_premarket_sanity_pick_count": 1,
+        "premarket_sanity_blocked_count": 0,
+        "scored_count": 273,
+        "scorer_workers": 4,
+        "universe_count": 583
+      },
+      "requested_pick_count": 1,
+      "strategy_lane": "premarket_official_daily_pick",
+      "timestamp_et": "2026-05-15T08:09:53-04:00",
+      "validation_errors": {
+        "AMAT": [
+          "missing required field: company"
+        ]
+      },
+      "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/25916837093"
+    },
+    "artifact_validation_errors": {
+      "AMAT": [
+        "missing required field: company"
+      ]
+    },
+    "selected_picks": [
+      {
+        "company": "",
+        "day_score": 0.99,
+        "days_to_earnings": null,
+        "entry": 440.56,
+        "news_action_window": "intraday",
+        "news_boost": 0.1,
+        "risk_reward": 1.67,
+        "score": 0.973,
+        "sector": "N/A",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 429.35,
+        "take_profit": 459.24,
+        "ticker": "AMAT",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      }
+    ]
+  },
+  "live_trading_enabled": false,
+  "mode": "monitoring_only",
+  "official_premarket_pick": false,
+  "paper_trading_enabled": false,
+  "pipeline": {
+    "capped_count": 2,
+    "data_readiness_passed": true,
+    "data_readiness_status": "ready",
+    "fetched_count": 576,
+    "filtered_count": 30,
+    "final_pick_count": 1,
+    "hard_blocked_count": 1,
+    "missing_data_blocked_count": 0,
+    "official_pick_artifact_validation_errors": {
+      "AMAT": [
+        "missing required field: company"
+      ]
+    },
+    "portfolio_risk_blocked_count": 0,
+    "post_hard_block_pick_count": 1,
+    "post_missing_data_pick_count": 1,
+    "post_portfolio_risk_pick_count": 1,
+    "post_premarket_sanity_pick_count": 1,
+    "pre_hard_block_pick_count": 2,
+    "pre_missing_data_pick_count": 1,
+    "pre_portfolio_risk_pick_count": 1,
+    "pre_premarket_sanity_pick_count": 1,
+    "premarket_sanity_blocked_count": 0,
+    "scored_count": 273,
+    "scorer_workers": 4,
+    "universe_count": 583
+  },
+  "primary_no_pick_cause": "PICKS_AVAILABLE",
+  "ready_for_paper_trading": false,
+  "secondary_causes": [
+    "YFINANCE_PROVIDER_DEGRADED"
+  ],
+  "timestamp_utc": "2026-05-15T12:09:53Z"
+}

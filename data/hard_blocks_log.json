@@ -1,0 +1,15 @@
+[
+  {
+    "timestamp": "2026-05-15 12:09:53",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "TNYA",
+        "reason": "penny stock ($0.94 < $5.0)",
+        "block_type": "penny_stock"
+      }
+    ]
+  }
+]
