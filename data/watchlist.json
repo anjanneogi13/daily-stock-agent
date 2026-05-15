@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ETOR",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "eToro beat Q1 estimates on strong commodities trading growth, though mixed with weak crypto volumes and forward-looking CEO optimism adds moderate positive catalyst.",
-      "action_window": "intraday",
-      "headline": "Gold, Oil Saved eToro's Quarter, But CEO Yoni Assia Says Crypto All-Time Highs Are Still To Come In 2026",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/05/52503791/gold-oil-saved-etoros-quarter-but-ceo-yoni-assia-says-crypto-all-time-highs-are-still-to-come-in-2026",
-      "source": "alpaca",
-      "added_at": "2026-05-12T19:42:03.810560+00:00"
-    },
-    {
-      "ticker": "SOXL",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Sharp sector-wide semiconductor selloff driven by major memory chip manufacturers with significant intraday momentum reversal affecting leveraged ETFs.",
-      "action_window": "intraday",
-      "headline": "SOXL Tumbles As Micron, SanDisk Drag Semis Lower; SOXS Spikes On Memory Shockwave",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/05/52503039/soxl-tumbles-as-micron-sandisk-drag-semis-lower-soxs-spikes-on-memory-shockwave",
-      "source": "alpaca",
-      "added_at": "2026-05-12T19:42:03.810572+00:00"
-    },
-    {
-      "ticker": "LCID",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Revenue miss combined with weak industry demand creates near-term pressure, though 2027 pivot mention provides some offset to pure downside momentum.",
-      "action_window": "intraday",
-      "headline": "Lucid Stock Struggles As Revenue Miss Overshadows 2027 Pivot",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52502799/lucid-stock-struggles-as-revenue-miss-overshadows-2027-pivot",
-      "source": "alpaca",
-      "added_at": "2026-05-12T19:42:03.810581+00:00"
-    },
-    {
-      "ticker": "AFRM",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership with Google integrating BNPL into Search and Gemini represents significant distribution expansion and validates AFRM's position in AI-driven commerce.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Affirm Stock Today?",
-      "url": "https://www.benzinga.com/markets/equities/26/05/52502723/whats-going-on-with-affirm-stock-today",
-      "source": "alpaca",
-      "added_at": "2026-05-12T19:42:03.810588+00:00"
-    },
-    {
       "ticker": "PWCDF",
       "tradeable_score": 0.55,
       "sentiment": "neutral",
@@ -1553,6 +1505,54 @@
       "url": "https://www.benzinga.com/news/26/05/52609818/citigroup-upgrades-c-h-robinson-worldwide-to-buy-maintains-price-target-to-199",
       "source": "alpaca",
       "added_at": "2026-05-15T18:20:18.332524+00:00"
+    },
+    {
+      "ticker": "SOC",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Legal challenge dismissal removes regulatory overhang and clears path for Sable Pipeline operations, reducing project risk and potential delays.",
+      "action_window": "next_day",
+      "headline": "Challenge to Sable Pipeline in California Dismissed",
+      "url": "https://www.benzinga.com/news/26/05/52614098/challenge-to-sable-pipeline-in-california-dismissed",
+      "source": "alpaca",
+      "added_at": "2026-05-15T20:00:18.726161+00:00"
+    },
+    {
+      "ticker": "CLRB",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Initiation of coverage with Buy rating and $10 price target by Ladenburg Thalmann provides positive sentiment but from a smaller regional firm with moderate impact potential.",
+      "action_window": "next_day",
+      "headline": "Ladenburg Thalmann Assumes Cellectar Biosciences at Buy, Announces Price Target of $10",
+      "url": "https://www.benzinga.com/news/26/05/52613292/ladenburg-thalmann-assumes-cellectar-biosciences-at-buy-announces-price-target-of-10",
+      "source": "alpaca",
+      "added_at": "2026-05-15T20:00:18.726177+00:00"
+    },
+    {
+      "ticker": "MKZR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q3 EPS loss improved significantly by 79% YoY from $(4.68) to $(0.98) while revenue grew 27% YoY, indicating strong operational improvement despite remaining unprofitable.",
+      "action_window": "next_day",
+      "headline": "Mackenzie Realty Capital Q3 EPS $(0.98) Up From $(4.68) YoY, Sales $5.442M Up From $4.274M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52613236/mackenzie-realty-capital-q3-eps-0-98-up-from-4-68-yoy-sales-5-442m-up-from-4-274m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-15T20:00:18.726187+00:00"
+    },
+    {
+      "ticker": "HRL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Major market access expansion for US beef exports to China involving 425 plants represents significant revenue opportunity for beef producers, though impact diffuses across multiple companies and broader trade relations.",
+      "action_window": "next_day",
+      "headline": "'China Allows Exports for 425 US Beef Plants, Trade Group Says' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/05/52612930/china-allows-exports-for-425-us-beef-plants-trade-group-says-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-05-15T20:00:18.726197+00:00"
     }
   ]
 }
