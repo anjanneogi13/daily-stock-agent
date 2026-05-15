@@ -38,11 +38,31 @@ def test_fetch_info_skips_heavy_yfinance_info_when_disabled(monkeypatch):
     assert info["name"] == ""
 
 
-def test_fetch_info_heavy_yfinance_info_enabled_by_default_contract(monkeypatch):
+def test_fetch_info_heavy_yfinance_info_disabled_by_default_contract(monkeypatch):
+    """PR-A7 (audit DF-33): default is now 'false' to match the docstring
+    promise 'Default remains lightweight'. With env unset, t.info must NOT
+    be touched, and company name fields stay empty/None."""
     import src.data_fetcher as df
 
     fake = FakeTicker()
     monkeypatch.delenv("DAILY_FETCH_YF_FULL_INFO", raising=False)
+    monkeypatch.setattr(df.yf, "Ticker", lambda ticker, session=None: fake)
+    monkeypatch.setattr(df, "SESSION", None)
+    monkeypatch.setattr(df, "HAS_FINNHUB", False)
+
+    info = df.fetch_info("EXAMPLE")
+
+    assert fake.info_access_count == 0
+    assert info["name"] == ""
+    assert info["longName"] is None
+
+
+def test_fetch_info_heavy_yfinance_info_when_env_true(monkeypatch):
+    """Coverage for the opt-in heavy path: env=true → t.info IS read."""
+    import src.data_fetcher as df
+
+    fake = FakeTicker()
+    monkeypatch.setenv("DAILY_FETCH_YF_FULL_INFO", "true")
     monkeypatch.setattr(df.yf, "Ticker", lambda ticker, session=None: fake)
     monkeypatch.setattr(df, "SESSION", None)
     monkeypatch.setattr(df, "HAS_FINNHUB", False)
