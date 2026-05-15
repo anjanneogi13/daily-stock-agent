@@ -116,6 +116,7 @@ OFFICIAL_NO_PICK_ALLOWED_PRIMARY_CAUSES = {
     "NO_PICK_RISK_GATE_BLOCKED_ALL",
     "NO_PICK_RUNTIME_FAILURE",
     "NO_PICK_UNKNOWN_POST_FILTER_GATING",
+    "NO_PICK_OFFICIAL_PICK_ARTIFACT_VALIDATION_FAILED",  # PR-A2.6 BUG-B: when we DID generate picks but artifact validator rejected them (e.g. missing metadata)
 }
 
 SAFETY_FLAGS = (

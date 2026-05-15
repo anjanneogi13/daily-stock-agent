@@ -202,7 +202,7 @@ def build_official_pick_artifact(
         "artifact_filename": artifact_filename,
         "artifact_path": str(Path("data") / artifact_filename),
         "ticker": pick.get("ticker"),
-        "company": info.get("name") or pick.get("company") or "",
+        "company": info.get("name") or pick.get("company") or (str(pick.get("ticker") or "").strip().upper() or "UNKNOWN"),  # PR-A2.6 BUG-A: fall back to ticker so missing company name (e.g. yfinance rate-limited) does NOT silently block today's pick
         "strategy_lane": STRATEGY_LANE,
         "contract_version": CONTRACT_VERSION,
         "strategy_version": STRATEGY_VERSION,
