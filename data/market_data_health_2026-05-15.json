@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 576,
+      "attempts": 1154,
       "empty": 0,
-      "errors": 31,
-      "successes": 545
+      "errors": 71,
+      "successes": 1083
     },
     "monster_info": {
-      "attempts": 273,
+      "attempts": 549,
       "empty": 0,
-      "errors": 25,
-      "successes": 248
+      "errors": 60,
+      "successes": 489
     },
     "ohlcv": {
-      "attempts": 592,
-      "empty": 8,
+      "attempts": 1185,
+      "empty": 16,
       "errors": 0,
-      "successes": 584
+      "successes": 1169
     }
   },
   "date": "2026-05-15",
   "providers": {
     "stooq": {
-      "attempts": 4,
-      "empty": 4,
+      "attempts": 8,
+      "empty": 8,
       "errors": 0,
       "failure_types": {
-        "empty_response": 4,
+        "empty_response": 8,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,17 +47,17 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1437,
-      "empty": 4,
-      "errors": 56,
+      "attempts": 2880,
+      "empty": 8,
+      "errors": 131,
       "failure_types": {
-        "empty_response": 4,
+        "empty_response": 8,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 56,
+        "rate_limited": 131,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,17 +65,17 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 56,
-      "successes": 1377,
+      "rate_limited": 131,
+      "successes": 2741,
       "timeout": 0,
       "unauthorized": 0
     }
   },
   "run": {
-    "fetched_count": 576,
-    "final_pick_count": 1,
-    "scored_count": 273,
-    "universe_count": 583
+    "fetched_count": 578,
+    "final_pick_count": 2,
+    "scored_count": 276,
+    "universe_count": 584
   },
   "samples": [
     {
@@ -349,5 +349,5 @@
       "ticker": "DDS"
     }
   ],
-  "timestamp_utc": "2026-05-15T12:09:53Z"
+  "timestamp_utc": "2026-05-15T12:39:47Z"
 }
