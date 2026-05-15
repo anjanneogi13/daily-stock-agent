@@ -220,7 +220,8 @@ def is_valid_market_data(info: dict) -> tuple[bool, str]:
         return False, f"currentPrice not numeric: {p!r}"
     if price <= 0:
         return False, f"currentPrice not positive: {price}"
-    if price > 1_000_000  # PR-A7 (audit DF-45): was 100k which flagged BRK.A (~$700k):
+    # PR-A7 (audit DF-45): was 100k which flagged BRK.A (~$700k)
+    if price > 1_000_000:
         return False, f"currentPrice suspiciously high: ${price:,.0f}"
 
     vol = info.get("averageVolume")
