@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CE",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Analyst upgrade from bearish to bullish with raised price target represents meaningful positive catalyst for Celanese and two other stocks.",
-      "action_window": "intraday",
-      "headline": "This Celanese Analyst Turns Bullish; Here Are Top 3 Upgrades For Tuesday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52492489/this-celanese-analyst-turns-bullish-here-are-top-3-upgrades-for-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-05-12T15:20:45.985723+00:00"
-    },
-    {
-      "ticker": "BL",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Bank of America Securities reinstating an Underperform rating with a $26 price target is a meaningful negative catalyst from a major bank that typically drives immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "B of A Securities Reinstates Underperform on BlackLine, Announces $26 Price Target",
-      "url": "https://www.benzinga.com/news/26/05/52492470/b-of-a-securities-reinstates-underperform-on-blackline-announces-26-price-target",
-      "source": "alpaca",
-      "added_at": "2026-05-12T15:20:45.985736+00:00"
-    },
-    {
-      "ticker": "XENE",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive stance with significant price target increase, indicating continued confidence and upward price momentum potential for a biotech stock.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on Xenon Pharmaceuticals, Raises Price Target to $80",
-      "url": "https://www.benzinga.com/news/26/05/52492443/jp-morgan-maintains-overweight-on-xenon-pharmaceuticals-raises-price-target-to-80",
-      "source": "alpaca",
-      "added_at": "2026-05-12T15:20:45.985744+00:00"
-    },
-    {
-      "ticker": "VIST",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive rating while raising price target, indicating incremental bullish catalyst but not a rating change from negative to positive.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on Vista Energy, Raises Price Target to $93",
-      "url": "https://www.benzinga.com/news/26/05/52492341/jp-morgan-maintains-overweight-on-vista-energy-raises-price-target-to-93",
-      "source": "alpaca",
-      "added_at": "2026-05-12T15:20:45.985750+00:00"
-    },
-    {
       "ticker": "UAA",
       "tradeable_score": 0.88,
       "sentiment": "bearish",
@@ -1567,6 +1519,42 @@
       "url": "https://www.benzinga.com/quote/IDACU",
       "source": "alpaca",
       "added_at": "2026-05-15T14:46:40.735248+00:00"
+    },
+    {
+      "ticker": "ERNA",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Circuit breaker halt with 40% gain indicates significant positive catalyst for biotech, though specific catalyst not disclosed in headline requiring caution on entry timing.",
+      "action_window": "intraday",
+      "headline": "Ernexa Therapeutics Shares Halted On Circuit Breaker To The Upside, Stock Now Up 39.96%",
+      "url": "https://www.benzinga.com/quote/ERNA",
+      "source": "alpaca",
+      "added_at": "2026-05-15T16:49:39.919698+00:00"
+    },
+    {
+      "ticker": "DXCM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Activist investor Elliott Investment Management's engagement resulting in board expansion and committee changes typically signals improved governance and potential operational enhancements, creating positive near-term momentum.",
+      "action_window": "next_day",
+      "headline": "Reported May 14, 2026: DexCom To Add Two Independent Directors And Expand Operations And Innovation Committee Following Constructive Engagement With Elliott Investment Management",
+      "url": "https://www.benzinga.com/news/26/05/52606498/reported-may-14-2026-dexcom-to-add-two-independent-directors-and-expand-operations-and-innovation-co",
+      "source": "alpaca",
+      "added_at": "2026-05-15T16:49:39.919718+00:00"
+    },
+    {
+      "ticker": "TRT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q3 earnings beat driven by secular growth trends in AI and EV chip testing with immediate positive price action confirming market reaction.",
+      "action_window": "intraday",
+      "headline": "Trio-Tech Gains After Q3 Results Highlight AI, EV Chip Demand",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52606365/trio-tech-gains-after-q3-results-highlight-ai-ev-chip-demand",
+      "source": "alpaca",
+      "added_at": "2026-05-15T16:49:39.919728+00:00"
     }
   ]
 }
