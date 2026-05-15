@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-05",
+  "date": "2026-05-15",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -10,18 +10,12 @@
   },
   "picks": [
     {
-      "ticker": "EXPD",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "could not verify price",
+      "ticker": "AMAT",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
-      "gap_pct": null
-    },
-    {
-      "ticker": "GILT",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "could not verify price",
-      "current_price": null,
-      "gap_pct": null
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }

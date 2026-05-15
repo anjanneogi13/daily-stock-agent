@@ -2,56 +2,312 @@
   "artifact": "daily_picks_candidate_diagnostics",
   "date": "2026-05-15",
   "diagnostics": {
-    "artifact_summary": {
-      "artifact": "premarket_official_pick_summary",
-      "artifact_bundle_name": "official-decision-artifacts-25918052124",
-      "artifacts": [],
-      "candidate_diagnostics_available": true,
-      "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/c7069dc7b3a14276489e6a971fc6bf0b676f4a87",
-      "contract_version": "premarket_decision_contract_v1",
-      "date": "2026-05-15",
-      "live_trading_enabled": false,
-      "official_pick_count": 0,
-      "paper_trading_enabled": false,
-      "pipeline": {
-        "capped_count": 2,
-        "data_readiness_passed": true,
-        "data_readiness_status": "ready",
-        "fetched_count": 578,
-        "filtered_count": 30,
-        "final_pick_count": 1,
-        "hard_blocked_count": 0,
-        "missing_data_blocked_count": 0,
-        "portfolio_risk_blocked_count": 1,
-        "post_hard_block_pick_count": 2,
-        "post_missing_data_pick_count": 1,
-        "post_portfolio_risk_pick_count": 1,
-        "post_premarket_sanity_pick_count": 2,
-        "pre_hard_block_pick_count": 2,
-        "pre_missing_data_pick_count": 1,
-        "pre_portfolio_risk_pick_count": 2,
-        "pre_premarket_sanity_pick_count": 2,
-        "premarket_sanity_blocked_count": 0,
-        "scored_count": 276,
-        "scorer_workers": 4,
-        "universe_count": 584
+    "diagnostics_available": true,
+    "extra": {
+      "missing_data_summary": {
+        "allowed_count": 1,
+        "blocked_count": 0,
+        "critical_fields": [
+          "ticker",
+          "score",
+          "trade_type",
+          "entry",
+          "stop_loss",
+          "take_profit",
+          "risk_reward",
+          "quantity"
+        ],
+        "input_count": 1
       },
-      "requested_pick_count": 1,
-      "strategy_lane": "premarket_official_daily_pick",
-      "timestamp_et": "2026-05-15T08:39:47-04:00",
-      "validation_errors": {
-        "AMAT": [
-          "missing required field: company"
-        ]
+      "portfolio_risk_summary": {
+        "allowed_count": 1,
+        "available_slots": null,
+        "blocked_count": 1,
+        "final_sector_counts": {
+          "N/A": 1
+        },
+        "final_tag_counts": {
+          "SEMI": 1
+        },
+        "input_count": 2,
+        "max_new_picks_per_day": 5,
+        "open_position_count": null,
+        "risk_config": {
+          "account_size": 10000.0,
+          "max_new_picks_per_day": 5,
+          "max_per_sector": 1,
+          "max_per_tag": 1,
+          "max_positions": 5,
+          "min_risk_reward": 1.0,
+          "risk_per_trade_pct": 1.0
+        },
+        "today_sector_counts": {
+          "N/A": 1
+        },
+        "today_tag_counts": {
+          "SEMI": 1
+        }
       },
-      "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/25918052124"
+      "pre_missing_data_candidates": [
+        {
+          "company": "",
+          "day_score": 0.99,
+          "days_to_earnings": null,
+          "entry": 440.56,
+          "news_action_window": "intraday",
+          "news_boost": 0.1,
+          "risk_reward": 1.67,
+          "score": 0.947,
+          "sector": "N/A",
+          "sector_tag": "SEMI / AI",
+          "stop_loss": 429.35,
+          "take_profit": 459.24,
+          "ticker": "AMAT",
+          "trade_type": "day",
+          "watch_only": false,
+          "watch_only_reason": ""
+        }
+      ],
+      "pre_portfolio_risk_candidates": [
+        {
+          "company": "",
+          "day_score": 0.99,
+          "days_to_earnings": null,
+          "entry": 440.56,
+          "news_action_window": "intraday",
+          "news_boost": 0.1,
+          "risk_reward": 1.67,
+          "score": 0.947,
+          "sector": "N/A",
+          "sector_tag": "SEMI / AI",
+          "stop_loss": 429.35,
+          "take_profit": 459.24,
+          "ticker": "AMAT",
+          "trade_type": "day",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        {
+          "company": "",
+          "day_score": 0.715,
+          "days_to_earnings": null,
+          "entry": 29.68,
+          "news_action_window": null,
+          "news_boost": null,
+          "risk_reward": 1.67,
+          "score": 0.866,
+          "sector": "N/A",
+          "sector_tag": null,
+          "stop_loss": 28.46,
+          "take_profit": 31.72,
+          "ticker": "URGN",
+          "trade_type": "swing",
+          "watch_only": false,
+          "watch_only_reason": ""
+        }
+      ],
+      "premarket_sanity_summary": {
+        "blocked_count": 0,
+        "current_prices": {
+          "AMAT": null,
+          "URGN": null
+        },
+        "market_snapshot": {
+          "global_action": "normal",
+          "qqq": null,
+          "qqq_change_pct": 0.0,
+          "soxx": null,
+          "soxx_change_pct": 0.0,
+          "spy": null,
+          "spy_change_pct": 0.0,
+          "vix": null,
+          "warnings": []
+        },
+        "official_count": 2,
+        "provider_unverified_count": 2
+      }
     },
-    "artifact_validation_errors": {
-      "AMAT": [
-        "missing required field: company"
-      ]
+    "hard_blocked_candidates": [],
+    "missing_data_blocked_candidates": [],
+    "pipeline": {
+      "capped_count": 2,
+      "data_readiness_passed": true,
+      "data_readiness_status": "ready",
+      "fetched_count": 578,
+      "filtered_count": 30,
+      "final_pick_count": 1,
+      "hard_blocked_count": 0,
+      "missing_data_blocked_count": 0,
+      "portfolio_risk_blocked_count": 1,
+      "post_hard_block_pick_count": 2,
+      "post_missing_data_pick_count": 1,
+      "post_portfolio_risk_pick_count": 1,
+      "post_premarket_sanity_pick_count": 2,
+      "pre_hard_block_pick_count": 2,
+      "pre_missing_data_pick_count": 1,
+      "pre_portfolio_risk_pick_count": 2,
+      "pre_premarket_sanity_pick_count": 2,
+      "premarket_sanity_blocked_count": 0,
+      "scored_count": 276,
+      "scorer_workers": 4,
+      "universe_count": 584
     },
-    "selected_picks": [
+    "portfolio_risk_blocked_candidates": [
+      {
+        "block_type": "risk_limit",
+        "candidate": {
+          "company": "",
+          "day_score": 0.715,
+          "days_to_earnings": null,
+          "entry": 29.68,
+          "news_action_window": null,
+          "news_boost": null,
+          "premarket_action": "HALF_SIZE",
+          "premarket_actionable": true,
+          "premarket_gap_pct": null,
+          "premarket_reason": "fresh price unavailable from any provider; reduced size",
+          "quantity": 40,
+          "risk_flags": [],
+          "risk_reward": 1.67,
+          "score": 0.866,
+          "sector": "N/A",
+          "sector_tag": null,
+          "stop_loss": 28.46,
+          "take_profit": 31.72,
+          "ticker": "URGN",
+          "trade_type": "swing",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "detail": {
+          "risk_config": {
+            "account_size": 10000.0,
+            "max_new_picks_per_day": 5,
+            "max_per_sector": 1,
+            "max_per_tag": 1,
+            "max_positions": 5,
+            "min_risk_reward": 1.0,
+            "risk_per_trade_pct": 1.0
+          },
+          "risk_profile": {
+            "entry": 29.68,
+            "quantity": 40,
+            "risk_dollars": 48.8,
+            "risk_pct": 0.488,
+            "risk_reward": 1.67,
+            "stop_loss": 28.46,
+            "take_profit": 31.72
+          },
+          "sector": "N/A",
+          "tag": "",
+          "ticker": "URGN"
+        },
+        "reason": "daily sector cap reached for N/A",
+        "rejection_stage": "portfolio_risk",
+        "ticker": "URGN"
+      }
+    ],
+    "post_hard_block_candidates": [
+      {
+        "company": "",
+        "day_score": 0.99,
+        "days_to_earnings": null,
+        "entry": 440.56,
+        "news_action_window": "intraday",
+        "news_boost": 0.1,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 4,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.947,
+        "sector": "N/A",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 429.35,
+        "take_profit": 459.24,
+        "ticker": "AMAT",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
+      {
+        "company": "",
+        "day_score": 0.715,
+        "days_to_earnings": null,
+        "entry": 29.68,
+        "news_action_window": null,
+        "news_boost": null,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 40,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.866,
+        "sector": "N/A",
+        "sector_tag": null,
+        "stop_loss": 28.46,
+        "take_profit": 31.72,
+        "ticker": "URGN",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
+      }
+    ],
+    "pre_hard_block_candidates": [
+      {
+        "company": "",
+        "day_score": 0.99,
+        "days_to_earnings": null,
+        "entry": 440.56,
+        "news_action_window": "intraday",
+        "news_boost": 0.1,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 4,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.947,
+        "sector": "N/A",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 429.35,
+        "take_profit": 459.24,
+        "ticker": "AMAT",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
+      {
+        "company": "",
+        "day_score": 0.715,
+        "days_to_earnings": null,
+        "entry": 29.68,
+        "news_action_window": null,
+        "news_boost": null,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 40,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.866,
+        "sector": "N/A",
+        "sector_tag": null,
+        "stop_loss": 28.46,
+        "take_profit": 31.72,
+        "ticker": "URGN",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
+      }
+    ],
+    "pre_missing_data_candidates": [
       {
         "company": "",
         "day_score": 0.99,
@@ -70,12 +326,201 @@
         "watch_only": false,
         "watch_only_reason": ""
       }
-    ]
+    ],
+    "pre_portfolio_risk_candidates": [
+      {
+        "company": "",
+        "day_score": 0.99,
+        "days_to_earnings": null,
+        "entry": 440.56,
+        "news_action_window": "intraday",
+        "news_boost": 0.1,
+        "risk_reward": 1.67,
+        "score": 0.947,
+        "sector": "N/A",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 429.35,
+        "take_profit": 459.24,
+        "ticker": "AMAT",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
+      {
+        "company": "",
+        "day_score": 0.715,
+        "days_to_earnings": null,
+        "entry": 29.68,
+        "news_action_window": null,
+        "news_boost": null,
+        "risk_reward": 1.67,
+        "score": 0.866,
+        "sector": "N/A",
+        "sector_tag": null,
+        "stop_loss": 28.46,
+        "take_profit": 31.72,
+        "ticker": "URGN",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
+      }
+    ],
+    "pre_premarket_sanity_candidates": [
+      {
+        "company": "",
+        "day_score": 0.99,
+        "days_to_earnings": null,
+        "entry": 440.56,
+        "news_action_window": "intraday",
+        "news_boost": 0.1,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 4,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.947,
+        "sector": "N/A",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 429.35,
+        "take_profit": 459.24,
+        "ticker": "AMAT",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
+      {
+        "company": "",
+        "day_score": 0.715,
+        "days_to_earnings": null,
+        "entry": 29.68,
+        "news_action_window": null,
+        "news_boost": null,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 40,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.866,
+        "sector": "N/A",
+        "sector_tag": null,
+        "stop_loss": 28.46,
+        "take_profit": 31.72,
+        "ticker": "URGN",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
+      }
+    ],
+    "premarket_sanity_blocked_candidates": [],
+    "rejected_candidates": [
+      {
+        "block_type": "risk_limit",
+        "candidate": {
+          "company": "",
+          "day_score": 0.715,
+          "days_to_earnings": null,
+          "entry": 29.68,
+          "news_action_window": null,
+          "news_boost": null,
+          "premarket_action": "HALF_SIZE",
+          "premarket_actionable": true,
+          "premarket_gap_pct": null,
+          "premarket_reason": "fresh price unavailable from any provider; reduced size",
+          "quantity": 40,
+          "risk_flags": [],
+          "risk_reward": 1.67,
+          "score": 0.866,
+          "sector": "N/A",
+          "sector_tag": null,
+          "stop_loss": 28.46,
+          "take_profit": 31.72,
+          "ticker": "URGN",
+          "trade_type": "swing",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "detail": {
+          "risk_config": {
+            "account_size": 10000.0,
+            "max_new_picks_per_day": 5,
+            "max_per_sector": 1,
+            "max_per_tag": 1,
+            "max_positions": 5,
+            "min_risk_reward": 1.0,
+            "risk_per_trade_pct": 1.0
+          },
+          "risk_profile": {
+            "entry": 29.68,
+            "quantity": 40,
+            "risk_dollars": 48.8,
+            "risk_pct": 0.488,
+            "risk_reward": 1.67,
+            "stop_loss": 28.46,
+            "take_profit": 31.72
+          },
+          "sector": "N/A",
+          "tag": "",
+          "ticker": "URGN"
+        },
+        "reason": "daily sector cap reached for N/A",
+        "rejection_stage": "portfolio_risk",
+        "ticker": "URGN"
+      }
+    ],
+    "selected_picks": [
+      {
+        "company": "",
+        "day_score": 0.99,
+        "days_to_earnings": null,
+        "entry": 440.56,
+        "news_action_window": "intraday",
+        "news_boost": 0.1,
+        "premarket_action": "HALF_SIZE",
+        "premarket_actionable": true,
+        "premarket_gap_pct": null,
+        "premarket_reason": "fresh price unavailable from any provider; reduced size",
+        "quantity": 4,
+        "risk_flags": [],
+        "risk_reward": 1.67,
+        "score": 0.947,
+        "sector": "N/A",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 429.35,
+        "take_profit": 459.24,
+        "ticker": "AMAT",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      }
+    ],
+    "stage_counts": {
+      "capped_count": 2,
+      "fetched_count": 578,
+      "filtered_count": 30,
+      "filtered_not_capped_count": 28,
+      "hard_blocked_count": 0,
+      "missing_data_blocked_count": 0,
+      "portfolio_risk_blocked_count": 1,
+      "post_hard_block_pick_count": 2,
+      "pre_hard_block_pick_count": 2,
+      "pre_premarket_sanity_pick_count": 2,
+      "premarket_sanity_blocked_count": 0,
+      "rejected_candidate_count": 1,
+      "scored_count": 276,
+      "scored_not_filtered_count": 246,
+      "selected_pick_count": 1,
+      "selected_ticker_count": 1,
+      "universe_count": 584
+    }
   },
   "diagnostics_available": true,
   "live_trading_enabled": false,
   "mode": "monitoring_only",
-  "official_premarket_pick": false,
+  "official_premarket_pick": true,
   "paper_trading_enabled": false,
   "pipeline": {
     "capped_count": 2,
@@ -86,11 +531,6 @@
     "final_pick_count": 1,
     "hard_blocked_count": 0,
     "missing_data_blocked_count": 0,
-    "official_pick_artifact_validation_errors": {
-      "AMAT": [
-        "missing required field: company"
-      ]
-    },
     "portfolio_risk_blocked_count": 1,
     "post_hard_block_pick_count": 2,
     "post_missing_data_pick_count": 1,
@@ -106,5 +546,5 @@
     "universe_count": 584
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-05-15T12:39:47Z"
+  "timestamp_utc": "2026-05-15T12:56:28Z"
 }

@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1160,
+      "attempts": 1738,
       "empty": 0,
-      "errors": 71,
-      "successes": 1089
+      "errors": 104,
+      "successes": 1634
     },
     "monster_info": {
-      "attempts": 549,
+      "attempts": 825,
       "empty": 0,
-      "errors": 60,
-      "successes": 489
+      "errors": 92,
+      "successes": 733
     },
     "ohlcv": {
-      "attempts": 1187,
-      "empty": 16,
+      "attempts": 1780,
+      "empty": 24,
       "errors": 0,
-      "successes": 1171
+      "successes": 1756
     }
   },
   "date": "2026-05-15",
   "providers": {
     "stooq": {
-      "attempts": 8,
-      "empty": 8,
+      "attempts": 12,
+      "empty": 12,
       "errors": 0,
       "failure_types": {
-        "empty_response": 8,
+        "empty_response": 12,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,17 +47,17 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 2888,
-      "empty": 8,
-      "errors": 131,
+      "attempts": 4331,
+      "empty": 12,
+      "errors": 196,
       "failure_types": {
-        "empty_response": 8,
+        "empty_response": 12,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 131,
+        "rate_limited": 196,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,8 +65,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 131,
-      "successes": 2749,
+      "rate_limited": 196,
+      "successes": 4123,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "DDS"
     }
   ],
-  "timestamp_utc": "2026-05-15T12:45:25Z"
+  "timestamp_utc": "2026-05-15T12:56:27Z"
 }
