@@ -4583,5 +4583,31 @@
     "expires": "2026-05-22T23:30:56.177264+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "SHG": {
+    "ticker": "SHG",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Shinhan Financial Group Q2 EPS $2.27 Misses $2.29 Estimate, Sales $2.065B Miss $2.940B Estimate",
+    "added_at": "2026-05-16T01:18:12.070814+00:00",
+    "expires": "2026-05-23T01:18:12.070821+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PHI": {
+    "ticker": "PHI",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "PLDT Q1 EPS $0.69 Down From $0.72 YoY, Sales $958.839M Up From $953.856M YoY",
+    "added_at": "2026-05-16T01:18:12.078724+00:00",
+    "expires": "2026-05-23T01:18:12.078733+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

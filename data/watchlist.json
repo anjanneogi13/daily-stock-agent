@@ -1949,6 +1949,30 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52620707/silexion-therapeutics-q1-eps-0-85-beats-1-29-estimate",
       "source": "alpaca",
       "added_at": "2026-05-15T23:30:56.182589+00:00"
+    },
+    {
+      "ticker": "SHG",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Shinhan Financial missed both EPS and sales estimates with sales particularly disappointing at 30% below consensus, creating immediate downward pressure on the stock.",
+      "action_window": "next_day",
+      "headline": "Shinhan Financial Group Q2 EPS $2.27 Misses $2.29 Estimate, Sales $2.065B Miss $2.940B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52621066/shinhan-financial-group-q2-eps-2-27-misses-2-29-estimate-sales-2-065b-miss-2-940b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-16T01:18:12.094323+00:00"
+    },
+    {
+      "ticker": "PHI",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "PLDT reported Q1 earnings miss with EPS declining 4.2% YoY despite modest 0.5% revenue growth, indicating margin compression and profitability concerns.",
+      "action_window": "next_day",
+      "headline": "PLDT Q1 EPS $0.69 Down From $0.72 YoY, Sales $958.839M Up From $953.856M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52621051/pldt-q1-eps-0-69-down-from-0-72-yoy-sales-958-839m-up-from-953-856m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-16T01:18:12.094339+00:00"
     }
   ]
 }
