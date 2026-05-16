@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-09T04:28:39.093622",
+  "computed_at": "2026-05-16T04:33:25.675088",
   "source_separation": {
     "included_source": "data/picks_log.csv closed non-watch-only rows",
     "excluded_watch_only_rows": 0,
@@ -64,20 +64,20 @@
   },
   "last_7_days": {
     "label": "last_7_days",
-    "n_trades": 6,
-    "wins": 2,
-    "losses": 4,
-    "win_rate": 33.3,
-    "avg_r": 0.07,
-    "sharpe": 5.51,
-    "max_dd_pct": 4.18,
-    "profit_factor": 3.53,
-    "expectancy_r": 0.07,
-    "best_trade_r": 2.002,
-    "worst_trade_r": -1.0,
-    "best_ticker": "POWI",
-    "worst_ticker": "NVDA",
-    "total_return_pct": 15.43
+    "n_trades": 0,
+    "win_rate": 0.0,
+    "avg_r": 0.0,
+    "sharpe": 0.0,
+    "max_dd_pct": 0.0,
+    "profit_factor": 0.0,
+    "expectancy_r": 0.0,
+    "best_trade_r": 0.0,
+    "worst_trade_r": 0.0,
+    "best_ticker": null,
+    "worst_ticker": null,
+    "wins": 0,
+    "losses": 0,
+    "total_return_pct": 0.0
   },
   "last_30_days": {
     "label": "last_30_days",
