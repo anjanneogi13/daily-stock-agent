@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SOC",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "lawsuit",
-      "rationale": "Legal challenge dismissal removes regulatory overhang and clears path for Sable Pipeline operations, reducing project risk and potential delays.",
-      "action_window": "next_day",
-      "headline": "Challenge to Sable Pipeline in California Dismissed",
-      "url": "https://www.benzinga.com/news/26/05/52614098/challenge-to-sable-pipeline-in-california-dismissed",
-      "source": "alpaca",
-      "added_at": "2026-05-15T20:00:18.726161+00:00"
-    },
-    {
-      "ticker": "CLRB",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Initiation of coverage with Buy rating and $10 price target by Ladenburg Thalmann provides positive sentiment but from a smaller regional firm with moderate impact potential.",
-      "action_window": "next_day",
-      "headline": "Ladenburg Thalmann Assumes Cellectar Biosciences at Buy, Announces Price Target of $10",
-      "url": "https://www.benzinga.com/news/26/05/52613292/ladenburg-thalmann-assumes-cellectar-biosciences-at-buy-announces-price-target-of-10",
-      "source": "alpaca",
-      "added_at": "2026-05-15T20:00:18.726177+00:00"
-    },
-    {
-      "ticker": "MKZR",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q3 EPS loss improved significantly by 79% YoY from $(4.68) to $(0.98) while revenue grew 27% YoY, indicating strong operational improvement despite remaining unprofitable.",
-      "action_window": "next_day",
-      "headline": "Mackenzie Realty Capital Q3 EPS $(0.98) Up From $(4.68) YoY, Sales $5.442M Up From $4.274M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52613236/mackenzie-realty-capital-q3-eps-0-98-up-from-4-68-yoy-sales-5-442m-up-from-4-274m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-05-15T20:00:18.726187+00:00"
-    },
-    {
-      "ticker": "HRL",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Major market access expansion for US beef exports to China involving 425 plants represents significant revenue opportunity for beef producers, though impact diffuses across multiple companies and broader trade relations.",
-      "action_window": "next_day",
-      "headline": "'China Allows Exports for 425 US Beef Plants, Trade Group Says' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/05/52612930/china-allows-exports-for-425-us-beef-plants-trade-group-says-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-05-15T20:00:18.726197+00:00"
-    },
-    {
       "ticker": "ZDPY",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -900,6 +852,126 @@
       "url": "https://www.benzinga.com/news/health-care/26/05/52646099/why-elliott-sees-hidden-billions-inside-bio-rad-laboratories",
       "source": "alpaca",
       "added_at": "2026-05-18T19:14:53.120765+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Significant 8,000 job cuts and massive $145B capex signal cost pressures despite record profits, creating mixed outlook with operational efficiency gains offset by enormous AI spending concerns.",
+      "action_window": "next_day",
+      "headline": "Meta's 8,000 Job Cuts To Foot The $145B AI Bill",
+      "url": "https://www.benzinga.com/Opinion/26/05/52650691/meta-8000-job-cuts-not-a-crisis-just-a-145-billion-ai-bill",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510264+00:00"
+    },
+    {
+      "ticker": "AGYS",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Company reported Q4 earnings beat with strong forward guidance and stock already moving higher in extended trading, indicating immediate positive market reaction.",
+      "action_window": "next_day",
+      "headline": "Agilysys Stock Darts Higher On Q4 Earnings Beat, Strong Guidance",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52650620/agilysys-stock-darts-higher-on-q4-earnings-beat-strong-guidance",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510278+00:00"
+    },
+    {
+      "ticker": "KPRX",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large secondary offering of 11.797M shares by selling shareholders typically creates significant dilution pressure and near-term selling overhang that depresses stock price.",
+      "action_window": "intraday",
+      "headline": "Kiora Pharmaceuticals Files Prospectus For Offering 11.797M Common Stock On Behalf Of Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/05/52650436/kiora-pharmaceuticals-files-prospectus-for-offering-11-797m-common-stock-on-behalf-of-selling-shareh",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510289+00:00"
+    },
+    {
+      "ticker": "INFU",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock buyback authorization signals management confidence and potential shareholder value return, though $20M is modest and replaces expiring program limiting incremental impact.",
+      "action_window": "next_day",
+      "headline": "InfuSystem Holdings Approves New $20M Stock Buyback Program, Replacing Expiring Repurchase Authorization",
+      "url": "https://www.benzinga.com/news/26/05/52650255/infusystem-holdings-approves-new-20m-stock-buyback-program-replacing-expiring-repurchase-authorizati",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510296+00:00"
+    },
+    {
+      "ticker": "WVE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Updated clinical trial data for an investigational therapy in ongoing Phase 2 trial represents a meaningful catalyst for biotech stocks, though impact depends on whether results are positive or negative.",
+      "action_window": "intraday",
+      "headline": "Wave Life Sciences Announces Updated Data From Ongoing RestorAATion-2 Trial Of WVE-006, Investigational, GalNAc-Conjugated, Subcutaneously Delivered RNA Editing Oligonucleotide For Alpha-1 Antitrypsin Deficiency",
+      "url": "https://www.benzinga.com/news/26/05/52650291/wave-life-sciences-announces-updated-data-from-ongoing-restoraation-2-trial-of-wve-006-investigation",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510302+00:00"
+    },
+    {
+      "ticker": "FLG",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CEO contract extension through 2028 signals board confidence and management stability, while dual co-president appointments suggest succession planning and operational continuity.",
+      "action_window": "next_day",
+      "headline": "Flagstar Bank Extends CEO Joseph Otting's Contract Through 2028; Names Richard Raffetto And Lee Smith Co-Presidents And Co-COOs",
+      "url": "https://www.benzinga.com/news/26/05/52650268/flagstar-bank-extends-ceo-joseph-ottings-contract-through-2028-names-richard-raffetto-and-lee-smith",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510308+00:00"
+    },
+    {
+      "ticker": "FATN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q4 earnings beat by 155% ($0.28 vs $0.11 estimate) and revenue beat by 5.9% represents a substantial positive surprise warranting immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Update: Fatpipe Q4 EPS $0.28 Beats $0.11 Estimate, Sales $7.200M Beat $6.800M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52650084/update-fatpipe-q4-eps-0-28-beats-0-11-estimate-sales-7-200m-beat-6-800m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510316+00:00"
+    },
+    {
+      "ticker": "GOCO",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Company officially disclosing substantial doubt about going concern status while delaying financial filings is a severe negative catalyst indicating potential bankruptcy or insolvency risk.",
+      "action_window": "intraday",
+      "headline": "GoHealth Delays Q1 2026 Form 10-Q Filing Amid Capital Structure Talks; Says Management Will Disclose In The Form 10-Q That There Is Substantial Doubt About The Company's Ability To Continue As A Going Concern",
+      "url": "https://www.benzinga.com/news/26/05/52650019/gohealth-delays-q1-2026-form-10-q-filing-amid-capital-structure-talks-says-management-will-disclose",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510323+00:00"
+    },
+    {
+      "ticker": "UTHR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA Priority Review submission for Tyvaso expansion into IPF based on completed Phase 3 trials is a meaningful positive catalyst that could expand the drug's addressable market, though the actual submission hasn't occurred yet.",
+      "action_window": "next_day",
+      "headline": "United Therapeutics Plans To Seek FDA Priority Review This Summer For Tyvaso sNDA In IPF Based On TETON\u20111 And TETON-2 Data",
+      "url": "https://www.benzinga.com/quote/UTHR",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510330+00:00"
+    },
+    {
+      "ticker": "XP",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Double miss on both EPS and revenue with sales missing by approximately 5.6% represents a meaningful negative catalyst requiring immediate price reassessment.",
+      "action_window": "intraday",
+      "headline": "XP Q1 EPS $0.47 Misses $0.48 Estimate, Sales $898.872M Miss $952.600M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52649809/xp-q1-eps-0-47-misses-0-48-estimate-sales-898-872m-miss-952-600m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-18T20:57:05.510336+00:00"
     }
   ]
 }
