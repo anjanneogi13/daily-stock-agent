@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ERNA",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Circuit breaker halt with 40% gain indicates significant positive catalyst for biotech, though specific catalyst not disclosed in headline requiring caution on entry timing.",
-      "action_window": "intraday",
-      "headline": "Ernexa Therapeutics Shares Halted On Circuit Breaker To The Upside, Stock Now Up 39.96%",
-      "url": "https://www.benzinga.com/quote/ERNA",
-      "source": "alpaca",
-      "added_at": "2026-05-15T16:49:39.919698+00:00"
-    },
-    {
-      "ticker": "DXCM",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Activist investor Elliott Investment Management's engagement resulting in board expansion and committee changes typically signals improved governance and potential operational enhancements, creating positive near-term momentum.",
-      "action_window": "next_day",
-      "headline": "Reported May 14, 2026: DexCom To Add Two Independent Directors And Expand Operations And Innovation Committee Following Constructive Engagement With Elliott Investment Management",
-      "url": "https://www.benzinga.com/news/26/05/52606498/reported-may-14-2026-dexcom-to-add-two-independent-directors-and-expand-operations-and-innovation-co",
-      "source": "alpaca",
-      "added_at": "2026-05-15T16:49:39.919718+00:00"
-    },
-    {
-      "ticker": "TRT",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q3 earnings beat driven by secular growth trends in AI and EV chip testing with immediate positive price action confirming market reaction.",
-      "action_window": "intraday",
-      "headline": "Trio-Tech Gains After Q3 Results Highlight AI, EV Chip Demand",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52606365/trio-tech-gains-after-q3-results-highlight-ai-ev-chip-demand",
-      "source": "alpaca",
-      "added_at": "2026-05-15T16:49:39.919728+00:00"
-    },
-    {
       "ticker": "KRYS",
       "tradeable_score": 0.95,
       "sentiment": "bullish",
@@ -851,6 +815,66 @@
       "url": "https://www.benzinga.com/news/26/05/52637042/jp-morgan-maintains-overweight-on-oculis-holding-raises-price-target-to-42",
       "source": "alpaca",
       "added_at": "2026-05-18T14:59:39.570913+00:00"
+    },
+    {
+      "ticker": "KLAR",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America maintains Buy rating while raising price target, signaling increased confidence in Klarna's valuation prospects.",
+      "action_window": "next_day",
+      "headline": "B of A Securities Maintains Buy on Klarna, Raises Price Target to $23",
+      "url": "https://www.benzinga.com/news/26/05/52643617/b-of-a-securities-maintains-buy-on-klarna-raises-price-target-to-23",
+      "source": "alpaca",
+      "added_at": "2026-05-18T17:31:05.858246+00:00"
+    },
+    {
+      "ticker": "XPEV",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "product_launch",
+      "rationale": "Stock falling despite positive product launch suggests market concerns about robotaxi profitability, regulatory hurdles, or competitive pressures offsetting the innovation news.",
+      "action_window": "intraday",
+      "headline": "What's Going On With XPeng Stock On Monday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52643594/whats-going-on-with-xpeng-stock-on-monday-2",
+      "source": "alpaca",
+      "added_at": "2026-05-18T17:31:05.858259+00:00"
+    },
+    {
+      "ticker": "DELL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with OpenAI to bring Codex to enterprise environments represents meaningful expansion of Dell's AI capabilities and potential revenue stream in the high-growth enterprise AI market.",
+      "action_window": "intraday",
+      "headline": "OpenAI And Dell Partner To Bring Codex To Hybrid And On-Premise Enterprise Environments; Dell And OpenAI Will Also Explore How Codex Can Connect With The Dell AI Factory",
+      "url": "https://www.benzinga.com/news/26/05/52643467/openai-and-dell-partner-to-bring-codex-to-hybrid-and-on-premise-enterprise-environments-dell-and-ope",
+      "source": "alpaca",
+      "added_at": "2026-05-18T17:31:05.858268+00:00"
+    },
+    {
+      "ticker": "Z",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Potential disruption to listing data feeds threatens Zillow's core business model as accurate real estate listings are fundamental to their platform's value proposition and traffic.",
+      "action_window": "intraday",
+      "headline": "Midwest Real Estate Data Announces Potential Disruption To Listing Data Feeds To Zillow Group",
+      "url": "https://www.benzinga.com/news/26/05/52643313/midwest-real-estate-data-announces-potential-disruption-to-listing-data-feeds-to-zillow-group",
+      "source": "alpaca",
+      "added_at": "2026-05-18T17:31:05.858276+00:00"
+    },
+    {
+      "ticker": "AMAT",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Broad market sell-off driven by AI capex concerns impacting semiconductors and geopolitical oil supply risks creating immediate sector rotation pressures.",
+      "action_window": "intraday",
+      "headline": "Nasdaq 100 Drops Over 1%, Oil Tops $106 On Iran Impasse: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/equities/26/05/52643214/ai-hardware-sell-off-tech-oil-tops-107-iran-impasse-markets-monday",
+      "source": "alpaca",
+      "added_at": "2026-05-18T17:31:05.858285+00:00"
     }
   ]
 }
