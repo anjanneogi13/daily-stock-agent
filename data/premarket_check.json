@@ -1,23 +1,20 @@
 {
-  "date": "2026-05-15",
+  "date": "2026-05-18",
   "market": {
-    "spy_change_pct": -1.01,
-    "qqq_change_pct": -1.37,
-    "soxx_change_pct": -3.69,
-    "vix": 18.39,
-    "warnings": [
-      "\u26a0\ufe0f SPY down -1.0% \u2014 caution",
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -3.7% \u2014 semis at risk"
-    ],
-    "global_action": "half"
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
+    "warnings": [],
+    "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "AMAT",
-      "tag": "\ud83d\udeab SKIP TODAY",
-      "reason": "gapped -1.9%, only 0.7% to SL",
-      "current_price": 432.36,
-      "gap_pct": -1.86,
+      "ticker": "VVX",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
       "actionable": false
     }
   ]
