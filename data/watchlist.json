@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "KRYS",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "MHRA (UK regulatory) approval of Beremagene Geperpavec for dystrophic epidermolysis bullosa represents a major regulatory milestone and significant commercial catalyst for KRYS.",
-      "action_window": "intraday",
-      "headline": "MHRA Approves Beremagene Geperpavec For The Treatment Of Dystrophic Epidermolysis Bullosa",
-      "url": "https://www.benzinga.com/general/biotech/26/05/52610754/mhra-approves-beremagene-geperpavec-for-the-treatment-of-dystrophic-epidermolysis-bullosa",
-      "source": "alpaca",
-      "added_at": "2026-05-15T18:20:18.332492+00:00"
-    },
-    {
-      "ticker": "STNE",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Citigroup downgrade from Buy/Overweight to Neutral with price target reduction creates immediate selling pressure on STNE shares.",
-      "action_window": "intraday",
-      "headline": "Citigroup Downgrades StoneCo to Neutral, Lowers Price Target to $11",
-      "url": "https://www.benzinga.com/news/26/05/52609967/citigroup-downgrades-stoneco-to-neutral-lowers-price-target-to-11",
-      "source": "alpaca",
-      "added_at": "2026-05-15T18:20:18.332509+00:00"
-    },
-    {
-      "ticker": "VRT",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bank of America maintains Buy rating while raising price target to $440, signaling increased confidence in Vertiv's valuation and prospects from a major bulge bracket firm.",
-      "action_window": "next_day",
-      "headline": "B of A Securities Maintains Buy on Vertiv Holdings, Raises Price Target to $440",
-      "url": "https://www.benzinga.com/news/26/05/52609933/b-of-a-securities-maintains-buy-on-vertiv-holdings-raises-price-target-to-440",
-      "source": "alpaca",
-      "added_at": "2026-05-15T18:20:18.332517+00:00"
-    },
-    {
-      "ticker": "CHRW",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Citigroup upgrade to Buy from a major bank typically drives institutional buying interest and positive price momentum in the near term.",
-      "action_window": "next_day",
-      "headline": "Citigroup Upgrades C.H. Robinson Worldwide to Buy, Maintains Price Target to $199",
-      "url": "https://www.benzinga.com/news/26/05/52609818/citigroup-upgrades-c-h-robinson-worldwide-to-buy-maintains-price-target-to-199",
-      "source": "alpaca",
-      "added_at": "2026-05-15T18:20:18.332524+00:00"
-    },
-    {
       "ticker": "SOC",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -194,15 +146,16 @@
     },
     {
       "ticker": "M",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Berkshire Hathaway initiating a new position in Macy's is a strong positive signal given Warren Buffett's reputation, typically driving significant investor interest and momentum in the target stock.",
+      "rationale": "Berkshire Hathaway disclosure of a position in Macy's is a significant institutional endorsement that typically drives substantial investor interest and buying pressure.",
       "action_window": "next_day",
-      "headline": "Berkshire Hathaway Takes New Stake In Macys Inc With 3,038,355 Shares",
-      "url": "https://www.benzinga.com/quote/M",
+      "headline": "Macy Stock Is Climbing: What's Happening Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52646456/macy-stock-is-climbing-whats-happening-today",
       "source": "alpaca",
-      "added_at": "2026-05-15T21:05:13.241685+00:00"
+      "added_at": "2026-05-15T21:05:13.241685+00:00",
+      "updated_at": "2026-05-18T19:14:53.120752+00:00"
     },
     {
       "ticker": "KSCP",
@@ -875,6 +828,78 @@
       "url": "https://www.benzinga.com/markets/equities/26/05/52643214/ai-hardware-sell-off-tech-oil-tops-107-iran-impasse-markets-monday",
       "source": "alpaca",
       "added_at": "2026-05-18T17:31:05.858285+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "De-escalation of immediate military conflict with Iran is a significant risk-off catalyst that should boost equities and reduce oil prices in the near term, though tail risk remains elevated.",
+      "action_window": "intraday",
+      "headline": "President Trump Says In Truth Social Post That He Is Delaying Tuesday's Planned Assault On Iran After Requests From Leaders In Saudi Arabia, UAE, And Qatar; Trump Tells Military To Be Ready \"On A Moment's Notice\" If Iran Deal Is Not Reached",
+      "url": "https://www.benzinga.com/general/macro-notification/26/05/52647131/president-trump-says-in-truth-social-post-that-he-is-delaying-tuesdays-planned-assault",
+      "source": "alpaca",
+      "added_at": "2026-05-18T19:14:53.120722+00:00"
+    },
+    {
+      "ticker": "YSS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "York Space Systems acquiring ALL.SPACE is a meaningful M&A catalyst that drove 5.6% stock surge and helped counter recent short seller concerns.",
+      "action_window": "intraday",
+      "headline": "What's Going On With York Space Systems Stock Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52646857/whats-going-on-with-york-space-systems-stock-monday",
+      "source": "alpaca",
+      "added_at": "2026-05-18T19:14:53.120735+00:00"
+    },
+    {
+      "ticker": "SVRA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 clinical trial data presentation on exercise capacity for lead drug candidate at major medical conference represents meaningful clinical progress for small-cap biotech.",
+      "action_window": "next_day",
+      "headline": "Savara Presents New Exercise Capacity Data From Double-Blind Period Of IMPALA-2 Phase 3 Clinical Trial Evaluating Molgramostim For Treatment Of aPAP At ATS 2026 International Conference",
+      "url": "https://www.benzinga.com/news/26/05/52646812/savara-presents-new-exercise-capacity-data-from-double-blind-period-of-impala-2-phase-3-clinical-tri",
+      "source": "alpaca",
+      "added_at": "2026-05-18T19:14:53.120741+00:00"
+    },
+    {
+      "ticker": "SSEA",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Failed SPAC merger is a significant negative catalyst as the target company loses its path to going public and the SPAC faces potential liquidation or must find a new target before deadline.",
+      "action_window": "intraday",
+      "headline": "Starry Sea Acquisition Not Proceeding With Proposed Merger With Forever Young International",
+      "url": "https://www.benzinga.com/news/26/05/52646782/starry-sea-acquisition-not-proceeding-with-proposed-merger-with-forever-young-international",
+      "source": "alpaca",
+      "added_at": "2026-05-18T19:14:53.120746+00:00"
+    },
+    {
+      "ticker": "BSX",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Material $1.5B strategic investment in high-growth aortic stenosis market signals aggressive expansion into attractive TAVR segment with clear acquisition optionality.",
+      "action_window": "intraday",
+      "headline": "Boston Scientific Targets Growing Aortic Stenosis Market With $1.5 Billion Deal",
+      "url": "https://www.benzinga.com/m-a/26/05/52646294/boston-scientific-targets-growing-aortic-stenosis-market-with-1-5-billion-deal",
+      "source": "alpaca",
+      "added_at": "2026-05-18T19:14:53.120759+00:00"
+    },
+    {
+      "ticker": "BIO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Elliott Management's activist stake typically drives value creation through operational improvements or strategic changes, though family voting control may limit immediate impact.",
+      "action_window": "next_day",
+      "headline": "Why Elliott Sees Hidden Billions Inside Bio-Rad Laboratories",
+      "url": "https://www.benzinga.com/news/health-care/26/05/52646099/why-elliott-sees-hidden-billions-inside-bio-rad-laboratories",
+      "source": "alpaca",
+      "added_at": "2026-05-18T19:14:53.120765+00:00"
     }
   ]
 }
