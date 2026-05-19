@@ -1,0 +1,329 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 546,
+      "empty": 0,
+      "errors": 6,
+      "successes": 540
+    },
+    "monster_info": {
+      "attempts": 244,
+      "empty": 0,
+      "errors": 24,
+      "successes": 220
+    },
+    "ohlcv": {
+      "attempts": 551,
+      "empty": 0,
+      "errors": 0,
+      "successes": 551
+    }
+  },
+  "date": "2026-05-19",
+  "providers": {
+    "yfinance": {
+      "attempts": 1341,
+      "empty": 0,
+      "errors": 30,
+      "failure_types": {
+        "empty_response": 0,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 5,
+        "rate_limited": 25,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 5,
+      "rate_limited": 25,
+      "successes": 1311,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 546,
+    "final_pick_count": 2,
+    "scored_count": 244,
+    "universe_count": 546
+  },
+  "samples": [
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SMH"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "FATN"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "AGYS"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "ATEX"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "YSS"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "EVTC"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "LUNR"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "WVE"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "THR"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "VTAK"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "VVX"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "ATER"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "UTHR"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "BIO"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SPIR"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "TLX"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "IBRX"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "OCS"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "AMST"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SHAZ"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "KLAR"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "INFU"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "AMST"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "FLG"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SHAZ"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "OCS"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "FLG"
+    }
+  ],
+  "timestamp_utc": "2026-05-19T12:08:46Z"
+}
