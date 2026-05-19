@@ -747,6 +747,30 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52668687/home-depot-ticks-up-on-earnings-beat-analysts-stick-with-bullish-calls",
       "source": "alpaca",
       "added_at": "2026-05-19T16:49:07.664931+00:00"
+    },
+    {
+      "ticker": "RAPP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Truist Securities initiating coverage with a Buy rating and $56 price target is a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
+      "action_window": "next_day",
+      "headline": "Truist Securities Assumes Rapport Therapeutics at Buy, Raises Price Target to $56",
+      "url": "https://www.benzinga.com/news/26/05/52673625/truist-securities-assumes-rapport-therapeutics-at-buy-raises-price-target-to-56",
+      "source": "alpaca",
+      "added_at": "2026-05-19T18:57:58.400484+00:00"
+    },
+    {
+      "ticker": "M",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Berkshire Hathaway's new stake disclosure is a meaningful catalyst as Warren Buffett's investment moves typically generate sustained investor interest and validation of value.",
+      "action_window": "next_day",
+      "headline": "Berkshire Stake Triggers Fresh Optimism For Macy's",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52673610/berkshire-stake-triggers-fresh-optimism-for-macys",
+      "source": "alpaca",
+      "added_at": "2026-05-19T18:57:58.400496+00:00"
     }
   ]
 }

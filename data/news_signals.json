@@ -35,39 +35,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ETN": {
-    "ticker": "ETN",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "headline": "Eaton Stock Is Under Pressure After Q1 Earnings",
-    "added_at": "2026-05-05T17:04:20.738881+00:00",
-    "expires": "2026-05-19T17:04:20.738885+00:00",
-    "hard_block": false
-  },
-  "TWST": {
-    "ticker": "TWST",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "headline": "These Analysts Boost Their Forecasts On Twist Bioscience After Q2 Results",
-    "added_at": "2026-05-05T18:53:43.047019+00:00",
-    "expires": "2026-05-19T18:53:43.047024+00:00",
-    "hard_block": false
-  },
-  "NCLH": {
-    "ticker": "NCLH",
-    "score_delta": -0.146,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.68,
-    "headline": "Norwegian Cruise Line Analysts Slash Their Forecasts Following Q1 Results",
-    "added_at": "2026-05-05T18:53:43.054189+00:00",
-    "expires": "2026-05-19T18:53:43.054194+00:00",
-    "hard_block": false
-  },
   "ZIM": {
     "ticker": "ZIM",
     "score_delta": 0.2,
@@ -1422,19 +1389,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AVGO": {
-    "ticker": "AVGO",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Broadcom Surges On New Data Center Framework: Wall Street Vastly Underestimating AI Power Needs",
-    "added_at": "2026-05-14T17:19:17.210636+00:00",
-    "expires": "2026-05-19T17:19:17.210642+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AMAT": {
     "ticker": "AMAT",
     "score_delta": 0.1,
@@ -1760,19 +1714,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GENB": {
-    "ticker": "GENB",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Generate Biomedicines, Raises Price Target to $22",
-    "added_at": "2026-05-14T17:19:17.193967+00:00",
-    "expires": "2026-05-19T17:19:17.193976+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "STUB": {
     "ticker": "STUB",
     "score_delta": 0.1,
@@ -1809,19 +1750,6 @@
     "headline": "Why Broadwind Shares Are Climbing After Wind Business Exit Strategy",
     "added_at": "2026-05-14T17:19:17.207654+00:00",
     "expires": "2026-05-21T17:19:17.207660+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "IRON": {
-    "ticker": "IRON",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Disc Medicine, Raises Price Target to $80",
-    "added_at": "2026-05-14T17:19:17.216550+00:00",
-    "expires": "2026-05-19T17:19:17.216555+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3976,6 +3904,58 @@
     "headline": "Home Depot Ticks Up On Earnings Beat, Analysts Stick With Bullish Calls",
     "added_at": "2026-05-19T16:49:07.660354+00:00",
     "expires": "2026-05-26T16:49:07.660359+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ARMK": {
+    "ticker": "ARMK",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "B of A Securities Maintains Buy on Aramark, Raises Price Target to $59",
+    "added_at": "2026-05-19T18:57:58.372896+00:00",
+    "expires": "2026-05-24T18:57:58.372904+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSX": {
+    "ticker": "CSX",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "B of A Securities Maintains Buy on CSX, Raises Price Target to $51",
+    "added_at": "2026-05-19T18:57:58.386194+00:00",
+    "expires": "2026-05-24T18:57:58.386200+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LEND": {
+    "ticker": "LEND",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "New Mutual Fund-Turned Active ETF Combines Junk Bonds, CLOs And Alternative Credit Exposure",
+    "added_at": "2026-05-19T18:57:58.389538+00:00",
+    "expires": "2026-05-26T18:57:58.389544+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RAPP": {
+    "ticker": "RAPP",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Truist Securities Assumes Rapport Therapeutics at Buy, Raises Price Target to $56",
+    "added_at": "2026-05-19T18:57:58.392798+00:00",
+    "expires": "2026-05-24T18:57:58.392805+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
