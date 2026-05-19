@@ -46,39 +46,6 @@
     "expires": "2026-06-04T20:05:10.319981+00:00",
     "hard_block": false
   },
-  "QRVO": {
-    "ticker": "QRVO",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "headline": "Qorvo Sees FY2027 Adj EPS $7.00 vs $6.60 Est",
-    "added_at": "2026-05-05T22:52:04.115872+00:00",
-    "expires": "2026-05-19T22:52:04.115880+00:00",
-    "hard_block": false
-  },
-  "TBI": {
-    "ticker": "TBI",
-    "score_delta": -0.139,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "headline": "TrueBlue Sees Q2 Sales $405.000M-$430.000M vs $416.480M Est",
-    "added_at": "2026-05-05T22:52:04.117147+00:00",
-    "expires": "2026-05-19T22:52:04.117154+00:00",
-    "hard_block": false
-  },
-  "QLYS": {
-    "ticker": "QLYS",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "headline": "Qualys Sees Q2 GAAP EPS $1.24-$1.31 vs $1.34 Est",
-    "added_at": "2026-05-05T22:52:04.120407+00:00",
-    "expires": "2026-05-19T22:52:04.120413+00:00",
-    "hard_block": false
-  },
   "JOBY": {
     "ticker": "JOBY",
     "score_delta": -0.139,
@@ -870,32 +837,6 @@
     "headline": "Amazon Kills Rufus Chatbot, Rolls Out AI-Powered Alexa Shopping Assistant: Here's What To Know",
     "added_at": "2026-05-14T10:10:19.898406+00:00",
     "expires": "2026-05-21T10:10:19.898412+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GH": {
-    "ticker": "GH",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Gamehost Q1 EPS $0.15 Beats $0.06 Estimate, Sales $21.156M Miss $72.664M Estimate",
-    "added_at": "2026-05-12T22:41:43.206345+00:00",
-    "expires": "2026-05-19T22:41:43.206352+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "IFS": {
-    "ticker": "IFS",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Intercorp Financial Servs Q1 EPS $1.54 Beats $1.36 Estimate, Sales $553.917M Beat $497.206M Estimate",
-    "added_at": "2026-05-12T22:41:43.212986+00:00",
-    "expires": "2026-05-19T22:41:43.212992+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3739,6 +3680,19 @@
     "headline": "Bank First Enters Merger Agreement To Buy PSB Holdings; Each Outstanding Share Of PSB Common Stock Will Be Converted Into Right To Receive 0.3470 Shares Of Common Stock Of BFC",
     "added_at": "2026-05-19T21:55:44.227561+00:00",
     "expires": "2026-06-02T21:55:44.227567+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BULL": {
+    "ticker": "BULL",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Webull Launches AI-Powered Stock Analysis Tool For Retail Traders",
+    "added_at": "2026-05-19T23:00:04.169673+00:00",
+    "expires": "2026-05-26T23:00:04.169680+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
