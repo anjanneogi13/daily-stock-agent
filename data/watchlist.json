@@ -771,6 +771,91 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52673610/berkshire-stake-triggers-fresh-optimism-for-macys",
       "source": "alpaca",
       "added_at": "2026-05-19T18:57:58.400496+00:00"
+    },
+    {
+      "ticker": "EARN",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Ellington Credit missed both EPS estimates by 17.4% and revenue estimates by 38.5%, representing a significant double-miss that typically drives immediate negative price action.",
+      "action_window": "intraday",
+      "headline": "Ellington Credit Q4 Adj. EPS $0.19 Misses $0.23 Estimate, Sales $7.312M Miss $11.880M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52677383/ellington-credit-q4-adj-eps-0-19-misses-0-23-estimate-sales-7-312m-miss-11-880m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160079+00:00"
+    },
+    {
+      "ticker": "KEYS",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "High-20s% revenue growth guidance for FY2026 represents a substantial guidance raise that significantly exceeds typical growth expectations for enterprise technology companies.",
+      "action_window": "intraday",
+      "headline": "Keysight Techs Sees Revenue for 2026 FY is expected to up by high-20s %.",
+      "url": "https://www.benzinga.com/news/26/05/52676972/keysight-techs-sees-revenue-for-2026-fy-is-expected-to-up-by-high-20s",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160096+00:00",
+      "updated_at": "2026-05-19T20:29:13.160127+00:00"
+    },
+    {
+      "ticker": "IRIX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company affirms FY2026 guidance range below consensus estimate of $53.2M, with midpoint at $52M representing a ~2.3% miss to Street expectations.",
+      "action_window": "next_day",
+      "headline": "Iridex Affirms FY2026 Sales Guidance of $51.000M-$53.000M vs $53.227M Est",
+      "url": "https://www.benzinga.com/news/26/05/52677095/iridex-affirms-fy2026-sales-guidance-of-51-000m-53-000m-vs-53-227m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160110+00:00"
+    },
+    {
+      "ticker": "ANVS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $250M public stock offering represents significant dilution for existing shareholders and typically creates immediate downward pressure on the stock price.",
+      "action_window": "intraday",
+      "headline": "Annovis Bio Announces Launch Of Proposed $250M Public Stock Offering Initially Filed February 12, 2024",
+      "url": "https://www.benzinga.com/quote/ANVS",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160135+00:00"
+    },
+    {
+      "ticker": "VIAV",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Public offerings typically dilute existing shareholders and signal potential weakness or capital needs, creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "VIAVI Announces ~$500M Public Offering",
+      "url": "https://www.benzinga.com/quote/VIAV",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160141+00:00"
+    },
+    {
+      "ticker": "CAVA",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raises FY2026 same-store sales guidance mid-range by 200bps and increases adjusted EBITDA guidance by approximately $5M-7M at midpoint, signaling strong operational momentum with aggressive expansion plans.",
+      "action_window": "intraday",
+      "headline": "CAVA Group, Inc. Raises FY2026 Outlook, Increasing Same-Store Sales Growth Forecast From 3.0%-5.0% To 4.5%-6.5% And Adjusted EBITDA Guidance From $176M-$184M To $181M-$191M; Expects 75-77 New Restaurant Openings",
+      "url": "https://www.benzinga.com/news/26/05/52676861/cava-group-inc-raises-fy2026-outlook-increasing-same-store-sales-growth-forecast-from-3-0-5-0-to-4-5",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160148+00:00"
+    },
+    {
+      "ticker": "MEC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Proposed public offering of common stock typically dilutes existing shareholders and creates immediate selling pressure, especially when size is undisclosed indicating potential material dilution.",
+      "action_window": "intraday",
+      "headline": "Mayville Engineering Reveals  Proposed Public Offering of Common Stock; No Size Disclosed",
+      "url": "https://www.benzinga.com/news/26/05/52676832/mayville-engineering-reveals-proposed-public-offering-of-common-stock-no-size-disclosed",
+      "source": "alpaca",
+      "added_at": "2026-05-19T20:29:13.160154+00:00"
     }
   ]
 }
