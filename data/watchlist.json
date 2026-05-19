@@ -590,6 +590,90 @@
       "url": "https://www.benzinga.com/news/26/05/52656276/canaan-sees-q2-sales-35-000m-45-000m-vs-95-935m-est",
       "source": "alpaca",
       "added_at": "2026-05-19T10:57:45.228334+00:00"
+    },
+    {
+      "ticker": "TU",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Massive $66B 5-year capital investment plan signals strong strategic commitment to high-growth infrastructure (AI, 5G) and will likely drive long-term revenue growth, though impact is spread over multiple years.",
+      "action_window": "intraday",
+      "headline": "TELUS Announces $66B 5-Year Investment Plan To Expand AI Supercomputing, 5G/Fibre Networks, And Housing Conversion Projects Across Canada",
+      "url": "https://www.benzinga.com/news/26/05/52662254/telus-announces-66b-5-year-investment-plan-to-expand-ai-supercomputing-5gfibre-networks-and-housing",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775664+00:00"
+    },
+    {
+      "ticker": "ZS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with global system integrators for AI security solution addresses growing enterprise AI adoption needs, representing meaningful business expansion but lacks immediate financial impact data.",
+      "action_window": "next_day",
+      "headline": "Zscaler Collaborates With Global System Integrators To Launch Project AI-Guardian to Help Accelerate Enterprise AI Adoption",
+      "url": "https://www.benzinga.com/26/05/52661951/zscaler-collaborates-with-global-system-integrators-to-launch-project-ai-guardian-to-help-accelerate",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775676+00:00"
+    },
+    {
+      "ticker": "WULF",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley maintaining Overweight with significant price target raise to $42 represents meaningful positive analyst action from a major investment bank that typically drives buying interest.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Maintains Overweight on TeraWulf, Raises Price Target to $42",
+      "url": "https://www.benzinga.com/news/26/05/52661930/morgan-stanley-maintains-overweight-on-terawulf-raises-price-target-to-42",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775682+00:00"
+    },
+    {
+      "ticker": "TE",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Short seller report from Fuzzy Panda Research causing shares to plunge intraday, creating immediate downward price pressure and potential cascade effect.",
+      "action_window": "intraday",
+      "headline": "T1 Energy Shares Plunge Following Fuzzy Panda Short Report",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52661854/t1-energy-shares-plunge-following-fuzzy-panda-short-report",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775686+00:00"
+    },
+    {
+      "ticker": "CIFR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley maintains positive rating with significant price target increase, indicating strengthened conviction and potential near-term upside catalyst for the stock.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Maintains Overweight on Cipher Digital, Raises Price Target to $42.5",
+      "url": "https://www.benzinga.com/news/26/05/52661621/morgan-stanley-maintains-overweight-on-cipher-digital-raises-price-target-to-42-5",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775691+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BofA flashing sell signal on semiconductors as the most crowded trade (73% of fund managers) suggests potential de-risking and rotation, creating near-term downward pressure on sector leaders.",
+      "action_window": "this_week",
+      "headline": "Nvidia, AMD Bulls Beware \u2014 Wall Street's Most Crowded Trade Just Flashed A Sell Warning",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52661560/nvidia-amd-bulls-beware-wall-streets-most-crowded-trade-just-flashed-a-sell-warning",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775696+00:00"
+    },
+    {
+      "ticker": "PGNY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Canaccord Genuity upgrade to Buy with $30 price target represents a meaningful positive catalyst from a reputable investment bank that typically drives near-term price action.",
+      "action_window": "intraday",
+      "headline": "Canaccord Genuity Upgrades Progyny to Buy, Raises Price Target to $30",
+      "url": "https://www.benzinga.com/news/26/05/52661554/canaccord-genuity-upgrades-progyny-to-buy-raises-price-target-to-30",
+      "source": "alpaca",
+      "added_at": "2026-05-19T13:55:28.775699+00:00"
     }
   ]
 }
