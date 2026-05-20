@@ -907,15 +907,16 @@
     },
     {
       "ticker": "AIM",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
       "category": "other",
-      "rationale": "Terminating equity distribution agreement stops dilution from at-the-market offerings, which is typically positive for existing shareholders by removing near-term share count pressure.",
+      "rationale": "Registered direct offering of 7.5M shares represents significant dilution (~$2.4M at $0.325/share, likely well below recent trading price) and typically pressures micro-cap stock prices immediately.",
       "action_window": "next_day",
-      "headline": "AIM ImmunoTech Suspends Equity Distribution Agreement And Terminates Continuous Offering As Of May 19, 2026",
-      "url": "https://www.benzinga.com/news/26/05/52679586/aim-immunotech-suspends-equity-distribution-agreement-and-terminates-continuous-offering-as-of-may-1",
+      "headline": "AIM ImmunoTech Announcing $2.4M Registered Direct Offering Of 7.5M Shares At $0.325 Each.",
+      "url": "https://www.benzinga.com/news/26/05/52702196/aim-immunotech-announcing-2-4m-registered-direct-offering-of-7-5m-shares-at-0-325-each",
       "source": "alpaca",
-      "added_at": "2026-05-19T21:55:44.231916+00:00"
+      "added_at": "2026-05-19T21:55:44.231916+00:00",
+      "updated_at": "2026-05-20T19:17:49.781857+00:00"
     },
     {
       "ticker": "INHD",
@@ -1016,15 +1017,16 @@
     },
     {
       "ticker": "HAS",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
+      "tradeable_score": 0.74,
+      "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Mixed earnings with strong EPS beat of 17.6% offset by revenue miss of 6%, creating conflicting signals for traders.",
+      "rationale": "Strong Q1 earnings with 26% revenue growth in key Wizards division driven by record Magic: The Gathering performance demonstrates sustained franchise momentum beyond one-time spike.",
       "action_window": "intraday",
-      "headline": "Hasbro Q1 Adj. EPS $1.47 Beats $1.25 Estimate, Sales $1.000B Miss $1.064B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52684923/hasbro-q1-adj-eps-1-47-beats-1-25-estimate-sales-1-000b-miss-1-064b-estimate",
+      "headline": "Hasbro Says Magic's Monster Growth Was 'No Fluke'",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52701564/hasbro-says-magics-monster-growth-was-no-fluke",
       "source": "alpaca",
-      "added_at": "2026-05-20T10:46:01.811769+00:00"
+      "added_at": "2026-05-20T10:46:01.811769+00:00",
+      "updated_at": "2026-05-20T19:17:49.781880+00:00"
     },
     {
       "ticker": "USO",
@@ -1169,6 +1171,54 @@
       "url": "https://www.benzinga.com/markets/tech/26/05/52697913/why-is-marvell-stock-gaining-wednesday",
       "source": "alpaca",
       "added_at": "2026-05-20T16:49:18.493331+00:00"
+    },
+    {
+      "ticker": "JUNS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registered direct offering of 7.14M shares represents significant dilution (~28% at $0.28/share pricing) with immediate trading impact expected upon market open.",
+      "action_window": "intraday",
+      "headline": "Jupiter Neurosciences Announces Pricing Of $2M Registered Direct Offering Of 7,142,858 Shares, Expected To Close May 21",
+      "url": "https://www.benzinga.com/quote/JUNS",
+      "source": "alpaca",
+      "added_at": "2026-05-20T19:17:49.781890+00:00"
+    },
+    {
+      "ticker": "TSLA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Key Tesla executives being moved to cash-burning xAI raises concerns about management focus and resource allocation at Tesla, though impact depends on scale of departures.",
+      "action_window": "next_day",
+      "headline": "Elon Musk's Raid: Why Tesla Lieutenants Are Shuffling To xAI",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/05/52701303/elon-musks-raid-why-tesla-lieutenants-are-shuffling-to-xai",
+      "source": "alpaca",
+      "added_at": "2026-05-20T19:17:49.781901+00:00"
+    },
+    {
+      "ticker": "ZIM",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "A 30% revenue decline with falling freight rates and reduced volumes represents a significant earnings miss with shares already declining, indicating immediate negative trading impact.",
+      "action_window": "intraday",
+      "headline": "ZIM Integrated Profit Hit Stems From Shipping Market Weakness",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52701252/zim-integrated-profit-hit-stems-from-shipping-market-weakness",
+      "source": "alpaca",
+      "added_at": "2026-05-20T19:17:49.781913+00:00"
+    },
+    {
+      "ticker": "WNW",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Confirmed $15.65 million private financing deal provides immediate capital injection for AI skincare expansion, explaining intraday surge.",
+      "action_window": "intraday",
+      "headline": "Why Is Meiwu Stock Surging Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52701155/why-is-meiwu-stock-surging-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-20T19:17:49.781920+00:00"
     }
   ]
 }
