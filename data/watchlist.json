@@ -1049,6 +1049,78 @@
       "url": "https://www.benzinga.com/news/26/05/52684731/morgan-stanley-downgrades-newell-brands-to-underweight-lowers-price-target-to-3-5",
       "source": "alpaca",
       "added_at": "2026-05-20T10:46:01.811788+00:00"
+    },
+    {
+      "ticker": "RUBI",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Equity line share sale causing immediate dilution and stock is already plunging intraday, representing a meaningful negative catalyst for existing shareholders.",
+      "action_window": "intraday",
+      "headline": "Why Is Rubico Stock Falling On Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52689619/why-is-rubico-stock-falling-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-20T13:36:00.762909+00:00"
+    },
+    {
+      "ticker": "PLUG",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Final investment decision on UK green hydrogen project with Plug Power as electrolyzer supplier represents confirmed revenue opportunity and validates technology, driving immediate price reaction.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Plug Power Stock Today?",
+      "url": "https://www.benzinga.com/markets/equities/26/05/52689536/whats-going-on-with-plug-power-stock-today-16",
+      "source": "alpaca",
+      "added_at": "2026-05-20T13:36:00.762923+00:00"
+    },
+    {
+      "ticker": "VIDA",
+      "tradeable_score": 0.8,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Successful $15M IPO completion with shares already rising and dual exchange listing represents a confirmed major catalyst for a newly public company.",
+      "action_window": "intraday",
+      "headline": "VIDA Gets An AI Liftoff After $15 Million IPO",
+      "url": "https://www.benzinga.com/markets/ipos/26/05/52689478/vida-gets-an-ai-liftoff-after-15-million-ipo",
+      "source": "alpaca",
+      "added_at": "2026-05-20T13:36:00.762932+00:00"
+    },
+    {
+      "ticker": "CAPS",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings results with EPS missing by 10.5% but revenue beating estimates by 17%, creating uncertainty that warrants immediate evaluation but no clear directional bias.",
+      "action_window": "intraday",
+      "headline": "Capstone Holding Q1 EPS $(0.21) Misses $(0.19) Estimate, Sales $12.636M Beat $10.803M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52689450/capstone-holding-q1-eps-0-21-misses-0-19-estimate-sales-12-636m-beat-10-803m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-20T13:36:00.762939+00:00"
+    },
+    {
+      "ticker": "VLO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Strait of Hormuz closure creates supply constraints benefiting US refiners with record exports, multi-year high utilization, and critically low inventories supporting strong margins.",
+      "action_window": "next_day",
+      "headline": "Is Trump Letting The Strait Of Hormuz Stay Closed? US Refiners Aren't Complaining",
+      "url": "https://www.benzinga.com/markets/commodities/26/05/52689436/is-trump-letting-the-strait-of-hormuz-stay-closed-us-refiners-arent-complaining",
+      "source": "alpaca",
+      "added_at": "2026-05-20T13:36:00.762946+00:00"
+    },
+    {
+      "ticker": "PHR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Wells Fargo downgrade from Overweight to Equal-Weight with lowered price target represents a meaningful negative catalyst from a major bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Wells Fargo Downgrades Phreesia to Equal-Weight, Lowers Price Target to $9",
+      "url": "https://www.benzinga.com/news/26/05/52689399/wells-fargo-downgrades-phreesia-to-equal-weight-lowers-price-target-to-9",
+      "source": "alpaca",
+      "added_at": "2026-05-20T13:36:00.762960+00:00"
     }
   ]
 }
