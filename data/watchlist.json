@@ -653,16 +653,16 @@
     },
     {
       "ticker": "NVDA",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Rising 30-year Treasury yield to 5.18% represents a significant macro headwind that could pressure high-multiple tech and AI stocks including Nvidia through higher discount rates.",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "CEO reveals significant additional revenue stream (Vera CPU) beyond the already massive $1T Blackwell/Rubin forecast, implying materially higher total addressable market and revenue potential.",
       "action_window": "this_week",
-      "headline": "Why A 5.18% Treasury Yield Could Matter More Than Nvidia Earnings",
-      "url": "https://www.benzinga.com/markets/bonds/26/05/52669417/why-a-5-18-treasury-yield-could-matter-more-than-nvidia-earnings",
+      "headline": "NVIDIA CEO Says Standalone Sales Of Vera CPU Not Included In $1T Blackwell And Rubin Forecast, Says Vera Will Be Largest Sales Contributor Outside The $1T Forecast",
+      "url": "https://www.benzinga.com/news/26/05/52707207/nvidia-ceo-says-standalone-sales-of-vera-cpu-not-included-in-1t-blackwell-and-rubin-forecast-says-ve",
       "source": "alpaca",
       "added_at": "2026-05-19T13:55:28.775696+00:00",
-      "updated_at": "2026-05-19T16:49:07.664886+00:00"
+      "updated_at": "2026-05-20T22:51:53.466595+00:00"
     },
     {
       "ticker": "PGNY",
@@ -1186,15 +1186,16 @@
     },
     {
       "ticker": "TSLA",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
       "category": "other",
-      "rationale": "Key Tesla executives being moved to cash-burning xAI raises concerns about management focus and resource allocation at Tesla, though impact depends on scale of departures.",
+      "rationale": "SpaceX IPO filing is a major corporate event that could unlock value for Musk and potentially impact TSLA through collateral implications, attention shift, and Musk's cross-company focus.",
       "action_window": "next_day",
-      "headline": "Elon Musk's Raid: Why Tesla Lieutenants Are Shuffling To xAI",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/05/52701303/elon-musks-raid-why-tesla-lieutenants-are-shuffling-to-xai",
+      "headline": "SpaceX IPO Filing Lands: First Look Inside Elon Musk's Public Offering",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52707022/spacex-ipo-filing-lands-first-look-inside-elon-musks-public-offering",
       "source": "alpaca",
-      "added_at": "2026-05-20T19:17:49.781901+00:00"
+      "added_at": "2026-05-20T19:17:49.781901+00:00",
+      "updated_at": "2026-05-20T22:51:53.466621+00:00"
     },
     {
       "ticker": "ZIM",
@@ -1303,6 +1304,43 @@
       "url": "https://www.benzinga.com/quote/TSLA",
       "source": "alpaca",
       "added_at": "2026-05-20T21:18:56.683103+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $3B shelf offering represents significant potential dilution for existing shareholders, typically pressuring stock price in the near term despite capital raise flexibility.",
+      "action_window": "next_day",
+      "headline": "Rocket Lab Files Prospectus To Offer Up To $3B Of Common Stock",
+      "url": "https://www.benzinga.com/news/26/05/52707003/rocket-lab-files-prospectus-to-offer-up-to-3b-of-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-05-20T22:51:53.466564+00:00",
+      "updated_at": "2026-05-20T22:51:53.466630+00:00"
+    },
+    {
+      "ticker": "APLD",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Long-term hyperscaler lease agreement represents significant recurring revenue commitment for Applied Digital, validated by immediate after-hours price jump.",
+      "action_window": "next_day",
+      "headline": "Applied Digital Stock Jumps After The Bell: Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52707400/applied-digital-stock-jumps-after-the-bell-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-20T22:51:53.466580+00:00"
+    },
+    {
+      "ticker": "PPBT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $200M mixed securities shelf filing signals potential significant dilution for existing shareholders, typically causing near-term selling pressure in small-cap biotech stocks.",
+      "action_window": "next_day",
+      "headline": "Purple Biotech Files $200M Mixed Securities Shelf",
+      "url": "https://www.benzinga.com/news/26/05/52707114/purple-biotech-files-200m-mixed-securities-shelf",
+      "source": "alpaca",
+      "added_at": "2026-05-20T22:51:53.466613+00:00"
     }
   ]
 }
