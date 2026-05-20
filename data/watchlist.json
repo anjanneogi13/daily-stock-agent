@@ -988,6 +988,67 @@
       "url": "https://www.benzinga.com/markets/tech/26/05/52680106/webull-launches-ai-powered-stock-analysis-tool-for-retail-traders",
       "source": "alpaca",
       "added_at": "2026-05-19T23:00:04.190614+00:00"
+    },
+    {
+      "ticker": "TGT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Target reported strong Q1 results with comparable traffic up 4.4%, digital sales up 8.9%, and non-merchandise sales surging nearly 25%, indicating solid operational performance across key metrics.",
+      "action_window": "intraday",
+      "headline": "Target Q1 Comparable Traffic Grew 4.4% Compared With Q1 2025; Digital Comparable Sales Up 8.9%; Non-Merchandise Sales Grew Nearly 25%",
+      "url": "https://www.benzinga.com/quote/TGT",
+      "source": "alpaca",
+      "added_at": "2026-05-20T10:46:01.811728+00:00",
+      "updated_at": "2026-05-20T10:46:01.811744+00:00"
+    },
+    {
+      "ticker": "CNL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Discovery of precious metal-rich mineralization at a mining exploration project is a meaningful catalyst that typically drives significant interest in junior mining stocks.",
+      "action_window": "intraday",
+      "headline": "Collective Mining Announces Discovery Of Precious Metal-Rich Mineralization In The Apollo Target Area At Its Guayabales Project",
+      "url": "https://www.benzinga.com/news/26/05/52684992/collective-mining-announces-discovery-of-precious-metal-rich-mineralization-in-the-apollo-target-are",
+      "source": "alpaca",
+      "added_at": "2026-05-20T10:46:01.811755+00:00"
+    },
+    {
+      "ticker": "HAS",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings with strong EPS beat of 17.6% offset by revenue miss of 6%, creating conflicting signals for traders.",
+      "action_window": "intraday",
+      "headline": "Hasbro Q1 Adj. EPS $1.47 Beats $1.25 Estimate, Sales $1.000B Miss $1.064B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52684923/hasbro-q1-adj-eps-1-47-beats-1-25-estimate-sales-1-000b-miss-1-064b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-20T10:46:01.811769+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Iran tightening Strait of Hormuz controls creates immediate supply risk for 20% of global oil transit, driving energy prices higher and creating geopolitical risk premium.",
+      "action_window": "intraday",
+      "headline": "'Three supertankers attempt Hormuz crossing after Iran tightens controls' - FT",
+      "url": "https://www.benzinga.com/news/26/05/52684785/three-supertankers-attempt-hormuz-crossing-after-iran-tightens-controls-ft",
+      "source": "alpaca",
+      "added_at": "2026-05-20T10:46:01.811781+00:00"
+    },
+    {
+      "ticker": "NWL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade to Underweight with significantly lowered price target represents a major negative catalyst from a top-tier investment bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades Newell Brands to Underweight, Lowers Price Target to $3.5",
+      "url": "https://www.benzinga.com/news/26/05/52684731/morgan-stanley-downgrades-newell-brands-to-underweight-lowers-price-target-to-3-5",
+      "source": "alpaca",
+      "added_at": "2026-05-20T10:46:01.811788+00:00"
     }
   ]
 }

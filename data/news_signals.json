@@ -59,18 +59,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LIVN": {
-    "ticker": "LIVN",
-    "score_delta": 0.079,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "LivaNova Raises FY2026 Adj EPS Guidance from $4.15-$4.25 to $4.20-$4.30 vs $4.21 Est;",
-    "added_at": "2026-05-06T10:13:29.869841+00:00",
-    "expires": "2026-05-20T10:13:29.869846+00:00",
-    "hard_block": false
-  },
   "CVE": {
     "ticker": "CVE",
     "score_delta": 0.194,
@@ -81,30 +69,6 @@
     "headline": "Canadian To Sell Its Canadian Commercial Fuels Unit For Expected Cash Proceeds Of $275M",
     "added_at": "2026-05-06T10:13:29.871915+00:00",
     "expires": "2026-06-05T10:13:29.871920+00:00",
-    "hard_block": false
-  },
-  "GEO": {
-    "ticker": "GEO",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "GEO Group Raises FY2026 GAAP EPS Guidance from $0.99-$1.07 to $1.15-$1.25 vs $1.12 Est; Raises FY2026 Sales Guidance from $2.900B-$3.100B to $2.950B-$3.100B vs $2.963B Est",
-    "added_at": "2026-05-06T10:13:29.872958+00:00",
-    "expires": "2026-05-20T10:13:29.872963+00:00",
-    "hard_block": false
-  },
-  "LPX": {
-    "ticker": "LPX",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.92,
-    "action_window": "intraday",
-    "headline": "Louisiana-Pacific Sees FY2026 Sales $1.650B-$1.670B vs $2.665B Est",
-    "added_at": "2026-05-06T10:13:29.873985+00:00",
-    "expires": "2026-05-20T10:13:29.873990+00:00",
     "hard_block": false
   },
   "OKLO": {
@@ -818,84 +782,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VYGR": {
-    "ticker": "VYGR",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Voyager Therapeutics' VY1706 Tau Silencing Gene Therapy Well Tolerated At Highest Dose, Reduces Tau Up To 64% In NHPs; Alzheimer's Clinical Trial Expected H2 2026",
-    "added_at": "2026-05-13T10:17:13.122545+00:00",
-    "expires": "2026-05-20T10:17:13.122551+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "YOU": {
-    "ticker": "YOU",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "CLEAR Launches At Northwest Arkansas National Airport",
-    "added_at": "2026-05-13T10:17:13.125716+00:00",
-    "expires": "2026-05-20T10:17:13.125721+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "OMRNY": {
-    "ticker": "OMRNY",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "OMRON Sees FY2026 GAAP EPS $0.89 vs $1.22 Est; Sees Sales $5.228B vs $0.00 Est",
-    "added_at": "2026-05-13T10:17:13.128866+00:00",
-    "expires": "2026-05-20T10:17:13.128873+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SOPH": {
-    "ticker": "SOPH",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Synnovis And SOPHiA GENETICS Launch Blood-Based Cancer Testing Program Covering One Third Of All ctDNA Tests In England",
-    "added_at": "2026-05-13T10:17:13.132020+00:00",
-    "expires": "2026-05-20T10:17:13.132027+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BIRK": {
-    "ticker": "BIRK",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Birkenstock Holding Q2 Adj. EPS $0.59 Misses $0.70 Estimate, Sales $724.068M Beat $723.930M Estimate",
-    "added_at": "2026-05-13T10:17:13.135212+00:00",
-    "expires": "2026-05-20T10:17:13.135219+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AIM": {
-    "ticker": "AIM",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Aimia Q1 EPS $0.02 Beats $(0.17) Estimate, Sales $32.700M Miss $134.300M Estimate",
-    "added_at": "2026-05-13T10:17:13.138320+00:00",
-    "expires": "2026-05-20T10:17:13.138325+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ORLA": {
     "ticker": "ORLA",
     "score_delta": 0.2,
@@ -932,19 +818,6 @@
     "headline": "Atour Lifestyle Holdings Raises FY2026 Sales Guidance from $1.680B-$1.736B to $1.736B-$1.792B vs $1.790B Est",
     "added_at": "2026-05-13T10:17:13.147950+00:00",
     "expires": "2026-05-27T10:17:13.147955+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DQJCY": {
-    "ticker": "DQJCY",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Pan Pacific International Q3 EPS $0.06 Down From $0.10 YoY, Sales $3.930B Up From $3.669B YoY",
-    "added_at": "2026-05-13T10:17:13.154400+00:00",
-    "expires": "2026-05-20T10:17:13.154406+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1725,19 +1598,6 @@
     "headline": "Auddia Files S-4 For Thramann Holdings Merger, Combined Company To Rebrand As McCarthy Finney And Trade As MCFN",
     "added_at": "2026-05-15T10:16:27.859676+00:00",
     "expires": "2026-06-14T10:16:27.859682+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BWXT": {
-    "ticker": "BWXT",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Deutsche Bank Upgrades BWX Technologies to Buy, Raises Price Target to $255",
-    "added_at": "2026-05-15T10:16:27.862969+00:00",
-    "expires": "2026-05-20T10:16:27.862975+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3671,6 +3531,45 @@
     "headline": "Webull Launches AI-Powered Stock Analysis Tool For Retail Traders",
     "added_at": "2026-05-19T23:00:04.169673+00:00",
     "expires": "2026-05-26T23:00:04.169680+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TGT": {
+    "ticker": "TGT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Target Q1 Comparable Sales Up 5.6%",
+    "added_at": "2026-05-20T10:46:01.789677+00:00",
+    "expires": "2026-05-27T10:46:01.789685+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HAS": {
+    "ticker": "HAS",
+    "score_delta": 0.093,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Hasbro Q1 Adj. EPS $1.47 Beats $1.25 Estimate, Sales $1.000B Miss $1.064B Estimate",
+    "added_at": "2026-05-20T10:46:01.801517+00:00",
+    "expires": "2026-05-27T10:46:01.801523+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NWL": {
+    "ticker": "NWL",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Morgan Stanley Downgrades Newell Brands to Underweight, Lowers Price Target to $3.5",
+    "added_at": "2026-05-20T10:46:01.807596+00:00",
+    "expires": "2026-05-25T10:46:01.807602+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
