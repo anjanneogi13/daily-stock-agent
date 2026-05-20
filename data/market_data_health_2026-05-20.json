@@ -1,0 +1,58 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 563,
+      "empty": 0,
+      "errors": 0,
+      "successes": 563
+    },
+    "monster_info": {
+      "attempts": 252,
+      "empty": 0,
+      "errors": 0,
+      "successes": 252
+    },
+    "ohlcv": {
+      "attempts": 568,
+      "empty": 0,
+      "errors": 0,
+      "successes": 568
+    }
+  },
+  "date": "2026-05-20",
+  "providers": {
+    "yfinance": {
+      "attempts": 1383,
+      "empty": 0,
+      "errors": 0,
+      "failure_types": {
+        "empty_response": 0,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 0,
+        "rate_limited": 0,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 0,
+      "rate_limited": 0,
+      "successes": 1383,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 563,
+    "final_pick_count": 1,
+    "scored_count": 252,
+    "universe_count": 563
+  },
+  "samples": [],
+  "timestamp_utc": "2026-05-20T12:10:04Z"
+}
