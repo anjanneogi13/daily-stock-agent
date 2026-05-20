@@ -107,30 +107,6 @@
     "expires": "2026-06-05T17:00:34.456887+00:00",
     "hard_block": false
   },
-  "SEZL": {
-    "ticker": "SEZL",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Sezzle Raises FY2026 Adj EPS Guidance from $4.70 to $5.10 vs $4.70 Est; Raises FY2026 Sales Guidance from $562.849M-$585.363M to $585.363M-$607.877M vs $575.227M Est",
-    "added_at": "2026-05-06T20:09:39.174640+00:00",
-    "expires": "2026-05-20T20:09:39.174645+00:00",
-    "hard_block": false
-  },
-  "NAGE": {
-    "ticker": "NAGE",
-    "score_delta": 0.097,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Niagen Expects 2026 Net Sales To Increase Between 10-15% YoY, Excluding 2025 Net Sales Attributable To The Analytical Reference Standards And Services Segment",
-    "added_at": "2026-05-06T20:09:39.180748+00:00",
-    "expires": "2026-05-20T20:09:39.180753+00:00",
-    "hard_block": false
-  },
   "WBD": {
     "ticker": "WBD",
     "score_delta": 0.2,
@@ -143,30 +119,6 @@
     "expires": "2026-06-07T09:10:23.148164+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "MIRM": {
-    "ticker": "MIRM",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Mirum Pharmaceuticals Raises FY2026 Sales Guidance from $630.000M-$650.000M to $660.000M-$680.000M vs $644.905M Est",
-    "added_at": "2026-05-06T20:09:39.183906+00:00",
-    "expires": "2026-05-20T20:09:39.183912+00:00",
-    "hard_block": false
-  },
-  "RVMD": {
-    "ticker": "RVMD",
-    "score_delta": -0.096,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Revolution Medicines Sees FY26 GAAP Operating Expenses $1.7B-$1.8B",
-    "added_at": "2026-05-06T20:09:39.189795+00:00",
-    "expires": "2026-05-20T20:09:39.189802+00:00",
-    "hard_block": false
   },
   "XRN": {
     "ticker": "XRN",
@@ -1642,45 +1594,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LGCY": {
-    "ticker": "LGCY",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Ladenburg Thalmann Maintains Buy on Legacy Education, Raises Price Target to $15.4",
-    "added_at": "2026-05-15T20:00:18.707132+00:00",
-    "expires": "2026-05-20T20:00:18.707137+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "USIO": {
-    "ticker": "USIO",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Ladenburg Thalmann Maintains Buy on Usio, Raises Price Target to $6.25",
-    "added_at": "2026-05-15T20:00:18.710643+00:00",
-    "expires": "2026-05-20T20:00:18.710650+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CLRB": {
-    "ticker": "CLRB",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Ladenburg Thalmann Assumes Cellectar Biosciences at Buy, Announces Price Target of $10",
-    "added_at": "2026-05-15T20:00:18.714125+00:00",
-    "expires": "2026-05-20T20:00:18.714130+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MKZR": {
     "ticker": "MKZR",
     "score_delta": 0.097,
@@ -1691,19 +1604,6 @@
     "headline": "Mackenzie Realty Capital Q3 EPS $(0.98) Up From $(4.68) YoY, Sales $5.442M Up From $4.274M YoY",
     "added_at": "2026-05-15T20:00:18.717654+00:00",
     "expires": "2026-05-22T20:00:18.717660+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PIII": {
-    "ticker": "PIII",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Lake Street Maintains Buy on P3 Health Partners, Raises Price Target to $14",
-    "added_at": "2026-05-15T20:00:18.721188+00:00",
-    "expires": "2026-05-20T20:00:18.721193+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3390,6 +3290,84 @@
     "headline": "Walmart Q1 Preview: Earnings Could Show Impact Of 'Tighter Budgets Amid Surging Gas Prices'",
     "added_at": "2026-05-20T19:17:49.774785+00:00",
     "expires": "2026-05-27T19:17:49.774790+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRUG": {
+    "ticker": "TRUG",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "TruGolf Holdings Q1 EPS $(2.75) Misses $(1.49) Estimate, Sales $5.020M Beat $4.500M Estimate",
+    "added_at": "2026-05-20T21:18:56.658251+00:00",
+    "expires": "2026-05-27T21:18:56.658259+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LIMN": {
+    "ticker": "LIMN",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "Liminatus Pharma Enters Merger Agreement With InnocsAI On May 17, 2026; InnocsAI Members To Receive 1.6B Shares At $0.20 Per Share And 20% Contingent Value Rights",
+    "added_at": "2026-05-20T21:18:56.666186+00:00",
+    "expires": "2026-06-19T21:18:56.666194+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SONM": {
+    "ticker": "SONM",
+    "score_delta": -0.064,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Sonim Technologies Q1 EPS $5.01 Misses $5.04 Estimate",
+    "added_at": "2026-05-20T21:18:56.668930+00:00",
+    "expires": "2026-05-27T21:18:56.668936+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IPW": {
+    "ticker": "IPW",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "iPower Q3 Adj. EPS $(0.18) Up From $(0.70) YoY, Sales $3.499M Down From $16.042M YoY",
+    "added_at": "2026-05-20T21:18:56.671564+00:00",
+    "expires": "2026-05-27T21:18:56.671571+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JAGX": {
+    "ticker": "JAGX",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Jaguar Health Q1 EPS $(13.60) Misses $(4.26) Estimate, Sales $20.272M Beat $4.211M Estimate",
+    "added_at": "2026-05-20T21:18:56.674176+00:00",
+    "expires": "2026-05-27T21:18:56.674182+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DXYZ": {
+    "ticker": "DXYZ",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.92,
+    "action_window": "intraday",
+    "headline": "SpaceX Says Consideration For Acquisition Of Cursor, After IPO Closing Would Consist Of Class A Common Stock Implied Equity Value Of $60B; Cursor Entitled To $1.5B Termination Fee Under Option Agreeme",
+    "added_at": "2026-05-20T21:18:56.679359+00:00",
+    "expires": "2026-06-19T21:18:56.679364+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

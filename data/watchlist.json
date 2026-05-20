@@ -1219,6 +1219,90 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52701155/why-is-meiwu-stock-surging-wednesday",
       "source": "alpaca",
       "added_at": "2026-05-20T19:17:49.781920+00:00"
+    },
+    {
+      "ticker": "TRUG",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of 85% ($2.75 vs $1.49 estimate) outweighs modest revenue beat of 12%, indicating deteriorating profitability and likely negative market reaction.",
+      "action_window": "intraday",
+      "headline": "TruGolf Holdings Q1 EPS $(2.75) Misses $(1.49) Estimate, Sales $5.020M Beat $4.500M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52706587/trugolf-holdings-q1-eps-2-75-misses-1-49-estimate-sales-5-020m-beat-4-500m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683045+00:00"
+    },
+    {
+      "ticker": "LIMN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive merger agreement with material consideration of 1.6B shares at $0.20/share ($320M valuation) plus 20% CVR represents significant M&A catalyst for target company.",
+      "action_window": "next_day",
+      "headline": "Liminatus Pharma Enters Merger Agreement With InnocsAI On May 17, 2026; InnocsAI Members To Receive 1.6B Shares At $0.20 Per Share And 20% Contingent Value Rights",
+      "url": "https://www.benzinga.com/news/26/05/52706567/liminatus-pharma-enters-merger-agreement-with-innocsai-on-may-17-2026-innocsai-members-to-receive-1",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683058+00:00"
+    },
+    {
+      "ticker": "SVM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Completion of strategic JV securing 70% operatorship stake, 40-year mining license extension to 2062, and clear asset acquisition represents significant value creation and long-term operational visibility for Silvercorp.",
+      "action_window": "next_day",
+      "headline": "Silvercorp Metals Completes Kyrgyz Gold Project Joint Venture, Secures 70% Stake And Operatorship, Extends Mining License To 2062; Pays $60M To Kyrgyz Government With Additional $10M Pending Milestones",
+      "url": "https://www.benzinga.com/news/26/05/52706477/silvercorp-metals-completes-kyrgyz-gold-project-joint-venture-secures-70-stake-and-operatorship-exte",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683068+00:00"
+    },
+    {
+      "ticker": "IPW",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Despite EPS improvement, catastrophic 78% revenue collapse from $16M to $3.5M signals severe business deterioration that outweighs the reduced loss.",
+      "action_window": "next_day",
+      "headline": "iPower Q3 Adj. EPS $(0.18) Up From $(0.70) YoY, Sales $3.499M Down From $16.042M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52706329/ipower-q3-adj-eps-0-18-up-from-0-70-yoy-sales-3-499m-down-from-16-042m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683080+00:00"
+    },
+    {
+      "ticker": "NUTR",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Simultaneous termination of CEO and CFO with immediate replacements signals potential strategic shift or governance issue, creating uncertainty that warrants monitoring but lacks clear directional catalyst.",
+      "action_window": "next_day",
+      "headline": "Nusatrip Terminates Anson Neo As CEO Effective May 17, 2026; Terminates Tan Yee Siong As CFO Effective May 17, 2026; Co. Appoints Tjin Patrick Soetanto As CEO; Appoints Tzi Chun Foo As CFO",
+      "url": "https://www.benzinga.com/news/26/05/52706315/nusatrip-terminates-anson-neo-as-ceo-effective-may-17-2026-terminates-tan-yee-siong-as-cfo-effective",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683087+00:00"
+    },
+    {
+      "ticker": "JAGX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Massive EPS miss of $13.60 vs $4.26 estimate (over 3x worse than expected) significantly outweighs the revenue beat, indicating severe profitability issues despite higher sales.",
+      "action_window": "next_day",
+      "headline": "Jaguar Health Q1 EPS $(13.60) Misses $(4.26) Estimate, Sales $20.272M Beat $4.211M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52706263/jaguar-health-q1-eps-13-60-misses-4-26-estimate-sales-20-272m-beat-4-211m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683094+00:00"
+    },
+    {
+      "ticker": "DXYZ",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "SpaceX announcing concrete acquisition consideration of $60B for Cursor with significant termination and deferred service fees ($10B combined) represents a major M&A catalyst with defined financial terms post-IPO.",
+      "action_window": "intraday",
+      "headline": "SpaceX Says Consideration For Acquisition Of Cursor, After IPO Closing Would Consist Of Class A Common Stock Implied Equity Value Of $60B; Cursor Entitled To $1.5B Termination Fee Under Option Agreement And $8.5B Deferred Services Fee Under Compute Agreement",
+      "url": "https://www.benzinga.com/quote/TSLA",
+      "source": "alpaca",
+      "added_at": "2026-05-20T21:18:56.683103+00:00"
     }
   ]
 }
