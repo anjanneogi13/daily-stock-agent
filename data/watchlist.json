@@ -1121,6 +1121,54 @@
       "url": "https://www.benzinga.com/news/26/05/52689399/wells-fargo-downgrades-phreesia-to-equal-weight-lowers-price-target-to-9",
       "source": "alpaca",
       "added_at": "2026-05-20T13:36:00.762960+00:00"
+    },
+    {
+      "ticker": "SNOW",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Headline explicitly indicates intraday stock decline with questioning tone suggesting negative catalyst, though specific cause unknown without full article details.",
+      "action_window": "intraday",
+      "headline": "Why Snowflake Stock Is Falling On Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52698360/why-snowflake-stock-is-falling-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-20T16:49:18.493297+00:00"
+    },
+    {
+      "ticker": "ARM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "ARM stock surged 14% on Bernstein's $300 price target upgrade and significant AI chip demand catalyst, but the move appears largely completed intraday.",
+      "action_window": "next_day",
+      "headline": "What Is Going On With Arm Stock On Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52697994/what-is-going-on-with-arm-stock-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-20T16:49:18.493314+00:00"
+    },
+    {
+      "ticker": "GME",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "GameStop filing reveals increased stake in eBay to 6.6% as part of Ryan Cohen's activist push to acquire the e-commerce company, a significant M&A development driving immediate stock movement.",
+      "action_window": "intraday",
+      "headline": "GameStop Stock Is Trending Again: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52697974/gamestop-stock-is-trending-again-whats-happening",
+      "source": "alpaca",
+      "added_at": "2026-05-20T16:49:18.493323+00:00"
+    },
+    {
+      "ticker": "MRVL",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple tier-1 analyst upgrades (Wells Fargo, Evercore) with raised price targets on AI demand catalyst, though stock already near 52-week high suggests some momentum already captured.",
+      "action_window": "intraday",
+      "headline": "Why Is Marvell Stock Gaining Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52697913/why-is-marvell-stock-gaining-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-20T16:49:18.493331+00:00"
     }
   ]
 }
