@@ -1,21 +1,21 @@
 {
-  "date": "2026-05-20",
+  "date": "2026-05-21",
   "market": {
-    "spy_change_pct": -0.67,
-    "qqq_change_pct": -0.62,
-    "soxx_change_pct": 0.18,
-    "vix": 18.01,
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "USO",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 152.96,
-      "gap_pct": 0.0,
-      "actionable": true
+      "ticker": "LLY",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }
