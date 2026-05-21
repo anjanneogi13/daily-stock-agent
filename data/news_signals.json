@@ -673,19 +673,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BTBT": {
-    "ticker": "BTBT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Bit Digital Q1 Sales $27.900M Beat $25.774M Estimate",
-    "added_at": "2026-05-14T23:29:33.627795+00:00",
-    "expires": "2026-05-21T23:29:33.627802+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SRG": {
     "ticker": "SRG",
     "score_delta": -0.1,

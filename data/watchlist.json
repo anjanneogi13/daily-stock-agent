@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BALY",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant earnings miss with Q1 EPS of $(2.69) versus $(1.15) estimate (134% worse than expected) and revenue also missing expectations creates strong negative trading catalyst.",
-      "action_window": "intraday",
-      "headline": "Ballys Q1 EPS $(2.69) Misses $(1.15) Estimate, Sales $755.722M Miss $759.190M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52652114/ballys-q1-eps-2-69-misses-1-15-estimate-sales-755-722m-miss-759-190m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-18T23:06:45.261536+00:00"
-    },
-    {
-      "ticker": "ATER",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Definitive agreement for $18M asset sale plus $7M strategic investment represents significant corporate action and liquidity event for Aterian, though the transactions involve only portions of the business rather than full acquisition.",
-      "action_window": "intraday",
-      "headline": "Aterian, Inc. Announces Definitive Agreement for the Sale of its Marquee Brand Portfolio for $18 Million Subject to Adjustments",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/aterian-inc-announces-definitive-agreement-120000332.html?.tsrc=rss",
-      "source": "yahoo",
-      "added_at": "2026-05-18T23:06:45.261554+00:00"
-    },
-    {
       "ticker": "MU",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
