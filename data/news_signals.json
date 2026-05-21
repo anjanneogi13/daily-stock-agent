@@ -120,18 +120,6 @@
     "expires": "2026-06-05T21:39:56.340828+00:00",
     "hard_block": false
   },
-  "RYZ": {
-    "ticker": "RYZ",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Ryerson Holding Sees Q2 GAAP EPS $0.38-$0.42 vs $0.43 Est; Sees Sales $1.860B-$1.930B vs $1.862B Est",
-    "added_at": "2026-05-06T23:44:32.609850+00:00",
-    "expires": "2026-05-20T23:44:32.609856+00:00",
-    "hard_block": false
-  },
   "GTN": {
     "ticker": "GTN",
     "score_delta": -0.15,
@@ -750,19 +738,6 @@
     "headline": "AI Demand Pushes Applied Materials To Highest Margins In 25 Years",
     "added_at": "2026-05-15T10:16:27.872534+00:00",
     "expires": "2026-05-22T10:16:27.872540+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DOX": {
-    "ticker": "DOX",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Amdocs Q2 Earnings Call Highlights",
-    "added_at": "2026-05-13T23:53:10.552008+00:00",
-    "expires": "2026-05-20T23:53:10.552014+00:00",
     "hard_block": false,
     "negative_reaction": false
   },

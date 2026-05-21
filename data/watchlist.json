@@ -1341,6 +1341,18 @@
       "url": "https://www.benzinga.com/news/26/05/52707114/purple-biotech-files-200m-mixed-securities-shelf",
       "source": "alpaca",
       "added_at": "2026-05-20T22:51:53.466613+00:00"
+    },
+    {
+      "ticker": "ONCO",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Trading halt with pending news indicates imminent material announcement but direction unknown until news released, creating high uncertainty with potential for significant price movement.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halted at 7:50:00 p.m. ET - Trading Halt: Halt News Pending",
+      "url": "https://www.benzinga.com/quote/ONCO",
+      "source": "alpaca",
+      "added_at": "2026-05-21T00:03:45.286823+00:00"
     }
   ]
 }
