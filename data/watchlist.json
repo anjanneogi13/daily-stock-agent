@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SHAZ",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive business development news about accelerating AI Cloud demand in key markets driving intraday share price appreciation, but lacks specific financial metrics or hard catalysts.",
-      "action_window": "intraday",
-      "headline": "What's Going On With SharonAI On Monday?",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52637673/whats-going-on-with-sharonai-on-monday",
-      "source": "alpaca",
-      "added_at": "2026-05-18T14:59:39.570892+00:00"
-    },
-    {
-      "ticker": "NIO",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Multiple negative catalysts converge including regulatory scrutiny on EV software/range claims, mixed delivery data, and shares already trading lower ahead of earnings.",
-      "action_window": "intraday",
-      "headline": "Nio's Growth Story In Focus Ahead Of Key Earnings Report",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52637606/nios-growth-story-in-focus-ahead-of-key-earnings-report",
-      "source": "alpaca",
-      "added_at": "2026-05-18T14:59:39.570903+00:00"
-    },
-    {
-      "ticker": "OCS",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive outlook with raised price target, creating moderate positive momentum but limited urgency as rating unchanged from Overweight.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on Oculis Holding, Raises Price Target to $42",
-      "url": "https://www.benzinga.com/news/26/05/52637042/jp-morgan-maintains-overweight-on-oculis-holding-raises-price-target-to-42",
-      "source": "alpaca",
-      "added_at": "2026-05-18T14:59:39.570913+00:00"
-    },
-    {
       "ticker": "KLAR",
       "tradeable_score": 0.62,
       "sentiment": "bullish",
@@ -1450,6 +1414,78 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52718254/star-bulk-q1-results-top-estimates-declares-50-cent-dividend",
       "source": "alpaca",
       "added_at": "2026-05-21T14:22:11.553653+00:00"
+    },
+    {
+      "ticker": "GFS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock hitting 52-week high on major product launch backed by substantial $375M government funding represents a meaningful catalyst with immediate market validation.",
+      "action_window": "intraday",
+      "headline": "GlobalFoundries Stock Hits 52-Week High - Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52725937/globalfoundries-stock-hits-52-week-high-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-21T17:11:47.355926+00:00"
+    },
+    {
+      "ticker": "CRWD",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic product enhancement integrating leading AI technology (Anthropic Claude) into core Falcon platform addresses high-priority enterprise AI security market, potentially expanding addressable market and competitive positioning.",
+      "action_window": "next_day",
+      "headline": "CrowdStrike Integrates Anthropic Claude Compliance API Into Falcon Platform To Boost Enterprise AI Security And Governance",
+      "url": "https://www.benzinga.com/news/26/05/52725863/crowdstrike-integrates-anthropic-claude-compliance-api-into-falcon-platform-to-boost-enterprise-ai-s",
+      "source": "alpaca",
+      "added_at": "2026-05-21T17:11:47.355940+00:00"
+    },
+    {
+      "ticker": "VRNS",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic product enhancement integrating leading AI technology (Anthropic Claude) into core security platform positions VRNS to capture growing enterprise AI security demand, though impact depends on adoption metrics.",
+      "action_window": "next_day",
+      "headline": "Varonis Systems Integrates Anthropic Claude Compliance API Into Atlas Platform To Expand Enterprise AI Security Monitoring",
+      "url": "https://www.benzinga.com/news/26/05/52725823/varonis-systems-integrates-anthropic-claude-compliance-api-into-atlas-platform-to-expand-enterprise",
+      "source": "alpaca",
+      "added_at": "2026-05-21T17:11:47.355951+00:00"
+    },
+    {
+      "ticker": "VRTX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Health Canada acceptance of NDS for suzetrigine is a positive regulatory milestone but represents submission acceptance rather than approval, and is for a secondary market (Canada) rather than FDA, creating moderate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Vertex Pharmaceuticals Announces Health Canada Has Accepted For Review A New Drug Submission For Suzetrigine For The Treatment Of Moderate-To-Severe Acute Pain In Adults",
+      "url": "https://www.benzinga.com/general/biotech/26/05/52725645/vertex-pharmaceuticals-announces-health-canada-has-accepted-for-review-a-new-drug-submission-for-",
+      "source": "alpaca",
+      "added_at": "2026-05-21T17:11:47.355961+00:00"
+    },
+    {
+      "ticker": "COHR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $1.9 billion strategic stake by Nvidia in Coherent validates the AI supplier thesis and represents a significant capital deployment that should drive immediate price action.",
+      "action_window": "intraday",
+      "headline": "Nvidia Just Opened A $1.9 Billion Position In A Critical AI Supplier",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52725621/nvidia-just-opened-a-1-9-billion-position-in-a-critical-ai-supplier",
+      "source": "alpaca",
+      "added_at": "2026-05-21T17:11:47.355974+00:00"
+    },
+    {
+      "ticker": "AUUD",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock already up 20%+ in premarket on AI product traction news, suggesting momentum but much of the move may have occurred.",
+      "action_window": "intraday",
+      "headline": "Why Is Auddia Stock Gaining Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52725261/why-is-auddia-stock-gaining-thursday",
+      "source": "alpaca",
+      "added_at": "2026-05-21T17:11:47.355983+00:00"
     }
   ]
 }
