@@ -693,32 +693,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MRLN": {
-    "ticker": "MRLN",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Merlin Unveils Plans For AI-Powered Autonomy Core For Commercial Cargo Transport",
-    "added_at": "2026-05-14T12:12:29.423988+00:00",
-    "expires": "2026-05-21T12:12:29.423996+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BK": {
-    "ticker": "BK",
-    "score_delta": 0.029,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "ignore",
-    "headline": "Snapdocs Partners With Bank Of New York Mellon To Offer Digital Mortgage Collateral Infrastructure",
-    "added_at": "2026-05-14T12:12:29.438637+00:00",
-    "expires": "2026-05-21T12:12:29.438642+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PRE": {
     "ticker": "PRE",
     "score_delta": 0.097,
@@ -729,32 +703,6 @@
     "headline": "Prenetics Global Announces Preliminary Q1 2026 Revenue Of $36M, Expects Q2 Revenue Of $46M To $48M",
     "added_at": "2026-05-14T12:12:29.447668+00:00",
     "expires": "2026-05-28T12:12:29.447694+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSX:MBX": {
-    "ticker": "TSX:MBX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Microbix Biosystems Q2 EPS $(0.01) Beats $(0.62) Estimate, Sales $3.378M Beat $3.374M Estimate",
-    "added_at": "2026-05-14T12:12:29.450660+00:00",
-    "expires": "2026-05-21T12:12:29.450666+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RBBN": {
-    "ticker": "RBBN",
-    "score_delta": 0.034,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Ribbon Communications Collaborating With Salesforce Over Session Border Controller Cloud Native Edition, Policy And Routing Engine",
-    "added_at": "2026-05-14T12:12:29.453650+00:00",
-    "expires": "2026-05-21T12:12:29.453655+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -783,19 +731,6 @@
     "expires": "2026-05-28T12:12:29.459630+00:00",
     "hard_block": false,
     "negative_reaction": true
-  },
-  "FRMM": {
-    "ticker": "FRMM",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "Forum Markets Q1 EPS $0.06 Beats $(0.22) Estimate, Sales $2.859M Beat $1.400M Estimate",
-    "added_at": "2026-05-14T12:12:29.462685+00:00",
-    "expires": "2026-05-21T12:12:29.462691+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "INVZ": {
     "ticker": "INVZ",
@@ -3130,6 +3065,71 @@
     "headline": "Roth Capital Initiates Coverage On Tamboran Resources with Buy Rating, Announces Price Target of $47",
     "added_at": "2026-05-21T11:02:24.024533+00:00",
     "expires": "2026-05-26T11:02:24.024538+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALGS": {
+    "ticker": "ALGS",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Cantor Fitzgerald Initiates Coverage On Aligos Therapeutics with Overweight Rating, Announces Price Target of $20",
+    "added_at": "2026-05-21T14:22:11.530960+00:00",
+    "expires": "2026-05-26T14:22:11.530968+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CNTB": {
+    "ticker": "CNTB",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Cantor Fitzgerald Initiates Coverage On Connect Biopharma Hldgs with Overweight Rating, Announces Price Target of $4",
+    "added_at": "2026-05-21T14:22:11.541767+00:00",
+    "expires": "2026-05-26T14:22:11.541772+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ADI": {
+    "ticker": "ADI",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Jefferies Maintains Buy on Analog Devices, Raises Price Target to $475",
+    "added_at": "2026-05-21T14:22:11.544399+00:00",
+    "expires": "2026-05-26T14:22:11.544404+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NTES": {
+    "ticker": "NTES",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "CORRECTION: NetEase Q1 Adj. EPS $2.53 Beats $2.02 Estimate, Sales $4.435B Beat $4.200B Estimate",
+    "added_at": "2026-05-21T14:22:11.547039+00:00",
+    "expires": "2026-05-28T14:22:11.547044+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SBLK": {
+    "ticker": "SBLK",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Star Bulk Stock Up On Q1 Double Beat, Declares 50-Cent Dividend",
+    "added_at": "2026-05-21T14:22:11.549740+00:00",
+    "expires": "2026-05-28T14:22:11.549745+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

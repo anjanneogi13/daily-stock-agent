@@ -1,126 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SLNH",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Soluna Holdings missed both EPS and revenue estimates significantly (EPS -20% worse than expected, revenue -11% below estimate), creating immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Soluna Holdings Q1 EPS $(0.24) Misses $(0.20) Estimate, Sales $9.394M Miss $10.600M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52629921/soluna-holdings-q1-eps-0-24-misses-0-20-estimate-sales-9-394m-miss-10-600m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373099+00:00"
-    },
-    {
-      "ticker": "VVX",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Government defense contract award from US Navy represents confirmed new revenue stream for V2X, materially positive for a defense contractor though specific contract value not disclosed.",
-      "action_window": "intraday",
-      "headline": "V2X Awarded Contract By US Navy's Naval Air Systems Command To Support Large Aircraft Infrared Countermeasures Program",
-      "url": "https://www.benzinga.com/quote/VVX",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373111+00:00"
-    },
-    {
-      "ticker": "IBRX",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Five US patent grants strengthen IP protection for ANKTIVA combination therapy, providing competitive moat and potential partnership value, though not an immediate revenue catalyst.",
-      "action_window": "next_day",
-      "headline": "ImmunityBio Secures Five US Patents Covering Combination Of IL-15 Receptor Agonist ANKTIVA With Bacillus Calmette-Gu\u00e9rin For Treatment Of Cancer",
-      "url": "https://www.benzinga.com/news/26/05/52629899/immunitybio-secures-five-us-patents-covering-combination-of-il-15-receptor-agonist-anktiva-with-baci",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373119+00:00"
-    },
-    {
-      "ticker": "ATEX",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FCC regulatory approval for satellite direct-to-device network collaboration represents a meaningful catalyst that unlocks potential new revenue opportunities and validates Anterix's technology platform.",
-      "action_window": "intraday",
-      "headline": "Anterix, Lynk Global Receive FCC Approval To Mull Use Of Lynk's Satellite Direct-To-Device Communications Network",
-      "url": "https://www.benzinga.com/news/26/05/52629858/anterix-lynk-global-receive-fcc-approval-to-mull-use-of-lynks-satellite-direct-to-device-communicati",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373125+00:00"
-    },
-    {
-      "ticker": "IINN",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Substantial $580K commercial purchase order from prestigious NYU Langone Hospital validates product commercialization and represents meaningful revenue for likely small-cap medical device company.",
-      "action_window": "intraday",
-      "headline": "Inspira Technologies Announces $580,000 Commercial Purchase Order For Its ART100 Extracorporeal Blood Circulation Systems From NYU Langone Hospital",
-      "url": "https://www.benzinga.com/news/26/05/52629846/inspira-technologies-announces-580-000-commercial-purchase-order-for-its-art100-extracorporeal-blood",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373130+00:00"
-    },
-    {
-      "ticker": "NEE",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Major all-stock merger announcement between two large utilities creating significant trading opportunity with immediate market impact on both acquirer and target.",
-      "action_window": "intraday",
-      "headline": "NextEra Energy To Combine In All-Stock Deal With Dominion Energy",
-      "url": "https://www.benzinga.com/m-a/26/05/52629833/nextera-energy-to-combine-in-all-stock-deal-with-dominion-energy",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373136+00:00"
-    },
-    {
-      "ticker": "WGRX",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Withdrawal of proxy statement suggests strategic transaction process hit obstacles or complications, creating near-term uncertainty despite continued exploration of options.",
-      "action_window": "intraday",
-      "headline": "Wellgistics Health Withdraws Preliminary Proxy Statement, Continues To Evaluate Potential Strategic Transactions",
-      "url": "https://www.benzinga.com/news/26/05/52629777/wellgistics-health-withdraws-preliminary-proxy-statement-continues-to-evaluate-potential-strategic-t",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373143+00:00"
-    },
-    {
-      "ticker": "ELAN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New monoclonal antibody product launch for canine atopic dermatitis represents meaningful revenue opportunity in animal health specialty therapeutics market.",
-      "action_window": "next_day",
-      "headline": "Elanco Animal Health Rolls Out Befrena Monoclonal Antibody To Treat Anine Allergic, Atopic Dermatitis",
-      "url": "https://www.benzinga.com/news/26/05/52629667/elanco-animal-health-rolls-out-befrena-monoclonal-antibody-to-treat-anine-allergic-atopic-dermatitis",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373149+00:00"
-    },
-    {
-      "ticker": "TOYO",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "EPS beat of 4% is overshadowed by significant revenue miss of 30% ($142.8M vs $202.9M estimate), indicating potential fundamental weakness in the business.",
-      "action_window": "intraday",
-      "headline": "Toyo Co Q1 EPS $0.75 Beats $0.72 Estimate, Sales $142.773M Miss $202.900M Estimate",
-      "url": "https://www.benzinga.com/quote/TOYO",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373154+00:00"
-    },
-    {
-      "ticker": "ALOT",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "lawsuit",
-      "rationale": "Settlement announcement removes legal uncertainty around M&A transaction but outcome details and financial impact remain unclear.",
-      "action_window": "intraday",
-      "headline": "AstroNova Announces Settlement Related To Transaction To Acquire MTEX",
-      "url": "https://www.benzinga.com/news/26/05/52629637/astronova-announces-settlement-related-to-transaction-to-acquire-mtex",
-      "source": "alpaca",
-      "added_at": "2026-05-18T11:40:55.373160+00:00"
-    },
-    {
       "ticker": "SHAZ",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -1486,6 +1366,90 @@
       "url": "https://www.benzinga.com/news/26/05/52711548/roth-capital-initiates-coverage-on-tamboran-resources-with-buy-rating-announces-price-target-of-47",
       "source": "alpaca",
       "added_at": "2026-05-21T11:02:24.028366+00:00"
+    },
+    {
+      "ticker": "SPOT",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CEO confirming significant 20% market share capture in new audiobook vertical demonstrates successful product diversification and revenue stream expansion beyond music streaming.",
+      "action_window": "intraday",
+      "headline": "Spotify CEO Says Company Has Already Captured ~20% Of U.S. Audiobook Market",
+      "url": "https://www.benzinga.com/news/26/05/52718969/spotify-ceo-says-company-has-already-captured-20-of-u-s-audiobook-market",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553584+00:00"
+    },
+    {
+      "ticker": "ALGS",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Cantor Fitzgerald initiates coverage with Overweight rating and $20 price target, which is a positive catalyst but initial coverage typically has moderate impact compared to upgrades from existing coverage.",
+      "action_window": "intraday",
+      "headline": "Cantor Fitzgerald Initiates Coverage On Aligos Therapeutics with Overweight Rating, Announces Price Target of $20",
+      "url": "https://www.benzinga.com/news/26/05/52718920/cantor-fitzgerald-initiates-coverage-on-aligos-therapeutics-with-overweight-rating-announces-price-t",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553598+00:00"
+    },
+    {
+      "ticker": "BIRK",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $250M accelerated share repurchase program signals management confidence and is confirmed by significant 16% stock price jump, though most of the move has already occurred.",
+      "action_window": "intraday",
+      "headline": "Birkenstock Unveils $250 Million Accelerated Stock Buyback",
+      "url": "https://www.benzinga.com/markets/buybacks/26/05/52718864/birkenstock-unveils-250-million-accelerated-stock-buyback",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553609+00:00"
+    },
+    {
+      "ticker": "CNTB",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Cantor Fitzgerald initiating coverage with Overweight rating and $4 price target is positive but represents new coverage rather than an upgrade from existing coverage, limiting immediate impact.",
+      "action_window": "intraday",
+      "headline": "Cantor Fitzgerald Initiates Coverage On Connect Biopharma Hldgs with Overweight Rating, Announces Price Target of $4",
+      "url": "https://www.benzinga.com/news/26/05/52718810/cantor-fitzgerald-initiates-coverage-on-connect-biopharma-hldgs-with-overweight-rating-announces-pri",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553616+00:00"
+    },
+    {
+      "ticker": "NTES",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "NetEase significantly beat Q1 earnings expectations with EPS 25% above estimate ($2.53 vs $2.02) and revenue 5.6% above estimate ($4.435B vs $4.200B), representing a strong double beat on key metrics.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: NetEase Q1 Adj. EPS $2.53 Beats $2.02 Estimate, Sales $4.435B Beat $4.200B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52718614/correction-netease-q1-adj-eps-2-53-beats-2-02-estimate-sales-4-435b-beat-4-200b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553625+00:00"
+    },
+    {
+      "ticker": "CB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Dual capital return program with 5.2% dividend increase and substantial $7.5B buyback authorization signals strong confidence and shareholder-friendly management, typically driving immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Chubb Raises Quarterly Dividend From $0.97 To $1.02/Share; Announces $7.5B Buyback Plan",
+      "url": "https://www.benzinga.com/news/26/05/52718489/chubb-raises-quarterly-dividend-from-0-97-to-1-02share-announces-7-5b-buyback-plan",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553644+00:00"
+    },
+    {
+      "ticker": "SBLK",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 double beat with substantial 50-cent dividend declaration and confirmed stock price increase provides strong bullish catalyst, though some momentum already captured in Thursday trading.",
+      "action_window": "next_day",
+      "headline": "Star Bulk Stock Up On Q1 Double Beat, Declares 50-Cent Dividend",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52718254/star-bulk-q1-results-top-estimates-declares-50-cent-dividend",
+      "source": "alpaca",
+      "added_at": "2026-05-21T14:22:11.553653+00:00"
     }
   ]
 }
