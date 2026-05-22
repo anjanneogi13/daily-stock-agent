@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MU",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Sector-wide selloff driven by capacity crunch fears affecting multiple memory chip manufacturers with confirmed premarket price drops.",
-      "action_window": "intraday",
-      "headline": "Micron, Seagate, Western Digital Sink On Capacity Crunch Fears",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52656297/micron-seagate-western-digital-sink-on-capacity-crunch-fears",
-      "source": "alpaca",
-      "added_at": "2026-05-19T10:57:45.228275+00:00",
-      "updated_at": "2026-05-19T10:57:45.228327+00:00"
-    },
-    {
-      "ticker": "SPIR",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Major partnership with established enterprise client Amadeus IT Group validates Spire's data capabilities and should drive revenue growth through integration into Amadeus's airport operations platform.",
-      "action_window": "intraday",
-      "headline": "Spire Global Selected By Amadeus IT Group To Provide Automatic Dependent Surveillance\u2013Broadcast Data Fusion For Integration Into Amadeus Virtual Airport Operations Center",
-      "url": "https://www.benzinga.com/news/26/05/52656583/spire-global-selected-by-amadeus-it-group-to-provide-automatic-dependent-surveillance-broadcast-data",
-      "source": "alpaca",
-      "added_at": "2026-05-19T10:57:45.228289+00:00"
-    },
-    {
-      "ticker": "THR",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Revenue beat estimates by 9.6% ($148.3M vs $135.3M) while EPS met expectations, indicating strong top-line performance that typically drives positive market reaction.",
-      "action_window": "intraday",
-      "headline": "Thermon Group Holdings Q4 Adj. EPS $0.55, Inline, Sales $148.332M Beat $135.349M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52656582/thermon-group-holdings-q4-adj-eps-0-55-inline-sales-148-332m-beat-135-349m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-19T10:57:45.228296+00:00"
-    },
-    {
-      "ticker": "AKAM",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New AI-focused product launch targeting emerging AI search optimization market represents strategic positioning but lacks immediate revenue impact or market size data.",
-      "action_window": "next_day",
-      "headline": "Akamai Launches AI Brand Presence To Help Firms Optimize Their Content For AI Search And Traffic",
-      "url": "https://www.benzinga.com/news/26/05/52656490/akamai-launches-ai-brand-presence-to-help-firms-optimize-their-content-for-ai-search-and-traffic",
-      "source": "alpaca",
-      "added_at": "2026-05-19T10:57:45.228317+00:00"
-    },
-    {
-      "ticker": "CAN",
-      "tradeable_score": 0.92,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Canaan's Q2 sales guidance of $35M-$45M represents a massive 53-63% miss versus $95.935M consensus estimate, indicating severe operational issues or demand collapse.",
-      "action_window": "intraday",
-      "headline": "Canaan Sees Q2 Sales $35.000M-$45.000M vs $95.935M Est",
-      "url": "https://www.benzinga.com/news/26/05/52656276/canaan-sees-q2-sales-35-000m-45-000m-vs-95-935m-est",
-      "source": "alpaca",
-      "added_at": "2026-05-19T10:57:45.228334+00:00"
-    },
-    {
       "ticker": "TU",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1453,15 +1392,16 @@
     },
     {
       "ticker": "FJET",
-      "tradeable_score": 0.73,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Significant $17.5M strategic equity investment led by institutional investors provides strong capital validation and runway for growth in the space sector.",
+      "rationale": "Significant $17.5M institutional investment combined with positive product testing milestones creates a meaningful dual catalyst for a growth-stage space company.",
       "action_window": "intraday",
-      "headline": "Starfighters Space Announces $17.5M Strategic Equity Investment Led By Global Institutional Investors",
-      "url": "https://www.benzinga.com/news/26/05/52739523/starfighters-space-announces-17-5m-strategic-equity-investment-led-by-global-institutional-investors",
+      "headline": "Starfighters Space Shares Rise On STARLAUNCH Progress And New Institutional Investment",
+      "url": "https://www.benzinga.com/news/space/26/05/52742653/starfighters-space-shares-rise-on-starlaunch-progress-and-new-institutional-investment",
       "source": "alpaca",
-      "added_at": "2026-05-22T10:45:28.898962+00:00"
+      "added_at": "2026-05-22T10:45:28.898962+00:00",
+      "updated_at": "2026-05-22T13:28:11.056704+00:00"
     },
     {
       "ticker": "TII",
@@ -1474,6 +1414,114 @@
       "url": "https://www.benzinga.com/quote/TII",
       "source": "alpaca",
       "added_at": "2026-05-22T10:45:28.898970+00:00"
+    },
+    {
+      "ticker": "KIDZ",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant strategic pivot into high-growth AI/GPU cloud sector with substantial $100M funding represents material business expansion catalyst driving immediate price action.",
+      "action_window": "intraday",
+      "headline": "Classover Shares Jump As Company Expands Into AI And GPU Cloud Computing",
+      "url": "https://www.benzinga.com/markets/equities/26/05/52742819/classover-shares-jump-as-company-expands-into-ai-and-gpu-cloud-computing",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056635+00:00"
+    },
+    {
+      "ticker": "IMPP",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Massive earnings beat with Q1 adjusted EPS of $0.61 vs $0.34 estimate (79% beat) and revenue of $61.7M vs $48.1M estimate (28% beat) represents a highly significant positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Imperial Ptrl Q1 Adj. EPS $0.61 Beats $0.34 Estimate, Sales $61.713M Beat $48.100M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52742775/imperial-ptrl-q1-adj-eps-0-61-beats-0-34-estimate-sales-61-713m-beat-48-100m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056654+00:00"
+    },
+    {
+      "ticker": "SG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan upgrade from neutral to overweight with price target increase represents a major Wall Street bank turning positive on the stock, typically driving immediate buying pressure.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Upgrades Sweetgreen to Overweight, Raises Price Target to $13",
+      "url": "https://www.benzinga.com/news/26/05/52742686/jp-morgan-upgrades-sweetgreen-to-overweight-raises-price-target-to-13",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056675+00:00"
+    },
+    {
+      "ticker": "AGIO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "EU marketing authorization for PYRUKYND represents a major regulatory approval expanding the commercial opportunity for Agios in the European market for anemia treatment.",
+      "action_window": "intraday",
+      "headline": "Agios Pharmaceuticals Announces EU Marketing Authorization For PYRUKYND In Adults For Treatment Of Anemia",
+      "url": "https://www.benzinga.com/news/26/05/52742670/agios-pharmaceuticals-announces-eu-marketing-authorization-for-pyrukynd-in-adults-for-treatment-of-a",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056684+00:00"
+    },
+    {
+      "ticker": "FUTU",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Chinese regulator imposed a substantial $271M fine for securities law breach, representing a significant regulatory penalty that will impact financials and potentially business operations.",
+      "action_window": "intraday",
+      "headline": "Futu Holdings Confirms Receipt Of Notice Of Investigation, Administrative Penalty Pre-Notification Letter From China Regulator Over Alleged Breach Of Securities Law; Regulator Imposes ~$271M Fine",
+      "url": "https://www.benzinga.com/news/26/05/52742654/futu-holdings-confirms-receipt-of-notice-of-investigation-administrative-penalty-pre-notification-le",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056694+00:00"
+    },
+    {
+      "ticker": "BOY",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed acquisition offer at \u00a38.85/share in cash from Apollo represents a significant premium and M&A catalyst for Bodycote shareholders with high probability of stock trading toward offer price.",
+      "action_window": "intraday",
+      "headline": "Bodycote Confirms Receipt Of Proposed Acquisition Offer From Apollo Global Management At \u00a38.85/Share In Cash",
+      "url": "https://www.benzinga.com/m-a/26/05/52742606/bodycote-confirms-receipt-of-proposed-acquisition-offer-from-apollo-global-management-at-8-85share-i",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056714+00:00"
+    },
+    {
+      "ticker": "TXN",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analyst upgrades including TXN moving from neutral to bullish provides moderate trading catalyst, though impact dispersed across 4 tickers.",
+      "action_window": "intraday",
+      "headline": "This Texas Instruments Analyst Turns Bullish; Here Are Top 4 Upgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52742583/this-texas-instruments-analyst-turns-bullish-here-are-top-4-upgrades-for-friday",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056722+00:00"
+    },
+    {
+      "ticker": "DAVA",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "JP Morgan downgrade to Underweight with significant price target cut signals major negative catalyst from a tier-1 investment bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Downgrades Endava to Underweight, Lowers Price Target to $5",
+      "url": "https://www.benzinga.com/news/26/05/52742582/jp-morgan-downgrades-endava-to-underweight-lowers-price-target-to-5",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056731+00:00"
+    },
+    {
+      "ticker": "GNRC",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Jefferies upgrade to Buy with significant price target of $302 represents a major catalyst from a reputable bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Jefferies Upgrades Generac Holdings to Buy, Raises Price Target to $302",
+      "url": "https://www.benzinga.com/news/26/05/52742557/jefferies-upgrades-generac-holdings-to-buy-raises-price-target-to-302",
+      "source": "alpaca",
+      "added_at": "2026-05-22T13:28:11.056741+00:00"
     }
   ]
 }
