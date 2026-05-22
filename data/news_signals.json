@@ -144,19 +144,6 @@
     "expires": "2026-06-06T20:48:23.419458+00:00",
     "hard_block": false
   },
-  "AIIO": {
-    "ticker": "AIIO",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Robo.ai Announced An Agreement To Acquire 100% Of The Equity Interest In Neurovia AI Limited For A Total Consideration Of $100M",
-    "added_at": "2026-05-08T09:10:23.144939+00:00",
-    "expires": "2026-05-22T09:10:23.144946+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TM": {
     "ticker": "TM",
     "score_delta": -0.15,
@@ -582,19 +569,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AMAT": {
-    "ticker": "AMAT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "AI Demand Pushes Applied Materials To Highest Margins In 25 Years",
-    "added_at": "2026-05-15T10:16:27.872534+00:00",
-    "expires": "2026-05-22T10:16:27.872540+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "YETI": {
     "ticker": "YETI",
     "score_delta": 0.1,
@@ -673,19 +647,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SRG": {
-    "ticker": "SRG",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Seritage Growth Props Q1 EPS $(0.56) Down From $(0.42) YoY, Sales $2.050M Down From $4.599M YoY",
-    "added_at": "2026-05-15T10:16:27.851623+00:00",
-    "expires": "2026-05-22T10:16:27.851630+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AUUD": {
     "ticker": "AUUD",
     "score_delta": 0.2,
@@ -696,71 +657,6 @@
     "headline": "Auddia Files S-4 For Thramann Holdings Merger, Combined Company To Rebrand As McCarthy Finney And Trade As MCFN",
     "added_at": "2026-05-15T10:16:27.859676+00:00",
     "expires": "2026-06-14T10:16:27.859682+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CBRS": {
-    "ticker": "CBRS",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Leveraged ETFs Tied To Cerebras Systems Set To Launch Just 24 Hours After Blockbuster IPO",
-    "added_at": "2026-05-15T10:16:27.866171+00:00",
-    "expires": "2026-05-22T10:16:27.866176+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NYC": {
-    "ticker": "NYC",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "American Strategic Q1 EPS $(3.04) Up From $(3.39) YoY, Sales $7.348M Down From $12.308M YoY",
-    "added_at": "2026-05-15T10:16:27.869315+00:00",
-    "expires": "2026-05-22T10:16:27.869321+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AZ": {
-    "ticker": "AZ",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "A2Z Smart Techs Q1 EPS $(0.19) Misses $(0.08) Estimate, Sales $3.317M Miss $4.329M Estimate",
-    "added_at": "2026-05-15T10:16:27.875746+00:00",
-    "expires": "2026-05-22T10:16:27.875752+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SPRY": {
-    "ticker": "SPRY",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "ARS Pharmaceuticals Q1 EPS $(0.61) Misses $(0.52) Estimate, Sales $22.681M Beat $22.230M Estimate",
-    "added_at": "2026-05-15T10:16:27.878952+00:00",
-    "expires": "2026-05-22T10:16:27.878957+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MAURY": {
-    "ticker": "MAURY",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Marui Group Q4 EPS $0.50 Down From $0.54 YoY, Sales $453.225M Up From $436.788M YoY",
-    "added_at": "2026-05-15T10:16:27.882190+00:00",
-    "expires": "2026-05-22T10:16:27.882195+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3019,6 +2915,71 @@
     "headline": "Lockheed Martin Breaks Ground On Alabama Munitions Production Center To Expand THAAD And NGI Output Amid $9B U.S. Manufacturing Investment Plan",
     "added_at": "2026-05-21T22:49:17.540421+00:00",
     "expires": "2026-05-28T22:49:17.540434+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SMMT": {
+    "ticker": "SMMT",
+    "score_delta": -0.039,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "HC Wainwright & Co. Downgrades Summit Therapeutics to Neutral",
+    "added_at": "2026-05-22T10:45:28.878866+00:00",
+    "expires": "2026-05-27T10:45:28.878873+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HAE": {
+    "ticker": "HAE",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "B of A Securities Upgrades Haemonetics to Buy, Raises Price Target to $80",
+    "added_at": "2026-05-22T10:45:28.887349+00:00",
+    "expires": "2026-05-27T10:45:28.887356+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TENB": {
+    "ticker": "TENB",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Needham Maintains Buy on Tenable Holdings, Raises Price Target to $30",
+    "added_at": "2026-05-22T10:45:28.889992+00:00",
+    "expires": "2026-05-27T10:45:28.889998+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ZM": {
+    "ticker": "ZM",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Needham Maintains Buy on Zoom Communications, Raises Price Target to $130",
+    "added_at": "2026-05-22T10:45:28.892598+00:00",
+    "expires": "2026-05-27T10:45:28.892603+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CNEY": {
+    "ticker": "CNEY",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "CN Energy Subsidiary Pathenbot Signs Initial 100,000-Unit Intelligent Cargo Sorting Services Order In U.S.",
+    "added_at": "2026-05-22T10:45:28.895260+00:00",
+    "expires": "2026-05-29T10:45:28.895266+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

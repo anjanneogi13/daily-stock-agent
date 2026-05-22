@@ -1366,6 +1366,114 @@
       "url": "https://www.benzinga.com/news/26/05/52735347/veritone-files-prospectus-to-offer-and-sell-common-stock-up-to-50m-through-sales-agents",
       "source": "alpaca",
       "added_at": "2026-05-21T22:49:17.543739+00:00"
+    },
+    {
+      "ticker": "SMMT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from HC Wainwright to Neutral represents a negative shift in sell-side sentiment that typically triggers selling pressure in the near term.",
+      "action_window": "intraday",
+      "headline": "HC Wainwright & Co. Downgrades Summit Therapeutics to Neutral",
+      "url": "https://www.benzinga.com/news/26/05/52739951/hc-wainwright-co-downgrades-summit-therapeutics-to-neutral",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898882+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Presidential decision to avoid AI regulation removes potential regulatory headwind for major AI-focused tech companies, particularly benefiting Google and other AI leaders.",
+      "action_window": "intraday",
+      "headline": "Trump Backs Out Of AI Executive Order Amid Fears It Could Hurt US Tech Edge\u2014 'Don't Want To...Get In The Way Of That Lead'",
+      "url": "https://www.benzinga.com/news/politics/26/05/52739913/trump-backs-out-of-ai-executive-order-amid-fears-it-could-hurt-us-tech-edge-dont-want-to-get-in-the-way-of-that-lead",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898896+00:00"
+    },
+    {
+      "ticker": "HAE",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America Securities upgraded HAE from neutral to buy with significant price target raise to $80, representing a major vote of confidence from a tier-1 investment bank that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Upgrades Haemonetics to Buy, Raises Price Target to $80",
+      "url": "https://www.benzinga.com/news/26/05/52739915/b-of-a-securities-upgrades-haemonetics-to-buy-raises-price-target-to-80",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898907+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "China reducing US Treasury holdings to 2008 crisis levels with 10-year yields near 5% signals significant bond market stress that typically pressures equity valuations and increases market volatility.",
+      "action_window": "intraday",
+      "headline": "China Cuts US Treasury Holdings To Lowest Level Since 2008 As Bond Market Selloff Deepens",
+      "url": "https://www.benzinga.com/markets/bonds/26/05/52739694/china-slashes-us-treasury-stockpile-to-lowest-level-since-2008-financial-crisis",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898920+00:00"
+    },
+    {
+      "ticker": "NTZ",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "NYSE acceptance of compliance plan removes immediate delisting risk, providing relief for the stock but uncertainty remains until full compliance is achieved.",
+      "action_window": "intraday",
+      "headline": "Natuzzi Announces NYSE Acceptance Of Plan To Regain Compliance With Listing Standards",
+      "url": "https://www.benzinga.com/news/26/05/52739658/natuzzi-announces-nyse-acceptance-of-plan-to-regain-compliance-with-listing-standards",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898929+00:00"
+    },
+    {
+      "ticker": "PURR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large secondary offering of 35.2M shares creates significant dilution risk and immediate selling pressure as existing shareholder Rorschach Advisors liquidates position.",
+      "action_window": "intraday",
+      "headline": "Hyperliquid Strategies Files Secondary Offering Of 35,156,660 Shares By Rorschach Advisors",
+      "url": "https://www.benzinga.com/news/26/05/52739631/hyperliquid-strategies-files-secondary-offering-of-35-156-660-shares-by-rorschach-advisors",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898937+00:00"
+    },
+    {
+      "ticker": "CNEY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant 100,000-unit initial order for intelligent cargo sorting services in U.S. market represents substantial revenue opportunity and validates subsidiary's technology with tangible commercial traction.",
+      "action_window": "intraday",
+      "headline": "CN Energy Subsidiary Pathenbot Signs Initial 100,000-Unit Intelligent Cargo Sorting Services Order In U.S.",
+      "url": "https://www.benzinga.com/quote/CNEY",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898954+00:00"
+    },
+    {
+      "ticker": "FJET",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $17.5M strategic equity investment led by institutional investors provides strong capital validation and runway for growth in the space sector.",
+      "action_window": "intraday",
+      "headline": "Starfighters Space Announces $17.5M Strategic Equity Investment Led By Global Institutional Investors",
+      "url": "https://www.benzinga.com/news/26/05/52739523/starfighters-space-announces-17-5m-strategic-equity-investment-led-by-global-institutional-investors",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898962+00:00"
+    },
+    {
+      "ticker": "TII",
+      "tradeable_score": 0.52,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CFO departure for personal reasons with immediate interim replacement suggests orderly transition but creates temporary uncertainty about financial leadership continuity.",
+      "action_window": "intraday",
+      "headline": "Titan Mining Names Ashley Kates Interim CFO Effective May 22 Following Kevin Hart Resignation For Personal Reasons",
+      "url": "https://www.benzinga.com/quote/TII",
+      "source": "alpaca",
+      "added_at": "2026-05-22T10:45:28.898970+00:00"
     }
   ]
 }
