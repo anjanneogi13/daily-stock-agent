@@ -660,19 +660,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MKZR": {
-    "ticker": "MKZR",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Mackenzie Realty Capital Q3 EPS $(0.98) Up From $(4.68) YoY, Sales $5.442M Up From $4.274M YoY",
-    "added_at": "2026-05-15T20:00:18.717654+00:00",
-    "expires": "2026-05-22T20:00:18.717660+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ZDPY": {
     "ticker": "ZDPY",
     "score_delta": 0.079,
@@ -3162,6 +3149,32 @@
     "headline": "FDA Approves First Treatment For Chronic Hepatitis Delta Virus (HDV) Infection",
     "added_at": "2026-05-22T18:15:04.410156+00:00",
     "expires": "2026-06-21T18:15:04.410160+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DECK": {
+    "ticker": "DECK",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Deckers Outdoor, Raises Price Target to $161",
+    "added_at": "2026-05-22T20:18:55.761058+00:00",
+    "expires": "2026-05-27T20:18:55.761064+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CVGW": {
+    "ticker": "CVGW",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Mission Produce Receives Antitrust Clearance From Mexico's Federal Economic Competition Commission For Its Proposed Acquisition Of Calavo Grower",
+    "added_at": "2026-05-22T20:18:55.770497+00:00",
+    "expires": "2026-06-21T20:18:55.770501+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
