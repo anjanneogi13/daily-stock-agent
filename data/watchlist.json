@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AS",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Amer Sports (AS) reports Q1 earnings beat with stock surging 198%, representing a massive confirmed catalyst despite broader market weakness.",
-      "action_window": "intraday",
-      "headline": "Gold Falls 1%; Amer Sports Earnings Top Views",
-      "url": "https://www.benzinga.com/markets/market-summary/26/05/52669277/gold-falls-1-amer-sports-earnings-top-views",
-      "source": "alpaca",
-      "added_at": "2026-05-19T16:49:07.664899+00:00"
-    },
-    {
-      "ticker": "ZETA",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Large bullish call sweep of 14,544 contracts near ask with strike 6.4% above current price and extremely high volume vs open interest (75x) signals informed bullish positioning for near-term upside by June expiration.",
-      "action_window": "intraday",
-      "headline": "Zeta Global Holdings Option Alert: Jun 18 $19.5 Calls Sweep (7) Near The Ask: 14544 @ $0.951 vs 192 OI; Ref=$18.3328",
-      "url": "https://www.benzinga.com/quote/ZETA",
-      "source": "alpaca",
-      "added_at": "2026-05-19T16:49:07.664907+00:00"
-    },
-    {
-      "ticker": "NDAQ",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Nasdaq secures exclusive data partnership with Polymarket for new private company prediction markets, expanding its private market data monetization and brand visibility in emerging prediction market sector.",
-      "action_window": "intraday",
-      "headline": "Polymarket Launches Private Company Markets With Nasdaq As Exclusive Data Partner",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/05/52669092/polymarket-launches-private-company-markets-with-nasdaq-as-exclusive-data-partner",
-      "source": "alpaca",
-      "added_at": "2026-05-19T16:49:07.664914+00:00"
-    },
-    {
-      "ticker": "GE",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Two major contract wins (Air Force engine deal and 10-year JAL Boeing 787 support) represent meaningful revenue expansion in defense and commercial aviation segments.",
-      "action_window": "intraday",
-      "headline": "GE Aerospace Expands Defense, Aviation Business With Two Major Deals",
-      "url": "https://www.benzinga.com/markets/large-cap/26/05/52668800/ge-aerospace-expands-defense-aviation-business-with-two-major-deals",
-      "source": "alpaca",
-      "added_at": "2026-05-19T16:49:07.664920+00:00"
-    },
-    {
-      "ticker": "PEPG",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large shelf registration ($400M) and ATM offering ($100M) signal significant dilution risk, typically causing immediate downward pressure on stock price.",
-      "action_window": "intraday",
-      "headline": "PepGen Files For $400M Shelf Registration And $100M At-The-Market Stock Offering",
-      "url": "https://www.benzinga.com/news/26/05/52668656/pepgen-files-for-400m-shelf-registration-and-100m-at-the-market-stock-offering",
-      "source": "alpaca",
-      "added_at": "2026-05-19T16:49:07.664926+00:00"
-    },
-    {
-      "ticker": "HD",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Earnings beat with immediate analyst reaffirmation from top-tier banks (Goldman, JPMorgan) provides strong confirmation of positive catalyst with stock already moving higher.",
-      "action_window": "intraday",
-      "headline": "Home Depot Ticks Up On Earnings Beat, Analysts Stick With Bullish Calls",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52668687/home-depot-ticks-up-on-earnings-beat-analysts-stick-with-bullish-calls",
-      "source": "alpaca",
-      "added_at": "2026-05-19T16:49:07.664931+00:00"
-    },
-    {
       "ticker": "RAPP",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1473,6 +1401,90 @@
       "url": "https://www.benzinga.com/news/26/05/52749057/rbc-capital-initiates-coverage-on-nmi-holdings-with-outperform-rating-announces-price-target-of-46",
       "source": "alpaca",
       "added_at": "2026-05-22T16:02:33.749690+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "CEO commentary indicating extended memory chip shortage implies sustained pricing power and revenue visibility for Micron through 2026 and beyond.",
+      "action_window": "next_day",
+      "headline": "Micron CEO Sees Memory Chip Shortage Lasting Beyond 2026",
+      "url": "https://www.benzinga.com/news/26/05/52753745/micron-ceo-sees-memory-chip-shortage-lasting-beyond-2026",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426610+00:00"
+    },
+    {
+      "ticker": "YAAS",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering by selling shareholders typically creates dilution concerns and near-term selling pressure, though the 11.1M share offering size represents moderate supply increase.",
+      "action_window": "intraday",
+      "headline": "Youxin Technology Files Prospectus To Offer Up To 11,100,832 Class A Ordinary Shares For Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/05/52753713/youxin-technology-files-prospectus-to-offer-up-to-11-100-832-class-a-ordinary-shares-for-selling-sha",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426624+00:00"
+    },
+    {
+      "ticker": "NIO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Stock already down 7% on regulatory crackdown which overwhelms the positive 112% revenue beat, creating mixed but immediate trading impact.",
+      "action_window": "intraday",
+      "headline": "What's Going On With NIO Stock Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52753109/whats-going-on-with-nio-stock-friday",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426634+00:00"
+    },
+    {
+      "ticker": "AAP",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with multiple analyst price target increases creates positive momentum catalyst for AAP stock.",
+      "action_window": "next_day",
+      "headline": "Advance Auto Parts Analysts Raise Their Forecasts Following Better-Than-Expected Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52753045/advance-auto-parts-analysts-raise-their-forecasts-following-better-than-expected-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426641+00:00"
+    },
+    {
+      "ticker": "GILD",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "First-in-class FDA approval for chronic HDV infection represents a major catalyst with monopoly treatment status and immediate revenue potential for Gilead Sciences.",
+      "action_window": "intraday",
+      "headline": "FDA Approves First Treatment For Chronic Hepatitis Delta Virus (HDV) Infection",
+      "url": "https://www.benzinga.com/general/biotech/26/05/52753005/fda-approves-first-treatment-for-chronic-hepatitis-delta-virus-hdv-infection",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426648+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Official statement eliminating near-term tariff risk on semiconductors removes significant overhang for chip stocks, though longer-term protection policy uncertainty remains.",
+      "action_window": "intraday",
+      "headline": "USTR Greer Says No Immediate Tariffs Coming On Semiconductors, But Important To Protect Investments In U.S. Chip Production; Says Trump's Visit To China Last Week Did Not Change Trump Administration's Approach To Semiconductor Tariff Probe",
+      "url": "https://www.benzinga.com/quote/TSM",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426654+00:00"
+    },
+    {
+      "ticker": "WMT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Revenue beat offset by below-expectations full-year guidance reaffirmation and multiple analyst downgrades, creating mixed but negative signal.",
+      "action_window": "next_day",
+      "headline": "These Analysts Cut Their Forecasts On Walmart After Q1 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52752800/these-analysts-cut-their-forecasts-on-walmart-after-q1-results",
+      "source": "alpaca",
+      "added_at": "2026-05-22T18:15:04.426663+00:00"
     }
   ]
 }
