@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BLRX",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive preclinical data showing anti-tumor activity in drug-resistant models is encouraging but remains early-stage animal data requiring human validation.",
-      "action_window": "next_day",
-      "headline": "BioLineRx Drug Shows Anti-Tumor Activity In Brain Tumor Animal Models",
-      "url": "https://www.benzinga.com/markets/biotech/26/05/52680140/biolinerx-drug-shows-anti-tumor-activity-in-brain-tumor-animal-models",
-      "source": "alpaca",
-      "added_at": "2026-05-19T23:00:04.190604+00:00"
-    },
-    {
-      "ticker": "BULL",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "AI-powered product launch enhances Webull's competitive positioning in retail trading space, potentially driving user engagement and market share gains.",
-      "action_window": "next_day",
-      "headline": "Webull Launches AI-Powered Stock Analysis Tool For Retail Traders",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52680106/webull-launches-ai-powered-stock-analysis-tool-for-retail-traders",
-      "source": "alpaca",
-      "added_at": "2026-05-19T23:00:04.190614+00:00"
-    },
-    {
       "ticker": "TGT",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
