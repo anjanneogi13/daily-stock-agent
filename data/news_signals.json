@@ -218,32 +218,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BMO": {
-    "ticker": "BMO",
-    "score_delta": 0.032,
-    "catalyst": "ma_acquirer",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "BMO Financial Group Signs A Definitive Agreement With Stonepeak For The Sale of BMO's Transportation Finance And Vendor Finance Businesses, Including Related Loan Portfolios In The U.S. And Canada; Co",
-    "added_at": "2026-05-11T21:49:49.790396+00:00",
-    "expires": "2026-05-25T21:49:49.790404+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ASTS": {
-    "ticker": "ASTS",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "AST SpaceMobile Sees FY2026 Sales $150.000M-$200.000M vs $185.673M Est",
-    "added_at": "2026-05-11T21:49:49.799703+00:00",
-    "expires": "2026-05-25T21:49:49.799708+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MGNX": {
     "ticker": "MGNX",
     "score_delta": 0.2,
@@ -634,32 +608,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AGYS": {
-    "ticker": "AGYS",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "next_day",
-    "headline": "Agilysys Stock Darts Higher On Q4 Earnings Beat, Strong Guidance",
-    "added_at": "2026-05-18T20:57:05.491885+00:00",
-    "expires": "2026-05-25T20:57:05.491892+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FATN": {
-    "ticker": "FATN",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Update: Fatpipe Q4 EPS $0.28 Beats $0.11 Estimate, Sales $7.200M Beat $6.800M Estimate",
-    "added_at": "2026-05-18T20:57:05.495355+00:00",
-    "expires": "2026-05-25T20:57:05.495361+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GOCO": {
     "ticker": "GOCO",
     "score_delta": -1.0,
@@ -679,71 +627,6 @@
     "headline": "United Therapeutics Plans To Seek FDA Priority Review This Summer For Tyvaso sNDA In IPF Based On TETON\u20111 And TETON-2 Data",
     "added_at": "2026-05-18T20:57:05.502155+00:00",
     "expires": "2026-06-17T20:57:05.502161+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "XP": {
-    "ticker": "XP",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "XP Q1 EPS $0.47 Misses $0.48 Estimate, Sales $898.872M Miss $952.600M Estimate",
-    "added_at": "2026-05-18T20:57:05.505560+00:00",
-    "expires": "2026-05-25T20:57:05.505565+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GOOG": {
-    "ticker": "GOOG",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "'Anthropic Lets Mythos Users Share Cyber Threats With Others'- WSJ",
-    "added_at": "2026-05-18T22:00:55.743791+00:00",
-    "expires": "2026-05-25T22:00:55.743798+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FEED": {
-    "ticker": "FEED",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "ENvue Medical Q1 EPS $(6.88) Up From $(29.90) YoY, Sales $653.000K Down From $1.025M YoY",
-    "added_at": "2026-05-18T22:00:55.747006+00:00",
-    "expires": "2026-05-25T22:00:55.747012+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VTAK": {
-    "ticker": "VTAK",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Catheter Precision, Inc. Common Stock Q1 EPS $(1.39) Up From $(6.84) YoY, Sales $432.000K Up From $143.000K YoY",
-    "added_at": "2026-05-18T22:00:55.750082+00:00",
-    "expires": "2026-05-25T22:00:55.750088+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMST": {
-    "ticker": "AMST",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Amesite Q3 EPS $(0.15) Up From $(0.16) YoY, Sales $83.332K Up From $30.690K YoY",
-    "added_at": "2026-05-18T22:00:55.753209+00:00",
-    "expires": "2026-05-25T22:00:55.753215+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2062,6 +1945,19 @@
     "headline": "NeuroOne Reports Fiscal Q2 2026 Financial Results and Provides Corporate Business Update",
     "added_at": "2026-05-25T20:23:48.867958+00:00",
     "expires": "2026-06-01T20:23:48.867964+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FINV": {
+    "ticker": "FINV",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "FinVolution Gr Q1 Adj. EPS $0.26 Down From $0.41 YoY, Sales $465.361M Down From $479.700M YoY",
+    "added_at": "2026-05-25T22:55:09.308695+00:00",
+    "expires": "2026-06-01T22:55:09.308704+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
