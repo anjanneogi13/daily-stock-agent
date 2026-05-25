@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-26403444215",
+  "artifact_bundle_name": "official-decision-artifacts-26407866164",
   "artifact_filename": "daily_picks_no_pick_report_2026-05-25.json",
   "artifact_id": "daily_picks_no_pick_report:2026-05-25:NO_PICK_MARKET_CLOSED",
   "artifact_path": "data/daily_picks_no_pick_report_2026-05-25.json",
@@ -8,21 +8,21 @@
     "guard_cause": "NO_PICK_MARKET_CLOSED",
     "guard_reason": "No official premarket pick was generated because the US market is closed for 2026-05-25 (holiday). Next trading day: 2026-05-26.",
     "guard_skip": true,
-    "workflow_run_id": "26403444215"
+    "workflow_run_id": "26407866164"
   },
-  "commit_sha": "10f4301cd6fc7ebd27192b7bf6762e00395c780d",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/10f4301cd6fc7ebd27192b7bf6762e00395c780d",
+  "commit_sha": "de59d6a0679662f583756d507ee8868d37c6c098",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/de59d6a0679662f583756d507ee8868d37c6c098",
   "config_version": "config.yaml",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "not_ready_market_closed",
   "date": "2026-05-25",
   "decision": "official_no_pick",
-  "decision_id": "premarket_official_daily_pick:2026-05-25:NO_PICK:NO_PICK_MARKET_CLOSED:26403444215:10f4301cd6fc",
+  "decision_id": "premarket_official_daily_pick:2026-05-25:NO_PICK:NO_PICK_MARKET_CLOSED:26407866164:de59d6a06796",
   "diagnostics": {
     "guard_cause": "NO_PICK_MARKET_CLOSED",
     "guard_reason": "No official premarket pick was generated because the US market is closed for 2026-05-25 (holiday). Next trading day: 2026-05-26.",
     "guard_skip": true,
-    "workflow_run_id": "26403444215"
+    "workflow_run_id": "26407866164"
   },
   "human_readable_summary": "No official premarket pick was generated because the US market is closed for 2026-05-25 (holiday). Next trading day: 2026-05-26.",
   "live_trading_enabled": false,
@@ -47,11 +47,11 @@
   "reason": "No official premarket pick was generated because the US market is closed for 2026-05-25 (holiday). Next trading day: 2026-05-26.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-05-25T09:40:15-04:00",
+  "selection_time_et": "2026-05-25T11:26:15-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-05-25T13:40:15Z",
+  "timestamp_utc": "2026-05-25T15:26:15Z",
   "watch_only_available": false,
-  "workflow_run_id": "26403444215",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/26403444215"
+  "workflow_run_id": "26407866164",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/26407866164"
 }

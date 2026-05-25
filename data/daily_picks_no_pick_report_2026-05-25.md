@@ -4,7 +4,7 @@ Monitoring-only official no-pick artifact. Not buy instructions.
 
 - Date: **2026-05-25**
 - Primary no-pick cause: **NO_PICK_MARKET_CLOSED**
-- Decision ID: `premarket_official_daily_pick:2026-05-25:NO_PICK:NO_PICK_MARKET_CLOSED:26403444215:10f4301cd6fc`
+- Decision ID: `premarket_official_daily_pick:2026-05-25:NO_PICK:NO_PICK_MARKET_CLOSED:26407866164:de59d6a06796`
 - Artifact ID: `daily_picks_no_pick_report:2026-05-25:NO_PICK_MARKET_CLOSED`
 - Summary: **No official premarket pick was generated because the US market is closed for 2026-05-25 (holiday). Next trading day: 2026-05-26.**
 - Paper trading enabled: **false**
