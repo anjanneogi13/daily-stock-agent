@@ -192,19 +192,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NFLX": {
-    "ticker": "NFLX",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Texas Attor\u00adney Gen\u00ader\u00adal Ken Pax\u00adton Sues Net\u00adflix For Spy\u00ading On Texas Kids And Con\u00adsumers By Ille\u00adgal\u00adly Col\u00adlect\u00ading Users' Data With\u00adout Their Knowl\u00adedge Or Consent",
-    "added_at": "2026-05-11T16:28:36.192537+00:00",
-    "expires": "2026-05-25T16:28:36.192542+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TWO": {
     "ticker": "TWO",
     "score_delta": 0.2,
@@ -1215,84 +1202,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RAL": {
-    "ticker": "RAL",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "TD Cowen Maintains Buy on Ralliant, Raises Price Target to $70",
-    "added_at": "2026-05-20T16:49:18.468515+00:00",
-    "expires": "2026-05-25T16:49:18.468521+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "COST": {
-    "ticker": "COST",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Costco Wholesale, Raises Price Target to $1275",
-    "added_at": "2026-05-20T16:49:18.471468+00:00",
-    "expires": "2026-05-25T16:49:18.471474+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BBWI": {
-    "ticker": "BBWI",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "UBS Maintains Neutral on Bath & Body Works, Lowers Price Target to $19",
-    "added_at": "2026-05-20T16:49:18.474416+00:00",
-    "expires": "2026-05-25T16:49:18.474421+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ARM": {
-    "ticker": "ARM",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "What Is Going On With Arm Stock On Wednesday?",
-    "added_at": "2026-05-20T16:49:18.480299+00:00",
-    "expires": "2026-05-25T16:49:18.480304+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DKS": {
-    "ticker": "DKS",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Telsey Advisory Group Maintains Outperform on Dick's Sporting Goods, Raises Price Target to $255",
-    "added_at": "2026-05-20T16:49:18.483246+00:00",
-    "expires": "2026-05-25T16:49:18.483252+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MRVL": {
-    "ticker": "MRVL",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Why Is Marvell Stock Gaining Wednesday?",
-    "added_at": "2026-05-20T16:49:18.489174+00:00",
-    "expires": "2026-05-25T16:49:18.489180+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WMT": {
     "ticker": "WMT",
     "score_delta": -0.118,
@@ -2155,5 +2064,18 @@
     "added_at": "2026-05-25T14:41:22.895495+00:00",
     "expires": "2026-11-21T14:41:22.895502+00:00",
     "hard_block": true
+  },
+  "PL": {
+    "ticker": "PL",
+    "score_delta": 0.089,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "next_day",
+    "headline": "Is Planet Labs Moving Closer to Sustainable Profitability?",
+    "added_at": "2026-05-25T17:03:35.820415+00:00",
+    "expires": "2026-06-08T17:03:35.820420+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

@@ -1,43 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ZM",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Zoom reported Q1 earnings beat with raised full-year guidance and shares already surged 11.5%, indicating strong positive catalyst with immediate market reaction.",
-      "action_window": "intraday",
-      "headline": "Zoom (ZM) Shares Skyrocket, What You Need To Know",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/zoom-zm-shares-skyrocket-know-210055059.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-05-22T16:02:33.749675+00:00",
-      "updated_at": "2026-05-25T14:41:22.904159+00:00"
-    },
-    {
-      "ticker": "RDN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "RBC Capital initiating coverage with Outperform rating and $47 price target represents meaningful positive catalyst from a major bank that typically drives near-term price action.",
-      "action_window": "intraday",
-      "headline": "RBC Capital Initiates Coverage On Radian Group with Outperform Rating, Announces Price Target of $47",
-      "url": "https://www.benzinga.com/news/26/05/52749209/rbc-capital-initiates-coverage-on-radian-group-with-outperform-rating-announces-price-target-of-47",
-      "source": "alpaca",
-      "added_at": "2026-05-22T16:02:33.749684+00:00"
-    },
-    {
-      "ticker": "NMIH",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "RBC Capital initiating coverage with Outperform rating and $46 price target signals institutional confidence and typically drives buying interest, though impact is moderate as it's an initiation rather than upgrade.",
-      "action_window": "intraday",
-      "headline": "RBC Capital Initiates Coverage On NMI Holdings with Outperform Rating, Announces Price Target of $46",
-      "url": "https://www.benzinga.com/news/26/05/52749057/rbc-capital-initiates-coverage-on-nmi-holdings-with-outperform-rating-announces-price-target-of-46",
-      "source": "alpaca",
-      "added_at": "2026-05-22T16:02:33.749690+00:00"
-    },
-    {
       "ticker": "MU",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -397,6 +360,30 @@
       "url": "https://www.benzinga.com/general/biotech/26/05/52766579/eli-lilly-and-company-reports-phase-1b-data-for-verve-102-gene-editing-therapy-dose-dependent-low",
       "source": "alpaca",
       "added_at": "2026-05-25T14:41:22.904145+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Iranian security official's hawkish rhetoric suggests potential escalation of geopolitical tensions in the Middle East, likely driving oil prices higher and broader equity market risk-off sentiment.",
+      "action_window": "intraday",
+      "headline": "Secretary Of Iran's Supreme National Security Council Posts Published Message, Says  \"That There Will Be 'No Surrender Or Retreat'\"",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52766898/secretary-of-irans-supreme-national-security-council-posts-published-message-says",
+      "source": "alpaca",
+      "added_at": "2026-05-25T17:03:35.822756+00:00"
+    },
+    {
+      "ticker": "PL",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Strong 2026 guidance indicating path to profitability through operational efficiency and higher-margin products represents a meaningful positive catalyst for a growth company transitioning to sustainable operations.",
+      "action_window": "next_day",
+      "headline": "Is Planet Labs Moving Closer to Sustainable Profitability?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-moving-closer-sustainable-173000607.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-05-25T17:03:35.822787+00:00"
     }
   ]
 }
