@@ -1189,19 +1189,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "WVE": {
-    "ticker": "WVE",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Wells Fargo Maintains Overweight on WAVE Life Sciences, Raises Price Target to $14",
-    "added_at": "2026-05-20T13:36:00.741129+00:00",
-    "expires": "2026-05-25T13:36:00.741136+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CAPS": {
     "ticker": "CAPS",
     "score_delta": -0.093,
@@ -1225,32 +1212,6 @@
     "headline": "CrowdStrike Integrates Anthropic Claude Compliance API Into Falcon Platform To Boost Enterprise AI Security And Governance",
     "added_at": "2026-05-21T17:11:47.338675+00:00",
     "expires": "2026-05-28T17:11:47.338681+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PHR": {
-    "ticker": "PHR",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Wells Fargo Downgrades Phreesia to Equal-Weight, Lowers Price Target to $9",
-    "added_at": "2026-05-20T13:36:00.755821+00:00",
-    "expires": "2026-05-25T13:36:00.755826+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RSI": {
-    "ticker": "RSI",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Citizens Maintains Market Outperform on Rush Street Interactive, Raises Price Target to $30",
-    "added_at": "2026-05-20T13:36:00.758785+00:00",
-    "expires": "2026-05-25T13:36:00.758791+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2172,5 +2133,27 @@
     "expires": "2026-06-21T20:18:55.770501+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DOGEUSD": {
+    "ticker": "DOGEUSD",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Why Dogecoin Traders Are Watching $0.1020 As Revolut Launches DOGE Payment Card Across Europe",
+    "added_at": "2026-05-25T14:41:22.888233+00:00",
+    "expires": "2026-06-01T14:41:22.888240+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BTCUSD": {
+    "ticker": "BTCUSD",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Bitcoin, Ethereum, XRP, Dogecoin Hold Ground As Traders Watch For Reversal Zones And Re-Entry",
+    "added_at": "2026-05-25T14:41:22.895495+00:00",
+    "expires": "2026-11-21T14:41:22.895502+00:00",
+    "hard_block": true
   }
 }

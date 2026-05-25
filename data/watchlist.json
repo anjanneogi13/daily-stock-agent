@@ -1,124 +1,17 @@
 {
   "items": [
     {
-      "ticker": "KIDZ",
-      "tradeable_score": 0.73,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Significant strategic pivot into high-growth AI/GPU cloud sector with substantial $100M funding represents material business expansion catalyst driving immediate price action.",
-      "action_window": "intraday",
-      "headline": "Classover Shares Jump As Company Expands Into AI And GPU Cloud Computing",
-      "url": "https://www.benzinga.com/markets/equities/26/05/52742819/classover-shares-jump-as-company-expands-into-ai-and-gpu-cloud-computing",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056635+00:00"
-    },
-    {
-      "ticker": "IMPP",
-      "tradeable_score": 0.92,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Massive earnings beat with Q1 adjusted EPS of $0.61 vs $0.34 estimate (79% beat) and revenue of $61.7M vs $48.1M estimate (28% beat) represents a highly significant positive catalyst.",
-      "action_window": "intraday",
-      "headline": "Imperial Ptrl Q1 Adj. EPS $0.61 Beats $0.34 Estimate, Sales $61.713M Beat $48.100M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52742775/imperial-ptrl-q1-adj-eps-0-61-beats-0-34-estimate-sales-61-713m-beat-48-100m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056654+00:00"
-    },
-    {
-      "ticker": "SG",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan upgrade from neutral to overweight with price target increase represents a major Wall Street bank turning positive on the stock, typically driving immediate buying pressure.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Upgrades Sweetgreen to Overweight, Raises Price Target to $13",
-      "url": "https://www.benzinga.com/news/26/05/52742686/jp-morgan-upgrades-sweetgreen-to-overweight-raises-price-target-to-13",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056675+00:00"
-    },
-    {
-      "ticker": "AGIO",
+      "ticker": "ZM",
       "tradeable_score": 0.88,
       "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "EU marketing authorization for PYRUKYND represents a major regulatory approval expanding the commercial opportunity for Agios in the European market for anemia treatment.",
-      "action_window": "intraday",
-      "headline": "Agios Pharmaceuticals Announces EU Marketing Authorization For PYRUKYND In Adults For Treatment Of Anemia",
-      "url": "https://www.benzinga.com/news/26/05/52742670/agios-pharmaceuticals-announces-eu-marketing-authorization-for-pyrukynd-in-adults-for-treatment-of-a",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056684+00:00"
-    },
-    {
-      "ticker": "FUTU",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Chinese regulator imposed a substantial $271M fine for securities law breach, representing a significant regulatory penalty that will impact financials and potentially business operations.",
-      "action_window": "intraday",
-      "headline": "Futu Holdings Confirms Receipt Of Notice Of Investigation, Administrative Penalty Pre-Notification Letter From China Regulator Over Alleged Breach Of Securities Law; Regulator Imposes ~$271M Fine",
-      "url": "https://www.benzinga.com/news/26/05/52742654/futu-holdings-confirms-receipt-of-notice-of-investigation-administrative-penalty-pre-notification-le",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056694+00:00"
-    },
-    {
-      "ticker": "BOY",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Confirmed acquisition offer at \u00a38.85/share in cash from Apollo represents a significant premium and M&A catalyst for Bodycote shareholders with high probability of stock trading toward offer price.",
-      "action_window": "intraday",
-      "headline": "Bodycote Confirms Receipt Of Proposed Acquisition Offer From Apollo Global Management At \u00a38.85/Share In Cash",
-      "url": "https://www.benzinga.com/m-a/26/05/52742606/bodycote-confirms-receipt-of-proposed-acquisition-offer-from-apollo-global-management-at-8-85share-i",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056714+00:00"
-    },
-    {
-      "ticker": "TXN",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Multiple analyst upgrades including TXN moving from neutral to bullish provides moderate trading catalyst, though impact dispersed across 4 tickers.",
-      "action_window": "intraday",
-      "headline": "This Texas Instruments Analyst Turns Bullish; Here Are Top 4 Upgrades For Friday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/05/52742583/this-texas-instruments-analyst-turns-bullish-here-are-top-4-upgrades-for-friday",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056722+00:00"
-    },
-    {
-      "ticker": "DAVA",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "JP Morgan downgrade to Underweight with significant price target cut signals major negative catalyst from a tier-1 investment bank that typically drives immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Downgrades Endava to Underweight, Lowers Price Target to $5",
-      "url": "https://www.benzinga.com/news/26/05/52742582/jp-morgan-downgrades-endava-to-underweight-lowers-price-target-to-5",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056731+00:00"
-    },
-    {
-      "ticker": "GNRC",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Jefferies upgrade to Buy with significant price target of $302 represents a major catalyst from a reputable bank that typically drives immediate buying interest.",
-      "action_window": "intraday",
-      "headline": "Jefferies Upgrades Generac Holdings to Buy, Raises Price Target to $302",
-      "url": "https://www.benzinga.com/news/26/05/52742557/jefferies-upgrades-generac-holdings-to-buy-raises-price-target-to-302",
-      "source": "alpaca",
-      "added_at": "2026-05-22T13:28:11.056741+00:00"
-    },
-    {
-      "ticker": "ZM",
-      "tradeable_score": 0.87,
-      "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Strong earnings beat with 184% AI user growth, raised FY27 guidance, and multiple analyst upgrades creates significant positive catalyst.",
+      "rationale": "Zoom reported Q1 earnings beat with raised full-year guidance and shares already surged 11.5%, indicating strong positive catalyst with immediate market reaction.",
       "action_window": "intraday",
-      "headline": "Zoom's AI Bet Pays Off: Paid Companion Users Explode 184% In Beat-And-Raise Quarter",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52749715/zooms-ai-bet-pays-off-paid-companion-users-explode-184-in-beat-and-raise-quarter",
+      "headline": "Zoom (ZM) Shares Skyrocket, What You Need To Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/zoom-zm-shares-skyrocket-know-210055059.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-05-22T16:02:33.749675+00:00"
+      "added_at": "2026-05-22T16:02:33.749675+00:00",
+      "updated_at": "2026-05-25T14:41:22.904159+00:00"
     },
     {
       "ticker": "RDN",
@@ -182,15 +75,16 @@
     },
     {
       "ticker": "AAP",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Strong Q1 earnings beat with multiple analyst price target increases creates positive momentum catalyst for AAP stock.",
+      "rationale": "Surprise Q1 profit with earnings beat, strong 3.5% comp growth (best in 5 years), and expanding margins creates meaningful positive catalyst for immediate trading.",
       "action_window": "next_day",
-      "headline": "Advance Auto Parts Analysts Raise Their Forecasts Following Better-Than-Expected Q1 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52753045/advance-auto-parts-analysts-raise-their-forecasts-following-better-than-expected-q1-results",
+      "headline": "Advance Auto Q1 Earnings Beat Estimates on Strong Comps Growth",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/advance-auto-q1-earnings-beat-150000509.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426641+00:00"
+      "added_at": "2026-05-22T18:15:04.426641+00:00",
+      "updated_at": "2026-05-25T14:41:22.904168+00:00"
     },
     {
       "ticker": "GILD",
@@ -491,6 +385,18 @@
       "url": "https://www.benzinga.com/etfs/specialty-etfs/26/05/52765847/trumps-possible-iran-deal-is-putting-gold-etfs-back-in-focus-as-bullion-prices-climb",
       "source": "alpaca",
       "added_at": "2026-05-25T11:47:57.913261+00:00"
+    },
+    {
+      "ticker": "LLY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 1b data showing sustained dose-dependent efficacy of gene-editing therapy for cardiovascular disease represents meaningful clinical progress, though early-stage data carries execution risk.",
+      "action_window": "intraday",
+      "headline": "Eli Lilly And Company Reports Phase 1b Data For VERVE-102 Gene-Editing Therapy, Dose-Dependent Lowering Of PCSK9 And LDL-C, With Both Reductions Sustained Over Follow-Up Of Up To 18 Months In Participants At High Risk For Cardiovascular Disease",
+      "url": "https://www.benzinga.com/general/biotech/26/05/52766579/eli-lilly-and-company-reports-phase-1b-data-for-verve-102-gene-editing-therapy-dose-dependent-low",
+      "source": "alpaca",
+      "added_at": "2026-05-25T14:41:22.904145+00:00"
     }
   ]
 }
