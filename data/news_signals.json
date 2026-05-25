@@ -517,19 +517,6 @@
     "hard_block": false,
     "negative_reaction": true
   },
-  "DELL": {
-    "ticker": "DELL",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "OpenAI And Dell Partner To Bring Codex To Hybrid And On-Premise Enterprise Environments; Dell And OpenAI Will Also Explore How Codex Can Connect With The Dell AI Factory",
-    "added_at": "2026-05-18T17:31:05.850111+00:00",
-    "expires": "2026-05-25T17:31:05.850118+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LSF": {
     "ticker": "LSF",
     "score_delta": 0.1,
@@ -646,19 +633,6 @@
     "expires": "2026-06-04T21:10:39.139893+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "XPEV": {
-    "ticker": "XPEV",
-    "score_delta": -0.012,
-    "catalyst": "product_launch",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "What's Going On With XPeng Stock On Monday?",
-    "added_at": "2026-05-18T17:31:05.846507+00:00",
-    "expires": "2026-05-25T17:31:05.846513+00:00",
-    "hard_block": false,
-    "negative_reaction": true
   },
   "YSS": {
     "ticker": "YSS",
@@ -2075,6 +2049,45 @@
     "headline": "Is Planet Labs Moving Closer to Sustainable Profitability?",
     "added_at": "2026-05-25T17:03:35.820415+00:00",
     "expires": "2026-06-08T17:03:35.820420+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MTEK": {
+    "ticker": "MTEK",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Maris-Tech Completes Development of Peridot Night Micro for AI-Enhanced Situational Awareness",
+    "added_at": "2026-05-25T18:59:10.461512+00:00",
+    "expires": "2026-06-01T18:59:10.461520+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LRHC": {
+    "ticker": "LRHC",
+    "score_delta": 0.071,
+    "catalyst": "ma_target",
+    "sentiment": "neutral",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "La Rosa Holdings Provides Update on Proposed Consensus Core Transaction Anticipates Definitive Agreements Within 45 to 60 Days, Subject to Customary Conditions",
+    "added_at": "2026-05-25T18:59:10.463536+00:00",
+    "expires": "2026-06-24T18:59:10.463541+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AAME": {
+    "ticker": "AAME",
+    "score_delta": -0.039,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "AM Best Downgrades Credit Ratings of American Southern Group\u2019s Members; Affirms Credit Ratings of Atlantic American Corporation and Bankers Fidelity Life Insurance Group\u2019s Members",
+    "added_at": "2026-05-25T18:59:10.465507+00:00",
+    "expires": "2026-05-30T18:59:10.465512+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

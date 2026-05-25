@@ -1,91 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MU",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "CEO commentary indicating extended memory chip shortage implies sustained pricing power and revenue visibility for Micron through 2026 and beyond.",
-      "action_window": "next_day",
-      "headline": "Micron CEO Sees Memory Chip Shortage Lasting Beyond 2026",
-      "url": "https://www.benzinga.com/news/26/05/52753745/micron-ceo-sees-memory-chip-shortage-lasting-beyond-2026",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426610+00:00"
-    },
-    {
-      "ticker": "YAAS",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Secondary offering by selling shareholders typically creates dilution concerns and near-term selling pressure, though the 11.1M share offering size represents moderate supply increase.",
-      "action_window": "intraday",
-      "headline": "Youxin Technology Files Prospectus To Offer Up To 11,100,832 Class A Ordinary Shares For Selling Shareholders",
-      "url": "https://www.benzinga.com/news/26/05/52753713/youxin-technology-files-prospectus-to-offer-up-to-11-100-832-class-a-ordinary-shares-for-selling-sha",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426624+00:00"
-    },
-    {
-      "ticker": "NIO",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Stock already down 7% on regulatory crackdown which overwhelms the positive 112% revenue beat, creating mixed but immediate trading impact.",
-      "action_window": "intraday",
-      "headline": "What's Going On With NIO Stock Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52753109/whats-going-on-with-nio-stock-friday",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426634+00:00"
-    },
-    {
-      "ticker": "AAP",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Surprise Q1 profit with earnings beat, strong 3.5% comp growth (best in 5 years), and expanding margins creates meaningful positive catalyst for immediate trading.",
-      "action_window": "next_day",
-      "headline": "Advance Auto Q1 Earnings Beat Estimates on Strong Comps Growth",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/advance-auto-q1-earnings-beat-150000509.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426641+00:00",
-      "updated_at": "2026-05-25T14:41:22.904168+00:00"
-    },
-    {
-      "ticker": "GILD",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "First-in-class FDA approval for chronic HDV infection represents a major catalyst with monopoly treatment status and immediate revenue potential for Gilead Sciences.",
-      "action_window": "intraday",
-      "headline": "FDA Approves First Treatment For Chronic Hepatitis Delta Virus (HDV) Infection",
-      "url": "https://www.benzinga.com/general/biotech/26/05/52753005/fda-approves-first-treatment-for-chronic-hepatitis-delta-virus-hdv-infection",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426648+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Official statement eliminating near-term tariff risk on semiconductors removes significant overhang for chip stocks, though longer-term protection policy uncertainty remains.",
-      "action_window": "intraday",
-      "headline": "USTR Greer Says No Immediate Tariffs Coming On Semiconductors, But Important To Protect Investments In U.S. Chip Production; Says Trump's Visit To China Last Week Did Not Change Trump Administration's Approach To Semiconductor Tariff Probe",
-      "url": "https://www.benzinga.com/quote/TSM",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426654+00:00"
-    },
-    {
-      "ticker": "WMT",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Revenue beat offset by below-expectations full-year guidance reaffirmation and multiple analyst downgrades, creating mixed but negative signal.",
-      "action_window": "next_day",
-      "headline": "These Analysts Cut Their Forecasts On Walmart After Q1 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52752800/these-analysts-cut-their-forecasts-on-walmart-after-q1-results",
-      "source": "alpaca",
-      "added_at": "2026-05-22T18:15:04.426663+00:00"
-    },
-    {
       "ticker": "IIPR",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -123,15 +38,16 @@
     },
     {
       "ticker": "EMPG",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.72,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Nasdaq noncompliance notice indicates listing standard violations (likely minimum bid price or market cap), creating delisting risk and typically prompting selling pressure from institutional investors with listing requirements.",
+      "rationale": "Nasdaq delinquency notice for failure to file annual 20-F report signals serious compliance issues that could lead to delisting and typically triggers immediate selling pressure.",
       "action_window": "next_day",
-      "headline": "Empro Group Receives Nasdaq Noncompliance Notice",
-      "url": "https://www.benzinga.com/quote/EMPG",
+      "headline": "Empro Group Inc. Announces Receipt of Delinquency Notification from Nasdaq",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/empro-group-inc-announces-receipt-201500494.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-05-22T20:18:55.773575+00:00"
+      "added_at": "2026-05-22T20:18:55.773575+00:00",
+      "updated_at": "2026-05-25T18:59:10.468160+00:00"
     },
     {
       "ticker": "CVGW",
@@ -171,15 +87,16 @@
     },
     {
       "ticker": "MTEK",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Nasdaq non-compliance notice signals regulatory/listing issues that typically trigger immediate selling pressure and raises delisting risk concerns.",
+      "rationale": "Nasdaq non-compliance notification for minimum stockholders' equity is a serious regulatory issue that threatens delisting and typically triggers immediate selling pressure.",
       "action_window": "intraday",
-      "headline": "Maris-Tech Receives Non-Compliance Notice From Nasdaq",
-      "url": "https://www.benzinga.com/quote/MTEK",
+      "headline": "Maris-Tech Announces Receipt of Nasdaq Notification of Minimum Stockholders\u2019 Equity Non-Compliance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/maris-tech-announces-receipt-nasdaq-201000486.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-05-22T20:18:55.773599+00:00"
+      "added_at": "2026-05-22T20:18:55.773599+00:00",
+      "updated_at": "2026-05-25T18:59:10.468144+00:00"
     },
     {
       "ticker": "ABVX",
@@ -303,15 +220,16 @@
     },
     {
       "ticker": "AAME",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.72,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Nasdaq noncompliance notices typically signal listing standards violations (price, market cap, or filing issues) creating delisting risk and forced selling pressure from institutional holders.",
+      "rationale": "Company received Nasdaq non-compliance notice for delayed 10-Q and 10-K filings, signaling serious operational or financial issues and potential delisting risk.",
       "action_window": "next_day",
-      "headline": "Atlantic American Receives Nasdaq Noncompliance Notice",
-      "url": "https://www.benzinga.com/quote/AAME",
+      "headline": "Atlantic American Corporation Receives Nasdaq Notice Regarding Delayed Form 10-Q Filing",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/atlantic-american-corporation-receives-nasdaq-203900714.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243473+00:00"
+      "added_at": "2026-05-22T21:42:01.243473+00:00",
+      "updated_at": "2026-05-25T18:59:10.468152+00:00"
     },
     {
       "ticker": "GITS",
@@ -384,6 +302,42 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-moving-closer-sustainable-173000607.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-05-25T17:03:35.822787+00:00"
+    },
+    {
+      "ticker": "BTCUSD",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Significant macro catalyst with Iran deal hopes driving global risk-on sentiment, S&P 500 futures rallying sharply, and 7% oil decline creating broad market impact across equities and commodities.",
+      "action_window": "next_day",
+      "headline": "Global Stocks Rally As Oil Sinks 7% On Iran Deal Hopes: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/market-summary/26/05/52767283/wall-street-closed-global-stocks-rally-oil-sinks-7-percent-iran-deal-hopes-markets-monday",
+      "source": "alpaca",
+      "added_at": "2026-05-25T18:59:10.468116+00:00"
+    },
+    {
+      "ticker": "TSM",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "product_launch",
+      "rationale": "Huawei's chipmaking breakthrough threatens TSMC and NVDA's competitive moat in advanced semiconductors by potentially undermining the effectiveness of U.S. export controls and creating a credible Chinese alternative.",
+      "action_window": "intraday",
+      "headline": "Huawei Says It Has A Chipmaking Breakthrough. Did US Sanctions Backfire?",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52767143/huawei-says-it-has-a-chipmaking-breakthrough-did-us-sanctions-backfire",
+      "source": "alpaca",
+      "added_at": "2026-05-25T18:59:10.468129+00:00"
+    },
+    {
+      "ticker": "VFS",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Chairman appointment is notable corporate governance news but lacks immediate business impact clarity without knowing predecessor's departure circumstances or new chairman's strategic vision.",
+      "action_window": "next_day",
+      "headline": "VinFast Auto Appoints Pham Nhat Quan Anh As New Chairman",
+      "url": "https://www.benzinga.com/news/26/05/52767102/vinfast-auto-appoints-pham-nhat-quan-anh-as-new-chairman",
+      "source": "alpaca",
+      "added_at": "2026-05-25T18:59:10.468136+00:00"
     }
   ]
 }
