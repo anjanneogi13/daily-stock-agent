@@ -1,126 +1,17 @@
 {
   "items": [
     {
-      "ticker": "ZSQR",
-      "tradeable_score": 0.52,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Co-CEO resignation with transition to sole CEO structure represents notable governance change but lacks clear positive or negative directional catalyst without additional context about performance or strategic reasons.",
-      "action_window": "next_day",
-      "headline": "Z Squared  Michelle Burke Resigns As Co-Chief Executive Officer And Director Effective May 22, 2026; David Halabu To Continue As Sole Chief Executive Officer Effective May 22, 2026",
-      "url": "https://www.benzinga.com/news/26/05/52760358/z-squared-michelle-burke-resigns-as-co-chief-executive-officer-and-director-effective-may-22-2026-da",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243398+00:00"
-    },
-    {
-      "ticker": "UP",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large secondary offering of 14.8M shares by selling securityholders typically creates downward price pressure due to increased supply and potential insider selling signal.",
-      "action_window": "next_day",
-      "headline": "Wheels Up Experience Files Prospectus Related To The Resale By The Selling Securityholders Of Up To 14,814,357 Shares Of Class A Common Stock",
-      "url": "https://www.benzinga.com/news/26/05/52760305/wheels-up-experience-files-prospectus-related-to-the-resale-by-the-selling-securityholders-of-up-to",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243414+00:00"
-    },
-    {
-      "ticker": "AVR",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large $250M secondary offering represents significant dilution (likely 20-40% of market cap) and will create immediate selling pressure as new shares are issued at a discount.",
-      "action_window": "intraday",
-      "headline": "Anteris Technologies Global To Offer Up To $250M Of Common Stock Through TD Cowen",
-      "url": "https://www.benzinga.com/news/26/05/52760255/anteris-technologies-global-to-offer-up-to-250m-of-common-stock-through-td-cowen",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243423+00:00"
-    },
-    {
-      "ticker": "LRHC",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Nasdaq noncompliance notice signals regulatory/listing risk that typically triggers selling pressure and raises delisting concerns, though outcome depends on specific violation and company response.",
-      "action_window": "next_day",
-      "headline": "La Rosa Holdings Receives Nasdaq Noncompliance Notice",
-      "url": "https://www.benzinga.com/quote/LRHC",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243430+00:00"
-    },
-    {
-      "ticker": "KNRX",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "NYSE noncompliance notice indicates the company has failed to meet listing requirements, creating delisting risk and negative investor sentiment that typically drives immediate selling pressure.",
-      "action_window": "next_day",
-      "headline": "KNOREX Receives NYSE Noncompliance Notice",
-      "url": "https://www.benzinga.com/quote/KNRX",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243438+00:00"
-    },
-    {
-      "ticker": "NMTC",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong 72% YoY revenue growth plus exceptional 100% success rate across 16 trigeminal neuralgia cases demonstrates both financial momentum and clinical validation for this medical device company.",
-      "action_window": "next_day",
-      "headline": "NeuroOne Reports Fiscal Q2 2026 Financial Results and Provides Corporate Business Update",
-      "url": "https://finance.yahoo.com/sectors/healthcare/articles/neuroone-reports-fiscal-q2-2026-120000984.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243446+00:00",
-      "updated_at": "2026-05-25T20:23:48.870564+00:00"
-    },
-    {
-      "ticker": "MNR",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "At-the-market equity offering of up to $100M represents potential dilution to existing shareholders, typically causing near-term selling pressure though proceeds may fund growth.",
-      "action_window": "next_day",
-      "headline": "Mach Natural Resources Enters Equity Distribution Agreement With Morgan Stanley As Sales Agent;  May Issue And Sell, Common Units Representing Limited Partner Interests. Of Up To $100M",
-      "url": "https://www.benzinga.com/news/26/05/52758967/mach-natural-resources-enters-equity-distribution-agreement-with-morgan-stanley-as-sales-agent-may-i",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243457+00:00"
-    },
-    {
-      "ticker": "TOI",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Cybersecurity breach with unauthorized access to patient data exposes TOI to regulatory penalties, litigation risk, reputational damage, and potential HIPAA violations that could materially impact operations and financials.",
-      "action_window": "intraday",
-      "headline": "Oncology Institute Says In Follow Up To Nov 2025 Disclosure Of A Cybersecurity Incident, Says A Software Service Provider Detected Unauthorized Access;  Vendor Had Unauthorized Access To Information Systems Including Patient Data; Cybersecurity Incident Believed To Affect Other Healthcare Providers;",
-      "url": "https://www.benzinga.com/news/26/05/52758871/oncology-institute-says-in-follow-up-to-nov-2025-disclosure-of-a-cybersecurity-incident-says-a-softw",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243465+00:00"
-    },
-    {
-      "ticker": "AAME",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Company received Nasdaq non-compliance notice for delayed 10-Q and 10-K filings, signaling serious operational or financial issues and potential delisting risk.",
-      "action_window": "next_day",
-      "headline": "Atlantic American Corporation Receives Nasdaq Notice Regarding Delayed Form 10-Q Filing",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/atlantic-american-corporation-receives-nasdaq-203900714.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-05-22T21:42:01.243473+00:00",
-      "updated_at": "2026-05-25T18:59:10.468152+00:00"
-    },
-    {
       "ticker": "GITS",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
       "category": "other",
-      "rationale": "Nasdaq noncompliance notice signals regulatory issues that could lead to delisting risk, typically triggering immediate selling pressure and increased volatility.",
+      "rationale": "Significant $18M strategic capital facility provides growth funding and balance sheet strength, material for a NASDAQ-listed company but execution risk remains.",
       "action_window": "next_day",
-      "headline": "Global Interactive Technologies Receives Nasdaq Noncompliance Notice",
-      "url": "https://www.benzinga.com/quote/GITS",
+      "headline": "Global Interactive Technologies Secures Up to $18 Million Strategic Capital Facility to Support Growth Initiatives",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/global-interactive-technologies-secures-18-150000673.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-05-22T22:53:23.499593+00:00"
+      "added_at": "2026-05-22T22:53:23.499593+00:00",
+      "updated_at": "2026-05-25T21:43:25.285240+00:00"
     },
     {
       "ticker": "LASE",
@@ -217,6 +108,18 @@
       "url": "https://www.benzinga.com/news/26/05/52767102/vinfast-auto-appoints-pham-nhat-quan-anh-as-new-chairman",
       "source": "alpaca",
       "added_at": "2026-05-25T18:59:10.468136+00:00"
+    },
+    {
+      "ticker": "AMD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $10B+ capital investment in AI infrastructure signals strong commitment to growth but is a multi-year strategic initiative rather than an immediate catalyst, with benefits accruing over time.",
+      "action_window": "this_week",
+      "headline": "Advanced Micro Devices, Inc. (AMD) Plans to Invest more than $10B in Taiwan\u2019s AI Market",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-inc-amd-180652879.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-05-25T21:43:25.285224+00:00"
     }
   ]
 }
