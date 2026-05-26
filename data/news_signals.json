@@ -630,19 +630,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BALY": {
-    "ticker": "BALY",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Ballys Q1 EPS $(2.69) Misses $(1.15) Estimate, Sales $755.722M Miss $759.190M Estimate",
-    "added_at": "2026-05-18T23:06:45.237462+00:00",
-    "expires": "2026-05-25T23:06:45.237468+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ATER": {
     "ticker": "ATER",
     "score_delta": 0.2,
@@ -1958,6 +1945,19 @@
     "headline": "FinVolution Gr Q1 Adj. EPS $0.26 Down From $0.41 YoY, Sales $465.361M Down From $479.700M YoY",
     "added_at": "2026-05-25T22:55:09.308695+00:00",
     "expires": "2026-06-01T22:55:09.308704+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LLY": {
+    "ticker": "LLY",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "Eli Lilly Just Got a Huge Vote of Confidence From Morgan Stanley -- and It's All About Mounjaro",
+    "added_at": "2026-05-26T00:01:06.799232+00:00",
+    "expires": "2026-05-31T00:01:06.799240+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
