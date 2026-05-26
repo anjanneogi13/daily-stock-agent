@@ -421,6 +421,54 @@
       "url": "https://www.benzinga.com/news/26/05/52795600/artelo-biosciences-files-prospectus-to-offer-up-to-6-53m-in-common-stock-via-h-c-wainwright",
       "source": "alpaca",
       "added_at": "2026-05-26T21:50:35.002755+00:00"
+    },
+    {
+      "ticker": "QFIN",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Qifu Technology reported a strong double beat with EPS exceeding estimates by 16.7% and revenue beating by 5.1%, representing a meaningful positive earnings surprise that typically drives immediate price action.",
+      "action_window": "next_day",
+      "headline": "Qifu Technology Q1 Adj. EPS $1.12 Beats $0.96 Estimate, Sales $566.735M Beat $539.510M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52796883/qifu-technology-q1-adj-eps-1-12-beats-0-96-estimate-sales-566-735m-beat-539-510m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-26T23:04:53.629620+00:00"
+    },
+    {
+      "ticker": "API",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company provides Q2 sales guidance of $39-40M versus $0 consensus estimate, indicating either a major business inflection or analysts had no prior coverage/estimates, representing a significant positive surprise.",
+      "action_window": "intraday",
+      "headline": "Agora Sees Q2 Sales $39.000M-$40.000M vs $0.00 Est",
+      "url": "https://www.benzinga.com/news/26/05/52796870/agora-sees-q2-sales-39-000m-40-000m-vs-0-00-est",
+      "source": "alpaca",
+      "added_at": "2026-05-26T23:04:53.629630+00:00"
+    },
+    {
+      "ticker": "DD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "DuPont reaffirmed FY2026 guidance below consensus estimate ($7.02-$7.16 vs $7.17), signaling no upside surprise and potential disappointment that guidance wasn't raised.",
+      "action_window": "next_day",
+      "headline": "DuPont de Nemours Affirms FY2026 Adj EPS Guidance of $7.02-$7.16 vs $7.17 Est",
+      "url": "https://www.benzinga.com/news/26/05/52796772/dupont-de-nemours-affirms-fy2026-adj-eps-guidance-of-7-02-7-16-vs-7-17-est",
+      "source": "alpaca",
+      "added_at": "2026-05-26T23:04:53.629641+00:00"
+    },
+    {
+      "ticker": "BOX",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Box guidance meets EPS expectations exactly while sales outlook slightly exceeds estimates by ~0.7%, representing a modest beat with limited upside surprise.",
+      "action_window": "intraday",
+      "headline": "UPDATE: Box Sees Q2 Adj EPS $0.39 vs $0.39 Est; Sees Sales $319.000M vs $316.913M Est",
+      "url": "https://www.benzinga.com/news/26/05/52796716/update-box-sees-q2-adj-eps-0-39-vs-0-39-est-sees-sales-319-000m-vs-316-913m-est",
+      "source": "alpaca",
+      "added_at": "2026-05-26T23:04:53.629647+00:00"
     }
   ]
 }

@@ -682,19 +682,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AUNA": {
-    "ticker": "AUNA",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Auna Q1 Adj. EPS $0.05 Misses $0.19 Estimate, Sales $337.000M Beat $318.290M Estimate",
-    "added_at": "2026-05-19T21:55:44.224387+00:00",
-    "expires": "2026-05-26T21:55:44.224394+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BFC": {
     "ticker": "BFC",
     "score_delta": 0.05,
@@ -705,19 +692,6 @@
     "headline": "Bank First Enters Merger Agreement To Buy PSB Holdings; Each Outstanding Share Of PSB Common Stock Will Be Converted Into Right To Receive 0.3470 Shares Of Common Stock Of BFC",
     "added_at": "2026-05-19T21:55:44.227561+00:00",
     "expires": "2026-06-02T21:55:44.227567+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BULL": {
-    "ticker": "BULL",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "Webull Launches AI-Powered Stock Analysis Tool For Retail Traders",
-    "added_at": "2026-05-19T23:00:04.169673+00:00",
-    "expires": "2026-05-26T23:00:04.169680+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1958,6 +1932,45 @@
     "headline": "SOLAI Q1 Adj. EPS $(0.34) Up From $(0.46) YoY, Sales $7.921M Up From $6.593M YoY",
     "added_at": "2026-05-26T21:50:34.998573+00:00",
     "expires": "2026-06-02T21:50:34.998578+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QFIN": {
+    "ticker": "QFIN",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Qifu Technology Q1 Adj. EPS $1.12 Beats $0.96 Estimate, Sales $566.735M Beat $539.510M Estimate",
+    "added_at": "2026-05-26T23:04:53.612688+00:00",
+    "expires": "2026-06-02T23:04:53.612695+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "API": {
+    "ticker": "API",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Agora Sees Q2 Sales $39.000M-$40.000M vs $0.00 Est",
+    "added_at": "2026-05-26T23:04:53.614915+00:00",
+    "expires": "2026-06-09T23:04:53.614921+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BOX": {
+    "ticker": "BOX",
+    "score_delta": 0.064,
+    "catalyst": "guidance_raise",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "UPDATE: Box Raises FY2027 Adj EPS Guidance from $1.55 to $1.56 vs $1.63 Est; Raises FY2027 Sales Guidance from $1.275B to $1.280B vs $1.275B Est",
+    "added_at": "2026-05-26T23:04:53.623438+00:00",
+    "expires": "2026-06-09T23:04:53.623443+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
