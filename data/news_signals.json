@@ -630,19 +630,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LEND": {
-    "ticker": "LEND",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "New Mutual Fund-Turned Active ETF Combines Junk Bonds, CLOs And Alternative Credit Exposure",
-    "added_at": "2026-05-19T18:57:58.389538+00:00",
-    "expires": "2026-05-26T18:57:58.389544+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "EARN": {
     "ticker": "EARN",
     "score_delta": -0.1,
@@ -1867,6 +1854,71 @@
     "headline": "Raymond James Maintains Outperform on Viper Energy, Raises Price Target to $61",
     "added_at": "2026-05-26T17:43:16.228001+00:00",
     "expires": "2026-05-31T17:43:16.228007+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FLNA": {
+    "ticker": "FLNA",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Maxim Group Reinstates Buy on Filana Therapeutics, Announces $5 Price Target",
+    "added_at": "2026-05-26T20:01:23.125761+00:00",
+    "expires": "2026-05-31T20:01:23.125766+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RGS": {
+    "ticker": "RGS",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Lake Street Initiates Coverage On Regis with Buy Rating, Announces Price Target of $42",
+    "added_at": "2026-05-26T20:01:23.132673+00:00",
+    "expires": "2026-05-31T20:01:23.132678+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BHYP": {
+    "ticker": "BHYP",
+    "score_delta": 0.039,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "this_week",
+    "headline": "Hyperliquid ETF Race Could Get New Fuel From Grayscale's HYPE Fund And Staking Push",
+    "added_at": "2026-05-26T20:01:23.134473+00:00",
+    "expires": "2026-06-02T20:01:23.134479+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ASTH": {
+    "ticker": "ASTH",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Barclays Upgrades Astrana Health to Overweight, Raises Price Target to $50",
+    "added_at": "2026-05-26T20:01:23.136706+00:00",
+    "expires": "2026-05-31T20:01:23.136712+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AGL": {
+    "ticker": "AGL",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Barclays Upgrades Agilon Health to Equal-Weight, Announces $81 Price Target",
+    "added_at": "2026-05-26T20:01:23.138516+00:00",
+    "expires": "2026-05-31T20:01:23.138523+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
