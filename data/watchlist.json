@@ -14,15 +14,16 @@
     },
     {
       "ticker": "LLY",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive Phase 1b data showing sustained dose-dependent efficacy of gene-editing therapy for cardiovascular disease represents meaningful clinical progress, though early-stage data carries execution risk.",
+      "category": "ma_acquirer",
+      "rationale": "Eli Lilly's billion-dollar acquisition spree of three companies signals strategic expansion into infectious disease prevention, representing meaningful portfolio diversification and long-term growth potential.",
       "action_window": "intraday",
-      "headline": "Eli Lilly And Company Reports Phase 1b Data For VERVE-102 Gene-Editing Therapy, Dose-Dependent Lowering Of PCSK9 And LDL-C, With Both Reductions Sustained Over Follow-Up Of Up To 18 Months In Participants At High Risk For Cardiovascular Disease",
-      "url": "https://www.benzinga.com/general/biotech/26/05/52766579/eli-lilly-and-company-reports-phase-1b-data-for-verve-102-gene-editing-therapy-dose-dependent-low",
+      "headline": "From Shingles To Superbugs: Eli Lilly Expands Infectious Disease Push In Billion-Dollar Buying Wave",
+      "url": "https://www.benzinga.com/m-a/26/05/52788323/from-shingles-to-superbugs-eli-lilly-expands-infectious-disease-push-in-billion-dollar-buying-wave",
       "source": "alpaca",
-      "added_at": "2026-05-25T14:41:22.904145+00:00"
+      "added_at": "2026-05-25T14:41:22.904145+00:00",
+      "updated_at": "2026-05-26T17:43:16.230339+00:00"
     },
     {
       "ticker": "USO",
@@ -192,6 +193,42 @@
       "url": "https://www.benzinga.com/news/26/05/52777745/warner-boosts-loan-sale-again-plans-to-repay-15-billion-bridge-bloomberg",
       "source": "alpaca",
       "added_at": "2026-05-26T14:14:14.208580+00:00"
+    },
+    {
+      "ticker": "LYFT",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Corporate travel expansion represents a strategic move into higher-margin business segment, but lacks concrete details on timing, partnerships, or revenue impact to justify immediate trading action.",
+      "action_window": "this_week",
+      "headline": "'Lyft is coming for corporate travel' - Semafor",
+      "url": "https://www.benzinga.com/news/26/05/52788251/lyft-is-coming-for-corporate-travel-semafor",
+      "source": "alpaca",
+      "added_at": "2026-05-26T17:43:16.230353+00:00"
+    },
+    {
+      "ticker": "CIEN",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America maintains Buy rating with significant price target raise to $660, indicating strong conviction and meaningful upside potential from a major sell-side firm.",
+      "action_window": "next_day",
+      "headline": "B of A Securities Maintains Buy on Ciena, Raises Price Target to $660",
+      "url": "https://www.benzinga.com/news/26/05/52788214/b-of-a-securities-maintains-buy-on-ciena-raises-price-target-to-660",
+      "source": "alpaca",
+      "added_at": "2026-05-26T17:43:16.230361+00:00"
+    },
+    {
+      "ticker": "ESLT",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Dual catalyst of Q1 earnings beat combined with substantial $1.4B contract win creates strong positive momentum for defense contractor.",
+      "action_window": "intraday",
+      "headline": "Defense Demand Lifts Elbit Systems After $1.4 Billion Contract Win",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52787962/defense-demand-lifts-elbit-systems-after-1-4-billion-contract-win",
+      "source": "alpaca",
+      "added_at": "2026-05-26T17:43:16.230373+00:00"
     }
   ]
 }
