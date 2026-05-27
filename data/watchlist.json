@@ -469,6 +469,126 @@
       "url": "https://www.benzinga.com/news/26/05/52796716/update-box-sees-q2-adj-eps-0-39-vs-0-39-est-sees-sales-319-000m-vs-316-913m-est",
       "source": "alpaca",
       "added_at": "2026-05-26T23:04:53.629647+00:00"
+    },
+    {
+      "ticker": "MNRO",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Trading halt with pending news announcement creates high uncertainty and volatility potential, requiring immediate attention but direction unknown until news releases.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halted at 7:25:00 a.m. ET - Trading Halt: Halt News Pending",
+      "url": "https://www.benzinga.com/quote/MNRO",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.489971+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Historic $1T market cap milestone driven by AI memory demand represents significant momentum but likely partially priced in given the rally already occurred.",
+      "action_window": "intraday",
+      "headline": "Micron Just Shattered The $1 Trillion Ceiling\u2014And Wall Street Says It's Not Done",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52802223/micron-just-shattered-the-1-trillion-ceiling-and-wall-street-says-its-not-done",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.489983+00:00"
+    },
+    {
+      "ticker": "SGMT",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Phase 1 data receiving 'Best of EASL' distinction at major medical conference is a meaningful positive catalyst for a bioscience company, though not as definitive as FDA approval.",
+      "action_window": "intraday",
+      "headline": "Sagimet Biosciences Presents Two Posters At EASL 2026; Denifanstat/Resmetirom Phase 1 Data Selected As Best Of EASL, With Additional Preclinical Mechanism Findings Showcased",
+      "url": "https://www.benzinga.com/news/26/05/52802280/sagimet-biosciences-presents-two-posters-at-easl-2026-denifanstatresmetirom-phase-1-data-selected-as",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.489990+00:00"
+    },
+    {
+      "ticker": "VRRM",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Deutsche Bank downgrade from Buy/Outperform to Hold with lowered price target creates near-term selling pressure, though Hold rating limits severity.",
+      "action_window": "intraday",
+      "headline": "Deutsche Bank Downgrades Verra Mobility to Hold, Lowers Price Target to $9",
+      "url": "https://www.benzinga.com/news/26/05/52802255/deutsche-bank-downgrades-verra-mobility-to-hold-lowers-price-target-to-9",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.489995+00:00"
+    },
+    {
+      "ticker": "LTRX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Russell 3000 inclusion typically drives meaningful passive fund inflows and trading volume as index funds rebalance, creating near-term buying pressure.",
+      "action_window": "this_week",
+      "headline": "Lantronix Announces Its Preliminary Inclusion In The Russell 3000 Index",
+      "url": "https://www.benzinga.com/news/26/05/52802244/lantronix-announces-its-preliminary-inclusion-in-the-russell-3000-index",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.490000+00:00"
+    },
+    {
+      "ticker": "ZSQR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Russell index inclusion typically drives significant passive fund buying and increased liquidity, creating a structural tailwind for the stock price.",
+      "action_window": "this_week",
+      "headline": "Z Squared Included In Preliminary List Of Additions To Broad-Market Russell 3000 Index And Small-Cap Russell 2000 Index As Part Of 2026 Russell Indexes Reconstitution",
+      "url": "https://www.benzinga.com/news/26/05/52802232/z-squared-included-in-preliminary-list-of-additions-to-broad-market-russell-3000-index-and-small-cap",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.490005+00:00"
+    },
+    {
+      "ticker": "VNDA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Japanese orphan drug designation provides regulatory and commercial advantages including extended market exclusivity and expedited review, though this is a foreign market milestone rather than US FDA approval.",
+      "action_window": "intraday",
+      "headline": "Vanda Pharmaceuticals Receives Japanese Orphan Drug Designation For Imsidolimab In Generalized Pustular Psoriasis",
+      "url": "https://www.benzinga.com/news/26/05/52802214/vanda-pharmaceuticals-receives-japanese-orphan-drug-designation-for-imsidolimab-in-generalized-pustu",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.490009+00:00"
+    },
+    {
+      "ticker": "PGEN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA orphan drug exclusivity grants 7-year market exclusivity for rare disease treatment, providing significant competitive advantage and reducing regulatory risk, though this is designation rather than full approval.",
+      "action_window": "intraday",
+      "headline": "Precigen Says FDA Grants Orphan Drug Exclusivity For PAPZIMEOS For Treatment Of Adults With Recurrent Respiratory Papillomatosis",
+      "url": "https://www.benzinga.com/news/26/05/52802204/precigen-says-fda-grants-orphan-drug-exclusivity-for-papzimeos-for-treatment-of-adults-with-recurren",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.490014+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Successful System Requirements Review represents a significant program milestone for a government defense contract, reducing execution risk and advancing toward revenue realization, though not yet a revenue-generating event.",
+      "action_window": "next_day",
+      "headline": "Rocket Lab Announces Successful Completion Of System Requirements Review For The Space Development Agency's Tracking Layer Tranche 3 Constellation",
+      "url": "https://www.benzinga.com/news/26/05/52802187/rocket-lab-announces-successful-completion-of-system-requirements-review-for-the-space-development-a",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.490018+00:00"
+    },
+    {
+      "ticker": "TDAC",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed SPAC merger announcement with $3.8B valuation for advanced solid-state battery technology represents a major de-SPAC catalyst with defined terms and attractive sector exposure.",
+      "action_window": "intraday",
+      "headline": "ProLogium To List On Nasdaq Via SPAC Merger With TDAC At ~$3.8B Pre-Money Valuation To Scale 4th-Generation Solid-State Battery Production",
+      "url": "https://www.benzinga.com/news/26/05/52802186/prologium-to-list-on-nasdaq-via-spac-merger-with-tdac-at-3-8b-pre-money-valuation-to-scale-4th-gener",
+      "source": "alpaca",
+      "added_at": "2026-05-27T11:33:58.490023+00:00"
     }
   ]
 }
