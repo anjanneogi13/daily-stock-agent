@@ -589,6 +589,114 @@
       "url": "https://www.benzinga.com/news/26/05/52802186/prologium-to-list-on-nasdaq-via-spac-merger-with-tdac-at-3-8b-pre-money-valuation-to-scale-4th-gener",
       "source": "alpaca",
       "added_at": "2026-05-27T11:33:58.490023+00:00"
+    },
+    {
+      "ticker": "CODX",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Circuit breaker halt triggered by sharp 18.44% decline indicates significant selling pressure and immediate market impact requiring rapid response.",
+      "action_window": "intraday",
+      "headline": "Co-Diagnostics Shares Halted On Circuit Breaker To The Downside, Stock Now Down 18.44%",
+      "url": "https://www.benzinga.com/quote/CODX",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397035+00:00"
+    },
+    {
+      "ticker": "BNS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with C$2.65B net income coupled with dividend raise signals robust financial health and shareholder-friendly capital allocation.",
+      "action_window": "intraday",
+      "headline": "Canada's Bank Of Nova Scotia Raises Dividend After Strong Quarter",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52811706/canadas-bank-of-nova-scotia-raises-dividend-after-strong-quarter",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397050+00:00"
+    },
+    {
+      "ticker": "HIMS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Million-dollar insider purchase signals confidence and is already driving intraday price action, though impact is typically moderate and may fade quickly.",
+      "action_window": "intraday",
+      "headline": "Hims & Hers Shares Rally On Million-Dollar Insider Purchase",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52811639/hims-hers-shares-rally-on-million-dollar-insider-purchase",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397057+00:00"
+    },
+    {
+      "ticker": "CLBT",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analyst initiation with Buy rating and $20 price target is moderately bullish but less impactful than upgrades from existing coverage, providing modest positive catalyst for near-term trading.",
+      "action_window": "intraday",
+      "headline": "DA Davidson Initiates Coverage On Cellebrite DI with Buy Rating, Announces Price Target of $20",
+      "url": "https://www.benzinga.com/news/26/05/52811574/da-davidson-initiates-coverage-on-cellebrite-di-with-buy-rating-announces-price-target-of-20",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397063+00:00"
+    },
+    {
+      "ticker": "ANF",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Abercrombie & Fitch reported upbeat Q1 earnings with strong stock movement alongside broader market gains, representing a meaningful positive catalyst for intraday trading.",
+      "action_window": "intraday",
+      "headline": "Abercrombie & Fitch Upbeat Q1 Earnings, Joins Digital Turbine, Dycom Industries And Other Big Stocks Moving Higher On Wednesday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52811469/abercrombie-fitch-upbeat-q1-earnings-joins-digital-turbine-dycom-industries-and-other-big-stocks-moving-higher-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397070+00:00"
+    },
+    {
+      "ticker": "FIBK",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from DA Davidson to Neutral with lowered price target creates moderate selling pressure, though impact is limited as downgrade is to Neutral rather than Sell/Underperform.",
+      "action_window": "intraday",
+      "headline": "DA Davidson Downgrades First Interstate BancSys to Neutral, Lowers Price Target to $39",
+      "url": "https://www.benzinga.com/news/26/05/52811461/da-davidson-downgrades-first-interstate-bancsys-to-neutral-lowers-price-target-to-39",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397075+00:00"
+    },
+    {
+      "ticker": "TSX:CHP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgrade to Outperform with price target raise represents a meaningful positive catalyst from a major bank that typically drives near-term buying interest in the REIT.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Upgrades Choice Properties REIT to Outperform, Raises Price Target to C$17.5",
+      "url": "https://www.benzinga.com/news/26/05/52811402/rbc-capital-upgrades-choice-properties-reit-to-outperform-raises-price-target-to-c-17-5",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397080+00:00"
+    },
+    {
+      "ticker": "ASTC",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Circuit breaker halt with 259% gain indicates significant intraday catalyst, but extreme volatility and lack of disclosed fundamental driver suggest elevated risk for entry at current levels.",
+      "action_window": "intraday",
+      "headline": "Astrotech Shares Halted On Circuit Breaker To The Upside, Stock Now Up 259.51%",
+      "url": "https://www.benzinga.com/quote/ASTC",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397085+00:00"
+    },
+    {
+      "ticker": "SHW",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Sherwin-Williams exploring acquisition of AkzoNobel signals potential strategic expansion, but 'explore next steps' language indicates early-stage discussions with uncertain outcome.",
+      "action_window": "next_day",
+      "headline": "Sherwin-Williams, Nippon Paint Group Explore Next Steps Over Proposed Acquisition Of AkzoNobel",
+      "url": "https://www.benzinga.com/m-a/26/05/52811103/sherwin-williams-nippon-paint-group-explore-next-steps-over-proposed-acquisition-of-akzonobel",
+      "source": "alpaca",
+      "added_at": "2026-05-27T15:01:38.397092+00:00"
     }
   ]
 }
