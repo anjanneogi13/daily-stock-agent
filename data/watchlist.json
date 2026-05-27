@@ -854,6 +854,102 @@
       "url": "https://www.benzinga.com/m-a/26/05/52824980/myr-group-inks-agreement-to-acquire-valley-holdings-for-328m",
       "source": "alpaca",
       "added_at": "2026-05-27T20:34:04.287203+00:00"
+    },
+    {
+      "ticker": "DELL",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $9.7B Pentagon contract win represents significant confirmed revenue catalyst with stock already rallying on the news.",
+      "action_window": "intraday",
+      "headline": "Dell Wins $9.7 Billion Pentagon Contract, Fueling Stock Rally",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52827858/dell-wins-9-7-billion-pentagon-contract-fueling-stock-rally",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475749+00:00"
+    },
+    {
+      "ticker": "BMA",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with 12% EPS beat offset by significant 22% revenue miss creates conflicting signals for traders.",
+      "action_window": "next_day",
+      "headline": "Banco Macro Q1 EPS $1.59 Beats $1.42 Estimate, Sales $687.511M Miss $880.850M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52827851/banco-macro-q1-eps-1-59-beats-1-42-estimate-sales-687-511m-miss-880-850m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475762+00:00"
+    },
+    {
+      "ticker": "NBIS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A prominent hedge fund disclosing a significant 5.6% stake signals institutional confidence and typically drives continued buying interest, with stock already showing immediate positive reaction in extended trading.",
+      "action_window": "next_day",
+      "headline": "Nebius Stock Jumps After Situational Awareness Hedge Fund Reveals Stake",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52827719/nebius-stock-jumps-after-situational-awareness-hedge-fund-reveals-stake",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475771+00:00"
+    },
+    {
+      "ticker": "HPQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed Q2 results with AI PC adoption growth offset by rising memory/storage costs and constrained supply environment expected through H2 2026, signaling margin pressure ahead.",
+      "action_window": "next_day",
+      "headline": "HP Interim CEO Says  AI PCs Constituted 44% Of Shipments In Q2, Up From More Than 35% In Prior Quarter;  In Q2, Memory And Storage Costs Increased Sequentially; Expect This Trend To Continue In The H2 2026;  Looking Ahead, We Expect The Memory And Storage Environment To Remain Constrained;  We Also ",
+      "url": "https://www.benzinga.com/news/26/05/52827688/hp-interim-ceo-says-ai-pcs-constituted-44-of-shipments-in-q2-up-from-more-than-35-in-prior-quarter-i",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475778+00:00"
+    },
+    {
+      "ticker": "SNOW",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Co-founder stepping away from day-to-day operations signals potential leadership transition concerns, though remaining on board provides some continuity.",
+      "action_window": "next_day",
+      "headline": "Snowflake Says Co-Founder Benoit Dageville Will Step Away From Day-To-Day Operations In Mid-June And Continue Serving On The Co's Board",
+      "url": "https://www.benzinga.com/news/26/05/52827490/snowflake-says-co-founder-benoit-dageville-will-step-away-from-day-to-day-operations-in-mid-june-and",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475797+00:00"
+    },
+    {
+      "ticker": "GWAV",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance notice signals potential delisting risk, triggering immediate selling pressure and concern about continued listing requirements.",
+      "action_window": "next_day",
+      "headline": "Greenwave Technology Solutions Receives Nasdaq Noncompliance Notice",
+      "url": "https://www.benzinga.com/quote/GWAV",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475804+00:00"
+    },
+    {
+      "ticker": "DAVE",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Index rebalancing events typically create mechanical buying/selling pressure with DAVE being added (bullish) and AMWD being removed (bearish), creating short-term trading opportunities before effective date.",
+      "action_window": "next_day",
+      "headline": "Dave Will Replace American Woodmark In The S&P Smallcap 600 Effective Prior To The Opening Of Trading On Monday, June 1",
+      "url": "https://www.benzinga.com/news/26/05/52827402/dave-will-replace-american-woodmark-in-the-s-p-smallcap-600-effective-prior-to-the-opening-of-tradin",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475810+00:00"
+    },
+    {
+      "ticker": "EPAM",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "S&P index rebalancing typically drives mechanical flows with EPAM moving down from S&P 500 to SmallCap 600 (bearish) while FedEx Freight moves up (bullish), creating predictable but limited trading opportunities.",
+      "action_window": "next_day",
+      "headline": "FedEx Freight Holding  To Replace EPAM Systems In The S&P 500, Effective On June 2;  EPAM Systems To Replace Shutterstock In The S&P Smallcap 600",
+      "url": "https://www.benzinga.com/news/26/05/52827385/fedex-freight-holding-to-replace-epam-systems-in-the-s-p-500-effective-on-june-2-epam-systems-to-rep",
+      "source": "alpaca",
+      "added_at": "2026-05-27T22:28:43.475817+00:00"
     }
   ]
 }

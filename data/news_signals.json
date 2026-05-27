@@ -656,19 +656,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TRUG": {
-    "ticker": "TRUG",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "TruGolf Holdings Q1 EPS $(2.75) Misses $(1.49) Estimate, Sales $5.020M Beat $4.500M Estimate",
-    "added_at": "2026-05-20T21:18:56.658251+00:00",
-    "expires": "2026-05-27T21:18:56.658259+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LIMN": {
     "ticker": "LIMN",
     "score_delta": -1.0,
@@ -677,45 +664,6 @@
     "added_at": "2026-05-23T00:01:13.901988+00:00",
     "expires": "2026-11-19T00:01:13.901994+00:00",
     "hard_block": true
-  },
-  "SONM": {
-    "ticker": "SONM",
-    "score_delta": -0.064,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Sonim Technologies Q1 EPS $5.01 Misses $5.04 Estimate",
-    "added_at": "2026-05-20T21:18:56.668930+00:00",
-    "expires": "2026-05-27T21:18:56.668936+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "IPW": {
-    "ticker": "IPW",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "iPower Q3 Adj. EPS $(0.18) Up From $(0.70) YoY, Sales $3.499M Down From $16.042M YoY",
-    "added_at": "2026-05-20T21:18:56.671564+00:00",
-    "expires": "2026-05-27T21:18:56.671571+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JAGX": {
-    "ticker": "JAGX",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Jaguar Health Q1 EPS $(13.60) Misses $(4.26) Estimate, Sales $20.272M Beat $4.211M Estimate",
-    "added_at": "2026-05-20T21:18:56.674176+00:00",
-    "expires": "2026-05-27T21:18:56.674182+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "DXYZ": {
     "ticker": "DXYZ",
@@ -2023,6 +1971,58 @@
     "headline": "MYR Group Inks Agreement To Acquire Valley Holdings For ~$328M",
     "added_at": "2026-05-27T20:34:04.284430+00:00",
     "expires": "2026-06-10T20:34:04.284436+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KKR": {
+    "ticker": "KKR",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "this_week",
+    "headline": "KKR, Capital Group Target Wealthy Clients With New Credit Play",
+    "added_at": "2026-05-27T22:28:43.461627+00:00",
+    "expires": "2026-06-03T22:28:43.461635+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BMA": {
+    "ticker": "BMA",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Banco Macro Q1 EPS $1.59 Beats $1.42 Estimate, Sales $687.511M Miss $880.850M Estimate",
+    "added_at": "2026-05-27T22:28:43.463781+00:00",
+    "expires": "2026-06-03T22:28:43.463787+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GOOG": {
+    "ticker": "GOOG",
+    "score_delta": -0.03,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.15,
+    "action_window": "ignore",
+    "headline": "'Google Engineer Charged With Insider Trading on Polymarket'- Bloomberg",
+    "added_at": "2026-05-27T22:28:43.471292+00:00",
+    "expires": "2026-06-10T22:28:43.471298+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "A": {
+    "ticker": "A",
+    "score_delta": 0.064,
+    "catalyst": "guidance_raise",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Agilent Technologies Says Middle East-Driven Inflation May Weigh On Capital Spending, But Sees Strong Recovery Accelerating",
+    "added_at": "2026-05-27T22:28:43.473155+00:00",
+    "expires": "2026-06-10T22:28:43.473160+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
