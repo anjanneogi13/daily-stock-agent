@@ -1898,14 +1898,14 @@
   },
   "MBC": {
     "ticker": "MBC",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
     "action_window": "intraday",
-    "headline": "MasterBrand Says FTC Closes Investigation Of MasterBrand's Proposed Merger With American Woodmark; Expects To Close American Woodmark Merger On Or About May 28, 2026",
-    "added_at": "2026-05-26T21:50:34.994996+00:00",
-    "expires": "2026-06-09T21:50:34.995003+00:00",
+    "headline": "MasterBrand Q1 Earnings Call Highlights",
+    "added_at": "2026-05-27T01:34:36.748992+00:00",
+    "expires": "2026-06-03T01:34:36.748997+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1971,6 +1971,19 @@
     "headline": "UPDATE: Box Raises FY2027 Adj EPS Guidance from $1.55 to $1.56 vs $1.63 Est; Raises FY2027 Sales Guidance from $1.275B to $1.280B vs $1.275B Est",
     "added_at": "2026-05-26T23:04:53.623438+00:00",
     "expires": "2026-06-09T23:04:53.623443+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PCLA": {
+    "ticker": "PCLA",
+    "score_delta": 0.046,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "PicoCELA Inc. (PCLA) Unveils Game-Changing Wireless Mesh Technology",
+    "added_at": "2026-05-27T01:34:36.747070+00:00",
+    "expires": "2026-06-03T01:34:36.747075+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
