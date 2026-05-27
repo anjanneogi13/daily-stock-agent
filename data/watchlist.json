@@ -697,6 +697,18 @@
       "url": "https://www.benzinga.com/m-a/26/05/52811103/sherwin-williams-nippon-paint-group-explore-next-steps-over-proposed-acquisition-of-akzonobel",
       "source": "alpaca",
       "added_at": "2026-05-27T15:01:38.397092+00:00"
+    },
+    {
+      "ticker": "MGM",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Truist Securities upgraded MGM to Buy with a $55 price target, representing a meaningful positive catalyst from a reputable bank that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Truist Securities Upgrades MGM Resorts International to Buy, Raises Price Target to $55",
+      "url": "https://www.benzinga.com/news/26/05/52819264/truist-securities-upgrades-mgm-resorts-international-to-buy-raises-price-target-to-55",
+      "source": "alpaca",
+      "added_at": "2026-05-27T18:03:38.209013+00:00"
     }
   ]
 }
