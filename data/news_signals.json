@@ -2025,5 +2025,31 @@
     "expires": "2026-06-10T22:28:43.473160+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "HLIT": {
+    "ticker": "HLIT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.91,
+    "action_window": "intraday",
+    "headline": "Why Harmonic Shares Are Trading Higher By Around 13%; Here Are 20 Stocks Moving Premarket",
+    "added_at": "2026-05-27T23:45:33.347457+00:00",
+    "expires": "2026-06-03T23:45:33.347463+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LUNR": {
+    "ticker": "LUNR",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "Why Did Intuitive Machines Stock Bounce Back?",
+    "added_at": "2026-05-27T23:45:33.356324+00:00",
+    "expires": "2026-06-01T23:45:33.356330+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

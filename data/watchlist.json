@@ -950,6 +950,18 @@
       "url": "https://www.benzinga.com/news/26/05/52827385/fedex-freight-holding-to-replace-epam-systems-in-the-s-p-500-effective-on-june-2-epam-systems-to-rep",
       "source": "alpaca",
       "added_at": "2026-05-27T22:28:43.475817+00:00"
+    },
+    {
+      "ticker": "HLIT",
+      "tradeable_score": 0.91,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Harmonic delivered a significant earnings beat (42% above consensus), revenue beat (19% above consensus), raised Q2 guidance above estimates, and raised FY26 EPS guidance, triggering a 13% pre-market surge.",
+      "action_window": "intraday",
+      "headline": "Why Harmonic Shares Are Trading Higher By Around 13%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://finance.yahoo.com/news/why-harmonic-shares-trading-higher-144527595.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-05-27T23:45:33.362990+00:00"
     }
   ]
 }
