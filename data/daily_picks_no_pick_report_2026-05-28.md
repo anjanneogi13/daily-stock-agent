@@ -25,8 +25,8 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **566**
 
 ## Market Data Health
-- stooq: attempts=**2**, successes=**0**, errors=**1**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1476**, successes=**1303**, errors=**171**, rate_limited=**171**, unauthorized=**0**
+- stooq: attempts=**4**, successes=**0**, errors=**2**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2952**, successes=**2612**, errors=**336**, rate_limited=**336**, unauthorized=**0**
 
 ## Secondary Causes
 - OHLCV_PROVIDER_ERRORS_PRESENT
