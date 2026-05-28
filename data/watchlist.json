@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "USO",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Iranian security official's hawkish rhetoric suggests potential escalation of geopolitical tensions in the Middle East, likely driving oil prices higher and broader equity market risk-off sentiment.",
-      "action_window": "intraday",
-      "headline": "Secretary Of Iran's Supreme National Security Council Posts Published Message, Says  \"That There Will Be 'No Surrender Or Retreat'\"",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52766898/secretary-of-irans-supreme-national-security-council-posts-published-message-says",
-      "source": "alpaca",
-      "added_at": "2026-05-25T17:03:35.822756+00:00"
-    },
-    {
-      "ticker": "PL",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Strong 2026 guidance indicating path to profitability through operational efficiency and higher-margin products represents a meaningful positive catalyst for a growth company transitioning to sustainable operations.",
-      "action_window": "next_day",
-      "headline": "Is Planet Labs Moving Closer to Sustainable Profitability?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-moving-closer-sustainable-173000607.html?.tsrc=rss",
-      "source": "yahoo",
-      "added_at": "2026-05-25T17:03:35.822787+00:00"
-    },
-    {
       "ticker": "BTCUSD",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1023,6 +999,78 @@
       "url": "https://www.benzinga.com/markets/large-cap/26/05/52844014/best-buy-stock-pops-after-strong-comparable-sales-margin-growth",
       "source": "alpaca",
       "added_at": "2026-05-28T15:35:49.997850+00:00"
+    },
+    {
+      "ticker": "RDW",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Stock already surging intraday on Trump administration policy catalyst favoring domestic drone manufacturing, but based on reports rather than confirmed policy announcement.",
+      "action_window": "intraday",
+      "headline": "Redwire Surges Amid Trump's Drone Funding Talks",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52852597/redwire-surges-amid-trumps-drone-funding-talks",
+      "source": "alpaca",
+      "added_at": "2026-05-28T18:32:50.334200+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership enhancing Amazon's AI service offering with SpaceX's Grok models strengthens competitive position in cloud AI services market, though impact magnitude depends on commercial terms and adoption.",
+      "action_window": "next_day",
+      "headline": "'Amazon plans to make SpaceX's Grok models available on its flagship AI service' - Business Insider",
+      "url": "https://www.benzinga.com/news/26/05/52852621/amazon-plans-to-make-spacexs-grok-models-available-on-its-flagship-ai-service-business-insider",
+      "source": "alpaca",
+      "added_at": "2026-05-28T18:32:50.334213+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Official assurance that the Strait of Hormuz (critical oil chokepoint carrying ~20% of global oil) will not be tolled removes major geopolitical risk premium from energy markets and supports broader equity sentiment.",
+      "action_window": "intraday",
+      "headline": "White House Press Briefing With U.S. Treasury Secretary Bessent, On Oman, Says Had A Call With Omani Ambassador Thursday Morning; Omani Ambassador Assured There Are No Plans To Toll The Strait",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52852483/white-house-press-briefing-with-u-s-treasury-secretary-bessent-on-oman-says-had-a",
+      "source": "alpaca",
+      "added_at": "2026-05-28T18:32:50.334222+00:00"
+    },
+    {
+      "ticker": "INVH",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "CFRA downgrade to Sell with reduced price target creates near-term selling pressure for Invitation Homes, though analyst downgrades typically have moderate and transient impact.",
+      "action_window": "next_day",
+      "headline": "CFRA Downgrades Invitation Homes to Sell, Lowers Price Target to $27",
+      "url": "https://www.benzinga.com/news/26/05/52852379/cfra-downgrades-invitation-homes-to-sell-lowers-price-target-to-27",
+      "source": "alpaca",
+      "added_at": "2026-05-28T18:32:50.334236+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Massive $65B funding round for Anthropic (a major AI competitor) at $965B valuation signals intense AI market validation, positively impacting strategic investors Google and Amazon who have significant stakes in the company.",
+      "action_window": "intraday",
+      "headline": "Anthropic Raises $65B in Series H funding At $965B Post-Money Valuation; Series H Funding LED By Altimeter Capital, Dragoneer, Greenoaks, And Sequoia Capital; Round Was Co-Led By Capital Group, Coatue, D1 Capital Partners, GIC, ICONIQ, And XN; Funding Also Includes $15B Of Previously Committed Inves",
+      "url": "https://www.benzinga.com/news/26/05/52852087/anthropic-raises-65b-in-series-h-funding-at-965b-post-money-valuation-series-h-funding-led-by-altime",
+      "source": "alpaca",
+      "added_at": "2026-05-28T18:32:50.334244+00:00"
+    },
+    {
+      "ticker": "IBM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "IBM announces significant multi-billion dollar AI security and quantum computing initiatives representing major strategic investments, with stock already up 2.66% on the news.",
+      "action_window": "intraday",
+      "headline": "What's Going On With IBM Stock Thursday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52851839/whats-going-on-with-ibm-stock-thursday-2",
+      "source": "alpaca",
+      "added_at": "2026-05-28T18:32:50.334275+00:00"
     }
   ]
 }
