@@ -2,37 +2,37 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1689,
+      "attempts": 2252,
       "empty": 0,
-      "errors": 292,
-      "successes": 1397
+      "errors": 522,
+      "successes": 1730
     },
     "monster_info": {
-      "attempts": 1025,
+      "attempts": 1366,
       "empty": 0,
-      "errors": 205,
-      "successes": 820
+      "errors": 370,
+      "successes": 996
     },
     "ohlcv": {
-      "attempts": 1719,
-      "empty": 9,
-      "errors": 3,
-      "successes": 1707
+      "attempts": 2292,
+      "empty": 12,
+      "errors": 4,
+      "successes": 2276
     }
   },
   "date": "2026-05-28",
   "providers": {
     "stooq": {
-      "attempts": 6,
-      "empty": 3,
-      "errors": 3,
+      "attempts": 8,
+      "empty": 4,
+      "errors": 4,
       "failure_types": {
-        "empty_response": 3,
+        "empty_response": 4,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 3,
+        "provider_exception": 4,
         "rate_limited": 0,
         "stale_data": 0,
         "symbol_not_found": 0,
@@ -40,24 +40,24 @@
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 3,
+      "provider_error": 4,
       "rate_limited": 0,
       "successes": 0,
       "timeout": 0,
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 4427,
-      "empty": 6,
-      "errors": 497,
+      "attempts": 5902,
+      "empty": 8,
+      "errors": 892,
       "failure_types": {
-        "empty_response": 6,
+        "empty_response": 8,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 497,
+        "rate_limited": 892,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,8 +65,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 497,
-      "successes": 3924,
+      "rate_limited": 892,
+      "successes": 5002,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "WMT"
     }
   ],
-  "timestamp_utc": "2026-05-28T13:08:50Z"
+  "timestamp_utc": "2026-05-28T13:18:35Z"
 }
