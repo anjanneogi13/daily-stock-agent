@@ -1,31 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GLD",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Geopolitical macro catalyst (U.S.-Iran deal) driving gold prices higher with weakening dollar and easing inflation concerns creating favorable conditions for gold ETFs.",
-      "action_window": "intraday",
-      "headline": "Trump's Possible Iran Deal Is Putting Gold ETFs Back In Focus As Bullion Prices Climb",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/05/52765847/trumps-possible-iran-deal-is-putting-gold-etfs-back-in-focus-as-bullion-prices-climb",
-      "source": "alpaca",
-      "added_at": "2026-05-25T11:47:57.913261+00:00"
-    },
-    {
-      "ticker": "LLY",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Eli Lilly's billion-dollar acquisition spree of three companies signals strategic expansion into infectious disease prevention, representing meaningful portfolio diversification and long-term growth potential.",
-      "action_window": "intraday",
-      "headline": "From Shingles To Superbugs: Eli Lilly Expands Infectious Disease Push In Billion-Dollar Buying Wave",
-      "url": "https://www.benzinga.com/m-a/26/05/52788323/from-shingles-to-superbugs-eli-lilly-expands-infectious-disease-push-in-billion-dollar-buying-wave",
-      "source": "alpaca",
-      "added_at": "2026-05-25T14:41:22.904145+00:00",
-      "updated_at": "2026-05-26T17:43:16.230339+00:00"
-    },
-    {
       "ticker": "USO",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -906,16 +881,16 @@
     },
     {
       "ticker": "SNOW",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.88,
       "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Morgan Stanley maintaining Overweight with raised price target to $300 is a meaningful positive catalyst from a major investment bank, though maintaining (vs upgrading) the rating limits impact.",
+      "category": "earnings_beat",
+      "rationale": "Q1 double beat combined with strategic AWS AI partnership expansion creates strong dual catalyst with immediate stock price reaction already confirmed.",
       "action_window": "next_day",
-      "headline": "Morgan Stanley Maintains Overweight on Snowflake, Raises Price Target to $300",
-      "url": "https://www.benzinga.com/news/26/05/52833284/morgan-stanley-maintains-overweight-on-snowflake-raises-price-target-to-300",
+      "headline": "Snowflake Stock Soars After Q1 Double Beat, AWS AI Partnership Expansion",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52836294/snowflake-stock-soars-after-q1-double-beat-aws-ai-partnership-expansion",
       "source": "alpaca",
       "added_at": "2026-05-27T22:28:43.475797+00:00",
-      "updated_at": "2026-05-28T11:33:14.111822+00:00"
+      "updated_at": "2026-05-28T15:35:49.997860+00:00"
     },
     {
       "ticker": "GWAV",
@@ -1000,6 +975,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/05/52833233/amber-international-q1-adj-eps-0-04-misses-0-02-estimate-sales-10-028m-miss-11-400m-estimate",
       "source": "alpaca",
       "added_at": "2026-05-28T11:33:14.111841+00:00"
+    },
+    {
+      "ticker": "GSK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "UK NICE recommendation for NHS coverage of Nucala in COPD expands market access and revenue potential in a major healthcare system, representing a meaningful regulatory/reimbursement win.",
+      "action_window": "intraday",
+      "headline": "GSK Announces UK's NICE Issues Guidance Recommending Nucala For Use On The NHS For Uncontrolled COPD Patients",
+      "url": "https://www.benzinga.com/news/26/05/52844643/gsk-announces-uks-nice-issues-guidance-recommending-nucala-for-use-on-the-nhs-for-uncontrolled-copd",
+      "source": "alpaca",
+      "added_at": "2026-05-28T15:35:49.997820+00:00"
+    },
+    {
+      "ticker": "ARM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stock already up 12% on Wall Street upgrades to street-high $360 target with strong fundamentals ($2B backlog, agentic AI tailwinds), but most of the immediate move has occurred.",
+      "action_window": "intraday",
+      "headline": "What Is Going On With ARM Stock On Thursday?",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52844510/what-is-going-on-with-arm-stock-on-thursday",
+      "source": "alpaca",
+      "added_at": "2026-05-28T15:35:49.997833+00:00"
+    },
+    {
+      "ticker": "ONDS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Pentagon drone initiative creates sector tailwind driving active intraday momentum in small-cap defense stock, but lacks company-specific fundamental catalyst.",
+      "action_window": "intraday",
+      "headline": "Pentagon 'Drone Dominance' Push Sends Ondas Shares Surging",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52844383/pentagon-drone-dominance-push-sends-ondas-shares-surging",
+      "source": "alpaca",
+      "added_at": "2026-05-28T15:35:49.997842+00:00"
+    },
+    {
+      "ticker": "BBY",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Best Buy beat Q1 earnings and revenue with strong comparable sales and margin growth across key categories, causing shares to surge intraday.",
+      "action_window": "intraday",
+      "headline": "Best Buy Stock Pops After Strong Comparable Sales, Margin Growth",
+      "url": "https://www.benzinga.com/markets/large-cap/26/05/52844014/best-buy-stock-pops-after-strong-comparable-sales-margin-growth",
+      "source": "alpaca",
+      "added_at": "2026-05-28T15:35:49.997850+00:00"
     }
   ]
 }
