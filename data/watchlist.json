@@ -1,19 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AMD",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A substantial $10B+ investment commitment in Taiwan's AI infrastructure signals AMD's aggressive expansion in the high-growth AI chip market, though the impact will materialize over time rather than immediately.",
-      "action_window": "this_week",
-      "headline": "Advanced Micro Devices, Inc. (AMD) Plans to Invest more than $10B in Taiwan\u2019s AI Market",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/advanced-micro-devices-inc-amd-180652879.html?.tsrc=rss",
-      "source": "yahoo",
-      "added_at": "2026-05-25T21:43:25.285224+00:00",
-      "updated_at": "2026-05-25T22:55:09.311584+00:00"
-    },
-    {
       "ticker": "FINV",
       "tradeable_score": 0.78,
       "sentiment": "bearish",
@@ -1168,6 +1155,54 @@
       "url": "https://www.benzinga.com/markets/earnings/26/05/52859908/why-american-eagle-stock-is-getting-hammered-after-hours-thursday",
       "source": "alpaca",
       "added_at": "2026-05-28T21:05:59.206137+00:00"
+    },
+    {
+      "ticker": "HPE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Dell's massive Q1 earnings beat on AI demand creates positive sector sentiment spillover to competitor HPE, indicating strong AI server market demand.",
+      "action_window": "intraday",
+      "headline": "Hewlett Packard Enterprise Stock Jumps After Dell's Massive Q1 Beat On AI Demand",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52861665/hewlett-packard-enterprise-stock-jumps-after-dells-massive-q1-beat-on-ai-demand",
+      "source": "alpaca",
+      "added_at": "2026-05-28T22:52:56.114729+00:00"
+    },
+    {
+      "ticker": "SPCE",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Lawsuit settlement removes overhang with insurers paying rather than company, confirmed by 14% after-hours gain, but limited long-term fundamental impact.",
+      "action_window": "next_day",
+      "headline": "Virgin Galactic Stock Lifts Off After-Hours \u2014 Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52861554/virgin-galactic-stock-lifts-off-after-hours-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-28T22:52:56.114743+00:00"
+    },
+    {
+      "ticker": "NOW",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "ServiceNow loses its Chief Marketing Officer to OpenAI, indicating executive talent drain to a competitive AI-focused company, though CMO departures typically have moderate impact.",
+      "action_window": "next_day",
+      "headline": "ServiceNow Chief Marketing Officer Posts On LinkedIn \"Earlier today, I shared that I was leaving ServiceNow after the most meaningful chapter of my career. Now I get to share what's next: I'm joining OpenAI as Chief Marketing Officer, Business. Hard to overstate how surreal that sentence feels. Some",
+      "url": "https://www.benzinga.com/news/26/05/52861500/servicenow-chief-marketing-officer-posts-on-linkedin-earlier-today-i-shared-that-i-was-leaving-servi",
+      "source": "alpaca",
+      "added_at": "2026-05-28T22:52:56.114752+00:00"
+    },
+    {
+      "ticker": "TTI",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Board approval of final investment decision for a $607M NPV bromine facility represents a significant value-creating capital allocation decision that materially impacts the company's future earnings potential.",
+      "action_window": "next_day",
+      "headline": "Tetra Technologies' Board Approves Final Investment Decision For The Development Of The Company's Bromine Production Facility Near Stamps, Arkansas; The Vertically Integrated Production Case Is Expected To Generate A Bromine Business NPV Of $607M; The Facility Is Expected To Commence First Productio",
+      "url": "https://www.benzinga.com/news/26/05/52861383/tetra-technologies-board-approves-final-investment-decision-for-the-development-of-the-companys-brom",
+      "source": "alpaca",
+      "added_at": "2026-05-28T22:52:56.114759+00:00"
     }
   ]
 }
