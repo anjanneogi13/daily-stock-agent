@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BTCUSD",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Significant macro catalyst with Iran deal hopes driving global risk-on sentiment, S&P 500 futures rallying sharply, and 7% oil decline creating broad market impact across equities and commodities.",
-      "action_window": "next_day",
-      "headline": "Global Stocks Rally As Oil Sinks 7% On Iran Deal Hopes: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/market-summary/26/05/52767283/wall-street-closed-global-stocks-rally-oil-sinks-7-percent-iran-deal-hopes-markets-monday",
-      "source": "alpaca",
-      "added_at": "2026-05-25T18:59:10.468116+00:00"
-    },
-    {
-      "ticker": "TSM",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "product_launch",
-      "rationale": "Huawei's chipmaking breakthrough threatens TSMC and NVDA's competitive moat in advanced semiconductors by potentially undermining the effectiveness of U.S. export controls and creating a credible Chinese alternative.",
-      "action_window": "intraday",
-      "headline": "Huawei Says It Has A Chipmaking Breakthrough. Did US Sanctions Backfire?",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52767143/huawei-says-it-has-a-chipmaking-breakthrough-did-us-sanctions-backfire",
-      "source": "alpaca",
-      "added_at": "2026-05-25T18:59:10.468129+00:00"
-    },
-    {
-      "ticker": "VFS",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Chairman appointment is notable corporate governance news but lacks immediate business impact clarity without knowing predecessor's departure circumstances or new chairman's strategic vision.",
-      "action_window": "next_day",
-      "headline": "VinFast Auto Appoints Pham Nhat Quan Anh As New Chairman",
-      "url": "https://www.benzinga.com/news/26/05/52767102/vinfast-auto-appoints-pham-nhat-quan-anh-as-new-chairman",
-      "source": "alpaca",
-      "added_at": "2026-05-25T18:59:10.468136+00:00"
-    },
-    {
       "ticker": "AMD",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
@@ -1071,6 +1035,139 @@
       "url": "https://www.benzinga.com/markets/large-cap/26/05/52851839/whats-going-on-with-ibm-stock-thursday-2",
       "source": "alpaca",
       "added_at": "2026-05-28T18:32:50.334275+00:00"
+    },
+    {
+      "ticker": "KNOP",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of 71% ($0.08 vs $0.28 expected) outweighs the modest 1.9% revenue beat, likely triggering immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "KNOT Offshore Partners Q1 EPS $0.08 Misses $0.28 Estimate, Sales $92.007M Beat $90.312M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52860374/knot-offshore-partners-q1-eps-0-08-misses-0-28-estimate-sales-92-007m-beat-90-312m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206046+00:00"
+    },
+    {
+      "ticker": "OKTA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with positive forward guidance causing immediate share price climb indicates significant positive catalyst with confirmation via price action.",
+      "action_window": "intraday",
+      "headline": "Okta Shares Climb After Strong Q1 Results, Forward Guidance",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52860361/okta-shares-climb-after-strong-q1-results-forward-guidance",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206059+00:00"
+    },
+    {
+      "ticker": "MRCY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Multi-year contract for 1,000 servers represents significant revenue visibility and validates Mercury's BuiltSECURE product line in defense sector.",
+      "action_window": "next_day",
+      "headline": "Mercury Systems Bags Multi-Year Contract To Deliver 1,000 Of RTBX06 BuiltSECURE Servers To Blue Raven",
+      "url": "https://www.benzinga.com/news/26/05/52860348/mercury-systems-bags-multi-year-contract-to-deliver-1-000-of-rtbx06-builtsecure-servers-to-blue-rave",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206068+00:00"
+    },
+    {
+      "ticker": "GAP",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Material $80M net tariff relief directly improves gross profit and operating income, representing significant margin expansion and likely earnings upside.",
+      "action_window": "next_day",
+      "headline": "Gap Sees ~$80M Of Net Tariff Relief To Gross Profit And Operating Income",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52860323/gap-sees-80m-of-net-tariff-relief-to-gross-profit-and-operating-income",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206075+00:00"
+    },
+    {
+      "ticker": "ELME",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Asset sale at $59M represents portfolio optimization and capital raising event for ELME, though impact depends on property's book value and company's market cap context.",
+      "action_window": "next_day",
+      "headline": "Elme Communities Subsidiary Enters Into Agreement With CAPREIT Acquisition To Sell Elme Bethesda For $59M",
+      "url": "https://www.benzinga.com/m-a/26/05/52860210/elme-communities-subsidiary-enters-into-agreement-with-capreit-acquisition-to-sell-elme-bethesda-for",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206082+00:00"
+    },
+    {
+      "ticker": "RRGB",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "ma_target",
+      "rationale": "Company announces intent to update guidance post-transaction close, suggesting M&A activity but direction of guidance change unclear and transaction details unspecified.",
+      "action_window": "next_day",
+      "headline": "Red Robin Gourmet Burgers Says Company Expects To Update Guidance Following The Close Of The Transaction",
+      "url": "https://www.benzinga.com/news/26/05/52860123/red-robin-gourmet-burgers-says-company-expects-to-update-guidance-following-the-close-of-the-transac",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206089+00:00"
+    },
+    {
+      "ticker": "NGL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss ($0.10 loss vs $0.18 estimate, a $0.28 shortfall) outweighs the modest sales beat, likely triggering immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "NGL Energy Partners Q4 Adj. EPS $(0.10) Misses $0.18 Estimate, Sales $949.510M Beat $908.519M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52860044/ngl-energy-partners-q4-adj-eps-0-10-misses-0-18-estimate-sales-949-510m-beat-908-519m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206096+00:00",
+      "updated_at": "2026-05-28T21:05:59.206113+00:00"
+    },
+    {
+      "ticker": "S",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "SentinelOne stock 'cratered' following Q1 earnings results, indicating a significant earnings miss or major disappointment that triggered immediate sharp selling.",
+      "action_window": "intraday",
+      "headline": "SentinelOne Stock Craters After Q1 Results \u2014 Here's Why",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52860058/sentinelone-stock-craters-after-q1-results-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206103+00:00"
+    },
+    {
+      "ticker": "HRTG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant 14.7% reduction in catastrophe reinsurance costs ($63.2M savings) directly improves underwriting profitability and margins for the insurance company.",
+      "action_window": "next_day",
+      "headline": "Heritage Insurance Highlights 2026\u201127 Catastrophe Reinsurance Program With Total Consolidated Cost Of ~$367.5M, Down $63.2M From Prior\u2011Year Renewal Cost Of ~$430.7M",
+      "url": "https://www.benzinga.com/quote/HRTG",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206122+00:00"
+    },
+    {
+      "ticker": "NUAI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Settlement dismisses company from lawsuit without admitting liability for $1M, removing legal overhang and allowing management to refocus on AI data center growth strategy.",
+      "action_window": "next_day",
+      "headline": "UPDATED: New Era Energy & Digital Reaches $1M Settlement To Dismiss Company From New Mexico Lawsuit, Denies Liability And Continues Focus On AI Data Center Strategy",
+      "url": "https://www.benzinga.com/news/26/05/52859934/updated-new-era-energy-digital-reaches-1m-settlement-to-dismiss-company-from-new-mexico-lawsuit-deni",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206130+00:00"
+    },
+    {
+      "ticker": "AEO",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock getting 'hammered' after hours following Q1 earnings release indicates significant earnings miss or guidance disappointment with immediate market reaction.",
+      "action_window": "next_day",
+      "headline": "Why American Eagle Stock Is Getting Hammered After Hours Thursday",
+      "url": "https://www.benzinga.com/markets/earnings/26/05/52859908/why-american-eagle-stock-is-getting-hammered-after-hours-thursday",
+      "source": "alpaca",
+      "added_at": "2026-05-28T21:05:59.206137+00:00"
     }
   ]
 }
