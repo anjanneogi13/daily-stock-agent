@@ -833,15 +833,16 @@
     },
     {
       "ticker": "MRVL",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Shares climbing after confirmed Q1 earnings beat represents a meaningful catalyst with immediate positive price action already underway.",
+      "rationale": "Marvell beat Q1 estimates with strong CEO commentary on data center strength and massive AI infrastructure growth forecast, creating immediate positive trading catalyst.",
       "action_window": "intraday",
-      "headline": "Marvell Shares Climb After Q1 Results Beat Estimates: Details",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52824993/marvell-shares-climb-after-q1-results-beat-estimates-details",
+      "headline": "Marvell CEO Says Data Center Business Is 'On Fire'",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52833213/marvell-ceo-says-data-center-business-is-on-fire",
       "source": "alpaca",
-      "added_at": "2026-05-27T20:34:04.287197+00:00"
+      "added_at": "2026-05-27T20:34:04.287197+00:00",
+      "updated_at": "2026-05-28T11:33:14.111849+00:00"
     },
     {
       "ticker": "MYRG",
@@ -905,15 +906,16 @@
     },
     {
       "ticker": "SNOW",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Co-founder stepping away from day-to-day operations signals potential leadership transition concerns, though remaining on board provides some continuity.",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley maintaining Overweight with raised price target to $300 is a meaningful positive catalyst from a major investment bank, though maintaining (vs upgrading) the rating limits impact.",
       "action_window": "next_day",
-      "headline": "Snowflake Says Co-Founder Benoit Dageville Will Step Away From Day-To-Day Operations In Mid-June And Continue Serving On The Co's Board",
-      "url": "https://www.benzinga.com/news/26/05/52827490/snowflake-says-co-founder-benoit-dageville-will-step-away-from-day-to-day-operations-in-mid-june-and",
+      "headline": "Morgan Stanley Maintains Overweight on Snowflake, Raises Price Target to $300",
+      "url": "https://www.benzinga.com/news/26/05/52833284/morgan-stanley-maintains-overweight-on-snowflake-raises-price-target-to-300",
       "source": "alpaca",
-      "added_at": "2026-05-27T22:28:43.475797+00:00"
+      "added_at": "2026-05-27T22:28:43.475797+00:00",
+      "updated_at": "2026-05-28T11:33:14.111822+00:00"
     },
     {
       "ticker": "GWAV",
@@ -962,6 +964,42 @@
       "url": "https://finance.yahoo.com/news/why-harmonic-shares-trading-higher-144527595.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-05-27T23:45:33.362990+00:00"
+    },
+    {
+      "ticker": "ZBIO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "BLA submission to FDA is a major regulatory milestone for biotech companies that significantly de-risks the path to commercialization and typically triggers meaningful stock appreciation.",
+      "action_window": "intraday",
+      "headline": "Zenas BioPharma Submits An FDA Biologics License Application For Obexelimab In Immunoglobulin G4-Related Disease",
+      "url": "https://www.benzinga.com/news/26/05/52833311/zenas-biopharma-submits-an-fda-biologics-license-application-for-obexelimab-in-immunoglobulin-g4-rel",
+      "source": "alpaca",
+      "added_at": "2026-05-28T11:33:14.111808+00:00"
+    },
+    {
+      "ticker": "ALMU",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Company commentary on $2B CHIPS Act incentives positions ALMU as potential beneficiary through subcontract opportunities, though actual contract award remains uncertain.",
+      "action_window": "intraday",
+      "headline": "Aeluma Comments On U.S. Commerce's $2B CHIPS Act Incentives To Accelerate Quantum Computing, Highlighting Scalable Wafer Platform And Subcontract Potential",
+      "url": "https://www.benzinga.com/news/26/05/52833244/aeluma-comments-on-u-s-commerces-2b-chips-act-incentives-to-accelerate-quantum-computing-highlightin",
+      "source": "alpaca",
+      "added_at": "2026-05-28T11:33:14.111834+00:00"
+    },
+    {
+      "ticker": "AMBR",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q1 earnings significantly missed on both EPS (double the expected loss) and revenue (12% below estimates), indicating fundamental operational weakness requiring immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "Amber International Q1 Adj. EPS $(0.04) Misses $(0.02) Estimate, Sales $10.028M Miss $11.400M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52833233/amber-international-q1-adj-eps-0-04-misses-0-02-estimate-sales-10-028m-miss-11-400m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-28T11:33:14.111841+00:00"
     }
   ]
 }
