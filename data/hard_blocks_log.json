@@ -99,5 +99,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-28 13:08:50",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "BZFD",
+        "reason": "penny stock ($1.74 < $5.0)",
+        "block_type": "penny_stock"
+      },
+      {
+        "ticker": "BNS",
+        "reason": "SL too tight (0.9% < 2.0% for $81 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
