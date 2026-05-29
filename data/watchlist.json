@@ -38,15 +38,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
       "category": "macro",
-      "rationale": "Consumer confidence beat expectations (93.1 vs 91.9), suggesting economic resilience and potential support for equity markets, though the 1.3% beat is modest.",
+      "rationale": "Fed official signals potential for more restrictive monetary policy including rate hikes and balance sheet tightening, which is negative for equity markets.",
       "action_window": "intraday",
-      "headline": "USA CB Consumer Confidence For May  93.1 Vs 91.9 Est.",
-      "url": "https://www.benzinga.com/quote/SPY",
+      "headline": "Fed's Schmid Says We Aren't Very Restrictive On Monetary Policy Right Now, The Fed May Need To Weigh How To Make Monetary Policy More Restrictive; Could Use Balance Sheet To Create Policy Restriction; One Must Have Optionality To Go Up And Down In Interest Rates",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52866595/feds-schmid-says-we-arent-very-restrictive-on-monetary-policy-right-now-the-fed-m",
       "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208568+00:00"
+      "added_at": "2026-05-26T14:14:14.208568+00:00",
+      "updated_at": "2026-05-29T11:23:24.822471+00:00"
     },
     {
       "ticker": "APLD",
@@ -1098,15 +1099,16 @@
     },
     {
       "ticker": "S",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.85,
       "sentiment": "bearish",
       "category": "earnings_miss",
-      "rationale": "SentinelOne stock 'cratered' following Q1 earnings results, indicating a significant earnings miss or major disappointment that triggered immediate sharp selling.",
+      "rationale": "Triple negative catalyst of Q1 revenue miss, weak guidance, and layoffs driving significant 17% premarket decline represents actionable bearish signal.",
       "action_window": "intraday",
-      "headline": "SentinelOne Stock Craters After Q1 Results \u2014 Here's Why",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52860058/sentinelone-stock-craters-after-q1-results-heres-why",
+      "headline": "Why Is SentinelOne Stock Sinking Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52866526/why-is-sentinelone-stock-sinking-friday",
       "source": "alpaca",
-      "added_at": "2026-05-28T21:05:59.206103+00:00"
+      "added_at": "2026-05-28T21:05:59.206103+00:00",
+      "updated_at": "2026-05-29T11:23:24.822485+00:00"
     },
     {
       "ticker": "HRTG",
@@ -1191,6 +1193,102 @@
       "url": "https://www.benzinga.com/news/26/05/52861383/tetra-technologies-board-approves-final-investment-decision-for-the-development-of-the-companys-brom",
       "source": "alpaca",
       "added_at": "2026-05-28T22:52:56.114759+00:00"
+    },
+    {
+      "ticker": "TSX:LB",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with Q2 adjusted EPS falling 33% short of estimates ($0.46 vs $0.69) and sales missing by 12% ($213.7M vs $243.1M), indicating deteriorating fundamentals.",
+      "action_window": "intraday",
+      "headline": "Laurentian Bank of Canada Q2 Adj. EPS $0.46 Misses $0.69 Estimate, Sales $213.655M Miss $243.133M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52866887/laurentian-bank-of-canada-q2-adj-eps-0-46-misses-0-69-estimate-sales-213-655m-miss-243-133m-estimat",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822390+00:00"
+    },
+    {
+      "ticker": "SBI",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings show exceptional growth with EPS more than doubling (+133%) and revenue up 83% YoY, representing a significant beat that warrants immediate trading attention.",
+      "action_window": "intraday",
+      "headline": "Serabi Gold Q1 EPS $0.28 Up From $0.12 YoY, Sales $50.571M Up From $27.593M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52866870/serabi-gold-q1-eps-0-28-up-from-0-12-yoy-sales-50-571m-up-from-27-593m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822404+00:00"
+    },
+    {
+      "ticker": "WTTR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America initiating coverage with Buy rating and specific price target typically drives positive price action, though impact may be muted as it's new coverage rather than an upgrade from existing coverage.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Initiates Coverage On Select Water Solutions with Buy Rating, Announces Price Target of $22",
+      "url": "https://www.benzinga.com/news/26/05/52866711/b-of-a-securities-initiates-coverage-on-select-water-solutions-with-buy-rating-announces-price-targe",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822424+00:00"
+    },
+    {
+      "ticker": "CLGN",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 10.5% worse than expected and revenue 93% below estimates indicating severe operational underperformance.",
+      "action_window": "intraday",
+      "headline": "CollPlant Biotechnologies Q1 Adj. EPS $(0.21) Misses $(0.19) Estimate, Sales $73.000K Miss $1.100M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/05/52866703/collplant-biotechnologies-q1-adj-eps-0-21-misses-0-19-estimate-sales-73-000k-miss-1-100m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822432+00:00"
+    },
+    {
+      "ticker": "CLIK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "100% acquisition with clear revenue projection of HK$50M+ annually within two years represents a meaningful growth catalyst for Click Holdings.",
+      "action_window": "intraday",
+      "headline": "Click Holdings Acquires 100% Equity Stake In Hong Kong-Based Construction HR Tech Company; Within Two Years, It Is Projected To Contribute Over HK$50M In Annual Revenue To CLIK Group",
+      "url": "https://www.benzinga.com/m-a/26/05/52866674/click-holdings-acquires-100-equity-stake-in-hong-kong-based-construction-hr-tech-company-within-two",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822440+00:00"
+    },
+    {
+      "ticker": "SEER",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "ITC complaint filing with major research hospital as co-plaintiff suggests IP defense action that could protect market position, though litigation outcomes are uncertain and timeline is lengthy.",
+      "action_window": "next_day",
+      "headline": "Seer Files Complaint Against Nanomics At The ITC, With Brigham And Women's Hospital Joining In",
+      "url": "https://www.benzinga.com/news/26/05/52866655/seer-files-complaint-against-nanomics-at-the-itc-with-brigham-and-womens-hospital-joining-in",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822448+00:00"
+    },
+    {
+      "ticker": "AGIO",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "Clinical trial failure with company halting development of tebapivat in LR-MDS represents a significant pipeline setback that will likely trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Agios Pharma Says It Will Not Advance Tebapivat, Next-Gen Oral Pyruvate Kinase Activator, In Lower-Risk Myelodysplastic Syndromes As Phase 2b Trial Results Did Not Meet Predefined Threshold To Support Further Development In LR-MDS",
+      "url": "https://www.benzinga.com/news/26/05/52866640/agios-pharma-says-it-will-not-advance-tebapivat-next-gen-oral-pyruvate-kinase-activator-in-lower-ris",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822455+00:00"
+    },
+    {
+      "ticker": "GCO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Genesco raised FY2027 EPS guidance floor by 9.4% and midpoint by 7.7%, with new midpoint materially above consensus estimate of $2.24, signaling strong business momentum.",
+      "action_window": "intraday",
+      "headline": "Genesco Raises FY2027 GAAP EPS Guidance from $2.12-$2.55 to $2.32-$2.75 vs $2.24 Est",
+      "url": "https://www.benzinga.com/news/26/05/52866631/genesco-raises-fy2027-gaap-eps-guidance-from-2-12-2-55-to-2-32-2-75-vs-2-24-est",
+      "source": "alpaca",
+      "added_at": "2026-05-29T11:23:24.822462+00:00"
     }
   ]
 }
