@@ -135,5 +135,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-29 12:09:00",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "SBI",
+        "reason": "SL too tight (0.5% < 3.0% for $8 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
