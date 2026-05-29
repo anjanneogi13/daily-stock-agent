@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "FINV",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q1 earnings show significant year-over-year declines with adjusted EPS down 36.6% and revenue down 3.0%, indicating deteriorating business fundamentals.",
-      "action_window": "next_day",
-      "headline": "FinVolution Gr Q1 Adj. EPS $0.26 Down From $0.41 YoY, Sales $465.361M Down From $479.700M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/05/52767694/finvolution-gr-q1-adj-eps-0-26-down-from-0-41-yoy-sales-465-361m-down-from-479-700m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-05-25T22:55:09.311571+00:00"
-    },
-    {
       "ticker": "NVDA",
       "tradeable_score": 0.73,
       "sentiment": "bearish",

@@ -2207,5 +2207,18 @@
     "expires": "2026-06-04T22:52:56.107346+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DELL": {
+    "ticker": "DELL",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Dell Technologies Q1 Earnings Call Highlights",
+    "added_at": "2026-05-29T00:07:08.354509+00:00",
+    "expires": "2026-06-05T00:07:08.354514+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
