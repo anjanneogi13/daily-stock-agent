@@ -1,91 +1,6 @@
 {
   "items": [
     {
-      "ticker": "NVDA",
-      "tradeable_score": 0.73,
-      "sentiment": "bearish",
-      "category": "product_launch",
-      "rationale": "Huawei's breakthrough chip architecture threatens U.S. semiconductor competitive advantage, particularly impacting NVIDIA's AI chip dominance and semiconductor equipment makers.",
-      "action_window": "intraday",
-      "headline": "Huawei's New Chip Architecture Rewrites Sanctions Playbook",
-      "url": "https://www.benzinga.com/Opinion/26/05/52778791/huaweis-new-chip-architecture-rewrites-sanctions-playbook",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208539+00:00"
-    },
-    {
-      "ticker": "GPUS",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Shares already surging on dual catalysts of significant Bitcoin treasury accumulation and $5M share buyback program announcement, creating immediate trading opportunity.",
-      "action_window": "intraday",
-      "headline": "Hyperscale Treasury Nears 700 Bitcoin, Launches $5 Million Buyback, Shares Surge",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52778536/hyperscale-treasury-nears-700-bitcoin-launches-5-million-buyback-shares-surge",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208556+00:00"
-    },
-    {
-      "ticker": "COSM",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Company provides forward guidance expecting $90M+ in FY26 revenue and $0.73 adjusted EPS by 2029, signaling growth expectations but with limited immediate catalysts given the forward-looking timeframe.",
-      "action_window": "next_day",
-      "headline": "CORRECTION: Cosmos Health Expects To Report Over $90M In FY26; Anticipates Adjusted EPS Of $0.73, $200.6M In Revenue By 2029",
-      "url": "https://www.benzinga.com/news/26/05/52778076/correction-cosmos-health-expects-to-report-over-90m-in-fy26-anticipates-adjusted-eps-of-0-73-200-6m",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208564+00:00"
-    },
-    {
-      "ticker": "SPY",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Fed official signals potential for more restrictive monetary policy including rate hikes and balance sheet tightening, which is negative for equity markets.",
-      "action_window": "intraday",
-      "headline": "Fed's Schmid Says We Aren't Very Restrictive On Monetary Policy Right Now, The Fed May Need To Weigh How To Make Monetary Policy More Restrictive; Could Use Balance Sheet To Create Policy Restriction; One Must Have Optionality To Go Up And Down In Interest Rates",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/05/52866595/feds-schmid-says-we-arent-very-restrictive-on-monetary-policy-right-now-the-fed-m",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208568+00:00",
-      "updated_at": "2026-05-29T11:23:24.822471+00:00"
-    },
-    {
-      "ticker": "APLD",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $7.5 billion, 15-year AI campus leasing contract is a material revenue win representing a transformational long-term contract for the company.",
-      "action_window": "intraday",
-      "headline": "Why Is Applied Digital Stock Moving Higher Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52777929/why-is-applied-digital-stock-moving-higher-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208573+00:00"
-    },
-    {
-      "ticker": "LEA",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "TD Cowen upgrade to Buy with price target raise to $165 represents a meaningful positive catalyst from a reputable sell-side firm that typically drives near-term buying interest.",
-      "action_window": "intraday",
-      "headline": "TD Cowen Upgrades Lear to Buy, Raises Price Target to $165",
-      "url": "https://www.benzinga.com/news/26/05/52777902/td-cowen-upgrades-lear-to-buy-raises-price-target-to-165",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208576+00:00"
-    },
-    {
-      "ticker": "WBD",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Increasing loan sale size and planning to repay $15B bridge loan signals improved financing conditions and reduced refinancing risk, strengthening Warner's balance sheet.",
-      "action_window": "intraday",
-      "headline": "'Warner Boosts Loan Sale Again, Plans to Repay $15 Billion Bridge'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/05/52777745/warner-boosts-loan-sale-again-plans-to-repay-15-billion-bridge-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-05-26T14:14:14.208580+00:00"
-    },
-    {
       "ticker": "LYFT",
       "tradeable_score": 0.52,
       "sentiment": "bullish",
@@ -1289,6 +1204,54 @@
       "url": "https://www.benzinga.com/news/26/05/52866631/genesco-raises-fy2027-gaap-eps-guidance-from-2-12-2-55-to-2-32-2-75-vs-2-24-est",
       "source": "alpaca",
       "added_at": "2026-05-29T11:23:24.822462+00:00"
+    },
+    {
+      "ticker": "QTTB",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $55M private placement provides substantial funding runway for autoimmune pipeline development, reducing near-term dilution risk and enabling clinical progress.",
+      "action_window": "intraday",
+      "headline": "Why Is Q32 Bio Stock Gaining Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52872687/why-is-q32-bio-stock-gaining-friday",
+      "source": "alpaca",
+      "added_at": "2026-05-29T14:19:24.386439+00:00"
+    },
+    {
+      "ticker": "AWK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "UBS upgrade from neutral to buy with significant price target increase represents meaningful positive catalyst from major investment bank that typically drives institutional buying.",
+      "action_window": "intraday",
+      "headline": "UBS Upgrades American Water Works Co to Buy, Raises Price Target to $140",
+      "url": "https://www.benzinga.com/news/26/05/52872336/ubs-upgrades-american-water-works-co-to-buy-raises-price-target-to-140",
+      "source": "alpaca",
+      "added_at": "2026-05-29T14:19:24.386453+00:00"
+    },
+    {
+      "ticker": "WTRG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "UBS upgrade to Buy with price target raise represents a meaningful catalyst from a major investment bank that typically drives institutional buying interest and near-term price appreciation.",
+      "action_window": "intraday",
+      "headline": "UBS Upgrades Essential Utilities to Buy, Raises Price Target to $43",
+      "url": "https://www.benzinga.com/news/26/05/52872124/ubs-upgrades-essential-utilities-to-buy-raises-price-target-to-43",
+      "source": "alpaca",
+      "added_at": "2026-05-29T14:19:24.386462+00:00"
+    },
+    {
+      "ticker": "ZCMD",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Best efforts public offering of $5M is dilutive to existing shareholders and typically signals weak demand, often causing immediate downward pressure on small-cap stocks.",
+      "action_window": "intraday",
+      "headline": "Zhongchao Prices $5M Best Efforts Public Offering",
+      "url": "https://www.benzinga.com/news/26/05/52872104/zhongchao-prices-5m-best-efforts-public-offering",
+      "source": "alpaca",
+      "added_at": "2026-05-29T14:19:24.386470+00:00"
     }
   ]
 }
