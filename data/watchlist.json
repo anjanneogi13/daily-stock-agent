@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LYFT",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Corporate travel expansion represents a strategic move into higher-margin business segment, but lacks concrete details on timing, partnerships, or revenue impact to justify immediate trading action.",
-      "action_window": "this_week",
-      "headline": "'Lyft is coming for corporate travel' - Semafor",
-      "url": "https://www.benzinga.com/news/26/05/52788251/lyft-is-coming-for-corporate-travel-semafor",
-      "source": "alpaca",
-      "added_at": "2026-05-26T17:43:16.230353+00:00"
-    },
-    {
-      "ticker": "CIEN",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bank of America maintains Buy rating with significant price target raise to $660, indicating strong conviction and meaningful upside potential from a major sell-side firm.",
-      "action_window": "next_day",
-      "headline": "B of A Securities Maintains Buy on Ciena, Raises Price Target to $660",
-      "url": "https://www.benzinga.com/news/26/05/52788214/b-of-a-securities-maintains-buy-on-ciena-raises-price-target-to-660",
-      "source": "alpaca",
-      "added_at": "2026-05-26T17:43:16.230361+00:00"
-    },
-    {
-      "ticker": "ESLT",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Dual catalyst of Q1 earnings beat combined with substantial $1.4B contract win creates strong positive momentum for defense contractor.",
-      "action_window": "intraday",
-      "headline": "Defense Demand Lifts Elbit Systems After $1.4 Billion Contract Win",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52787962/defense-demand-lifts-elbit-systems-after-1-4-billion-contract-win",
-      "source": "alpaca",
-      "added_at": "2026-05-26T17:43:16.230373+00:00"
-    },
-    {
       "ticker": "SPCX",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -941,15 +905,16 @@
     },
     {
       "ticker": "OKTA",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q1 earnings beat with positive forward guidance causing immediate share price climb indicates significant positive catalyst with confirmation via price action.",
+      "category": "guidance_raise",
+      "rationale": "28% surge to 52-week high driven by strong cRPO growth, raised full-year outlook, and multiple Wall Street upgrades represents a significant confirmed catalyst with multiple validation points.",
       "action_window": "intraday",
-      "headline": "Okta Shares Climb After Strong Q1 Results, Forward Guidance",
-      "url": "https://www.benzinga.com/markets/earnings/26/05/52860361/okta-shares-climb-after-strong-q1-results-forward-guidance",
+      "headline": "Okta Stock Hits 52-Week High - Here's Why",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52881707/okta-stock-hits-52-week-high-heres-why",
       "source": "alpaca",
-      "added_at": "2026-05-28T21:05:59.206059+00:00"
+      "added_at": "2026-05-28T21:05:59.206059+00:00",
+      "updated_at": "2026-05-29T17:50:13.450921+00:00"
     },
     {
       "ticker": "MRCY",
@@ -1252,6 +1217,30 @@
       "url": "https://www.benzinga.com/news/26/05/52872104/zhongchao-prices-5m-best-efforts-public-offering",
       "source": "alpaca",
       "added_at": "2026-05-29T14:19:24.386470+00:00"
+    },
+    {
+      "ticker": "ADSK",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "ma_acquirer",
+      "rationale": "Earnings beat and guidance raise are positive but overshadowed by $3.6B acquisition concerns regarding execution risk and margin impact, creating mixed sentiment.",
+      "action_window": "intraday",
+      "headline": "Autodesk Gains Analyst Backing, But MaintainX Deal Faces Scrutiny",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52881847/autodesk-gains-analyst-backing-but-maintainx-deal-faces-scrutiny",
+      "source": "alpaca",
+      "added_at": "2026-05-29T17:50:13.450896+00:00"
+    },
+    {
+      "ticker": "APO",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Apollo's president warning of accelerating redemptions in private credit products signals potential liquidity pressures and asset outflows that could impact fee-based revenues and business growth.",
+      "action_window": "intraday",
+      "headline": "Apollo Says Private Credit Redemptions Could Accelerate Further",
+      "url": "https://www.benzinga.com/markets/private-markets/26/05/52881812/apollo-says-private-credit-redemptions-could-accelerate-further",
+      "source": "alpaca",
+      "added_at": "2026-05-29T17:50:13.450910+00:00"
     }
   ]
 }
