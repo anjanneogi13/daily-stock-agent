@@ -309,19 +309,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SOC": {
-    "ticker": "SOC",
-    "score_delta": -0.097,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Challenge to Sable Pipeline in California Dismissed",
-    "added_at": "2026-05-15T20:00:18.703637+00:00",
-    "expires": "2026-05-29T20:00:18.703643+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ATEX": {
     "ticker": "ATEX",
     "score_delta": 0.15,
@@ -740,32 +727,6 @@
     "headline": "Micron CEO Sees Memory Chip Shortage Lasting Beyond 2026",
     "added_at": "2026-05-22T18:15:04.396712+00:00",
     "expires": "2026-06-05T18:15:04.396719+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RL": {
-    "ticker": "RL",
-    "score_delta": 0.05,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "These Analysts Increase Their Forecasts On Ralph Lauren After Upbeat Q4 Results",
-    "added_at": "2026-05-22T18:15:04.405948+00:00",
-    "expires": "2026-05-29T18:15:04.405952+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAP": {
-    "ticker": "AAP",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Advance Auto Parts Analysts Raise Their Forecasts Following Better-Than-Expected Q1 Results",
-    "added_at": "2026-05-22T18:15:04.408050+00:00",
-    "expires": "2026-05-29T18:15:04.408072+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2348,6 +2309,58 @@
     "headline": "Truist Securities Maintains Hold on Fiserv, Lowers Price Target to $58",
     "added_at": "2026-05-29T17:50:13.447811+00:00",
     "expires": "2026-06-03T17:50:13.447816+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FOTO": {
+    "ticker": "FOTO",
+    "score_delta": 0.018,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "Tuttle Capital Launches Photonics ETF To Target AI Infrastructure's Next Big Bottleneck",
+    "added_at": "2026-05-29T20:12:30.303614+00:00",
+    "expires": "2026-06-05T20:12:30.303620+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BNBUSD": {
+    "ticker": "BNBUSD",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Binance Coin Hits Wall Street With The First Spot BNB ETF",
+    "added_at": "2026-05-29T20:12:30.308421+00:00",
+    "expires": "2026-06-05T20:12:30.308426+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NXT": {
+    "ticker": "NXT",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Jefferies Maintains Buy on Nextpower, Raises Price Target to $159",
+    "added_at": "2026-05-29T20:12:30.310479+00:00",
+    "expires": "2026-06-03T20:12:30.310484+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DVN": {
+    "ticker": "DVN",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "'Devon Energy Received An Offer To Buy Its Marcellus Position Worth Around $8B From Asset Manager Stone Ridge; Stone Ridge Offer For Devon's Marcellus Asset Would Be Funded Using The Largest Asset-Bac",
+    "added_at": "2026-05-29T20:12:30.312581+00:00",
+    "expires": "2026-06-28T20:12:30.312586+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

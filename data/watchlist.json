@@ -1,90 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPCX",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $2.29B government contract is a substantial confirmed revenue catalyst representing significant business win for SpaceX-related holdings.",
-      "action_window": "intraday",
-      "headline": "'U.S. Space Force Awards SpaceX $2.29B Contract For Military Space Data Network' - Reuters News",
-      "url": "https://www.benzinga.com/news/26/05/52792572/u-s-space-force-awards-spacex-2-29b-contract-for-military-space-data-network-reuters-news",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140948+00:00"
-    },
-    {
-      "ticker": "PCLA",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Circuit breaker halt with 79% surge indicates a major catalyst driving extreme buying pressure, though the specific underlying cause is not disclosed in the headline.",
-      "action_window": "intraday",
-      "headline": "PicoCELA Shares Halted On Circuit Breaker To The Upside, Stock Now Up 79.46%",
-      "url": "https://www.benzinga.com/quote/PCLA",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140958+00:00"
-    },
-    {
-      "ticker": "LUNR",
-      "tradeable_score": 0.88,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Company lost a major NASA contract award, described as stock 'cratering' and getting 'hammered', indicating significant immediate negative impact on a key revenue opportunity.",
-      "action_window": "intraday",
-      "headline": "Intuitive Machines Stock Craters After Losing NASA LTV Contract",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52791759/intuitive-machines-stock-craters-after-losing-nasa-ltv-contract",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140964+00:00"
-    },
-    {
-      "ticker": "BHYP",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Grayscale's amended filing adds competitive momentum to emerging Hyperliquid ETF market with multiple players, signaling institutional validation but still pre-approval speculation.",
-      "action_window": "this_week",
-      "headline": "Hyperliquid ETF Race Could Get New Fuel From Grayscale's HYPE Fund And Staking Push",
-      "url": "https://www.benzinga.com/etfs/new-etfs/26/05/52791196/hyperliquid-etf-race-could-get-new-fuel-from-grayscales-hype-fund-and-staking-push",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140969+00:00"
-    },
-    {
-      "ticker": "PRTA",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Significant insider buying of 100,000 shares by William P. Scully with immediate market reaction (shares spiking) signals strong insider confidence, though impact is moderate as insider buys are less definitive than corporate catalysts.",
-      "action_window": "intraday",
-      "headline": "UPDATED: Watching Prothena; Shares Spike Higher, Form4 Filing Shows William P. Scully Bought 100,000 Shares At An Average Price Of $9.81/Share",
-      "url": "https://www.benzinga.com/news/26/05/52790915/updated-watching-prothena-shares-spike-higher-form4-filing-shows-william-p-scully-bought-100-000-sha",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140973+00:00"
-    },
-    {
-      "ticker": "ASTH",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Barclays upgrade to Overweight with $50 price target is a meaningful catalyst from a major investment bank that typically drives immediate buying interest.",
-      "action_window": "intraday",
-      "headline": "Barclays Upgrades Astrana Health to Overweight, Raises Price Target to $50",
-      "url": "https://www.benzinga.com/news/26/05/52790752/barclays-upgrades-astrana-health-to-overweight-raises-price-target-to-50",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140977+00:00"
-    },
-    {
-      "ticker": "REBN",
-      "tradeable_score": 0.8,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large dilutive secondary offering of 10.5M shares ($21M) will significantly increase share count and typically pressures stock price in the near term.",
-      "action_window": "intraday",
-      "headline": "Reborn Coffee To Commence $21M Offering Of 10.5M Common Shares At $2/Share",
-      "url": "https://www.benzinga.com/news/26/05/52790621/reborn-coffee-to-commence-21m-offering-of-10-5m-common-shares-at-2share",
-      "source": "alpaca",
-      "added_at": "2026-05-26T20:01:23.140981+00:00"
-    },
-    {
       "ticker": "GNK",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1232,15 +1148,52 @@
     },
     {
       "ticker": "APO",
-      "tradeable_score": 0.58,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Apollo's president warning of accelerating redemptions in private credit products signals potential liquidity pressures and asset outflows that could impact fee-based revenues and business growth.",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $36B debt financing deal demonstrates significant fee-generating deployment opportunity for both Apollo and Blackstone in high-demand AI infrastructure sector.",
       "action_window": "intraday",
-      "headline": "Apollo Says Private Credit Redemptions Could Accelerate Further",
-      "url": "https://www.benzinga.com/markets/private-markets/26/05/52881812/apollo-says-private-credit-redemptions-could-accelerate-further",
+      "headline": "Apollo, Blackstone Arrange $36 Billion To Fund Anthropic's AI Chips",
+      "url": "https://www.benzinga.com/markets/private-markets/26/05/52887197/apollo-blackstone-arrange-36-billion-to-fund-anthropics-ai-chips",
       "source": "alpaca",
-      "added_at": "2026-05-29T17:50:13.450910+00:00"
+      "added_at": "2026-05-29T17:50:13.450910+00:00",
+      "updated_at": "2026-05-29T20:12:30.315648+00:00"
+    },
+    {
+      "ticker": "FTHM",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance notice signals potential delisting risk, typically triggering immediate selling pressure and concern over stock's exchange listing status.",
+      "action_window": "intraday",
+      "headline": "Fathom Holdings Receives Nasdaq Noncompliance Notice",
+      "url": "https://www.benzinga.com/news/26/05/52888453/fathom-holdings-receives-nasdaq-noncompliance-notice",
+      "source": "alpaca",
+      "added_at": "2026-05-29T20:12:30.315621+00:00"
+    },
+    {
+      "ticker": "BNBUSD",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "First U.S. spot BNB ETF launch by VanEck represents a major liquidity and institutional access catalyst for Binance Coin, similar to Bitcoin and Ethereum ETF launches.",
+      "action_window": "intraday",
+      "headline": "Binance Coin Hits Wall Street With The First Spot BNB ETF",
+      "url": "https://www.benzinga.com/etfs/new-etfs/26/05/52887201/binance-coin-hits-wall-street-with-the-first-spot-bnb-etf",
+      "source": "alpaca",
+      "added_at": "2026-05-29T20:12:30.315636+00:00"
+    },
+    {
+      "ticker": "DVN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Devon Energy received an $8B acquisition offer for its Marcellus position from Stone Ridge, representing a significant asset sale opportunity that could unlock shareholder value, though this is still an offer rather than a completed deal.",
+      "action_window": "intraday",
+      "headline": "'Devon Energy Received An Offer To Buy Its Marcellus Position Worth Around $8B From Asset Manager Stone Ridge; Stone Ridge Offer For Devon's Marcellus Asset Would Be Funded Using The Largest Asset-Backed Security Financing Ever In U.S. Oil And Gas, Sources Say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/m-a/26/05/52887035/devon-energy-received-an-offer-to-buy-its-marcellus-position-worth-around-8b-from-asset-manager-ston",
+      "source": "alpaca",
+      "added_at": "2026-05-29T20:12:30.315657+00:00"
     }
   ]
 }
