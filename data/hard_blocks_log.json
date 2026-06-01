@@ -166,5 +166,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-01 12:38:44",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "BAC",
+        "reason": "SL too tight (1.2% < 2.0% for $52 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "HLT",
+        "reason": "SL too tight (1.3% < 1.5% for $328 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

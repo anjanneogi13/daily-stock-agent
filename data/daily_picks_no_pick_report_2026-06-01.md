@@ -25,8 +25,8 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **526**
 
 ## Market Data Health
-- stooq: attempts=**1**, successes=**0**, errors=**1**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1351**, successes=**1292**, errors=**58**, rate_limited=**58**, unauthorized=**0**
+- stooq: attempts=**2**, successes=**0**, errors=**2**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2703**, successes=**2580**, errors=**121**, rate_limited=**120**, unauthorized=**0**
 
 ## Secondary Causes
 - OHLCV_PROVIDER_ERRORS_PRESENT
@@ -34,4 +34,4 @@ Monitoring-only failure evidence. No official picks were generated.
 
 ## Hard-Blocked Finalists
 - BAC: **sl_too_tight** — SL too tight (1.2% < 2.0% for $52 stock)
-- FITB: **sl_too_tight** — SL too tight (1.1% < 2.0% for $50 stock)
+- HLT: **sl_too_tight** — SL too tight (1.3% < 1.5% for $328 stock)

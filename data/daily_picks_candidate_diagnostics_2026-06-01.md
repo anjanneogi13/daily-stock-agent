@@ -31,4 +31,4 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 
 ## Rejected Candidates
 - BAC: **hard_block** — SL too tight (1.2% < 2.0% for $52 stock)
-- FITB: **hard_block** — SL too tight (1.1% < 2.0% for $50 stock)
+- HLT: **hard_block** — SL too tight (1.3% < 1.5% for $328 stock)

@@ -55,14 +55,14 @@
           "sector_tag": null,
           "stop_loss": null,
           "take_profit": null,
-          "ticker": "FITB",
+          "ticker": "HLT",
           "trade_type": "day",
           "watch_only": false,
           "watch_only_reason": ""
         },
-        "reason": "SL too tight (1.1% < 2.0% for $50 stock)",
+        "reason": "SL too tight (1.3% < 1.5% for $328 stock)",
         "rejection_stage": "hard_block",
-        "ticker": "FITB"
+        "ticker": "HLT"
       }
     ],
     "missing_data_blocked_candidates": [],
@@ -109,24 +109,24 @@
       },
       {
         "company": "",
-        "day_score": 0.746,
+        "day_score": 0.745,
         "days_to_earnings": null,
-        "entry": 49.93,
+        "entry": 327.66,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 175,
+        "quantity": 23,
         "risk_flags": [],
-        "risk_reward": 1.65,
-        "score": 0.677,
+        "risk_reward": 1.67,
+        "score": 0.68,
         "sector": "N/A",
         "sector_tag": null,
-        "stop_loss": 49.36,
-        "take_profit": 50.87,
-        "ticker": "FITB",
+        "stop_loss": 323.42,
+        "take_profit": 334.73,
+        "ticker": "HLT",
         "trade_type": "day",
         "watch_only": false,
         "watch_only_reason": ""
@@ -186,14 +186,14 @@
           "sector_tag": null,
           "stop_loss": null,
           "take_profit": null,
-          "ticker": "FITB",
+          "ticker": "HLT",
           "trade_type": "day",
           "watch_only": false,
           "watch_only_reason": ""
         },
-        "reason": "SL too tight (1.1% < 2.0% for $50 stock)",
+        "reason": "SL too tight (1.3% < 1.5% for $328 stock)",
         "rejection_stage": "hard_block",
-        "ticker": "FITB"
+        "ticker": "HLT"
       }
     ],
     "selected_picks": [],
@@ -237,5 +237,5 @@
     "universe_count": 526
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-06-01T12:08:46Z"
+  "timestamp_utc": "2026-06-01T12:38:44Z"
 }

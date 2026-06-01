@@ -10,8 +10,8 @@ Monitoring-only diagnostic artifact. Not official picks. Not buy instructions.
 
 ## Pre-Hard-Block Finalists
 - BAC: score=0.683, sector=N/A, trade_type=day, entry=51.6, stop_loss=51.0, take_profit=52.61, risk_reward=1.68, watch_only=False
-- FITB: score=0.677, sector=N/A, trade_type=day, entry=49.93, stop_loss=49.36, take_profit=50.87, risk_reward=1.65, watch_only=False
+- HLT: score=0.68, sector=N/A, trade_type=day, entry=327.66, stop_loss=323.42, take_profit=334.73, risk_reward=1.67, watch_only=False
 
 ## Hard-Blocked Finalists
 - BAC: **sl_too_tight** — SL too tight (1.2% < 2.0% for $52 stock) (trade_type=day, watch_only=False)
-- FITB: **sl_too_tight** — SL too tight (1.1% < 2.0% for $50 stock) (trade_type=day, watch_only=False)
+- HLT: **sl_too_tight** — SL too tight (1.3% < 1.5% for $328 stock) (trade_type=day, watch_only=False)
