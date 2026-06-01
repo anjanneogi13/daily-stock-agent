@@ -1,79 +1,6 @@
 {
   "items": [
     {
-      "ticker": "QTTB",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Significant $55M private placement provides substantial funding runway for autoimmune pipeline development, reducing near-term dilution risk and enabling clinical progress.",
-      "action_window": "intraday",
-      "headline": "Why Is Q32 Bio Stock Gaining Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/05/52872687/why-is-q32-bio-stock-gaining-friday",
-      "source": "alpaca",
-      "added_at": "2026-05-29T14:19:24.386439+00:00"
-    },
-    {
-      "ticker": "AWK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "UBS upgrade from neutral to buy with significant price target increase represents meaningful positive catalyst from major investment bank that typically drives institutional buying.",
-      "action_window": "intraday",
-      "headline": "UBS Upgrades American Water Works Co to Buy, Raises Price Target to $140",
-      "url": "https://www.benzinga.com/news/26/05/52872336/ubs-upgrades-american-water-works-co-to-buy-raises-price-target-to-140",
-      "source": "alpaca",
-      "added_at": "2026-05-29T14:19:24.386453+00:00"
-    },
-    {
-      "ticker": "WTRG",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "UBS upgrade to Buy with price target raise represents a meaningful catalyst from a major investment bank that typically drives institutional buying interest and near-term price appreciation.",
-      "action_window": "intraday",
-      "headline": "UBS Upgrades Essential Utilities to Buy, Raises Price Target to $43",
-      "url": "https://www.benzinga.com/news/26/05/52872124/ubs-upgrades-essential-utilities-to-buy-raises-price-target-to-43",
-      "source": "alpaca",
-      "added_at": "2026-05-29T14:19:24.386462+00:00"
-    },
-    {
-      "ticker": "ZCMD",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Best efforts public offering of $5M is dilutive to existing shareholders and typically signals weak demand, often causing immediate downward pressure on small-cap stocks.",
-      "action_window": "intraday",
-      "headline": "Zhongchao Prices $5M Best Efforts Public Offering",
-      "url": "https://www.benzinga.com/news/26/05/52872104/zhongchao-prices-5m-best-efforts-public-offering",
-      "source": "alpaca",
-      "added_at": "2026-05-29T14:19:24.386470+00:00"
-    },
-    {
-      "ticker": "ADSK",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "ma_acquirer",
-      "rationale": "Earnings beat and guidance raise are positive but overshadowed by $3.6B acquisition concerns regarding execution risk and margin impact, creating mixed sentiment.",
-      "action_window": "intraday",
-      "headline": "Autodesk Gains Analyst Backing, But MaintainX Deal Faces Scrutiny",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/05/52881847/autodesk-gains-analyst-backing-but-maintainx-deal-faces-scrutiny",
-      "source": "alpaca",
-      "added_at": "2026-05-29T17:50:13.450896+00:00"
-    },
-    {
-      "ticker": "APO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major $36B debt financing deal demonstrates significant fee-generating deployment opportunity for both Apollo and Blackstone in high-demand AI infrastructure sector.",
-      "action_window": "intraday",
-      "headline": "Apollo, Blackstone Arrange $36 Billion To Fund Anthropic's AI Chips",
-      "url": "https://www.benzinga.com/markets/private-markets/26/05/52887197/apollo-blackstone-arrange-36-billion-to-fund-anthropics-ai-chips",
-      "source": "alpaca",
-      "added_at": "2026-05-29T17:50:13.450910+00:00",
-      "updated_at": "2026-05-29T20:12:30.315648+00:00"
-    },
-    {
       "ticker": "FTHM",
       "tradeable_score": 0.65,
       "sentiment": "bearish",
@@ -313,6 +240,18 @@
       "url": "https://www.benzinga.com/news/26/06/52903489/ridenow-group-announces-addition-to-the-russell-2000-and-russell-300-indexes-effective-june-26",
       "source": "alpaca",
       "added_at": "2026-06-01T13:32:15.899211+00:00"
+    },
+    {
+      "ticker": "TSLA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong registration growth in France suggests potential Q2 delivery beat, but represents single market data point with prediction market speculation rather than confirmed results.",
+      "action_window": "this_week",
+      "headline": "Tesla Registrations Surge 655% In France: What Prediction Markets Say It Means For TSLA",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/06/52921050/tesla-registrations-surge-655-in-france-what-prediction-markets-say-it-means-for-tsla",
+      "source": "alpaca",
+      "added_at": "2026-06-01T19:10:40.937688+00:00"
     }
   ]
 }
