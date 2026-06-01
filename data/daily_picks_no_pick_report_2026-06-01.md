@@ -20,13 +20,13 @@ Monitoring-only failure evidence. No official picks were generated.
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **296**
+- scored_count: **295**
 - scorer_workers: **4**
 - universe_count: **526**
 
 ## Market Data Health
-- stooq: attempts=**2**, successes=**0**, errors=**2**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**2703**, successes=**2580**, errors=**121**, rate_limited=**120**, unauthorized=**0**
+- stooq: attempts=**3**, successes=**0**, errors=**3**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**4054**, successes=**3877**, errors=**174**, rate_limited=**173**, unauthorized=**0**
 
 ## Secondary Causes
 - OHLCV_PROVIDER_ERRORS_PRESENT
