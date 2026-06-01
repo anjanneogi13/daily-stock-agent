@@ -2,37 +2,37 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1575,
+      "attempts": 2100,
       "empty": 0,
-      "errors": 101,
-      "successes": 1474
+      "errors": 111,
+      "successes": 1989
     },
     "monster_info": {
-      "attempts": 887,
+      "attempts": 1182,
       "empty": 0,
-      "errors": 73,
-      "successes": 814
+      "errors": 81,
+      "successes": 1101
     },
     "ohlcv": {
-      "attempts": 1595,
-      "empty": 3,
-      "errors": 3,
-      "successes": 1589
+      "attempts": 2127,
+      "empty": 4,
+      "errors": 4,
+      "successes": 2119
     }
   },
   "date": "2026-06-01",
   "providers": {
     "stooq": {
-      "attempts": 3,
+      "attempts": 4,
       "empty": 0,
-      "errors": 3,
+      "errors": 4,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 3,
+        "provider_exception": 4,
         "rate_limited": 0,
         "stale_data": 0,
         "symbol_not_found": 0,
@@ -40,24 +40,24 @@
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 3,
+      "provider_error": 4,
       "rate_limited": 0,
       "successes": 0,
       "timeout": 0,
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 4054,
-      "empty": 3,
-      "errors": 174,
+      "attempts": 5405,
+      "empty": 4,
+      "errors": 192,
       "failure_types": {
-        "empty_response": 3,
+        "empty_response": 4,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 1,
-        "rate_limited": 173,
+        "rate_limited": 191,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,8 +65,8 @@
       },
       "not_found": 0,
       "provider_error": 1,
-      "rate_limited": 173,
-      "successes": 3877,
+      "rate_limited": 191,
+      "successes": 5209,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "CRDO"
     }
   ],
-  "timestamp_utc": "2026-06-01T13:08:50Z"
+  "timestamp_utc": "2026-06-01T13:19:29Z"
 }
