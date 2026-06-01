@@ -257,19 +257,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NEE": {
-    "ticker": "NEE",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "NextEra Energy To Combine In All-Stock Deal With Dominion Energy",
-    "added_at": "2026-05-18T11:40:55.357953+00:00",
-    "expires": "2026-06-01T11:40:55.357975+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INMB": {
     "ticker": "INMB",
     "score_delta": 0.15,
@@ -319,19 +306,6 @@
     "headline": "Anterix, Lynk Global Receive FCC Approval To Mull Use Of Lynk's Satellite Direct-To-Device Communications Network",
     "added_at": "2026-05-18T11:40:55.351190+00:00",
     "expires": "2026-06-17T11:40:55.351195+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ALOT": {
-    "ticker": "ALOT",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "AstroNova Announces Settlement Related To Transaction To Acquire MTEX",
-    "added_at": "2026-05-18T11:40:55.368194+00:00",
-    "expires": "2026-06-01T11:40:55.368199+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -817,19 +791,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AAME": {
-    "ticker": "AAME",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "AM Best Downgrades Credit Ratings of American Southern Group\u2019s Members; Affirms Credit Ratings of Atlantic American Corporation and Bankers Fidelity Life Insurance Group\u2019s Members",
-    "added_at": "2026-05-25T18:59:10.465507+00:00",
-    "expires": "2026-05-30T18:59:10.465512+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "KNRX": {
     "ticker": "KNRX",
     "score_delta": 0.039,
@@ -882,19 +843,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GCMG": {
-    "ticker": "GCMG",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "TD Cowen Maintains Buy on GCM Grosvenor, Raises Price Target to $14",
-    "added_at": "2026-05-26T14:14:14.200406+00:00",
-    "expires": "2026-05-31T14:14:14.200427+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "COSM": {
     "ticker": "COSM",
     "score_delta": 0.083,
@@ -905,32 +853,6 @@
     "headline": "CORRECTION: Cosmos Health Expects To Report Over $90M In FY26; Anticipates Adjusted EPS Of $0.73, $200.6M In Revenue By 2029",
     "added_at": "2026-05-26T14:14:14.202151+00:00",
     "expires": "2026-06-09T14:14:14.202170+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LEA": {
-    "ticker": "LEA",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "TD Cowen Upgrades Lear to Buy, Raises Price Target to $165",
-    "added_at": "2026-05-26T14:14:14.203947+00:00",
-    "expires": "2026-05-31T14:14:14.203952+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CDNS": {
-    "ticker": "CDNS",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on Cadence Design Systems, Raises Price Target to $425",
-    "added_at": "2026-05-26T14:14:14.205664+00:00",
-    "expires": "2026-05-31T14:14:14.205669+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -947,19 +869,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CIEN": {
-    "ticker": "CIEN",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "B of A Securities Maintains Buy on Ciena, Raises Price Target to $660",
-    "added_at": "2026-05-26T17:43:16.214096+00:00",
-    "expires": "2026-05-31T17:43:16.214102+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "JD": {
     "ticker": "JD",
     "score_delta": 0.032,
@@ -970,19 +879,6 @@
     "headline": "'Brussels set to open in-depth probe into JD.com's takeover of Ceconomy' - Financial Times",
     "added_at": "2026-05-26T17:43:16.215863+00:00",
     "expires": "2026-06-09T17:43:16.215869+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAPL": {
-    "ticker": "AAPL",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "B of A Securities Maintains Buy on Apple, Raises Price Target to $380",
-    "added_at": "2026-05-26T17:43:16.219257+00:00",
-    "expires": "2026-05-31T17:43:16.219262+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -999,32 +895,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AMTM": {
-    "ticker": "AMTM",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "BNP Paribas Initiates Coverage On Amentum Holdings with Underperform Rating, Announces Price Target of $22",
-    "added_at": "2026-05-26T17:43:16.222669+00:00",
-    "expires": "2026-05-31T17:43:16.222674+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "APA": {
-    "ticker": "APA",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Raymond James Maintains Outperform on APA, Raises Price Target to $57",
-    "added_at": "2026-05-26T17:43:16.224432+00:00",
-    "expires": "2026-05-31T17:43:16.224437+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AZO": {
     "ticker": "AZO",
     "score_delta": 0.064,
@@ -1038,45 +908,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VNOM": {
-    "ticker": "VNOM",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Raymond James Maintains Outperform on Viper Energy, Raises Price Target to $61",
-    "added_at": "2026-05-26T17:43:16.228001+00:00",
-    "expires": "2026-05-31T17:43:16.228007+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FLNA": {
-    "ticker": "FLNA",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Maxim Group Reinstates Buy on Filana Therapeutics, Announces $5 Price Target",
-    "added_at": "2026-05-26T20:01:23.125761+00:00",
-    "expires": "2026-05-31T20:01:23.125766+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RGS": {
-    "ticker": "RGS",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Lake Street Initiates Coverage On Regis with Buy Rating, Announces Price Target of $42",
-    "added_at": "2026-05-26T20:01:23.132673+00:00",
-    "expires": "2026-05-31T20:01:23.132678+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BHYP": {
     "ticker": "BHYP",
     "score_delta": 0.039,
@@ -1087,32 +918,6 @@
     "headline": "Hyperliquid ETF Race Could Get New Fuel From Grayscale's HYPE Fund And Staking Push",
     "added_at": "2026-05-26T20:01:23.134473+00:00",
     "expires": "2026-06-02T20:01:23.134479+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ASTH": {
-    "ticker": "ASTH",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Barclays Upgrades Astrana Health to Overweight, Raises Price Target to $50",
-    "added_at": "2026-05-26T20:01:23.136706+00:00",
-    "expires": "2026-05-31T20:01:23.136712+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AGL": {
-    "ticker": "AGL",
-    "score_delta": 0.029,
-    "catalyst": "upgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Barclays Upgrades Agilon Health to Equal-Weight, Announces $81 Price Target",
-    "added_at": "2026-05-26T20:01:23.138516+00:00",
-    "expires": "2026-05-31T20:01:23.138523+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1233,19 +1038,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "PSX": {
-    "ticker": "PSX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Phillips 66 To Rally Around 22%? Here Are 10 Top Analyst Forecasts For Wednesday",
-    "added_at": "2026-05-27T11:33:58.472096+00:00",
-    "expires": "2026-06-01T11:33:58.472104+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NRXP": {
     "ticker": "NRXP",
     "score_delta": 0.032,
@@ -1256,19 +1048,6 @@
     "headline": "NRx Pharma's HOPE Unit Deploys Zeta Surgical's FDA\u2011Cleared TMS Navigation System At West Palm Beach Clinic To Deliver Image\u2011Guided Therapy For Major Depressive Disorder And Other Neurological Conditio",
     "added_at": "2026-05-27T11:33:58.474430+00:00",
     "expires": "2026-06-03T11:33:58.474438+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VRRM": {
-    "ticker": "VRRM",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Deutsche Bank Downgrades Verra Mobility to Hold, Lowers Price Target to $9",
-    "added_at": "2026-05-27T11:33:58.481984+00:00",
-    "expires": "2026-06-01T11:33:58.481991+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1924,14 +1703,14 @@
   },
   "IBM": {
     "ticker": "IBM",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.68,
+    "tradeable_score": 0.72,
     "action_window": "intraday",
-    "headline": "What's Going On With IBM Stock Thursday?",
-    "added_at": "2026-05-28T18:32:50.329493+00:00",
-    "expires": "2026-06-04T18:32:50.329499+00:00",
+    "headline": "Barclays Initiates Coverage On IBM with Overweight Rating, Announces Price Target of $350",
+    "added_at": "2026-06-01T13:32:15.894153+00:00",
+    "expires": "2026-06-06T13:32:15.894159+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2452,6 +2231,67 @@
     "headline": "eXp World Says Court Grants Preliminary Approval Of Tuccori Settlement Including eXp World Participation; Expects Tuccori Settlement To Apply To Claims In Batton Action",
     "added_at": "2026-05-29T22:12:57.671905+00:00",
     "expires": "2026-06-12T22:12:57.671910+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VIK": {
+    "ticker": "VIK",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Loop Capital Initiates Coverage On Viking Holdings with Buy Rating, Announces Price Target of $108",
+    "added_at": "2026-06-01T13:32:15.885370+00:00",
+    "expires": "2026-06-06T13:32:15.885377+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QTEX": {
+    "ticker": "QTEX",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "QTREX Quantum Receives Purchase Order For AME System, Related Material From Unnamed UAE Firm",
+    "added_at": "2026-06-01T13:32:15.887898+00:00",
+    "expires": "2026-06-08T13:32:15.887904+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CCL": {
+    "ticker": "CCL",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Loop Capital Initiates Coverage On Carnival with Buy Rating, Announces Price Target of $36",
+    "added_at": "2026-06-01T13:32:15.890012+00:00",
+    "expires": "2026-06-06T13:32:15.890018+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GPRO": {
+    "ticker": "GPRO",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Gopro Flags \"Substantial Doubt\" About Going Concern, Warns Of Potential Debt Cross-Default Risk Tied To Updated Financial Statements.",
+    "added_at": "2026-06-01T13:32:15.892087+00:00",
+    "expires": "2026-11-28T13:32:15.892095+00:00",
+    "hard_block": true
+  },
+  "UAL": {
+    "ticker": "UAL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Morgan Stanley Maintains Overweight on United Airlines Holdings, Raises Price Target to $182",
+    "added_at": "2026-06-01T13:32:15.896240+00:00",
+    "expires": "2026-06-06T13:32:15.896246+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
