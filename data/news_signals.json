@@ -322,19 +322,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "YSS": {
-    "ticker": "YSS",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "What's Going On With York Space Systems Stock Monday?",
-    "added_at": "2026-05-18T19:14:53.098583+00:00",
-    "expires": "2026-06-01T19:14:53.098589+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SSEA": {
     "ticker": "SSEA",
     "score_delta": 0.2,
@@ -358,19 +345,6 @@
     "headline": "Boston Scientific Announces Results From Pivotal FRACTURE IDE Trial Evaluating Use Of SEISMIQ 4CE Coronary Intravascular Lithotripsy Catheter To Treat CAD Patients; Study Meets Primary Safety And Effe",
     "added_at": "2026-05-19T10:57:45.217137+00:00",
     "expires": "2026-06-18T10:57:45.217144+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSLA": {
-    "ticker": "TSLA",
-    "score_delta": -0.036,
-    "catalyst": "lawsuit",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "Elon Musk On OpenAI Verdict Says I Will Be Filing An Appeal With The Ninth Circuit",
-    "added_at": "2026-05-18T20:57:05.483295+00:00",
-    "expires": "2026-06-01T20:57:05.483302+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -762,32 +736,6 @@
     "headline": "La Rosa Holdings Provides Update on Proposed Consensus Core Transaction Anticipates Definitive Agreements Within 45 to 60 Days, Subject to Customary Conditions",
     "added_at": "2026-05-25T18:59:10.463536+00:00",
     "expires": "2026-06-24T18:59:10.463541+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KNRX": {
-    "ticker": "KNRX",
-    "score_delta": 0.039,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "KNOREX Delivers 47% Surge in Conversion Quality and 45% Reduction in CPA Following Major KAIROS\u2122 AI Models Upgrade",
-    "added_at": "2026-05-25T20:23:48.862018+00:00",
-    "expires": "2026-06-01T20:23:48.862026+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NMTC": {
-    "ticker": "NMTC",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "NeuroOne Reports Fiscal Q2 2026 Financial Results and Provides Corporate Business Update",
-    "added_at": "2026-05-25T20:23:48.867958+00:00",
-    "expires": "2026-06-01T20:23:48.867964+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2162,6 +2110,45 @@
     "headline": "Barclays Maintains Overweight on Ryman Hospitality Props, Raises Price Target to $120",
     "added_at": "2026-06-01T19:10:40.932991+00:00",
     "expires": "2026-06-06T19:10:40.932999+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GLSI": {
+    "ticker": "GLSI",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Greenwich LifeSciences Q4 EPS $(0.58) Misses $(0.31) Estimate",
+    "added_at": "2026-06-01T22:21:16.553633+00:00",
+    "expires": "2026-06-08T22:21:16.553638+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TLN": {
+    "ticker": "TLN",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Talen Energy Obtains Regulatory Clearances For Lawrenceburg, Waterford And Darby Acquisition",
+    "added_at": "2026-06-01T22:21:16.555606+00:00",
+    "expires": "2026-06-15T22:21:16.555614+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FRHC": {
+    "ticker": "FRHC",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.92,
+    "action_window": "next_day",
+    "headline": "Freedom Holding Q4 EPS $0.13 Up From $(2.50) YoY, Sales $503.140M Up From $298.439M YoY",
+    "added_at": "2026-06-01T22:21:16.557587+00:00",
+    "expires": "2026-06-08T22:21:16.557592+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
