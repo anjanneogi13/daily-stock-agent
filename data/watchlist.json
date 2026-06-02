@@ -327,6 +327,66 @@
       "url": "https://www.benzinga.com/news/26/06/52946505/openai-announces-codex-for-every-role-tool-and-workflow-new-role-specific-plugins-sites-and-annotati",
       "source": "alpaca",
       "added_at": "2026-06-02T16:30:19.350224+00:00"
+    },
+    {
+      "ticker": "GNK",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Genco rejected Diana Shipping's acquisition offer and Diana is now pursuing a hostile proxy fight, indicating deal friction and uncertainty with potential downside for target if offer withdrawn.",
+      "action_window": "next_day",
+      "headline": "Diana Shipping Comments On Genco Shipping & Trading's Rejection Of $24.80/Share Cash Tender Offer; Urges Shareholders To Vote For Six Independent Nominees For Company Board",
+      "url": "https://www.benzinga.com/m-a/26/06/52954810/diana-shipping-comments-on-genco-shipping-tradings-rejection-of-24-80share-cash-tender-offer-urges-s",
+      "source": "alpaca",
+      "added_at": "2026-06-02T19:57:48.299402+00:00"
+    },
+    {
+      "ticker": "ASTC",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Critical research report highlighting major red flags including multiple business pivots, significant capital losses ($262M), and governance concerns about CEO accountability will likely trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Watching Astrotech; Fugazi Research Issues Report On Co. Titled 'Five Pivots, $262M Lost, and an Unaccountable CEO'",
+      "url": "https://www.benzinga.com/news/26/06/52954084/watching-astrotech-fugazi-research-issues-report-on-co-titled-five-pivots-262m-lost-and-an-unaccount",
+      "source": "alpaca",
+      "added_at": "2026-06-02T19:57:48.299413+00:00"
+    },
+    {
+      "ticker": "DLR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "One-year moratorium on data center construction in New York represents significant regulatory headwind for data center REITs with NY exposure, likely impacting near-term growth plans and expansion timelines.",
+      "action_window": "intraday",
+      "headline": "'New York lawmakers plan to approve one-year data center moratorium' - Politico",
+      "url": "https://www.benzinga.com/news/26/06/52953111/new-york-lawmakers-plan-to-approve-one-year-data-center-moratorium-politico",
+      "source": "alpaca",
+      "added_at": "2026-06-02T19:57:48.299425+00:00"
+    },
+    {
+      "ticker": "BE",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Tariff reduction on industrial metals is a positive macro catalyst for Bloom Energy's cost structure, though impact depends on tariff magnitude and company's metal input exposure.",
+      "action_window": "intraday",
+      "headline": "Bloom Energy Stock Rises As Trump Cuts U.S. Tariffs",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52952938/bloom-energy-stock-rises-as-trump-cuts-u-s-tariffs",
+      "source": "alpaca",
+      "added_at": "2026-06-02T19:57:48.299430+00:00"
+    },
+    {
+      "ticker": "DOCU",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic integration with OpenAI's widely-used ChatGPT platform significantly expands DocuSign's distribution and positions the company in the AI-powered workflow automation space.",
+      "action_window": "intraday",
+      "headline": "Docusign Announces Addition Of App In ChatGPT And Codex, Adding Docusign Intelligent Agreement Management Platform Directly Into OpenAI's Products",
+      "url": "https://www.benzinga.com/quote/DOCU",
+      "source": "alpaca",
+      "added_at": "2026-06-02T19:57:48.299435+00:00"
     }
   ]
 }
