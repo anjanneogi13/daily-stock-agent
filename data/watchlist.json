@@ -387,6 +387,114 @@
       "url": "https://www.benzinga.com/quote/DOCU",
       "source": "alpaca",
       "added_at": "2026-06-02T19:57:48.299435+00:00"
+    },
+    {
+      "ticker": "CI",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Cigna's decision to drop GLP-1 coverage for own employees signals cost concerns and potential industry trend that could negatively impact insurer margins and raise questions about broader coverage policies.",
+      "action_window": "next_day",
+      "headline": "'Cigna drops coverage of GLP-1 obesity drugs for its own employees'- Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/06/52959326/cigna-drops-coverage-of-glp-1-obesity-drugs-for-its-own-employees-reuters-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630719+00:00"
+    },
+    {
+      "ticker": "HIVE",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "HIVE missed Q4 EPS estimates by 36% ($0.30 loss vs $0.22 expected) and revenue missed by 9% ($71.8M vs $78.9M), representing a significant double miss that typically triggers immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "HIVE Digital Technologies Q4 EPS $(0.30) Misses $(0.22) Estimate, Sales $71.816M Miss $78.917M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/52959110/hive-digital-technologies-q4-eps-0-30-misses-0-22-estimate-sales-71-816m-miss-78-917m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630742+00:00"
+    },
+    {
+      "ticker": "IPST",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of $75M represents significant potential dilution for existing shareholders, typically causing immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "IP Strategy Files Prospectus To Offer Up To $75M Of Securities",
+      "url": "https://www.benzinga.com/news/26/06/52959001/ip-strategy-files-prospectus-to-offer-up-to-75m-of-securities",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630749+00:00"
+    },
+    {
+      "ticker": "PICS",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings with 70% YoY revenue growth ($667M vs $392M) indicates significant business acceleration and likely beats expectations substantially.",
+      "action_window": "next_day",
+      "headline": "Picpay Holdings Q1 Adj. EPS $0.25, Sales $667.066M Up From $391.987M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/06/52958929/picpay-holdings-q1-adj-eps-0-25-sales-667-066m-up-from-391-987m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630754+00:00"
+    },
+    {
+      "ticker": "GME",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record quarterly net income represents a significant earnings beat that warrants immediate trading consideration given the stock's already positive reaction.",
+      "action_window": "intraday",
+      "headline": "GameStop Stock Pops On Q1 Results: Highest Quarterly Net Income Ever",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/52958599/gamestop-stock-pops-on-q1-results-highest-quarterly-net-income-ever",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630759+00:00"
+    },
+    {
+      "ticker": "SPWH",
+      "tradeable_score": 0.8,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Stock is soaring after Q1 earnings release, indicating a significant beat that warrants immediate attention for short-term trading opportunities.",
+      "action_window": "intraday",
+      "headline": "Sportsman's Warehouse Stock Soars After Q1 Earnings",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/52958805/sportsmans-warehouse-stock-soars-after-q1-earnings",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630763+00:00"
+    },
+    {
+      "ticker": "TSX:DBO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q4 results show strong performance with revenue up 70% YoY and EPS turning positive, representing significant operational improvement deserving immediate attention.",
+      "action_window": "next_day",
+      "headline": "D-Box Technologies Q4 EPS $0.01 Up From $0.00 YoY, Sales $14.651M Up From $8.609M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/06/52958569/d-box-technologies-q4-eps-0-01-up-from-0-00-yoy-sales-14-651m-up-from-8-609m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630768+00:00"
+    },
+    {
+      "ticker": "HGV",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 5M shares by Apollo creates immediate dilution pressure and insider selling signal, typically causing near-term stock price weakness due to increased supply.",
+      "action_window": "intraday",
+      "headline": "Hilton Grand Vacations Announces Secondary Offering Of 5M Shares By Affiliates Of Apollo Global Management",
+      "url": "https://www.benzinga.com/news/26/06/52958476/hilton-grand-vacations-announces-secondary-offering-of-5m-shares-by-affiliates-of-apollo-global-mana",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630772+00:00"
+    },
+    {
+      "ticker": "ATLN",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance notice signals listing standards violation that could lead to delisting risk, typically negative for stock price and investor confidence.",
+      "action_window": "next_day",
+      "headline": "Atlantic International Receives Nasdaq Noncompliance Notice",
+      "url": "https://www.benzinga.com/quote/ATLN",
+      "source": "alpaca",
+      "added_at": "2026-06-02T22:21:17.630776+00:00"
     }
   ]
 }
