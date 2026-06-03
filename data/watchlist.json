@@ -522,15 +522,16 @@
     },
     {
       "ticker": "MRVL",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "NVIDIA CEO endorsement drove 11.73% pre-market surge in Marvell amid broader AI-driven market rally with Nasdaq futures up 7%, representing a significant catalyst already materializing in pre-market trading.",
+      "rationale": "Jensen Huang endorsement drove massive $40B market cap increase in single session, indicating strong institutional reaction to NVIDIA CEO's validation of Marvell's technology or position.",
       "action_window": "intraday",
-      "headline": "Marvell Technology Soars on NVIDIA CEO's Endorsement, Joins Relmada Therapeutics and Other Big Stocks Moving Higher in Wednesday's Pre-Market Session",
-      "url": "https://www.benzinga.com/markets/equities/26/06/52966899/marvell-technology-soars-on-nvidia-ceos-endorsement-joins-relmada-therapeutics-and-other-big-stocks-moving-higher-in-wednesdays-pre-market-session",
+      "headline": "Jensen Huang Said Four Words About Marvell. The Market Added $40 Billion Before Lunch.",
+      "url": "https://www.benzinga.com/Opinion/26/06/52982056/jensen-huang-said-four-words-about-marvell-the-market-added-40-billion-before-lunch",
       "source": "alpaca",
-      "added_at": "2026-06-03T12:39:11.698264+00:00"
+      "added_at": "2026-06-03T12:39:11.698264+00:00",
+      "updated_at": "2026-06-03T17:59:26.133832+00:00"
     },
     {
       "ticker": "GRRR",
@@ -615,6 +616,30 @@
       "url": "https://www.benzinga.com/news/26/06/52966656/treasure-global-expects-fy26-revenue-to-increase-by-over-100-yoy-driven-by-southeast-asia-ecosystem",
       "source": "alpaca",
       "added_at": "2026-06-03T12:39:11.698307+00:00"
+    },
+    {
+      "ticker": "TMO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "HSBC downgrade from Buy to Hold with price target reduction creates near-term selling pressure, though impact is moderate as it's from a single analyst.",
+      "action_window": "intraday",
+      "headline": "HSBC Downgrades Thermo Fisher Scientific to Hold, Lowers Price Target to $540",
+      "url": "https://www.benzinga.com/news/26/06/52981365/hsbc-downgrades-thermo-fisher-scientific-to-hold-lowers-price-target-to-540",
+      "source": "alpaca",
+      "added_at": "2026-06-03T17:59:26.133851+00:00"
+    },
+    {
+      "ticker": "CRDF",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from Buy/Overweight to Hold with lowered price target signals deteriorating investment thesis and typically triggers selling pressure in small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Craig-Hallum Downgrades Cardiff Oncology to Hold, Lowers Price Target to $2",
+      "url": "https://www.benzinga.com/news/26/06/52981292/craig-hallum-downgrades-cardiff-oncology-to-hold-lowers-price-target-to-2",
+      "source": "alpaca",
+      "added_at": "2026-06-03T17:59:26.133859+00:00"
     }
   ]
 }
