@@ -495,6 +495,18 @@
       "url": "https://www.benzinga.com/quote/ATLN",
       "source": "alpaca",
       "added_at": "2026-06-02T22:21:17.630776+00:00"
+    },
+    {
+      "ticker": "ABNY",
+      "tradeable_score": 0.95,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Fund closures are definitive negative catalysts for the specific ETFs being shuttered, requiring immediate liquidation for holders.",
+      "action_window": "intraday",
+      "headline": "ETF Boom Turns To Shakeout As Defiance, YieldMax Close Multiple Funds",
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/06/52959729/etf-boom-turns-to-shakeout-as-defiance-yieldmax-close-multiple-funds",
+      "source": "alpaca",
+      "added_at": "2026-06-03T00:11:09.753635+00:00"
     }
   ]
 }
