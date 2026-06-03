@@ -1,15 +1,4 @@
 {
-  "FSHP": {
-    "ticker": "FSHP",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "headline": "Flag Ship Acquisition And Great Future Technology Mutually Terminate Merger Agreement On May 3, 2026; No Termination Fee Required For Mutual Termination Of Merger Agreement; Termination Agreement Incl",
-    "added_at": "2026-05-04T21:03:05.801403+00:00",
-    "expires": "2026-06-03T21:03:05.801410+00:00",
-    "hard_block": false
-  },
   "EBAY": {
     "ticker": "EBAY",
     "score_delta": 0.194,
@@ -380,19 +369,6 @@
     "headline": "Aterian, Inc. Announces Definitive Agreement for the Sale of its Marquee Brand Portfolio for $18 Million Subject to Adjustments",
     "added_at": "2026-05-18T23:06:45.252490+00:00",
     "expires": "2026-06-17T23:06:45.252496+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NVDA": {
-    "ticker": "NVDA",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "NVIDIA CEO Says Standalone Sales Of Vera CPU Not Included In $1T Blackwell And Rubin Forecast, Says Vera Will Be Largest Sales Contributor Outside The $1T Forecast",
-    "added_at": "2026-05-20T22:51:53.448018+00:00",
-    "expires": "2026-06-03T22:51:53.448027+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -892,32 +868,6 @@
     "headline": "MYR Group Inks Agreement To Acquire Valley Holdings For ~$328M",
     "added_at": "2026-05-27T20:34:04.284430+00:00",
     "expires": "2026-06-10T20:34:04.284436+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KKR": {
-    "ticker": "KKR",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "KKR, Capital Group Target Wealthy Clients With New Credit Play",
-    "added_at": "2026-05-27T22:28:43.461627+00:00",
-    "expires": "2026-06-03T22:28:43.461635+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BMA": {
-    "ticker": "BMA",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Banco Macro Q1 EPS $1.59 Beats $1.42 Estimate, Sales $687.511M Miss $880.850M Estimate",
-    "added_at": "2026-05-27T22:28:43.463781+00:00",
-    "expires": "2026-06-03T22:28:43.463787+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2188,6 +2138,45 @@
     "headline": "CXapp Purchase Price For EngineRoom Is About $4.6M",
     "added_at": "2026-06-03T20:55:45.284414+00:00",
     "expires": "2026-06-17T20:55:45.284420+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AVGO": {
+    "ticker": "AVGO",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Broadcom CEO Says Very Comfortable That We Have Been Able To Secure Supply For 2026 And 2027; Working On 2028 And 2029; We're Planning To Ship 10 GW In 2027; Expect A Lot More GW  In 2028",
+    "added_at": "2026-06-03T23:01:16.606761+00:00",
+    "expires": "2026-06-17T23:01:16.606767+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CF": {
+    "ticker": "CF",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Canaccord Genuity Group Q4 Adj. EPS $0.48 Beats $0.31 Estimate, Sales $615.857M Beat $548.000M Estimate",
+    "added_at": "2026-06-03T23:01:16.608696+00:00",
+    "expires": "2026-06-10T23:01:16.608701+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DSGX": {
+    "ticker": "DSGX",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Descartes Systems Gr Q1 EPS $0.55 Beats $0.52 Estimate, Sales $193.621M Beat $192.401M Estimate",
+    "added_at": "2026-06-03T23:01:16.610693+00:00",
+    "expires": "2026-06-10T23:01:16.610699+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

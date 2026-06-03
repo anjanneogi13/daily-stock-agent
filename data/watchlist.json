@@ -63,15 +63,16 @@
     },
     {
       "ticker": "TSLA",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Strong registration growth in France suggests potential Q2 delivery beat, but represents single market data point with prediction market speculation rather than confirmed results.",
+      "rationale": "SpaceX IPO announcement at massive $1.77T valuation is a major catalyst for related equities, particularly TSLA given Elon Musk's ownership stake and market correlation.",
       "action_window": "this_week",
-      "headline": "Tesla Registrations Surge 655% In France: What Prediction Markets Say It Means For TSLA",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/06/52921050/tesla-registrations-surge-655-in-france-what-prediction-markets-say-it-means-for-tsla",
+      "headline": "'SpaceX targets $135 IPO price at valuation of $1.77 trillion'- CNBC",
+      "url": "https://www.benzinga.com/news/26/06/52989654/spacex-targets-135-ipo-price-at-valuation-of-1-77-trillion-cnbc",
       "source": "alpaca",
-      "added_at": "2026-06-01T19:10:40.937688+00:00"
+      "added_at": "2026-06-01T19:10:40.937688+00:00",
+      "updated_at": "2026-06-03T23:01:16.615451+00:00"
     },
     {
       "ticker": "SPY",
@@ -773,6 +774,103 @@
       "url": "https://www.benzinga.com/m-a/26/06/52988036/cxapp-purchase-price-for-engineroom-is-about-4-6m",
       "source": "alpaca",
       "added_at": "2026-06-03T20:55:45.287304+00:00"
+    },
+    {
+      "ticker": "APO",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "DA investigation into valuation practices at private credit funds creates regulatory overhang and potential compliance risks for Apollo and similar asset managers with significant private credit exposure.",
+      "action_window": "next_day",
+      "headline": "New York District Attorney Looks Into Valuation Discrepancies Across Private Credit Funds",
+      "url": "https://www.benzinga.com/markets/private-markets/26/06/52990013/new-york-district-attorney-looks-into-valuation-discrepancies-across-private-credit-funds",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615400+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Meta's planned premium AI agent at $200/month signals high-margin enterprise AI monetization strategy with significant revenue potential in the growing AI assistant market.",
+      "action_window": "next_day",
+      "headline": "'Meta Looks to Charge Up to $200 a Month for Planned 'Hatch' AI Agent'- The Information",
+      "url": "https://www.benzinga.com/news/26/06/52989968/meta-looks-to-charge-up-to-200-a-month-for-planned-hatch-ai-agent-the-information",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615413+00:00"
+    },
+    {
+      "ticker": "SMID",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance notice signals regulatory/listing standards issues that typically pressure stock price and raises concerns about potential delisting risk.",
+      "action_window": "next_day",
+      "headline": "Smith-Midland Receives Nasdaq Noncompliance Notice",
+      "url": "https://www.benzinga.com/quote/SMID",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615422+00:00"
+    },
+    {
+      "ticker": "AVGO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CEO announcement of major multi-gigawatt orders from Anthropic (5 GW TPU) and Meta (1 GW XPU/networking) represents significant revenue visibility through 2027+ for Broadcom's AI infrastructure business.",
+      "action_window": "intraday",
+      "headline": "Broadcom CEO Says Entered Into An Agreement To Enable Anthropic To Access Another 5 GW Of Next-Generation TPU-Based Compute Beginning In 2027; Meta's Initial Order For One GW, Which Includes Xpus And Our Networking, Has Been Received And Will Start Delivery In The Second Half Of 2027",
+      "url": "https://www.benzinga.com/news/26/06/52989301/broadcom-ceo-says-entered-into-an-agreement-to-enable-anthropic-to-access-another-5-gw-of-next-gener",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615430+00:00",
+      "updated_at": "2026-06-03T23:01:16.615481+00:00"
+    },
+    {
+      "ticker": "AEVA",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Follow-on public offerings typically cause immediate dilution to existing shareholders and create downward price pressure as new shares enter the market.",
+      "action_window": "intraday",
+      "headline": "Aeva Technologies Launches Proposed Follow-On Public Offering Of $100M Of Shares Of Its Common Stock",
+      "url": "https://www.benzinga.com/news/26/06/52989727/aeva-technologies-launches-proposed-follow-on-public-offering-of-100m-of-shares-of-its-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615437+00:00"
+    },
+    {
+      "ticker": "CUB",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Lionheart announces major strategic pivot to Venezuela oil sector with $2.25B equity facility for asset acquisitions, representing significant capital raise and new business direction.",
+      "action_window": "next_day",
+      "headline": "Lionheart Announces Focus On Potential Business Combination In Venezuela Upstream Oil And Gas Sector; Negotiating Equity Facility To Raise Up To $2.25B Over 24 Months;  Proceeds May Be Used For Acquisition Of Oil Assets In Venezuela And Corporate Purposes",
+      "url": "https://www.benzinga.com/news/26/06/52989703/lionheart-announces-focus-on-potential-business-combination-in-venezuela-upstream-oil-and-gas-sector",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615444+00:00"
+    },
+    {
+      "ticker": "CF",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant quarterly earnings beat with EPS 55% above estimates and revenue 12% above consensus represents a strong fundamental catalyst for immediate price action.",
+      "action_window": "next_day",
+      "headline": "Canaccord Genuity Group Q4 Adj. EPS $0.48 Beats $0.31 Estimate, Sales $615.857M Beat $548.000M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/52989637/canaccord-genuity-group-q4-adj-eps-0-48-beats-0-31-estimate-sales-615-857m-beat-548-000m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615460+00:00"
+    },
+    {
+      "ticker": "DSGX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Descartes beat both EPS estimates by 5.8% and revenue estimates by 0.6%, a solid double beat that typically drives positive price action in after-hours and next-day trading.",
+      "action_window": "intraday",
+      "headline": "Descartes Systems Gr Q1 EPS $0.55 Beats $0.52 Estimate, Sales $193.621M Beat $192.401M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/52988789/descartes-systems-gr-q1-eps-0-55-beats-0-52-estimate-sales-193-621m-beat-192-401m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-03T23:01:16.615467+00:00"
     }
   ]
 }
