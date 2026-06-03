@@ -233,5 +233,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-03 12:09:14",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "SPWH",
+        "reason": "penny stock ($1.42 < $5.0)",
+        "block_type": "penny_stock"
+      }
+    ]
   }
 ]
