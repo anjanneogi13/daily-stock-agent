@@ -507,6 +507,114 @@
       "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/06/52959729/etf-boom-turns-to-shakeout-as-defiance-yieldmax-close-multiple-funds",
       "source": "alpaca",
       "added_at": "2026-06-03T00:11:09.753635+00:00"
+    },
+    {
+      "ticker": "EZRA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes delisting risk and restores investor confidence, though impact is moderate as it resolves a known issue rather than creating new value.",
+      "action_window": "intraday",
+      "headline": "Reliance Global Group Regains Nasdaq Compliance",
+      "url": "https://www.benzinga.com/quote/EZRA",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698251+00:00"
+    },
+    {
+      "ticker": "MRVL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "NVIDIA CEO endorsement drove 11.73% pre-market surge in Marvell amid broader AI-driven market rally with Nasdaq futures up 7%, representing a significant catalyst already materializing in pre-market trading.",
+      "action_window": "intraday",
+      "headline": "Marvell Technology Soars on NVIDIA CEO's Endorsement, Joins Relmada Therapeutics and Other Big Stocks Moving Higher in Wednesday's Pre-Market Session",
+      "url": "https://www.benzinga.com/markets/equities/26/06/52966899/marvell-technology-soars-on-nvidia-ceos-endorsement-joins-relmada-therapeutics-and-other-big-stocks-moving-higher-in-wednesdays-pre-market-session",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698264+00:00"
+    },
+    {
+      "ticker": "GRRR",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Bond offering of $107M creates dilution concerns and is already causing price decline as confirmed in the headline.",
+      "action_window": "intraday",
+      "headline": "Gorilla Technology Shares Slide As Company Prices $107 Million Bond Offering",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52966865/gorilla-technology-shares-slide-as-company-prices-107-million-bond-offering",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698271+00:00"
+    },
+    {
+      "ticker": "MDLN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "FDA warning letter for CGMP violations in finished pharmaceuticals indicates serious regulatory compliance issues that typically result in operational disruptions, potential product recalls, and reputational damage.",
+      "action_window": "intraday",
+      "headline": "FDA Sends Warning Letter To Medline Over CGMP Violations For Finished Pharmaceuticals On May 28",
+      "url": "https://www.benzinga.com/general/biotech/26/06/52966855/fda-sends-warning-letter-to-medline-over-cgmp-violations-for-finished-pharmaceuticals-on-may-28",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698278+00:00"
+    },
+    {
+      "ticker": "V",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major payment networks backing a stablecoin platform signals strategic expansion into crypto infrastructure, though 'said to be' indicates unconfirmed rumor status that limits immediate tradeable conviction.",
+      "action_window": "next_day",
+      "headline": "'Payment Giants Stripe, Visa, MasterCard Said To Be Among Backers Of Soon-To-Debut Stablecoin Platform' - CoinDesk",
+      "url": "https://www.benzinga.com/markets/cryptocurrency/26/06/52966831/payment-giants-stripe-visa-mastercard-said-to-be-among-backers-of-soon-to-debut-stablecoin",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698283+00:00"
+    },
+    {
+      "ticker": "NRXP",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Public offering of 5.7M shares represents significant dilution (~15-20% of float typical for such offerings) and will create immediate selling pressure as the offering is priced and shares hit the market.",
+      "action_window": "intraday",
+      "headline": "NRx Pharmaceuticals Prices $20M Public Offering Of 5,714,286 Shares Of Common Stock At A Price Of $3.50/Share To Fund Working Capital And Growth Plans",
+      "url": "https://www.benzinga.com/news/26/06/52966738/nrx-pharmaceuticals-prices-20m-public-offering-of-5-714-286-shares-of-common-stock-at-a-price-of-3-5",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698290+00:00"
+    },
+    {
+      "ticker": "USAR",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Access to $1.6B in government CHIPS Program funding is a transformative catalyst for a rare earth company, representing massive capital injection and strategic validation.",
+      "action_window": "intraday",
+      "headline": "USA Rare Earth Enters Agreement With Department Of Commerce To Access Up To $1.6B In Funding Under The CHIPS Program",
+      "url": "https://www.benzinga.com/news/26/06/52966702/usa-rare-earth-enters-agreement-with-department-of-commerce-to-access-up-to-1-6b-in-funding-under-th",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698296+00:00"
+    },
+    {
+      "ticker": "TURB",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance through equity boost removes delisting risk and improves market access, though this is procedural rather than fundamental improvement.",
+      "action_window": "intraday",
+      "headline": "Turbo Energy Boosts Equity To Regain Nasdaq Compliance",
+      "url": "https://www.benzinga.com/news/26/06/52966679/turbo-energy-boosts-equity-to-regain-nasdaq-compliance",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698302+00:00"
+    },
+    {
+      "ticker": "TGL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company guidance of over 100% YoY revenue growth for FY26 represents a significant upward catalyst driven by concrete geographic expansion plans in Southeast Asia.",
+      "action_window": "intraday",
+      "headline": "Treasure Global Expects FY26 Revenue To Increase By Over 100% YoY, Driven By Southeast Asia Ecosystem Expansion",
+      "url": "https://www.benzinga.com/news/26/06/52966656/treasure-global-expects-fy26-revenue-to-increase-by-over-100-yoy-driven-by-southeast-asia-ecosystem",
+      "source": "alpaca",
+      "added_at": "2026-06-03T12:39:11.698307+00:00"
     }
   ]
 }

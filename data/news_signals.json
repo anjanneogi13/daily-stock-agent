@@ -726,19 +726,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MBC": {
-    "ticker": "MBC",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "MasterBrand Q1 Earnings Call Highlights",
-    "added_at": "2026-05-27T01:34:36.748992+00:00",
-    "expires": "2026-06-03T01:34:36.748997+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "IREN": {
     "ticker": "IREN",
     "score_delta": 0.1,
@@ -775,32 +762,6 @@
     "headline": "UPDATE: Box Raises FY2027 Adj EPS Guidance from $1.55 to $1.56 vs $1.63 Est; Raises FY2027 Sales Guidance from $1.275B to $1.280B vs $1.275B Est",
     "added_at": "2026-05-26T23:04:53.623438+00:00",
     "expires": "2026-06-09T23:04:53.623443+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PCLA": {
-    "ticker": "PCLA",
-    "score_delta": 0.046,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "PicoCELA Inc. (PCLA) Unveils Game-Changing Wireless Mesh Technology",
-    "added_at": "2026-05-27T01:34:36.747070+00:00",
-    "expires": "2026-06-03T01:34:36.747075+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NRXP": {
-    "ticker": "NRXP",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "NRx Pharma's HOPE Unit Deploys Zeta Surgical's FDA\u2011Cleared TMS Navigation System At West Palm Beach Clinic To Deliver Image\u2011Guided Therapy For Major Depressive Disorder And Other Neurological Conditio",
-    "added_at": "2026-05-27T11:33:58.474430+00:00",
-    "expires": "2026-06-03T11:33:58.474438+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1386,19 +1347,6 @@
     "headline": "Serabi Gold Q1 EPS $0.28 Up From $0.12 YoY, Sales $50.571M Up From $27.593M YoY",
     "added_at": "2026-05-29T11:23:24.794755+00:00",
     "expires": "2026-06-05T11:23:24.794761+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "WTTR": {
-    "ticker": "WTTR",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "B of A Securities Initiates Coverage On Select Water Solutions with Buy Rating, Announces Price Target of $22",
-    "added_at": "2026-05-29T11:23:24.798951+00:00",
-    "expires": "2026-06-03T11:23:24.798957+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2149,6 +2097,45 @@
     "headline": "First-Ever Autism ETF Hits Market As Health Care Innovation Theme Gains Momentum",
     "added_at": "2026-06-03T00:11:09.741983+00:00",
     "expires": "2026-06-10T00:11:09.741992+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "V": {
+    "ticker": "V",
+    "score_delta": 0.044,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "next_day",
+    "headline": "'Payment Giants Stripe, Visa, MasterCard Said To Be Among Backers Of Soon-To-Debut Stablecoin Platform' - CoinDesk",
+    "added_at": "2026-06-03T12:39:11.691469+00:00",
+    "expires": "2026-06-10T12:39:11.691474+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MSTR": {
+    "ticker": "MSTR",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Michael Saylor's MSTR Stock Momentum Sinks, But Benchmark Analyst Calls Bitcoin Sell-Off An 'Overreaction,' Eyes 319% Upside",
+    "added_at": "2026-06-03T12:39:11.693521+00:00",
+    "expires": "2026-06-08T12:39:11.693527+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TGL": {
+    "ticker": "TGL",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Treasure Global Expects FY26 Revenue To Increase By Over 100% YoY, Driven By Southeast Asia Ecosystem Expansion",
+    "added_at": "2026-06-03T12:39:11.695532+00:00",
+    "expires": "2026-06-17T12:39:11.695538+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
