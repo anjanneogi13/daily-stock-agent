@@ -871,6 +871,55 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/52988789/descartes-systems-gr-q1-eps-0-55-beats-0-52-estimate-sales-193-621m-beat-192-401m-estimate",
       "source": "alpaca",
       "added_at": "2026-06-03T23:01:16.615467+00:00"
+    },
+    {
+      "ticker": "J",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major contract award with $1B+ potential value represents significant revenue opportunity for Jacobs, providing multi-year revenue visibility and validating competitive position in critical infrastructure modernization.",
+      "action_window": "intraday",
+      "headline": "Jacobs Awarded Multiple Strategic Frameworks By SSE With Potential Value $1B+ For Modernization And Security Of Northern Scotland's Power Grid",
+      "url": "https://www.benzinga.com/news/26/06/52994577/jacobs-awarded-multiple-strategic-frameworks-by-sse-with-potential-value-1b-for-modernization-and-se",
+      "source": "alpaca",
+      "added_at": "2026-06-04T11:02:20.693905+00:00"
+    },
+    {
+      "ticker": "MUR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "KeyBanc upgrade to Overweight with a $48 price target represents a meaningful positive catalyst from a reputable regional bank that typically drives intraday trading momentum.",
+      "action_window": "intraday",
+      "headline": "Keybanc Upgrades Murphy Oil to Overweight, Announces $48 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/52994547/keybanc-upgrades-murphy-oil-to-overweight-announces-48-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-04T11:02:20.693929+00:00"
+    },
+    {
+      "ticker": "CAL",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Caleres delivered dual beat with EPS exceeding estimates by 22.6% and revenue beating by 1.4%, representing a significant positive earnings surprise worthy of immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Caleres Q1 Adj. EPS $0.38 Beats $0.31 Estimate, Sales $666.599M Beat $657.598M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/52994385/caleres-q1-adj-eps-0-38-beats-0-31-estimate-sales-666-599m-beat-657-598m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-04T11:02:20.693936+00:00",
+      "updated_at": "2026-06-04T11:02:20.693954+00:00"
+    },
+    {
+      "ticker": "CRWD",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Needham maintaining Buy rating with raised price target to $780 signals analyst conviction and potential upside, though impact is moderate as it's a reiteration not initiation.",
+      "action_window": "intraday",
+      "headline": "Needham Maintains Buy on CrowdStrike Holdings, Raises Price Target to $780",
+      "url": "https://www.benzinga.com/news/26/06/52994313/needham-maintains-buy-on-crowdstrike-holdings-raises-price-target-to-780",
+      "source": "alpaca",
+      "added_at": "2026-06-04T11:02:20.693964+00:00"
     }
   ]
 }
