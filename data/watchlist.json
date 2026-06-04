@@ -1,19 +1,6 @@
 {
   "items": [
     {
-      "ticker": "TSLA",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "SpaceX IPO announcement at massive $1.77T valuation is a major catalyst for related equities, particularly TSLA given Elon Musk's ownership stake and market correlation.",
-      "action_window": "this_week",
-      "headline": "'SpaceX targets $135 IPO price at valuation of $1.77 trillion'- CNBC",
-      "url": "https://www.benzinga.com/news/26/06/52989654/spacex-targets-135-ipo-price-at-valuation-of-1-77-trillion-cnbc",
-      "source": "alpaca",
-      "added_at": "2026-06-01T19:10:40.937688+00:00",
-      "updated_at": "2026-06-03T23:01:16.615451+00:00"
-    },
-    {
       "ticker": "SPY",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -980,6 +967,102 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53009697/att-shares-are-sliding-whats-driving-the-action",
       "source": "alpaca",
       "added_at": "2026-06-04T17:29:11.356674+00:00"
+    },
+    {
+      "ticker": "SHOP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $5B buyback expansion signals strong management confidence in valuation and returns excess capital to shareholders, with shares already trading higher on the news.",
+      "action_window": "intraday",
+      "headline": "Shopify Boosts Buyback Program To $5 Billion: What Investors Need To Know",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53015052/shopify-boosts-buyback-program-to-5-billion-what-investors-need-to-know",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761805+00:00"
+    },
+    {
+      "ticker": "ABNB",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CEO planning to start a new company signals potential divided attention or possible departure, creating significant leadership uncertainty for Airbnb shareholders.",
+      "action_window": "intraday",
+      "headline": "'Airbnb CEO Brian Chesky Plans to Start a New AI Company' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/06/53015006/airbnb-ceo-brian-chesky-plans-to-start-a-new-ai-company-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761817+00:00"
+    },
+    {
+      "ticker": "HSBC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Formal investigation into a central bank scandal represents significant regulatory and reputational risk with potential for material fines and operational consequences.",
+      "action_window": "intraday",
+      "headline": "'HSBC placed under formal investigation over Lebanese central bank scandal' - Financial Times",
+      "url": "https://www.benzinga.com/government/26/06/53014554/hsbc-placed-under-formal-investigation-over-lebanese-central-bank-scandal-financial-times",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761826+00:00"
+    },
+    {
+      "ticker": "NHC",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Strategic acquisition of five skilled nursing facilities for $50.5M expands NHC's footprint and capacity, though relatively modest deal size limits immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "National HealthCare Acquires Five Skilled Nursing Sites For $50.5M",
+      "url": "https://www.benzinga.com/m-a/26/06/53014321/national-healthcare-acquires-five-skilled-nursing-sites-for-50-5m",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761863+00:00"
+    },
+    {
+      "ticker": "KRT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "William Blair upgrade to Outperform is a meaningful positive catalyst from a reputable firm that typically drives near-term buying interest in the stock.",
+      "action_window": "next_day",
+      "headline": "William Blair Upgrades Karat Packaging to Outperform",
+      "url": "https://www.benzinga.com/news/26/06/53014132/william-blair-upgrades-karat-packaging-to-outperform",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761871+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Anthropic's involvement with US security agency for cyber attacks raises significant regulatory, ethical, and reputational concerns for major investors Google, Amazon, and Microsoft, with potential for government scrutiny and public backlash.",
+      "action_window": "intraday",
+      "headline": "'Anthropic assists US security agency's use of Mythos for cyber attacks' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/06/53014065/anthropic-assists-us-security-agencys-use-of-mythos-for-cyber-attacks-financial-times",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761878+00:00"
+    },
+    {
+      "ticker": "MDT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BTIG upgrade to Buy with $90 target following strong Q4 revenue beat and accelerating organic growth represents a meaningful catalyst combining analyst upgrade with fundamental improvement.",
+      "action_window": "next_day",
+      "headline": "Wall Street May Be Mispricing Medtronic, Analyst Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/06/53014062/wall-street-may-be-mispricing-medtronic-analyst-says",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761883+00:00"
+    },
+    {
+      "ticker": "BTCUSD",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Significant crypto market decline with $1B+ liquidations driven by $400B capital rotation to AI, creating immediate bearish pressure across all major cryptocurrencies and related equities like MSTR.",
+      "action_window": "intraday",
+      "headline": "Bitcoin Falls To $63,000 As Ethereum, XRP, Dogecoin Slide 4% On $400 Billion AI Capital Rotation",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53013979/bitcoin-falls-to-63000-as-ethereum-xrp-dogecoin-slide-4-on-400-billion-ai-capital-rotation",
+      "source": "alpaca",
+      "added_at": "2026-06-04T19:38:17.761889+00:00"
     }
   ]
 }

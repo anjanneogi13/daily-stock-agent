@@ -446,19 +446,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "META": {
-    "ticker": "META",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Attorney General Paxton Files Landmark Lawsuit Against Meta and WhatsApp for Lying About Privacy Measures and Deceiving Texans by Falsely Claiming WhatsApp Messages are Encrypted",
-    "added_at": "2026-05-21T19:25:50.318913+00:00",
-    "expires": "2026-06-04T19:25:50.318919+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TTWO": {
     "ticker": "TTWO",
     "score_delta": 0.083,
@@ -606,9 +593,9 @@
     "ticker": "BTCUSD",
     "score_delta": -1.0,
     "catalyst": "BANKRUPTCY_RISK",
-    "headline": "Bitcoin, Ethereum, XRP, Dogecoin Hold Ground As Traders Watch For Reversal Zones And Re-Entry",
-    "added_at": "2026-05-25T14:41:22.895495+00:00",
-    "expires": "2026-11-21T14:41:22.895502+00:00",
+    "headline": "Bitcoin Falls To $63,000 As Ethereum, XRP, Dogecoin Slide 4% On $400 Billion AI Capital Rotation",
+    "added_at": "2026-06-04T19:38:17.754875+00:00",
+    "expires": "2026-12-01T19:38:17.754881+00:00",
     "hard_block": true
   },
   "PL": {
@@ -2242,6 +2229,84 @@
     "headline": "AT&T Shares Are Sliding: What's Driving The Action?",
     "added_at": "2026-06-04T17:29:11.353801+00:00",
     "expires": "2026-06-09T17:29:11.353806+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HSBC": {
+    "ticker": "HSBC",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "'HSBC placed under formal investigation over Lebanese central bank scandal' - Financial Times",
+    "added_at": "2026-06-04T19:38:17.742329+00:00",
+    "expires": "2026-06-18T19:38:17.742336+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CTSH": {
+    "ticker": "CTSH",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Cognizant Integrates Its Cognizant Neuro AI Trust With ServiceNow To Offer Unified Platform For AI Governance",
+    "added_at": "2026-06-04T19:38:17.744705+00:00",
+    "expires": "2026-06-11T19:38:17.744710+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NHC": {
+    "ticker": "NHC",
+    "score_delta": 0.041,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "National HealthCare Acquires Five Skilled Nursing Sites For $50.5M",
+    "added_at": "2026-06-04T19:38:17.746751+00:00",
+    "expires": "2026-06-18T19:38:17.746756+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KRT": {
+    "ticker": "KRT",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "William Blair Upgrades Karat Packaging to Outperform",
+    "added_at": "2026-06-04T19:38:17.748764+00:00",
+    "expires": "2026-06-09T19:38:17.748770+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MDT": {
+    "ticker": "MDT",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Wall Street May Be Mispricing Medtronic, Analyst Says",
+    "added_at": "2026-06-04T19:38:17.750801+00:00",
+    "expires": "2026-06-09T19:38:17.750807+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NUDG": {
+    "ticker": "NUDG",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "this_week",
+    "headline": "These New Nuveen ETFs Are Built For Income, Inflation, Infrastructure Growth",
+    "added_at": "2026-06-04T19:38:17.758921+00:00",
+    "expires": "2026-06-11T19:38:17.758926+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
