@@ -12,17 +12,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ZIM": {
-    "ticker": "ZIM",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "headline": "'Israeli $4.5 Billion Takeover Bid Beats Hapag-Lloyd's' Ynet",
-    "added_at": "2026-05-05T20:05:10.319976+00:00",
-    "expires": "2026-06-04T20:05:10.319981+00:00",
-    "hard_block": false
-  },
   "ONC": {
     "ticker": "ONC",
     "score_delta": 0.15,
@@ -298,19 +287,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ROST": {
-    "ticker": "ROST",
-    "score_delta": 0.097,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Ross Stores Executive Says Q2 Total Sales Projected To Increase 9% To 11% Vs Last Year; Our Assumptions For Second Half Remain Unchanged",
-    "added_at": "2026-05-21T21:10:39.139887+00:00",
-    "expires": "2026-06-04T21:10:39.139893+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SSEA": {
     "ticker": "SSEA",
     "score_delta": 0.2,
@@ -443,19 +419,6 @@
     "headline": "Vertex Pharmaceuticals Announces Health Canada Has Accepted For Review A New Drug Submission For Suzetrigine For The Treatment Of Moderate-To-Severe Acute Pain In Adults",
     "added_at": "2026-05-21T17:11:47.349312+00:00",
     "expires": "2026-06-20T17:11:47.349317+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TTWO": {
-    "ticker": "TTWO",
-    "score_delta": 0.083,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "Take-Two Interactive Exec Says Co. Expects To Release 22 Titles Throughout FY28, FY29",
-    "added_at": "2026-05-21T21:10:39.145403+00:00",
-    "expires": "2026-06-04T21:10:39.145408+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -936,32 +899,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KNOP": {
-    "ticker": "KNOP",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "KNOT Offshore Partners Q1 EPS $0.08 Misses $0.28 Estimate, Sales $92.007M Beat $90.312M Estimate",
-    "added_at": "2026-05-28T21:05:59.180779+00:00",
-    "expires": "2026-06-04T21:05:59.180785+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "OKTA": {
-    "ticker": "OKTA",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Okta Shares Climb After Strong Q1 Results, Forward Guidance",
-    "added_at": "2026-05-28T21:05:59.183028+00:00",
-    "expires": "2026-06-04T21:05:59.183033+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GAP": {
     "ticker": "GAP",
     "score_delta": 0.1,
@@ -1001,32 +938,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NGL": {
-    "ticker": "NGL",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "CORRECTION: NGL Energy Partners Q4 Adj. EPS $0.10 Misses $0.18 Estimate, Sales $949.510M Beat $908.519M Estimate",
-    "added_at": "2026-05-28T21:05:59.190769+00:00",
-    "expires": "2026-06-04T21:05:59.190774+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "S": {
-    "ticker": "S",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "SentinelOne Stock Craters After Q1 Results \u2014 Here's Why",
-    "added_at": "2026-05-28T21:05:59.192721+00:00",
-    "expires": "2026-06-04T21:05:59.192726+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NUAI": {
     "ticker": "NUAI",
     "score_delta": -0.097,
@@ -1039,19 +950,6 @@
     "expires": "2026-06-11T21:05:59.196658+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "AEO": {
-    "ticker": "AEO",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.8,
-    "action_window": "next_day",
-    "headline": "Why American Eagle Stock Is Getting Hammered After Hours Thursday",
-    "added_at": "2026-05-28T21:05:59.198608+00:00",
-    "expires": "2026-06-04T21:05:59.198613+00:00",
-    "hard_block": false,
-    "negative_reaction": true
   },
   "SPCE": {
     "ticker": "SPCE",
@@ -1675,14 +1573,14 @@
   },
   "DOCU": {
     "ticker": "DOCU",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Docusign Announces Addition Of App In ChatGPT And Codex, Adding Docusign Intelligent Agreement Management Platform Directly Into OpenAI's Products",
-    "added_at": "2026-06-02T19:57:48.294822+00:00",
-    "expires": "2026-06-09T19:57:48.294828+00:00",
+    "score_delta": 0.093,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "DocuSign Delivers Beat-And-Raise Q1, But Investors Aren't Impressed",
+    "added_at": "2026-06-04T21:28:19.782921+00:00",
+    "expires": "2026-06-11T21:28:19.782929+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1818,14 +1716,14 @@
   },
   "LULU": {
     "ticker": "LULU",
-    "score_delta": -0.05,
-    "catalyst": "earnings_miss",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
     "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Lululemon Q1 Preview: Stock At Seven-Year Low, Analysts See Minimal Upside",
-    "added_at": "2026-06-03T17:59:26.109596+00:00",
-    "expires": "2026-06-10T17:59:26.109602+00:00",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Lululemon Athletica Executive Says Expect Q2 Gross Margin To Decrease About 410 Basis Points From A Year Ago, Driven By Higher Tariff Costs And Ongoing Investments",
+    "added_at": "2026-06-04T21:28:19.769814+00:00",
+    "expires": "2026-06-18T21:28:19.769822+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2307,6 +2205,32 @@
     "headline": "These New Nuveen ETFs Are Built For Income, Inflation, Infrastructure Growth",
     "added_at": "2026-06-04T19:38:17.758921+00:00",
     "expires": "2026-06-11T19:38:17.758926+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MRLN": {
+    "ticker": "MRLN",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Merlin Stock Soars After The Close: Here's Why",
+    "added_at": "2026-06-04T21:28:19.774534+00:00",
+    "expires": "2026-06-11T21:28:19.774541+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SAP": {
+    "ticker": "SAP",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Saputo Q4 Adj. EPS $0.41 Beats $0.40 Estimate, Sales $4.550B Beat $4.520B Estimate",
+    "added_at": "2026-06-04T21:28:19.776625+00:00",
+    "expires": "2026-06-11T21:28:19.776631+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

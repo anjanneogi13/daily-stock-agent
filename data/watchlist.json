@@ -1063,6 +1063,91 @@
       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53013979/bitcoin-falls-to-63000-as-ethereum-xrp-dogecoin-slide-4-on-400-billion-ai-capital-rotation",
       "source": "alpaca",
       "added_at": "2026-06-04T19:38:17.761889+00:00"
+    },
+    {
+      "ticker": "LULU",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Executive warns of failed product launches and significant Q2 North America revenue decline in low double digits, representing a material guidance cut for the company's core market.",
+      "action_window": "intraday",
+      "headline": "Lululemon Athletica Executive Says As We Start Q2, Product Launches Did Not Generate Anticipated Guest Response; For Q2, Expect North America To Decline In The Low Double Digits, With US Also In That Range; For Q2, Expect China Mainland To Increase In The Mid To High Teens",
+      "url": "https://www.benzinga.com/news/26/06/53018546/lululemon-athletica-executive-says-as-we-start-q2-product-launches-did-not-generate-anticipated-gues",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785851+00:00",
+      "updated_at": "2026-06-04T21:28:19.785928+00:00"
+    },
+    {
+      "ticker": "MRLN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Completion of critical design review for C-130J autonomy program represents a significant technical milestone that validates the program and de-risks future development, driving after-hours stock appreciation.",
+      "action_window": "next_day",
+      "headline": "Merlin Stock Soars After The Close: Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53018735/merlin-stock-soars-after-the-close-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785872+00:00"
+    },
+    {
+      "ticker": "INM",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes delisting risk and restores investor confidence, but is a procedural recovery rather than fundamental business improvement.",
+      "action_window": "next_day",
+      "headline": "InMed Pharmaceuticals Regains Nasdaq Compliance",
+      "url": "https://www.benzinga.com/quote/INM",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785884+00:00"
+    },
+    {
+      "ticker": "TPST",
+      "tradeable_score": 0.52,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CFO resignation creates uncertainty and potential governance concerns, though immediate replacement with Principal Financial Officer provides some continuity.",
+      "action_window": "next_day",
+      "headline": "Tempest Therapeutics Nicholas Maestas Resigns As CFO Effective June 5, 2026; Appoints Justin Trojanowski As Principal Financial Officer Effective June 5, 2026",
+      "url": "https://www.benzinga.com/news/26/06/53018601/tempest-therapeutics-nicholas-maestas-resigns-as-cfo-effective-june-5-2026-appoints-justin-trojanows",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785899+00:00"
+    },
+    {
+      "ticker": "SAP",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Saputo beat both EPS and revenue estimates, but the magnitude of the beat is modest (2.5% EPS, 0.7% revenue), creating a mildly positive but not transformative catalyst.",
+      "action_window": "next_day",
+      "headline": "Saputo Q4 Adj. EPS $0.41 Beats $0.40 Estimate, Sales $4.550B Beat $4.520B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53018554/saputo-q4-adj-eps-0-41-beats-0-40-estimate-sales-4-550b-beat-4-520b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785907+00:00"
+    },
+    {
+      "ticker": "ALM",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large $700M+ convertible debt offering represents significant dilution risk and potential equity overhang, typically triggering immediate selling pressure on small-cap stocks.",
+      "action_window": "intraday",
+      "headline": "Almonty Industries Plans $700M Convertible Senior Notes Offering Due 2031, With $100M Upsize Option",
+      "url": "https://www.benzinga.com/news/26/06/53018478/almonty-industries-plans-700m-convertible-senior-notes-offering-due-2031-with-100m-upsize-option",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785941+00:00"
+    },
+    {
+      "ticker": "CREX",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $100M securities offering represents significant dilution risk for existing shareholders, typically causing immediate downward pressure on the stock price.",
+      "action_window": "intraday",
+      "headline": "Creative Realities Files Prospectus To Offer Securities Up To $100M",
+      "url": "https://www.benzinga.com/news/26/06/53018135/creative-realities-files-prospectus-to-offer-securities-up-to-100m",
+      "source": "alpaca",
+      "added_at": "2026-06-04T21:28:19.785954+00:00"
     }
   ]
 }
