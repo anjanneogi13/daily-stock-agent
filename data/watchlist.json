@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "QTEX",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Purchase order from UAE firm for AME system represents confirmed revenue but lacks financial details and customer identity, creating moderate positive catalyst for likely smaller-cap quantum technology company.",
-      "action_window": "intraday",
-      "headline": "QTREX Quantum Receives Purchase Order For AME System, Related Material From Unnamed UAE Firm",
-      "url": "https://www.benzinga.com/news/26/06/52903792/qtrex-quantum-receives-purchase-order-for-ame-system-related-material-from-unnamed-uae-firm",
-      "source": "alpaca",
-      "added_at": "2026-06-01T13:32:15.899173+00:00"
-    },
-    {
-      "ticker": "GPRO",
-      "tradeable_score": 0.92,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Going concern doubt and potential debt cross-default represent severe financial distress signaling possible bankruptcy or significant dilution, creating immediate downside pressure.",
-      "action_window": "intraday",
-      "headline": "Gopro Flags \"Substantial Doubt\" About Going Concern, Warns Of Potential Debt Cross-Default Risk Tied To Updated Financial Statements.",
-      "url": "https://www.benzinga.com/news/26/06/52903685/gopro-flags-substantial-doubt-about-going-concern-warns-of-potential-debt-cross-default-risk-tied-to",
-      "source": "alpaca",
-      "added_at": "2026-06-01T13:32:15.899185+00:00",
-      "updated_at": "2026-06-01T13:32:15.899194+00:00"
-    },
-    {
-      "ticker": "IBM",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Barclays initiates coverage with Overweight rating and $350 price target, representing a meaningful upside catalyst from a major investment bank that typically drives institutional buying interest.",
-      "action_window": "intraday",
-      "headline": "Barclays Initiates Coverage On IBM with Overweight Rating, Announces Price Target of $350",
-      "url": "https://www.benzinga.com/news/26/06/52903731/barclays-initiates-coverage-on-ibm-with-overweight-rating-announces-price-target-of-350",
-      "source": "alpaca",
-      "added_at": "2026-06-01T13:32:15.899200+00:00"
-    },
-    {
-      "ticker": "USO",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Escalating Middle East tensions with Iran halting US negotiations raises geopolitical risk premium, negative for equities and positive for oil prices in the near term.",
-      "action_window": "intraday",
-      "headline": "Iran's Tasnim News Agency Says Iran's Negotiating Team Is Stopping Message Exchanges With U.S. Through Mediators Over Attacks On Lebanon",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/52903518/irans-tasnim-news-agency-says-irans-negotiating-team-is-stopping-message-exchange",
-      "source": "alpaca",
-      "added_at": "2026-06-01T13:32:15.899206+00:00"
-    },
-    {
-      "ticker": "RDNW",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Russell index inclusion typically drives passive fund buying and increased liquidity, creating measurable upward price pressure leading up to and on the effective date.",
-      "action_window": "this_week",
-      "headline": "RideNow Group Announces Addition To The Russell 2000 And Russell 300 Indexes, Effective June 26",
-      "url": "https://www.benzinga.com/news/26/06/52903489/ridenow-group-announces-addition-to-the-russell-2000-and-russell-300-indexes-effective-june-26",
-      "source": "alpaca",
-      "added_at": "2026-06-01T13:32:15.899211+00:00"
-    },
-    {
       "ticker": "TSLA",
       "tradeable_score": 0.95,
       "sentiment": "bullish",
@@ -920,6 +859,90 @@
       "url": "https://www.benzinga.com/news/26/06/52994313/needham-maintains-buy-on-crowdstrike-holdings-raises-price-target-to-780",
       "source": "alpaca",
       "added_at": "2026-06-04T11:02:20.693964+00:00"
+    },
+    {
+      "ticker": "WOOF",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock trading lower on mixed Q1 results indicates market disappointment with earnings quality despite potentially meeting some expectations, creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Petco Stock Trades Lower After Mixed First-Quarter Results",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53002238/petco-stock-trades-lower-after-mixed-first-quarter-results",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268677+00:00"
+    },
+    {
+      "ticker": "QNT",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "IPO debut with indicated opening 2.5% above $60 pricing shows modest initial demand but limited upside from IPO price, representing typical first-day trading volatility.",
+      "action_window": "intraday",
+      "headline": "Quantinuum Shares Indicated To Open At $61.50 In Nasdaq Debut; IPO Priced At $60/Share",
+      "url": "https://www.benzinga.com/quote/QNT",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268690+00:00"
+    },
+    {
+      "ticker": "DG",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings beat is positive but offset by stock decline, CEO exit uncertainty, and mixed analyst sentiment creating a conflicted trading signal.",
+      "action_window": "intraday",
+      "headline": "Dollar General's Q1 Beat Driven By Cost Control As CEO Exit Looms",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/06/53002173/dollar-generals-q1-beat-driven-by-cost-control-as-ceo-exit-looms",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268698+00:00"
+    },
+    {
+      "ticker": "TVTX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive long-term Phase 3 open-label extension data for FILSPARI in FSGS demonstrates sustained efficacy and supports commercial potential for a rare disease treatment.",
+      "action_window": "intraday",
+      "headline": "Travere Therapeutics Announces Long-Term Results From Ongoing Phase 3 DUPLEX Study Open-Label Extension Of FILSPARI In Treatment Of Focal Segmental Glomerulosclerosis",
+      "url": "https://www.benzinga.com/news/26/06/53002070/travere-therapeutics-announces-long-term-results-from-ongoing-phase-3-duplex-study-open-label-extens",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268704+00:00"
+    },
+    {
+      "ticker": "AMRN",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Supreme Court ruling against Amarin on patent infringement eliminates patent protection, allowing generic competition from Hikma which will significantly erode revenue and market exclusivity.",
+      "action_window": "intraday",
+      "headline": "U.S. Supreme Court Rules In Favor Of Hikma Pharmaceuticals V Amarin Pharmaceuticals Over Patent Infringement Claims By Amarin",
+      "url": "https://www.benzinga.com/news/26/06/53001991/u-s-supreme-court-rules-in-favor-of-hikma-pharmaceuticals-v-amarin-pharmaceuticals-over-patent-infri",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268710+00:00"
+    },
+    {
+      "ticker": "NXL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New U.S. patent approval for neurostimulation technology treating major mental health conditions represents meaningful intellectual property protection and potential commercial opportunity, though clinical and regulatory pathways remain ahead.",
+      "action_window": "intraday",
+      "headline": "Nexalin Technology Announces New U.S. Patent Covering Dynamic Frequency Deep-Brain Neurostimulation For Anxiety, Depression, And Insomnia Treatment",
+      "url": "https://www.benzinga.com/news/26/06/53001632/nexalin-technology-announces-new-u-s-patent-covering-dynamic-frequency-deep-brain-neurostimulation-f",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268718+00:00"
+    },
+    {
+      "ticker": "FIGR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $250M forward-flow agreement provides significant capital support and validation for Figure's crypto-backed lending business, representing meaningful revenue potential.",
+      "action_window": "intraday",
+      "headline": "Cross River Announced Forward-Flow Agreement With Figure Technology Solutions; Cross River's PFG To Purchase Up To $250M In Assets To Support Figure's Crypto-Backed Loans",
+      "url": "https://www.benzinga.com/news/26/06/53001600/cross-river-announced-forward-flow-agreement-with-figure-technology-solutions-cross-rivers-pfg-to-pu",
+      "source": "alpaca",
+      "added_at": "2026-06-04T14:15:23.268725+00:00"
     }
   ]
 }

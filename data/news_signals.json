@@ -433,19 +433,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "WMS": {
-    "ticker": "WMS",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Advanced Drainage Systems Sees FY2027 Sales $3.350B-$3.550B vs $3.422B Est",
-    "added_at": "2026-05-21T11:02:24.019292+00:00",
-    "expires": "2026-06-04T11:02:24.019297+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VRTX": {
     "ticker": "VRTX",
     "score_delta": 0.118,
@@ -897,19 +884,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NTAP": {
-    "ticker": "NTAP",
-    "score_delta": 0.05,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "NetApp Likely To Report Higher Q4 Earnings; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
-    "added_at": "2026-05-28T11:33:14.090713+00:00",
-    "expires": "2026-06-04T11:33:14.090719+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ZBIO": {
     "ticker": "ZBIO",
     "score_delta": 0.15,
@@ -923,19 +897,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LH": {
-    "ticker": "LH",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "Labcorp Announces Availability Of Expanded DPYD Genotyping Test To Help Identify Cancer Patients At Increased Risk For Severe Fluoropyrimidine Chemotherapy Side Effects",
-    "added_at": "2026-05-28T11:33:14.099541+00:00",
-    "expires": "2026-06-04T11:33:14.099546+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SNOW": {
     "ticker": "SNOW",
     "score_delta": 0.1,
@@ -946,32 +907,6 @@
     "headline": "Snowflake Stock Soars After Q1 Double Beat, AWS AI Partnership Expansion",
     "added_at": "2026-05-28T15:35:49.992997+00:00",
     "expires": "2026-06-04T15:35:49.993002+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SOTK": {
-    "ticker": "SOTK",
-    "score_delta": -0.05,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "intraday",
-    "headline": "Sono-Tek Q4 Sales $5.609M Miss $5.611M Estimate",
-    "added_at": "2026-05-28T11:33:14.105240+00:00",
-    "expires": "2026-06-04T11:33:14.105246+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMBR": {
-    "ticker": "AMBR",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Amber International Q1 Adj. EPS $(0.04) Misses $(0.02) Estimate, Sales $10.028M Miss $11.400M Estimate",
-    "added_at": "2026-05-28T11:33:14.107132+00:00",
-    "expires": "2026-06-04T11:33:14.107137+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2229,6 +2164,71 @@
     "headline": "Parsons Highlights Expanding AI Capabilities Driving Growth Across Federal Solutions And Critical Infrastructure",
     "added_at": "2026-06-04T11:02:20.691412+00:00",
     "expires": "2026-06-11T11:02:20.691417+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WOOF": {
+    "ticker": "WOOF",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Petco Stock Trades Lower After Mixed First-Quarter Results",
+    "added_at": "2026-06-04T14:15:23.251199+00:00",
+    "expires": "2026-06-11T14:15:23.251207+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "DG": {
+    "ticker": "DG",
+    "score_delta": -0.024,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Dollar General's Q1 Beat Driven By Cost Control As CEO Exit Looms",
+    "added_at": "2026-06-04T14:15:23.253622+00:00",
+    "expires": "2026-06-11T14:15:23.253630+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "AMRN": {
+    "ticker": "AMRN",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "U.S. Supreme Court Rules In Favor Of Hikma Pharmaceuticals V Amarin Pharmaceuticals Over Patent Infringement Claims By Amarin",
+    "added_at": "2026-06-04T14:15:23.255755+00:00",
+    "expires": "2026-06-18T14:15:23.255760+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NXL": {
+    "ticker": "NXL",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Nexalin Technology Announces New U.S. Patent Covering Dynamic Frequency Deep-Brain Neurostimulation For Anxiety, Depression, And Insomnia Treatment",
+    "added_at": "2026-06-04T14:15:23.259804+00:00",
+    "expires": "2026-06-11T14:15:23.259809+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RADX": {
+    "ticker": "RADX",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "This HC Wainwright & Co. Analyst Begins Coverage On A Bullish Note; Here Are Top 2 Initiations For Thursday",
+    "added_at": "2026-06-04T14:15:23.263827+00:00",
+    "expires": "2026-06-09T14:15:23.263832+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
