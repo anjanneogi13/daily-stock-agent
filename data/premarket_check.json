@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-03",
+  "date": "2026-06-04",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -10,7 +10,7 @@
   },
   "picks": [
     {
-      "ticker": "MSFT",
+      "ticker": "J",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
