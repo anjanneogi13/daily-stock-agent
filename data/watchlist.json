@@ -874,15 +874,16 @@
     },
     {
       "ticker": "QNT",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.88,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "IPO debut with indicated opening 2.5% above $60 pricing shows modest initial demand but limited upside from IPO price, representing typical first-day trading volatility.",
+      "rationale": "IPO opening 11.7% above pricing at $67 versus $60 indicates strong institutional demand and positive market reception for the newly public quantum computing company.",
       "action_window": "intraday",
-      "headline": "Quantinuum Shares Indicated To Open At $61.50 In Nasdaq Debut; IPO Priced At $60/Share",
+      "headline": "Quantinuum Shares Indicated To Open At $67/Share On 2.7M Shares; IPO Priced At $60/Share On 28M Shares",
       "url": "https://www.benzinga.com/quote/QNT",
       "source": "alpaca",
-      "added_at": "2026-06-04T14:15:23.268690+00:00"
+      "added_at": "2026-06-04T14:15:23.268690+00:00",
+      "updated_at": "2026-06-04T17:29:11.356666+00:00"
     },
     {
       "ticker": "DG",
@@ -943,6 +944,42 @@
       "url": "https://www.benzinga.com/news/26/06/53001600/cross-river-announced-forward-flow-agreement-with-figure-technology-solutions-cross-rivers-pfg-to-pu",
       "source": "alpaca",
       "added_at": "2026-06-04T14:15:23.268725+00:00"
+    },
+    {
+      "ticker": "UNH",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Dual upgrades from major banks (BofA upgrade to Buy with $450 target and Morgan Stanley citing AI-driven earnings upside) provide strong bullish catalyst with stock already surging.",
+      "action_window": "intraday",
+      "headline": "Why Is UnitedHealth Stock Gaining Thursday?",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/06/53010304/why-is-unitedhealth-stock-gaining-thursday",
+      "source": "alpaca",
+      "added_at": "2026-06-04T17:29:11.356623+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major \u20ac10B European expansion with next-gen robotics represents significant capital deployment and operational efficiency gains, with stock already showing relative strength against tech sector weakness.",
+      "action_window": "next_day",
+      "headline": "Amazon Defies Tech Slump, Launching Next-Gen Robotics Blitz in Europe",
+      "url": "https://www.benzinga.com/markets/tech/26/06/53009557/amazon-defies-tech-slump-launching-next-gen-robotics-blitz-in-europe",
+      "source": "alpaca",
+      "added_at": "2026-06-04T17:29:11.356643+00:00"
+    },
+    {
+      "ticker": "T",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade citing competitive concerns is driving intraday selling pressure, representing a notable but not extreme catalyst for near-term trading.",
+      "action_window": "intraday",
+      "headline": "AT&T Shares Are Sliding: What's Driving The Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53009697/att-shares-are-sliding-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-06-04T17:29:11.356674+00:00"
     }
   ]
 }
