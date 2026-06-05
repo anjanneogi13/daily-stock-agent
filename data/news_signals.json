@@ -38,18 +38,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CCRN": {
-    "ticker": "CCRN",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "Knox Lane To Acquire All Outstanding Shares Of Cross Country Healthcare Common Stock For $13.25/Shr In All-Cash Transaction Valued At $437M",
-    "added_at": "2026-05-06T21:39:56.340823+00:00",
-    "expires": "2026-06-05T21:39:56.340828+00:00",
-    "hard_block": false
-  },
   "AVBP": {
     "ticker": "AVBP",
     "score_delta": 0.15,
@@ -2309,6 +2297,45 @@
     "headline": "PMGC's NorthStrive Defense Tech Enters Binding Term Sheet With Florida State University Research Foundation For Exclusive Aerospace And Defense Patent License",
     "added_at": "2026-06-05T20:49:45.104348+00:00",
     "expires": "2026-06-12T20:49:45.104354+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SOAR": {
+    "ticker": "SOAR",
+    "score_delta": 0.194,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Volato Group Terminates Merger Agreement With M2i Global On June 4, 2026; Will Not Incur Termination Fee Or Penalty For Terminating Merger Agreement; Evaluating Unsolicited Letters Of Intent As Strate",
+    "added_at": "2026-06-05T22:12:54.506740+00:00",
+    "expires": "2026-07-05T22:12:54.506749+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NRT": {
+    "ticker": "NRT",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "North European Oil Q2 EPS $0.22 Down From $0.25 YoY, Sales $2.383M Down From $2.471M YoY",
+    "added_at": "2026-06-05T22:12:54.509521+00:00",
+    "expires": "2026-06-12T22:12:54.509528+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CETY": {
+    "ticker": "CETY",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "Clean Energy Technologies Q4 EPS $(0.59) Down From $(0.15) YoY, Sales $709.857K Up From $480.350K YoY",
+    "added_at": "2026-06-05T22:12:54.513801+00:00",
+    "expires": "2026-06-12T22:12:54.513807+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
