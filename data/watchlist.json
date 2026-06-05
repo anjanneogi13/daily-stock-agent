@@ -460,15 +460,16 @@
     },
     {
       "ticker": "META",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Meta's planned premium AI agent at $200/month signals high-margin enterprise AI monetization strategy with significant revenue potential in the growing AI assistant market.",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large equity raising of tens of billions signals significant dilution for META shareholders despite positive business development with Google, creating immediate trading pressure.",
       "action_window": "next_day",
-      "headline": "'Meta Looks to Charge Up to $200 a Month for Planned 'Hatch' AI Agent'- The Information",
-      "url": "https://www.benzinga.com/news/26/06/52989968/meta-looks-to-charge-up-to-200-a-month-for-planned-hatch-ai-agent-the-information",
+      "headline": "'Meta Weighs Big Equity Raising After Blockbuster Google Deal; Meta Could Sell Tens Of Billions Of Dollars In New Stock As It Seeks To Finance AI Infrastructure' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/06/53038786/meta-weighs-big-equity-raising-after-blockbuster-google-deal-meta-could-sell-tens-of-billions-of-dol",
       "source": "alpaca",
-      "added_at": "2026-06-03T23:01:16.615413+00:00"
+      "added_at": "2026-06-03T23:01:16.615413+00:00",
+      "updated_at": "2026-06-05T18:59:46.892297+00:00"
     },
     {
       "ticker": "SMID",
@@ -776,15 +777,16 @@
     },
     {
       "ticker": "GOOG",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
       "category": "other",
-      "rationale": "Anthropic's involvement with US security agency for cyber attacks raises significant regulatory, ethical, and reputational concerns for major investors Google, Amazon, and Microsoft, with potential for government scrutiny and public backlash.",
+      "rationale": "Major cloud service contract disclosure worth $920M monthly ($33B total through 2029) reveals significant GPU infrastructure investment by Google, representing massive revenue commitment and AI infrastructure scaling.",
       "action_window": "intraday",
-      "headline": "'Anthropic assists US security agency's use of Mythos for cyber attacks' - Financial Times",
-      "url": "https://www.benzinga.com/news/26/06/53014065/anthropic-assists-us-security-agencys-use-of-mythos-for-cyber-attacks-financial-times",
+      "headline": "SpaceX Files Form S-1 Amendment, Disclosing June 2026 Cloud Service Agreement To Provide Google With 110,000 NVIDIA GPUs For $920M Monthly Fee Through June 2029",
+      "url": "https://www.benzinga.com/quote/SPCX",
       "source": "alpaca",
-      "added_at": "2026-06-04T19:38:17.761878+00:00"
+      "added_at": "2026-06-04T19:38:17.761878+00:00",
+      "updated_at": "2026-06-05T18:59:46.892255+00:00"
     },
     {
       "ticker": "MDT",
@@ -1065,15 +1067,16 @@
     },
     {
       "ticker": "ABM",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "ABM Industries beat both EPS and revenue estimates with EPS exceeding by 3.4% and sales beating by 3.4%, representing a solid dual beat that typically drives positive intraday momentum.",
+      "rationale": "Stock already up 6.7% on Q2 earnings beat with confirmed strong FY2026 guidance and exposure to AI data center growth theme creates meaningful catalyst.",
       "action_window": "intraday",
-      "headline": "ABM Indus Q2 Adj. EPS $0.90 Beats $0.87 Estimate, Sales $2.290B Beat $2.214B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/06/53023332/abm-indus-q2-adj-eps-0-90-beats-0-87-estimate-sales-2-290b-beat-2-214b-estimate",
+      "headline": "ABM Rides AI Data Center Boom To Fastest Growth In Nearly Four Years",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/53040082/abm-rides-ai-data-center-boom-to-fastest-growth-in-nearly-four-years",
       "source": "alpaca",
-      "added_at": "2026-06-05T11:21:20.118680+00:00"
+      "added_at": "2026-06-05T11:21:20.118680+00:00",
+      "updated_at": "2026-06-05T18:59:46.892240+00:00"
     },
     {
       "ticker": "NVTS",
@@ -1146,6 +1149,66 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53034731/space-stocks-crash-after-sp-kills-spacex-index-catalyst",
       "source": "alpaca",
       "added_at": "2026-06-05T17:00:03.595117+00:00"
+    },
+    {
+      "ticker": "NBIS",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock declining due to dual headwinds of massive insider selling by a director and broader hawkish macro environment from hot jobs report, creating near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "Why Is Nebius Stock Falling On Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53039876/why-is-nebius-stock-falling-on-friday",
+      "source": "alpaca",
+      "added_at": "2026-06-05T18:59:46.892265+00:00"
+    },
+    {
+      "ticker": "AEMD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Government funding for Ebola response creates direct revenue opportunity for diagnostics and medical device companies specializing in infectious disease detection and treatment.",
+      "action_window": "next_day",
+      "headline": "U.S. State Dept Announces Nearly $38M In Additional Funding Toward The Department's Ongoing Ebola Response Efforts",
+      "url": "https://www.benzinga.com/general/biotech/26/06/53039143/u-s-state-dept-announces-nearly-38m-in-additional-funding-toward-the-departments-ongoing-ebola-re",
+      "source": "alpaca",
+      "added_at": "2026-06-05T18:59:46.892283+00:00"
+    },
+    {
+      "ticker": "PSKY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Multi-state antitrust lawsuit to block major M&A transaction creates significant regulatory risk and deal uncertainty, prompting immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Paramount Skydance shares are trading lower after reports suggesting that multiple U.S. states are planning to file a lawsuit to block the company's acquisition of Warner Bros",
+      "url": "https://www.benzinga.com/quote/PSKY",
+      "source": "alpaca",
+      "added_at": "2026-06-05T18:59:46.892290+00:00"
+    },
+    {
+      "ticker": "STTK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Citigroup upgrade to Buy from a lower rating with $7 price target represents a meaningful catalyst from a major bulge bracket bank that typically drives institutional buying interest.",
+      "action_window": "next_day",
+      "headline": "Citigroup Upgrades Shattuck Labs to Buy, Announces $7 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/53038694/citigroup-upgrades-shattuck-labs-to-buy-announces-7-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-05T18:59:46.892304+00:00"
+    },
+    {
+      "ticker": "MSTR",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Significant crypto sell-off with Bitcoin dropping to $60k and altcoins down up to 9% creates immediate bearish pressure on crypto-exposed equities like MicroStrategy.",
+      "action_window": "intraday",
+      "headline": "Bitcoin Taps $60,000, Ethereum, XRP Fall Up To 9% In Painful Crypto Sell-Off",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53038636/bitcoin-taps-60000-ethereum-xrp-fall-up-to-9-in-painful-crypto-sell-off",
+      "source": "alpaca",
+      "added_at": "2026-06-05T18:59:46.892311+00:00"
     }
   ]
 }

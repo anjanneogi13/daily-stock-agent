@@ -25,18 +25,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MDLN": {
-    "ticker": "MDLN",
-    "score_delta": -0.2,
-    "catalyst": "fda_rejection",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "FDA Announces Medline Recalls All Of Its Stock Keeping Units In Medline Branded Neuro Sponge Category With No Definite Market Re-Entry Date",
-    "added_at": "2026-05-06T17:00:34.456882+00:00",
-    "expires": "2026-06-05T17:00:34.456887+00:00",
-    "hard_block": false
-  },
   "WBD": {
     "ticker": "WBD",
     "score_delta": 0.2,
@@ -325,19 +313,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "WMT": {
-    "ticker": "WMT",
-    "score_delta": -0.118,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "These Analysts Cut Their Forecasts On Walmart After Q1 Results",
-    "added_at": "2026-05-22T18:15:04.412236+00:00",
-    "expires": "2026-06-05T18:15:04.412241+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LIMN": {
     "ticker": "LIMN",
     "score_delta": -1.0,
@@ -448,19 +423,6 @@
     "headline": "Bodycote Confirms Receipt Of Proposed Acquisition Offer From Apollo Global Management At \u00a38.85/Share In Cash",
     "added_at": "2026-05-22T13:28:11.044714+00:00",
     "expires": "2026-06-21T13:28:11.044721+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MU": {
-    "ticker": "MU",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Micron CEO Sees Memory Chip Shortage Lasting Beyond 2026",
-    "added_at": "2026-05-22T18:15:04.396712+00:00",
-    "expires": "2026-06-05T18:15:04.396719+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2286,6 +2248,58 @@
     "headline": "'Tesla Pushes Roadster Demo To August; Tesla Roadster Demo Is Meant To Showcase Tesla's Work With SpaceX On A Cold Gas Thruster System' - The Information Exclusive",
     "added_at": "2026-06-05T17:00:03.592371+00:00",
     "expires": "2026-06-12T17:00:03.592376+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DKNG": {
+    "ticker": "DKNG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on DraftKings, Raises Price Target to $49",
+    "added_at": "2026-06-05T18:59:46.880867+00:00",
+    "expires": "2026-06-10T18:59:46.880874+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PSKY": {
+    "ticker": "PSKY",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Paramount Skydance shares are trading lower after reports suggesting that multiple U.S. states are planning to file a lawsuit to block the company's acquisition of Warner Bros",
+    "added_at": "2026-06-05T18:59:46.885103+00:00",
+    "expires": "2026-06-19T18:59:46.885110+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "THO": {
+    "ticker": "THO",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Neutral on Thor Industries, Lowers Price Target to $80",
+    "added_at": "2026-06-05T18:59:46.887178+00:00",
+    "expires": "2026-06-10T18:59:46.887190+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "STTK": {
+    "ticker": "STTK",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Citigroup Upgrades Shattuck Labs to Buy, Announces $7 Price Target",
+    "added_at": "2026-06-05T18:59:46.889271+00:00",
+    "expires": "2026-06-10T18:59:46.889278+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
