@@ -246,5 +246,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-05 12:09:32",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "ABM",
+        "reason": "SL too tight (1.5% < 2.0% for $40 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

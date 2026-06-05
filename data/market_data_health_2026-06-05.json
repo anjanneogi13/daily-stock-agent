@@ -1,0 +1,353 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 554,
+      "empty": 0,
+      "errors": 30,
+      "successes": 524
+    },
+    "monster_info": {
+      "attempts": 281,
+      "empty": 0,
+      "errors": 15,
+      "successes": 266
+    },
+    "ohlcv": {
+      "attempts": 565,
+      "empty": 4,
+      "errors": 0,
+      "successes": 561
+    }
+  },
+  "date": "2026-06-05",
+  "providers": {
+    "stooq": {
+      "attempts": 2,
+      "empty": 2,
+      "errors": 0,
+      "failure_types": {
+        "empty_response": 2,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 0,
+        "rate_limited": 0,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 0,
+      "rate_limited": 0,
+      "successes": 0,
+      "timeout": 0,
+      "unauthorized": 0
+    },
+    "yfinance": {
+      "attempts": 1398,
+      "empty": 2,
+      "errors": 45,
+      "failure_types": {
+        "empty_response": 2,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 0,
+        "rate_limited": 45,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 0,
+      "rate_limited": 45,
+      "successes": 1351,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 554,
+    "final_pick_count": 1,
+    "scored_count": 281,
+    "universe_count": 558
+  },
+  "samples": [
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPCX"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "TSX:DBO"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "stooq",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "TSX:DBO"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "stooq",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPCX"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SMH"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "GIII"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SOXX"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SMH"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "GIII"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "USAR"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "ALNY"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "GME"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "ALNY"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "CAL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "GME"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "TGL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "CAL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "DOCU"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "FIGR"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SHOP"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "MUR"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "TCNNF"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "GORO"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "GORO"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "CUB"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "ZG"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "ZG"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "DSGX"
+    }
+  ],
+  "timestamp_utc": "2026-06-05T12:09:32Z"
+}
