@@ -2249,5 +2249,44 @@
     "expires": "2026-06-19T14:07:56.739657+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TTAN": {
+    "ticker": "TTAN",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "ServiceTitan Rallies On Strong Q1 Results And Outlook",
+    "added_at": "2026-06-05T17:00:03.588525+00:00",
+    "expires": "2026-06-12T17:00:03.588534+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GIS": {
+    "ticker": "GIS",
+    "score_delta": -0.03,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Morgan Stanley Maintains Underweight on General Mills, Lowers Price Target to $32",
+    "added_at": "2026-06-05T17:00:03.590490+00:00",
+    "expires": "2026-06-10T17:00:03.590509+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "score_delta": 0.018,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "'Tesla Pushes Roadster Demo To August; Tesla Roadster Demo Is Meant To Showcase Tesla's Work With SpaceX On A Cold Gas Thruster System' - The Information Exclusive",
+    "added_at": "2026-06-05T17:00:03.592371+00:00",
+    "expires": "2026-06-12T17:00:03.592376+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

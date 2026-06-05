@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BJDX",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Significant dilutive private placement of 3.66M shares represents substantial equity dilution that typically pressures stock price in the near term, despite providing $8.5M capital plus potential $15M from warrant exercises.",
-      "action_window": "intraday",
-      "headline": "Bluejay Diagnostics Announces $8.5M Private Placement Of 3,655,917 Shares, With Series G And H Warrants At A Combined Price Of $2.325; Potential Additional Gross Proceeds To The Company From The Series G Warrants And The Short-Term Series H Warrants, If Fully Exercised On A Cash Basis, Will Be ~$15.",
-      "url": "https://www.benzinga.com/news/26/06/52947316/bluejay-diagnostics-announces-8-5m-private-placement-of-3-655-917-shares-with-series-g-and-h-warrant",
-      "source": "alpaca",
-      "added_at": "2026-06-02T16:30:19.350195+00:00"
-    },
-    {
-      "ticker": "GDS",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major capital expenditure announcement of 50B yuan signals strong revenue visibility from AI data center demand, representing significant growth catalyst for GDS's core business.",
-      "action_window": "intraday",
-      "headline": "GDS Plans To Spend Up To 50B Yuan As AI Data Center Demand Booms",
-      "url": "https://www.benzinga.com/Opinion/26/06/52947196/gds-plans-to-spend-up-to-50b-yuan-as-ai-data-center-demand-booms",
-      "source": "alpaca",
-      "added_at": "2026-06-02T16:30:19.350202+00:00"
-    },
-    {
-      "ticker": "FULC",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Truist Securities downgrade to Hold with lowered price target creates immediate selling pressure for small-cap biotech stock.",
-      "action_window": "intraday",
-      "headline": "Truist Securities Downgrades Fulcrum Therapeutics to Hold, Lowers Price Target to $4",
-      "url": "https://www.benzinga.com/news/26/06/52947014/truist-securities-downgrades-fulcrum-therapeutics-to-hold-lowers-price-target-to-4",
-      "source": "alpaca",
-      "added_at": "2026-06-02T16:30:19.350214+00:00"
-    },
-    {
-      "ticker": "COHR",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Coherent hits all-time high on confirmed industry shift to optical interconnects validated by NVDA CEO, creating strong momentum catalyst despite being overlooked.",
-      "action_window": "intraday",
-      "headline": "Marvell Gets The Headlines \u2014 Coherent Stock Gets The All-Time High",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52946506/marvell-gets-the-headlines-coherent-stock-gets-the-all-time-high",
-      "source": "alpaca",
-      "added_at": "2026-06-02T16:30:19.350220+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Significant expansion of OpenAI's Codex capabilities with enterprise-focused features likely benefits Microsoft as primary investor and Azure cloud provider, though impact may be partially anticipated given ongoing AI product rollouts.",
-      "action_window": "next_day",
-      "headline": "OpenAI Announces Codex For Every Role, Tool, And Workflow; New Role-Specific Plugins, Sites, And Annotations Help Teams Do More With Codex",
-      "url": "https://www.benzinga.com/news/26/06/52946505/openai-announces-codex-for-every-role-tool-and-workflow-new-role-specific-plugins-sites-and-annotati",
-      "source": "alpaca",
-      "added_at": "2026-06-02T16:30:19.350224+00:00"
-    },
-    {
       "ticker": "GNK",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -1182,6 +1122,30 @@
       "url": "https://www.benzinga.com/news/26/06/53027830/franklins-western-asset-management-agrees-over-100m-sec-settlement",
       "source": "alpaca",
       "added_at": "2026-06-05T14:07:56.742664+00:00"
+    },
+    {
+      "ticker": "TTAN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings and revenue beat combined with raised full-year outlook, bullish technicals, and analyst price target increases creates multiple positive catalysts with immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "ServiceTitan Rallies On Strong Q1 Results And Outlook",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/53034812/servicetitan-rallies-on-strong-q1-results-and-outlook",
+      "source": "alpaca",
+      "added_at": "2026-06-05T17:00:03.595103+00:00"
+    },
+    {
+      "ticker": "ARKX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "S&P ruling out SpaceX index inclusion eliminates expected passive fund inflows catalyst, triggering immediate sector-wide selloff in space stocks.",
+      "action_window": "intraday",
+      "headline": "Space Stocks Crash After S&P Kills SpaceX Index Catalyst",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53034731/space-stocks-crash-after-sp-kills-spacex-index-catalyst",
+      "source": "alpaca",
+      "added_at": "2026-06-05T17:00:03.595117+00:00"
     }
   ]
 }
