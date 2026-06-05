@@ -942,32 +942,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FOTO": {
-    "ticker": "FOTO",
-    "score_delta": 0.018,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "Tuttle Capital Launches Photonics ETF To Target AI Infrastructure's Next Big Bottleneck",
-    "added_at": "2026-05-29T20:12:30.303614+00:00",
-    "expires": "2026-06-05T20:12:30.303620+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BNBUSD": {
-    "ticker": "BNBUSD",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Binance Coin Hits Wall Street With The First Spot BNB ETF",
-    "added_at": "2026-05-29T20:12:30.308421+00:00",
-    "expires": "2026-06-05T20:12:30.308426+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DVN": {
     "ticker": "DVN",
     "score_delta": 0.2,
@@ -2300,6 +2274,41 @@
     "headline": "Citigroup Upgrades Shattuck Labs to Buy, Announces $7 Price Target",
     "added_at": "2026-06-05T18:59:46.889271+00:00",
     "expires": "2026-06-10T18:59:46.889278+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HYPD": {
+    "ticker": "HYPD",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Hyperion DeFi Agreed With Felix To Wind Down HAUS Agreement Associated With Their HIP-3 Perpetual Futures Market; Intends To Reposition ~800,000 HYPE Tokens To Strategies That Expect To Be More Profit",
+    "added_at": "2026-06-05T20:49:45.099528+00:00",
+    "expires": "2026-12-02T20:49:45.099537+00:00",
+    "hard_block": true
+  },
+  "PLRZ": {
+    "ticker": "PLRZ",
+    "score_delta": 0.025,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Polyrizon Ltd. Extends Exclusivity Period For Proposed 51% Acquisition Of Arrow Aviation Through June 30, 2026",
+    "added_at": "2026-06-05T20:49:45.102236+00:00",
+    "expires": "2026-06-19T20:49:45.102242+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ELAB": {
+    "ticker": "ELAB",
+    "score_delta": 0.046,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "PMGC's NorthStrive Defense Tech Enters Binding Term Sheet With Florida State University Research Foundation For Exclusive Aerospace And Defense Patent License",
+    "added_at": "2026-06-05T20:49:45.104348+00:00",
+    "expires": "2026-06-12T20:49:45.104354+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

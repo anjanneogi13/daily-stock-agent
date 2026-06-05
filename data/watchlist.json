@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GNK",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "Genco rejected Diana Shipping's acquisition offer and Diana is now pursuing a hostile proxy fight, indicating deal friction and uncertainty with potential downside for target if offer withdrawn.",
-      "action_window": "next_day",
-      "headline": "Diana Shipping Comments On Genco Shipping & Trading's Rejection Of $24.80/Share Cash Tender Offer; Urges Shareholders To Vote For Six Independent Nominees For Company Board",
-      "url": "https://www.benzinga.com/m-a/26/06/52954810/diana-shipping-comments-on-genco-shipping-tradings-rejection-of-24-80share-cash-tender-offer-urges-s",
-      "source": "alpaca",
-      "added_at": "2026-06-02T19:57:48.299402+00:00"
-    },
-    {
-      "ticker": "ASTC",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Critical research report highlighting major red flags including multiple business pivots, significant capital losses ($262M), and governance concerns about CEO accountability will likely trigger immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Watching Astrotech; Fugazi Research Issues Report On Co. Titled 'Five Pivots, $262M Lost, and an Unaccountable CEO'",
-      "url": "https://www.benzinga.com/news/26/06/52954084/watching-astrotech-fugazi-research-issues-report-on-co-titled-five-pivots-262m-lost-and-an-unaccount",
-      "source": "alpaca",
-      "added_at": "2026-06-02T19:57:48.299413+00:00"
-    },
-    {
-      "ticker": "DLR",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "One-year moratorium on data center construction in New York represents significant regulatory headwind for data center REITs with NY exposure, likely impacting near-term growth plans and expansion timelines.",
-      "action_window": "intraday",
-      "headline": "'New York lawmakers plan to approve one-year data center moratorium' - Politico",
-      "url": "https://www.benzinga.com/news/26/06/52953111/new-york-lawmakers-plan-to-approve-one-year-data-center-moratorium-politico",
-      "source": "alpaca",
-      "added_at": "2026-06-02T19:57:48.299425+00:00"
-    },
-    {
-      "ticker": "BE",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Tariff reduction on industrial metals is a positive macro catalyst for Bloom Energy's cost structure, though impact depends on tariff magnitude and company's metal input exposure.",
-      "action_window": "intraday",
-      "headline": "Bloom Energy Stock Rises As Trump Cuts U.S. Tariffs",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52952938/bloom-energy-stock-rises-as-trump-cuts-u-s-tariffs",
-      "source": "alpaca",
-      "added_at": "2026-06-02T19:57:48.299430+00:00"
-    },
-    {
-      "ticker": "DOCU",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic integration with OpenAI's widely-used ChatGPT platform significantly expands DocuSign's distribution and positions the company in the AI-powered workflow automation space.",
-      "action_window": "intraday",
-      "headline": "Docusign Announces Addition Of App In ChatGPT And Codex, Adding Docusign Intelligent Agreement Management Platform Directly Into OpenAI's Products",
-      "url": "https://www.benzinga.com/quote/DOCU",
-      "source": "alpaca",
-      "added_at": "2026-06-02T19:57:48.299435+00:00"
-    },
-    {
       "ticker": "CI",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -1209,6 +1149,150 @@
       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53038636/bitcoin-taps-60000-ethereum-xrp-fall-up-to-9-in-painful-crypto-sell-off",
       "source": "alpaca",
       "added_at": "2026-06-05T18:59:46.892311+00:00"
+    },
+    {
+      "ticker": "FBYD",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $10.6M consulting contract represents significant revenue for Falcon's Attractions and validates business model with concrete project win.",
+      "action_window": "next_day",
+      "headline": "Falcon's Attractions Signs $10.6M Master Consulting Agreement With VAI Amusement Park To Lead Arizona Theme Park Design Project",
+      "url": "https://www.benzinga.com/news/26/06/53044037/falcons-attractions-signs-10-6m-master-consulting-agreement-with-vai-amusement-park-to-lead-arizona",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107357+00:00"
+    },
+    {
+      "ticker": "CHA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock shelf registration signals potential dilution from future Class A share offerings, typically creating near-term selling pressure until size and timing are clarified.",
+      "action_window": "next_day",
+      "headline": "Chagee Holdings Files For Stock Shelf; Size Not Disclosed; May From Time To Time In One Or More Offerings Offer And Sell Class A Ordinary Shares",
+      "url": "https://www.benzinga.com/news/26/06/53043970/chagee-holdings-files-for-stock-shelf-size-not-disclosed-may-from-time-to-time-in-one-or-more-offeri",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107370+00:00"
+    },
+    {
+      "ticker": "IRD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 2.679M shares by selling shareholders typically creates dilution concerns and near-term selling pressure, though this is an existing shareholder sale rather than new capital raise.",
+      "action_window": "next_day",
+      "headline": "Opus Genetics Files Prospectus For Offering 2.679M Common Shares On Behalf Of Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/06/53043913/opus-genetics-files-prospectus-for-offering-2-679m-common-shares-on-behalf-of-selling-shareholders",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107379+00:00"
+    },
+    {
+      "ticker": "MYND",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "NYSE non-compliance notice signals potential delisting risk, typically triggering immediate sell-off and raising concerns about company's ability to meet listing standards.",
+      "action_window": "intraday",
+      "headline": "Mynd.ai Receives Non-Compliance Notice From NYSE American",
+      "url": "https://www.benzinga.com/quote/MYND",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107391+00:00"
+    },
+    {
+      "ticker": "LSH",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Co-CEO resignation consolidates leadership to sole CEO, creating governance clarity but uncertain operational impact until market assesses management continuity.",
+      "action_window": "next_day",
+      "headline": "Lakeside Co-CEO Henry Liu Resigns, Effective June 2; Yang Li Now Serves As Sole CEO",
+      "url": "https://www.benzinga.com/news/26/06/53043558/lakeside-co-ceo-henry-liu-resigns-effective-june-2-yang-li-now-serves-as-sole-ceo",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107399+00:00"
+    },
+    {
+      "ticker": "ELAB",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Binding term sheet for exclusive aerospace and defense patent license represents meaningful IP acquisition that could enhance competitive positioning and future revenue potential, though commercialization timeline remains uncertain.",
+      "action_window": "next_day",
+      "headline": "PMGC's NorthStrive Defense Tech Enters Binding Term Sheet With Florida State University Research Foundation For Exclusive Aerospace And Defense Patent License",
+      "url": "https://www.benzinga.com/news/26/06/53043515/pmgcs-northstrive-defense-tech-enters-binding-term-sheet-with-florida-state-university-research-foun",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107406+00:00"
+    },
+    {
+      "ticker": "UNCY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Shelf registration for $150M secondary offering typically signals dilution concerns for existing shareholders, though provides capital runway for operations.",
+      "action_window": "next_day",
+      "headline": "Unicycive Therapeutics Files Base Prospectus For Offering Up To $150M Securities",
+      "url": "https://www.benzinga.com/news/26/06/53043494/unicycive-therapeutics-files-base-prospectus-for-offering-up-to-150m-securities",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107413+00:00"
+    },
+    {
+      "ticker": "GPCR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong Phase 2b results showing 16.2% weight loss published in prestigious journal with clear Phase 3 timeline is a significant clinical catalyst for obesity drug developer.",
+      "action_window": "next_day",
+      "headline": "Structure Therapeutics Publishes Phase 2b Aleniglipron Results In Nature Medicine, Reporting Up To 16.2% Weight Loss; Phase 3 Obesity Program On Track For Q3 2026",
+      "url": "https://www.benzinga.com/news/26/06/53043075/structure-therapeutics-publishes-phase-2b-aleniglipron-results-in-nature-medicine-reporting-up-to-16",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107421+00:00"
+    },
+    {
+      "ticker": "RSKD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $75M share buyback program signals management confidence and provides technical support, though impact depends on company market cap and execution timeline.",
+      "action_window": "next_day",
+      "headline": "Riskified Announces $75M Buyback Plan",
+      "url": "https://www.benzinga.com/news/26/06/53043280/riskified-announces-75m-buyback-plan",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107428+00:00"
+    },
+    {
+      "ticker": "QMCO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Company is cleaning up its capital structure by paying off expensive debt ($57.8M termination, canceling 10% PIK convertible notes), removing dilution risk from equity purchase agreement, which significantly improves financial flexibility and reduces debt burden.",
+      "action_window": "next_day",
+      "headline": "Quantum Pays $57.8M To Terminate Credit Agreement On June 4, 2026; Terminates Standby Equity Purchase Agreement With Yorkville Effective June 11, 2026; Cancels All Outstanding 10% PIK Senior Secured Convertible Notes Due 2028",
+      "url": "https://www.benzinga.com/news/26/06/53043270/quantum-pays-57-8m-to-terminate-credit-agreement-on-june-4-2026-terminates-standby-equity-purchase-a",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107454+00:00"
+    },
+    {
+      "ticker": "BQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 9.99M shares by selling stockholders signals dilution concerns and insider selling pressure, typically creating near-term downward price pressure.",
+      "action_window": "next_day",
+      "headline": "Boqii Files Prospectus For Offering Up To 9.99M Class A Ordinary Shares On Behalf Of Selling Stockholders",
+      "url": "https://www.benzinga.com/news/26/06/53043237/boqii-files-prospectus-for-offering-up-to-9-99m-class-a-ordinary-shares-on-behalf-of-selling-stockho",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107462+00:00"
+    },
+    {
+      "ticker": "HNRG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant federal DOE funding award of up to $27.2M (covering ~48% of total project cost) to modernize a major 1,080-MW power plant represents material positive catalyst with government backing and reduced capital burden.",
+      "action_window": "next_day",
+      "headline": "Hallador Energy Selected For Up To $27.2M DOE Funding To Modernize Indiana's 1,080-MW Merom Power Plant; Total Project Cost Is Estimated To Be ~$56.9M",
+      "url": "https://www.benzinga.com/news/26/06/53043167/hallador-energy-selected-for-up-to-27-2m-doe-funding-to-modernize-indianas-1-080-mw-merom-power-plan",
+      "source": "alpaca",
+      "added_at": "2026-06-05T20:49:45.107470+00:00"
     }
   ]
 }
