@@ -943,58 +943,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "XCUR": {
-    "ticker": "XCUR",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Exicure Q1 EPS $(0.29) Down From $0.49 YoY",
-    "added_at": "2026-05-29T22:12:57.659220+00:00",
-    "expires": "2026-06-05T22:12:57.659225+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "HTLM": {
-    "ticker": "HTLM",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Homestolife Q1 EPS $0.04 Up From $0.03 YoY, Sales $92.530M Up From $79.486M YoY",
-    "added_at": "2026-05-29T22:12:57.661306+00:00",
-    "expires": "2026-06-05T22:12:57.661311+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NTRP": {
-    "ticker": "NTRP",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "NextTrip Q4 EPS $(0.43) Up From $(0.89) YoY, Sales $1.619M Up From $83.497K YoY",
-    "added_at": "2026-05-29T22:12:57.663397+00:00",
-    "expires": "2026-06-05T22:12:57.663403+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FNGR": {
-    "ticker": "FNGR",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.8,
-    "action_window": "next_day",
-    "headline": "FingerMotion Q4 EPS $(0.03) Down From $0.00 YoY, Sales $1.230M Down From $10.241M YoY",
-    "added_at": "2026-05-29T22:12:57.665480+00:00",
-    "expires": "2026-06-05T22:12:57.665485+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "YUM": {
     "ticker": "YUM",
     "score_delta": 0.049,
