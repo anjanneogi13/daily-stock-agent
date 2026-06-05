@@ -25,18 +25,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CVE": {
-    "ticker": "CVE",
-    "score_delta": 0.194,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Canadian To Sell Its Canadian Commercial Fuels Unit For Expected Cash Proceeds Of $275M",
-    "added_at": "2026-05-06T10:13:29.871915+00:00",
-    "expires": "2026-06-05T10:13:29.871920+00:00",
-    "hard_block": false
-  },
   "OKLO": {
     "ticker": "OKLO",
     "score_delta": 0.15,
@@ -948,19 +936,6 @@
     "headline": "Virgin Galactic Stock Lifts Off After-Hours \u2014 Here's Why",
     "added_at": "2026-05-28T22:52:56.109899+00:00",
     "expires": "2026-06-11T22:52:56.109907+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DELL": {
-    "ticker": "DELL",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Dell Technologies Q1 Earnings Call Highlights",
-    "added_at": "2026-05-29T00:07:08.354509+00:00",
-    "expires": "2026-06-05T00:07:08.354514+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2244,6 +2219,58 @@
     "headline": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
     "added_at": "2026-06-05T00:01:55.492870+00:00",
     "expires": "2026-06-19T00:01:55.492878+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IOT": {
+    "ticker": "IOT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Samsara Says AI Data Center Boom Is Creating Massive Demand Across Physical Economy",
+    "added_at": "2026-06-05T11:21:20.104750+00:00",
+    "expires": "2026-06-12T11:21:20.104758+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GIII": {
+    "ticker": "GIII",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.92,
+    "action_window": "intraday",
+    "headline": "G-III Apparel Group Raises FY2027 GAAP EPS Guidance from $2.00-$2.10 to $3.85-$3.95 vs $2.10 Est",
+    "added_at": "2026-06-05T11:21:20.107408+00:00",
+    "expires": "2026-06-19T11:21:20.107414+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GORO": {
+    "ticker": "GORO",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "this_week",
+    "headline": "Gold Resource Urges Shareholders To Back Goldgroup Merger As Proxy Materials Mailed",
+    "added_at": "2026-06-05T11:21:20.111541+00:00",
+    "expires": "2026-07-05T11:21:20.111546+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ABM": {
+    "ticker": "ABM",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "ABM Indus Q2 Adj. EPS $0.90 Beats $0.87 Estimate, Sales $2.290B Beat $2.214B Estimate",
+    "added_at": "2026-06-05T11:21:20.115640+00:00",
+    "expires": "2026-06-12T11:21:20.115645+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

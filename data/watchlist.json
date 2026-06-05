@@ -1135,6 +1135,102 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53019201/keel-infrastructure-stock-slides-after-the-close-whats-happening",
       "source": "alpaca",
       "added_at": "2026-06-04T22:54:21.833896+00:00"
+    },
+    {
+      "ticker": "IOT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Samsara beat Q1 earnings and raised full-year guidance while highlighting AI data center tailwinds, though premarket dip suggests initial price-in creating potential entry opportunity.",
+      "action_window": "intraday",
+      "headline": "Samsara Says AI Data Center Boom Is Creating Massive Demand Across Physical Economy",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/53023489/samsara-says-ai-data-center-boom-is-creating-massive-demand-across-physical-economy",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118606+00:00"
+    },
+    {
+      "ticker": "TCNNF",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Uplisting from CSE to NYSE significantly increases liquidity, institutional accessibility, and visibility for cannabis stocks, typically driving short-term price appreciation.",
+      "action_window": "intraday",
+      "headline": "Trulieve Cannabis Announces Uplisting to NYSE, Effective June 10; Will Trade Under Symbol 'TRLV'",
+      "url": "https://www.benzinga.com/news/26/06/53023510/trulieve-cannabis-announces-uplisting-to-nyse-effective-june-10-will-trade-under-symbol-trlv",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118619+00:00"
+    },
+    {
+      "ticker": "GIII",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "G-III raised FY2027 GAAP EPS guidance by 83-88% (from $2.00-$2.10 to $3.85-$3.95), nearly doubling consensus estimate of $2.10, representing a massive positive surprise.",
+      "action_window": "intraday",
+      "headline": "G-III Apparel Group Raises FY2027 GAAP EPS Guidance from $2.00-$2.10 to $3.85-$3.95 vs $2.10 Est",
+      "url": "https://www.benzinga.com/news/26/06/53023445/g-iii-apparel-group-raises-fy2027-gaap-eps-guidance-from-2-00-2-10-to-3-85-3-95-vs-2-10-est",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118628+00:00"
+    },
+    {
+      "ticker": "CLYM",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Phase 1 safety data presentation for lead antibody candidate is positive clinical progress but lacks definitive results until actual congress presentation.",
+      "action_window": "this_week",
+      "headline": "Climb Bio To Present Translational Pharmacometric Modeling And Initial Phase 1 Safety Data For CLYM116, Anti-APRIL Monoclonal Antibody, At ERA Congress 2026",
+      "url": "https://www.benzinga.com/news/26/06/53023444/climb-bio-to-present-translational-pharmacometric-modeling-and-initial-phase-1-safety-data-for-clym1",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118636+00:00"
+    },
+    {
+      "ticker": "GORO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Gold Resource actively urging shareholders to approve merger with Goldgroup indicates deal progression and likely shareholder value creation, making GORO a definitive M&A target with increased probability of deal completion.",
+      "action_window": "this_week",
+      "headline": "Gold Resource Urges Shareholders To Back Goldgroup Merger As Proxy Materials Mailed",
+      "url": "https://www.benzinga.com/m-a/26/06/53023400/gold-resource-urges-shareholders-to-back-goldgroup-merger-as-proxy-materials-mailed",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118652+00:00"
+    },
+    {
+      "ticker": "MCRB",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Nestle paying $25M upfront to restructure milestone obligations strengthens balance sheet immediately and provides near-term cash certainty for biotech operations.",
+      "action_window": "intraday",
+      "headline": "Seres Therapeutics Announces Balance Sheet Transactions; Nestle To Pay Company $25 M In Two Installments To Buy Out Sales Milestone Payments",
+      "url": "https://www.benzinga.com/news/26/06/53023390/seres-therapeutics-announces-balance-sheet-transactions-nestle-to-pay-company-25-m-in-two-installmen",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118660+00:00"
+    },
+    {
+      "ticker": "SNY",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Multi-year AI collaboration for drug development signals strategic innovation commitment, but undisclosed deal terms and long timeline limit immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "Owkin Announces Multi-year Collaboration With Sanofi To Co-Develop Next-generation Biopharma Agents, To Be Backed By Five-year License For K Pro AI Scientist, Deal Terms Were Not Disclosed",
+      "url": "https://www.benzinga.com/quote/SNY",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118673+00:00"
+    },
+    {
+      "ticker": "ABM",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "ABM Industries beat both EPS and revenue estimates with EPS exceeding by 3.4% and sales beating by 3.4%, representing a solid dual beat that typically drives positive intraday momentum.",
+      "action_window": "intraday",
+      "headline": "ABM Indus Q2 Adj. EPS $0.90 Beats $0.87 Estimate, Sales $2.290B Beat $2.214B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53023332/abm-indus-q2-adj-eps-0-90-beats-0-87-estimate-sales-2-290b-beat-2-214b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-05T11:21:20.118680+00:00"
     }
   ]
 }
