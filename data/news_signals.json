@@ -2233,5 +2233,18 @@
     "expires": "2026-06-11T22:54:21.830910+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "MRVL": {
+    "ticker": "MRVL",
+    "score_delta": -0.096,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
+    "added_at": "2026-06-05T00:01:55.492870+00:00",
+    "expires": "2026-06-19T00:01:55.492878+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

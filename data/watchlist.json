@@ -763,16 +763,16 @@
     },
     {
       "ticker": "QNT",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "IPO opening 11.7% above pricing at $67 versus $60 indicates strong institutional demand and positive market reception for the newly public quantum computing company.",
+      "rationale": "Strong IPO debut with 13.3% pop above offering price signals robust investor demand and successful market entry for quantum computing company.",
       "action_window": "intraday",
-      "headline": "Quantinuum Shares Indicated To Open At $67/Share On 2.7M Shares; IPO Priced At $60/Share On 28M Shares",
-      "url": "https://www.benzinga.com/quote/QNT",
+      "headline": "Quantinuum shares soar in Nasdaq debut with valuation topping $17.6 billion",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/quantinuum-shares-soar-nasdaq-debut-181816466.html?.tsrc=rss",
       "source": "alpaca",
       "added_at": "2026-06-04T14:15:23.268690+00:00",
-      "updated_at": "2026-06-04T17:29:11.356666+00:00"
+      "updated_at": "2026-06-05T00:01:55.501815+00:00"
     },
     {
       "ticker": "DG",
@@ -800,15 +800,16 @@
     },
     {
       "ticker": "AMRN",
-      "tradeable_score": 0.85,
+      "tradeable_score": 0.88,
       "sentiment": "bearish",
       "category": "lawsuit",
-      "rationale": "Supreme Court ruling against Amarin on patent infringement eliminates patent protection, allowing generic competition from Hikma which will significantly erode revenue and market exclusivity.",
+      "rationale": "Supreme Court ruling against Amarin in patent case represents a major legal defeat that likely eliminates key intellectual property protection and opens the door to generic competition.",
       "action_window": "intraday",
-      "headline": "U.S. Supreme Court Rules In Favor Of Hikma Pharmaceuticals V Amarin Pharmaceuticals Over Patent Infringement Claims By Amarin",
-      "url": "https://www.benzinga.com/news/26/06/53001991/u-s-supreme-court-rules-in-favor-of-hikma-pharmaceuticals-v-amarin-pharmaceuticals-over-patent-infri",
+      "headline": "Update: Supreme Court Rules Against Amarin in 'Skinny Label' Patent Case",
+      "url": "https://finance.yahoo.com/sectors/healthcare/articles/supreme-court-rules-against-amarin-172550336.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-06-04T14:15:23.268710+00:00"
+      "added_at": "2026-06-04T14:15:23.268710+00:00",
+      "updated_at": "2026-06-05T00:01:55.501840+00:00"
     },
     {
       "ticker": "NXL",
