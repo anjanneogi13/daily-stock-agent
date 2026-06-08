@@ -1201,19 +1201,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "EC": {
-    "ticker": "EC",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Citigroup Downgrades Ecopetrol to Neutral, Raises Price Target to $18",
-    "added_at": "2026-06-03T20:55:45.276306+00:00",
-    "expires": "2026-06-08T20:55:45.276312+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VEEV": {
     "ticker": "VEEV",
     "score_delta": 0.093,
@@ -2148,14 +2135,14 @@
   },
   "AAPL": {
     "ticker": "AAPL",
-    "score_delta": 0.018,
+    "score_delta": 0.041,
     "catalyst": "product_launch",
-    "sentiment": "bearish",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "Apple Stock Is Sliding Today: What's Going On?",
-    "added_at": "2026-06-08T19:18:19.939706+00:00",
-    "expires": "2026-06-15T19:18:19.939713+00:00",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "this_week",
+    "headline": "Apple Introduces New AI Integration APIs And Expanded Agentic Coding Tools In Xcode 27, Enhancing App Development With Advanced Intelligence Capabilities And Platform Improvements",
+    "added_at": "2026-06-08T21:24:00.901968+00:00",
+    "expires": "2026-06-15T21:24:00.901978+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2182,6 +2169,45 @@
     "headline": "Jefferies Maintains Buy on Nurix Therapeutics, Raises Price Target to $45",
     "added_at": "2026-06-08T19:18:19.946026+00:00",
     "expires": "2026-06-13T19:18:19.946031+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KPLT": {
+    "ticker": "KPLT",
+    "score_delta": -0.097,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Katapult Holdings Settles Patent Infringement Lawsuit With Flexshopper, Secures Royalty-Free License To Key Patents In Exchange For Lump-Sum Payment And Mutual Release of Claims",
+    "added_at": "2026-06-08T21:24:00.904260+00:00",
+    "expires": "2026-06-22T21:24:00.904267+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HLIT": {
+    "ticker": "HLIT",
+    "score_delta": 0.1,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Harmonic Confirms $145M Sale Of Video Business To MediaKind Remains On Track To Close In Q2 2026,",
+    "added_at": "2026-06-08T21:24:00.906098+00:00",
+    "expires": "2026-07-08T21:24:00.906103+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MTN": {
+    "ticker": "MTN",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Vail Resorts Stock Sinks After Q3 Impacted By 'Extremely Unfavorable' Weather",
+    "added_at": "2026-06-08T21:24:00.907909+00:00",
+    "expires": "2026-06-15T21:24:00.907915+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
