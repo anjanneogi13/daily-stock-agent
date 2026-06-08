@@ -1,90 +1,6 @@
 {
   "items": [
     {
-      "ticker": "TTAN",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q1 earnings and revenue beat combined with raised full-year outlook, bullish technicals, and analyst price target increases creates multiple positive catalysts with immediate trading opportunity.",
-      "action_window": "intraday",
-      "headline": "ServiceTitan Rallies On Strong Q1 Results And Outlook",
-      "url": "https://www.benzinga.com/markets/earnings/26/06/53034812/servicetitan-rallies-on-strong-q1-results-and-outlook",
-      "source": "alpaca",
-      "added_at": "2026-06-05T17:00:03.595103+00:00"
-    },
-    {
-      "ticker": "ARKX",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "S&P ruling out SpaceX index inclusion eliminates expected passive fund inflows catalyst, triggering immediate sector-wide selloff in space stocks.",
-      "action_window": "intraday",
-      "headline": "Space Stocks Crash After S&P Kills SpaceX Index Catalyst",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53034731/space-stocks-crash-after-sp-kills-spacex-index-catalyst",
-      "source": "alpaca",
-      "added_at": "2026-06-05T17:00:03.595117+00:00"
-    },
-    {
-      "ticker": "NBIS",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Stock declining due to dual headwinds of massive insider selling by a director and broader hawkish macro environment from hot jobs report, creating near-term selling pressure.",
-      "action_window": "intraday",
-      "headline": "Why Is Nebius Stock Falling On Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53039876/why-is-nebius-stock-falling-on-friday",
-      "source": "alpaca",
-      "added_at": "2026-06-05T18:59:46.892265+00:00"
-    },
-    {
-      "ticker": "AEMD",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Government funding for Ebola response creates direct revenue opportunity for diagnostics and medical device companies specializing in infectious disease detection and treatment.",
-      "action_window": "next_day",
-      "headline": "U.S. State Dept Announces Nearly $38M In Additional Funding Toward The Department's Ongoing Ebola Response Efforts",
-      "url": "https://www.benzinga.com/general/biotech/26/06/53039143/u-s-state-dept-announces-nearly-38m-in-additional-funding-toward-the-departments-ongoing-ebola-re",
-      "source": "alpaca",
-      "added_at": "2026-06-05T18:59:46.892283+00:00"
-    },
-    {
-      "ticker": "PSKY",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Multi-state antitrust lawsuit to block major M&A transaction creates significant regulatory risk and deal uncertainty, prompting immediate market reaction.",
-      "action_window": "intraday",
-      "headline": "Paramount Skydance shares are trading lower after reports suggesting that multiple U.S. states are planning to file a lawsuit to block the company's acquisition of Warner Bros",
-      "url": "https://www.benzinga.com/quote/PSKY",
-      "source": "alpaca",
-      "added_at": "2026-06-05T18:59:46.892290+00:00"
-    },
-    {
-      "ticker": "STTK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Citigroup upgrade to Buy from a lower rating with $7 price target represents a meaningful catalyst from a major bulge bracket bank that typically drives institutional buying interest.",
-      "action_window": "next_day",
-      "headline": "Citigroup Upgrades Shattuck Labs to Buy, Announces $7 Price Target",
-      "url": "https://www.benzinga.com/news/26/06/53038694/citigroup-upgrades-shattuck-labs-to-buy-announces-7-price-target",
-      "source": "alpaca",
-      "added_at": "2026-06-05T18:59:46.892304+00:00"
-    },
-    {
-      "ticker": "MSTR",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Significant crypto sell-off with Bitcoin dropping to $60k and altcoins down up to 9% creates immediate bearish pressure on crypto-exposed equities like MicroStrategy.",
-      "action_window": "intraday",
-      "headline": "Bitcoin Taps $60,000, Ethereum, XRP Fall Up To 9% In Painful Crypto Sell-Off",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53038636/bitcoin-taps-60000-ethereum-xrp-fall-up-to-9-in-painful-crypto-sell-off",
-      "source": "alpaca",
-      "added_at": "2026-06-05T18:59:46.892311+00:00"
-    },
-    {
       "ticker": "FBYD",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -528,6 +444,54 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/06/53064784/biogens-base-is-declining-but-8-pipeline-readouts-could-flip-the-story",
       "source": "alpaca",
       "added_at": "2026-06-08T16:35:37.583092+00:00"
+    },
+    {
+      "ticker": "LLY",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Phase 3 data showing Foundayo outperformed oral semaglutide across all primary and secondary endpoints represents a significant competitive advantage in the lucrative Type 2 diabetes market.",
+      "action_window": "intraday",
+      "headline": "Eli Lilly Announces Data From Three Phase 3 Studies Of Foundayo In ACHIEVE Program Surpasses Oral Semaglutide Throughout Primary, Secondary Endpoints In Adults With Type 2 Diabetes",
+      "url": "https://www.benzinga.com/news/26/06/53070416/eli-lilly-announces-data-from-three-phase-3-studies-of-foundayo-in-achieve-program-surpasses-oral-se",
+      "source": "alpaca",
+      "added_at": "2026-06-08T19:18:19.948817+00:00"
+    },
+    {
+      "ticker": "AAL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Industry-wide fuel cost crisis threatening profitability across airlines with route cuts and margin compression through 2026, representing a significant structural headwind but timeline extends beyond immediate trading catalysts.",
+      "action_window": "this_week",
+      "headline": "A $100 Billion Fuel-Price Shock Is Pushing Airlines Back Into Crisis Mode",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/53070008/airlines-100-billion-fuel-price-shock-crisis-mode",
+      "source": "alpaca",
+      "added_at": "2026-06-08T19:18:19.948830+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Capital raise announcement causing dilution concerns and immediate stock decline, though increased AI spending signals long-term growth investment.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Alphabet Stock?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53069860/whats-going-on-with-dip-in-alphabet-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-08T19:18:19.948838+00:00"
+    },
+    {
+      "ticker": "DXCM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive clinical trial results (CONNECT) demonstrating efficacy in Type 2 diabetes expand market opportunity and validate product differentiation, creating meaningful upside catalyst.",
+      "action_window": "next_day",
+      "headline": "Clinical Wins Boost Dexcom Growth Story In Type 2 Diabetes",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53069798/clinical-wins-boost-dexcom-growth-story-in-type-2-diabetes",
+      "source": "alpaca",
+      "added_at": "2026-06-08T19:18:19.948844+00:00"
     }
   ]
 }

@@ -360,19 +360,6 @@
     "expires": "2026-12-01T19:38:17.754881+00:00",
     "hard_block": true
   },
-  "PL": {
-    "ticker": "PL",
-    "score_delta": 0.089,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.62,
-    "action_window": "next_day",
-    "headline": "Is Planet Labs Moving Closer to Sustainable Profitability?",
-    "added_at": "2026-05-25T17:03:35.820415+00:00",
-    "expires": "2026-06-08T17:03:35.820420+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LRHC": {
     "ticker": "LRHC",
     "score_delta": 0.071,
@@ -889,19 +876,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "MCHP": {
-    "ticker": "MCHP",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "AI Infrastructure Investing Goes Deeper: New Leveraged Semiconductor ETFs Tied To Microchip, NXP, ON Semi Hits The Market",
-    "added_at": "2026-06-01T19:10:40.928931+00:00",
-    "expires": "2026-06-08T19:10:40.928938+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GLSI": {
     "ticker": "GLSI",
     "score_delta": -0.1,
@@ -1188,84 +1162,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ADGM": {
-    "ticker": "ADGM",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "LUCID CAPITAL MARKETS Initiates Coverage On Adagio Medical Holdings with Buy Rating, Announces Price Target of $3",
-    "added_at": "2026-06-03T17:59:26.111746+00:00",
-    "expires": "2026-06-08T17:59:26.111751+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PM": {
-    "ticker": "PM",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Philip Morris Intl, Raises Price Target to $200",
-    "added_at": "2026-06-03T17:59:26.113609+00:00",
-    "expires": "2026-06-08T17:59:26.113615+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MBOT": {
-    "ticker": "MBOT",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "LUCID CAPITAL MARKETS Initiates Coverage On Microbot Medical with Buy Rating, Announces Price Target of $4",
-    "added_at": "2026-06-03T17:59:26.115496+00:00",
-    "expires": "2026-06-08T17:59:26.115501+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SSII": {
-    "ticker": "SSII",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "LUCID CAPITAL MARKETS Initiates Coverage On SS Innovations Intl with Buy Rating, Announces Price Target of $7",
-    "added_at": "2026-06-03T17:59:26.117359+00:00",
-    "expires": "2026-06-08T17:59:26.117364+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FDX": {
-    "ticker": "FDX",
-    "score_delta": -0.03,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Morgan Stanley Maintains Underweight on FedEx, Lowers Price Target to $160",
-    "added_at": "2026-06-03T17:59:26.119216+00:00",
-    "expires": "2026-06-08T17:59:26.119221+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PANW": {
-    "ticker": "PANW",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Palo Alto Networks, Raises Price Target to $320",
-    "added_at": "2026-06-03T17:59:26.122987+00:00",
-    "expires": "2026-06-08T17:59:26.122992+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WAT": {
     "ticker": "WAT",
     "score_delta": 0.049,
@@ -1276,19 +1172,6 @@
     "headline": "Waters Announces Launch Of Reserve-Phased Drug Production Platform To Separate Impurities In GLP-1 Peptides, Insulin, And Lipid Nanoparticles",
     "added_at": "2026-06-08T12:25:24.403940+00:00",
     "expires": "2026-06-15T12:25:24.403945+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TMO": {
-    "ticker": "TMO",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "HSBC Downgrades Thermo Fisher Scientific to Hold, Lowers Price Target to $540",
-    "added_at": "2026-06-03T17:59:26.126757+00:00",
-    "expires": "2026-06-08T17:59:26.126762+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2260,6 +2143,45 @@
     "headline": "Biogen's Base Is Declining \u2014 But 8 Pipeline Readouts Could Flip The Story",
     "added_at": "2026-06-08T16:35:37.580199+00:00",
     "expires": "2026-06-13T16:35:37.580205+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AAPL": {
+    "ticker": "AAPL",
+    "score_delta": 0.018,
+    "catalyst": "product_launch",
+    "sentiment": "bearish",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "Apple Stock Is Sliding Today: What's Going On?",
+    "added_at": "2026-06-08T19:18:19.939706+00:00",
+    "expires": "2026-06-15T19:18:19.939713+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KKR": {
+    "ticker": "KKR",
+    "score_delta": 0.018,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "'Nestle's Longtime PE Partner Drops Out of Bidding for Perrier' - Bloomberg",
+    "added_at": "2026-06-08T19:18:19.944085+00:00",
+    "expires": "2026-06-22T19:18:19.944091+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NRIX": {
+    "ticker": "NRIX",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Jefferies Maintains Buy on Nurix Therapeutics, Raises Price Target to $45",
+    "added_at": "2026-06-08T19:18:19.946026+00:00",
+    "expires": "2026-06-13T19:18:19.946031+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
