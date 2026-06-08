@@ -876,19 +876,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "GLSI": {
-    "ticker": "GLSI",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Greenwich LifeSciences Q4 EPS $(0.58) Misses $(0.31) Estimate",
-    "added_at": "2026-06-01T22:21:16.553633+00:00",
-    "expires": "2026-06-08T22:21:16.553638+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TLN": {
     "ticker": "TLN",
     "score_delta": 0.05,
@@ -899,19 +886,6 @@
     "headline": "Talen Energy Obtains Regulatory Clearances For Lawrenceburg, Waterford And Darby Acquisition",
     "added_at": "2026-06-01T22:21:16.555606+00:00",
     "expires": "2026-06-15T22:21:16.555614+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FRHC": {
-    "ticker": "FRHC",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.92,
-    "action_window": "next_day",
-    "headline": "Freedom Holding Q4 EPS $0.13 Up From $(2.50) YoY, Sales $503.140M Up From $298.439M YoY",
-    "added_at": "2026-06-01T22:21:16.557587+00:00",
-    "expires": "2026-06-08T22:21:16.557592+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
