@@ -506,6 +506,42 @@
       "url": "https://www.benzinga.com/government/26/06/53084839/longeveron-granted-small-or-medium-sized-enterprise-status-by-european-medicines-agency",
       "source": "alpaca",
       "added_at": "2026-06-09T13:41:32.856492+00:00"
+    },
+    {
+      "ticker": "TRUMPUSD",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Major investigative report revealing $2.3B in Trump family crypto profits while investors lost equivalent amounts creates significant reputational and regulatory risk for associated crypto ventures.",
+      "action_window": "intraday",
+      "headline": "Trump Family Reportedly Made $2.3 Billion From Crypto Ventures",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53093946/trump-family-reportedly-made-2-3-billion-from-crypto-ventures",
+      "source": "alpaca",
+      "added_at": "2026-06-09T16:29:24.190248+00:00"
+    },
+    {
+      "ticker": "SNDK",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple price target hikes from major banks (Cantor and BofA) driving intraday outperformance represents a meaningful catalyst with confirmation from institutional analysts.",
+      "action_window": "intraday",
+      "headline": "Why Is SanDisk Stock Gaining Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53093670/why-is-sandisk-stock-gaining-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-06-09T16:29:24.190259+00:00"
+    },
+    {
+      "ticker": "VECO",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Follow-on order for NSA500 indicates customer validation and revenue momentum, supported by positive chip-sector tailwinds, though specifics on order size are limited.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Veeco Instruments Stock On Tuesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/06/53093386/whats-going-on-with-veeco-instruments-stock-on-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-06-09T16:29:24.190267+00:00"
     }
   ]
 }

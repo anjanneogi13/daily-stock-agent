@@ -386,19 +386,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "COSM": {
-    "ticker": "COSM",
-    "score_delta": 0.083,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "CORRECTION: Cosmos Health Expects To Report Over $90M In FY26; Anticipates Adjusted EPS Of $0.73, $200.6M In Revenue By 2029",
-    "added_at": "2026-05-26T14:14:14.202151+00:00",
-    "expires": "2026-06-09T14:14:14.202170+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "JD": {
     "ticker": "JD",
     "score_delta": 0.032,
@@ -1289,19 +1276,6 @@
     "headline": "Nexalin Technology Announces New U.S. Patent Covering Dynamic Frequency Deep-Brain Neurostimulation For Anxiety, Depression, And Insomnia Treatment",
     "added_at": "2026-06-04T14:15:23.259804+00:00",
     "expires": "2026-06-11T14:15:23.259809+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RADX": {
-    "ticker": "RADX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "This HC Wainwright & Co. Analyst Begins Coverage On A Bullish Note; Here Are Top 2 Initiations For Thursday",
-    "added_at": "2026-06-04T14:15:23.263827+00:00",
-    "expires": "2026-06-09T14:15:23.263832+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2299,6 +2273,32 @@
     "headline": "Wedbush Downgrades Nuvalent to Neutral, Lowers Price Target to $124",
     "added_at": "2026-06-09T13:41:32.853826+00:00",
     "expires": "2026-06-14T13:41:32.853831+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNDK": {
+    "ticker": "SNDK",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Why Is SanDisk Stock Gaining Tuesday?",
+    "added_at": "2026-06-09T16:29:24.181212+00:00",
+    "expires": "2026-06-14T16:29:24.181220+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VECO": {
+    "ticker": "VECO",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "What's Going On With Veeco Instruments Stock On Tuesday?",
+    "added_at": "2026-06-09T16:29:24.185650+00:00",
+    "expires": "2026-06-16T16:29:24.185656+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
