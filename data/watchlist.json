@@ -711,6 +711,91 @@
       "url": "https://www.benzinga.com/news/26/06/53102876/citigroup-cfo-gonzalo-luchetti-expects-trading-revenue-to-rise-between-high-single-or-low-double-dig",
       "source": "alpaca",
       "added_at": "2026-06-09T20:31:13.428720+00:00"
+    },
+    {
+      "ticker": "TSX:RAY",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q4 earnings beat with adjusted EPS up 14.8% YoY and revenue up 43.5% YoY, indicating significant growth acceleration.",
+      "action_window": "next_day",
+      "headline": "Stingray Group Q4 Adj. EPS $0.31 Up From $0.27 YoY, Sales $137.825M Up From $96.008M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53105390/stingray-group-q4-adj-eps-0-31-up-from-0-27-yoy-sales-137-825m-up-from-96-008m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.552945+00:00"
+    },
+    {
+      "ticker": "SMCI",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $7B financing to fund AI server component purchases signals strong near-term demand and order backlog, though dilution concerns may temper enthusiasm.",
+      "action_window": "next_day",
+      "headline": "Super Micro Announces $7B Equity And Convertible Financing To Fund The Purchase Of Components To Satisfy The AI Orders That The Company Has Received In Recent Weeks For Its Advanced AI Servers",
+      "url": "https://www.benzinga.com/news/26/06/53104892/super-micro-announces-7b-equity-and-convertible-financing-to-fund-the-purchase-of-components-to-sati",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.552965+00:00",
+      "updated_at": "2026-06-09T22:09:26.552995+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "U.S. military strikes against Iran represent major geopolitical escalation with immediate risk-off implications for equities and flight to safe havens, while boosting oil prices significantly.",
+      "action_window": "intraday",
+      "headline": "U.S. Central Command Posts On X 'U.S. Central Command (CENTCOM) forces began launching self-defense strikes against Iran at 5 p.m. ET today at the Commander in Chief's direction, in response to yesterday's downing of a U.S. Army Apache helicopter. The mission is a proportional response to unjustifie",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53105196/u-s-central-command-posts-on-x-u-s-central-command-centcom-forces-began-launching",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.552974+00:00"
+    },
+    {
+      "ticker": "GEO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $70B immigration enforcement funding bill passage directly benefits private prison operators CXW and GEO through increased detention facility demand and government contracts.",
+      "action_window": "next_day",
+      "headline": "U.S. House Of Representatives Passes $70B Immigration Enforcement Funding Bill",
+      "url": "https://www.benzinga.com/quote/SPY",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.552980+00:00"
+    },
+    {
+      "ticker": "APLD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $1.59B debt financing successfully priced to fund high-demand AI data center construction and refinance existing debt, demonstrating strong capital access and growth execution in hot AI infrastructure space.",
+      "action_window": "next_day",
+      "headline": "Applied Digital Prices $1.59B 7.00% Senior Secured Notes Due 2031 To Fund AI Data Center Construction And Refinance Bridge Facility",
+      "url": "https://www.benzinga.com/news/26/06/53105065/applied-digital-prices-1-59b-7-00-senior-secured-notes-due-2031-to-fund-ai-data-center-construction",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.552986+00:00"
+    },
+    {
+      "ticker": "BA",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Expected FAA certification of 737 Max 10 this year signals regulatory progress for Boeing's key narrow-body aircraft, removing a significant operational overhang, though timeline remains uncertain.",
+      "action_window": "next_day",
+      "headline": "'Brazil Aviation Regulator ANAC Expects U.S. FAA To Certify Boeing 737 Max 10 This Year, Will Work To Validate It Quickly; Seeks U.S., Canada, Europe Cooperation To Harmonize Global EVTOL Rules' - Reuters",
+      "url": "https://www.benzinga.com/news/26/06/53104806/brazil-aviation-regulator-anac-expects-u-s-faa-to-certify-boeing-737-max-10-this-year-will-work-to-v",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.553002+00:00"
+    },
+    {
+      "ticker": "DTOL",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS missed estimates by 57% ($0.03 vs $0.07 expected) despite modest revenue beat of 1.6%, indicating margin compression and profitability concerns that typically drive negative trading.",
+      "action_window": "intraday",
+      "headline": "D2L Q1 EPS $0.03 Misses $0.07 Estimate, Sales $57.130M Beat $56.225M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53104798/d2l-q1-eps-0-03-misses-0-07-estimate-sales-57-130m-beat-56-225m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-09T22:09:26.553009+00:00"
     }
   ]
 }
