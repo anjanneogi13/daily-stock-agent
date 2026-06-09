@@ -257,15 +257,16 @@
     },
     {
       "ticker": "AAPL",
-      "tradeable_score": 0.58,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
       "category": "product_launch",
-      "rationale": "Significant developer tool enhancement with AI integration strengthens Apple's platform ecosystem and competitive positioning in the AI race, though impact is medium-term rather than immediate revenue driver.",
+      "rationale": "OpenAI IPO filing is a major AI sector catalyst that would positively impact big tech companies with OpenAI investments/partnerships (Microsoft notably absent from tickers) and drive AI enthusiasm across mentioned mega-caps.",
       "action_window": "this_week",
-      "headline": "Apple Introduces New AI Integration APIs And Expanded Agentic Coding Tools In Xcode 27, Enhancing App Development With Advanced Intelligence Capabilities And Platform Improvements",
-      "url": "https://www.benzinga.com/news/26/06/53075311/apple-introduces-new-ai-integration-apis-and-expanded-agentic-coding-tools-in-xcode-27-enhancing-app",
+      "headline": "OpenAI Files For IPO as Markets Await CPI Data",
+      "url": "https://www.benzinga.com/Opinion/26/06/53103164/exclusive-pick-unexpected-hedge-fund-trade-impacting-sats-ahead-of-the-spacex-ipo",
       "source": "alpaca",
-      "added_at": "2026-06-08T21:24:00.910407+00:00"
+      "added_at": "2026-06-08T21:24:00.910407+00:00",
+      "updated_at": "2026-06-09T20:31:13.428649+00:00"
     },
     {
       "ticker": "KPLT",
@@ -614,6 +615,102 @@
       "url": "https://www.benzinga.com/insights/options/26/06/53097697/6-financials-stocks-with-whale-alerts-in-todays-session",
       "source": "alpaca",
       "added_at": "2026-06-09T18:31:33.647380+00:00"
+    },
+    {
+      "ticker": "SUJA",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company's FY2026 sales guidance midpoint of $369M falls 0.8% below analyst estimates of $371.8M, signaling a meaningful revenue miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Suja Life Sees FY2026 Sales $367.000M-$371.000M vs $371.800M Est",
+      "url": "https://www.benzinga.com/news/26/06/53103357/suja-life-sees-fy2026-sales-367-000m-371-000m-vs-371-800m-est",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428661+00:00"
+    },
+    {
+      "ticker": "CME",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New crypto futures product launch expands CME's addressable market and revenue streams in the growing digital asset space, though impact is incremental to existing crypto offerings.",
+      "action_window": "next_day",
+      "headline": "CME Rolls Out Nasdaq CME Crypto Index Futures",
+      "url": "https://www.benzinga.com/news/26/06/53103291/cme-rolls-out-nasdaq-cme-crypto-index-futures",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428669+00:00"
+    },
+    {
+      "ticker": "BARK",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Q1 sales guidance of $77-79M dramatically misses analyst expectations of $105.98M by approximately 27%, indicating severe operational challenges.",
+      "action_window": "intraday",
+      "headline": "BARK Sees Q1 Sales $77.000M-$79.000M vs $105.980M Est",
+      "url": "https://www.benzinga.com/news/26/06/53103277/bark-sees-q1-sales-77-000m-79-000m-vs-105-980m-est",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428679+00:00"
+    },
+    {
+      "ticker": "STTK",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Common stock offerings typically cause immediate dilution concerns and selling pressure, especially with undisclosed terms suggesting potential urgency or unfavorable pricing.",
+      "action_window": "intraday",
+      "headline": "Shattuck Labs Commences Common Stock Offering; Terms Undisclosed",
+      "url": "https://www.benzinga.com/news/26/06/53103218/shattuck-labs-commences-common-stock-offering-terms-undisclosed",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428689+00:00"
+    },
+    {
+      "ticker": "SKIL",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Skillsoft's FY2027 sales guidance of $388M-$406M represents a massive 20-23% miss versus analyst consensus of $503M, signaling severe business deterioration.",
+      "action_window": "intraday",
+      "headline": "Skillsoft Sees FY2027 Sales $388.000M-$406.000M vs $503.198M Est",
+      "url": "https://www.benzinga.com/news/26/06/53103048/skillsoft-sees-fy2027-sales-388-000m-406-000m-vs-503-198m-est",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428698+00:00"
+    },
+    {
+      "ticker": "VRME",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Amendment to include additional share issuances in diluted share count increases potential shareholder dilution in the Open World merger, typically negative for existing shareholders.",
+      "action_window": "next_day",
+      "headline": "VerifyMe Amends Open World Merger Agreement To Include Additional Potential Share Issuances In Fully Diluted Share Count Calculation",
+      "url": "https://www.benzinga.com/news/26/06/53103001/verifyme-amends-open-world-merger-agreement-to-include-additional-potential-share-issuances-in-fully",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428703+00:00"
+    },
+    {
+      "ticker": "HNGE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raises both Q2 and FY26 revenue guidance with strong 40-45% growth rates at midpoint, indicating robust business momentum and operational execution.",
+      "action_window": "intraday",
+      "headline": "Hinge Health Raises Q2 Revenue Range To $200M - $202M, Up 45% At Midpoint; Raises FY26 Revenue Range $818M - $824M, Up 40% At Midpoint",
+      "url": "https://www.benzinga.com/news/26/06/53102887/hinge-health-raises-q2-revenue-range-to-200m-202m-up-45-at-midpoint-raises-fy26-revenue-range-818m-8",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428715+00:00"
+    },
+    {
+      "ticker": "C",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "CFO providing specific positive Q2 revenue guidance for both trading (high single/low double digit growth) and investment banking (mid-teen growth) represents a meaningful upward catalyst during the quarter.",
+      "action_window": "intraday",
+      "headline": "Citigroup CFO Gonzalo Luchetti Expects Trading Revenue To Rise Between High Single Or Low Double Digits In Q2; Expects Investment Banking Revenue To Rise By Mid Teen Percentage In Q2",
+      "url": "https://www.benzinga.com/news/26/06/53102876/citigroup-cfo-gonzalo-luchetti-expects-trading-revenue-to-rise-between-high-single-or-low-double-dig",
+      "source": "alpaca",
+      "added_at": "2026-06-09T20:31:13.428720+00:00"
     }
   ]
 }
