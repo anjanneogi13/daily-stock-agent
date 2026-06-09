@@ -796,6 +796,66 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/53104798/d2l-q1-eps-0-03-misses-0-07-estimate-sales-57-130m-beat-56-225m-estimate",
       "source": "alpaca",
       "added_at": "2026-06-09T22:09:26.553009+00:00"
+    },
+    {
+      "ticker": "FNMA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Presidential appointment of William Pulte to dual roles including continuing as FHFA Chairman signals potential policy continuity and influence over Fannie Mae/Freddie Mac operations, which could accelerate GSE reform efforts.",
+      "action_window": "next_day",
+      "headline": "President Trump Posts On Truth Social \"William Pulte, who is working closely with Tulsi Gabbard, will be taking over as Acting Director of National Intelligence on Friday, June 19th. He will remain as Director of the Federal Housing Finance Agency, and Chairman of Fannie Mae/Freddie Mac. ...\"",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53105584/president-trump-posts-on-truth-social-william-pulte-who-is-working-closely-with-t",
+      "source": "alpaca",
+      "added_at": "2026-06-09T23:51:00.682058+00:00"
+    },
+    {
+      "ticker": "OCCI",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with adjusted EPS 37% below estimate ($0.19 vs $0.30) and revenue 18% below estimate ($9.202M vs $11.160M), likely to trigger sharp selloff in next session.",
+      "action_window": "next_day",
+      "headline": "OFS Credit Co Q2 Adj. EPS $0.19 Misses $0.30 Estimate, Sales $9.202M Miss $11.160M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53105538/ofs-credit-co-q2-adj-eps-0-19-misses-0-30-estimate-sales-9-202m-miss-11-160m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-09T23:51:00.682070+00:00"
+    },
+    {
+      "ticker": "LMT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Military strikes against Iran represent a confirmed geopolitical catalyst that historically drives immediate demand expectations for defense contractors, with after-hours movement already confirming market reaction.",
+      "action_window": "next_day",
+      "headline": "U.S. Launches Retaliatory Strikes Against Iran \u2014 Defense Stocks, ETFs On Watch",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53105537/u-s-launches-retaliatory-strikes-against-iran-defense-stocks-etfs-on-watch",
+      "source": "alpaca",
+      "added_at": "2026-06-09T23:51:00.682077+00:00"
+    },
+    {
+      "ticker": "WRB",
+      "tradeable_score": 0.62,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Death of founder and executive chairman creates leadership uncertainty and potential governance concerns that typically trigger short-term selling pressure in insurance stocks.",
+      "action_window": "next_day",
+      "headline": "W. R. Berkley Founder And Executive Chairman William R. Berkley Dies At Age 80",
+      "url": "https://www.benzinga.com/news/26/06/53105512/w-r-berkley-founder-and-executive-chairman-william-r-berkley-dies-at-age-80",
+      "source": "alpaca",
+      "added_at": "2026-06-09T23:51:00.682084+00:00"
+    },
+    {
+      "ticker": "BCTX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q3 EPS loss of $0.99 represents a massive 94% improvement from prior year loss of $16.40, indicating significant operational progress for this biotech company.",
+      "action_window": "next_day",
+      "headline": "BriaCell Therapeutics Q3 EPS $(0.99) Up From $(16.40) YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53105477/briacell-therapeutics-q3-eps-0-99-up-from-16-40-yoy",
+      "source": "alpaca",
+      "added_at": "2026-06-09T23:51:00.682089+00:00"
     }
   ]
 }
