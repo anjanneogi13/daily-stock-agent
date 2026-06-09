@@ -207,15 +207,16 @@
     },
     {
       "ticker": "LLY",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.87,
       "sentiment": "bullish",
       "category": "product_launch",
-      "rationale": "Phase 3 data showing Foundayo outperformed oral semaglutide across all primary and secondary endpoints represents a significant competitive advantage in the lucrative Type 2 diabetes market.",
+      "rationale": "Positive late-stage trial results showing Lilly's oral GLP-1 pill outperformed major competitors on key metrics represents a significant competitive advantage in the massive diabetes/weight loss market.",
       "action_window": "intraday",
-      "headline": "Eli Lilly Announces Data From Three Phase 3 Studies Of Foundayo In ACHIEVE Program Surpasses Oral Semaglutide Throughout Primary, Secondary Endpoints In Adults With Type 2 Diabetes",
-      "url": "https://www.benzinga.com/news/26/06/53070416/eli-lilly-announces-data-from-three-phase-3-studies-of-foundayo-in-achieve-program-surpasses-oral-se",
+      "headline": "LLY Stock Climbs As Oral GLP-1 Pill Beats Novo Nordisk, AstraZeneca\u2019s Therapies In Diabetes Trials",
+      "url": "https://stocktwits.com/news-articles/markets/equity/lly-stock-climbs-as-oral-glp-1-pill-crushes-rivals-in-diabetes-trials/cZ0vSJmR7bG?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-06-08T19:18:19.948817+00:00"
+      "added_at": "2026-06-08T19:18:19.948817+00:00",
+      "updated_at": "2026-06-09T00:00:48.124502+00:00"
     },
     {
       "ticker": "AAL",
@@ -243,15 +244,16 @@
     },
     {
       "ticker": "DXCM",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.76,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Positive clinical trial results (CONNECT) demonstrating efficacy in Type 2 diabetes expand market opportunity and validate product differentiation, creating meaningful upside catalyst.",
+      "rationale": "Positive clinical trial results for Dexcom G7 expanding market opportunity to non-insulin Type 2 diabetes patients represents a significant addressable market expansion catalyst.",
       "action_window": "next_day",
-      "headline": "Clinical Wins Boost Dexcom Growth Story In Type 2 Diabetes",
-      "url": "https://www.benzinga.com/news/health-care/26/06/53069798/clinical-wins-boost-dexcom-growth-story-in-type-2-diabetes",
+      "headline": "DexCom Reports Positive CONNECT Data for Non-Insulin Diabetes",
+      "url": "https://finance.yahoo.com/sectors/healthcare/articles/dexcom-reports-positive-connect-data-172900265.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-06-08T19:18:19.948844+00:00"
+      "added_at": "2026-06-08T19:18:19.948844+00:00",
+      "updated_at": "2026-06-09T00:00:48.124517+00:00"
     },
     {
       "ticker": "AAPL",
