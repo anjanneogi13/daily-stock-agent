@@ -542,6 +542,78 @@
       "url": "https://www.benzinga.com/markets/tech/26/06/53093386/whats-going-on-with-veeco-instruments-stock-on-tuesday",
       "source": "alpaca",
       "added_at": "2026-06-09T16:29:24.190267+00:00"
+    },
+    {
+      "ticker": "ASTS",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Concrete satellite launch date is a meaningful operational milestone for space infrastructure company, though current 2.5% dip suggests market uncertainty about execution risk ahead of the June 17 event.",
+      "action_window": "this_week",
+      "headline": "AST SpaceMobile Sets June 17 Launch Date For BlueBird Satellites",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/53098851/ast-spacemobile-sets-june-17-launch-date-for-bluebird-satellites",
+      "source": "alpaca",
+      "added_at": "2026-06-09T18:31:33.647332+00:00"
+    },
+    {
+      "ticker": "RIVN",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "product_launch",
+      "rationale": "Major R2 SUV deliveries began but stock is sliding despite positive milestone, indicating market disappointment with timing, volume expectations, or pricing concerns.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Rivian Stock Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53098914/whats-going-on-with-rivian-stock-today-3",
+      "source": "alpaca",
+      "added_at": "2026-06-09T18:31:33.647349+00:00"
+    },
+    {
+      "ticker": "INCY",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "ma_acquirer",
+      "rationale": "Large $1.25B acquisition adds promising pipeline asset but payoff timeline is distant (2030s) and execution risk remains high for rare disease development.",
+      "action_window": "next_day",
+      "headline": "Incyte Bets $1.25 Billion On Rare Bleeding Disorder Drug With Blockbuster Potential",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53098895/incyte-bets-1-25-billion-on-rare-bleeding-disorder-drug-with-blockbuster-potential",
+      "source": "alpaca",
+      "added_at": "2026-06-09T18:31:33.647356+00:00"
+    },
+    {
+      "ticker": "CRWV",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock declining on concerns about additional debt issuance signaling potential capital constraints or dilution risk, creating near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "CoreWeave Stock Slips: What's Happening Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53098151/coreweave-stock-slips-whats-happening-today",
+      "source": "alpaca",
+      "added_at": "2026-06-09T18:31:33.647367+00:00"
+    },
+    {
+      "ticker": "XPOF",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Legal settlement of $3.9M for misleading franchise owners indicates regulatory risk and potential reputational damage that could impact franchise sales and investor confidence.",
+      "action_window": "next_day",
+      "headline": "Attorney General James Secures More Than $3.9 Million From Xponential Fitness For Misleading Franchise Owners",
+      "url": "https://www.benzinga.com/government/26/06/53098053/attorney-general-james-secures-more-than-3-9-million-from-xponential-fitness-for-misleading-franchis",
+      "source": "alpaca",
+      "added_at": "2026-06-09T18:31:33.647373+00:00"
+    },
+    {
+      "ticker": "APO",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Whale alerts indicate large institutional trades across multiple financials suggesting near-term bullish momentum, but lacks specific catalyst details and affects 6 tickers broadly.",
+      "action_window": "intraday",
+      "headline": "6 Financials Stocks With Whale Alerts In Today's Session",
+      "url": "https://www.benzinga.com/insights/options/26/06/53097697/6-financials-stocks-with-whale-alerts-in-todays-session",
+      "source": "alpaca",
+      "added_at": "2026-06-09T18:31:33.647380+00:00"
     }
   ]
 }
