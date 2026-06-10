@@ -856,6 +856,30 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/53105477/briacell-therapeutics-q3-eps-0-99-up-from-16-40-yoy",
       "source": "alpaca",
       "added_at": "2026-06-09T23:51:00.682089+00:00"
+    },
+    {
+      "ticker": "FIGR",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major M&A announcement with confirmed $717M acquisition of Kiavi represents significant strategic expansion for Figure Technology, creating immediate trading opportunity on deal confirmation and scale implications.",
+      "action_window": "intraday",
+      "headline": "Figure Technology Solutions Signs Deal To Acquire Lending Platform Kiavi For $717M",
+      "url": "https://www.benzinga.com/m-a/26/06/53110560/figure-technology-solutions-signs-deal-to-acquire-lending-platform-kiavi-for-717m",
+      "source": "alpaca",
+      "added_at": "2026-06-10T11:34:53.566106+00:00"
+    },
+    {
+      "ticker": "CHWY",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Chewy cut FY2026 sales guidance by approximately $200M at the midpoint, falling roughly 3% below consensus estimates of $13.838B, signaling weaker-than-expected business trajectory.",
+      "action_window": "intraday",
+      "headline": "Chewy Lowers FY2026 Sales Guidance from $13.600B-$13.750B to $13.400B-$13.550B vs $13.838B Est",
+      "url": "https://www.benzinga.com/news/26/06/53110372/chewy-lowers-fy2026-sales-guidance-from-13-600b-13-750b-to-13-400b-13-550b-vs-13-838b-est",
+      "source": "alpaca",
+      "added_at": "2026-06-10T11:34:53.566133+00:00"
     }
   ]
 }
