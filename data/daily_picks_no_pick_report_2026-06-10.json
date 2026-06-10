@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-27274949216",
+  "artifact_bundle_name": "official-decision-artifacts-27276591935",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [],
@@ -46,8 +46,8 @@
       "universe_count": 548
     }
   },
-  "commit_sha": "cc94b00414ec16c900f1d393320fd4d4d4641af9",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/cc94b00414ec16c900f1d393320fd4d4d4641af9",
+  "commit_sha": "fd74b3ee9448d98ec790095cf07c3c2163c2b756",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/fd74b3ee9448d98ec790095cf07c3c2163c2b756",
   "config_version": "config.yaml",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_no_qualified_candidates",
@@ -104,26 +104,26 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 544,
+        "attempts": 1088,
         "empty": 0,
         "errors": 0,
-        "successes": 544
+        "successes": 1088
       },
       "ohlcv": {
-        "attempts": 554,
-        "empty": 2,
+        "attempts": 1108,
+        "empty": 4,
         "errors": 0,
-        "successes": 552
+        "successes": 1104
       }
     },
     "date": "2026-06-10",
     "providers": {
       "stooq": {
-        "attempts": 1,
-        "empty": 1,
+        "attempts": 2,
+        "empty": 2,
         "errors": 0,
         "failure_types": {
-          "empty_response": 1,
+          "empty_response": 2,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -143,11 +143,11 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 1097,
-        "empty": 1,
+        "attempts": 2194,
+        "empty": 2,
         "errors": 0,
         "failure_types": {
-          "empty_response": 1,
+          "empty_response": 2,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -162,7 +162,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 1096,
+        "successes": 2192,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -191,9 +191,27 @@
         "result": "empty",
         "stage": "ohlcv",
         "ticker": "TSX:RAY"
+      },
+      {
+        "error_type": "empty",
+        "failure_type": "empty_response",
+        "message": "empty OHLCV dataframe",
+        "provider": "yfinance",
+        "result": "empty",
+        "stage": "ohlcv",
+        "ticker": "TSX:RAY"
+      },
+      {
+        "error_type": "empty",
+        "failure_type": "empty_response",
+        "message": "empty OHLCV dataframe",
+        "provider": "stooq",
+        "result": "empty",
+        "stage": "ohlcv",
+        "ticker": "TSX:RAY"
       }
     ],
-    "timestamp_utc": "2026-06-10T12:08:36Z"
+    "timestamp_utc": "2026-06-10T12:38:43Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -220,11 +238,11 @@
   "reason": "No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-06-10T08:08:36-04:00",
+  "selection_time_et": "2026-06-10T08:38:43-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-06-10T12:08:36Z",
+  "timestamp_utc": "2026-06-10T12:38:43Z",
   "watch_only_available": false,
-  "workflow_run_id": "27274949216",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27274949216"
+  "workflow_run_id": "27276591935",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27276591935"
 }

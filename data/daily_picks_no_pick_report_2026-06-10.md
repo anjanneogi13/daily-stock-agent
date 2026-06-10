@@ -25,5 +25,5 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **548**
 
 ## Market Data Health
-- stooq: attempts=**1**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1097**, successes=**1096**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- stooq: attempts=**2**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2194**, successes=**2192**, errors=**0**, rate_limited=**0**, unauthorized=**0**
