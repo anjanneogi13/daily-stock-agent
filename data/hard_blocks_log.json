@@ -272,5 +272,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-10 13:08:43",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "GEO",
+        "reason": "SL too tight (2.0% < 2.5% for $27 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

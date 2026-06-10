@@ -2,26 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1088,
+      "attempts": 1632,
       "empty": 0,
       "errors": 0,
-      "successes": 1088
+      "successes": 1632
+    },
+    "monster_info": {
+      "attempts": 4,
+      "empty": 0,
+      "errors": 0,
+      "successes": 4
     },
     "ohlcv": {
-      "attempts": 1108,
-      "empty": 4,
+      "attempts": 1662,
+      "empty": 6,
       "errors": 0,
-      "successes": 1104
+      "successes": 1656
     }
   },
   "date": "2026-06-10",
   "providers": {
     "stooq": {
-      "attempts": 2,
-      "empty": 2,
+      "attempts": 3,
+      "empty": 3,
       "errors": 0,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 3,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -41,11 +47,11 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 2194,
-      "empty": 2,
+      "attempts": 3295,
+      "empty": 3,
       "errors": 0,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 3,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -60,15 +66,15 @@
       "not_found": 0,
       "provider_error": 0,
       "rate_limited": 0,
-      "successes": 2192,
+      "successes": 3292,
       "timeout": 0,
       "unauthorized": 0
     }
   },
   "run": {
     "fetched_count": 544,
-    "final_pick_count": 0,
-    "scored_count": 0,
+    "final_pick_count": 1,
+    "scored_count": 4,
     "universe_count": 548
   },
   "samples": [
@@ -107,7 +113,25 @@
       "result": "empty",
       "stage": "ohlcv",
       "ticker": "TSX:RAY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "TSX:RAY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "stooq",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "TSX:RAY"
     }
   ],
-  "timestamp_utc": "2026-06-10T12:38:43Z"
+  "timestamp_utc": "2026-06-10T13:08:43Z"
 }
