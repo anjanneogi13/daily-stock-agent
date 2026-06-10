@@ -931,6 +931,127 @@
       "url": "https://www.benzinga.com/quote/FRMI",
       "source": "alpaca",
       "added_at": "2026-06-10T17:59:17.568990+00:00"
+    },
+    {
+      "ticker": "DAIC",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Company correcting a strategic transaction press release to remove references to shareholder payouts and management retention suggests material misstatements or deal complications, creating significant uncertainty despite after-hours price increase.",
+      "action_window": "next_day",
+      "headline": "Watching Dot Ai; Shares Move Higher In After Hours Session, Co Corrects Strategic Transactions Release, Removes References To Shareholder Payouts And Management Retention Plans",
+      "url": "https://www.benzinga.com/trading-ideas/26/06/53130146/watching-dot-ai-shares-move-higher-in-after-hours-session-co-corrects-strategic-transactions-releas",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735727+00:00"
+    },
+    {
+      "ticker": "AEMD",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Massive earnings beat with actual profit of $0.40 versus expected loss of $2.02, representing a surprise swing of over $2.42 per share.",
+      "action_window": "next_day",
+      "headline": "Aethlon Medical Q4 EPS $0.40 Beats $(2.02) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53130037/aethlon-medical-q4-eps-0-40-beats-2-02-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735740+00:00"
+    },
+    {
+      "ticker": "MIND",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Company reported Q1 earnings beat on revenue ($9.672M vs $9.450M estimate) with significant YoY EPS improvement from -$0.12 to -$0.05, though still posting a loss.",
+      "action_window": "next_day",
+      "headline": "MIND Technology Q1 EPS $(0.05) Up From $(0.12) YoY, Sales $9.672M Beat $9.450M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53129983/mind-technology-q1-eps-0-05-up-from-0-12-yoy-sales-9-672m-beat-9-450m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735748+00:00"
+    },
+    {
+      "ticker": "VACH",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Completed SPAC merger with new ticker starting tomorrow creates immediate trading catalyst for VACH shareholders and new entry point for VRXA.",
+      "action_window": "next_day",
+      "headline": "VERAXA Biotech And Voyager Acquisition Complete Business Combination; On June 11, 2026, VERAXA Will Commence Trading Its Shares Under The Symbol \"VRXA\"",
+      "url": "https://www.benzinga.com/m-a/26/06/53129969/veraxa-biotech-and-voyager-acquisition-complete-business-combination-on-june-11-2026-veraxa-will-com",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735755+00:00"
+    },
+    {
+      "ticker": "NLY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A 7.1% dividend increase for a mortgage REIT is a meaningful positive signal about earnings power and management confidence, likely to attract income-focused investors.",
+      "action_window": "next_day",
+      "headline": "Annaly Capital Management Raises Quarterly Dividend From $0.70 To $0.75/Share",
+      "url": "https://www.benzinga.com/news/26/06/53129918/annaly-capital-management-raises-quarterly-dividend-from-0-70-to-0-75share",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735761+00:00"
+    },
+    {
+      "ticker": "VERI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant 25% workforce reduction and 30% operating expense cut signals aggressive restructuring that typically improves margins and profitability, often viewed positively by markets for struggling companies.",
+      "action_window": "intraday",
+      "headline": "Veritone Plans To Cut ~25% Of Workforce; Plans To Lower Operating Expenses By 30%;",
+      "url": "https://www.benzinga.com/news/26/06/53129807/veritone-plans-to-cut-25-of-workforce-plans-to-lower-operating-expenses-by-30",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735767+00:00"
+    },
+    {
+      "ticker": "ZOOZ",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Board authorization to explore strategic alternatives typically signals potential M&A, buyback, or restructuring, creating bullish optionality but with uncertain timing and outcome.",
+      "action_window": "next_day",
+      "headline": "ZOOZ Strategy Gets Board Authorization To Mull Strategic Options To Enhance Stockholder Value",
+      "url": "https://www.benzinga.com/news/26/06/53129722/zooz-strategy-gets-board-authorization-to-mull-strategic-options-to-enhance-stockholder-value",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735774+00:00"
+    },
+    {
+      "ticker": "NAVN",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Significant FY2027 sales guidance raise of approximately 4.7% above midpoint and well above consensus estimates represents a meaningful positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Navan Raises FY2027 Sales Guidance from $866.000M-$874.000M to $907.000M-$913.000M vs $884.471M Est",
+      "url": "https://www.benzinga.com/news/26/06/53129704/navan-raises-fy2027-sales-guidance-from-866-000m-874-000m-to-907-000m-913-000m-vs-884-471m-est",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735779+00:00"
+    },
+    {
+      "ticker": "ORCL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Oracle providing forward guidance of double-digit growth for Oracle Health division in FY2027 driven by new AI product represents a meaningful positive catalyst for a specific business segment.",
+      "action_window": "intraday",
+      "headline": "Oracle Expects New AI Patient Care Management System To Push Overall Oracle Health Growth Rate To Double-Digits In FY 2027",
+      "url": "https://www.benzinga.com/quote/ORCL",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735791+00:00",
+      "updated_at": "2026-06-10T20:30:04.735807+00:00"
+    },
+    {
+      "ticker": "OXM",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "guidance_raise",
+      "rationale": "EPS guidance floor raised 9.5% but revenue guidance narrowed downward with midpoint below consensus, creating mixed signals.",
+      "action_window": "next_day",
+      "headline": "Oxford Industries Raises FY2026 Adj EPS Guidance from $2.10-$2.70 to $2.30-$2.70 vs $2.43 Est; Narrows FY2026 Sales Guidance from $1.475B-$1.530B to $1.475B-$1.505B vs $1.506B Est",
+      "url": "https://www.benzinga.com/news/26/06/53129604/oxford-industries-raises-fy2026-adj-eps-guidance-from-2-10-2-70-to-2-30-2-70-vs-2-43-est-narrows-fy2",
+      "source": "alpaca",
+      "added_at": "2026-06-10T20:30:04.735798+00:00"
     }
   ]
 }
