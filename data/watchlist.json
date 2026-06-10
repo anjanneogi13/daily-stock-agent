@@ -159,15 +159,16 @@
     },
     {
       "ticker": "USO",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
       "category": "macro",
-      "rationale": "U.S. military action against oil tanker in Gulf of Oman (critical oil transit chokepoint) creates immediate supply disruption concerns, typically driving oil prices higher on geopolitical risk premium.",
+      "rationale": "Presidential announcement of successful mission securing 100+ million barrels of oil through Strait of Hormuz suggests increased supply and reduced geopolitical risk premium, bearish for oil prices and bullish for broad equities.",
       "action_window": "intraday",
-      "headline": "U.S. Central Command Posts On X \"U.S. Forces Disable Non-Compliant Oil Tanker in Gulf of Oman\"",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53065368/u-s-central-command-posts-on-x-u-s-forces-disable-non-compliant-oil-tanker-in-gul",
+      "headline": "President Trump Posts On Truth Social \"Last month, I directed our Great U.S. Military to execute a secret mission to support Oil Tankers and other Commercial Ships through the Straight of Hormuz. Today, I am pleased to announce that this effort has resulted in more than 100 MILLION Barrels of Oil ma",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53125264/president-trump-posts-on-truth-social-last-month-i-directed-our-great-u-s-militar",
       "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583063+00:00"
+      "added_at": "2026-06-08T16:35:37.583063+00:00",
+      "updated_at": "2026-06-10T17:59:17.568964+00:00"
     },
     {
       "ticker": "EH",
@@ -906,6 +907,30 @@
       "url": "https://www.benzinga.com/quote/PLTR",
       "source": "alpaca",
       "added_at": "2026-06-10T15:01:18.213125+00:00"
+    },
+    {
+      "ticker": "GV",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Company failed to meet Nasdaq filing compliance deadline and faces potential delisting risk, though appealing to hearings panel provides temporary reprieve.",
+      "action_window": "intraday",
+      "headline": "Visionary Holdings Announces Intent To Submit Formal Request To Nasdaq Hearings Panel After Failing To Regain Filing Compliance By June 4 Deadline",
+      "url": "https://www.benzinga.com/quote/GV",
+      "source": "alpaca",
+      "added_at": "2026-06-10T17:59:17.568977+00:00"
+    },
+    {
+      "ticker": "FRMI",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large unusual options sweep of 830 call contracts significantly above existing open interest ahead of earnings suggests informed bullish positioning, though still speculative activity rather than confirmed catalyst.",
+      "action_window": "intraday",
+      "headline": "Fermi Option Alert: Fri $7.5 Calls Sweep (44) Near The Ask: 830 @ $0.35 Vs 391 OI; Earnings 7/28 Before Open [Est] Ref=$7.015",
+      "url": "https://www.benzinga.com/quote/FRMI",
+      "source": "alpaca",
+      "added_at": "2026-06-10T17:59:17.568990+00:00"
     }
   ]
 }
