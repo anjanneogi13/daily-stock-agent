@@ -412,19 +412,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GAP": {
-    "ticker": "GAP",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Gap Sees ~$80M Of Net Tariff Relief To Gross Profit And Operating Income",
-    "added_at": "2026-05-28T21:05:59.184991+00:00",
-    "expires": "2026-06-11T21:05:59.184996+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ELME": {
     "ticker": "ELME",
     "score_delta": 0.194,
@@ -448,19 +435,6 @@
     "headline": "Red Robin Gourmet Burgers Says Company Expects To Update Guidance Following The Close Of The Transaction",
     "added_at": "2026-05-28T21:05:59.188841+00:00",
     "expires": "2026-06-27T21:05:59.188846+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NUAI": {
-    "ticker": "NUAI",
-    "score_delta": -0.097,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "UPDATED: New Era Energy & Digital Reaches $1M Settlement To Dismiss Company From New Mexico Lawsuit, Denies Liability And Continues Focus On AI Data Center Strategy",
-    "added_at": "2026-05-28T21:05:59.196653+00:00",
-    "expires": "2026-06-11T21:05:59.196658+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -681,19 +655,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DOCU": {
-    "ticker": "DOCU",
-    "score_delta": 0.093,
-    "catalyst": "earnings_beat",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "DocuSign Delivers Beat-And-Raise Q1, But Investors Aren't Impressed",
-    "added_at": "2026-06-04T21:28:19.782921+00:00",
-    "expires": "2026-06-11T21:28:19.782929+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TGL": {
     "ticker": "TGL",
     "score_delta": 0.1,
@@ -811,19 +772,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CTSH": {
-    "ticker": "CTSH",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Cognizant Integrates Its Cognizant Neuro AI Trust With ServiceNow To Offer Unified Platform For AI Governance",
-    "added_at": "2026-06-04T19:38:17.744705+00:00",
-    "expires": "2026-06-11T19:38:17.744710+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NHC": {
     "ticker": "NHC",
     "score_delta": 0.041,
@@ -834,45 +782,6 @@
     "headline": "National HealthCare Acquires Five Skilled Nursing Sites For $50.5M",
     "added_at": "2026-06-04T19:38:17.746751+00:00",
     "expires": "2026-06-18T19:38:17.746756+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NUDG": {
-    "ticker": "NUDG",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "this_week",
-    "headline": "These New Nuveen ETFs Are Built For Income, Inflation, Infrastructure Growth",
-    "added_at": "2026-06-04T19:38:17.758921+00:00",
-    "expires": "2026-06-11T19:38:17.758926+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MRLN": {
-    "ticker": "MRLN",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Merlin Stock Soars After The Close: Here's Why",
-    "added_at": "2026-06-04T21:28:19.774534+00:00",
-    "expires": "2026-06-11T21:28:19.774541+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SAP": {
-    "ticker": "SAP",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Saputo Q4 Adj. EPS $0.41 Beats $0.40 Estimate, Sales $4.550B Beat $4.520B Estimate",
-    "added_at": "2026-06-04T21:28:19.776625+00:00",
-    "expires": "2026-06-11T21:28:19.776631+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2312,6 +2221,71 @@
     "headline": "The AI Rally Has Gone Too Far. Here Are Two Stocks to Sell Right Now.",
     "added_at": "2026-06-11T19:30:41.512298+00:00",
     "expires": "2026-06-16T19:30:41.512304+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SENEA": {
+    "ticker": "SENEA",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "Seneca Foods Q4 Adj. EPS $3.67 Up From $1.37 YoY, Sales $393.847M Up From $345.839M YoY",
+    "added_at": "2026-06-11T21:40:26.486408+00:00",
+    "expires": "2026-06-18T21:40:26.486414+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LASE": {
+    "ticker": "LASE",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Laser Photonics Q1 EPS $(0.11) Up From $(0.12) YoY, Sales $915.553K Down From $2.290M YoY",
+    "added_at": "2026-06-11T21:40:26.490528+00:00",
+    "expires": "2026-06-18T21:40:26.490533+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SGVA": {
+    "ticker": "SGVA",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "this_week",
+    "headline": "Forget Dividends: F/m's New Treasury ETF Keeps Returns Compounding Inside the Fund",
+    "added_at": "2026-06-11T21:40:26.492459+00:00",
+    "expires": "2026-06-18T21:40:26.492464+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NTRB": {
+    "ticker": "NTRB",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Nutriband Q1 EPS $(0.10) Up From $(0.12) YoY, Sales $433.399K Down From $667.432K YoY",
+    "added_at": "2026-06-11T21:40:26.498112+00:00",
+    "expires": "2026-06-18T21:40:26.498117+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TPET": {
+    "ticker": "TPET",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Trio Petroleum Q2 EPS $(0.05) Up From $(0.22) YoY, Sales $208.257K Up From $23.271K YoY",
+    "added_at": "2026-06-11T21:40:26.500101+00:00",
+    "expires": "2026-06-18T21:40:26.500106+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
