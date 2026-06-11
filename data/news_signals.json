@@ -438,19 +438,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SPCE": {
-    "ticker": "SPCE",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Virgin Galactic Stock Lifts Off After-Hours \u2014 Here's Why",
-    "added_at": "2026-05-28T22:52:56.109899+00:00",
-    "expires": "2026-06-11T22:52:56.109907+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CLIK": {
     "ticker": "CLIK",
     "score_delta": 0.05,
@@ -782,32 +769,6 @@
     "headline": "National HealthCare Acquires Five Skilled Nursing Sites For $50.5M",
     "added_at": "2026-06-04T19:38:17.746751+00:00",
     "expires": "2026-06-18T19:38:17.746756+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GWRE": {
-    "ticker": "GWRE",
-    "score_delta": -0.028,
-    "catalyst": "earnings_beat",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Guidewire Software Posts Better-Than-Expected Q3 Report, But Stock Drops",
-    "added_at": "2026-06-04T22:54:21.826708+00:00",
-    "expires": "2026-06-11T22:54:21.826716+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
-  "REA": {
-    "ticker": "REA",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "Rare Earths Americas Q1 EPS $(1.12) Down From $(0.03) YoY",
-    "added_at": "2026-06-04T22:54:21.830905+00:00",
-    "expires": "2026-06-11T22:54:21.830910+00:00",
     "hard_block": false,
     "negative_reaction": false
   },

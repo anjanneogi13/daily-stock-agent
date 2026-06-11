@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LSE",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Mixed shelf registration up to $150M signals potential dilution risk for existing shareholders, though the actual timing and amount of future raises remains uncertain.",
-      "action_window": "next_day",
-      "headline": "Leishen Energy Registers Up To $150M Mixed Shelf Offering For Class A Shares, Warrants, Debt, Rights, And Units For Flexible Future Capital Raises",
-      "url": "https://www.benzinga.com/news/26/06/53075703/leishen-energy-registers-up-to-150m-mixed-shelf-offering-for-class-a-shares-warrants-debt-rights-and",
-      "source": "alpaca",
-      "added_at": "2026-06-08T22:55:59.151982+00:00"
-    },
-    {
-      "ticker": "MTEN",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Massive dilution evident as company sold 222.6M shares for only $20.6M (~$0.09/share pre-split), indicating severe equity destruction and financial distress before terminating the ATM program.",
-      "action_window": "next_day",
-      "headline": "Terminates $100M ATM Sales Agreement, Having Sold ~222.6M (Pre-Split) Class A Shares For $20.6M Gross Proceeds, ~$18M Net",
-      "url": "https://www.benzinga.com/news/26/06/53075654/terminates-100m-atm-sales-agreement-having-sold-222-6m-pre-split-class-a-shares-for-20-6m-gross-proc",
-      "source": "alpaca",
-      "added_at": "2026-06-08T22:55:59.151993+00:00"
-    },
-    {
       "ticker": "CBRL",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
