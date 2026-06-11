@@ -412,19 +412,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AMZN": {
-    "ticker": "AMZN",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Amazon Defies Tech Slump, Launching Next-Gen Robotics Blitz in Europe",
-    "added_at": "2026-06-04T17:29:11.349783+00:00",
-    "expires": "2026-06-11T17:29:11.349788+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GAP": {
     "ticker": "GAP",
     "score_delta": 0.1,
@@ -1407,14 +1394,14 @@
   },
   "KKR": {
     "ticker": "KKR",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
     "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "KKR Launches Helix Digital Infrastructure With $10B Backing",
-    "added_at": "2026-06-11T16:35:07.462367+00:00",
-    "expires": "2026-06-18T16:35:07.462373+00:00",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "'Accounting Firm Crowe to Sell Stake to KKR in Nearly $3 Billion Deal' - Wall Street Journal Exclusive",
+    "added_at": "2026-06-11T19:30:41.514464+00:00",
+    "expires": "2026-06-25T19:30:41.514469+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2314,5 +2301,18 @@
     "expires": "2026-06-18T16:35:07.464488+00:00",
     "hard_block": false,
     "negative_reaction": true
+  },
+  "SOXL": {
+    "ticker": "SOXL",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "The AI Rally Has Gone Too Far. Here Are Two Stocks to Sell Right Now.",
+    "added_at": "2026-06-11T19:30:41.512298+00:00",
+    "expires": "2026-06-16T19:30:41.512304+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

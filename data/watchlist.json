@@ -1,141 +1,6 @@
 {
   "items": [
     {
-      "ticker": "DDOG",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bank of America maintains Buy rating while raising price target, indicating increased confidence in upside potential but not a full rating upgrade from lower tier.",
-      "action_window": "intraday",
-      "headline": "B of A Securities Maintains Buy on Datadog, Raises Price Target to $280",
-      "url": "https://www.benzinga.com/news/26/06/53065577/b-of-a-securities-maintains-buy-on-datadog-raises-price-target-to-280",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583039+00:00"
-    },
-    {
-      "ticker": "OKLO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Strategic acquisition expands OKLO's nuclear manufacturing capabilities and supply chain, positioning company for growth in advanced nuclear reactor deployment.",
-      "action_window": "intraday",
-      "headline": "Oklo Expands Nuclear Supply Chain With ARMEC Deal",
-      "url": "https://www.benzinga.com/markets/equities/26/06/53065470/oklo-expands-nuclear-supply-chain-with-armec-deal",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583050+00:00"
-    },
-    {
-      "ticker": "FIX",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "UBS maintains Buy rating while raising price target, signaling increased conviction in upside potential for Comfort Systems USA.",
-      "action_window": "next_day",
-      "headline": "UBS Maintains Buy on Comfort Systems USA, Raises Price Target to $2125",
-      "url": "https://www.benzinga.com/news/26/06/53065439/ubs-maintains-buy-on-comfort-systems-usa-raises-price-target-to-2125",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583057+00:00"
-    },
-    {
-      "ticker": "USO",
-      "tradeable_score": 0.8,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Presidential announcement of successful mission securing 100+ million barrels of oil through Strait of Hormuz suggests increased supply and reduced geopolitical risk premium, bearish for oil prices and bullish for broad equities.",
-      "action_window": "intraday",
-      "headline": "President Trump Posts On Truth Social \"Last month, I directed our Great U.S. Military to execute a secret mission to support Oil Tankers and other Commercial Ships through the Straight of Hormuz. Today, I am pleased to announce that this effort has resulted in more than 100 MILLION Barrels of Oil ma",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53125264/president-trump-posts-on-truth-social-last-month-i-directed-our-great-u-s-militar",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583063+00:00",
-      "updated_at": "2026-06-10T17:59:17.568964+00:00"
-    },
-    {
-      "ticker": "EH",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Share buyback of $30M signals management confidence and provides technical support, though impact is moderate given weak momentum and execution timeline uncertainty.",
-      "action_window": "next_day",
-      "headline": "EHang Stock Rallies After Company Unveils Fresh Share Buyback",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53065002/ehang-stock-rallies-after-company-unveils-fresh-share-buyback",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583072+00:00"
-    },
-    {
-      "ticker": "ADCT",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Analyst downgrade from bullish to non-bullish represents a meaningful negative sentiment shift that typically triggers selling pressure, especially when highlighted as a top downgrade.",
-      "action_window": "intraday",
-      "headline": "This ADC Therapeutics Analyst Is No Longer Bullish; Here Are Top 2 Downgrades For Monday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/06/53064967/this-adc-therapeutics-analyst-is-no-longer-bullish-here-are-top-2-downgrades-for-monday",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583077+00:00"
-    },
-    {
-      "ticker": "BIIB",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Analyst upgrade to Buy with multiple pipeline catalysts and identified growth drivers creates actionable positive momentum despite declining base business concerns.",
-      "action_window": "next_day",
-      "headline": "Biogen's Base Is Declining \u2014 But 8 Pipeline Readouts Could Flip The Story",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/06/53064784/biogens-base-is-declining-but-8-pipeline-readouts-could-flip-the-story",
-      "source": "alpaca",
-      "added_at": "2026-06-08T16:35:37.583092+00:00"
-    },
-    {
-      "ticker": "LLY",
-      "tradeable_score": 0.87,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Positive late-stage trial results showing Lilly's oral GLP-1 pill outperformed major competitors on key metrics represents a significant competitive advantage in the massive diabetes/weight loss market.",
-      "action_window": "intraday",
-      "headline": "LLY Stock Climbs As Oral GLP-1 Pill Beats Novo Nordisk, AstraZeneca\u2019s Therapies In Diabetes Trials",
-      "url": "https://stocktwits.com/news-articles/markets/equity/lly-stock-climbs-as-oral-glp-1-pill-crushes-rivals-in-diabetes-trials/cZ0vSJmR7bG?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-06-08T19:18:19.948817+00:00",
-      "updated_at": "2026-06-09T00:00:48.124502+00:00"
-    },
-    {
-      "ticker": "AAL",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Industry-wide fuel cost crisis threatening profitability across airlines with route cuts and margin compression through 2026, representing a significant structural headwind but timeline extends beyond immediate trading catalysts.",
-      "action_window": "this_week",
-      "headline": "A $100 Billion Fuel-Price Shock Is Pushing Airlines Back Into Crisis Mode",
-      "url": "https://www.benzinga.com/markets/large-cap/26/06/53070008/airlines-100-billion-fuel-price-shock-crisis-mode",
-      "source": "alpaca",
-      "added_at": "2026-06-08T19:18:19.948830+00:00"
-    },
-    {
-      "ticker": "GOOG",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Capital raise announcement causing dilution concerns and immediate stock decline, though increased AI spending signals long-term growth investment.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Alphabet Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53069860/whats-going-on-with-dip-in-alphabet-stock",
-      "source": "alpaca",
-      "added_at": "2026-06-08T19:18:19.948838+00:00"
-    },
-    {
-      "ticker": "DXCM",
-      "tradeable_score": 0.76,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive clinical trial results for Dexcom G7 expanding market opportunity to non-insulin Type 2 diabetes patients represents a significant addressable market expansion catalyst.",
-      "action_window": "next_day",
-      "headline": "DexCom Reports Positive CONNECT Data for Non-Insulin Diabetes",
-      "url": "https://finance.yahoo.com/sectors/healthcare/articles/dexcom-reports-positive-connect-data-172900265.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-06-08T19:18:19.948844+00:00",
-      "updated_at": "2026-06-09T00:00:48.124517+00:00"
-    },
-    {
       "ticker": "AAPL",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1104,15 +969,16 @@
     },
     {
       "ticker": "KKR",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "KKR launching a $10B+ AI-focused digital infrastructure venture is a significant strategic initiative that expands their alternative asset management capabilities in a high-growth sector.",
+      "category": "ma_acquirer",
+      "rationale": "KKR acquiring stake in major accounting firm Crowe for nearly $3B represents significant strategic deployment of capital in a stable, cash-generative professional services business.",
       "action_window": "next_day",
-      "headline": "KKR Launches Helix Digital Infrastructure With $10B Backing",
-      "url": "https://www.benzinga.com/markets/large-cap/26/06/53148261/kkr-launches-helix-digital-infrastructure-with-10b-backing",
+      "headline": "'Accounting Firm Crowe to Sell Stake to KKR in Nearly $3 Billion Deal' - Wall Street Journal Exclusive",
+      "url": "https://www.benzinga.com/m-a/26/06/53152400/accounting-firm-crowe-to-sell-stake-to-kkr-in-nearly-3-billion-deal-wall-street-journal-exclusive",
       "source": "alpaca",
-      "added_at": "2026-06-11T16:35:07.478018+00:00"
+      "added_at": "2026-06-11T16:35:07.478018+00:00",
+      "updated_at": "2026-06-11T19:30:41.517500+00:00"
     },
     {
       "ticker": "FAC",
@@ -1173,6 +1039,43 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53147651/whats-going-on-with-amc-entertainment-stock-thursday-3",
       "source": "alpaca",
       "added_at": "2026-06-11T16:35:07.478053+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Iran deal approval suggests potential sanctions relief and increased oil supply, pressuring crude prices negatively for USO while reducing geopolitical risk premium for equities.",
+      "action_window": "intraday",
+      "headline": "'The Qatari Delegation Returning From Tehran Handed Over Iran's Approval Of The Final Draft' - Al Arabiya",
+      "url": "https://www.benzinga.com/news/26/06/53153178/the-qatari-delegation-returning-from-tehran-handed-over-irans-approval-of-the-final-draft-al-arabiya",
+      "source": "alpaca",
+      "added_at": "2026-06-11T19:30:41.517456+00:00",
+      "updated_at": "2026-06-11T19:30:41.517472+00:00"
+    },
+    {
+      "ticker": "RCAT",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock is actively surging on positive policy tailwinds for domestic drone manufacturers, representing a sector-specific catalyst with immediate price action.",
+      "action_window": "intraday",
+      "headline": "Red Cat Stock Is Climbing Thursday: What's Driving The Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53152945/red-cat-stock-is-climbing-thursday-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-06-11T19:30:41.517483+00:00"
+    },
+    {
+      "ticker": "PL",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock already moving on sector rotation anticipation ahead of SpaceX IPO, creating momentum but the catalyst is indirect and sentiment-driven rather than fundamental to Planet Labs itself.",
+      "action_window": "intraday",
+      "headline": "Planet Labs Stock Skyrockets Ahead Of SpaceX's Friday IPO",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53152877/planet-labs-stock-skyrockets-ahead-of-spacexs-friday-ipo",
+      "source": "alpaca",
+      "added_at": "2026-06-11T19:30:41.517490+00:00"
     }
   ]
 }
