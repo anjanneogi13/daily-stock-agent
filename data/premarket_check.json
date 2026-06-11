@@ -1,23 +1,21 @@
 {
-  "date": "2026-06-10",
+  "date": "2026-06-11",
   "market": {
-    "spy_change_pct": NaN,
-    "qqq_change_pct": -1.15,
-    "soxx_change_pct": NaN,
-    "vix": 20.93,
-    "warnings": [
-      "\u26a0\ufe0f VIX at 20.9 \u2014 elevated volatility"
-    ],
-    "global_action": "half"
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
+    "warnings": [],
+    "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "HNGE",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "market caution \u2014 reduce size",
-      "current_price": 62.78,
-      "gap_pct": -0.0,
-      "actionable": true
+      "ticker": "C",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }
