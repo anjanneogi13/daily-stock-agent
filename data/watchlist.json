@@ -1,127 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MRVL",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Stock is actively soaring intraday, indicating a significant positive catalyst occurring on Monday that warrants immediate attention despite headline lacking specific details.",
-      "action_window": "intraday",
-      "headline": "Why Is Marvell Technology Stock Soaring Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/06/53055107/why-is-marvell-technology-stock-soaring-monday",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415633+00:00"
-    },
-    {
-      "ticker": "FRVO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bernstein initiating coverage with Outperform rating and $47 price target is a meaningful positive catalyst from a major institutional bank that typically drives buying interest.",
-      "action_window": "intraday",
-      "headline": "Bernstein Initiates Coverage On Fervo Energy with Outperform Rating, Announces Price Target of $47",
-      "url": "https://www.benzinga.com/news/26/06/53055071/bernstein-initiates-coverage-on-fervo-energy-with-outperform-rating-announces-price-target-of-47",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415647+00:00"
-    },
-    {
-      "ticker": "RCT",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "RedCloud secured a beverage manufacturer client for RedAI deployment in Lagos, representing tangible customer acquisition and revenue expansion but limited details on contract size or financial impact.",
-      "action_window": "next_day",
-      "headline": "RedCloud Lands Beverage Manufacturer For Deployment Of Its RedAI Infrastructure Throughout Lagos Route-To-Market",
-      "url": "https://www.benzinga.com/news/26/06/53055059/redcloud-lands-beverage-manufacturer-for-deployment-of-its-redai-infrastructure-throughout-lagos-rou",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415654+00:00"
-    },
-    {
-      "ticker": "BXDC",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bernstein initiating coverage with Outperform rating and $26 price target represents credible bullish catalyst from a major investment bank.",
-      "action_window": "intraday",
-      "headline": "Bernstein Initiates Coverage On Blackstone Digital Infr with Outperform Rating, Announces Price Target of $26",
-      "url": "https://www.benzinga.com/news/26/06/53055044/bernstein-initiates-coverage-on-blackstone-digital-infr-with-outperform-rating-announces-price-targe",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415659+00:00"
-    },
-    {
-      "ticker": "HUHU",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "EXCLUSIVE news of entry into high-value semiconductor equipment market with proprietary technology represents significant business expansion and potential revenue diversification.",
-      "action_window": "intraday",
-      "headline": "EXCLUSIVE: HUHUTECH Enters Semiconductor Equipment Market with In-House Developed HB-800 Vacuum Furnace",
-      "url": "https://www.benzinga.com/quote/HUHU",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415664+00:00"
-    },
-    {
-      "ticker": "MPAA",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Motorcar Parts of America stock surged 37% on strong Q4 earnings, indicating a massive earnings beat with immediate market reaction already occurring.",
-      "action_window": "intraday",
-      "headline": "Crude Oil Gains Over 1%; Motorcar Parts Of America Shares Surge After Q4 Earnings",
-      "url": "https://www.benzinga.com/markets/market-summary/26/06/53064915/crude-oil-gains-over-1-motorcar-parts-of-america-shares-surge-after-q4-earnings",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415669+00:00",
-      "updated_at": "2026-06-08T16:35:37.583085+00:00"
-    },
-    {
-      "ticker": "WAT",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New platform targeting high-growth GLP-1 and biologic drug manufacturing markets represents meaningful revenue opportunity for Waters in expanding pharmaceutical production infrastructure.",
-      "action_window": "intraday",
-      "headline": "Waters Announces Launch Of Reserve-Phased Drug Production Platform To Separate Impurities In GLP-1 Peptides, Insulin, And Lipid Nanoparticles",
-      "url": "https://www.benzinga.com/quote/WAT",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415673+00:00"
-    },
-    {
-      "ticker": "OCC",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong earnings beat with EPS swinging from loss to profit ($0.12 vs -$0.09 YoY) and revenue growth of 26.6% indicates significant operational improvement.",
-      "action_window": "intraday",
-      "headline": "Optical Cable Q2 EPS $0.12 Up From $(0.09) YoY, Sales $22.214M Up From $17.550M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/06/53054892/optical-cable-q2-eps-0-12-up-from-0-09-yoy-sales-22-214m-up-from-17-550m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415679+00:00"
-    },
-    {
-      "ticker": "SRAD",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Partnership agreement with Kalshi expands Sportradar's customer base and revenue streams in the growing prediction market sector, though financial terms are undisclosed.",
-      "action_window": "intraday",
-      "headline": "Sportradar Group Signs Agreement With Prediction Market Kalshi As Official Data, Solutions Provider For Kalshi",
-      "url": "https://www.benzinga.com/news/26/06/53054868/sportradar-group-signs-agreement-with-prediction-market-kalshi-as-official-data-solutions-provider-f",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415683+00:00"
-    },
-    {
-      "ticker": "MNOV",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Patent allowance for glioblastoma treatment is positive IP protection but not as impactful as FDA approval, creating moderate upside catalyst for a biotech with limited immediate revenue impact.",
-      "action_window": "intraday",
-      "headline": "MediciNova Receives U.S. Patent Office Notice Of Allowance Covering The Use Of Ibudilast In The Treatment Of Glioblastoma",
-      "url": "https://www.benzinga.com/news/26/06/53054849/medicinova-receives-u-s-patent-office-notice-of-allowance-covering-the-use-of-ibudilast-in-the-treat",
-      "source": "alpaca",
-      "added_at": "2026-06-08T12:25:24.415687+00:00"
-    },
-    {
       "ticker": "DDOG",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
@@ -1210,6 +1089,90 @@
       "url": "https://www.benzinga.com/news/26/06/53137197/hc-wainwright-co-initiates-coverage-on-damora-therapeutics-with-buy-rating-announces-price-target-of",
       "source": "alpaca",
       "added_at": "2026-06-11T12:06:26.064972+00:00"
+    },
+    {
+      "ticker": "ARM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple Wall Street upgrades triggered by agentic AI catalyst represent meaningful positive re-rating for ARM Holdings with stock already rallying.",
+      "action_window": "intraday",
+      "headline": "Arm Holdings Rallies As Agentic AI Spark Triggers Wave Of Wall Street Upgrades",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/06/53148319/arm-stock-rallies-as-agentic-ai-spark-triggers-massive-wave-of-wall-street-upgrades",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478004+00:00"
+    },
+    {
+      "ticker": "KKR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "KKR launching a $10B+ AI-focused digital infrastructure venture is a significant strategic initiative that expands their alternative asset management capabilities in a high-growth sector.",
+      "action_window": "next_day",
+      "headline": "KKR Launches Helix Digital Infrastructure With $10B Backing",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/53148261/kkr-launches-helix-digital-infrastructure-with-10b-backing",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478018+00:00"
+    },
+    {
+      "ticker": "FAC",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "product_launch",
+      "rationale": "Stock falling on battery milestone update suggests market disappointment with commercialization timeline despite technical progress with Stellantis partnership.",
+      "action_window": "intraday",
+      "headline": "Why Factorial Energy Stock Is Falling After Stellantis Battery Milestone",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53148191/why-factorial-energy-stock-is-falling-after-stellantis-battery-milestone",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478026+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Shares actively declining on dilution concerns from AI-focused equity raise, representing immediate negative catalyst with concrete impact on shareholder value.",
+      "action_window": "intraday",
+      "headline": "Alphabet Shares Are Under Pressure Thursday: What Investors Need To Know",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53148018/alphabet-shares-are-under-pressure-thursday-what-investors-need-to-know",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478033+00:00"
+    },
+    {
+      "ticker": "VRTX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive clinical data showing sustained benefits in pediatric patients expands the market opportunity for CASGEVY, a gene therapy for rare blood disorders, which strengthens the commercial thesis.",
+      "action_window": "intraday",
+      "headline": "Vertex Says Pediatric CASGEVY Data Show Consistent Benefits In Rare Blood Disorders",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53147978/vertex-says-pediatric-casgevy-data-show-consistent-benefits-in-rare-blood-disorders",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478040+00:00"
+    },
+    {
+      "ticker": "HON",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Investor Day with 2029 growth targets, margin expansion plans, and Aerospace spin-off strategy drove immediate share price appreciation, representing meaningful positive catalyst with concrete long-term roadmap.",
+      "action_window": "intraday",
+      "headline": "Honeywell Lays Out Automation Growth Roadmap",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53147877/honeywell-lays-out-automation-growth-roadmap",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478047+00:00"
+    },
+    {
+      "ticker": "AMC",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Equity offering raises cash but dilutes existing shareholders, creating near-term selling pressure despite balance sheet improvement.",
+      "action_window": "intraday",
+      "headline": "What's Going On With AMC Entertainment Stock Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53147651/whats-going-on-with-amc-entertainment-stock-thursday-3",
+      "source": "alpaca",
+      "added_at": "2026-06-11T16:35:07.478053+00:00"
     }
   ]
 }
