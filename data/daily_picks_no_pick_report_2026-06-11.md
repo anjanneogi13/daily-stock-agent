@@ -1,32 +1,11 @@
-# Daily Picks No-Pick Report
+# Daily Picks Official No-Pick Guard Decision
 
-Monitoring-only failure evidence. No official picks were generated.
+Monitoring-only official no-pick artifact. Not buy instructions.
 
 - Date: **2026-06-11**
-- Reason: **No official picks generated because all finalists were blocked by the premarket sanity gate.**
-- Primary no-pick cause: **NO_PICK_PREMARKET_SANITY_BLOCKED_ALL**
-- Summary: **No official picks were generated because all finalists were blocked by the premarket sanity gate.**
+- Primary no-pick cause: **NO_PICK_WINDOW_MISSED**
+- Decision ID: `premarket_official_daily_pick:2026-06-11:NO_PICK:NO_PICK_WINDOW_MISSED:27350040533:f744ba7568d5`
+- Artifact ID: `daily_picks_no_pick_report:2026-06-11:NO_PICK_WINDOW_MISSED`
+- Summary: **No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.**
 - Paper trading enabled: **false**
 - Live trading enabled: **false**
-- Official premarket pick: **false**
-
-## Pipeline
-- capped_count: **2**
-- data_readiness_passed: **True**
-- data_readiness_status: **ready**
-- fetched_count: **555**
-- filtered_count: **30**
-- final_pick_count: **0**
-- hard_blocked_count: **0**
-- post_hard_block_pick_count: **2**
-- post_premarket_sanity_pick_count: **0**
-- pre_hard_block_pick_count: **2**
-- pre_premarket_sanity_pick_count: **2**
-- premarket_sanity_blocked_count: **2**
-- scored_count: **320**
-- scorer_workers: **4**
-- universe_count: **561**
-
-## Market Data Health
-- stooq: attempts=**3**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1441**, successes=**1438**, errors=**0**, rate_limited=**0**, unauthorized=**0**
