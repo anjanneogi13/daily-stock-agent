@@ -633,15 +633,16 @@
     },
     {
       "ticker": "CME",
-      "tradeable_score": 0.58,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New crypto futures product launch expands CME's addressable market and revenue streams in the growing digital asset space, though impact is incremental to existing crypto offerings.",
+      "category": "upgrade",
+      "rationale": "Rothschild & Co upgraded CME Group to Buy with a $323 price target, representing a meaningful positive catalyst from a reputable financial institution that typically drives near-term buying interest.",
       "action_window": "next_day",
-      "headline": "CME Rolls Out Nasdaq CME Crypto Index Futures",
-      "url": "https://www.benzinga.com/news/26/06/53103291/cme-rolls-out-nasdaq-cme-crypto-index-futures",
+      "headline": "Rothschild & Co Upgrades CME Group to Buy, Raises Price Target to $323",
+      "url": "https://www.benzinga.com/news/26/06/53137530/rothschild-co-upgrades-cme-group-to-buy-raises-price-target-to-323",
       "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428669+00:00"
+      "added_at": "2026-06-09T20:31:13.428669+00:00",
+      "updated_at": "2026-06-11T12:06:26.064907+00:00"
     },
     {
       "ticker": "BARK",
@@ -1125,6 +1126,90 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/53131415/major-drilling-group-intl-q4-eps-0-10-beats-0-07-estimate-sales-233-689m-beat-228-930m-estimate",
       "source": "alpaca",
       "added_at": "2026-06-10T22:28:33.319424+00:00"
+    },
+    {
+      "ticker": "CRBU",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Longer follow-up data from ongoing Phase 1 trial of off-the-shelf CAR-T therapy for multiple myeloma represents positive clinical progress but lacks definitive efficacy/safety outcomes to be a major catalyst.",
+      "action_window": "intraday",
+      "headline": "Caribou Biosciences Reports Longer Follow Up Data For Ongoing CaMMouflage Phase 1 Trial Of CB-011, Off-The-Shelf BCMA-Targeted CAR-T Cell Therapy, Being Evaluated For r/r MM",
+      "url": "https://www.benzinga.com/news/26/06/53137496/caribou-biosciences-reports-longer-follow-up-data-for-ongoing-cammouflage-phase-1-trial-of-cb-011-of",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064924+00:00"
+    },
+    {
+      "ticker": "VRA",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Vera Bradley significantly beat both EPS estimates (loss of $0.09 vs expected loss of $0.33) and revenue estimates ($55.7M vs $49.1M expected), representing a 73% EPS beat and 13% revenue beat.",
+      "action_window": "intraday",
+      "headline": "Vera Bradley Q1 Adj. EPS $(0.09) Beats $(0.33) Estimate, Sales $55.702M Beat $49.116M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53137472/vera-bradley-q1-adj-eps-0-09-beats-0-33-estimate-sales-55-702m-beat-49-116m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064934+00:00"
+    },
+    {
+      "ticker": "BBCQ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant product launch demonstrating operational progress for SPAC partner Pasqal with deployment of 140-qubit quantum computer in strategic European market, validating technology commercialization.",
+      "action_window": "intraday",
+      "headline": "Bleichroeder SPAC Partner Pasqal Launches Italy's First Neutral-Atom Quantum Computer",
+      "url": "https://www.benzinga.com/markets/small-cap/26/06/53137471/bleichroeder-spac-partner-pasqal-launches-italys-first-neutral-atom-quantum-computer",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064942+00:00"
+    },
+    {
+      "ticker": "MKTX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Rothschild & Co downgraded MKTX from a higher rating to Neutral with a lower price target of $134, indicating reduced confidence in near-term performance.",
+      "action_window": "intraday",
+      "headline": "Rothschild & Co Downgrades MarketAxess Holdings to Neutral, Lowers Price Target to $134",
+      "url": "https://www.benzinga.com/news/26/06/53137449/rothschild-co-downgrades-marketaxess-holdings-to-neutral-lowers-price-target-to-134",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064950+00:00"
+    },
+    {
+      "ticker": "PCT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large concurrent public offerings totaling $395M typically cause immediate dilution pressure and the headline confirms shares are already sliding on the news.",
+      "action_window": "intraday",
+      "headline": "PureCycle Shares Slide After Company Prices $250M Notes, $145M Stock Offering",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53137243/purecycle-shares-slide-after-company-prices-250m-notes-145m-stock-offering",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064958+00:00"
+    },
+    {
+      "ticker": "SMMT",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Withdrawal of $500M dilutive offering removes immediate shareholder dilution risk and signals management confidence, typically causing sharp positive price reaction.",
+      "action_window": "intraday",
+      "headline": "Summit Therapeutics Withdraws Previously Announced Proposed $500M Underwritten Public Offering Of Shares Due To Market Conditions",
+      "url": "https://www.benzinga.com/news/26/06/53137218/summit-therapeutics-withdraws-previously-announced-proposed-500m-underwritten-public-offering-of-sha",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064965+00:00"
+    },
+    {
+      "ticker": "DMRA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Initiation of coverage with Buy rating and $45 price target by HC Wainwright is positive but represents analyst opinion rather than a fundamental catalyst, with impact dependent on current stock price relative to target.",
+      "action_window": "intraday",
+      "headline": "HC Wainwright & Co. Initiates Coverage On Damora Therapeutics with Buy Rating, Announces Price Target of $45",
+      "url": "https://www.benzinga.com/news/26/06/53137197/hc-wainwright-co-initiates-coverage-on-damora-therapeutics-with-buy-rating-announces-price-target-of",
+      "source": "alpaca",
+      "added_at": "2026-06-11T12:06:26.064972+00:00"
     }
   ]
 }
