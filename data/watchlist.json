@@ -1,80 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ASTS",
-      "tradeable_score": 0.8,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "SpaceX's massive IPO at $175 triggered immediate sell-off in space/satellite peers, creating a significant competitive threat event with clear sector rotation impact.",
-      "action_window": "this_week",
-      "headline": "Stock Market Today: SpaceX Jumps To $175, Rocks Space Rivals",
-      "url": "https://www.benzinga.com/markets/equities/26/06/53174107/stock-market-today-spacex-jumps-175-debut-rocks-space-stocks",
-      "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647332+00:00",
-      "updated_at": "2026-06-12T17:35:21.460840+00:00"
-    },
-    {
-      "ticker": "RIVN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "R2 product launch is a meaningful catalyst for Rivian's mid-market expansion strategy, with CEO providing positive commentary on EV market potential that could drive investor interest.",
-      "action_window": "intraday",
-      "headline": "Rivian CEO Says Americans Aren't Anti-EV, There's Just 'Few Great Choices': How R2 Launch Could Help",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/06/53117981/rivian-ceo-says-americans-arent-anti-ev-theres-just-few-great-choices-how-r2-launch-could-help",
-      "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647349+00:00",
-      "updated_at": "2026-06-10T15:01:18.213114+00:00"
-    },
-    {
-      "ticker": "INCY",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "ma_acquirer",
-      "rationale": "Large $1.25B acquisition adds promising pipeline asset but payoff timeline is distant (2030s) and execution risk remains high for rare disease development.",
-      "action_window": "next_day",
-      "headline": "Incyte Bets $1.25 Billion On Rare Bleeding Disorder Drug With Blockbuster Potential",
-      "url": "https://www.benzinga.com/news/health-care/26/06/53098895/incyte-bets-1-25-billion-on-rare-bleeding-disorder-drug-with-blockbuster-potential",
-      "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647356+00:00"
-    },
-    {
-      "ticker": "CRWV",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Stock declining on concerns about additional debt issuance signaling potential capital constraints or dilution risk, creating near-term selling pressure.",
-      "action_window": "intraday",
-      "headline": "CoreWeave Stock Slips: What's Happening Today?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53098151/coreweave-stock-slips-whats-happening-today",
-      "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647367+00:00"
-    },
-    {
-      "ticker": "XPOF",
-      "tradeable_score": 0.58,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Legal settlement of $3.9M for misleading franchise owners indicates regulatory risk and potential reputational damage that could impact franchise sales and investor confidence.",
-      "action_window": "next_day",
-      "headline": "Attorney General James Secures More Than $3.9 Million From Xponential Fitness For Misleading Franchise Owners",
-      "url": "https://www.benzinga.com/government/26/06/53098053/attorney-general-james-secures-more-than-3-9-million-from-xponential-fitness-for-misleading-franchis",
-      "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647373+00:00"
-    },
-    {
-      "ticker": "APO",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Whale alerts indicate large institutional trades across multiple financials suggesting near-term bullish momentum, but lacks specific catalyst details and affects 6 tickers broadly.",
-      "action_window": "intraday",
-      "headline": "6 Financials Stocks With Whale Alerts In Today's Session",
-      "url": "https://www.benzinga.com/insights/options/26/06/53097697/6-financials-stocks-with-whale-alerts-in-todays-session",
-      "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647380+00:00"
-    },
-    {
       "ticker": "SUJA",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -862,15 +788,16 @@
     },
     {
       "ticker": "SPCX",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "SpaceX IPO coverage highlighting valuation risks and disconnect between AI hype versus actual WiFi-driven profits suggests caution despite strong investor demand.",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "SpaceX IPO announcement is a major catalyst as the highly anticipated private company goes public with ticker SPCX.",
       "action_window": "next_day",
-      "headline": "SpaceX Is Selling A Planet\u2011Shifting Vision \u2014 The Profits Come From Wi\u2011Fi",
-      "url": "https://www.benzinga.com/markets/tech/26/06/53157258/spacex-ipo-stock-valuation",
+      "headline": "SpaceX Takes Page From Tesla, Launches Merch To Celebrate Ticker, IPO",
+      "url": "https://www.benzinga.com/markets/ipos/26/06/53177442/spacex-takes-page-from-tesla-launches-merch-to-celebrate-ticker-ipo",
       "source": "alpaca",
-      "added_at": "2026-06-11T21:40:26.503092+00:00"
+      "added_at": "2026-06-11T21:40:26.503092+00:00",
+      "updated_at": "2026-06-12T19:59:33.967765+00:00"
     },
     {
       "ticker": "XXII",
@@ -1075,6 +1002,127 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53174068/why-cuprina-holdings-stock-is-surging-today",
       "source": "alpaca",
       "added_at": "2026-06-12T17:35:21.460854+00:00"
+    },
+    {
+      "ticker": "DXCM",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA clearance for first-ever OTC continuous glucose monitor for children represents a major regulatory milestone opening significant new market access for DexCom.",
+      "action_window": "intraday",
+      "headline": "FDA Clears First Over-The-Counter Continuous Glucose Monitor For Children",
+      "url": "https://www.benzinga.com/news/26/06/53178544/fda-clears-first-over-the-counter-continuous-glucose-monitor-for-children",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967705+00:00"
+    },
+    {
+      "ticker": "ASTS",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Short seller targeting multiple space sector stocks creates immediate selling pressure, though impact is sector-wide rather than company-specific fundamental deterioration.",
+      "action_window": "intraday",
+      "headline": "Space Stocks Get Torched: Short Seller Calls Them 'Sci-Fi Wishes'",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53178299/space-stocks-get-torched-short-seller-calls-them-sci-fi-wishes",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967719+00:00"
+    },
+    {
+      "ticker": "RIVN",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock already surging on R2 SUV delivery milestone and positive 2026 guidance, suggesting market is actively pricing in the catalyst with momentum potentially continuing near-term.",
+      "action_window": "intraday",
+      "headline": "Is Rivian Stock A Buy Now? Inside The R2 SUV Delivery Milestone And 2026 Guidance",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53178190/is-rivian-stock-a-buy-now-inside-the-r2-suv-delivery-milestone-and-2026-guidance",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967727+00:00"
+    },
+    {
+      "ticker": "SUGP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 38.317M shares by existing shareholders signals potential dilution and near-term selling pressure, typically bearish for stock price.",
+      "action_window": "intraday",
+      "headline": "Su Group Files Prospectus For Offering Up To 38.317M Class A Ordinary Shares On Behalf Of Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/06/53178039/su-group-files-prospectus-for-offering-up-to-38-317m-class-a-ordinary-shares-on-behalf-of-selling-sh",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967734+00:00"
+    },
+    {
+      "ticker": "MH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Q4 earnings beat overshadowed by soft forward guidance and K-12 market headwinds, triggering share decline and price target reduction despite maintained Buy rating.",
+      "action_window": "intraday",
+      "headline": "McGraw Hill Tops Q4 Estimates But Soft Guidance, Choppy K-12 Market Weigh",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/06/53177929/mcgraw-hill-tops-q4-estimates-but-soft-guidance-choppy-k-12-market-weigh",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967740+00:00"
+    },
+    {
+      "ticker": "ROKU",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "M&A sale talks typically drive immediate premium for target company, though 'said to be' language indicates this is still rumor-stage without confirmed deal.",
+      "action_window": "intraday",
+      "headline": "'Roku Said to Be in Sale Talks, Including Possible Media Tie-Up' - Bloomberg News",
+      "url": "https://www.benzinga.com/m-a/26/06/53177871/roku-said-to-be-in-sale-talks-including-possible-media-tie-up-bloomberg-news",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967746+00:00"
+    },
+    {
+      "ticker": "BBGI",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of $5.236M represents dilution for existing shareholders, typically bearish for small-cap stocks in the near term.",
+      "action_window": "intraday",
+      "headline": "Beasley Broadcast Strikes Equity Distribution Agreement With Noble Capital Markets To Offer $5.236M Class A Common Shares",
+      "url": "https://www.benzinga.com/news/26/06/53177756/beasley-broadcast-strikes-equity-distribution-agreement-with-noble-capital-markets-to-offer-5-236m-c",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967757+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Meta acknowledging billions in AI costs for 2026 and implementing cost controls signals higher-than-expected AI infrastructure spending that may pressure margins and investor sentiment on ROI concerns.",
+      "action_window": "intraday",
+      "headline": "'Tokenminimizing: Meta Moves To Curb Employee AI Usage As AI Costs Reach Billions; In Memo, Meta Says It Plans To Crack Down On Employee Token Use As AI Costs Soar; Internal AI Usage Projected To Cost Meta Billions In 2026' - The Information",
+      "url": "https://www.benzinga.com/news/26/06/53177440/tokenminimizing-meta-moves-to-curb-employee-ai-usage-as-ai-costs-reach-billions-in-memo-meta-says-it",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967774+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $2.56B government contract win for AWS is material revenue addition but represents small percentage of Amazon's total revenue given its scale.",
+      "action_window": "intraday",
+      "headline": "Department Of Homeland Security Awards Amazon Web Services $2.56B Department-Wide Cumulus Cloud Services Contract For Computing Infrastructure Providers, Data Processing, Web Hosting, And Related Services",
+      "url": "https://www.benzinga.com/news/26/06/53177384/department-of-homeland-security-awards-amazon-web-services-2-56b-department-wide-cumulus-cloud-servi",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967781+00:00"
+    },
+    {
+      "ticker": "BYAH",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registered direct offering of $2M with pre-funded warrants at $1.50 typically causes immediate dilution and selling pressure, especially for small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Park Ha Biological Technology Launches $2M Registered Direct Offering Of Up To 1,133,332 Shares And 200,000 Pre-Funded Warrants At A Combined Price Of $1.50",
+      "url": "https://www.benzinga.com/news/26/06/53177296/park-ha-biological-technology-launches-2m-registered-direct-offering-of-up-to-1-133-332-shares-and-2",
+      "source": "alpaca",
+      "added_at": "2026-06-12T19:59:33.967787+00:00",
+      "updated_at": "2026-06-12T19:59:33.967795+00:00"
     }
   ]
 }
