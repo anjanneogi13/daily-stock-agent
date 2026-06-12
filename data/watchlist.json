@@ -1087,6 +1087,18 @@
       "url": "https://www.benzinga.com/markets/tech/26/06/53157258/spacex-ipo-stock-valuation",
       "source": "alpaca",
       "added_at": "2026-06-11T21:40:26.503092+00:00"
+    },
+    {
+      "ticker": "XXII",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Trading halt with pending news announcement indicates material information forthcoming but direction unknown until news is released.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halted at 7:50:00 p.m. ET - Trading Halt: Halt News Pending",
+      "url": "https://www.benzinga.com/quote/XXII",
+      "source": "alpaca",
+      "added_at": "2026-06-12T01:44:30.933697+00:00"
     }
   ]
 }
