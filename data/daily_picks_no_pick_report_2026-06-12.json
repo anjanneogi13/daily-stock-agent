@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-27414532130",
+  "artifact_bundle_name": "official-decision-artifacts-27415982476",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -217,8 +217,8 @@
       "universe_count": 565
     }
   },
-  "commit_sha": "3909bc5f3ad572f52682246fa7c1dc8fb09d9119",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/3909bc5f3ad572f52682246fa7c1dc8fb09d9119",
+  "commit_sha": "4e60a97186f87113d0414eb96622dc84676f5520",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/4e60a97186f87113d0414eb96622dc84676f5520",
   "config_version": "config.yaml",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -446,32 +446,32 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 561,
+        "attempts": 1122,
         "empty": 0,
-        "errors": 103,
-        "successes": 458
+        "errors": 208,
+        "successes": 914
       },
       "monster_info": {
-        "attempts": 355,
+        "attempts": 710,
         "empty": 0,
-        "errors": 65,
-        "successes": 290
+        "errors": 132,
+        "successes": 578
       },
       "ohlcv": {
-        "attempts": 573,
-        "empty": 6,
+        "attempts": 1145,
+        "empty": 12,
         "errors": 0,
-        "successes": 567
+        "successes": 1133
       }
     },
     "date": "2026-06-12",
     "providers": {
       "stooq": {
-        "attempts": 3,
-        "empty": 3,
+        "attempts": 6,
+        "empty": 6,
         "errors": 0,
         "failure_types": {
-          "empty_response": 3,
+          "empty_response": 6,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -491,17 +491,17 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 1486,
-        "empty": 3,
-        "errors": 168,
+        "attempts": 2971,
+        "empty": 6,
+        "errors": 340,
         "failure_types": {
-          "empty_response": 3,
+          "empty_response": 6,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 168,
+          "rate_limited": 340,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -509,8 +509,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 168,
-        "successes": 1315,
+        "rate_limited": 340,
+        "successes": 2625,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -793,7 +793,7 @@
         "ticker": "WMT"
       }
     ],
-    "timestamp_utc": "2026-06-12T12:09:11Z"
+    "timestamp_utc": "2026-06-12T12:39:02Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -822,11 +822,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-06-12T08:09:11-04:00",
+  "selection_time_et": "2026-06-12T08:39:02-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-06-12T12:09:11Z",
+  "timestamp_utc": "2026-06-12T12:39:02Z",
   "watch_only_available": false,
-  "workflow_run_id": "27414532130",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27414532130"
+  "workflow_run_id": "27415982476",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27415982476"
 }

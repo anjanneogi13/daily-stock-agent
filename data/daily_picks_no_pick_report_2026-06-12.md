@@ -25,8 +25,8 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **565**
 
 ## Market Data Health
-- stooq: attempts=**3**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1486**, successes=**1315**, errors=**168**, rate_limited=**168**, unauthorized=**0**
+- stooq: attempts=**6**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2971**, successes=**2625**, errors=**340**, rate_limited=**340**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED

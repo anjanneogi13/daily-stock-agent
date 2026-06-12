@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 561,
+      "attempts": 1122,
       "empty": 0,
-      "errors": 103,
-      "successes": 458
+      "errors": 208,
+      "successes": 914
     },
     "monster_info": {
-      "attempts": 355,
+      "attempts": 710,
       "empty": 0,
-      "errors": 65,
-      "successes": 290
+      "errors": 132,
+      "successes": 578
     },
     "ohlcv": {
-      "attempts": 573,
-      "empty": 6,
+      "attempts": 1145,
+      "empty": 12,
       "errors": 0,
-      "successes": 567
+      "successes": 1133
     }
   },
   "date": "2026-06-12",
   "providers": {
     "stooq": {
-      "attempts": 3,
-      "empty": 3,
+      "attempts": 6,
+      "empty": 6,
       "errors": 0,
       "failure_types": {
-        "empty_response": 3,
+        "empty_response": 6,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,17 +47,17 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1486,
-      "empty": 3,
-      "errors": 168,
+      "attempts": 2971,
+      "empty": 6,
+      "errors": 340,
       "failure_types": {
-        "empty_response": 3,
+        "empty_response": 6,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 168,
+        "rate_limited": 340,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,8 +65,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 168,
-      "successes": 1315,
+      "rate_limited": 340,
+      "successes": 2625,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "WMT"
     }
   ],
-  "timestamp_utc": "2026-06-12T12:09:11Z"
+  "timestamp_utc": "2026-06-12T12:39:02Z"
 }
