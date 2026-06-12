@@ -1,52 +1,17 @@
 {
   "items": [
     {
-      "ticker": "TRUMPUSD",
-      "tradeable_score": 0.75,
+      "ticker": "ASTS",
+      "tradeable_score": 0.8,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Major investigative report revealing $2.3B in Trump family crypto profits while investors lost equivalent amounts creates significant reputational and regulatory risk for associated crypto ventures.",
-      "action_window": "intraday",
-      "headline": "Trump Family Reportedly Made $2.3 Billion From Crypto Ventures",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53093946/trump-family-reportedly-made-2-3-billion-from-crypto-ventures",
-      "source": "alpaca",
-      "added_at": "2026-06-09T16:29:24.190248+00:00"
-    },
-    {
-      "ticker": "SNDK",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Multiple price target hikes from major banks (Cantor and BofA) driving intraday outperformance represents a meaningful catalyst with confirmation from institutional analysts.",
-      "action_window": "intraday",
-      "headline": "Why Is SanDisk Stock Gaining Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53093670/why-is-sandisk-stock-gaining-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-06-09T16:29:24.190259+00:00"
-    },
-    {
-      "ticker": "VECO",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Follow-on order for NSA500 indicates customer validation and revenue momentum, supported by positive chip-sector tailwinds, though specifics on order size are limited.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Veeco Instruments Stock On Tuesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/06/53093386/whats-going-on-with-veeco-instruments-stock-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-06-09T16:29:24.190267+00:00"
-    },
-    {
-      "ticker": "ASTS",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Concrete satellite launch date is a meaningful operational milestone for space infrastructure company, though current 2.5% dip suggests market uncertainty about execution risk ahead of the June 17 event.",
+      "rationale": "SpaceX's massive IPO at $175 triggered immediate sell-off in space/satellite peers, creating a significant competitive threat event with clear sector rotation impact.",
       "action_window": "this_week",
-      "headline": "AST SpaceMobile Sets June 17 Launch Date For BlueBird Satellites",
-      "url": "https://www.benzinga.com/markets/large-cap/26/06/53098851/ast-spacemobile-sets-june-17-launch-date-for-bluebird-satellites",
+      "headline": "Stock Market Today: SpaceX Jumps To $175, Rocks Space Rivals",
+      "url": "https://www.benzinga.com/markets/equities/26/06/53174107/stock-market-today-spacex-jumps-175-debut-rocks-space-stocks",
       "source": "alpaca",
-      "added_at": "2026-06-09T18:31:33.647332+00:00"
+      "added_at": "2026-06-09T18:31:33.647332+00:00",
+      "updated_at": "2026-06-12T17:35:21.460840+00:00"
     },
     {
       "ticker": "RIVN",
@@ -1086,6 +1051,30 @@
       "url": "https://www.benzinga.com/news/26/06/53166782/woodside-energy-exercising-right-to-preempt-400m-sale-of-petrochinas-10-67-stake-in-the-browse-lng-j",
       "source": "alpaca",
       "added_at": "2026-06-12T14:42:43.829152+00:00"
+    },
+    {
+      "ticker": "DNTH",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strong 75% responder rate for claseprubart in CIDP trial represents meaningful clinical data catalyst while competitor Sanofi faces setbacks, creating significant competitive advantage.",
+      "action_window": "intraday",
+      "headline": "Why Is Dianthus Therapeutics Stock Trading Higher On Friday?",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53174395/why-is-dianthus-therapeutics-stock-trading-higher-on-friday",
+      "source": "alpaca",
+      "added_at": "2026-06-12T17:35:21.460821+00:00"
+    },
+    {
+      "ticker": "CUPR",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes immediate delisting risk, providing relief rally opportunity but limited fundamental improvement.",
+      "action_window": "intraday",
+      "headline": "Why Cuprina Holdings Stock Is Surging Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53174068/why-cuprina-holdings-stock-is-surging-today",
+      "source": "alpaca",
+      "added_at": "2026-06-12T17:35:21.460854+00:00"
     }
   ]
 }

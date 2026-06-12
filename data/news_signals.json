@@ -759,32 +759,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TTAN": {
-    "ticker": "TTAN",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "ServiceTitan Rallies On Strong Q1 Results And Outlook",
-    "added_at": "2026-06-05T17:00:03.588525+00:00",
-    "expires": "2026-06-12T17:00:03.588534+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSLA": {
-    "ticker": "TSLA",
-    "score_delta": 0.018,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "'Tesla Pushes Roadster Demo To August; Tesla Roadster Demo Is Meant To Showcase Tesla's Work With SpaceX On A Cold Gas Thruster System' - The Information Exclusive",
-    "added_at": "2026-06-05T17:00:03.592371+00:00",
-    "expires": "2026-06-12T17:00:03.592376+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PSKY": {
     "ticker": "PSKY",
     "score_delta": -0.1,
@@ -2275,5 +2249,27 @@
     "expires": "2026-06-26T14:42:43.826140+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DNTH": {
+    "ticker": "DNTH",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Why Is Dianthus Therapeutics Stock Trading Higher On Friday?",
+    "added_at": "2026-06-12T17:35:21.455482+00:00",
+    "expires": "2026-06-19T17:35:21.455489+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CUPR": {
+    "ticker": "CUPR",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Why Cuprina Holdings Stock Is Surging Today?",
+    "added_at": "2026-06-12T17:35:21.457861+00:00",
+    "expires": "2026-12-09T17:35:21.457868+00:00",
+    "hard_block": true
   }
 }
