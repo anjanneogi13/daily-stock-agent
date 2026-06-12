@@ -1,126 +1,6 @@
 {
   "items": [
     {
-      "ticker": "NCRA",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New AI-driven venture platform launch is a strategic initiative that could drive future growth, but lacks immediate revenue impact or concrete financial metrics.",
-      "action_window": "intraday",
-      "headline": "Why Is Nocera Stock Trading Higher Today?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53085116/why-is-nocera-stock-trading-higher-today",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856441+00:00"
-    },
-    {
-      "ticker": "DXST",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strategic partnership with Taihao Robotics for physical AI applications represents meaningful business expansion into high-growth sectors (healthcare, home robotics), likely to drive positive price action for small-cap stock.",
-      "action_window": "intraday",
-      "headline": "Decent Holdings Enters Strategic Cooperation Agreement With Taihao Robotics To Support Development And Deployment Of Physical AI Applications In Home, Healthcare, And Community Environments",
-      "url": "https://www.benzinga.com/quote/DXST",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856453+00:00"
-    },
-    {
-      "ticker": "AIM",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Registered direct offering of 2.554M shares represents significant dilution (~10-15% based on typical small-cap float) at a fixed price, creating immediate downward pressure on the stock.",
-      "action_window": "intraday",
-      "headline": "AIM ImmunoTech Commences ~$2.65M Registered Direct Offering Of 2.554M Common Shares At $0.5189/Share",
-      "url": "https://www.benzinga.com/news/26/06/53085046/aim-immunotech-commences-2-65m-registered-direct-offering-of-2-554m-common-shares-at-0-5189share",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856459+00:00"
-    },
-    {
-      "ticker": "PKE",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Initiation of coverage with Outperform rating and $42 price target is positive but represents new coverage rather than an upgrade from existing rating, limiting immediate trading impact.",
-      "action_window": "intraday",
-      "headline": "Citizens Initiates Coverage On Park Aerospace with Market Outperform Rating, Announces Price Target of $42",
-      "url": "https://www.benzinga.com/news/26/06/53085028/citizens-initiates-coverage-on-park-aerospace-with-market-outperform-rating-announces-price-target-o",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856463+00:00"
-    },
-    {
-      "ticker": "ASO",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Earnings beat and guidance raise are bullish but offset by cautionary consumer outlook through 2026, creating mixed signals for traders.",
-      "action_window": "intraday",
-      "headline": "Academy Sports Raises Outlook, But Warns Shoppers Will Stay Squeezed Through 2026",
-      "url": "https://www.benzinga.com/markets/earnings/26/06/53084968/academy-sports-raises-outlook-but-warns-shoppers-will-stay-squeezed-through-2026",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856468+00:00"
-    },
-    {
-      "ticker": "NBIS",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership with NVIDIA to launch AI robotics hub is a meaningful business development that already showed positive market reaction with shares gaining.",
-      "action_window": "intraday",
-      "headline": "Nebius Launches AI Robotics Living Lab With NVIDIA Robotics Program",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53085008/nebius-launches-ai-robotics-living-lab-with-nvidia-robotics-program",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856473+00:00"
-    },
-    {
-      "ticker": "MPTI",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Material $6.8M follow-on defense contract representing significant revenue for a small-cap company in high-priority C-UAS radar programs with DoD backing.",
-      "action_window": "intraday",
-      "headline": "M-tron Industries Secures A Follow-On Order For $6.8M From One Of The Rising U.S. Department Of Defense Contractors In Support Of Several Major C-UAS Radar Programs",
-      "url": "https://www.benzinga.com/news/26/06/53084910/m-tron-industries-secures-a-follow-on-order-for-6-8m-from-one-of-the-rising-u-s-department-of-defens",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856478+00:00"
-    },
-    {
-      "ticker": "NUVL",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Wedbush downgrade from a higher rating to Neutral with price target reduction creates immediate selling pressure and signals reduced conviction in near-term upside.",
-      "action_window": "intraday",
-      "headline": "Wedbush Downgrades Nuvalent to Neutral, Lowers Price Target to $124",
-      "url": "https://www.benzinga.com/news/26/06/53084882/wedbush-downgrades-nuvalent-to-neutral-lowers-price-target-to-124",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856483+00:00"
-    },
-    {
-      "ticker": "RDW",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "A $500M ATM equity offering represents significant dilution for existing shareholders, causing immediate downward pressure on the stock price as confirmed by the trading action.",
-      "action_window": "intraday",
-      "headline": "Redwire Stock Falls After Company Launches $500 Million ATM Equity Offering",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53084856/redwire-stock-falls-after-company-launches-500-million-atm-equity-offering",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856487+00:00"
-    },
-    {
-      "ticker": "LGVN",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "EMA SME status provides regulatory fee reductions and support for drug development in Europe, representing a moderate positive catalyst for market expansion but not as significant as actual drug approval.",
-      "action_window": "intraday",
-      "headline": "Longeveron Granted Small Or Medium-Sized Enterprise Status By European Medicines Agency",
-      "url": "https://www.benzinga.com/government/26/06/53084839/longeveron-granted-small-or-medium-sized-enterprise-status-by-european-medicines-agency",
-      "source": "alpaca",
-      "added_at": "2026-06-09T13:41:32.856492+00:00"
-    },
-    {
       "ticker": "TRUMPUSD",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -1158,6 +1038,54 @@
       "url": "https://www.benzinga.com/news/26/06/53161523/richtech-robotics-announces-it-will-restate-its-audited-financial-results-for-fy24-and-fy25",
       "source": "alpaca",
       "added_at": "2026-06-12T11:39:54.031409+00:00"
+    },
+    {
+      "ticker": "BAC",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "SpaceX IPO showing strong 29% first-day pop benefits underwriter banks (BAC, C, GS, JPM, MS) but SpaceX itself is not publicly traded yet, creating indirect trading opportunity.",
+      "action_window": "intraday",
+      "headline": "SpaceX IPO: First Indicative Price At $174 Per Share",
+      "url": "https://www.benzinga.com/markets/ipos/26/06/53168032/spacex-ipo-opening-price-174-per-share",
+      "source": "alpaca",
+      "added_at": "2026-06-12T14:42:43.829108+00:00"
+    },
+    {
+      "ticker": "MNTS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $25M registered direct offering typically causes immediate dilution concerns and selling pressure, especially for small-cap stocks, explaining the Friday tumble.",
+      "action_window": "intraday",
+      "headline": "Why Is Momentus Stock Falling Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53167973/why-is-momentus-stock-falling-friday",
+      "source": "alpaca",
+      "added_at": "2026-06-12T14:42:43.829120+00:00"
+    },
+    {
+      "ticker": "NTRA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital reinstating coverage with an Outperform rating and $275 price target represents a meaningful positive catalyst from a major bank that typically drives short-term price action.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Reinstates Outperform on Natera, Announces $275 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/53167891/rbc-capital-reinstates-outperform-on-natera-announces-275-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-12T14:42:43.829136+00:00"
+    },
+    {
+      "ticker": "WDS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Woodside exercising preemption rights to acquire additional 10.67% stake in Browse LNG for $400M strengthens strategic position in key asset and demonstrates confidence in project value.",
+      "action_window": "next_day",
+      "headline": "Woodside Energy Exercising Right To Preempt $400M Sale Of PetroChina's 10.67% Stake In The Browse LNG Joint Venture To INPEX",
+      "url": "https://www.benzinga.com/news/26/06/53166782/woodside-energy-exercising-right-to-preempt-400m-sale-of-petrochinas-10-67-stake-in-the-browse-lng-j",
+      "source": "alpaca",
+      "added_at": "2026-06-12T14:42:43.829152+00:00"
     }
   ]
 }
