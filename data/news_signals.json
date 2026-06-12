@@ -768,19 +768,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ELAB": {
-    "ticker": "ELAB",
-    "score_delta": 0.046,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "PMGC's NorthStrive Defense Tech Enters Binding Term Sheet With Florida State University Research Foundation For Exclusive Aerospace And Defense Patent License",
-    "added_at": "2026-06-05T20:49:45.104348+00:00",
-    "expires": "2026-06-12T20:49:45.104354+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SOAR": {
     "ticker": "SOAR",
     "score_delta": 0.194,
@@ -2282,6 +2269,58 @@
     "headline": "SpaceX Takes Page From Tesla, Launches Merch To Celebrate Ticker, IPO",
     "added_at": "2026-06-12T19:59:33.964716+00:00",
     "expires": "2026-06-19T19:59:33.964727+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GENC": {
+    "ticker": "GENC",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Gencor Industries Q3 EPS $0.26 Misses $0.41 Estimate, Sales $33.799M Miss $36.519M Estimate",
+    "added_at": "2026-06-12T21:44:57.268722+00:00",
+    "expires": "2026-06-19T21:44:57.268729+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRAW": {
+    "ticker": "TRAW",
+    "score_delta": -0.2,
+    "catalyst": "fda_rejection",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Traws Pharma Defers Planned Phase 2a Influenza Study Of Tivoxavir Marboxil After Negative UK MHRA Review; Cash Runway Extends To Q1 2027; Advancing Alternative Influenza Antiviral Candidates",
+    "added_at": "2026-06-12T21:44:57.271217+00:00",
+    "expires": "2026-07-12T21:44:57.271223+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ABCB": {
+    "ticker": "ABCB",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Ameris Bancorp Says Jury Finds Ameris Bank Liable For $16.53M In Damages, $62.9M In Punitive Damages; Co. Intends To Appeal Jury Verdict",
+    "added_at": "2026-06-12T21:44:57.273334+00:00",
+    "expires": "2026-06-26T21:44:57.273339+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RMIX": {
+    "ticker": "RMIX",
+    "score_delta": 0.049,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Suncrete Buys Newoods, D/B/A ABC Block Company On June 8, 2026; Deal Consideration Is $27.2M Cash And 587,726 Class A Common Shares",
+    "added_at": "2026-06-12T21:44:57.275447+00:00",
+    "expires": "2026-06-26T21:44:57.275453+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -1,103 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SUJA",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Company's FY2026 sales guidance midpoint of $369M falls 0.8% below analyst estimates of $371.8M, signaling a meaningful revenue miss that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Suja Life Sees FY2026 Sales $367.000M-$371.000M vs $371.800M Est",
-      "url": "https://www.benzinga.com/news/26/06/53103357/suja-life-sees-fy2026-sales-367-000m-371-000m-vs-371-800m-est",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428661+00:00"
-    },
-    {
-      "ticker": "CME",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Rothschild & Co upgraded CME Group to Buy with a $323 price target, representing a meaningful positive catalyst from a reputable financial institution that typically drives near-term buying interest.",
-      "action_window": "next_day",
-      "headline": "Rothschild & Co Upgrades CME Group to Buy, Raises Price Target to $323",
-      "url": "https://www.benzinga.com/news/26/06/53137530/rothschild-co-upgrades-cme-group-to-buy-raises-price-target-to-323",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428669+00:00",
-      "updated_at": "2026-06-11T12:06:26.064907+00:00"
-    },
-    {
-      "ticker": "BARK",
-      "tradeable_score": 0.88,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Q1 sales guidance of $77-79M dramatically misses analyst expectations of $105.98M by approximately 27%, indicating severe operational challenges.",
-      "action_window": "intraday",
-      "headline": "BARK Sees Q1 Sales $77.000M-$79.000M vs $105.980M Est",
-      "url": "https://www.benzinga.com/news/26/06/53103277/bark-sees-q1-sales-77-000m-79-000m-vs-105-980m-est",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428679+00:00"
-    },
-    {
-      "ticker": "STTK",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Common stock offerings typically cause immediate dilution concerns and selling pressure, especially with undisclosed terms suggesting potential urgency or unfavorable pricing.",
-      "action_window": "intraday",
-      "headline": "Shattuck Labs Commences Common Stock Offering; Terms Undisclosed",
-      "url": "https://www.benzinga.com/news/26/06/53103218/shattuck-labs-commences-common-stock-offering-terms-undisclosed",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428689+00:00"
-    },
-    {
-      "ticker": "SKIL",
-      "tradeable_score": 0.88,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Skillsoft's FY2027 sales guidance of $388M-$406M represents a massive 20-23% miss versus analyst consensus of $503M, signaling severe business deterioration.",
-      "action_window": "intraday",
-      "headline": "Skillsoft Sees FY2027 Sales $388.000M-$406.000M vs $503.198M Est",
-      "url": "https://www.benzinga.com/news/26/06/53103048/skillsoft-sees-fy2027-sales-388-000m-406-000m-vs-503-198m-est",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428698+00:00"
-    },
-    {
-      "ticker": "VRME",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "Amendment to include additional share issuances in diluted share count increases potential shareholder dilution in the Open World merger, typically negative for existing shareholders.",
-      "action_window": "next_day",
-      "headline": "VerifyMe Amends Open World Merger Agreement To Include Additional Potential Share Issuances In Fully Diluted Share Count Calculation",
-      "url": "https://www.benzinga.com/news/26/06/53103001/verifyme-amends-open-world-merger-agreement-to-include-additional-potential-share-issuances-in-fully",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428703+00:00"
-    },
-    {
-      "ticker": "HNGE",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Company raises both Q2 and FY26 revenue guidance with strong 40-45% growth rates at midpoint, indicating robust business momentum and operational execution.",
-      "action_window": "intraday",
-      "headline": "Hinge Health Raises Q2 Revenue Range To $200M - $202M, Up 45% At Midpoint; Raises FY26 Revenue Range $818M - $824M, Up 40% At Midpoint",
-      "url": "https://www.benzinga.com/news/26/06/53102887/hinge-health-raises-q2-revenue-range-to-200m-202m-up-45-at-midpoint-raises-fy26-revenue-range-818m-8",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428715+00:00"
-    },
-    {
-      "ticker": "C",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "CFO providing specific positive Q2 revenue guidance for both trading (high single/low double digit growth) and investment banking (mid-teen growth) represents a meaningful upward catalyst during the quarter.",
-      "action_window": "intraday",
-      "headline": "Citigroup CFO Gonzalo Luchetti Expects Trading Revenue To Rise Between High Single Or Low Double Digits In Q2; Expects Investment Banking Revenue To Rise By Mid Teen Percentage In Q2",
-      "url": "https://www.benzinga.com/news/26/06/53102876/citigroup-cfo-gonzalo-luchetti-expects-trading-revenue-to-rise-between-high-single-or-low-double-dig",
-      "source": "alpaca",
-      "added_at": "2026-06-09T20:31:13.428720+00:00"
-    },
-    {
       "ticker": "TSX:RAY",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -1123,6 +1026,90 @@
       "source": "alpaca",
       "added_at": "2026-06-12T19:59:33.967787+00:00",
       "updated_at": "2026-06-12T19:59:33.967795+00:00"
+    },
+    {
+      "ticker": "GENC",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 37% below estimates ($0.26 vs $0.41) and revenue 7% below estimates ($33.8M vs $36.5M), indicating operational underperformance.",
+      "action_window": "next_day",
+      "headline": "Gencor Industries Q3 EPS $0.26 Misses $0.41 Estimate, Sales $33.799M Miss $36.519M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53181718/gencor-industries-q3-eps-0-26-misses-0-41-estimate-sales-33-799m-miss-36-519m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283217+00:00"
+    },
+    {
+      "ticker": "TRAW",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "UK MHRA negative review forcing deferral of Phase 2a study is a significant setback for lead program, though partially offset by extended cash runway and alternative candidates.",
+      "action_window": "next_day",
+      "headline": "Traws Pharma Defers Planned Phase 2a Influenza Study Of Tivoxavir Marboxil After Negative UK MHRA Review; Cash Runway Extends To Q1 2027; Advancing Alternative Influenza Antiviral Candidates",
+      "url": "https://www.benzinga.com/news/26/06/53181657/traws-pharma-defers-planned-phase-2a-influenza-study-of-tivoxavir-marboxil-after-negative-uk-mhra-re",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283232+00:00"
+    },
+    {
+      "ticker": "ABCB",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Jury verdict of $79.43M in total damages ($16.53M compensatory + $62.9M punitive) represents material financial liability that will likely pressure the stock despite appeal intentions.",
+      "action_window": "next_day",
+      "headline": "Ameris Bancorp Says Jury Finds Ameris Bank Liable For $16.53M In Damages, $62.9M In Punitive Damages; Co. Intends To Appeal Jury Verdict",
+      "url": "https://www.benzinga.com/news/26/06/53181612/ameris-bancorp-says-jury-finds-ameris-bank-liable-for-16-53m-in-damages-62-9m-in-punitive-damages-co",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283241+00:00"
+    },
+    {
+      "ticker": "VENU",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "ATM offering of up to $250M represents significant potential dilution to existing shareholders, typically creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Venu Holding Enters ATM Sales Agreement With ThinkEquity For Up To $250M In Common Stock",
+      "url": "https://www.benzinga.com/news/26/06/53181397/venu-holding-enters-atm-sales-agreement-with-thinkequity-for-up-to-250m-in-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283250+00:00"
+    },
+    {
+      "ticker": "GNPX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance notice indicates the company failed to meet listing requirements (likely minimum bid price or market cap), raising delisting concerns and signaling financial weakness.",
+      "action_window": "next_day",
+      "headline": "Genprex Receives Nasdaq Noncompliance Notice",
+      "url": "https://www.benzinga.com/news/26/06/53181316/genprex-receives-nasdaq-noncompliance-notice",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283256+00:00"
+    },
+    {
+      "ticker": "AMH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of up to $1B signals dilution for existing shareholders, typically creating near-term selling pressure despite capital raise flexibility.",
+      "action_window": "next_day",
+      "headline": "American Homes 4 Rent  Enters Sales Agreement For Class A Common Shares Under Continuous Offering Program; Offer And Sell Class A Common Shares Up To $1B Aggregate Gross Sales Price",
+      "url": "https://www.benzinga.com/news/26/06/53181175/american-homes-4-rent-enters-sales-agreement-for-class-a-common-shares-under-continuous-offering-pro",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283266+00:00"
+    },
+    {
+      "ticker": "RMIX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "RMIX (Suncrete) announced a confirmed $27.2M cash plus equity acquisition of ABC Block Company, representing strategic expansion but with dilution from 587,726 new shares issued.",
+      "action_window": "next_day",
+      "headline": "Suncrete Buys Newoods, D/B/A ABC Block Company On June 8, 2026; Deal Consideration Is $27.2M Cash And 587,726 Class A Common Shares",
+      "url": "https://www.benzinga.com/news/26/06/53180859/suncrete-buys-newoods-dba-abc-block-company-on-june-8-2026-deal-consideration-is-27-2m-cash-and-587",
+      "source": "alpaca",
+      "added_at": "2026-06-12T21:44:57.283273+00:00"
     }
   ]
 }
