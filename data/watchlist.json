@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CBRL",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Surprise profit combined with raised fiscal 2026 revenue guidance above estimates creates strong dual catalyst for immediate positive trading impact.",
-      "action_window": "next_day",
-      "headline": "Cracker Barrel Stock Climbs On Strong Q3 Earnings Result",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53118016/cracker-barrel-stock-climbs-on-strong-q3-earnings-result",
-      "source": "alpaca",
-      "added_at": "2026-06-09T10:56:16.206425+00:00",
-      "updated_at": "2026-06-10T15:01:18.213106+00:00"
-    },
-    {
-      "ticker": "DBI",
-      "tradeable_score": 0.6,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Mixed Q1 results with EPS beating by 75% but revenue missing marginally creates offsetting signals with modest upside bias from bottom-line strength.",
-      "action_window": "intraday",
-      "headline": "Designer Brands Q1 Adj. EPS $0.07 Beats $0.04 Estimate, Sales $696.350M Miss $696.815M Estimate",
-      "url": "https://www.benzinga.com/quote/DBI",
-      "source": "alpaca",
-      "added_at": "2026-06-09T10:56:16.206436+00:00"
-    },
-    {
-      "ticker": "LE",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Mixed earnings with EPS beat offset by significant revenue miss of 10.8% ($238.9M vs $267.97M expected), signaling weaker demand despite cost controls.",
-      "action_window": "intraday",
-      "headline": "Lands' End Q1 Adj. EPS $(0.11) Beats $(0.20) Estimate, Sales $238.916M Miss $267.970M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/06/53080704/lands-end-q1-adj-eps-0-11-beats-0-20-estimate-sales-238-916m-miss-267-970m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-06-09T10:56:16.206443+00:00"
-    },
-    {
-      "ticker": "THCH",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q1 earnings miss with both adjusted EPS deteriorating year-over-year and revenue declining 10.2%, indicating operational weakness warranting immediate reassessment.",
-      "action_window": "intraday",
-      "headline": "TH International Q1 Adj. EPS $(0.30) Down From $(0.29) YoY, Sales $37.220M Down From $41.443M YoY",
-      "url": "https://www.benzinga.com/quote/THCH",
-      "source": "alpaca",
-      "added_at": "2026-06-09T10:56:16.206450+00:00"
-    },
-    {
-      "ticker": "UCAR",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strategic joint venture for AI-based energy management in data centers represents significant business expansion into high-growth sectors (AI, hydrogen energy, data centers) with concrete near-term deployment in Thailand and global expansion plans.",
-      "action_window": "intraday",
-      "headline": "U Power Forms JV With Jiangsu Guofu Hydrogen Energy Equipment And Cloud Digital Chain Limited To Provide AI-Based Energy Management Solutions For Data Centers Starting In Thailand, With Plans For Global Expansion",
-      "url": "https://www.benzinga.com/news/26/06/53080393/u-power-forms-jv-with-jiangsu-guofu-hydrogen-energy-equipment-and-cloud-digital-chain-limited-to-pro",
-      "source": "alpaca",
-      "added_at": "2026-06-09T10:56:16.206460+00:00"
-    },
-    {
       "ticker": "NCRA",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -1099,6 +1038,126 @@
       "url": "https://www.benzinga.com/quote/XXII",
       "source": "alpaca",
       "added_at": "2026-06-12T01:44:30.933697+00:00"
+    },
+    {
+      "ticker": "DXYZ",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "DXYZ shares surge on SpaceX IPO catalyst as the fund holds SpaceX exposure, creating immediate trading opportunity on market open.",
+      "action_window": "intraday",
+      "headline": "Destiny Tech100 Stock Surges as SpaceX Prepares To Trade \u2014 Here's What Investors Need to Know",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53162475/destiny-tech100-stock-surges-as-spacex-prepares-to-trade-heres-what-investors-need-to-know",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031335+00:00"
+    },
+    {
+      "ticker": "UCB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive agreement to sell Equipment Finance business for $1.9B in cash represents a significant asset sale that should unlock shareholder value and improve capital position for United Community Banks.",
+      "action_window": "intraday",
+      "headline": "United Community Banks Announced The Execution Of A Definitive Agreement To Sell Its Equipment Finance Business To Funds Managed By Wafra For $1.9B In Cash",
+      "url": "https://www.benzinga.com/quote/UCB",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031350+00:00"
+    },
+    {
+      "ticker": "EXOD",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major product launch introducing trading of 200+ tokenized assets on Solana through partnership with Ondo Finance significantly expands EXOD's platform capabilities and addressable market.",
+      "action_window": "intraday",
+      "headline": "Exodus Movement Launches Exodus Markets With Tokenization Platform Ondo Finance To Facilitate Trading In Over 200 Tokenized Stocks, ETFs And Real-World Assets Directly On Solana",
+      "url": "https://www.benzinga.com/news/26/06/53162373/exodus-movement-launches-exodus-markets-with-tokenization-platform-ondo-finance-to-facilitate-tradin",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031359+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Nasdaq-100 inclusion is a known catalyst that typically drives institutional buying and index fund rebalancing, but the impact is largely mechanical and partially anticipated once announced.",
+      "action_window": "this_week",
+      "headline": "Why Is Rocket Lab Stock Trading Higher On Friday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/53162361/why-is-rocket-lab-stock-trading-higher-on-friday",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031367+00:00"
+    },
+    {
+      "ticker": "SHAZ",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Six-year strategic partnership with NVDA to deploy significant 72MW data center infrastructure represents major business expansion and revenue visibility for Sharon AI, with secondary positive impact for NVDA's AI infrastructure business.",
+      "action_window": "intraday",
+      "headline": "Sharon AI Signs Six-Year AI Infrastructure Compute Collaboration With Nvidia To Deploy 72MW Of New Data Center Capacity In Australia",
+      "url": "https://www.benzinga.com/news/26/06/53162312/sharon-ai-signs-six-year-ai-infrastructure-compute-collaboration-with-nvidia-to-deploy-72mw-of-new-d",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031374+00:00"
+    },
+    {
+      "ticker": "ADBE",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Multiple analyst downgrades following earnings despite record revenue and raised guidance, combined with unexpected CFO departure and significant pre-market decline, signals meaningful negative sentiment shift that overrides positive fundamentals.",
+      "action_window": "intraday",
+      "headline": "These Analysts Slash Their Forecasts On Adobe Following Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/06/53162318/these-analysts-slash-their-forecasts-on-adobe-following-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031381+00:00"
+    },
+    {
+      "ticker": "AROW",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Piper Sandler initiating coverage at Overweight with a price target represents a positive catalyst, though impact depends on current stock price relative to the $43 target and the company's market capitalization.",
+      "action_window": "intraday",
+      "headline": "Piper Sandler Assumes Arrow Financial at Overweight, Announces Price Target of $43",
+      "url": "https://www.benzinga.com/news/26/06/53162281/piper-sandler-assumes-arrow-financial-at-overweight-announces-price-target-of-43",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031388+00:00"
+    },
+    {
+      "ticker": "ODD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Company repurchasing $50M face value debt for only $35M represents a 30% discount, demonstrating strong financial management and implying debt trading at distressed levels that company views as opportunistic.",
+      "action_window": "intraday",
+      "headline": "ODDITY Tech To Repurchase $50M Of 0% Exchangeable Senior Notes Due 2030 For $35M",
+      "url": "https://www.benzinga.com/news/26/06/53162193/oddity-tech-to-repurchase-50m-of-0-exchangeable-senior-notes-due-2030-for-35m",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031396+00:00"
+    },
+    {
+      "ticker": "COE",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS deterioration (50% wider loss year-over-year) despite 71% revenue growth suggests worsening unit economics and profitability challenges.",
+      "action_window": "intraday",
+      "headline": "51 Talk Online Education Q1 Adj. EPS $(0.30) Down From $(0.20) YoY, Sales $31.188M Up From $18.247M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53162068/51-talk-online-education-q1-adj-eps-0-30-down-from-0-20-yoy-sales-31-188m-up-from-18-247m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031403+00:00"
+    },
+    {
+      "ticker": "RR",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Financial restatements for two consecutive fiscal years signal accounting irregularities or material errors, typically triggering immediate selling pressure, regulatory scrutiny, and potential delisting risks.",
+      "action_window": "intraday",
+      "headline": "Richtech Robotics Announces It Will Restate Its Audited Financial Results For FY24 And FY25",
+      "url": "https://www.benzinga.com/news/26/06/53161523/richtech-robotics-announces-it-will-restate-its-audited-financial-results-for-fy24-and-fy25",
+      "source": "alpaca",
+      "added_at": "2026-06-12T11:39:54.031409+00:00"
     }
   ]
 }

@@ -8,19 +8,6 @@
     "expires": "2026-11-04T20:06:25.385114+00:00",
     "hard_block": true
   },
-  "ORLA": {
-    "ticker": "ORLA",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "Equinox Gold And Orla Mining To Combine In $18.5B Agreement, ORLA Shareholders To Receive 1.00 EQX Share Plus Nominal Cash Payment Of $0.0001 Per ORLA Share",
-    "added_at": "2026-05-13T10:17:13.141567+00:00",
-    "expires": "2026-06-12T10:17:13.141574+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INMB": {
     "ticker": "INMB",
     "score_delta": 0.15,
@@ -438,45 +425,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CLIK": {
-    "ticker": "CLIK",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Click Holdings Acquires 100% Equity Stake In Hong Kong-Based Construction HR Tech Company; Within Two Years, It Is Projected To Contribute Over HK$50M In Annual Revenue To CLIK Group",
-    "added_at": "2026-05-29T11:23:24.804331+00:00",
-    "expires": "2026-06-12T11:23:24.804361+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SEER": {
-    "ticker": "SEER",
-    "score_delta": -0.074,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.52,
-    "action_window": "next_day",
-    "headline": "Seer Files Complaint Against Nanomics At The ITC, With Brigham And Women's Hospital Joining In",
-    "added_at": "2026-05-29T11:23:24.806460+00:00",
-    "expires": "2026-06-12T11:23:24.806465+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GCO": {
-    "ticker": "GCO",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Genesco Raises FY2027 GAAP EPS Guidance from $2.12-$2.55 to $2.32-$2.75 vs $2.24 Est",
-    "added_at": "2026-05-29T11:23:24.810538+00:00",
-    "expires": "2026-06-12T11:23:24.810543+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HOOD": {
     "ticker": "HOOD",
     "score_delta": -0.069,
@@ -785,19 +733,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "IOT": {
-    "ticker": "IOT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Samsara Says AI Data Center Boom Is Creating Massive Demand Across Physical Economy",
-    "added_at": "2026-06-05T11:21:20.104750+00:00",
-    "expires": "2026-06-12T11:21:20.104758+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GIII": {
     "ticker": "GIII",
     "score_delta": 0.1,
@@ -821,19 +756,6 @@
     "headline": "Gold Resource Urges Shareholders To Back Goldgroup Merger As Proxy Materials Mailed",
     "added_at": "2026-06-05T11:21:20.111541+00:00",
     "expires": "2026-07-05T11:21:20.111546+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ABM": {
-    "ticker": "ABM",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "ABM Indus Q2 Adj. EPS $0.90 Beats $0.87 Estimate, Sales $2.290B Beat $2.214B Estimate",
-    "added_at": "2026-06-05T11:21:20.115640+00:00",
-    "expires": "2026-06-12T11:21:20.115645+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2247,6 +2169,84 @@
     "headline": "Trio Petroleum Q2 EPS $(0.05) Up From $(0.22) YoY, Sales $208.257K Up From $23.271K YoY",
     "added_at": "2026-06-11T21:40:26.500101+00:00",
     "expires": "2026-06-18T21:40:26.500106+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UCB": {
+    "ticker": "UCB",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "United Community Banks Announced The Execution Of A Definitive Agreement To Sell Its Equipment Finance Business To Funds Managed By Wafra For $1.9B In Cash",
+    "added_at": "2026-06-12T11:39:54.014158+00:00",
+    "expires": "2026-07-12T11:39:54.014165+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EXOD": {
+    "ticker": "EXOD",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Exodus Movement Launches Exodus Markets With Tokenization Platform Ondo Finance To Facilitate Trading In Over 200 Tokenized Stocks, ETFs And Real-World Assets Directly On Solana",
+    "added_at": "2026-06-12T11:39:54.016313+00:00",
+    "expires": "2026-06-19T11:39:54.016319+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SHAZ": {
+    "ticker": "SHAZ",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Sharon AI Signs Six-Year AI Infrastructure Compute Collaboration With Nvidia To Deploy 72MW Of New Data Center Capacity In Australia",
+    "added_at": "2026-06-12T11:39:54.018309+00:00",
+    "expires": "2026-06-19T11:39:54.018314+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ADBE": {
+    "ticker": "ADBE",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "These Analysts Slash Their Forecasts On Adobe Following Q2 Earnings",
+    "added_at": "2026-06-12T11:39:54.020268+00:00",
+    "expires": "2026-06-17T11:39:54.020274+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "AROW": {
+    "ticker": "AROW",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Piper Sandler Assumes Arrow Financial at Overweight, Announces Price Target of $43",
+    "added_at": "2026-06-12T11:39:54.026400+00:00",
+    "expires": "2026-06-17T11:39:54.026407+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "COE": {
+    "ticker": "COE",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "51 Talk Online Education Q1 Adj. EPS $(0.30) Down From $(0.20) YoY, Sales $31.188M Up From $18.247M YoY",
+    "added_at": "2026-06-12T11:39:54.028426+00:00",
+    "expires": "2026-06-19T11:39:54.028431+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
