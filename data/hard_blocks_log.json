@@ -285,5 +285,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-12 12:09:11",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "UCB",
+        "reason": "SL too tight (1.2% < 2.0% for $34 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "AROW",
+        "reason": "SL too tight (1.6% < 2.0% for $38 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
