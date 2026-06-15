@@ -408,19 +408,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "TLN": {
-    "ticker": "TLN",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Talen Energy Obtains Regulatory Clearances For Lawrenceburg, Waterford And Darby Acquisition",
-    "added_at": "2026-06-01T22:21:16.555606+00:00",
-    "expires": "2026-06-15T22:21:16.555614+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ZENA": {
     "ticker": "ZENA",
     "score_delta": 0.032,
@@ -2022,6 +2009,45 @@
     "headline": "VistaGen Therapeutics Q4 EPS $(0.37) Misses $(0.30) Estimate, Sales $465.000K Beat $320.000K Estimate",
     "added_at": "2026-06-15T21:31:22.586801+00:00",
     "expires": "2026-06-22T21:31:22.586813+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DEVS": {
+    "ticker": "DEVS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "DevvStream Q3 EPS $(0.64) Down From $1.21 YoY, Sales $720.000 Down From $10.164K YoY",
+    "added_at": "2026-06-15T23:19:52.477482+00:00",
+    "expires": "2026-06-22T23:19:52.477489+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JRSH": {
+    "ticker": "JRSH",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Jerash Holdings (US) Inc (JRSH) Q4 2026 Earnings Call Highlights: Record Revenue and Strategic ...",
+    "added_at": "2026-06-15T23:19:52.479801+00:00",
+    "expires": "2026-06-22T23:19:52.479807+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NTLA": {
+    "ticker": "NTLA",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Intellia Surges; Can Its Gene-Editing Drug Solve The Chronic Treatment Problem?",
+    "added_at": "2026-06-15T23:19:52.485928+00:00",
+    "expires": "2026-06-22T23:19:52.485934+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
