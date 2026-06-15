@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BAC",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "SpaceX IPO showing strong 29% first-day pop benefits underwriter banks (BAC, C, GS, JPM, MS) but SpaceX itself is not publicly traded yet, creating indirect trading opportunity.",
-      "action_window": "intraday",
-      "headline": "SpaceX IPO: First Indicative Price At $174 Per Share",
-      "url": "https://www.benzinga.com/markets/ipos/26/06/53168032/spacex-ipo-opening-price-174-per-share",
-      "source": "alpaca",
-      "added_at": "2026-06-12T14:42:43.829108+00:00"
-    },
-    {
-      "ticker": "MNTS",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "A $25M registered direct offering typically causes immediate dilution concerns and selling pressure, especially for small-cap stocks, explaining the Friday tumble.",
-      "action_window": "intraday",
-      "headline": "Why Is Momentus Stock Falling Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53167973/why-is-momentus-stock-falling-friday",
-      "source": "alpaca",
-      "added_at": "2026-06-12T14:42:43.829120+00:00"
-    },
-    {
-      "ticker": "NTRA",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "RBC Capital reinstating coverage with an Outperform rating and $275 price target represents a meaningful positive catalyst from a major bank that typically drives short-term price action.",
-      "action_window": "intraday",
-      "headline": "RBC Capital Reinstates Outperform on Natera, Announces $275 Price Target",
-      "url": "https://www.benzinga.com/news/26/06/53167891/rbc-capital-reinstates-outperform-on-natera-announces-275-price-target",
-      "source": "alpaca",
-      "added_at": "2026-06-12T14:42:43.829136+00:00"
-    },
-    {
-      "ticker": "WDS",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Woodside exercising preemption rights to acquire additional 10.67% stake in Browse LNG for $400M strengthens strategic position in key asset and demonstrates confidence in project value.",
-      "action_window": "next_day",
-      "headline": "Woodside Energy Exercising Right To Preempt $400M Sale Of PetroChina's 10.67% Stake In The Browse LNG Joint Venture To INPEX",
-      "url": "https://www.benzinga.com/news/26/06/53166782/woodside-energy-exercising-right-to-preempt-400m-sale-of-petrochinas-10-67-stake-in-the-browse-lng-j",
-      "source": "alpaca",
-      "added_at": "2026-06-12T14:42:43.829152+00:00"
-    },
-    {
-      "ticker": "DNTH",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strong 75% responder rate for claseprubart in CIDP trial represents meaningful clinical data catalyst while competitor Sanofi faces setbacks, creating significant competitive advantage.",
-      "action_window": "intraday",
-      "headline": "Why Is Dianthus Therapeutics Stock Trading Higher On Friday?",
-      "url": "https://www.benzinga.com/news/health-care/26/06/53174395/why-is-dianthus-therapeutics-stock-trading-higher-on-friday",
-      "source": "alpaca",
-      "added_at": "2026-06-12T17:35:21.460821+00:00"
-    },
-    {
-      "ticker": "CUPR",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Regaining Nasdaq compliance removes immediate delisting risk, providing relief rally opportunity but limited fundamental improvement.",
-      "action_window": "intraday",
-      "headline": "Why Cuprina Holdings Stock Is Surging Today?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53174068/why-cuprina-holdings-stock-is-surging-today",
-      "source": "alpaca",
-      "added_at": "2026-06-12T17:35:21.460854+00:00"
-    },
-    {
       "ticker": "DXCM",
       "tradeable_score": 0.92,
       "sentiment": "bullish",
@@ -158,15 +86,16 @@
     },
     {
       "ticker": "META",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Meta acknowledging billions in AI costs for 2026 and implementing cost controls signals higher-than-expected AI infrastructure spending that may pressure margins and investor sentiment on ROI concerns.",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Strong 4.47% premarket surge driven by positive macro catalyst (U.S.-Iran peace deal) triggering tech sector rally, with upcoming $60B earnings creating additional momentum.",
       "action_window": "intraday",
-      "headline": "'Tokenminimizing: Meta Moves To Curb Employee AI Usage As AI Costs Reach Billions; In Memo, Meta Says It Plans To Crack Down On Employee Token Use As AI Costs Soar; Internal AI Usage Projected To Cost Meta Billions In 2026' - The Information",
-      "url": "https://www.benzinga.com/news/26/06/53177440/tokenminimizing-meta-moves-to-curb-employee-ai-usage-as-ai-costs-reach-billions-in-memo-meta-says-it",
+      "headline": "What Is Going On With Meta Stock On Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/06/53203350/what-is-going-on-with-meta-stock-on-monday-2",
       "source": "alpaca",
-      "added_at": "2026-06-12T19:59:33.967774+00:00"
+      "added_at": "2026-06-12T19:59:33.967774+00:00",
+      "updated_at": "2026-06-15T18:23:21.230986+00:00"
     },
     {
       "ticker": "AMZN",
@@ -372,6 +301,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53193376/super-micro-computer-stock-in-the-spotlight-as-7-billion-capital-raise-officially-closes",
       "source": "alpaca",
       "added_at": "2026-06-15T13:50:08.748957+00:00"
+    },
+    {
+      "ticker": "ALAB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Nasdaq-100 inclusion triggers mechanical buying from index funds and ETFs, creating near-term price momentum with strong technical tailwinds.",
+      "action_window": "intraday",
+      "headline": "Why Astera Labs Shares Are Jumping Ahead Of Nasdaq-100 Entry",
+      "url": "https://www.benzinga.com/markets/tech/26/06/53206950/why-astera-labs-shares-are-jumping-ahead-of-nasdaq-100-entry",
+      "source": "alpaca",
+      "added_at": "2026-06-15T18:23:21.230965+00:00"
+    },
+    {
+      "ticker": "FLY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "KeyBanc analyst upgrade with strong upside thesis drove 7% intraday gain, indicating meaningful near-term momentum in aerospace/defense stock.",
+      "action_window": "intraday",
+      "headline": "Why Is Firefly Aerospace Stock Soaring Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53206806/why-is-firefly-aerospace-stock-soaring-monday",
+      "source": "alpaca",
+      "added_at": "2026-06-15T18:23:21.230976+00:00"
+    },
+    {
+      "ticker": "WDC",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley reaffirmed Overweight rating with significant price target increase to $650, driving shares to boom on the day, indicating strong institutional support and upward momentum.",
+      "action_window": "intraday",
+      "headline": "What's Going On With The Jump In Western Digital Stock?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53206626/whats-going-on-with-the-jump-in-western-digital-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-15T18:23:21.230992+00:00"
+    },
+    {
+      "ticker": "BETR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Initial coverage with Buy rating and $35 price target from Roth Capital provides positive signal but initiation carries less weight than upgrade from existing coverage.",
+      "action_window": "next_day",
+      "headline": "Roth Capital Initiates Coverage On Better Home & Finance with Buy Rating, Announces Price Target of $35",
+      "url": "https://www.benzinga.com/news/26/06/53206339/roth-capital-initiates-coverage-on-better-home-finance-with-buy-rating-announces-price-target-of-35",
+      "source": "alpaca",
+      "added_at": "2026-06-15T18:23:21.230998+00:00"
     }
   ]
 }

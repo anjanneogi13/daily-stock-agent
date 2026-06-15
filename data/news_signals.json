@@ -1262,19 +1262,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NUE": {
-    "ticker": "NUE",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "JP Morgan Maintains Overweight on Nucor, Raises Price Target to $282",
-    "added_at": "2026-06-10T15:01:18.204232+00:00",
-    "expires": "2026-06-15T15:01:18.204236+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PLTR": {
     "ticker": "PLTR",
     "score_delta": 0.049,
@@ -1288,19 +1275,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MAA": {
-    "ticker": "MAA",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Truist Securities Maintains Buy on Mid-America Apartment, Raises Price Target to $146",
-    "added_at": "2026-06-10T17:59:17.561472+00:00",
-    "expires": "2026-06-15T17:59:17.561478+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PRGO": {
     "ticker": "PRGO",
     "score_delta": 0.129,
@@ -1311,19 +1285,6 @@
     "headline": "Watching Perrigo; Shares See Volume, Traders Circulate Unconfirmed M&A Blog Report Saying STADA And CapVest Are Launching A Takeover Of The Co",
     "added_at": "2026-06-10T17:59:17.564006+00:00",
     "expires": "2026-07-10T17:59:17.564011+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ASH": {
-    "ticker": "ASH",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Ashland, Raises Price Target to $72",
-    "added_at": "2026-06-10T17:59:17.566071+00:00",
-    "expires": "2026-06-15T17:59:17.566076+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1996,6 +1957,84 @@
     "headline": "This Datadog Analyst Turns Bullish; Here Are Top 4 Upgrades For Monday",
     "added_at": "2026-06-15T13:50:08.746216+00:00",
     "expires": "2026-06-20T13:50:08.746221+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FLY": {
+    "ticker": "FLY",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Why Is Firefly Aerospace Stock Soaring Monday?",
+    "added_at": "2026-06-15T18:23:21.214937+00:00",
+    "expires": "2026-06-20T18:23:21.214944+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WDC": {
+    "ticker": "WDC",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "What's Going On With The Jump In Western Digital Stock?",
+    "added_at": "2026-06-15T18:23:21.217099+00:00",
+    "expires": "2026-06-20T18:23:21.217105+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JBL": {
+    "ticker": "JBL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Stifel Maintains Buy on Jabil, Raises Price Target to $430",
+    "added_at": "2026-06-15T18:23:21.218942+00:00",
+    "expires": "2026-06-20T18:23:21.218947+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MGM": {
+    "ticker": "MGM",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.4,
+    "action_window": "intraday",
+    "headline": "Stifel Downgrades MGM Resorts International to Hold, Raises Price Target to $49",
+    "added_at": "2026-06-15T18:23:21.220812+00:00",
+    "expires": "2026-06-20T18:23:21.220818+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CZR": {
+    "ticker": "CZR",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Stifel Downgrades Caesars Entertainment to Hold, Maintains Price Target to $31",
+    "added_at": "2026-06-15T18:23:21.222615+00:00",
+    "expires": "2026-06-20T18:23:21.222621+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BETR": {
+    "ticker": "BETR",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Roth Capital Initiates Coverage On Better Home & Finance with Buy Rating, Announces Price Target of $35",
+    "added_at": "2026-06-15T18:23:21.228469+00:00",
+    "expires": "2026-06-20T18:23:21.228474+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
