@@ -898,19 +898,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "XELB": {
-    "ticker": "XELB",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Xcel Brands Announces Exclusive Licensing Collaboration With Baggallini And Coco Rocha To Launch Limited Edition Of Capsule Collection For Women",
-    "added_at": "2026-06-09T20:31:13.412721+00:00",
-    "expires": "2026-06-16T20:31:13.412726+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SKIL": {
     "ticker": "SKIL",
     "score_delta": -0.15,
@@ -934,19 +921,6 @@
     "headline": "VerifyMe Amends Open World Merger Agreement To Include Additional Potential Share Issuances In Fully Diluted Share Count Calculation",
     "added_at": "2026-06-09T20:31:13.416950+00:00",
     "expires": "2026-07-09T20:31:13.416955+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "YYGH": {
-    "ticker": "YYGH",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "YY Group Announces Strategic Deployment Of Humanoid Robots For Commercial Facility Management Data Training",
-    "added_at": "2026-06-09T20:31:13.419071+00:00",
-    "expires": "2026-06-16T20:31:13.419076+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1300,19 +1274,6 @@
     "expires": "2026-06-18T16:35:07.464488+00:00",
     "hard_block": false,
     "negative_reaction": true
-  },
-  "SOXL": {
-    "ticker": "SOXL",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "The AI Rally Has Gone Too Far. Here Are Two Stocks to Sell Right Now.",
-    "added_at": "2026-06-11T19:30:41.512298+00:00",
-    "expires": "2026-06-16T19:30:41.512304+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "SENEA": {
     "ticker": "SENEA",
@@ -1970,6 +1931,71 @@
     "headline": "Intel-Backed Mobileye's Robotaxi Ambitions Just Got Much Bigger",
     "added_at": "2026-06-16T17:59:24.593084+00:00",
     "expires": "2026-06-23T17:59:24.593089+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LOKV": {
+    "ticker": "LOKV",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Teamshares Announces Live Oak Acquisition Corp. V Shareholders Approve Proposed Merger With Teamshares",
+    "added_at": "2026-06-16T20:51:06.443517+00:00",
+    "expires": "2026-07-16T20:51:06.443525+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AMZN": {
+    "ticker": "AMZN",
+    "score_delta": -0.083,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "'Amazon Faces Billions in Penalties From Potential FTC Ad Suit' - Bloomberg Law",
+    "added_at": "2026-06-16T20:51:06.445586+00:00",
+    "expires": "2026-06-30T20:51:06.445592+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNOA": {
+    "ticker": "SNOA",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Sonoma Pharmaceuticals Q4 EPS $(0.33) Misses $(0.24) Estimate, Sales $5.561M Miss $5.565M Estimate",
+    "added_at": "2026-06-16T20:51:06.447453+00:00",
+    "expires": "2026-06-23T20:51:06.447458+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LZB": {
+    "ticker": "LZB",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "La-Z-Boy Q4 Adj. EPS $1.26 Beats $0.82 Estimate, Sales $570.338M Beat $569.225M Estimate",
+    "added_at": "2026-06-16T20:51:06.449260+00:00",
+    "expires": "2026-06-23T20:51:06.449265+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RIGL": {
+    "ticker": "RIGL",
+    "score_delta": 0.046,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "Rigel Pharmaceuticals Closes Its Licensing Agreement for VEPPANU; The Agreement Is Effective As Of June 11, 2026 And Rigel Has Made The Upfront Payment Of $70.0M To Be Distributed Evenly Between Arvin",
+    "added_at": "2026-06-16T20:51:06.451122+00:00",
+    "expires": "2026-06-23T20:51:06.451128+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -433,6 +433,126 @@
       "url": "https://www.benzinga.com/news/26/06/53232260/vision-marine-highlights-first-year-nautical-ventures-integration-progress-with-57-reduction-in-floo",
       "source": "alpaca",
       "added_at": "2026-06-16T17:59:24.595670+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Crude oil inventory draw of 8.33M barrels significantly exceeded the 4.5M estimate, indicating stronger-than-expected demand and potentially bullish for oil prices.",
+      "action_window": "intraday",
+      "headline": "API Weekly Crude Oil Stock 8.330M Barrel Draw Vs 4.500M Barrel Draw Est.; 9.119M Barrel Draw Prior",
+      "url": "https://www.benzinga.com/quote/USO",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453660+00:00"
+    },
+    {
+      "ticker": "LOKV",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Shareholder approval of a SPAC merger is a critical milestone that typically triggers immediate trading activity and removes deal uncertainty for the target company.",
+      "action_window": "intraday",
+      "headline": "Teamshares Announces Live Oak Acquisition Corp. V Shareholders Approve Proposed Merger With Teamshares",
+      "url": "https://www.benzinga.com/m-a/26/06/53238022/teamshares-announces-live-oak-acquisition-corp-v-shareholders-approve-proposed-merger-with-teamshare",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453671+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Potential FTC lawsuit with billions in penalties represents material regulatory risk for Amazon's advertising business, though market may have partially anticipated increased regulatory scrutiny.",
+      "action_window": "next_day",
+      "headline": "'Amazon Faces Billions in Penalties From Potential FTC Ad Suit' - Bloomberg Law",
+      "url": "https://www.benzinga.com/news/26/06/53237882/amazon-faces-billions-in-penalties-from-potential-ftc-ad-suit-bloomberg-law",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453678+00:00"
+    },
+    {
+      "ticker": "SOPH",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Ordinary shares offering typically dilutes existing shareholders and creates immediate selling pressure as terms remain undisclosed suggesting potentially unfavorable pricing.",
+      "action_window": "intraday",
+      "headline": "SOPHiA GENETICS Commences Ordinary Shares Offering; Terms Undisclosed",
+      "url": "https://www.benzinga.com/news/26/06/53237775/sophia-genetics-commences-ordinary-shares-offering-terms-undisclosed",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453683+00:00"
+    },
+    {
+      "ticker": "JMG",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "NYSE American commencing delisting process is a significant negative catalyst indicating the company failed to meet continued listing standards, typically triggering forced selling and severely limiting liquidity.",
+      "action_window": "intraday",
+      "headline": "JM Group Announces NYSE American Commences Process To Delist From Co. Shares",
+      "url": "https://www.benzinga.com/news/26/06/53237663/jm-group-announces-nyse-american-commences-process-to-delist-from-co-shares",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453688+00:00"
+    },
+    {
+      "ticker": "SNOA",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Double miss on both EPS (-37.5% worse than estimate at -$0.33 vs -$0.24) and revenue creates significant negative catalyst for near-term trading.",
+      "action_window": "next_day",
+      "headline": "Sonoma Pharmaceuticals Q4 EPS $(0.33) Misses $(0.24) Estimate, Sales $5.561M Miss $5.565M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53237644/sonoma-pharmaceuticals-q4-eps-0-33-misses-0-24-estimate-sales-5-561m-miss-5-565m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453693+00:00"
+    },
+    {
+      "ticker": "LZB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "La-Z-Boy significantly beat Q4 EPS estimates by 54% ($1.26 vs $0.82) and exceeded revenue expectations, indicating strong operational performance that warrants immediate trading consideration.",
+      "action_window": "intraday",
+      "headline": "La-Z-Boy Q4 Adj. EPS $1.26 Beats $0.82 Estimate, Sales $570.338M Beat $569.225M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53237599/la-z-boy-q4-adj-eps-1-26-beats-0-82-estimate-sales-570-338m-beat-569-225m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453697+00:00"
+    },
+    {
+      "ticker": "CLOV",
+      "tradeable_score": 0.52,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CEO departure coupled with business integration suggests restructuring that could be efficiency-driven (positive) but creates leadership uncertainty (negative), making this mixed news with moderate tradability.",
+      "action_window": "next_day",
+      "headline": "Clover Health Investments' Clover Care Services CEO Brady Priest Stepping Down; Co. Integrating Its Home-Care Business With Its Broader Operations; Not Appointing Priest's Successor",
+      "url": "https://www.benzinga.com/news/26/06/53237491/clover-health-investments-clover-care-services-ceo-brady-priest-stepping-down-co-integrating-its-hom",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453703+00:00"
+    },
+    {
+      "ticker": "MTNB",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $150M mixed shelf offering signals potential dilution for existing shareholders, typically creating near-term selling pressure on small-cap biotech stocks.",
+      "action_window": "next_day",
+      "headline": "Matinas Biopharma Files Prospectus For Offering $150M Mixed Shelf",
+      "url": "https://www.benzinga.com/news/26/06/53237399/matinas-biopharma-files-prospectus-for-offering-150m-mixed-shelf",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453707+00:00"
+    },
+    {
+      "ticker": "RIGL",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Rigel closes licensing deal for VEPPANU with $70M upfront payment to Arvinas/Pfizer, representing a significant product acquisition that could expand their portfolio, though the news is 5 days post-effective date reducing immediacy.",
+      "action_window": "next_day",
+      "headline": "Rigel Pharmaceuticals Closes Its Licensing Agreement for VEPPANU; The Agreement Is Effective As Of June 11, 2026 And Rigel Has Made The Upfront Payment Of $70.0M To Be Distributed Evenly Between Arvinas And Pfizer, Consistent With The Terms Of The Agreement",
+      "url": "https://www.benzinga.com/news/26/06/53237168/rigel-pharmaceuticals-closes-its-licensing-agreement-for-veppanu-the-agreement-is-effective-as-of-ju",
+      "source": "alpaca",
+      "added_at": "2026-06-16T20:51:06.453712+00:00"
     }
   ]
 }
