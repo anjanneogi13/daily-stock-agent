@@ -25,8 +25,8 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **535**
 
 ## Market Data Health
-- stooq: attempts=**3**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**3199**, successes=**3195**, errors=**1**, rate_limited=**0**, unauthorized=**0**
+- stooq: attempts=**4**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**4276**, successes=**4271**, errors=**1**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
 - NIXX: **penny_stock** — penny stock ($0.87 < $5.0)

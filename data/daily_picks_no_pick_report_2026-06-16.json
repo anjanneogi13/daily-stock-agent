@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-27619620242",
+  "artifact_bundle_name": "official-decision-artifacts-27620223798",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -217,8 +217,8 @@
       "universe_count": 535
     }
   },
-  "commit_sha": "c4489cc005b399cedd6814c3b5cbe598a0b4cc68",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/c4489cc005b399cedd6814c3b5cbe598a0b4cc68",
+  "commit_sha": "f5bf603fdd32ee6e21ffb9edc0ac5d164f4ce56a",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/f5bf603fdd32ee6e21ffb9edc0ac5d164f4ce56a",
   "config_version": "config.yaml",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -446,32 +446,32 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1582,
+        "attempts": 2114,
         "empty": 0,
         "errors": 1,
-        "successes": 1581
+        "successes": 2113
       },
       "monster_info": {
-        "attempts": 11,
+        "attempts": 16,
         "empty": 0,
         "errors": 0,
-        "successes": 11
+        "successes": 16
       },
       "ohlcv": {
-        "attempts": 1609,
-        "empty": 6,
+        "attempts": 2150,
+        "empty": 8,
         "errors": 0,
-        "successes": 1603
+        "successes": 2142
       }
     },
     "date": "2026-06-16",
     "providers": {
       "stooq": {
-        "attempts": 3,
-        "empty": 3,
+        "attempts": 4,
+        "empty": 4,
         "errors": 0,
         "failure_types": {
-          "empty_response": 3,
+          "empty_response": 4,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -491,11 +491,11 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 3199,
-        "empty": 3,
+        "attempts": 4276,
+        "empty": 4,
         "errors": 1,
         "failure_types": {
-          "empty_response": 3,
+          "empty_response": 4,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -510,7 +510,7 @@
         "not_found": 0,
         "provider_error": 1,
         "rate_limited": 0,
-        "successes": 3195,
+        "successes": 4271,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -584,9 +584,27 @@
         "result": "empty",
         "stage": "ohlcv",
         "ticker": "XRPUSD"
+      },
+      {
+        "error_type": "empty",
+        "failure_type": "empty_response",
+        "message": "empty OHLCV dataframe",
+        "provider": "yfinance",
+        "result": "empty",
+        "stage": "ohlcv",
+        "ticker": "XRPUSD"
+      },
+      {
+        "error_type": "empty",
+        "failure_type": "empty_response",
+        "message": "empty OHLCV dataframe",
+        "provider": "stooq",
+        "result": "empty",
+        "stage": "ohlcv",
+        "ticker": "XRPUSD"
       }
     ],
-    "timestamp_utc": "2026-06-16T13:09:16Z"
+    "timestamp_utc": "2026-06-16T13:19:05Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -613,11 +631,11 @@
   "reason": "No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-06-16T09:09:16-04:00",
+  "selection_time_et": "2026-06-16T09:19:05-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-06-16T13:09:16Z",
+  "timestamp_utc": "2026-06-16T13:19:05Z",
   "watch_only_available": false,
-  "workflow_run_id": "27619620242",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27619620242"
+  "workflow_run_id": "27620223798",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27620223798"
 }
