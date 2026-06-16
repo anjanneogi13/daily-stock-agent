@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 525,
+      "attempts": 1050,
       "empty": 0,
-      "errors": 0,
-      "successes": 525
+      "errors": 1,
+      "successes": 1049
     },
     "monster_info": {
-      "attempts": 3,
+      "attempts": 6,
       "empty": 0,
       "errors": 0,
-      "successes": 3
+      "successes": 6
     },
     "ohlcv": {
-      "attempts": 534,
-      "empty": 2,
+      "attempts": 1068,
+      "empty": 4,
       "errors": 0,
-      "successes": 532
+      "successes": 1064
     }
   },
   "date": "2026-06-16",
   "providers": {
     "stooq": {
-      "attempts": 1,
-      "empty": 1,
+      "attempts": 2,
+      "empty": 2,
       "errors": 0,
       "failure_types": {
-        "empty_response": 1,
+        "empty_response": 2,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,16 +47,16 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1061,
-      "empty": 1,
-      "errors": 0,
+      "attempts": 2122,
+      "empty": 2,
+      "errors": 1,
       "failure_types": {
-        "empty_response": 1,
+        "empty_response": 2,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 0,
+        "provider_exception": 1,
         "rate_limited": 0,
         "stale_data": 0,
         "symbol_not_found": 0,
@@ -64,9 +64,9 @@
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 0,
+      "provider_error": 1,
       "rate_limited": 0,
-      "successes": 1060,
+      "successes": 2119,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -95,7 +95,34 @@
       "result": "empty",
       "stage": "ohlcv",
       "ticker": "XRPUSD"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "XRPUSD"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "stooq",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "XRPUSD"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SOXL"
     }
   ],
-  "timestamp_utc": "2026-06-16T12:08:39Z"
+  "timestamp_utc": "2026-06-16T12:39:34Z"
 }

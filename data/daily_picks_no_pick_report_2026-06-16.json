@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-27616219346",
+  "artifact_bundle_name": "official-decision-artifacts-27617897078",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -217,8 +217,8 @@
       "universe_count": 528
     }
   },
-  "commit_sha": "3921a8e2546a2fdb645274dddd2e9b29663aabd2",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/3921a8e2546a2fdb645274dddd2e9b29663aabd2",
+  "commit_sha": "567922e233e2f52d0a5d55ba56a185bdde0998bc",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/567922e233e2f52d0a5d55ba56a185bdde0998bc",
   "config_version": "config.yaml",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -446,32 +446,32 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 525,
+        "attempts": 1050,
         "empty": 0,
-        "errors": 0,
-        "successes": 525
+        "errors": 1,
+        "successes": 1049
       },
       "monster_info": {
-        "attempts": 3,
+        "attempts": 6,
         "empty": 0,
         "errors": 0,
-        "successes": 3
+        "successes": 6
       },
       "ohlcv": {
-        "attempts": 534,
-        "empty": 2,
+        "attempts": 1068,
+        "empty": 4,
         "errors": 0,
-        "successes": 532
+        "successes": 1064
       }
     },
     "date": "2026-06-16",
     "providers": {
       "stooq": {
-        "attempts": 1,
-        "empty": 1,
+        "attempts": 2,
+        "empty": 2,
         "errors": 0,
         "failure_types": {
-          "empty_response": 1,
+          "empty_response": 2,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -491,16 +491,16 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 1061,
-        "empty": 1,
-        "errors": 0,
+        "attempts": 2122,
+        "empty": 2,
+        "errors": 1,
         "failure_types": {
-          "empty_response": 1,
+          "empty_response": 2,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
           "missing_quote": 0,
-          "provider_exception": 0,
+          "provider_exception": 1,
           "rate_limited": 0,
           "stale_data": 0,
           "symbol_not_found": 0,
@@ -508,9 +508,9 @@
           "unknown_provider_failure": 0
         },
         "not_found": 0,
-        "provider_error": 0,
+        "provider_error": 1,
         "rate_limited": 0,
-        "successes": 1060,
+        "successes": 2119,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -539,9 +539,36 @@
         "result": "empty",
         "stage": "ohlcv",
         "ticker": "XRPUSD"
+      },
+      {
+        "error_type": "empty",
+        "failure_type": "empty_response",
+        "message": "empty OHLCV dataframe",
+        "provider": "yfinance",
+        "result": "empty",
+        "stage": "ohlcv",
+        "ticker": "XRPUSD"
+      },
+      {
+        "error_type": "empty",
+        "failure_type": "empty_response",
+        "message": "empty OHLCV dataframe",
+        "provider": "stooq",
+        "result": "empty",
+        "stage": "ohlcv",
+        "ticker": "XRPUSD"
+      },
+      {
+        "error_type": "provider_error",
+        "failure_type": "provider_exception",
+        "message": "argument of type 'NoneType' is not iterable",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SOXL"
       }
     ],
-    "timestamp_utc": "2026-06-16T12:08:39Z"
+    "timestamp_utc": "2026-06-16T12:39:34Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -568,11 +595,11 @@
   "reason": "No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-06-16T08:08:39-04:00",
+  "selection_time_et": "2026-06-16T08:39:34-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-06-16T12:08:39Z",
+  "timestamp_utc": "2026-06-16T12:39:34Z",
   "watch_only_available": false,
-  "workflow_run_id": "27616219346",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27616219346"
+  "workflow_run_id": "27617897078",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/27617897078"
 }
