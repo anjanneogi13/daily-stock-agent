@@ -357,5 +357,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-16 12:08:39",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "NIXX",
+        "reason": "penny stock ($0.87 < $5.0)",
+        "block_type": "penny_stock"
+      },
+      {
+        "ticker": "JRSH",
+        "reason": "penny stock ($3.75 < $5.0)",
+        "block_type": "penny_stock"
+      }
+    ]
   }
 ]
