@@ -216,6 +216,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/53212993/devvstream-q3-eps-0-64-down-from-1-21-yoy-sales-720-000-down-from-10-164k-yoy",
       "source": "alpaca",
       "added_at": "2026-06-15T23:19:52.488590+00:00"
+    },
+    {
+      "ticker": "SPCX",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "SpaceX IPO announcement at $2 trillion valuation is a major event for SPCX (likely a space ETF), creating significant trading opportunity on the newly public stock access.",
+      "action_window": "next_day",
+      "headline": "Elon Musk Gave SpaceX Less Than 10% Chance Of Success, Told People, 'Probably Gonna Fail' \u2014 Tried Anyway And Today It's A $2 Trillion Space Giant",
+      "url": "https://www.benzinga.com/markets/tech/26/06/53214255/elon-musk-gave-spacex-less-than-10-percent-chance-of-success-but-built-a-2-trillion-space-giant-anyway",
+      "source": "alpaca",
+      "added_at": "2026-06-16T02:07:12.183814+00:00"
     }
   ]
 }
