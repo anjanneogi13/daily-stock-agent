@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1050,
+      "attempts": 1582,
       "empty": 0,
       "errors": 1,
-      "successes": 1049
+      "successes": 1581
     },
     "monster_info": {
-      "attempts": 6,
+      "attempts": 11,
       "empty": 0,
       "errors": 0,
-      "successes": 6
+      "successes": 11
     },
     "ohlcv": {
-      "attempts": 1068,
-      "empty": 4,
+      "attempts": 1609,
+      "empty": 6,
       "errors": 0,
-      "successes": 1064
+      "successes": 1603
     }
   },
   "date": "2026-06-16",
   "providers": {
     "stooq": {
-      "attempts": 2,
-      "empty": 2,
+      "attempts": 3,
+      "empty": 3,
       "errors": 0,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 3,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,11 +47,11 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 2122,
-      "empty": 2,
+      "attempts": 3199,
+      "empty": 3,
       "errors": 1,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 3,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -66,16 +66,16 @@
       "not_found": 0,
       "provider_error": 1,
       "rate_limited": 0,
-      "successes": 2119,
+      "successes": 3195,
       "timeout": 0,
       "unauthorized": 0
     }
   },
   "run": {
-    "fetched_count": 525,
+    "fetched_count": 532,
     "final_pick_count": 0,
-    "scored_count": 3,
-    "universe_count": 528
+    "scored_count": 5,
+    "universe_count": 535
   },
   "samples": [
     {
@@ -122,7 +122,25 @@
       "result": "error",
       "stage": "info",
       "ticker": "SOXL"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "XRPUSD"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "stooq",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "XRPUSD"
     }
   ],
-  "timestamp_utc": "2026-06-16T12:39:34Z"
+  "timestamp_utc": "2026-06-16T13:09:16Z"
 }

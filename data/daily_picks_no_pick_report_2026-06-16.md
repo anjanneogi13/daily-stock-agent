@@ -14,20 +14,20 @@ Monitoring-only failure evidence. No official picks were generated.
 - capped_count: **2**
 - data_readiness_passed: **True**
 - data_readiness_status: **ready**
-- fetched_count: **525**
-- filtered_count: **3**
+- fetched_count: **532**
+- filtered_count: **5**
 - final_pick_count: **0**
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **3**
+- scored_count: **5**
 - scorer_workers: **4**
-- universe_count: **528**
+- universe_count: **535**
 
 ## Market Data Health
-- stooq: attempts=**2**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**2122**, successes=**2119**, errors=**1**, rate_limited=**0**, unauthorized=**0**
+- stooq: attempts=**3**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**3199**, successes=**3195**, errors=**1**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
 - NIXX: **penny_stock** — penny stock ($0.87 < $5.0)
-- JRSH: **penny_stock** — penny stock ($3.75 < $5.0)
+- CNTN: **penny_stock** — penny stock ($3.21 < $5.0)

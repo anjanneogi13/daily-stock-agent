@@ -9,9 +9,9 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 
 ## Stage Counts
 - capped_count: **2**
-- fetched_count: **525**
-- filtered_count: **3**
-- filtered_not_capped_count: **1**
+- fetched_count: **532**
+- filtered_count: **5**
+- filtered_not_capped_count: **3**
 - hard_blocked_count: **2**
 - missing_data_blocked_count: **0**
 - portfolio_risk_blocked_count: **0**
@@ -20,15 +20,15 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
 - rejected_candidate_count: **2**
-- scored_count: **3**
+- scored_count: **5**
 - scored_not_filtered_count: **0**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
-- universe_count: **528**
+- universe_count: **535**
 
 ## Selected Official Picks
 - None.
 
 ## Rejected Candidates
 - NIXX: **hard_block** — penny stock ($0.87 < $5.0)
-- JRSH: **hard_block** — penny stock ($3.75 < $5.0)
+- CNTN: **hard_block** — penny stock ($3.21 < $5.0)
