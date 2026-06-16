@@ -408,19 +408,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "PENG": {
-    "ticker": "PENG",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Penguin Solutions Stock Hits New Highs: What's Going On?",
-    "added_at": "2026-06-02T16:30:19.322749+00:00",
-    "expires": "2026-06-16T16:30:19.322756+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TMHC": {
     "ticker": "TMHC",
     "score_delta": 0.071,
@@ -794,19 +781,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NCRA": {
-    "ticker": "NCRA",
-    "score_delta": 0.039,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Why Is Nocera Stock Trading Higher Today?",
-    "added_at": "2026-06-09T13:41:32.840207+00:00",
-    "expires": "2026-06-16T13:41:32.840215+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ROKU": {
     "ticker": "ROKU",
     "score_delta": 0.2,
@@ -820,32 +794,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ASO": {
-    "ticker": "ASO",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Academy Sports Raises Outlook, But Warns Shoppers Will Stay Squeezed Through 2026",
-    "added_at": "2026-06-09T13:41:32.846327+00:00",
-    "expires": "2026-06-16T13:41:32.846333+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NBIS": {
-    "ticker": "NBIS",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "intraday",
-    "headline": "Nebius Launches AI Robotics Living Lab With NVIDIA Robotics Program",
-    "added_at": "2026-06-09T13:41:32.848247+00:00",
-    "expires": "2026-06-16T13:41:32.848253+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DXCM": {
     "ticker": "DXCM",
     "score_delta": 0.15,
@@ -856,19 +804,6 @@
     "headline": "FDA Clears First Over-The-Counter Continuous Glucose Monitor For Children",
     "added_at": "2026-06-12T19:59:33.945118+00:00",
     "expires": "2026-07-12T19:59:33.945126+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VECO": {
-    "ticker": "VECO",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "intraday",
-    "headline": "What's Going On With Veeco Instruments Stock On Tuesday?",
-    "added_at": "2026-06-09T16:29:24.185650+00:00",
-    "expires": "2026-06-16T16:29:24.185656+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1350,19 +1285,6 @@
     "headline": "Ryanair Faces U.K. Regulator Investigation Over Allegedly Charging Parents To Sit With Children",
     "added_at": "2026-06-11T12:06:26.061925+00:00",
     "expires": "2026-06-25T12:06:26.061930+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ARM": {
-    "ticker": "ARM",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Arm Holdings Rallies As Agentic AI Spark Triggers Wave Of Wall Street Upgrades",
-    "added_at": "2026-06-11T16:35:07.459927+00:00",
-    "expires": "2026-06-16T16:35:07.459934+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2009,6 +1931,45 @@
     "headline": "Bridgeline Digital Announces Launch Of First Two Of Five HawkSearch AI-Based Online Shopping Deployments For Unnamed Home And Garden Supplier",
     "added_at": "2026-06-16T12:49:09.029434+00:00",
     "expires": "2026-06-23T12:49:09.029440+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "COIN": {
+    "ticker": "COIN",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Coinbase Launches Real Tokenized Stocks, Robinhood, Kraken Race To Follow",
+    "added_at": "2026-06-16T17:59:24.587359+00:00",
+    "expires": "2026-06-23T17:59:24.587364+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MRNA": {
+    "ticker": "MRNA",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "FDA Says Moderna's MRNA-1010 Influenza Vaccine Data May Support Use In Adults \u226550 Years Old",
+    "added_at": "2026-06-16T17:59:24.591065+00:00",
+    "expires": "2026-07-16T17:59:24.591070+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MBLY": {
+    "ticker": "MBLY",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Intel-Backed Mobileye's Robotaxi Ambitions Just Got Much Bigger",
+    "added_at": "2026-06-16T17:59:24.593084+00:00",
+    "expires": "2026-06-23T17:59:24.593089+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

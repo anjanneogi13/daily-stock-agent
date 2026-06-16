@@ -243,15 +243,16 @@
     },
     {
       "ticker": "LASE",
-      "tradeable_score": 0.62,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
       "category": "product_launch",
-      "rationale": "Material $800K order delivery represents significant revenue for a small-cap company and validates commercial product traction, though single order lacks transformational scale.",
+      "rationale": "Company enters high-growth data center market with first robotic laser cleaning cell delivery, representing meaningful market expansion and explaining Tuesday's stock gains.",
       "action_window": "intraday",
-      "headline": "Laser Photonics Delivers First ~$800K Robotic Laser Cleaning Cell Order To Vander-Bend Manufacturing",
-      "url": "https://www.benzinga.com/news/26/06/53220534/laser-photonics-delivers-first-800k-robotic-laser-cleaning-cell-order-to-vander-bend-manufacturing",
+      "headline": "Why Is Laser Photonics Stock Gaining Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53232965/why-is-laser-photonics-stock-gaining-tuesday",
       "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033857+00:00"
+      "added_at": "2026-06-16T12:49:09.033857+00:00",
+      "updated_at": "2026-06-16T17:59:24.595637+00:00"
     },
     {
       "ticker": "CNTN",
@@ -324,6 +325,114 @@
       "url": "https://www.benzinga.com/news/26/06/53220393/axe-compute-announces-25-9m-in-total-contract-value-spanning-two-long-term-agreements-for-deployment",
       "source": "alpaca",
       "added_at": "2026-06-16T12:49:09.033909+00:00"
+    },
+    {
+      "ticker": "CNC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Membership decline forcing cost-cutting through staff buyouts signals deteriorating core business fundamentals and likely negative earnings revisions for a healthcare company.",
+      "action_window": "intraday",
+      "headline": "Membership Slump Forces Health Giant Centene Into Staff Buyouts: Report",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53233365/membership-slump-forces-health-giant-centene-into-staff-buyouts-report",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595604+00:00"
+    },
+    {
+      "ticker": "EW",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CMS proposal to expand TAVR coverage access is a meaningful regulatory tailwind that could significantly increase Edwards Lifesciences' addressable market for heart valve devices.",
+      "action_window": "next_day",
+      "headline": "Edwards Lifesciences Stands Out As US Agency Eyes Broader Access For Heart Valve Device",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/06/53233325/edwards-lifesciences-stands-out-as-us-agency-eyes-broader-access-for-heart-valve-device",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595616+00:00"
+    },
+    {
+      "ticker": "EWTX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 2 clinical trial results showing improvements across multiple endpoints (symptoms, biomarkers, heart function) is a meaningful catalyst for a biotech stock that typically drives significant price movement.",
+      "action_window": "intraday",
+      "headline": "Edgewise Therapeutics Reports Improvements In Heart Drug Trial",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53233008/edgewise-therapeutics-reports-improvements-in-heart-drug-trial",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595630+00:00"
+    },
+    {
+      "ticker": "COIN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Coinbase achieves significant competitive advantage by launching real tokenized stocks with full backing versus rivals' derivative products, representing meaningful product innovation in a growing market.",
+      "action_window": "intraday",
+      "headline": "Coinbase Launches Real Tokenized Stocks, Robinhood, Kraken Race To Follow",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/53232823/coinbase-launches-real-tokenized-stocks-robinhood-kraken-race-to-follow",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595646+00:00"
+    },
+    {
+      "ticker": "ELF",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock rising on brand momentum and strong results with new vertical expansion, showing relative strength versus broader market weakness, but lacks specific catalyst magnitude.",
+      "action_window": "intraday",
+      "headline": "e.l.f. Beauty Stock Shows Exceptional Strength: What's Fueling The Momentum?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53232708/e-l-f-beauty-stock-shows-exceptional-strength-whats-fueling-the-momentum",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595651+00:00"
+    },
+    {
+      "ticker": "SHAZ",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock already up 11% on confirmed major AI infrastructure partnership expansion with 600 PBs deployment, representing significant operational catalyst in hot AI sector.",
+      "action_window": "intraday",
+      "headline": "Why Is SharonAI Stock Surging Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53232530/why-is-sharonai-stock-surging-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595657+00:00"
+    },
+    {
+      "ticker": "MRNA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA positive assessment of Moderna's influenza vaccine data represents a significant regulatory milestone that supports potential approval and market expansion beyond COVID-19 products.",
+      "action_window": "intraday",
+      "headline": "FDA Says Moderna's MRNA-1010 Influenza Vaccine Data May Support Use In Adults \u226550 Years Old",
+      "url": "https://www.benzinga.com/general/biotech/26/06/53232400/fda-says-modernas-mrna-1010-influenza-vaccine-data-may-support-use-in-adults-50-years-old",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595661+00:00"
+    },
+    {
+      "ticker": "MBLY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Mobileye announces strategic expansion into robotaxi business with 2027 launch, representing significant business model expansion with stock already rising on the news.",
+      "action_window": "intraday",
+      "headline": "Intel-Backed Mobileye's Robotaxi Ambitions Just Got Much Bigger",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53232285/intel-backed-mobileyes-robotaxi-ambitions-just-got-much-bigger",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595666+00:00"
+    },
+    {
+      "ticker": "VMAR",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong operational progress from acquisition integration showing 57% debt reduction, 30% inventory optimization, real estate proceeds, and significant annual cost savings demonstrates effective post-M&A execution.",
+      "action_window": "next_day",
+      "headline": "Vision Marine Highlights First-Year Nautical Ventures Integration Progress With 57% Reduction In Floor-Plan Debt, From $42M To $18.2M; 30% Inventory Reduction, From $35.1M To $24.5M; $3.8M In Real Estate Proceeds Estimated $2.8M Annual Savings",
+      "url": "https://www.benzinga.com/news/26/06/53232260/vision-marine-highlights-first-year-nautical-ventures-integration-progress-with-57-reduction-in-floo",
+      "source": "alpaca",
+      "added_at": "2026-06-16T17:59:24.595670+00:00"
     }
   ]
 }
