@@ -8,19 +8,6 @@
     "expires": "2026-11-04T20:06:25.385114+00:00",
     "hard_block": true
   },
-  "ATEX": {
-    "ticker": "ATEX",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Anterix, Lynk Global Receive FCC Approval To Mull Use Of Lynk's Satellite Direct-To-Device Communications Network",
-    "added_at": "2026-05-18T11:40:55.351190+00:00",
-    "expires": "2026-06-17T11:40:55.351195+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SSEA": {
     "ticker": "SSEA",
     "score_delta": 0.2,
@@ -976,32 +963,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "XNDU": {
-    "ticker": "XNDU",
-    "score_delta": 0.034,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Xanadu Achieves Ultra-Low Edge-Coupling Loss For Its Photonic Chips",
-    "added_at": "2026-06-10T11:34:53.558580+00:00",
-    "expires": "2026-06-17T11:34:53.558589+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAOI": {
-    "ticker": "AAOI",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Applied Optoelectronics To Supply Spectrum With Its QuantumLink Remote Management Software",
-    "added_at": "2026-06-10T11:34:53.563116+00:00",
-    "expires": "2026-06-17T11:34:53.563121+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PLTR": {
     "ticker": "PLTR",
     "score_delta": 0.049,
@@ -1324,32 +1285,6 @@
     "headline": "Sharon AI Signs Six-Year AI Infrastructure Compute Collaboration With Nvidia To Deploy 72MW Of New Data Center Capacity In Australia",
     "added_at": "2026-06-12T11:39:54.018309+00:00",
     "expires": "2026-06-19T11:39:54.018314+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ADBE": {
-    "ticker": "ADBE",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "These Analysts Slash Their Forecasts On Adobe Following Q2 Earnings",
-    "added_at": "2026-06-12T11:39:54.020268+00:00",
-    "expires": "2026-06-17T11:39:54.020274+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
-  "AROW": {
-    "ticker": "AROW",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Piper Sandler Assumes Arrow Financial at Overweight, Announces Price Target of $43",
-    "added_at": "2026-06-12T11:39:54.026400+00:00",
-    "expires": "2026-06-17T11:39:54.026407+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2022,6 +1957,45 @@
     "headline": "Northern Technologies' Natur-Tec And Bayer Sign MOU To Develop Compostable Seedling Cups Aimed At Replacing Single-Use Plastic Nursery Containers, With Pilot Trials Launching Across India",
     "added_at": "2026-06-16T22:51:31.357251+00:00",
     "expires": "2026-06-23T22:51:31.357256+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BBBY": {
+    "ticker": "BBBY",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Bed Bath & Beyond To Acquire Fathom In All-Stock Transaction At 0.2236 BBBY Shares Per FTHM Share For Implied Valutation Of ~$53.38M",
+    "added_at": "2026-06-17T12:12:46.943322+00:00",
+    "expires": "2026-07-01T12:12:46.943329+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DGNX": {
+    "ticker": "DGNX",
+    "score_delta": 0.018,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "Diginex Extends Resulticks Global Acquisition Long Stop Date To June 30",
+    "added_at": "2026-06-17T12:12:46.945655+00:00",
+    "expires": "2026-07-01T12:12:46.945662+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AAPL": {
+    "ticker": "AAPL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Apple Seen Best Positioned To Navigate AI Memory Crunch: Analyst",
+    "added_at": "2026-06-17T12:12:46.947660+00:00",
+    "expires": "2026-06-22T12:12:46.947665+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
