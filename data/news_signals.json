@@ -408,19 +408,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TGL": {
-    "ticker": "TGL",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Treasure Global Expects FY26 Revenue To Increase By Over 100% YoY, Driven By Southeast Asia Ecosystem Expansion",
-    "added_at": "2026-06-03T12:39:11.695532+00:00",
-    "expires": "2026-06-17T12:39:11.695538+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LULU": {
     "ticker": "LULU",
     "score_delta": -0.15,
@@ -729,19 +716,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CBRL": {
-    "ticker": "CBRL",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Cracker Barrel Stock Climbs On Strong Q3 Earnings Result",
-    "added_at": "2026-06-10T15:01:18.205411+00:00",
-    "expires": "2026-06-17T15:01:18.205414+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WBD": {
     "ticker": "WBD",
     "score_delta": 0.129,
@@ -804,19 +778,6 @@
     "headline": "Space Stocks Get Torched: Short Seller Calls Them 'Sci-Fi Wishes'",
     "added_at": "2026-06-12T19:59:33.947632+00:00",
     "expires": "2026-06-17T19:59:33.947645+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RIVN": {
-    "ticker": "RIVN",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Rivian CEO Says Americans Aren't Anti-EV, There's Just 'Few Great Choices': How R2 Launch Could Help",
-    "added_at": "2026-06-10T15:01:18.210205+00:00",
-    "expires": "2026-06-17T15:01:18.210209+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -960,19 +921,6 @@
     "headline": "Figure Technology Solutions Signs Deal To Acquire Lending Platform Kiavi For $717M",
     "added_at": "2026-06-10T11:34:53.545163+00:00",
     "expires": "2026-06-24T11:34:53.545171+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PLTR": {
-    "ticker": "PLTR",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Live On CNBC, Palantir Technologies CEO Alex Karp Says \"Most Of The Things Anthropic Talks About In Public Are Running On Palantir\"",
-    "added_at": "2026-06-10T15:01:18.211441+00:00",
-    "expires": "2026-06-17T15:01:18.211444+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1301,32 +1249,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HBAN": {
-    "ticker": "HBAN",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Maintains Outperform on Huntington Bancshares, Raises Price Target to $20",
-    "added_at": "2026-06-12T14:42:43.811373+00:00",
-    "expires": "2026-06-17T14:42:43.811380+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NTRA": {
-    "ticker": "NTRA",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "RBC Capital Reinstates Outperform on Natera, Announces $275 Price Target",
-    "added_at": "2026-06-12T14:42:43.813778+00:00",
-    "expires": "2026-06-17T14:42:43.813784+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NOK": {
     "ticker": "NOK",
     "score_delta": 0.032,
@@ -1337,19 +1259,6 @@
     "headline": "Nokia Stock Is Climbing Friday: What's Driving The Action?",
     "added_at": "2026-06-12T14:42:43.815860+00:00",
     "expires": "2026-06-19T14:42:43.815865+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CASY": {
-    "ticker": "CASY",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Maintains Outperform on Casey's General Stores, Raises Price Target to $990",
-    "added_at": "2026-06-12T14:42:43.817838+00:00",
-    "expires": "2026-06-17T14:42:43.817844+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1996,6 +1905,58 @@
     "headline": "Apple Seen Best Positioned To Navigate AI Memory Crunch: Analyst",
     "added_at": "2026-06-17T12:12:46.947660+00:00",
     "expires": "2026-06-22T12:12:46.947665+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RBRK": {
+    "ticker": "RBRK",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Rubrik Announces Agent Cloud Integration With Amazon Bedrock AgentCore, Adding AI Governance And Recovery Controls For Enterprise Agent Workflows",
+    "added_at": "2026-06-17T16:11:24.360458+00:00",
+    "expires": "2026-06-24T16:11:24.360465+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "S": {
+    "ticker": "S",
+    "score_delta": 0.044,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "intraday",
+    "headline": "SentinelOne Expands AI Security Platform With Amazon Bedrock AgentCore Integration, Adding Runtime Guardrails For Enterprise AI Agent Workflows",
+    "added_at": "2026-06-17T16:11:24.362625+00:00",
+    "expires": "2026-06-24T16:11:24.362630+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HOOD": {
+    "ticker": "HOOD",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Argus Research Maintains Buy on Robinhood Markets, Raises Price Target to $110",
+    "added_at": "2026-06-17T16:11:24.366249+00:00",
+    "expires": "2026-06-22T16:11:24.366254+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NEXN": {
+    "ticker": "NEXN",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Scotiabank Maintains Sector Outperform on Nexxen International, Raises Price Target to $11",
+    "added_at": "2026-06-17T16:11:24.369878+00:00",
+    "expires": "2026-06-22T16:11:24.369883+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
