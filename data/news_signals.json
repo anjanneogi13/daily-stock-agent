@@ -8,19 +8,6 @@
     "expires": "2026-11-04T20:06:25.385114+00:00",
     "hard_block": true
   },
-  "SSEA": {
-    "ticker": "SSEA",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Starry Sea Acquisition Not Proceeding With Proposed Merger With Forever Young International",
-    "added_at": "2026-05-18T19:14:53.105847+00:00",
-    "expires": "2026-06-17T19:14:53.105852+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BSX": {
     "ticker": "BSX",
     "score_delta": 0.15,
@@ -42,19 +29,6 @@
     "added_at": "2026-05-18T20:57:05.498767+00:00",
     "expires": "2026-11-14T20:57:05.498774+00:00",
     "hard_block": true
-  },
-  "UTHR": {
-    "ticker": "UTHR",
-    "score_delta": 0.146,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "United Therapeutics Plans To Seek FDA Priority Review This Summer For Tyvaso sNDA In IPF Based On TETON\u20111 And TETON-2 Data",
-    "added_at": "2026-05-18T20:57:05.502155+00:00",
-    "expires": "2026-06-17T20:57:05.502161+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "ATER": {
     "ticker": "ATER",
@@ -434,19 +408,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CXAI": {
-    "ticker": "CXAI",
-    "score_delta": 0.039,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "CXapp Purchase Price For EngineRoom Is About $4.6M",
-    "added_at": "2026-06-03T20:55:45.284414+00:00",
-    "expires": "2026-06-17T20:55:45.284420+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AVGO": {
     "ticker": "AVGO",
     "score_delta": -0.15,
@@ -566,16 +527,16 @@
   },
   "PSKY": {
     "ticker": "PSKY",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
     "action_window": "intraday",
-    "headline": "Paramount Skydance shares are trading lower after reports suggesting that multiple U.S. states are planning to file a lawsuit to block the company's acquisition of Warner Bros",
-    "added_at": "2026-06-05T18:59:46.885103+00:00",
-    "expires": "2026-06-19T18:59:46.885110+00:00",
+    "headline": "Semafor Reporter Rohan Goswami Posts On X \"$PSKY has secured China regulatory approval for $WBD deal\"",
+    "added_at": "2026-06-17T21:02:46.920070+00:00",
+    "expires": "2026-07-17T21:02:46.920076+00:00",
     "hard_block": false,
-    "negative_reaction": true
+    "negative_reaction": false
   },
   "HYPD": {
     "ticker": "HYPD",
@@ -768,19 +729,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ASTS": {
-    "ticker": "ASTS",
-    "score_delta": -0.046,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Space Stocks Get Torched: Short Seller Calls Them 'Sci-Fi Wishes'",
-    "added_at": "2026-06-12T19:59:33.947632+00:00",
-    "expires": "2026-06-17T19:59:33.947645+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INCY": {
     "ticker": "INCY",
     "score_delta": 0.046,
@@ -934,32 +882,6 @@
     "headline": "Watching Perrigo; Shares See Volume, Traders Circulate Unconfirmed M&A Blog Report Saying STADA And CapVest Are Launching A Takeover Of The Co",
     "added_at": "2026-06-10T17:59:17.564006+00:00",
     "expires": "2026-07-10T17:59:17.564011+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AEMD": {
-    "ticker": "AEMD",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "next_day",
-    "headline": "Aethlon Medical Q4 EPS $0.40 Beats $(2.02) Estimate",
-    "added_at": "2026-06-10T20:30:04.715301+00:00",
-    "expires": "2026-06-17T20:30:04.715308+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MIND": {
-    "ticker": "MIND",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "MIND Technology Q1 EPS $(0.05) Up From $(0.12) YoY, Sales $9.672M Beat $9.450M Estimate",
-    "added_at": "2026-06-10T20:30:04.717587+00:00",
-    "expires": "2026-06-17T20:30:04.717592+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1983,6 +1905,50 @@
     "headline": "Deutsche Bank Maintains Buy on Micron Technology, Raises Price Target to $1500",
     "added_at": "2026-06-17T18:40:43.916081+00:00",
     "expires": "2026-06-22T18:40:43.916086+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ODTX": {
+    "ticker": "ODTX",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "Odyssey Therapeutics Q1 EPS $(6.77) Misses $(1.13) Estimate",
+    "added_at": "2026-06-17T21:02:46.914446+00:00",
+    "expires": "2026-06-24T21:02:46.914453+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SDM": {
+    "ticker": "SDM",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Smart Digital Group To Be Delisted From Nasdaq On June 24, Unless The Company Appeals To A Listing Qualifications Hearings Panel",
+    "added_at": "2026-06-17T21:02:46.916462+00:00",
+    "expires": "2026-12-14T21:02:46.916469+00:00",
+    "hard_block": true
+  },
+  "QMMM": {
+    "ticker": "QMMM",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "QMMM Holdings To Be Delisted From Nasdaq On June 24, Unless The Company Appeals To A Listing Qualifications Hearings Panel",
+    "added_at": "2026-06-17T21:02:46.918261+00:00",
+    "expires": "2026-12-14T21:02:46.918268+00:00",
+    "hard_block": true
+  },
+  "NUE": {
+    "ticker": "NUE",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Nucor Guides Q2 2026 GAAP EPS Of $4.70-$4.80, Adj EPS $4.50-$4.60, Says Earnings In Q2 Of 2026 Are Expected To Increase Across All 3 Of Our Operating Segments As Compared To Q1 2026, With The Largest ",
+    "added_at": "2026-06-17T21:02:46.921904+00:00",
+    "expires": "2026-07-01T21:02:46.921909+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
