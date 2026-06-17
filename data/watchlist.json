@@ -231,15 +231,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
+      "tradeable_score": 0.85,
+      "sentiment": "neutral",
       "category": "macro",
-      "rationale": "Strong 9.2% YoY retail sales growth indicates robust consumer spending and economic strength, supporting broad equity market upside.",
+      "rationale": "FOMC statements are major market-moving events that directly impact broad equity indices, interest rate expectations, and overall market sentiment with immediate trading implications.",
       "action_window": "intraday",
-      "headline": "Redbook Retail Sales Index For June 2026 Vs June 2025: 9.2% YoY",
-      "url": "https://www.benzinga.com/quote/SPY",
+      "headline": "Federal Reserve Issues FOMC Statement For June 16-17, 2026 (Link In Body)",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53259098/federal-reserve-issues-fomc-statement-for-june-16-17-2026-link-in-body",
       "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033838+00:00"
+      "added_at": "2026-06-16T12:49:09.033838+00:00",
+      "updated_at": "2026-06-17T18:40:43.918726+00:00"
     },
     {
       "ticker": "LASE",
@@ -769,6 +770,66 @@
       "url": "https://www.benzinga.com/news/26/06/53254623/lakewood-amedex-biotherapeutics-announces-1-for-10-reverse-stock-split-effective-on-june-19-2026",
       "source": "alpaca",
       "added_at": "2026-06-17T16:11:24.372504+00:00"
+    },
+    {
+      "ticker": "MRVL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "S&P 500 inclusion on June 22 will trigger mandatory buying from passive index funds and ETFs, creating predictable demand pressure for both MRVL and FLEX.",
+      "action_window": "this_week",
+      "headline": "Marvell, Flex Could Be Days Away From Massive Passive-Fund Tailwind",
+      "url": "https://www.benzinga.com/etfs/broad-u-s-equity-etfs/26/06/53260169/marvell-flex-could-be-days-away-from-massive-passive-fund-tailwind",
+      "source": "alpaca",
+      "added_at": "2026-06-17T18:40:43.918658+00:00"
+    },
+    {
+      "ticker": "CRML",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major drilling campaign at rare earth project is a meaningful operational milestone that creates near-term momentum, though lacks the certainty of hard catalysts like drill results or resource estimates.",
+      "action_window": "intraday",
+      "headline": "Critical Metals Stock Soars After 10,000-Meter Drilling Launch",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53260121/critical-metals-stock-soars-after-10000-meter-drilling-launch",
+      "source": "alpaca",
+      "added_at": "2026-06-17T18:40:43.918670+00:00"
+    },
+    {
+      "ticker": "BIRD",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock already surged 45% on major strategic pivot from footwear to AI infrastructure with rebranding, representing significant fundamental business transformation catalyst.",
+      "action_window": "intraday",
+      "headline": "Why Is Smartbird Stock Gaining Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53259486/why-is-smartbird-stock-gaining-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-06-17T18:40:43.918713+00:00"
+    },
+    {
+      "ticker": "NVO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Major data breach with 1.3TB of sensitive drug research, trial data, and AI models stolen represents significant IP loss, competitive risk, regulatory concerns, and potential litigation exposure for Novo Nordisk.",
+      "action_window": "intraday",
+      "headline": "Novo Nordisk Data Breach: Hackers Claim To Have Stolen Drug Research, Trial Data And AI Models",
+      "url": "https://www.benzinga.com/news/health-care/26/06/53259007/novo-nordisk-data-breach-hackers-claim-to-have-stolen-drug-research-trial-data-and-ai-models",
+      "source": "alpaca",
+      "added_at": "2026-06-17T18:40:43.918733+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Deutsche Bank maintains Buy rating with significant price target increase to $1500, indicating strong bullish conviction from a major investment bank that could drive near-term momentum.",
+      "action_window": "intraday",
+      "headline": "Deutsche Bank Maintains Buy on Micron Technology, Raises Price Target to $1500",
+      "url": "https://www.benzinga.com/news/26/06/53258973/deutsche-bank-maintains-buy-on-micron-technology-raises-price-target-to-1500",
+      "source": "alpaca",
+      "added_at": "2026-06-17T18:40:43.918738+00:00"
     }
   ]
 }
