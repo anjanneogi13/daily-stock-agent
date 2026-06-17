@@ -962,6 +962,66 @@
       "url": "https://www.benzinga.com/news/26/06/53264564/nucor-guides-q2-2026-gaap-eps-of-4-70-4-80-adj-eps-4-50-4-60-says-earnings-in-q2-of-2026-are-expecte",
       "source": "alpaca",
       "added_at": "2026-06-17T21:02:46.924503+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Price increases across Apple's product lineup due to input cost pressures signal potential demand destruction and margin compression, representing a significant negative catalyst for the stock.",
+      "action_window": "next_day",
+      "headline": "Apple Will Raise Prices Due To Soaring Memory Costs: CEO Tim Cook Says 'This Is A 100-Year Flood'",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53266186/apple-will-raise-prices-due-to-soaring-memory-costs-ceo-tim-cook-says-this-is-a-100-year-flood",
+      "source": "alpaca",
+      "added_at": "2026-06-17T22:57:06.725439+00:00"
+    },
+    {
+      "ticker": "TTMI",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Confirmed dual M&A acquisitions with all-cash deals explicitly stated as immediately accretive, representing a significant strategic expansion into European markets with near-term earnings enhancement.",
+      "action_window": "next_day",
+      "headline": "TTM Technologies To Acquire Privately-Held, European-Based Swiss Technology Group AG And ILFA GmbH In All-Cash Deals; Acquisitions Expected To Be Immediately Accretive Upon Completion",
+      "url": "https://www.benzinga.com/quote/TTMI",
+      "source": "alpaca",
+      "added_at": "2026-06-17T22:57:06.725454+00:00"
+    },
+    {
+      "ticker": "DXPE",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "M&A acquisition funded with cash indicates strategic growth without dilution, but impact depends on undisclosed deal size and General Repair Service's financials.",
+      "action_window": "next_day",
+      "headline": "DXP Enterprises Acquires General Repair Service; DXP Funded The Acquisition With Cash From The Balance Sheet",
+      "url": "https://www.benzinga.com/quote/DXPE",
+      "source": "alpaca",
+      "added_at": "2026-06-17T22:57:06.725463+00:00"
+    },
+    {
+      "ticker": "JRVR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Supreme Court allowing direct damages claim to proceed is a favorable legal development for James River Group in their reinsurance dispute, though final outcome remains uncertain.",
+      "action_window": "next_day",
+      "headline": "James River Group Says Supreme Court Rules On Motion To Dismiss Co's Amended Complaint In JRG Reinsurance Deal Case; Court Allows Direct Damages Claim To Proceed In JRG Reinsurance",
+      "url": "https://www.benzinga.com/news/26/06/53265524/james-river-group-says-supreme-court-rules-on-motion-to-dismiss-cos-amended-complaint-in-jrg-reinsur",
+      "source": "alpaca",
+      "added_at": "2026-06-17T22:57:06.725476+00:00"
+    },
+    {
+      "ticker": "IBATF",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Company posted a loss of $0.02 per share versus breakeven last year despite revenue improving from negative to $63K, indicating deteriorating profitability at very small scale.",
+      "action_window": "next_day",
+      "headline": "International Battery Q4 EPS $(0.02) Down From $0.00 YoY, Sales $63.000K Up From $(11.000K) YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/06/53265347/international-battery-q4-eps-0-02-down-from-0-00-yoy-sales-63-000k-up-from-11-000k-yoy",
+      "source": "alpaca",
+      "added_at": "2026-06-17T22:57:06.725492+00:00"
     }
   ]
 }
