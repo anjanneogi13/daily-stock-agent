@@ -963,32 +963,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "OCCI": {
-    "ticker": "OCCI",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "OFS Credit Co Q2 Adj. EPS $0.19 Misses $0.30 Estimate, Sales $9.202M Miss $11.160M Estimate",
-    "added_at": "2026-06-09T23:51:00.674804+00:00",
-    "expires": "2026-06-16T23:51:00.674812+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BCTX": {
-    "ticker": "BCTX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "BriaCell Therapeutics Q3 EPS $(0.99) Up From $(16.40) YoY",
-    "added_at": "2026-06-09T23:51:00.677129+00:00",
-    "expires": "2026-06-16T23:51:00.677135+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FIGR": {
     "ticker": "FIGR",
     "score_delta": 0.05,
