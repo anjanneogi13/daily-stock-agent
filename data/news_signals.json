@@ -17,19 +17,6 @@
     "expires": "2026-11-14T20:57:05.498774+00:00",
     "hard_block": true
   },
-  "FACT": {
-    "ticker": "FACT",
-    "score_delta": 0.071,
-    "catalyst": "ma_target",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "Precision Aerospace & Defense Group, Inc. And FACT II Acquisition Corp. Update S-4 Filing For SPAC Merger",
-    "added_at": "2026-05-19T20:29:13.142308+00:00",
-    "expires": "2026-06-18T20:29:13.142316+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LIMN": {
     "ticker": "LIMN",
     "score_delta": -1.0,
@@ -353,19 +340,6 @@
     "headline": "From Trailer Parks To Master-Planned Communities: Buffett Successor Builds Berkshire Housing Empire With Taylor Morrison Deal",
     "added_at": "2026-06-02T16:30:19.342423+00:00",
     "expires": "2026-07-02T16:30:19.342428+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LULU": {
-    "ticker": "LULU",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Lululemon Athletica Executive Says Expect Q2 Gross Margin To Decrease About 410 Basis Points From A Year Ago, Driven By Higher Tariff Costs And Ongoing Investments",
-    "added_at": "2026-06-04T21:28:19.769814+00:00",
-    "expires": "2026-06-18T21:28:19.769822+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -843,71 +817,6 @@
     "headline": "Ryanair Faces U.K. Regulator Investigation Over Allegedly Charging Parents To Sit With Children",
     "added_at": "2026-06-11T12:06:26.061925+00:00",
     "expires": "2026-06-25T12:06:26.061930+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SENEA": {
-    "ticker": "SENEA",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "next_day",
-    "headline": "Seneca Foods Q4 Adj. EPS $3.67 Up From $1.37 YoY, Sales $393.847M Up From $345.839M YoY",
-    "added_at": "2026-06-11T21:40:26.486408+00:00",
-    "expires": "2026-06-18T21:40:26.486414+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LASE": {
-    "ticker": "LASE",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Laser Photonics Q1 EPS $(0.11) Up From $(0.12) YoY, Sales $915.553K Down From $2.290M YoY",
-    "added_at": "2026-06-11T21:40:26.490528+00:00",
-    "expires": "2026-06-18T21:40:26.490533+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SGVA": {
-    "ticker": "SGVA",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "this_week",
-    "headline": "Forget Dividends: F/m's New Treasury ETF Keeps Returns Compounding Inside the Fund",
-    "added_at": "2026-06-11T21:40:26.492459+00:00",
-    "expires": "2026-06-18T21:40:26.492464+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NTRB": {
-    "ticker": "NTRB",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Nutriband Q1 EPS $(0.10) Up From $(0.12) YoY, Sales $433.399K Down From $667.432K YoY",
-    "added_at": "2026-06-11T21:40:26.498112+00:00",
-    "expires": "2026-06-18T21:40:26.498117+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TPET": {
-    "ticker": "TPET",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Trio Petroleum Q2 EPS $(0.05) Up From $(0.22) YoY, Sales $208.257K Up From $23.271K YoY",
-    "added_at": "2026-06-11T21:40:26.500101+00:00",
-    "expires": "2026-06-18T21:40:26.500106+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2014,6 +1923,19 @@
     "headline": "Perceptive Capital, Freenome Holdings Announce Their Form S-4 Registration Regarding Proposed Merger Declared Effective By U.S. SEC; Business Combination Expected To Be Completed In July",
     "added_at": "2026-06-18T20:20:14.444146+00:00",
     "expires": "2026-07-18T20:20:14.444154+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OMH": {
+    "ticker": "OMH",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "On June 17, Ohmyhome Entered Agreement To Sell All Shares In Ohmyhome BVI To Sterling Oat For Purchase Price Of $1",
+    "added_at": "2026-06-18T22:31:01.565023+00:00",
+    "expires": "2026-07-18T22:31:01.565030+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
