@@ -8,19 +8,6 @@
     "expires": "2026-11-04T20:06:25.385114+00:00",
     "hard_block": true
   },
-  "BSX": {
-    "ticker": "BSX",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Boston Scientific Announces Results From Pivotal FRACTURE IDE Trial Evaluating Use Of SEISMIQ 4CE Coronary Intravascular Lithotripsy Catheter To Treat CAD Patients; Study Meets Primary Safety And Effe",
-    "added_at": "2026-05-19T10:57:45.217137+00:00",
-    "expires": "2026-06-18T10:57:45.217144+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GOCO": {
     "ticker": "GOCO",
     "score_delta": -1.0,
@@ -405,19 +392,6 @@
     "headline": "Stock Market Today: Nasdaq 100 Slips As Broadcom Plunges, Bitcoin Hits 4-Month Lows",
     "added_at": "2026-06-04T17:29:11.347774+00:00",
     "expires": "2026-06-18T17:29:11.347779+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CAL": {
-    "ticker": "CAL",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Caleres Sees Q2 Adj EPS $0.32-$0.38 vs $0.38 Est",
-    "added_at": "2026-06-04T11:02:20.679143+00:00",
-    "expires": "2026-06-18T11:02:20.679150+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1923,6 +1897,32 @@
     "headline": "International Battery Q4 EPS $(0.02) Down From $0.00 YoY, Sales $63.000K Up From $(11.000K) YoY",
     "added_at": "2026-06-17T22:57:06.722807+00:00",
     "expires": "2026-06-24T22:57:06.722812+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QTEX": {
+    "ticker": "QTEX",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "QTREX Quantum Manufactures Cryogenic Chip Carrier Through Its AME Process",
+    "added_at": "2026-06-18T11:47:53.710381+00:00",
+    "expires": "2026-06-25T11:47:53.710388+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IMCC": {
+    "ticker": "IMCC",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "IM Cannabis Inks Letter Of Intent With Slil.com To Sell Its European-Focused Assets; Slil.com To Assume Total Of ~C$10.5M Debt",
+    "added_at": "2026-06-18T11:47:53.712649+00:00",
+    "expires": "2026-07-18T11:47:53.712655+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

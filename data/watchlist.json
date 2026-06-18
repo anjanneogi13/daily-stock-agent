@@ -1023,6 +1023,91 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/53265347/international-battery-q4-eps-0-02-down-from-0-00-yoy-sales-63-000k-up-from-11-000k-yoy",
       "source": "alpaca",
       "added_at": "2026-06-17T22:57:06.725492+00:00"
+    },
+    {
+      "ticker": "DFLI",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Patent allowance for solid-state battery technology represents meaningful IP protection and potential competitive advantage in energy storage sector, though commercialization timeline remains uncertain.",
+      "action_window": "intraday",
+      "headline": "Dragonfly Energy Receives Notice Of Allowance From USPTO For Its Patent Application Titled Powderized Solid-State Electrolyte And Electroactive Materials",
+      "url": "https://www.benzinga.com/news/26/06/53271268/dragonfly-energy-receives-notice-of-allowance-from-uspto-for-its-patent-application-titled-powderize",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715314+00:00"
+    },
+    {
+      "ticker": "IMCC",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Asset sale with debt assumption of ~C$10.5M signals balance sheet improvement and strategic restructuring, typically positive for small-cap cannabis companies with financial pressures.",
+      "action_window": "intraday",
+      "headline": "IM Cannabis Inks Letter Of Intent With Slil.com To Sell Its European-Focused Assets; Slil.com To Assume Total Of ~C$10.5M Debt",
+      "url": "https://www.benzinga.com/m-a/26/06/53271245/im-cannabis-inks-letter-of-intent-with-slil-com-to-sell-its-european-focused-assets-slil-com-to-assu",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715327+00:00"
+    },
+    {
+      "ticker": "INTC",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major government-backed partnership announcement with Apple, NVIDIA, and Tesla for domestic chip manufacturing represents significant strategic catalyst with 8% surge already confirmed.",
+      "action_window": "intraday",
+      "headline": "Why Is Intel Stock Soaring Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53271124/why-is-intel-stock-soaring-thursday",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715337+00:00"
+    },
+    {
+      "ticker": "EU",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Federal regulatory authorization to begin construction at a major uranium project is a significant operational milestone that removes key development risk and enables revenue-generating activities.",
+      "action_window": "intraday",
+      "headline": "enCore Energy To Begin Construction At Dewey Burdock Uranium Project In South Dakota Following Bureau of Land Management Authorization",
+      "url": "https://www.benzinga.com/news/26/06/53271074/encore-energy-to-begin-construction-at-dewey-burdock-uranium-project-in-south-dakota-following-burea",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715344+00:00"
+    },
+    {
+      "ticker": "IPFX",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Pentagon contract award to SPAC merger partner validates technology and provides government revenue for pre-merger space company, typically a significant catalyst for SPAC valuations.",
+      "action_window": "intraday",
+      "headline": "Inflection Point Acquisition VI's Merger Partner Quantum Space Awarded A Pentagon Operational Energy Capability Improvement Fund Contract For A Fuel Depot Spacecraft Demonstration",
+      "url": "https://www.benzinga.com/news/26/06/53271047/inflection-point-acquisition-vis-merger-partner-quantum-space-awarded-a-pentagon-operational-energy",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715350+00:00",
+      "updated_at": "2026-06-18T11:47:53.715360+00:00"
+    },
+    {
+      "ticker": "PBK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Completion of $242.3M in equipment procurement agreements across 23 projects represents significant confirmed contract wins and business expansion that should positively impact revenue visibility and growth trajectory.",
+      "action_window": "intraday",
+      "headline": "PowerBank Confirms Completion Of Equipment Procurement Agreements Totaling $242.3M In Construction Value Across 23 Distributed Solar And Energy Storage Projects In New York And Pennsylvania",
+      "url": "https://www.benzinga.com/news/26/06/53271034/powerbank-confirms-completion-of-equipment-procurement-agreements-totaling-242-3m-in-construction-va",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715368+00:00"
+    },
+    {
+      "ticker": "UUUU",
+      "tradeable_score": 0.87,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $725M conditional loan agreement with the Pentagon's Office of Strategic Capital represents transformational financing for rare earth expansion, significantly de-risking the company's growth strategy and validating strategic national importance.",
+      "action_window": "intraday",
+      "headline": "Energy Fuels Enters $725M Conditional Loan Agreement With Pentagon's Office Of Strategic Capital To Expand Rare Earth Separazation And Metallization",
+      "url": "https://www.benzinga.com/news/26/06/53271022/energy-fuels-enters-725m-conditional-loan-agreement-with-pentagons-office-of-strategic-capital-to-ex",
+      "source": "alpaca",
+      "added_at": "2026-06-18T11:47:53.715374+00:00"
     }
   ]
 }
