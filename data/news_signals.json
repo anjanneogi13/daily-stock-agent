@@ -30,19 +30,6 @@
     "expires": "2026-11-14T20:57:05.498774+00:00",
     "hard_block": true
   },
-  "ATER": {
-    "ticker": "ATER",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Aterian, Inc. Announces Definitive Agreement for the Sale of its Marquee Brand Portfolio for $18 Million Subject to Adjustments",
-    "added_at": "2026-05-18T23:06:45.252490+00:00",
-    "expires": "2026-06-17T23:06:45.252496+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FACT": {
     "ticker": "FACT",
     "score_delta": 0.071,
@@ -934,19 +921,6 @@
     "headline": "Prenetics Global Affirms Q2 Sales Guidance of $46.000M-$48.000M vs $37.849M Est",
     "added_at": "2026-06-10T22:28:33.298695+00:00",
     "expires": "2026-06-24T22:28:33.298702+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PCPP": {
-    "ticker": "PCPP",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "1980s Permanent Portfolio Gets 2026 Upgrade: Bitcoin Joins The Party In New ETF",
-    "added_at": "2026-06-10T23:57:28.045981+00:00",
-    "expires": "2026-06-17T23:57:28.045989+00:00",
     "hard_block": false,
     "negative_reaction": false
   },

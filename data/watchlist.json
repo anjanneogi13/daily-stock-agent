@@ -881,15 +881,16 @@
     },
     {
       "ticker": "PSKY",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Chinese regulatory approval removes a major closing condition for the WBD-PSKY deal, significantly de-risking the transaction and likely narrowing any merger arbitrage spread.",
+      "rationale": "Federal clearance of $110B Paramount-Warner merger is a confirmed major M&A catalyst with significant premium implications for the target company.",
       "action_window": "intraday",
-      "headline": "Semafor Reporter Rohan Goswami Posts On X \"$PSKY has secured China regulatory approval for $WBD deal\"",
-      "url": "https://www.benzinga.com/m-a/26/06/53264903/semafor-reporter-rohan-goswami-posts-on-x-psky-has-secured-china-regulatory-approval-for-wbd-deal",
+      "headline": "Plot Twist: How the $110B Paramount-Warner Deal Rewrites Media",
+      "url": "https://www.marketbeat.com/originals/plot-twist-how-the-110b-paramount-warner-deal-rewrites-media/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-06-17T21:02:46.924467+00:00"
+      "added_at": "2026-06-17T21:02:46.924467+00:00",
+      "updated_at": "2026-06-18T00:11:47.468927+00:00"
     },
     {
       "ticker": "MDRR",
