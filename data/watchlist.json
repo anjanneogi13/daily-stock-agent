@@ -1059,6 +1059,18 @@
       "url": "https://www.benzinga.com/news/26/06/53278284/td-cowen-maintains-buy-on-jfrog-raises-price-target-to-100",
       "source": "alpaca",
       "added_at": "2026-06-18T14:53:22.351616+00:00"
+    },
+    {
+      "ticker": "IMMX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BofA Securities initiates coverage with Buy rating and significant peak sales projection, though tempered by safety and adoption concerns flagged in headline.",
+      "action_window": "next_day",
+      "headline": "Immix Biopharma Analyst Bullish But Flags Safety, Adoption Questions",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/06/53286177/immix-biopharma-analyst-bullish-but-flags-safety-adoption-questions",
+      "source": "alpaca",
+      "added_at": "2026-06-18T17:58:05.340288+00:00"
     }
   ]
 }

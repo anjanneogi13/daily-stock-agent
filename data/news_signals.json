@@ -382,19 +382,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AVGO": {
-    "ticker": "AVGO",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Stock Market Today: Nasdaq 100 Slips As Broadcom Plunges, Bitcoin Hits 4-Month Lows",
-    "added_at": "2026-06-04T17:29:11.347774+00:00",
-    "expires": "2026-06-18T17:29:11.347779+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HSBC": {
     "ticker": "HSBC",
     "score_delta": -0.1,
@@ -884,19 +871,6 @@
     "expires": "2026-06-25T12:06:26.061930+00:00",
     "hard_block": false,
     "negative_reaction": false
-  },
-  "FAC": {
-    "ticker": "FAC",
-    "score_delta": -0.012,
-    "catalyst": "product_launch",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Why Factorial Energy Stock Is Falling After Stellantis Battery Milestone",
-    "added_at": "2026-06-11T16:35:07.464482+00:00",
-    "expires": "2026-06-18T16:35:07.464488+00:00",
-    "hard_block": false,
-    "negative_reaction": true
   },
   "SENEA": {
     "ticker": "SENEA",
@@ -1962,6 +1936,71 @@
     "headline": "TD Cowen Maintains Buy on JFrog, Raises Price Target to $100",
     "added_at": "2026-06-18T14:53:22.349003+00:00",
     "expires": "2026-06-23T14:53:22.349009+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ICHR": {
+    "ticker": "ICHR",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "B. Riley Securities Maintains Buy on Ichor Holdings, Raises Price Target to $125",
+    "added_at": "2026-06-18T17:58:05.329385+00:00",
+    "expires": "2026-06-23T17:58:05.329392+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SEZL": {
+    "ticker": "SEZL",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Northland Capital Markets Maintains Outperform on Sezzle, Raises Price Target to $160",
+    "added_at": "2026-06-18T17:58:05.331767+00:00",
+    "expires": "2026-06-23T17:58:05.331773+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LE": {
+    "ticker": "LE",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Noble Capital Markets Initiates Coverage On Lands' End with Outperform Rating, Announces Price Target of $20",
+    "added_at": "2026-06-18T17:58:05.333722+00:00",
+    "expires": "2026-06-23T17:58:05.333727+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RLMD": {
+    "ticker": "RLMD",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Relmada's Cancer Drug Candidate Sparks Fresh Bullish Call",
+    "added_at": "2026-06-18T17:58:05.335635+00:00",
+    "expires": "2026-06-23T17:58:05.335641+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IMMX": {
+    "ticker": "IMMX",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Immix Biopharma Analyst Bullish But Flags Safety, Adoption Questions",
+    "added_at": "2026-06-18T17:58:05.337547+00:00",
+    "expires": "2026-06-23T17:58:05.337552+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
