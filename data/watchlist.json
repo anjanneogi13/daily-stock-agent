@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ALAB",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Nasdaq-100 inclusion triggers mechanical buying from index funds and ETFs, creating near-term price momentum with strong technical tailwinds.",
-      "action_window": "intraday",
-      "headline": "Why Astera Labs Shares Are Jumping Ahead Of Nasdaq-100 Entry",
-      "url": "https://www.benzinga.com/markets/tech/26/06/53206950/why-astera-labs-shares-are-jumping-ahead-of-nasdaq-100-entry",
-      "source": "alpaca",
-      "added_at": "2026-06-15T18:23:21.230965+00:00"
-    },
-    {
-      "ticker": "FLY",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "KeyBanc analyst upgrade with strong upside thesis drove 7% intraday gain, indicating meaningful near-term momentum in aerospace/defense stock.",
-      "action_window": "intraday",
-      "headline": "Why Is Firefly Aerospace Stock Soaring Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53206806/why-is-firefly-aerospace-stock-soaring-monday",
-      "source": "alpaca",
-      "added_at": "2026-06-15T18:23:21.230976+00:00"
-    },
-    {
-      "ticker": "WDC",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Morgan Stanley reaffirmed Overweight rating with significant price target increase to $650, driving shares to boom on the day, indicating strong institutional support and upward momentum.",
-      "action_window": "intraday",
-      "headline": "What's Going On With The Jump In Western Digital Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53206626/whats-going-on-with-the-jump-in-western-digital-stock",
-      "source": "alpaca",
-      "added_at": "2026-06-15T18:23:21.230992+00:00"
-    },
-    {
-      "ticker": "BETR",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Initial coverage with Buy rating and $35 price target from Roth Capital provides positive signal but initiation carries less weight than upgrade from existing coverage.",
-      "action_window": "next_day",
-      "headline": "Roth Capital Initiates Coverage On Better Home & Finance with Buy Rating, Announces Price Target of $35",
-      "url": "https://www.benzinga.com/news/26/06/53206339/roth-capital-initiates-coverage-on-better-home-finance-with-buy-rating-announces-price-target-of-35",
-      "source": "alpaca",
-      "added_at": "2026-06-15T18:23:21.230998+00:00"
-    },
-    {
       "ticker": "VTGN",
       "tradeable_score": 0.65,
       "sentiment": "bearish",
@@ -1071,6 +1023,138 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/06/53286177/immix-biopharma-analyst-bullish-but-flags-safety-adoption-questions",
       "source": "alpaca",
       "added_at": "2026-06-18T17:58:05.340288+00:00"
+    },
+    {
+      "ticker": "SSII",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-The-Market (ATM) equity offering of up to $50M signals dilution and potential capital needs, typically causing immediate downward pressure on stock price.",
+      "action_window": "intraday",
+      "headline": "SS Innovations International Enters ATM Sales Agreement With Virtu Americas To Sell Up To $50M In Stock",
+      "url": "https://www.benzinga.com/news/26/06/53292026/ss-innovations-international-enters-atm-sales-agreement-with-virtu-americas-to-sell-up-to-50m-in-sto",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446911+00:00"
+    },
+    {
+      "ticker": "GVH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Standby equity purchase agreements typically signal dilution risk as companies raise capital by issuing new shares, though the $20M facility provides liquidity runway.",
+      "action_window": "next_day",
+      "headline": "Globavend Inks Standby Equity Purchase Agreement With YA II To Sell $20M Ordinary Shares",
+      "url": "https://www.benzinga.com/news/26/06/53292219/globavend-inks-standby-equity-purchase-agreement-with-ya-ii-to-sell-20m-ordinary-shares",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446925+00:00"
+    },
+    {
+      "ticker": "EPSN",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of $15M signals potential dilution for existing shareholders, typically creating near-term selling pressure despite providing company liquidity.",
+      "action_window": "next_day",
+      "headline": "Epsilon Energy Enters ATM Agreement With Roth Capital Partners To Offer Up To $15M Of Common Shares",
+      "url": "https://www.benzinga.com/news/26/06/53292193/epsilon-energy-enters-atm-agreement-with-roth-capital-partners-to-offer-up-to-15m-of-common-shares",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446935+00:00"
+    },
+    {
+      "ticker": "OAK",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Redemption requests dropping by nearly half signals improving investor confidence and reduced liquidity stress in private credit operations, a meaningful positive for fund stability.",
+      "action_window": "next_day",
+      "headline": "Oaktree Sees Redemption Requests Nearly Half As Private Credit Pressures Ease",
+      "url": "https://www.benzinga.com/markets/private-markets/26/06/53292105/oaktree-sees-redemption-requests-nearly-half-as-private-credit-pressures-ease",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446942+00:00"
+    },
+    {
+      "ticker": "ODYS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Company clarifies it will NOT dilute shareholders at current depressed prices, signaling management believes stock is undervalued and reducing near-term dilution concerns.",
+      "action_window": "intraday",
+      "headline": "Odysight.ai Clarifies ATM Offering Strategy, Saying It Currently Does Not Intend To Sell Shares At Or Near Current Market Prices And Will Use The Facility Only If Valuations And Market Conditions Are Deemed Attractive",
+      "url": "https://www.benzinga.com/news/26/06/53292088/odysight-ai-clarifies-atm-offering-strategy-saying-it-currently-does-not-intend-to-sell-shares-at-or",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446949+00:00"
+    },
+    {
+      "ticker": "RPAY",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Completion of stablecoin payment proof of concept represents meaningful technology advancement that could differentiate RPAY's platform and expand addressable market, though still early-stage implementation.",
+      "action_window": "next_day",
+      "headline": "Repay Holdings Completes Proof Of Concept For Stablecoin Payment Capabilities On Its Platform",
+      "url": "https://www.benzinga.com/news/26/06/53292086/repay-holdings-completes-proof-of-concept-for-stablecoin-payment-capabilities-on-its-platform",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446957+00:00"
+    },
+    {
+      "ticker": "MTN",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Activist proxy fights typically drive shareholder value through operational improvements or strategic changes, though outcome uncertain and timeline extended.",
+      "action_window": "next_day",
+      "headline": "'Activist weighs proxy fight at Vail Resorts' - Semafor Exclusive",
+      "url": "https://www.benzinga.com/m-a/26/06/53291977/activist-weighs-proxy-fight-at-vail-resorts-semafor-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446965+00:00"
+    },
+    {
+      "ticker": "FTH",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of up to $150M typically causes immediate dilution concerns and selling pressure for small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Faeth Therapeutics Enters Into Sales Agreement For Offering Of Up To $150M",
+      "url": "https://www.benzinga.com/news/26/06/53291897/faeth-therapeutics-enters-into-sales-agreement-for-offering-of-up-to-150m",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446972+00:00"
+    },
+    {
+      "ticker": "LMNR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Failed asset sale transaction indicates strategic setback for Limoneira subsidiary as buyer terminated purchase agreement, though deposit return suggests no penalty imposed.",
+      "action_window": "next_day",
+      "headline": "Limoneira Subsidiary Windfall Investors Received Notice Of Purchase Agreement Termination From Peak Holdings On June 15; $500K Deposit In Escrow To Be Returned To Peak Holdings",
+      "url": "https://www.benzinga.com/m-a/26/06/53291844/limoneira-subsidiary-windfall-investors-received-notice-of-purchase-agreement-termination-from-peak",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446979+00:00"
+    },
+    {
+      "ticker": "CCEC",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Fleet expansion through new LNG carrier delivery increases operational capacity and revenue potential, but is a planned capital deployment event likely anticipated by the market.",
+      "action_window": "next_day",
+      "headline": "Capital Clean Energy Carriers Takes Delivery Of Agamemnon LNG Carrier",
+      "url": "https://www.benzinga.com/news/26/06/53291724/capital-clean-energy-carriers-takes-delivery-of-agamemnon-lng-carrier",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.446995+00:00"
+    },
+    {
+      "ticker": "PCSC",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "SEC declaring S-4 effective is a critical de-risking milestone for the merger with completion expected within weeks, removing regulatory uncertainty for the SPAC combination.",
+      "action_window": "intraday",
+      "headline": "Perceptive Capital, Freenome Holdings Announce Their Form S-4 Registration Regarding Proposed Merger Declared Effective By U.S. SEC; Business Combination Expected To Be Completed In July",
+      "url": "https://www.benzinga.com/m-a/26/06/53291662/perceptive-capital-freenome-holdings-announce-their-form-s-4-registration-regarding-proposed-merger",
+      "source": "alpaca",
+      "added_at": "2026-06-18T20:20:14.447002+00:00"
     }
   ]
 }

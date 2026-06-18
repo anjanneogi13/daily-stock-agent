@@ -382,32 +382,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HSBC": {
-    "ticker": "HSBC",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "'HSBC placed under formal investigation over Lebanese central bank scandal' - Financial Times",
-    "added_at": "2026-06-04T19:38:17.742329+00:00",
-    "expires": "2026-06-18T19:38:17.742336+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NHC": {
-    "ticker": "NHC",
-    "score_delta": 0.041,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "National HealthCare Acquires Five Skilled Nursing Sites For $50.5M",
-    "added_at": "2026-06-04T19:38:17.746751+00:00",
-    "expires": "2026-06-18T19:38:17.746756+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MRVL": {
     "ticker": "MRVL",
     "score_delta": -0.096,
@@ -2001,6 +1975,45 @@
     "headline": "Immix Biopharma Analyst Bullish But Flags Safety, Adoption Questions",
     "added_at": "2026-06-18T17:58:05.337547+00:00",
     "expires": "2026-06-23T17:58:05.337552+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RPAY": {
+    "ticker": "RPAY",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Repay Holdings Completes Proof Of Concept For Stablecoin Payment Capabilities On Its Platform",
+    "added_at": "2026-06-18T20:20:14.439766+00:00",
+    "expires": "2026-06-25T20:20:14.439774+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSCO": {
+    "ticker": "CSCO",
+    "score_delta": 0.025,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Cisco Plans To Acquire WideField Security; Financial Terms Undisclosed",
+    "added_at": "2026-06-18T20:20:14.442150+00:00",
+    "expires": "2026-07-02T20:20:14.442157+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PCSC": {
+    "ticker": "PCSC",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Perceptive Capital, Freenome Holdings Announce Their Form S-4 Registration Regarding Proposed Merger Declared Effective By U.S. SEC; Business Combination Expected To Be Completed In July",
+    "added_at": "2026-06-18T20:20:14.444146+00:00",
+    "expires": "2026-07-18T20:20:14.444154+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
