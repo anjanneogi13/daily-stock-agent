@@ -369,19 +369,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BEN": {
-    "ticker": "BEN",
-    "score_delta": -0.097,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Franklin's Western Asset Management Agrees Over $100M SEC Settlement",
-    "added_at": "2026-06-05T14:07:56.739651+00:00",
-    "expires": "2026-06-19T14:07:56.739657+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PSKY": {
     "ticker": "PSKY",
     "score_delta": 0.2,
@@ -804,19 +791,6 @@
     "headline": "United Community Banks Announced The Execution Of A Definitive Agreement To Sell Its Equipment Finance Business To Funds Managed By Wafra For $1.9B In Cash",
     "added_at": "2026-06-12T11:39:54.014158+00:00",
     "expires": "2026-07-12T11:39:54.014165+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NOK": {
-    "ticker": "NOK",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Nokia Stock Is Climbing Friday: What's Driving The Action?",
-    "added_at": "2026-06-12T14:42:43.815860+00:00",
-    "expires": "2026-06-19T14:42:43.815865+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1884,6 +1858,19 @@
     "headline": "uniQure Soars After FDA's U-Turn Opens Accelerated Approval Pathway for Huntington's Therapy",
     "added_at": "2026-06-19T00:11:46.693093+00:00",
     "expires": "2026-07-19T00:11:46.693101+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GLD": {
+    "ticker": "GLD",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "intraday",
+    "headline": "Goldman Cuts Gold Target To $4,900 As Markets Now Price Two Fed Hikes",
+    "added_at": "2026-06-19T15:33:20.454456+00:00",
+    "expires": "2026-06-24T15:33:20.454463+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

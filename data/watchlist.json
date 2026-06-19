@@ -1,104 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPY",
-      "tradeable_score": 0.85,
-      "sentiment": "neutral",
-      "category": "macro",
-      "rationale": "FOMC statements are major market-moving events that directly impact broad equity indices, interest rate expectations, and overall market sentiment with immediate trading implications.",
-      "action_window": "intraday",
-      "headline": "Federal Reserve Issues FOMC Statement For June 16-17, 2026 (Link In Body)",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/06/53259098/federal-reserve-issues-fomc-statement-for-june-16-17-2026-link-in-body",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033838+00:00",
-      "updated_at": "2026-06-17T18:40:43.918726+00:00"
-    },
-    {
-      "ticker": "LASE",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Company enters high-growth data center market with first robotic laser cleaning cell delivery, representing meaningful market expansion and explaining Tuesday's stock gains.",
-      "action_window": "intraday",
-      "headline": "Why Is Laser Photonics Stock Gaining Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53232965/why-is-laser-photonics-stock-gaining-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033857+00:00",
-      "updated_at": "2026-06-16T17:59:24.595637+00:00"
-    },
-    {
-      "ticker": "CNTN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Share buyback of $50M signals management confidence in valuation and returns capital to shareholders, typically supporting stock price in near-term.",
-      "action_window": "intraday",
-      "headline": "Canton Strategic Holdings Announces $50M Share Buyback",
-      "url": "https://www.benzinga.com/quote/CNTN",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033863+00:00"
-    },
-    {
-      "ticker": "PAYO",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Citigroup downgrade from a higher rating to Neutral with lowered price target creates immediate selling pressure and signals deteriorating analyst confidence.",
-      "action_window": "intraday",
-      "headline": "Citigroup Downgrades Payoneer Global to Neutral, Lowers Price Target to $7.4",
-      "url": "https://www.benzinga.com/news/26/06/53220472/citigroup-downgrades-payoneer-global-to-neutral-lowers-price-target-to-7-4",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033889+00:00"
-    },
-    {
-      "ticker": "JFB",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "U.S. patent approval for UAV technology provides competitive moat and potential revenue protection, representing a meaningful IP milestone for the company.",
-      "action_window": "intraday",
-      "headline": "JFB Construction's XTEND Receives U.S. Patent Protecting Technology For Unmanned Aerial Vehicles",
-      "url": "https://www.benzinga.com/news/26/06/53220464/jfb-constructions-xtend-receives-u-s-patent-protecting-technology-for-unmanned-aerial-vehicles",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033894+00:00"
-    },
-    {
-      "ticker": "HPAI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New AI agent product launch (HyprX) expanding direct-to-consumer capabilities represents meaningful business expansion for Helport AI, likely to drive near-term trading interest in small-cap AI stock.",
-      "action_window": "intraday",
-      "headline": "Helport AI Launches Its QR-Code AI Agent, HyprX For Hardware, To Enable Shipped Devices To Serve As A Direct-To-Consumer Service",
-      "url": "https://www.benzinga.com/news/26/06/53220463/helport-ai-launches-its-qr-code-ai-agent-hyprx-for-hardware-to-enable-shipped-devices-to-serve-as-a",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033899+00:00"
-    },
-    {
-      "ticker": "MBOT",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Government contract with federal healthcare systems represents meaningful revenue opportunity for small-cap medical device company, though specifics on contract value are not disclosed.",
-      "action_window": "intraday",
-      "headline": "Microbot Medical Inks Agreement With Lovell Government Services To Serve Federal Healthcare Systems",
-      "url": "https://www.benzinga.com/news/26/06/53220426/microbot-medical-inks-agreement-with-lovell-government-services-to-serve-federal-healthcare-systems",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033904+00:00"
-    },
-    {
-      "ticker": "AGPU",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Material $25.9M contract win for advanced AI compute deployments represents significant revenue secured through long-term agreements, likely meaningful relative to small-cap market cap.",
-      "action_window": "intraday",
-      "headline": "Axe Compute Announces $25.9M In Total Contract Value Spanning Two Long-Term Agreements For Deployments Of Blackwell And Grace Blackwell Compute",
-      "url": "https://www.benzinga.com/news/26/06/53220393/axe-compute-announces-25-9m-in-total-contract-value-spanning-two-long-term-agreements-for-deployment",
-      "source": "alpaca",
-      "added_at": "2026-06-16T12:49:09.033909+00:00"
-    },
-    {
       "ticker": "CNC",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -220,15 +122,16 @@
     },
     {
       "ticker": "LOKV",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Shareholder approval of a SPAC merger is a critical milestone that typically triggers immediate trading activity and removes deal uncertainty for the target company.",
+      "rationale": "Completed SPAC merger with $126.5M capital raise represents a major definitive catalyst that typically drives significant trading activity on completion date.",
       "action_window": "intraday",
-      "headline": "Teamshares Announces Live Oak Acquisition Corp. V Shareholders Approve Proposed Merger With Teamshares",
-      "url": "https://www.benzinga.com/m-a/26/06/53238022/teamshares-announces-live-oak-acquisition-corp-v-shareholders-approve-proposed-merger-with-teamshare",
+      "headline": "Teamshares and Live Oak Acquisition Corp. V Complete Business Combination",
+      "url": "https://finance.yahoo.com/small-business/articles/teamshares-live-oak-acquisition-corp-130000157.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-06-16T20:51:06.453671+00:00"
+      "added_at": "2026-06-16T20:51:06.453671+00:00",
+      "updated_at": "2026-06-19T15:33:20.471781+00:00"
     },
     {
       "ticker": "AMZN",
