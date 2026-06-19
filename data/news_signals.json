@@ -1860,5 +1860,31 @@
     "expires": "2026-06-24T15:33:20.454463+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "IBIT": {
+    "ticker": "IBIT",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "this_week",
+    "headline": "Franklin Templeton Files Bitcoin \u2018DRIP\u2019 ETFs That Reinvest Stock Dividends Into Crypto",
+    "added_at": "2026-06-19T19:30:30.440684+00:00",
+    "expires": "2026-06-26T19:30:30.440691+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ACOM": {
+    "ticker": "ACOM",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "this_week",
+    "headline": "Harbor Joins Active Commodity ETF Race As Inflation-Hedge Demand Grows",
+    "added_at": "2026-06-19T19:30:30.442899+00:00",
+    "expires": "2026-06-26T19:30:30.442906+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
