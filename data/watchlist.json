@@ -1,19 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPCX",
-      "tradeable_score": 0.95,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "SpaceX IPO is a major market event with significant trading volume expected, though the headline's cautionary tone ('hard part') tempers immediate bullish sentiment.",
-      "action_window": "next_day",
-      "headline": "SpaceX Had The Best IPO In History\u2014Now Comes The Hard Part",
-      "url": "https://www.benzinga.com/Opinion/26/06/53294290/spacex-had-the-best-ipo-in-history-now-comes-the-hard-part",
-      "source": "alpaca",
-      "added_at": "2026-06-16T02:07:12.183814+00:00",
-      "updated_at": "2026-06-18T22:31:01.568104+00:00"
-    },
-    {
       "ticker": "SPY",
       "tradeable_score": 0.85,
       "sentiment": "neutral",

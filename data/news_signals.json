@@ -356,19 +356,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GIII": {
-    "ticker": "GIII",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.92,
-    "action_window": "intraday",
-    "headline": "G-III Apparel Group Raises FY2027 GAAP EPS Guidance from $2.00-$2.10 to $3.85-$3.95 vs $2.10 Est",
-    "added_at": "2026-06-05T11:21:20.107408+00:00",
-    "expires": "2026-06-19T11:21:20.107414+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GORO": {
     "ticker": "GORO",
     "score_delta": 0.2,
@@ -817,45 +804,6 @@
     "headline": "United Community Banks Announced The Execution Of A Definitive Agreement To Sell Its Equipment Finance Business To Funds Managed By Wafra For $1.9B In Cash",
     "added_at": "2026-06-12T11:39:54.014158+00:00",
     "expires": "2026-07-12T11:39:54.014165+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EXOD": {
-    "ticker": "EXOD",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Exodus Movement Launches Exodus Markets With Tokenization Platform Ondo Finance To Facilitate Trading In Over 200 Tokenized Stocks, ETFs And Real-World Assets Directly On Solana",
-    "added_at": "2026-06-12T11:39:54.016313+00:00",
-    "expires": "2026-06-19T11:39:54.016319+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SHAZ": {
-    "ticker": "SHAZ",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Sharon AI Signs Six-Year AI Infrastructure Compute Collaboration With Nvidia To Deploy 72MW Of New Data Center Capacity In Australia",
-    "added_at": "2026-06-12T11:39:54.018309+00:00",
-    "expires": "2026-06-19T11:39:54.018314+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "COE": {
-    "ticker": "COE",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "51 Talk Online Education Q1 Adj. EPS $(0.30) Down From $(0.20) YoY, Sales $31.188M Up From $18.247M YoY",
-    "added_at": "2026-06-12T11:39:54.028426+00:00",
-    "expires": "2026-06-19T11:39:54.028431+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
