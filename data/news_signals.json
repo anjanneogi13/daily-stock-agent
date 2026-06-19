@@ -391,19 +391,6 @@
     "expires": "2026-12-02T20:49:45.099537+00:00",
     "hard_block": true
   },
-  "PLRZ": {
-    "ticker": "PLRZ",
-    "score_delta": 0.025,
-    "catalyst": "ma_acquirer",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Polyrizon Ltd. Extends Exclusivity Period For Proposed 51% Acquisition Of Arrow Aviation Through June 30, 2026",
-    "added_at": "2026-06-05T20:49:45.102236+00:00",
-    "expires": "2026-06-19T20:49:45.102242+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SOAR": {
     "ticker": "SOAR",
     "score_delta": 0.194,
@@ -816,19 +803,6 @@
     "expires": "2026-12-09T17:35:21.457868+00:00",
     "hard_block": true
   },
-  "SOFI": {
-    "ticker": "SOFI",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "SoFi Stock Pauses Friday: What's Going On?",
-    "added_at": "2026-06-12T19:59:33.951776+00:00",
-    "expires": "2026-06-19T19:59:33.951781+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MH": {
     "ticker": "MH",
     "score_delta": -0.118,
@@ -841,19 +815,6 @@
     "expires": "2026-06-26T19:59:33.958429+00:00",
     "hard_block": false,
     "negative_reaction": true
-  },
-  "SPCX": {
-    "ticker": "SPCX",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "SpaceX Takes Page From Tesla, Launches Merch To Celebrate Ticker, IPO",
-    "added_at": "2026-06-12T19:59:33.964716+00:00",
-    "expires": "2026-06-19T19:59:33.964727+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "GENC": {
     "ticker": "GENC",
