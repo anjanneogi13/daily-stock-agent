@@ -26,19 +26,6 @@
     "expires": "2026-11-19T00:01:13.901994+00:00",
     "hard_block": true
   },
-  "DXYZ": {
-    "ticker": "DXYZ",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.92,
-    "action_window": "intraday",
-    "headline": "SpaceX Says Consideration For Acquisition Of Cursor, After IPO Closing Would Consist Of Class A Common Stock Implied Equity Value Of $60B; Cursor Entitled To $1.5B Termination Fee Under Option Agreeme",
-    "added_at": "2026-05-20T21:18:56.679359+00:00",
-    "expires": "2026-06-19T21:18:56.679364+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "KTB": {
     "ticker": "KTB",
     "score_delta": 0.2,
@@ -815,19 +802,6 @@
     "expires": "2026-06-26T19:59:33.958429+00:00",
     "hard_block": false,
     "negative_reaction": true
-  },
-  "GENC": {
-    "ticker": "GENC",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Gencor Industries Q3 EPS $0.26 Misses $0.41 Estimate, Sales $33.799M Miss $36.519M Estimate",
-    "added_at": "2026-06-12T21:44:57.268722+00:00",
-    "expires": "2026-06-19T21:44:57.268729+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "TRAW": {
     "ticker": "TRAW",
