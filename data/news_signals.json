@@ -356,19 +356,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MRVL": {
-    "ticker": "MRVL",
-    "score_delta": -0.096,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
-    "added_at": "2026-06-05T00:01:55.492870+00:00",
-    "expires": "2026-06-19T00:01:55.492878+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GIII": {
     "ticker": "GIII",
     "score_delta": 0.1,
@@ -1936,6 +1923,19 @@
     "headline": "On June 17, Ohmyhome Entered Agreement To Sell All Shares In Ohmyhome BVI To Sterling Oat For Purchase Price Of $1",
     "added_at": "2026-06-18T22:31:01.565023+00:00",
     "expires": "2026-07-18T22:31:01.565030+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QURE": {
+    "ticker": "QURE",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.93,
+    "action_window": "intraday",
+    "headline": "uniQure Soars After FDA's U-Turn Opens Accelerated Approval Pathway for Huntington's Therapy",
+    "added_at": "2026-06-19T00:11:46.693093+00:00",
+    "expires": "2026-07-19T00:11:46.693101+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
