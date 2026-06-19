@@ -807,19 +807,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DNTH": {
-    "ticker": "DNTH",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Why Is Dianthus Therapeutics Stock Trading Higher On Friday?",
-    "added_at": "2026-06-12T17:35:21.455482+00:00",
-    "expires": "2026-06-19T17:35:21.455489+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CUPR": {
     "ticker": "CUPR",
     "score_delta": -1.0,
