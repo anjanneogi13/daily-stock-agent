@@ -300,19 +300,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KPLT": {
-    "ticker": "KPLT",
-    "score_delta": -0.097,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Katapult Holdings Settles Patent Infringement Lawsuit With Flexshopper, Secures Royalty-Free License To Key Patents In Exchange For Lump-Sum Payment And Mutual Release of Claims",
-    "added_at": "2026-06-08T21:24:00.904260+00:00",
-    "expires": "2026-06-22T21:24:00.904267+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HLIT": {
     "ticker": "HLIT",
     "score_delta": 0.1,
@@ -735,19 +722,6 @@
     "headline": "These Analysts Increase Their Forecasts On Jabil Following Strong Q3 Earnings",
     "added_at": "2026-06-18T14:53:22.334293+00:00",
     "expires": "2026-06-25T14:53:22.334299+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VTGN": {
-    "ticker": "VTGN",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "VistaGen Therapeutics Q4 EPS $(0.37) Misses $(0.30) Estimate, Sales $465.000K Beat $320.000K Estimate",
-    "added_at": "2026-06-15T21:31:22.586801+00:00",
-    "expires": "2026-06-22T21:31:22.586813+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1702,6 +1676,45 @@
     "headline": "MacroGenics To Receive $24.5M Milestone From Sanofi Following FDA Approval Of TZIELD Expansion In Type 1 Diabetes",
     "added_at": "2026-06-22T21:20:13.629104+00:00",
     "expires": "2026-07-22T21:20:13.629109+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CIIT": {
+    "ticker": "CIIT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Tianci International Q3 EPS $0.01 Up From $(0.43) YoY, Sales $4.311M Up From $1.948M YoY",
+    "added_at": "2026-06-22T23:00:47.103656+00:00",
+    "expires": "2026-06-29T23:00:47.103665+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GITS": {
+    "ticker": "GITS",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Global Interactive Q1 EPS $(0.14) Up From $(0.20) YoY, Sales $96.000",
+    "added_at": "2026-06-22T23:00:47.105845+00:00",
+    "expires": "2026-06-29T23:00:47.105852+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EPC": {
+    "ticker": "EPC",
+    "score_delta": 0.157,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "'Schick Razor Maker Is Said to Reject Unsolicited Takeover Offer'- Bloomberg",
+    "added_at": "2026-06-22T23:00:47.107775+00:00",
+    "expires": "2026-07-22T23:00:47.107781+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
