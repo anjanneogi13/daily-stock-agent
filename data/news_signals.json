@@ -287,19 +287,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "OKLO": {
-    "ticker": "OKLO",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Oklo Expands Nuclear Supply Chain With ARMEC Deal",
-    "added_at": "2026-06-08T16:35:37.559560+00:00",
-    "expires": "2026-06-22T16:35:37.559566+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "KKR": {
     "ticker": "KKR",
     "score_delta": 0.05,
@@ -1089,32 +1076,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HOOD": {
-    "ticker": "HOOD",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Argus Research Maintains Buy on Robinhood Markets, Raises Price Target to $110",
-    "added_at": "2026-06-17T16:11:24.366249+00:00",
-    "expires": "2026-06-22T16:11:24.366254+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NEXN": {
-    "ticker": "NEXN",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Scotiabank Maintains Sector Outperform on Nexxen International, Raises Price Target to $11",
-    "added_at": "2026-06-17T16:11:24.369878+00:00",
-    "expires": "2026-06-22T16:11:24.369883+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BB": {
     "ticker": "BB",
     "score_delta": 0.03,
@@ -1626,5 +1587,109 @@
     "expires": "2026-06-27T13:30:14.685462+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "EL": {
+    "ticker": "EL",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Goldman Sachs Reinstates Buy on Estee Lauder Cos, Announces $100 Price Target",
+    "added_at": "2026-06-22T18:05:03.153762+00:00",
+    "expires": "2026-06-27T18:05:03.153767+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TE": {
+    "ticker": "TE",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.73,
+    "action_window": "intraday",
+    "headline": "What's Going On With T1 Energy Stock Monday?",
+    "added_at": "2026-06-22T18:05:03.155355+00:00",
+    "expires": "2026-06-27T18:05:03.155360+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HIVE": {
+    "ticker": "HIVE",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "HIVE Stock Surges After Groundbreaking AI Project In Paraguay",
+    "added_at": "2026-06-22T18:05:03.156909+00:00",
+    "expires": "2026-06-29T18:05:03.156914+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NOK": {
+    "ticker": "NOK",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "Nokia Stock Gains As Google Cloud Partnership Adds Gemini AI Agents",
+    "added_at": "2026-06-22T18:05:03.158487+00:00",
+    "expires": "2026-06-29T18:05:03.158492+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BBOT": {
+    "ticker": "BBOT",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Oppenheimer Assumes BridgeBio Oncology at Outperform, Announces Price Target of $22",
+    "added_at": "2026-06-22T18:05:03.160074+00:00",
+    "expires": "2026-06-27T18:05:03.160079+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FRVO": {
+    "ticker": "FRVO",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Why Is Fervo Energy Stock Gaining Monday?",
+    "added_at": "2026-06-22T18:05:03.161707+00:00",
+    "expires": "2026-06-29T18:05:03.161713+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MPLT": {
+    "ticker": "MPLT",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Needham Maintains Buy on MapLight Therapeutics, Raises Price Target to $42",
+    "added_at": "2026-06-22T18:05:03.163339+00:00",
+    "expires": "2026-06-27T18:05:03.163345+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AIXI": {
+    "ticker": "AIXI",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Xiao-I shares are trading lower after the Shanghai High People's Court dismissed the company's patent litigation claims against Apple's Siri technology.",
+    "added_at": "2026-06-22T18:05:03.164937+00:00",
+    "expires": "2026-07-06T18:05:03.164942+00:00",
+    "hard_block": false,
+    "negative_reaction": true
   }
 }

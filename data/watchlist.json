@@ -107,6 +107,114 @@
       "url": "https://www.benzinga.com/news/26/06/60013141/lion-group-invest-12m-meili-capital-managemen-through-issuance-ordinary-shares",
       "source": "alpaca",
       "added_at": "2026-06-22T13:30:14.687762+00:00"
+    },
+    {
+      "ticker": "EL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Goldman Sachs reinstating Buy rating with $100 price target is a meaningful positive catalyst from a top-tier investment bank that typically drives institutional buying interest.",
+      "action_window": "next_day",
+      "headline": "Goldman Sachs Reinstates Buy on Estee Lauder Cos, Announces $100 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/60025534/goldman-sachs-reinstates-buy-estee-lauder-cos-announces-100-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167073+00:00"
+    },
+    {
+      "ticker": "BQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 9.99M shares by selling shareholders typically creates dilution concerns and near-term selling pressure as insiders/early investors exit.",
+      "action_window": "next_day",
+      "headline": "Reported June 18: Boqii Files Prospectus For Offering 9.99M Class A Ordinary Share On Behalf Of Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/06/60025446/reported-june-18-boqii-files-prospectus-offering-9-99m-class-ordinary-share-behalf-selling-sharehold",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167083+00:00"
+    },
+    {
+      "ticker": "TE",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bernstein initiation coverage combined with top bankability rating for Dallas facility creates dual positive catalysts driving stock surge.",
+      "action_window": "intraday",
+      "headline": "What's Going On With T1 Energy Stock Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60025290/whats-going-on-with-t1-energy-stock-monday",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167090+00:00"
+    },
+    {
+      "ticker": "F",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Union deadline creates labor negotiation uncertainty with potential strike risk if tentative deal not reached by July 10, increasing operational risk over near-term.",
+      "action_window": "this_week",
+      "headline": "Unifor Sets July 10 Deadline For Ford To Reach Tentative Deal",
+      "url": "https://www.benzinga.com/news/26/06/60025247/unifor-sets-july-10-deadline-ford-reach-tentative-deal",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167094+00:00"
+    },
+    {
+      "ticker": "HIVE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Completion of prestigious AI research partnership with Columbia University demonstrates capability monetization and validates HIVE's GPU infrastructure, driving immediate price action.",
+      "action_window": "intraday",
+      "headline": "HIVE Stock Surges After Groundbreaking AI Project In Paraguay",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60025120/hive-stock-surges-after-groundbreaking-ai-project-in-paraguay",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167099+00:00"
+    },
+    {
+      "ticker": "NOK",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with Google Cloud to integrate Gemini AI represents a meaningful competitive advantage in telecom network automation, though impact magnitude depends on commercial terms and deployment timeline.",
+      "action_window": "intraday",
+      "headline": "Nokia Stock Gains As Google Cloud Partnership Adds Gemini AI Agents",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60024973/nokia-stock-gains-as-google-cloud-partnership-adds-gemini-ai-agents",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167105+00:00"
+    },
+    {
+      "ticker": "BBOT",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Oppenheimer initiating coverage at Outperform with a $22 price target is a meaningful positive catalyst that typically drives near-term buying interest, though impact depends on current stock price relative to target.",
+      "action_window": "intraday",
+      "headline": "Oppenheimer Assumes BridgeBio Oncology at Outperform, Announces Price Target of $22",
+      "url": "https://www.benzinga.com/news/26/06/60024774/oppenheimer-assumes-bridgebio-oncology-outperform-announces-price-target-22",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167113+00:00"
+    },
+    {
+      "ticker": "FRVO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with NVIDIA for AI-driven geothermal technology drives 6% stock gain and overshadows Q1 earnings miss, indicating strong market validation of the partnership's growth potential.",
+      "action_window": "intraday",
+      "headline": "Why Is Fervo Energy Stock Gaining Monday?",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/60024478/why-is-fervo-energy-stock-gaining-monday",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167117+00:00"
+    },
+    {
+      "ticker": "AIXI",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Court dismissal of major patent litigation against Apple eliminates potential revenue opportunity and validates negative stock price movement already occurring.",
+      "action_window": "intraday",
+      "headline": "Xiao-I shares are trading lower after the Shanghai High People's Court dismissed the company's patent litigation claims against Apple's Siri technology.",
+      "url": "https://www.benzinga.com/quote/AIXI",
+      "source": "alpaca",
+      "added_at": "2026-06-22T18:05:03.167122+00:00"
     }
   ]
 }
