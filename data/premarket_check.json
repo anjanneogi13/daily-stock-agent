@@ -1,23 +1,21 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-22",
   "market": {
-    "spy_change_pct": -1.25,
-    "qqq_change_pct": -1.01,
-    "soxx_change_pct": 1.44,
-    "vix": 17.44,
-    "warnings": [
-      "\u26a0\ufe0f SPY down -1.2% \u2014 caution"
-    ],
-    "global_action": "half"
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
+    "warnings": [],
+    "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "INTC",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "market caution \u2014 reduce size",
-      "current_price": 121.1,
-      "gap_pct": -0.0,
-      "actionable": true
+      "ticker": "ROST",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }
