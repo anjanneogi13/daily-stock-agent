@@ -1076,32 +1076,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BB": {
-    "ticker": "BB",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "CIBC Maintains Outperformer on BlackBerry, Raises Price Target to $10",
-    "added_at": "2026-06-17T18:40:43.913971+00:00",
-    "expires": "2026-06-22T18:40:43.913978+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MU": {
-    "ticker": "MU",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Deutsche Bank Maintains Buy on Micron Technology, Raises Price Target to $1500",
-    "added_at": "2026-06-17T18:40:43.916081+00:00",
-    "expires": "2026-06-22T18:40:43.916086+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ODTX": {
     "ticker": "ODTX",
     "score_delta": -0.1,
@@ -1691,5 +1665,44 @@
     "expires": "2026-07-06T18:05:03.164942+00:00",
     "hard_block": false,
     "negative_reaction": true
+  },
+  "QCOM": {
+    "ticker": "QCOM",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "'Qualcomm Nears Deal for AI Chip Startup Modular'- Bloomberg",
+    "added_at": "2026-06-22T21:20:13.626092+00:00",
+    "expires": "2026-07-06T21:20:13.626098+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ATD.TO": {
+    "ticker": "ATD.TO",
+    "score_delta": 0.086,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.6,
+    "action_window": "intraday",
+    "headline": "Alimentation Couche-Tard Q4 Adj. EPS $0.73 Beats $0.53 Estimate, Sales $19.488M Miss $17.932B Estimate",
+    "added_at": "2026-06-22T21:20:13.627705+00:00",
+    "expires": "2026-06-29T21:20:13.627710+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MGNX": {
+    "ticker": "MGNX",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "MacroGenics To Receive $24.5M Milestone From Sanofi Following FDA Approval Of TZIELD Expansion In Type 1 Diabetes",
+    "added_at": "2026-06-22T21:20:13.629104+00:00",
+    "expires": "2026-07-22T21:20:13.629109+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

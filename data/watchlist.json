@@ -215,6 +215,90 @@
       "url": "https://www.benzinga.com/quote/AIXI",
       "source": "alpaca",
       "added_at": "2026-06-22T18:05:03.167122+00:00"
+    },
+    {
+      "ticker": "QCOM",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "M&A deal near completion for AI chip startup signals strategic expansion into high-growth AI semiconductor market, typically positive for acquirer with growth synergies.",
+      "action_window": "intraday",
+      "headline": "'Qualcomm Nears Deal for AI Chip Startup Modular'- Bloomberg",
+      "url": "https://www.benzinga.com/news/26/06/60031954/qualcomm-nears-deal-ai-chip-startup-modular-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630884+00:00"
+    },
+    {
+      "ticker": "ATD.TO",
+      "tradeable_score": 0.6,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Strong EPS beat of 38% is offset by significant revenue miss ($19.488M vs $17.932B appears to be a data error given magnitude discrepancy), creating mixed trading signals requiring clarification.",
+      "action_window": "intraday",
+      "headline": "Alimentation Couche-Tard Q4 Adj. EPS $0.73 Beats $0.53 Estimate, Sales $19.488M Miss $17.932B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/60031876/alimentation-couche-tard-q4-adj-eps-0-73-beats-0-53-estimate-sales-19-488m-miss-17-932b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630893+00:00"
+    },
+    {
+      "ticker": "GLOO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Public offering registration typically signals dilution for existing shareholders and creates near-term selling pressure as new shares enter the market.",
+      "action_window": "next_day",
+      "headline": "Gloo Files Registration Statement For Public Offering Of Class A Common Stock",
+      "url": "https://www.benzinga.com/news/26/06/60031649/gloo-files-registration-statement-public-offering-class-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630899+00:00"
+    },
+    {
+      "ticker": "ORC",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Expansion of share buyback program to 13.3% of outstanding shares signals management confidence and creates near-term technical support through reduced float.",
+      "action_window": "next_day",
+      "headline": "Orchid Island Capital Expands Stock Buyback Program To 26.6M Shares, Equal To About 13.3% Of Outstanding Stock",
+      "url": "https://www.benzinga.com/news/26/06/60031595/orchid-island-capital-expands-stock-buyback-program-26-6m-shares-equal-about-13-3-outstanding-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630903+00:00"
+    },
+    {
+      "ticker": "NVO",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock already up 6% on favorable GLP-1 access initiatives improving market outlook for weight-loss drugs, but move is largely intraday and catalyst details are vague.",
+      "action_window": "intraday",
+      "headline": "Novo Nordisk Stock Is Surging Monday: What's Driving The Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60031499/novo-nordisk-stock-is-surging-monday-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630906+00:00"
+    },
+    {
+      "ticker": "RIME",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Second forbearance agreement signals ongoing financial distress with missed payments and only temporary relief until July, indicating elevated default risk and potential liquidity crisis.",
+      "action_window": "next_day",
+      "headline": "Algorhythm & Semicab Enter Second Forbearance Agreement On June 16; Semicab Waives Defaults For Algorhythm' Missed May 2, 2026 Payment; Semicab To Forbear From Action On Payment Defaults Through July 16, 2026",
+      "url": "https://www.benzinga.com/news/26/06/60031353/algorhythm-semicab-enter-second-forbearance-agreement-june-16-semicab-waives-defaults-algorhythm-mis",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630909+00:00"
+    },
+    {
+      "ticker": "MGNX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval triggering $24.5M milestone payment represents significant near-term cash influx and validates product expansion for small-cap biotech MacroGenics.",
+      "action_window": "next_day",
+      "headline": "MacroGenics To Receive $24.5M Milestone From Sanofi Following FDA Approval Of TZIELD Expansion In Type 1 Diabetes",
+      "url": "https://www.benzinga.com/general/biotech/26/06/60031309/macrogenics-receive-24-5m-milestone-sanofi-following-fda-approval-tzield-expansion-type-1-diabetes",
+      "source": "alpaca",
+      "added_at": "2026-06-22T21:20:13.630913+00:00"
     }
   ]
 }
