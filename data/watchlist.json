@@ -386,15 +386,16 @@
     },
     {
       "ticker": "KFY",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Korn Ferry beat both EPS and revenue estimates with EPS exceeding by 1.5% and sales beating by 3.4%, indicating solid operational performance.",
+      "rationale": "Stock jumped following Q4 earnings and revenue beat with CEO highlighting resilient growth, representing a confirmed positive catalyst with immediate market reaction.",
       "action_window": "intraday",
-      "headline": "Korn Ferry Q4 Adj. EPS $1.40 Beats $1.38 Estimate, Sales $768.256M Beat $743.340M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60036701/korn-ferry-q4-adj-eps-1-40-beats-1-38-estimate-sales-768-256m-beat-743-340m-estimate",
+      "headline": "Korn Ferry CEO Highlights Resilient Growth Despite Uneven Economy",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/60048910/korn-ferry-ceo-highlights-resilient-growth-despite-uneven-economy",
       "source": "alpaca",
-      "added_at": "2026-06-23T10:58:42.608188+00:00"
+      "added_at": "2026-06-23T10:58:42.608188+00:00",
+      "updated_at": "2026-06-23T16:24:48.890128+00:00"
     },
     {
       "ticker": "VTOL",
@@ -467,6 +468,42 @@
       "url": "https://www.benzinga.com/news/26/06/60041085/fusemachines-partners-global-apparel-brand-transform-demand-planning-using-predictive-and-agentic-ai",
       "source": "alpaca",
       "added_at": "2026-06-23T13:44:09.985844+00:00"
+    },
+    {
+      "ticker": "FAC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Cantor Fitzgerald initiating coverage with Overweight rating provides positive signal but initiation carries less urgency than upgrade of existing coverage, and impact depends on current stock price relative to $18 target.",
+      "action_window": "next_day",
+      "headline": "Cantor Fitzgerald Initiates Coverage On Factorial Energy with Overweight Rating, Announces Price Target of $18",
+      "url": "https://www.benzinga.com/news/26/06/60049521/cantor-fitzgerald-initiates-coverage-factorial-energy-overweight-rating-announces-price-target-18",
+      "source": "alpaca",
+      "added_at": "2026-06-23T16:24:48.890096+00:00"
+    },
+    {
+      "ticker": "APO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Second consecutive quarter of redemption limits signals liquidity stress in Apollo's private credit fund, raising concerns about asset quality and potential contagion risk in the private credit sector.",
+      "action_window": "intraday",
+      "headline": "Private Credit Pressure Builds As Apollo Limits Redemptions For Second Straight Quarter",
+      "url": "https://www.benzinga.com/markets/private-markets/26/06/60049325/private-credit-pressure-builds-as-apollo-limits-redemptions-for-second-straight-quarter",
+      "source": "alpaca",
+      "added_at": "2026-06-23T16:24:48.890110+00:00"
+    },
+    {
+      "ticker": "QNCX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Initiation of coverage with Overweight rating by Cantor Fitzgerald is positive but represents a new opinion rather than a change in existing consensus, limiting immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "Cantor Fitzgerald Initiates Coverage On Quince Therapeutics with Overweight Rating, Announces Price Target of $4",
+      "url": "https://www.benzinga.com/news/26/06/60049255/cantor-fitzgerald-initiates-coverage-quince-therapeutics-overweight-rating-announces-price-target-4",
+      "source": "alpaca",
+      "added_at": "2026-06-23T16:24:48.890118+00:00"
     }
   ]
 }
