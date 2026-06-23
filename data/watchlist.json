@@ -504,6 +504,66 @@
       "url": "https://www.benzinga.com/news/26/06/60049255/cantor-fitzgerald-initiates-coverage-quince-therapeutics-overweight-rating-announces-price-target-4",
       "source": "alpaca",
       "added_at": "2026-06-23T16:24:48.890118+00:00"
+    },
+    {
+      "ticker": "ATLN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock already up 175% on confirmed $52M+ government contract announcement, suggesting most of the immediate move has occurred but catalyst is material and confirmed.",
+      "action_window": "intraday",
+      "headline": "Why Atlantic International (ATLN) Stock Is Up 175% On Tuesday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60053726/why-atlantic-international-atln-stock-is-up-175-on-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-06-23T18:20:59.153448+00:00"
+    },
+    {
+      "ticker": "SGMO",
+      "tradeable_score": 0.95,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Chapter 11 bankruptcy filing is a confirmed major catalyst with distressed asset sale to LLY and Astellas, representing near-total value destruction for SGMO equity holders while potentially beneficial for acquirers.",
+      "action_window": "intraday",
+      "headline": "Sangamo Bankruptcy Puts Gene Therapy Platforms In Play, Eli Lilly And Astellas Circle",
+      "url": "https://www.benzinga.com/m-a/26/06/60053151/sangamo-bankruptcy-puts-gene-therapy-platforms-in-play-eli-lilly-and-astellas-circle",
+      "source": "alpaca",
+      "added_at": "2026-06-23T18:20:59.153461+00:00"
+    },
+    {
+      "ticker": "AMC",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock offering causing immediate dilution and price tank represents a meaningful negative catalyst with direct shareholder value impact.",
+      "action_window": "intraday",
+      "headline": "AMC Stock Tanks On Offering: How Retail Got Drowned In Dilution",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60053067/amc-stock-tanks-on-offering-how-retail-got-drowned-in-dilution",
+      "source": "alpaca",
+      "added_at": "2026-06-23T18:20:59.153468+00:00"
+    },
+    {
+      "ticker": "WMT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Walmart's largest acquisition in two years signals strategic expansion into high-margin advertising technology, a confirmed M&A catalyst that should drive near-term price action.",
+      "action_window": "intraday",
+      "headline": "'Walmart, in Biggest Deal in Two Years, Buys Advertising Tech Firm' - Wall Street Journal",
+      "url": "https://www.benzinga.com/m/26/06/60053054/walmart-biggest-deal-two-years-buys-advertising-tech-firm-wall-street-journal",
+      "source": "alpaca",
+      "added_at": "2026-06-23T18:20:59.153473+00:00"
+    },
+    {
+      "ticker": "QGEN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley upgrade from neutral to overweight with meaningful price target increase represents a credible catalyst from a top-tier investment bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Upgrades Qiagen to Overweight, Raises Price Target to $42",
+      "url": "https://www.benzinga.com/news/26/06/60052787/morgan-stanley-upgrades-qiagen-overweight-raises-price-target-42",
+      "source": "alpaca",
+      "added_at": "2026-06-23T18:20:59.153479+00:00"
     }
   ]
 }
