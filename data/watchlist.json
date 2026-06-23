@@ -371,6 +371,66 @@
       "url": "https://finance.yahoo.com/sectors/healthcare/articles/sanofi-wins-fda-nod-expanded-161200608.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-06-23T00:11:23.213022+00:00"
+    },
+    {
+      "ticker": "ALLT",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $40M share buyback program signals management confidence and returns capital to shareholders, typically supporting stock price appreciation through reduced share count and positive market perception.",
+      "action_window": "intraday",
+      "headline": "Allot Announces $40M Share Buyback Program",
+      "url": "https://www.benzinga.com/news/26/06/60036724/allot-announces-40m-share-buyback-program",
+      "source": "alpaca",
+      "added_at": "2026-06-23T10:58:42.608177+00:00"
+    },
+    {
+      "ticker": "KFY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Korn Ferry beat both EPS and revenue estimates with EPS exceeding by 1.5% and sales beating by 3.4%, indicating solid operational performance.",
+      "action_window": "intraday",
+      "headline": "Korn Ferry Q4 Adj. EPS $1.40 Beats $1.38 Estimate, Sales $768.256M Beat $743.340M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/60036701/korn-ferry-q4-adj-eps-1-40-beats-1-38-estimate-sales-768-256m-beat-743-340m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-23T10:58:42.608188+00:00"
+    },
+    {
+      "ticker": "VTOL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "M&A rumor with Bristow as acquirer of Berry Aviation signals potential expansion in government contracting segment, though deal not yet confirmed.",
+      "action_window": "intraday",
+      "headline": "'Bristow Is Said to Near Berry Aviation Deal in Government Push' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/06/60036649/bristow-said-near-berry-aviation-deal-government-push-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-06-23T10:58:42.608195+00:00"
+    },
+    {
+      "ticker": "BBVA",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "BBVA reduces balance sheet risk through $2B significant risk transfer transaction, improving capital efficiency and regulatory ratios, though market impact depends on pricing and existing expectations.",
+      "action_window": "next_day",
+      "headline": "'BBVA Offloads AI Risk With $2 Billion Infrastructure-Linked SRT' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/06/60036374/bbva-offloads-ai-risk-2-billion-infrastructure-linked-srt-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-06-23T10:58:42.608207+00:00"
+    },
+    {
+      "ticker": "SSRM",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Specific gold miners showing positive momentum divergence from broader gold selloff suggests relative strength and potential trading opportunity in individual names despite sector headwinds.",
+      "action_window": "intraday",
+      "headline": "Gold Tumbles From Record Highs\u2014But These Gold Miners Are Climbing Into Top Momentum Zones",
+      "url": "https://www.benzinga.com/markets/equities/26/06/60036362/gold-tumbles-from-record-highs-but-these-gold-miners-are-climbing-into-top-momentum-zones",
+      "source": "alpaca",
+      "added_at": "2026-06-23T10:58:42.608212+00:00"
     }
   ]
 }
