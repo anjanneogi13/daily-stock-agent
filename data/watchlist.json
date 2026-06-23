@@ -769,6 +769,18 @@
       "url": "https://www.benzinga.com/markets/earnings/26/06/60059705/cerebras-stock-slips-after-its-first-earnings-print-heres-why",
       "source": "alpaca",
       "added_at": "2026-06-23T22:00:45.691896+00:00"
+    },
+    {
+      "ticker": "LI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New vehicle launch with immediate delivery timeline is a meaningful catalyst for EV manufacturers, likely to drive near-term revenue growth and investor interest.",
+      "action_window": "next_day",
+      "headline": "Li Auto Launches The All-New Li L8, With Deliveries To Commence Within This Week",
+      "url": "https://www.benzinga.com/news/26/06/60060432/li-auto-launches-all-new-li-l8-deliveries-commence-within-week",
+      "source": "alpaca",
+      "added_at": "2026-06-23T23:11:51.557695+00:00"
     }
   ]
 }
