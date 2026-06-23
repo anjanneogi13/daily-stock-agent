@@ -738,32 +738,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "JRSH": {
-    "ticker": "JRSH",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "Jerash Holdings (US) Inc (JRSH) Q4 2026 Earnings Call Highlights: Record Revenue and Strategic ...",
-    "added_at": "2026-06-15T23:19:52.479801+00:00",
-    "expires": "2026-06-22T23:19:52.479807+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NTLA": {
-    "ticker": "NTLA",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Intellia Surges; Can Its Gene-Editing Drug Solve The Chronic Treatment Problem?",
-    "added_at": "2026-06-15T23:19:52.485928+00:00",
-    "expires": "2026-06-22T23:19:52.485934+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GRML": {
     "ticker": "GRML",
     "score_delta": 0.1,
@@ -1715,6 +1689,19 @@
     "headline": "'Schick Razor Maker Is Said to Reject Unsolicited Takeover Offer'- Bloomberg",
     "added_at": "2026-06-22T23:00:47.107775+00:00",
     "expires": "2026-07-22T23:00:47.107781+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNY": {
+    "ticker": "SNY",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Sanofi Wins FDA Nod for Expanded Use of T1D Drug in Children",
+    "added_at": "2026-06-23T00:11:23.205795+00:00",
+    "expires": "2026-07-23T00:11:23.205801+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

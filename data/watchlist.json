@@ -359,6 +359,18 @@
       "url": "https://www.benzinga.com/news/26/06/60032072/metropolitan-bank-approves-new-share-repurchase-program-50m",
       "source": "alpaca",
       "added_at": "2026-06-22T23:00:47.114588+00:00"
+    },
+    {
+      "ticker": "SNY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval expanding Tzield to children represents a significant market expansion for a diabetes drug, though MGNX (partner) may see greater percentage impact than large-cap SNY.",
+      "action_window": "intraday",
+      "headline": "Sanofi Wins FDA Nod for Expanded Use of T1D Drug in Children",
+      "url": "https://finance.yahoo.com/sectors/healthcare/articles/sanofi-wins-fda-nod-expanded-161200608.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-06-23T00:11:23.213022+00:00"
     }
   ]
 }
