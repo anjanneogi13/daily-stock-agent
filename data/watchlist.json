@@ -661,6 +661,114 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/60057866/kb-home-q2-eps-0-43-misses-0-45-estimate-sales-1-112b-beat-1-098b-estimate",
       "source": "alpaca",
       "added_at": "2026-06-23T20:32:05.132992+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Addition to DJIA typically drives significant index fund buying and enhances institutional prestige, with shares already rising in extended trading confirming positive market reaction.",
+      "action_window": "next_day",
+      "headline": "Alphabet To Replace Verizon In Dow Jones Industrial Average",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60060233/alphabet-to-replace-verizon-in-dow-jones-industrial-average",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691836+00:00"
+    },
+    {
+      "ticker": "ASTS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major commercial partnership announcement with Rakuten (a significant Japanese carrier) validates ASTS's satellite-to-cell technology and represents meaningful revenue potential in the Japanese market.",
+      "action_window": "intraday",
+      "headline": "'Rakuten to offer satellite-to-cell service in Japan with US startup'- Nikkei Asia",
+      "url": "https://www.benzinga.com/news/26/06/60060144/rakuten-offer-satellite-cell-service-japan-us-startup-nikkei-asia",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691848+00:00"
+    },
+    {
+      "ticker": "CBOE",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Launch of an entirely new product suite (prediction markets) represents meaningful business diversification and revenue opportunity for an exchange operator, though market adoption remains to be seen.",
+      "action_window": "next_day",
+      "headline": "Cboe Global Markets Launches  The First Products In Its New Prediction Markets Suite, Cboe Predicts",
+      "url": "https://www.benzinga.com/news/26/06/60060080/cboe-global-markets-launches-first-products-its-new-prediction-markets-suite-cboe-predicts",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691856+00:00"
+    },
+    {
+      "ticker": "IESC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Addition to S&P MidCap 400 typically drives meaningful buying from index funds and signals improved market cap/liquidity, while removal is bearish for JHG.",
+      "action_window": "this_week",
+      "headline": "IES Holdings To Replace Janus Henderson Group  In The S&P MidCap 400 Effective Prior To The Opening Of Trading On Wednesday, July 1, 2026",
+      "url": "https://www.benzinga.com/news/26/06/60059987/ies-holdings-replace-janus-henderson-group-s-p-midcap-400-effective-prior-opening-trading-wednesday-",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691867+00:00"
+    },
+    {
+      "ticker": "TOST",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "S&P MidCap 400 index inclusion typically drives technical buying from index funds, bullish for TOST and bearish for BLD being removed, with effect date clearly defined for July 1st.",
+      "action_window": "next_day",
+      "headline": "Toast To Replace TopBuild Corp. In The S&P Midcap 400, Effective Prior To The Opening Of Trading On Wednesday, July 1",
+      "url": "https://www.benzinga.com/news/26/06/60059927/toast-replace-topbuild-corp-s-p-midcap-400-effective-prior-opening-trading-wednesday-july-1",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691873+00:00"
+    },
+    {
+      "ticker": "NHI",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Index inclusion (NHI bullish due to passive fund buying) and exclusion (ARI bearish due to forced selling) creates mechanical trading opportunities before market open June 30th.",
+      "action_window": "next_day",
+      "headline": "National Health Investors To Replace Apollo Commercial Real Estate Finance In The S&P SmallCap 600 Effective Prior To The Opening Of Trading On Tuesday, June 30",
+      "url": "https://www.benzinga.com/news/26/06/60059861/national-health-investors-replace-apollo-commercial-real-estate-finance-s-p-smallcap-600-effective-p",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691879+00:00"
+    },
+    {
+      "ticker": "HON",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "S&P 500 index additions typically drive passive fund buying and temporary price appreciation, while removals from indices create selling pressure for affected stocks.",
+      "action_window": "next_day",
+      "headline": "Honeywell Aerospace To Be Added To The S&P 500 & 100 On Monday, June 29; Conagra Brands Will Replace Grid Dynamics Holdings In The S&P SmallCap 600 Effective Prior To The Opening Of Trading On Tuesday, June 30",
+      "url": "https://www.benzinga.com/news/26/06/60059828/honeywell-aerospace-be-added-s-p-500-100-monday-june-29-conagra-brands-will-replace-grid-dynamics-ho",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691884+00:00"
+    },
+    {
+      "ticker": "EGHT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Cybersecurity breach with data exfiltration is a significant negative event despite mitigation, creating immediate reputational and potential liability concerns that typically drive short-term selloffs.",
+      "action_window": "intraday",
+      "headline": "8x8  Reports Unauthorized Access To Salesforce System Via Klue Integration On June 13, 2026; Says Unauthorized Access And Data Exfiltration Occurred Between June 11 And 12, 2026; Co, Klue, And Salesforce Disable Compromised Integration And Remove Unauthorized Access; Incident Has Not Impacted 8x8 Bu",
+      "url": "https://www.benzinga.com/news/26/06/60059758/8x8-reports-unauthorized-access-salesforce-system-klue-integration-june-13-2026-says-unauthorized-ac",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691891+00:00"
+    },
+    {
+      "ticker": "CBRS",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock slipping after first earnings print indicates disappointing results that warrant immediate attention for a newly public company establishing its track record.",
+      "action_window": "intraday",
+      "headline": "Cerebras Stock Slips After Its First Earnings Print \u2014 Here's Why",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/60059705/cerebras-stock-slips-after-its-first-earnings-print-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-06-23T22:00:45.691896+00:00"
     }
   ]
 }

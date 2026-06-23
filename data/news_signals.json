@@ -712,45 +712,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SNOA": {
-    "ticker": "SNOA",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "Sonoma Pharmaceuticals Q4 EPS $(0.33) Misses $(0.24) Estimate, Sales $5.561M Miss $5.565M Estimate",
-    "added_at": "2026-06-16T20:51:06.447453+00:00",
-    "expires": "2026-06-23T20:51:06.447458+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LZB": {
-    "ticker": "LZB",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "La-Z-Boy Q4 Adj. EPS $1.26 Beats $0.82 Estimate, Sales $570.338M Beat $569.225M Estimate",
-    "added_at": "2026-06-16T20:51:06.449260+00:00",
-    "expires": "2026-06-23T20:51:06.449265+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RIGL": {
-    "ticker": "RIGL",
-    "score_delta": 0.046,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "Rigel Pharmaceuticals Closes Its Licensing Agreement for VEPPANU; The Agreement Is Effective As Of June 11, 2026 And Rigel Has Made The Upfront Payment Of $70.0M To Be Distributed Evenly Between Arvin",
-    "added_at": "2026-06-16T20:51:06.451122+00:00",
-    "expires": "2026-06-23T20:51:06.451128+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "YQ": {
     "ticker": "YQ",
     "score_delta": 0.1,
@@ -1828,6 +1789,45 @@
     "headline": "Reported Earlier: Alps Group Rolling Out Internal Patient-Derived Organoid Program For Personalized Cancer Treatment In Partnership With Dr. Kong Wai Mun Of Axiocell Biotech",
     "added_at": "2026-06-23T20:32:05.128812+00:00",
     "expires": "2026-06-30T20:32:05.128817+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ASTS": {
+    "ticker": "ASTS",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "'Rakuten to offer satellite-to-cell service in Japan with US startup'- Nikkei Asia",
+    "added_at": "2026-06-23T22:00:45.685483+00:00",
+    "expires": "2026-06-30T22:00:45.685490+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CBOE": {
+    "ticker": "CBOE",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Cboe Global Markets Launches  The First Products In Its New Prediction Markets Suite, Cboe Predicts",
+    "added_at": "2026-06-23T22:00:45.687532+00:00",
+    "expires": "2026-06-30T22:00:45.687537+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CBRS": {
+    "ticker": "CBRS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Cerebras Stock Slips After Its First Earnings Print \u2014 Here's Why",
+    "added_at": "2026-06-23T22:00:45.689371+00:00",
+    "expires": "2026-06-30T22:00:45.689376+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
