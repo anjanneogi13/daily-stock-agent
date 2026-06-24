@@ -13,8 +13,11 @@ universe:
   excluded_tickers:
   # MRVL: original exclusion (owner preference)
   - MRVL
-  # Added 2026-05-03 (Sunday): backtester-proven losers
-  # Source: 100-ticker × 20-month backtest, 2,010 picks, see docs/FINAL_ROADMAP.md
+  # Added 2026-05-03: HEURISTIC exclusion — UNVERIFIED, not backtest-validated.
+  # Derived from an in-dev backtest that is survivorship-biased, uses a
+  # mis-annualized Sharpe, has no unit tests, and runs in no CI. Treat the
+  # per-ticker R-values below as illustrative heuristics, NOT proven results.
+  # See docs/audit/COFOUNDER_AUDIT_2026-06-24.md
   - UNH    # -1.35R avg per pick — worst loser in universe
   - TEAM   # -1.00R avg per pick
   - SMCI   # -0.94R avg per pick — also high vol penalty
@@ -35,9 +38,10 @@ weights:
   sentiment: 0.12
   indicators: 0.23
 sector:
-  # ⚠ DISABLED 2026-05-02: backtester proved SEMI bias = -24.8 Sharpe leak
+  # ⚠ DISABLED 2026-05-02 (HEURISTIC, UNVERIFIED — not backtest-validated):
+  # a SEMI-bias "−24.8 Sharpe leak" was claimed by an in-dev backtest that is
+  # survivorship-biased and untested; treat as preference, not proven evidence.
   # Original: semi_boost 1.1, ai_boost 0.2  (gave SEMI/AI stocks +30% score)
-  # See docs/sessions/2026-05-02_BREAKTHROUGH.md
   semi_boost: 1.0
   ai_boost: 0.0
 risk:
