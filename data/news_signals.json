@@ -365,19 +365,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CHWY": {
-    "ticker": "CHWY",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Chewy Lowers FY2026 Sales Guidance from $13.600B-$13.750B to $13.400B-$13.550B vs $13.838B Est",
-    "added_at": "2026-06-10T11:34:53.551879+00:00",
-    "expires": "2026-06-24T11:34:53.551884+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VRME": {
     "ticker": "VRME",
     "score_delta": 0.157,
@@ -401,19 +388,6 @@
     "headline": "'Brazil Aviation Regulator ANAC Expects U.S. FAA To Certify Boeing 737 Max 10 This Year, Will Work To Validate It Quickly; Seeks U.S., Canada, Europe Cooperation To Harmonize Global EVTOL Rules' - Reu",
     "added_at": "2026-06-09T22:09:26.543427+00:00",
     "expires": "2026-07-09T22:09:26.543432+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FIGR": {
-    "ticker": "FIGR",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Figure Technology Solutions Signs Deal To Acquire Lending Platform Kiavi For $717M",
-    "added_at": "2026-06-10T11:34:53.545163+00:00",
-    "expires": "2026-06-24T11:34:53.545171+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1841,6 +1815,58 @@
     "headline": "Raymond James Downgrades V2X to Market Perform",
     "added_at": "2026-06-24T10:44:31.774240+00:00",
     "expires": "2026-06-29T10:44:31.774247+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FROG": {
+    "ticker": "FROG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on JFrog, Raises Price Target to $92",
+    "added_at": "2026-06-24T13:14:49.568772+00:00",
+    "expires": "2026-06-29T13:14:49.568780+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CWEN": {
+    "ticker": "CWEN",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Clearway Energy, Raises Price Target to $45",
+    "added_at": "2026-06-24T13:14:49.570922+00:00",
+    "expires": "2026-06-29T13:14:49.570928+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CCL": {
+    "ticker": "CCL",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "Susquehanna Maintains Positive on Carnival, Raises Price Target to $33",
+    "added_at": "2026-06-24T13:14:49.572792+00:00",
+    "expires": "2026-06-29T13:14:49.572798+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CYTK": {
+    "ticker": "CYTK",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Mizuho Maintains Outperform on Cytokinetics, Raises Price Target to $118",
+    "added_at": "2026-06-24T13:14:49.574567+00:00",
+    "expires": "2026-06-29T13:14:49.574573+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

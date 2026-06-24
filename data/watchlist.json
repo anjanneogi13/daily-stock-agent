@@ -901,6 +901,54 @@
       "url": "https://www.benzinga.com/news/26/06/60064193/raymond-james-downgrades-v2x-market-perform",
       "source": "alpaca",
       "added_at": "2026-06-24T10:44:31.776780+00:00"
+    },
+    {
+      "ticker": "CAN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant insider buying by both Chairman/CEO and CFO totaling over 1M shares demonstrates strong conviction in company value at current distressed price levels.",
+      "action_window": "next_day",
+      "headline": "Cannan Chairman And CEO Zhang And CFO Cheng Purchase Total Of 1,065,000 ADSs At Average Price $0.35 Per ADS",
+      "url": "https://www.benzinga.com/quote/CAN",
+      "source": "alpaca",
+      "added_at": "2026-06-24T13:14:49.577103+00:00"
+    },
+    {
+      "ticker": "VRAX",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Reverse stock splits (1-for-25 is severe) typically signal financial distress and compliance issues, often leading to continued selling pressure despite mechanical price increase.",
+      "action_window": "intraday",
+      "headline": "Virax Biolabs Group Announces 1-For-25 Reverse Stock Split, Effective June 26",
+      "url": "https://www.benzinga.com/news/26/06/60068137/virax-biolabs-group-announces-1-25-reverse-stock-split-effective-june-26",
+      "source": "alpaca",
+      "added_at": "2026-06-24T13:14:49.577125+00:00"
+    },
+    {
+      "ticker": "NOTE",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CEO succession at a small-cap company typically creates short-term uncertainty and modest volatility but lacks clear directional catalyst without additional context about circumstances or new leader's background.",
+      "action_window": "intraday",
+      "headline": "FiscalNote Appoints Key Compton President, CEO, Succeeding Josh Resnik",
+      "url": "https://www.benzinga.com/news/26/06/60068101/fiscalnote-appoints-key-compton-president-ceo-succeeding-josh-resnik",
+      "source": "alpaca",
+      "added_at": "2026-06-24T13:14:49.577135+00:00"
+    },
+    {
+      "ticker": "GDC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registered direct offering at $0.021/share represents significant dilution (~$5.45M) for what appears to be a micro-cap stock, typically triggering immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "GD Culture Group Prices ~$5.45M Registered Direct Offering At $0.021/Shr",
+      "url": "https://www.benzinga.com/news/26/06/60068088/gd-culture-group-prices-5-45m-registered-direct-offering-0-021-shr",
+      "source": "alpaca",
+      "added_at": "2026-06-24T13:14:49.577142+00:00"
     }
   ]
 }
