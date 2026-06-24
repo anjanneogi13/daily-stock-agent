@@ -313,19 +313,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ORCL": {
-    "ticker": "ORCL",
-    "score_delta": -0.118,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Oracle CFO Says Co. Expects Gross Margins To Step Down In Fiscal 2027 Due To Ramp Up In Data Center Projects",
-    "added_at": "2026-06-10T22:28:33.303335+00:00",
-    "expires": "2026-06-24T22:28:33.303341+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ROKU": {
     "ticker": "ROKU",
     "score_delta": 0.2,
@@ -401,19 +388,6 @@
     "headline": "VERAXA Biotech And Voyager Acquisition Complete Business Combination; On June 11, 2026, VERAXA Will Commence Trading Its Shares Under The Symbol \"VRXA\"",
     "added_at": "2026-06-10T20:30:04.719692+00:00",
     "expires": "2026-07-10T20:30:04.719697+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PRE": {
-    "ticker": "PRE",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Prenetics Global Affirms Q2 Sales Guidance of $46.000M-$48.000M vs $37.849M Est",
-    "added_at": "2026-06-10T22:28:33.298695+00:00",
-    "expires": "2026-06-24T22:28:33.298702+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1450,8 +1424,8 @@
     "score_delta": -1.0,
     "catalyst": "BANKRUPTCY_RISK",
     "headline": "Sangamo Therapeutics Enters Into Asset Sale Agreements with Lilly and Astellas",
-    "added_at": "2026-06-24T01:25:11.488928+00:00",
-    "expires": "2026-12-21T01:25:11.488935+00:00",
+    "added_at": "2026-06-24T22:46:15.976957+00:00",
+    "expires": "2026-12-21T22:46:15.976966+00:00",
     "hard_block": true
   },
   "RL": {
@@ -2101,6 +2075,45 @@
     "headline": "Burcon NutraScience Q4 EPS $(0.30) Misses $(0.10) Estimate, Sales $827.000K Miss $1.400M Estimate",
     "added_at": "2026-06-24T21:12:05.049894+00:00",
     "expires": "2026-07-01T21:12:05.049899+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TCOM": {
+    "ticker": "TCOM",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Trip.com Group Sees Q2 Sales $2.137B-$2.241B vs $2.500B Est",
+    "added_at": "2026-06-24T22:46:15.964673+00:00",
+    "expires": "2026-07-08T22:46:15.964680+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CMCSA": {
+    "ticker": "CMCSA",
+    "score_delta": 0.032,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "'Comcast-owned Sky reaches terms to buy ITV's broadcast unit, sources say'- Reuters Exclusive",
+    "added_at": "2026-06-24T22:46:15.968993+00:00",
+    "expires": "2026-07-08T22:46:15.968998+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BNED": {
+    "ticker": "BNED",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Barnes & Noble Education Sees FY2026 Sales $1.710B-$1.720B vs $1.578B Est",
+    "added_at": "2026-06-24T22:46:15.973008+00:00",
+    "expires": "2026-07-08T22:46:15.973013+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
