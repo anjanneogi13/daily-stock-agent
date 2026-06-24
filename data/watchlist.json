@@ -170,15 +170,16 @@
     },
     {
       "ticker": "NOK",
-      "tradeable_score": 0.58,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
       "category": "product_launch",
-      "rationale": "Strategic partnership with Google Cloud to integrate Gemini AI represents a meaningful competitive advantage in telecom network automation, though impact magnitude depends on commercial terms and deployment timeline.",
+      "rationale": "Strategic partnership expansion with AWS for autonomous networks represents meaningful technological advancement and revenue opportunity, with stock already surging intraday on the news.",
       "action_window": "intraday",
-      "headline": "Nokia Stock Gains As Google Cloud Partnership Adds Gemini AI Agents",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60024973/nokia-stock-gains-as-google-cloud-partnership-adds-gemini-ai-agents",
+      "headline": "Why Is Nokia Stock Surging On Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60078943/why-is-nokia-stock-surging-on-wednesday",
       "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167105+00:00"
+      "added_at": "2026-06-22T18:05:03.167105+00:00",
+      "updated_at": "2026-06-24T17:50:32.205542+00:00"
     },
     {
       "ticker": "BBOT",
@@ -961,6 +962,30 @@
       "url": "https://www.benzinga.com/m/26/06/60074662/gsk-commences-tender-offer-acquire-nuvalent-124-share",
       "source": "alpaca",
       "added_at": "2026-06-24T15:42:15.738320+00:00"
+    },
+    {
+      "ticker": "CASY",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic plan announcement signals management confidence and commitment to growth initiatives across core business segments, though lacks specific financial targets or immediate catalysts.",
+      "action_window": "next_day",
+      "headline": "Casey\u2019s General Stores Unveils 3-Yr Strategic Plan To Accelerate Food, Beverage, Store Growth And Operational Efficiency",
+      "url": "https://www.benzinga.com/news/26/06/60079299/casey-s-general-stores-unveils-3-yr-strategic-plan-accelerate-food-beverage-store-growth-and-operati",
+      "source": "alpaca",
+      "added_at": "2026-06-24T17:50:32.205527+00:00"
+    },
+    {
+      "ticker": "DAKT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q4 earnings and sales beat estimates with record orders, improved margins, and strong $356M backlog indicating sustained business momentum.",
+      "action_window": "intraday",
+      "headline": "Electronic Scoreboard Maker Daktronics Sees Record Demand, $356 Million Backlog",
+      "url": "https://www.benzinga.com/markets/earnings/26/06/60078654/electronic-scoreboard-maker-daktronics-sees-record-demand-356-million-backlog",
+      "source": "alpaca",
+      "added_at": "2026-06-24T17:50:32.205554+00:00"
     }
   ]
 }
