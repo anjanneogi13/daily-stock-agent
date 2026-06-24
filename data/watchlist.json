@@ -781,6 +781,126 @@
       "url": "https://www.benzinga.com/news/26/06/60060432/li-auto-launches-all-new-li-l8-deliveries-commence-within-week",
       "source": "alpaca",
       "added_at": "2026-06-23T23:11:51.557695+00:00"
+    },
+    {
+      "ticker": "ABSI",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large dilutive equity offering of 13.5M shares representing significant dilution will create immediate selling pressure as underwriters distribute shares and existing shareholders react negatively.",
+      "action_window": "intraday",
+      "headline": "Absci Prices $100M Underwritten Offering Of 13,495,277 Shares At $7.41 Per Share",
+      "url": "https://www.benzinga.com/news/26/06/60064551/absci-prices-100m-underwritten-offering-13-495-277-shares-7-41-share",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776708+00:00"
+    },
+    {
+      "ticker": "SAFX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Facility startup for renewable diesel production is a positive operational milestone but represents early-stage execution with optimization still ahead, creating moderate trading opportunity with some uncertainty.",
+      "action_window": "next_day",
+      "headline": "XCF Global Expects Its Reno Facility To Produce Renewable Diesel During Its Startup And Optimization Phase",
+      "url": "https://www.benzinga.com/news/26/06/60064513/xcf-global-expects-its-reno-facility-produce-renewable-diesel-during-its-startup-and-optimization-ph",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776721+00:00"
+    },
+    {
+      "ticker": "PRCT",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Evercore ISI initiating coverage with Outperform rating provides positive signal but initiation carries less weight than upgrade of existing coverage, creating moderate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Evercore ISI Group Initiates Coverage On PROCEPT BioRobotics with Outperform Rating, Announces Price Target of $30",
+      "url": "https://www.benzinga.com/news/26/06/60064472/evercore-isi-group-initiates-coverage-procept-biorobotics-outperform-rating-announces-price-target-3",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776736+00:00"
+    },
+    {
+      "ticker": "NUE",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "KeyBanc upgrade to Overweight with $274 price target is a meaningful positive catalyst from a respected analyst firm that typically drives immediate trading volume and price appreciation.",
+      "action_window": "intraday",
+      "headline": "Keybanc Upgrades Nucor to Overweight, Announces $274 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/60064427/keybanc-upgrades-nucor-overweight-announces-274-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776745+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "High-stakes negotiations over potential Iranian fees on Strait of Hormuz transit (critical 20% of global oil supply chokepoint) creates significant oil price uncertainty and geopolitical risk premium.",
+      "action_window": "intraday",
+      "headline": "Qatari PM Is In Muscat Today To Start Process With Oman For Iran-GCC-Iraq Discussions On Reopening And Future Operation Of Hormuz; Gulf States Expected To Lobby For No Hormuz Transit Fees; Tolls Are Not On The Table, But Iran Is Expected To Propose An Environmental, Navigation And Security Fee",
+      "url": "https://www.benzinga.com/news/26/06/60064304/qatari-pm-muscat-today-start-process-oman-iran-gcc-iraq-discussions-reopening-and-future-operation-h",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776751+00:00"
+    },
+    {
+      "ticker": "LODE",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Industrial-scale facility announcement represents significant business expansion and infrastructure investment, though execution risk and timeline to revenue generation temper immediate impact.",
+      "action_window": "next_day",
+      "headline": "Comstock Selects Cambridge, Ohio, As Location For Its Industrial-Scale Solar Panel Recycling And Production Facility And Logistics Hub",
+      "url": "https://www.benzinga.com/news/26/06/60064285/comstock-selects-cambridge-ohio-location-its-industrial-scale-solar-panel-recycling-and-production-f",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776757+00:00"
+    },
+    {
+      "ticker": "PFG",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Bank of America Securities downgrade to Underperform with lowered price target represents a significant negative catalyst from a major bulge bracket bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Downgrades Principal Financial Group to Underperform, Lowers Price Target to $95",
+      "url": "https://www.benzinga.com/news/26/06/60064274/b-securities-downgrades-principal-financial-group-underperform-lowers-price-target-95",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776763+00:00"
+    },
+    {
+      "ticker": "TTWO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "GTA 6 pricing announcement confirms premium pricing strategy for one of gaming's most anticipated AAA titles, validating strong revenue potential for Take-Two's flagship franchise.",
+      "action_window": "intraday",
+      "headline": "Take-Two Interactive Software's Rockstar Games Prices GTA 6 At $79.99 And Ultimate Edition At $99.99",
+      "url": "https://www.benzinga.com/news/26/06/60064262/take-two-interactive-software-s-rockstar-games-prices-gta-6-79-99-and-ultimate-edition-99-99",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776768+00:00"
+    },
+    {
+      "ticker": "CCJ",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "A $17.5B government loan program for nuclear reactors is a significant catalyst for the nuclear energy sector, benefiting uranium miners and nuclear-focused ETFs with multi-year tailwinds.",
+      "action_window": "this_week",
+      "headline": "A $17.5 Billion Nuclear Boom Promises Domestic Opportunities",
+      "url": "https://www.benzinga.com/news/financing/26/06/60064247/a-17-5-billion-nuclear-boom-promises-domestic-opportunities",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776774+00:00"
+    },
+    {
+      "ticker": "VVX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Raymond James downgrade to Market Perform (equivalent to Hold/Neutral) signals reduced confidence and typically triggers selling pressure as the firm likely had a Buy rating previously.",
+      "action_window": "intraday",
+      "headline": "Raymond James Downgrades V2X to Market Perform",
+      "url": "https://www.benzinga.com/news/26/06/60064193/raymond-james-downgrades-v2x-market-perform",
+      "source": "alpaca",
+      "added_at": "2026-06-24T10:44:31.776780+00:00"
     }
   ]
 }
