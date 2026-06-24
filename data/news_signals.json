@@ -951,19 +951,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GLD": {
-    "ticker": "GLD",
-    "score_delta": -0.029,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.4,
-    "action_window": "intraday",
-    "headline": "Goldman Cuts Gold Target To $4,900 As Markets Now Price Two Fed Hikes",
-    "added_at": "2026-06-19T15:33:20.454456+00:00",
-    "expires": "2026-06-24T15:33:20.454463+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "IBIT": {
     "ticker": "IBIT",
     "score_delta": 0.032,
@@ -1867,6 +1854,71 @@
     "headline": "Mizuho Maintains Outperform on Cytokinetics, Raises Price Target to $118",
     "added_at": "2026-06-24T13:14:49.574567+00:00",
     "expires": "2026-06-29T13:14:49.574573+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BB": {
+    "ticker": "BB",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "BlackBerry Stock Rallies As Analyst Sees More Upside: What Investors Need To Know",
+    "added_at": "2026-06-24T15:42:15.726555+00:00",
+    "expires": "2026-06-29T15:42:15.726561+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MAC": {
+    "ticker": "MAC",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "Truist Securities Maintains Buy on Macerich, Raises Price Target to $26",
+    "added_at": "2026-06-24T15:42:15.730245+00:00",
+    "expires": "2026-06-29T15:42:15.730251+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NUVL": {
+    "ticker": "NUVL",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "GSK Commences Tender Offer To Acquire Nuvalent At $124/Share",
+    "added_at": "2026-06-24T15:42:15.732089+00:00",
+    "expires": "2026-07-24T15:42:15.732095+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "score_delta": -0.05,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "intraday",
+    "headline": "'Tesla Sued After Woman Killed by Car Crashing Into Her House' - Bloomberg",
+    "added_at": "2026-06-24T15:42:15.733864+00:00",
+    "expires": "2026-07-08T15:42:15.733869+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SUNB": {
+    "ticker": "SUNB",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Underweight on Sunbelt Rentals Holdings, Lowers Price Target to $74",
+    "added_at": "2026-06-24T15:42:15.735704+00:00",
+    "expires": "2026-06-29T15:42:15.735709+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -949,6 +949,18 @@
       "url": "https://www.benzinga.com/news/26/06/60068088/gd-culture-group-prices-5-45m-registered-direct-offering-0-021-shr",
       "source": "alpaca",
       "added_at": "2026-06-24T13:14:49.577142+00:00"
+    },
+    {
+      "ticker": "NUVL",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive tender offer at $124/share represents a confirmed M&A transaction with immediate impact on target stock price converging to offer price.",
+      "action_window": "intraday",
+      "headline": "GSK Commences Tender Offer To Acquire Nuvalent At $124/Share",
+      "url": "https://www.benzinga.com/m/26/06/60074662/gsk-commences-tender-offer-acquire-nuvalent-124-share",
+      "source": "alpaca",
+      "added_at": "2026-06-24T15:42:15.738320+00:00"
     }
   ]
 }
