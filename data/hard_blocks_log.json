@@ -481,5 +481,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-24 12:08:56",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "LODE",
+        "reason": "penny stock ($4.28 < $5.0)",
+        "block_type": "penny_stock"
+      }
+    ]
   }
 ]
