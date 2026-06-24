@@ -219,15 +219,16 @@
     },
     {
       "ticker": "QCOM",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "M&A deal near completion for AI chip startup signals strategic expansion into high-growth AI semiconductor market, typically positive for acquirer with growth synergies.",
+      "category": "other",
+      "rationale": "Announcement of two major hyperscaler deals with meaningful revenue starting end of year represents significant new business win for Qualcomm's data center segment expansion.",
       "action_window": "intraday",
-      "headline": "'Qualcomm Nears Deal for AI Chip Startup Modular'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/06/60031954/qualcomm-nears-deal-ai-chip-startup-modular-bloomberg",
+      "headline": "Data Center Chief Says Have Won Two Major Hyperscaler Deals That Will Contribute Meaningful Revenue To Qualcomm Starting At The End Of This Year",
+      "url": "https://www.benzinga.com/news/26/06/60082049/data-center-chief-says-have-won-two-major-hyperscaler-deals-will-contribute-meaningful-revenue-qualc",
       "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630884+00:00"
+      "added_at": "2026-06-22T21:20:13.630884+00:00",
+      "updated_at": "2026-06-24T19:29:51.066759+00:00"
     },
     {
       "ticker": "ATD.TO",
@@ -986,6 +987,18 @@
       "url": "https://www.benzinga.com/markets/earnings/26/06/60078654/electronic-scoreboard-maker-daktronics-sees-record-demand-356-million-backlog",
       "source": "alpaca",
       "added_at": "2026-06-24T17:50:32.205554+00:00"
+    },
+    {
+      "ticker": "CHWY",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Goldman Sachs maintaining Buy rating while stock surges suggests modest positive momentum but limited new information since rating was maintained rather than upgraded.",
+      "action_window": "intraday",
+      "headline": "Chewy Stock Is Moving Higher Today: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60082856/chewy-stock-is-moving-higher-today-whats-going-on",
+      "source": "alpaca",
+      "added_at": "2026-06-24T19:29:51.066729+00:00"
     }
   ]
 }
