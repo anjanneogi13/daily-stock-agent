@@ -730,19 +730,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "IBATF": {
-    "ticker": "IBATF",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "International Battery Q4 EPS $(0.02) Down From $0.00 YoY, Sales $63.000K Up From $(11.000K) YoY",
-    "added_at": "2026-06-17T22:57:06.722807+00:00",
-    "expires": "2026-06-24T22:57:06.722812+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "QTEX": {
     "ticker": "QTEX",
     "score_delta": 0.032,
@@ -1424,8 +1411,8 @@
     "score_delta": -1.0,
     "catalyst": "BANKRUPTCY_RISK",
     "headline": "Sangamo Therapeutics Enters Into Asset Sale Agreements with Lilly and Astellas",
-    "added_at": "2026-06-24T22:46:15.976957+00:00",
-    "expires": "2026-12-21T22:46:15.976966+00:00",
+    "added_at": "2026-06-25T00:02:53.575427+00:00",
+    "expires": "2026-12-22T00:02:53.575434+00:00",
     "hard_block": true
   },
   "RL": {
