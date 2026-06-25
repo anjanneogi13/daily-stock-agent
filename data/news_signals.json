@@ -213,19 +213,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HON": {
-    "ticker": "HON",
-    "score_delta": 0.093,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Honeywell Lays Out Automation Growth Roadmap",
-    "added_at": "2026-06-11T16:35:07.466580+00:00",
-    "expires": "2026-06-25T16:35:07.466585+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GORO": {
     "ticker": "GORO",
     "score_delta": 0.2,
@@ -2218,6 +2205,32 @@
     "headline": "Scotiabank Maintains Sector Outperform on Hudbay Minerals, Raises Price Target to C$44",
     "added_at": "2026-06-25T16:00:44.117098+00:00",
     "expires": "2026-06-30T16:00:44.117103+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ARGX": {
+    "ticker": "ARGX",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Argenx Analyst Is Bullish Despite Changes To Phase 3 Myositis Study",
+    "added_at": "2026-06-25T18:13:18.699107+00:00",
+    "expires": "2026-06-30T18:13:18.699114+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PRIM": {
+    "ticker": "PRIM",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Goldman Sachs Upgrades Primoris Services to Neutral, Lowers Price Target to $102",
+    "added_at": "2026-06-25T18:13:18.701490+00:00",
+    "expires": "2026-06-30T18:13:18.701496+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

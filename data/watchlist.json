@@ -1,115 +1,6 @@
 {
   "items": [
     {
-      "ticker": "EL",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Goldman Sachs reinstating Buy rating with $100 price target is a meaningful positive catalyst from a top-tier investment bank that typically drives institutional buying interest.",
-      "action_window": "next_day",
-      "headline": "Goldman Sachs Reinstates Buy on Estee Lauder Cos, Announces $100 Price Target",
-      "url": "https://www.benzinga.com/news/26/06/60025534/goldman-sachs-reinstates-buy-estee-lauder-cos-announces-100-price-target",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167073+00:00"
-    },
-    {
-      "ticker": "BQ",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Secondary offering of 9.99M shares by selling shareholders typically creates dilution concerns and near-term selling pressure as insiders/early investors exit.",
-      "action_window": "next_day",
-      "headline": "Reported June 18: Boqii Files Prospectus For Offering 9.99M Class A Ordinary Share On Behalf Of Selling Shareholders",
-      "url": "https://www.benzinga.com/news/26/06/60025446/reported-june-18-boqii-files-prospectus-offering-9-99m-class-ordinary-share-behalf-selling-sharehold",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167083+00:00"
-    },
-    {
-      "ticker": "TE",
-      "tradeable_score": 0.73,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bernstein initiation coverage combined with top bankability rating for Dallas facility creates dual positive catalysts driving stock surge.",
-      "action_window": "intraday",
-      "headline": "What's Going On With T1 Energy Stock Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60025290/whats-going-on-with-t1-energy-stock-monday",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167090+00:00"
-    },
-    {
-      "ticker": "F",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Union deadline creates labor negotiation uncertainty with potential strike risk if tentative deal not reached by July 10, increasing operational risk over near-term.",
-      "action_window": "this_week",
-      "headline": "Unifor Sets July 10 Deadline For Ford To Reach Tentative Deal",
-      "url": "https://www.benzinga.com/news/26/06/60025247/unifor-sets-july-10-deadline-ford-reach-tentative-deal",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167094+00:00"
-    },
-    {
-      "ticker": "HIVE",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Completion of prestigious AI research partnership with Columbia University demonstrates capability monetization and validates HIVE's GPU infrastructure, driving immediate price action.",
-      "action_window": "intraday",
-      "headline": "HIVE Stock Surges After Groundbreaking AI Project In Paraguay",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60025120/hive-stock-surges-after-groundbreaking-ai-project-in-paraguay",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167099+00:00"
-    },
-    {
-      "ticker": "NOK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership expansion with AWS for autonomous networks represents meaningful technological advancement and revenue opportunity, with stock already surging intraday on the news.",
-      "action_window": "intraday",
-      "headline": "Why Is Nokia Stock Surging On Wednesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60078943/why-is-nokia-stock-surging-on-wednesday",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167105+00:00",
-      "updated_at": "2026-06-24T17:50:32.205542+00:00"
-    },
-    {
-      "ticker": "BBOT",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Oppenheimer initiating coverage at Outperform with a $22 price target is a meaningful positive catalyst that typically drives near-term buying interest, though impact depends on current stock price relative to target.",
-      "action_window": "intraday",
-      "headline": "Oppenheimer Assumes BridgeBio Oncology at Outperform, Announces Price Target of $22",
-      "url": "https://www.benzinga.com/news/26/06/60024774/oppenheimer-assumes-bridgebio-oncology-outperform-announces-price-target-22",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167113+00:00"
-    },
-    {
-      "ticker": "FRVO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership with NVIDIA for AI-driven geothermal technology drives 6% stock gain and overshadows Q1 earnings miss, indicating strong market validation of the partnership's growth potential.",
-      "action_window": "intraday",
-      "headline": "Why Is Fervo Energy Stock Gaining Monday?",
-      "url": "https://www.benzinga.com/markets/earnings/26/06/60024478/why-is-fervo-energy-stock-gaining-monday",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167117+00:00"
-    },
-    {
-      "ticker": "AIXI",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Court dismissal of major patent litigation against Apple eliminates potential revenue opportunity and validates negative stock price movement already occurring.",
-      "action_window": "intraday",
-      "headline": "Xiao-I shares are trading lower after the Shanghai High People's Court dismissed the company's patent litigation claims against Apple's Siri technology.",
-      "url": "https://www.benzinga.com/quote/AIXI",
-      "source": "alpaca",
-      "added_at": "2026-06-22T18:05:03.167122+00:00"
-    },
-    {
       "ticker": "QCOM",
       "tradeable_score": 0.8,
       "sentiment": "bullish",
@@ -726,15 +617,16 @@
     },
     {
       "ticker": "USO",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
       "category": "macro",
-      "rationale": "High-stakes negotiations over potential Iranian fees on Strait of Hormuz transit (critical 20% of global oil supply chokepoint) creates significant oil price uncertainty and geopolitical risk premium.",
+      "rationale": "Ship attack in Strait of Hormuz (critical oil transit chokepoint handling ~21% of global petroleum) creates immediate supply disruption risk, driving oil prices higher.",
       "action_window": "intraday",
-      "headline": "Qatari PM Is In Muscat Today To Start Process With Oman For Iran-GCC-Iraq Discussions On Reopening And Future Operation Of Hormuz; Gulf States Expected To Lobby For No Hormuz Transit Fees; Tolls Are Not On The Table, But Iran Is Expected To Propose An Environmental, Navigation And Security Fee",
-      "url": "https://www.benzinga.com/news/26/06/60064304/qatari-pm-muscat-today-start-process-oman-iran-gcc-iraq-discussions-reopening-and-future-operation-h",
+      "headline": "International Maritime Organization Pauses Evacuations Following Ship Attack In Strait Of Hormuz",
+      "url": "https://www.benzinga.com/news/26/06/60110775/international-maritime-organization-pauses-evacuations-following-ship-attack-strait-hormuz",
       "source": "alpaca",
-      "added_at": "2026-06-24T10:44:31.776751+00:00"
+      "added_at": "2026-06-24T10:44:31.776751+00:00",
+      "updated_at": "2026-06-25T18:13:18.704534+00:00"
     },
     {
       "ticker": "LODE",
@@ -1396,6 +1288,54 @@
       "url": "https://www.benzinga.com/markets/large-cap/26/06/60104381/here-is-the-real-reason-kkr-stock-is-climbing-higher-today",
       "source": "alpaca",
       "added_at": "2026-06-25T16:00:44.120244+00:00"
+    },
+    {
+      "ticker": "SLS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock hitting 52-week high on heavy volume following regulatory filing suggests significant positive catalyst, though specific filing details are not disclosed in headline.",
+      "action_window": "intraday",
+      "headline": "Why SELLAS Life Sciences Stock Is Surging Thursday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60110972/why-sellas-life-sciences-stock-is-surging-thursday",
+      "source": "alpaca",
+      "added_at": "2026-06-25T18:13:18.704501+00:00"
+    },
+    {
+      "ticker": "DKNG",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "DraftKings faces dual headwinds from potential Meta competition in prediction markets and hawkish Fed outlook impacting growth stocks, creating notable but mixed trading catalyst.",
+      "action_window": "intraday",
+      "headline": "Why Is DraftKings Stock Falling On Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60110872/why-is-draftkings-stock-falling-on-thursday",
+      "source": "alpaca",
+      "added_at": "2026-06-25T18:13:18.704515+00:00"
+    },
+    {
+      "ticker": "RDW",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock already down 8% on $500M ATM offering announcement creating significant dilution concerns, representing a confirmed negative catalyst with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Why Is Redwire Stock Falling On Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60110753/why-is-redwire-stock-falling-on-thursday",
+      "source": "alpaca",
+      "added_at": "2026-06-25T18:13:18.704525+00:00"
+    },
+    {
+      "ticker": "XLE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Oil falling below the psychologically significant $70 level creates near-term pressure on energy equities and ETFs, though this is a macro price movement rather than a company-specific catalyst.",
+      "action_window": "next_day",
+      "headline": "Oil Slips Below $70: Are Energy ETFs Heading For A Reality Check?",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/06/60110423/oil-slips-below-70-are-energy-etfs-heading-for-a-reality-check",
+      "source": "alpaca",
+      "added_at": "2026-06-25T18:13:18.704547+00:00"
     }
   ]
 }
