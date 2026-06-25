@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CIIT",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong earnings beat with EPS swing from -$0.43 to +$0.01 and revenue more than doubled YoY from $1.948M to $4.311M demonstrates significant operational turnaround.",
-      "action_window": "next_day",
-      "headline": "Tianci International Q3 EPS $0.01 Up From $(0.43) YoY, Sales $4.311M Up From $1.948M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60032548/tianci-international-q3-eps-0-01-0-43-yoy-sales-4-311m-1-948m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-06-22T23:00:47.114564+00:00"
-    },
-    {
-      "ticker": "GITS",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q1 EPS loss improved 30% year-over-year from $(0.20) to $(0.14), demonstrating meaningful operational improvement despite remaining unprofitable.",
-      "action_window": "next_day",
-      "headline": "Global Interactive Q1 EPS $(0.14) Up From $(0.20) YoY, Sales $96.000",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60032537/global-interactive-q1-eps-0-14-0-20-yoy-sales-96-000",
-      "source": "alpaca",
-      "added_at": "2026-06-22T23:00:47.114574+00:00"
-    },
-    {
-      "ticker": "EPC",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Rejection of unsolicited takeover offer signals management confidence in standalone value and may invite higher bids or confirm the company is in play.",
-      "action_window": "next_day",
-      "headline": "'Schick Razor Maker Is Said to Reject Unsolicited Takeover Offer'- Bloomberg",
-      "url": "https://www.benzinga.com/news/26/06/60032432/schick-razor-maker-said-reject-unsolicited-takeover-offer-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-06-22T23:00:47.114579+00:00"
-    },
-    {
-      "ticker": "VHUB",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "S-1 registration for resale of 6.17M shares by existing stockholders signals potential dilution and selling pressure without new capital raise for the company.",
-      "action_window": "next_day",
-      "headline": "VenHub Global Files Prospectus For Resale Of Up To 6.17M Common Shares By The Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/06/60032369/venhub-global-files-prospectus-resale-6-17m-common-shares-selling-stockholders",
-      "source": "alpaca",
-      "added_at": "2026-06-22T23:00:47.114583+00:00"
-    },
-    {
-      "ticker": "MCB",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Share buyback authorization signals management confidence and provides price support, though $50M represents modest capital return relative to typical market cap impact.",
-      "action_window": "next_day",
-      "headline": "Metropolitan Bank Approves New Share Repurchase Program Up To $50M",
-      "url": "https://www.benzinga.com/news/26/06/60032072/metropolitan-bank-approves-new-share-repurchase-program-50m",
-      "source": "alpaca",
-      "added_at": "2026-06-22T23:00:47.114588+00:00"
-    },
-    {
       "ticker": "SNY",
       "tradeable_score": 0.88,
       "sentiment": "bullish",
@@ -1431,6 +1371,30 @@
       "url": "https://www.benzinga.com/content/60116819/semiconductor-says-if-deal-terminates-under-certain-circumstances-synaptics-pay-co-termination-fee-2",
       "source": "alpaca",
       "added_at": "2026-06-25T22:05:48.890258+00:00"
+    },
+    {
+      "ticker": "WTTR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Definitive agreement for commercial iodine production represents a material business expansion and new revenue stream leveraging existing infrastructure across multiple states.",
+      "action_window": "next_day",
+      "headline": "Select Water Solutions Reveals Definitive Agreement with ISE Chemicals Corporation Providing for the Development of Commercial Iodine Production Facilities Utilizing Produced Water Infrastructure Across Texas, New Mexico and Oklahoma; Initial Commercial Iodine Facility Expected To Be Commissioned In",
+      "url": "https://www.benzinga.com/news/26/06/60117707/select-water-solutions-reveals-definitive-agreement-ise-chemicals-corporation-providing-development-",
+      "source": "alpaca",
+      "added_at": "2026-06-25T23:51:44.289541+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Significant 5.2% intraday decline driven by rare mid-cycle price hikes signaling margin pressure from memory-cost inflation, representing a meaningful negative catalyst already in motion.",
+      "action_window": "intraday",
+      "headline": "Apple (AAPL) Stock Trades Down, Here Is Why",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-stock-trades-down-233750438.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-06-25T23:51:44.289570+00:00"
     }
   ]
 }
