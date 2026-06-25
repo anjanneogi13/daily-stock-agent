@@ -1,91 +1,6 @@
 {
   "items": [
     {
-      "ticker": "QCOM",
-      "tradeable_score": 0.8,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Stock soaring after-hours on updated outlook indicates a guidance raise, a meaningful catalyst that typically drives significant price movement in the immediate session and next trading day.",
-      "action_window": "intraday",
-      "headline": "Qualcomm Stock Soars After The Close: Here's Why",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60086749/qualcomm-stock-soars-after-the-close-heres-why",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630884+00:00",
-      "updated_at": "2026-06-24T22:46:15.981817+00:00"
-    },
-    {
-      "ticker": "ATD.TO",
-      "tradeable_score": 0.6,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Strong EPS beat of 38% is offset by significant revenue miss ($19.488M vs $17.932B appears to be a data error given magnitude discrepancy), creating mixed trading signals requiring clarification.",
-      "action_window": "intraday",
-      "headline": "Alimentation Couche-Tard Q4 Adj. EPS $0.73 Beats $0.53 Estimate, Sales $19.488M Miss $17.932B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60031876/alimentation-couche-tard-q4-adj-eps-0-73-beats-0-53-estimate-sales-19-488m-miss-17-932b-estimate",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630893+00:00"
-    },
-    {
-      "ticker": "GLOO",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Public offering registration typically signals dilution for existing shareholders and creates near-term selling pressure as new shares enter the market.",
-      "action_window": "next_day",
-      "headline": "Gloo Files Registration Statement For Public Offering Of Class A Common Stock",
-      "url": "https://www.benzinga.com/news/26/06/60031649/gloo-files-registration-statement-public-offering-class-common-stock",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630899+00:00"
-    },
-    {
-      "ticker": "ORC",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Expansion of share buyback program to 13.3% of outstanding shares signals management confidence and creates near-term technical support through reduced float.",
-      "action_window": "next_day",
-      "headline": "Orchid Island Capital Expands Stock Buyback Program To 26.6M Shares, Equal To About 13.3% Of Outstanding Stock",
-      "url": "https://www.benzinga.com/news/26/06/60031595/orchid-island-capital-expands-stock-buyback-program-26-6m-shares-equal-about-13-3-outstanding-stock",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630903+00:00"
-    },
-    {
-      "ticker": "NVO",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Stock already up 6% on favorable GLP-1 access initiatives improving market outlook for weight-loss drugs, but move is largely intraday and catalyst details are vague.",
-      "action_window": "intraday",
-      "headline": "Novo Nordisk Stock Is Surging Monday: What's Driving The Action?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60031499/novo-nordisk-stock-is-surging-monday-whats-driving-the-action",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630906+00:00"
-    },
-    {
-      "ticker": "RIME",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Second forbearance agreement signals ongoing financial distress with missed payments and only temporary relief until July, indicating elevated default risk and potential liquidity crisis.",
-      "action_window": "next_day",
-      "headline": "Algorhythm & Semicab Enter Second Forbearance Agreement On June 16; Semicab Waives Defaults For Algorhythm' Missed May 2, 2026 Payment; Semicab To Forbear From Action On Payment Defaults Through July 16, 2026",
-      "url": "https://www.benzinga.com/news/26/06/60031353/algorhythm-semicab-enter-second-forbearance-agreement-june-16-semicab-waives-defaults-algorhythm-mis",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630909+00:00"
-    },
-    {
-      "ticker": "MGNX",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA approval triggering $24.5M milestone payment represents significant near-term cash influx and validates product expansion for small-cap biotech MacroGenics.",
-      "action_window": "next_day",
-      "headline": "MacroGenics To Receive $24.5M Milestone From Sanofi Following FDA Approval Of TZIELD Expansion In Type 1 Diabetes",
-      "url": "https://www.benzinga.com/general/biotech/26/06/60031309/macrogenics-receive-24-5m-milestone-sanofi-following-fda-approval-tzield-expansion-type-1-diabetes",
-      "source": "alpaca",
-      "added_at": "2026-06-22T21:20:13.630913+00:00"
-    },
-    {
       "ticker": "CIIT",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -1444,6 +1359,78 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60114326/corteva-shares-rise-following-landmark-supreme-court-pesticide-ruling",
       "source": "alpaca",
       "added_at": "2026-06-25T20:30:17.234191+00:00"
+    },
+    {
+      "ticker": "BTGO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Workforce reduction of 15% signals cost-cutting due to business headwinds or efficiency pressures, typically viewed negatively short-term though may improve margins longer-term.",
+      "action_window": "next_day",
+      "headline": "BitGo Holdings To Reduce Workforce By Nearly 15%",
+      "url": "https://www.benzinga.com/news/26/06/60117344/bitgo-holdings-reduce-workforce-nearly-15",
+      "source": "alpaca",
+      "added_at": "2026-06-25T22:05:48.890206+00:00"
+    },
+    {
+      "ticker": "BENF",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CEO appointment is material corporate governance news that can signal strategic shift, but without context on predecessor departure or new CEO's background, impact is uncertain.",
+      "action_window": "next_day",
+      "headline": "Beneficient Appoints James G. Silk As CEO Effective Immediately",
+      "url": "https://www.benzinga.com/news/26/06/60117267/beneficient-appoints-james-g-silk-ceo-effective-immediately",
+      "source": "alpaca",
+      "added_at": "2026-06-25T22:05:48.890220+00:00"
+    },
+    {
+      "ticker": "ATHR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "An $11M equity offering represents significant dilution for a small-cap company, typically creating immediate downward pressure on the stock price as existing shareholders face ownership dilution.",
+      "action_window": "intraday",
+      "headline": "Aether Holdings Files Prospectus To Offer And Sell Common Stock Up To $11M In Aggregate Offering Price",
+      "url": "https://www.benzinga.com/news/26/06/60117126/aether-holdings-files-prospectus-offer-and-sell-common-stock-11m-aggregate-offering-price",
+      "source": "alpaca",
+      "added_at": "2026-06-25T22:05:48.890230+00:00"
+    },
+    {
+      "ticker": "IVF",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Small acquisition ($175K) gains full operational control and consolidates Alabama fertility clinic financials, modest positive for small-cap but limited material impact given deal size.",
+      "action_window": "next_day",
+      "headline": "INVO Fertility Acquires HRCFG For $175,001, Gains Full Control Of Alabama Fertility Clinic; Company Will Now Include The Accounts Of The Alabama JV In Its Consolidated Financial Statements On A Prospective Basis",
+      "url": "https://www.benzinga.com/m/26/06/60117026/invo-fertility-acquires-hrcfg-175-001-gains-full-control-alabama-fertility-clinic-company-will-now-i",
+      "source": "alpaca",
+      "added_at": "2026-06-25T22:05:48.890239+00:00"
+    },
+    {
+      "ticker": "SYNA",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive $7B all-stock acquisition with SYNA as target commands immediate premium as confirmed by rally mentioned in headline; acquirer ON typically faces dilution concerns.",
+      "action_window": "intraday",
+      "headline": "ON Semi To Acquire Synaptics In $7 Billion All-Stock Deal: SYNA Rallies, ON Shares Take Hit",
+      "url": "https://www.benzinga.com/m-a/26/06/60116848/on-semi-to-acquire-synaptics-in-7-billion-all-stock-deal-syna-rallies-on-shares-take-hit",
+      "source": "alpaca",
+      "added_at": "2026-06-25T22:05:48.890249+00:00"
+    },
+    {
+      "ticker": "ON",
+      "tradeable_score": 0.75,
+      "sentiment": "neutral",
+      "category": "ma_acquirer",
+      "rationale": "ON Semiconductor announced M&A deal terms with Synaptics including mutual termination fees, indicating a significant acquisition attempt with regulatory and deal execution risks.",
+      "action_window": "intraday",
+      "headline": "ON Semiconductor Says If Deal Terminates Under Certain Circumstances, Synaptics To Pay Co Termination Fee Of $235M; Will Be Required To Pay Synaptics Regulatory Termination Fee Of $320M, If Deal Terminated Under Certain Circumstances",
+      "url": "https://www.benzinga.com/content/60116819/semiconductor-says-if-deal-terminates-under-certain-circumstances-synaptics-pay-co-termination-fee-2",
+      "source": "alpaca",
+      "added_at": "2026-06-25T22:05:48.890258+00:00"
     }
   ]
 }

@@ -48,19 +48,6 @@
     "expires": "2026-12-01T19:38:17.754881+00:00",
     "hard_block": true
   },
-  "GNK": {
-    "ticker": "GNK",
-    "score_delta": 0.194,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Genco Shipping & Trading Issues Statement Regarding Diana Shipping's May 19 Investor Presentation; Reminds Shareholders Not to Tender Their Shares into Diana's Inadequate Tender Offer",
-    "added_at": "2026-05-26T21:50:34.986381+00:00",
-    "expires": "2026-06-25T21:50:34.986398+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VNDA": {
     "ticker": "VNDA",
     "score_delta": 0.146,
@@ -2283,6 +2270,58 @@
     "headline": "Corteva Shares Rise Following Landmark Supreme Court Pesticide Ruling",
     "added_at": "2026-06-25T20:30:17.231138+00:00",
     "expires": "2026-07-09T20:30:17.231143+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IVF": {
+    "ticker": "IVF",
+    "score_delta": 0.037,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.52,
+    "action_window": "next_day",
+    "headline": "INVO Fertility Acquires HRCFG For $175,001, Gains Full Control Of Alabama Fertility Clinic; Company Will Now Include The Accounts Of The Alabama JV In Its Consolidated Financial Statements On A Prospe",
+    "added_at": "2026-06-25T22:05:48.880223+00:00",
+    "expires": "2026-07-09T22:05:48.880230+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SYNA": {
+    "ticker": "SYNA",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "ON Semi To Acquire Synaptics In $7 Billion All-Stock Deal: SYNA Rallies, ON Shares Take Hit",
+    "added_at": "2026-06-25T22:05:48.882865+00:00",
+    "expires": "2026-07-25T22:05:48.882871+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ON": {
+    "ticker": "ON",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "ON Semiconductor Says If Deal Terminates Under Certain Circumstances, Synaptics To Pay Co Termination Fee Of $235M; Will Be Required To Pay Synaptics Regulatory Termination Fee Of $320M, If Deal Termi",
+    "added_at": "2026-06-25T22:05:48.884971+00:00",
+    "expires": "2026-07-09T22:05:48.884976+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OWL": {
+    "ticker": "OWL",
+    "score_delta": 0.029,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "ignore",
+    "headline": "Private Equity Eyes The NBA As Blue Owl Targets Cavaliers",
+    "added_at": "2026-06-25T22:05:48.887111+00:00",
+    "expires": "2026-07-09T22:05:48.887117+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
