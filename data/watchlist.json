@@ -1289,6 +1289,114 @@
       "url": "https://www.benzinga.com/news/26/06/60091385/kbr-appoints-micahel-larouche-ceo-and-nicholas-veasey-cfo-its-mission-technology-solutions-unit-will",
       "source": "alpaca",
       "added_at": "2026-06-25T10:38:04.440663+00:00"
+    },
+    {
+      "ticker": "FROG",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Keybanc maintains positive rating with significant price target increase, indicating continued analyst confidence and potential upside catalyst for FROG.",
+      "action_window": "intraday",
+      "headline": "Keybanc Maintains Overweight on JFrog, Raises Price Target to $89",
+      "url": "https://www.benzinga.com/news/26/06/60095868/keybanc-maintains-overweight-jfrog-raises-price-target-89",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005214+00:00"
+    },
+    {
+      "ticker": "ARES",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "14% withdrawal requests from flagship fund signals significant investor concern about liquidity and fund stability, likely triggering immediate selling pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "'Ares Management\u2019s flagship private credit fund hit by 14% withdrawal requests' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/06/60095691/ares-management-s-flagship-private-credit-fund-hit-14-withdrawal-requests-financial-times",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005229+00:00"
+    },
+    {
+      "ticker": "SPCB",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Signed national contract with Norway's prison service valued at $1.8M-$6.1M represents material revenue for small-cap company, warranting immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "SuperCom Signs Contract, Launches National EM Project With Norway's Prison And Probation Service After Customary Standstill Period; Total Project Value Estimated Between $1.8M Base Case And $6.1M Customer Budget",
+      "url": "https://www.benzinga.com/news/26/06/60095682/supercom-signs-contract-launches-national-em-project-norway-s-prison-and-probation-service-after-cus",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005238+00:00"
+    },
+    {
+      "ticker": "GCMG",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic partnership signals business expansion and potential AUM growth for GCM Grosvenor, but lacks specific financial terms or immediate material impact details.",
+      "action_window": "next_day",
+      "headline": "GCM Grosvenor Enters Strategic Partnership With Lower Middle Market PE Firm Banner Capital",
+      "url": "https://www.benzinga.com/news/26/06/60095663/gcm-grosvenor-enters-strategic-partnership-lower-middle-market-pe-firm-banner-capital",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005246+00:00"
+    },
+    {
+      "ticker": "AIFA",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Securing share purchase agreements with holders of majority stake (~57.67%) in acquisition target represents significant M&A progress and substantially de-risks deal completion.",
+      "action_window": "intraday",
+      "headline": "All In FutureTech Alliance Announces Share Purchase Agreements With Holders Of ~57.67% Of Acquisition Target HyalRoute's Share Capital",
+      "url": "https://www.benzinga.com/news/26/06/60095554/all-futuretech-alliance-announces-share-purchase-agreements-holders-57-67-acquisition-target-hyalrou",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005254+00:00"
+    },
+    {
+      "ticker": "ITB",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Presidential decision to freeze major housing affordability legislation creates immediate policy headwind for homebuilders and REITs, with clear sector-wide impact across multiple housing ETFs.",
+      "action_window": "intraday",
+      "headline": "Trump Freezes Housing Bill. What It Means For Homebuilder And REIT ETFs",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/06/60095553/trump-freezes-housing-bill-what-it-means-for-homebuilder-and-reit-etfs",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005262+00:00"
+    },
+    {
+      "ticker": "IWM",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Rising PCE inflation at 3-year high signals imminent Fed rate hikes which disproportionately hurt small-cap stocks in IWM due to higher borrowing costs and economic sensitivity.",
+      "action_window": "intraday",
+      "headline": "Fed's Favorite Inflation Gauge Hits 3-Year High, Fueling Rate-Hike Bets",
+      "url": "https://www.benzinga.com/markets/economic-data/26/06/60094964/pce-inflation-federal-reserve-rate-hike-odds",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005269+00:00"
+    },
+    {
+      "ticker": "VIVK",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant recurring revenue contract of $7.5M monthly ($90M annually) represents material new business for what appears to be a small-cap company, though execution risk remains.",
+      "action_window": "intraday",
+      "headline": "Vivakor\u2019s Commodities Trading Platform Enters Into Recurring Crude Oil Deal For ~100K Barrels Per Month At Enterprise Products Cushing Terminal, Expected To Generate ~$7.5M Monthly Revenue",
+      "url": "https://www.benzinga.com/news/26/06/60095542/vivakor-s-commodities-trading-platform-enters-recurring-crude-oil-deal-100k-barrels-month-enterprise",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005276+00:00"
+    },
+    {
+      "ticker": "GNSS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $2M follow-on order represents repeat business validation and revenue, though the amount is modest relative to typical market-moving catalysts and represents incremental rather than transformational growth.",
+      "action_window": "intraday",
+      "headline": "Genasys Receives $2M Follow-On Order From Unnamed Utility Firm For Its LRAD Systems",
+      "url": "https://www.benzinga.com/news/26/06/60095541/genasys-receives-2m-follow-order-unnamed-utility-firm-its-lrad-systems",
+      "source": "alpaca",
+      "added_at": "2026-06-25T13:14:33.005283+00:00"
     }
   ]
 }

@@ -391,19 +391,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RYAAY": {
-    "ticker": "RYAAY",
-    "score_delta": -0.064,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Ryanair Faces U.K. Regulator Investigation Over Allegedly Charging Parents To Sit With Children",
-    "added_at": "2026-06-11T12:06:26.061925+00:00",
-    "expires": "2026-06-25T12:06:26.061930+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "UCB": {
     "ticker": "UCB",
     "score_delta": 0.2,
@@ -730,19 +717,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "QTEX": {
-    "ticker": "QTEX",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "QTREX Quantum Manufactures Cryogenic Chip Carrier Through Its AME Process",
-    "added_at": "2026-06-18T11:47:53.710381+00:00",
-    "expires": "2026-06-25T11:47:53.710388+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "IMCC": {
     "ticker": "IMCC",
     "score_delta": 0.2,
@@ -784,14 +758,14 @@
   },
   "CSCO": {
     "ticker": "CSCO",
-    "score_delta": 0.025,
-    "catalyst": "ma_acquirer",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Cisco Plans To Acquire WideField Security; Financial Terms Undisclosed",
-    "added_at": "2026-06-18T20:20:14.442150+00:00",
-    "expires": "2026-07-02T20:20:14.442157+00:00",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Keybanc Maintains Overweight on Cisco Systems, Raises Price Target to $130",
+    "added_at": "2026-06-25T13:14:32.998435+00:00",
+    "expires": "2026-06-30T13:14:32.998440+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1690,14 +1664,14 @@
   },
   "FROG": {
     "ticker": "FROG",
-    "score_delta": 0.03,
+    "score_delta": 0.046,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on JFrog, Raises Price Target to $92",
-    "added_at": "2026-06-24T13:14:49.568772+00:00",
-    "expires": "2026-06-29T13:14:49.568780+00:00",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Keybanc Maintains Overweight on JFrog, Raises Price Target to $89",
+    "added_at": "2026-06-25T13:14:32.992441+00:00",
+    "expires": "2026-06-30T13:14:32.992448+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2153,6 +2127,32 @@
     "headline": "Radware Partners With Dataiku To Monitor, Inspect, And Help Control AI-Driven Actions Across Applications, APIs And Data",
     "added_at": "2026-06-25T10:38:04.437746+00:00",
     "expires": "2026-07-02T10:38:04.437751+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SPCB": {
+    "ticker": "SPCB",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "SuperCom Signs Contract, Launches National EM Project With Norway's Prison And Probation Service After Customary Standstill Period; Total Project Value Estimated Between $1.8M Base Case And $6.1M Cust",
+    "added_at": "2026-06-25T13:14:33.000357+00:00",
+    "expires": "2026-07-02T13:14:33.000362+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AIFA": {
+    "ticker": "AIFA",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "All In FutureTech Alliance Announces Share Purchase Agreements With Holders Of ~57.67% Of Acquisition Target HyalRoute's Share Capital",
+    "added_at": "2026-06-25T13:14:33.002319+00:00",
+    "expires": "2026-07-09T13:14:33.002324+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
