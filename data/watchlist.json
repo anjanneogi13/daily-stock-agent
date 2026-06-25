@@ -1181,6 +1181,114 @@
       "url": "https://www.benzinga.com/news/26/06/60086714/barnes-noble-education-sees-fy2026-sales-1-710b-1-720b-vs-1-578b-est",
       "source": "alpaca",
       "added_at": "2026-06-24T22:46:15.981833+00:00"
+    },
+    {
+      "ticker": "WYY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "WidePoint awarded sole-source $3.1B DHS contract over 10 years, representing transformational revenue opportunity for small-cap company.",
+      "action_window": "intraday",
+      "headline": "WidePoint Selected As Single Awardee Of DHS\u2019 Cellular Wireless Managed Services 3.0 Contract, 10-Yr IDIQ Contract With Ceiling Value Of ~$3.1B",
+      "url": "https://www.benzinga.com/news/26/06/60091716/widepoint-selected-single-awardee-dhs-cellular-wireless-managed-services-3-0-contract-10-yr-idiq-con",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440588+00:00"
+    },
+    {
+      "ticker": "GFL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Russell index inclusion typically drives forced buying from index funds and ETFs tracking these benchmarks, creating measurable price appreciation ahead of and on the effective date.",
+      "action_window": "this_week",
+      "headline": "GFL Environmental To Join The Russell 1000 And Russell 3000 Indexes, Effective June 29",
+      "url": "https://www.benzinga.com/news/26/06/60091694/gfl-environmental-join-russell-1000-and-russell-3000-indexes-effective-june-29",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440606+00:00"
+    },
+    {
+      "ticker": "PRQR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 1 clinical trial data showing target engagement on all key biomarkers is a meaningful de-risking catalyst for this investigational RNA editing therapy.",
+      "action_window": "intraday",
+      "headline": "ProQR Therapeutics Announces Data From Its Ongoing Phase 1 Clinical Study Of AX-0810 Investigational Axiomer RNA Editing Oligonucleotide; Sees Target Engagement On All Key Biomarkers",
+      "url": "https://www.benzinga.com/news/26/06/60091638/proqr-therapeutics-announces-data-its-ongoing-phase-1-clinical-study-ax-0810-investigational-axiomer",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440615+00:00"
+    },
+    {
+      "ticker": "NNE",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Progress in NRC construction permit review represents a significant regulatory milestone for nuclear energy companies, reducing development risk and validating technology credibility.",
+      "action_window": "intraday",
+      "headline": "NANO Nuclear Sees Progress In The NRC Review Of The Construction Permit Application For Its KRONOS MMR Energy System at the University of Illinois",
+      "url": "https://www.benzinga.com/news/26/06/60091600/nano-nuclear-sees-progress-nrc-review-construction-permit-application-its-kronos-mmr-energy-system-u",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440623+00:00"
+    },
+    {
+      "ticker": "TECH",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive M&A announcement with Bio-Techne being acquired at $73/share in cash, representing a significant premium and immediate catalyst for the target company's stock.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: Germany's Merck KGaA To Acquire Bio-Techne At $73 Per Share In Cash At EV $11.3B; Deal Expected To Be Immediately Sales Accretive And EBITDA Pre Margin Post-Closing And EPS Pre Accretive By Year 3 Post-Closing",
+      "url": "https://www.benzinga.com/news/26/06/60091584/correction-germany-s-merck-kgaa-acquire-bio-techne-73-share-cash-ev-11-3b-deal-expected-be-immediate",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440629+00:00"
+    },
+    {
+      "ticker": "TSLA",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Dual headwinds from wrongful-death lawsuit and NTSB investigation create regulatory overhang and potential liability concerns for Tesla's autonomous driving technology.",
+      "action_window": "intraday",
+      "headline": "Elon Musk\u2019s Tesla Under Fresh Scrutiny As Texas Crash Victim\u2019s Family Files Wrongful-Death Lawsuit, NTSB Opens Probe",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60091503/elon-musks-tesla-under-fresh-scrutiny-as-texas-crash-victims-family-files-wrongful-death-lawsuit-ntsb-opens-probe",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440643+00:00"
+    },
+    {
+      "ticker": "RDWR",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with Dataiku enhances Radware's AI security capabilities in a high-growth market segment, but lacks specific financial terms or immediate revenue impact.",
+      "action_window": "next_day",
+      "headline": "Radware Partners With Dataiku To Monitor, Inspect, And Help Control AI-Driven Actions Across Applications, APIs And Data",
+      "url": "https://www.benzinga.com/news/26/06/60091490/radware-partners-dataiku-monitor-inspect-and-help-control-ai-driven-actions-across-applications-apis",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440649+00:00"
+    },
+    {
+      "ticker": "BEEM",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Relocation from California to Arizona typically signals cost reduction and operational efficiency improvements, though execution risk and timing uncertainty moderate the immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "Beam Global To Relocate Its California Manufacturing And Production Operations To Yuma, Arizona",
+      "url": "https://www.benzinga.com/news/26/06/60091396/beam-global-relocate-its-california-manufacturing-and-production-operations-yuma-arizona",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440656+00:00"
+    },
+    {
+      "ticker": "KBR",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Spinoff execution progress with senior leadership appointments signals transaction advancement, typically creating value for both entities, though impact depends on separation terms and valuation.",
+      "action_window": "next_day",
+      "headline": "KBR Appoints Micahel LaRouche As CEO And Nicholas Veasey As CFO Of Its Mission Technology Solutions Unit That Will Be Spun Off",
+      "url": "https://www.benzinga.com/news/26/06/60091385/kbr-appoints-micahel-larouche-ceo-and-nicholas-veasey-cfo-its-mission-technology-solutions-unit-will",
+      "source": "alpaca",
+      "added_at": "2026-06-25T10:38:04.440663+00:00"
     }
   ]
 }
