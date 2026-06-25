@@ -1336,6 +1336,114 @@
       "url": "https://www.benzinga.com/etfs/sector-etfs/26/06/60110423/oil-slips-below-70-are-energy-etfs-heading-for-a-reality-check",
       "source": "alpaca",
       "added_at": "2026-06-25T18:13:18.704547+00:00"
+    },
+    {
+      "ticker": "EIKN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Russell 3000 index inclusion typically drives mechanical buying from index funds and ETFs tracking the index, creating near-term bullish price pressure through reconstitution trading.",
+      "action_window": "intraday",
+      "headline": "Eikon Therapeutics Set To Join Russell 3000 Index, Effective June",
+      "url": "https://www.benzinga.com/news/26/06/60115577/eikon-therapeutics-set-join-russell-3000-index-effective-june",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234124+00:00"
+    },
+    {
+      "ticker": "QMCO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q4 earnings beat on both adjusted EPS (30% better than estimate at -$0.21 vs -$0.30) and revenue beat of 7.2% ($78M vs $72.75M estimate) creates positive trading catalyst.",
+      "action_window": "intraday",
+      "headline": "Quantum Q4 Adj. EPS $(0.21) Beats $(0.30) Estimate, Sales $78.000M Beat $72.750M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/60115513/quantum-q4-adj-eps-0-21-beats-0-30-estimate-sales-78-000m-beat-72-750m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234137+00:00"
+    },
+    {
+      "ticker": "DLHC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major contract win with $250M ceiling value represents significant revenue potential for a small-cap company, likely material to total revenues.",
+      "action_window": "intraday",
+      "headline": "DLH Receives Multiple Indefinite Delivery/Indefinite Quantity Contract To Offer Full Range Of Logistics Information Technology Services For U.S. Navy; Contract Has $250M Ceiling Value",
+      "url": "https://www.benzinga.com/news/26/06/60115454/dlh-receives-multiple-indefinite-delivery-indefinite-quantity-contract-offer-full-range-logistics-in",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234147+00:00"
+    },
+    {
+      "ticker": "ELMT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic equity investment of 20M shares combined with long-term offtake agreement signals strong business commitment and future revenue visibility for Elmet Group.",
+      "action_window": "next_day",
+      "headline": "The Elmet Group Exercises Option To Purchase 20M Ordinary Shares Of EQ Resources As Part Of Strategic Collaboration And Long-Term Offtake Contract",
+      "url": "https://www.benzinga.com/news/26/06/60115442/elmet-group-exercises-option-purchase-20m-ordinary-shares-eq-resources-part-strategic-collaboration-",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234154+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "NASA contract win with $300M maximum value over 10 years represents significant revenue opportunity and validation for Rocket Lab's launch capabilities.",
+      "action_window": "intraday",
+      "headline": "NASA Selects Rocket Lab To Launch Sun, Earth Science Missions; Contract Allows The Agency To Award Fixed-Price Indefinite-Delivery/Indefinite-Quantity Launch Service Task Orders During VADR\u2019s 10-Year Ordering Period, With A Maximum Total Contract Value Of $300M",
+      "url": "https://www.benzinga.com/news/26/06/60115393/nasa-selects-rocket-lab-launch-sun-earth-science-missions-contract-allows-agency-award-fixed-price-i",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234161+00:00"
+    },
+    {
+      "ticker": "NRXP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Legal dispute involving allegations and arbitration over failed acquisition creates uncertainty and potential financial/operational risks for the company.",
+      "action_window": "next_day",
+      "headline": "NRx Pharmaceuticals Issues Statement In Response To Kadima Allegations, Citing Arbitration Over Non\u2011Acquisition By HOPE Therapeutics",
+      "url": "https://www.benzinga.com/news/26/06/60115298/nrx-pharmaceuticals-issues-statement-response-kadima-allegations-citing-arbitration-over-non-acquisi",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234169+00:00"
+    },
+    {
+      "ticker": "ICFI",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Expanded buyback authorization signals management confidence and returns capital to shareholders, typically supporting stock price through reduced share count and positive signaling effect.",
+      "action_window": "next_day",
+      "headline": "ICF Expands Buyback Plan By $100M",
+      "url": "https://www.benzinga.com/news/26/06/60115214/icf-expands-buyback-plan-100m",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234176+00:00"
+    },
+    {
+      "ticker": "DPRO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Exclusive announcement of major contract win with IACLEA for nationwide campus drone program represents significant market expansion opportunity and revenue catalyst for small-cap drone company.",
+      "action_window": "intraday",
+      "headline": "EXCLUSIVE: Draganfly Secures Major IACLEA Win To Expand Campus Drone Programs Nationwide",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60093574/exclusive-draganfly-secures-major-iaclea-win-to-expand-campus-drone-programs-nationwide",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234183+00:00"
+    },
+    {
+      "ticker": "CTVA",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "A 7-2 Supreme Court ruling in favor of Corteva on pesticide regulations is a significant legal catalyst removing regulatory overhang and shares are already moving on the news.",
+      "action_window": "intraday",
+      "headline": "Corteva Shares Rise Following Landmark Supreme Court Pesticide Ruling",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60114326/corteva-shares-rise-following-landmark-supreme-court-pesticide-ruling",
+      "source": "alpaca",
+      "added_at": "2026-06-25T20:30:17.234191+00:00"
     }
   ]
 }
