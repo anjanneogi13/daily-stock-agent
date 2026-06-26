@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "INSP",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Analyst downgrade from Evercore ISI with reduced price target creates immediate selling pressure and signals deteriorating fundamentals or valuation concerns.",
-      "action_window": "intraday",
-      "headline": "Evercore ISI Group Downgrades Inspire Medical Systems to In-Line, Lowers Price Target to $40",
-      "url": "https://www.benzinga.com/news/26/06/60041598/evercore-isi-group-downgrades-inspire-medical-systems-line-lowers-price-target-40",
-      "source": "alpaca",
-      "added_at": "2026-06-23T13:44:09.985819+00:00"
-    },
-    {
-      "ticker": "TPL",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major strategic partnership with Chevron for giga-scale data center infrastructure represents significant new revenue stream and validates TPL's land/water assets in high-growth AI/compute sector.",
-      "action_window": "intraday",
-      "headline": "Texas Pacific Land Partners With Chevron On Project Kilby To Supply Land And Brackish Water For Giga-Scale Power And Data Center Development In West Texas Compute Infrastructure Buildout",
-      "url": "https://www.benzinga.com/quote/CVX",
-      "source": "alpaca",
-      "added_at": "2026-06-23T13:44:09.985830+00:00"
-    },
-    {
-      "ticker": "FUSE",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership with a global apparel brand for AI-driven demand planning represents meaningful business expansion and revenue potential, though lacking financial details and partner identification limits immediate impact assessment.",
-      "action_window": "intraday",
-      "headline": "Fusemachines Partners With A Global Apparel Brand To Transform Demand Planning Using Predictive And Agentic AI",
-      "url": "https://www.benzinga.com/news/26/06/60041085/fusemachines-partners-global-apparel-brand-transform-demand-planning-using-predictive-and-agentic-ai",
-      "source": "alpaca",
-      "added_at": "2026-06-23T13:44:09.985844+00:00"
-    },
-    {
       "ticker": "FAC",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -1455,6 +1419,42 @@
       "url": "https://www.benzinga.com/news/26/06/60123372/raymond-james-downgrades-taylor-morrison-home-market-perform",
       "source": "alpaca",
       "added_at": "2026-06-26T13:07:19.152261+00:00"
+    },
+    {
+      "ticker": "FCEL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock already climbing on dual catalysts of analyst upgrade and major clean-power agreement announcement, creating momentum trading opportunity.",
+      "action_window": "intraday",
+      "headline": "What's Going On With The Boost In FuelCell Stock?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60130854/whats-going-on-with-the-boost-in-fuelcell-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-26T15:38:12.076459+00:00"
+    },
+    {
+      "ticker": "OMER",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "EMA rejection of Yartemlea significantly limits European market opportunity despite prior FDA approval, cutting revenue potential and creating regulatory uncertainty for a key product.",
+      "action_window": "intraday",
+      "headline": "FDA Approved, Europe Unconvinced: Omeros' Stem Cell Transplant Treatment Hits Regulatory Divide",
+      "url": "https://www.benzinga.com/news/health-care/26/06/60130423/fda-approved-europe-unconvinced-omeros-stem-cell-transplant-treatment-hits-regulatory-divide",
+      "source": "alpaca",
+      "added_at": "2026-06-26T15:38:12.076484+00:00"
+    },
+    {
+      "ticker": "GVA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stephens initiating coverage with Overweight rating and $180 price target is a meaningful bullish catalyst from a regional investment bank, though initial coverage typically has moderate trading impact compared to upgrades from existing coverage.",
+      "action_window": "intraday",
+      "headline": "Stephens & Co. Initiates Coverage On Granite Construction with Overweight Rating, Announces Price Target of $180",
+      "url": "https://www.benzinga.com/news/26/06/60130245/stephens-co-initiates-coverage-granite-construction-overweight-rating-announces-price-target-180",
+      "source": "alpaca",
+      "added_at": "2026-06-26T15:38:12.076501+00:00"
     }
   ]
 }
