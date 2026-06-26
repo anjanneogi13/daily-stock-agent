@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "FAC",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Cantor Fitzgerald initiating coverage with Overweight rating provides positive signal but initiation carries less urgency than upgrade of existing coverage, and impact depends on current stock price relative to $18 target.",
-      "action_window": "next_day",
-      "headline": "Cantor Fitzgerald Initiates Coverage On Factorial Energy with Overweight Rating, Announces Price Target of $18",
-      "url": "https://www.benzinga.com/news/26/06/60049521/cantor-fitzgerald-initiates-coverage-factorial-energy-overweight-rating-announces-price-target-18",
-      "source": "alpaca",
-      "added_at": "2026-06-23T16:24:48.890096+00:00"
-    },
-    {
-      "ticker": "APO",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Second consecutive quarter of redemption limits signals liquidity stress in Apollo's private credit fund, raising concerns about asset quality and potential contagion risk in the private credit sector.",
-      "action_window": "intraday",
-      "headline": "Private Credit Pressure Builds As Apollo Limits Redemptions For Second Straight Quarter",
-      "url": "https://www.benzinga.com/markets/private-markets/26/06/60049325/private-credit-pressure-builds-as-apollo-limits-redemptions-for-second-straight-quarter",
-      "source": "alpaca",
-      "added_at": "2026-06-23T16:24:48.890110+00:00"
-    },
-    {
-      "ticker": "QNCX",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Initiation of coverage with Overweight rating by Cantor Fitzgerald is positive but represents a new opinion rather than a change in existing consensus, limiting immediate trading impact.",
-      "action_window": "next_day",
-      "headline": "Cantor Fitzgerald Initiates Coverage On Quince Therapeutics with Overweight Rating, Announces Price Target of $4",
-      "url": "https://www.benzinga.com/news/26/06/60049255/cantor-fitzgerald-initiates-coverage-quince-therapeutics-overweight-rating-announces-price-target-4",
-      "source": "alpaca",
-      "added_at": "2026-06-23T16:24:48.890118+00:00"
-    },
-    {
       "ticker": "ATLN",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -1455,6 +1419,66 @@
       "url": "https://www.benzinga.com/news/26/06/60130245/stephens-co-initiates-coverage-granite-construction-overweight-rating-announces-price-target-180",
       "source": "alpaca",
       "added_at": "2026-06-26T15:38:12.076501+00:00"
+    },
+    {
+      "ticker": "AMT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Goldman Sachs initiating coverage with a Buy rating is a meaningful positive catalyst from a top-tier investment bank that typically drives institutional buying interest.",
+      "action_window": "next_day",
+      "headline": "Goldman Sachs Assumes American Tower at Buy, Announces Price Target of $215",
+      "url": "https://www.benzinga.com/news/26/06/60135270/goldman-sachs-assumes-american-tower-buy-announces-price-target-215",
+      "source": "alpaca",
+      "added_at": "2026-06-26T17:43:32.208366+00:00"
+    },
+    {
+      "ticker": "SFTBY",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "SoftBank dropped significantly on news that OpenAI postponed IPO to 2027, delaying potential returns on a major investment holding.",
+      "action_window": "intraday",
+      "headline": "Why OpenAI's Listing Timeline Matters For SoftBank Stock",
+      "url": "https://www.benzinga.com/Opinion/26/06/60135113/why-openais-listing-timeline-matters-for-softbank-stock",
+      "source": "alpaca",
+      "added_at": "2026-06-26T17:43:32.208378+00:00"
+    },
+    {
+      "ticker": "RRR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Goldman Sachs initiating coverage with a Buy rating is a meaningful positive catalyst from a tier-1 investment bank that typically drives institutional interest and near-term price momentum.",
+      "action_window": "next_day",
+      "headline": "Goldman Sachs Initiates Coverage On Red Rock Resorts with Buy Rating, Announces Price Target of $72",
+      "url": "https://www.benzinga.com/news/26/06/60134893/goldman-sachs-initiates-coverage-red-rock-resorts-buy-rating-announces-price-target-72",
+      "source": "alpaca",
+      "added_at": "2026-06-26T17:43:32.208389+00:00"
+    },
+    {
+      "ticker": "CODX",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CDC Level 1 activation for Congo Ebola outbreak creates immediate demand catalyst for diagnostic testing companies and antiviral treatments, though U.S. risk remains contained.",
+      "action_window": "intraday",
+      "headline": "CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Remains Low",
+      "url": "https://www.benzinga.com/general/biotech/26/06/60134830/cdc-raises-its-response-level-congo-ebola-outbreak-level-1-activation-its-highest-level-says-risk-eb",
+      "source": "alpaca",
+      "added_at": "2026-06-26T17:43:32.208398+00:00"
+    },
+    {
+      "ticker": "PENN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Goldman Sachs initiating coverage with a Buy rating is a meaningful positive catalyst from a top-tier investment bank that typically drives institutional interest and near-term price action.",
+      "action_window": "intraday",
+      "headline": "Goldman Sachs Initiates Coverage On PENN Entertainment with Buy Rating, Announces Price Target of $26",
+      "url": "https://www.benzinga.com/news/26/06/60134770/goldman-sachs-initiates-coverage-penn-entertainment-buy-rating-announces-price-target-26",
+      "source": "alpaca",
+      "added_at": "2026-06-26T17:43:32.208406+00:00"
     }
   ]
 }
