@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SNY",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA approval expanding Tzield to children represents a significant market expansion for a diabetes drug, though MGNX (partner) may see greater percentage impact than large-cap SNY.",
-      "action_window": "intraday",
-      "headline": "Sanofi Wins FDA Nod for Expanded Use of T1D Drug in Children",
-      "url": "https://finance.yahoo.com/sectors/healthcare/articles/sanofi-wins-fda-nod-expanded-161200608.html?.tsrc=rss",
-      "source": "yahoo",
-      "added_at": "2026-06-23T00:11:23.213022+00:00"
-    },
-    {
       "ticker": "ALLT",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1395,6 +1383,54 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-stock-trades-down-233750438.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-06-25T23:51:44.289570+00:00"
+    },
+    {
+      "ticker": "NU",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Needham initiating coverage with a Buy rating and $17 price target is a positive catalyst, though initiation coverage typically has less impact than upgrades from existing coverage.",
+      "action_window": "intraday",
+      "headline": "Needham Initiates Coverage On Nu Holdings with Buy Rating, Announces Price Target of $17",
+      "url": "https://www.benzinga.com/news/26/06/60121242/needham-initiates-coverage-nu-holdings-buy-rating-announces-price-target-17",
+      "source": "alpaca",
+      "added_at": "2026-06-26T10:47:06.608263+00:00"
+    },
+    {
+      "ticker": "APOG",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong double beat with EPS exceeding estimates by 26.7% and revenue beating by 2.7%, indicating robust quarterly performance.",
+      "action_window": "intraday",
+      "headline": "Apogee Enterprises Q1 Adj. EPS $0.57 Beats $0.45 Estimate, Sales $342.684M Beat $333.839M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/60121186/apogee-enterprises-q1-adj-eps-0-57-beats-0-45-estimate-sales-342-684m-beat-333-839m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-26T10:47:06.608278+00:00"
+    },
+    {
+      "ticker": "RMCF",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Interim CEO resignation creates leadership uncertainty and potential governance concerns, particularly negative given the temporary nature of the role.",
+      "action_window": "intraday",
+      "headline": "Rocky Mountain Chocolate Factory Interim CEO Jeffrey R Geygan Resigns, Effective June 26",
+      "url": "https://www.benzinga.com/news/26/06/60121020/rocky-mountain-chocolate-factory-interim-ceo-jeffrey-r-geygan-resigns-effective-june-26",
+      "source": "alpaca",
+      "added_at": "2026-06-26T10:47:06.608293+00:00"
+    },
+    {
+      "ticker": "ONC",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CNY446M (~$62M USD) tax settlement represents a significant unexpected liability that will negatively impact Q2 GAAP earnings and potentially cash position.",
+      "action_window": "intraday",
+      "headline": "BeOne Medicines Discloses Chinese Tax Settlement Of CNY446M; To Be Noted In Q2 GAAP Financial Results",
+      "url": "https://www.benzinga.com/news/26/06/60120946/beone-medicines-discloses-chinese-tax-settlement-cny446m-be-noted-q2-gaap-financial-results",
+      "source": "alpaca",
+      "added_at": "2026-06-26T10:47:06.608303+00:00"
     }
   ]
 }

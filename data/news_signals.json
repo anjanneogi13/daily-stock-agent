@@ -2337,5 +2337,44 @@
     "expires": "2026-06-30T23:51:44.273593+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "NU": {
+    "ticker": "NU",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Needham Initiates Coverage On Nu Holdings with Buy Rating, Announces Price Target of $17",
+    "added_at": "2026-06-26T10:47:06.595924+00:00",
+    "expires": "2026-07-01T10:47:06.595932+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DRI": {
+    "ticker": "DRI",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "BTIG Maintains Buy on Darden Restaurants, Raises Price Target to $235",
+    "added_at": "2026-06-26T10:47:06.598457+00:00",
+    "expires": "2026-07-01T10:47:06.598463+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "APOG": {
+    "ticker": "APOG",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Apogee Enterprises Q1 Adj. EPS $0.57 Beats $0.45 Estimate, Sales $342.684M Beat $333.839M Estimate",
+    "added_at": "2026-06-26T10:47:06.600669+00:00",
+    "expires": "2026-07-03T10:47:06.600675+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
