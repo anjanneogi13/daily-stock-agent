@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LI",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New vehicle launch with immediate delivery timeline is a meaningful catalyst for EV manufacturers, likely to drive near-term revenue growth and investor interest.",
-      "action_window": "next_day",
-      "headline": "Li Auto Launches The All-New Li L8, With Deliveries To Commence Within This Week",
-      "url": "https://www.benzinga.com/news/26/06/60060432/li-auto-launches-all-new-li-l8-deliveries-commence-within-week",
-      "source": "alpaca",
-      "added_at": "2026-06-23T23:11:51.557695+00:00"
-    },
-    {
       "ticker": "ABSI",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -953,16 +941,16 @@
     },
     {
       "ticker": "ON",
-      "tradeable_score": 0.85,
+      "tradeable_score": 0.95,
       "sentiment": "bearish",
       "category": "ma_acquirer",
-      "rationale": "ON Semiconductor stock is falling due to a confirmed $7B all-stock acquisition of Synaptics, which typically dilutes existing shareholders and raises integration risk concerns for the acquirer.",
+      "rationale": "Major $7B all-stock M&A announcement with immediate 21.8% stock decline due to shareholder dilution concerns represents a highly tradeable confirmed catalyst.",
       "action_window": "intraday",
-      "headline": "Why Is ON Semiconductor Stock Falling On Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60123546/why-is-on-semiconductor-stock-falling-on-friday",
+      "headline": "Why onsemi (ON) Shares Are Falling Today",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-onsemi-shares-falling-today-210425984.html?.tsrc=rss",
       "source": "alpaca",
       "added_at": "2026-06-25T22:05:48.890258+00:00",
-      "updated_at": "2026-06-26T13:07:19.152229+00:00"
+      "updated_at": "2026-06-26T23:59:36.641895+00:00"
     },
     {
       "ticker": "WTTR",
