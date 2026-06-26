@@ -494,5 +494,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-26 12:09:34",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "NU",
+        "reason": "SL too tight (2.1% < 2.5% for $12 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
