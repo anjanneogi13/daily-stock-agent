@@ -322,32 +322,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ABCB": {
-    "ticker": "ABCB",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Ameris Bancorp Says Jury Finds Ameris Bank Liable For $16.53M In Damages, $62.9M In Punitive Damages; Co. Intends To Appeal Jury Verdict",
-    "added_at": "2026-06-12T21:44:57.273334+00:00",
-    "expires": "2026-06-26T21:44:57.273339+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RMIX": {
-    "ticker": "RMIX",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Suncrete Buys Newoods, D/B/A ABC Block Company On June 8, 2026; Deal Consideration Is $27.2M Cash And 587,726 Class A Common Shares",
-    "added_at": "2026-06-12T21:44:57.275447+00:00",
-    "expires": "2026-06-26T21:44:57.275453+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NIXX": {
     "ticker": "NIXX",
     "score_delta": 0.2,
@@ -1274,14 +1248,14 @@
   },
   "GME": {
     "ticker": "GME",
-    "score_delta": 0.046,
-    "catalyst": "ma_acquirer",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
     "sentiment": "bullish",
-    "tradeable_score": 0.65,
+    "tradeable_score": 0.88,
     "action_window": "intraday",
-    "headline": "GameStop Board Grants CEO Ryan Cohen Request To Amend Proxy Statement To Eliminate Proposed CEO Performance To Focus On Proposed Takeover of eBay",
-    "added_at": "2026-06-23T20:32:05.120246+00:00",
-    "expires": "2026-07-07T20:32:05.120252+00:00",
+    "headline": "GameStop Expects FY2026 Adj EBITDA In Excess Of $600M Compared To Adjusted EBITDA Of $345.4M In FY 2025.; Co. Remains Focused On Advancing The Proposed Acquisition Of eBay",
+    "added_at": "2026-06-26T22:44:04.943128+00:00",
+    "expires": "2026-07-10T22:44:04.943135+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2565,6 +2539,32 @@
     "headline": "Blue Moon Metals Enters Binding Agreement With Alpha Future Funds To Combine Subsidiaries Into Integrated Sulitjelma Mining Development Entity",
     "added_at": "2026-06-26T21:09:08.836924+00:00",
     "expires": "2026-07-26T21:09:08.836930+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VRDN": {
+    "ticker": "VRDN",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "next_day",
+    "headline": "Viridian Therapeutics Receives FDA Approval For Lumvoa For The Treatment Of Thyroid Eye Disease; Co. Plans To Launch Lumvoa Immediately",
+    "added_at": "2026-06-26T22:44:04.940347+00:00",
+    "expires": "2026-07-26T22:44:04.940355+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SEM": {
+    "ticker": "SEM",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "next_day",
+    "headline": "Select Medical Reveals Stockholder Approval of Acquisition By Consortium Led by Robert A. Ortenzio, Martin F. Jackson, and WCAS",
+    "added_at": "2026-06-26T22:44:04.945520+00:00",
+    "expires": "2026-07-26T22:44:04.945526+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
