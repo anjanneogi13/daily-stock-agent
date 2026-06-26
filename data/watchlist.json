@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ALLT",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $40M share buyback program signals management confidence and returns capital to shareholders, typically supporting stock price appreciation through reduced share count and positive market perception.",
-      "action_window": "intraday",
-      "headline": "Allot Announces $40M Share Buyback Program",
-      "url": "https://www.benzinga.com/news/26/06/60036724/allot-announces-40m-share-buyback-program",
-      "source": "alpaca",
-      "added_at": "2026-06-23T10:58:42.608177+00:00"
-    },
-    {
-      "ticker": "KFY",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Stock jumped following Q4 earnings and revenue beat with CEO highlighting resilient growth, representing a confirmed positive catalyst with immediate market reaction.",
-      "action_window": "intraday",
-      "headline": "Korn Ferry CEO Highlights Resilient Growth Despite Uneven Economy",
-      "url": "https://www.benzinga.com/markets/earnings/26/06/60048910/korn-ferry-ceo-highlights-resilient-growth-despite-uneven-economy",
-      "source": "alpaca",
-      "added_at": "2026-06-23T10:58:42.608188+00:00",
-      "updated_at": "2026-06-23T16:24:48.890128+00:00"
-    },
-    {
-      "ticker": "VTOL",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "M&A rumor with Bristow as acquirer of Berry Aviation signals potential expansion in government contracting segment, though deal not yet confirmed.",
-      "action_window": "intraday",
-      "headline": "'Bristow Is Said to Near Berry Aviation Deal in Government Push' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/06/60036649/bristow-said-near-berry-aviation-deal-government-push-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-06-23T10:58:42.608195+00:00"
-    },
-    {
-      "ticker": "BBVA",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "BBVA reduces balance sheet risk through $2B significant risk transfer transaction, improving capital efficiency and regulatory ratios, though market impact depends on pricing and existing expectations.",
-      "action_window": "next_day",
-      "headline": "'BBVA Offloads AI Risk With $2 Billion Infrastructure-Linked SRT' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/06/60036374/bbva-offloads-ai-risk-2-billion-infrastructure-linked-srt-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-06-23T10:58:42.608207+00:00"
-    },
-    {
-      "ticker": "SSRM",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Specific gold miners showing positive momentum divergence from broader gold selloff suggests relative strength and potential trading opportunity in individual names despite sector headwinds.",
-      "action_window": "intraday",
-      "headline": "Gold Tumbles From Record Highs\u2014But These Gold Miners Are Climbing Into Top Momentum Zones",
-      "url": "https://www.benzinga.com/markets/equities/26/06/60036362/gold-tumbles-from-record-highs-but-these-gold-miners-are-climbing-into-top-momentum-zones",
-      "source": "alpaca",
-      "added_at": "2026-06-23T10:58:42.608212+00:00"
-    },
-    {
       "ticker": "INSP",
       "tradeable_score": 0.65,
       "sentiment": "bearish",
@@ -1350,15 +1289,16 @@
     },
     {
       "ticker": "ON",
-      "tradeable_score": 0.75,
-      "sentiment": "neutral",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
       "category": "ma_acquirer",
-      "rationale": "ON Semiconductor announced M&A deal terms with Synaptics including mutual termination fees, indicating a significant acquisition attempt with regulatory and deal execution risks.",
+      "rationale": "ON Semiconductor stock is falling due to a confirmed $7B all-stock acquisition of Synaptics, which typically dilutes existing shareholders and raises integration risk concerns for the acquirer.",
       "action_window": "intraday",
-      "headline": "ON Semiconductor Says If Deal Terminates Under Certain Circumstances, Synaptics To Pay Co Termination Fee Of $235M; Will Be Required To Pay Synaptics Regulatory Termination Fee Of $320M, If Deal Terminated Under Certain Circumstances",
-      "url": "https://www.benzinga.com/content/60116819/semiconductor-says-if-deal-terminates-under-certain-circumstances-synaptics-pay-co-termination-fee-2",
+      "headline": "Why Is ON Semiconductor Stock Falling On Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60123546/why-is-on-semiconductor-stock-falling-on-friday",
       "source": "alpaca",
-      "added_at": "2026-06-25T22:05:48.890258+00:00"
+      "added_at": "2026-06-25T22:05:48.890258+00:00",
+      "updated_at": "2026-06-26T13:07:19.152229+00:00"
     },
     {
       "ticker": "WTTR",
@@ -1431,6 +1371,90 @@
       "url": "https://www.benzinga.com/news/26/06/60120946/beone-medicines-discloses-chinese-tax-settlement-cny446m-be-noted-q2-gaap-financial-results",
       "source": "alpaca",
       "added_at": "2026-06-26T10:47:06.608303+00:00"
+    },
+    {
+      "ticker": "NKE",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Multiple analyst downgrades including Nike losing bullish rating creates near-term selling pressure, though impact diluted across 5 stocks.",
+      "action_window": "intraday",
+      "headline": "This Nike Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/06/60123830/this-nike-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday-4",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152201+00:00"
+    },
+    {
+      "ticker": "A",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bernstein reinstating Outperform rating with $155 price target is a meaningful catalyst from a major sell-side firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Bernstein Reinstates Outperform on Agilent Technologies, Announces $155 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/60123727/bernstein-reinstates-outperform-agilent-technologies-announces-155-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152212+00:00"
+    },
+    {
+      "ticker": "INFQ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wedbush initiating coverage with bullish stance calling stock 'meaningfully mispriced' with 25% upside target represents a meaningful catalyst from a reputable firm, though impact may be partially muted as initiation coverage typically carries less weight than upgrades.",
+      "action_window": "intraday",
+      "headline": "Top Wall Street Analyst Says This Quantum Computing Stock Is 'Meaningfully Mispriced'\u2014 Sees 25% Upside As Trump's Quantum Push Gathers Steam",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/06/60123587/top-wall-street-analyst-says-this-quantum-computing-stock-is-meaningfully-mispriced-sees-25-upside-as-trumps-quantum-push-gathers-steam",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152220+00:00"
+    },
+    {
+      "ticker": "MOS",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Rothschild & Co initiated coverage with a Buy rating and $30 price target, which is a positive catalyst but as an initiation from a smaller investment bank it has moderate rather than high trading impact.",
+      "action_window": "next_day",
+      "headline": "Rothschild & Co Initiates Coverage On Mosaic with Buy Rating, Announces Price Target of $30",
+      "url": "https://www.benzinga.com/news/26/06/60123535/rothschild-co-initiates-coverage-mosaic-buy-rating-announces-price-target-30",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152236+00:00"
+    },
+    {
+      "ticker": "ESS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analyst upgrades including Essex Property Trust turning bullish provides positive trading catalyst, though impact is moderate as analyst revisions are typically partially anticipated.",
+      "action_window": "intraday",
+      "headline": "This Essex Property Trust Analyst Turns Bullish; Here Are Top 4 Upgrades For Friday",
+      "url": "https://www.benzinga.com/news/26/06/60123453/this-essex-property-trust-analyst-turns-bullish-here-are-top-4-upgrades-for-friday",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152244+00:00"
+    },
+    {
+      "ticker": "IAUX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Termination of offtake agreement suggests i-80 Gold may be seeking better terms or greater operational flexibility, potentially bullish for the company but requires confirmation of reasoning.",
+      "action_window": "intraday",
+      "headline": "i-80 GOLD Terminates Offtake Agreement With Vox Royalty Cayman",
+      "url": "https://www.benzinga.com/news/26/06/60123404/i-80-gold-terminates-offtake-agreement-vox-royalty-cayman",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152250+00:00"
+    },
+    {
+      "ticker": "TMHC",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Raymond James downgrade from Outperform to Market Perform signals reduced conviction and typically triggers selling pressure, though impact is moderate as it's a move to neutral rather than underweight.",
+      "action_window": "intraday",
+      "headline": "Raymond James Downgrades Taylor Morrison Home to Market Perform",
+      "url": "https://www.benzinga.com/news/26/06/60123372/raymond-james-downgrades-taylor-morrison-home-market-perform",
+      "source": "alpaca",
+      "added_at": "2026-06-26T13:07:19.152261+00:00"
     }
   ]
 }
