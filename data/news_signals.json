@@ -48,32 +48,6 @@
     "expires": "2026-12-01T19:38:17.754881+00:00",
     "hard_block": true
   },
-  "PSEC": {
-    "ticker": "PSEC",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "next_day",
-    "headline": "Prospect Capital Announces Sale Of Valley Electric To MYR Group For Consideration Of ~$328M",
-    "added_at": "2026-05-27T20:34:04.269392+00:00",
-    "expires": "2026-06-26T20:34:04.269400+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BZFD": {
-    "ticker": "BZFD",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "Allen Family Digital Completes Acquisition Of 51% Of BuzzFeed For $120M, Byron Allen Assumes Role Of Chairman And CEO Of BuzzFeed",
-    "added_at": "2026-05-27T20:34:04.278767+00:00",
-    "expires": "2026-06-26T20:34:04.278773+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ZBIO": {
     "ticker": "ZBIO",
     "score_delta": 0.15,
@@ -334,19 +308,6 @@
     "added_at": "2026-06-12T17:35:21.457861+00:00",
     "expires": "2026-12-09T17:35:21.457868+00:00",
     "hard_block": true
-  },
-  "MH": {
-    "ticker": "MH",
-    "score_delta": -0.118,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "McGraw Hill Tops Q4 Estimates But Soft Guidance, Choppy K-12 Market Weigh",
-    "added_at": "2026-06-12T19:59:33.958416+00:00",
-    "expires": "2026-06-26T19:59:33.958429+00:00",
-    "hard_block": false,
-    "negative_reaction": true
   },
   "TRAW": {
     "ticker": "TRAW",
@@ -2543,6 +2504,67 @@
     "headline": "UBS Maintains Buy on TD Synnex, Raises Price Target to $352",
     "added_at": "2026-06-26T19:31:34.454902+00:00",
     "expires": "2026-07-01T19:31:34.454907+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TNMG": {
+    "ticker": "TNMG",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "TNL Mediagene Receives Nasdaq Determination Letter Stating That Its Securities Are Subject To Delisting From The Nasdaq; Co. Intends To Timely Request A Hearing Before A Nasdaq Hearings Panel  To Appe",
+    "added_at": "2026-06-26T21:09:08.824762+00:00",
+    "expires": "2026-12-23T21:09:08.824769+00:00",
+    "hard_block": true
+  },
+  "ABBV": {
+    "ticker": "ABBV",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "AbbVie Receives FDA Approval For SKYRIZI For The Treatment Of Children Six Years Of Age And Older With Moderate-To-Severe Plaque Psoriasis Who Are Candidates For Systemic Therapy Or Phototherapy, Or A",
+    "added_at": "2026-06-26T21:09:08.827453+00:00",
+    "expires": "2026-07-26T21:09:08.827459+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AEHR": {
+    "ticker": "AEHR",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Aehr Test Systems Gets New 2X Leveraged ETF Amid AI Semiconductor Rally",
+    "added_at": "2026-06-26T21:09:08.829814+00:00",
+    "expires": "2026-07-03T21:09:08.829820+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VCIG": {
+    "ticker": "VCIG",
+    "score_delta": -0.079,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "VCI Global Announces Settlement Agreement With Esousa Group Holdings",
+    "added_at": "2026-06-26T21:09:08.832199+00:00",
+    "expires": "2026-07-10T21:09:08.832207+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BMM": {
+    "ticker": "BMM",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Blue Moon Metals Enters Binding Agreement With Alpha Future Funds To Combine Subsidiaries Into Integrated Sulitjelma Mining Development Entity",
+    "added_at": "2026-06-26T21:09:08.836924+00:00",
+    "expires": "2026-07-26T21:09:08.836930+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
