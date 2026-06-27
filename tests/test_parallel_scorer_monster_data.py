@@ -111,3 +111,29 @@ def test_monster_data_fetch_is_explicit_opt_in(monkeypatch):
 
     assert result is not None
     assert calls == ["AAPL"]
+
+
+def test_vol_ratio_surfaced_into_scores(monkeypatch):
+    """PR-A5 regression guard: _score_one must copy vol_ratio from sig into
+    scores, because main.py journals p['scores'].get('vol_ratio'). Before the
+    fix, vol_ratio was computed in sig but never written to scores, so 100% of
+    journal rows bucketed as 'unknown'. latest_signals is stubbed to return
+    vol_ratio=1.2 and composite_score returns a dict WITHOUT vol_ratio, exactly
+    reproducing the original bug condition.
+    """
+    import src.parallel_scorer as ps
+
+    _patch_common(monkeypatch, ps)
+    monkeypatch.setattr(ps, "get_monster_data", lambda tk: {})
+    monkeypatch.setattr(ps, "score_monster", lambda **kwargs: {
+        "monster_score": 0.0,
+        "monster_reasons": [],
+        "is_monster": False,
+    })
+
+    result = ps._score_one("AAPL", _df(), _cfg())
+
+    assert result is not None
+    assert result["scores"].get("vol_ratio") == 1.2, (
+        "vol_ratio must be surfaced into scores so main.py can journal it"
+    )
