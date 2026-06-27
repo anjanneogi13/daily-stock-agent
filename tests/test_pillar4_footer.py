@@ -13,7 +13,7 @@ def test_weekly_renders_pillar4_block_when_journal_present(tmp_path, monkeypatch
 
     from src.weekly_review import build_report, format_telegram
     text = format_telegram(build_report())
-    assert "Brain learned this week" in text
+    assert "Config/journal activity this week" in text
     assert "lessons" in text or "patterns" in text
 
 
