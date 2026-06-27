@@ -59,10 +59,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # KILL-2 (audit 2026-06-24): strategy config is NO LONGER auto-committed.
+          # config/weights.json must change only via a reviewed PR (human-in-loop).
+          # The data/* files below are brain MEMORY and ARE still persisted on purpose.
           git add data/patterns.jsonl data/pattern_stats.json \
                   data/weight_proposals.jsonl data/weight_history.jsonl \
                   data/learning_journal.jsonl data/agent_memoir.json \
-                  config/weights.json 2>/dev/null || true
+                  2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "🧠 nightly brain maintenance $(date -u +%Y-%m-%d)"
             for i in 1 2 3; do
