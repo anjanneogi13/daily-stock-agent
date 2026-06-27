@@ -1,7 +1,7 @@
 """Finding #1 (May 4 2026): Soul faculty must count real outcome statuses."""
 import csv
 from pathlib import Path
-from src.agent_memoir import _load_closed_picks
+from experimental.agent_memoir import _load_closed_picks
 
 
 def test_memoir_counts_tp_hit_sl_hit_expired(tmp_path, monkeypatch):
@@ -20,7 +20,7 @@ def test_memoir_counts_tp_hit_sl_hit_expired(tmp_path, monkeypatch):
         w.writerows(rows)
 
     # Patch the module's PICKS_LOG path
-    import src.agent_memoir as memoir
+    import experimental.agent_memoir as memoir
     monkeypatch.setattr(memoir, "PICKS_LOG", fake_csv)
 
     closed = _load_closed_picks()

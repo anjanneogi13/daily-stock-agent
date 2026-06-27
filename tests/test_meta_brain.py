@@ -5,7 +5,7 @@ import pytest
 from datetime import datetime, timedelta
 from pathlib import Path
 
-from src import meta_brain as mb
+from experimental import meta_brain as mb
 
 
 @pytest.fixture

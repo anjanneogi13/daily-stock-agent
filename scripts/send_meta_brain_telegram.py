@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.meta_brain import build_self_improvement_digest, format_telegram_digest
+from experimental.meta_brain import build_self_improvement_digest, format_telegram_digest
 
 
 def _send(token, chat_id, text):
