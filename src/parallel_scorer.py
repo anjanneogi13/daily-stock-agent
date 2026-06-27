@@ -49,6 +49,9 @@ def _score_one(tk, df, cfg):
         sent = score_sentiment(news)
         scores = composite_score(sig, fund, sent, cfg["weights"],
                                  ticker=tk, sector_cfg=cfg.get("sector", {}))
+        # PR-A5 fix: surface vol_ratio into scores so main.py journals it
+        # (computed in sig but never copied -> 100% "unknown" buckets).
+        scores["vol_ratio"] = sig.get("vol_ratio")
 
         # Phase 2A: News watchlist boost
         wl_boost = watchlist_score_boost(tk)
