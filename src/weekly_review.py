@@ -275,7 +275,7 @@ def format_telegram(r: Dict) -> str:
         wh = _wa.history_summary(days=7)
         if lj["total"] or wh["total"]:
             lines.append("")
-            lines.append("🧠 *Brain learned this week (Pillar 4)*")
+            lines.append("🧠 *Config/journal activity this week (Pillar 4 — note: resets nightly, not persisted learning)*")
             if lj["total"]:
                 bk = lj["by_kind"]
                 bits = []

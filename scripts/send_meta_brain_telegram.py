@@ -1,7 +1,9 @@
-"""T50 — Sunday weekly Self-Improvement Report → Telegram (plain English).
+"""T50 — Sunday weekly activity digest → Telegram (plain English).
 
-For amateur users. No jargon. Reads what the brain learned this week
-and explains it the way a friend would over coffee.
+For amateur users. No jargon. Summarizes the brain's nightly config/journal
+activity from the last 7 days. NOTE: this activity is recomputed nightly and
+is NOT persisted learning (see docs/audit/COFOUNDER_AUDIT_2026-06-24.md) — the
+digest describes what changed, not durable self-improvement.
 """
 import os
 import sys
