@@ -159,7 +159,7 @@ def _step_lesson_gc() -> Dict:
 # ═══════════════════════════════════════════════════════════════
 def _step_agent_memoir() -> Dict:
     """Step 8 (added 2026-05-04): regenerate agent's self-portrait."""
-    from src.agent_memoir import write_memoir
+    from experimental.agent_memoir import write_memoir
     m = write_memoir()
     return {
         "lifetime_trades": m["lifetime_stats"]["closed_trades"],
