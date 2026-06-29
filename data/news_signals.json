@@ -600,32 +600,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CIIT": {
-    "ticker": "CIIT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Tianci International Q3 EPS $0.01 Up From $(0.43) YoY, Sales $4.311M Up From $1.948M YoY",
-    "added_at": "2026-06-22T23:00:47.103656+00:00",
-    "expires": "2026-06-29T23:00:47.103665+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GITS": {
-    "ticker": "GITS",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Global Interactive Q1 EPS $(0.14) Up From $(0.20) YoY, Sales $96.000",
-    "added_at": "2026-06-22T23:00:47.105845+00:00",
-    "expires": "2026-06-29T23:00:47.105852+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "EPC": {
     "ticker": "EPC",
     "score_delta": 0.157,
