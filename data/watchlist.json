@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPCX",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "SpaceX's record-breaking IPO represents a massive market debut and liquidity event, creating immediate trading opportunities as public investors gain access to a dominant space economy leader.",
-      "action_window": "intraday",
-      "headline": "Europe\u2019s Reckoning: SpaceX\u2019s Record IPO Exposes the Continent\u2019s Space Gap",
-      "url": "https://www.benzinga.com/Opinion/26/06/60138327/europes-reckoning-spacexs-record-ipo-exposes-the-continents-space-gap",
-      "source": "alpaca",
-      "added_at": "2026-06-26T19:31:34.458192+00:00"
-    },
-    {
       "ticker": "TNMG",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -26,15 +14,16 @@
     },
     {
       "ticker": "ABBV",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA approval expands SKYRIZI's addressable market into pediatric population for two indications, representing meaningful label expansion for a key growth drug, though this is incremental rather than transformational given existing adult approvals.",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial meeting primary endpoint with 60% reduction in disease progression risk represents a significant clinical milestone that could lead to regulatory approval and commercial opportunity in DLBCL market.",
       "action_window": "next_day",
-      "headline": "AbbVie Receives FDA Approval For SKYRIZI For The Treatment Of Children Six Years Of Age And Older With Moderate-To-Severe Plaque Psoriasis Who Are Candidates For Systemic Therapy Or Phototherapy, Or Active Psoriatic Arthritis",
-      "url": "https://www.benzinga.com/news/26/06/60142773/abbvie-receives-fda-approval-skyrizi-treatment-children-six-years-age-and-older-moderate-severe-plaq",
+      "headline": "AbbVie Reports Phase 3 EPCORE DLBCL-4 Results Showing Epcoritamab Combination Reduced Disease Progression Risk By Up To 60% In Relapsed Or Refractory DLBCL; Trial Met Its Primary Endpoint, Demonstrating Statistically Significant And Clinically Meaningful Improvement In Progression-Free Survival",
+      "url": "https://www.benzinga.com/markets/biotech/26/06/60173615/abbvie-reports-positive-phase-3-epcore-dlbcl-4-results-showing-epcoritamab-combination-reduced-disease-progression-risk-by-up-to-60-in-relapsed-or-refractory-dlbcl-trial-met-its-primary-endpoint-dem",
       "source": "alpaca",
-      "added_at": "2026-06-26T21:09:08.840337+00:00"
+      "added_at": "2026-06-26T21:09:08.840337+00:00",
+      "updated_at": "2026-06-29T20:26:24.995267+00:00"
     },
     {
       "ticker": "AEHR",
@@ -565,6 +554,139 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/06/60168342/doximitys-ai-expansion-raises-execution-risks-analyst",
       "source": "alpaca",
       "added_at": "2026-06-29T18:29:50.292669+00:00"
+    },
+    {
+      "ticker": "GPOR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Asset acquisition of undeveloped acreage expands GPOR's land position strategically, but $83M is a modest-sized deal relative to typical E&P transactions and impact depends on development economics.",
+      "action_window": "next_day",
+      "headline": "Gulfport Energy Acquires Net Undeveloped Acres In Ohio For ~$83M Through Ohio Oil And Gas Land Management Commission State Land Lease Sale",
+      "url": "https://www.benzinga.com/m/26/06/60173684/gulfport-energy-acquires-net-undeveloped-acres-ohio-83m-through-ohio-oil-and-gas-land-management-com",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995244+00:00"
+    },
+    {
+      "ticker": "VSH",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large $750M common stock offering will cause significant dilution to existing shareholders and typically creates immediate selling pressure despite debt reduction benefits.",
+      "action_window": "intraday",
+      "headline": "Vishay Intertechnology Launches $750M Common Stock Offering To Fund Growth Initiatives And Reduce Debt",
+      "url": "https://www.benzinga.com/news/26/06/60173673/vishay-intertechnology-launches-750m-common-stock-offering-fund-growth-initiatives-and-reduce-debt",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995256+00:00"
+    },
+    {
+      "ticker": "PURR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Index inclusion in Russell 3000/2000 and S&P Global BMI typically drives passive fund inflows and increased liquidity, creating near-term buying pressure.",
+      "action_window": "next_day",
+      "headline": "Hyperliquid Strategies Joins The Russell 3000, Russell 2000, And S&P Global BMI Indices",
+      "url": "https://www.benzinga.com/news/26/06/60173587/hyperliquid-strategies-joins-russell-3000-russell-2000-and-s-p-global-bmi-indices",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995274+00:00"
+    },
+    {
+      "ticker": "SILO",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Partnership engagement for clinical trial represents meaningful clinical development progress for a biotech, though this is a trial initiation rather than results or regulatory approval.",
+      "action_window": "next_day",
+      "headline": "Silo Pharma Engages Drug-Device Development Partner Resyca To Carry Out Trial To Evaluate Nasal Spray System For Nose-To-Brain Delivery Of SPC-15 To Treat Post-Traumatic Stress Disorder",
+      "url": "https://www.benzinga.com/news/26/06/60173553/silo-pharma-engages-drug-device-development-partner-resyca-carry-out-trial-evaluate-nasal-spray-syst",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995280+00:00"
+    },
+    {
+      "ticker": "GMAB",
+      "tradeable_score": 0.87,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial results meeting primary endpoint with 60% risk reduction in DLBCL is a significant clinical catalyst that typically drives strong stock movement in biotech.",
+      "action_window": "next_day",
+      "headline": "Genmab Reports Phase 3 EPCORE DLBCL-4 Results Showing Epcoritamab Combination Reduced Disease Progression Risk By Up To 60% In Relapsed Or Refractory DLBCL; Trial Met Its Primary Objective, Demonstrating Statistically Significant And Clinically Meaningful Improvement In Progression-Free Survival",
+      "url": "https://www.benzinga.com/general/biotech/26/06/60173498/genmab-reports-phase-3-epcore-dlbcl-4-results-showing-epcoritamab-combination-reduced-disease-progre",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995286+00:00"
+    },
+    {
+      "ticker": "AVAV",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "AeroVironment's FY2027 GAAP EPS guidance of $0.16-$0.48 dramatically misses consensus estimate of $1.26, representing a 62-87% shortfall at the midpoint.",
+      "action_window": "intraday",
+      "headline": "AeroVironment Sees FY2027 GAAP EPS $0.16-$0.48 vs $1.26 Est",
+      "url": "https://www.benzinga.com/news/26/06/60173404/aerovironment-sees-fy2027-gaap-eps-0-16-0-48-vs-1-26-est",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995291+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bullish analyst note on structural AI memory demand shift favoring HBM suppliers like Micron, though tempered by antitrust lawsuit mention and being research commentary rather than hard catalyst.",
+      "action_window": "next_day",
+      "headline": "'AI Equals Memory': Why The AI Boom Now Runs Through Micron, SK Hynix And Samsung",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60173329/ai-equals-memory-why-the-ai-boom-now-runs-through-micron-sk-hynix-and-samsung",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995305+00:00"
+    },
+    {
+      "ticker": "DLR",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major $7.8B acquisition of data center assets significantly expands Digital Realty's portfolio and represents a substantial strategic transaction requiring immediate trading consideration.",
+      "action_window": "intraday",
+      "headline": "Digital Realty Agrees To Acquire Stake In Three Data Centers For $7.8B From Blackstone-Affiliated Funds",
+      "url": "https://www.benzinga.com/m/26/06/60173141/digital-realty-agrees-acquire-stake-three-data-centers-7-8b-blackstone-affiliated-funds",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995310+00:00",
+      "updated_at": "2026-06-29T20:26:24.995332+00:00"
+    },
+    {
+      "ticker": "CURB",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A 10M share forward stock offering represents significant dilution for existing shareholders and typically causes immediate downward price pressure as supply increases.",
+      "action_window": "intraday",
+      "headline": "Curbline Properties Launches 10M Share Forward Stock Offering",
+      "url": "https://www.benzinga.com/news/26/06/60173231/curbline-properties-launches-10m-share-forward-stock-offering",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995315+00:00"
+    },
+    {
+      "ticker": "GANX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA IND clearance for Phase 2 clinical trial is a significant regulatory milestone that de-risks the development pathway and enables U.S. clinical progression for a Parkinson's disease treatment.",
+      "action_window": "next_day",
+      "headline": "Gain Therapeutics Obtains FDA Clearance Of IND To Advance GT-02287 Into Phase 2 Clinical Development for Parkinson\u2019s Disease; IND Authorization Paves The Way For Initiation Of GT-02287 Phase 2 Clinical Development In The U.S., Expected During Q3'26",
+      "url": "https://www.benzinga.com/news/26/06/60173206/gain-therapeutics-obtains-fda-clearance-ind-advance-gt-02287-phase-2-clinical-development-parkinson-",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995321+00:00"
+    },
+    {
+      "ticker": "PACS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Significant expansion through acquisition of 34 nursing facilities demonstrates growth strategy, though undisclosed amount creates valuation uncertainty.",
+      "action_window": "next_day",
+      "headline": "PACS Group to Acquires 34 Nursing Facilities; Amount Not Disclosed",
+      "url": "https://www.benzinga.com/m/26/06/60173142/pacs-group-acquires-34-nursing-facilities-amount-not-disclosed",
+      "source": "alpaca",
+      "added_at": "2026-06-29T20:26:24.995326+00:00"
     }
   ]
 }
