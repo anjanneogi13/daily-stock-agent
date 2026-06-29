@@ -2238,5 +2238,31 @@
     "added_at": "2026-06-29T21:51:57.426504+00:00",
     "expires": "2026-12-26T21:51:57.426510+00:00",
     "hard_block": true
+  },
+  "BENF": {
+    "ticker": "BENF",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "Beneficient Q4 EPS $(14.02) Misses $(0.37) Estimate, Sales $(7.842M) Miss $202.000K Estimate",
+    "added_at": "2026-06-29T22:50:58.170718+00:00",
+    "expires": "2026-07-06T22:50:58.170727+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VRXA": {
+    "ticker": "VRXA",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "this_week",
+    "headline": "VERAXA Unveils Cancer Therapy Platform, Sparks Partnering Talks at BIO 2026",
+    "added_at": "2026-06-29T22:50:58.179120+00:00",
+    "expires": "2026-07-06T22:50:58.179127+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
