@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AMT",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Goldman Sachs initiating coverage with a Buy rating is a meaningful positive catalyst from a top-tier investment bank that typically drives institutional buying interest.",
-      "action_window": "next_day",
-      "headline": "Goldman Sachs Assumes American Tower at Buy, Announces Price Target of $215",
-      "url": "https://www.benzinga.com/news/26/06/60135270/goldman-sachs-assumes-american-tower-buy-announces-price-target-215",
-      "source": "alpaca",
-      "added_at": "2026-06-26T17:43:32.208366+00:00"
-    },
-    {
-      "ticker": "SFTBY",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "SoftBank dropped significantly on news that OpenAI postponed IPO to 2027, delaying potential returns on a major investment holding.",
-      "action_window": "intraday",
-      "headline": "Why OpenAI's Listing Timeline Matters For SoftBank Stock",
-      "url": "https://www.benzinga.com/Opinion/26/06/60135113/why-openais-listing-timeline-matters-for-softbank-stock",
-      "source": "alpaca",
-      "added_at": "2026-06-26T17:43:32.208378+00:00"
-    },
-    {
-      "ticker": "RRR",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Goldman Sachs initiating coverage with a Buy rating is a meaningful positive catalyst from a tier-1 investment bank that typically drives institutional interest and near-term price momentum.",
-      "action_window": "next_day",
-      "headline": "Goldman Sachs Initiates Coverage On Red Rock Resorts with Buy Rating, Announces Price Target of $72",
-      "url": "https://www.benzinga.com/news/26/06/60134893/goldman-sachs-initiates-coverage-red-rock-resorts-buy-rating-announces-price-target-72",
-      "source": "alpaca",
-      "added_at": "2026-06-26T17:43:32.208389+00:00"
-    },
-    {
-      "ticker": "CODX",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "CDC Level 1 activation for Congo Ebola outbreak creates immediate demand catalyst for diagnostic testing companies and antiviral treatments, though U.S. risk remains contained.",
-      "action_window": "intraday",
-      "headline": "CDC Raises Its Response Level To Congo Ebola Outbreak To Level 1 Activation, Its Highest Level; Says Risk Of Ebola Spreading In The U.S. Remains Low",
-      "url": "https://www.benzinga.com/general/biotech/26/06/60134830/cdc-raises-its-response-level-congo-ebola-outbreak-level-1-activation-its-highest-level-says-risk-eb",
-      "source": "alpaca",
-      "added_at": "2026-06-26T17:43:32.208398+00:00"
-    },
-    {
-      "ticker": "PENN",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Goldman Sachs initiating coverage with a Buy rating is a meaningful positive catalyst from a top-tier investment bank that typically drives institutional interest and near-term price action.",
-      "action_window": "intraday",
-      "headline": "Goldman Sachs Initiates Coverage On PENN Entertainment with Buy Rating, Announces Price Target of $26",
-      "url": "https://www.benzinga.com/news/26/06/60134770/goldman-sachs-initiates-coverage-penn-entertainment-buy-rating-announces-price-target-26",
-      "source": "alpaca",
-      "added_at": "2026-06-26T17:43:32.208406+00:00"
-    },
-    {
       "ticker": "SPCX",
       "tradeable_score": 0.95,
       "sentiment": "bullish",
@@ -363,15 +303,16 @@
     },
     {
       "ticker": "BHVN",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "downgrade",
-      "rationale": "BofA downgrade combined with Phase 3 trial enrollment creates near-term selling pressure, though positive trial progress provides some offset to the bearish analyst call.",
+      "rationale": "Bank of America downgrade to Underperform with concerns about lead drug differentiation ahead of critical epilepsy trial data represents actionable negative catalyst with shares already falling.",
       "action_window": "intraday",
-      "headline": "Biohaven, Goodyear Tire And Other Big Stocks Moving Lower In Monday\u2019s Pre-Market Session",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60153200/biohaven-goodyear-tire-and-other-big-stocks-moving-lower-in-mondays-pre-market-session",
+      "headline": "Analyst Warns Biohaven's Lead Drug May Struggle To Stand Out",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/06/60168944/analyst-warns-biohavens-lead-drug-may-struggle-to-stand-out",
       "source": "alpaca",
-      "added_at": "2026-06-29T12:26:05.119413+00:00"
+      "added_at": "2026-06-29T12:26:05.119413+00:00",
+      "updated_at": "2026-06-29T18:29:50.292645+00:00"
     },
     {
       "ticker": "NUVB",
@@ -540,6 +481,90 @@
       "url": "https://www.benzinga.com/news/26/06/60163216/jp-morgan-initiates-coverage-quantinuum-overweight-rating-announces-price-target-97",
       "source": "alpaca",
       "added_at": "2026-06-29T16:24:31.068447+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Data breach exposing unreleased iPhone 18 Pro documents creates supply chain security concerns and potential competitive disadvantage, though impact may be partially mitigated by Apple's brand strength and market position.",
+      "action_window": "intraday",
+      "headline": "Files On Unreleased iPhone 18 Pro Posted On Dark Web After Apple Supplier Tata Electronics Hack-Documents; List Of Suppliers, Parts, Photos Of iPhone 18 Pro Are Part Of Tata Electronics Data Breach; Apple Is Concerned About Leak Of iPhone 18 Pro Documents On Dark Web",
+      "url": "https://www.benzinga.com/news/26/06/60169633/files-unreleased-iphone-18-pro-posted-dark-web-after-apple-supplier-tata-electronics-hack-documents-",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292618+00:00"
+    },
+    {
+      "ticker": "RDZN",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q4 EPS missed estimates by 50% ($0.09 vs $0.06 expected) despite revenue beat of 5.4%, indicating profitability concerns outweigh top-line growth.",
+      "action_window": "intraday",
+      "headline": "Reported Earlier: Roadzen Q4 EPS $(0.09) Misses $(0.06) Estimate, Sales $16.121M Beat $15.289M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/06/60169210/reported-earlier-roadzen-q4-eps-0-09-misses-0-06-estimate-sales-16-121m-beat-15-289m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292630+00:00"
+    },
+    {
+      "ticker": "ILLR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Reverse stock split authorization (up to 1-for-10) and name change typically signal distressed company situation and share price weakness, though shareholder approval reduces immediate execution uncertainty.",
+      "action_window": "next_day",
+      "headline": "Triller Issues Shareholder Of AGM Outcomes, Changes The Company\u2019s Name From Triller Group To Eight Holdings; Gets Shareholder Authorization For A Reverse Stock Split At A Ratio Of No More Than 1-for-10 Within One Year",
+      "url": "https://www.benzinga.com/news/26/06/60169024/triller-issues-shareholder-agm-outcomes-changes-company-s-name-triller-group-eight-holdings-gets-sha",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292637+00:00"
+    },
+    {
+      "ticker": "SMCI",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Government raid related to chip smuggling probe represents serious regulatory/legal risk with potential for supply chain disruption, compliance penalties, and reputational damage.",
+      "action_window": "intraday",
+      "headline": "'Super Micro Office\u2019s Raided As Taiwan Expands Chip Smuggling Probe'",
+      "url": "https://www.benzinga.com/news/26/06/60168921/super-micro-office-s-raided-taiwan-expands-chip-smuggling-probe",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292651+00:00"
+    },
+    {
+      "ticker": "URI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BNP Paribas upgrade to Outperform with a $1320 price target represents a meaningful positive catalyst from a major institutional bank that typically drives investor repositioning.",
+      "action_window": "next_day",
+      "headline": "BNP Paribas Upgrades United Rentals to Outperform, Announces $1320 Price Target",
+      "url": "https://www.benzinga.com/news/26/06/60168902/bnp-paribas-upgrades-united-rentals-outperform-announces-1320-price-target",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292656+00:00"
+    },
+    {
+      "ticker": "INIO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BNP Paribas initiating coverage with Outperform rating is a meaningful positive catalyst from a major European bank that typically drives near-term buying interest.",
+      "action_window": "next_day",
+      "headline": "BNP Paribas Initiates Coverage On Innio with Outperform Rating, Announces Price Target of $48",
+      "url": "https://www.benzinga.com/news/26/06/60168720/bnp-paribas-initiates-coverage-innio-outperform-rating-announces-price-target-48",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292661+00:00"
+    },
+    {
+      "ticker": "DOCS",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BofA downgrade to Underperform with significant price target cut to $20 citing multiple headwinds including soft pharma ad demand and AI execution risks represents a meaningful negative catalyst from a major bank.",
+      "action_window": "intraday",
+      "headline": "Doximity's AI Expansion Raises Execution Risks: Analyst",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/06/60168342/doximitys-ai-expansion-raises-execution-risks-analyst",
+      "source": "alpaca",
+      "added_at": "2026-06-29T18:29:50.292669+00:00"
     }
   ]
 }
