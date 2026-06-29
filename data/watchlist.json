@@ -1,126 +1,6 @@
 {
   "items": [
     {
-      "ticker": "NKE",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Multiple analyst downgrades including Nike losing bullish rating creates near-term selling pressure, though impact diluted across 5 stocks.",
-      "action_window": "intraday",
-      "headline": "This Nike Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/06/60123830/this-nike-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday-4",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152201+00:00"
-    },
-    {
-      "ticker": "A",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bernstein reinstating Outperform rating with $155 price target is a meaningful catalyst from a major sell-side firm that typically drives near-term buying interest.",
-      "action_window": "intraday",
-      "headline": "Bernstein Reinstates Outperform on Agilent Technologies, Announces $155 Price Target",
-      "url": "https://www.benzinga.com/news/26/06/60123727/bernstein-reinstates-outperform-agilent-technologies-announces-155-price-target",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152212+00:00"
-    },
-    {
-      "ticker": "INFQ",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Wedbush initiating coverage with bullish stance calling stock 'meaningfully mispriced' with 25% upside target represents a meaningful catalyst from a reputable firm, though impact may be partially muted as initiation coverage typically carries less weight than upgrades.",
-      "action_window": "intraday",
-      "headline": "Top Wall Street Analyst Says This Quantum Computing Stock Is 'Meaningfully Mispriced'\u2014 Sees 25% Upside As Trump's Quantum Push Gathers Steam",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/06/60123587/top-wall-street-analyst-says-this-quantum-computing-stock-is-meaningfully-mispriced-sees-25-upside-as-trumps-quantum-push-gathers-steam",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152220+00:00"
-    },
-    {
-      "ticker": "MOS",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Rothschild & Co initiated coverage with a Buy rating and $30 price target, which is a positive catalyst but as an initiation from a smaller investment bank it has moderate rather than high trading impact.",
-      "action_window": "next_day",
-      "headline": "Rothschild & Co Initiates Coverage On Mosaic with Buy Rating, Announces Price Target of $30",
-      "url": "https://www.benzinga.com/news/26/06/60123535/rothschild-co-initiates-coverage-mosaic-buy-rating-announces-price-target-30",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152236+00:00"
-    },
-    {
-      "ticker": "ESS",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Multiple analyst upgrades including Essex Property Trust turning bullish provides positive trading catalyst, though impact is moderate as analyst revisions are typically partially anticipated.",
-      "action_window": "intraday",
-      "headline": "This Essex Property Trust Analyst Turns Bullish; Here Are Top 4 Upgrades For Friday",
-      "url": "https://www.benzinga.com/news/26/06/60123453/this-essex-property-trust-analyst-turns-bullish-here-are-top-4-upgrades-for-friday",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152244+00:00"
-    },
-    {
-      "ticker": "IAUX",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Termination of offtake agreement suggests i-80 Gold may be seeking better terms or greater operational flexibility, potentially bullish for the company but requires confirmation of reasoning.",
-      "action_window": "intraday",
-      "headline": "i-80 GOLD Terminates Offtake Agreement With Vox Royalty Cayman",
-      "url": "https://www.benzinga.com/news/26/06/60123404/i-80-gold-terminates-offtake-agreement-vox-royalty-cayman",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152250+00:00"
-    },
-    {
-      "ticker": "TMHC",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Raymond James downgrade from Outperform to Market Perform signals reduced conviction and typically triggers selling pressure, though impact is moderate as it's a move to neutral rather than underweight.",
-      "action_window": "intraday",
-      "headline": "Raymond James Downgrades Taylor Morrison Home to Market Perform",
-      "url": "https://www.benzinga.com/news/26/06/60123372/raymond-james-downgrades-taylor-morrison-home-market-perform",
-      "source": "alpaca",
-      "added_at": "2026-06-26T13:07:19.152261+00:00"
-    },
-    {
-      "ticker": "FCEL",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Stock already climbing on dual catalysts of analyst upgrade and major clean-power agreement announcement, creating momentum trading opportunity.",
-      "action_window": "intraday",
-      "headline": "What's Going On With The Boost In FuelCell Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60130854/whats-going-on-with-the-boost-in-fuelcell-stock",
-      "source": "alpaca",
-      "added_at": "2026-06-26T15:38:12.076459+00:00"
-    },
-    {
-      "ticker": "OMER",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "fda_rejection",
-      "rationale": "EMA rejection of Yartemlea significantly limits European market opportunity despite prior FDA approval, cutting revenue potential and creating regulatory uncertainty for a key product.",
-      "action_window": "intraday",
-      "headline": "FDA Approved, Europe Unconvinced: Omeros' Stem Cell Transplant Treatment Hits Regulatory Divide",
-      "url": "https://www.benzinga.com/news/health-care/26/06/60130423/fda-approved-europe-unconvinced-omeros-stem-cell-transplant-treatment-hits-regulatory-divide",
-      "source": "alpaca",
-      "added_at": "2026-06-26T15:38:12.076484+00:00"
-    },
-    {
-      "ticker": "GVA",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Stephens initiating coverage with Overweight rating and $180 price target is a meaningful bullish catalyst from a regional investment bank, though initial coverage typically has moderate trading impact compared to upgrades from existing coverage.",
-      "action_window": "intraday",
-      "headline": "Stephens & Co. Initiates Coverage On Granite Construction with Overweight Rating, Announces Price Target of $180",
-      "url": "https://www.benzinga.com/news/26/06/60130245/stephens-co-initiates-coverage-granite-construction-overweight-rating-announces-price-target-180",
-      "source": "alpaca",
-      "added_at": "2026-06-26T15:38:12.076501+00:00"
-    },
-    {
       "ticker": "AMT",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -600,6 +480,66 @@
       "url": "https://www.benzinga.com/news/26/06/60153031/energy-recovery-announces-five-new-contracted-wastewater-projects-india-multiple-px-pressure-exchang",
       "source": "alpaca",
       "added_at": "2026-06-29T12:26:05.119460+00:00"
+    },
+    {
+      "ticker": "YMM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan upgrade to Overweight with $10 price target is a meaningful catalyst from a major investment bank that typically drives near-term buying pressure.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Upgrades Full Truck Alliance Co to Overweight, Raises Price Target to $10",
+      "url": "https://www.benzinga.com/news/26/06/60164138/jp-morgan-upgrades-full-truck-alliance-co-overweight-raises-price-target-10",
+      "source": "alpaca",
+      "added_at": "2026-06-29T16:24:31.068412+00:00"
+    },
+    {
+      "ticker": "WY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains positive stance with price target increase to $31, signaling increased upside potential and analyst confidence in Weyerhaeuser's outlook.",
+      "action_window": "next_day",
+      "headline": "JP Morgan Maintains Overweight on Weyerhaeuser, Raises Price Target to $31",
+      "url": "https://www.benzinga.com/news/26/06/60163727/jp-morgan-maintains-overweight-weyerhaeuser-raises-price-target-31",
+      "source": "alpaca",
+      "added_at": "2026-06-29T16:24:31.068426+00:00"
+    },
+    {
+      "ticker": "MNSO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "HK$2 billion share buyback program is a meaningful capital return signal that drove immediate 6% price appreciation, indicating strong management confidence and shareholder value commitment.",
+      "action_window": "intraday",
+      "headline": "Why Is MINISO Group Stock Gaining Monday?",
+      "url": "https://www.benzinga.com/markets/buybacks/26/06/60163581/why-is-miniso-group-stock-gaining-monday",
+      "source": "alpaca",
+      "added_at": "2026-06-29T16:24:31.068432+00:00"
+    },
+    {
+      "ticker": "DPRO",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New contract win for campus security drone services represents tangible revenue opportunity with expansion potential, though specific deal size and financial terms are not disclosed.",
+      "action_window": "intraday",
+      "headline": "'Drone Applications Are Almost Endless\u2019: Inside Draganfly\u2019s Campus Security Win",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60163459/drone-applications-draganfly-campus-security-win",
+      "source": "alpaca",
+      "added_at": "2026-06-29T16:24:31.068440+00:00"
+    },
+    {
+      "ticker": "QNT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan initiating coverage with an Overweight rating and specific price target of $97 is a meaningful catalyst that typically drives significant trading interest and upward price movement.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Initiates Coverage On Quantinuum with Overweight Rating, Announces Price Target of $97",
+      "url": "https://www.benzinga.com/news/26/06/60163216/jp-morgan-initiates-coverage-quantinuum-overweight-rating-announces-price-target-97",
+      "source": "alpaca",
+      "added_at": "2026-06-29T16:24:31.068447+00:00"
     }
   ]
 }
