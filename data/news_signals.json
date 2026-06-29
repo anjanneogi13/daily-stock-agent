@@ -587,19 +587,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ATD.TO": {
-    "ticker": "ATD.TO",
-    "score_delta": 0.086,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.6,
-    "action_window": "intraday",
-    "headline": "Alimentation Couche-Tard Q4 Adj. EPS $0.73 Beats $0.53 Estimate, Sales $19.488M Miss $17.932B Estimate",
-    "added_at": "2026-06-22T21:20:13.627705+00:00",
-    "expires": "2026-06-29T21:20:13.627710+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MGNX": {
     "ticker": "MGNX",
     "score_delta": 0.15,
@@ -1087,19 +1074,6 @@
     "headline": "Patent And Market Court Of Sweden Postpones Publication Of Its Judgement In Antitrust Claims Against Google Brought By Klarna's Subsidiary",
     "added_at": "2026-06-24T19:29:51.064020+00:00",
     "expires": "2026-07-08T19:29:51.064026+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAVEUSD": {
-    "ticker": "AAVEUSD",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "Standard Chartered Says Forget Bitcoin, ETH Because AAVE Can Do A 50X By 2030",
-    "added_at": "2026-06-24T21:12:05.032316+00:00",
-    "expires": "2026-06-29T21:12:05.032323+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2229,5 +2203,40 @@
     "expires": "2026-07-13T20:26:24.992443+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TCS": {
+    "ticker": "TCS",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Tecsys Sees FY2027 Sales $197.005M-$200.868M vs $207.767M Est",
+    "added_at": "2026-06-29T21:51:57.417984+00:00",
+    "expires": "2026-07-13T21:51:57.417991+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TLRY": {
+    "ticker": "TLRY",
+    "score_delta": 0.032,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Tilray Brands To Acquire HelloMD Corporation; Financial Terms Not Disclosed",
+    "added_at": "2026-06-29T21:51:57.424504+00:00",
+    "expires": "2026-07-13T21:51:57.424510+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MTX": {
+    "ticker": "MTX",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Minerals Technologies Files A Plan Of Reorganization In The Chapter 11 Cases Of Its Subsidiaries BMI Oldco And Its Affiliated Debtors, Pending Before The U.S. Bankruptcy Court For The Southern Distric",
+    "added_at": "2026-06-29T21:51:57.426504+00:00",
+    "expires": "2026-12-26T21:51:57.426510+00:00",
+    "hard_block": true
   }
 }
