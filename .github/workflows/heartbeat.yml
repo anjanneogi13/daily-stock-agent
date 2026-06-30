@@ -1,0 +1,55 @@
+name: Daily Heartbeat
+
+# Positive liveness signal (vision item #29).
+#
+# watchdog.yml only alarms ON FAILURE, so a silent failure stays silent. This
+# posts a daily "I'm alive + what I logged today" message to Telegram. It reads
+# only durable on-disk artifacts; it does not fabricate a send-recap.
+#
+# Channel: prefers HEARTBEAT_CHAT_ID, else falls back to TELEGRAM_CHAT_ID /
+# TELEGRAM_GROUP_CHAT_ID -- works immediately on the main channel and
+# self-separates once HEARTBEAT_CHAT_ID is set (groundwork for #4/#14).
+#
+# Safety:
+# - This workflow does not create picks.
+# - This workflow does not bypass any timing gate.
+# - This workflow does not enable paper/live trading.
+# - Missing creds => the sender exits 0 (never fails the run).
+
+on:
+  schedule:
+    # ~10:00 ET, covered for both EDT (14:00 UTC) and EST (15:00 UTC).
+    # The ET guard below skips the duplicate/wrong DST hour.
+    - cron: '0 14,15 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Send daily heartbeat
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+          HEARTBEAT_CHAT_ID: ${{ secrets.HEARTBEAT_CHAT_ID }}
+        run: |
+          ET_HOUR=$(TZ='America/New_York' date +%H)
+          ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
+          echo "Heartbeat firing at $ET_DATE $ET_HOUR ET"
+          # Skip duplicate DST fire -- only run in the 10:xx ET hour.
+          if [ "$ET_HOUR" != "10" ]; then
+            echo "Wrong DST slot ($ET_HOUR ET) -- skipping"
+            exit 0
+          fi
+          python scripts/send_heartbeat.py
