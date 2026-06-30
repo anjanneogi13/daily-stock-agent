@@ -62,7 +62,14 @@ jobs:
           # KILL-2 (audit 2026-06-24): strategy config is NO LONGER auto-committed.
           # config/weights.json must change only via a reviewed PR (human-in-loop).
           # The data/* files below are brain MEMORY and ARE still persisted on purpose.
-          git add data/patterns.jsonl data/pattern_stats.json \
+          # Task 1 (audit P0): force-add (-f) is REQUIRED. data/ is gitignored
+          # (.gitignore:225), so a plain `git add` of these paths is a silent
+          # no-op -- which is why brain state never persisted (the audit's
+          # "5%/week cap silently became 5%/night" bug: weight_history.jsonl
+          # was never committed, so the weekly accounting reset every run).
+          # -f bypasses the ignore for these specific, intentionally-persisted
+          # state files while keeping them ignored for humans locally.
+          git add -f data/patterns.jsonl data/pattern_stats.json \
                   data/weight_proposals.jsonl data/weight_history.jsonl \
                   data/learning_journal.jsonl data/agent_memoir.json \
                   2>/dev/null || true
