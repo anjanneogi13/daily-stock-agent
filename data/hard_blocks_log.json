@@ -520,5 +520,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-30 12:08:47",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "MTX",
+        "reason": "catastrophic news (BANKRUPTCY_RISK: Minerals Technologies Files A Plan Of Reorganization In The Chapter 11 Cases Of Its Subsidiaries BMI)",
+        "block_type": "catastrophic_news"
+      }
+    ]
   }
 ]
