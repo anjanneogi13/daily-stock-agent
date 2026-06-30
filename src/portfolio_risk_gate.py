@@ -30,6 +30,9 @@ DEFAULT_MAX_NEW_PICKS_PER_DAY = 5
 DEFAULT_MAX_PER_SECTOR = 2
 DEFAULT_MAX_PER_TAG = 2
 DEFAULT_MIN_RISK_REWARD = 1.0
+DEFAULT_MAX_PAIRWISE_CORRELATION = 0.7
+DEFAULT_CORR_LOOKBACK_DAYS = 60
+MIN_CORR_OVERLAP_OBS = 30  # need >=30 aligned return points to trust a correlation
 
 
 def _safe_float(value: Any, default: float | None = None) -> float | None:
@@ -136,7 +139,72 @@ def build_portfolio_risk_config(cfg: dict | None) -> dict:
         "max_per_sector": max(1, _safe_int(risk.get("max_per_sector"), DEFAULT_MAX_PER_SECTOR)),
         "max_per_tag": max(1, _safe_int(risk.get("max_per_tag"), DEFAULT_MAX_PER_TAG)),
         "min_risk_reward": _safe_float(risk.get("min_risk_reward"), DEFAULT_MIN_RISK_REWARD) or DEFAULT_MIN_RISK_REWARD,
+        "max_pairwise_correlation": _safe_float(
+            risk.get("max_pairwise_correlation"), DEFAULT_MAX_PAIRWISE_CORRELATION
+        ),
+        "corr_lookback_days": max(2, _safe_int(risk.get("corr_lookback_days"), DEFAULT_CORR_LOOKBACK_DAYS)),
     }
+
+
+def _closes_from_history(history: Any, ticker: str):
+    """Return a pandas Series of closes for `ticker`, or None.
+
+    Robust to the normalized OHLCV frames (lowercase "close") AND raw
+    yfinance frames ("Close"). Returns None on anything unusable so the
+    caller can fail OPEN (never reject a pick because of missing/odd data).
+    """
+    if not history:
+        return None
+    frame = history.get(ticker) if hasattr(history, "get") else None
+    if frame is None:
+        return None
+    try:
+        # Accept a DataFrame (preferred) or a bare Series of closes.
+        if hasattr(frame, "columns"):
+            col = None
+            for cand in ("close", "Close", "adj_close", "Adj Close"):
+                if cand in frame.columns:
+                    col = cand
+                    break
+            if col is None:
+                return None
+            series = frame[col]
+        else:
+            series = frame  # assume already a close series
+        series = series.dropna()
+        if len(series) == 0:
+            return None
+        return series
+    except Exception:
+        return None
+
+
+def _pairwise_return_correlation(a_closes, b_closes, lookback: int):
+    """Pearson correlation of daily % returns over the last `lookback` days,
+    aligned on common dates. Returns None when there is insufficient overlap
+    or any computation problem (caller treats None as "no rejection").
+    """
+    try:
+        import pandas as pd  # local import: keep module import light + optional
+        a = a_closes.tail(lookback + 1)
+        b = b_closes.tail(lookback + 1)
+        df = pd.concat([a, b], axis=1, join="inner")
+        if df.shape[0] < 2:
+            return None
+        returns = df.pct_change().dropna()
+        if returns.shape[0] < MIN_CORR_OVERLAP_OBS:
+            return None  # thin overlap -> fail OPEN (do not reject)
+        col_a = returns.iloc[:, 0]
+        col_b = returns.iloc[:, 1]
+        # Guard against a flat (zero-variance) series -> correlation undefined.
+        if float(col_a.std()) == 0.0 or float(col_b.std()) == 0.0:
+            return None
+        corr = float(col_a.corr(col_b))
+        if corr != corr:  # NaN check
+            return None
+        return corr
+    except Exception:
+        return None
 
 
 def evaluate_candidate_portfolio_risk(
@@ -189,6 +257,7 @@ def apply_portfolio_risk_gate(
     cfg: dict | None,
     *,
     existing_positions: list[dict] | None = None,
+    price_history: dict[str, Any] | None = None,
 ) -> tuple[list[dict], list[dict], dict]:
     """PR-A: existing_positions is IGNORED for slot accounting (kept in
     signature for backward compat). Today-only diversity cap.
@@ -198,6 +267,21 @@ def apply_portfolio_risk_gate(
 
     sector_counts: dict[str, int] = {}
     tag_counts: dict[str, int] = {}
+
+    # Task 8 (#28): 60-day return correlation guard. Disabled when threshold
+    # >= 1.0 or no price_history supplied. Additive + fail-open: a correlation
+    # problem must never zero-out the day, so it can only REJECT extra picks,
+    # never cause a NO_PICK on its own.
+    corr_threshold = risk_config.get("max_pairwise_correlation")
+    corr_lookback = int(risk_config.get("corr_lookback_days", DEFAULT_CORR_LOOKBACK_DAYS))
+    corr_enabled = bool(
+        price_history
+        and corr_threshold is not None
+        and corr_threshold < 1.0
+    )
+    # ticker -> close series, cached for accepted finalists only.
+    accepted_close_series: dict[str, Any] = {}
+    correlation_rejections = 0
 
     allowed: list[dict] = []
     blocked: list[dict] = []
@@ -233,11 +317,49 @@ def apply_portfolio_risk_gate(
             })
             continue
 
+        # Task 8 (#28): reject if too correlated with an already-accepted finalist.
+        if corr_enabled:
+            try:
+                this_closes = _closes_from_history(price_history, ticker)
+                if this_closes is not None:
+                    worst = None  # (corr, other_ticker)
+                    for other_tk, other_closes in accepted_close_series.items():
+                        corr = _pairwise_return_correlation(this_closes, other_closes, corr_lookback)
+                        if corr is None:
+                            continue
+                        if corr > corr_threshold and (worst is None or corr > worst[0]):
+                            worst = (corr, other_tk)
+                    if worst is not None:
+                        correlation_rejections += 1
+                        blocked.append({
+                            "ticker": ticker,
+                            "rejection_stage": "portfolio_risk",
+                            "block_type": "correlation",
+                            "reason": (
+                                f"{corr_lookback}d return corr {worst[0]:.2f} with "
+                                f"{worst[1]} exceeds {corr_threshold:.2f}"
+                            ),
+                            "candidate": candidate,
+                            "detail": {
+                                **detail,
+                                "correlation": round(worst[0], 4),
+                                "correlated_with": worst[1],
+                                "correlation_threshold": corr_threshold,
+                            },
+                        })
+                        continue
+            except Exception as _ce:  # fail OPEN: never let corr math drop the day
+                print(f"[portfolio_risk_gate] correlation check skipped for {ticker}: {_ce}")
+
         sector = detail["sector"]
         tag = detail["tag"]
         sector_counts[sector] = sector_counts.get(sector, 0) + 1
         if tag:
             tag_counts[tag] = tag_counts.get(tag, 0) + 1
+        if corr_enabled:
+            _cs = _closes_from_history(price_history, ticker)
+            if _cs is not None:
+                accepted_close_series[ticker] = _cs
 
         candidate["portfolio_risk"] = {
             "passed": True,
@@ -259,5 +381,8 @@ def apply_portfolio_risk_gate(
         "today_tag_counts": tag_counts,
         "final_sector_counts": sector_counts,
         "final_tag_counts": tag_counts,
+        "correlation_guard_enabled": corr_enabled,
+        "correlation_threshold": corr_threshold,
+        "correlation_rejections": correlation_rejections,
     }
     return allowed, blocked, summary

@@ -1331,6 +1331,10 @@ def run():
             top,
             cfg,
             existing_positions=open_positions,
+            # Task 8 (#28): feed the fetched OHLCV (ticker->DataFrame) so the
+            # gate can reject finalists that are too correlated (60d returns).
+            # Optional + fail-open: if `data` is unusable the guard self-disables.
+            price_history=data,
         )
         pipeline["portfolio_risk_blocked_count"] = len(risk_blocked)
         pipeline["post_portfolio_risk_pick_count"] = len(top)
