@@ -39,8 +39,24 @@ def update_pick_row(pick_date: str, ticker: str, updates: Dict) -> bool:
                 found = True
             rows.append(row)
     if found:
-        with LOG_PATH.open("w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
-            w.writeheader()
-            w.writerows(rows)
+        # P1 (COFOUNDER_AUDIT_2026-06-24 #3 / audit PV-X2): write atomically.
+        # Previously this opened LOG_PATH in "w" (truncate) and rewrote in
+        # place, so a kill mid-write left the durable pick history truncated
+        # or empty. Mirror pick_evaluator._save_picks: write a sibling .tmp
+        # then atomically rename onto the real path (atomic on POSIX). On any
+        # exception the original picks_log.csv is left intact.
+        tmp = LOG_PATH.with_suffix(LOG_PATH.suffix + ".tmp")
+        try:
+            with tmp.open("w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+                w.writeheader()
+                w.writerows(rows)
+            tmp.replace(LOG_PATH)
+        finally:
+            # Clean up a leftover tmp if the write failed before replace().
+            if tmp.exists():
+                try:
+                    tmp.unlink()
+                except OSError:
+                    pass
     return found
