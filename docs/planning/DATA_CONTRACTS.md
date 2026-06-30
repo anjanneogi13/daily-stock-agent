@@ -141,7 +141,7 @@ Primary owners:
 - `main.py`
 - `src/pick_logger.py`
 - `src/picks_csv.py`
-- `evaluate_picks.py`
+- `scripts/evaluate_picks.py`
 - `scripts/intraday_monitor.py`
 
 May affect official pick statistics:

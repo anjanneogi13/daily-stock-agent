@@ -202,7 +202,6 @@ Current product rule:
 
 Likely files:
 
-- `evaluate_picks.py`
 - `scripts/evaluate_picks.py`
 - `.github/workflows/evaluate.yml`
 - `src/pick_evaluator.py`
