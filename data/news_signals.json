@@ -626,19 +626,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BDX": {
-    "ticker": "BDX",
-    "score_delta": 0.029,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Becton Dickinson's CentroVena One Insertion System Awarded Innovative Technology Contract From Vizient; Terms Not Disclosed",
-    "added_at": "2026-06-23T10:58:42.595377+00:00",
-    "expires": "2026-06-30T10:58:42.595384+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "META": {
     "ticker": "META",
     "score_delta": -0.064,
@@ -675,19 +662,6 @@
     "headline": "'Bristow Is Said to Near Berry Aviation Deal in Government Push' - Bloomberg",
     "added_at": "2026-06-23T10:58:42.600787+00:00",
     "expires": "2026-07-07T10:58:42.600792+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VIAV": {
-    "ticker": "VIAV",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "VIAVI Solutions Launches Ultra Ethernet Transport Validation Solution For AI Fabrics, Targeting Hyperscalers, Cloud & Neocloud Providers, And Network Equipment Makers",
-    "added_at": "2026-06-23T10:58:42.605838+00:00",
-    "expires": "2026-06-30T10:58:42.605843+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2301,6 +2275,71 @@
     "headline": "BTIG Maintains Buy on Abivax, Raises Price Target to $175",
     "added_at": "2026-06-30T10:51:46.623483+00:00",
     "expires": "2026-07-05T10:51:46.623487+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNOA": {
+    "ticker": "SNOA",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Sonoma Pharmaceuticals Receives FDA 510(k) Clearance For Its Microdacyn Wound Irrigation Solution",
+    "added_at": "2026-06-30T13:07:43.961826+00:00",
+    "expires": "2026-07-30T13:07:43.961833+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNDK": {
+    "ticker": "SNDK",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Bernstein Maintains Outperform on SanDisk, Raises Price Target to $3000",
+    "added_at": "2026-06-30T13:07:43.964591+00:00",
+    "expires": "2026-07-05T13:07:43.964597+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BULL": {
+    "ticker": "BULL",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Webull Canada\u00a0Crypto Receives Canadian Investment Regulatory Organization\u00a0Approval To Start Offering Cryptocurrency Trading",
+    "added_at": "2026-06-30T13:07:43.968748+00:00",
+    "expires": "2026-07-30T13:07:43.968753+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MODD": {
+    "ticker": "MODD",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "EXCLUSIVE: Modular Medical Says First Patients Begin Using Pivot Tubeless Insulin Patch Pump; Expects To Target Multibillion-Dollar Market",
+    "added_at": "2026-06-30T13:07:43.970792+00:00",
+    "expires": "2026-07-07T13:07:43.970797+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IFF": {
+    "ticker": "IFF",
+    "score_delta": 0.025,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Argus Research Maintains Buy on Intl Flavors & Fragrances, Raises Price Target to $85",
+    "added_at": "2026-06-30T13:07:43.974946+00:00",
+    "expires": "2026-07-05T13:07:43.974951+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
