@@ -32,6 +32,7 @@ from src.auto_pause import compute_score as _pause_score, format_summary as _pau
 from src.pause_state import is_paused as _is_paused, maybe_auto_pause as _maybe_pause, format_pause_alert as _pause_alert
 from src.market_calendar import is_trading_day as _is_td, reason_market_closed as _why_closed, next_trading_day as _next_td
 from src.github_observability import github_observability_metadata
+from src.official_pick_artifact import config_hash as _config_hash
 
 def _safe_trade_type_for_pick(scores: dict, pick_date=None, sig: dict = None, gap_pct: float = 0.0) -> str:
     """Calendar-safe DAY/SWING classifier.
@@ -377,7 +378,7 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
             "contract_version": CONTRACT_VERSION,
             "strategy_version": STRATEGY_VERSION,
             "scoring_version": SCORING_VERSION,
-            "config_version": os.getenv("CONFIG_VERSION", "config.yaml"),
+            "config_version": _config_hash(),  # #22: real content hash (shared helper)
             "selection_time_et": now_et,
             "workflow_run_id": os.getenv("GITHUB_RUN_ID", "local"),
             "commit_sha": os.getenv("GITHUB_SHA", "local"),
