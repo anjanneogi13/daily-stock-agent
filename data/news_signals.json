@@ -639,32 +639,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "UAL": {
-    "ticker": "UAL",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "ignore",
-    "headline": "United Airlines And DIRECTV Team Up To Stream Live TV On Starlink-Enabled Seatback Screens This Summer",
-    "added_at": "2026-06-23T18:20:59.151068+00:00",
-    "expires": "2026-06-30T18:20:59.151074+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "THOR": {
-    "ticker": "THOR",
-    "score_delta": 0.018,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "As Investors Cool On The Magnificent Seven, Thornburg Debuts Dividend-And-Options ETF THOR",
-    "added_at": "2026-06-23T18:20:59.139204+00:00",
-    "expires": "2026-06-30T18:20:59.139210+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SGMO": {
     "ticker": "SGMO",
     "score_delta": -1.0,
@@ -1191,32 +1165,6 @@
     "headline": "Jack Henry, Google Cloud Expand Partnership To Provide AI-Driven Securities Capabilities For Banks, Credit Unions",
     "added_at": "2026-06-25T16:00:44.115021+00:00",
     "expires": "2026-07-02T16:00:44.115028+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ARGX": {
-    "ticker": "ARGX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Argenx Analyst Is Bullish Despite Changes To Phase 3 Myositis Study",
-    "added_at": "2026-06-25T18:13:18.699107+00:00",
-    "expires": "2026-06-30T18:13:18.699114+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PRIM": {
-    "ticker": "PRIM",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Goldman Sachs Upgrades Primoris Services to Neutral, Lowers Price Target to $102",
-    "added_at": "2026-06-25T18:13:18.701490+00:00",
-    "expires": "2026-06-30T18:13:18.701496+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2340,6 +2288,19 @@
     "headline": "B of A Securities Maintains Underperform on Dow, Lowers Price Target to $29",
     "added_at": "2026-06-30T18:02:03.277824+00:00",
     "expires": "2026-07-05T18:02:03.277829+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CCL": {
+    "ticker": "CCL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Tigress Financial Maintains Buy on Carnival, Raises Price Target to $42",
+    "added_at": "2026-06-30T20:07:10.175484+00:00",
+    "expires": "2026-07-05T20:07:10.175492+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

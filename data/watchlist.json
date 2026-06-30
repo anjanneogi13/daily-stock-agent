@@ -762,6 +762,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60197704/why-is-circle-internet-group-stock-falling-on-tuesday",
       "source": "alpaca",
       "added_at": "2026-06-30T18:02:03.280717+00:00"
+    },
+    {
+      "ticker": "NGNE",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Public offerings typically dilute existing shareholders and signal near-term downward pressure as new shares enter the market, creating an immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Neurogene Reveals Proposed Public Offering; No Size Disclosed",
+      "url": "https://www.benzinga.com/news/26/06/60202460/neurogene-reveals-proposed-public-offering-no-size-disclosed",
+      "source": "alpaca",
+      "added_at": "2026-06-30T20:07:10.183195+00:00"
+    },
+    {
+      "ticker": "FLY",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $144M NASA contract award represents significant revenue for aerospace company and validates its lunar lander technology for commercial missions.",
+      "action_window": "intraday",
+      "headline": "Firefly Aerospace Receives $144M NASA Commercial Lunar Payload Services Contract To Offer Rapid Mission To Moon With Its Blue Ghost Lunar Lander",
+      "url": "https://www.benzinga.com/news/26/06/60202459/firefly-aerospace-receives-144m-nasa-commercial-lunar-payload-services-contract-offer-rapid-mission-",
+      "source": "alpaca",
+      "added_at": "2026-06-30T20:07:10.183207+00:00"
+    },
+    {
+      "ticker": "SRI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Russell 2000 index inclusion typically drives significant buying from index funds and ETFs that track the index, creating immediate demand for the stock.",
+      "action_window": "next_day",
+      "headline": "Stoneridge Added To Russell 2000 Index",
+      "url": "https://www.benzinga.com/news/26/06/60202296/stoneridge-added-russell-2000-index",
+      "source": "alpaca",
+      "added_at": "2026-06-30T20:07:10.183215+00:00"
+    },
+    {
+      "ticker": "AMOD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes delisting risk and restores investor confidence, though impact depends on whether news was anticipated.",
+      "action_window": "next_day",
+      "headline": "Alpha Modus Regains Nasdaq Compliance",
+      "url": "https://www.benzinga.com/news/26/06/60200484/alpha-modus-regains-nasdaq-compliance",
+      "source": "alpaca",
+      "added_at": "2026-06-30T20:07:10.183230+00:00"
     }
   ]
 }
