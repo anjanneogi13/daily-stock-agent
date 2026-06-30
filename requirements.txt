@@ -16,7 +16,11 @@ pytest==8.3.3
 curl_cffi==0.7.4
 google-genai==0.3.0
 yfinance==0.2.65
-anthropic>=0.40.0
+anthropic==0.97.0  # Task 9d (#deps): frozen to installed+suite-green version (was >=0.40.0)
 
 # Phase 2A: News Engine + Alpaca
+# NOTE (Task 9d): the alpaca-py SDK appears UNUSED -- src/news_engine.py calls
+# the Alpaca News REST API directly via `requests`, not this SDK. Left ACTIVE
+# (installable) and NOT exact-pinned to avoid breaking any env that installs
+# it; flagged as a candidate for removal in a separate, verified PR.
 alpaca-py>=0.20.0
