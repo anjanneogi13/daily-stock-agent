@@ -12,6 +12,7 @@ Safety:
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from datetime import datetime, timezone
@@ -165,6 +166,30 @@ def _invalidation_conditions(pick: dict) -> list[str]:
     return conditions
 
 
+def config_hash(path: "str | Path" = "config.yaml", *, respect_env: bool = True) -> str:
+    """Return a REAL content fingerprint of the config file: 'sha256:<64hex>'.
+
+    Vision item #22: makes every artifact traceable to the exact config bytes
+    that produced it (the old value was the constant string "config.yaml", so
+    picks from different weights were indistinguishable).
+
+    - If CONFIG_VERSION is set in the env and respect_env is True, that explicit
+      value wins (lets CI pin an exact label). 
+    - On a missing/unreadable file, returns the safe non-hash sentinel
+      "config-unavailable" -- never raises, so artifact generation cannot break
+      on a config read error.
+    """
+    if respect_env:
+        env = os.getenv("CONFIG_VERSION")
+        if env:
+            return env
+    try:
+        data = Path(path).read_bytes()
+        return "sha256:" + hashlib.sha256(data).hexdigest()
+    except Exception:
+        return "config-unavailable"
+
+
 def build_official_pick_artifact(
     pick: dict,
     *,
@@ -207,7 +232,7 @@ def build_official_pick_artifact(
         "contract_version": CONTRACT_VERSION,
         "strategy_version": STRATEGY_VERSION,
         "scoring_version": SCORING_VERSION,
-        "config_version": config_version or os.getenv("CONFIG_VERSION", "config.yaml"),
+        "config_version": config_version or config_hash(),  # #22: real content hash, not a constant string
         "selection_time_et": selection_time,
         "workflow_run_id": workflow_run,
         "commit_sha": commit,

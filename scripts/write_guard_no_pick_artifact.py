@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from src.official_pick_artifact import config_hash as _config_hash
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -145,7 +146,7 @@ def build_guard_no_pick_artifact(
         "contract_version": CONTRACT_VERSION,
         "strategy_version": STRATEGY_VERSION,
         "scoring_version": SCORING_VERSION,
-        "config_version": os.getenv("CONFIG_VERSION", "config.yaml"),
+        "config_version": _config_hash(),  # #22: real content hash (shared helper)
         "selection_time_et": selection_time_et,
         "workflow_run_id": os.getenv("GITHUB_RUN_ID", "local"),
         "commit_sha": os.getenv("GITHUB_SHA", "local"),
