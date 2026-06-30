@@ -12,8 +12,15 @@ from datetime import datetime, timedelta
 
 JOURNAL = Path("data/signal_journal.jsonl")
 
-# Cutoff: only entries on or after this date are quality-gated
-QUALITY_GATE_START = "2026-05-05"
+# Cutoff: only picks made on/after this date are quality-gated for vol_ratio.
+# Raised from 2026-05-05 to 2026-06-28 because the REAL vol_ratio fix landed in
+# PR-A5 (commit ece831b, merged 2026-06-27): parallel_scorer now copies vol_ratio
+# into scores so main.py journals it. All pre-fix rows have vol_ratio_bucket
+# "unknown" HONESTLY -- the agent genuinely failed to record it then; we do NOT
+# backfill or fabricate those historical values. This gate enforces correctness
+# on picks made AFTER the fix. (An earlier 2026-05-04 attempt via pick_logger.py
+# was incomplete -- vol_ratio stayed unknown through June.)
+QUALITY_GATE_START = "2026-06-28"
 
 
 def _post_fix_entries():
