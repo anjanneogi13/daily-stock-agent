@@ -726,45 +726,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ASTS": {
-    "ticker": "ASTS",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "'Rakuten to offer satellite-to-cell service in Japan with US startup'- Nikkei Asia",
-    "added_at": "2026-06-23T22:00:45.685483+00:00",
-    "expires": "2026-06-30T22:00:45.685490+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CBOE": {
-    "ticker": "CBOE",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Cboe Global Markets Launches  The First Products In Its New Prediction Markets Suite, Cboe Predicts",
-    "added_at": "2026-06-23T22:00:45.687532+00:00",
-    "expires": "2026-06-30T22:00:45.687537+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CBRS": {
-    "ticker": "CBRS",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Cerebras Stock Slips After Its First Earnings Print \u2014 Here's Why",
-    "added_at": "2026-06-23T22:00:45.689371+00:00",
-    "expires": "2026-06-30T22:00:45.689376+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LI": {
     "ticker": "LI",
     "score_delta": 0.05,
@@ -2301,6 +2262,32 @@
     "headline": "BTIG Maintains Buy on Palo Alto Networks, Raises Price Target to $380",
     "added_at": "2026-06-30T21:54:45.984103+00:00",
     "expires": "2026-07-05T21:54:45.984109+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PRPH": {
+    "ticker": "PRPH",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "ProPhase Labs Q1 EPS $(0.43) Up From $(1.33) YoY, Sales $478.000K Down From $1.431M YoY",
+    "added_at": "2026-06-30T23:06:00.225800+00:00",
+    "expires": "2026-07-07T23:06:00.225807+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BRLS": {
+    "ticker": "BRLS",
+    "score_delta": 0.083,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Borealis Foods Q1 EPS $(0.16) Up From $(0.20) YoY, Sales $7.368M Up From $6.846M YoY",
+    "added_at": "2026-06-30T23:06:00.227833+00:00",
+    "expires": "2026-07-07T23:06:00.227859+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
