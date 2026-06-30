@@ -133,6 +133,51 @@ def _risk_flags(pick: dict) -> list[str]:
     return sorted(set(flags))
 
 
+def _model_version() -> str:
+    """Vision #19: record which LLM made the decision. Env LLM_MODEL wins; the
+    default mirrors llm_agent.CLAUDE_MODEL (duplicated intentionally to avoid
+    importing the LLM module into this lightweight artifact module / dodge any
+    circular-import). Never raises."""
+    return os.getenv("LLM_MODEL") or "claude-sonnet-4-5"
+
+
+def _top_reasons(pick: dict) -> list[str]:
+    """Vision #19: structured top-3 drivers. A READOUT of existing signals
+    (composite score, sector tag, premarket sanity) -- NOT a new signal and no
+    change to scoring/selection. Complements the prose `selection_reason`."""
+    scores = pick.get("scores") if isinstance(pick.get("scores"), dict) else {}
+    reasons: list[str] = []
+    composite = scores.get("composite")
+    if composite is not None:
+        reasons.append(f"composite score {composite}")
+    tag = scores.get("sector_tag")
+    if tag:
+        reasons.append(f"sector tag: {tag}")
+    sanity = pick.get("premarket_sanity") if isinstance(pick.get("premarket_sanity"), dict) else {}
+    if sanity.get("reason"):
+        reasons.append(f"premarket sanity: {sanity['reason']}")
+    return reasons[:3]
+
+
+def _data_missing(pick: dict) -> list[str]:
+    """Vision #19: explicit list of source fields that were ABSENT at selection
+    time (so a degraded pick is auditable, not silently backfilled). Mirrors the
+    builder's own fallbacks -- e.g. company is reported missing when neither
+    info_short.name nor pick.company was provided (even though the artifact then
+    falls back to the ticker)."""
+    missing: list[str] = []
+    info = pick.get("info_short") if isinstance(pick.get("info_short"), dict) else {}
+    if not (info.get("name") or pick.get("company")):
+        missing.append("company")
+    scores = pick.get("scores") if isinstance(pick.get("scores"), dict) else {}
+    if scores.get("composite") is None:
+        missing.append("composite_score")
+    plan = pick.get("plan") if isinstance(pick.get("plan"), dict) else {}
+    if (plan.get("entry") or pick.get("entry")) is None:
+        missing.append("entry")
+    return missing
+
+
 def _selection_reason(pick: dict) -> str:
     ticker = pick.get("ticker", "?")
     scores = pick.get("scores") if isinstance(pick.get("scores"), dict) else {}
@@ -251,6 +296,10 @@ def build_official_pick_artifact(
         "regime": _json_safe(regime or pick.get("regime") or "unknown"),
         "risk_flags": _risk_flags(pick),
         "selection_reason": _selection_reason(pick),
+        # Vision #19 (Task 9c): structured explainability alongside the prose reason.
+        "top_reasons": _top_reasons(pick),
+        "data_missing": _data_missing(pick),
+        "model_version": _model_version(),
         "invalidation_conditions": _invalidation_conditions(pick),
         "paper_trading_enabled": False,
         "live_trading_enabled": False,
