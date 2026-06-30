@@ -19,8 +19,15 @@ MAIN = Path("main.py")
 def test_main_logs_root_level_is_monster_flag():
     src = MAIN.read_text()
 
-    assert '_p["is_monster"] = True' in src or "_p['is_monster'] = True" in src, (
-        "Test assumes monster treatment stamps root-level is_monster on pick."
+    # BUG-M97 refactor (2026-06-30): the root-level is_monster stamping moved
+    # OUT of main.py and INTO src.monster_hunt.revalidate_and_apply_monster,
+    # which now sets pick["is_monster"] = True only when the widened SL/TP/qty
+    # pass re-validation. The Bug #16 contract below (picks_for_log reads the
+    # root flag) is unchanged. Assert the stamping still exists in the helper.
+    helper_src = Path("src/monster_hunt.py").read_text()
+    assert 'pick["is_monster"] = True' in helper_src or "pick['is_monster'] = True" in helper_src, (
+        "Monster treatment must stamp root-level is_monster on the pick "
+        "(now in src.monster_hunt.revalidate_and_apply_monster)."
     )
 
     assert '"is_monster": p.get("is_monster") or p["scores"].get("is_monster") or False' in src, (
