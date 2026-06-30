@@ -25,7 +25,7 @@ from src.llm_agent import explain_pick
 from src.paper_trader import log_paper_trade
 from src.regime import market_regime
 from src.earnings import days_to_earnings
-from src.monster_hunt import apply_monster_treatment
+from src.monster_hunt import apply_monster_treatment, revalidate_and_apply_monster
 from src.sector_benchmark import resolve_sector_etf
 from src.signal_journal import log_pick as _journal_log_pick
 from src.auto_pause import compute_score as _pause_score, format_summary as _pause_fmt
@@ -1662,22 +1662,37 @@ def run():
                 for _p in top:
                     _ms = _p["scores"].get("monster_score", 0) or 0
                     if _ms >= _mthr:
-                        _pdict = {
-                            "ticker": _p["ticker"],
-                            "entry": _p["plan"].get("entry"),
-                            "stop_loss": _p["plan"].get("stop_loss"),
-                            "take_profit": _p["plan"].get("take_profit"),
-                            "qty": _p["plan"].get("quantity"),
-                        }
-                        _treated = apply_monster_treatment(_pdict, _ms, _macct, _mpos)
-                        _p["plan"]["stop_loss"] = _treated["stop_loss"]
-                        _p["plan"]["take_profit"] = _treated["take_profit"]
-                        _p["plan"]["quantity"] = _treated["qty"]
-                        _p["plan"]["risk_reward"] = _treated["risk_reward"]
-                        _p["is_monster"] = True
-                        _monsters += 1
+                        # BUG-M97: re-validate the widened SL/TP/qty against the
+                        # portfolio risk gate. Applies ONLY if still within limits;
+                        # otherwise the gate-approved plan is kept (fail-closed).
+                        _res = revalidate_and_apply_monster(
+                            _p, _ms, cfg, sector_counts={}, tag_counts={}
+                        )
+                        if _res.get("applied"):
+                            _monsters += 1
+                        else:
+                            rprint(
+                                f"  [yellow]\u26a0 {_p.get('ticker')}: monster treatment "
+                                f"NOT applied ({_res.get('reason')}) \u2014 kept gate-approved plan[/yellow]"
+                            )
                 if _monsters:
-                    rprint(f"[bold magenta]💎 {_monsters} MONSTER pick(s) — wider SL, +25% TP, lottery sizing[/bold magenta]")
+                    rprint(f"[bold magenta]💎 {_monsters} MONSTER pick(s) — re-validated, wider SL, +25% TP, lottery sizing[/bold magenta]")
+                    # BUG-M97: monster mutation changed plan(s) AFTER the official
+                    # artifact was written. Refresh artifacts so the on-disk official
+                    # artifact matches the SL/TP/qty that get logged to the CSV.
+                    try:
+                        from src.official_pick_artifact import write_official_pick_artifacts
+                        write_official_pick_artifacts(
+                            top,
+                            pipeline=pipeline,
+                            candidate_diagnostics=selection_diagnostics,
+                            regime=reg,
+                            data_readiness_status=pipeline.get("data_readiness_status") or "ready",
+                            provider_status="healthy",
+                            market_session_status="premarket",
+                        )
+                    except Exception as _ae:
+                        rprint(f"[yellow]\u26a0 artifact refresh after monster treatment skipped: {_ae}[/yellow]")
         except Exception as _e:
             rprint(f"[yellow]⚠ monster treatment skipped: {_e}[/yellow]")
 

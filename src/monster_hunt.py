@@ -138,3 +138,90 @@ def apply_monster_treatment(
     pick["risk_reward"] = round((monster_tp - entry) / max(entry - monster_sl, 0.01), 2)
 
     return pick
+
+
+def revalidate_and_apply_monster(
+    pick: Dict,
+    monster_score: float,
+    cfg: Dict,
+    sector_counts: Optional[Dict] = None,
+    tag_counts: Optional[Dict] = None,
+) -> Dict:
+    """BUG-M97 fix: apply monster treatment ONLY if the widened SL/TP/qty still
+    pass the portfolio risk gate.
+
+    The monster treatment widens the stop and re-sizes qty to `monster.position_pct`
+    risk. That mutated risk profile was historically NEVER re-checked, so a pick
+    approved by the gate at <=risk_per_trade_pct could ship at a higher risk and
+    the official artifact (written pre-mutation) disagreed with the CSV
+    (written post-mutation).
+
+    This function re-validates the treated values against the gate's RISK and
+    STRUCTURAL limits (entry/SL/TP/RR/risk_pct). Diversity caps (sector/tag) are
+    intentionally NOT re-checked here -- the monster mutation does not change a
+    pick's sector or tag, and the pick already passed those caps in the gate's
+    first pass; pass empty counts so only risk/structural limits gate the apply.
+
+    Fail-closed (B1): if the treated values fail, pick["plan"] is left UNCHANGED
+    (its gate-approved pre-monster values), and nothing is applied.
+
+    Returns {"applied": bool, "reason": str}.
+    Mutates pick["plan"] in place ONLY when applied is True.
+    """
+    from src.portfolio_risk_gate import (
+        build_portfolio_risk_config,
+        evaluate_candidate_portfolio_risk,
+    )
+
+    plan = pick.get("plan") if isinstance(pick.get("plan"), dict) else {}
+    entry = float(plan.get("entry") or 0)
+    if entry <= 0:
+        return {"applied": False, "reason": "missing or invalid entry"}
+
+    # Compute treatment on a COPY so pick["plan"] is untouched unless we commit.
+    probe = {
+        "ticker": pick.get("ticker"),
+        "entry": entry,
+        "stop_loss": plan.get("stop_loss"),
+        "take_profit": plan.get("take_profit"),
+        "qty": plan.get("quantity"),
+    }
+    account_size = float((cfg.get("risk") or {}).get("account_size", 10000.0) or 10000.0)
+    monster_pct = float((cfg.get("monster") or {}).get("position_pct", 1.5) or 1.5)
+    treated = apply_monster_treatment(probe, monster_score, account_size, monster_pct)
+
+    if not treated.get("is_monster"):
+        return {"applied": False, "reason": "not a monster"}
+
+    # Re-validate treated values against the risk gate (risk/structural only).
+    risk_config = build_portfolio_risk_config(cfg)
+    candidate = {
+        "ticker": pick.get("ticker"),
+        "info_short": pick.get("info_short"),
+        "scores": pick.get("scores"),
+        "plan": {
+            "entry": entry,
+            "stop_loss": treated["stop_loss"],
+            "take_profit": treated["take_profit"],
+            "quantity": treated["qty"],
+            "risk_reward": treated["risk_reward"],
+        },
+    }
+    ok, reason, _detail = evaluate_candidate_portfolio_risk(
+        candidate,
+        risk_config=risk_config,
+        sector_counts=sector_counts or {},
+        tag_counts=tag_counts or {},
+    )
+    if not ok:
+        # Fail-closed: keep gate-approved plan, do not apply monster.
+        return {"applied": False, "reason": f"monster re-validation failed: {reason}"}
+
+    # Passed -> commit the widened plan.
+    plan["stop_loss"] = treated["stop_loss"]
+    plan["take_profit"] = treated["take_profit"]
+    plan["quantity"] = treated["qty"]
+    plan["risk_reward"] = treated["risk_reward"]
+    pick["plan"] = plan
+    pick["is_monster"] = True
+    return {"applied": True, "reason": "ok"}
