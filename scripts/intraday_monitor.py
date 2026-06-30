@@ -289,6 +289,10 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
                          f"   Reference levels: Observed ${o['entry']:.2f} | SL ref ${o['sl']:.2f} | TP ref ${o['tp']:.2f}\n"
                          f"   {o.get('reason','Live momentum')}\n"
                          f"   Monitoring-only. Do not treat as a buy instruction.\n")
+    # Task 9b (#3): prices come from get_live_quote() = last 5-min yfinance
+    # bar (~15 min delayed), NOT a live tick. Disclose so the fresh "HH:MM ET"
+    # header is not mistaken for real-time data.
+    lines.append("⏱ _Prices are delayed ~15 min (free data) — verify live price before acting._")
     lines.append("_Educational only. Not financial advice._")
     msg = "\n".join(lines)
     return msg[:3950] + "\n\n_(truncated)_" if len(msg) > 4000 else msg
