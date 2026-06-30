@@ -40,7 +40,13 @@ def load_watchlist() -> list:
     return DEFAULT_WATCHLIST
 
 def get_live_quote(ticker: str) -> dict:
-    """Returns {price, change_pct, vol_ratio} or {} on failure."""
+    """Returns {price, change_pct, vol_ratio, prev_close, data_freshness} or {} on failure.
+
+    NOTE (Task 9b / #3): `price` is the last 5-min bar close from free
+    yfinance and is DELAYED ~15 minutes -- it is NOT a real-time tick.
+    (The function name is a historical misnomer kept for call-site
+    compatibility.) Consumers should surface data_freshness to users.
+    """
     if yf is None:
         return {}
     try:
@@ -62,6 +68,7 @@ def get_live_quote(ticker: str) -> dict:
             "change_pct": change_pct,
             "vol_ratio": vol_ratio,
             "prev_close": prev_close,
+            "data_freshness": "delayed_~15min",  # #3: last 5-min bar, NOT a live tick
         }
     except Exception as e:
         print(f"[quote] {ticker}: {e}")
