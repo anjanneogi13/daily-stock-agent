@@ -116,9 +116,11 @@ def _send(token: str, chat_ids: list[str], msg: str) -> bool:
                 urllib.request.Request(url, data=data), timeout=10,
             )
             result = json.loads(resp.read())
-            if result.get("ok"):
+            ok = bool(result.get("ok"))
+            if ok:
                 sent_any = True
-            print(f"[heartbeat\u2192{chat_id}] {'\u2705 Sent' if result.get('ok') else '\u274c '+str(result)}")
+            status = "\u2705 Sent" if ok else ("\u274c " + str(result))
+            print(f"[heartbeat\u2192{chat_id}] {status}")
         except Exception as e:
             print(f"[heartbeat\u2192{chat_id}] \u274c {e}")
     return sent_any
