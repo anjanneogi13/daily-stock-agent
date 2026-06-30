@@ -714,6 +714,18 @@
       "url": "https://www.benzinga.com/news/26/06/60183918/primoris-awarded-engineering-and-construction-work-fermi-s-first-six-sgt-800-gas-turbines-part-phase",
       "source": "alpaca",
       "added_at": "2026-06-30T13:07:43.979910+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "BofA reiteration with positive catalysts including strong Prime Day data and significant 20% AWS price increase expected to boost second-half growth, though not a new upgrade.",
+      "action_window": "next_day",
+      "headline": "Amazon Stock On Watch As Prime Day Pull-Forward Meets 20% AWS Price Pop",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/06/60193394/amazon-stock-on-watch-as-prime-day-pull-forward-meets-20-aws-price-pop",
+      "source": "alpaca",
+      "added_at": "2026-06-30T16:01:20.986607+00:00"
     }
   ]
 }

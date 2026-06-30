@@ -457,19 +457,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CSCO": {
-    "ticker": "CSCO",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on Cisco Systems, Raises Price Target to $130",
-    "added_at": "2026-06-25T13:14:32.998435+00:00",
-    "expires": "2026-06-30T13:14:32.998440+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PCSC": {
     "ticker": "PCSC",
     "score_delta": 0.2,
@@ -675,19 +662,6 @@
     "headline": "United Airlines And DIRECTV Team Up To Stream Live TV On Starlink-Enabled Seatback Screens This Summer",
     "added_at": "2026-06-23T18:20:59.151068+00:00",
     "expires": "2026-06-30T18:20:59.151074+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FUSE": {
-    "ticker": "FUSE",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Fusemachines Partners With A Global Apparel Brand To Transform Demand Planning Using Predictive And Agentic AI",
-    "added_at": "2026-06-23T13:44:09.980085+00:00",
-    "expires": "2026-06-30T13:44:09.980090+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -918,19 +892,6 @@
     "headline": "Comstock Selects Cambridge, Ohio, As Location For Its Industrial-Scale Solar Panel Recycling And Production Facility And Logistics Hub",
     "added_at": "2026-06-24T10:44:31.768830+00:00",
     "expires": "2026-07-01T10:44:31.768835+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FROG": {
-    "ticker": "FROG",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on JFrog, Raises Price Target to $89",
-    "added_at": "2026-06-25T13:14:32.992441+00:00",
-    "expires": "2026-06-30T13:14:32.992448+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1220,45 +1181,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KDP": {
-    "ticker": "KDP",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Barclays Upgrades Keurig Dr Pepper to Overweight, Raises Price Target to $36",
-    "added_at": "2026-06-25T16:00:44.104255+00:00",
-    "expires": "2026-06-30T16:00:44.104262+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BF.B": {
-    "ticker": "BF.B",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Barclays Downgrades Brown-Forman to Equal-Weight, Maintains Price Target to $27",
-    "added_at": "2026-06-25T16:00:44.106751+00:00",
-    "expires": "2026-06-30T16:00:44.106757+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VELO": {
-    "ticker": "VELO",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Watching Velo3D; Shares Move Lower, Morpheus Research Issues Report On Co Stating It Holds Short Positions On The Stock",
-    "added_at": "2026-06-25T16:00:44.108782+00:00",
-    "expires": "2026-06-30T16:00:44.108788+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FRTT": {
     "ticker": "FRTT",
     "score_delta": 0.039,
@@ -1272,19 +1194,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DELL": {
-    "ticker": "DELL",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Why Is Dell Technologies Stock Falling Thursday?",
-    "added_at": "2026-06-25T16:00:44.112920+00:00",
-    "expires": "2026-06-30T16:00:44.112925+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
   "JKHY": {
     "ticker": "JKHY",
     "score_delta": 0.041,
@@ -1295,19 +1204,6 @@
     "headline": "Jack Henry, Google Cloud Expand Partnership To Provide AI-Driven Securities Capabilities For Banks, Credit Unions",
     "added_at": "2026-06-25T16:00:44.115021+00:00",
     "expires": "2026-07-02T16:00:44.115028+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "HBM": {
-    "ticker": "HBM",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Scotiabank Maintains Sector Outperform on Hudbay Minerals, Raises Price Target to C$44",
-    "added_at": "2026-06-25T16:00:44.117098+00:00",
-    "expires": "2026-06-30T16:00:44.117103+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2340,6 +2236,71 @@
     "headline": "Argus Research Maintains Buy on Intl Flavors & Fragrances, Raises Price Target to $85",
     "added_at": "2026-06-30T13:07:43.974946+00:00",
     "expires": "2026-07-05T13:07:43.974951+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MSTR": {
+    "ticker": "MSTR",
+    "score_delta": -0.039,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "TD Cowen Targets $260 For MSTR, $100,000 For Bitcoin By End Of 2026",
+    "added_at": "2026-06-30T16:01:20.974527+00:00",
+    "expires": "2026-07-05T16:01:20.974535+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AXP": {
+    "ticker": "AXP",
+    "score_delta": 0.025,
+    "catalyst": "upgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "This Analyst Raises Price Target For American Express And This Banking Stock Ahead Of Q2 Earnings",
+    "added_at": "2026-06-30T16:01:20.977021+00:00",
+    "expires": "2026-07-05T16:01:20.977030+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DB": {
+    "ticker": "DB",
+    "score_delta": 0.025,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Deutsche Bank Signs Agreement To Sell Its Indian Private Banking And Wealth Management Business To Kotak Mahindra Bank",
+    "added_at": "2026-06-30T16:01:20.979162+00:00",
+    "expires": "2026-07-14T16:01:20.979170+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VELO": {
+    "ticker": "VELO",
+    "score_delta": -0.064,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "What's Going On With Velo3D Stock Tuesday?",
+    "added_at": "2026-06-30T16:01:20.981176+00:00",
+    "expires": "2026-07-14T16:01:20.981189+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TENB": {
+    "ticker": "TENB",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Tenable Holdings, Raises Price Target to $40",
+    "added_at": "2026-06-30T16:01:20.983658+00:00",
+    "expires": "2026-07-05T16:01:20.983665+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
