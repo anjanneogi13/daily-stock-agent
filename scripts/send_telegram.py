@@ -316,7 +316,10 @@ def build_message(rows, pm, today):
         for _l in _pause_fmt(_ps).split("\n"):
             lines.append(_l)
         if _ps.get("enforced"):
-            lines.append("🚨 _Enforce-mode active — agent may auto-pause_")
+            # Task 4 (#18, audit "relabel path"): even in enforce-mode the
+            # pause STATE is non-durable (wiped next run), so do not claim an
+            # active brake. State this as an advisory risk signal only.
+            lines.append("📊 _Risk signal is advisory only — the agent does NOT auto-pause; review exposure yourself._")
     except Exception as _pe:
         pass  # Never block the daily message on pause-signal failure
 

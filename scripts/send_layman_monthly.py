@@ -72,7 +72,7 @@ def build_message(outcomes):
     lines.append("*🧠 Is the agent improving?*")
     if wr >= 55: lines.append("✅ Win rate is healthy — the brain is finding edges.")
     elif wr >= 45: lines.append("🟡 Win rate is okay — agent is tuning itself nightly.")
-    else: lines.append("🔴 Win rate is low this month — agent has auto-paused weak strategies and will retry.")
+    else: lines.append("🔴 Win rate is low this month — a flag to review the weaker strategies yourself; the agent does NOT auto-pause.")
     lines.append("")
     lines.append(LAYMAN_PERFORMANCE_SOURCE_NOTE)
     lines.append(footer_explainer())

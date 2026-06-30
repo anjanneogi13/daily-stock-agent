@@ -7,8 +7,10 @@ Computes a pause_signal score (0-10) based on:
   - rolling 30d win rate
   - latest weekly grade
 
-OBSERVE-MODE: This module ONLY reports. It does NOT pause anything.
-Manual flip from observe → enforce planned for Wed 2026-05-06.
+ADVISORY / OBSERVE-ONLY: This module ONLY reports a risk signal. It does
+NOT pause anything and the agent does NOT auto-pause. An enforce path
+exists but is intentionally deferred (it requires durable pause state
+first); until then all output here is advisory only.
 
 Score interpretation:
   0-2  🟢 GREEN     normal ops
@@ -176,7 +178,9 @@ def format_summary(result: Dict) -> str:
         for r in reasons:
             lines.append(f"  • {r}")
     if would_pause:
-        lines.append("  ⚠️ Enforce-mode would PAUSE for 3 days (currently observe-mode)")
+        # Task 4 (#18): advisory-only labeling. The agent does NOT auto-pause
+        # (observe-only by default; pause state is non-durable). Say so plainly.
+        lines.append("  📊 ADVISORY ONLY — risk signal, not an active pause. The agent does NOT auto-pause.")
     elif not reasons:
         lines.append("  • All clear — no risk flags")
     return "\n".join(lines)
