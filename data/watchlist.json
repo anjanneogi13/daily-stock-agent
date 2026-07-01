@@ -717,15 +717,16 @@
     },
     {
       "ticker": "AMZN",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.68,
       "sentiment": "bullish",
-      "category": "other",
-      "rationale": "BofA reiteration with positive catalysts including strong Prime Day data and significant 20% AWS price increase expected to boost second-half growth, though not a new upgrade.",
+      "category": "product_launch",
+      "rationale": "AWS announcing a $1 billion investment in a new AI engineering unit represents a significant strategic initiative that validates AI services demand and competitive positioning, though impact is longer-term rather than immediate.",
       "action_window": "next_day",
-      "headline": "Amazon Stock On Watch As Prime Day Pull-Forward Meets 20% AWS Price Pop",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/06/60193394/amazon-stock-on-watch-as-prime-day-pull-forward-meets-20-aws-price-pop",
+      "headline": "Amazon's AWS Bets $1 Billion on New AI Engineering Unit Built Around a Strategy Palantir Pioneered More Than a Decade Ago",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60215633/amazons-aws-bets-1-billion-on-new-ai-engineering-unit-built-around-a-strategy-palantir-pioneered-more-than-a-decade-ago",
       "source": "alpaca",
-      "added_at": "2026-06-30T16:01:20.986607+00:00"
+      "added_at": "2026-06-30T16:01:20.986607+00:00",
+      "updated_at": "2026-07-01T13:45:10.292641+00:00"
     },
     {
       "ticker": "ONC",
@@ -1038,6 +1039,78 @@
       "url": "https://www.benzinga.com/m/26/07/60211132/kroger-acquire-food-and-pharmacy-chain-giant-eagle-1-65b-comprising-1-25b-cash-and-assumption-400m-l",
       "source": "alpaca",
       "added_at": "2026-07-01T11:20:14.787949+00:00"
+    },
+    {
+      "ticker": "NOW",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stock already moving up on dual catalyst of major AI partnership with Accenture and Guggenheim upgrade to Buy with $125 price target.",
+      "action_window": "intraday",
+      "headline": "Is ServiceNow Stock a Buy After the Accenture AI Launch?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60216280/is-servicenow-stock-a-buy-after-the-accenture-ai-launch",
+      "source": "alpaca",
+      "added_at": "2026-07-01T13:45:10.292590+00:00"
+    },
+    {
+      "ticker": "HIMS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Canaccord Genuity maintaining Buy rating with significant price target raise to $40 signals strong conviction and upside potential, though impact moderated as it's a reaffirmation rather than new upgrade.",
+      "action_window": "intraday",
+      "headline": "Canaccord Genuity Maintains Buy on Hims & Hers Health, Raises Price Target to $40",
+      "url": "https://www.benzinga.com/news/26/07/60215786/canaccord-genuity-maintains-buy-hims-hers-health-raises-price-target-40",
+      "source": "alpaca",
+      "added_at": "2026-07-01T13:45:10.292606+00:00"
+    },
+    {
+      "ticker": "NCEL",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Pre-IND meeting with constructive FDA feedback signals regulatory pathway progress for NewcelX, a meaningful de-risking event for clinical development but not a final approval catalyst.",
+      "action_window": "intraday",
+      "headline": "NewcelX Completes Type B Pre-IND Meeting With FDA; Administration Provided Constructive Feedback And Alignment On Proposed Strategy",
+      "url": "https://www.benzinga.com/news/26/07/60215740/newcelx-completes-type-b-pre-ind-meeting-fda-administration-provided-constructive-feedback-and-align",
+      "source": "alpaca",
+      "added_at": "2026-07-01T13:45:10.292615+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Fed Chair signals stable labor markets, falling inflation expectations, and acknowledgment of high prices suggest potential policy shift toward dovish stance, which is materially bullish for equities.",
+      "action_window": "intraday",
+      "headline": "Fed Chair Warsh Says Labor Markets Are Steady; Supply Side Solid; We're In The Price Stability Business; We've Looked Around And See That Prices Are Too High; The Committee Described That Labor Markets Are Steady; Expectations Of Inflation Over The First Four Weeks Have Come Down; Inflation Risks Ha",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60215718/fed-chair-warsh-says-labor-markets-are-steady-supply-side-solid-we-re-price-stability-business-we-ve",
+      "source": "alpaca",
+      "added_at": "2026-07-01T13:45:10.292623+00:00"
+    },
+    {
+      "ticker": "CURI",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $10M contract win by a subsidiary shows business momentum and revenue visibility, but represents a secondary operational update rather than a major catalyst.",
+      "action_window": "intraday",
+      "headline": "Curiosity Subsidiary Signs $10M Third-Party Agreements During Q2",
+      "url": "https://www.benzinga.com/news/26/07/60215663/curiosity-subsidiary-signs-10m-third-party-agreements-during-q2",
+      "source": "alpaca",
+      "added_at": "2026-07-01T13:45:10.292631+00:00"
+    },
+    {
+      "ticker": "YTRA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance notification signals regulatory risk and potential delisting concerns, though extension through December provides time to remedy the situation.",
+      "action_window": "intraday",
+      "headline": "Yatra Online Receives Nasdaq Noncompliance Notification, Gets Time Through Dec. 22 To Regain Compliance",
+      "url": "https://www.benzinga.com/news/26/07/60215559/yatra-online-receives-nasdaq-noncompliance-notification-gets-time-through-dec-22-regain-compliance",
+      "source": "alpaca",
+      "added_at": "2026-07-01T13:45:10.292652+00:00"
     }
   ]
 }
