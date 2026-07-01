@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 from scripts.validate_daily_no_pick import validate_no_pick_report
@@ -70,3 +72,26 @@ def test_guard_no_pick_artifact_includes_github_observability_metadata(monkeypat
     assert payload["commit_url"] == "https://github.com/anjanneogi13/daily-stock-agent/commit/abcdef1234567890"
     assert payload["artifact_bundle_name"] == "official-decision-artifacts-987654"
     assert validate_no_pick_report(payload) == []
+
+
+def test_write_guard_no_pick_artifact_script_runs_from_outside_repo(tmp_path):
+    script = Path(__file__).resolve().parents[1] / "scripts" / "write_guard_no_pick_artifact.py"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(script),
+            "--date",
+            "2026-07-01",
+            "--cause",
+            "NO_PICK_MARKET_CLOSED",
+            "--data-dir",
+            str(tmp_path),
+        ],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr or result.stdout
+    assert (tmp_path / "daily_picks_no_pick_report_2026-07-01.json").exists()
+    assert (tmp_path / "daily_picks_no_pick_report_2026-07-01.md").exists()
