@@ -1318,6 +1318,102 @@
       "url": "https://www.benzinga.com/news/26/07/60232321/neurocrine-biosciences-initiates-phase-2-clinical-study-assess-crinecerfont-children-aged-3-months-u",
       "source": "alpaca",
       "added_at": "2026-07-01T20:23:07.219218+00:00"
+    },
+    {
+      "ticker": "LEU",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $1.07B contract finalization with DOE represents significant revenue catalyst for a small-cap company, creating immediate job growth and multi-year revenue visibility.",
+      "action_window": "next_day",
+      "headline": "Centrus Energy Signs A Contract To Finalize The Terms Of The Competitively-Awarded, $900M Task Order It Received From The U.S. Department Of Energy Earlier This Year; Total Contract Value With All Options Included Is $1.07B; Expansion Project To Support 1000 Construction Jobs, 300 New Operating Jobs",
+      "url": "https://www.benzinga.com/news/26/07/60234869/centrus-energy-signs-contract-finalize-terms-competitively-awarded-900m-task-order-it-received-u-s-d",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275623+00:00"
+    },
+    {
+      "ticker": "ONMD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering prospectus for 11.68M shares by selling stockholders typically creates dilution concerns and near-term selling pressure, though impact depends on float size and existing shareholder base.",
+      "action_window": "next_day",
+      "headline": "OneMedNet Files Prospectus Related To The Offer And Resale Of Up To 11.68M Shares Of Common Stock By The Selling Stockholders",
+      "url": "https://www.benzinga.com/news/26/07/60234846/onemednet-files-prospectus-related-offer-and-resale-11-68m-shares-common-stock-selling-stockholders",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275636+00:00"
+    },
+    {
+      "ticker": "VRTX",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval of first-in-class gene therapy for pediatric sickle cell disease represents a major regulatory milestone and significant revenue opportunity for Vertex Pharmaceuticals.",
+      "action_window": "next_day",
+      "headline": "FDA Approves First Gene Therapy for Young Children with Sickle Cell Disease; The FDA Granted The Approval To Vertex Pharmaceuticals",
+      "url": "https://www.benzinga.com/news/26/07/60234764/fda-approves-first-gene-therapy-young-children-sickle-cell-disease-fda-granted-approval-vertex-pharm",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275645+00:00"
+    },
+    {
+      "ticker": "RUBI",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed shelf offering of $200M signals potential dilution for existing shareholders, typically causing near-term selling pressure until terms are clarified.",
+      "action_window": "next_day",
+      "headline": "Rubico Files For Mixed Shelf Of Up To $200M",
+      "url": "https://www.benzinga.com/news/26/07/60234608/rubico-files-mixed-shelf-200m",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275653+00:00"
+    },
+    {
+      "ticker": "CLF",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $400M IDIQ government contract win for specialized steel products represents significant confirmed revenue opportunity and competitive validation for Cleveland-Cliffs.",
+      "action_window": "next_day",
+      "headline": "Cleveland-Cliffs Steel Wins A Maximum $400M Indefinite-Delivery/Indefinite-Quantity Contract For Grain Oriented Electrical Steel",
+      "url": "https://www.benzinga.com/news/26/07/60234579/cleveland-cliffs-steel-wins-maximum-400m-indefinite-delivery-indefinite-quantity-contract-grain-orie",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275660+00:00"
+    },
+    {
+      "ticker": "JBIO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Exclusive worldwide licensing agreement with defined milestone payments up to $22M and royalty structure represents meaningful business development catalyst for small-cap biotech, though execution risk remains.",
+      "action_window": "next_day",
+      "headline": "Jade Biosciences Enters Exclusive Worldwide License Agreement With Paragon Therapeutics; To Pay Up To $22M In Milestone Payments To Paragon; To Pay Paragon Low To Mid-Single-Digit Percentage Royalties On Net Sales Of Licensed Products; Paragon Barred From New Campaigns Targeting Licensed Target For ",
+      "url": "https://www.benzinga.com/news/26/07/60234539/jade-biosciences-enters-exclusive-worldwide-license-agreement-paragon-therapeutics-pay-22m-milestone",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275668+00:00"
+    },
+    {
+      "ticker": "JTAI",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Majority shareholder approval for M&A transaction with imminent close date (July 7) represents a major catalyst for target company JTAI, reducing deal risk significantly.",
+      "action_window": "next_day",
+      "headline": "Jet.AI Announces Majority Of Shareholders Vote In Favor Of flyExclusive Deal; Transaction Is Expected To Close On Or About July 7, 2026",
+      "url": "https://www.benzinga.com/news/26/07/60234424/jet-ai-announces-majority-shareholders-vote-favor-flyexclusive-deal-transaction-expected-close-or-ab",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275678+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Two simultaneous antitrust losses including a substantial $1.5B European damages ruling and U.S. lawsuit defeat create meaningful near-term headwinds for Alphabet, though company size limits relative impact.",
+      "action_window": "next_day",
+      "headline": "Google Takes One-Two Antitrust Punch: Yelp Win, $1.5 Billion Klarna Ruling",
+      "url": "https://www.benzinga.com/news/legal/26/07/60234402/google-takes-one-two-antitrust-punch-yelp-win-1-5-billion-klarna-ruling",
+      "source": "alpaca",
+      "added_at": "2026-07-01T21:58:33.275685+00:00"
     }
   ]
 }

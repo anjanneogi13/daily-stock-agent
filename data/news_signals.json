@@ -353,19 +353,6 @@
     "expires": "2026-12-14T21:02:46.918268+00:00",
     "hard_block": true
   },
-  "NUE": {
-    "ticker": "NUE",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Nucor Guides Q2 2026 GAAP EPS Of $4.70-$4.80, Adj EPS $4.50-$4.60, Says Earnings In Q2 Of 2026 Are Expected To Increase Across All 3 Of Our Operating Segments As Compared To Q1 2026, With The Largest ",
-    "added_at": "2026-06-17T21:02:46.921904+00:00",
-    "expires": "2026-07-01T21:02:46.921909+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TTMI": {
     "ticker": "TTMI",
     "score_delta": 0.05,
@@ -713,19 +700,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MEI": {
-    "ticker": "MEI",
-    "score_delta": 0.064,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "12 Information Technology Stocks Moving In Wednesday's After-Market Session",
-    "added_at": "2026-06-24T21:12:05.034382+00:00",
-    "expires": "2026-07-01T21:12:05.034388+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FSRL": {
     "ticker": "FSRL",
     "score_delta": 0.2,
@@ -739,45 +713,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MU": {
-    "ticker": "MU",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Micron's Blowout Q3 Report Ripples Through Memory Stocks SanDisk, Western Digital",
-    "added_at": "2026-06-24T21:12:05.038249+00:00",
-    "expires": "2026-07-01T21:12:05.038255+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NRXBF": {
-    "ticker": "NRXBF",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "EXCLUSIVE: NurExone Targets Mexico Wellness Market With  Exosome Supply Agreement (UPDATED)",
-    "added_at": "2026-06-24T21:12:05.042109+00:00",
-    "expires": "2026-07-01T21:12:05.042116+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JEF": {
-    "ticker": "JEF",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Jefferies Financial Gr Q2 Adj. EPS $1.03 Misses $1.16 Estimate, Sales $2.206B Miss $2.299B Estimate",
-    "added_at": "2026-06-24T21:12:05.044044+00:00",
-    "expires": "2026-07-01T21:12:05.044049+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SPRY": {
     "ticker": "SPRY",
     "score_delta": 0.097,
@@ -788,19 +723,6 @@
     "headline": "ARS Pharma Lowers 2026 Cash Operating Expense Guidance To $248M And Reaffirms Path To Cash-Flow Breakeven In 2027",
     "added_at": "2026-06-24T21:12:05.045972+00:00",
     "expires": "2026-07-08T21:12:05.045978+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BU": {
-    "ticker": "BU",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Burcon NutraScience Q4 EPS $(0.30) Misses $(0.10) Estimate, Sales $827.000K Miss $1.400M Estimate",
-    "added_at": "2026-06-24T21:12:05.049894+00:00",
-    "expires": "2026-07-01T21:12:05.049899+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1478,14 +1400,14 @@
   },
   "GOOGL": {
     "ticker": "GOOGL",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
+    "score_delta": -0.097,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.68,
     "action_window": "next_day",
-    "headline": "Google Launches Gemini Spark For macOS With Expanded App Integrations",
-    "added_at": "2026-06-30T21:54:45.986156+00:00",
-    "expires": "2026-07-07T21:54:45.986161+00:00",
+    "headline": "Google Takes One-Two Antitrust Punch: Yelp Win, $1.5 Billion Klarna Ruling",
+    "added_at": "2026-07-01T21:58:33.272597+00:00",
+    "expires": "2026-07-15T21:58:33.272602+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2327,6 +2249,45 @@
     "headline": "Culp Q4 EPS $(0.18) Misses $(0.11) Estimate, Sales $51.624M Beat $50.100M Estimate",
     "added_at": "2026-07-01T20:23:07.216092+00:00",
     "expires": "2026-07-08T20:23:07.216097+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VRTX": {
+    "ticker": "VRTX",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "next_day",
+    "headline": "FDA Approves First Gene Therapy for Young Children with Sickle Cell Disease; The FDA Granted The Approval To Vertex Pharmaceuticals",
+    "added_at": "2026-07-01T21:58:33.265954+00:00",
+    "expires": "2026-07-31T21:58:33.265960+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JBIO": {
+    "ticker": "JBIO",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Jade Biosciences Enters Exclusive Worldwide License Agreement With Paragon Therapeutics; To Pay Up To $22M In Milestone Payments To Paragon; To Pay Paragon Low To Mid-Single-Digit Percentage Royalties",
+    "added_at": "2026-07-01T21:58:33.268423+00:00",
+    "expires": "2026-07-08T21:58:33.268429+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JTAI": {
+    "ticker": "JTAI",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "Jet.AI Announces Majority Of Shareholders Vote In Favor Of flyExclusive Deal; Transaction Is Expected To Close On Or About July 7, 2026",
+    "added_at": "2026-07-01T21:58:33.270547+00:00",
+    "expires": "2026-07-31T21:58:33.270552+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
