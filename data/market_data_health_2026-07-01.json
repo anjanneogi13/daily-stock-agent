@@ -2,10 +2,10 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 582,
+      "attempts": 568,
       "empty": 0,
-      "errors": 120,
-      "successes": 462
+      "errors": 116,
+      "successes": 452
     },
     "monster_info": {
       "attempts": 364,
@@ -14,25 +14,25 @@
       "successes": 275
     },
     "ohlcv": {
-      "attempts": 615,
-      "empty": 20,
-      "errors": 18,
+      "attempts": 579,
+      "empty": 2,
+      "errors": 0,
       "successes": 577
     }
   },
   "date": "2026-07-01",
   "providers": {
     "stooq": {
-      "attempts": 19,
+      "attempts": 1,
       "empty": 1,
-      "errors": 18,
+      "errors": 0,
       "failure_types": {
         "empty_response": 1,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 18,
+        "provider_exception": 0,
         "rate_limited": 0,
         "stale_data": 0,
         "symbol_not_found": 0,
@@ -40,23 +40,23 @@
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 18,
+      "provider_error": 0,
       "rate_limited": 0,
       "successes": 0,
       "timeout": 0,
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1542,
-      "empty": 19,
-      "errors": 209,
+      "attempts": 1510,
+      "empty": 1,
+      "errors": 205,
       "failure_types": {
-        "empty_response": 19,
+        "empty_response": 1,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 4,
+        "provider_exception": 0,
         "rate_limited": 205,
         "stale_data": 0,
         "symbol_not_found": 0,
@@ -64,9 +64,9 @@
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 4,
+      "provider_error": 0,
       "rate_limited": 205,
-      "successes": 1314,
+      "successes": 1304,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "V"
     }
   ],
-  "timestamp_utc": "2026-07-01T13:36:35Z"
+  "timestamp_utc": "2026-07-01T12:08:46Z"
 }
