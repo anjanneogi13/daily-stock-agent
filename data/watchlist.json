@@ -1114,15 +1114,16 @@
     },
     {
       "ticker": "CON",
-      "tradeable_score": 0.58,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
       "category": "upgrade",
-      "rationale": "William Blair initiated coverage with Outperform rating, a positive catalyst but initiation coverage typically has moderate impact as it represents new research rather than a change in existing view.",
+      "rationale": "William Blair analyst initiation with Outperform rating combined with positive commentary on earnings strength and guidance raises creates a meaningful bullish catalyst for CON.",
       "action_window": "next_day",
-      "headline": "William Blair Initiates Coverage On Concentra Group Holdings with Outperform Rating",
-      "url": "https://www.benzinga.com/news/26/07/60224212/william-blair-initiates-coverage-concentra-group-holdings-outperform-rating",
+      "headline": "Concentra Standout in Occupational Medicine: Analyst",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/07/60227731/concentra-standout-in-occupational-medicine-analyst",
       "source": "alpaca",
-      "added_at": "2026-07-01T16:21:17.061441+00:00"
+      "added_at": "2026-07-01T16:21:17.061441+00:00",
+      "updated_at": "2026-07-01T18:23:36.342146+00:00"
     },
     {
       "ticker": "IBKR",
@@ -1159,6 +1160,78 @@
       "url": "https://www.benzinga.com/quote/LIME",
       "source": "alpaca",
       "added_at": "2026-07-01T16:21:17.061485+00:00"
+    },
+    {
+      "ticker": "TARS",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Short-seller alleging illegal Medicare copay scheme on company's sole commercial product creates immediate regulatory risk and reputational damage.",
+      "action_window": "intraday",
+      "headline": "Tarsus Pharmaceuticals Stock Drops as Short Seller Alleges Illegal Copay Scheme",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60228364/tarsus-pharmaceuticals-stock-drops-as-short-seller-alleges-illegal-copay-scheme",
+      "source": "alpaca",
+      "added_at": "2026-07-01T18:23:36.342110+00:00"
+    },
+    {
+      "ticker": "CVNA",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Management guidance for record retail units and EBITDA ahead of Q2 earnings is a strong positive catalyst driving immediate stock surge.",
+      "action_window": "intraday",
+      "headline": "Why Is Carvana Stock Surging Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60228190/why-is-carvana-stock-surging-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-01T18:23:36.342128+00:00"
+    },
+    {
+      "ticker": "QCOM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "SpaceX entering the handset market using Qualcomm's Snapdragon chipset represents a significant design win and potential new revenue stream for QCOM, though execution risk remains as this is still at prototype stage.",
+      "action_window": "next_day",
+      "headline": "'SpaceX Handset-Like Device Prototype Prototype To Run On Proprietary Operating System Integrating AI Technology From SpaceX's xAI; Prototype Described as Having Sleek Design Slimmer Than iPhone; Device Would Use A Qualcomm Snapdragon Chipset' - WSJ",
+      "url": "https://www.benzinga.com/news/26/07/60228149/spacex-handset-device-prototype-prototype-run-proprietary-operating-system-integrating-ai-technology",
+      "source": "alpaca",
+      "added_at": "2026-07-01T18:23:36.342136+00:00"
+    },
+    {
+      "ticker": "DAL",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BofA upgrade with raised price targets on airline sector ahead of Q2 earnings based on strong demand and stable pricing power represents a meaningful positive catalyst from a major bank.",
+      "action_window": "next_day",
+      "headline": "Higher Airfares Are Sticking After Spring Price Hikes, Analyst Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60227556/higher-airfares-are-sticking-after-spring-price-hikes-analyst-says",
+      "source": "alpaca",
+      "added_at": "2026-07-01T18:23:36.342154+00:00"
+    },
+    {
+      "ticker": "TCPC",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CEO departure from a fund explicitly described as 'troubled' signals operational distress and management instability, likely triggering immediate investor concern and selling pressure.",
+      "action_window": "intraday",
+      "headline": "'BlackRock\u2019s Tseng to Exit as CEO of Troubled Private Credit Fund - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60227477/blackrock-s-tseng-exit-ceo-troubled-private-credit-fund-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-01T18:23:36.342162+00:00"
+    },
+    {
+      "ticker": "BLK",
+      "tradeable_score": 0.52,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CEO departure from a troubled private credit fund signals operational issues and potential reputational risk for BlackRock, though impact is limited to one business segment.",
+      "action_window": "intraday",
+      "headline": "'BlackRock\u2019s Tseng to Exit as CEO of Troubled Private Credit Fund' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60227296/blackrock-s-tseng-exit-ceo-troubled-private-credit-fund-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-01T18:23:36.342170+00:00"
     }
   ]
 }
