@@ -251,3 +251,12 @@ data/picks_log.csv.*.bak
 # Pillar 2.5 — books seed YAML must be tracked (CI loads from it)
 !data/books/
 !data/books/*.yaml
+
+# Task 1 (issue #290): durable brain-state files — un-ignore so git add -f
+# in nightly_brain.yml can reliably persist them run-to-run.
+# Without these negations, `git add -f` silently no-ops on a gitignored path
+# when the file doesn't yet exist, breaking the 5%/week weight cap and
+# calibration/memoir continuity (audit 2026-06-24, Section 3 #1, Task 1).
+!data/weight_history.jsonl
+!data/pattern_stats.json
+!data/agent_memoir.json

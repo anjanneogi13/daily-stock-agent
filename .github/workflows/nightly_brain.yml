@@ -69,6 +69,17 @@ jobs:
           # was never committed, so the weekly accounting reset every run).
           # -f bypasses the ignore for these specific, intentionally-persisted
           # state files while keeping them ignored for humans locally.
+          #
+          # Task 1 fix (issue #290): the root cause of the "git add -f silently
+          # no-ops" bug is that these three files often don't exist on disk when
+          # the conductor produces nothing new (no weight applied, no memoir
+          # written).  Ensure they always exist before `git add -f` so the add
+          # never silently skips them and the weekly cap / calibration / memoir
+          # state is committed on EVERY nightly run, not just when something
+          # changed.
+          [ -f data/weight_history.jsonl ] || : > data/weight_history.jsonl
+          [ -f data/pattern_stats.json ]  || echo '{}' > data/pattern_stats.json
+          [ -f data/agent_memoir.json ]   || echo '{}' > data/agent_memoir.json
           git add -f data/patterns.jsonl data/pattern_stats.json \
                   data/weight_proposals.jsonl data/weight_history.jsonl \
                   data/learning_journal.jsonl data/agent_memoir.json \
