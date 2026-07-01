@@ -930,6 +930,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/06/60205821/borealis-foods-q1-eps-0-16-0-20-yoy-sales-7-368m-6-846m-yoy",
       "source": "alpaca",
       "added_at": "2026-06-30T23:06:00.236880+00:00"
+    },
+    {
+      "ticker": "APOG",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings beat of +32.56% with revenue also exceeding estimates represents a strong positive catalyst for immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Apogee Enterprises (APOG) Beats Q1 Earnings and Revenue Estimates",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/apogee-enterprises-apog-beats-q1-114001138.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-07-01T01:39:10.803915+00:00"
     }
   ]
 }

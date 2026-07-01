@@ -726,19 +726,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LI": {
-    "ticker": "LI",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Li Auto Launches The All-New Li L8, With Deliveries To Commence Within This Week",
-    "added_at": "2026-06-23T23:11:51.546233+00:00",
-    "expires": "2026-06-30T23:11:51.546240+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SAFX": {
     "ticker": "SAFX",
     "score_delta": 0.039,
