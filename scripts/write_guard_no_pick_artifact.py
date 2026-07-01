@@ -24,7 +24,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from src.official_pick_artifact import config_hash as _config_hash
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -33,6 +32,7 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts.validate_daily_no_pick import validate_no_pick_report
+from src.official_pick_artifact import config_hash as _config_hash
 from src.github_observability import github_observability_metadata
 from src.market_calendar import next_trading_day, reason_market_closed
 from src.premarket_decision_contract import (
