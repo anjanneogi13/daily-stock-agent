@@ -353,45 +353,6 @@
     "expires": "2026-12-14T21:02:46.918268+00:00",
     "hard_block": true
   },
-  "TTMI": {
-    "ticker": "TTMI",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "next_day",
-    "headline": "TTM Technologies To Acquire Privately-Held, European-Based Swiss Technology Group AG And ILFA GmbH In All-Cash Deals; Acquisitions Expected To Be Immediately Accretive Upon Completion",
-    "added_at": "2026-06-17T22:57:06.716804+00:00",
-    "expires": "2026-07-01T22:57:06.716812+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DXPE": {
-    "ticker": "DXPE",
-    "score_delta": 0.039,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "DXP Enterprises Acquires General Repair Service; DXP Funded The Acquisition With Cash From The Balance Sheet",
-    "added_at": "2026-06-17T22:57:06.719039+00:00",
-    "expires": "2026-07-01T22:57:06.719045+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JRVR": {
-    "ticker": "JRVR",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "James River Group Says Supreme Court Rules On Motion To Dismiss Co's Amended Complaint In JRG Reinsurance Deal Case; Court Allows Direct Damages Claim To Proceed In JRG Reinsurance",
-    "added_at": "2026-06-17T22:57:06.721001+00:00",
-    "expires": "2026-07-01T22:57:06.721009+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "IMCC": {
     "ticker": "IMCC",
     "score_delta": 0.2,
@@ -2288,6 +2249,19 @@
     "headline": "Jet.AI Announces Majority Of Shareholders Vote In Favor Of flyExclusive Deal; Transaction Is Expected To Close On Or About July 7, 2026",
     "added_at": "2026-07-01T21:58:33.270547+00:00",
     "expires": "2026-07-31T21:58:33.270552+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KTOS": {
+    "ticker": "KTOS",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "Why Is Kratos (KTOS) Stock Rocketing Higher Today",
+    "added_at": "2026-07-01T23:13:09.473836+00:00",
+    "expires": "2026-07-06T23:13:09.473843+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
