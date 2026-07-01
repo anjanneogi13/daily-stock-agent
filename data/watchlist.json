@@ -1111,6 +1111,54 @@
       "url": "https://www.benzinga.com/news/26/07/60215559/yatra-online-receives-nasdaq-noncompliance-notification-gets-time-through-dec-22-regain-compliance",
       "source": "alpaca",
       "added_at": "2026-07-01T13:45:10.292652+00:00"
+    },
+    {
+      "ticker": "CON",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "William Blair initiated coverage with Outperform rating, a positive catalyst but initiation coverage typically has moderate impact as it represents new research rather than a change in existing view.",
+      "action_window": "next_day",
+      "headline": "William Blair Initiates Coverage On Concentra Group Holdings with Outperform Rating",
+      "url": "https://www.benzinga.com/news/26/07/60224212/william-blair-initiates-coverage-concentra-group-holdings-outperform-rating",
+      "source": "alpaca",
+      "added_at": "2026-07-01T16:21:17.061441+00:00"
+    },
+    {
+      "ticker": "IBKR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong operational metrics showing 53% YoY growth in daily average revenue trades indicates robust business momentum and likely revenue beat expectations.",
+      "action_window": "intraday",
+      "headline": "Interactive Brokers Group Reports Brokerage Metrics And Other Financial Information For June 2026; 5.269M Daily Average Revenue Trades, Up 53% YoY And Up 6% MoM",
+      "url": "https://www.benzinga.com/news/26/07/60223708/interactive-brokers-group-reports-brokerage-metrics-and-other-financial-information-june-2026-5-269m",
+      "source": "alpaca",
+      "added_at": "2026-07-01T16:21:17.061467+00:00"
+    },
+    {
+      "ticker": "BE",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "UBS maintaining Buy rating with significant price target raise to $350 indicates strong conviction and upside potential, though analyst updates typically have moderate near-term trading impact.",
+      "action_window": "intraday",
+      "headline": "UBS Maintains Buy on Bloom Energy, Raises Price Target to $350",
+      "url": "https://www.benzinga.com/news/26/07/60223532/ubs-maintains-buy-bloom-energy-raises-price-target-350",
+      "source": "alpaca",
+      "added_at": "2026-07-01T16:21:17.061476+00:00"
+    },
+    {
+      "ticker": "LIME",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Neutron IPO opened 8% above pricing at $27 vs $25, indicating strong initial demand, but IPO pops are often short-lived and the ticker mentioned (LIME) relationship is unclear.",
+      "action_window": "intraday",
+      "headline": "Neutron IPO Shares Open For Trade At $27/Share; IPO Priced At $25/Share On 6,956,522 Shares",
+      "url": "https://www.benzinga.com/quote/LIME",
+      "source": "alpaca",
+      "added_at": "2026-07-01T16:21:17.061485+00:00"
     }
   ]
 }
