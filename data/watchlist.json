@@ -1211,15 +1211,16 @@
     },
     {
       "ticker": "TCPC",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.72,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "CEO departure from a fund explicitly described as 'troubled' signals operational distress and management instability, likely triggering immediate investor concern and selling pressure.",
+      "rationale": "CEO departure combined with federal valuation probe, mounting losses, and asset markdowns signals serious operational and regulatory distress requiring immediate risk assessment.",
       "action_window": "intraday",
-      "headline": "'BlackRock\u2019s Tseng to Exit as CEO of Troubled Private Credit Fund - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60227477/blackrock-s-tseng-exit-ceo-troubled-private-credit-fund-bloomberg",
+      "headline": "BlackRock Private Credit Fund CEO Departs During Valuation Probe, Mounting Losses",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60232518/blackrock-private-credit-fund-ceo-departs-during-valuation-probe-mounting-losses",
       "source": "alpaca",
-      "added_at": "2026-07-01T18:23:36.342162+00:00"
+      "added_at": "2026-07-01T18:23:36.342162+00:00",
+      "updated_at": "2026-07-01T20:23:07.219202+00:00"
     },
     {
       "ticker": "BLK",
@@ -1232,6 +1233,91 @@
       "url": "https://www.benzinga.com/news/26/07/60227296/blackrock-s-tseng-exit-ceo-troubled-private-credit-fund-bloomberg",
       "source": "alpaca",
       "added_at": "2026-07-01T18:23:36.342170+00:00"
+    },
+    {
+      "ticker": "GBX",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Greenbrier missed both EPS and revenue estimates with revenue shortfall of 5.9% being particularly significant, likely to trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Greenbrier Companies Q3 EPS $0.60 Misses $0.62 Estimate, Sales $576.500M Miss $612.694M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60232775/greenbrier-companies-q3-eps-0-60-misses-0-62-estimate-sales-576-500m-miss-612-694m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219139+00:00",
+      "updated_at": "2026-07-01T20:23:07.219164+00:00"
+    },
+    {
+      "ticker": "CBIO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed shelf offering of $500M signals potential dilution risk for existing shareholders, typically pressuring stock price in the near term despite providing capital flexibility.",
+      "action_window": "next_day",
+      "headline": "Crescent Biopharma Files Prospectus For Offering $500M Mixed Shelf",
+      "url": "https://www.benzinga.com/news/26/07/60232786/crescent-biopharma-files-prospectus-offering-500m-mixed-shelf",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219152+00:00"
+    },
+    {
+      "ticker": "SGLY",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "lawsuit",
+      "rationale": "Settlement of class action lawsuit removes legal overhang and uncertainty, though $5.8M cost is material depending on company size and may signal resolution of prior issues.",
+      "action_window": "next_day",
+      "headline": "Singularity Future Technology Settles Class Action For $5.8M",
+      "url": "https://www.benzinga.com/news/26/07/60232734/singularity-future-technology-settles-class-action-5-8m",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219174+00:00"
+    },
+    {
+      "ticker": "FC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company lowered FY2026 sales guidance midpoint by ~4% ($270M to $263.5M), now below consensus estimate of $267.4M, signaling deteriorating business conditions.",
+      "action_window": "intraday",
+      "headline": "Franklin Covey Lowers FY2026 Sales Guidance from $265.000M-$275.000M to $260.000M-$267.000M vs $267.445M Est",
+      "url": "https://www.benzinga.com/news/26/07/60232724/franklin-covey-lowers-fy2026-sales-guidance-265-000m-275-000m-260-000m-267-000m-vs-267-445m-est",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219181+00:00"
+    },
+    {
+      "ticker": "LHX",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Long-term FAA contract through 2045 provides significant revenue visibility and validates L3Harris's position in aviation infrastructure, though immediate financial impact depends on contract size.",
+      "action_window": "next_day",
+      "headline": "L3Harris Technologies Receives FAA Contract To Modernize, Continue Aircraft Tracking Network Through 2045",
+      "url": "https://www.benzinga.com/news/26/07/60232625/l3harris-technologies-receives-faa-contract-modernize-continue-aircraft-tracking-network-through-204",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219194+00:00"
+    },
+    {
+      "ticker": "CULP",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of 64% (actual -$0.18 vs estimate -$0.11) outweighs modest 3% revenue beat, indicating deteriorating profitability that will likely pressure the stock.",
+      "action_window": "intraday",
+      "headline": "Culp Q4 EPS $(0.18) Misses $(0.11) Estimate, Sales $51.624M Beat $50.100M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60232368/culp-q4-eps-0-18-misses-0-11-estimate-sales-51-624m-beat-50-100m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219211+00:00"
+    },
+    {
+      "ticker": "NBIX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Phase 2 trial initiation for expanded pediatric population shows pipeline progress but is early-stage with uncertain outcomes and distant commercial potential.",
+      "action_window": "next_day",
+      "headline": "Neurocrine Biosciences Initiates Phase 2 Clinical Study To Assess Crinecerfont In Children Aged 3 Months To Under 4 Years With Classic Congenital Adrenal Hyperplasia",
+      "url": "https://www.benzinga.com/news/26/07/60232321/neurocrine-biosciences-initiates-phase-2-clinical-study-assess-crinecerfont-children-aged-3-months-u",
+      "source": "alpaca",
+      "added_at": "2026-07-01T20:23:07.219218+00:00"
     }
   ]
 }

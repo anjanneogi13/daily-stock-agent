@@ -1168,19 +1168,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ALLY": {
-    "ticker": "ALLY",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on Ally Financial, Raises Price Target to $55",
-    "added_at": "2026-06-26T19:31:34.447983+00:00",
-    "expires": "2026-07-01T19:31:34.447989+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SPCX": {
     "ticker": "SPCX",
     "score_delta": 0.05,
@@ -1191,19 +1178,6 @@
     "headline": "Europe\u2019s Reckoning: SpaceX\u2019s Record IPO Exposes the Continent\u2019s Space Gap",
     "added_at": "2026-06-26T19:31:34.452604+00:00",
     "expires": "2026-07-03T19:31:34.452609+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SNX": {
-    "ticker": "SNX",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on TD Synnex, Raises Price Target to $352",
-    "added_at": "2026-06-26T19:31:34.454902+00:00",
-    "expires": "2026-07-01T19:31:34.454907+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2301,6 +2275,58 @@
     "headline": "Deutsche Bank Maintains Buy on Welltower, Raises Price Target to $265",
     "added_at": "2026-07-01T18:23:36.339169+00:00",
     "expires": "2026-07-06T18:23:36.339174+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SGLY": {
+    "ticker": "SGLY",
+    "score_delta": -0.079,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Singularity Future Technology Settles Class Action For $5.8M",
+    "added_at": "2026-07-01T20:23:07.209773+00:00",
+    "expires": "2026-07-15T20:23:07.209779+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GBX": {
+    "ticker": "GBX",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Greenbrier Companies Narrows FY2026 GAAP EPS Guidance from $3.00-$3.50 to $3.00-$3.15 vs $3.17 Est; Affirms FY2026 Sales Guidance of $2.400B-$2.500B vs $2.535B Est",
+    "added_at": "2026-07-01T20:23:07.205547+00:00",
+    "expires": "2026-07-15T20:23:07.205553+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FC": {
+    "ticker": "FC",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Franklin Covey Lowers FY2026 Sales Guidance from $265.000M-$275.000M to $260.000M-$267.000M vs $267.445M Est",
+    "added_at": "2026-07-01T20:23:07.211890+00:00",
+    "expires": "2026-07-15T20:23:07.211896+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CULP": {
+    "ticker": "CULP",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Culp Q4 EPS $(0.18) Misses $(0.11) Estimate, Sales $51.624M Beat $50.100M Estimate",
+    "added_at": "2026-07-01T20:23:07.216092+00:00",
+    "expires": "2026-07-08T20:23:07.216097+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
