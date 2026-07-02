@@ -2394,5 +2394,44 @@
     "expires": "2026-08-01T17:10:33.296416+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "CRWV": {
+    "ticker": "CRWV",
+    "score_delta": -0.03,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Stock Of The Day: Is CoreWeave Headed Lower?",
+    "added_at": "2026-07-02T18:56:42.136742+00:00",
+    "expires": "2026-07-07T18:56:42.136749+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RVMD": {
+    "ticker": "RVMD",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Wedbush Maintains Outperform on Revolution Medicines, Raises Price Target to $181",
+    "added_at": "2026-07-02T18:56:42.141648+00:00",
+    "expires": "2026-07-07T18:56:42.141653+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GIS": {
+    "ticker": "GIS",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Freedom Broker Maintains Hold on General Mills, Lowers Price Target to $42",
+    "added_at": "2026-07-02T18:56:42.143877+00:00",
+    "expires": "2026-07-07T18:56:42.143882+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
