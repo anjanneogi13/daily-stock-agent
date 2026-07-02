@@ -1,0 +1,72 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-28588608496",
+  "artifact_filename": "premarket_official_pick_2026-07-02_NBIX.json",
+  "artifact_id": "premarket_official_pick:2026-07-02:NBIX",
+  "artifact_path": "data/premarket_official_pick_2026-07-02_NBIX.json",
+  "commit_sha": "af24f38937e692aa41dfc24f0ebc4f35874fe8b6",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/af24f38937e692aa41dfc24f0ebc4f35874fe8b6",
+  "company": "NBIX",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-07-02",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-07-02:NBIX:28588608496:af24f38937e6",
+  "entry": 167.77,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 158.91.",
+    "Review/exit near take profit 178.84."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 5,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 7.79,
+    "regime": "bull",
+    "sma_value": 691.87,
+    "sma_window": 200,
+    "spy_close": 745.76,
+    "spy_sma200": 691.87,
+    "spy_sma_anchor": 691.87
+  },
+  "risk_dollars": 44.3,
+  "risk_flags": [
+    "PREMARKET_HALF_SIZE"
+  ],
+  "risk_reward": 1.25,
+  "score": 0.731,
+  "score_components": {
+    "composite": 0.731,
+    "day_score": 0.598,
+    "monster_score": 0.15,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.7543654845047163,
+    "watchlist_boost": 0.083
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "NBIX selected as official swing pick; composite score 0.731; premarket sanity: fresh price unavailable from any provider; reduced size.",
+  "selection_time_et": "2026-07-02T08:08:55-04:00",
+  "stop_loss": 158.91,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 178.84,
+  "ticker": "NBIX",
+  "top_reasons": [
+    "composite score 0.731",
+    "premarket sanity: fresh price unavailable from any provider; reduced size"
+  ],
+  "workflow_run_id": "28588608496",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/28588608496"
+}
