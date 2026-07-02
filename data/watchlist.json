@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "TCS",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Tecsys significantly beat Q4 earnings expectations with adjusted EPS of $0.28 vs $0.12 estimate (133% beat) and revenue of $50.045M vs $48.450M estimate (3.3% beat), representing a strong fundamental surprise likely to drive immediate price action.",
-      "action_window": "next_day",
-      "headline": "Update: Tecsys Q4 Adj. EPS $0.28 Beats $0.12 Estimate, Sales $50.045M Beat $48.450M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60175420/update-tecsys-q4-adj-eps-0-28-beats-0-12-estimate-sales-50-045m-beat-48-450m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-06-29T21:51:57.429301+00:00",
-      "updated_at": "2026-06-29T21:51:57.429315+00:00"
-    },
-    {
-      "ticker": "ELTP",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Mixed earnings results with EPS declining 50% YoY but revenue showing strong 27% growth, creating conflicting signals for traders.",
-      "action_window": "next_day",
-      "headline": "Elite Pharmaceuticals Q4 EPS $0.01 Down From $0.02 YoY, Sales $40.748M Up From $31.996M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60175210/elite-pharmaceuticals-q4-eps-0-01-down-0-02-yoy-sales-40-748m-31-996m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-06-29T21:51:57.429328+00:00"
-    },
-    {
-      "ticker": "SCLX",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Material $50M Bitcoin acquisition agreement represents significant balance sheet transformation and crypto treasury strategy adoption for Scilex, though binding term sheet leaves execution risk.",
-      "action_window": "next_day",
-      "headline": "Scilex Holding Enters Binding Term Sheet With Datavault AI On June 24, 2026; Expected To Purchase 837 BTC From Datavault For $50M",
-      "url": "https://www.benzinga.com/news/26/06/60175182/scilex-holding-enters-binding-term-sheet-datavault-ai-june-24-2026-expected-purchase-837-btc-datavau",
-      "source": "alpaca",
-      "added_at": "2026-06-29T21:51:57.429335+00:00"
-    },
-    {
-      "ticker": "MTX",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "lawsuit",
-      "rationale": "Filing of reorganization plan with defined $450M funding for talc injury trust provides clarity on liability resolution and caps potential exposure for parent company, reducing uncertainty overhang.",
-      "action_window": "next_day",
-      "headline": "Minerals Technologies Files A Plan Of Reorganization In The Chapter 11 Cases Of Its Subsidiaries BMI Oldco And Its Affiliated Debtors, Pending Before The U.S. Bankruptcy Court For The Southern District Of Texas;  Parent Plan Funds Talc Personal Injury Trust With $450M From Non-Debtor Affiliates",
-      "url": "https://www.benzinga.com/news/26/06/60175061/minerals-technologies-files-plan-reorganization-chapter-11-cases-its-subsidiaries-bmi-oldco-and-its-",
-      "source": "alpaca",
-      "added_at": "2026-06-29T21:51:57.429340+00:00"
-    },
-    {
-      "ticker": "BENF",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Massive earnings miss with Q4 EPS of -$14.02 versus -$0.37 estimate (38x worse) and revenue significantly negative versus positive expectations indicates severe operational issues.",
-      "action_window": "next_day",
-      "headline": "Beneficient Q4 EPS $(14.02) Misses $(0.37) Estimate, Sales $(7.842M) Miss $202.000K Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60175950/beneficient-q4-eps-14-02-misses-0-37-estimate-sales-7-842m-miss-202-000k-estimate",
-      "source": "alpaca",
-      "added_at": "2026-06-29T22:50:58.187703+00:00"
-    },
-    {
       "ticker": "HOOD",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -354,15 +293,16 @@
     },
     {
       "ticker": "AA",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.92,
       "sentiment": "bullish",
       "category": "ma_acquirer",
-      "rationale": "Major $4.1B acquisition of vertically integrated aluminum assets significantly expands Alcoa's production capacity and resource base, representing a transformative strategic move.",
+      "rationale": "Transformative M&A deal acquiring major integrated aluminum assets across three continents positions Alcoa as one of the largest global producers, representing a significant strategic expansion.",
       "action_window": "intraday",
-      "headline": "Alcoa To Acquire South32 Limited\u2019s Interests In Bauxite Mine, Alumina Refinery And Aluminum Smelter Operations In A Cash And Stock Transaction For An Upfront Consideration Of ~$4.1B",
-      "url": "https://www.benzinga.com/news/26/06/60205713/alcoa-acquire-south32-limited-s-interests-bauxite-mine-alumina-refinery-and-aluminum-smelter-operati",
+      "headline": "Alcoa (AA) Agrees To Buy South32 Assets To Build A Leading Aluminum Business",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/alcoa-aa-agrees-buy-south32-120942965.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989117+00:00"
+      "added_at": "2026-06-30T21:54:45.989117+00:00",
+      "updated_at": "2026-07-02T22:59:53.252144+00:00"
     },
     {
       "ticker": "NKE",
@@ -1338,6 +1278,18 @@
       "url": "https://www.benzinga.com/news/26/07/60261703/fabric-ai-files-prospectus-related-resale-187-2m-shares-common-stock",
       "source": "alpaca",
       "added_at": "2026-07-02T21:42:59.479921+00:00"
+    },
+    {
+      "ticker": "ALAR",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Law enforcement investigation into proxy network infrastructure misuse represents significant regulatory and reputational risk with potential legal/financial consequences.",
+      "action_window": "intraday",
+      "headline": "Alarum Technologies Issues Statement  In Response To Recent Reports Regarding Their Proxy Network Operations; To Fully Cooperate With Law Enforcement In Infrastructure Misuse Investigation",
+      "url": "https://www.benzinga.com/news/26/07/60262506/alarum-technologies-issues-statement-response-recent-reports-regarding-their-proxy-network-operation",
+      "source": "alpaca",
+      "added_at": "2026-07-02T22:59:53.252102+00:00"
     }
   ]
 }
