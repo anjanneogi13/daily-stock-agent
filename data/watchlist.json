@@ -199,16 +199,16 @@
     },
     {
       "ticker": "HOOD",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Mizuho raises price target to $130 with stock already up 3.3% premarket, indicating meaningful analyst confidence and positive momentum.",
+      "category": "product_launch",
+      "rationale": "Multiple significant product launches (AI agents, tokenized stocks in 120 countries, perpetual futures) with confirmed 3% price move and technical breakout above all EMAs indicates strong positive momentum and institutional interest.",
       "action_window": "intraday",
-      "headline": "Why Is Robinhood Markets Stock Gaining Thursday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60242755/why-is-robinhood-markets-stock-gaining-thursday",
+      "headline": "HOOD Jumps 3% as Robinhood Unveils AI Agents, Blockchain Expansion",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60258130/hood-jumps-3-as-robinhood-unveils-ai-agents-blockchain-expansion",
       "source": "alpaca",
       "added_at": "2026-06-30T10:51:46.627247+00:00",
-      "updated_at": "2026-07-02T12:55:42.696813+00:00"
+      "updated_at": "2026-07-02T20:16:31.569723+00:00"
     },
     {
       "ticker": "EOSE",
@@ -1222,6 +1222,138 @@
       "url": "https://www.benzinga.com/news/26/07/60256045/momentus-awarded-u-s-space-force-contract-transportation-services",
       "source": "alpaca",
       "added_at": "2026-07-02T18:56:42.151386+00:00"
+    },
+    {
+      "ticker": "MTVA",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of $4M in common shares typically causes immediate dilution and selling pressure on small-cap stocks.",
+      "action_window": "intraday",
+      "headline": "MetaVia Files Prospectus For Offering $4M Common Shares",
+      "url": "https://www.benzinga.com/news/26/07/60259610/metavia-files-prospectus-offering-4m-common-shares",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569644+00:00"
+    },
+    {
+      "ticker": "BBCP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed shelf offering of $300M signals potential equity dilution concerns, typically creating near-term selling pressure though proceeds may support growth initiatives.",
+      "action_window": "next_day",
+      "headline": "Concrete Pumping Files Prospectus For Offering $300M Mixed Shelf",
+      "url": "https://www.benzinga.com/news/26/07/60259529/concrete-pumping-files-prospectus-offering-300m-mixed-shelf",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569658+00:00"
+    },
+    {
+      "ticker": "INO",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $300M securities offering represents significant dilution for existing shareholders and typically causes immediate downward price pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Inovio Pharmaceuticals May Offer Up To $300 Mln Of Securities",
+      "url": "https://www.benzinga.com/news/26/07/60259491/inovio-pharmaceuticals-may-offer-300-mln-securities",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569666+00:00"
+    },
+    {
+      "ticker": "FTW",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Presidio's $83M acquisition paired with an 11% dividend increase from $1.35 to $1.50 signals strong accretive M&A execution and improved cash flow generation capability.",
+      "action_window": "next_day",
+      "headline": "Presidio Acquires Canyon Creek For ~$83M; Believes Transaction Will Support Increase To Its Anticipated Annualized Dividend Rate From $1.35 To $1.50 Per Share",
+      "url": "https://www.benzinga.com/news/26/07/60259398/presidio-acquires-canyon-creek-83m-believes-transaction-will-support-increase-its-anticipated-annual",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569674+00:00"
+    },
+    {
+      "ticker": "JCAP",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large mixed shelf offering of $7.1B with 32.7M shares being sold by existing shareholders represents significant dilution risk and supply overhang that typically pressures stock price in the near term.",
+      "action_window": "intraday",
+      "headline": "Jefferson Capital Files Prospectus For Offering $7100M Mixed Shelf, 32.722M Common Shares On Behalf Of Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/07/60259340/jefferson-capital-files-prospectus-offering-7100m-mixed-shelf-32-722m-common-shares-behalf-selling-s",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569681+00:00"
+    },
+    {
+      "ticker": "AHCO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Material cybersecurity breach with data exfiltration creates regulatory, litigation, and reputational risk despite company claiming no operational impact.",
+      "action_window": "intraday",
+      "headline": "AdaptHealth Discloses Investigation Into Security Incident Where Threat Actor Gained Authorized Access To Systems And Exfiltrated Certain Data; Determined Incident Is Material Due To Nature And Potential Volume; No Material Impact On Operations",
+      "url": "https://www.benzinga.com/news/26/07/60259285/adapthealth-discloses-investigation-security-incident-where-threat-actor-gained-authorized-access-sy",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569688+00:00"
+    },
+    {
+      "ticker": "LVLU",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed shelf offering of $7.5M signals potential dilution for existing shareholders, typically creating near-term selling pressure for small-cap stocks.",
+      "action_window": "next_day",
+      "headline": "Lulu's Fashion Lounge Files Prospectus For Offering $7.5M Mixed Shelf",
+      "url": "https://www.benzinga.com/news/26/07/60259226/lulu-s-fashion-lounge-files-prospectus-offering-7-5m-mixed-shelf",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569695+00:00"
+    },
+    {
+      "ticker": "SAIH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $300M mixed shelf offering typically signals dilution risk and potential capital needs, creating near-term selling pressure despite providing financial flexibility.",
+      "action_window": "next_day",
+      "headline": "SAIHEAT Files Prospectus For Offering $300M Mixed Shelf",
+      "url": "https://www.benzinga.com/news/26/07/60259159/saiheat-files-prospectus-offering-300m-mixed-shelf",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569702+00:00"
+    },
+    {
+      "ticker": "SXI",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Standex completes strategic acquisition by buying remaining minority stake for $64M, demonstrating commitment to India operations but represents a relatively small transaction for full consolidation rather than transformative deal.",
+      "action_window": "next_day",
+      "headline": "Standex International Acquires Remaining 9.9% Stake In India-Based Narayan Powertech For ~$64M",
+      "url": "https://www.benzinga.com/m/26/07/60259035/standex-international-acquires-remaining-9-9-stake-india-based-narayan-powertech-64m",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569709+00:00"
+    },
+    {
+      "ticker": "UTZ",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "FDA's highest risk level classification for a long-running recall on popular potato chip brands poses serious health liability, potential sales loss, and reputational damage for UTZ requiring immediate risk assessment.",
+      "action_window": "intraday",
+      "headline": "'Long-running recall on popular potato chips brands classified at FDA\u2019s highest risk level' - New York Post",
+      "url": "https://www.benzinga.com/news/26/07/60258712/long-running-recall-popular-potato-chips-brands-classified-fda-s-highest-risk-level-new-york-post",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569716+00:00"
+    },
+    {
+      "ticker": "GPC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "M&A interest from ORLY for GPC's auto unit represents potential value unlock through strategic divestiture, though this is still at rumor stage ('said to receive').",
+      "action_window": "intraday",
+      "headline": "'Genuine Parts Is Said to Receive O\u2019Reilly Interest for Auto Unit' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60257626/genuine-parts-said-receive-o-reilly-interest-auto-unit-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-02T20:16:31.569732+00:00"
     }
   ]
 }

@@ -2433,5 +2433,57 @@
     "expires": "2026-07-07T18:56:42.143882+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "FTW": {
+    "ticker": "FTW",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Presidio Acquires Canyon Creek For ~$83M; Believes Transaction Will Support Increase To Its Anticipated Annualized Dividend Rate From $1.35 To $1.50 Per Share",
+    "added_at": "2026-07-02T20:16:31.557141+00:00",
+    "expires": "2026-07-16T20:16:31.557148+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SXI": {
+    "ticker": "SXI",
+    "score_delta": 0.037,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.52,
+    "action_window": "next_day",
+    "headline": "Standex International Acquires Remaining 9.9% Stake In India-Based Narayan Powertech For ~$64M",
+    "added_at": "2026-07-02T20:16:31.559786+00:00",
+    "expires": "2026-07-16T20:16:31.559792+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JPM": {
+    "ticker": "JPM",
+    "score_delta": -0.03,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.15,
+    "action_window": "ignore",
+    "headline": "'JPMorgan Loses Battle Over Charlie Javice\u2019s Legal Expenses' - Bloomberg",
+    "added_at": "2026-07-02T20:16:31.564258+00:00",
+    "expires": "2026-07-16T20:16:31.564263+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GPC": {
+    "ticker": "GPC",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "'Genuine Parts Is Said to Receive O\u2019Reilly Interest for Auto Unit' - Bloomberg",
+    "added_at": "2026-07-02T20:16:31.566452+00:00",
+    "expires": "2026-08-01T20:16:31.566457+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
