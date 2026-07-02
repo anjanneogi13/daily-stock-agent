@@ -1318,6 +1318,18 @@
       "url": "https://www.benzinga.com/quote/RIVN",
       "source": "alpaca",
       "added_at": "2026-07-02T12:55:42.696848+00:00"
+    },
+    {
+      "ticker": "NEXA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed M&A discussions involving a major shareholder stake acquisition in Nexa Resources creates potential takeover premium opportunity with near-term price impact.",
+      "action_window": "intraday",
+      "headline": "Boliden Confirms Talks With Votorantim Related To Potential Acquisition Of Votorantim's Shares In Nexa Resources",
+      "url": "https://www.benzinga.com/m/26/07/60247441/boliden-confirms-talks-votorantim-related-potential-acquisition-votorantim-s-shares-nexa-resources",
+      "source": "alpaca",
+      "added_at": "2026-07-02T15:09:58.514406+00:00"
     }
   ]
 }
