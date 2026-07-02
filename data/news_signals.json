@@ -44,19 +44,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "TMHC": {
-    "ticker": "TMHC",
-    "score_delta": 0.071,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "From Trailer Parks To Master-Planned Communities: Buffett Successor Builds Berkshire Housing Empire With Taylor Morrison Deal",
-    "added_at": "2026-06-02T16:30:19.342423+00:00",
-    "expires": "2026-07-02T16:30:19.342428+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GORO": {
     "ticker": "GORO",
     "score_delta": 0.2,
@@ -762,19 +749,6 @@
     "headline": "Why Is Fort Technology Stock Falling On Thursday?",
     "added_at": "2026-06-25T16:00:44.110811+00:00",
     "expires": "2026-07-09T16:00:44.110817+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JKHY": {
-    "ticker": "JKHY",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "intraday",
-    "headline": "Jack Henry, Google Cloud Expand Partnership To Provide AI-Driven Securities Capabilities For Banks, Credit Unions",
-    "added_at": "2026-06-25T16:00:44.115021+00:00",
-    "expires": "2026-07-02T16:00:44.115028+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2405,6 +2379,19 @@
     "headline": "B of A Securities Maintains Buy on argenx, Raises Price Target to $1088",
     "added_at": "2026-07-02T15:09:58.511196+00:00",
     "expires": "2026-07-07T15:09:58.511202+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TWO": {
+    "ticker": "TWO",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "Two Harbors Investment Stockholders Approve Merger With Crosscountry Mortgage; TWO Common Stockholders To Receive $12/Shr In Cash, Plus Pro-Rated Stub Dividend",
+    "added_at": "2026-07-02T17:10:33.296409+00:00",
+    "expires": "2026-08-01T17:10:33.296416+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
