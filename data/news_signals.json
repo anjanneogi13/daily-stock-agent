@@ -2264,5 +2264,57 @@
     "expires": "2026-07-06T23:13:09.473843+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "UAL": {
+    "ticker": "UAL",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Goldman Sachs Maintains Buy on United Airlines Holdings, Raises Price Target to $162",
+    "added_at": "2026-07-02T10:32:09.655317+00:00",
+    "expires": "2026-07-07T10:32:09.655326+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "YARIY": {
+    "ticker": "YARIY",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Yara To Acquire Gulf Coast Ammonia's Production Facility In Texas From Lotus Infrastructure And MB Energy For $1.3B",
+    "added_at": "2026-07-02T10:32:09.658055+00:00",
+    "expires": "2026-07-16T10:32:09.658063+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VEON": {
+    "ticker": "VEON",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "VEON Partners With Mastercard To Expand Financial Services Across Ukraine, Kazakhstan, Pakistan and Uzbekistan",
+    "added_at": "2026-07-02T10:32:09.660288+00:00",
+    "expires": "2026-07-09T10:32:09.660294+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ENSG": {
+    "ticker": "ENSG",
+    "score_delta": 0.032,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Ensign Group Purchases Two Skilled Nursing Facilities In Texas; Terms Not Disclosed",
+    "added_at": "2026-07-02T10:32:09.664167+00:00",
+    "expires": "2026-07-16T10:32:09.664173+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

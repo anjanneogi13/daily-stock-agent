@@ -1414,6 +1414,54 @@
       "url": "https://www.benzinga.com/news/legal/26/07/60234402/google-takes-one-two-antitrust-punch-yelp-win-1-5-billion-klarna-ruling",
       "source": "alpaca",
       "added_at": "2026-07-01T21:58:33.275685+00:00"
+    },
+    {
+      "ticker": "AZN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic R&D collaboration with option and license agreement for novel siRNA drug candidates represents meaningful pipeline expansion for AstraZeneca, though commercial impact is long-term and uncertain.",
+      "action_window": "next_day",
+      "headline": "CSPC Pharmaceutical Earlier Announced Strategic Research Collaboration, Option, License Agreement With AstraZeneca To Develop Novel Small Nucleic Acid Drug Candidates Using Proprietary SiRNA Drug Discovery And Extrahepatic Targeted Delivery Platforms",
+      "url": "https://www.benzinga.com/quote/AZN",
+      "source": "alpaca",
+      "added_at": "2026-07-02T10:32:09.667000+00:00"
+    },
+    {
+      "ticker": "YRD",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Share repurchase program of up to 10% of outstanding shares signals management confidence and provides technical support, though impact spreads over 12 months.",
+      "action_window": "intraday",
+      "headline": "Yiren Digital Authorizes New Share Repurchase Program To Repurchase Up To 10% Of Total Issued And Outstanding Shares For Up To $20M Over The Next 12 Months",
+      "url": "https://www.benzinga.com/quote/YRD",
+      "source": "alpaca",
+      "added_at": "2026-07-02T10:32:09.667013+00:00"
+    },
+    {
+      "ticker": "GPUS",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant 67 Bitcoin addition (~8% increase) to treasury holdings signals corporate confidence in crypto strategy, though impact depends on company size and existing crypto exposure.",
+      "action_window": "intraday",
+      "headline": "Hyperscale Data Increases Bitcoin Holdings By 67 To Bring Total Treasury Holdings To ~849",
+      "url": "https://www.benzinga.com/quote/GPUS",
+      "source": "alpaca",
+      "added_at": "2026-07-02T10:32:09.667023+00:00"
+    },
+    {
+      "ticker": "YARIY",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Yara's $1.3B strategic acquisition of Texas ammonia production facility represents significant capacity expansion and is a material M&A catalyst requiring immediate market reassessment.",
+      "action_window": "intraday",
+      "headline": "Yara To Acquire Gulf Coast Ammonia's Production Facility In Texas From Lotus Infrastructure And MB Energy For $1.3B",
+      "url": "https://www.benzinga.com/m/26/07/60238989/yara-acquire-gulf-coast-ammonia-s-production-facility-texas-lotus-infrastructure-and-mb-energy-1-3b",
+      "source": "alpaca",
+      "added_at": "2026-07-02T10:32:09.667031+00:00"
     }
   ]
 }
