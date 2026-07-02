@@ -752,19 +752,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "QMCO": {
-    "ticker": "QMCO",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Quantum Q4 Adj. EPS $(0.21) Beats $(0.30) Estimate, Sales $78.000M Beat $72.750M Estimate",
-    "added_at": "2026-06-25T20:30:17.220462+00:00",
-    "expires": "2026-07-02T20:30:17.220469+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NRXP": {
     "ticker": "NRXP",
     "score_delta": -0.079,
@@ -775,45 +762,6 @@
     "headline": "NRx Pharmaceuticals Issues Statement In Response To Kadima Allegations, Citing Arbitration Over Non\u2011Acquisition By HOPE Therapeutics",
     "added_at": "2026-06-25T20:30:17.222912+00:00",
     "expires": "2026-07-09T20:30:17.222918+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FLEX": {
-    "ticker": "FLEX",
-    "score_delta": 0.018,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "JetCool Introduces Liquid-Cooled Version Of Dell PowerEdge XE7745 Server",
-    "added_at": "2026-06-25T20:30:17.225010+00:00",
-    "expires": "2026-07-02T20:30:17.225015+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DPRO": {
-    "ticker": "DPRO",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "EXCLUSIVE: Draganfly Secures Major IACLEA Win To Expand Campus Drone Programs Nationwide",
-    "added_at": "2026-06-25T20:30:17.227065+00:00",
-    "expires": "2026-07-02T20:30:17.227070+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMHI": {
-    "ticker": "AMHI",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "New Municipal Bond ETF Targets High Tax-Free Yield With Active Management Edge",
-    "added_at": "2026-06-25T20:30:17.229106+00:00",
-    "expires": "2026-07-02T20:30:17.229112+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2483,6 +2431,19 @@
     "headline": "'Genuine Parts Is Said to Receive O\u2019Reilly Interest for Auto Unit' - Bloomberg",
     "added_at": "2026-07-02T20:16:31.566452+00:00",
     "expires": "2026-08-01T20:16:31.566457+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BSVN": {
+    "ticker": "BSVN",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Bank7 To Buy 71% Of Century Financial Services For $68M Cash",
+    "added_at": "2026-07-02T21:42:59.475684+00:00",
+    "expires": "2026-07-16T21:42:59.475693+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
