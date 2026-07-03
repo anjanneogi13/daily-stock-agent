@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "PZZA",
-      "tradeable_score": 0.58,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Unexpected CFO departure is a negative signal raising governance concerns, confirmed by after-hours price decline, though impact typically moderates after initial reaction.",
-      "action_window": "next_day",
-      "headline": "Papa John's Stock Slips On CFO Surprise Exit",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60205963/papa-johns-stock-slips-on-cfo-surprise-exit",
-      "source": "alpaca",
-      "added_at": "2026-06-30T23:06:00.236857+00:00"
-    },
-    {
-      "ticker": "PRPH",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "While EPS loss improved significantly from $(1.33) to $(0.43) YoY, revenue collapsed 67% from $1.431M to $478K indicating severe business contraction that outweighs the EPS improvement.",
-      "action_window": "next_day",
-      "headline": "ProPhase Labs Q1 EPS $(0.43) Up From $(1.33) YoY, Sales $478.000K Down From $1.431M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60205858/prophase-labs-q1-eps-0-43-1-33-yoy-sales-478-000k-down-1-431m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-06-30T23:06:00.236872+00:00"
-    },
-    {
-      "ticker": "BRLS",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Company showed improvement with EPS loss narrowing 20% to $(0.16) and revenue growing 7.6% YoY to $7.368M, indicating operational progress despite continued losses.",
-      "action_window": "next_day",
-      "headline": "Borealis Foods Q1 EPS $(0.16) Up From $(0.20) YoY, Sales $7.368M Up From $6.846M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/06/60205821/borealis-foods-q1-eps-0-16-0-20-yoy-sales-7-368m-6-846m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-06-30T23:06:00.236880+00:00"
-    },
-    {
       "ticker": "APOG",
       "tradeable_score": 0.88,
       "sentiment": "bullish",
