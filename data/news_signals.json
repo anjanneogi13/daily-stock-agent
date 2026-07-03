@@ -856,19 +856,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "APOG": {
-    "ticker": "APOG",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Apogee Enterprises Q1 Adj. EPS $0.57 Beats $0.45 Estimate, Sales $342.684M Beat $333.839M Estimate",
-    "added_at": "2026-06-26T10:47:06.600669+00:00",
-    "expires": "2026-07-03T10:47:06.600675+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NKE": {
     "ticker": "NKE",
     "score_delta": -0.15,
@@ -2457,6 +2444,32 @@
     "headline": "Alarum Technologies Issues Statement  In Response To Recent Reports Regarding Their Proxy Network Operations; To Fully Cooperate With Law Enforcement In Infrastructure Misuse Investigation",
     "added_at": "2026-07-02T22:59:53.230937+00:00",
     "expires": "2026-07-16T22:59:53.230945+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PLTR": {
+    "ticker": "PLTR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Alex Karp's AI Vision Gets Fresh Backing As Analysts Call Palantir the \u2018Oxygen\u2019 Behind Enterprise AI",
+    "added_at": "2026-07-03T12:27:40.430935+00:00",
+    "expires": "2026-07-08T12:27:40.430942+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "APOG": {
+    "ticker": "APOG",
+    "score_delta": 0.049,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Apogee Enterprises Completes Acquisition of Kalwall Companies",
+    "added_at": "2026-07-03T12:27:40.498177+00:00",
+    "expires": "2026-07-17T12:27:40.498190+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
