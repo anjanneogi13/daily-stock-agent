@@ -2462,14 +2462,14 @@
   },
   "APOG": {
     "ticker": "APOG",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Apogee Enterprises Completes Acquisition of Kalwall Companies",
-    "added_at": "2026-07-03T12:27:40.498177+00:00",
-    "expires": "2026-07-17T12:27:40.498190+00:00",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Apogee Q1 Earnings Beat Estimates on Pricing, Productivity Gains",
+    "added_at": "2026-07-03T14:41:03.377470+00:00",
+    "expires": "2026-07-10T14:41:03.377475+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

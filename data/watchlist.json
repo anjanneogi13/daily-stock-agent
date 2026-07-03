@@ -1,102 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ABVX",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Stock is actively skyrocketing intraday suggesting a major positive catalyst, but headline lacks specific detail on the driver which prevents maximum tradeable score.",
-      "action_window": "intraday",
-      "headline": "Why Is Abivax Stock Skyrocketing Tuesday?",
-      "url": "https://www.benzinga.com/news/health-care/26/06/60184393/why-is-abivax-stock-skyrocketing-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979854+00:00"
-    },
-    {
-      "ticker": "DFNS",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Material new order announcements totaling $4.9M including completed order and follow-on business from repeat Israeli defense clients demonstrates strong demand and revenue visibility for defense subsidiary.",
-      "action_window": "intraday",
-      "headline": "T3 Defense Subsidiary Announces $4.9M Orders; $1M From Israeli Defense Integrator Completed; Same Client Places $1M Follow-On Order; Another Israeli Customer Places $3.9M Order For Modified Version Of Heavy-Duty Single-Axis Rotator",
-      "url": "https://www.benzinga.com/news/26/06/60184368/t3-defense-subsidiary-announces-4-9m-orders-1m-israeli-defense-integrator-completed-same-client-plac",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979866+00:00"
-    },
-    {
-      "ticker": "SNOA",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA 510(k) clearance is a significant regulatory milestone that enables commercial sales of the wound irrigation solution, representing a major catalyst for a small-cap pharmaceutical company.",
-      "action_window": "intraday",
-      "headline": "Sonoma Pharmaceuticals Receives FDA 510(k) Clearance For Its Microdacyn Wound Irrigation Solution",
-      "url": "https://www.benzinga.com/news/26/06/60184367/sonoma-pharmaceuticals-receives-fda-510-k-clearance-its-microdacyn-wound-irrigation-solution",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979874+00:00"
-    },
-    {
-      "ticker": "SNDK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bernstein maintains bullish stance with significant price target increase, indicating strong conviction and potential upside catalyst for the stock.",
-      "action_window": "intraday",
-      "headline": "Bernstein Maintains Outperform on SanDisk, Raises Price Target to $3000",
-      "url": "https://www.benzinga.com/news/26/06/60184331/bernstein-maintains-outperform-sandisk-raises-price-target-3000",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979880+00:00"
-    },
-    {
-      "ticker": "VRNS",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "GovRAMP authorization opens significant U.S. government contract opportunities for Varonis' data security platform, representing a meaningful market expansion catalyst.",
-      "action_window": "intraday",
-      "headline": "Varonis Systems Receives GovRAMP Authorization For Its Data Security Platform",
-      "url": "https://www.benzinga.com/news/26/06/60184296/varonis-systems-receives-govramp-authorization-its-data-security-platform",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979885+00:00"
-    },
-    {
-      "ticker": "BULL",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Regulatory approval to offer cryptocurrency trading is a significant catalyst that enables new revenue streams and market expansion for Webull Canada.",
-      "action_window": "intraday",
-      "headline": "Webull Canada\u00a0Crypto Receives Canadian Investment Regulatory Organization\u00a0Approval To Start Offering Cryptocurrency Trading",
-      "url": "https://www.benzinga.com/news/26/06/60184274/webull-canada-crypto-receives-canadian-investment-regulatory-organization-approval-start-offering-cr",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979892+00:00"
-    },
-    {
-      "ticker": "MODD",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "First patient usage of novel tubeless insulin pump represents significant commercial milestone with clear multibillion-dollar market opportunity in diabetes management.",
-      "action_window": "intraday",
-      "headline": "EXCLUSIVE: Modular Medical Says First Patients Begin Using Pivot Tubeless Insulin Patch Pump; Expects To Target Multibillion-Dollar Market",
-      "url": "https://www.benzinga.com/quote/MODD",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979897+00:00"
-    },
-    {
-      "ticker": "PRIM",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Contract award for engineering and construction work represents confirmed new revenue for Primoris, with Fermi benefiting indirectly as project sponsor for their power buildout.",
-      "action_window": "intraday",
-      "headline": "Primoris Awarded Engineering And Construction Work For Fermi's First Six SGT-800 Gas Turbines As Part Of Phase One Power Buildout",
-      "url": "https://www.benzinga.com/news/26/06/60183918/primoris-awarded-engineering-and-construction-work-fermi-s-first-six-sgt-800-gas-turbines-part-phase",
-      "source": "alpaca",
-      "added_at": "2026-06-30T13:07:43.979910+00:00"
-    },
-    {
       "ticker": "AMZN",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1216,6 +1120,18 @@
       "url": "https://www.benzinga.com/markets/tech/26/07/60264815/fords-ev-sales-plunge-41-in-q2-as-legacy-us-automakers-struggle-with-weak-demand",
       "source": "alpaca",
       "added_at": "2026-07-03T10:30:02.416968+00:00"
+    },
+    {
+      "ticker": "SSNLF",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Samsung securing a major $6.5B AI chip contract from Meta validates its competitive position in AI semiconductor manufacturing, though impact is moderate as this is a report rather than confirmed announcement.",
+      "action_window": "intraday",
+      "headline": "After Tesla, Samsung Eyes Meta Platforms for $6.5 Billion AI Chip Agreement: Report",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60265709/after-tesla-samsung-eyes-meta-platforms-for-6-5-billion-ai-chip-agreement-report",
+      "source": "alpaca",
+      "added_at": "2026-07-03T14:41:03.382964+00:00"
     }
   ]
 }
