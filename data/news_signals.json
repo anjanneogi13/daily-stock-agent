@@ -843,19 +843,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DRI": {
-    "ticker": "DRI",
-    "score_delta": 0.064,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Darden Restaurants Stock Slips Despite Earnings Beat: Analysts Say LongHorn Still Leads The Menu",
-    "added_at": "2026-06-26T15:38:12.060072+00:00",
-    "expires": "2026-07-03T15:38:12.060077+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NKE": {
     "ticker": "NKE",
     "score_delta": -0.15,
@@ -892,19 +879,6 @@
     "headline": "FDA Approved, Europe Unconvinced: Omeros' Stem Cell Transplant Treatment Hits Regulatory Divide",
     "added_at": "2026-06-26T15:38:12.066621+00:00",
     "expires": "2026-07-26T15:38:12.066626+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAPL": {
-    "ticker": "AAPL",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "this_week",
-    "headline": "'Apple\u2019s Touch MacBook to Use M5 Pro and Max Chips, With M7 Models to Follow' - Bloomberg",
-    "added_at": "2026-06-26T15:38:12.068825+00:00",
-    "expires": "2026-07-03T15:38:12.068830+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
