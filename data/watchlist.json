@@ -1,91 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AIOT",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Share buyback programs signal management confidence and create technical support, though $30M is modest relative to typical market caps, making this a meaningful but not transformative catalyst.",
-      "action_window": "next_day",
-      "headline": "PowerFleet Reveals New $30M Buyback Program",
-      "url": "https://www.benzinga.com/news/26/06/60205755/powerfleet-reveals-new-30m-buyback-program",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989100+00:00"
-    },
-    {
-      "ticker": "AA",
-      "tradeable_score": 0.92,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Transformative M&A deal acquiring major integrated aluminum assets across three continents positions Alcoa as one of the largest global producers, representing a significant strategic expansion.",
-      "action_window": "intraday",
-      "headline": "Alcoa (AA) Agrees To Buy South32 Assets To Build A Leading Aluminum Business",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/alcoa-aa-agrees-buy-south32-120942965.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989117+00:00",
-      "updated_at": "2026-07-02T22:59:53.252144+00:00"
-    },
-    {
-      "ticker": "NKE",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Nike CFO provided significant negative guidance revisions with FY2027 revenue expected down low-to-mid single digits versus consensus expecting growth, no near-term improvement expected, and Q1 revenue also projected to decline sharply.",
-      "action_window": "intraday",
-      "headline": "Nike CFO Says Not Expecting Operating Environment To Improve Over The Next Six Months; Expects Fiscal Year 2027 Revenue To Be Down Low-To-Mid Single Digits Vs Estimates Of 0.4% Rise; Expects Q1 Reported Revenue To Be Down Low-To-Mid-Single Digits; Expects Q1 Gross Margin To Be Slightly Positive",
-      "url": "https://www.benzinga.com/news/26/06/60205694/nike-cfo-says-not-expecting-operating-environment-improve-over-next-six-months-expects-fiscal-year-2",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989129+00:00"
-    },
-    {
-      "ticker": "ASTL",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Q2 2026 guidance shows significantly weak adjusted EBITDA of only $5M-$15M with low steel shipment volumes of 175K-180K tons, indicating challenging market conditions for the steel producer.",
-      "action_window": "next_day",
-      "headline": "Algoma Steel Group Provides Guidance For Q2 2026; Total Steel Shipments For The Quarter Are Expected To Be In The Range Of 175,000 Tons To 180,000 Tons And Adjusted EBITDA Is Expected To Be In The Range Of $5M To $15M",
-      "url": "https://www.benzinga.com/news/26/06/60205623/algoma-steel-group-provides-guidance-q2-2026-total-steel-shipments-quarter-are-expected-be-range-175",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989139+00:00"
-    },
-    {
-      "ticker": "LUNR",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "NASA Moon Base program contract awards represent a significant government catalyst for multiple lunar lander companies with immediate market reaction already showing into the close.",
-      "action_window": "next_day",
-      "headline": "Firefly, Intuitive Machines, Voyager Shares See Strength Into The Close",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60205488/firefly-intuitive-machines-voyager-shares-see-strength-into-the-close",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989153+00:00"
-    },
-    {
-      "ticker": "GETY",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "Merger termination represents a failed strategic transaction that removes a potential premium exit opportunity for shareholders, though debt redemption provides some offsetting financial flexibility.",
-      "action_window": "next_day",
-      "headline": "Getty Images' Board To Terminate Merger Agreement With Shutterstock After July 6, 2026; To Redeem 10.5% Senior Secured Notes Due 2030 After Merger Termination",
-      "url": "https://www.benzinga.com/news/26/06/60205471/getty-images-board-terminate-merger-agreement-shutterstock-after-july-6-2026-redeem-10-5-senior-secu",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989159+00:00"
-    },
-    {
-      "ticker": "ALSN",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Index rebalancing creates mechanical buying/selling pressure but represents no fundamental change in company value, with ALSN upgraded to MidCap 400 (bullish flow) and GT downgraded to SmallCap 600 (bearish flow).",
-      "action_window": "next_day",
-      "headline": "Allison Transmission To Replace Goodyear Tire & Rubber In The S&P MidCap 40; Goodyear Tire & Rubber To Replace Stellar Bancorp In The S&P SmallCap 600, Effective Prior To The Opening Of Trading On Monday, July 6",
-      "url": "https://www.benzinga.com/news/26/06/60205427/allison-transmission-replace-goodyear-tire-rubber-s-p-midcap-40-goodyear-tire-rubber-replace-stellar",
-      "source": "alpaca",
-      "added_at": "2026-06-30T21:54:45.989166+00:00"
-    },
-    {
       "ticker": "PZZA",
       "tradeable_score": 0.58,
       "sentiment": "bearish",
@@ -510,15 +425,16 @@
     },
     {
       "ticker": "LEU",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.92,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Major $1.07B contract finalization with DOE represents significant revenue catalyst for a small-cap company, creating immediate job growth and multi-year revenue visibility.",
+      "rationale": "Confirmed $1.07 billion contract from U.S. Department of Energy for HALEU production represents a major revenue catalyst for Centrus Energy.",
       "action_window": "next_day",
-      "headline": "Centrus Energy Signs A Contract To Finalize The Terms Of The Competitively-Awarded, $900M Task Order It Received From The U.S. Department Of Energy Earlier This Year; Total Contract Value With All Options Included Is $1.07B; Expansion Project To Support 1000 Construction Jobs, 300 New Operating Jobs",
-      "url": "https://www.benzinga.com/news/26/07/60234869/centrus-energy-signs-contract-finalize-terms-competitively-awarded-900m-task-order-it-received-u-s-d",
+      "headline": "Why Is LEU Stock Rising Premarket Today?",
+      "url": "https://stocktwits.com/news-articles/markets/equity/why-is-leu-stock-rising-premarket-today/cZmeXoQR7Sc?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-01T21:58:33.275623+00:00"
+      "added_at": "2026-07-01T21:58:33.275623+00:00",
+      "updated_at": "2026-07-03T22:01:09.146314+00:00"
     },
     {
       "ticker": "ONMD",

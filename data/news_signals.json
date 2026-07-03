@@ -917,19 +917,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AEHR": {
-    "ticker": "AEHR",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "Aehr Test Systems Gets New 2X Leveraged ETF Amid AI Semiconductor Rally",
-    "added_at": "2026-06-26T21:09:08.829814+00:00",
-    "expires": "2026-07-03T21:09:08.829820+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VCIG": {
     "ticker": "VCIG",
     "score_delta": -0.079,
