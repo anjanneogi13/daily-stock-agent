@@ -1290,6 +1290,18 @@
       "url": "https://www.benzinga.com/news/26/07/60262506/alarum-technologies-issues-statement-response-recent-reports-regarding-their-proxy-network-operation",
       "source": "alpaca",
       "added_at": "2026-07-02T22:59:53.252102+00:00"
+    },
+    {
+      "ticker": "F",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A 41% quarterly EV sales plunge represents a significant operational miss signaling major competitive and demand weakness in Ford's strategic growth segment.",
+      "action_window": "intraday",
+      "headline": "Ford's EV Sales Plunge 41% in Q2 As Legacy US Automakers Struggle With Weak Demand",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60264815/fords-ev-sales-plunge-41-in-q2-as-legacy-us-automakers-struggle-with-weak-demand",
+      "source": "alpaca",
+      "added_at": "2026-07-03T10:30:02.416968+00:00"
     }
   ]
 }
