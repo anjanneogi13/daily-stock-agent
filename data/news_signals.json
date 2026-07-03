@@ -895,19 +895,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SPCX": {
-    "ticker": "SPCX",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "Europe\u2019s Reckoning: SpaceX\u2019s Record IPO Exposes the Continent\u2019s Space Gap",
-    "added_at": "2026-06-26T19:31:34.452604+00:00",
-    "expires": "2026-07-03T19:31:34.452609+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TNMG": {
     "ticker": "TNMG",
     "score_delta": -1.0,
