@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ONC",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive Phase 3 trial data showing 43% risk reduction is a significant clinical catalyst ahead of regulatory filings, likely to drive substantial stock movement.",
-      "action_window": "intraday",
-      "headline": "BeOne Medicines Advances Chemotherapy-Free Lymphoma Strategy",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60197938/beone-medicines-advances-chemotherapy-free-lymphoma-strategy",
-      "source": "alpaca",
-      "added_at": "2026-06-30T18:02:03.280698+00:00"
-    },
-    {
-      "ticker": "SBET",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Large capital deployment ($16.1M in ETH) combined with share buyback of 2.13M shares signals management confidence and potential catalyst for SBET amid stock weakness.",
-      "action_window": "next_day",
-      "headline": "Sharplink Bought 10,000 ETH, 2 Million SBET: What's Going On?",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60197880/sharplink-bought-10000-eth-2-million-sbet-whats-going-on",
-      "source": "alpaca",
-      "added_at": "2026-06-30T18:02:03.280709+00:00"
-    },
-    {
-      "ticker": "CRCL",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "product_launch",
-      "rationale": "Circle stock already down 16% on confirmed competitive threat from Open Standard's new stablecoin launch, representing direct market share risk to USDC.",
-      "action_window": "intraday",
-      "headline": "Why Is Circle Internet Group Stock Falling On Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60197704/why-is-circle-internet-group-stock-falling-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-06-30T18:02:03.280717+00:00"
-    },
-    {
       "ticker": "NGNE",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
