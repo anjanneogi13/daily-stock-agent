@@ -87,6 +87,9 @@ jobs:
               git add -f "$path"
             fi
           done
+          # Defensive tripwire: run_nightly() now always rewrites
+          # data/brain_state_meta.json, so an empty staged set means the
+          # conductor failed to persist any brain state for this run.
           if git diff --cached --quiet; then
             echo "ERROR: nightly brain run staged no persisted state files"
             exit 1
