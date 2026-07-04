@@ -1,0 +1,80 @@
+{
+  "last_run_utc": "2026-07-04T18:24:16+00:00",
+  "run_id": "28715384951",
+  "steps": {
+    "agent_memoir": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 76, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_agent_memoir\",        lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "auto_promote": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 74, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_auto_promote\",        lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "calibration_propose": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 72, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_calibration_propose\", lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "lesson_gc": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 75, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_lesson_gc\",           lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "pattern_auto_e_d": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 71, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_pattern_auto_enable_disable\", lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "pattern_scan": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 69, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_pattern_scan\",        lambda *a,**k: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "pattern_stats": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 70, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_pattern_stats\",       lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    },
+    "weight_apply": {
+      "error": "RuntimeError: x",
+      "status": "failed",
+      "traceback": [
+        "  File \"/home/runner/work/daily-stock-agent/daily-stock-agent/tests/test_nightly_conductor.py\", line 73, in <genexpr>",
+        "    monkeypatch.setattr(nc, \"_step_weight_apply\",        lambda: (_ for _ in ()).throw(RuntimeError(\"x\")))",
+        "RuntimeError: x"
+      ]
+    }
+  },
+  "steps_failed": 8,
+  "steps_ok": 0
+}
