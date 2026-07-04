@@ -260,3 +260,4 @@ data/picks_log.csv.*.bak
 !data/weight_history.jsonl
 !data/pattern_stats.json
 !data/agent_memoir.json
+!data/brain_state_meta.json
