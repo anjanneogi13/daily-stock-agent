@@ -34,27 +34,21 @@ jobs:
 
       - name: Verify brain steps succeeded (M6)
         run: |
-          python -c "
-          import json, sys
+          python - <<'PY'
+          import json
+          import sys
           from pathlib import Path
-          jf = Path('data/learning_journal.jsonl')
-          if not jf.exists():
-              print('M6: no learning_journal.jsonl yet — skipping check'); sys.exit(0)
-          last_brain = None
-          for line in jf.read_text().strip().split('\n')[-200:]:
-              try:
-                  e = json.loads(line)
-                  if e.get('event') == 'nightly_brain_run':
-                      last_brain = e
-              except Exception:
-                  pass
-          if last_brain is None:
-              print('M6: no nightly_brain_run event in last 200 lines'); sys.exit(0)
-          failed = last_brain.get('steps_failed', 0)
-          print(f'M6: latest brain run failed_steps={failed}')
+          meta_path = Path("data/brain_state_meta.json")
+          if not meta_path.exists():
+              print("M6: data/brain_state_meta.json missing after conductor run")
+              sys.exit(1)
+          meta = json.loads(meta_path.read_text())
+          failed = int(meta.get("steps_failed", 0))
+          print(f"M6: run_id={meta.get('run_id', 'unknown')} failed_steps={failed}")
           if failed >= 4:
-              print('M6: too many brain steps failed — failing workflow'); sys.exit(1)
-          "
+              print("M6: too many brain steps failed — failing workflow")
+              sys.exit(1)
+          PY
       - name: Commit brain state changes
         run: |
           git config user.name "github-actions[bot]"
@@ -80,17 +74,28 @@ jobs:
           [ -f data/weight_history.jsonl ] || : > data/weight_history.jsonl
           [ -f data/pattern_stats.json ]  || echo '{}' > data/pattern_stats.json
           [ -f data/agent_memoir.json ]   || echo '{}' > data/agent_memoir.json
-          git add -f data/patterns.jsonl data/pattern_stats.json \
-                  data/weight_proposals.jsonl data/weight_history.jsonl \
-                  data/learning_journal.jsonl data/agent_memoir.json \
-                  2>/dev/null || true
-          if ! git diff --cached --quiet; then
-            git commit -m "🧠 nightly brain maintenance $(date -u +%Y-%m-%d)"
-            for i in 1 2 3; do
-              git pull --rebase origin main && git push origin main && break
-              sleep 5
-            done
+          for path in \
+            data/patterns.jsonl \
+            data/pattern_stats.json \
+            data/weight_proposals.jsonl \
+            data/weight_history.jsonl \
+            data/learning_journal.jsonl \
+            data/agent_memoir.json \
+            data/brain_state_meta.json
+          do
+            if [ -e "$path" ]; then
+              git add -f "$path"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "ERROR: nightly brain run staged no persisted state files"
+            exit 1
           fi
+          git commit -m "🧠 nightly brain maintenance $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && break
+            sleep 5
+          done
 
   meta-brain-sunday:
     runs-on: ubuntu-latest

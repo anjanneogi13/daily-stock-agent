@@ -17,14 +17,16 @@ ORDER MATTERS:
 from __future__ import annotations
 import csv
 import json
+import os
 import traceback
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
 
 WATCHLIST_PATH = Path("data/watchlist.json")
 PICKS_LOG      = Path("data/picks_log.csv")
+BRAIN_STATE_META_PATH = Path("data/brain_state_meta.json")
 
 
 def _step(name: str, fn, summary: Dict) -> None:
@@ -38,6 +40,40 @@ def _step(name: str, fn, summary: Dict) -> None:
             "error": f"{type(e).__name__}: {e}",
             "traceback": traceback.format_exc().splitlines()[-3:],
         }
+
+
+def _step_status(step: Dict) -> Dict:
+    """Summarize a step as ok / skipped / failed for persisted run metadata."""
+    if not step.get("ok"):
+        out = {"status": "failed"}
+        if step.get("error"):
+            out["error"] = step["error"]
+        if step.get("traceback"):
+            out["traceback"] = step["traceback"]
+        return out
+
+    result = step.get("result") or {}
+    if isinstance(result, dict) and "skipped" in result:
+        return {"status": "skipped", "reason": result.get("skipped")}
+    return {"status": "ok"}
+
+
+def _write_brain_state_meta(summary: Dict) -> Dict:
+    """Persist per-run heartbeat metadata that always changes each run."""
+    now_utc = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    run_id = os.getenv("GITHUB_RUN_ID") or f"local-{now_utc.replace(':', '').replace('+00:00', 'Z')}"
+    payload = {
+        "last_run_utc": now_utc,
+        "run_id": run_id,
+        "steps_ok": summary["steps_ok"],
+        "steps_failed": summary["steps_failed"],
+        "steps": {name: _step_status(step) for name, step in summary["steps"].items()},
+    }
+    BRAIN_STATE_META_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = BRAIN_STATE_META_PATH.with_name(f"{BRAIN_STATE_META_PATH.name}.tmp")
+    tmp.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    tmp.replace(BRAIN_STATE_META_PATH)
+    return payload
 
 
 def _load_universe_for_scan(max_tickers: int = 100) -> List[str]:
@@ -205,27 +241,31 @@ def run_nightly(scan_tickers: Optional[List[str]] = None,
     _step("lesson_gc",          _step_lesson_gc, summary)
     _step("agent_memoir",       _step_agent_memoir, summary)
 
+    summary["steps_ok"] = sum(1 for s in summary["steps"].values() if s.get("ok"))
+    summary["steps_failed"] = sum(1 for s in summary["steps"].values() if not s.get("ok"))
+
     # Emit single nightly_brain_run event
     try:
         from src import learning_journal as lj
-        ok = sum(1 for s in summary["steps"].values() if s.get("ok"))
-        fail = len(summary["steps"]) - ok
         lj.log("nightly_brain_run",
-               steps_ok=ok, steps_failed=fail,
+               steps_ok=summary["steps_ok"], steps_failed=summary["steps_failed"],
                summary={k: v.get("result") if v.get("ok") else "FAIL"
                         for k, v in summary["steps"].items()})
     except Exception:
         pass
 
-    summary["ok_count"]   = sum(1 for s in summary["steps"].values() if s.get("ok"))
-    summary["fail_count"] = sum(1 for s in summary["steps"].values() if not s.get("ok"))
+    summary["brain_state_meta"] = _write_brain_state_meta(summary)
+    summary["ok_count"] = summary["steps_ok"]
+    summary["fail_count"] = summary["steps_failed"]
     return summary
 
 
 def format_summary_text(summary: Dict) -> str:
     """Plain-text representation for logs / CI output."""
+    ok_count = summary.get("steps_ok", summary.get("ok_count", 0))
+    fail_count = summary.get("steps_failed", summary.get("fail_count", 0))
     lines = [f"🧠 Nightly Brain Run — {summary.get('ts','')}"]
-    lines.append(f"   ✅ {summary.get('ok_count',0)} ok · ❌ {summary.get('fail_count',0)} failed")
+    lines.append(f"   ✅ {ok_count} ok · ❌ {fail_count} failed")
     lines.append("")
     for name, step in summary.get("steps", {}).items():
         icon = "✅" if step.get("ok") else "❌"
