@@ -170,15 +170,16 @@
     },
     {
       "ticker": "EJTTF",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "A $6.7 billion take-private deal represents a significant premium acquisition that would be highly bullish for EasyJet shareholders if consummated.",
+      "rationale": "Confirmed takeover agreement at \u00a36.9/share valuing easyJet at \u00a35.23B represents a definitive M&A catalyst with shares already soaring on the announcement.",
       "action_window": "intraday",
-      "headline": "Castlelake Nears $6.7 Billion Take-Private Deal for EasyJet",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60291412/castlelake-nears-6-7-billion-take-private-deal-for-easyjet",
+      "headline": "EasyJet agrees to Castlelake\u2019s \u00a35.2B takeover offer; shares soar",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/easyjet-agrees-castlelake-5-2b-175343330.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430856+00:00"
+      "added_at": "2026-07-06T19:52:12.430856+00:00",
+      "updated_at": "2026-07-06T22:45:49.746018+00:00"
     },
     {
       "ticker": "GLD",
@@ -206,15 +207,16 @@
     },
     {
       "ticker": "CRTO",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Takeover offer from well-capitalized Vista Equity typically triggers immediate premium pricing for target company shares.",
+      "rationale": "Confirmed buyout offer at 50%+ premium resulted in stock's best day in nearly 5 years, representing a highly credible M&A catalyst with significant price impact already realized.",
       "action_window": "intraday",
-      "headline": "'Advertising Technology Firm Criteo Attracts Vista Equity-Backed Takeover Offer' - Bloomberg",
-      "url": "https://www.benzinga.com/m/26/07/60290372/advertising-technology-firm-criteo-attracts-vista-equity-backed-takeover-offer-bloomberg",
+      "headline": "CRTO Stock Clocks Best Day In Nearly 5 Years On 50%+ Premium Buyout Offer From Vista \u2014 TTD Edges Higher",
+      "url": "https://stocktwits.com/news-articles/markets/equity/crto-stock-clocks-best-day-in-nearly-five-years-on-50-percent-premium-buyout-offer/cZm1FnyR7lD?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430878+00:00"
+      "added_at": "2026-07-06T19:52:12.430878+00:00",
+      "updated_at": "2026-07-06T22:45:49.746031+00:00"
     },
     {
       "ticker": "WHK",
@@ -230,15 +232,16 @@
     },
     {
       "ticker": "RIVN",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Large secondary offering of 75M shares creates immediate dilution and significant selling pressure on the stock.",
+      "rationale": "Public offering announcement causes immediate dilution concern for existing shareholders, triggering after-hours selloff with high conviction bearish signal.",
       "action_window": "intraday",
-      "headline": "Rivian Automotive Offers 75M Shares Of Class A Common Stock",
-      "url": "https://www.benzinga.com/news/26/07/60294269/rivian-automotive-offers-75m-shares-class-common-stock",
+      "headline": "Rivian Stock Gets Rocked After the Bell: Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60294725/rivian-stock-gets-rocked-after-the-bell-heres-why",
       "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190662+00:00"
+      "added_at": "2026-07-06T21:24:12.190662+00:00",
+      "updated_at": "2026-07-06T22:45:49.745983+00:00"
     },
     {
       "ticker": "CRVO",
@@ -299,6 +302,42 @@
       "url": "https://www.benzinga.com/news/26/07/60293437/maison-solutions-enters-equity-purchase-agreement-dnl-management-july-2-2026-co-sells-91-67-stake-su",
       "source": "alpaca",
       "added_at": "2026-07-06T21:24:12.190695+00:00"
+    },
+    {
+      "ticker": "EXYN",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS deteriorating 25% YoY from $(1.96) to $(2.45) and revenue declining, indicating worsening fundamentals that warrant immediate attention.",
+      "action_window": "next_day",
+      "headline": "Exyn Technologies Q1 EPS $(2.45) Down From $(1.96) YoY, Sales $1.190M Down From $1.220M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60294685/exyn-technologies-q1-eps-2-45-down-1-96-yoy-sales-1-190m-down-1-220m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-06T22:45:49.745994+00:00"
+    },
+    {
+      "ticker": "HCTI",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large secondary offering of 28M shares by selling stockholders signals potential dilution and significant selling pressure on the stock.",
+      "action_window": "next_day",
+      "headline": "Healthcare Triangle Files Prospectus Related To Offer And Resale Of 28M Shares Of Common Stock By Selling Stockholders",
+      "url": "https://www.benzinga.com/news/26/07/60294539/healthcare-triangle-files-prospectus-related-offer-and-resale-28m-shares-common-stock-selling-stockh",
+      "source": "alpaca",
+      "added_at": "2026-07-06T22:45:49.746001+00:00"
+    },
+    {
+      "ticker": "WETO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of $50M in ordinary shares typically causes dilution concerns and near-term selling pressure as new shares enter the market.",
+      "action_window": "next_day",
+      "headline": "Wetour Robotics Files Prospectus To Offer Up To $50M In Ordinary Shares",
+      "url": "https://www.benzinga.com/news/26/07/60294439/wetour-robotics-files-prospectus-offer-50m-ordinary-shares",
+      "source": "alpaca",
+      "added_at": "2026-07-06T22:45:49.746007+00:00"
     }
   ]
 }

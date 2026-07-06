@@ -2108,5 +2108,18 @@
     "expires": "2026-08-05T21:24:12.188005+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "EXYN": {
+    "ticker": "EXYN",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Exyn Technologies Q1 EPS $(2.45) Down From $(1.96) YoY, Sales $1.190M Down From $1.220M YoY",
+    "added_at": "2026-07-06T22:45:49.728706+00:00",
+    "expires": "2026-07-13T22:45:49.728714+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
