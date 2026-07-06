@@ -44,19 +44,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "GORO": {
-    "ticker": "GORO",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "this_week",
-    "headline": "Gold Resource Urges Shareholders To Back Goldgroup Merger As Proxy Materials Mailed",
-    "added_at": "2026-06-05T11:21:20.111541+00:00",
-    "expires": "2026-07-05T11:21:20.111546+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PSKY": {
     "ticker": "PSKY",
     "score_delta": 0.2,
@@ -78,19 +65,6 @@
     "added_at": "2026-06-05T20:49:45.099528+00:00",
     "expires": "2026-12-02T20:49:45.099537+00:00",
     "hard_block": true
-  },
-  "SOAR": {
-    "ticker": "SOAR",
-    "score_delta": 0.194,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Volato Group Terminates Merger Agreement With M2i Global On June 4, 2026; Will Not Incur Termination Fee Or Penalty For Terminating Merger Agreement; Evaluating Unsolicited Letters Of Intent As Strate",
-    "added_at": "2026-06-05T22:12:54.506740+00:00",
-    "expires": "2026-07-05T22:12:54.506749+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "HLIT": {
     "ticker": "HLIT",
@@ -882,19 +856,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AMAT": {
-    "ticker": "AMAT",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Why Is Applied Materials Stock Gaining Tuesday?",
-    "added_at": "2026-06-30T10:51:46.617152+00:00",
-    "expires": "2026-07-05T10:51:46.617156+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TNMG": {
     "ticker": "TNMG",
     "score_delta": -1.0,
@@ -995,32 +956,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LFTO": {
-    "ticker": "LFTO",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Goldman Sachs Initiates Coverage On Liftoff Mobile with Buy Rating, Announces Price Target of $40",
-    "added_at": "2026-06-29T12:26:05.106045+00:00",
-    "expires": "2026-07-04T12:26:05.106050+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BHVN": {
-    "ticker": "BHVN",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Analyst Warns Biohaven's Lead Drug May Struggle To Stand Out",
-    "added_at": "2026-06-29T18:29:50.278234+00:00",
-    "expires": "2026-07-04T18:29:50.278239+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
   "ICE": {
     "ticker": "ICE",
     "score_delta": 0.037,
@@ -1047,71 +982,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "YMM": {
-    "ticker": "YMM",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "JP Morgan Upgrades Full Truck Alliance Co to Overweight, Raises Price Target to $10",
-    "added_at": "2026-06-29T16:24:31.055049+00:00",
-    "expires": "2026-07-04T16:24:31.055056+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "WY": {
-    "ticker": "WY",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "JP Morgan Maintains Overweight on Weyerhaeuser, Raises Price Target to $31",
-    "added_at": "2026-06-29T16:24:31.057629+00:00",
-    "expires": "2026-07-04T16:24:31.057635+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BAC": {
-    "ticker": "BAC",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Morgan Stanley Maintains Overweight on Bank of America, Raises Price Target to $67",
-    "added_at": "2026-06-29T16:24:31.059648+00:00",
-    "expires": "2026-07-04T16:24:31.059653+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "APA": {
-    "ticker": "APA",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Morgan Stanley Maintains Underweight on APA, Lowers Price Target to $41",
-    "added_at": "2026-06-29T16:24:31.063650+00:00",
-    "expires": "2026-07-04T16:24:31.063655+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "QNT": {
-    "ticker": "QNT",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "JP Morgan Initiates Coverage On Quantinuum with Overweight Rating, Announces Price Target of $97",
-    "added_at": "2026-06-29T16:24:31.065649+00:00",
-    "expires": "2026-07-04T16:24:31.065654+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "RDZN": {
     "ticker": "RDZN",
     "score_delta": -0.093,
@@ -1122,19 +992,6 @@
     "headline": "Reported Earlier: Roadzen Q4 EPS $(0.09) Misses $(0.06) Estimate, Sales $16.121M Beat $15.289M Estimate",
     "added_at": "2026-06-29T18:29:50.273796+00:00",
     "expires": "2026-07-06T18:29:50.273804+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BDRX": {
-    "ticker": "BDRX",
-    "score_delta": 0.029,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Watching Biodexa Pharmaceuticals; Zacks Small-Cap Research Gives Stock $10 Price Valuation",
-    "added_at": "2026-06-29T18:29:50.276247+00:00",
-    "expires": "2026-07-04T18:29:50.276252+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1151,32 +1008,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "URI": {
-    "ticker": "URI",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "BNP Paribas Upgrades United Rentals to Outperform, Announces $1320 Price Target",
-    "added_at": "2026-06-29T18:29:50.282083+00:00",
-    "expires": "2026-07-04T18:29:50.282088+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "INIO": {
-    "ticker": "INIO",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "BNP Paribas Initiates Coverage On Innio with Outperform Rating, Announces Price Target of $48",
-    "added_at": "2026-06-29T18:29:50.284051+00:00",
-    "expires": "2026-07-04T18:29:50.284056+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GOOGL": {
     "ticker": "GOOGL",
     "score_delta": -0.097,
@@ -1187,19 +1018,6 @@
     "headline": "Google Takes One-Two Antitrust Punch: Yelp Win, $1.5 Billion Klarna Ruling",
     "added_at": "2026-07-01T21:58:33.272597+00:00",
     "expires": "2026-07-15T21:58:33.272602+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DOCS": {
-    "ticker": "DOCS",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Doximity's AI Expansion Raises Execution Risks: Analyst",
-    "added_at": "2026-06-29T18:29:50.289874+00:00",
-    "expires": "2026-07-04T18:29:50.289879+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1316,45 +1134,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MNPR": {
-    "ticker": "MNPR",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "BTIG Maintains Buy on Monopar Therapeutics, Raises Price Target to $117",
-    "added_at": "2026-06-30T10:51:46.611771+00:00",
-    "expires": "2026-07-05T10:51:46.611777+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EVMN": {
-    "ticker": "EVMN",
-    "score_delta": -0.049,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "HC Wainwright & Co. Downgrades Evommune to Neutral",
-    "added_at": "2026-06-30T10:51:46.615568+00:00",
-    "expires": "2026-07-05T10:51:46.615573+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ATI": {
-    "ticker": "ATI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on ATI, Raises Price Target to $211",
-    "added_at": "2026-06-30T10:51:46.618739+00:00",
-    "expires": "2026-07-05T10:51:46.618745+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INSG": {
     "ticker": "INSG",
     "score_delta": 0.05,
@@ -1368,32 +1147,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AIR": {
-    "ticker": "AIR",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Keybanc Downgrades AAR to Sector Weight",
-    "added_at": "2026-06-30T10:51:46.621903+00:00",
-    "expires": "2026-07-05T10:51:46.621907+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ABVX": {
-    "ticker": "ABVX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "BTIG Maintains Buy on Abivax, Raises Price Target to $175",
-    "added_at": "2026-06-30T10:51:46.623483+00:00",
-    "expires": "2026-07-05T10:51:46.623487+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SNOA": {
     "ticker": "SNOA",
     "score_delta": 0.15,
@@ -1404,19 +1157,6 @@
     "headline": "Sonoma Pharmaceuticals Receives FDA 510(k) Clearance For Its Microdacyn Wound Irrigation Solution",
     "added_at": "2026-06-30T13:07:43.961826+00:00",
     "expires": "2026-07-30T13:07:43.961833+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SNDK": {
-    "ticker": "SNDK",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Bernstein Maintains Outperform on SanDisk, Raises Price Target to $3000",
-    "added_at": "2026-06-30T13:07:43.964591+00:00",
-    "expires": "2026-07-05T13:07:43.964597+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1446,45 +1186,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "IFF": {
-    "ticker": "IFF",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Argus Research Maintains Buy on Intl Flavors & Fragrances, Raises Price Target to $85",
-    "added_at": "2026-06-30T13:07:43.974946+00:00",
-    "expires": "2026-07-05T13:07:43.974951+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MSTR": {
-    "ticker": "MSTR",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "TD Cowen Targets $260 For MSTR, $100,000 For Bitcoin By End Of 2026",
-    "added_at": "2026-06-30T16:01:20.974527+00:00",
-    "expires": "2026-07-05T16:01:20.974535+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AXP": {
-    "ticker": "AXP",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "next_day",
-    "headline": "This Analyst Raises Price Target For American Express And This Banking Stock Ahead Of Q2 Earnings",
-    "added_at": "2026-06-30T16:01:20.977021+00:00",
-    "expires": "2026-07-05T16:01:20.977030+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DB": {
     "ticker": "DB",
     "score_delta": 0.025,
@@ -1511,19 +1212,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TENB": {
-    "ticker": "TENB",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "JP Morgan Maintains Overweight on Tenable Holdings, Raises Price Target to $40",
-    "added_at": "2026-06-30T16:01:20.983658+00:00",
-    "expires": "2026-07-05T16:01:20.983665+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CRCL": {
     "ticker": "CRCL",
     "score_delta": 0.05,
@@ -1537,19 +1225,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LYB": {
-    "ticker": "LYB",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "B of A Securities Maintains Underperform on LyondellBasell Industries, Lowers Price Target to $48",
-    "added_at": "2026-06-30T18:02:03.273689+00:00",
-    "expires": "2026-07-05T18:02:03.273694+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "YOOV": {
     "ticker": "YOOV",
     "score_delta": 0.129,
@@ -1560,32 +1235,6 @@
     "headline": "Concorde International Group Receives Offer To Sell Majority Equity Interest In Wholly Owned Subsidiary YOOV Group Holding Limited; No Terms Disclosed",
     "added_at": "2026-06-30T18:02:03.275756+00:00",
     "expires": "2026-07-30T18:02:03.275761+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DOW": {
-    "ticker": "DOW",
-    "score_delta": -0.03,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "B of A Securities Maintains Underperform on Dow, Lowers Price Target to $29",
-    "added_at": "2026-06-30T18:02:03.277824+00:00",
-    "expires": "2026-07-05T18:02:03.277829+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CCL": {
-    "ticker": "CCL",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Tigress Financial Maintains Buy on Carnival, Raises Price Target to $42",
-    "added_at": "2026-06-30T20:07:10.175484+00:00",
-    "expires": "2026-07-05T20:07:10.175492+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1628,19 +1277,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "PANW": {
-    "ticker": "PANW",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "BTIG Maintains Buy on Palo Alto Networks, Raises Price Target to $380",
-    "added_at": "2026-06-30T21:54:45.984103+00:00",
-    "expires": "2026-07-05T21:54:45.984109+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PRPH": {
     "ticker": "PRPH",
     "score_delta": -0.093,
@@ -1680,19 +1316,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VLO": {
-    "ticker": "VLO",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Barclays Maintains Overweight on Valero Energy, Raises Price Target to $279",
-    "added_at": "2026-07-01T11:20:14.770128+00:00",
-    "expires": "2026-07-06T11:20:14.770133+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NGG": {
     "ticker": "NGG",
     "score_delta": 0.05,
@@ -1703,19 +1326,6 @@
     "headline": "National Grid Ventures To Acquire 35% Stake In Power Solutions Provider Joulent For $1.75B",
     "added_at": "2026-07-01T11:20:14.772250+00:00",
     "expires": "2026-07-15T11:20:14.772255+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ALGT": {
-    "ticker": "ALGT",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "JP Morgan Initiates Coverage On Allegiant Travel with Overweight Rating, Announces Price Target of $156",
-    "added_at": "2026-07-01T11:20:14.774318+00:00",
-    "expires": "2026-07-06T11:20:14.774323+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1742,19 +1352,6 @@
     "headline": "Gogo Announces That Gulfstream Aerospace Received FAA Certificate To Install The Company's Galileo HDX On Gulfstream G650 And Gulfstream G650ER Aircraft",
     "added_at": "2026-07-01T11:20:14.778549+00:00",
     "expires": "2026-07-08T11:20:14.778555+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MUSA": {
-    "ticker": "MUSA",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Jefferies Upgrades Murphy USA to Buy, Raises Price Target to $625",
-    "added_at": "2026-07-01T11:20:14.780658+00:00",
-    "expires": "2026-07-06T11:20:14.780665+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2418,6 +2015,97 @@
     "headline": "Apogee Q1 Earnings Beat Estimates on Pricing, Productivity Gains",
     "added_at": "2026-07-03T14:41:03.377470+00:00",
     "expires": "2026-07-10T14:41:03.377475+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CCXI": {
+    "ticker": "CCXI",
+    "score_delta": 0.157,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Churchill Capital Shares Rise as $2.5 Billion Agility Robotics Merger Keeps Investors Engaged",
+    "added_at": "2026-07-06T11:58:53.316102+00:00",
+    "expires": "2026-08-05T11:58:53.316109+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BPOP": {
+    "ticker": "BPOP",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Wells Fargo Maintains Overweight on Popular, Raises Price Target to $180",
+    "added_at": "2026-07-06T11:58:53.318541+00:00",
+    "expires": "2026-07-11T11:58:53.318546+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FBP": {
+    "ticker": "FBP",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Wells Fargo Maintains Overweight on First BanCorp, Raises Price Target to $28",
+    "added_at": "2026-07-06T11:58:53.320488+00:00",
+    "expires": "2026-07-11T11:58:53.320494+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FNB": {
+    "ticker": "FNB",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Wells Fargo Maintains Overweight on F N B, Raises Price Target to $21",
+    "added_at": "2026-07-06T11:58:53.322481+00:00",
+    "expires": "2026-07-11T11:58:53.322486+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EWBC": {
+    "ticker": "EWBC",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Wells Fargo Maintains Overweight on East West Bancorp, Raises Price Target to $140",
+    "added_at": "2026-07-06T11:58:53.324357+00:00",
+    "expires": "2026-07-11T11:58:53.324362+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DRIO": {
+    "ticker": "DRIO",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "DarioHealth Enters Agreement With A Major Health Insurer In Arizona Through Its Strategic Channel Partnership With Amwell",
+    "added_at": "2026-07-06T11:58:53.326256+00:00",
+    "expires": "2026-07-13T11:58:53.326261+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KIDZ": {
+    "ticker": "KIDZ",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "KIDZ AI Unveils KIDZBot, AI Robotics Learning Platform For Physical AI Education Era; Co. Expects KIDZBot To Begin Commercial Rollout During H2 Of 2026",
+    "added_at": "2026-07-06T11:58:53.328177+00:00",
+    "expires": "2026-07-13T11:58:53.328182+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
