@@ -227,6 +227,78 @@
       "url": "https://www.benzinga.com/news/26/07/60289581/capital-one-initiates-coverage-whitehawk-minerals-overweight-rating-announces-price-target-32",
       "source": "alpaca",
       "added_at": "2026-07-06T19:52:12.430884+00:00"
+    },
+    {
+      "ticker": "RIVN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large secondary offering of 75M shares creates immediate dilution and significant selling pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Rivian Automotive Offers 75M Shares Of Class A Common Stock",
+      "url": "https://www.benzinga.com/news/26/07/60294269/rivian-automotive-offers-75m-shares-class-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-07-06T21:24:12.190662+00:00"
+    },
+    {
+      "ticker": "CRVO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 10.08M shares by existing stockholders creates immediate dilution pressure and insider selling signal, typically causing short-term downward price movement.",
+      "action_window": "intraday",
+      "headline": "CervoMed Files Prospectus Related To Offer And Resale Of 10.08M Shares Of Common Stock By Selling Stockholders",
+      "url": "https://www.benzinga.com/news/26/07/60294100/cervomed-files-prospectus-related-offer-and-resale-10-08m-shares-common-stock-selling-stockholders",
+      "source": "alpaca",
+      "added_at": "2026-07-06T21:24:12.190673+00:00"
+    },
+    {
+      "ticker": "DMLP",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Acquisition of mineral and royalty interests is accretive for DMLP, expanding asset base and potentially cash flows, though deal size and terms are not specified in headline.",
+      "action_window": "next_day",
+      "headline": "Dorchester Minerals To Acquire Mineral And Royalty Interests",
+      "url": "https://www.benzinga.com/m/26/07/60293964/dorchester-minerals-acquire-mineral-and-royalty-interests",
+      "source": "alpaca",
+      "added_at": "2026-07-06T21:24:12.190678+00:00"
+    },
+    {
+      "ticker": "DMRC",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Executive leadership change (new CEO appointment) typically creates moderate uncertainty and potential strategic shift but lacks immediate financial catalyst.",
+      "action_window": "next_day",
+      "headline": "Digimarc Names Paul Carreiro As President And CEO",
+      "url": "https://www.benzinga.com/news/26/07/60293843/digimarc-names-paul-carreiro-president-and-ceo",
+      "source": "alpaca",
+      "added_at": "2026-07-06T21:24:12.190685+00:00"
+    },
+    {
+      "ticker": "RXST",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Significant FY2026 sales guidance raise of 17-19% above previous midpoint and 16-24% above consensus estimates represents a major positive catalyst.",
+      "action_window": "intraday",
+      "headline": "RxSight Raises FY2026 Sales Guidance from $120.000M-$135.000M to $140.000M-$160.000M vs $129.250M Est",
+      "url": "https://www.benzinga.com/news/26/07/60293614/rxsight-raises-fy2026-sales-guidance-120-000m-135-000m-140-000m-160-000m-vs-129-250m-est",
+      "source": "alpaca",
+      "added_at": "2026-07-06T21:24:12.190690+00:00"
+    },
+    {
+      "ticker": "MSS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Company selling 91.67% controlling stake for only $1 indicates severe financial distress or worthless asset, signaling major restructuring or potential insolvency concerns.",
+      "action_window": "next_day",
+      "headline": "Maison Solutions Enters Equity Purchase Agreement With DNL Management On July 2, 2026; Co To Sells 91.67% Stake In Super HK Of El Monte For $1",
+      "url": "https://www.benzinga.com/news/26/07/60293437/maison-solutions-enters-equity-purchase-agreement-dnl-management-july-2-2026-co-sells-91-67-stake-su",
+      "source": "alpaca",
+      "added_at": "2026-07-06T21:24:12.190695+00:00"
     }
   ]
 }

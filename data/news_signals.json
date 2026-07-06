@@ -2069,5 +2069,44 @@
     "expires": "2026-07-11T19:52:12.428290+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DMLP": {
+    "ticker": "DMLP",
+    "score_delta": 0.049,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Dorchester Minerals To Acquire Mineral And Royalty Interests",
+    "added_at": "2026-07-06T21:24:12.181737+00:00",
+    "expires": "2026-07-20T21:24:12.181744+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RXST": {
+    "ticker": "RXST",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "RxSight Raises FY2026 Sales Guidance from $120.000M-$135.000M to $140.000M-$160.000M vs $129.250M Est",
+    "added_at": "2026-07-06T21:24:12.186036+00:00",
+    "expires": "2026-07-20T21:24:12.186041+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MSS": {
+    "ticker": "MSS",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Maison Solutions Enters Equity Purchase Agreement With DNL Management On July 2, 2026; Co To Sells 91.67% Stake In Super HK Of El Monte For $1",
+    "added_at": "2026-07-06T21:24:12.188000+00:00",
+    "expires": "2026-08-05T21:24:12.188005+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
