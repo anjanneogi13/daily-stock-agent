@@ -167,6 +167,66 @@
       "url": "https://www.benzinga.com/news/26/07/60287917/hii-secures-u-s-navy-lionfish-production-contract-option-expanding-autonomous-undersea-vehicle-progr",
       "source": "alpaca",
       "added_at": "2026-07-06T17:58:17.603542+00:00"
+    },
+    {
+      "ticker": "EJTTF",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "A $6.7 billion take-private deal represents a significant premium acquisition that would be highly bullish for EasyJet shareholders if consummated.",
+      "action_window": "intraday",
+      "headline": "Castlelake Nears $6.7 Billion Take-Private Deal for EasyJet",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60291412/castlelake-nears-6-7-billion-take-private-deal-for-easyjet",
+      "source": "alpaca",
+      "added_at": "2026-07-06T19:52:12.430856+00:00"
+    },
+    {
+      "ticker": "GLD",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Macro catalysts (weak jobs data, softer dollar, cooling inflation) are driving gold and gold ETF demand with clear fundamental support for the bullish thesis.",
+      "action_window": "this_week",
+      "headline": "Gold ETFs Back in Focus as Weak Jobs Data, Softer Dollar Boost Bullion Rally",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60291118/gold-etfs-back-in-focus-as-weak-jobs-data-softer-dollar-boost-bullion-rally",
+      "source": "alpaca",
+      "added_at": "2026-07-06T19:52:12.430866+00:00"
+    },
+    {
+      "ticker": "LCID",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong delivery and production results are positive operational metrics but headline lacks specific numbers and mentions broader sector momentum which dilutes company-specific impact.",
+      "action_window": "intraday",
+      "headline": "Lucid Stock Surges on Strong EV Delivery and Production Results",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60290410/lucid-stock-surges-on-strong-ev-delivery-and-production-results",
+      "source": "alpaca",
+      "added_at": "2026-07-06T19:52:12.430873+00:00"
+    },
+    {
+      "ticker": "CRTO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Takeover offer from well-capitalized Vista Equity typically triggers immediate premium pricing for target company shares.",
+      "action_window": "intraday",
+      "headline": "'Advertising Technology Firm Criteo Attracts Vista Equity-Backed Takeover Offer' - Bloomberg",
+      "url": "https://www.benzinga.com/m/26/07/60290372/advertising-technology-firm-criteo-attracts-vista-equity-backed-takeover-offer-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-06T19:52:12.430878+00:00"
+    },
+    {
+      "ticker": "WHK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Capital One initiating coverage with Overweight rating and $32 price target represents a meaningful bullish catalyst from a major financial institution.",
+      "action_window": "next_day",
+      "headline": "Capital One Initiates Coverage On WhiteHawk Minerals with Overweight Rating, Announces Price Target of $32",
+      "url": "https://www.benzinga.com/news/26/07/60289581/capital-one-initiates-coverage-whitehawk-minerals-overweight-rating-announces-price-target-32",
+      "source": "alpaca",
+      "added_at": "2026-07-06T19:52:12.430884+00:00"
     }
   ]
 }

@@ -392,19 +392,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AIXI": {
-    "ticker": "AIXI",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Xiao-I shares are trading lower after the Shanghai High People's Court dismissed the company's patent litigation claims against Apple's Siri technology.",
-    "added_at": "2026-06-22T18:05:03.164937+00:00",
-    "expires": "2026-07-06T18:05:03.164942+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
   "QCOM": {
     "ticker": "QCOM",
     "score_delta": 0.1,
@@ -943,19 +930,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RDZN": {
-    "ticker": "RDZN",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Reported Earlier: Roadzen Q4 EPS $(0.09) Misses $(0.06) Estimate, Sales $16.121M Beat $15.289M Estimate",
-    "added_at": "2026-06-29T18:29:50.273796+00:00",
-    "expires": "2026-07-06T18:29:50.273804+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SMCI": {
     "ticker": "SMCI",
     "score_delta": -0.1,
@@ -1342,19 +1316,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CON": {
-    "ticker": "CON",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Concentra Standout in Occupational Medicine: Analyst",
-    "added_at": "2026-07-01T18:23:36.333062+00:00",
-    "expires": "2026-07-06T18:23:36.333067+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CVNA": {
     "ticker": "CVNA",
     "score_delta": 0.1,
@@ -1365,71 +1326,6 @@
     "headline": "Why Is Carvana Stock Surging Wednesday?",
     "added_at": "2026-07-01T18:23:36.322693+00:00",
     "expires": "2026-07-15T18:23:36.322700+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DHI": {
-    "ticker": "DHI",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Americans Still Can't Afford to Buy \u2014 and Homebuilder Stocks Are Paying the Price",
-    "added_at": "2026-07-01T18:23:36.329031+00:00",
-    "expires": "2026-07-06T18:23:36.329036+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FVR": {
-    "ticker": "FVR",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Jones Trading Maintains Buy on FrontView REIT, Raises Price Target to $21",
-    "added_at": "2026-07-01T18:23:36.331046+00:00",
-    "expires": "2026-07-06T18:23:36.331052+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMBA": {
-    "ticker": "AMBA",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "ignore",
-    "headline": "Rosenblatt Names Ambarella a Top Pick for Second Half of 2026",
-    "added_at": "2026-07-01T18:23:36.335096+00:00",
-    "expires": "2026-07-06T18:23:36.335101+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DAL": {
-    "ticker": "DAL",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "Higher Airfares Are Sticking After Spring Price Hikes, Analyst Says",
-    "added_at": "2026-07-01T18:23:36.337125+00:00",
-    "expires": "2026-07-06T18:23:36.337130+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "WELL": {
-    "ticker": "WELL",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Deutsche Bank Maintains Buy on Welltower, Raises Price Target to $265",
-    "added_at": "2026-07-01T18:23:36.339169+00:00",
-    "expires": "2026-07-06T18:23:36.339174+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2132,6 +2028,45 @@
     "headline": "Jefferies Maintains Underperform on Hawaiian Electric Indus, Lowers Price Target to $11.75",
     "added_at": "2026-07-06T17:58:17.600874+00:00",
     "expires": "2026-07-11T17:58:17.600880+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EJTTF": {
+    "ticker": "EJTTF",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.92,
+    "action_window": "intraday",
+    "headline": "Castlelake Nears $6.7 Billion Take-Private Deal for EasyJet",
+    "added_at": "2026-07-06T19:52:12.423966+00:00",
+    "expires": "2026-08-05T19:52:12.423973+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CRTO": {
+    "ticker": "CRTO",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "'Advertising Technology Firm Criteo Attracts Vista Equity-Backed Takeover Offer' - Bloomberg",
+    "added_at": "2026-07-06T19:52:12.426313+00:00",
+    "expires": "2026-08-05T19:52:12.426319+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WHK": {
+    "ticker": "WHK",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Capital One Initiates Coverage On WhiteHawk Minerals with Overweight Rating, Announces Price Target of $32",
+    "added_at": "2026-07-06T19:52:12.428285+00:00",
+    "expires": "2026-07-11T19:52:12.428290+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
