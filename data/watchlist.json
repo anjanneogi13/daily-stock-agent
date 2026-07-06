@@ -95,6 +95,78 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60282218/why-did-core-natural-resources-stock-gain-after-doe-grant",
       "source": "alpaca",
       "added_at": "2026-07-06T15:27:39.097707+00:00"
+    },
+    {
+      "ticker": "LULU",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley reinstating Underweight rating on LULU with a $93 price target represents a meaningful negative catalyst from a major bulge bracket bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Reinstates Underweight on Lululemon Athletica, Announces $93 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60288328/morgan-stanley-reinstates-underweight-lululemon-athletica-announces-93-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-06T17:58:17.603510+00:00"
+    },
+    {
+      "ticker": "GMAB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "EU approval of first-in-class bispecific therapy following Phase 3 success represents a major regulatory milestone with significant commercial potential in the oncology market.",
+      "action_window": "intraday",
+      "headline": "Genmab\u2019s TEPKINLY + R2 Wins EU Approval As First Bispecific Therapy For Relapsed Follicular Lymphoma Following Phase 3 Trial Success",
+      "url": "https://www.benzinga.com/general/biotech/26/07/60288294/genmab-s-tepkinly-r2-wins-eu-approval-first-bispecific-therapy-relapsed-follicular-lymphoma-followin",
+      "source": "alpaca",
+      "added_at": "2026-07-06T17:58:17.603520+00:00"
+    },
+    {
+      "ticker": "ABBV",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "First-in-class European approval for bispecific therapy in relapsed follicular lymphoma following Phase 3 success represents meaningful market expansion for AbbVie's oncology portfolio.",
+      "action_window": "next_day",
+      "headline": "AbbVie\u2019s TEPKINLY + R2 Becomes First Bispecific Therapy Approved In Europe For Relapsed Follicular Lymphoma Following Phase 3 Success",
+      "url": "https://www.benzinga.com/general/biotech/26/07/60288278/abbvie-s-tepkinly-r2-becomes-first-bispecific-therapy-approved-europe-relapsed-follicular-lymphoma-f",
+      "source": "alpaca",
+      "added_at": "2026-07-06T17:58:17.603526+00:00"
+    },
+    {
+      "ticker": "RWAY",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Activist investor publicly criticizes core business model (loan origination being devalued 50%+ by market) while pushing for defensive capital allocation, signaling fundamental business concerns.",
+      "action_window": "intraday",
+      "headline": "Runway Growth Finance 3% Shareholder Bulldog Investors Urges Board To Expand Share Buybacks; Believes It No Longer Makes Sense For Runway To Issue Additional Loans That Market Immediately Devalues By More Than 50%",
+      "url": "https://www.benzinga.com/news/26/07/60288240/runway-growth-finance-3-shareholder-bulldog-investors-urges-board-expand-share-buybacks-believes-it-",
+      "source": "alpaca",
+      "added_at": "2026-07-06T17:58:17.603531+00:00"
+    },
+    {
+      "ticker": "KSS",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley reinstating Underweight rating with $15 price target represents a clear negative catalyst from a major investment bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Reinstates Underweight on Kohl's, Announces $15 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60288080/morgan-stanley-reinstates-underweight-kohl-s-announces-15-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-06T17:58:17.603537+00:00"
+    },
+    {
+      "ticker": "HII",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major defense contract win worth $347M+ expands HII's autonomous undersea vehicle program, representing material revenue certainty and strategic positioning in growing naval technology segment.",
+      "action_window": "next_day",
+      "headline": "HII Secures U.S. Navy Lionfish Production Contract Option, Expanding Autonomous Undersea Vehicle Program Valued At Over $347M",
+      "url": "https://www.benzinga.com/news/26/07/60287917/hii-secures-u-s-navy-lionfish-production-contract-option-expanding-autonomous-undersea-vehicle-progr",
+      "source": "alpaca",
+      "added_at": "2026-07-06T17:58:17.603542+00:00"
     }
   ]
 }
