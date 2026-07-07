@@ -2351,5 +2351,18 @@
     "added_at": "2026-07-07T21:52:27.432988+00:00",
     "expires": "2027-01-03T21:52:27.432994+00:00",
     "hard_block": true
+  },
+  "EPAC": {
+    "ticker": "EPAC",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Enerpac Tool Group To Acquire Specialized Fabrication Equipment Group  For ~ $472M In Cash",
+    "added_at": "2026-07-07T22:55:16.444555+00:00",
+    "expires": "2026-07-21T22:55:16.444562+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

@@ -784,6 +784,30 @@
       "url": "https://www.benzinga.com/news/26/07/60321140/nextnrg-enters-standard-merchant-cash-advance-agreement-avanza-capital-holdings-june-30-2026-sells-1",
       "source": "alpaca",
       "added_at": "2026-07-07T21:52:27.438168+00:00"
+    },
+    {
+      "ticker": "EPAC",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Significant M&A announcement with EPAC acquiring a specialized equipment group for $472M in cash represents a material strategic expansion requiring immediate market reassessment of the acquirer's growth trajectory and capital allocation.",
+      "action_window": "next_day",
+      "headline": "Enerpac Tool Group To Acquire Specialized Fabrication Equipment Group  For ~ $472M In Cash",
+      "url": "https://www.benzinga.com/news/26/07/60322096/enerpac-tool-group-acquire-specialized-fabrication-equipment-group-472m-cash",
+      "source": "alpaca",
+      "added_at": "2026-07-07T22:55:16.461250+00:00"
+    },
+    {
+      "ticker": "LMT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Military strikes on Iran create immediate geopolitical crisis driving defense contractors and oil prices higher on supply disruption fears and increased military spending expectations.",
+      "action_window": "intraday",
+      "headline": "US Resumes 'Powerful Strikes' on Iran After 3 Ships Attacked in Strait of Hormuz",
+      "url": "https://www.benzinga.com/news/politics/26/07/60321995/us-resumes-powerful-strikes-on-iran-after-3-ships-attacked-in-strait-of-hormuz",
+      "source": "alpaca",
+      "added_at": "2026-07-07T22:55:16.461264+00:00"
     }
   ]
 }
