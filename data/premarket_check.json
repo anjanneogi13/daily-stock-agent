@@ -1,23 +1,21 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "market": {
-    "spy_change_pct": -0.13,
-    "qqq_change_pct": -1.73,
-    "soxx_change_pct": -5.57,
-    "vix": 16.37,
-    "warnings": [
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -5.6% \u2014 semis at risk"
-    ],
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
+    "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "CCXI",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 19.1,
-      "gap_pct": 0.0,
-      "actionable": true
+      "ticker": "CMPS",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }
