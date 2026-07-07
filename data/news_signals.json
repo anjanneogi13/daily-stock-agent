@@ -453,32 +453,6 @@
     "expires": "2026-12-22T23:51:44.271345+00:00",
     "hard_block": true
   },
-  "BX": {
-    "ticker": "BX",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Blackstone Expects Q2 2026 Realized Performance Revenues And Realized Principal Investment Income To Be Over $500M",
-    "added_at": "2026-06-23T20:32:05.112831+00:00",
-    "expires": "2026-07-07T20:32:05.112839+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FDX": {
-    "ticker": "FDX",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "FedEx Stock Slips On Q4 Results As FY27 Earnings Guidance Comes In Light",
-    "added_at": "2026-06-23T20:32:05.115118+00:00",
-    "expires": "2026-07-07T20:32:05.115124+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GME": {
     "ticker": "GME",
     "score_delta": 0.1,
@@ -489,19 +463,6 @@
     "headline": "GameStop Expects FY2026 Adj EBITDA In Excess Of $600M Compared To Adjusted EBITDA Of $345.4M In FY 2025.; Co. Remains Focused On Advancing The Proposed Acquisition Of eBay",
     "added_at": "2026-06-26T22:44:04.943128+00:00",
     "expires": "2026-07-10T22:44:04.943135+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LFS": {
-    "ticker": "LFS",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "CORRECTION: LEIFRAS To Acquire SWIFT JAPAN For JPY454.6M",
-    "added_at": "2026-06-23T20:32:05.123672+00:00",
-    "expires": "2026-07-07T20:32:05.123684+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2368,5 +2329,27 @@
     "expires": "2026-07-14T20:23:58.880225+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "RMD": {
+    "ticker": "RMD",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "ResMed Says Deal Valued At $490M All-Cash, Expected To Close In Q1 FY2027",
+    "added_at": "2026-07-07T21:52:27.430510+00:00",
+    "expires": "2026-07-21T21:52:27.430518+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PTNM": {
+    "ticker": "PTNM",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Pitanium Limited To Be Delisted From Nasdaq On July 16, 2026 Unless Appealed",
+    "added_at": "2026-07-07T21:52:27.432988+00:00",
+    "expires": "2027-01-03T21:52:27.432994+00:00",
+    "hard_block": true
   }
 }
