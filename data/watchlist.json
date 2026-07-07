@@ -531,6 +531,54 @@
       "url": "https://www.benzinga.com/news/26/07/60310529/zelman-assoc-downgrades-m-i-homes-neutral",
       "source": "alpaca",
       "added_at": "2026-07-07T16:01:27.030966+00:00"
+    },
+    {
+      "ticker": "MSTR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Strategy's first major Bitcoin sale since 2022 represents a significant strategic shift for a company known for aggressive Bitcoin accumulation, likely triggering negative sentiment among investors who view MSTR as a Bitcoin proxy.",
+      "action_window": "intraday",
+      "headline": "What Strategy's July 6 Filing Actually Says About Its First Major Bitcoin Sale Since 2022",
+      "url": "https://www.benzinga.com/Opinion/26/07/60316260/what-strategys-july-6-filing-actually-says-about-its-first-major-bitcoin-sale-since-2022",
+      "source": "alpaca",
+      "added_at": "2026-07-07T18:05:18.222495+00:00"
+    },
+    {
+      "ticker": "ALAB",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Insider selling by Chairman combined with sector-wide semiconductor demand concerns creates moderate bearish pressure with some uncertainty around magnitude.",
+      "action_window": "intraday",
+      "headline": "Why Is Astera Labs Stock Falling on Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60315957/why-is-astera-labs-stock-falling-on-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-07-07T18:05:18.222507+00:00"
+    },
+    {
+      "ticker": "TVRD",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock already gained 50% on positive Phase 1 clinical trial data for lead drug candidate, representing a significant de-risking catalyst for biotech.",
+      "action_window": "intraday",
+      "headline": "Why Is Tvardi Therapeutics Stock Gaining Tuesday?",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60315956/why-is-tvardi-therapeutics-stock-gaining-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-07-07T18:05:18.222513+00:00"
+    },
+    {
+      "ticker": "ALGT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Melius Research upgrade to Buy with $160 price target represents a meaningful positive catalyst from a recognized research firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Melius Research Upgrades Allegiant Travel to Buy, Announces $160 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60315498/melius-research-upgrades-allegiant-travel-buy-announces-160-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-07T18:05:18.222522+00:00"
     }
   ]
 }
