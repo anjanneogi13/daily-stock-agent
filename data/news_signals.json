@@ -1069,32 +1069,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "PRPH": {
-    "ticker": "PRPH",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "ProPhase Labs Q1 EPS $(0.43) Up From $(1.33) YoY, Sales $478.000K Down From $1.431M YoY",
-    "added_at": "2026-06-30T23:06:00.225800+00:00",
-    "expires": "2026-07-07T23:06:00.225807+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BRLS": {
-    "ticker": "BRLS",
-    "score_delta": 0.083,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "Borealis Foods Q1 EPS $(0.16) Up From $(0.20) YoY, Sales $7.368M Up From $6.846M YoY",
-    "added_at": "2026-06-30T23:06:00.227833+00:00",
-    "expires": "2026-07-07T23:06:00.227859+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SUPX": {
     "ticker": "SUPX",
     "score_delta": 0.034,

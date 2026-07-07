@@ -667,15 +667,16 @@
     },
     {
       "ticker": "PENG",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.92,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Penguin Solutions delivered a significant earnings beat with adjusted EPS 55% above estimates ($0.84 vs $0.54) and revenue 18% above estimates ($478.7M vs $405.5M), indicating strong operational performance.",
+      "rationale": "Strong Q2 earnings beat with revenue up 47.6% YoY and EPS beating consensus by 49.3%, plus headline confirms stock already soaring on the news.",
       "action_window": "intraday",
-      "headline": "Penguin Solutions Q3 Adj. EPS $0.84 Beats $0.54 Estimate, Sales $478.713M Beat $405.534M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60319837/penguin-solutions-q3-adj-eps-0-84-beats-0-54-estimate-sales-478-713m-beat-405-534m-estimate",
+      "headline": "Penguin Solutions (NASDAQ:PENG) Reports Bullish Q2, Stock Soars",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/penguin-solutions-nasdaq-peng-reports-203627193.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-07T20:23:58.883185+00:00"
+      "added_at": "2026-07-07T20:23:58.883185+00:00",
+      "updated_at": "2026-07-07T23:53:16.678894+00:00"
     },
     {
       "ticker": "NET",
