@@ -444,32 +444,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "META": {
-    "ticker": "META",
-    "score_delta": -0.064,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "'EU to Escalate Meta Probe Into Addictive Design That Hooks Kids' - Bloomberg",
-    "added_at": "2026-06-23T10:58:42.597442+00:00",
-    "expires": "2026-07-07T10:58:42.597447+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VTOL": {
-    "ticker": "VTOL",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "'Bristow Is Said to Near Berry Aviation Deal in Government Push' - Bloomberg",
-    "added_at": "2026-06-23T10:58:42.600787+00:00",
-    "expires": "2026-07-07T10:58:42.600792+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SGMO": {
     "ticker": "SGMO",
     "score_delta": -1.0,
@@ -817,19 +791,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HOOD": {
-    "ticker": "HOOD",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Why Is Robinhood Markets Stock Gaining Thursday?",
-    "added_at": "2026-07-02T12:55:42.683113+00:00",
-    "expires": "2026-07-07T12:55:42.683119+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "OMER": {
     "ticker": "OMER",
     "score_delta": -0.2,
@@ -1079,19 +1040,6 @@
     "headline": "Webull Canada\u00a0Crypto Receives Canadian Investment Regulatory Organization\u00a0Approval To Start Offering Cryptocurrency Trading",
     "added_at": "2026-06-30T13:07:43.968748+00:00",
     "expires": "2026-07-30T13:07:43.968753+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MODD": {
-    "ticker": "MODD",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "EXCLUSIVE: Modular Medical Says First Patients Begin Using Pivot Tubeless Insulin Patch Pump; Expects To Target Multibillion-Dollar Market",
-    "added_at": "2026-06-30T13:07:43.970792+00:00",
-    "expires": "2026-07-07T13:07:43.970797+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1430,19 +1378,6 @@
     "headline": "Ensign Group Purchases Two Skilled Nursing Facilities In Texas; Terms Not Disclosed",
     "added_at": "2026-07-02T10:32:09.664167+00:00",
     "expires": "2026-07-16T10:32:09.664173+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FWONA": {
-    "ticker": "FWONA",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Citizens Reiterates Market Outperform on Liberty Media, Raises Price Target to $120",
-    "added_at": "2026-07-02T12:55:42.680619+00:00",
-    "expires": "2026-07-07T12:55:42.680626+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2197,6 +2132,84 @@
     "headline": "Truist Securities Downgrades Amrize to Hold, Lowers Price Target to $48",
     "added_at": "2026-07-07T10:50:36.767404+00:00",
     "expires": "2026-07-12T10:50:36.767409+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SAIA": {
+    "ticker": "SAIA",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Saia, Raises Price Target to $527",
+    "added_at": "2026-07-07T13:14:48.313512+00:00",
+    "expires": "2026-07-12T13:14:48.313519+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QXL": {
+    "ticker": "QXL",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Quantum X Labs Demonstrates High-Sensitivity Atomic Clock Based On Its Ramsey Coherent Population Trapping Platform",
+    "added_at": "2026-07-07T13:14:48.315880+00:00",
+    "expires": "2026-07-14T13:14:48.315885+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CTSH": {
+    "ticker": "CTSH",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Cognizant Expands Collaboration With Google Cloud Over Gemini Enterprise",
+    "added_at": "2026-07-07T13:14:48.317908+00:00",
+    "expires": "2026-07-14T13:14:48.317913+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DOCN": {
+    "ticker": "DOCN",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "DigitalOcean Expects Q2 Revenue Growth To Accelerate To 29%, Up From 14% In Same Quarter 2025; RPO To Exceed $800M; Adds 20 MW Capacity For 2027/2028; Sees aEBITDA, EPS At High End Of Guidance",
+    "added_at": "2026-07-07T13:14:48.321911+00:00",
+    "expires": "2026-07-21T13:14:48.321916+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "XPO": {
+    "ticker": "XPO",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on XPO, Raises Price Target to $257",
+    "added_at": "2026-07-07T13:14:48.323906+00:00",
+    "expires": "2026-07-12T13:14:48.323911+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CRSR": {
+    "ticker": "CRSR",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "CORSAIR's Fanatec Strikes Licensing Deal With Nissan Motor To Develop Sim Racing Steering Wheels",
+    "added_at": "2026-07-07T13:14:48.325931+00:00",
+    "expires": "2026-07-14T13:14:48.325936+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

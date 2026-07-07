@@ -435,6 +435,42 @@
       "url": "https://www.benzinga.com/news/26/07/60298861/truist-securities-downgrades-amrize-hold-lowers-price-target-48",
       "source": "alpaca",
       "added_at": "2026-07-07T10:50:36.770227+00:00"
+    },
+    {
+      "ticker": "QXL",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Successful demonstration of advanced atomic clock technology represents meaningful R&D milestone that validates the company's core platform, though commercial timeline and revenue impact remain uncertain.",
+      "action_window": "next_day",
+      "headline": "Quantum X Labs Demonstrates High-Sensitivity Atomic Clock Based On Its Ramsey Coherent Population Trapping Platform",
+      "url": "https://www.benzinga.com/news/26/07/60304006/quantum-x-labs-demonstrates-high-sensitivity-atomic-clock-based-its-ramsey-coherent-population-trapp",
+      "source": "alpaca",
+      "added_at": "2026-07-07T13:14:48.328711+00:00"
+    },
+    {
+      "ticker": "DOCN",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "DigitalOcean projects dramatic revenue acceleration from 14% to 29% YoY growth, raises guidance to high end, exceeds $800M RPO milestone, and adds significant capacity expansion signaling strong demand momentum.",
+      "action_window": "intraday",
+      "headline": "DigitalOcean Expects Q2 Revenue Growth To Accelerate To 29%, Up From 14% In Same Quarter 2025; RPO To Exceed $800M; Adds 20 MW Capacity For 2027/2028; Sees aEBITDA, EPS At High End Of Guidance",
+      "url": "https://www.benzinga.com/news/26/07/60303799/digitalocean-expects-q2-revenue-growth-accelerate-29-14-same-quarter-2025-rpo-exceed-800m-adds-20-mw",
+      "source": "alpaca",
+      "added_at": "2026-07-07T13:14:48.328730+00:00"
+    },
+    {
+      "ticker": "SYNX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $3M+ military contract win represents significant revenue for a small-cap defense communications company and validates product demand in Asian defense markets.",
+      "action_window": "intraday",
+      "headline": "Silynxcom Delivers $3M+ Tactical Communications Order To A Military Customer In Asia",
+      "url": "https://www.benzinga.com/news/26/07/60303727/silynxcom-delivers-3m-tactical-communications-order-military-customer-asia",
+      "source": "alpaca",
+      "added_at": "2026-07-07T13:14:48.328737+00:00"
     }
   ]
 }
