@@ -471,6 +471,66 @@
       "url": "https://www.benzinga.com/news/26/07/60303727/silynxcom-delivers-3m-tactical-communications-order-military-customer-asia",
       "source": "alpaca",
       "added_at": "2026-07-07T13:14:48.328737+00:00"
+    },
+    {
+      "ticker": "GPUS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant treasury update showing $111.4M in holdings including nearly 900 Bitcoin positions the company with substantial crypto exposure during a period of Bitcoin appreciation.",
+      "action_window": "next_day",
+      "headline": "Hyperscale Data's Bitcoin Stash Nears 900 Coins",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60311548/hyperscale-datas-bitcoin-stash-nears-900-coins",
+      "source": "alpaca",
+      "added_at": "2026-07-07T16:01:27.030935+00:00"
+    },
+    {
+      "ticker": "NCT",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Public offering at $0.79/unit typically causes immediate dilution and selling pressure as existing shareholders face share count increase of approximately 8M units.",
+      "action_window": "intraday",
+      "headline": "Intercont Prices $6.32M Public Offering Of 8M Units At $0.79/Unit",
+      "url": "https://www.benzinga.com/news/26/07/60311255/intercont-prices-6-32m-public-offering-8m-units-0-79-unit",
+      "source": "alpaca",
+      "added_at": "2026-07-07T16:01:27.030948+00:00"
+    },
+    {
+      "ticker": "CCS",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade to Underperform is a clear negative catalyst that typically drives near-term selling pressure and institutional repositioning.",
+      "action_window": "intraday",
+      "headline": "Zelman & Assoc Downgrades Century Communities to Underperform",
+      "url": "https://www.benzinga.com/news/26/07/60310659/zelman-assoc-downgrades-century-communities-underperform",
+      "source": "alpaca",
+      "added_at": "2026-07-07T16:01:27.030957+00:00"
+    },
+    {
+      "ticker": "MTH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Zelman & Associates downgrade to Neutral represents a notable negative catalyst from a respected homebuilding sector specialist, likely to trigger selling pressure though impact is moderate given downgrade is to Neutral rather than Sell/Underperform.",
+      "action_window": "intraday",
+      "headline": "Zelman & Assoc Downgrades Meritage Homes to Neutral",
+      "url": "https://www.benzinga.com/news/26/07/60310565/zelman-assoc-downgrades-meritage-homes-neutral",
+      "source": "alpaca",
+      "added_at": "2026-07-07T16:01:27.030962+00:00"
+    },
+    {
+      "ticker": "MHO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Zelman & Associates downgrade to Neutral represents a negative catalyst from a respected housing sector analyst that typically triggers near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "Zelman & Assoc Downgrades M/I Homes to Neutral",
+      "url": "https://www.benzinga.com/news/26/07/60310529/zelman-assoc-downgrades-m-i-homes-neutral",
+      "source": "alpaca",
+      "added_at": "2026-07-07T16:01:27.030966+00:00"
     }
   ]
 }
