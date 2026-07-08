@@ -1028,6 +1028,30 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60338034/truist-financial-analyst-is-no-longer-bullish-after-ceo-shakeup",
       "source": "alpaca",
       "added_at": "2026-07-08T16:27:44.799323+00:00"
+    },
+    {
+      "ticker": "BE",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Explosive short report alleging CEO misrepresentation on China-free supply chain claims with confirmed stock decline creates immediate material trading impact.",
+      "action_window": "intraday",
+      "headline": "Bloom Energy Hit By Explosive Short Report Questioning China-Free Supply Claims",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60342006/bloom-energy-hit-by-explosive-short-report-questioning-china-free-supply-claims",
+      "source": "alpaca",
+      "added_at": "2026-07-08T17:58:44.234380+00:00"
+    },
+    {
+      "ticker": "SOXL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Semiconductors breaking below technical support combined with geopolitical uncertainty (Iran ceasefire ending) and pending Fed minutes creates near-term headwinds for the sector.",
+      "action_window": "intraday",
+      "headline": "Semiconductors Below Support; Fed Minutes Ahead; Trump Says Iran Ceasefire Is Over, But Will He Back Off?",
+      "url": "https://www.benzinga.com/Opinion/26/07/60341954/semiconductors-below-support-fed-minutes-ahead-trump-says-iran-ceasefire-is-over-but-will-he-back-off",
+      "source": "alpaca",
+      "added_at": "2026-07-08T17:58:44.234392+00:00"
     }
   ]
 }
