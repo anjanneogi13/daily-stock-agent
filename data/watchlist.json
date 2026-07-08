@@ -693,16 +693,16 @@
     },
     {
       "ticker": "FCEL",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.95,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Dilutive $225M stock offering priced at discount causing immediate 18% premarket decline represents a high-conviction bearish catalyst with confirmed price action.",
+      "rationale": "Stock already fell 15% on confirmed $225M dilutive equity offering with immediate price and share count impact, representing a significant capital raise catalyst.",
       "action_window": "intraday",
-      "headline": "Why Is FuelCell Energy Stock Sinking Wednesday?",
-      "url": "https://www.benzinga.com/markets/offerings/26/07/60325124/why-is-fuelcell-energy-stock-sinking-wednesday",
+      "headline": "FuelCell Energy shares fall after company prices upsized $225M stock offering",
+      "url": "https://www.proactiveinvestors.com/companies/news/1095139/fuelcell-energy-shares-fall-after-company-prices-upsized-225-million-stock-offering-1095139.html?.tsrc=rss",
       "source": "alpaca",
       "added_at": "2026-07-07T20:23:58.883198+00:00",
-      "updated_at": "2026-07-08T10:11:18.228626+00:00"
+      "updated_at": "2026-07-08T23:14:59.021722+00:00"
     },
     {
       "ticker": "BFST",

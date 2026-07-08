@@ -492,19 +492,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TCOM": {
-    "ticker": "TCOM",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Trip.com Group Sees Q2 Sales $2.137B-$2.241B vs $2.500B Est",
-    "added_at": "2026-06-24T22:46:15.964673+00:00",
-    "expires": "2026-07-08T22:46:15.964680+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CMCSA": {
     "ticker": "CMCSA",
     "score_delta": 0.129,
@@ -515,19 +502,6 @@
     "headline": "Comcast\u2019s NBCUniversal Spin-Off Increases Potential For Merger With This Telecom Giant",
     "added_at": "2026-06-30T18:02:03.268951+00:00",
     "expires": "2026-07-30T18:02:03.268958+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BNED": {
-    "ticker": "BNED",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Barnes & Noble Education Sees FY2026 Sales $1.710B-$1.720B vs $1.578B Est",
-    "added_at": "2026-06-24T22:46:15.973008+00:00",
-    "expires": "2026-07-08T22:46:15.973013+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2830,6 +2804,19 @@
     "headline": "Aimei Health Technology Terminates The Business Combination Agreement With United Hydrogen Group",
     "added_at": "2026-07-08T22:01:50.763354+00:00",
     "expires": "2026-08-07T22:01:50.763360+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALC": {
+    "ticker": "ALC",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Can Alcon Inc. (ALC) Stock Rebound as New Eye Care Products Approach Regulatory Milestones?",
+    "added_at": "2026-07-08T23:14:59.018198+00:00",
+    "expires": "2026-07-13T23:14:59.018206+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
