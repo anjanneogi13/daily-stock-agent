@@ -1,0 +1,74 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-28941206136",
+  "artifact_filename": "premarket_official_pick_2026-07-08_DLTR.json",
+  "artifact_id": "premarket_official_pick:2026-07-08:DLTR",
+  "artifact_path": "data/premarket_official_pick_2026-07-08_DLTR.json",
+  "commit_sha": "48004b2ed32bc551a95ad5d20af5c08f85b480b7",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/48004b2ed32bc551a95ad5d20af5c08f85b480b7",
+  "company": "DLTR",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-07-08",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-07-08:DLTR:28941206136:48004b2ed32b",
+  "entry": 122.65,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 119.72.",
+    "Review/exit near take profit 127.53."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 17,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 7.87,
+    "regime": "bull",
+    "sma_value": 693.19,
+    "sma_window": 200,
+    "spy_close": 747.71,
+    "spy_sma200": 693.19,
+    "spy_sma_anchor": 693.19
+  },
+  "risk_dollars": 49.81,
+  "risk_flags": [
+    "PREMARKET_HALF_SIZE",
+    "WATCH_ONLY_FLAG_PRESENT"
+  ],
+  "risk_reward": 1.67,
+  "score": 0.869,
+  "score_components": {
+    "composite": 0.869,
+    "day_score": 0.754,
+    "monster_score": 0.45,
+    "news_boost": 0.05,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.8710511743225723,
+    "watchlist_boost": 0.234
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "DLTR selected as official swing pick; composite score 0.869; premarket sanity: fresh price unavailable from any provider; reduced size.",
+  "selection_time_et": "2026-07-08T08:09:06-04:00",
+  "stop_loss": 119.72,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 127.53,
+  "ticker": "DLTR",
+  "top_reasons": [
+    "composite score 0.869",
+    "premarket sanity: fresh price unavailable from any provider; reduced size"
+  ],
+  "workflow_run_id": "28941206136",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/28941206136"
+}
