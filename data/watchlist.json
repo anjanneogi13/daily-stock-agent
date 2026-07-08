@@ -980,6 +980,54 @@
       "url": "https://www.benzinga.com/m-a/26/07/60334460/dream-finders-pushes-beazer-board-with-a-bigger-all-cash-offer",
       "source": "alpaca",
       "added_at": "2026-07-08T14:55:24.515155+00:00"
+    },
+    {
+      "ticker": "LUCY",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "71% preliminary sales growth combined with geographic expansion into Canada represents a meaningful positive catalyst with stock already showing upward momentum.",
+      "action_window": "intraday",
+      "headline": "Innovative Eyewear Stock Climbs as Canada Launch Adds Fuel to Sales Growth Story",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60338784/innovative-eyewear-stock-climbs-as-canada-launch-adds-fuel-to-sales-growth-story",
+      "source": "alpaca",
+      "added_at": "2026-07-08T16:27:44.799287+00:00"
+    },
+    {
+      "ticker": "HELE",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Mixed Q1 with sales and EPS beat offset by supply chain warning, tariff margin pressure, and immediate 5% stock drop indicating negative market reaction despite earnings beat.",
+      "action_window": "intraday",
+      "headline": "Helen of Troy Warns Middle East Conflict Could Disrupt Supply Chain, Hurt Revenue",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60338558/helen-of-troy-warns-middle-east-conflict-could-disrupt-supply-chain-hurt-revenue",
+      "source": "alpaca",
+      "added_at": "2026-07-08T16:27:44.799302+00:00"
+    },
+    {
+      "ticker": "DIA",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Major geopolitical escalation with Iran ceasefire ending triggers immediate market-wide risk-off move, S&P 500 plunge, and oil price spike above $80, creating clear sector rotation from equities to energy.",
+      "action_window": "intraday",
+      "headline": "Oil Stocks Rally, S&P 500 Plunges As Iran Ceasefire Sinks: Stock Market Today",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60338463/oil-surges-iran-ceasefire-collapses-rate-hike-fears-markets-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-08T16:27:44.799313+00:00"
+    },
+    {
+      "ticker": "TFC",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BofA analyst downgrade citing external CEO hire as signal of near-term risk and strategy reset creates credible negative catalyst for Truist Financial.",
+      "action_window": "intraday",
+      "headline": "Truist Financial Analyst Turns Bearish After CEO Shakeup",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60338034/truist-financial-analyst-is-no-longer-bullish-after-ceo-shakeup",
+      "source": "alpaca",
+      "added_at": "2026-07-08T16:27:44.799323+00:00"
     }
   ]
 }

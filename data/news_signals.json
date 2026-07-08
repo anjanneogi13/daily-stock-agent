@@ -2585,5 +2585,83 @@
     "expires": "2026-07-13T14:55:24.509484+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "LUCY": {
+    "ticker": "LUCY",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.73,
+    "action_window": "intraday",
+    "headline": "Innovative Eyewear Stock Climbs as Canada Launch Adds Fuel to Sales Growth Story",
+    "added_at": "2026-07-08T16:27:44.781389+00:00",
+    "expires": "2026-07-15T16:27:44.781396+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HELE": {
+    "ticker": "HELE",
+    "score_delta": -0.028,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Helen of Troy Warns Middle East Conflict Could Disrupt Supply Chain, Hurt Revenue",
+    "added_at": "2026-07-08T16:27:44.784284+00:00",
+    "expires": "2026-07-15T16:27:44.784291+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "BKR": {
+    "ticker": "BKR",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Baker Hughes, Raises Price Target to $75",
+    "added_at": "2026-07-08T16:27:44.786709+00:00",
+    "expires": "2026-07-13T16:27:44.786715+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RIOT": {
+    "ticker": "RIOT",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Riot Platforms, Raises Price Target to $28",
+    "added_at": "2026-07-08T16:27:44.789014+00:00",
+    "expires": "2026-07-13T16:27:44.789020+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GH": {
+    "ticker": "GH",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Guardant Health, Raises Price Target to $215",
+    "added_at": "2026-07-08T16:27:44.791339+00:00",
+    "expires": "2026-07-13T16:27:44.791344+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TFC": {
+    "ticker": "TFC",
+    "score_delta": -0.041,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "Truist Financial Analyst Turns Bearish After CEO Shakeup",
+    "added_at": "2026-07-08T16:27:44.796014+00:00",
+    "expires": "2026-07-13T16:27:44.796019+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
