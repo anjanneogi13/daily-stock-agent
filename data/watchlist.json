@@ -947,15 +947,16 @@
     },
     {
       "ticker": "KLAR",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.68,
       "sentiment": "bullish",
       "category": "upgrade",
-      "rationale": "JP Morgan maintains positive stance with raised price target, signaling confidence but not a rating change from neutral to positive.",
+      "rationale": "UBS maintaining Buy rating with price target increase signals positive analyst conviction, though maintaining (not upgrading) rating limits impact compared to a fresh upgrade.",
       "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on Klarna, Raises Price Target to $22",
-      "url": "https://www.benzinga.com/news/26/07/60334744/jp-morgan-maintains-overweight-klarna-raises-price-target-22",
+      "headline": "UBS Maintains Buy on Klarna, Raises Price Target to $23",
+      "url": "https://www.benzinga.com/news/26/07/60343478/ubs-maintains-buy-klarna-raises-price-target-23",
       "source": "alpaca",
-      "added_at": "2026-07-08T14:55:24.515137+00:00"
+      "added_at": "2026-07-08T14:55:24.515137+00:00",
+      "updated_at": "2026-07-08T19:22:23.900364+00:00"
     },
     {
       "ticker": "CVLG",
@@ -1052,6 +1053,54 @@
       "url": "https://www.benzinga.com/Opinion/26/07/60341954/semiconductors-below-support-fed-minutes-ahead-trump-says-iran-ceasefire-is-over-but-will-he-back-off",
       "source": "alpaca",
       "added_at": "2026-07-08T17:58:44.234392+00:00"
+    },
+    {
+      "ticker": "ZURA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "William Blair initiating coverage with Outperform rating is positive but represents a new analyst opinion rather than a change in existing coverage, creating moderate trading interest.",
+      "action_window": "next_day",
+      "headline": "William Blair Initiates Coverage On Zura Bio with Outperform Rating",
+      "url": "https://www.benzinga.com/news/26/07/60343864/william-blair-initiates-coverage-zura-bio-outperform-rating",
+      "source": "alpaca",
+      "added_at": "2026-07-08T19:22:23.900332+00:00"
+    },
+    {
+      "ticker": "DVLT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "USPTO Notice of Allowance for patent on tokenized dividend system with all 24 claims allowed represents significant intellectual property milestone that could provide competitive moat and licensing revenue opportunities.",
+      "action_window": "intraday",
+      "headline": "Datavault AI Says USPTO Issues Notice Of Allowance For Patent On Tokenized Dividend System To Curb Naked Short Selling, Allowing All 24 Pending Claims",
+      "url": "https://www.benzinga.com/news/topics/26/07/60343757/datavault-ai-receives-uspto-notice-of-allowance-for-patent-on-tokenized-dividend-system-to-curb-naked-short-selling-allowing-all-24-pending-claims",
+      "source": "alpaca",
+      "added_at": "2026-07-08T19:22:23.900345+00:00"
+    },
+    {
+      "ticker": "BTCUSD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Macro-driven risk-off sentiment causing 6% crypto retreat is meaningful but temporary, with analysts noting accumulation opportunities suggesting limited downside.",
+      "action_window": "intraday",
+      "headline": "Bitcoin, Ethereum, XRP, Dogecoin Retreat up to 6% on Escalating US-Iran Tensions",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60343710/bitcoin-ethereum-xrp-dogecoin-retreat-up-to-6-on-escalating-us-iran-tensions",
+      "source": "alpaca",
+      "added_at": "2026-07-08T19:22:23.900353+00:00"
+    },
+    {
+      "ticker": "AMC",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Macquarie upgrade with raised price target based on improved theater demand is a meaningful catalyst, though stock already trading higher suggests partial pricing.",
+      "action_window": "intraday",
+      "headline": "AMC Stock Surges as Macquarie Lifts Theater Box Office Outlook",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60343378/amc-stock-surges-as-macquarie-lifts-theater-box-office-outlook",
+      "source": "alpaca",
+      "added_at": "2026-07-08T19:22:23.900373+00:00"
     }
   ]
 }
