@@ -1101,6 +1101,116 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60343378/amc-stock-surges-as-macquarie-lifts-theater-box-office-outlook",
       "source": "alpaca",
       "added_at": "2026-07-08T19:22:23.900373+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant AI product advancement by OpenAI (Microsoft's key partner) in competitive voice assistant market represents strategic positioning but impact partly anticipated given known AI race.",
+      "action_window": "next_day",
+      "headline": "OpenAI Unveils GPT-Live As Competition Heats Up Around AI Voice Assistants",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60346806/openai-unveils-gpt-live-as-competition-heats-up-around-ai-voice-assistants",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.092967+00:00"
+    },
+    {
+      "ticker": "LLY",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "ma_acquirer",
+      "rationale": "Large $2.8B acquired IPR&D charge with significant $3.02 EPS impact signals major M&A transaction requiring immediate earnings estimate adjustments and potential negative price reaction to dilution.",
+      "action_window": "intraday",
+      "headline": "Eli Lilly Estimates $2.8B Q2 2026 Acquired IPR&D Charges, Impacting GAAP And Non-GAAP EPS By ~$3.02 Per Share",
+      "url": "https://www.benzinga.com/news/26/07/60346787/eli-lilly-estimates-2-8b-q2-2026-acquired-ipr-d-charges-impacting-gaap-and-non-gaap-eps-3-02-share",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.092980+00:00"
+    },
+    {
+      "ticker": "CEPO",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Failed SPAC merger due to inability to secure $1.5B financing signals major deal collapse and weak institutional crypto appetite amid 50% Bitcoin decline.",
+      "action_window": "intraday",
+      "headline": "Adam Back's BSTR Scraps SPAC Merger After Failing to Secure $1.5B in Financing",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60346689/adam-backs-bstr-scraps-spac-merger-after-failing-to-secure-1-5b-in-financing",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.092989+00:00"
+    },
+    {
+      "ticker": "SUNE",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A 13G filing disclosing a substantial 19.9% stake by a private equity fund signals strong institutional confidence and potential activist involvement, though the market impact depends on the filer's intentions and company size.",
+      "action_window": "next_day",
+      "headline": "SUNation Energy 13G Filing Shows AWM Investment Company Discloses 19.9% Stake In Co Special Situations Private Equity Fund As Of July 8, 2026",
+      "url": "https://www.benzinga.com/m/26/07/60346518/sunation-energy-13g-filing-shows-awm-investment-company-discloses-19-9-stake-co-special-situations-p",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.092997+00:00"
+    },
+    {
+      "ticker": "MDA",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "ma_acquirer",
+      "rationale": "MDA Space announces major ~C$920M cash acquisition for 70% of CLS, a significant cash outlay that typically pressures acquirer stock despite strategic rationale.",
+      "action_window": "intraday",
+      "headline": "MDA Space Enters Into Firm And Irrevocable Offer To Acquire ~70% Interest In CLS From Shareholders Of CLS\u2019s Parent Company, For ~C$920 Million In Cash",
+      "url": "https://www.benzinga.com/m/26/07/60346416/mda-space-enters-firm-and-irrevocable-offer-acquire-70-interest-cls-shareholders-cls-s-parent-compan",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.093009+00:00",
+      "updated_at": "2026-07-08T20:42:58.093018+00:00"
+    },
+    {
+      "ticker": "VG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong Q2 operational results with significant LNG export volumes across both facilities and solid liquefaction fee pricing indicating robust business performance.",
+      "action_window": "intraday",
+      "headline": "Venture Global Reports Q2 LNG Sales Of 466.4 TBtu At Weighted Average Liquefaction Fee Of $6.45/MMBtu; Exported 127 LNG Cargoes; Plaquemines LNG Sales Totaled 328.9 TBtu With 90 Cargoes Exported; Calcasieu Pass LNG Sales Reached 137.5 TBtu With 37 Cargoes Exported",
+      "url": "https://www.benzinga.com/news/26/07/60346401/venture-global-reports-q2-lng-sales-466-4-tbtu-weighted-average-liquefaction-fee-6-45-mmbtu-exported",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.093025+00:00"
+    },
+    {
+      "ticker": "AZZ",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings beat on both EPS (9.5% above estimate) and revenue (3.2% above estimate) represents a significant positive catalyst warranting immediate attention.",
+      "action_window": "next_day",
+      "headline": "AZZ Q1 Adj. EPS $1.85 Beats $1.69 Estimate, Sales $448.530M Beat $434.521M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60346383/azz-q1-adj-eps-1-85-beats-1-69-estimate-sales-448-530m-beat-434-521m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.093032+00:00",
+      "updated_at": "2026-07-08T20:42:58.093040+00:00"
+    },
+    {
+      "ticker": "COST",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong June sales with 10.6% revenue growth and comparable sales gains indicate robust retail momentum, though this is a monthly sales update rather than full quarterly earnings.",
+      "action_window": "next_day",
+      "headline": "Costco Wholesale Corporation Reports June Sales Results; Reports June Net Sales Of $29.24B, Up 10.6% For Five Weeks Ended July 5, 2026;  Reports Net Sales Of $250.43B For First 44 Weeks, Up 10.1%; U.S. Comparable Sales Up 10.6% For 5 Weeks, Canada Up 3.7%",
+      "url": "https://www.benzinga.com/news/26/07/60346364/costco-wholesale-corporation-reports-june-sales-results-reports-june-net-sales-29-24b-10-6-five-week",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.093047+00:00"
+    },
+    {
+      "ticker": "SKIL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "NYSE acceptance of compliance plan removes delisting risk, a significant positive catalyst for a distressed stock that reduces uncertainty.",
+      "action_window": "next_day",
+      "headline": "Skillsoft Announces NYSE Acceptance Of Its Business Plan To Regain Compliance",
+      "url": "https://www.benzinga.com/news/26/07/60346334/skillsoft-announces-nyse-acceptance-its-business-plan-regain-compliance",
+      "source": "alpaca",
+      "added_at": "2026-07-08T20:42:58.093054+00:00"
     }
   ]
 }
