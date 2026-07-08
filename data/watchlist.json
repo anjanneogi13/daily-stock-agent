@@ -594,15 +594,16 @@
     },
     {
       "ticker": "KRUS",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Mixed earnings result with significant EPS beat ($0.03 vs -$0.01 expected) but revenue miss ($85.9M vs $86.5M), creating uncertainty about quality of earnings and growth trajectory.",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Guidance cut for FY2026 sales and multiple analyst downgrades following mixed Q3 results creates negative near-term pressure despite earnings beat.",
       "action_window": "intraday",
-      "headline": "Kura Sushi USA Q3 Adj. EPS $0.03 Beats $(0.01) Estimate, Sales $85.922M Miss $86.461M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60320116/kura-sushi-usa-q3-adj-eps-0-03-beats-0-01-estimate-sales-85-922m-miss-86-461m-estimate",
+      "headline": "These Analysts Slash Their Forecasts On Kura Sushi Following Q3 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60334375/these-analysts-slash-their-forecasts-on-kura-sushi-following-q3-results",
       "source": "alpaca",
-      "added_at": "2026-07-07T20:23:58.883147+00:00"
+      "added_at": "2026-07-07T20:23:58.883147+00:00",
+      "updated_at": "2026-07-08T14:55:24.515170+00:00"
     },
     {
       "ticker": "COTY",
@@ -753,15 +754,16 @@
     },
     {
       "ticker": "USO",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "macro",
-      "rationale": "Explosions in Iranian port city Sirik (near Strait of Hormuz) represent significant geopolitical risk that typically drives oil prices higher and equity markets lower on supply disruption concerns.",
+      "rationale": "Threat to close Strait of Hormuz (20% of global oil supply route) would spike oil prices and create significant equity market volatility with immediate geopolitical risk premium.",
       "action_window": "intraday",
-      "headline": "Iran's Press TV Reports Several Explosions In Southern Iranian Port City Of Sirik",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60321528/iran-s-press-tv-reports-several-explosions-southern-iranian-port-city-sirik",
+      "headline": "Iran's Press TV Citing Informed Source Says Iran Will Close Strait Of Hormuz In Event Of Any Fresh Attacks On Iran; Iran Will Strike Enemy Targets At A Ratio Of At Least Two To One",
+      "url": "https://www.benzinga.com/news/26/07/60334378/iran-s-press-tv-citing-informed-source-says-iran-will-close-strait-hormuz-event-any-fresh-attacks-ir",
       "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438153+00:00"
+      "added_at": "2026-07-07T21:52:27.438153+00:00",
+      "updated_at": "2026-07-08T14:55:24.515162+00:00"
     },
     {
       "ticker": "PTNM",
@@ -930,6 +932,54 @@
       "url": "https://www.benzinga.com/m/26/07/60327585/chemomab-therapeutics-scipher-medicine-strike-all-stock-merger-agreement-combined-entity-expected-op",
       "source": "alpaca",
       "added_at": "2026-07-08T12:02:51.992263+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Major $8B M&A transaction signals industry consolidation with direct implications for space/satellite competitors and suppliers, though Rocket Lab (acquirer) is not among listed tickers.",
+      "action_window": "intraday",
+      "headline": "Rocket Lab\u2019s Mega Iridium Deal Kicks off Space Industry Consolidation",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60334682/rocket-labs-mega-iridium-deal-kicks-off-space-industry-consolidation",
+      "source": "alpaca",
+      "added_at": "2026-07-08T14:55:24.515125+00:00"
+    },
+    {
+      "ticker": "KLAR",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains positive stance with raised price target, signaling confidence but not a rating change from neutral to positive.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Maintains Overweight on Klarna, Raises Price Target to $22",
+      "url": "https://www.benzinga.com/news/26/07/60334744/jp-morgan-maintains-overweight-klarna-raises-price-target-22",
+      "source": "alpaca",
+      "added_at": "2026-07-08T14:55:24.515137+00:00"
+    },
+    {
+      "ticker": "CVLG",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stephens & Co. initiating coverage with Overweight rating and $60 price target is moderately bullish but limited by being a new initiation rather than an upgrade from existing coverage.",
+      "action_window": "intraday",
+      "headline": "Stephens & Co. Initiates Coverage On Covenant Logistics Gr with Overweight Rating, Announces Price Target of $60",
+      "url": "https://www.benzinga.com/news/26/07/60334562/stephens-co-initiates-coverage-covenant-logistics-gr-overweight-rating-announces-price-target-60",
+      "source": "alpaca",
+      "added_at": "2026-07-08T14:55:24.515148+00:00"
+    },
+    {
+      "ticker": "BZH",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Increased all-cash acquisition offer to $32/share represents a meaningful catalyst for the target company with confirmed bidder engagement and upward price pressure.",
+      "action_window": "intraday",
+      "headline": "Dream Finders Pushes Beazer Board With a Bigger All-Cash Offer",
+      "url": "https://www.benzinga.com/m-a/26/07/60334460/dream-finders-pushes-beazer-board-with-a-bigger-all-cash-offer",
+      "source": "alpaca",
+      "added_at": "2026-07-08T14:55:24.515155+00:00"
     }
   ]
 }
