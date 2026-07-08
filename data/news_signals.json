@@ -2338,5 +2338,83 @@
     "expires": "2026-07-21T22:55:16.444562+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "CRM": {
+    "ticker": "CRM",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.76,
+    "action_window": "intraday",
+    "headline": "Salesforce Announces That The U.S. Air Force Is Now Using Missionforce To Manage Its $13.5B Fleet Of Over 84K Vehicles Across ~389 Locations",
+    "added_at": "2026-07-08T10:11:18.214090+00:00",
+    "expires": "2026-07-15T10:11:18.214096+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "YSG": {
+    "ticker": "YSG",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Yatsen Group Announced Collaboration To Bring Perfect Diary To Sephora In China",
+    "added_at": "2026-07-08T10:11:18.216676+00:00",
+    "expires": "2026-07-15T10:11:18.216682+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VERA": {
+    "ticker": "VERA",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "HC Wainwright & Co. Maintains Buy on Vera Therapeutics, Raises Price Target to $125",
+    "added_at": "2026-07-08T10:11:18.218889+00:00",
+    "expires": "2026-07-13T10:11:18.218895+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TVRD": {
+    "ticker": "TVRD",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Raymond James Upgrades Tvardi Therapeutics to Outperform, Announces $10 Price Target",
+    "added_at": "2026-07-08T10:11:18.221073+00:00",
+    "expires": "2026-07-13T10:11:18.221078+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DLTR": {
+    "ticker": "DLTR",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Raymond James Upgrades Dollar Tree to Outperform, Announces $140 Price Target",
+    "added_at": "2026-07-08T10:11:18.223281+00:00",
+    "expires": "2026-07-13T10:11:18.223286+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PINS": {
+    "ticker": "PINS",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "DA Davidson Initiates Coverage On Pinterest with Buy Rating, Announces Price Target of $26",
+    "added_at": "2026-07-08T10:11:18.225464+00:00",
+    "expires": "2026-07-13T10:11:18.225469+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

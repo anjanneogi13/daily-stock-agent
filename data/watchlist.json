@@ -692,15 +692,16 @@
     },
     {
       "ticker": "FCEL",
-      "tradeable_score": 0.8,
+      "tradeable_score": 0.92,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Large $200M underwritten public offering will dilute existing shareholders significantly and typically creates immediate selling pressure as the stock adjusts to increased share count.",
+      "rationale": "Dilutive $225M stock offering priced at discount causing immediate 18% premarket decline represents a high-conviction bearish catalyst with confirmed price action.",
       "action_window": "intraday",
-      "headline": "FuelCell Energy Launches $200M Underwritten Public Offering Of Common Stock",
-      "url": "https://www.benzinga.com/news/26/07/60319762/fuelcell-energy-launches-200m-underwritten-public-offering-common-stock",
+      "headline": "Why Is FuelCell Energy Stock Sinking Wednesday?",
+      "url": "https://www.benzinga.com/markets/offerings/26/07/60325124/why-is-fuelcell-energy-stock-sinking-wednesday",
       "source": "alpaca",
-      "added_at": "2026-07-07T20:23:58.883198+00:00"
+      "added_at": "2026-07-07T20:23:58.883198+00:00",
+      "updated_at": "2026-07-08T10:11:18.228626+00:00"
     },
     {
       "ticker": "BFST",
@@ -809,6 +810,78 @@
       "url": "https://www.benzinga.com/news/politics/26/07/60321995/us-resumes-powerful-strikes-on-iran-after-3-ships-attacked-in-strait-of-hormuz",
       "source": "alpaca",
       "added_at": "2026-07-07T22:55:16.461264+00:00"
+    },
+    {
+      "ticker": "CRM",
+      "tradeable_score": 0.76,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major government contract win with U.S. Air Force for $13.5B fleet management validates Salesforce's enterprise product expansion and provides significant revenue visibility.",
+      "action_window": "intraday",
+      "headline": "Salesforce Announces That The U.S. Air Force Is Now Using Missionforce To Manage Its $13.5B Fleet Of Over 84K Vehicles Across ~389 Locations",
+      "url": "https://www.benzinga.com/news/26/07/60325421/salesforce-announces-u-s-air-force-now-using-missionforce-manage-its-13-5b-fleet-over-84k-vehicles-a",
+      "source": "alpaca",
+      "added_at": "2026-07-08T10:11:18.228639+00:00"
+    },
+    {
+      "ticker": "YSG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic distribution partnership with Sephora expands Perfect Diary's premium retail presence in China, representing significant market access and brand validation for Yatsen's flagship product line.",
+      "action_window": "intraday",
+      "headline": "Yatsen Group Announced Collaboration To Bring Perfect Diary To Sephora In China",
+      "url": "https://www.benzinga.com/quote/YSG",
+      "source": "alpaca",
+      "added_at": "2026-07-08T10:11:18.228647+00:00"
+    },
+    {
+      "ticker": "BABA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "12% premarket surge driven by multiple catalysts including AI growth momentum and Pentagon legal victory creates strong near-term trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Why Is Alibaba Stock Soaring Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60325045/why-is-alibaba-stock-soaring-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-08T10:11:18.228655+00:00"
+    },
+    {
+      "ticker": "AVGO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $30B+ multi-year supply agreement represents significant revenue visibility and expansion for Broadcom while confirming Apple's commitment to custom silicon strategy.",
+      "action_window": "intraday",
+      "headline": "Apple To Increase Spending To Over $30B On Broadcom Design And Production Of Custom Silicon Components And Wireless Connectivity Technologies",
+      "url": "https://www.benzinga.com/news/26/07/60325357/apple-increase-spending-over-30b-broadcom-design-and-production-custom-silicon-components-and-wirele",
+      "source": "alpaca",
+      "added_at": "2026-07-08T10:11:18.228661+00:00"
+    },
+    {
+      "ticker": "DLTR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Raymond James upgrade to Outperform with $140 price target is a meaningful catalyst from a major bank that typically drives immediate buying interest and momentum.",
+      "action_window": "intraday",
+      "headline": "Raymond James Upgrades Dollar Tree to Outperform, Announces $140 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60325236/raymond-james-upgrades-dollar-tree-outperform-announces-140-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-08T10:11:18.228671+00:00"
+    },
+    {
+      "ticker": "PINS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "DA Davidson initiating coverage with a Buy rating and $26 price target is a moderately positive catalyst that typically generates intraday buying interest, though initiation carries less weight than an upgrade from existing coverage.",
+      "action_window": "intraday",
+      "headline": "DA Davidson Initiates Coverage On Pinterest with Buy Rating, Announces Price Target of $26",
+      "url": "https://www.benzinga.com/news/26/07/60325187/da-davidson-initiates-coverage-pinterest-buy-rating-announces-price-target-26",
+      "source": "alpaca",
+      "added_at": "2026-07-08T10:11:18.228676+00:00"
     }
   ]
 }
