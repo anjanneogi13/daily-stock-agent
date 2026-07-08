@@ -882,6 +882,54 @@
       "url": "https://www.benzinga.com/news/26/07/60325187/da-davidson-initiates-coverage-pinterest-buy-rating-announces-price-target-26",
       "source": "alpaca",
       "added_at": "2026-07-08T10:11:18.228676+00:00"
+    },
+    {
+      "ticker": "OXY",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Double upgrade from major bank (Evercore ISI) combined with significant commodity tailwind (6% Brent crude spike from geopolitical event) creates strong bullish catalyst already driving price action.",
+      "action_window": "intraday",
+      "headline": "Why Is Occidental Petroleum Stock Surging on Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60327912/why-is-occidental-petroleum-stock-surging-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-08T12:02:51.992227+00:00"
+    },
+    {
+      "ticker": "GRNT",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Initiation of coverage with Outperform rating and price target provides positive signal but limited immediate impact as it's a new coverage start rather than upgrade from existing coverage.",
+      "action_window": "intraday",
+      "headline": "Northland Capital Markets Initiates Coverage On Granite Ridge Resources with Outperform Rating, Announces Price Target of $9",
+      "url": "https://www.benzinga.com/news/26/07/60327874/northland-capital-markets-initiates-coverage-granite-ridge-resources-outperform-rating-announces-pri",
+      "source": "alpaca",
+      "added_at": "2026-07-08T12:02:51.992239+00:00"
+    },
+    {
+      "ticker": "CNC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Premium increases of 14% signal higher revenue potential for managed care insurers, though rising medical costs may pressure margins, creating a mixed near-term outlook.",
+      "action_window": "this_week",
+      "headline": "Obamacare Premiums Could Jump 14% in 2027 As Insurers Warn Rising Medical Costs are Driving Rates Higher",
+      "url": "https://www.benzinga.com/news/financing/26/07/60327735/obamacare-premiums-could-jump-14-in-2027-as-insurers-warn-rising-medical-costs-are-driving-rates-higher",
+      "source": "alpaca",
+      "added_at": "2026-07-08T12:02:51.992250+00:00"
+    },
+    {
+      "ticker": "CMMB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive all-stock merger agreement represents a confirmed M&A catalyst that typically drives immediate trading activity in the target company's shares.",
+      "action_window": "intraday",
+      "headline": "Chemomab Therapeutics, Scipher Medicine Strike All-Stock Merger Agreement; Combined Entity Expected To Operate Under Scipher Medicine Name, SCIP Ticker On Nasdaq",
+      "url": "https://www.benzinga.com/m/26/07/60327585/chemomab-therapeutics-scipher-medicine-strike-all-stock-merger-agreement-combined-entity-expected-op",
+      "source": "alpaca",
+      "added_at": "2026-07-08T12:02:51.992263+00:00"
     }
   ]
 }
