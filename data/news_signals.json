@@ -66,19 +66,6 @@
     "expires": "2026-12-02T20:49:45.099537+00:00",
     "hard_block": true
   },
-  "HLIT": {
-    "ticker": "HLIT",
-    "score_delta": 0.1,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Harmonic Confirms $145M Sale Of Video Business To MediaKind Remains On Track To Close In Q2 2026,",
-    "added_at": "2026-06-08T21:24:00.906098+00:00",
-    "expires": "2026-07-08T21:24:00.906103+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WBD": {
     "ticker": "WBD",
     "score_delta": 0.129,
@@ -392,19 +379,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "QCOM": {
-    "ticker": "QCOM",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Qualcomm Targets Industrial, Networking And Robotics $8B For FY29; Qualcomm Targets Personal AI And Compute Revenue Of $6B For Fiscal 2029; CFO Says Have An Opportunity To Scale Our Annual Revenue To ",
-    "added_at": "2026-06-24T21:12:05.047953+00:00",
-    "expires": "2026-07-08T21:12:05.047958+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MGNX": {
     "ticker": "MGNX",
     "score_delta": 0.15,
@@ -515,19 +489,6 @@
     "headline": "Colony Bankcorp And First Reliance Bancshares Sign Definitive Merger Agreement; Colony To Acquire 100% Of The Stock Of First Reliance In A Combined Stock-And-Cash Transaction Valued At ~$163M",
     "added_at": "2026-06-24T21:12:05.036319+00:00",
     "expires": "2026-07-24T21:12:05.036324+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SPRY": {
-    "ticker": "SPRY",
-    "score_delta": 0.097,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "ARS Pharma Lowers 2026 Cash Operating Expense Guidance To $248M And Reaffirms Path To Cash-Flow Breakeven In 2027",
-    "added_at": "2026-06-24T21:12:05.045972+00:00",
-    "expires": "2026-07-08T21:12:05.045978+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1144,19 +1105,6 @@
     "headline": "FDA Approves First Gene Therapy for Young Children with Sickle Cell Disease; The FDA Granted The Approval To Vertex Pharmaceuticals",
     "added_at": "2026-07-01T21:58:33.265954+00:00",
     "expires": "2026-07-31T21:58:33.265960+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JBIO": {
-    "ticker": "JBIO",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Jade Biosciences Enters Exclusive Worldwide License Agreement With Paragon Therapeutics; To Pay Up To $22M In Milestone Payments To Paragon; To Pay Paragon Low To Mid-Single-Digit Percentage Royalties",
-    "added_at": "2026-07-01T21:58:33.268423+00:00",
-    "expires": "2026-07-08T21:58:33.268429+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2856,6 +2804,32 @@
     "headline": "AZZ Raises FY2027 Adj EPS Guidance from $6.50-$7.00 to $6.75-$7.15 vs $6.84 Est; Raises FY2027 Sales Guidance from $1.725B-$1.775B to $1.800B-$1.850B vs $1.750B Est",
     "added_at": "2026-07-08T20:42:58.086846+00:00",
     "expires": "2026-07-22T20:42:58.086851+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VOYA": {
+    "ticker": "VOYA",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Voya Financial  Estimates Q2 Combined Alternative Investment And Capital Pre-Tax Loss Of $9M - $19M",
+    "added_at": "2026-07-08T22:01:50.760910+00:00",
+    "expires": "2026-07-22T22:01:50.760917+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AFJK": {
+    "ticker": "AFJK",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Aimei Health Technology Terminates The Business Combination Agreement With United Hydrogen Group",
+    "added_at": "2026-07-08T22:01:50.763354+00:00",
+    "expires": "2026-08-07T22:01:50.763360+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
