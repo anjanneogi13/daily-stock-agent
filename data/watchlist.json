@@ -1,79 +1,6 @@
 {
   "items": [
     {
-      "ticker": "RIVN",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Public offering announcement causes immediate dilution concern for existing shareholders, triggering after-hours selloff with high conviction bearish signal.",
-      "action_window": "intraday",
-      "headline": "Rivian Stock Gets Rocked After the Bell: Here's Why",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60294725/rivian-stock-gets-rocked-after-the-bell-heres-why",
-      "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190662+00:00",
-      "updated_at": "2026-07-06T22:45:49.745983+00:00"
-    },
-    {
-      "ticker": "CRVO",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Secondary offering of 10.08M shares by existing stockholders creates immediate dilution pressure and insider selling signal, typically causing short-term downward price movement.",
-      "action_window": "intraday",
-      "headline": "CervoMed Files Prospectus Related To Offer And Resale Of 10.08M Shares Of Common Stock By Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/07/60294100/cervomed-files-prospectus-related-offer-and-resale-10-08m-shares-common-stock-selling-stockholders",
-      "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190673+00:00"
-    },
-    {
-      "ticker": "DMLP",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Acquisition of mineral and royalty interests is accretive for DMLP, expanding asset base and potentially cash flows, though deal size and terms are not specified in headline.",
-      "action_window": "next_day",
-      "headline": "Dorchester Minerals To Acquire Mineral And Royalty Interests",
-      "url": "https://www.benzinga.com/m/26/07/60293964/dorchester-minerals-acquire-mineral-and-royalty-interests",
-      "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190678+00:00"
-    },
-    {
-      "ticker": "DMRC",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Executive leadership change (new CEO appointment) typically creates moderate uncertainty and potential strategic shift but lacks immediate financial catalyst.",
-      "action_window": "next_day",
-      "headline": "Digimarc Names Paul Carreiro As President And CEO",
-      "url": "https://www.benzinga.com/news/26/07/60293843/digimarc-names-paul-carreiro-president-and-ceo",
-      "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190685+00:00"
-    },
-    {
-      "ticker": "RXST",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Significant FY2026 sales guidance raise of 17-19% above previous midpoint and 16-24% above consensus estimates represents a major positive catalyst.",
-      "action_window": "intraday",
-      "headline": "RxSight Raises FY2026 Sales Guidance from $120.000M-$135.000M to $140.000M-$160.000M vs $129.250M Est",
-      "url": "https://www.benzinga.com/news/26/07/60293614/rxsight-raises-fy2026-sales-guidance-120-000m-135-000m-140-000m-160-000m-vs-129-250m-est",
-      "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190690+00:00"
-    },
-    {
-      "ticker": "MSS",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "Company selling 91.67% controlling stake for only $1 indicates severe financial distress or worthless asset, signaling major restructuring or potential insolvency concerns.",
-      "action_window": "next_day",
-      "headline": "Maison Solutions Enters Equity Purchase Agreement With DNL Management On July 2, 2026; Co To Sells 91.67% Stake In Super HK Of El Monte For $1",
-      "url": "https://www.benzinga.com/news/26/07/60293437/maison-solutions-enters-equity-purchase-agreement-dnl-management-july-2-2026-co-sells-91-67-stake-su",
-      "source": "alpaca",
-      "added_at": "2026-07-06T21:24:12.190695+00:00"
-    },
-    {
       "ticker": "EXYN",
       "tradeable_score": 0.78,
       "sentiment": "bearish",
@@ -1319,6 +1246,102 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60372894/educational-development-q1-eps-0-16-down-0-13-yoy-sales-4-756m-down-7-106m-yoy",
       "source": "alpaca",
       "added_at": "2026-07-09T20:17:14.881510+00:00"
+    },
+    {
+      "ticker": "CCC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Reuters exclusive reporting that CCC is exploring a sale typically triggers acquisition premium speculation and near-term buying interest in the target company.",
+      "action_window": "intraday",
+      "headline": "'Software firm CCC explores sale, sources say'- Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/07/60374778/software-firm-ccc-explores-sale-sources-say-reuters-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123077+00:00"
+    },
+    {
+      "ticker": "RFAM",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Business combination agreement for SPAC merger with Nasdaq listing intent is a significant catalyst that typically drives immediate price action in the SPAC vehicle.",
+      "action_window": "next_day",
+      "headline": "HCC Healthcare Inks A Business Combination Agreement With RF Acquisition Corp III To Pursue Nasdaq Listing",
+      "url": "https://www.benzinga.com/news/26/07/60374708/hcc-healthcare-inks-business-combination-agreement-rf-acquisition-corp-iii-pursue-nasdaq-listing",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123091+00:00"
+    },
+    {
+      "ticker": "CPRX",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "S&P SmallCap 600 index rebalancing typically creates temporary bullish pressure on the added stock (SEI) from index fund buying and bearish pressure on the removed stock (CPRX), but effects are largely mechanical and mean-reverting.",
+      "action_window": "next_day",
+      "headline": "Solaris Energy Infrastructure To Replace Catalyst Pharmaceuticals In The S&P SmallCap 600 Effective Prior To The Opening Of Trading On July 15, 2026",
+      "url": "https://www.benzinga.com/news/26/07/60374589/solaris-energy-infrastructure-replace-catalyst-pharmaceuticals-s-p-smallcap-600-effective-prior-open",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123102+00:00"
+    },
+    {
+      "ticker": "NFLX",
+      "tradeable_score": 0.62,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "WSJ exclusive revealing strategic pivot due to viewer retention struggles signals operational weakness and uncertainty about core business model effectiveness.",
+      "action_window": "intraday",
+      "headline": "'Netflix Is Exploring Live TV and Bundles as It Struggles to Keep Viewers Hooked'- WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/07/60374360/netflix-exploring-live-tv-and-bundles-it-struggles-keep-viewers-hooked-wsj-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123113+00:00"
+    },
+    {
+      "ticker": "HLP",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance letters indicate listing requirement violations (typically minimum bid price or market cap), raising delisting risk and triggering forced selling pressure from institutional holders.",
+      "action_window": "next_day",
+      "headline": "Hongli Group Obtains Nasdaq Noncompliance Letter",
+      "url": "https://www.benzinga.com/quote/HLP",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123121+00:00"
+    },
+    {
+      "ticker": "LGHL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Reverse stock splits (1-for-9 ADS ratio change) are typically viewed negatively as they signal stock price weakness and potential delisting concerns, though the 5-day advance notice provides some reaction time.",
+      "action_window": "next_day",
+      "headline": "Lion Group Plans To Implement ADS Ratio Change; ADS Ratio Change Equivalent To 1-For-9 Reverse ADS Split Effective On July 14, 2026",
+      "url": "https://www.benzinga.com/quote/LGHL",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123128+00:00"
+    },
+    {
+      "ticker": "KORE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Multiple shareholder lawsuits alleging negligent misrepresentation in merger proxy create uncertainty and potential deal risk, though company's supplemental disclosures suggest intent to proceed.",
+      "action_window": "next_day",
+      "headline": "KORE Group Says Two Complaints Filed June 24, 2026 Against Kore And Board Over Merger; Complaints Allege Negligent Misrepresentation And Concealment In Kore Merger Proxy; Co. Makes Supplemental Disclosures To Proxy Statement To Avoid Merger Delays",
+      "url": "https://www.benzinga.com/news/26/07/60374214/kore-group-says-two-complaints-filed-june-24-2026-against-kore-and-board-over-merger-complaints-alle",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123136+00:00"
+    },
+    {
+      "ticker": "AIRI",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "ma_acquirer",
+      "rationale": "Amended merger terms with substantial share consideration (126.9M shares) coupled with 1-for-5 reverse split signals significant dilution concerns and typical distress signals that tend to pressure stock price.",
+      "action_window": "next_day",
+      "headline": "Air Industries Amends Tenax Merger Deal, Sets 126.9M-Share Consideration and Approves 1-For-5 Reverse Stock Split",
+      "url": "https://www.benzinga.com/m/26/07/60374196/air-industries-amends-tenax-merger-deal-sets-126-9m-share-consideration-and-approves-1-5-reverse-sto",
+      "source": "alpaca",
+      "added_at": "2026-07-09T21:55:47.123144+00:00"
     }
   ]
 }
