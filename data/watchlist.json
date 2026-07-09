@@ -1271,6 +1271,90 @@
       "url": "https://www.benzinga.com/news/26/07/60347279/aimei-health-technology-terminates-business-combination-agreement-united-hydrogen-group",
       "source": "alpaca",
       "added_at": "2026-07-08T22:01:50.766274+00:00"
+    },
+    {
+      "ticker": "ENOV",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BMO Capital initiating coverage with Outperform rating provides positive sentiment and new institutional validation, though impact is moderate as initiation carries less weight than upgrade of existing coverage.",
+      "action_window": "intraday",
+      "headline": "BMO Capital Initiates Coverage On Enovis with Outperform Rating, Announces Price Target of $29",
+      "url": "https://www.benzinga.com/news/26/07/60352072/bmo-capital-initiates-coverage-enovis-outperform-rating-announces-price-target-29",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716447+00:00"
+    },
+    {
+      "ticker": "ALGN",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BMO Capital initiating coverage with Outperform rating signals credible bullish catalyst from a major bank, though initiation typically has less impact than an upgrade.",
+      "action_window": "intraday",
+      "headline": "BMO Capital Initiates Coverage On Align Technology with Outperform Rating, Announces Price Target of $209",
+      "url": "https://www.benzinga.com/news/26/07/60352003/bmo-capital-initiates-coverage-align-technology-outperform-rating-announces-price-target-209",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716465+00:00"
+    },
+    {
+      "ticker": "TSLA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Regulatory warning from NHTSA with July deadline creates compliance pressure and potential operational restrictions for autonomous vehicle programs across major players.",
+      "action_window": "intraday",
+      "headline": "NHTSA Warns Autonomous Vehicle Companies Over 'Clear Pattern' of First Responder Interference",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60351872/nhtsa-warns-autonomous-vehicle-companies-over-clear-pattern-of-first-responder-interference",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716475+00:00"
+    },
+    {
+      "ticker": "LEVI",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Stock falling despite earnings beat and raised guidance indicates negative market reaction to underlying business concerns or sell-the-news behavior, creating near-term trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Why Is Levi Strauss Stock Falling Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60351835/why-is-levi-strauss-stock-falling-thursday",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716483+00:00"
+    },
+    {
+      "ticker": "CTSH",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic workforce expansion into Frontier-certified engineers signals capability investment and potential revenue growth, but lacks immediate financial impact or concrete contract wins.",
+      "action_window": "this_week",
+      "headline": "Cognizant To Increase Its Frontier-Certified Workforce To 5K Engineers And 10K Frontier Business Operators",
+      "url": "https://www.benzinga.com/news/26/07/60351858/cognizant-increase-its-frontier-certified-workforce-5k-engineers-and-10k-frontier-business-operators",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716491+00:00"
+    },
+    {
+      "ticker": "SAFX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New production facility commencing operations represents a meaningful operational milestone and revenue catalyst for renewable energy company, though impact depends on facility scale and ramp-up timeline.",
+      "action_window": "next_day",
+      "headline": "XCF Global\u2019s New Rise Renewables Reno Facility Begins Producing Renewable Fuels, With Initial Production Consisting Of Renewable Diesel",
+      "url": "https://www.benzinga.com/news/26/07/60351824/xcf-global-s-new-rise-renewables-reno-facility-begins-producing-renewable-fuels-initial-production-c",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716500+00:00"
+    },
+    {
+      "ticker": "TSCO",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Mizuho downgrade from presumably Buy/Overweight to Neutral with a significantly reduced price target signals material deterioration in the analyst's outlook on the stock.",
+      "action_window": "intraday",
+      "headline": "Mizuho Downgrades Tractor Supply to Neutral, Lowers Price Target to $32",
+      "url": "https://www.benzinga.com/news/26/07/60351707/mizuho-downgrades-tractor-supply-neutral-lowers-price-target-32",
+      "source": "alpaca",
+      "added_at": "2026-07-09T10:59:33.716510+00:00"
     }
   ]
 }
