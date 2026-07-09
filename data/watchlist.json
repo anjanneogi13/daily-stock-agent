@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "IREN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strategic pivot from Bitcoin mining to AI infrastructure partnering with high-profile Anthropic represents significant business model transformation with potentially higher margins and growth prospects.",
-      "action_window": "intraday",
-      "headline": "TeraWulf and IREN Just Joined Anthropic's Growing Club of Former Bitcoin Miners",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60283173/terawulf-and-iren-just-joined-anthropics-growing-club-of-former-bitcoin-miners",
-      "source": "alpaca",
-      "added_at": "2026-07-06T15:27:39.097678+00:00"
-    },
-    {
-      "ticker": "TRUMPUSD",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Blockchain investigation revealing nearly $4 billion in investor losses on a memecoin represents significant reputational damage and potential regulatory scrutiny that could drive immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Nearly 1 Million Investors Lost $3.8 Billion on TRUMP Meme Coin, Blockchain Investigation Alleges",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60282892/nearly-1-million-investors-lost-3-8-billion-on-trump-meme-coin-blockchain-investigation-alleges",
-      "source": "alpaca",
-      "added_at": "2026-07-06T15:27:39.097690+00:00"
-    },
-    {
-      "ticker": "NVS",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Material $1.5B acquisition strengthening Novartis' oncology pipeline with next-generation ADC technology represents a significant strategic move requiring immediate market reassessment.",
-      "action_window": "intraday",
-      "headline": "Novartis Scoops up UK Biotech Myricx in $1.5 Billion Cancer Push",
-      "url": "https://www.benzinga.com/m-a/26/07/60282819/novartis-scoops-up-uk-biotech-myricx-in-1-5-billion-cancer-push",
-      "source": "alpaca",
-      "added_at": "2026-07-06T15:27:39.097696+00:00"
-    },
-    {
-      "ticker": "AMD",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Goldman Sachs reiterated Buy rating with significant price target increase to $640, signaling strong conviction from a major investment bank that typically drives institutional buying interest.",
-      "action_window": "intraday",
-      "headline": "Goldman Sachs Maintains Buy on Advanced Micro Devices, Raises Price Target to $640",
-      "url": "https://www.benzinga.com/news/26/07/60282292/goldman-sachs-maintains-buy-advanced-micro-devices-raises-price-target-640",
-      "source": "alpaca",
-      "added_at": "2026-07-06T15:27:39.097703+00:00"
-    },
-    {
-      "ticker": "CNR",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "DOE grant selection for rare earth resources is a meaningful catalyst with government validation and potential funding, driving immediate stock gains with strategic sector implications.",
-      "action_window": "intraday",
-      "headline": "Why Did Core Natural Resources Stock Gain After DOE Grant?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60282218/why-did-core-natural-resources-stock-gain-after-doe-grant",
-      "source": "alpaca",
-      "added_at": "2026-07-06T15:27:39.097707+00:00"
-    },
-    {
       "ticker": "LULU",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -1331,6 +1271,42 @@
       "url": "https://www.benzinga.com/news/26/07/60356954/oppenheimer-initiates-coverage-connect-biopharma-hldgs-outperform-rating-announces-price-target-8",
       "source": "alpaca",
       "added_at": "2026-07-09T13:45:56.905767+00:00"
+    },
+    {
+      "ticker": "BBAI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Regulatory approval from Dutch aviation authorities for threat detection technology represents meaningful product validation and potential revenue catalyst in European security market.",
+      "action_window": "next_day",
+      "headline": "BigBear.ai\u2019s Pangiam Threat Detection Receives Dutch Aviation Security Approval, Meeting Automated Prohibited Items Detection System Standard 1 Criteria",
+      "url": "https://www.benzinga.com/news/26/07/60365323/bigbear-ai-s-pangiam-threat-detection-receives-dutch-aviation-security-approval-meeting-automated-pr",
+      "source": "alpaca",
+      "added_at": "2026-07-09T16:25:01.071347+00:00"
+    },
+    {
+      "ticker": "SRXH",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock halted due to circuit breaker with 37% upside move indicates significant buying pressure from a major catalyst, though specific catalyst unknown.",
+      "action_window": "intraday",
+      "headline": "SRX Global Shares Halted On Circuit Breaker To The Upside, Stock Now Up 37.06%",
+      "url": "https://www.benzinga.com/quote/SRXH",
+      "source": "alpaca",
+      "added_at": "2026-07-09T16:25:01.071363+00:00"
+    },
+    {
+      "ticker": "AMAT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Stock already up 7% on CEO comments about strong 24-month demand visibility from AI cycle, indicating implicit guidance strength with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Applied Materials CEO Sees 'Tremendous Visibility' Into Demand",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60364878/applied-materials-ceo-sees-tremendous-visibility-into-demand",
+      "source": "alpaca",
+      "added_at": "2026-07-09T16:25:01.071374+00:00"
     }
   ]
 }
