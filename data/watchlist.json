@@ -1,68 +1,6 @@
 {
   "items": [
     {
-      "ticker": "EJTTF",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Confirmed takeover agreement at \u00a36.9/share valuing easyJet at \u00a35.23B represents a definitive M&A catalyst with shares already soaring on the announcement.",
-      "action_window": "intraday",
-      "headline": "EasyJet agrees to Castlelake\u2019s \u00a35.2B takeover offer; shares soar",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/easyjet-agrees-castlelake-5-2b-175343330.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430856+00:00",
-      "updated_at": "2026-07-06T22:45:49.746018+00:00"
-    },
-    {
-      "ticker": "GLD",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Macro catalysts (weak jobs data, softer dollar, cooling inflation) are driving gold and gold ETF demand with clear fundamental support for the bullish thesis.",
-      "action_window": "this_week",
-      "headline": "Gold ETFs Back in Focus as Weak Jobs Data, Softer Dollar Boost Bullion Rally",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60291118/gold-etfs-back-in-focus-as-weak-jobs-data-softer-dollar-boost-bullion-rally",
-      "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430866+00:00"
-    },
-    {
-      "ticker": "LCID",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strong delivery and production results are positive operational metrics but headline lacks specific numbers and mentions broader sector momentum which dilutes company-specific impact.",
-      "action_window": "intraday",
-      "headline": "Lucid Stock Surges on Strong EV Delivery and Production Results",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60290410/lucid-stock-surges-on-strong-ev-delivery-and-production-results",
-      "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430873+00:00"
-    },
-    {
-      "ticker": "CRTO",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Confirmed buyout offer at 50%+ premium resulted in stock's best day in nearly 5 years, representing a highly credible M&A catalyst with significant price impact already realized.",
-      "action_window": "intraday",
-      "headline": "CRTO Stock Clocks Best Day In Nearly 5 Years On 50%+ Premium Buyout Offer From Vista \u2014 TTD Edges Higher",
-      "url": "https://stocktwits.com/news-articles/markets/equity/crto-stock-clocks-best-day-in-nearly-five-years-on-50-percent-premium-buyout-offer/cZm1FnyR7lD?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430878+00:00",
-      "updated_at": "2026-07-06T22:45:49.746031+00:00"
-    },
-    {
-      "ticker": "WHK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Capital One initiating coverage with Overweight rating and $32 price target represents a meaningful bullish catalyst from a major financial institution.",
-      "action_window": "next_day",
-      "headline": "Capital One Initiates Coverage On WhiteHawk Minerals with Overweight Rating, Announces Price Target of $32",
-      "url": "https://www.benzinga.com/news/26/07/60289581/capital-one-initiates-coverage-whitehawk-minerals-overweight-rating-announces-price-target-32",
-      "source": "alpaca",
-      "added_at": "2026-07-06T19:52:12.430884+00:00"
-    },
-    {
       "ticker": "RIVN",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -1271,6 +1209,116 @@
       "url": "https://www.benzinga.com/news/26/07/60368905/goldman-sachs-upgrades-toast-buy-announces-36-price-target",
       "source": "alpaca",
       "added_at": "2026-07-09T18:17:33.791012+00:00"
+    },
+    {
+      "ticker": "WDFC",
+      "tradeable_score": 0.93,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "WD-40 delivered a massive earnings beat with Q3 adjusted EPS of $2.33 vs $1.56 estimate (49% beat) and sales of $195.1M vs $172.8M estimate (13% beat), representing a significant positive surprise that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "WD-40 Q3 Adj. EPS $2.33 Beats $1.56 Estimate, Sales $195.119M Beat $172.792M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60373156/wd-40-q3-adj-eps-2-33-beats-1-56-estimate-sales-195-119m-beat-172-792m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881419+00:00",
+      "updated_at": "2026-07-09T20:17:14.881458+00:00"
+    },
+    {
+      "ticker": "WSR",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Shareholder approval of all-cash acquisition is a critical milestone that significantly de-risks the deal and moves it toward closure, creating immediate upside for WSR shareholders to the acquisition price.",
+      "action_window": "next_day",
+      "headline": "Whitestone REIT Receives Shareholders Approval For The All-Cash Acquisition Of Whitestone By Certain Ares Real Estate Funds",
+      "url": "https://www.benzinga.com/news/26/07/60373208/whitestone-reit-receives-shareholders-approval-all-cash-acquisition-whitestone-certain-ares-real-est",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881434+00:00"
+    },
+    {
+      "ticker": "RANI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic partnership to explore delivery of obesity/metabolic disease candidates through Rani's RaniPill platform represents meaningful business development in the high-value obesity market with potential pipeline expansion.",
+      "action_window": "next_day",
+      "headline": "Rani Therapeutics Partners With PegBio To Mull Delivery Of Multiple Novel Candidates From PegBio's Obesity And Metabolic Disease Pipeline Through RaniPill Platform",
+      "url": "https://www.benzinga.com/news/26/07/60373176/rani-therapeutics-partners-pegbio-mull-delivery-multiple-novel-candidates-pegbio-s-obesity-and-metab",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881447+00:00"
+    },
+    {
+      "ticker": "ICCC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "12% product sales growth in Q2 is positive but modest, representing solid quarterly performance without being a major beat or surprise catalyst.",
+      "action_window": "next_day",
+      "headline": "ImmuCell Q2 Total Product Sales Rises 12%",
+      "url": "https://www.benzinga.com/news/26/07/60373153/immucell-q2-total-product-sales-rises-12",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881467+00:00"
+    },
+    {
+      "ticker": "SLP",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q3 adjusted EPS beat estimates by 131% ($0.30 vs $0.13) and revenue beat by 4.6%, representing a significant positive surprise that should drive immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Simulations Plus Q3 Adj. EPS $0.30 Beats $0.13 Estimate, Sales $21.886M Beat $20.918M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60373114/simulations-plus-q3-adj-eps-0-30-beats-0-13-estimate-sales-21-886m-beat-20-918m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881474+00:00"
+    },
+    {
+      "ticker": "TSX:ATZ",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Aritzia delivered a solid double beat with Q1 adjusted EPS exceeding estimates by 9.1% and sales beating by 3.6%, indicating strong operational performance worthy of immediate trading attention.",
+      "action_window": "intraday",
+      "headline": "Aritzia Q1 Adj. EPS $0.96 Beats $0.88 Estimate, Sales $951.009M Beat $918.379M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60372979/aritzia-q1-adj-eps-0-96-beats-0-88-estimate-sales-951-009m-beat-918-379m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881480+00:00",
+      "updated_at": "2026-07-09T20:17:14.881495+00:00"
+    },
+    {
+      "ticker": "ATZ",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raised FY2027 sales guidance by approximately 3.4% at midpoint ($4.5B to $4.65B), signaling stronger-than-expected business momentum and confidence in growth trajectory.",
+      "action_window": "intraday",
+      "headline": "Aritzia Raises FY2027 Sales Guidance from $4.400B-$4.600B to $4.550B-$4.750B",
+      "url": "https://www.benzinga.com/news/26/07/60373068/aritzia-raises-fy2027-sales-guidance-4-400b-4-600b-4-550b-4-750b",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881487+00:00"
+    },
+    {
+      "ticker": "NRIX",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 9.5% worse than expected and revenue missing estimates by 44%, indicating operational challenges and likely to trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Nurix Therapeutics Q2 EPS $(0.81) Misses $(0.74) Estimate, Sales $9.043M Miss $16.170M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60372963/nurix-therapeutics-q2-eps-0-81-misses-0-74-estimate-sales-9-043m-miss-16-170m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881503+00:00"
+    },
+    {
+      "ticker": "EDUC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS declining 23% and revenue dropping 33% year-over-year, indicating substantial business deterioration.",
+      "action_window": "next_day",
+      "headline": "Educational Development Q1 EPS $(0.16) Down From $(0.13) YoY, Sales $4.756M Down From $7.106M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60372894/educational-development-q1-eps-0-16-down-0-13-yoy-sales-4-756m-down-7-106m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-09T20:17:14.881510+00:00"
     }
   ]
 }
