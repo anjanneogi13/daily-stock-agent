@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CCXI",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "SPAC merger with Agility Robotics showing positive price action and continued investor interest, but at $2.5B valuation with shares already rising, much of the immediate catalyst may be reflected in current price.",
-      "action_window": "intraday",
-      "headline": "Churchill Capital Shares Rise as $2.5 Billion Agility Robotics Merger Keeps Investors Engaged",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60275077/churchill-capital-shares-rise-as-25-billion-agility-robotics-merger-keeps-investors-engaged",
-      "source": "alpaca",
-      "added_at": "2026-07-06T11:58:53.330925+00:00"
-    },
-    {
-      "ticker": "ONDS",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large secondary offering of ~40M shares by existing stockholders creates significant dilution pressure and immediate selling supply, typically causing stock price decline.",
-      "action_window": "intraday",
-      "headline": "Ondas Announces Sale Of 39,999,998 Shares By Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/07/60275067/ondas-announces-sale-39-999-998-shares-selling-stockholders",
-      "source": "alpaca",
-      "added_at": "2026-07-06T11:58:53.330934+00:00"
-    },
-    {
-      "ticker": "DRIO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership with major health insurer expands market access and validates DarioHealth's platform, creating meaningful revenue expansion potential through Amwell's distribution channel.",
-      "action_window": "intraday",
-      "headline": "DarioHealth Enters Agreement With A Major Health Insurer In Arizona Through Its Strategic Channel Partnership With Amwell",
-      "url": "https://www.benzinga.com/news/26/07/60274823/dariohealth-enters-agreement-major-health-insurer-arizona-through-its-strategic-channel-partnership-",
-      "source": "alpaca",
-      "added_at": "2026-07-06T11:58:53.330941+00:00"
-    },
-    {
       "ticker": "IREN",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1355,6 +1319,18 @@
       "url": "https://www.benzinga.com/news/26/07/60351707/mizuho-downgrades-tractor-supply-neutral-lowers-price-target-32",
       "source": "alpaca",
       "added_at": "2026-07-09T10:59:33.716510+00:00"
+    },
+    {
+      "ticker": "CNTB",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Oppenheimer initiating coverage with Outperform rating and $8 price target represents new buy-side support from a reputable firm, typically generating positive near-term momentum.",
+      "action_window": "intraday",
+      "headline": "Oppenheimer Initiates Coverage On Connect Biopharma Hldgs with Outperform Rating, Announces Price Target of $8",
+      "url": "https://www.benzinga.com/news/26/07/60356954/oppenheimer-initiates-coverage-connect-biopharma-hldgs-outperform-rating-announces-price-target-8",
+      "source": "alpaca",
+      "added_at": "2026-07-09T13:45:56.905767+00:00"
     }
   ]
 }

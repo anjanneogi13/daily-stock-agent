@@ -505,19 +505,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AIFA": {
-    "ticker": "AIFA",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "All In FutureTech Alliance Announces Share Purchase Agreements With Holders Of ~57.67% Of Acquisition Target HyalRoute's Share Capital",
-    "added_at": "2026-06-25T13:14:33.002319+00:00",
-    "expires": "2026-07-09T13:14:33.002324+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FRTT": {
     "ticker": "FRTT",
     "score_delta": 0.039,
@@ -2908,6 +2895,71 @@
     "headline": "Mizuho Downgrades Tractor Supply to Neutral, Lowers Price Target to $32",
     "added_at": "2026-07-09T10:59:33.712670+00:00",
     "expires": "2026-07-14T10:59:33.712676+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FROG": {
+    "ticker": "FROG",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Truist Securities Maintains Buy on JFrog, Raises Price Target to $105",
+    "added_at": "2026-07-09T13:45:56.888755+00:00",
+    "expires": "2026-07-14T13:45:56.888763+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MRX": {
+    "ticker": "MRX",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on Marex Group, Raises Price Target to $76",
+    "added_at": "2026-07-09T13:45:56.891699+00:00",
+    "expires": "2026-07-14T13:45:56.891705+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DT": {
+    "ticker": "DT",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Truist Securities Maintains Buy on Dynatrace, Raises Price Target to $55",
+    "added_at": "2026-07-09T13:45:56.894422+00:00",
+    "expires": "2026-07-14T13:45:56.894428+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IBKR": {
+    "ticker": "IBKR",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on Interactive Brokers Group, Raises Price Target to $108",
+    "added_at": "2026-07-09T13:45:56.899577+00:00",
+    "expires": "2026-07-14T13:45:56.899582+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CNTB": {
+    "ticker": "CNTB",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Oppenheimer Initiates Coverage On Connect Biopharma Hldgs with Outperform Rating, Announces Price Target of $8",
+    "added_at": "2026-07-09T13:45:56.902110+00:00",
+    "expires": "2026-07-14T13:45:56.902116+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
