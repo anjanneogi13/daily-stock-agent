@@ -1121,19 +1121,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "APOG": {
-    "ticker": "APOG",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Apogee Q1 Earnings Beat Estimates on Pricing, Productivity Gains",
-    "added_at": "2026-07-03T14:41:03.377470+00:00",
-    "expires": "2026-07-10T14:41:03.377475+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CCXI": {
     "ticker": "CCXI",
     "score_delta": 0.157,
@@ -3398,6 +3385,45 @@
     "headline": "Susquehanna Maintains Neutral on Plug Power, Lowers Price Target to $2.5",
     "added_at": "2026-07-10T13:07:50.645110+00:00",
     "expires": "2026-07-15T13:07:50.645115+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PFE": {
+    "ticker": "PFE",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Pfizer And Astellas Win FDA Approval For PADCEV Plus Keytruda As First Platinum-Free Perioperative Treatment For Muscle-Invasive Bladder Cancer",
+    "added_at": "2026-07-10T15:45:20.979418+00:00",
+    "expires": "2026-08-09T15:45:20.979427+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JBHT": {
+    "ticker": "JBHT",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on JB Hunt Transport Servs, Raises Price Target to $280",
+    "added_at": "2026-07-10T15:45:20.984855+00:00",
+    "expires": "2026-07-15T15:45:20.984861+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSX": {
+    "ticker": "CSX",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on CSX, Raises Price Target to $56",
+    "added_at": "2026-07-10T15:45:20.987347+00:00",
+    "expires": "2026-07-15T15:45:20.987354+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

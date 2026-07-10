@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "QXL",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Successful demonstration of advanced atomic clock technology represents meaningful R&D milestone that validates the company's core platform, though commercial timeline and revenue impact remain uncertain.",
-      "action_window": "next_day",
-      "headline": "Quantum X Labs Demonstrates High-Sensitivity Atomic Clock Based On Its Ramsey Coherent Population Trapping Platform",
-      "url": "https://www.benzinga.com/news/26/07/60304006/quantum-x-labs-demonstrates-high-sensitivity-atomic-clock-based-its-ramsey-coherent-population-trapp",
-      "source": "alpaca",
-      "added_at": "2026-07-07T13:14:48.328711+00:00"
-    },
-    {
-      "ticker": "DOCN",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "DigitalOcean projects dramatic revenue acceleration from 14% to 29% YoY growth, raises guidance to high end, exceeds $800M RPO milestone, and adds significant capacity expansion signaling strong demand momentum.",
-      "action_window": "intraday",
-      "headline": "DigitalOcean Expects Q2 Revenue Growth To Accelerate To 29%, Up From 14% In Same Quarter 2025; RPO To Exceed $800M; Adds 20 MW Capacity For 2027/2028; Sees aEBITDA, EPS At High End Of Guidance",
-      "url": "https://www.benzinga.com/news/26/07/60303799/digitalocean-expects-q2-revenue-growth-accelerate-29-14-same-quarter-2025-rpo-exceed-800m-adds-20-mw",
-      "source": "alpaca",
-      "added_at": "2026-07-07T13:14:48.328730+00:00"
-    },
-    {
-      "ticker": "SYNX",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Material $3M+ military contract win represents significant revenue for a small-cap defense communications company and validates product demand in Asian defense markets.",
-      "action_window": "intraday",
-      "headline": "Silynxcom Delivers $3M+ Tactical Communications Order To A Military Customer In Asia",
-      "url": "https://www.benzinga.com/news/26/07/60303727/silynxcom-delivers-3m-tactical-communications-order-military-customer-asia",
-      "source": "alpaca",
-      "added_at": "2026-07-07T13:14:48.328737+00:00"
-    },
-    {
       "ticker": "GPUS",
       "tradeable_score": 0.58,
       "sentiment": "bullish",
@@ -1276,15 +1240,16 @@
     },
     {
       "ticker": "DFNS",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
+      "tradeable_score": 0.95,
+      "sentiment": "bearish",
       "category": "ma_acquirer",
-      "rationale": "Strategic acquisition of majority 60% stake represents meaningful expansion with defined financial terms including equity and promissory note consideration, typically driving positive momentum for acquirer in defense sector.",
+      "rationale": "Stock already plunged 27% on confirmed M&A acquisition news, indicating severe negative market reaction to the deal terms or strategic concerns.",
       "action_window": "intraday",
-      "headline": "T3 Defense Acquires 60% Stake In Project35 With 21M Shares And $1.25M Promissory Note",
-      "url": "https://www.benzinga.com/m/26/07/60381251/t3-defense-acquires-60-stake-project35-21m-shares-and-1-25m-promissory-note",
+      "headline": "T3 Defense Buys Into Israel's Drone Industry With Project35 Majority Stake",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60390186/t3-defense-buys-into-israels-drone-industry-with-project35-majority-stake",
       "source": "alpaca",
-      "added_at": "2026-07-10T13:07:50.649360+00:00"
+      "added_at": "2026-07-10T13:07:50.649360+00:00",
+      "updated_at": "2026-07-10T15:45:20.990958+00:00"
     },
     {
       "ticker": "SNY",
@@ -1309,6 +1274,54 @@
       "url": "https://www.benzinga.com/news/26/07/60380936/aura-minerals-reports-preliminary-q2-production-75-437-gold-equivalent-ounces-18-yoy",
       "source": "alpaca",
       "added_at": "2026-07-10T13:07:50.649386+00:00"
+    },
+    {
+      "ticker": "SKHYV",
+      "tradeable_score": 0.8,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Record-breaking $26.5B ADR offering signals strong institutional demand and major liquidity event as shares debut on U.S. market, creating immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "SK Hynix Stock Makes Its U.S. Debut After Raising $26.5 Billion",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60386489/sk-hynix-stock-makes-its-u-s-debut-after-raising-26-5-billion-2",
+      "source": "alpaca",
+      "added_at": "2026-07-10T15:45:20.990915+00:00"
+    },
+    {
+      "ticker": "SKHY",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "ADR opening 14% above offering price indicates strong institutional demand and successful capital raise, creating immediate positive price momentum.",
+      "action_window": "intraday",
+      "headline": "SK Hynix American Depository Shares Open At $170/ADR Vs Offering Price Of $149/ADR",
+      "url": "https://www.benzinga.com/quote/SKHYV",
+      "source": "alpaca",
+      "added_at": "2026-07-10T15:45:20.990930+00:00"
+    },
+    {
+      "ticker": "IONS",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Phase 3 trial failure for ATTR-CM is a major negative catalyst for IONS/AZN while creating competitive advantages for rivals ALNY, BBIO, and NTLA in this therapeutic space.",
+      "action_window": "intraday",
+      "headline": "Ionis, AstraZeneca Stumble in ATTR-CM Trial as Rivals Stand to Gain",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60390366/ionis-astrazeneca-stumble-in-attr-cm-trial-as-rivals-stand-to-gain",
+      "source": "alpaca",
+      "added_at": "2026-07-10T15:45:20.990940+00:00"
+    },
+    {
+      "ticker": "PFE",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval for first-in-class platinum-free perioperative treatment represents a significant commercial opportunity in muscle-invasive bladder cancer market with major competitive advantage.",
+      "action_window": "intraday",
+      "headline": "Pfizer And Astellas Win FDA Approval For PADCEV Plus Keytruda As First Platinum-Free Perioperative Treatment For Muscle-Invasive Bladder Cancer",
+      "url": "https://www.benzinga.com/general/biotech/26/07/60390280/pfizer-and-astellas-win-fda-approval-padcev-plus-keytruda-first-platinum-free-perioperative-treatmen",
+      "source": "alpaca",
+      "added_at": "2026-07-10T15:45:20.990947+00:00"
     }
   ]
 }
