@@ -1309,6 +1309,67 @@
       "url": "https://www.benzinga.com/m/26/07/60374196/air-industries-amends-tenax-merger-deal-sets-126-9m-share-consideration-and-approves-1-5-reverse-sto",
       "source": "alpaca",
       "added_at": "2026-07-09T21:55:47.123144+00:00"
+    },
+    {
+      "ticker": "DAL",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Delta reported Q2 earnings beating EPS estimates by 6% and revenue estimates by 13%, representing a strong operational performance that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Delta Air Lines Q2 Adj. EPS $1.56 Beats $1.47 Estimate, Sales $19.757B Beat $17.532B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60378321/delta-air-lines-q2-adj-eps-1-56-beats-1-47-estimate-sales-19-757b-beat-17-532b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-10T10:47:38.402439+00:00",
+      "updated_at": "2026-07-10T10:47:38.402466+00:00"
+    },
+    {
+      "ticker": "PERF",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive acquisition announcement at $2.00 per share in cash represents a confirmed M&A catalyst with clear price target for arbitrage.",
+      "action_window": "intraday",
+      "headline": "Perfect To Be Taken Private By ProjectNY At $2.00 Per Share In Cash",
+      "url": "https://www.benzinga.com/m/26/07/60378343/perfect-be-taken-private-projectny-2-00-share-cash",
+      "source": "alpaca",
+      "added_at": "2026-07-10T10:47:38.402457+00:00"
+    },
+    {
+      "ticker": "BMGL",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Regaining Nasdaq compliance removes delisting risk and improves institutional investor eligibility, though this is a procedural milestone rather than fundamental business improvement.",
+      "action_window": "intraday",
+      "headline": "Basel Medical Group Regains Nasdaq Compliance",
+      "url": "https://www.benzinga.com/news/26/07/60378312/basel-medical-group-regains-nasdaq-compliance",
+      "source": "alpaca",
+      "added_at": "2026-07-10T10:47:38.402474+00:00"
+    },
+    {
+      "ticker": "TOL",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Citigroup upgraded Toll Brothers from a lower rating to Buy with a significant price target of $176, which typically drives immediate buying interest and positive momentum.",
+      "action_window": "intraday",
+      "headline": "Citigroup Upgrades Toll Brothers to Buy, Raises Price Target to $176",
+      "url": "https://www.benzinga.com/news/26/07/60378144/citigroup-upgrades-toll-brothers-buy-raises-price-target-176",
+      "source": "alpaca",
+      "added_at": "2026-07-10T10:47:38.402481+00:00"
+    },
+    {
+      "ticker": "PEP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Citigroup downgrade from Buy/Overweight to Neutral with price target reduction creates near-term selling pressure on PepsiCo shares, though impact is moderate as it's not a complete sell rating.",
+      "action_window": "intraday",
+      "headline": "Citigroup Downgrades PepsiCo to Neutral, Lowers Price Target to $145",
+      "url": "https://www.benzinga.com/news/26/07/60378108/citigroup-downgrades-pepsico-neutral-lowers-price-target-145",
+      "source": "alpaca",
+      "added_at": "2026-07-10T10:47:38.402487+00:00"
     }
   ]
 }
