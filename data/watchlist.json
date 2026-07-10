@@ -1,68 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SHMD",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "EUR 37M+ repeat order from major Chinese customer represents significant revenue catalyst and validates product competitiveness in advanced manufacturing equipment segment.",
-      "action_window": "next_day",
-      "headline": "Schmid Group Receives A Repeat Order Exceeding EUR 37M From A Leading Chinese Customer For Advanced HDi-ML And mSAP Production Equipment",
-      "url": "https://www.benzinga.com/news/26/07/60321862/schmid-group-receives-repeat-order-exceeding-eur-37m-leading-chinese-customer-advanced-hdi-ml-and-ms",
-      "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438124+00:00"
-    },
-    {
-      "ticker": "RMD",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "ResMed announcing a $490M all-cash acquisition is a significant M&A catalyst indicating strategic expansion, though distant closing date (Q1 FY2027) moderates immediate impact.",
-      "action_window": "next_day",
-      "headline": "ResMed Says Deal Valued At $490M All-Cash, Expected To Close In Q1 FY2027",
-      "url": "https://www.benzinga.com/news/26/07/60321745/resmed-says-deal-valued-490m-all-cash-expected-close-q1-fy2027",
-      "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438136+00:00"
-    },
-    {
-      "ticker": "USO",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Threat to close Strait of Hormuz (20% of global oil supply route) would spike oil prices and create significant equity market volatility with immediate geopolitical risk premium.",
-      "action_window": "intraday",
-      "headline": "Iran's Press TV Citing Informed Source Says Iran Will Close Strait Of Hormuz In Event Of Any Fresh Attacks On Iran; Iran Will Strike Enemy Targets At A Ratio Of At Least Two To One",
-      "url": "https://www.benzinga.com/news/26/07/60334378/iran-s-press-tv-citing-informed-source-says-iran-will-close-strait-hormuz-event-any-fresh-attacks-ir",
-      "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438153+00:00",
-      "updated_at": "2026-07-08T14:55:24.515162+00:00"
-    },
-    {
-      "ticker": "PTNM",
-      "tradeable_score": 0.95,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Nasdaq trading halt following SEC suspension indicates severe regulatory concerns and potential fraud or material disclosure issues, creating extreme downside risk and likely untradeable situation for most investors.",
-      "action_window": "intraday",
-      "headline": "Nasdaq Halts Pitanium Limited",
-      "url": "https://finance.yahoo.com/news/nasdaq-halts-pitanium-limited-140000099.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438162+00:00",
-      "updated_at": "2026-07-10T01:08:27.955301+00:00"
-    },
-    {
-      "ticker": "NXXT",
-      "tradeable_score": 0.58,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "NextNRG is selling $1.5M in future receivables for only $1M (33% discount), signaling severe cash flow distress and expensive alternative financing that typically indicates financial difficulty.",
-      "action_window": "next_day",
-      "headline": "NextNRG Enters Standard Merchant Cash Advance Agreement With Avanza Capital Holdings On June 30, 2026; Sells $1.5M Future Receivables To Avanza For $1M Under Avanza MCA",
-      "url": "https://www.benzinga.com/news/26/07/60321140/nextnrg-enters-standard-merchant-cash-advance-agreement-avanza-capital-holdings-june-30-2026-sells-1",
-      "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438168+00:00"
-    },
-    {
       "ticker": "EPAC",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -1198,6 +1136,126 @@
       "url": "https://www.benzinga.com/news/26/07/60400810/revelation-biosciences-board-implements-shareholder-rights-plan-declares-dividend-distribution-one-r",
       "source": "alpaca",
       "added_at": "2026-07-10T20:49:18.985986+00:00"
+    },
+    {
+      "ticker": "VNRX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 3.31M shares by selling stockholder typically creates dilution concerns and near-term selling pressure, though impact depends on float size and existing holder selling rather than company raising capital.",
+      "action_window": "next_day",
+      "headline": "VolitionRX  Files Prospectus Related To Offer And Resale Of Up To 3.31M Shares By Selling Stockholder",
+      "url": "https://www.benzinga.com/quote/VNRX",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636595+00:00"
+    },
+    {
+      "ticker": "HCTI",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Prospectus filing for 28M share offering represents significant dilution risk for existing shareholders and typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Healthcare Triangle Files Prospectus To Offer Up To 28M Shares Of Common Stock By Hudson Global Ventures",
+      "url": "https://www.benzinga.com/news/26/07/60402031/healthcare-triangle-files-prospectus-offer-28m-shares-common-stock-hudson-global-ventures",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636610+00:00"
+    },
+    {
+      "ticker": "MOVE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registration of 53.39M shares for resale by Corvex signals significant potential dilution and selling pressure, typically bearish for stock price in the near term.",
+      "action_window": "next_day",
+      "headline": "Corvex Files Prospectus To Register Up To 53.39M Shares Of Common Stock For Resale By Selling Stockholders",
+      "url": "https://www.benzinga.com/news/26/07/60402013/corvex-files-prospectus-register-53-39m-shares-common-stock-resale-selling-stockholders",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636617+00:00"
+    },
+    {
+      "ticker": "NAGE",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $50M secondary offering typically causes immediate dilution concerns and selling pressure as existing shareholders face ownership dilution and potential supply overhang.",
+      "action_window": "intraday",
+      "headline": "Niagen Bioscience Files Prospectus To Offer And Sell Common Stock Up To $50M",
+      "url": "https://www.benzinga.com/news/26/07/60401959/niagen-bioscience-files-prospectus-offer-and-sell-common-stock-50m",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636625+00:00"
+    },
+    {
+      "ticker": "FFAI",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Elimination of nearly 50 million warrants reduces significant overhang and potential dilution, which is constructive for existing shareholders though this is a financial restructuring move rather than a fundamental business catalyst.",
+      "action_window": "next_day",
+      "headline": "Faraday Future Intelligent Electric Terminates Warrants To Purchase An Aggregate Of 5,359,525 Shares Of Class A Common Stock; Following The Termination Of Warrants Covering 44,551,199 Shares In December 2025, The Co. Has Cumulatively Eliminated Warrants Covering~ 49.9M Shares",
+      "url": "https://www.benzinga.com/news/26/07/60401910/faraday-future-intelligent-electric-terminates-warrants-purchase-aggregate-5-359-525-shares-class-co",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636632+00:00"
+    },
+    {
+      "ticker": "FNUC",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq noncompliance letters indicate potential delisting risk, triggering immediate selling pressure and raising concerns about the company's ability to meet exchange listing requirements.",
+      "action_window": "intraday",
+      "headline": "Frontier Nuclear and Minerals Receives Nasdaq Noncompliance Letter",
+      "url": "https://www.benzinga.com/news/26/07/60401869/frontier-nuclear-and-minerals-receives-nasdaq-noncompliance-letter",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636639+00:00"
+    },
+    {
+      "ticker": "TSX:GDL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Goodfellow reported Q2 earnings miss with EPS down 13.8% YoY and sales down 6.7% YoY, indicating meaningful business deterioration.",
+      "action_window": "next_day",
+      "headline": "Goodfellow Q2 EPS $0.25 Down From $0.29 YoY, Sales $142.686M Down From $152.940M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60401859/goodfellow-q2-eps-0-25-down-0-29-yoy-sales-142-686m-down-152-940m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636645+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Geopolitical tension in the Strait of Hormuz (critical oil shipping chokepoint) creates immediate risk-off sentiment for equities and potential upward pressure on crude oil prices, though this appears to be diplomatic positioning rather than imminent conflict.",
+      "action_window": "intraday",
+      "headline": "'US insists Iran commit to stopping attacks in Hormuz strait, say US officials'- Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60401836/us-insists-iran-commit-stopping-attacks-hormuz-strait-say-us-officials-reuters",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636652+00:00"
+    },
+    {
+      "ticker": "IPWR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A $75M mixed securities offering represents significant potential dilution for existing shareholders, typically causing immediate selling pressure upon announcement.",
+      "action_window": "intraday",
+      "headline": "Ideal Power Files Prospectus To Offer Up To $75M Of Common Stock, Preferred Stock, Warrants, And Units",
+      "url": "https://www.benzinga.com/news/26/07/60401752/ideal-power-files-prospectus-offer-75m-common-stock-preferred-stock-warrants-and-units",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636670+00:00"
+    },
+    {
+      "ticker": "FWRD",
+      "tradeable_score": 0.58,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Executive Chairman resignation with independent replacement suggests potential governance improvement but lacks clarity on circumstances, creating mixed trading implications with modest volatility expected.",
+      "action_window": "next_day",
+      "headline": "Forward Air Says Jerome Lorrain Resigns As Executive Chairman Of Co.; Christine M. Gorjanc Appointed As Independent Chair Of The Board",
+      "url": "https://www.benzinga.com/news/26/07/60401474/forward-air-says-jerome-lorrain-resigns-executive-chairman-co-christine-m-gorjanc-appointed-independ",
+      "source": "alpaca",
+      "added_at": "2026-07-10T21:55:34.636677+00:00"
     }
   ]
 }

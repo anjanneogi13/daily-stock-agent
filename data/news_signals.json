@@ -527,19 +527,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VCIG": {
-    "ticker": "VCIG",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "VCI Global Announces Settlement Agreement With Esousa Group Holdings",
-    "added_at": "2026-06-26T21:09:08.832199+00:00",
-    "expires": "2026-07-10T21:09:08.832207+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BMM": {
     "ticker": "BMM",
     "score_delta": 0.2,
@@ -1604,14 +1591,14 @@
   },
   "CTSH": {
     "ticker": "CTSH",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Cognizant Expands Collaboration With Google Cloud Over Gemini Enterprise",
-    "added_at": "2026-07-07T13:14:48.317908+00:00",
-    "expires": "2026-07-14T13:14:48.317913+00:00",
+    "score_delta": -0.036,
+    "catalyst": "lawsuit",
+    "sentiment": "neutral",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "Cognizant Says Court Preliminarily Approves Proposed Settlement Of Cognizant Stockholder Derivative Action On June 30, 2026; Settlement Hearing Scheduled For September 14, 2026, At U.S. District Court",
+    "added_at": "2026-07-10T21:55:34.621068+00:00",
+    "expires": "2026-07-24T21:55:34.621075+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3489,6 +3476,32 @@
     "headline": "Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidential Hardware Files After Joining OpenAI; Alleges OpenAI Instr",
     "added_at": "2026-07-10T20:49:18.978715+00:00",
     "expires": "2026-07-24T20:49:18.978721+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SLSN": {
+    "ticker": "SLSN",
+    "score_delta": -0.05,
+    "catalyst": "lawsuit",
+    "sentiment": "neutral",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Solesence's Unit Enters Settlement Agreement With Refy Beauty On July 6, 2026; Co's Unit & Refy Agreed To Settle & Compromise Disputes Relating To Certain Consumer Care Products Previously Sold By Co'",
+    "added_at": "2026-07-10T21:55:34.624314+00:00",
+    "expires": "2026-07-24T21:55:34.624340+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:GDL": {
+    "ticker": "TSX:GDL",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Goodfellow Q2 EPS $0.25 Down From $0.29 YoY, Sales $142.686M Down From $152.940M YoY",
+    "added_at": "2026-07-10T21:55:34.627119+00:00",
+    "expires": "2026-07-17T21:55:34.627124+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
