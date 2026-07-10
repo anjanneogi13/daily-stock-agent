@@ -428,15 +428,16 @@
     },
     {
       "ticker": "PTNM",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Delisting notice is a major negative catalyst indicating failure to meet exchange requirements, typically triggering selling pressure and institutional exits with 9 days until delisting unless appealed.",
+      "rationale": "Nasdaq trading halt following SEC suspension indicates severe regulatory concerns and potential fraud or material disclosure issues, creating extreme downside risk and likely untradeable situation for most investors.",
       "action_window": "intraday",
-      "headline": "Pitanium Limited To Be Delisted From Nasdaq On July 16, 2026 Unless Appealed",
-      "url": "https://www.benzinga.com/news/26/07/60321163/pitanium-limited-be-delisted-nasdaq-july-16-2026-unless-appealed",
+      "headline": "Nasdaq Halts Pitanium Limited",
+      "url": "https://finance.yahoo.com/news/nasdaq-halts-pitanium-limited-140000099.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-07T21:52:27.438162+00:00"
+      "added_at": "2026-07-07T21:52:27.438162+00:00",
+      "updated_at": "2026-07-10T01:08:27.955301+00:00"
     },
     {
       "ticker": "NXXT",
@@ -584,15 +585,16 @@
     },
     {
       "ticker": "CMMB",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.92,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Definitive all-stock merger agreement represents a confirmed M&A catalyst that typically drives immediate trading activity in the target company's shares.",
+      "rationale": "Merger announcement with strategic rationale combining Chemomab's lead drug candidate with AI-powered precision medicine platform represents a significant value-creating catalyst for the target company.",
       "action_window": "intraday",
-      "headline": "Chemomab Therapeutics, Scipher Medicine Strike All-Stock Merger Agreement; Combined Entity Expected To Operate Under Scipher Medicine Name, SCIP Ticker On Nasdaq",
-      "url": "https://www.benzinga.com/m/26/07/60327585/chemomab-therapeutics-scipher-medicine-strike-all-stock-merger-agreement-combined-entity-expected-op",
+      "headline": "Chemomab Therapeutics and Precision Medicine Pioneer Scipher Medicine Announce Merger Agreement to Advance Nebokitug in an AI-Powered Phase 2 Trial in Rheumatoid Arthritis",
+      "url": "https://finance.yahoo.com/healthcare/articles/chemomab-therapeutics-precision-medicine-pioneer-113500441.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-08T12:02:51.992263+00:00"
+      "added_at": "2026-07-08T12:02:51.992263+00:00",
+      "updated_at": "2026-07-10T01:08:27.955313+00:00"
     },
     {
       "ticker": "AMZN",
