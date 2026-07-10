@@ -3335,5 +3335,70 @@
     "expires": "2026-07-15T10:47:38.399383+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "AUGO": {
+    "ticker": "AUGO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Aura Minerals Reports Preliminary Q2 Production Of 75,437 Gold Equivalent Ounces, Up 18% YoY",
+    "added_at": "2026-07-10T13:07:50.633538+00:00",
+    "expires": "2026-07-17T13:07:50.633544+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MSCI": {
+    "ticker": "MSCI",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on MSCI, Raises Price Target to $735",
+    "added_at": "2026-07-10T13:07:50.636403+00:00",
+    "expires": "2026-07-15T13:07:50.636408+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HG": {
+    "ticker": "HG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citizens Maintains Market Outperform on Hamilton Insurance Group, Raises Price Target to $40",
+    "added_at": "2026-07-10T13:07:50.639265+00:00",
+    "expires": "2026-07-15T13:07:50.639270+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MCO": {
+    "ticker": "MCO",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on Moodys, Raises Price Target to $575",
+    "added_at": "2026-07-10T13:07:50.642159+00:00",
+    "expires": "2026-07-15T13:07:50.642164+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PLUG": {
+    "ticker": "PLUG",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Susquehanna Maintains Neutral on Plug Power, Lowers Price Target to $2.5",
+    "added_at": "2026-07-10T13:07:50.645110+00:00",
+    "expires": "2026-07-15T13:07:50.645115+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
