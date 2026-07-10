@@ -10,7 +10,7 @@ Monitoring-only diagnostic artifact. Not official picks. Not buy instructions.
 
 ## Pre-Hard-Block Finalists
 - PERF: score=1.0, sector=N/A, trade_type=day, entry=1.74, stop_loss=1.72, take_profit=1.77, risk_reward=1.5, news_action_window=intraday, watch_only=False
-- DAL: score=0.917, sector=N/A, trade_type=day, entry=89.0, stop_loss=87.23, take_profit=91.94, risk_reward=1.66, news_action_window=intraday, watch_only=False
+- DAL: score=0.896, sector=N/A, trade_type=day, entry=89.0, stop_loss=87.23, take_profit=91.94, risk_reward=1.66, news_action_window=intraday, watch_only=False
 
 ## Hard-Blocked Finalists
 - PERF: **penny_stock** — penny stock ($1.74 < $5.0) (trade_type=day, watch_only=False)

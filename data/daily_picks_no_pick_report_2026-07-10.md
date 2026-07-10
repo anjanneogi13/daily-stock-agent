@@ -20,13 +20,13 @@ Monitoring-only failure evidence. No official picks were generated.
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **345**
+- scored_count: **346**
 - scorer_workers: **4**
 - universe_count: **570**
 
 ## Market Data Health
-- stooq: attempts=**2**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1487**, successes=**1301**, errors=**184**, rate_limited=**184**, unauthorized=**0**
+- stooq: attempts=**4**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2975**, successes=**2642**, errors=**329**, rate_limited=**329**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED

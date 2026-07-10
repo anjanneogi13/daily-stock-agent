@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-29091433027",
+  "artifact_bundle_name": "official-decision-artifacts-29093036385",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -76,7 +76,7 @@
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 345,
+      "scored_count": 346,
       "scorer_workers": 4,
       "universe_count": 570
     },
@@ -121,7 +121,7 @@
         "quantity": 56,
         "risk_flags": [],
         "risk_reward": 1.66,
-        "score": 0.917,
+        "score": 0.896,
         "sector": "N/A",
         "sector_tag": null,
         "stop_loss": 87.23,
@@ -210,15 +210,15 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 345,
-      "scored_not_filtered_count": 315,
+      "scored_count": 346,
+      "scored_not_filtered_count": 316,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 570
     }
   },
-  "commit_sha": "18dfc0c0a126547115b6f075bfa87f0ca99271ff",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/18dfc0c0a126547115b6f075bfa87f0ca99271ff",
+  "commit_sha": "5bf2e9a42ab392e7d79f0bb4c1d337fb35cc137d",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/5bf2e9a42ab392e7d79f0bb4c1d337fb35cc137d",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -299,7 +299,7 @@
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 345,
+      "scored_count": 346,
       "scorer_workers": 4,
       "universe_count": 570
     },
@@ -344,7 +344,7 @@
         "quantity": 56,
         "risk_flags": [],
         "risk_reward": 1.66,
-        "score": 0.917,
+        "score": 0.896,
         "sector": "N/A",
         "sector_tag": null,
         "stop_loss": 87.23,
@@ -433,8 +433,8 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 345,
-      "scored_not_filtered_count": 315,
+      "scored_count": 346,
+      "scored_not_filtered_count": 316,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 570
@@ -446,32 +446,32 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 567,
+        "attempts": 1134,
         "empty": 0,
-        "errors": 112,
-        "successes": 455
+        "errors": 201,
+        "successes": 933
       },
       "monster_info": {
-        "attempts": 345,
+        "attempts": 691,
         "empty": 0,
-        "errors": 72,
-        "successes": 273
+        "errors": 128,
+        "successes": 563
       },
       "ohlcv": {
-        "attempts": 577,
-        "empty": 4,
+        "attempts": 1154,
+        "empty": 8,
         "errors": 0,
-        "successes": 573
+        "successes": 1146
       }
     },
     "date": "2026-07-10",
     "providers": {
       "stooq": {
-        "attempts": 2,
-        "empty": 2,
+        "attempts": 4,
+        "empty": 4,
         "errors": 0,
         "failure_types": {
-          "empty_response": 2,
+          "empty_response": 4,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -491,17 +491,17 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 1487,
-        "empty": 2,
-        "errors": 184,
+        "attempts": 2975,
+        "empty": 4,
+        "errors": 329,
         "failure_types": {
-          "empty_response": 2,
+          "empty_response": 4,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 184,
+          "rate_limited": 329,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -509,8 +509,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 184,
-        "successes": 1301,
+        "rate_limited": 329,
+        "successes": 2642,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -518,7 +518,7 @@
     "run": {
       "fetched_count": 567,
       "final_pick_count": 0,
-      "scored_count": 345,
+      "scored_count": 346,
       "universe_count": 570
     },
     "samples": [
@@ -793,7 +793,7 @@
         "ticker": "VTR"
       }
     ],
-    "timestamp_utc": "2026-07-10T12:08:46Z"
+    "timestamp_utc": "2026-07-10T12:39:23Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -810,7 +810,7 @@
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 0,
     "pre_hard_block_pick_count": 2,
-    "scored_count": 345,
+    "scored_count": 346,
     "scorer_workers": 4,
     "universe_count": 570
   },
@@ -822,11 +822,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-07-10T08:08:46-04:00",
+  "selection_time_et": "2026-07-10T08:39:23-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-07-10T12:08:46Z",
+  "timestamp_utc": "2026-07-10T12:39:23Z",
   "watch_only_available": false,
-  "workflow_run_id": "29091433027",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29091433027"
+  "workflow_run_id": "29093036385",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29093036385"
 }

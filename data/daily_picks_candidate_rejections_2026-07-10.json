@@ -76,7 +76,7 @@
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 345,
+      "scored_count": 346,
       "scorer_workers": 4,
       "universe_count": 570
     },
@@ -121,7 +121,7 @@
         "quantity": 56,
         "risk_flags": [],
         "risk_reward": 1.66,
-        "score": 0.917,
+        "score": 0.896,
         "sector": "N/A",
         "sector_tag": null,
         "stop_loss": 87.23,
@@ -210,8 +210,8 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 345,
-      "scored_not_filtered_count": 315,
+      "scored_count": 346,
+      "scored_not_filtered_count": 316,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 570
@@ -231,7 +231,7 @@
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 0,
     "pre_hard_block_pick_count": 2,
-    "scored_count": 345,
+    "scored_count": 346,
     "scorer_workers": 4,
     "universe_count": 570
   },
@@ -240,5 +240,5 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "timestamp_utc": "2026-07-10T12:08:46Z"
+  "timestamp_utc": "2026-07-10T12:39:23Z"
 }

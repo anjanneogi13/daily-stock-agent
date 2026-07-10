@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 567,
+      "attempts": 1134,
       "empty": 0,
-      "errors": 112,
-      "successes": 455
+      "errors": 201,
+      "successes": 933
     },
     "monster_info": {
-      "attempts": 345,
+      "attempts": 691,
       "empty": 0,
-      "errors": 72,
-      "successes": 273
+      "errors": 128,
+      "successes": 563
     },
     "ohlcv": {
-      "attempts": 577,
-      "empty": 4,
+      "attempts": 1154,
+      "empty": 8,
       "errors": 0,
-      "successes": 573
+      "successes": 1146
     }
   },
   "date": "2026-07-10",
   "providers": {
     "stooq": {
-      "attempts": 2,
-      "empty": 2,
+      "attempts": 4,
+      "empty": 4,
       "errors": 0,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 4,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,17 +47,17 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1487,
-      "empty": 2,
-      "errors": 184,
+      "attempts": 2975,
+      "empty": 4,
+      "errors": 329,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 4,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 184,
+        "rate_limited": 329,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,8 +65,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 184,
-      "successes": 1301,
+      "rate_limited": 329,
+      "successes": 2642,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -74,7 +74,7 @@
   "run": {
     "fetched_count": 567,
     "final_pick_count": 0,
-    "scored_count": 345,
+    "scored_count": 346,
     "universe_count": 570
   },
   "samples": [
@@ -349,5 +349,5 @@
       "ticker": "VTR"
     }
   ],
-  "timestamp_utc": "2026-07-10T12:08:46Z"
+  "timestamp_utc": "2026-07-10T12:39:23Z"
 }
