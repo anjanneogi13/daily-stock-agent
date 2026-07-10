@@ -559,5 +559,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-10 12:08:46",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "PERF",
+        "reason": "penny stock ($1.74 < $5.0)",
+        "block_type": "penny_stock"
+      },
+      {
+        "ticker": "DAL",
+        "reason": "SL too tight (2.0% < 2.0% for $89 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
