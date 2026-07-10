@@ -92,19 +92,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VACH": {
-    "ticker": "VACH",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "next_day",
-    "headline": "VERAXA Biotech And Voyager Acquisition Complete Business Combination; On June 11, 2026, VERAXA Will Commence Trading Its Shares Under The Symbol \"VRXA\"",
-    "added_at": "2026-06-10T20:30:04.719692+00:00",
-    "expires": "2026-07-10T20:30:04.719697+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "UCB": {
     "ticker": "UCB",
     "score_delta": 0.2,
@@ -3476,6 +3463,32 @@
     "headline": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
     "added_at": "2026-07-10T19:19:57.940667+00:00",
     "expires": "2026-07-15T19:19:57.940672+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "YSXT": {
+    "ticker": "YSXT",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "YSX Tech FY EPS $0.11 Down From $0.18 YoY, Sales $83.468M Up From $71.453M YoY",
+    "added_at": "2026-07-10T20:49:18.975193+00:00",
+    "expires": "2026-07-17T20:49:18.975201+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AAPL": {
+    "ticker": "AAPL",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidential Hardware Files After Joining OpenAI; Alleges OpenAI Instr",
+    "added_at": "2026-07-10T20:49:18.978715+00:00",
+    "expires": "2026-07-24T20:49:18.978721+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
