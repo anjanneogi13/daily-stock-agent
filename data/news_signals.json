@@ -92,19 +92,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "PRGO": {
-    "ticker": "PRGO",
-    "score_delta": 0.129,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Watching Perrigo; Shares See Volume, Traders Circulate Unconfirmed M&A Blog Report Saying STADA And CapVest Are Launching A Takeover Of The Co",
-    "added_at": "2026-06-10T17:59:17.564006+00:00",
-    "expires": "2026-07-10T17:59:17.564011+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VACH": {
     "ticker": "VACH",
     "score_delta": 0.2,
@@ -3437,6 +3424,58 @@
     "headline": "Raymond James Maintains Outperform on Natural Gas Services Gr, Raises Price Target to $54",
     "added_at": "2026-07-10T17:43:42.358672+00:00",
     "expires": "2026-07-15T17:43:42.358677+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OWL": {
+    "ticker": "OWL",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk",
+    "added_at": "2026-07-10T19:19:57.931185+00:00",
+    "expires": "2026-07-15T19:19:57.931193+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FSPC": {
+    "ticker": "FSPC",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "this_week",
+    "headline": "Beyond SpaceX: First Trust Launches FSPC Space Economy ETF Focused on AI, Satellites, Launch Leaders",
+    "added_at": "2026-07-10T19:19:57.934686+00:00",
+    "expires": "2026-07-17T19:19:57.934692+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BKH": {
+    "ticker": "BKH",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "B of A Securities Maintains Buy on Black Hills, Raises Price Target to $87",
+    "added_at": "2026-07-10T19:19:57.937724+00:00",
+    "expires": "2026-07-15T19:19:57.937730+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KO": {
+    "ticker": "KO",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "B of A Securities Maintains Buy on Coca-Cola, Raises Price Target to $95",
+    "added_at": "2026-07-10T19:19:57.940667+00:00",
+    "expires": "2026-07-15T19:19:57.940672+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MSTR",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Strategy's first major Bitcoin sale since 2022 represents a significant strategic shift for a company known for aggressive Bitcoin accumulation, likely triggering negative sentiment among investors who view MSTR as a Bitcoin proxy.",
-      "action_window": "intraday",
-      "headline": "What Strategy's July 6 Filing Actually Says About Its First Major Bitcoin Sale Since 2022",
-      "url": "https://www.benzinga.com/Opinion/26/07/60316260/what-strategys-july-6-filing-actually-says-about-its-first-major-bitcoin-sale-since-2022",
-      "source": "alpaca",
-      "added_at": "2026-07-07T18:05:18.222495+00:00"
-    },
-    {
-      "ticker": "ALAB",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Insider selling by Chairman combined with sector-wide semiconductor demand concerns creates moderate bearish pressure with some uncertainty around magnitude.",
-      "action_window": "intraday",
-      "headline": "Why Is Astera Labs Stock Falling on Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60315957/why-is-astera-labs-stock-falling-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-07T18:05:18.222507+00:00"
-    },
-    {
-      "ticker": "TVRD",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Stock already gained 50% on positive Phase 1 clinical trial data for lead drug candidate, representing a significant de-risking catalyst for biotech.",
-      "action_window": "intraday",
-      "headline": "Why Is Tvardi Therapeutics Stock Gaining Tuesday?",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60315956/why-is-tvardi-therapeutics-stock-gaining-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-07T18:05:18.222513+00:00"
-    },
-    {
-      "ticker": "ALGT",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Melius Research upgrade to Buy with $160 price target represents a meaningful positive catalyst from a recognized research firm that typically drives near-term buying interest.",
-      "action_window": "intraday",
-      "headline": "Melius Research Upgrades Allegiant Travel to Buy, Announces $160 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60315498/melius-research-upgrades-allegiant-travel-buy-announces-160-price-target",
-      "source": "alpaca",
-      "added_at": "2026-07-07T18:05:18.222522+00:00"
-    },
-    {
       "ticker": "LTRX",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1262,6 +1214,42 @@
       "url": "https://www.benzinga.com/general/biotech/26/07/60390280/pfizer-and-astellas-win-fda-approval-padcev-plus-keytruda-first-platinum-free-perioperative-treatmen",
       "source": "alpaca",
       "added_at": "2026-07-10T15:45:20.990947+00:00"
+    },
+    {
+      "ticker": "OWL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "UBS flagging rising default risk in private credit triggered significant investor outflows from Blue Owl, a major private credit manager, creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60398726/blue-owl-saw-investor-exodus-after-ubs-flaged-rising-private-credit-default-risk",
+      "source": "alpaca",
+      "added_at": "2026-07-10T19:19:57.947791+00:00"
+    },
+    {
+      "ticker": "LCID",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock down 4% on execution updates and leadership changes signals operational concerns, but lacks specific catalyst details for higher conviction trading.",
+      "action_window": "intraday",
+      "headline": "Lucid Stock Is Sliding Friday: What's Driving the Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60397813/lucid-stock-is-sliding-friday-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-07-10T19:19:57.947810+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "SK Hynix CEO forecasting extended memory shortage signals strong pricing power and sustained demand for memory chip manufacturers through the decade, directly benefiting publicly traded peers like Micron.",
+      "action_window": "next_day",
+      "headline": "'SK Hynix Chief Expects Memory Shortage to Last Into Next Decade' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/07/60396854/sk-hynix-chief-expects-memory-shortage-last-next-decade-bloomberg-news",
+      "source": "alpaca",
+      "added_at": "2026-07-10T19:19:57.947824+00:00"
     }
   ]
 }
