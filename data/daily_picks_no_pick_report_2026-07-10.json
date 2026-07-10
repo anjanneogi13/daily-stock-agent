@@ -1,9 +1,39 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-29094764641",
+  "artifact_bundle_name": "official-decision-artifacts-29095373905",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
+      {
+        "block_type": "sl_too_tight",
+        "candidate": {
+          "company": "",
+          "day_score": null,
+          "days_to_earnings": null,
+          "entry": null,
+          "news_action_window": null,
+          "news_boost": null,
+          "premarket_action": null,
+          "premarket_actionable": null,
+          "premarket_gap_pct": null,
+          "premarket_reason": "",
+          "quantity": null,
+          "risk_flags": [],
+          "risk_reward": null,
+          "score": null,
+          "sector": "",
+          "sector_tag": null,
+          "stop_loss": null,
+          "take_profit": null,
+          "ticker": "SNY",
+          "trade_type": "day",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "SL too tight (1.4% < 2.0% for $44 stock)",
+        "rejection_stage": "hard_block",
+        "ticker": "SNY"
+      },
       {
         "block_type": "penny_stock",
         "candidate": {
@@ -33,36 +63,6 @@
         "reason": "penny stock ($1.74 < $5.0)",
         "rejection_stage": "hard_block",
         "ticker": "PERF"
-      },
-      {
-        "block_type": "sl_too_tight",
-        "candidate": {
-          "company": "",
-          "day_score": null,
-          "days_to_earnings": null,
-          "entry": null,
-          "news_action_window": null,
-          "news_boost": null,
-          "premarket_action": null,
-          "premarket_actionable": null,
-          "premarket_gap_pct": null,
-          "premarket_reason": "",
-          "quantity": null,
-          "risk_flags": [],
-          "risk_reward": null,
-          "score": null,
-          "sector": "",
-          "sector_tag": null,
-          "stop_loss": null,
-          "take_profit": null,
-          "ticker": "DAL",
-          "trade_type": "day",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "SL too tight (2.0% < 2.0% for $89 stock)",
-        "rejection_stage": "hard_block",
-        "ticker": "DAL"
       }
     ],
     "missing_data_blocked_candidates": [],
@@ -76,13 +76,37 @@
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 346,
+      "scored_count": 348,
       "scorer_workers": 4,
       "universe_count": 570
     },
     "portfolio_risk_blocked_candidates": [],
     "post_hard_block_candidates": [],
     "pre_hard_block_candidates": [
+      {
+        "company": "",
+        "day_score": 0.824,
+        "days_to_earnings": null,
+        "entry": 43.9,
+        "news_action_window": "intraday",
+        "news_boost": 0.15,
+        "premarket_action": null,
+        "premarket_actionable": null,
+        "premarket_gap_pct": null,
+        "premarket_reason": "",
+        "quantity": 161,
+        "risk_flags": [],
+        "risk_reward": 1.66,
+        "score": 1.0,
+        "sector": "N/A",
+        "sector_tag": null,
+        "stop_loss": 43.28,
+        "take_profit": 44.93,
+        "ticker": "SNY",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
       {
         "company": "",
         "day_score": 0.8,
@@ -106,35 +130,41 @@
         "trade_type": "day",
         "watch_only": false,
         "watch_only_reason": ""
-      },
-      {
-        "company": "",
-        "day_score": 0.822,
-        "days_to_earnings": null,
-        "entry": 89.0,
-        "news_action_window": "intraday",
-        "news_boost": 0.1,
-        "premarket_action": null,
-        "premarket_actionable": null,
-        "premarket_gap_pct": null,
-        "premarket_reason": "",
-        "quantity": 56,
-        "risk_flags": [],
-        "risk_reward": 1.66,
-        "score": 0.912,
-        "sector": "N/A",
-        "sector_tag": null,
-        "stop_loss": 87.23,
-        "take_profit": 91.94,
-        "ticker": "DAL",
-        "trade_type": "day",
-        "watch_only": false,
-        "watch_only_reason": ""
       }
     ],
     "pre_premarket_sanity_candidates": [],
     "premarket_sanity_blocked_candidates": [],
     "rejected_candidates": [
+      {
+        "block_type": "sl_too_tight",
+        "candidate": {
+          "company": "",
+          "day_score": null,
+          "days_to_earnings": null,
+          "entry": null,
+          "news_action_window": null,
+          "news_boost": null,
+          "premarket_action": null,
+          "premarket_actionable": null,
+          "premarket_gap_pct": null,
+          "premarket_reason": "",
+          "quantity": null,
+          "risk_flags": [],
+          "risk_reward": null,
+          "score": null,
+          "sector": "",
+          "sector_tag": null,
+          "stop_loss": null,
+          "take_profit": null,
+          "ticker": "SNY",
+          "trade_type": "day",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "SL too tight (1.4% < 2.0% for $44 stock)",
+        "rejection_stage": "hard_block",
+        "ticker": "SNY"
+      },
       {
         "block_type": "penny_stock",
         "candidate": {
@@ -164,36 +194,6 @@
         "reason": "penny stock ($1.74 < $5.0)",
         "rejection_stage": "hard_block",
         "ticker": "PERF"
-      },
-      {
-        "block_type": "sl_too_tight",
-        "candidate": {
-          "company": "",
-          "day_score": null,
-          "days_to_earnings": null,
-          "entry": null,
-          "news_action_window": null,
-          "news_boost": null,
-          "premarket_action": null,
-          "premarket_actionable": null,
-          "premarket_gap_pct": null,
-          "premarket_reason": "",
-          "quantity": null,
-          "risk_flags": [],
-          "risk_reward": null,
-          "score": null,
-          "sector": "",
-          "sector_tag": null,
-          "stop_loss": null,
-          "take_profit": null,
-          "ticker": "DAL",
-          "trade_type": "day",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "SL too tight (2.0% < 2.0% for $89 stock)",
-        "rejection_stage": "hard_block",
-        "ticker": "DAL"
       }
     ],
     "selected_picks": [],
@@ -210,15 +210,15 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 346,
-      "scored_not_filtered_count": 316,
+      "scored_count": 348,
+      "scored_not_filtered_count": 318,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 570
     }
   },
-  "commit_sha": "aa3976570375d4c67f730cbe3ac04e29a5d47456",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/aa3976570375d4c67f730cbe3ac04e29a5d47456",
+  "commit_sha": "943ce94a4efd127678a493605a1d6503f1ea55b3",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/943ce94a4efd127678a493605a1d6503f1ea55b3",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -228,6 +228,36 @@
     "diagnostics_available": true,
     "hard_blocked_candidates": [
       {
+        "block_type": "sl_too_tight",
+        "candidate": {
+          "company": "",
+          "day_score": null,
+          "days_to_earnings": null,
+          "entry": null,
+          "news_action_window": null,
+          "news_boost": null,
+          "premarket_action": null,
+          "premarket_actionable": null,
+          "premarket_gap_pct": null,
+          "premarket_reason": "",
+          "quantity": null,
+          "risk_flags": [],
+          "risk_reward": null,
+          "score": null,
+          "sector": "",
+          "sector_tag": null,
+          "stop_loss": null,
+          "take_profit": null,
+          "ticker": "SNY",
+          "trade_type": "day",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "SL too tight (1.4% < 2.0% for $44 stock)",
+        "rejection_stage": "hard_block",
+        "ticker": "SNY"
+      },
+      {
         "block_type": "penny_stock",
         "candidate": {
           "company": "",
@@ -256,36 +286,6 @@
         "reason": "penny stock ($1.74 < $5.0)",
         "rejection_stage": "hard_block",
         "ticker": "PERF"
-      },
-      {
-        "block_type": "sl_too_tight",
-        "candidate": {
-          "company": "",
-          "day_score": null,
-          "days_to_earnings": null,
-          "entry": null,
-          "news_action_window": null,
-          "news_boost": null,
-          "premarket_action": null,
-          "premarket_actionable": null,
-          "premarket_gap_pct": null,
-          "premarket_reason": "",
-          "quantity": null,
-          "risk_flags": [],
-          "risk_reward": null,
-          "score": null,
-          "sector": "",
-          "sector_tag": null,
-          "stop_loss": null,
-          "take_profit": null,
-          "ticker": "DAL",
-          "trade_type": "day",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "SL too tight (2.0% < 2.0% for $89 stock)",
-        "rejection_stage": "hard_block",
-        "ticker": "DAL"
       }
     ],
     "missing_data_blocked_candidates": [],
@@ -299,13 +299,37 @@
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 346,
+      "scored_count": 348,
       "scorer_workers": 4,
       "universe_count": 570
     },
     "portfolio_risk_blocked_candidates": [],
     "post_hard_block_candidates": [],
     "pre_hard_block_candidates": [
+      {
+        "company": "",
+        "day_score": 0.824,
+        "days_to_earnings": null,
+        "entry": 43.9,
+        "news_action_window": "intraday",
+        "news_boost": 0.15,
+        "premarket_action": null,
+        "premarket_actionable": null,
+        "premarket_gap_pct": null,
+        "premarket_reason": "",
+        "quantity": 161,
+        "risk_flags": [],
+        "risk_reward": 1.66,
+        "score": 1.0,
+        "sector": "N/A",
+        "sector_tag": null,
+        "stop_loss": 43.28,
+        "take_profit": 44.93,
+        "ticker": "SNY",
+        "trade_type": "day",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
       {
         "company": "",
         "day_score": 0.8,
@@ -329,35 +353,41 @@
         "trade_type": "day",
         "watch_only": false,
         "watch_only_reason": ""
-      },
-      {
-        "company": "",
-        "day_score": 0.822,
-        "days_to_earnings": null,
-        "entry": 89.0,
-        "news_action_window": "intraday",
-        "news_boost": 0.1,
-        "premarket_action": null,
-        "premarket_actionable": null,
-        "premarket_gap_pct": null,
-        "premarket_reason": "",
-        "quantity": 56,
-        "risk_flags": [],
-        "risk_reward": 1.66,
-        "score": 0.912,
-        "sector": "N/A",
-        "sector_tag": null,
-        "stop_loss": 87.23,
-        "take_profit": 91.94,
-        "ticker": "DAL",
-        "trade_type": "day",
-        "watch_only": false,
-        "watch_only_reason": ""
       }
     ],
     "pre_premarket_sanity_candidates": [],
     "premarket_sanity_blocked_candidates": [],
     "rejected_candidates": [
+      {
+        "block_type": "sl_too_tight",
+        "candidate": {
+          "company": "",
+          "day_score": null,
+          "days_to_earnings": null,
+          "entry": null,
+          "news_action_window": null,
+          "news_boost": null,
+          "premarket_action": null,
+          "premarket_actionable": null,
+          "premarket_gap_pct": null,
+          "premarket_reason": "",
+          "quantity": null,
+          "risk_flags": [],
+          "risk_reward": null,
+          "score": null,
+          "sector": "",
+          "sector_tag": null,
+          "stop_loss": null,
+          "take_profit": null,
+          "ticker": "SNY",
+          "trade_type": "day",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "SL too tight (1.4% < 2.0% for $44 stock)",
+        "rejection_stage": "hard_block",
+        "ticker": "SNY"
+      },
       {
         "block_type": "penny_stock",
         "candidate": {
@@ -387,36 +417,6 @@
         "reason": "penny stock ($1.74 < $5.0)",
         "rejection_stage": "hard_block",
         "ticker": "PERF"
-      },
-      {
-        "block_type": "sl_too_tight",
-        "candidate": {
-          "company": "",
-          "day_score": null,
-          "days_to_earnings": null,
-          "entry": null,
-          "news_action_window": null,
-          "news_boost": null,
-          "premarket_action": null,
-          "premarket_actionable": null,
-          "premarket_gap_pct": null,
-          "premarket_reason": "",
-          "quantity": null,
-          "risk_flags": [],
-          "risk_reward": null,
-          "score": null,
-          "sector": "",
-          "sector_tag": null,
-          "stop_loss": null,
-          "take_profit": null,
-          "ticker": "DAL",
-          "trade_type": "day",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "SL too tight (2.0% < 2.0% for $89 stock)",
-        "rejection_stage": "hard_block",
-        "ticker": "DAL"
       }
     ],
     "selected_picks": [],
@@ -433,8 +433,8 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 346,
-      "scored_not_filtered_count": 316,
+      "scored_count": 348,
+      "scored_not_filtered_count": 318,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 570
@@ -446,32 +446,32 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1701,
+        "attempts": 2268,
         "empty": 0,
-        "errors": 471,
-        "successes": 1230
+        "errors": 722,
+        "successes": 1546
       },
       "monster_info": {
-        "attempts": 1037,
+        "attempts": 1385,
         "empty": 0,
-        "errors": 291,
-        "successes": 746
+        "errors": 446,
+        "successes": 939
       },
       "ohlcv": {
-        "attempts": 1731,
-        "empty": 12,
+        "attempts": 2308,
+        "empty": 16,
         "errors": 0,
-        "successes": 1719
+        "successes": 2292
       }
     },
     "date": "2026-07-10",
     "providers": {
       "stooq": {
-        "attempts": 6,
-        "empty": 6,
+        "attempts": 8,
+        "empty": 8,
         "errors": 0,
         "failure_types": {
-          "empty_response": 6,
+          "empty_response": 8,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -491,26 +491,26 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 4463,
-        "empty": 6,
-        "errors": 762,
+        "attempts": 5953,
+        "empty": 8,
+        "errors": 1168,
         "failure_types": {
-          "empty_response": 6,
+          "empty_response": 8,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
           "missing_quote": 0,
-          "provider_exception": 0,
-          "rate_limited": 762,
+          "provider_exception": 1,
+          "rate_limited": 1167,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
           "unknown_provider_failure": 0
         },
         "not_found": 0,
-        "provider_error": 0,
-        "rate_limited": 762,
-        "successes": 3695,
+        "provider_error": 1,
+        "rate_limited": 1167,
+        "successes": 4777,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -518,7 +518,7 @@
     "run": {
       "fetched_count": 567,
       "final_pick_count": 0,
-      "scored_count": 346,
+      "scored_count": 348,
       "universe_count": 570
     },
     "samples": [
@@ -793,7 +793,7 @@
         "ticker": "VTR"
       }
     ],
-    "timestamp_utc": "2026-07-10T13:08:50Z"
+    "timestamp_utc": "2026-07-10T13:18:52Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -810,7 +810,7 @@
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 0,
     "pre_hard_block_pick_count": 2,
-    "scored_count": 346,
+    "scored_count": 348,
     "scorer_workers": 4,
     "universe_count": 570
   },
@@ -822,11 +822,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-07-10T09:08:50-04:00",
+  "selection_time_et": "2026-07-10T09:18:52-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-07-10T13:08:50Z",
+  "timestamp_utc": "2026-07-10T13:18:52Z",
   "watch_only_available": false,
-  "workflow_run_id": "29094764641",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29094764641"
+  "workflow_run_id": "29095373905",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29095373905"
 }

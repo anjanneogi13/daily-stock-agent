@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1701,
+      "attempts": 2268,
       "empty": 0,
-      "errors": 471,
-      "successes": 1230
+      "errors": 722,
+      "successes": 1546
     },
     "monster_info": {
-      "attempts": 1037,
+      "attempts": 1385,
       "empty": 0,
-      "errors": 291,
-      "successes": 746
+      "errors": 446,
+      "successes": 939
     },
     "ohlcv": {
-      "attempts": 1731,
-      "empty": 12,
+      "attempts": 2308,
+      "empty": 16,
       "errors": 0,
-      "successes": 1719
+      "successes": 2292
     }
   },
   "date": "2026-07-10",
   "providers": {
     "stooq": {
-      "attempts": 6,
-      "empty": 6,
+      "attempts": 8,
+      "empty": 8,
       "errors": 0,
       "failure_types": {
-        "empty_response": 6,
+        "empty_response": 8,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,26 +47,26 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 4463,
-      "empty": 6,
-      "errors": 762,
+      "attempts": 5953,
+      "empty": 8,
+      "errors": 1168,
       "failure_types": {
-        "empty_response": 6,
+        "empty_response": 8,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 0,
-        "rate_limited": 762,
+        "provider_exception": 1,
+        "rate_limited": 1167,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 0,
-      "rate_limited": 762,
-      "successes": 3695,
+      "provider_error": 1,
+      "rate_limited": 1167,
+      "successes": 4777,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -74,7 +74,7 @@
   "run": {
     "fetched_count": 567,
     "final_pick_count": 0,
-    "scored_count": 346,
+    "scored_count": 348,
     "universe_count": 570
   },
   "samples": [
@@ -349,5 +349,5 @@
       "ticker": "VTR"
     }
   ],
-  "timestamp_utc": "2026-07-10T13:08:50Z"
+  "timestamp_utc": "2026-07-10T13:18:52Z"
 }

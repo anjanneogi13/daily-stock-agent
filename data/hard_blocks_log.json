@@ -613,5 +613,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-10 13:18:52",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "SNY",
+        "reason": "SL too tight (1.4% < 2.0% for $44 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "PERF",
+        "reason": "penny stock ($1.74 < $5.0)",
+        "block_type": "penny_stock"
+      }
+    ]
   }
 ]

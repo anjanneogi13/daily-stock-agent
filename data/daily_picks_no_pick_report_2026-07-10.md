@@ -20,17 +20,17 @@ Monitoring-only failure evidence. No official picks were generated.
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **346**
+- scored_count: **348**
 - scorer_workers: **4**
 - universe_count: **570**
 
 ## Market Data Health
-- stooq: attempts=**6**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**4463**, successes=**3695**, errors=**762**, rate_limited=**762**, unauthorized=**0**
+- stooq: attempts=**8**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**5953**, successes=**4777**, errors=**1168**, rate_limited=**1167**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED
 
 ## Hard-Blocked Finalists
+- SNY: **sl_too_tight** — SL too tight (1.4% < 2.0% for $44 stock)
 - PERF: **penny_stock** — penny stock ($1.74 < $5.0)
-- DAL: **sl_too_tight** — SL too tight (2.0% < 2.0% for $89 stock)

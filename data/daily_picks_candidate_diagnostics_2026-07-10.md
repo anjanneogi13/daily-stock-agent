@@ -20,8 +20,8 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
 - rejected_candidate_count: **2**
-- scored_count: **346**
-- scored_not_filtered_count: **316**
+- scored_count: **348**
+- scored_not_filtered_count: **318**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
 - universe_count: **570**
@@ -30,5 +30,5 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - None.
 
 ## Rejected Candidates
+- SNY: **hard_block** — SL too tight (1.4% < 2.0% for $44 stock)
 - PERF: **hard_block** — penny stock ($1.74 < $5.0)
-- DAL: **hard_block** — SL too tight (2.0% < 2.0% for $89 stock)
