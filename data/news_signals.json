@@ -362,19 +362,6 @@
     "expires": "2026-12-22T23:51:44.271345+00:00",
     "hard_block": true
   },
-  "GME": {
-    "ticker": "GME",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "GameStop Expects FY2026 Adj EBITDA In Excess Of $600M Compared To Adjusted EBITDA Of $345.4M In FY 2025.; Co. Remains Focused On Advancing The Proposed Acquisition Of eBay",
-    "added_at": "2026-06-26T22:44:04.943128+00:00",
-    "expires": "2026-07-10T22:44:04.943135+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AGMB": {
     "ticker": "AGMB",
     "score_delta": 0.146,
