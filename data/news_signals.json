@@ -3426,5 +3426,18 @@
     "expires": "2026-07-15T15:45:20.987354+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "NGS": {
+    "ticker": "NGS",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Raymond James Maintains Outperform on Natural Gas Services Gr, Raises Price Target to $54",
+    "added_at": "2026-07-10T17:43:42.358672+00:00",
+    "expires": "2026-07-15T17:43:42.358677+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
