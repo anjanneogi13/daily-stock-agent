@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1134,
+      "attempts": 1701,
       "empty": 0,
-      "errors": 201,
-      "successes": 933
+      "errors": 471,
+      "successes": 1230
     },
     "monster_info": {
-      "attempts": 691,
+      "attempts": 1037,
       "empty": 0,
-      "errors": 128,
-      "successes": 563
+      "errors": 291,
+      "successes": 746
     },
     "ohlcv": {
-      "attempts": 1154,
-      "empty": 8,
+      "attempts": 1731,
+      "empty": 12,
       "errors": 0,
-      "successes": 1146
+      "successes": 1719
     }
   },
   "date": "2026-07-10",
   "providers": {
     "stooq": {
-      "attempts": 4,
-      "empty": 4,
+      "attempts": 6,
+      "empty": 6,
       "errors": 0,
       "failure_types": {
-        "empty_response": 4,
+        "empty_response": 6,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,17 +47,17 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 2975,
-      "empty": 4,
-      "errors": 329,
+      "attempts": 4463,
+      "empty": 6,
+      "errors": 762,
       "failure_types": {
-        "empty_response": 4,
+        "empty_response": 6,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 329,
+        "rate_limited": 762,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,8 +65,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 329,
-      "successes": 2642,
+      "rate_limited": 762,
+      "successes": 3695,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -349,5 +349,5 @@
       "ticker": "VTR"
     }
   ],
-  "timestamp_utc": "2026-07-10T12:39:23Z"
+  "timestamp_utc": "2026-07-10T13:08:50Z"
 }

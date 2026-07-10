@@ -121,7 +121,7 @@
         "quantity": 56,
         "risk_flags": [],
         "risk_reward": 1.66,
-        "score": 0.896,
+        "score": 0.912,
         "sector": "N/A",
         "sector_tag": null,
         "stop_loss": 87.23,
@@ -237,5 +237,5 @@
     "universe_count": 570
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-07-10T12:39:23Z"
+  "timestamp_utc": "2026-07-10T13:08:50Z"
 }
