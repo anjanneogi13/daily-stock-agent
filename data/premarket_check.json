@@ -1,21 +1,21 @@
 {
-  "date": "2026-07-09",
+  "date": "2026-07-13",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
+    "spy_change_pct": 0.43,
+    "qqq_change_pct": 0.31,
+    "soxx_change_pct": -0.06,
+    "vix": 16.4,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "BZH",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "AKZOY",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 21.82,
+      "gap_pct": -0.0,
+      "actionable": true
     }
   ]
 }
