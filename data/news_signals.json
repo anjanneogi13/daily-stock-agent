@@ -1468,19 +1468,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ALC": {
-    "ticker": "ALC",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Can Alcon Inc. (ALC) Stock Rebound as New Eye Care Products Approach Regulatory Milestones?",
-    "added_at": "2026-07-08T23:14:59.018198+00:00",
-    "expires": "2026-07-13T23:14:59.018206+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SW": {
     "ticker": "SW",
     "score_delta": 0.03,
@@ -2878,6 +2865,19 @@
     "headline": "Lexaria Bioscience Q3 EPS $(0.08) Beats $(0.09) Estimate",
     "added_at": "2026-07-13T22:50:09.256111+00:00",
     "expires": "2026-07-20T22:50:09.256119+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AXTA": {
+    "ticker": "AXTA",
+    "score_delta": 0.129,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "Axalta to Hold Special Meeting of Stockholders on Proposed Merger with AkzoNobel on August 5, 2026",
+    "added_at": "2026-07-13T23:47:16.365037+00:00",
+    "expires": "2026-08-12T23:47:16.365063+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

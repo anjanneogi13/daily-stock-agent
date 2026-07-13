@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MGM",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "rumor",
-      "rationale": "WSJ exclusive reporting deal talks with prominent billionaire Barry Diller suggests potential M&A or strategic partnership, but remains unconfirmed rumor without deal terms or certainty.",
-      "action_window": "intraday",
-      "headline": "'MGM Resorts in Deal Talks With Barry Diller'- WSJ Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60402260/mgm-resorts-deal-talks-barry-diller-wsj-exclusive",
-      "source": "alpaca",
-      "added_at": "2026-07-10T22:55:33.150528+00:00"
-    },
-    {
       "ticker": "BNAI",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
