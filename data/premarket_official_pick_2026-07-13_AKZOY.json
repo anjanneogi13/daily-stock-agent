@@ -1,0 +1,74 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-29248515076",
+  "artifact_filename": "premarket_official_pick_2026-07-13_AKZOY.json",
+  "artifact_id": "premarket_official_pick:2026-07-13:AKZOY",
+  "artifact_path": "data/premarket_official_pick_2026-07-13_AKZOY.json",
+  "commit_sha": "46efdf7c7ef46186160be3f07fae9534367b031f",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/46efdf7c7ef46186160be3f07fae9534367b031f",
+  "company": "AKZOY",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-07-13",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-07-13:AKZOY:29248515076:46efdf7c7ef4",
+  "entry": 21.82,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 20.98.",
+    "Review/exit near take profit 22.87."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 119,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 8.71,
+    "regime": "bull",
+    "sma_value": 694.48,
+    "sma_window": 200,
+    "spy_close": 754.95,
+    "spy_sma200": 694.48,
+    "spy_sma_anchor": 694.48
+  },
+  "risk_dollars": 99.96,
+  "risk_flags": [
+    "EARNINGS_WITHIN_10_DAYS",
+    "WATCH_ONLY_FLAG_PRESENT"
+  ],
+  "risk_reward": 1.25,
+  "score": 0.902,
+  "score_components": {
+    "composite": 0.902,
+    "day_score": 0.649,
+    "monster_score": 0.15,
+    "news_boost": 0.2,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.5050048433968356,
+    "watchlist_boost": 0.246
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "AKZOY selected as official swing pick; composite score 0.902; premarket sanity: normal official premarket entry conditions.",
+  "selection_time_et": "2026-07-13T08:10:34-04:00",
+  "stop_loss": 20.98,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 22.87,
+  "ticker": "AKZOY",
+  "top_reasons": [
+    "composite score 0.902",
+    "premarket sanity: normal official premarket entry conditions"
+  ],
+  "workflow_run_id": "29248515076",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29248515076"
+}
