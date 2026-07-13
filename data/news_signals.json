@@ -514,19 +514,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AVAV": {
-    "ticker": "AVAV",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "AeroVironment Sees FY2027 GAAP EPS $0.16-$0.48 vs $1.26 Est",
-    "added_at": "2026-06-29T20:26:24.979565+00:00",
-    "expires": "2026-07-13T20:26:24.979572+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GANX": {
     "ticker": "GANX",
     "score_delta": 0.15,
@@ -537,32 +524,6 @@
     "headline": "Gain Therapeutics Obtains FDA Clearance Of IND To Advance GT-02287 Into Phase 2 Clinical Development for Parkinson\u2019s Disease; IND Authorization Paves The Way For Initiation Of GT-02287 Phase 2 Clinica",
     "added_at": "2026-06-29T20:26:24.988369+00:00",
     "expires": "2026-07-29T20:26:24.988375+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PACS": {
-    "ticker": "PACS",
-    "score_delta": 0.046,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "PACS Group to Acquires 34 Nursing Facilities; Amount Not Disclosed",
-    "added_at": "2026-06-29T20:26:24.990381+00:00",
-    "expires": "2026-07-13T20:26:24.990387+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DLR": {
-    "ticker": "DLR",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Digital Realty Agrees To Acquire Stake In Three Data Centers For $7.8B From Blackstone-Affiliated Funds",
-    "added_at": "2026-06-29T20:26:24.992424+00:00",
-    "expires": "2026-07-13T20:26:24.992443+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2826,6 +2787,58 @@
     "headline": "TD Cowen Maintains Hold on ON Semiconductor, Lowers Price Target to $95",
     "added_at": "2026-07-13T19:57:51.287279+00:00",
     "expires": "2026-07-18T19:57:51.287284+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNWV": {
+    "ticker": "SNWV",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "SANUWAVE Health Raises Q2 Sales Guidance from $8.500M-$9.500M to $9.600M-$9.800M",
+    "added_at": "2026-07-13T20:54:41.728877+00:00",
+    "expires": "2026-07-27T20:54:41.728884+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DXCM": {
+    "ticker": "DXCM",
+    "score_delta": 0.139,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "Dexcom Receives Health Canada Authorization For Dexcom G7 15 Day CGM System, Offering 15.5-Day Wear, 8.0% MARD Accuracy, And Fewer Sensor Changes For Canadians With Diabetes",
+    "added_at": "2026-07-13T20:54:41.731846+00:00",
+    "expires": "2026-08-12T20:54:41.731852+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TREX": {
+    "ticker": "TREX",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Trex Co Raises Q2 Sales Guidance from $388.000M-$403.000M to $418.000M vs $340.132M Est",
+    "added_at": "2026-07-13T20:54:41.734436+00:00",
+    "expires": "2026-07-27T20:54:41.734451+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DRVR": {
+    "ticker": "DRVR",
+    "score_delta": 0.015,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.15,
+    "action_window": "ignore",
+    "headline": "New DRVR ETF Bets on S&P 500 Dividend Growth as Income Investors Seek Quality",
+    "added_at": "2026-07-13T20:54:41.739489+00:00",
+    "expires": "2026-07-20T20:54:41.739498+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -1,102 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CERS",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "CEO transition to Executive Chairman represents a notable leadership change that typically creates short-term uncertainty but the continued involvement suggests organizational continuity.",
-      "action_window": "next_day",
-      "headline": "Cerus Announces William Greenman Ceases As President And CEO, Becomes Executive Chairman Effective July 1, 2026",
-      "url": "https://www.benzinga.com/news/26/07/60401443/cerus-announces-william-greenman-ceases-president-and-ceo-becomes-executive-chairman-effective-july-",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985916+00:00"
-    },
-    {
-      "ticker": "YSXT",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "EPS declined 39% YoY despite 17% revenue growth, indicating significant margin compression and profitability concerns that typically trigger immediate selling pressure.",
-      "action_window": "next_day",
-      "headline": "YSX Tech FY EPS $0.11 Down From $0.18 YoY, Sales $83.468M Up From $71.453M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60401399/ysx-tech-fy-eps-0-11-down-0-18-yoy-sales-83-468m-71-453m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985930+00:00"
-    },
-    {
-      "ticker": "AIRT",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "ATM offering of $8M represents potential dilution for existing shareholders, typically causing short-term selling pressure though the at-the-market structure may limit immediate impact.",
-      "action_window": "next_day",
-      "headline": "Air T Enters ATM Offering Agreement To Sell Up To $8M Of Common Stock",
-      "url": "https://www.benzinga.com/news/26/07/60401359/air-t-enters-atm-offering-agreement-sell-8m-common-stock",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985939+00:00"
-    },
-    {
-      "ticker": "EDBL",
-      "tradeable_score": 0.58,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Exchange of preferred stock for 8.2M common shares represents significant dilution to existing common shareholders, typically pressuring the stock price in the near term.",
-      "action_window": "next_day",
-      "headline": "Edible Garden Exchanges $1.134M Of Series B Preferred Stock For 8,203,075 Common Shares",
-      "url": "https://www.benzinga.com/news/26/07/60401339/edible-garden-exchanges-1-134m-series-b-preferred-stock-8-203-075-common-shares",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985946+00:00"
-    },
-    {
-      "ticker": "AAPL",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Apple alleging systematic trade secret theft by multiple senior employees who joined OpenAI represents material IP risk and potential hardware development setbacks, with legal action implying serious competitive threat.",
-      "action_window": "intraday",
-      "headline": "Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidential Hardware Files After Joining OpenAI; Alleges OpenAI Instructing Job Candidates To Bring Apple Prototypes And Design Artifacts To Interviews, Asked Suppliers ",
-      "url": "https://www.benzinga.com/news/26/07/60401302/apple-says-tang-yew-tan-allegedly-using-apple-trade-secrets-openai-chief-hardware-officer-chang-liu-",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985953+00:00"
-    },
-    {
-      "ticker": "DCOY",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Secondary offering of 3.767M shares by existing shareholders typically creates near-term dilution concerns and selling pressure, though company itself not raising capital suggests less dire financing needs.",
-      "action_window": "intraday",
-      "headline": "Decoy Therapeutics Files Prospectus For Offering 3.767M Common Shares On Behalf Of Common Shareholders",
-      "url": "https://www.benzinga.com/news/26/07/60401219/decoy-therapeutics-files-prospectus-offering-3-767m-common-shares-behalf-common-shareholders",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985960+00:00"
-    },
-    {
-      "ticker": "AVAT",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Prospectus filing for resale of ~15.7M shares signals potential dilution and significant selling pressure from existing shareholders, typically bearish for stock price in near term.",
-      "action_window": "next_day",
-      "headline": "Avalanche Treasury Files Prospectus For Resale Of 15,690,755 Shares Of Class A Common Stock",
-      "url": "https://www.benzinga.com/news/26/07/60400891/avalanche-treasury-files-prospectus-resale-15-690-755-shares-class-common-stock",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985978+00:00"
-    },
-    {
-      "ticker": "REVB",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Shareholder rights plans (poison pills) are defensive measures typically implemented to prevent hostile takeovers, signaling management concern about vulnerability and often triggering immediate negative price reaction.",
-      "action_window": "intraday",
-      "headline": "Revelation Biosciences' Board Implements Shareholder Rights Plan, Declares Dividend Distribution Of One Right For Each Outstanding Common Stock",
-      "url": "https://www.benzinga.com/news/26/07/60400810/revelation-biosciences-board-implements-shareholder-rights-plan-declares-dividend-distribution-one-r",
-      "source": "alpaca",
-      "added_at": "2026-07-10T20:49:18.985986+00:00"
-    },
-    {
       "ticker": "VNRX",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -491,6 +395,102 @@
       "url": "https://www.benzinga.com/news/26/07/60427390/wells-fargo-upgrades-q32-bio-overweight-announces-66-price-target",
       "source": "alpaca",
       "added_at": "2026-07-13T19:57:51.290665+00:00"
+    },
+    {
+      "ticker": "SNWV",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Mid-quarter guidance raise of approximately 10-13% above prior high-end guidance is a strong positive catalyst indicating better-than-expected business momentum.",
+      "action_window": "intraday",
+      "headline": "SANUWAVE Health Raises Q2 Sales Guidance from $8.500M-$9.500M to $9.600M-$9.800M",
+      "url": "https://www.benzinga.com/news/26/07/60430326/sanuwave-health-raises-q2-sales-guidance-8-500m-9-500m-9-600m-9-800m",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742900+00:00"
+    },
+    {
+      "ticker": "WHF",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large securities offering of $240.9M plus existing share sale signals significant dilution risk for current shareholders, typically causing immediate downward pressure on stock price.",
+      "action_window": "next_day",
+      "headline": "WhiteHorse Finance Files Prospectus For Up To $240.9M Securities Offering, Including Common Stock, Preferred Stock, Warrants, Debt Securities, Units, And Sale Of 3,976,258 Existing Shares By Selling Stockholder",
+      "url": "https://www.benzinga.com/news/26/07/60430300/whitehorse-finance-files-prospectus-240-9m-securities-offering-including-common-stock-preferred-stoc",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742910+00:00"
+    },
+    {
+      "ticker": "MVIS",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering of $50M signals potential shareholder dilution and possible capital needs, typically causing immediate selling pressure on small-cap stocks.",
+      "action_window": "intraday",
+      "headline": "MicroVision Files Prospectus To Offer Securities Up To $50M",
+      "url": "https://www.benzinga.com/news/26/07/60430289/microvision-files-prospectus-offer-securities-50m",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742917+00:00"
+    },
+    {
+      "ticker": "DXCM",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Health Canada authorization for Dexcom G7 15-day system expands market access with improved product specs, though Canada represents a smaller market compared to US FDA approval.",
+      "action_window": "next_day",
+      "headline": "Dexcom Receives Health Canada Authorization For Dexcom G7 15 Day CGM System, Offering 15.5-Day Wear, 8.0% MARD Accuracy, And Fewer Sensor Changes For Canadians With Diabetes",
+      "url": "https://www.benzinga.com/general/biotech/26/07/60430275/dexcom-receives-health-canada-authorization-dexcom-g7-15-day-cgm-system-offering-15-5-day-wear-8-0-m",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742922+00:00"
+    },
+    {
+      "ticker": "TREX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Significant Q2 sales guidance raise of 22.8% above consensus ($418M vs $340.1M est) and 7.7% above prior high-end guidance indicates strong demand acceleration.",
+      "action_window": "intraday",
+      "headline": "Trex Co Raises Q2 Sales Guidance from $388.000M-$403.000M to $418.000M vs $340.132M Est",
+      "url": "https://www.benzinga.com/news/26/07/60430167/trex-co-raises-q2-sales-guidance-388-000m-403-000m-418-000m-vs-340-132m-est",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742927+00:00"
+    },
+    {
+      "ticker": "FLNC",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "New commercial agreement for energy storage solution with EPC services represents tangible revenue opportunity, though financial terms and project size are undisclosed.",
+      "action_window": "next_day",
+      "headline": "Fluence Energy Signs Agreement With Avantus To Offer Advanced Smartstack Energy Storage Solution, Engineering, Procurement And Construction Services For Rexford 2 Project In California",
+      "url": "https://www.benzinga.com/news/26/07/60429944/fluence-energy-signs-agreement-avantus-offer-advanced-smartstack-energy-storage-solution-engineering",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742937+00:00"
+    },
+    {
+      "ticker": "BTTC",
+      "tradeable_score": 0.52,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Interim Co-CEO appointment signals leadership transition or potential instability, creating uncertainty but not necessarily negative implications without context on circumstances.",
+      "action_window": "next_day",
+      "headline": "Black Titan Appoints Brynner Chiam As Interim Co-CEO",
+      "url": "https://www.benzinga.com/news/26/07/60429773/black-titan-appoints-brynner-chiam-interim-co-ceo",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742942+00:00"
+    },
+    {
+      "ticker": "ERAS",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large $500M secondary offering will cause immediate dilution to existing shareholders and typically triggers significant selling pressure as the stock adjusts to increased share count.",
+      "action_window": "intraday",
+      "headline": "Erasca Plans To Commence $500M Common Stock Offering",
+      "url": "https://www.benzinga.com/news/26/07/60429610/erasca-plans-commence-500m-common-stock-offering",
+      "source": "alpaca",
+      "added_at": "2026-07-13T20:54:41.742948+00:00"
     }
   ]
 }
