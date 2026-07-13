@@ -501,19 +501,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KGEI": {
-    "ticker": "KGEI",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Kolibri Global Energy Sees FY2026 Sales $78.000M-$84.000M vs $75.258M Est",
-    "added_at": "2026-06-29T12:26:05.101396+00:00",
-    "expires": "2026-07-13T12:26:05.101403+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SMCI": {
     "ticker": "SMCI",
     "score_delta": -0.1,
@@ -1030,32 +1017,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DRIO": {
-    "ticker": "DRIO",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "DarioHealth Enters Agreement With A Major Health Insurer In Arizona Through Its Strategic Channel Partnership With Amwell",
-    "added_at": "2026-07-06T11:58:53.326256+00:00",
-    "expires": "2026-07-13T11:58:53.326261+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KIDZ": {
-    "ticker": "KIDZ",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "KIDZ AI Unveils KIDZBot, AI Robotics Learning Platform For Physical AI Education Era; Co. Expects KIDZBot To Begin Commercial Rollout During H2 Of 2026",
-    "added_at": "2026-07-06T11:58:53.328177+00:00",
-    "expires": "2026-07-13T11:58:53.328182+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NVS": {
     "ticker": "NVS",
     "score_delta": 0.05,
@@ -1390,71 +1351,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "OXY": {
-    "ticker": "OXY",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Why Is Occidental Petroleum Stock Surging on Wednesday?",
-    "added_at": "2026-07-08T12:02:51.966134+00:00",
-    "expires": "2026-07-13T12:02:51.966141+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GRNT": {
-    "ticker": "GRNT",
-    "score_delta": 0.041,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "intraday",
-    "headline": "Northland Capital Markets Initiates Coverage On Granite Ridge Resources with Outperform Rating, Announces Price Target of $9",
-    "added_at": "2026-07-08T12:02:51.968791+00:00",
-    "expires": "2026-07-13T12:02:51.968797+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PS": {
-    "ticker": "PS",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Jones Trading Initiates Coverage On Pershing Square with Buy Rating, Announces Price Target of $39",
-    "added_at": "2026-07-08T12:02:51.971073+00:00",
-    "expires": "2026-07-13T12:02:51.971079+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MTZ": {
-    "ticker": "MTZ",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Mizuho Maintains Outperform on MasTec, Raises Price Target to $502",
-    "added_at": "2026-07-08T12:02:51.973308+00:00",
-    "expires": "2026-07-13T12:02:51.973313+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EG": {
-    "ticker": "EG",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Keefe, Bruyette & Woods Maintains Outperform on Everest Group, Raises Price Target to $414",
-    "added_at": "2026-07-08T12:02:51.975527+00:00",
-    "expires": "2026-07-13T12:02:51.975532+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "JNJ": {
     "ticker": "JNJ",
     "score_delta": 0.09,
@@ -1465,19 +1361,6 @@
     "headline": "Johnson & Johnson Receives FDA Approval For Its Dual Energy THERMOCOOL SMARTTOUCH SF Catheter Platform",
     "added_at": "2026-07-08T12:02:51.977755+00:00",
     "expires": "2026-08-07T12:02:51.977760+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PYPL": {
-    "ticker": "PYPL",
-    "score_delta": -0.029,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.4,
-    "action_window": "intraday",
-    "headline": "This PayPal Analyst Begins Coverage On A Bearish Note; Here Are Top 5 Initiations For Wednesday",
-    "added_at": "2026-07-08T12:02:51.980014+00:00",
-    "expires": "2026-07-13T12:02:51.980019+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1507,19 +1390,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CX": {
-    "ticker": "CX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "JP Morgan Maintains Overweight on Cemex, Raises Price Target to $15",
-    "added_at": "2026-07-08T14:55:24.490185+00:00",
-    "expires": "2026-07-13T14:55:24.490191+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DOGEUSD": {
     "ticker": "DOGEUSD",
     "score_delta": 0.032,
@@ -1530,32 +1400,6 @@
     "headline": "Dogecoin Drops 4% as House of Doge Publishes Ambitious Roadmap",
     "added_at": "2026-07-08T14:55:24.493050+00:00",
     "expires": "2026-07-15T14:55:24.493055+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CRNX": {
-    "ticker": "CRNX",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "TD Cowen Downgrades Crinetics Pharmaceuticals to Hold",
-    "added_at": "2026-07-08T14:55:24.495483+00:00",
-    "expires": "2026-07-13T14:55:24.495488+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DELL": {
-    "ticker": "DELL",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Maintains Outperform on Dell Technologies, Raises Price Target to $500",
-    "added_at": "2026-07-08T14:55:24.497815+00:00",
-    "expires": "2026-07-13T14:55:24.497820+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1572,32 +1416,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CMPS": {
-    "ticker": "CMPS",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Upgrades Compass Pathways to Outperform, Raises Price Target to $21",
-    "added_at": "2026-07-08T14:55:24.502564+00:00",
-    "expires": "2026-07-13T14:55:24.502569+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CVLG": {
-    "ticker": "CVLG",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Stephens & Co. Initiates Coverage On Covenant Logistics Gr with Overweight Rating, Announces Price Target of $60",
-    "added_at": "2026-07-08T14:55:24.504878+00:00",
-    "expires": "2026-07-13T14:55:24.504882+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BZH": {
     "ticker": "BZH",
     "score_delta": 0.2,
@@ -1608,19 +1426,6 @@
     "headline": "Dream Finders Pushes Beazer Board With a Bigger All-Cash Offer",
     "added_at": "2026-07-08T14:55:24.507161+00:00",
     "expires": "2026-08-07T14:55:24.507166+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FIG": {
-    "ticker": "FIG",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Figma Stock Battles 200-Day Moving Average: Is the BofA Buy Rating Enough?",
-    "added_at": "2026-07-08T14:55:24.509479+00:00",
-    "expires": "2026-07-13T14:55:24.509484+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2969,6 +2774,71 @@
     "headline": "B of A Securities Upgrades Saia to Buy, Raises Price Target to $502",
     "added_at": "2026-07-13T10:53:51.105971+00:00",
     "expires": "2026-07-18T10:53:51.105976+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PCAR": {
+    "ticker": "PCAR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on PACCAR, Raises Price Target to $155",
+    "added_at": "2026-07-13T16:04:46.106392+00:00",
+    "expires": "2026-07-18T16:04:46.106400+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NMIH": {
+    "ticker": "NMIH",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on NMI Holdings, Raises Price Target to $48",
+    "added_at": "2026-07-13T16:04:46.109471+00:00",
+    "expires": "2026-07-18T16:04:46.109479+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALKS": {
+    "ticker": "ALKS",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Needham Maintains Buy on Alkermes, Raises Price Target to $62",
+    "added_at": "2026-07-13T16:04:46.112005+00:00",
+    "expires": "2026-07-18T16:04:46.112012+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALNY": {
+    "ticker": "ALNY",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "HC Wainwright & Co. Maintains Buy on Alnylam Pharmaceuticals, Raises Price Target to $485",
+    "added_at": "2026-07-13T16:04:46.114502+00:00",
+    "expires": "2026-07-18T16:04:46.114508+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RUN": {
+    "ticker": "RUN",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "'Sunrun Offers Solar Users Hundreds Per Month in Compute Program' - Bloomberg",
+    "added_at": "2026-07-13T16:04:46.117006+00:00",
+    "expires": "2026-07-20T16:04:46.117012+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
