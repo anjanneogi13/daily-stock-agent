@@ -501,19 +501,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SMCI": {
-    "ticker": "SMCI",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "'Super Micro Office\u2019s Raided As Taiwan Expands Chip Smuggling Probe'",
-    "added_at": "2026-06-29T18:29:50.280159+00:00",
-    "expires": "2026-07-13T18:29:50.280164+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GOOGL": {
     "ticker": "GOOGL",
     "score_delta": -0.097,
@@ -1403,19 +1390,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KLAR": {
-    "ticker": "KLAR",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Klarna, Raises Price Target to $23",
-    "added_at": "2026-07-08T19:22:23.888420+00:00",
-    "expires": "2026-07-13T19:22:23.888425+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BZH": {
     "ticker": "BZH",
     "score_delta": 0.2,
@@ -1455,19 +1429,6 @@
     "hard_block": false,
     "negative_reaction": true
   },
-  "ZURA": {
-    "ticker": "ZURA",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "William Blair Initiates Coverage On Zura Bio with Outperform Rating",
-    "added_at": "2026-07-08T19:22:23.875729+00:00",
-    "expires": "2026-07-13T19:22:23.875737+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DVLT": {
     "ticker": "DVLT",
     "score_delta": 0.05,
@@ -1481,19 +1442,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MRSH": {
-    "ticker": "MRSH",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Marsh, Raises Price Target to $212",
-    "added_at": "2026-07-08T19:22:23.884011+00:00",
-    "expires": "2026-07-13T19:22:23.884017+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MET": {
     "ticker": "MET",
     "score_delta": 0.032,
@@ -1504,45 +1452,6 @@
     "headline": "Wells Fargo Maintains Overweight on MetLife, Raises Price Target to $101",
     "added_at": "2026-07-09T18:17:33.753974+00:00",
     "expires": "2026-07-14T18:17:33.753980+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "INVH": {
-    "ticker": "INVH",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Invitation Homes, Raises Price Target to $35",
-    "added_at": "2026-07-08T19:22:23.890571+00:00",
-    "expires": "2026-07-13T19:22:23.890576+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMC": {
-    "ticker": "AMC",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "AMC Stock Surges as Macquarie Lifts Theater Box Office Outlook",
-    "added_at": "2026-07-08T19:22:23.892757+00:00",
-    "expires": "2026-07-13T19:22:23.892762+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "HCSG": {
-    "ticker": "HCSG",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Healthcare Services Group, Raises Price Target to $30",
-    "added_at": "2026-07-08T19:22:23.897114+00:00",
-    "expires": "2026-07-13T19:22:23.897119+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1561,14 +1470,14 @@
   },
   "LLY": {
     "ticker": "LLY",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Eli Lilly Estimates $2.8B Q2 2026 Acquired IPR&D Charges, Impacting GAAP And Non-GAAP EPS By ~$3.02 Per Share",
-    "added_at": "2026-07-08T20:42:58.079332+00:00",
-    "expires": "2026-07-22T20:42:58.079345+00:00",
+    "score_delta": -0.057,
+    "catalyst": "lawsuit",
+    "sentiment": "neutral",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "U.S. Appeals Court Revives Teva Pharmaceuticals' Lawsuit Against Eli Lilly Over Alleged Violation Of Settlement Agreement",
+    "added_at": "2026-07-13T19:57:51.277391+00:00",
+    "expires": "2026-07-27T19:57:51.277397+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2852,6 +2761,71 @@
     "headline": "TD Cowen Maintains Buy on Advanced Micro Devices, Raises Price Target to $675",
     "added_at": "2026-07-13T18:17:50.769796+00:00",
     "expires": "2026-07-18T18:17:50.769801+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EVO": {
+    "ticker": "EVO",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Evotec Now Expects FY26 Revenue From \u20ac700M - \u20ac780M To ~\u20ac570M - \u20ac610M, Expects H1 Revenue Of ~\u20ac300.1M",
+    "added_at": "2026-07-13T19:57:51.274470+00:00",
+    "expires": "2026-07-27T19:57:51.274477+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MDT": {
+    "ticker": "MDT",
+    "score_delta": -0.194,
+    "catalyst": "fda_rejection",
+    "sentiment": "bearish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Reported Earlier: FDA Announces Medtronic Recalls Certain Harmony Delivery Catheter System",
+    "added_at": "2026-07-13T19:57:51.279894+00:00",
+    "expires": "2026-08-12T19:57:51.279900+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QTTB": {
+    "ticker": "QTTB",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Wells Fargo Upgrades Q32 Bio to Overweight, Announces $66 Price Target",
+    "added_at": "2026-07-13T19:57:51.282395+00:00",
+    "expires": "2026-07-18T19:57:51.282400+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNAP": {
+    "ticker": "SNAP",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Neutral on Snap, Lowers Price Target to $5",
+    "added_at": "2026-07-13T19:57:51.284800+00:00",
+    "expires": "2026-07-18T19:57:51.284805+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ON": {
+    "ticker": "ON",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "TD Cowen Maintains Hold on ON Semiconductor, Lowers Price Target to $95",
+    "added_at": "2026-07-13T19:57:51.287279+00:00",
+    "expires": "2026-07-18T19:57:51.287284+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

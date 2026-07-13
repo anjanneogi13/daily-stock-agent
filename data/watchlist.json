@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "OWL",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "UBS flagging rising default risk in private credit triggered significant investor outflows from Blue Owl, a major private credit manager, creating immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Blue Owl Saw Investor Exodus After UBS Flaged Rising Private Credit Default Risk",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60398726/blue-owl-saw-investor-exodus-after-ubs-flaged-rising-private-credit-default-risk",
-      "source": "alpaca",
-      "added_at": "2026-07-10T19:19:57.947791+00:00"
-    },
-    {
-      "ticker": "LCID",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Stock down 4% on execution updates and leadership changes signals operational concerns, but lacks specific catalyst details for higher conviction trading.",
-      "action_window": "intraday",
-      "headline": "Lucid Stock Is Sliding Friday: What's Driving the Action?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60397813/lucid-stock-is-sliding-friday-whats-driving-the-action",
-      "source": "alpaca",
-      "added_at": "2026-07-10T19:19:57.947810+00:00"
-    },
-    {
-      "ticker": "MU",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "SK Hynix CEO forecasting extended memory shortage signals strong pricing power and sustained demand for memory chip manufacturers through the decade, directly benefiting publicly traded peers like Micron.",
-      "action_window": "next_day",
-      "headline": "'SK Hynix Chief Expects Memory Shortage to Last Into Next Decade' - Bloomberg News",
-      "url": "https://www.benzinga.com/news/26/07/60396854/sk-hynix-chief-expects-memory-shortage-last-next-decade-bloomberg-news",
-      "source": "alpaca",
-      "added_at": "2026-07-10T19:19:57.947824+00:00"
-    },
-    {
       "ticker": "CERS",
       "tradeable_score": 0.55,
       "sentiment": "neutral",
@@ -479,6 +443,54 @@
       "url": "https://www.benzinga.com/news/26/07/60425284/novartis-ag-receives-health-canada-approval-vanrafia-reduce-preoteinuria-production-immunoglobulin-n",
       "source": "alpaca",
       "added_at": "2026-07-13T18:17:50.773196+00:00"
+    },
+    {
+      "ticker": "EVO",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Evotec slashed FY26 revenue guidance by approximately 22% at the midpoint (from \u20ac740M to \u20ac590M), representing a significant negative revision that will likely trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Evotec Now Expects FY26 Revenue From \u20ac700M - \u20ac780M To ~\u20ac570M - \u20ac610M, Expects H1 Revenue Of ~\u20ac300.1M",
+      "url": "https://www.benzinga.com/news/26/07/60428621/evotec-now-expects-fy26-revenue-700m-780m-570m-610m-expects-h1-revenue-300-1m",
+      "source": "alpaca",
+      "added_at": "2026-07-13T19:57:51.290640+00:00"
+    },
+    {
+      "ticker": "LNC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Multibillion-dollar risk transfer deal talks suggest potential balance sheet optimization and capital relief for Lincoln, but remains unconfirmed with uncertain terms and timing.",
+      "action_window": "next_day",
+      "headline": "'Lincoln in Talks With Talcott for Multibillion-Dollar Risk Deal' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60428509/lincoln-talks-talcott-multibillion-dollar-risk-deal-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-13T19:57:51.290651+00:00"
+    },
+    {
+      "ticker": "MDT",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "FDA-mandated medical device recall creates immediate regulatory risk and potential liability concerns for Medtronic, though impact depends on recall scale and revenue exposure of the specific catheter system.",
+      "action_window": "intraday",
+      "headline": "Reported Earlier: FDA Announces Medtronic Recalls Certain Harmony Delivery Catheter System",
+      "url": "https://www.benzinga.com/news/26/07/60427690/reported-earlier-fda-announces-medtronic-recalls-certain-harmony-delivery-catheter-system",
+      "source": "alpaca",
+      "added_at": "2026-07-13T19:57:51.290659+00:00"
+    },
+    {
+      "ticker": "QTTB",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wells Fargo upgrade to Overweight with $66 price target is a meaningful catalyst from a major bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Wells Fargo Upgrades Q32 Bio to Overweight, Announces $66 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60427390/wells-fargo-upgrades-q32-bio-overweight-announces-66-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-13T19:57:51.290665+00:00"
     }
   ]
 }
