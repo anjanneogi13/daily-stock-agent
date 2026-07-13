@@ -527,32 +527,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TCS": {
-    "ticker": "TCS",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Tecsys Sees FY2027 Sales $197.005M-$200.868M vs $207.767M Est",
-    "added_at": "2026-06-29T21:51:57.417984+00:00",
-    "expires": "2026-07-13T21:51:57.417991+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TLRY": {
-    "ticker": "TLRY",
-    "score_delta": 0.032,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Tilray Brands To Acquire HelloMD Corporation; Financial Terms Not Disclosed",
-    "added_at": "2026-06-29T21:51:57.424504+00:00",
-    "expires": "2026-07-13T21:51:57.424510+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MTX": {
     "ticker": "MTX",
     "score_delta": -1.0,
@@ -1053,19 +1027,6 @@
     "headline": "Maison Solutions Enters Equity Purchase Agreement With DNL Management On July 2, 2026; Co To Sells 91.67% Stake In Super HK Of El Monte For $1",
     "added_at": "2026-07-06T21:24:12.188000+00:00",
     "expires": "2026-08-05T21:24:12.188005+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EXYN": {
-    "ticker": "EXYN",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "Exyn Technologies Q1 EPS $(2.45) Down From $(1.96) YoY, Sales $1.190M Down From $1.220M YoY",
-    "added_at": "2026-07-06T22:45:49.728706+00:00",
-    "expires": "2026-07-13T22:45:49.728714+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2904,6 +2865,19 @@
     "headline": "Tavia Acquisition And Vita Inclinata Technologies Sign LOI For A Business Combination That Would Result In Vita Becoming A Publicly Traded Company Through a De-SPAC; Proposed Transaction Values Vita A",
     "added_at": "2026-07-13T21:50:19.558880+00:00",
     "expires": "2026-08-12T21:50:19.558885+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LEXX": {
+    "ticker": "LEXX",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Lexaria Bioscience Q3 EPS $(0.08) Beats $(0.09) Estimate",
+    "added_at": "2026-07-13T22:50:09.256111+00:00",
+    "expires": "2026-07-20T22:50:09.256119+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

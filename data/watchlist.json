@@ -1,126 +1,6 @@
 {
   "items": [
     {
-      "ticker": "VNRX",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Secondary offering of 3.31M shares by selling stockholder typically creates dilution concerns and near-term selling pressure, though impact depends on float size and existing holder selling rather than company raising capital.",
-      "action_window": "next_day",
-      "headline": "VolitionRX  Files Prospectus Related To Offer And Resale Of Up To 3.31M Shares By Selling Stockholder",
-      "url": "https://www.benzinga.com/quote/VNRX",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636595+00:00"
-    },
-    {
-      "ticker": "HCTI",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Prospectus filing for 28M share offering represents significant dilution risk for existing shareholders and typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Healthcare Triangle Files Prospectus To Offer Up To 28M Shares Of Common Stock By Hudson Global Ventures",
-      "url": "https://www.benzinga.com/news/26/07/60402031/healthcare-triangle-files-prospectus-offer-28m-shares-common-stock-hudson-global-ventures",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636610+00:00"
-    },
-    {
-      "ticker": "MOVE",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Registration of 53.39M shares for resale by Corvex signals significant potential dilution and selling pressure, typically bearish for stock price in the near term.",
-      "action_window": "next_day",
-      "headline": "Corvex Files Prospectus To Register Up To 53.39M Shares Of Common Stock For Resale By Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/07/60402013/corvex-files-prospectus-register-53-39m-shares-common-stock-resale-selling-stockholders",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636617+00:00"
-    },
-    {
-      "ticker": "NAGE",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "A $50M secondary offering typically causes immediate dilution concerns and selling pressure as existing shareholders face ownership dilution and potential supply overhang.",
-      "action_window": "intraday",
-      "headline": "Niagen Bioscience Files Prospectus To Offer And Sell Common Stock Up To $50M",
-      "url": "https://www.benzinga.com/news/26/07/60401959/niagen-bioscience-files-prospectus-offer-and-sell-common-stock-50m",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636625+00:00"
-    },
-    {
-      "ticker": "FFAI",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Elimination of nearly 50 million warrants reduces significant overhang and potential dilution, which is constructive for existing shareholders though this is a financial restructuring move rather than a fundamental business catalyst.",
-      "action_window": "next_day",
-      "headline": "Faraday Future Intelligent Electric Terminates Warrants To Purchase An Aggregate Of 5,359,525 Shares Of Class A Common Stock; Following The Termination Of Warrants Covering 44,551,199 Shares In December 2025, The Co. Has Cumulatively Eliminated Warrants Covering~ 49.9M Shares",
-      "url": "https://www.benzinga.com/news/26/07/60401910/faraday-future-intelligent-electric-terminates-warrants-purchase-aggregate-5-359-525-shares-class-co",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636632+00:00"
-    },
-    {
-      "ticker": "FNUC",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Nasdaq noncompliance letters indicate potential delisting risk, triggering immediate selling pressure and raising concerns about the company's ability to meet exchange listing requirements.",
-      "action_window": "intraday",
-      "headline": "Frontier Nuclear and Minerals Receives Nasdaq Noncompliance Letter",
-      "url": "https://www.benzinga.com/news/26/07/60401869/frontier-nuclear-and-minerals-receives-nasdaq-noncompliance-letter",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636639+00:00"
-    },
-    {
-      "ticker": "TSX:GDL",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Goodfellow reported Q2 earnings miss with EPS down 13.8% YoY and sales down 6.7% YoY, indicating meaningful business deterioration.",
-      "action_window": "next_day",
-      "headline": "Goodfellow Q2 EPS $0.25 Down From $0.29 YoY, Sales $142.686M Down From $152.940M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60401859/goodfellow-q2-eps-0-25-down-0-29-yoy-sales-142-686m-down-152-940m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636645+00:00"
-    },
-    {
-      "ticker": "USO",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Geopolitical tension in the Strait of Hormuz (critical oil shipping chokepoint) creates immediate risk-off sentiment for equities and potential upward pressure on crude oil prices, though this appears to be diplomatic positioning rather than imminent conflict.",
-      "action_window": "intraday",
-      "headline": "'US insists Iran commit to stopping attacks in Hormuz strait, say US officials'- Reuters",
-      "url": "https://www.benzinga.com/news/26/07/60401836/us-insists-iran-commit-stopping-attacks-hormuz-strait-say-us-officials-reuters",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636652+00:00"
-    },
-    {
-      "ticker": "IPWR",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "A $75M mixed securities offering represents significant potential dilution for existing shareholders, typically causing immediate selling pressure upon announcement.",
-      "action_window": "intraday",
-      "headline": "Ideal Power Files Prospectus To Offer Up To $75M Of Common Stock, Preferred Stock, Warrants, And Units",
-      "url": "https://www.benzinga.com/news/26/07/60401752/ideal-power-files-prospectus-offer-75m-common-stock-preferred-stock-warrants-and-units",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636670+00:00"
-    },
-    {
-      "ticker": "FWRD",
-      "tradeable_score": 0.58,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Executive Chairman resignation with independent replacement suggests potential governance improvement but lacks clarity on circumstances, creating mixed trading implications with modest volatility expected.",
-      "action_window": "next_day",
-      "headline": "Forward Air Says Jerome Lorrain Resigns As Executive Chairman Of Co.; Christine M. Gorjanc Appointed As Independent Chair Of The Board",
-      "url": "https://www.benzinga.com/news/26/07/60401474/forward-air-says-jerome-lorrain-resigns-executive-chairman-co-christine-m-gorjanc-appointed-independ",
-      "source": "alpaca",
-      "added_at": "2026-07-10T21:55:34.636677+00:00"
-    },
-    {
       "ticker": "MGM",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -600,6 +480,42 @@
       "url": "https://www.benzinga.com/news/26/07/60430696/tavia-acquisition-and-vita-inclinata-technologies-sign-loi-business-combination-would-result-vita-be",
       "source": "alpaca",
       "added_at": "2026-07-13T21:50:19.562363+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "macro",
+      "rationale": "Geopolitical tension around Strait of Hormuz (critical oil chokepoint) creates immediate volatility for oil prices and broader markets, though diplomatic tone suggests de-escalation potential.",
+      "action_window": "intraday",
+      "headline": "President Trump On Iran Says Attacking Their Capabilities Having To Do With The Hormuz Strait; Knocking Out Iran's Offensive Capability; Think A Deal Is Possible; Want To Be Reimbursed For Protecting Countries That We're Helping In Strait Of Hormuz",
+      "url": "https://www.benzinga.com/general/macro-notification/26/07/60431423/president-trump-iran-says-attacking-their-capabilities-having-do-hormuz-strait-knocking-out-iran-s-o",
+      "source": "alpaca",
+      "added_at": "2026-07-13T22:50:09.278394+00:00"
+    },
+    {
+      "ticker": "LEXX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q3 earnings beat by $0.01 per share (11% better than estimate) is modestly positive but represents a narrow beat for a small-cap biotech with limited institutional following.",
+      "action_window": "next_day",
+      "headline": "Lexaria Bioscience Q3 EPS $(0.08) Beats $(0.09) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60431367/lexaria-bioscience-q3-eps-0-08-beats-0-09-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-13T22:50:09.278410+00:00"
+    },
+    {
+      "ticker": "RPT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Public equity offerings typically dilute existing shareholders and signal management believes stock is overvalued, creating immediate downward pressure on share price.",
+      "action_window": "intraday",
+      "headline": "Rithm Property Trust Reveals Public Offering Of Common Stock; No Size Disclosed",
+      "url": "https://www.benzinga.com/news/26/07/60431256/rithm-property-trust-reveals-public-offering-common-stock-no-size-disclosed",
+      "source": "alpaca",
+      "added_at": "2026-07-13T22:50:09.278419+00:00"
     }
   ]
 }
