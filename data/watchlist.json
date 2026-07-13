@@ -491,6 +491,115 @@
       "url": "https://www.benzinga.com/news/26/07/60429610/erasca-plans-commence-500m-common-stock-offering",
       "source": "alpaca",
       "added_at": "2026-07-13T20:54:41.742948+00:00"
+    },
+    {
+      "ticker": "SCII",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Termination of LOI for business combination is a significant negative catalyst for a SPAC, as it eliminates near-term path to merger and raises uncertainty about finding alternative targets before deadline.",
+      "action_window": "next_day",
+      "headline": "SC II Acquisition Terminates LOI For Proposed Business Combination With A Payments Technology Company On July 12",
+      "url": "https://www.benzinga.com/news/26/07/60431207/sc-ii-acquisition-terminates-loi-proposed-business-combination-payments-technology-company-july-12",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562284+00:00"
+    },
+    {
+      "ticker": "PENG",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large convertible debt offering ($650M with $100M greenshoe) typically signals dilution concerns and often pressures stock price in near-term as convertible arbitrage funds short the equity.",
+      "action_window": "next_day",
+      "headline": "Penguin Solutions Intends To Offer $650.0M In Aggregate Principal Amount Of Convertible Senior Notes Due 2031;  Initial Purchasers May Buy Up To $100M In Additional Notes",
+      "url": "https://www.benzinga.com/news/26/07/60430962/penguin-solutions-intends-offer-650-0m-aggregate-principal-amount-convertible-senior-notes-due-2031-",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562296+00:00",
+      "updated_at": "2026-07-13T21:50:19.562323+00:00"
+    },
+    {
+      "ticker": "AERO",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Grupo Aeromexico reported a significant earnings miss with Q2 EPS of -$0.40 versus $0.50 prior year (180% decline), despite 12.6% revenue growth, indicating major profitability deterioration.",
+      "action_window": "next_day",
+      "headline": "Grupo Aeromexico Q2 EPS $(0.40) Down From $0.50 YoY, Sales $1.479B Up From $1.314B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60431178/grupo-aeromexico-q2-eps-0-40-down-0-50-yoy-sales-1-479b-1-314b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562303+00:00"
+    },
+    {
+      "ticker": "RPAY",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Board rejection of $5.25/share buyout offer signals management believes shares are worth significantly more, validating higher intrinsic value and potentially inviting higher bids.",
+      "action_window": "next_day",
+      "headline": "Repay's Board Rejects Revised Forager Capital Proposal To Buy Shares For $5.25 Per Share; Says Revised Proposal Continues To Significantly Undervalue Company And Is Not In Best Interest Of Stockholders",
+      "url": "https://www.benzinga.com/news/26/07/60431168/repay-s-board-rejects-revised-forager-capital-proposal-buy-shares-5-25-share-says-revised-proposal-c",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562308+00:00"
+    },
+    {
+      "ticker": "JTAI",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Merger closing announcement is a definitive catalyst with concrete terms (7.1M shares consideration), representing completed M&A transaction that typically drives significant price action for the target company.",
+      "action_window": "intraday",
+      "headline": "Jet.AI Announced The Closing Of Its Merger Transaction With flyExclusive; Merger Consideration Consists Of An Aggregate Of 7,096,115 Shares Of flyExclusive Class A Common Stock",
+      "url": "https://www.benzinga.com/news/26/07/60431115/jet-ai-announced-closing-its-merger-transaction-flyexclusive-merger-consideration-consists-aggregate",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562314+00:00"
+    },
+    {
+      "ticker": "DFNS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A 1-for-50 reverse stock split typically signals severe share price distress and is generally viewed negatively by markets as it often precedes further dilution or delisting concerns.",
+      "action_window": "next_day",
+      "headline": "T3 Defense Approves 1-For-50 Reverse Stock Split Effective On July 20, 2026",
+      "url": "https://www.benzinga.com/news/26/07/60430929/t3-defense-approves-1-50-reverse-stock-split-effective-july-20-2026",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562337+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major AI model availability on Amazon's cloud platform strengthens competitive positioning against Microsoft in the lucrative AI infrastructure market.",
+      "action_window": "intraday",
+      "headline": "Amazon Announces OpenAI GPT-5.6 Models Now Generally Available On Amazon Bedrock",
+      "url": "https://www.benzinga.com/news/26/07/60430860/amazon-announces-openai-gpt-5-6-models-now-generally-available-amazon-bedrock",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562346+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Third consecutive night of U.S. military strikes against Iran represents significant geopolitical escalation likely to trigger risk-off sentiment and drive flight to safety while boosting oil prices.",
+      "action_window": "intraday",
+      "headline": "U.S. Central Command Posts On X \"At 4:45 p.m. ET today, U.S. Central Command began launching the third consecutive night of strikes against Iran, at the Commander in Chief's direction. These strikes will continue imposing a heavy cost on Iranian forces and degrade their ability to attack innocent ci",
+      "url": "https://www.benzinga.com/news/26/07/60430803/u-s-central-command-posts-x-4-45-p-m-et-today-u-s-central-command-began-launching-third-consecutive-",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562355+00:00"
+    },
+    {
+      "ticker": "TAVI",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Signed LOI for de-SPAC merger at $450M valuation represents a definitive step toward business combination, typically driving significant SPAC price movement as deal terms are now public.",
+      "action_window": "next_day",
+      "headline": "Tavia Acquisition And Vita Inclinata Technologies Sign LOI For A Business Combination That Would Result In Vita Becoming A Publicly Traded Company Through a De-SPAC; Proposed Transaction Values Vita At A Pre-money Enterprise Value Of $450M",
+      "url": "https://www.benzinga.com/news/26/07/60430696/tavia-acquisition-and-vita-inclinata-technologies-sign-loi-business-combination-would-result-vita-be",
+      "source": "alpaca",
+      "added_at": "2026-07-13T21:50:19.562363+00:00"
     }
   ]
 }
