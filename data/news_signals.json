@@ -3158,5 +3158,79 @@
     "expires": "2026-08-13T20:37:08.115015+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "CCIX": {
+    "ticker": "CCIX",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Churchill Capital Corp IX Reveals its Intention To Liquidate; Co. To Redeem All Outstanding Class A Ordinary Shares; To Cease Operations And Redeem Public Shares;  Last Day That The Company\u2019s Securiti",
+    "added_at": "2026-07-14T21:52:56.800794+00:00",
+    "expires": "2027-01-10T21:52:56.800802+00:00",
+    "hard_block": true
+  },
+  "GCTK": {
+    "ticker": "GCTK",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "GlucoTrack Completes Its Strategic Business Combination With L\u014dkahi Therapeutics; Transaction Is Structured Such That L\u014dkahi Therapeutics Becomes The Operating And Controlling Business Of The Combined",
+    "added_at": "2026-07-14T21:52:56.804015+00:00",
+    "expires": "2026-08-13T21:52:56.804021+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PNR": {
+    "ticker": "PNR",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "Pentair PLC Says Outlook FY2026 Sales Expected To Be Down About 4% To 7%; Q2 2026 Sales Expected About $930M, Down 17% Vs Prior Guidance; Q2 2026 Adjusted EPS Expected To Be ~ $1.12 Versus Previous Gu",
+    "added_at": "2026-07-14T21:52:56.806805+00:00",
+    "expires": "2026-07-28T21:52:56.806811+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DHR": {
+    "ticker": "DHR",
+    "score_delta": 0.029,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "ignore",
+    "headline": "Linden Capital Partners And Audax Private Equity To Sell StatLab Medical Products To Leica Biosystems, An Operating Company Of Danaher; Financial Terms Not Disclosed",
+    "added_at": "2026-07-14T21:52:56.809593+00:00",
+    "expires": "2026-07-28T21:52:56.809598+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WLFC": {
+    "ticker": "WLFC",
+    "score_delta": 0.044,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "next_day",
+    "headline": "Willis Lease Finance To  To Acquire 12 Commercial Aircraft And 13 Aircraft Engines; The Transaction Is Subject To Customary Closing Conditions",
+    "added_at": "2026-07-14T21:52:56.812475+00:00",
+    "expires": "2026-07-28T21:52:56.812481+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LION": {
+    "ticker": "LION",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "'Lionsgate Studios attracts takeover interest from Bollore, Banijay, sources say'- Reuters Exclusive",
+    "added_at": "2026-07-14T21:52:56.817953+00:00",
+    "expires": "2026-08-13T21:52:56.817957+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
