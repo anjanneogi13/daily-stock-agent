@@ -685,5 +685,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-14 13:21:44",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "PERF",
+        "reason": "penny stock ($1.93 < $5.0)",
+        "block_type": "penny_stock"
+      },
+      {
+        "ticker": "HAL",
+        "reason": "SL too tight (1.7% < 2.0% for $35 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

@@ -19,7 +19,7 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_hard_block_pick_count: **2**
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
-- rejected_candidate_count: **2**
+- rejected_candidate_count: **5**
 - scored_count: **323**
 - scored_not_filtered_count: **293**
 - selected_pick_count: **0**
@@ -30,5 +30,8 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - None.
 
 ## Rejected Candidates
+- PERF: **hard_block** — penny stock ($1.93 < $5.0)
 - HAL: **hard_block** — SL too tight (1.7% < 2.0% for $35 stock)
-- SMMT: **hard_block** — SL too tight (2.5% < 2.5% for $15 stock)
+- SMMT: **earnings_risk** — earnings in 0d
+- RPAY: **earnings_risk** — earnings in 0d
+- CAI: **earnings_risk** — earnings in 0d

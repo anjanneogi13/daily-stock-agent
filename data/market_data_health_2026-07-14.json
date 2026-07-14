@@ -2,30 +2,30 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1651,
+      "attempts": 2204,
       "empty": 0,
       "errors": 64,
-      "successes": 1587
+      "successes": 2140
     },
     "monster_info": {
-      "attempts": 963,
+      "attempts": 1286,
       "empty": 0,
-      "errors": 54,
-      "successes": 909
+      "errors": 56,
+      "successes": 1230
     },
     "ohlcv": {
-      "attempts": 1672,
+      "attempts": 2231,
       "empty": 0,
       "errors": 0,
-      "successes": 1672
+      "successes": 2231
     }
   },
   "date": "2026-07-14",
   "providers": {
     "yfinance": {
-      "attempts": 4286,
+      "attempts": 5721,
       "empty": 0,
-      "errors": 118,
+      "errors": 120,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
@@ -36,14 +36,14 @@
         "rate_limited": 118,
         "stale_data": 0,
         "symbol_not_found": 0,
-        "timeout": 0,
+        "timeout": 2,
         "unknown_provider_failure": 0
       },
       "not_found": 0,
       "provider_error": 0,
       "rate_limited": 118,
-      "successes": 4168,
-      "timeout": 0,
+      "successes": 5601,
+      "timeout": 2,
       "unauthorized": 0
     }
   },
@@ -325,5 +325,5 @@
       "ticker": "SMMT"
     }
   ],
-  "timestamp_utc": "2026-07-14T13:10:01Z"
+  "timestamp_utc": "2026-07-14T13:21:44Z"
 }

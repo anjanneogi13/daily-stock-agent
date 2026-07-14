@@ -25,11 +25,11 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **555**
 
 ## Market Data Health
-- yfinance: attempts=**4286**, successes=**4168**, errors=**118**, rate_limited=**118**, unauthorized=**0**
+- yfinance: attempts=**5721**, successes=**5601**, errors=**120**, rate_limited=**118**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED
 
 ## Hard-Blocked Finalists
+- PERF: **penny_stock** — penny stock ($1.93 < $5.0)
 - HAL: **sl_too_tight** — SL too tight (1.7% < 2.0% for $35 stock)
-- SMMT: **sl_too_tight** — SL too tight (2.5% < 2.5% for $15 stock)
