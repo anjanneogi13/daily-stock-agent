@@ -414,19 +414,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NKE": {
-    "ticker": "NKE",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Nike CFO Says Not Expecting Operating Environment To Improve Over The Next Six Months; Expects Fiscal Year 2027 Revenue To Be Down Low-To-Mid Single Digits Vs Estimates Of 0.4% Rise; Expects Q1 Report",
-    "added_at": "2026-06-30T21:54:45.973670+00:00",
-    "expires": "2026-07-14T21:54:45.973676+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "OMER": {
     "ticker": "OMER",
     "score_delta": -0.2,
@@ -572,32 +559,6 @@
     "headline": "Concorde International Group Receives Offer To Sell Majority Equity Interest In Wholly Owned Subsidiary YOOV Group Holding Limited; No Terms Disclosed",
     "added_at": "2026-06-30T18:02:03.275756+00:00",
     "expires": "2026-07-30T18:02:03.275761+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AA": {
-    "ticker": "AA",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Alcoa To Acquire South32 Limited\u2019s Interests In Bauxite Mine, Alumina Refinery And Aluminum Smelter Operations In A Cash And Stock Transaction For An Upfront Consideration Of ~$4.1B",
-    "added_at": "2026-06-30T21:54:45.971065+00:00",
-    "expires": "2026-07-14T21:54:45.971072+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ASTL": {
-    "ticker": "ASTL",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Algoma Steel Group Provides Guidance For Q2 2026; Total Steel Shipments For The Quarter Are Expected To Be In The Range Of 175,000 Tons To 180,000 Tons And Adjusted EBITDA Is Expected To Be In The Ran",
-    "added_at": "2026-06-30T21:54:45.975818+00:00",
-    "expires": "2026-07-14T21:54:45.975824+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3230,6 +3191,45 @@
     "headline": "'Lionsgate Studios attracts takeover interest from Bollore, Banijay, sources say'- Reuters Exclusive",
     "added_at": "2026-07-14T21:52:56.817953+00:00",
     "expires": "2026-08-13T21:52:56.817957+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DRI": {
+    "ticker": "DRI",
+    "score_delta": 0.018,
+    "catalyst": "product_launch",
+    "sentiment": "neutral",
+    "tradeable_score": 0.25,
+    "action_window": "ignore",
+    "headline": "Olive Garden Follows McDonald\u2019s Bet on Value: Will Never Ending Pasta Pass Strategy Work?",
+    "added_at": "2026-07-14T22:51:51.526887+00:00",
+    "expires": "2026-07-21T22:51:51.526895+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JCTC": {
+    "ticker": "JCTC",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Jewett-Cameron Trading Q3 EPS $(0.23) Down From $(0.18) YoY, Sales $9.852M Down From $12.605M YoY",
+    "added_at": "2026-07-14T22:51:51.530282+00:00",
+    "expires": "2026-07-21T22:51:51.530288+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GLDG": {
+    "ticker": "GLDG",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "GoldMining Q2 EPS $(0.03) Down From $(0.01) YoY",
+    "added_at": "2026-07-14T22:51:51.533171+00:00",
+    "expires": "2026-07-21T22:51:51.533177+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

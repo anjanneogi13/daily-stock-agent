@@ -1171,15 +1171,16 @@
     },
     {
       "ticker": "PNR",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.92,
       "sentiment": "bearish",
       "category": "guidance_cut",
-      "rationale": "Pentair significantly cut Q2 2026 guidance with sales down 17% and adjusted EPS reduced 24% below prior guidance, while also lowering FY2026 sales outlook by 4-7%, representing a major negative catalyst.",
+      "rationale": "Pentair slashed Q2 EPS guidance by 24% and revenue guidance by 18%, both significantly below consensus estimates, indicating severe operational deterioration.",
       "action_window": "next_day",
-      "headline": "Pentair PLC Says Outlook FY2026 Sales Expected To Be Down About 4% To 7%; Q2 2026 Sales Expected About $930M, Down 17% Vs Prior Guidance; Q2 2026 Adjusted EPS Expected To Be ~ $1.12 Versus Previous Guide Of $1.47 To $1.50",
-      "url": "https://www.benzinga.com/news/26/07/60458846/pentair-plc-says-outlook-fy2026-sales-expected-be-down-about-4-7-q2-2026-sales-expected-about-930m-d",
+      "headline": "Pentair Lowers Q2 Adj EPS Guidance from $1.47-$1.50 to $1.12 vs $1.48 Est; Lowers Q2 Sales Guidance from $1.134B to $930.000M vs $1.137B Est",
+      "url": "https://www.benzinga.com/news/26/07/60459009/pentair-lowers-q2-adj-eps-guidance-1-47-1-50-1-12-vs-1-48-est-lowers-q2-sales-guidance-1-134b-930-00",
       "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834853+00:00"
+      "added_at": "2026-07-14T21:52:56.834853+00:00",
+      "updated_at": "2026-07-14T22:51:51.570167+00:00"
     },
     {
       "ticker": "BTSG",
@@ -1240,6 +1241,30 @@
       "url": "https://www.benzinga.com/news/26/07/60458122/australia-japan-united-states-and-alcoa-reveal-final-investment-decision-gallium-project-western-aus",
       "source": "alpaca",
       "added_at": "2026-07-14T21:52:56.834906+00:00"
+    },
+    {
+      "ticker": "JCTC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q3 earnings miss with EPS deteriorating 28% YoY to $(0.23) and sales declining 22% YoY to $9.852M represents significant fundamental weakness requiring immediate reassessment.",
+      "action_window": "next_day",
+      "headline": "Jewett-Cameron Trading Q3 EPS $(0.23) Down From $(0.18) YoY, Sales $9.852M Down From $12.605M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60459094/jewett-cameron-trading-q3-eps-0-23-down-0-18-yoy-sales-9-852m-down-12-605m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-14T22:51:51.570138+00:00"
+    },
+    {
+      "ticker": "GLDG",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS loss widened 200% from $(0.01) to $(0.03) year-over-year, indicating deteriorating profitability that will likely pressure the stock in next-day trading.",
+      "action_window": "next_day",
+      "headline": "GoldMining Q2 EPS $(0.03) Down From $(0.01) YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60459070/goldmining-q2-eps-0-03-down-0-01-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-14T22:51:51.570154+00:00"
     }
   ]
 }
