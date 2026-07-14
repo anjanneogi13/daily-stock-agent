@@ -20,12 +20,12 @@ Monitoring-only failure evidence. No official picks were generated.
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **321**
+- scored_count: **319**
 - scorer_workers: **4**
 - universe_count: **551**
 
 ## Market Data Health
-- yfinance: attempts=**1426**, successes=**1374**, errors=**52**, rate_limited=**52**, unauthorized=**0**
+- yfinance: attempts=**2850**, successes=**2786**, errors=**64**, rate_limited=**64**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED

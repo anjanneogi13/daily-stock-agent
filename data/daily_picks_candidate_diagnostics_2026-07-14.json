@@ -76,7 +76,7 @@
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 321,
+      "scored_count": 319,
       "scorer_workers": 4,
       "universe_count": 551
     },
@@ -210,8 +210,8 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 321,
-      "scored_not_filtered_count": 291,
+      "scored_count": 319,
+      "scored_not_filtered_count": 289,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 551
@@ -232,10 +232,10 @@
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 0,
     "pre_hard_block_pick_count": 2,
-    "scored_count": 321,
+    "scored_count": 319,
     "scorer_workers": 4,
     "universe_count": 551
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-07-14T12:10:00Z"
+  "timestamp_utc": "2026-07-14T12:40:44Z"
 }
