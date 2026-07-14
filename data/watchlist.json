@@ -805,6 +805,30 @@
       "url": "https://www.benzinga.com/news/26/07/60439298/kopin-hits-three-microled-milestones-under-u-s-ibas-program-advancing-domestic-manufacturing-and-nex",
       "source": "alpaca",
       "added_at": "2026-07-14T12:47:24.523492+00:00"
+    },
+    {
+      "ticker": "DML",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital initiating coverage with Outperform rating and C$6 price target represents meaningful positive analyst catalyst from a major bank that typically drives trading activity.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Initiates Coverage On Denison Mines with Outperform Rating, Announces Price Target of C$6",
+      "url": "https://www.benzinga.com/news/26/07/60444458/rbc-capital-initiates-coverage-denison-mines-outperform-rating-announces-price-target-c-6",
+      "source": "alpaca",
+      "added_at": "2026-07-14T14:44:55.810546+00:00"
+    },
+    {
+      "ticker": "C",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with 45% profit jump and best investment banking revenue since 2021 signals turnaround momentum despite continued equity division challenges.",
+      "action_window": "intraday",
+      "headline": "Citigroup CFO Says Bank Is Still Playing Catch-up in Equities",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60444216/citigroup-cfo-says-bank-is-still-playing-catch-up-in-equities",
+      "source": "alpaca",
+      "added_at": "2026-07-14T14:44:55.810558+00:00"
     }
   ]
 }
