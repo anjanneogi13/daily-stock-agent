@@ -70,15 +70,15 @@
       "capped_count": 2,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
-      "fetched_count": 549,
+      "fetched_count": 553,
       "filtered_count": 30,
       "final_pick_count": 0,
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 319,
+      "scored_count": 323,
       "scorer_workers": 4,
-      "universe_count": 551
+      "universe_count": 555
     },
     "portfolio_risk_blocked_candidates": [],
     "post_hard_block_candidates": [],
@@ -199,7 +199,7 @@
     "selected_picks": [],
     "stage_counts": {
       "capped_count": 2,
-      "fetched_count": 549,
+      "fetched_count": 553,
       "filtered_count": 30,
       "filtered_not_capped_count": 28,
       "hard_blocked_count": 2,
@@ -210,11 +210,11 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 319,
-      "scored_not_filtered_count": 289,
+      "scored_count": 323,
+      "scored_not_filtered_count": 293,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
-      "universe_count": 551
+      "universe_count": 555
     }
   },
   "live_trading_enabled": false,
@@ -225,20 +225,20 @@
     "capped_count": 2,
     "data_readiness_passed": true,
     "data_readiness_status": "ready",
-    "fetched_count": 549,
+    "fetched_count": 553,
     "filtered_count": 30,
     "final_pick_count": 0,
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 0,
     "pre_hard_block_pick_count": 2,
-    "scored_count": 319,
+    "scored_count": 323,
     "scorer_workers": 4,
-    "universe_count": 551
+    "universe_count": 555
   },
   "primary_no_pick_cause": "NO_PICK_ALL_FINALISTS_HARD_BLOCKED",
   "ready_for_paper_trading": false,
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "timestamp_utc": "2026-07-14T12:40:44Z"
+  "timestamp_utc": "2026-07-14T13:10:01Z"
 }

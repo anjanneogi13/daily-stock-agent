@@ -2,30 +2,30 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1098,
+      "attempts": 1651,
       "empty": 0,
-      "errors": 35,
-      "successes": 1063
+      "errors": 64,
+      "successes": 1587
     },
     "monster_info": {
-      "attempts": 640,
+      "attempts": 963,
       "empty": 0,
-      "errors": 29,
-      "successes": 611
+      "errors": 54,
+      "successes": 909
     },
     "ohlcv": {
-      "attempts": 1112,
+      "attempts": 1672,
       "empty": 0,
       "errors": 0,
-      "successes": 1112
+      "successes": 1672
     }
   },
   "date": "2026-07-14",
   "providers": {
     "yfinance": {
-      "attempts": 2850,
+      "attempts": 4286,
       "empty": 0,
-      "errors": 64,
+      "errors": 118,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
@@ -33,7 +33,7 @@
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 64,
+        "rate_limited": 118,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -41,17 +41,17 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 64,
-      "successes": 2786,
+      "rate_limited": 118,
+      "successes": 4168,
       "timeout": 0,
       "unauthorized": 0
     }
   },
   "run": {
-    "fetched_count": 549,
+    "fetched_count": 553,
     "final_pick_count": 0,
-    "scored_count": 319,
-    "universe_count": 551
+    "scored_count": 323,
+    "universe_count": 555
   },
   "samples": [
     {
@@ -325,5 +325,5 @@
       "ticker": "SMMT"
     }
   ],
-  "timestamp_utc": "2026-07-14T12:40:44Z"
+  "timestamp_utc": "2026-07-14T13:10:01Z"
 }

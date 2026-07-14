@@ -9,7 +9,7 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 
 ## Stage Counts
 - capped_count: **2**
-- fetched_count: **549**
+- fetched_count: **553**
 - filtered_count: **30**
 - filtered_not_capped_count: **28**
 - hard_blocked_count: **2**
@@ -20,11 +20,11 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
 - rejected_candidate_count: **2**
-- scored_count: **319**
-- scored_not_filtered_count: **289**
+- scored_count: **323**
+- scored_not_filtered_count: **293**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
-- universe_count: **551**
+- universe_count: **555**
 
 ## Selected Official Picks
 - None.

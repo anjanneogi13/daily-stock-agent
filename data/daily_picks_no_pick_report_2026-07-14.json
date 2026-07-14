@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-29333041053",
+  "artifact_bundle_name": "official-decision-artifacts-29335028155",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -70,15 +70,15 @@
       "capped_count": 2,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
-      "fetched_count": 549,
+      "fetched_count": 553,
       "filtered_count": 30,
       "final_pick_count": 0,
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 319,
+      "scored_count": 323,
       "scorer_workers": 4,
-      "universe_count": 551
+      "universe_count": 555
     },
     "portfolio_risk_blocked_candidates": [],
     "post_hard_block_candidates": [],
@@ -199,7 +199,7 @@
     "selected_picks": [],
     "stage_counts": {
       "capped_count": 2,
-      "fetched_count": 549,
+      "fetched_count": 553,
       "filtered_count": 30,
       "filtered_not_capped_count": 28,
       "hard_blocked_count": 2,
@@ -210,15 +210,15 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 319,
-      "scored_not_filtered_count": 289,
+      "scored_count": 323,
+      "scored_not_filtered_count": 293,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
-      "universe_count": 551
+      "universe_count": 555
     }
   },
-  "commit_sha": "eccbfc50cbd3af89f12ea9c978c30373915f87cf",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/eccbfc50cbd3af89f12ea9c978c30373915f87cf",
+  "commit_sha": "9e91bf11aa0890ebd4dea72dd5cf4e2db25de8c5",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/9e91bf11aa0890ebd4dea72dd5cf4e2db25de8c5",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -293,15 +293,15 @@
       "capped_count": 2,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
-      "fetched_count": 549,
+      "fetched_count": 553,
       "filtered_count": 30,
       "final_pick_count": 0,
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 0,
       "pre_hard_block_pick_count": 2,
-      "scored_count": 319,
+      "scored_count": 323,
       "scorer_workers": 4,
-      "universe_count": 551
+      "universe_count": 555
     },
     "portfolio_risk_blocked_candidates": [],
     "post_hard_block_candidates": [],
@@ -422,7 +422,7 @@
     "selected_picks": [],
     "stage_counts": {
       "capped_count": 2,
-      "fetched_count": 549,
+      "fetched_count": 553,
       "filtered_count": 30,
       "filtered_not_capped_count": 28,
       "hard_blocked_count": 2,
@@ -433,11 +433,11 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 2,
-      "scored_count": 319,
-      "scored_not_filtered_count": 289,
+      "scored_count": 323,
+      "scored_not_filtered_count": 293,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
-      "universe_count": 551
+      "universe_count": 555
     }
   },
   "human_readable_summary": "No official picks were generated because all 2 finalist candidate(s) were hard-blocked.",
@@ -446,30 +446,30 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1098,
+        "attempts": 1651,
         "empty": 0,
-        "errors": 35,
-        "successes": 1063
+        "errors": 64,
+        "successes": 1587
       },
       "monster_info": {
-        "attempts": 640,
+        "attempts": 963,
         "empty": 0,
-        "errors": 29,
-        "successes": 611
+        "errors": 54,
+        "successes": 909
       },
       "ohlcv": {
-        "attempts": 1112,
+        "attempts": 1672,
         "empty": 0,
         "errors": 0,
-        "successes": 1112
+        "successes": 1672
       }
     },
     "date": "2026-07-14",
     "providers": {
       "yfinance": {
-        "attempts": 2850,
+        "attempts": 4286,
         "empty": 0,
-        "errors": 64,
+        "errors": 118,
         "failure_types": {
           "empty_response": 0,
           "market_closed": 0,
@@ -477,7 +477,7 @@
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 64,
+          "rate_limited": 118,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -485,17 +485,17 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 64,
-        "successes": 2786,
+        "rate_limited": 118,
+        "successes": 4168,
         "timeout": 0,
         "unauthorized": 0
       }
     },
     "run": {
-      "fetched_count": 549,
+      "fetched_count": 553,
       "final_pick_count": 0,
-      "scored_count": 319,
-      "universe_count": 551
+      "scored_count": 323,
+      "universe_count": 555
     },
     "samples": [
       {
@@ -769,7 +769,7 @@
         "ticker": "SMMT"
       }
     ],
-    "timestamp_utc": "2026-07-14T12:40:44Z"
+    "timestamp_utc": "2026-07-14T13:10:01Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -780,15 +780,15 @@
     "capped_count": 2,
     "data_readiness_passed": true,
     "data_readiness_status": "ready",
-    "fetched_count": 549,
+    "fetched_count": 553,
     "filtered_count": 30,
     "final_pick_count": 0,
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 0,
     "pre_hard_block_pick_count": 2,
-    "scored_count": 319,
+    "scored_count": 323,
     "scorer_workers": 4,
-    "universe_count": 551
+    "universe_count": 555
   },
   "primary_no_pick_cause": "NO_PICK_ALL_FINALISTS_HARD_BLOCKED",
   "provider_status": "healthy",
@@ -798,11 +798,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-07-14T08:40:44-04:00",
+  "selection_time_et": "2026-07-14T09:10:01-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-07-14T12:40:44Z",
+  "timestamp_utc": "2026-07-14T13:10:01Z",
   "watch_only_available": false,
-  "workflow_run_id": "29333041053",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29333041053"
+  "workflow_run_id": "29335028155",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29335028155"
 }

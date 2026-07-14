@@ -14,18 +14,18 @@ Monitoring-only failure evidence. No official picks were generated.
 - capped_count: **2**
 - data_readiness_passed: **True**
 - data_readiness_status: **ready**
-- fetched_count: **549**
+- fetched_count: **553**
 - filtered_count: **30**
 - final_pick_count: **0**
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **319**
+- scored_count: **323**
 - scorer_workers: **4**
-- universe_count: **551**
+- universe_count: **555**
 
 ## Market Data Health
-- yfinance: attempts=**2850**, successes=**2786**, errors=**64**, rate_limited=**64**, unauthorized=**0**
+- yfinance: attempts=**4286**, successes=**4168**, errors=**118**, rate_limited=**118**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED
