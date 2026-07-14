@@ -1416,32 +1416,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LRCX": {
-    "ticker": "LRCX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "TD Cowen Maintains Buy on Lam Research, Raises Price Target to $400",
-    "added_at": "2026-07-09T16:25:01.048642+00:00",
-    "expires": "2026-07-14T16:25:01.048649+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KLAC": {
-    "ticker": "KLAC",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "TD Cowen Maintains Buy on KLA, Raises Price Target to $260",
-    "added_at": "2026-07-09T16:25:01.051790+00:00",
-    "expires": "2026-07-14T16:25:01.051795+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BBAI": {
     "ticker": "BBAI",
     "score_delta": 0.049,
@@ -1455,19 +1429,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ICHR": {
-    "ticker": "ICHR",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "TD Cowen Maintains Buy on Ichor Holdings, Raises Price Target to $115",
-    "added_at": "2026-07-09T16:25:01.057093+00:00",
-    "expires": "2026-07-14T16:25:01.057098+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AMAT": {
     "ticker": "AMAT",
     "score_delta": 0.1,
@@ -1478,32 +1439,6 @@
     "headline": "Applied Materials CEO Sees 'Tremendous Visibility' Into Demand",
     "added_at": "2026-07-09T16:25:01.064953+00:00",
     "expires": "2026-07-23T16:25:01.064959+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ZI": {
-    "ticker": "ZI",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Sell on ZoomInfo Technologies, Lowers Price Target to $2",
-    "added_at": "2026-07-09T16:25:01.062294+00:00",
-    "expires": "2026-07-14T16:25:01.062300+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CP": {
-    "ticker": "CP",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Canadian Pacific Kansas, Raises Price Target to $106",
-    "added_at": "2026-07-09T16:25:01.067603+00:00",
-    "expires": "2026-07-14T16:25:01.067609+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2792,14 +2727,14 @@
   },
   "MRVL": {
     "ticker": "MRVL",
-    "score_delta": 0.046,
+    "score_delta": 0.05,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on Marvell Technology, Raises Price Target to $400",
-    "added_at": "2026-07-14T11:21:24.866217+00:00",
-    "expires": "2026-07-19T11:21:24.866222+00:00",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Why Is Marvell Technology Stock Gaining Tuesday?",
+    "added_at": "2026-07-14T17:40:55.461228+00:00",
+    "expires": "2026-07-19T17:40:55.461233+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3114,5 +3049,79 @@
     "expires": "2026-07-19T16:11:03.310470+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "VIK": {
+    "ticker": "VIK",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "BNP Paribas Reiterates Outperform on Viking Holdings, Raises Price Target to $121",
+    "added_at": "2026-07-14T17:40:55.457226+00:00",
+    "expires": "2026-07-19T17:40:55.457233+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GFUZ": {
+    "ticker": "GFUZ",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Why Are General Fusion Shares Surging On Tuesday?",
+    "added_at": "2026-07-14T17:40:55.459458+00:00",
+    "expires": "2026-07-21T17:40:55.459465+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FAST": {
+    "ticker": "FAST",
+    "score_delta": 0.093,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Why Is Fastenal Stock Trading Lower Today?",
+    "added_at": "2026-07-14T17:40:55.462891+00:00",
+    "expires": "2026-07-21T17:40:55.462896+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CTEV": {
+    "ticker": "CTEV",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "'DOJ\u2019s Claritev Probe Intensifies With New Information Demands' - Bloomberg",
+    "added_at": "2026-07-14T17:40:55.532224+00:00",
+    "expires": "2026-07-28T17:40:55.532231+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CHTR": {
+    "ticker": "CHTR",
+    "score_delta": -0.03,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "BNP Paribas Maintains Underperform on Charter Communications, Lowers Price Target to $120",
+    "added_at": "2026-07-14T17:40:55.533956+00:00",
+    "expires": "2026-07-19T17:40:55.533961+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LCID": {
+    "ticker": "LCID",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "'Lucid Weighs Going Private or Chapter 11 as Adviser Reports to Board' - EV",
+    "added_at": "2026-07-14T17:40:55.535586+00:00",
+    "expires": "2027-01-10T17:40:55.535591+00:00",
+    "hard_block": true
   }
 }
