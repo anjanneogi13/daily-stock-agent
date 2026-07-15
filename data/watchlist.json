@@ -1738,6 +1738,78 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60483340/western-digital-stock-tumbles-as-cxmt-targets-10-billion-shanghai-ipo",
       "source": "alpaca",
       "added_at": "2026-07-15T20:12:34.456586+00:00"
+    },
+    {
+      "ticker": "UNB",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Union Bankshares reported Q2 earnings beat with EPS up 15% YoY and revenue up 10% YoY, representing solid growth across both metrics.",
+      "action_window": "next_day",
+      "headline": "Union Bankshares Q2 EPS $0.61 Up From $0.53 YoY, Sales $14.534M Up From $13.200M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60486588/union-bankshares-q2-eps-0-61-0-53-yoy-sales-14-534m-13-200m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-15T21:30:08.152468+00:00"
+    },
+    {
+      "ticker": "GSBC",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Great Southern Bancorp beat both EPS estimates by 3.6% and revenue estimates by 2.3%, which is a solid double beat for a regional bank that typically trades on earnings surprises.",
+      "action_window": "next_day",
+      "headline": "Great Southern Bancorp Q2 EPS $1.43 Beats $1.38 Estimate, Sales $49.493M Beat $48.377M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60486557/great-southern-bancorp-q2-eps-1-43-beats-1-38-estimate-sales-49-493m-beat-48-377m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-15T21:30:08.152487+00:00"
+    },
+    {
+      "ticker": "HOMB",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Home BancShares beat both EPS and revenue estimates with EPS exceeding by 4.9% and sales beating by 2.0%, representing a solid double beat for a regional bank.",
+      "action_window": "next_day",
+      "headline": "Home BancShares Q2 Adj. EPS $0.64 Beats $0.61 Estimate, Sales $295.097M Beat $289.253M Estimate",
+      "url": "https://www.benzinga.com/quote/HOMB",
+      "source": "alpaca",
+      "added_at": "2026-07-15T21:30:08.152498+00:00"
+    },
+    {
+      "ticker": "CMCT",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mortgage maturity default is a significant credit event that signals financial distress and potential asset loss, likely to trigger immediate negative market reaction for the REIT.",
+      "action_window": "next_day",
+      "headline": "Creative Media Receives Notice Of Maturity Default On 1 Kaiser Plaza Mortgage As Of July 9, 2026",
+      "url": "https://www.benzinga.com/news/26/07/60486432/creative-media-receives-notice-maturity-default-1-kaiser-plaza-mortgage-july-9-2026",
+      "source": "alpaca",
+      "added_at": "2026-07-15T21:30:08.152509+00:00"
+    },
+    {
+      "ticker": "EOSE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic partnership with Department of Defense for national infrastructure represents a significant government contract win that validates technology and provides material revenue visibility for a small-cap energy storage company.",
+      "action_window": "intraday",
+      "headline": "Eos Energy Enterprises Announces A Strategic Partnership With The Department Of War To Enhance The Resilience Of National Defense Infrastructure",
+      "url": "https://www.benzinga.com/news/26/07/60486379/eos-energy-enterprises-announces-strategic-partnership-department-war-enhance-resilience-national-de",
+      "source": "alpaca",
+      "added_at": "2026-07-15T21:30:08.152518+00:00"
+    },
+    {
+      "ticker": "NKE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Material $385M severance charge signals significant organizational restructuring and potential operational challenges, though restructuring can eventually improve efficiency.",
+      "action_window": "next_day",
+      "headline": "Nike Says Co. In 2026, Recognized $385M Of Estimated Employee Severance Costs Related To Organizational Changes",
+      "url": "https://www.benzinga.com/news/26/07/60486176/nike-says-co-2026-recognized-385m-estimated-employee-severance-costs-related-organizational-changes",
+      "source": "alpaca",
+      "added_at": "2026-07-15T21:30:08.152530+00:00"
     }
   ]
 }

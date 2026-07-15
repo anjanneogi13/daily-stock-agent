@@ -562,45 +562,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SGLY": {
-    "ticker": "SGLY",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Singularity Future Technology Settles Class Action For $5.8M",
-    "added_at": "2026-07-01T20:23:07.209773+00:00",
-    "expires": "2026-07-15T20:23:07.209779+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GBX": {
-    "ticker": "GBX",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Greenbrier Companies Narrows FY2026 GAAP EPS Guidance from $3.00-$3.50 to $3.00-$3.15 vs $3.17 Est; Affirms FY2026 Sales Guidance of $2.400B-$2.500B vs $2.535B Est",
-    "added_at": "2026-07-01T20:23:07.205547+00:00",
-    "expires": "2026-07-15T20:23:07.205553+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FC": {
-    "ticker": "FC",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Franklin Covey Lowers FY2026 Sales Guidance from $265.000M-$275.000M to $260.000M-$267.000M vs $267.445M Est",
-    "added_at": "2026-07-01T20:23:07.211890+00:00",
-    "expires": "2026-07-15T20:23:07.211896+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VRTX": {
     "ticker": "VRTX",
     "score_delta": 0.15,
@@ -1078,19 +1039,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MSFT": {
-    "ticker": "MSFT",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "OpenAI Unveils GPT-Live As Competition Heats Up Around AI Voice Assistants",
-    "added_at": "2026-07-08T20:42:58.076425+00:00",
-    "expires": "2026-07-15T20:42:58.076433+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LLY": {
     "ticker": "LLY",
     "score_delta": -0.057,
@@ -1101,19 +1049,6 @@
     "headline": "U.S. Appeals Court Revives Teva Pharmaceuticals' Lawsuit Against Eli Lilly Over Alleged Violation Of Settlement Agreement",
     "added_at": "2026-07-13T19:57:51.277391+00:00",
     "expires": "2026-07-27T19:57:51.277397+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FMC": {
-    "ticker": "FMC",
-    "score_delta": 0.029,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "ignore",
-    "headline": "FMC Corp. Submits Regulatory Dossier For Rimisoxafen To US Environmental Protection Agency, Covering Use On Corn, Soybean, Sunflower And Select Pulse Crops",
-    "added_at": "2026-07-08T20:42:58.081827+00:00",
-    "expires": "2026-07-15T20:42:58.081832+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3399,6 +3334,45 @@
     "headline": "Frequency Electronics Q4 EPS $(0.50) Misses $0.24 Estimate, Sales $15.398M Miss $18.575M Estimate",
     "added_at": "2026-07-15T20:12:34.449117+00:00",
     "expires": "2026-07-22T20:12:34.449122+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UNB": {
+    "ticker": "UNB",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Union Bankshares Q2 EPS $0.61 Up From $0.53 YoY, Sales $14.534M Up From $13.200M YoY",
+    "added_at": "2026-07-15T21:30:08.138966+00:00",
+    "expires": "2026-07-22T21:30:08.138973+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GSBC": {
+    "ticker": "GSBC",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Great Southern Bancorp Q2 EPS $1.43 Beats $1.38 Estimate, Sales $49.493M Beat $48.377M Estimate",
+    "added_at": "2026-07-15T21:30:08.142427+00:00",
+    "expires": "2026-07-22T21:30:08.142433+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HOMB": {
+    "ticker": "HOMB",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Home BancShares Q2 Adj. EPS $0.64 Beats $0.61 Estimate, Sales $295.097M Beat $289.253M Estimate",
+    "added_at": "2026-07-15T21:30:08.145350+00:00",
+    "expires": "2026-07-22T21:30:08.145355+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
