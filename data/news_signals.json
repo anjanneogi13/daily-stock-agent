@@ -2415,14 +2415,14 @@
   },
   "ASML": {
     "ticker": "ASML",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on ASML Holding, Raises Price Target to $2000",
-    "added_at": "2026-07-14T14:44:55.802141+00:00",
-    "expires": "2026-07-19T14:44:55.802146+00:00",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "ASML Stock Rises On Second-Quarter Beat, Raised Forecast",
+    "added_at": "2026-07-15T23:32:11.124898+00:00",
+    "expires": "2026-07-22T23:32:11.124904+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3503,6 +3503,19 @@
     "headline": "'Honda to build electric scooter in Vietnam as soon as September'- Nikkei Asia",
     "added_at": "2026-07-15T22:31:29.350016+00:00",
     "expires": "2026-07-22T22:31:29.350022+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GRRR": {
+    "ticker": "GRRR",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Gorilla Technology Completes Acquisition of Shackleton Finance and Launches Gorilla Tech Capital",
+    "added_at": "2026-07-15T23:32:11.115924+00:00",
+    "expires": "2026-07-29T23:32:11.115929+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -1560,15 +1560,16 @@
     },
     {
       "ticker": "ASML",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.88,
       "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Positive macro news (cooler PPI inflation data) combined with optimistic ASML earnings supports AI-related tech stocks, though this is broader market commentary rather than company-specific catalyst.",
+      "category": "earnings_beat",
+      "rationale": "ASML delivered both a Q2 earnings beat and raised full-year guidance, a dual catalyst that typically drives strong trading momentum in semiconductor equipment stocks.",
       "action_window": "intraday",
-      "headline": "57 Economists Wrong On Inflation; ASML Earnings Bring Optimism To AI Trade",
-      "url": "https://www.benzinga.com/Opinion/26/07/60479835/57-economists-wrong-on-inflation-asml-earnings-bring-optimism-to-ai-trade",
+      "headline": "ASML Stock Rises On Second-Quarter Beat, Raised Forecast",
+      "url": "https://finance.yahoo.com/m/b6d165b4-1f4b-3796-a18d-ba071bae4491/asml-stock-rises-on.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-15T17:46:02.818213+00:00"
+      "added_at": "2026-07-15T17:46:02.818213+00:00",
+      "updated_at": "2026-07-15T23:32:11.132295+00:00"
     },
     {
       "ticker": "GRRR",
