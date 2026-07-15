@@ -1351,6 +1351,54 @@
       "url": "https://www.benzinga.com/m-a/26/07/60461440/paypal-stock-surges-nearly-15-in-premarket-as-stripe-and-advent-international-reportedly-propose-53-billion-joint-acquisition",
       "source": "alpaca",
       "added_at": "2026-07-15T09:55:27.992702+00:00"
+    },
+    {
+      "ticker": "TSX:LOVE",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Cannara Biotech beat both EPS estimates by 67% ($0.05 vs $0.03) and revenue estimates by 1.9%, creating a clear positive trading catalyst with immediate market impact.",
+      "action_window": "intraday",
+      "headline": "Cannara Biotech Q3 EPS $0.05 Beats $0.03 Estimate, Sales $31.828M Beat $31.233M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60464103/cannara-biotech-q3-eps-0-05-beats-0-03-estimate-sales-31-828m-beat-31-233m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-15T11:25:08.953372+00:00"
+    },
+    {
+      "ticker": "KEEL",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Sherbrooke approval for 96 MW project transfer and land purchase represents positive project progress, but remains subject to provincial ministry review creating execution uncertainty.",
+      "action_window": "next_day",
+      "headline": "Keel Infrastructure Secures Sherbrooke Approval For 96 MW Transfer And Land Purchase; Project Now Pending Review By Quebec\u2019s Ministry Of Economy, Innovation And Energy",
+      "url": "https://www.benzinga.com/news/26/07/60464015/keel-infrastructure-secures-sherbrooke-approval-96-mw-transfer-and-land-purchase-project-now-pending",
+      "source": "alpaca",
+      "added_at": "2026-07-15T11:25:08.953389+00:00"
+    },
+    {
+      "ticker": "CRGO",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong 33% YoY growth in Gross Booking Value represents meaningful operational momentum that typically drives positive price action for growth-stage companies.",
+      "action_window": "intraday",
+      "headline": "Freightos Reports Q2 Gross Booking Value Of $422M, Up 33% YoY",
+      "url": "https://www.benzinga.com/news/26/07/60464005/freightos-reports-q2-gross-booking-value-422m-33-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-15T11:25:08.953399+00:00"
+    },
+    {
+      "ticker": "RDW",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $21.5M in follow-on defense contract awards represents tangible near-term revenue for a small-cap space infrastructure company, validating existing program relationships.",
+      "action_window": "intraday",
+      "headline": "Redwire Receives Follow-On Awards Totaling $21.5M In Purchase Orders Supporting PAE RAS Aircraft Program Management Office FoSUAS Team",
+      "url": "https://www.benzinga.com/news/26/07/60463891/redwire-receives-follow-awards-totaling-21-5m-purchase-orders-supporting-pae-ras-aircraft-program-ma",
+      "source": "alpaca",
+      "added_at": "2026-07-15T11:25:08.953409+00:00"
     }
   ]
 }
