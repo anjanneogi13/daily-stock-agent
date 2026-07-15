@@ -715,15 +715,16 @@
     },
     {
       "ticker": "INTC",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.68,
       "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Analyst maintains positive rating with significant price target raise, indicating increased confidence but not a rating upgrade from neutral to positive.",
+      "category": "product_launch",
+      "rationale": "Intel being first to deploy ASML's advanced High-NA EUV manufacturing technology represents a competitive technological advantage in chip production, confirmed by 2%+ premarket gain.",
       "action_window": "intraday",
-      "headline": "Keybanc Maintains Overweight on Intel, Raises Price Target to $155",
-      "url": "https://www.benzinga.com/news/26/07/60436634/keybanc-maintains-overweight-intel-raises-price-target-155",
+      "headline": "What Is Going on With Intel Stock on Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60472191/what-is-going-on-with-intel-stock-on-wednesday",
       "source": "alpaca",
-      "added_at": "2026-07-14T11:21:24.884654+00:00"
+      "added_at": "2026-07-14T11:21:24.884654+00:00",
+      "updated_at": "2026-07-15T14:44:52.689765+00:00"
     },
     {
       "ticker": "CRCL",
@@ -1447,6 +1448,54 @@
       "url": "https://www.benzinga.com/news/26/07/60466708/lase-group-s-fonon-technologies-advances-step-2-u-s-air-force-shaw-air-force-base-battle-lab-commerc",
       "source": "alpaca",
       "added_at": "2026-07-15T12:50:50.330469+00:00"
+    },
+    {
+      "ticker": "SKHY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Technical profit-taking after record $26.5B cross-listing debut presents tactical entry opportunity in AI memory sector leader, though 7% premarket drop suggests near-term volatility.",
+      "action_window": "intraday",
+      "headline": "SK Hynix Stock Drops 7% Premarket: Why Tech Profit-Taking Created a Prime AI Memory Entry Point",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60472234/sk-hynix-stock-drops-7-premarket-why-tech-profit-taking-created-a-prime-ai-memory-entry-point",
+      "source": "alpaca",
+      "added_at": "2026-07-15T14:44:52.689730+00:00"
+    },
+    {
+      "ticker": "FAC",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with promising test results (30% range improvement) validates solid-state battery technology for UAV commercialization, though early-stage development limits immediate revenue impact.",
+      "action_window": "next_day",
+      "headline": "Factorial Energy Expands UAV Push With Tulip Tech Battery Collaboration",
+      "url": "https://www.benzinga.com/markets/small-cap/26/07/60472211/factorial-energy-expands-uav-push-with-tulip-tech-battery-collaboration",
+      "source": "alpaca",
+      "added_at": "2026-07-15T14:44:52.689745+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Apple's in-house M2 Ultra chips failing at AI workloads reveals competitive weakness and delayed Baltra chip indicates execution problems, forcing continued expensive NVIDIA dependence while hunting for acquisitions suggests strategic gap in critical AI infrastructure.",
+      "action_window": "intraday",
+      "headline": "'Apple Hunts for AI Chip Acquisitions; Apple's In-House M2 Ultra Chips Haven\u2019t Proven Sufficient For Running Advanced AI Workloads, Forcing NVIDIA Reliance; A Future Version Of Apple\u2019s AI Server Chip, Code-Named Baltra, Was Originally Supposed To Ship This Year, But It Has Been Delayed - The Informa",
+      "url": "https://www.benzinga.com/news/26/07/60472201/apple-hunts-ai-chip-acquisitions-apple-s-house-m2-ultra-chips-haven-t-proven-sufficient-running-adva",
+      "source": "alpaca",
+      "added_at": "2026-07-15T14:44:52.689755+00:00"
+    },
+    {
+      "ticker": "UNG",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Larger-than-expected gasoline inventory draw suggests stronger demand and tighter supply, bullish for energy commodities but impact is moderate as inventory data is volatile week-to-week.",
+      "action_window": "intraday",
+      "headline": "USA Gasoline Inventories 1.533M Barrel Draw Vs 0.800M Barrel Draw Est.",
+      "url": "https://www.benzinga.com/quote/UNG",
+      "source": "alpaca",
+      "added_at": "2026-07-15T14:44:52.689778+00:00"
     }
   ]
 }
