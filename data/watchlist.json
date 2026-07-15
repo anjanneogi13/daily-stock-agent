@@ -1399,6 +1399,54 @@
       "url": "https://www.benzinga.com/news/26/07/60463891/redwire-receives-follow-awards-totaling-21-5m-purchase-orders-supporting-pae-ras-aircraft-program-ma",
       "source": "alpaca",
       "added_at": "2026-07-15T11:25:08.953409+00:00"
+    },
+    {
+      "ticker": "AREC",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $160M NSF funding over 10 years for critical materials consortium represents significant non-dilutive capital and government validation of AREC's strategic positioning in critical materials sector.",
+      "action_window": "intraday",
+      "headline": "American Resources Announces Critical Materials Crossroads Consortium Selected By National Science Foundation As Its Regional Innovation Engines For $160M Funding Over 10 Years",
+      "url": "https://www.benzinga.com/news/26/07/60466860/american-resources-announces-critical-materials-crossroads-consortium-selected-national-science-foun",
+      "source": "alpaca",
+      "added_at": "2026-07-15T12:50:50.330436+00:00"
+    },
+    {
+      "ticker": "BABA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major partnership with Apple to power AI features in China represents significant revenue opportunity and validates Alibaba's AI capabilities in a massive market.",
+      "action_window": "intraday",
+      "headline": "Why Is Alibaba Stock Surging Wednesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60466788/why-is-alibaba-stock-surging-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-15T12:50:50.330451+00:00"
+    },
+    {
+      "ticker": "KAPA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Interim Phase I safety data is a minor positive catalyst for small-cap biotech KAPA, while being immaterial for large-cap AZN; data is preliminary and only addresses safety, not efficacy.",
+      "action_window": "intraday",
+      "headline": "Kairos Pharma Announces Interim Safety Data From Phase I Trial Of Carotuximab In Combination With AstraZeneca's Osimertinib To Resensitize Patients With Advanced EGFR-Mutated Non-Small Cell Lung Cancer Who Became Resistant To Osimertinib",
+      "url": "https://www.benzinga.com/quote/AZN",
+      "source": "alpaca",
+      "added_at": "2026-07-15T12:50:50.330461+00:00"
+    },
+    {
+      "ticker": "LASE",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Advancement to Step 2 of U.S. Air Force evaluation for anti-drone technology represents meaningful contract progress but remains early-stage without confirmed award or revenue.",
+      "action_window": "intraday",
+      "headline": "LASE Group\u2019s Fonon Technologies Advances To Step 2 Of U.S. Air Force Shaw Air Force Base Battle Lab Commercial Solutions Opening Evaluation Process For Laser Shield Anti-Drone Technology",
+      "url": "https://www.benzinga.com/news/26/07/60466708/lase-group-s-fonon-technologies-advances-step-2-u-s-air-force-shaw-air-force-base-battle-lab-commerc",
+      "source": "alpaca",
+      "added_at": "2026-07-15T12:50:50.330469+00:00"
     }
   ]
 }

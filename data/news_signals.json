@@ -3310,5 +3310,57 @@
     "expires": "2026-07-22T11:25:08.949242+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "CHRW": {
+    "ticker": "CHRW",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Truist Securities Maintains Buy on C.H. Robinson Worldwide, Raises Price Target to $215",
+    "added_at": "2026-07-15T12:50:50.313739+00:00",
+    "expires": "2026-07-20T12:50:50.313746+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BAC": {
+    "ticker": "BAC",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Truist Securities Maintains Buy on Bank of America, Raises Price Target to $65",
+    "added_at": "2026-07-15T12:50:50.317102+00:00",
+    "expires": "2026-07-20T12:50:50.317107+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ARCB": {
+    "ticker": "ARCB",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Truist Securities Maintains Buy on ArcBest, Raises Price Target to $165",
+    "added_at": "2026-07-15T12:50:50.323157+00:00",
+    "expires": "2026-07-20T12:50:50.323163+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NBIS": {
+    "ticker": "NBIS",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Nebius Launches New Business Model Allowing Infrastructure Partners To Deploy Its Full-Stack AI Cloud Platform In Their Own Data Centers",
+    "added_at": "2026-07-15T12:50:50.326176+00:00",
+    "expires": "2026-07-22T12:50:50.326181+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
