@@ -1475,15 +1475,16 @@
     },
     {
       "ticker": "AAPL",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Apple's in-house M2 Ultra chips failing at AI workloads reveals competitive weakness and delayed Baltra chip indicates execution problems, forcing continued expensive NVIDIA dependence while hunting for acquisitions suggests strategic gap in critical AI infrastructure.",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "China regulatory approval for Apple Intelligence is a major catalyst for AAPL's largest market, with stock already up 4% to 52-week high indicating strong market reaction.",
       "action_window": "intraday",
-      "headline": "'Apple Hunts for AI Chip Acquisitions; Apple's In-House M2 Ultra Chips Haven\u2019t Proven Sufficient For Running Advanced AI Workloads, Forcing NVIDIA Reliance; A Future Version Of Apple\u2019s AI Server Chip, Code-Named Baltra, Was Originally Supposed To Ship This Year, But It Has Been Delayed - The Informa",
-      "url": "https://www.benzinga.com/news/26/07/60472201/apple-hunts-ai-chip-acquisitions-apple-s-house-m2-ultra-chips-haven-t-proven-sufficient-running-adva",
+      "headline": "Apple Stock Hits 52-Week High - Here's Why",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60476015/apple-stock-hits-52-week-high-heres-why",
       "source": "alpaca",
-      "added_at": "2026-07-15T14:44:52.689755+00:00"
+      "added_at": "2026-07-15T14:44:52.689755+00:00",
+      "updated_at": "2026-07-15T16:16:23.072142+00:00"
     },
     {
       "ticker": "UNG",
@@ -1496,6 +1497,54 @@
       "url": "https://www.benzinga.com/quote/UNG",
       "source": "alpaca",
       "added_at": "2026-07-15T14:44:52.689778+00:00"
+    },
+    {
+      "ticker": "JPM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record Q2 earnings beat with analyst price target raise and shares rallying creates strong near-term momentum for JPM with positive read-through for financials sector.",
+      "action_window": "intraday",
+      "headline": "JPMorgan Chase Posts Record Q2 Earnings, Could Continue Generating \u2018Above-Average Profitability\u2019 Says Analyst",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60476508/jpmorgan-chase-posts-record-q2-earnings-could-continue-generating-above-average-profitability-says-analyst",
+      "source": "alpaca",
+      "added_at": "2026-07-15T16:16:23.072105+00:00"
+    },
+    {
+      "ticker": "AXP",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Delinquency and write-off rates are relatively low indicating strong credit quality, though this is preliminary operational data rather than a major catalyst.",
+      "action_window": "intraday",
+      "headline": "American Express U.S. Small Business Card 30 Days Past Due Rate 1.4% As Of June 30, 2026; Preliminary U.S. Consumer Card 30 Days Past Due Rate 1.1%; Prelim U.S. Small Business Card Net Write-off Rate 2.3% For June 2026; Preliminary U.S. Consumer Card Net Write-off Rate 1.4% For June",
+      "url": "https://www.benzinga.com/news/26/07/60476342/american-express-u-s-small-business-card-30-days-past-due-rate-1-4-june-30-2026-preliminary-u-s-cons",
+      "source": "alpaca",
+      "added_at": "2026-07-15T16:16:23.072120+00:00"
+    },
+    {
+      "ticker": "APO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $3 billion financing deal represents significant fee revenue opportunity for Apollo's credit platform and validates their large-cap lending capabilities in high-profile transactions.",
+      "action_window": "intraday",
+      "headline": "'New York Yankees in Talks With Apollo Over $3 Billion Financing Deal' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60475986/new-york-yankees-talks-apollo-over-3-billion-financing-deal-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-15T16:16:23.072153+00:00"
+    },
+    {
+      "ticker": "NVO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "European Commission marketing authorization for oral Wegovy (obesity treatment) is a major regulatory milestone expanding addressable market and product accessibility in a multi-billion dollar category.",
+      "action_window": "intraday",
+      "headline": "Novo Nordisk Receives European Commission's Marketing Authorization For Wegovy Pill To Treat Adults With Obesity",
+      "url": "https://www.benzinga.com/news/26/07/60475969/novo-nordisk-receives-european-commission-s-marketing-authorization-wegovy-pill-treat-adults-obesity",
+      "source": "alpaca",
+      "added_at": "2026-07-15T16:16:23.072161+00:00"
     }
   ]
 }
