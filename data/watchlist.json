@@ -447,16 +447,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.78,
+      "tradeable_score": 0.85,
       "sentiment": "bearish",
       "category": "macro",
-      "rationale": "Fed Chair signaling aggressive stance on fighting inflation suggests continued restrictive monetary policy, which is negative for equity markets in the near term.",
+      "rationale": "Second wave of U.S. military strikes against Iran threatening critical Strait of Hormuz shipping route represents major geopolitical escalation driving immediate risk-off sentiment and energy price volatility.",
       "action_window": "intraday",
-      "headline": "Fed Chair Warsh Says Our Commitment Is To Take Sticky Prices And Unstick Them",
-      "url": "https://www.benzinga.com/news/26/07/60448434/fed-chair-warsh-says-our-commitment-take-sticky-prices-and-unstick-them",
+      "headline": "U.S. Military Says At 3 P.M. ET, U.S. Forces Launched Operations For A Second Wave Of Strikes Against Iran; The Strikes Are Targeting Iranian Military Capabilities Used To Threaten Vessels Freely Transiting Through The Strait Of Hormuz, An International Waterway Vital To Global Commerce",
+      "url": "https://www.benzinga.com/news/26/07/60483394/u-s-military-says-3-p-m-et-u-s-forces-launched-operations-second-wave-strikes-against-iran-strikes-a",
       "source": "alpaca",
       "added_at": "2026-07-13T21:50:19.562355+00:00",
-      "updated_at": "2026-07-14T16:11:03.314306+00:00"
+      "updated_at": "2026-07-15T20:12:34.456576+00:00"
     },
     {
       "ticker": "TAVI",
@@ -1653,6 +1653,91 @@
       "url": "https://www.benzinga.com/news/26/07/60482411/morgan-stanley-downgrades-travelers-companies-underweight-lowers-price-target-290",
       "source": "alpaca",
       "added_at": "2026-07-15T19:00:36.510756+00:00"
+    },
+    {
+      "ticker": "UAL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "United Airlines beat both EPS estimates by 6.4% and revenue estimates, representing a solid quarterly performance that typically drives positive price action in after-hours and next-day trading.",
+      "action_window": "intraday",
+      "headline": "United Airlines Holdings Q2 Adj. EPS $1.99 Beats $1.87 Estimate, Sales $17.672B Beat $17.618B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60484611/united-airlines-holdings-q2-adj-eps-1-99-beats-1-87-estimate-sales-17-672b-beat-17-618b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456498+00:00",
+      "updated_at": "2026-07-15T20:12:34.456526+00:00"
+    },
+    {
+      "ticker": "BAFN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Financial statement restatements for two years combined with asset resolution plan indicate significant accounting issues or asset quality problems that typically trigger material negative price reactions.",
+      "action_window": "next_day",
+      "headline": "BayFirst Financial Announces Impact Of Asset Resolution Plan In Accordance With Stock Purchase Agreement Transactions Dated April 28; Company Will Restate Previously-Issued Financial Statements For The Years Ended December 31, 2024 And 2025",
+      "url": "https://www.benzinga.com/news/26/07/60484658/bayfirst-financial-announces-impact-asset-resolution-plan-accordance-stock-purchase-agreement-transa",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456512+00:00"
+    },
+    {
+      "ticker": "ASTS",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large $1B debt offering typically signals dilutive financing and near-term selling pressure as converts/hedging activity impacts stock, though it provides capital for growth.",
+      "action_window": "intraday",
+      "headline": "AST SpaceMobile Plans To Offer $1B Senior Notes Due 2034",
+      "url": "https://www.benzinga.com/news/26/07/60484598/ast-spacemobile-plans-offer-1b-senior-notes-due-2034",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456536+00:00"
+    },
+    {
+      "ticker": "FEIM",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS of -$0.50 versus +$0.24 estimate (swing of $0.74) and revenue miss of 17% creates immediate downward pressure.",
+      "action_window": "next_day",
+      "headline": "Frequency Electronics Q4 EPS $(0.50) Misses $0.24 Estimate, Sales $15.398M Miss $18.575M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60484583/frequency-electronics-q4-eps-0-50-misses-0-24-estimate-sales-15-398m-miss-18-575m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456545+00:00"
+    },
+    {
+      "ticker": "SPCX",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "SpaceX breaking below IPO price with increased short interest represents significant negative momentum and investor confidence erosion, though prediction market data suggests mixed sentiment on valuation.",
+      "action_window": "intraday",
+      "headline": "Investing In Elon Musk Is 'Faith-Based': Julie Hyman's Warning Rings True As SpaceX Breaks Below IPO Price",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60484211/investing-in-elon-musk-is-faith-based-julie-hymans-warning-rings-true-as-spacex-breaks-below-ipo-price",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456554+00:00"
+    },
+    {
+      "ticker": "WLDN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $31M design-build contract win represents significant revenue for a small-cap company and validates competitive positioning in renewable infrastructure.",
+      "action_window": "intraday",
+      "headline": "Willdan Group Selected By Encina Wastewater Authority For $31M Design-Build Contract To Deliver Renewable Cogeneration Project",
+      "url": "https://www.benzinga.com/news/26/07/60483675/willdan-group-selected-encina-wastewater-authority-31m-design-build-contract-deliver-renewable-cogen",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456570+00:00"
+    },
+    {
+      "ticker": "WDC",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Major Chinese competitor filing for $10B IPO represents significant competitive threat to Western Digital's memory business, triggering immediate stock decline.",
+      "action_window": "intraday",
+      "headline": "Western Digital Stock Tumbles as CXMT Targets $10 Billion Shanghai IPO",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60483340/western-digital-stock-tumbles-as-cxmt-targets-10-billion-shanghai-ipo",
+      "source": "alpaca",
+      "added_at": "2026-07-15T20:12:34.456586+00:00"
     }
   ]
 }
