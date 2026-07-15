@@ -1,19 +1,19 @@
 {
-  "date": "2026-07-13",
+  "date": "2026-07-15",
   "market": {
-    "spy_change_pct": 0.43,
-    "qqq_change_pct": 0.31,
-    "soxx_change_pct": -0.06,
-    "vix": 16.4,
+    "spy_change_pct": NaN,
+    "qqq_change_pct": NaN,
+    "soxx_change_pct": NaN,
+    "vix": 16.35,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "AKZOY",
+      "ticker": "VCYT",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 21.82,
+      "current_price": 56.62,
       "gap_pct": -0.0,
       "actionable": true
     }
