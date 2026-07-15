@@ -472,16 +472,16 @@
     },
     {
       "ticker": "USO",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "macro",
-      "rationale": "A 20% toll on Strait of Hormuz cargo (20% of global oil flows) would significantly increase transportation costs and oil prices, creating bearish pressure on equities while bullish for oil.",
+      "rationale": "Iran's statement on military freedom of action and control over Strait of Hormuz signals potential escalation risk in a critical oil transit chokepoint, likely driving risk-off sentiment and oil price volatility.",
       "action_window": "intraday",
-      "headline": "Semafor Reported President Trump Very Serious About 20% Toll On Cargo Transiting Through Strait Of Hormuz, White House Says Plan Has Been Pursued For Months",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60434201/semafor-reported-president-trump-very-serious-about-20-toll-cargo-transiting-through-strait-hormuz-w",
+      "headline": "Iran's Top Negotiator Qalibaf Says Our Armed Forces Have Complete Freedom Of Action As Always To Confront The 'Enemy's Aggression'; Our National Security Lies In Maintaining The 'Iranian Arrangements' On The Strait Of Hormuz; Negotiation At This Stage Is Not Equivalent To Compromise, But, Along With",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60479908/iran-s-top-negotiator-qalibaf-says-our-armed-forces-have-complete-freedom-action-always-confront-ene",
       "source": "alpaca",
       "added_at": "2026-07-13T22:50:09.278394+00:00",
-      "updated_at": "2026-07-14T09:51:21.643183+00:00"
+      "updated_at": "2026-07-15T17:46:02.818203+00:00"
     },
     {
       "ticker": "LEXX",
@@ -1545,6 +1545,54 @@
       "url": "https://www.benzinga.com/news/26/07/60475969/novo-nordisk-receives-european-commission-s-marketing-authorization-wegovy-pill-treat-adults-obesity",
       "source": "alpaca",
       "added_at": "2026-07-15T16:16:23.072161+00:00"
+    },
+    {
+      "ticker": "BLK",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "BlackRock's Q2 earnings beat estimates with record $15.3T AUM and strong client demand, already rallying premarket on confirmed results.",
+      "action_window": "intraday",
+      "headline": "Blackrock CEO Says Client Demand Has \u2018Never Been Greater\u2019 as Assets Reach Record $15.3 Trillion",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60466095/blackrock-ceo-says-client-demand-has-never-been-greater-as-assets-reach-record-15-3-trillion",
+      "source": "alpaca",
+      "added_at": "2026-07-15T17:46:02.818189+00:00"
+    },
+    {
+      "ticker": "ASML",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Positive macro news (cooler PPI inflation data) combined with optimistic ASML earnings supports AI-related tech stocks, though this is broader market commentary rather than company-specific catalyst.",
+      "action_window": "intraday",
+      "headline": "57 Economists Wrong On Inflation; ASML Earnings Bring Optimism To AI Trade",
+      "url": "https://www.benzinga.com/Opinion/26/07/60479835/57-economists-wrong-on-inflation-asml-earnings-bring-optimism-to-ai-trade",
+      "source": "alpaca",
+      "added_at": "2026-07-15T17:46:02.818213+00:00"
+    },
+    {
+      "ticker": "GRRR",
+      "tradeable_score": 0.95,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock already plunged 27% on confirmed $125M convertible note offering, representing significant dilution and immediate negative price action.",
+      "action_window": "intraday",
+      "headline": "Why Gorilla Technology Stock Is Falling Wednesday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60479817/why-gorilla-technology-stock-is-falling-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-15T17:46:02.818221+00:00"
+    },
+    {
+      "ticker": "MRK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Positive Phase 3 trial results for blockbuster drug Keytruda in new indication expands market opportunity and supports future revenue growth, though regulatory approval still pending.",
+      "action_window": "intraday",
+      "headline": "Merck Says Blockbuster Keytruda Outperforms Chemotherapy in Advanced Endometrial Cancer",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60479337/merck-says-blockbuster-keytruda-outperforms-chemotherapy-in-advanced-endometrial-cancer",
+      "source": "alpaca",
+      "added_at": "2026-07-15T17:46:02.818238+00:00"
     }
   ]
 }
