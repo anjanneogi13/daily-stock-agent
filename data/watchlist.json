@@ -1593,6 +1593,66 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60479337/merck-says-blockbuster-keytruda-outperforms-chemotherapy-in-advanced-endometrial-cancer",
       "source": "alpaca",
       "added_at": "2026-07-15T17:46:02.818238+00:00"
+    },
+    {
+      "ticker": "VOYG",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade to Underweight is a significant negative catalyst from a major investment bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades Voyager Technologies to Underweight, Maintains Price Target to $39",
+      "url": "https://www.benzinga.com/news/26/07/60482609/morgan-stanley-downgrades-voyager-technologies-underweight-maintains-price-target-39",
+      "source": "alpaca",
+      "added_at": "2026-07-15T19:00:36.510712+00:00"
+    },
+    {
+      "ticker": "INFQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large block distribution of 23.25 million shares creates significant near-term selling pressure and potential overhang, with immediate 4% price decline confirming market impact.",
+      "action_window": "next_day",
+      "headline": "Why Is Infleqtion Stock Falling Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60482510/why-is-infleqtion-stock-falling-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-15T19:00:36.510727+00:00"
+    },
+    {
+      "ticker": "TDG",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade from Overweight to Equal-Weight with lower price target creates near-term selling pressure from a major Wall Street bank.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades TransDigm Group to Equal-Weight, Lowers Price Target to $1345",
+      "url": "https://www.benzinga.com/news/26/07/60482552/morgan-stanley-downgrades-transdigm-group-equal-weight-lowers-price-target-1345",
+      "source": "alpaca",
+      "added_at": "2026-07-15T19:00:36.510738+00:00"
+    },
+    {
+      "ticker": "LOAR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade from a higher rating to Equal-Weight with reduced price target represents a negative catalyst from a major investment bank that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades Loar Holdings to Equal-Weight, Lowers Price Target to $82",
+      "url": "https://www.benzinga.com/news/26/07/60482489/morgan-stanley-downgrades-loar-holdings-equal-weight-lowers-price-target-82",
+      "source": "alpaca",
+      "added_at": "2026-07-15T19:00:36.510747+00:00"
+    },
+    {
+      "ticker": "TRV",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade to Underweight with lowered price target represents a meaningful negative catalyst from a major sell-side institution that typically drives near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades Travelers Companies to Underweight, Lowers Price Target to $290",
+      "url": "https://www.benzinga.com/news/26/07/60482411/morgan-stanley-downgrades-travelers-companies-underweight-lowers-price-target-290",
+      "source": "alpaca",
+      "added_at": "2026-07-15T19:00:36.510756+00:00"
     }
   ]
 }
