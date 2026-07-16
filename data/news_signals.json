@@ -75,19 +75,6 @@
     "expires": "2026-12-09T17:35:21.457868+00:00",
     "hard_block": true
   },
-  "MRNA": {
-    "ticker": "MRNA",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "FDA Says Moderna's MRNA-1010 Influenza Vaccine Data May Support Use In Adults \u226550 Years Old",
-    "added_at": "2026-06-16T17:59:24.591065+00:00",
-    "expires": "2026-07-16T17:59:24.591070+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LOKV": {
     "ticker": "LOKV",
     "score_delta": 0.2,
@@ -3495,14 +3482,14 @@
   },
   "GEV": {
     "ticker": "GEV",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
+    "score_delta": 0.044,
+    "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
+    "tradeable_score": 0.62,
     "action_window": "next_day",
-    "headline": "GE Vernova To Build 110 kV Gas-Insulated Substations Using SF\u2086-Free g\u00b3 Technology For Stromnetz Berlin's Grid Modernization",
-    "added_at": "2026-07-16T10:02:12.627728+00:00",
-    "expires": "2026-07-23T10:02:12.627735+00:00",
+    "headline": "BofA Securities Sees GE Vernova\u2019s Power Demand Fueling Another Strong Quarter",
+    "added_at": "2026-07-16T18:01:06.576255+00:00",
+    "expires": "2026-07-21T18:01:06.576264+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3724,6 +3711,45 @@
     "headline": "NetApp Acquires AI Data Infrastructure Company DataPelago; Financial Terms Undisclosed",
     "added_at": "2026-07-16T16:50:34.803273+00:00",
     "expires": "2026-07-30T16:50:34.803278+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AVAV": {
+    "ticker": "AVAV",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "AeroVironment Stock Climbs: What's Happening Today?",
+    "added_at": "2026-07-16T18:01:06.579229+00:00",
+    "expires": "2026-07-21T18:01:06.579237+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RKLB": {
+    "ticker": "RKLB",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Why Is Rocket Lab Stock Falling on Thursday?",
+    "added_at": "2026-07-16T18:01:06.587579+00:00",
+    "expires": "2026-07-21T18:01:06.587586+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PLD": {
+    "ticker": "PLD",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Prologis Sees AI Spending Creating Millions of Square Feet of New Warehouse Demand",
+    "added_at": "2026-07-16T18:01:06.590431+00:00",
+    "expires": "2026-07-23T18:01:06.590438+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

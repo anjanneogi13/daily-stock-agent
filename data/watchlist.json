@@ -2053,6 +2053,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60504182/why-is-vivosim-labs-stock-falling-thursday",
       "source": "alpaca",
       "added_at": "2026-07-16T16:50:34.807947+00:00"
+    },
+    {
+      "ticker": "HMC",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Honda halting sales of its last US EV signals strategic setback in electrification amid industry transition, raising competitive concerns versus peers.",
+      "action_window": "next_day",
+      "headline": "'Honda to Halt Sales of Last EV in Its US Lineup' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60507711/honda-halt-sales-last-ev-its-us-lineup-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-16T18:01:06.597384+00:00"
+    },
+    {
+      "ticker": "GEV",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BofA Securities positive outlook with 59% order growth forecast is meaningful bullish catalyst from major bank, though not yet confirmed results.",
+      "action_window": "next_day",
+      "headline": "BofA Securities Sees GE Vernova\u2019s Power Demand Fueling Another Strong Quarter",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60507710/bofa-securities-sees-ge-vernovas-power-demand-fueling-another-strong-quarter",
+      "source": "alpaca",
+      "added_at": "2026-07-16T18:01:06.597399+00:00"
+    },
+    {
+      "ticker": "AVAV",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Raymond James upgraded AVAV to Outperform with a $210 price target, a meaningful catalyst from a reputable firm that typically drives near-term price momentum.",
+      "action_window": "intraday",
+      "headline": "AeroVironment Stock Climbs: What's Happening Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60507648/aerovironment-stock-climbs-whats-happening-today",
+      "source": "alpaca",
+      "added_at": "2026-07-16T18:01:06.597411+00:00"
+    },
+    {
+      "ticker": "PLD",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 FFO beat plus second 2026 guidance raise in a REIT signals strong operational momentum with AI-driven demand tailwind creating multi-year growth visibility.",
+      "action_window": "intraday",
+      "headline": "Prologis Sees AI Spending Creating Millions of Square Feet of New Warehouse Demand",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60507209/prologis-sees-ai-spending-creating-millions-of-square-feet-of-new-warehouse-demand",
+      "source": "alpaca",
+      "added_at": "2026-07-16T18:01:06.597445+00:00"
     }
   ]
 }
