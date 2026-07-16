@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "EVO",
-      "tradeable_score": 0.88,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Evotec slashed FY26 revenue guidance by approximately 22% at the midpoint (from \u20ac740M to \u20ac590M), representing a significant negative revision that will likely trigger immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Evotec Now Expects FY26 Revenue From \u20ac700M - \u20ac780M To ~\u20ac570M - \u20ac610M, Expects H1 Revenue Of ~\u20ac300.1M",
-      "url": "https://www.benzinga.com/news/26/07/60428621/evotec-now-expects-fy26-revenue-700m-780m-570m-610m-expects-h1-revenue-300-1m",
-      "source": "alpaca",
-      "added_at": "2026-07-13T19:57:51.290640+00:00"
-    },
-    {
-      "ticker": "LNC",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Multibillion-dollar risk transfer deal talks suggest potential balance sheet optimization and capital relief for Lincoln, but remains unconfirmed with uncertain terms and timing.",
-      "action_window": "next_day",
-      "headline": "'Lincoln in Talks With Talcott for Multibillion-Dollar Risk Deal' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60428509/lincoln-talks-talcott-multibillion-dollar-risk-deal-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-07-13T19:57:51.290651+00:00"
-    },
-    {
-      "ticker": "MDT",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "fda_rejection",
-      "rationale": "FDA-mandated medical device recall creates immediate regulatory risk and potential liability concerns for Medtronic, though impact depends on recall scale and revenue exposure of the specific catheter system.",
-      "action_window": "intraday",
-      "headline": "Reported Earlier: FDA Announces Medtronic Recalls Certain Harmony Delivery Catheter System",
-      "url": "https://www.benzinga.com/news/26/07/60427690/reported-earlier-fda-announces-medtronic-recalls-certain-harmony-delivery-catheter-system",
-      "source": "alpaca",
-      "added_at": "2026-07-13T19:57:51.290659+00:00"
-    },
-    {
-      "ticker": "QTTB",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Wells Fargo upgrade to Overweight with $66 price target is a meaningful catalyst from a major bank that typically drives immediate buying interest.",
-      "action_window": "intraday",
-      "headline": "Wells Fargo Upgrades Q32 Bio to Overweight, Announces $66 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60427390/wells-fargo-upgrades-q32-bio-overweight-announces-66-price-target",
-      "source": "alpaca",
-      "added_at": "2026-07-13T19:57:51.290665+00:00"
-    },
-    {
       "ticker": "SNWV",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -2077,6 +2029,90 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60510426/short-squeeze-and-earnings-why-manpowergroup-stock-spiked-thursday",
       "source": "alpaca",
       "added_at": "2026-07-16T19:19:02.480030+00:00"
+    },
+    {
+      "ticker": "CACI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Confirmed $113M 5-year Navy contract represents material revenue (~2% of annual revenue for mid-cap defense contractor) and validates competitive positioning in government IT modernization.",
+      "action_window": "next_day",
+      "headline": "CACI International Awarded 5-Yr Technology Contract Valued At Up To $113M By US Navy\u2019s Military Sealift Command To Continue Modernizing Portfolio Of Mission-Critical Business Applications",
+      "url": "https://www.benzinga.com/news/26/07/60513316/caci-international-awarded-5-yr-technology-contract-valued-113m-us-navy-s-military-sealift-command-c",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214521+00:00"
+    },
+    {
+      "ticker": "ARCB",
+      "tradeable_score": 0.6,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Restructuring announcement with significant impairments offset by material cost savings creates mixed near-term bearish/long-term bullish signals requiring immediate assessment.",
+      "action_window": "intraday",
+      "headline": "ArcBest Intends To Cut Workforce By ~2%; Expects To Post Total Non-Cash Impairments Of ~$76.5M; Anticipates ~$40M Of Annualized Cost Saving;",
+      "url": "https://www.benzinga.com/news/26/07/60513278/arcbest-intends-cut-workforce-2-expects-post-total-non-cash-impairments-76-5m-anticipates-40m-annual",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214538+00:00"
+    },
+    {
+      "ticker": "INMD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Activist investor Steel Partners publicly challenges CEO's potential lowball buyout bid and questions management manipulation, signaling potential for higher takeover price or competitive bidding process.",
+      "action_window": "intraday",
+      "headline": "Steel Partners Questions Management Steering Results To Fit CEO\u2019s Lowball Bid And Calls Board To Reschedule AGM",
+      "url": "https://www.benzinga.com/quote/INMD",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214550+00:00"
+    },
+    {
+      "ticker": "DJT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New revenue stream through API monetization of presidential content creates a novel and potentially significant business model for Trump Media with Wall Street as direct customer base.",
+      "action_window": "intraday",
+      "headline": "Trump Media Will Charge Wall Street for Faster Access to Trump's Market-Moving Posts",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60513125/trump-media-will-charge-wall-street-for-faster-access-to-trumps-market-moving-posts",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214568+00:00"
+    },
+    {
+      "ticker": "FFIN",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS inline but revenue miss of $1.4M (-0.8%) indicates weaker top-line performance that typically pressures financial stocks in after-hours trading.",
+      "action_window": "intraday",
+      "headline": "First Finl Bankshares Q2 EPS $0.50, Inline, Sales $172.758M Miss $174.191M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60513116/first-finl-bankshares-q2-eps-0-50-inline-sales-172-758m-miss-174-191m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214579+00:00"
+    },
+    {
+      "ticker": "NFLX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 free cash flow of $1.5B with favorable content cost guidance showing slower amortization growth in H2, though partially offset by one-time tax impacts from WBD termination fee.",
+      "action_window": "intraday",
+      "headline": "Netflix Says Continue To Expect Content Amortization To Grow Slower In H2 & To Increase About 10% For 2026; Q2 Free Cash Flow $1.5B Included Higher Cash Tax Payments Due In Part To WBD Termination Fee",
+      "url": "https://www.benzinga.com/quote/WBD",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214599+00:00"
+    },
+    {
+      "ticker": "INDB",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Independent Bank missed both EPS ($1.70 vs $1.78 est, -4.5%) and revenue ($253.3M vs $257.5M est, -1.6%) estimates in Q2 earnings, representing a meaningful double-miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Independent Bank Q2 Adj. EPS $1.70 Misses $1.78 Estimate, Sales $253.318M Miss $257.495M Estimate",
+      "url": "https://www.benzinga.com/quote/INDB",
+      "source": "alpaca",
+      "added_at": "2026-07-16T20:26:17.214609+00:00"
     }
   ]
 }
