@@ -1,150 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BNAI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Completed acquisition with immediate U.S. market expansion of Cataneo unit signals growth execution and revenue expansion potential for the acquirer.",
-      "action_window": "intraday",
-      "headline": "Brand Engagement Network Launches The U.S. Market Expansion Of Its Cataneo Unit After Completing Acquisition",
-      "url": "https://www.benzinga.com/news/26/07/60408871/brand-engagement-network-launches-u-s-market-expansion-its-cataneo-unit-after-completing-acquisition",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109694+00:00"
-    },
-    {
-      "ticker": "SHOP",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Jefferies upgrade to Buy with significant price target raise creates immediate buying pressure and positive sentiment shift for Shopify.",
-      "action_window": "intraday",
-      "headline": "Jefferies Upgrades Shopify to Buy, Raises Price Target to $160",
-      "url": "https://www.benzinga.com/news/26/07/60408855/jefferies-upgrades-shopify-buy-raises-price-target-160",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109705+00:00"
-    },
-    {
-      "ticker": "BRSL",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Long-term contract extension through 2036 with system upgrade provides significant revenue visibility and demonstrates strong client retention in a stable regulatory sector.",
-      "action_window": "intraday",
-      "headline": "Brightstar Extends Washington Lottery Deal Through 2036, To Upgrade Washington Lottery System And Retail Machines",
-      "url": "https://www.benzinga.com/news/26/07/60408854/brightstar-extends-washington-lottery-deal-through-2036-upgrade-washington-lottery-system-and-retail",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109711+00:00"
-    },
-    {
-      "ticker": "FCBM",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Raymond James initiating coverage with Outperform rating and $15 price target provides positive catalyst for First Carolina Financial, though impact may be limited by smaller firm size and initiation (vs upgrade).",
-      "action_window": "intraday",
-      "headline": "Raymond James Initiates Coverage On First Carolina Financial with Outperform Rating, Announces Price Target of $15",
-      "url": "https://www.benzinga.com/news/26/07/60408819/raymond-james-initiates-coverage-first-carolina-financial-outperform-rating-announces-price-target-1",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109735+00:00"
-    },
-    {
-      "ticker": "AKZOY",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Nippon Paint's \u20ac7.5bn unsolicited bid for Akzo unit creates competitive bidding tension, typically driving premium valuations for the target company.",
-      "action_window": "intraday",
-      "headline": "Reported Earlier, 'Nippon Paint offers \u20ac7.5bn for Akzo unit in attempt to gatecrash rival deal' - Financial Times",
-      "url": "https://www.benzinga.com/m/26/07/60408792/reported-earlier-nippon-paint-offers-7-5bn-akzo-unit-attempt-gatecrash-rival-deal-financial-times",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109740+00:00"
-    },
-    {
-      "ticker": "PZZA",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Bank of America downgrade to Underperform with lowered price target represents a significant negative catalyst from a major sell-side firm that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "B of A Securities Downgrades Papa John's International to Underperform, Lowers Price Target to $34",
-      "url": "https://www.benzinga.com/news/26/07/60408762/b-securities-downgrades-papa-john-s-international-underperform-lowers-price-target-34",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109744+00:00"
-    },
-    {
-      "ticker": "NVA",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Completion of engineering and design for pilot processing plant represents a meaningful operational milestone that de-risks the project and advances it toward production, though antimony markets are relatively niche.",
-      "action_window": "next_day",
-      "headline": "Nova Minerals Completes Engineering And Design For Its Estelle Antimony Pilot Processing Plant In Alaska",
-      "url": "https://www.benzinga.com/news/26/07/60408723/nova-minerals-completes-engineering-and-design-its-estelle-antimony-pilot-processing-plant-alaska",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109749+00:00"
-    },
-    {
-      "ticker": "CNL",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "New mining titles expand operational footprint and future resource potential, representing tangible asset growth for a mining exploration company.",
-      "action_window": "next_day",
-      "headline": "Collective Mining Wins New Mining Titles In Colombia",
-      "url": "https://www.benzinga.com/news/26/07/60408700/collective-mining-wins-new-mining-titles-colombia",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109753+00:00"
-    },
-    {
-      "ticker": "BRR",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Significant milestone of AI platform surpassing $50B in assets suggests strong product adoption and potential revenue growth, though impact depends on BRR's relationship to ProCap Financial.",
-      "action_window": "intraday",
-      "headline": "ProCap Financial\u2019s AI Agent Lab Silvia Surpasses $50B In Assets",
-      "url": "https://www.benzinga.com/news/26/07/60408678/procap-financial-s-ai-agent-lab-silvia-surpasses-50b-assets",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109758+00:00"
-    },
-    {
-      "ticker": "GPK",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New product launch entering uncoated recycled paperboard market represents strategic expansion but lacks immediate financial impact visibility.",
-      "action_window": "this_week",
-      "headline": "Graphic Packaging Launches PaceSetter Ridgeline As Part Of Its Entry Into The Uncoated Recycled Paperboard Market",
-      "url": "https://www.benzinga.com/news/26/07/60408643/graphic-packaging-launches-pacesetter-ridgeline-part-its-entry-uncoated-recycled-paperboard-market",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109762+00:00"
-    },
-    {
-      "ticker": "SAIA",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Bank of America Securities upgrade to Buy with significant price target increase represents a major positive catalyst from a top-tier investment bank that typically drives immediate buying interest.",
-      "action_window": "intraday",
-      "headline": "B of A Securities Upgrades Saia to Buy, Raises Price Target to $502",
-      "url": "https://www.benzinga.com/news/26/07/60408632/b-securities-upgrades-saia-buy-raises-price-target-502",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109766+00:00"
-    },
-    {
-      "ticker": "BW",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Share repurchase authorization of $50M signals board confidence in valuation and returns capital to shareholders, typically supporting near-term price appreciation.",
-      "action_window": "intraday",
-      "headline": "Babcock & Wilcox Enterprises Board Authorizes Share Repurchase Program Of Up To $50M",
-      "url": "https://www.benzinga.com/news/26/07/60408612/babcock-wilcox-enterprises-board-authorizes-share-repurchase-program-50m",
-      "source": "alpaca",
-      "added_at": "2026-07-13T10:53:51.109770+00:00"
-    },
-    {
       "ticker": "STNG",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -2088,6 +1944,18 @@
       "url": "https://www.benzinga.com/quote/VSAT",
       "source": "alpaca",
       "added_at": "2026-07-16T10:02:12.638540+00:00"
+    },
+    {
+      "ticker": "ALL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Substantial catastrophe losses of $1.72B in Q2 will materially impact quarterly earnings and profitability for the insurance company, representing a significant operational headwind.",
+      "action_window": "intraday",
+      "headline": "Allstate Reports June Catastrophe Losses Of $563M, Q2 Catastrophe Losses Of $1.72B",
+      "url": "https://www.benzinga.com/news/26/07/60492582/allstate-reports-june-catastrophe-losses-563m-q2-catastrophe-losses-1-72b",
+      "source": "alpaca",
+      "added_at": "2026-07-16T11:59:47.707923+00:00"
     }
   ]
 }
