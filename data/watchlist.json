@@ -1956,6 +1956,30 @@
       "url": "https://www.benzinga.com/news/26/07/60492582/allstate-reports-june-catastrophe-losses-563m-q2-catastrophe-losses-1-72b",
       "source": "alpaca",
       "added_at": "2026-07-16T11:59:47.707923+00:00"
+    },
+    {
+      "ticker": "VOYA",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Exclusive report of ongoing takeover interest in Voya Financial creates significant M&A premium speculation, though no confirmed deal exists yet.",
+      "action_window": "intraday",
+      "headline": "'Retirement Giant Voya Financial Fields Ongoing Takeover Interest' - Semafor Exclusive",
+      "url": "https://www.benzinga.com/m/26/07/60496414/retirement-giant-voya-financial-fields-ongoing-takeover-interest-semafor-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-07-16T13:49:47.720811+00:00"
+    },
+    {
+      "ticker": "HYMLF",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Hyundai acquiring full control of Boston Dynamics represents a strategic M&A completion enabling commercialization of Atlas humanoid robots, a potentially transformative robotics asset.",
+      "action_window": "intraday",
+      "headline": "Hyundai Buys Out SoftBank Stake to Take Full Control of Boston Dynamics as Atlas Humanoid Robot Manufacturing Rollout Moves Closer",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60496213/hyundai-buys-out-softbank-stake-to-take-full-control-of-boston-dynamics-as-atlas-humanoid-robot-manufacturing-rollout-moves-closer",
+      "source": "alpaca",
+      "added_at": "2026-07-16T13:49:47.720832+00:00"
     }
   ]
 }
