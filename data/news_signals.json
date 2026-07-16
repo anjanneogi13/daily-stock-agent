@@ -3661,5 +3661,44 @@
     "expires": "2026-07-21T13:49:47.716313+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "WABC": {
+    "ticker": "WABC",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Westamerica Bancorp Q2 EPS $1.17 Beats $1.10 Estimate, Sales $62.968M Beat $61.600M Estimate",
+    "added_at": "2026-07-16T15:29:48.455469+00:00",
+    "expires": "2026-07-23T15:29:48.455476+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "APM": {
+    "ticker": "APM",
+    "score_delta": 0.157,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Aptorum Group Announces 1-For-10 Reverse Stock Split, Effective July 20; Proposed Merger With DiamiR Biosciences Anticipated To Close Around July 20",
+    "added_at": "2026-07-16T15:29:48.462304+00:00",
+    "expires": "2026-08-15T15:29:48.462309+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NRG": {
+    "ticker": "NRG",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Wells Fargo Maintains Overweight on NRG Energy, Raises Price Target to $209",
+    "added_at": "2026-07-16T15:29:48.465416+00:00",
+    "expires": "2026-07-21T15:29:48.465421+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

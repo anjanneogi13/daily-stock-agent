@@ -1980,6 +1980,54 @@
       "url": "https://www.benzinga.com/markets/tech/26/07/60496213/hyundai-buys-out-softbank-stake-to-take-full-control-of-boston-dynamics-as-atlas-humanoid-robot-manufacturing-rollout-moves-closer",
       "source": "alpaca",
       "added_at": "2026-07-16T13:49:47.720832+00:00"
+    },
+    {
+      "ticker": "LLY",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Projected earnings improvement and partnership announcements are positive but lack specific figures, company identity unclear despite LLY/TAK mentions, and AI drug development remains speculative.",
+      "action_window": "next_day",
+      "headline": "World's First End-To-End AI Drug Developer To Power Into Black On Lucrative Partnerships",
+      "url": "https://www.benzinga.com/Opinion/26/07/60501724/worlds-first-end-to-end-ai-drug-developer-to-power-into-black-on-lucrative-partnerships",
+      "source": "alpaca",
+      "added_at": "2026-07-16T15:29:48.469929+00:00"
+    },
+    {
+      "ticker": "EWZ",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "New 25% tariffs on Brazil represent a significant negative catalyst for Brazilian equities (EWZ) with immediate market impact, though expanded exemptions list provides partial offset.",
+      "action_window": "intraday",
+      "headline": "'US imposes new 25% tariffs on Brazil, expands exemptions list' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60501493/us-imposes-new-25-tariffs-brazil-expands-exemptions-list-reuters",
+      "source": "alpaca",
+      "added_at": "2026-07-16T15:29:48.469944+00:00"
+    },
+    {
+      "ticker": "WABC",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Westamerica Bancorp beat both EPS estimates by 6.4% and revenue estimates by 2.2%, representing a solid double beat on quarterly earnings.",
+      "action_window": "intraday",
+      "headline": "Westamerica Bancorp Q2 EPS $1.17 Beats $1.10 Estimate, Sales $62.968M Beat $61.600M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60501231/westamerica-bancorp-q2-eps-1-17-beats-1-10-estimate-sales-62-968m-beat-61-600m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-16T15:29:48.469958+00:00"
+    },
+    {
+      "ticker": "APM",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "Reverse stock split (1-for-10) typically signals financial distress and often precedes dilution, though merger announcement provides some offsetting positive catalyst with imminent July 20 timing.",
+      "action_window": "intraday",
+      "headline": "Aptorum Group Announces 1-For-10 Reverse Stock Split, Effective July 20; Proposed Merger With DiamiR Biosciences Anticipated To Close Around July 20",
+      "url": "https://www.benzinga.com/m/26/07/60500983/aptorum-group-announces-1-10-reverse-stock-split-effective-july-20-proposed-merger-diamir-bioscience",
+      "source": "alpaca",
+      "added_at": "2026-07-16T15:29:48.469968+00:00"
     }
   ]
 }
