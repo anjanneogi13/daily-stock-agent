@@ -1956,6 +1956,138 @@
       "url": "https://www.benzinga.com/news/26/07/60486689/stereotaxis-files-prospectus-related-resale-108-87m-shares-common-stock-selling-stockholders",
       "source": "alpaca",
       "added_at": "2026-07-15T22:31:29.354482+00:00"
+    },
+    {
+      "ticker": "UNH",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "UnitedHealth delivered a significant earnings beat with Q2 adj. EPS of $6.38 vs $4.86 estimate (31% beat) and revenue also exceeding expectations, representing a major positive catalyst for immediate trading.",
+      "action_window": "intraday",
+      "headline": "UnitedHealth Group Q2 Adj. EPS $6.38 Beats $4.86 Estimate, Sales $112.032B Beat $110.825B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60489742/unitedhealth-group-q2-adj-eps-6-38-beats-4-86-estimate-sales-112-032b-beat-110-825b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638399+00:00"
+    },
+    {
+      "ticker": "ETSY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BTIG downgrade from Buy/Overweight to Neutral typically triggers near-term selling pressure as institutional investors reassess positions, though impact is moderate as it's not a downgrade to Sell.",
+      "action_window": "intraday",
+      "headline": "BTIG Downgrades Etsy to Neutral",
+      "url": "https://www.benzinga.com/news/26/07/60489725/btig-downgrades-etsy-neutral",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638417+00:00"
+    },
+    {
+      "ticker": "EYPT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stifel initiating coverage with Buy rating and $40 price target represents a meaningful positive catalyst from a reputable firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Stifel Initiates Coverage On EyePoint with Buy Rating, Announces Price Target of $40",
+      "url": "https://www.benzinga.com/news/26/07/60489674/stifel-initiates-coverage-eyepoint-buy-rating-announces-price-target-40",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638440+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.58,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "EU court ruling creates potential liability for Google's YouTube content and undermines safe harbor protections, increasing regulatory and legal risk with possible financial exposure.",
+      "action_window": "intraday",
+      "headline": "Google May Be Held Liable For Gambling-Related YouTube Videos After EU Court Rules Reviewing Content For Partnership Deals Forfeits Hosting Exemption",
+      "url": "https://www.benzinga.com/quote/VGK",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638449+00:00"
+    },
+    {
+      "ticker": "NVT",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Baird initiating coverage with Outperform rating and specific price target represents meaningful positive analyst action that typically drives trading volume and price movement.",
+      "action_window": "intraday",
+      "headline": "Baird Initiates Coverage On nVent Electric with Outperform Rating, Announces Price Target of $188",
+      "url": "https://www.benzinga.com/news/26/07/60489639/baird-initiates-coverage-nvent-electric-outperform-rating-announces-price-target-188",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638461+00:00"
+    },
+    {
+      "ticker": "FPS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Baird initiating coverage with Outperform rating and $55 price target represents fresh positive analyst attention that typically drives buying interest and price discovery.",
+      "action_window": "intraday",
+      "headline": "Baird Initiates Coverage On Forgent Power Solutions with Outperform Rating, Announces Price Target of $55",
+      "url": "https://www.benzinga.com/news/26/07/60489597/baird-initiates-coverage-forgent-power-solutions-outperform-rating-announces-price-target-55",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638476+00:00"
+    },
+    {
+      "ticker": "VRT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Baird initiating coverage with Outperform rating and $370 price target represents fresh bullish analyst support that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Baird Initiates Coverage On Vertiv Holdings with Outperform Rating, Announces Price Target of $370",
+      "url": "https://www.benzinga.com/news/26/07/60489585/baird-initiates-coverage-vertiv-holdings-outperform-rating-announces-price-target-370",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638501+00:00"
+    },
+    {
+      "ticker": "GEHC",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $500M 10-year strategic partnership is material revenue with predictable cash flows, representing a significant commercial win for GEHC though impact is spread over long duration.",
+      "action_window": "intraday",
+      "headline": "Catholic Health And GE HealthCare Announce $500M, 10-Year Care Alliance To Expand Patient Access Across Long Island",
+      "url": "https://www.benzinga.com/news/26/07/60489559/catholic-health-and-ge-healthcare-announce-500m-10-year-care-alliance-expand-patient-access-across-l",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638512+00:00"
+    },
+    {
+      "ticker": "BIDU",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Dual-primary listing in Hong Kong expands investor base and improves liquidity, reducing delisting risk and potentially unlocking valuation premium for Chinese ADRs.",
+      "action_window": "next_day",
+      "headline": "Baidu Board Approves Motion For Dual-Primary Listing On Hong Kong Stock Exchange, Expected Effective Within This Year",
+      "url": "https://www.benzinga.com/quote/BIDU",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638521+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major partnership announcement for large-scale AI infrastructure deployment with 27,500 GPUs represents significant revenue opportunity and validates NVIDIA's next-generation Rubin platform in Japan market.",
+      "action_window": "intraday",
+      "headline": "NVIDIA Partners With Noetra Corp To Build Vera Rubin AI Factory Using 13,750 Vera CPUs And 27,500 Rubin GPUs In Japan",
+      "url": "https://www.benzinga.com/quote/EWJ",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638531+00:00"
+    },
+    {
+      "ticker": "VSAT",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic product launch with premium auto partner BMW demonstrates commercial traction in high-margin connected vehicle market, expanding Viasat's addressable market beyond traditional satellite communications.",
+      "action_window": "next_day",
+      "headline": "Viasat Brings Non-Terrestrial Network Communications To Connected Vehicles, Enabling Voice Calls Beyond Cellular Coverage Via BMW iX3",
+      "url": "https://www.benzinga.com/quote/VSAT",
+      "source": "alpaca",
+      "added_at": "2026-07-16T10:02:12.638540+00:00"
     }
   ]
 }
