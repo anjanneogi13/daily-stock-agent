@@ -3752,5 +3752,44 @@
     "expires": "2026-07-23T18:01:06.590438+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "MAN": {
+    "ticker": "MAN",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "Short Squeeze And Earnings: Why ManpowerGroup Stock Spiked Thursday",
+    "added_at": "2026-07-16T19:19:02.463915+00:00",
+    "expires": "2026-07-23T19:19:02.463923+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SN": {
+    "ticker": "SN",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on SharkNinja, Raises Price Target to $170",
+    "added_at": "2026-07-16T19:19:02.470444+00:00",
+    "expires": "2026-07-21T19:19:02.470452+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PRMB": {
+    "ticker": "PRMB",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Primo Brands, Raises Price Target to $29",
+    "added_at": "2026-07-16T19:19:02.473297+00:00",
+    "expires": "2026-07-21T19:19:02.473303+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

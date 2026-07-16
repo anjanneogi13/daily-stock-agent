@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "XOM",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Geopolitical tensions threatening global energy supplies create immediate bullish catalyst for oil majors with stocks already surging on the news.",
-      "action_window": "intraday",
-      "headline": "Oil Stocks Surge Amid Escalating US-Iran Tensions",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60425551/oil-stocks-surge-amid-escalating-us-iran-tensions",
-      "source": "alpaca",
-      "added_at": "2026-07-13T18:17:50.773176+00:00"
-    },
-    {
-      "ticker": "SHEL",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Shell completes $1.8 billion asset sale of Sprng Energy, generating significant cash proceeds and streamlining portfolio toward core operations.",
-      "action_window": "intraday",
-      "headline": "Shell Sells Sprng Energy to India\u2019s Aditya Birla Group",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60425446/shell-sells-sprng-energy-to-indias-aditya-birla-group",
-      "source": "alpaca",
-      "added_at": "2026-07-13T18:17:50.773187+00:00"
-    },
-    {
-      "ticker": "NVS",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Health Canada approval for Vanrafia in IgA nephropathy is a meaningful regulatory milestone, though limited to Canadian market and for a niche indication, making it moderately positive but not transformational for a large-cap pharma like Novartis.",
-      "action_window": "next_day",
-      "headline": "Novartis AG Receives Health Canada Approval For Vanrafia To Reduce Preoteinuria Production In Immunoglobulin A Nephropathy Patients",
-      "url": "https://www.benzinga.com/news/26/07/60425284/novartis-ag-receives-health-canada-approval-vanrafia-reduce-preoteinuria-production-immunoglobulin-n",
-      "source": "alpaca",
-      "added_at": "2026-07-13T18:17:50.773196+00:00"
-    },
-    {
       "ticker": "EVO",
       "tradeable_score": 0.88,
       "sentiment": "bearish",
@@ -2101,6 +2065,18 @@
       "url": "https://www.benzinga.com/markets/earnings/26/07/60507209/prologis-sees-ai-spending-creating-millions-of-square-feet-of-new-warehouse-demand",
       "source": "alpaca",
       "added_at": "2026-07-16T18:01:06.597445+00:00"
+    },
+    {
+      "ticker": "MAN",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "ManpowerGroup beat Q2 estimates with strong Q3 guidance and shares surged over 35% intraday, indicating a massive earnings beat combined with short squeeze dynamics.",
+      "action_window": "intraday",
+      "headline": "Short Squeeze And Earnings: Why ManpowerGroup Stock Spiked Thursday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60510426/short-squeeze-and-earnings-why-manpowergroup-stock-spiked-thursday",
+      "source": "alpaca",
+      "added_at": "2026-07-16T19:19:02.480030+00:00"
     }
   ]
 }
