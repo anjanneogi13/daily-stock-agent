@@ -1013,19 +1013,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BBAI": {
-    "ticker": "BBAI",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "BigBear.ai\u2019s Pangiam Threat Detection Receives Dutch Aviation Security Approval, Meeting Automated Prohibited Items Detection System Standard 1 Criteria",
-    "added_at": "2026-07-09T16:25:01.054458+00:00",
-    "expires": "2026-07-16T16:25:01.054464+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AMAT": {
     "ticker": "AMAT",
     "score_delta": 0.1,
@@ -1648,14 +1635,14 @@
   },
   "AMD": {
     "ticker": "AMD",
-    "score_delta": 0.039,
+    "score_delta": 0.049,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on Advanced Micro Devices, Raises Price Target to $725",
-    "added_at": "2026-07-14T11:21:24.861140+00:00",
-    "expires": "2026-07-19T11:21:24.861146+00:00",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "AMD's $600 Target Isn't Really About AMD",
+    "added_at": "2026-07-16T16:50:34.793124+00:00",
+    "expires": "2026-07-21T16:50:34.793131+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3698,6 +3685,45 @@
     "headline": "Wells Fargo Maintains Overweight on NRG Energy, Raises Price Target to $209",
     "added_at": "2026-07-16T15:29:48.465416+00:00",
     "expires": "2026-07-21T15:29:48.465421+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GHRS": {
+    "ticker": "GHRS",
+    "score_delta": 0.186,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Why Is GH Research Stock Trading Higher on Thursday?",
+    "added_at": "2026-07-16T16:50:34.796906+00:00",
+    "expires": "2026-08-15T16:50:34.796912+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ATAI": {
+    "ticker": "ATAI",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "AtaiBeckley Shares Surge as Eli Lilly Seals $3.8B Acquisition Deal",
+    "added_at": "2026-07-16T16:50:34.800106+00:00",
+    "expires": "2026-08-15T16:50:34.800111+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NTAP": {
+    "ticker": "NTAP",
+    "score_delta": 0.049,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "NetApp Acquires AI Data Infrastructure Company DataPelago; Financial Terms Undisclosed",
+    "added_at": "2026-07-16T16:50:34.803273+00:00",
+    "expires": "2026-07-30T16:50:34.803278+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

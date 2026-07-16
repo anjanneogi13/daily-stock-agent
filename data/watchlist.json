@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "STNG",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Geopolitical tensions in Strait of Hormuz creating tangible tailwinds for shipping tanker rates and insurance costs, directly benefiting named companies with measurable revenue impact.",
-      "action_window": "this_week",
-      "headline": "3 Shipping And Insurance Stocks To Watch As Hormuz Tensions Rise",
-      "url": "https://www.benzinga.com/Opinion/26/07/60419859/3-shipping-and-insurance-stocks-to-watch-as-hormuz-tensions-rise",
-      "source": "alpaca",
-      "added_at": "2026-07-13T16:04:46.122862+00:00"
-    },
-    {
-      "ticker": "RUN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Sunrun launching a novel compute program offering solar users hundreds monthly creates a new revenue stream that could significantly enhance customer economics and differentiate their business model.",
-      "action_window": "intraday",
-      "headline": "'Sunrun Offers Solar Users Hundreds Per Month in Compute Program' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60419621/sunrun-offers-solar-users-hundreds-month-compute-program-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-07-13T16:04:46.122876+00:00"
-    },
-    {
-      "ticker": "SLB",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major deepwater EPC contract win for SLB joint venture represents meaningful revenue opportunity, though contract value and timeline details are not specified in the headline.",
-      "action_window": "intraday",
-      "headline": "Why Is SLB Stock Gaining Monday?",
-      "url": "https://www.benzinga.com/markets/equities/26/07/60419573/why-is-slb-stock-gaining-monday",
-      "source": "alpaca",
-      "added_at": "2026-07-13T16:04:46.122882+00:00"
-    },
-    {
       "ticker": "XOM",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -485,15 +449,16 @@
     },
     {
       "ticker": "AMD",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.68,
       "sentiment": "bullish",
       "category": "upgrade",
-      "rationale": "Keybanc maintains positive stance with significant price target increase to $725, indicating strong conviction but not a rating change from neutral to positive.",
+      "rationale": "BNP Paribas significantly raised AMD's price target to $600 based on long-term AI cycle confidence, representing a meaningful upgrade despite near-term muted expectations.",
       "action_window": "intraday",
-      "headline": "Keybanc Maintains Overweight on Advanced Micro Devices, Raises Price Target to $725",
-      "url": "https://www.benzinga.com/news/26/07/60436765/keybanc-maintains-overweight-advanced-micro-devices-raises-price-target-725",
+      "headline": "AMD's $600 Target Isn't Really About AMD",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60505004/amd-stock-600-price-target-is-not-about-amd",
       "source": "alpaca",
-      "added_at": "2026-07-14T11:21:24.884618+00:00"
+      "added_at": "2026-07-14T11:21:24.884618+00:00",
+      "updated_at": "2026-07-16T16:50:34.807884+00:00"
     },
     {
       "ticker": "IBM",
@@ -2028,6 +1993,66 @@
       "url": "https://www.benzinga.com/m/26/07/60500983/aptorum-group-announces-1-10-reverse-stock-split-effective-july-20-proposed-merger-diamir-bioscience",
       "source": "alpaca",
       "added_at": "2026-07-16T15:29:48.469968+00:00"
+    },
+    {
+      "ticker": "STDN",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "IPO indicating at $12/share (20% below $15 pricing) with dramatically reduced share count (900K vs 10M) signals weak demand and likely poor first-day performance requiring immediate attention.",
+      "action_window": "intraday",
+      "headline": "Standard Nuclear IPO Indicating $12/Share On 900K Shares; IPO Priced At $15/Share On 10M Shares",
+      "url": "https://www.benzinga.com/quote/STDN",
+      "source": "alpaca",
+      "added_at": "2026-07-16T16:50:34.807901+00:00"
+    },
+    {
+      "ticker": "GHRS",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "GHRS trading higher on sympathy/sector momentum from Eli Lilly's $3.8B acquisition of peer AtaiBeckley, indicating increased big pharma interest in the psychedelic therapeutics space.",
+      "action_window": "intraday",
+      "headline": "Why Is GH Research Stock Trading Higher on Thursday?",
+      "url": "https://www.benzinga.com/m-a/26/07/60504723/why-is-gh-research-stock-trading-higher-on-thursday",
+      "source": "alpaca",
+      "added_at": "2026-07-16T16:50:34.807914+00:00"
+    },
+    {
+      "ticker": "ATAI",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed $3.8B acquisition of AtaiBeckley by Eli Lilly represents a significant premium and immediate value realization for ATAI shareholders.",
+      "action_window": "intraday",
+      "headline": "AtaiBeckley Shares Surge as Eli Lilly Seals $3.8B Acquisition Deal",
+      "url": "https://www.benzinga.com/m-a/26/07/60504699/ataibeckley-shares-surge-as-eli-lilly-seals-3-8b-acquisition-deal",
+      "source": "alpaca",
+      "added_at": "2026-07-16T16:50:34.807925+00:00"
+    },
+    {
+      "ticker": "NTAP",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Strategic AI infrastructure acquisition aligns NetApp with high-growth AI data market, though undisclosed terms limit immediate valuation impact assessment.",
+      "action_window": "intraday",
+      "headline": "NetApp Acquires AI Data Infrastructure Company DataPelago; Financial Terms Undisclosed",
+      "url": "https://www.benzinga.com/m/26/07/60504520/netapp-acquires-ai-data-infrastructure-company-datapelago-financial-terms-undisclosed",
+      "source": "alpaca",
+      "added_at": "2026-07-16T16:50:34.807936+00:00"
+    },
+    {
+      "ticker": "VIVS",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Confirmed 25%+ stock plunge on dilutive $4M private placement at $0.85/share represents significant shareholder dilution and negative price action already in progress.",
+      "action_window": "intraday",
+      "headline": "Why Is VivoSim Labs Stock Falling Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60504182/why-is-vivosim-labs-stock-falling-thursday",
+      "source": "alpaca",
+      "added_at": "2026-07-16T16:50:34.807947+00:00"
     }
   ]
 }
