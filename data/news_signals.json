@@ -575,19 +575,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BSVN": {
-    "ticker": "BSVN",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Bank7 To Buy 71% Of Century Financial Services For $68M Cash",
-    "added_at": "2026-07-02T21:42:59.475684+00:00",
-    "expires": "2026-07-16T21:42:59.475693+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ALAR": {
     "ticker": "ALAR",
     "score_delta": -0.1,
@@ -3802,6 +3789,45 @@
     "headline": "Capital Southwest Sees Q1 GAAP EPS $0.58-$0.59 vs $0.55 Est",
     "added_at": "2026-07-16T21:32:07.734173+00:00",
     "expires": "2026-07-23T21:32:07.734178+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BSFC": {
+    "ticker": "BSFC",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Blue Star Foods Q1 Sales $250.259K Down From $960.758K YoY",
+    "added_at": "2026-07-16T22:32:08.439255+00:00",
+    "expires": "2026-07-23T22:32:08.439265+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WAFD": {
+    "ticker": "WAFD",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "WaFd Q3 EPS $0.84 Beats $0.81 Estimate, Sales $205.516M Beat $183.376M Estimate",
+    "added_at": "2026-07-16T22:32:08.442788+00:00",
+    "expires": "2026-07-23T22:32:08.442795+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IPGP": {
+    "ticker": "IPGP",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "IPG Photonics Enters Into A Binding Offer To Acquire Lumibird Medical For A Purchase Price Of \u20ac300M On A Cash-Free, Debt-free Basis; Co. Expects Deal Also Adds About $1B In Addressable Market For Adva",
+    "added_at": "2026-07-16T22:32:08.445818+00:00",
+    "expires": "2026-07-30T22:32:08.445824+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
