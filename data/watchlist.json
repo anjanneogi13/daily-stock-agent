@@ -1,102 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SNWV",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Mid-quarter guidance raise of approximately 10-13% above prior high-end guidance is a strong positive catalyst indicating better-than-expected business momentum.",
-      "action_window": "intraday",
-      "headline": "SANUWAVE Health Raises Q2 Sales Guidance from $8.500M-$9.500M to $9.600M-$9.800M",
-      "url": "https://www.benzinga.com/news/26/07/60430326/sanuwave-health-raises-q2-sales-guidance-8-500m-9-500m-9-600m-9-800m",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742900+00:00"
-    },
-    {
-      "ticker": "WHF",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large securities offering of $240.9M plus existing share sale signals significant dilution risk for current shareholders, typically causing immediate downward pressure on stock price.",
-      "action_window": "next_day",
-      "headline": "WhiteHorse Finance Files Prospectus For Up To $240.9M Securities Offering, Including Common Stock, Preferred Stock, Warrants, Debt Securities, Units, And Sale Of 3,976,258 Existing Shares By Selling Stockholder",
-      "url": "https://www.benzinga.com/news/26/07/60430300/whitehorse-finance-files-prospectus-240-9m-securities-offering-including-common-stock-preferred-stoc",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742910+00:00"
-    },
-    {
-      "ticker": "MVIS",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "At-the-market equity offering of $50M signals potential shareholder dilution and possible capital needs, typically causing immediate selling pressure on small-cap stocks.",
-      "action_window": "intraday",
-      "headline": "MicroVision Files Prospectus To Offer Securities Up To $50M",
-      "url": "https://www.benzinga.com/news/26/07/60430289/microvision-files-prospectus-offer-securities-50m",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742917+00:00"
-    },
-    {
-      "ticker": "DXCM",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Health Canada authorization for Dexcom G7 15-day system expands market access with improved product specs, though Canada represents a smaller market compared to US FDA approval.",
-      "action_window": "next_day",
-      "headline": "Dexcom Receives Health Canada Authorization For Dexcom G7 15 Day CGM System, Offering 15.5-Day Wear, 8.0% MARD Accuracy, And Fewer Sensor Changes For Canadians With Diabetes",
-      "url": "https://www.benzinga.com/general/biotech/26/07/60430275/dexcom-receives-health-canada-authorization-dexcom-g7-15-day-cgm-system-offering-15-5-day-wear-8-0-m",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742922+00:00"
-    },
-    {
-      "ticker": "TREX",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Significant Q2 sales guidance raise of 22.8% above consensus ($418M vs $340.1M est) and 7.7% above prior high-end guidance indicates strong demand acceleration.",
-      "action_window": "intraday",
-      "headline": "Trex Co Raises Q2 Sales Guidance from $388.000M-$403.000M to $418.000M vs $340.132M Est",
-      "url": "https://www.benzinga.com/news/26/07/60430167/trex-co-raises-q2-sales-guidance-388-000m-403-000m-418-000m-vs-340-132m-est",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742927+00:00"
-    },
-    {
-      "ticker": "FLNC",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "New commercial agreement for energy storage solution with EPC services represents tangible revenue opportunity, though financial terms and project size are undisclosed.",
-      "action_window": "next_day",
-      "headline": "Fluence Energy Signs Agreement With Avantus To Offer Advanced Smartstack Energy Storage Solution, Engineering, Procurement And Construction Services For Rexford 2 Project In California",
-      "url": "https://www.benzinga.com/news/26/07/60429944/fluence-energy-signs-agreement-avantus-offer-advanced-smartstack-energy-storage-solution-engineering",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742937+00:00"
-    },
-    {
-      "ticker": "BTTC",
-      "tradeable_score": 0.52,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Interim Co-CEO appointment signals leadership transition or potential instability, creating uncertainty but not necessarily negative implications without context on circumstances.",
-      "action_window": "next_day",
-      "headline": "Black Titan Appoints Brynner Chiam As Interim Co-CEO",
-      "url": "https://www.benzinga.com/news/26/07/60429773/black-titan-appoints-brynner-chiam-interim-co-ceo",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742942+00:00"
-    },
-    {
-      "ticker": "ERAS",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large $500M secondary offering will cause immediate dilution to existing shareholders and typically triggers significant selling pressure as the stock adjusts to increased share count.",
-      "action_window": "intraday",
-      "headline": "Erasca Plans To Commence $500M Common Stock Offering",
-      "url": "https://www.benzinga.com/news/26/07/60429610/erasca-plans-commence-500m-common-stock-offering",
-      "source": "alpaca",
-      "added_at": "2026-07-13T20:54:41.742948+00:00"
-    },
-    {
       "ticker": "SCII",
       "tradeable_score": 0.8,
       "sentiment": "bearish",
@@ -1443,15 +1347,16 @@
     },
     {
       "ticker": "SPCX",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "SpaceX breaking below IPO price with increased short interest represents significant negative momentum and investor confidence erosion, though prediction market data suggests mixed sentiment on valuation.",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major AI model launch (Grok 4.5) with strong positioning claims against competitors in high-value enterprise segments (coding, agentic tasks, knowledge work) represents meaningful competitive advancement for SpaceXAI.",
       "action_window": "intraday",
-      "headline": "Investing In Elon Musk Is 'Faith-Based': Julie Hyman's Warning Rings True As SpaceX Breaks Below IPO Price",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60484211/investing-in-elon-musk-is-faith-based-julie-hymans-warning-rings-true-as-spacex-breaks-below-ipo-price",
+      "headline": "SpaceXAI Launches Grok 4.5, SpaceXAI's Smartest Model Built To Excel At Coding, Agentic Tasks, And Knowledge Work; Says It's Our Strongest Model Ever And Was Trained Alongside Cursor",
+      "url": "https://www.benzinga.com/news/26/07/60514425/spacexai-launches-grok-4-5-spacexai-s-smartest-model-built-excel-coding-agentic-tasks-and-knowledge-",
       "source": "alpaca",
-      "added_at": "2026-07-15T20:12:34.456554+00:00"
+      "added_at": "2026-07-15T20:12:34.456554+00:00",
+      "updated_at": "2026-07-16T21:32:07.740385+00:00"
     },
     {
       "ticker": "WLDN",
@@ -2113,6 +2018,54 @@
       "url": "https://www.benzinga.com/quote/INDB",
       "source": "alpaca",
       "added_at": "2026-07-16T20:26:17.214609+00:00"
+    },
+    {
+      "ticker": "MOH",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "S&P index rebalancing typically creates mechanical buying pressure from index funds, with MOH moving up to MidCap 400 being modestly bullish while ROAD faces selling pressure moving to SmallCap 600.",
+      "action_window": "next_day",
+      "headline": "Molina Healthcare To Replace National Storage Affiliates Trust  In The S&P MidCap 400, And Construction Partners To Replace Molina Healthcare In The S&P SmallCap 600, Effective Prior To The Opening Of Trading On Wednesday, July 22",
+      "url": "https://www.benzinga.com/news/26/07/60514754/molina-healthcare-replace-national-storage-affiliates-trust-s-p-midcap-400-and-construction-partners",
+      "source": "alpaca",
+      "added_at": "2026-07-16T21:32:07.740343+00:00"
+    },
+    {
+      "ticker": "JSPR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Completed M&A acquisition combined with significant $132M capital raise extends runway through H2 2028, materially de-risking the company and providing substantial cash for operations.",
+      "action_window": "next_day",
+      "headline": "Jasper Therapeutics Completes The Acquisition Of Kira Pharmaceuticals; Announces $132M Private Placement Of Convertible Preferred Stock; Combined Company Operations Expected To Be Funded Through Second Half Of 2028",
+      "url": "https://www.benzinga.com/news/26/07/60514701/jasper-therapeutics-completes-acquisition-kira-pharmaceuticals-announces-132m-private-placement-conv",
+      "source": "alpaca",
+      "added_at": "2026-07-16T21:32:07.740356+00:00"
+    },
+    {
+      "ticker": "CSWC",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Capital Southwest guidance for Q1 GAAP EPS of $0.58-$0.59 beats consensus estimate of $0.55 by 5.5-7.3%, representing a meaningful positive catalyst for the stock.",
+      "action_window": "intraday",
+      "headline": "Capital Southwest Sees Q1 GAAP EPS $0.58-$0.59 vs $0.55 Est",
+      "url": "https://www.benzinga.com/news/26/07/60514635/capital-southwest-sees-q1-gaap-eps-0-58-0-59-vs-0-55-est",
+      "source": "alpaca",
+      "added_at": "2026-07-16T21:32:07.740365+00:00"
+    },
+    {
+      "ticker": "ASPI",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering of 23.2M shares by selling stockholders creates significant dilution concern and immediate selling pressure, though existing shareholders are exiting rather than company raising capital.",
+      "action_window": "intraday",
+      "headline": "ASP Isotopes Files Prospectus Related To Offer & Sale By Selling Stockholders Of 23.2M Shares Of Common Stock",
+      "url": "https://www.benzinga.com/news/26/07/60514487/asp-isotopes-files-prospectus-related-offer-sale-selling-stockholders-23-2m-shares-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-07-16T21:32:07.740377+00:00"
     }
   ]
 }

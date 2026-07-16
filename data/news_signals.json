@@ -75,19 +75,6 @@
     "expires": "2026-12-09T17:35:21.457868+00:00",
     "hard_block": true
   },
-  "LOKV": {
-    "ticker": "LOKV",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Teamshares Announces Live Oak Acquisition Corp. V Shareholders Approve Proposed Merger With Teamshares",
-    "added_at": "2026-06-16T20:51:06.443517+00:00",
-    "expires": "2026-07-16T20:51:06.443525+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HUN": {
     "ticker": "HUN",
     "score_delta": 0.129,
@@ -2637,14 +2624,14 @@
   },
   "SPCX": {
     "ticker": "SPCX",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Needham Maintains Buy on SpaceX, Raises Price Target to $250",
-    "added_at": "2026-07-15T09:55:27.953424+00:00",
-    "expires": "2026-07-20T09:55:27.953432+00:00",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "SpaceXAI Launches Grok 4.5, SpaceXAI's Smartest Model Built To Excel At Coding, Agentic Tasks, And Knowledge Work; Says It's Our Strongest Model Ever And Was Trained Alongside Cursor",
+    "added_at": "2026-07-16T21:32:07.736731+00:00",
+    "expires": "2026-07-23T21:32:07.736735+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3789,6 +3776,32 @@
     "headline": "Independent Bank Q2 Adj. EPS $1.70 Misses $1.78 Estimate, Sales $253.318M Miss $257.495M Estimate",
     "added_at": "2026-07-16T20:26:17.206521+00:00",
     "expires": "2026-07-23T20:26:17.206526+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JSPR": {
+    "ticker": "JSPR",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "Jasper Therapeutics Completes The Acquisition Of Kira Pharmaceuticals; Announces $132M Private Placement Of Convertible Preferred Stock; Combined Company Operations Expected To Be Funded Through Secon",
+    "added_at": "2026-07-16T21:32:07.731100+00:00",
+    "expires": "2026-07-30T21:32:07.731106+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSWC": {
+    "ticker": "CSWC",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Capital Southwest Sees Q1 GAAP EPS $0.58-$0.59 vs $0.55 Est",
+    "added_at": "2026-07-16T21:32:07.734173+00:00",
+    "expires": "2026-07-23T21:32:07.734178+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
