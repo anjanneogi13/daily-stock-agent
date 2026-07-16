@@ -1,43 +1,6 @@
 {
   "items": [
     {
-      "ticker": "USO",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Iran's statement on military freedom of action and control over Strait of Hormuz signals potential escalation risk in a critical oil transit chokepoint, likely driving risk-off sentiment and oil price volatility.",
-      "action_window": "intraday",
-      "headline": "Iran's Top Negotiator Qalibaf Says Our Armed Forces Have Complete Freedom Of Action As Always To Confront The 'Enemy's Aggression'; Our National Security Lies In Maintaining The 'Iranian Arrangements' On The Strait Of Hormuz; Negotiation At This Stage Is Not Equivalent To Compromise, But, Along With",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60479908/iran-s-top-negotiator-qalibaf-says-our-armed-forces-have-complete-freedom-action-always-confront-ene",
-      "source": "alpaca",
-      "added_at": "2026-07-13T22:50:09.278394+00:00",
-      "updated_at": "2026-07-15T17:46:02.818203+00:00"
-    },
-    {
-      "ticker": "LEXX",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q3 earnings beat by $0.01 per share (11% better than estimate) is modestly positive but represents a narrow beat for a small-cap biotech with limited institutional following.",
-      "action_window": "next_day",
-      "headline": "Lexaria Bioscience Q3 EPS $(0.08) Beats $(0.09) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60431367/lexaria-bioscience-q3-eps-0-08-beats-0-09-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-13T22:50:09.278410+00:00"
-    },
-    {
-      "ticker": "RPT",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Public equity offerings typically dilute existing shareholders and signal management believes stock is overvalued, creating immediate downward pressure on share price.",
-      "action_window": "intraday",
-      "headline": "Rithm Property Trust Reveals Public Offering Of Common Stock; No Size Disclosed",
-      "url": "https://www.benzinga.com/news/26/07/60431256/rithm-property-trust-reveals-public-offering-common-stock-no-size-disclosed",
-      "source": "alpaca",
-      "added_at": "2026-07-13T22:50:09.278419+00:00"
-    },
-    {
       "ticker": "AMBQ",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
@@ -1731,15 +1694,16 @@
     },
     {
       "ticker": "ATAI",
-      "tradeable_score": 0.95,
+      "tradeable_score": 1.0,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Confirmed $3.8B acquisition of AtaiBeckley by Eli Lilly represents a significant premium and immediate value realization for ATAI shareholders.",
+      "rationale": "Definitive $2.8 billion cash acquisition by Eli Lilly at $6.75/share plus milestone payments represents a major buyout premium and immediate liquidity event for shareholders.",
       "action_window": "intraday",
-      "headline": "AtaiBeckley Shares Surge as Eli Lilly Seals $3.8B Acquisition Deal",
-      "url": "https://www.benzinga.com/m-a/26/07/60504699/ataibeckley-shares-surge-as-eli-lilly-seals-3-8b-acquisition-deal",
+      "headline": "AtaiBeckley Soars as Eli Lilly Agrees to $2.8 Billion Buyout",
+      "url": "https://finance.yahoo.com/healthcare/articles/ataibeckley-soars-eli-lilly-agrees-185902090.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-16T16:50:34.807925+00:00"
+      "added_at": "2026-07-16T16:50:34.807925+00:00",
+      "updated_at": "2026-07-16T23:54:37.518104+00:00"
     },
     {
       "ticker": "NTAP",

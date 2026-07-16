@@ -75,19 +75,6 @@
     "expires": "2026-12-09T17:35:21.457868+00:00",
     "hard_block": true
   },
-  "HUN": {
-    "ticker": "HUN",
-    "score_delta": 0.129,
-    "catalyst": "ma_target",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "ignore",
-    "headline": "Huntsman Says If Deal Terminated Under Certain Circumstances, Co Or Olin To Pay To Other Party Termination Fee Of $121M",
-    "added_at": "2026-06-16T22:51:31.345964+00:00",
-    "expires": "2026-07-16T22:51:31.345970+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SDM": {
     "ticker": "SDM",
     "score_delta": -1.0,
@@ -572,19 +559,6 @@
     "headline": "'Genuine Parts Is Said to Receive O\u2019Reilly Interest for Auto Unit' - Bloomberg",
     "added_at": "2026-07-02T20:16:31.566452+00:00",
     "expires": "2026-08-01T20:16:31.566457+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ALAR": {
-    "ticker": "ALAR",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Alarum Technologies Issues Statement  In Response To Recent Reports Regarding Their Proxy Network Operations; To Fully Cooperate With Law Enforcement In Infrastructure Misuse Investigation",
-    "added_at": "2026-07-02T22:59:53.230937+00:00",
-    "expires": "2026-07-16T22:59:53.230945+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
