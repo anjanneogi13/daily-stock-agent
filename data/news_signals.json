@@ -44,19 +44,6 @@
     "expires": "2026-12-01T01:45:38.346918+00:00",
     "hard_block": true
   },
-  "PSKY": {
-    "ticker": "PSKY",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Semafor Reporter Rohan Goswami Posts On X \"$PSKY has secured China regulatory approval for $WBD deal\"",
-    "added_at": "2026-06-17T21:02:46.920070+00:00",
-    "expires": "2026-07-17T21:02:46.920076+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HYPD": {
     "ticker": "HYPD",
     "score_delta": -1.0,
@@ -1136,19 +1123,6 @@
     "headline": "Solesence's Unit Enters Settlement Agreement With Refy Beauty On July 6, 2026; Co's Unit & Refy Agreed To Settle & Compromise Disputes Relating To Certain Consumer Care Products Previously Sold By Co'",
     "added_at": "2026-07-10T21:55:34.624314+00:00",
     "expires": "2026-07-24T21:55:34.624340+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSX:GDL": {
-    "ticker": "TSX:GDL",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Goodfellow Q2 EPS $0.25 Down From $0.29 YoY, Sales $142.686M Down From $152.940M YoY",
-    "added_at": "2026-07-10T21:55:34.627119+00:00",
-    "expires": "2026-07-17T21:55:34.627124+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4231,6 +4205,32 @@
     "headline": "This New ETF Targets AI Memory Leaders and Weekly Cash Payouts",
     "added_at": "2026-07-17T21:02:38.191147+00:00",
     "expires": "2026-07-24T21:02:38.191152+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SKYA": {
+    "ticker": "SKYA",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "SkyAI Says Formed Special Committee To Review All-Stock Proposal From Forward Industries; Board And Special Committee Reject Forward Industries Proposal",
+    "added_at": "2026-07-17T22:13:07.268190+00:00",
+    "expires": "2026-08-16T22:13:07.268199+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MKDW": {
+    "ticker": "MKDW",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "MKDWELL Tech  To Acquire The Entire Issued Share Capital Of Landvision; Deal Valued At $240M Via 30M New Shares At $8 Per Share",
+    "added_at": "2026-07-17T22:13:07.272493+00:00",
+    "expires": "2026-07-31T22:13:07.272501+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

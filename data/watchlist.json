@@ -1,103 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CCIX",
-      "tradeable_score": 0.92,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "SPAC liquidation announcement with confirmed redemption of all shares and delisting date represents definitive end of company operations and trading opportunity.",
-      "action_window": "next_day",
-      "headline": "Churchill Capital Corp IX Reveals its Intention To Liquidate; Co. To Redeem All Outstanding Class A Ordinary Shares; To Cease Operations And Redeem Public Shares;  Last Day That The Company\u2019s Securities Will Trade On The Nasdaq Will Be July 27, 2026",
-      "url": "https://www.benzinga.com/news/26/07/60458924/churchill-capital-corp-ix-reveals-its-intention-liquidate-co-redeem-all-outstanding-class-ordinary-s",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834831+00:00"
-    },
-    {
-      "ticker": "GCTK",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Completed reverse merger with L\u014dkahi Therapeutics taking operational control provides GCTK shareholders with exposure to a new operating business and typically drives significant trading volume and price volatility in the target company.",
-      "action_window": "intraday",
-      "headline": "GlucoTrack Completes Its Strategic Business Combination With L\u014dkahi Therapeutics; Transaction Is Structured Such That L\u014dkahi Therapeutics Becomes The Operating And Controlling Business Of The Combined Company, Leveraging Glucotrack\u2019s Public Market Platform To Support Long-Term Growth And Access To C",
-      "url": "https://www.benzinga.com/news/26/07/60458864/glucotrack-completes-its-strategic-business-combination-l-kahi-therapeutics-transaction-structured-s",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834844+00:00"
-    },
-    {
-      "ticker": "PNR",
-      "tradeable_score": 0.92,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Pentair slashed Q2 EPS guidance by 24% and revenue guidance by 18%, both significantly below consensus estimates, indicating severe operational deterioration.",
-      "action_window": "next_day",
-      "headline": "Pentair Lowers Q2 Adj EPS Guidance from $1.47-$1.50 to $1.12 vs $1.48 Est; Lowers Q2 Sales Guidance from $1.134B to $930.000M vs $1.137B Est",
-      "url": "https://www.benzinga.com/news/26/07/60459009/pentair-lowers-q2-adj-eps-guidance-1-47-1-50-1-12-vs-1-48-est-lowers-q2-sales-guidance-1-134b-930-00",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834853+00:00",
-      "updated_at": "2026-07-14T22:51:51.570167+00:00"
-    },
-    {
-      "ticker": "BTSG",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "S&P index rebalancing creates mechanical buying pressure from index funds tracking the MidCap 400 for BTSG and SmallCap 600 for KRMN, with GTLS facing selling pressure from MidCap exit.",
-      "action_window": "next_day",
-      "headline": "BrightSpring Health Services To Replace Chart Industries In The S&P MidCap 400, And Karman Holdings To Replace BrightSpring Health Services In The S&P SmallCap 600 Effective Prior To The Opening Of Trading On Friday, July 17",
-      "url": "https://www.benzinga.com/news/26/07/60458664/brightspring-health-services-replace-chart-industries-s-p-midcap-400-and-karman-holdings-replace-bri",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834868+00:00"
-    },
-    {
-      "ticker": "WLFC",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Significant asset acquisition of 12 aircraft and 13 engines expands WLFC's leasing portfolio, though subject to closing conditions which introduces execution risk.",
-      "action_window": "next_day",
-      "headline": "Willis Lease Finance To  To Acquire 12 Commercial Aircraft And 13 Aircraft Engines; The Transaction Is Subject To Customary Closing Conditions",
-      "url": "https://www.benzinga.com/news/26/07/60458614/willis-lease-finance-acquire-12-commercial-aircraft-and-13-aircraft-engines-transaction-subject-cust",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834875+00:00"
-    },
-    {
-      "ticker": "LION",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Reuters exclusive reporting multiple takeover bidders creates immediate upward price pressure for target company, though remains unconfirmed rumor until formal offer announced.",
-      "action_window": "intraday",
-      "headline": "'Lionsgate Studios attracts takeover interest from Bollore, Banijay, sources say'- Reuters Exclusive",
-      "url": "https://www.benzinga.com/news/26/07/60458527/lionsgate-studios-attracts-takeover-interest-bollore-banijay-sources-say-reuters-exclusive",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834886+00:00"
-    },
-    {
-      "ticker": "OII",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major U.S. Department of Defense contract selection for autonomous undersea vehicle development represents significant future revenue opportunity and strategic positioning in defense maritime technology.",
-      "action_window": "next_day",
-      "headline": "Oceaneering International And KONGSBERG Selected By The U.S. Department Of War\u2019s Defense Innovation Unit To Support The Combat Autonomous Maritime Platform Program, Focused On The Development Of An Extra-Large Uncrewed Undersea Vehicle For Future U.S. Navy Missions",
-      "url": "https://www.benzinga.com/news/26/07/60458395/oceaneering-international-and-kongsberg-selected-u-s-department-war-s-defense-innovation-unit-suppor",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834900+00:00"
-    },
-    {
-      "ticker": "AA",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Final investment decision with multi-government backing for new gallium production facility represents significant strategic expansion and revenue diversification for Alcoa with strong geopolitical support.",
-      "action_window": "next_day",
-      "headline": "Australia, Japan, The United States And Alcoa Reveal Final Investment Decision For Gallium Project In Western Australia; To Construct And Operate Gallium Plant At Wagerup Refinery In Western Australia",
-      "url": "https://www.benzinga.com/news/26/07/60458122/australia-japan-united-states-and-alcoa-reveal-final-investment-decision-gallium-project-western-aus",
-      "source": "alpaca",
-      "added_at": "2026-07-14T21:52:56.834906+00:00"
-    },
-    {
       "ticker": "JCTC",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -1808,6 +1711,66 @@
       "url": "https://www.benzinga.com/m/26/07/60538476/boxabl-completes-spac-merger-fg-merger-ii-corp-becomes-publicly-traded-nasdaq-under-bxbl-beginning-j",
       "source": "alpaca",
       "added_at": "2026-07-17T21:02:38.196281+00:00"
+    },
+    {
+      "ticker": "SKYA",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "ma_target",
+      "rationale": "SkyAI's board rejection of Forward Industries' all-stock acquisition proposal signals resistance to the deal, typically negative for target stock as it removes takeout premium expectations.",
+      "action_window": "intraday",
+      "headline": "SkyAI Says Formed Special Committee To Review All-Stock Proposal From Forward Industries; Board And Special Committee Reject Forward Industries Proposal",
+      "url": "https://www.benzinga.com/content/60539484/skyai-says-formed-special-committee-review-all-stock-proposal-forward-industries-board-and-special-c",
+      "source": "alpaca",
+      "added_at": "2026-07-17T22:13:07.280704+00:00"
+    },
+    {
+      "ticker": "BBLG",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Secondary offering by selling stockholders signals dilution and potential insider selling pressure, typically creating immediate downward pressure on small-cap stocks.",
+      "action_window": "intraday",
+      "headline": "Bone Biologics Files Prospectus To Offer Up To 6.46M Shares Of Common Stock By Selling Stockholders",
+      "url": "https://www.benzinga.com/news/26/07/60539439/bone-biologics-files-prospectus-offer-6-46m-shares-common-stock-selling-stockholders",
+      "source": "alpaca",
+      "added_at": "2026-07-17T22:13:07.280720+00:00"
+    },
+    {
+      "ticker": "MKDW",
+      "tradeable_score": 0.85,
+      "sentiment": "neutral",
+      "category": "ma_acquirer",
+      "rationale": "Major M&A announcement with MKDW acquiring Landvision for $240M through share issuance, representing significant dilution (30M shares at $8) that typically pressures acquirer stock price near-term despite strategic rationale.",
+      "action_window": "next_day",
+      "headline": "MKDWELL Tech  To Acquire The Entire Issued Share Capital Of Landvision; Deal Valued At $240M Via 30M New Shares At $8 Per Share",
+      "url": "https://www.benzinga.com/news/26/07/60539405/mkdwell-tech-acquire-entire-issued-share-capital-landvision-deal-valued-240m-30m-new-shares-8-share",
+      "source": "alpaca",
+      "added_at": "2026-07-17T22:13:07.280729+00:00"
+    },
+    {
+      "ticker": "ADVB",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Termination of purchase agreement suggests deal fell through or company backing away from acquisition, typically negative for strategic growth plans and potential financing arrangements.",
+      "action_window": "next_day",
+      "headline": "Advanced Biomed Delivers Notice To Terminate Purchase Agreement With With Helena Global Investment Opportunities I LTD On July 14; Purchase Agreement Termination Effective July 21, 2026",
+      "url": "https://www.benzinga.com/news/26/07/60539317/advanced-biomed-delivers-notice-terminate-purchase-agreement-helena-global-investment-opportunities-",
+      "source": "alpaca",
+      "added_at": "2026-07-17T22:13:07.280744+00:00"
+    },
+    {
+      "ticker": "EXOD",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A 25% workforce reduction signals significant operational stress and restructuring costs of $2.5M-$3.5M, typically triggering immediate negative market reaction despite potential long-term cost savings.",
+      "action_window": "intraday",
+      "headline": "Exodus Movement Announces An Operating Realignment That Includes A Reduction Of ~25% Of The Global Workforce; Expects $2.5M-$3.5M Of Pre-Tax Charges From Workforce Reduction",
+      "url": "https://www.benzinga.com/news/26/07/60539148/exodus-movement-announces-operating-realignment-includes-reduction-25-global-workforce-expects-2-5m-",
+      "source": "alpaca",
+      "added_at": "2026-07-17T22:13:07.280755+00:00"
     }
   ]
 }
