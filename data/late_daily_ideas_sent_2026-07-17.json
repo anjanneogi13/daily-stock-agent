@@ -1,0 +1,11 @@
+{
+  "artifact": "late_daily_ideas_sent",
+  "date": "2026-07-17",
+  "live_trading_enabled": false,
+  "message_sha256": "86d58551d92cf8afe0349c213d84821b6923f7a2005279f9167b3bea3df2a1c7",
+  "mode": "monitoring_only",
+  "paper_trading_enabled": false,
+  "sent_at_utc": "2026-07-17T13:30:06Z",
+  "sent_count": 2,
+  "watch_only": true
+}
