@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "FXI",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Proposed tariffs legislation targeting major emerging markets (China, India) represents significant geopolitical and trade risk with direct negative impact on country ETFs, though still at bill stage requiring passage.",
-      "action_window": "intraday",
-      "headline": "'Lindsey Graham\u2019s Tariffs Bill Would Target China, India as Russian Oil Buyers' - Wall Street Journal Exclusive",
-      "url": "https://www.benzinga.com/government/26/07/60451738/lindsey-graham-s-tariffs-bill-would-target-china-india-russian-oil-buyers-wall-street-journal-exclus",
-      "source": "alpaca",
-      "added_at": "2026-07-14T17:40:55.539524+00:00"
-    },
-    {
-      "ticker": "GFUZ",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "First publicly listed fusion energy company beginning Nasdaq trading with strong $150M cash position creates significant near-term momentum and speculative interest.",
-      "action_window": "intraday",
-      "headline": "Why Are General Fusion Shares Surging On Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60451710/why-are-general-fusion-shares-surging-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-14T17:40:55.539533+00:00"
-    },
-    {
-      "ticker": "FAST",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "earnings_beat",
-      "rationale": "Mixed earnings with sales beat and strong contract growth but stock trading lower suggests margin pressure and tariff concerns outweighing positives, creating tradeable negative reaction despite fundamental beat.",
-      "action_window": "intraday",
-      "headline": "Why Is Fastenal Stock Trading Lower Today?",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60451447/why-is-fastenal-stock-trading-lower-today",
-      "source": "alpaca",
-      "added_at": "2026-07-14T17:40:55.539544+00:00"
-    },
-    {
-      "ticker": "CTEV",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Intensifying DOJ probe with new information demands signals escalating regulatory risk and potential legal liabilities for Claritev.",
-      "action_window": "intraday",
-      "headline": "'DOJ\u2019s Claritev Probe Intensifies With New Information Demands' - Bloomberg",
-      "url": "https://www.benzinga.com/government/26/07/60451351/doj-s-claritev-probe-intensifies-new-information-demands-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-07-14T17:40:55.539549+00:00"
-    },
-    {
-      "ticker": "LCID",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Company considering bankruptcy (Chapter 11) or going private signals severe financial distress and potential total equity wipeout for public shareholders.",
-      "action_window": "intraday",
-      "headline": "'Lucid Weighs Going Private or Chapter 11 as Adviser Reports to Board' - EV",
-      "url": "https://www.benzinga.com/news/26/07/60451287/lucid-weighs-going-private-or-chapter-11-adviser-reports-board-ev",
-      "source": "alpaca",
-      "added_at": "2026-07-14T17:40:55.539553+00:00"
-    },
-    {
       "ticker": "BA",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1918,6 +1858,18 @@
       "url": "https://www.benzinga.com/news/26/07/60531070/agroz-receives-nasdaq-notification-regarding-annual-report-filing-deficiency-renames-public-shares-c",
       "source": "alpaca",
       "added_at": "2026-07-17T17:05:36.570136+00:00"
+    },
+    {
+      "ticker": "ARWR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains bullish stance with significant price target raise to $95, signaling strong conviction from a major bulge bracket bank.",
+      "action_window": "next_day",
+      "headline": "JP Morgan Maintains Overweight on Arrowhead Pharma, Raises Price Target to $95",
+      "url": "https://www.benzinga.com/news/26/07/60534084/jp-morgan-maintains-overweight-arrowhead-pharma-raises-price-target-95",
+      "source": "alpaca",
+      "added_at": "2026-07-17T18:33:45.315666+00:00"
     }
   ]
 }
