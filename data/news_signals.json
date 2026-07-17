@@ -1113,19 +1113,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FSPC": {
-    "ticker": "FSPC",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "Beyond SpaceX: First Trust Launches FSPC Space Economy ETF Focused on AI, Satellites, Launch Leaders",
-    "added_at": "2026-07-10T19:19:57.934686+00:00",
-    "expires": "2026-07-17T19:19:57.934692+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "YSXT": {
     "ticker": "YSXT",
     "score_delta": -0.1,
@@ -2572,14 +2559,14 @@
   },
   "TSLA": {
     "ticker": "TSLA",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Elon Musk's SpaceX Won't Turn Profitable Until 2027, Analyst Says: 'Still Not Sure What People See\u2026'",
-    "added_at": "2026-07-15T09:55:27.957026+00:00",
-    "expires": "2026-07-20T09:55:27.957035+00:00",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Tesla\u2019s Robotaxi Land Grab: Miami Added, Texas Fleet Grows",
+    "added_at": "2026-07-17T20:01:50.689187+00:00",
+    "expires": "2026-07-24T20:01:50.689192+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4153,6 +4140,32 @@
     "headline": "JP Morgan Maintains Overweight on Arrowhead Pharma, Raises Price Target to $95",
     "added_at": "2026-07-17T18:33:45.310843+00:00",
     "expires": "2026-07-22T18:33:45.310849+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KARO": {
+    "ticker": "KARO",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Raymond James Maintains Outperform on Karooooo, Raises Price Target to $75",
+    "added_at": "2026-07-17T20:01:50.700023+00:00",
+    "expires": "2026-07-22T20:01:50.700028+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TNGX": {
+    "ticker": "TNGX",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Mizuho Maintains Outperform on Tango Therapeutics, Raises Price Target to $40",
+    "added_at": "2026-07-17T20:01:50.702712+00:00",
+    "expires": "2026-07-22T20:01:50.702717+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
