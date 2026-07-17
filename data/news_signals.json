@@ -3921,5 +3921,57 @@
     "expires": "2026-07-22T11:18:21.600840+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "MED": {
+    "ticker": "MED",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Medifast Launches Trilivy, Comprehensive Metabolic Health System; Co. Also Unveils Newly Formulated Meal Replacements, Including Trilivy Reset Fueling Line Enhanced With MetaVantage Technology",
+    "added_at": "2026-07-17T12:42:06.370550+00:00",
+    "expires": "2026-07-24T12:42:06.370557+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSAI": {
+    "ticker": "CSAI",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Cloudastructure Q1 EPS $(0.14) Misses $(0.08) Estimate",
+    "added_at": "2026-07-17T12:42:06.374129+00:00",
+    "expires": "2026-07-24T12:42:06.374137+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FROG": {
+    "ticker": "FROG",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Guggenheim Maintains Buy on JFrog, Raises Price Target to $105",
+    "added_at": "2026-07-17T12:42:06.377173+00:00",
+    "expires": "2026-07-22T12:42:06.377179+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "USB": {
+    "ticker": "USB",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on U.S. Bancorp, Raises Price Target to $75",
+    "added_at": "2026-07-17T12:42:06.380076+00:00",
+    "expires": "2026-07-22T12:42:06.380081+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
