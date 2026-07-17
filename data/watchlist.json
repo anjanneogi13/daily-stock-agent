@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "DML",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "RBC Capital initiating coverage with Outperform rating and C$6 price target represents meaningful positive analyst catalyst from a major bank that typically drives trading activity.",
-      "action_window": "intraday",
-      "headline": "RBC Capital Initiates Coverage On Denison Mines with Outperform Rating, Announces Price Target of C$6",
-      "url": "https://www.benzinga.com/news/26/07/60444458/rbc-capital-initiates-coverage-denison-mines-outperform-rating-announces-price-target-c-6",
-      "source": "alpaca",
-      "added_at": "2026-07-14T14:44:55.810546+00:00"
-    },
-    {
-      "ticker": "C",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q2 earnings beat with 45% profit jump and best investment banking revenue since 2021 signals turnaround momentum despite continued equity division challenges.",
-      "action_window": "intraday",
-      "headline": "Citigroup CFO Says Bank Is Still Playing Catch-up in Equities",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60444216/citigroup-cfo-says-bank-is-still-playing-catch-up-in-equities",
-      "source": "alpaca",
-      "added_at": "2026-07-14T14:44:55.810558+00:00"
-    },
-    {
       "ticker": "AAOI",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1918,6 +1894,42 @@
       "url": "https://www.benzinga.com/news/26/07/60524158/scotiabank-upgrades-international-petroleum-sector-outperform-announces-c-38-price-target",
       "source": "alpaca",
       "added_at": "2026-07-17T14:27:52.373894+00:00"
+    },
+    {
+      "ticker": "DRS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large defense contract for 50,000+ thermal cameras represents meaningful revenue catalyst with stock already trading higher on the news.",
+      "action_window": "intraday",
+      "headline": "Why Is Leonardo DRS Stock Surging on Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60529173/why-is-leonardo-drs-stock-surging-on-friday",
+      "source": "alpaca",
+      "added_at": "2026-07-17T15:55:35.943049+00:00"
+    },
+    {
+      "ticker": "SDOT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Stock already surging on confirmed M&A acquisition combined with improved capital structure through new financing and removal of dilutive equity facility.",
+      "action_window": "intraday",
+      "headline": "Sadot Group Stock Jumps as Financing, TradeIQ Deal Reshape Outlook",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60528998/sadot-group-stock-jumps-as-financing-tradeiq-deal-reshape-outlook",
+      "source": "alpaca",
+      "added_at": "2026-07-17T15:55:35.943069+00:00"
+    },
+    {
+      "ticker": "GE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record quarterly results with raised guidance represents a strong earnings beat, though CEO's cautious tone on execution challenges provides modest offset to otherwise bullish catalyst.",
+      "action_window": "intraday",
+      "headline": "GE Aerospace Has a Record Quarter. Larry Culp Says 'No Victory Laps'",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60528547/ge-aerospace-has-a-record-quarter-larry-culp-says-no-victory-laps",
+      "source": "alpaca",
+      "added_at": "2026-07-17T15:55:35.943088+00:00"
     }
   ]
 }

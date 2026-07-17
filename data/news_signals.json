@@ -4025,5 +4025,57 @@
     "expires": "2026-07-22T14:27:52.363672+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "CVE": {
+    "ticker": "CVE",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Scotiabank Maintains Sector Outperform on Cenovus Energy, Raises Price Target to C$49",
+    "added_at": "2026-07-17T15:55:35.920344+00:00",
+    "expires": "2026-07-22T15:55:35.920352+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BIR": {
+    "ticker": "BIR",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Scotiabank Maintains Sector Perform on Birchcliff Energy, Lowers Price Target to C$7.75",
+    "added_at": "2026-07-17T15:55:35.924555+00:00",
+    "expires": "2026-07-22T15:55:35.924561+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SDOT": {
+    "ticker": "SDOT",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Sadot Group Stock Jumps as Financing, TradeIQ Deal Reshape Outlook",
+    "added_at": "2026-07-17T15:55:35.927972+00:00",
+    "expires": "2026-07-31T15:55:35.927978+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GE": {
+    "ticker": "GE",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "GE Aerospace Has a Record Quarter. Larry Culp Says 'No Victory Laps'",
+    "added_at": "2026-07-17T15:55:35.934851+00:00",
+    "expires": "2026-07-24T15:55:35.934856+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
