@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AAOI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Significant capacity expansion for next-gen AI datacenter optical products (800G/1.6T transceivers) signals strong demand visibility and revenue growth potential in high-value market segment.",
-      "action_window": "next_day",
-      "headline": "Applied Optoelectronics Stock Rises on Texas AI Optics Expansion",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60448631/applied-optoelectronics-stock-rises-on-texas-ai-optics-expansion",
-      "source": "alpaca",
-      "added_at": "2026-07-14T16:11:03.314292+00:00"
-    },
-    {
-      "ticker": "NBIS",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A confirmed $1 billion multi-year AI infrastructure deal represents a material revenue catalyst for NBIS with stock already showing positive price reaction.",
-      "action_window": "intraday",
-      "headline": "Nebius Stock Jumps on $1 Billion AI Infrastructure Deal",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60448157/nebius-stock-jumps-on-1-billion-ai-infrastructure-deal",
-      "source": "alpaca",
-      "added_at": "2026-07-14T16:11:03.314317+00:00"
-    },
-    {
-      "ticker": "TSM",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "TSMC's 68% sales surge significantly exceeds typical growth expectations and validates major institutional investment thesis ahead of full earnings, creating strong momentum for TSM and AI chip supply chain beneficiaries.",
-      "action_window": "intraday",
-      "headline": "TSMC's 68% Sales Surge Just Validated This Billionaire's $9.5 Billion Bet",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60448155/tsmc-68-percent-sales-surge-validate-lewis-sanders-9-billion-bet",
-      "source": "alpaca",
-      "added_at": "2026-07-14T16:11:03.314324+00:00"
-    },
-    {
-      "ticker": "BIIB",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Stock already down 9% on disappointing Phase 2 diranersen data that overshadows positive LEQEMBI news, representing a significant clinical setback requiring immediate reassessment.",
-      "action_window": "intraday",
-      "headline": "Why Is Biogen Stock Falling Tuesday?",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60447880/why-is-biogen-stock-falling-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-14T16:11:03.314332+00:00"
-    },
-    {
       "ticker": "FXI",
       "tradeable_score": 0.65,
       "sentiment": "bearish",
@@ -1930,6 +1882,42 @@
       "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60528547/ge-aerospace-has-a-record-quarter-larry-culp-says-no-victory-laps",
       "source": "alpaca",
       "added_at": "2026-07-17T15:55:35.943088+00:00"
+    },
+    {
+      "ticker": "SNOW",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Databricks' massive $188B valuation raise intensifies competitive pressure on Snowflake in the data platform/analytics space, likely prompting investor concerns about market share erosion.",
+      "action_window": "intraday",
+      "headline": "Databricks Targets $188 Billion Valuation With New Coatue Investment",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60531614/databricks-targets-188-billion-valuation-with-new-coatue-investment",
+      "source": "alpaca",
+      "added_at": "2026-07-17T17:05:36.570107+00:00"
+    },
+    {
+      "ticker": "CXW",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Loss of banking relationship signals reputational risk and potential financing constraints for private prison operators CoreCivic and GEO Group, creating credit access headwinds.",
+      "action_window": "next_day",
+      "headline": "Citizens Financial Group Plans To Exit Credit Facilities To CoreCivic, GEO Group",
+      "url": "https://www.benzinga.com/news/26/07/60531170/citizens-financial-group-plans-exit-credit-facilities-corecivic-geo-group",
+      "source": "alpaca",
+      "added_at": "2026-07-17T17:05:36.570125+00:00"
+    },
+    {
+      "ticker": "AGRZ",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq filing deficiency signals compliance issues while massive share authorization expansion (to 1B+ shares) indicates potential significant dilution risk for existing shareholders.",
+      "action_window": "intraday",
+      "headline": "Agroz Receives Nasdaq Notification Regarding Annual Report Filing Deficiency; Renames Public Shares To Class A; Adopts Dual-Class Share Structure; Expands Authorized Share Capital To Over 1B Shares Following Shareholder Approval",
+      "url": "https://www.benzinga.com/news/26/07/60531070/agroz-receives-nasdaq-notification-regarding-annual-report-filing-deficiency-renames-public-shares-c",
+      "source": "alpaca",
+      "added_at": "2026-07-17T17:05:36.570136+00:00"
     }
   ]
 }

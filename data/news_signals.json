@@ -4077,5 +4077,31 @@
     "expires": "2026-07-24T15:55:35.934856+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "APD": {
+    "ticker": "APD",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Bernstein Maintains Outperform on Air Products, Raises Price Target to $345",
+    "added_at": "2026-07-17T17:05:36.561618+00:00",
+    "expires": "2026-07-22T17:05:36.561624+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LIN": {
+    "ticker": "LIN",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Bernstein Maintains Outperform on Linde, Raises Price Target to $599",
+    "added_at": "2026-07-17T17:05:36.565091+00:00",
+    "expires": "2026-07-22T17:05:36.565096+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
