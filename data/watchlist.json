@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "JCTC",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q3 earnings miss with EPS deteriorating 28% YoY to $(0.23) and sales declining 22% YoY to $9.852M represents significant fundamental weakness requiring immediate reassessment.",
-      "action_window": "next_day",
-      "headline": "Jewett-Cameron Trading Q3 EPS $(0.23) Down From $(0.18) YoY, Sales $9.852M Down From $12.605M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60459094/jewett-cameron-trading-q3-eps-0-23-down-0-18-yoy-sales-9-852m-down-12-605m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-14T22:51:51.570138+00:00"
-    },
-    {
-      "ticker": "GLDG",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 EPS loss widened 200% from $(0.01) to $(0.03) year-over-year, indicating deteriorating profitability that will likely pressure the stock in next-day trading.",
-      "action_window": "next_day",
-      "headline": "GoldMining Q2 EPS $(0.03) Down From $(0.01) YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60459070/goldmining-q2-eps-0-03-down-0-01-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-14T22:51:51.570154+00:00"
-    },
-    {
       "ticker": "ORCL",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
