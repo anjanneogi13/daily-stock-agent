@@ -1031,15 +1031,16 @@
     },
     {
       "ticker": "TRV",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Morgan Stanley downgrade to Underweight with lowered price target represents a meaningful negative catalyst from a major sell-side institution that typically drives near-term selling pressure.",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Travelers Companies massively beat Q2 earnings expectations with adjusted EPS of $10.04 vs $5.38 estimate (87% beat) and revenue of $12.153B vs $11.346B estimate (7% beat), representing a significant positive surprise warranting immediate trading action.",
       "action_window": "intraday",
-      "headline": "Morgan Stanley Downgrades Travelers Companies to Underweight, Lowers Price Target to $290",
-      "url": "https://www.benzinga.com/news/26/07/60482411/morgan-stanley-downgrades-travelers-companies-underweight-lowers-price-target-290",
+      "headline": "Travelers Companies Q2 Adj. EPS $10.04 Beats $5.38 Estimate, Sales $12.153B Beat $11.346B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60518866/travelers-companies-q2-adj-eps-10-04-beats-5-38-estimate-sales-12-153b-beat-11-346b-estimate",
       "source": "alpaca",
-      "added_at": "2026-07-15T19:00:36.510756+00:00"
+      "added_at": "2026-07-15T19:00:36.510756+00:00",
+      "updated_at": "2026-07-17T11:18:21.605651+00:00"
     },
     {
       "ticker": "UAL",
@@ -1932,6 +1933,90 @@
       "url": "https://www.benzinga.com/markets/tech/26/07/60517184/gamestop-ceo-ryan-cohen-wont-give-up-on-ebay-pursuit-says-were-coming-for-ebay-one-way-or-another",
       "source": "alpaca",
       "added_at": "2026-07-17T09:51:49.486883+00:00"
+    },
+    {
+      "ticker": "PPG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America Securities upgrade to Buy with raised price target represents a meaningful positive catalyst from a major Wall Street bank that typically drives immediate buying pressure.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Upgrades PPG Indus to Buy, Raises Price Target to $134",
+      "url": "https://www.benzinga.com/news/26/07/60519185/b-securities-upgrades-ppg-indus-buy-raises-price-target-134",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605571+00:00"
+    },
+    {
+      "ticker": "EROC",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bank of America Securities upgrade to Buy represents a meaningful positive catalyst from a major bulge bracket firm that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "B of A Securities Upgrades ERock to Buy, Maintains Price Target to $16",
+      "url": "https://www.benzinga.com/news/26/07/60519128/b-securities-upgrades-erock-buy-maintains-price-target-16",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605590+00:00"
+    },
+    {
+      "ticker": "COP",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "ConocoPhillips acquiring 42% stake in Iraq-based BP Energy Company of Kirkuk expands its Middle East presence, though undisclosed financial terms and minority stake limit immediate impact assessment.",
+      "action_window": "intraday",
+      "headline": "ConocoPhillips To Acquire 42% Stake In BP Energy Company Of Kirkuk; Financial Terms Not Disclosed",
+      "url": "https://www.benzinga.com/m/26/07/60519105/conocophillips-acquire-42-stake-bp-energy-company-kirkuk-financial-terms-not-disclosed",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605602+00:00"
+    },
+    {
+      "ticker": "KLRS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 1A clinical trial data showing vision and retinal anatomy improvements in additional patients is a significant catalyst for a biotech company that typically drives immediate stock price movement.",
+      "action_window": "intraday",
+      "headline": "Kalaris Therapeutics Announces Additional Data From Its Phase 1A Trial Of TH103 In Neovascular Age-Related Macular Degeneration; Additional Patients Showed Improvements In Vision And Retinal Anatomy",
+      "url": "https://www.benzinga.com/news/26/07/60519085/kalaris-therapeutics-announces-additional-data-its-phase-1a-trial-th103-neovascular-age-related-macu",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605612+00:00"
+    },
+    {
+      "ticker": "RGNX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Significant dilutive equity offering of over 10 million shares plus warrants will increase share count substantially and typically pressures stock price in near-term.",
+      "action_window": "intraday",
+      "headline": "REGENXBIO Prices Offering Of 10,003,889 Shares At $9.00 Per Share And 1,111,111 Pre-Funded Warrants At $8.9999 Per Warrant",
+      "url": "https://www.benzinga.com/news/26/07/60518971/regenxbio-prices-offering-10-003-889-shares-9-00-share-and-1-111-111-pre-funded-warrants-8-9999-warr",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605632+00:00"
+    },
+    {
+      "ticker": "EMR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan upgrade from neutral to overweight is a meaningful positive catalyst from a major bulge bracket bank that typically drives near-term buying pressure.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Upgrades Emerson Electric to Overweight, Maintains Price Target to $157",
+      "url": "https://www.benzinga.com/news/26/07/60518916/jp-morgan-upgrades-emerson-electric-overweight-maintains-price-target-157",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605642+00:00"
+    },
+    {
+      "ticker": "MMM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan, a major investment bank, upgraded 3M to Overweight with a significant price target increase, creating immediate positive trading pressure.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Upgrades 3M to Overweight, Raises Price Target to $180",
+      "url": "https://www.benzinga.com/news/26/07/60518836/jp-morgan-upgrades-3m-overweight-raises-price-target-180",
+      "source": "alpaca",
+      "added_at": "2026-07-17T11:18:21.605663+00:00"
     }
   ]
 }
