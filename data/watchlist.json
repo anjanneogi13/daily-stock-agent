@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MBAI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership to expand AI robotics distribution through established foodservice platform represents meaningful market access expansion and revenue potential.",
-      "action_window": "intraday",
-      "headline": "MBody AI Partners With Buyers Edge Platform To Expand AI-Powered Robotics Across The Foodservice Industry",
-      "url": "https://www.benzinga.com/news/26/07/60439407/mbody-ai-partners-buyers-edge-platform-expand-ai-powered-robotics-across-foodservice-industry",
-      "source": "alpaca",
-      "added_at": "2026-07-14T12:47:24.523462+00:00"
-    },
-    {
-      "ticker": "HLLY",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Voluntary $15M debt prepayment demonstrates strong cash flow generation and commitment to balance sheet improvement, reducing financial risk and interest expense.",
-      "action_window": "next_day",
-      "headline": "Holley Performance Brands Makes Additional $15M Voluntary Prepayment Of Debt, Further Advancing Its Ongoing Deleveraging Strategy",
-      "url": "https://www.benzinga.com/news/26/07/60439339/holley-performance-brands-makes-additional-15m-voluntary-prepayment-debt-further-advancing-its-ongoi",
-      "source": "alpaca",
-      "added_at": "2026-07-14T12:47:24.523474+00:00"
-    },
-    {
-      "ticker": "CAI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Caris launching in-house PTEN testing following FDA approval of related biomarker-guided therapy represents a meaningful revenue opportunity in companion diagnostics, though this is a service expansion rather than direct FDA approval for the company.",
-      "action_window": "next_day",
-      "headline": "Caris Life Sciences To Offer In-House PTEN Immunohistochemistry Testing After Recent FDA Approval Of Biomarker-Guided Therapy And Diagnostic Assay",
-      "url": "https://www.benzinga.com/news/26/07/60439327/caris-life-sciences-offer-house-pten-immunohistochemistry-testing-after-recent-fda-approval-biomarke",
-      "source": "alpaca",
-      "added_at": "2026-07-14T12:47:24.523486+00:00"
-    },
-    {
-      "ticker": "KOPN",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Achievement of three technical milestones under U.S. government defense program signals meaningful progress in MicroLED technology and potential for future military contracts, though no immediate revenue impact disclosed.",
-      "action_window": "intraday",
-      "headline": "Kopin Hits Three MicroLED Milestones Under U.S. IBAS Program, Advancing Domestic Manufacturing And Next\u2011Gen Soldier Vision Systems",
-      "url": "https://www.benzinga.com/news/26/07/60439298/kopin-hits-three-microled-milestones-under-u-s-ibas-program-advancing-domestic-manufacturing-and-nex",
-      "source": "alpaca",
-      "added_at": "2026-07-14T12:47:24.523492+00:00"
-    },
-    {
       "ticker": "DML",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1930,6 +1882,42 @@
       "source": "alpaca",
       "added_at": "2026-07-17T12:42:06.390240+00:00",
       "updated_at": "2026-07-17T12:42:06.390261+00:00"
+    },
+    {
+      "ticker": "TAK",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial data showing high rates of skin clearance for zasocitinib represents meaningful clinical progress that could support future regulatory approval and commercial potential in plaque psoriasis market.",
+      "action_window": "next_day",
+      "headline": "Reported July 16: Takeda Announces New Data From Two Phase 3 Studies Of Zasocitinib In Adults With Plaque Psoriasis; Secondary Endpoint Data Indicate Consistent And High Rates Of Skin Clearance",
+      "url": "https://www.benzinga.com/news/26/07/60525213/reported-july-16-takeda-announces-new-data-two-phase-3-studies-zasocitinib-adults-plaque-psoriasis-s",
+      "source": "alpaca",
+      "added_at": "2026-07-17T14:27:52.373859+00:00"
+    },
+    {
+      "ticker": "BHVN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Multiple stocks posting upbeat earnings and moving higher intraday creates bullish momentum for affected tickers, though broader market weakness (Nasdaq down 400 pts) limits overall impact.",
+      "action_window": "intraday",
+      "headline": "ManpowerGroup Posts Upbeat Q2 Earnings, Joins Docebo, Zentalis Pharmaceuticals And Other Big Stocks Moving Higher On Friday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60524659/manpowergroup-posts-upbeat-q2-earnings-joins-docebo-zentalis-pharmaceuticals-and-other-big-stocks-moving-higher-on-friday",
+      "source": "alpaca",
+      "added_at": "2026-07-17T14:27:52.373882+00:00"
+    },
+    {
+      "ticker": "TSX:IPCO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Scotiabank upgraded International Petroleum to Sector Outperform with a C$38 price target, representing a meaningful positive catalyst from a major Canadian bank.",
+      "action_window": "intraday",
+      "headline": "Scotiabank Upgrades International Petroleum to Sector Outperform, Announces C$38 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60524158/scotiabank-upgrades-international-petroleum-sector-outperform-announces-c-38-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-17T14:27:52.373894+00:00"
     }
   ]
 }
