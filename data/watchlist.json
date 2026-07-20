@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "TAK",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive Phase 3 trial data showing high rates of skin clearance for zasocitinib represents meaningful clinical progress that could support future regulatory approval and commercial potential in plaque psoriasis market.",
-      "action_window": "next_day",
-      "headline": "Reported July 16: Takeda Announces New Data From Two Phase 3 Studies Of Zasocitinib In Adults With Plaque Psoriasis; Secondary Endpoint Data Indicate Consistent And High Rates Of Skin Clearance",
-      "url": "https://www.benzinga.com/news/26/07/60525213/reported-july-16-takeda-announces-new-data-two-phase-3-studies-zasocitinib-adults-plaque-psoriasis-s",
-      "source": "alpaca",
-      "added_at": "2026-07-17T14:27:52.373859+00:00"
-    },
-    {
-      "ticker": "BHVN",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Multiple stocks posting upbeat earnings and moving higher intraday creates bullish momentum for affected tickers, though broader market weakness (Nasdaq down 400 pts) limits overall impact.",
-      "action_window": "intraday",
-      "headline": "ManpowerGroup Posts Upbeat Q2 Earnings, Joins Docebo, Zentalis Pharmaceuticals And Other Big Stocks Moving Higher On Friday",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60524659/manpowergroup-posts-upbeat-q2-earnings-joins-docebo-zentalis-pharmaceuticals-and-other-big-stocks-moving-higher-on-friday",
-      "source": "alpaca",
-      "added_at": "2026-07-17T14:27:52.373882+00:00"
-    },
-    {
-      "ticker": "TSX:IPCO",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Scotiabank upgraded International Petroleum to Sector Outperform with a C$38 price target, representing a meaningful positive catalyst from a major Canadian bank.",
-      "action_window": "intraday",
-      "headline": "Scotiabank Upgrades International Petroleum to Sector Outperform, Announces C$38 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60524158/scotiabank-upgrades-international-petroleum-sector-outperform-announces-c-38-price-target",
-      "source": "alpaca",
-      "added_at": "2026-07-17T14:27:52.373894+00:00"
-    },
-    {
       "ticker": "DRS",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -420,6 +384,42 @@
       "url": "https://www.benzinga.com/quote/USO",
       "source": "alpaca",
       "added_at": "2026-07-20T13:03:14.269046+00:00"
+    },
+    {
+      "ticker": "IBIT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "BlackRock's IBIT selling 100,000 BTC represents a significant liquidity event that could pressure Bitcoin prices and create volatility in spot Bitcoin ETF flows, though the 'stress test' framing suggests this may be a temporary technical event rather than fundamental deterioration.",
+      "action_window": "intraday",
+      "headline": "What Happens When The Largest Bitcoin ETF Sells 100,000 BTC?",
+      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60555788/what-happens-when-the-largest-bitcoin-etf-sells-100000-btc",
+      "source": "alpaca",
+      "added_at": "2026-07-20T15:27:47.397447+00:00"
+    },
+    {
+      "ticker": "DPZ",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "CFO publicly acknowledging continued macro headwinds, consumer pressure, and heightened competition signals ongoing business challenges and likely indicates softer guidance or results ahead.",
+      "action_window": "intraday",
+      "headline": "Domino's Pizza CFO Says Business Continued To Be Impacted By Challenging Macro Environment, Pressuring Consumers And Heightened Competition",
+      "url": "https://www.benzinga.com/news/26/07/60555778/domino-s-pizza-cfo-says-business-continued-be-impacted-challenging-macro-environment-pressuring-cons",
+      "source": "alpaca",
+      "added_at": "2026-07-20T15:27:47.397459+00:00"
+    },
+    {
+      "ticker": "FITB",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Fifth Third beat both earnings (7.4% above consensus at $1.02 vs $0.95) and revenue expectations, prompting multiple analyst forecast increases which provides strong positive momentum.",
+      "action_window": "intraday",
+      "headline": "These Analysts Boost Their Forecasts On Fifth Third Bancorp Following Upbeat Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60555576/these-analysts-boost-their-forecasts-on-fifth-third-bancorp-following-upbeat-q2-results",
+      "source": "alpaca",
+      "added_at": "2026-07-20T15:27:47.397470+00:00"
     }
   ]
 }
