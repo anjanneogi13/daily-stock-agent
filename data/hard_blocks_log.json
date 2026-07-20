@@ -742,5 +742,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-20 12:10:06",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "LXP",
+        "reason": "SL too tight (1.3% < 2.0% for $59 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
