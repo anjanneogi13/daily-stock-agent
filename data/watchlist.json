@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SKYA",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "SkyAI's board rejection of Forward Industries' all-stock acquisition proposal signals resistance to the deal, typically negative for target stock as it removes takeout premium expectations.",
-      "action_window": "intraday",
-      "headline": "SkyAI Says Formed Special Committee To Review All-Stock Proposal From Forward Industries; Board And Special Committee Reject Forward Industries Proposal",
-      "url": "https://www.benzinga.com/content/60539484/skyai-says-formed-special-committee-review-all-stock-proposal-forward-industries-board-and-special-c",
-      "source": "alpaca",
-      "added_at": "2026-07-17T22:13:07.280704+00:00"
-    },
-    {
-      "ticker": "BBLG",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Secondary offering by selling stockholders signals dilution and potential insider selling pressure, typically creating immediate downward pressure on small-cap stocks.",
-      "action_window": "intraday",
-      "headline": "Bone Biologics Files Prospectus To Offer Up To 6.46M Shares Of Common Stock By Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/07/60539439/bone-biologics-files-prospectus-offer-6-46m-shares-common-stock-selling-stockholders",
-      "source": "alpaca",
-      "added_at": "2026-07-17T22:13:07.280720+00:00"
-    },
-    {
-      "ticker": "MKDW",
-      "tradeable_score": 0.85,
-      "sentiment": "neutral",
-      "category": "ma_acquirer",
-      "rationale": "Major M&A announcement with MKDW acquiring Landvision for $240M through share issuance, representing significant dilution (30M shares at $8) that typically pressures acquirer stock price near-term despite strategic rationale.",
-      "action_window": "next_day",
-      "headline": "MKDWELL Tech  To Acquire The Entire Issued Share Capital Of Landvision; Deal Valued At $240M Via 30M New Shares At $8 Per Share",
-      "url": "https://www.benzinga.com/news/26/07/60539405/mkdwell-tech-acquire-entire-issued-share-capital-landvision-deal-valued-240m-30m-new-shares-8-share",
-      "source": "alpaca",
-      "added_at": "2026-07-17T22:13:07.280729+00:00"
-    },
-    {
-      "ticker": "ADVB",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Termination of purchase agreement suggests deal fell through or company backing away from acquisition, typically negative for strategic growth plans and potential financing arrangements.",
-      "action_window": "next_day",
-      "headline": "Advanced Biomed Delivers Notice To Terminate Purchase Agreement With With Helena Global Investment Opportunities I LTD On July 14; Purchase Agreement Termination Effective July 21, 2026",
-      "url": "https://www.benzinga.com/news/26/07/60539317/advanced-biomed-delivers-notice-terminate-purchase-agreement-helena-global-investment-opportunities-",
-      "source": "alpaca",
-      "added_at": "2026-07-17T22:13:07.280744+00:00"
-    },
-    {
-      "ticker": "EXOD",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "A 25% workforce reduction signals significant operational stress and restructuring costs of $2.5M-$3.5M, typically triggering immediate negative market reaction despite potential long-term cost savings.",
-      "action_window": "intraday",
-      "headline": "Exodus Movement Announces An Operating Realignment That Includes A Reduction Of ~25% Of The Global Workforce; Expects $2.5M-$3.5M Of Pre-Tax Charges From Workforce Reduction",
-      "url": "https://www.benzinga.com/news/26/07/60539148/exodus-movement-announces-operating-realignment-includes-reduction-25-global-workforce-expects-2-5m-",
-      "source": "alpaca",
-      "added_at": "2026-07-17T22:13:07.280755+00:00"
-    },
-    {
       "ticker": "BABA",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -552,6 +492,18 @@
       "url": "https://www.benzinga.com/news/26/07/60567171/white-house-says-president-donald-j-trump-signed-three-proclamations-pursuant-section-338-tariff-act",
       "source": "alpaca",
       "added_at": "2026-07-20T21:40:52.864016+00:00"
+    },
+    {
+      "ticker": "ENB",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Major tariff announcement up to 50% on Canadian imports creates significant headwinds for Canadian-exposed companies and trade-sensitive sectors, with immediate market impact likely.",
+      "action_window": "intraday",
+      "headline": "Trump Hits Canada with New Tariffs Up to 50% on Hockey Sticks, Other Goods",
+      "url": "https://www.benzinga.com/news/26/07/60567622/trump-hits-canada-with-new-tariffs-up-to-50-on-hockey-sticks-other-goods",
+      "source": "alpaca",
+      "added_at": "2026-07-20T22:52:53.422602+00:00"
     }
   ]
 }

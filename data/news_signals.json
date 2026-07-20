@@ -931,19 +931,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AMZN": {
-    "ticker": "AMZN",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Amazon Announces OpenAI GPT-5.6 Models Now Generally Available On Amazon Bedrock",
-    "added_at": "2026-07-13T21:50:19.556356+00:00",
-    "expires": "2026-07-20T21:50:19.556362+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FCPT": {
     "ticker": "FCPT",
     "score_delta": 0.018,
@@ -1178,19 +1165,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AERO": {
-    "ticker": "AERO",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Grupo Aeromexico Q2 EPS $(0.40) Down From $0.50 YoY, Sales $1.479B Up From $1.314B YoY",
-    "added_at": "2026-07-13T21:50:19.548642+00:00",
-    "expires": "2026-07-20T21:50:19.548650+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "RPAY": {
     "ticker": "RPAY",
     "score_delta": 0.157,
@@ -1214,19 +1188,6 @@
     "headline": "Tavia Acquisition And Vita Inclinata Technologies Sign LOI For A Business Combination That Would Result In Vita Becoming A Publicly Traded Company Through a De-SPAC; Proposed Transaction Values Vita A",
     "added_at": "2026-07-13T21:50:19.558880+00:00",
     "expires": "2026-08-12T21:50:19.558885+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LEXX": {
-    "ticker": "LEXX",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Lexaria Bioscience Q3 EPS $(0.08) Beats $(0.09) Estimate",
-    "added_at": "2026-07-13T22:50:09.256111+00:00",
-    "expires": "2026-07-20T22:50:09.256119+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
