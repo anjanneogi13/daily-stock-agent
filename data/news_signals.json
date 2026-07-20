@@ -1087,19 +1087,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RUN": {
-    "ticker": "RUN",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "'Sunrun Offers Solar Users Hundreds Per Month in Compute Program' - Bloomberg",
-    "added_at": "2026-07-13T16:04:46.117006+00:00",
-    "expires": "2026-07-20T16:04:46.117012+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SHEL": {
     "ticker": "SHEL",
     "score_delta": 0.05,
@@ -1946,19 +1933,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "PANW": {
-    "ticker": "PANW",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Tigress Financial Maintains Buy on Palo Alto Networks, Raises Price Target to $430",
-    "added_at": "2026-07-15T16:16:23.053575+00:00",
-    "expires": "2026-07-20T16:16:23.053581+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NVO": {
     "ticker": "NVO",
     "score_delta": 0.15,
@@ -1969,19 +1943,6 @@
     "headline": "Novo Nordisk Receives European Commission's Marketing Authorization For Wegovy Pill To Treat Adults With Obesity",
     "added_at": "2026-07-15T16:16:23.062267+00:00",
     "expires": "2026-08-14T16:16:23.062273+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LGND": {
-    "ticker": "LGND",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on Ligand Pharmaceuticals, Raises Price Target to $340",
-    "added_at": "2026-07-15T16:16:23.065115+00:00",
-    "expires": "2026-07-20T16:16:23.065120+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3698,6 +3659,58 @@
     "headline": "Stifel Maintains Buy on Gentherm, Raises Price Target to $44",
     "added_at": "2026-07-20T15:27:47.387866+00:00",
     "expires": "2026-07-25T15:27:47.387872+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BAM": {
+    "ticker": "BAM",
+    "score_delta": 0.032,
+    "catalyst": "ma_acquirer",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "'Brookfield buys Edmonton-based Gregg Distributors for $1.6-billion' - The Globe And Mail",
+    "added_at": "2026-07-20T16:54:00.331667+00:00",
+    "expires": "2026-08-03T16:54:00.331673+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TEM": {
+    "ticker": "TEM",
+    "score_delta": -0.015,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Tempus AI Slides as Investors Weigh $1.5 Billion Personalis Acquisition",
+    "added_at": "2026-07-20T16:54:00.335315+00:00",
+    "expires": "2026-08-03T16:54:00.335320+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "RYAAY": {
+    "ticker": "RYAAY",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Ryanair Warns Visibility Has Deteriorated, Shelves Full-Year Profit Outlook",
+    "added_at": "2026-07-20T16:54:00.338471+00:00",
+    "expires": "2026-07-27T16:54:00.338476+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "STTK": {
+    "ticker": "STTK",
+    "score_delta": 0.039,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Leerink Partners Initiates Coverage On Shattuck Labs with Outperform Rating, Announces Price Target of $16",
+    "added_at": "2026-07-20T16:54:00.341600+00:00",
+    "expires": "2026-07-25T16:54:00.341606+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
