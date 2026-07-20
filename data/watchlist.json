@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SNOW",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Databricks' massive $188B valuation raise intensifies competitive pressure on Snowflake in the data platform/analytics space, likely prompting investor concerns about market share erosion.",
-      "action_window": "intraday",
-      "headline": "Databricks Targets $188 Billion Valuation With New Coatue Investment",
-      "url": "https://www.benzinga.com/markets/private-markets/26/07/60531614/databricks-targets-188-billion-valuation-with-new-coatue-investment",
-      "source": "alpaca",
-      "added_at": "2026-07-17T17:05:36.570107+00:00"
-    },
-    {
-      "ticker": "CXW",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Loss of banking relationship signals reputational risk and potential financing constraints for private prison operators CoreCivic and GEO Group, creating credit access headwinds.",
-      "action_window": "next_day",
-      "headline": "Citizens Financial Group Plans To Exit Credit Facilities To CoreCivic, GEO Group",
-      "url": "https://www.benzinga.com/news/26/07/60531170/citizens-financial-group-plans-exit-credit-facilities-corecivic-geo-group",
-      "source": "alpaca",
-      "added_at": "2026-07-17T17:05:36.570125+00:00"
-    },
-    {
-      "ticker": "AGRZ",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Nasdaq filing deficiency signals compliance issues while massive share authorization expansion (to 1B+ shares) indicates potential significant dilution risk for existing shareholders.",
-      "action_window": "intraday",
-      "headline": "Agroz Receives Nasdaq Notification Regarding Annual Report Filing Deficiency; Renames Public Shares To Class A; Adopts Dual-Class Share Structure; Expands Authorized Share Capital To Over 1B Shares Following Shareholder Approval",
-      "url": "https://www.benzinga.com/news/26/07/60531070/agroz-receives-nasdaq-notification-regarding-annual-report-filing-deficiency-renames-public-shares-c",
-      "source": "alpaca",
-      "added_at": "2026-07-17T17:05:36.570136+00:00"
-    },
-    {
-      "ticker": "ARWR",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains bullish stance with significant price target raise to $95, signaling strong conviction from a major bulge bracket bank.",
-      "action_window": "next_day",
-      "headline": "JP Morgan Maintains Overweight on Arrowhead Pharma, Raises Price Target to $95",
-      "url": "https://www.benzinga.com/news/26/07/60534084/jp-morgan-maintains-overweight-arrowhead-pharma-raises-price-target-95",
-      "source": "alpaca",
-      "added_at": "2026-07-17T18:33:45.315666+00:00"
-    },
-    {
       "ticker": "CRWV",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -444,6 +396,30 @@
       "url": "https://www.benzinga.com/news/26/07/60558338/leerink-partners-initiates-coverage-shattuck-labs-outperform-rating-announces-price-target-16",
       "source": "alpaca",
       "added_at": "2026-07-20T16:54:00.349013+00:00"
+    },
+    {
+      "ticker": "BTCUSD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Major crypto legislative progress with CLARITY Act advancing to Senate creates regulatory tailwinds, driving Bitcoin to $65K with expert targets of $85K suggesting continued momentum.",
+      "action_window": "intraday",
+      "headline": "Bitcoin Crosses $65,000 As Ethereum, XRP, Dogecoin Rally After CLARITY Act Advances To Senate Floor",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60562956/bitcoin-crosses-65000-ethereum-xrp-dogecoin-rally-clarity-act-advances-senate-floor",
+      "source": "alpaca",
+      "added_at": "2026-07-20T18:51:04.050498+00:00"
+    },
+    {
+      "ticker": "IREN",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Major $2.8B AI deal win with 20% stock surge and guidance raise represents a significant fundamental catalyst with immediate price momentum across core stock and leveraged derivatives.",
+      "action_window": "intraday",
+      "headline": "IREN Stock Rally Sparks 40% Surge in Leveraged ETFs After $2.8 Billion AI Deal Win",
+      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60562648/iren-stock-rally-sparks-40-surge-in-leveraged-etfs-after-2-8-billion-ai-deal-win",
+      "source": "alpaca",
+      "added_at": "2026-07-20T18:51:04.050514+00:00"
     }
   ]
 }
