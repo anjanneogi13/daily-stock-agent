@@ -614,19 +614,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RMD": {
-    "ticker": "RMD",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "next_day",
-    "headline": "ResMed Says Deal Valued At $490M All-Cash, Expected To Close In Q1 FY2027",
-    "added_at": "2026-07-07T21:52:27.430510+00:00",
-    "expires": "2026-07-21T21:52:27.430518+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PTNM": {
     "ticker": "PTNM",
     "score_delta": -1.0,
@@ -3824,6 +3811,71 @@
     "headline": "CORRECTION: AAR Q4 Adj. EPS $1.53 Beats $1.38 Estimate, Sales $928.000M Beat $868.540M Estimate",
     "added_at": "2026-07-21T20:43:22.128969+00:00",
     "expires": "2026-07-28T20:43:22.128975+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VLRS": {
+    "ticker": "VLRS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Controladora Vuela Q2 EPS $(1.11) Misses $(0.15) Estimate, Sales $859.000M Beat $850.359M Estimate",
+    "added_at": "2026-07-21T22:00:03.865376+00:00",
+    "expires": "2026-07-28T22:00:03.865384+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BFC": {
+    "ticker": "BFC",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Bank First Q2 Adj. EPS $2.45 Beats $2.24 Estimate, Sales $65.035M Miss $66.050M Estimate",
+    "added_at": "2026-07-21T22:00:03.869289+00:00",
+    "expires": "2026-07-28T22:00:03.869295+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BGI": {
+    "ticker": "BGI",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Birks Group FY EPS $(0.17) Up From $(0.66) YoY, Sales $205.424M Up From $177.807M YoY",
+    "added_at": "2026-07-21T22:00:03.872655+00:00",
+    "expires": "2026-07-28T22:00:03.872660+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NPB": {
+    "ticker": "NPB",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Northpointe Bancshares Q2 EPS $0.60 Misses $0.68 Estimate, Sales $64.316M Miss $66.506M Estimate",
+    "added_at": "2026-07-21T22:00:03.875931+00:00",
+    "expires": "2026-07-28T22:00:03.875937+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BHB": {
+    "ticker": "BHB",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Bar Harbor Bankshares Q2 Adj. EPS $0.92 Beats $0.90 Estimate, Sales $49.651M Beat $48.821M Estimate",
+    "added_at": "2026-07-21T22:00:03.879224+00:00",
+    "expires": "2026-07-28T22:00:03.879230+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
