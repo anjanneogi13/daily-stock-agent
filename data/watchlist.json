@@ -711,6 +711,42 @@
       "url": "https://www.benzinga.com/news/26/07/60573195/morgan-stanley-downgrades-nice-equal-weight-lowers-price-target-111",
       "source": "alpaca",
       "added_at": "2026-07-21T12:08:49.783659+00:00"
+    },
+    {
+      "ticker": "CPHI",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock up 68.13% after circuit breaker halt indicates significant positive catalyst or volatile short squeeze event requiring immediate attention.",
+      "action_window": "intraday",
+      "headline": "China Pharma Holdings Shares Halted On Circuit Breaker To The Downside, Stock Now Up 68.13%",
+      "url": "https://www.benzinga.com/quote/CPHI",
+      "source": "alpaca",
+      "added_at": "2026-07-21T14:33:27.733792+00:00"
+    },
+    {
+      "ticker": "GM",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings from GM combined with broad market rally (Dow +300pts) creates positive momentum, though specific earnings beat magnitude not disclosed.",
+      "action_window": "intraday",
+      "headline": "Dow Surges 300 Points; General Motors Posts Upbeat Earnings",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60580397/dow-surges-300-points-general-motors-posts-upbeat-earnings",
+      "source": "alpaca",
+      "added_at": "2026-07-21T14:33:27.733806+00:00"
+    },
+    {
+      "ticker": "VICR",
+      "tradeable_score": 0.74,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company providing formal guidance for 10% YoY revenue growth in Q3 during conference call is a meaningful positive catalyst that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "Conference Call:\nVicor Sees Q3 Revenue To Increase Nearly 10% YoY.",
+      "url": "https://www.benzinga.com/news/26/07/60579865/conference-call-vicor-sees-q3-revenue-increase-nearly-10-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-21T14:33:27.733817+00:00"
     }
   ]
 }
