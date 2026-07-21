@@ -879,6 +879,127 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60591588/tempus-ai-makes-billion-dollar-bet-on-the-future-of-cancer-monitoring",
       "source": "alpaca",
       "added_at": "2026-07-21T19:08:35.458584+00:00"
+    },
+    {
+      "ticker": "WFRD",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Weatherford guided Q3 sales significantly below consensus estimates with midpoint of $1.13B representing ~6% miss vs $1.195B estimate, indicating material business weakness.",
+      "action_window": "intraday",
+      "headline": "Weatherford International Sees Q3 Sales $1.105B-$1.155B vs $1.195B Est",
+      "url": "https://www.benzinga.com/news/26/07/60595365/weatherford-international-sees-q3-sales-1-105b-1-155b-vs-1-195b-est",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133365+00:00",
+      "updated_at": "2026-07-21T20:43:22.133400+00:00"
+    },
+    {
+      "ticker": "FNWD",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive all-stock M&A agreement with clear exchange ratio (1.35x) and $208M valuation creates immediate arbitrage opportunity and acquisition premium for FNWD shareholders.",
+      "action_window": "intraday",
+      "headline": "First Financial Bancorp To Acquire Munster-Based Finward In An All-Stock Transaction; Under The Terms Of The Agreement, Each Outstanding Share Of Finward Common Stock Will Be Converted Into The Right To Receive 1.35 Shares Of First Financial Common Stock, Valuing The Transaction At ~ $208M",
+      "url": "https://www.benzinga.com/m/26/07/60595518/first-financial-bancorp-acquire-munster-based-finward-all-stock-transaction-under-terms-agreement-ea",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133377+00:00"
+    },
+    {
+      "ticker": "FSBW",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with EPS missing by 3.7% but revenue beating estimates by 2.1%, creating uncertain trading direction for this small-cap bank.",
+      "action_window": "next_day",
+      "headline": "FS Bancorp Q2 EPS $1.04 Misses $1.08 Estimate, Sales $38.798M Beat $38.005M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60595368/fs-bancorp-q2-eps-1-04-misses-1-08-estimate-sales-38-798m-beat-38-005m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133392+00:00"
+    },
+    {
+      "ticker": "AWI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Substantial $800M buyback authorization increase signals strong management confidence in valuation and commitment to shareholder returns, typically supportive for near-term stock price.",
+      "action_window": "next_day",
+      "headline": "Armstrong World Industries Approves Additional $800M Authorization To Its Buyback Plan To Increase Total Amount To $2.5B",
+      "url": "https://www.benzinga.com/news/26/07/60595340/armstrong-world-industries-approves-additional-800m-authorization-its-buyback-plan-increase-total-am",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133407+00:00"
+    },
+    {
+      "ticker": "FFBC",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beat of 3.9% offset by revenue miss of 2.1%, creating uncertainty about quality of earnings and operational performance.",
+      "action_window": "next_day",
+      "headline": "First Financial Bancor Q2 Adj. EPS $0.80 Beats $0.77 Estimate, Sales $264.168M Miss $269.967M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60595312/first-financial-bancor-q2-adj-eps-0-80-beats-0-77-estimate-sales-264-168m-miss-269-967m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133414+00:00"
+    },
+    {
+      "ticker": "OSUR",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA Emergency Use Authorization for a rapid diagnostic test is a significant regulatory catalyst that typically drives strong immediate upside for small-cap medical device companies.",
+      "action_window": "next_day",
+      "headline": "OraSure Technologies Receives FDA's Emergency Use Authorization For Its OraQuick Ebola 2.0 Rapid Antigen Test",
+      "url": "https://www.benzinga.com/news/26/07/60595220/orasure-technologies-receives-fda-s-emergency-use-authorization-its-oraquick-ebola-2-0-rapid-antigen",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133420+00:00"
+    },
+    {
+      "ticker": "EQT",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EQT missed both EPS and revenue estimates with EPS at $0.39 vs $0.41 expected (-4.9%) and sales at $1.683B vs $1.796B expected (-6.3%), representing a meaningful double-miss on key metrics.",
+      "action_window": "intraday",
+      "headline": "EQT Q2 Adj. EPS $0.39 Misses $0.41 Estimate, Sales $1.683B Miss $1.796B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60595203/eqt-q2-adj-eps-0-39-misses-0-41-estimate-sales-1-683b-miss-1-796b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133426+00:00"
+    },
+    {
+      "ticker": "TGL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Treasure Global's subsidiary acquiring 80% stake in Cigar Secret represents strategic expansion and growth catalyst, though impact depends on deal size and target company value.",
+      "action_window": "next_day",
+      "headline": "Treasure Global's Tadaa Capital Subsidiary To Acquire 80% Of Cigar Secret",
+      "url": "https://www.benzinga.com/m/26/07/60595188/treasure-global-s-tadaa-capital-subsidiary-acquire-80-cigar-secret",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133432+00:00"
+    },
+    {
+      "ticker": "ADSE",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Large secondary offering of 27.494M shares by selling shareholders creates significant dilution risk and immediate selling pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "ADS-TEC Energy Files Prospectus For Offering 27.494M Ordinary Shares On Behalf Of Selling Shareholders",
+      "url": "https://www.benzinga.com/news/26/07/60595111/ads-tec-energy-files-prospectus-offering-27-494m-ordinary-shares-behalf-selling-shareholders",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133438+00:00"
+    },
+    {
+      "ticker": "AIR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q4 earnings beat with adjusted EPS exceeding estimates by 10.9% and revenue beating by 6.8%, indicating solid operational performance.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: AAR Q4 Adj. EPS $1.53 Beats $1.38 Estimate, Sales $928.000M Beat $868.540M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60595083/correction-aar-q4-adj-eps-1-53-beats-1-38-estimate-sales-928-000m-beat-868-540m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-21T20:43:22.133444+00:00"
     }
   ]
 }
