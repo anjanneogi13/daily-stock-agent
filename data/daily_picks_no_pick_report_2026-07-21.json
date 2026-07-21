@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-29832861060",
+  "artifact_bundle_name": "official-decision-artifacts-29833594013",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -309,8 +309,8 @@
       "universe_count": 550
     }
   },
-  "commit_sha": "1e1a2f7cd922920d8734ecbb47564bc39f4efc71",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/1e1a2f7cd922920d8734ecbb47564bc39f4efc71",
+  "commit_sha": "efed7598adddde4121c50176dfae5740b21a11b0",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/efed7598adddde4121c50176dfae5740b21a11b0",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -630,32 +630,32 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1641,
+        "attempts": 2190,
         "empty": 0,
         "errors": 91,
-        "successes": 1550
+        "successes": 2099
       },
       "monster_info": {
-        "attempts": 833,
+        "attempts": 1112,
         "empty": 0,
-        "errors": 75,
-        "successes": 758
+        "errors": 88,
+        "successes": 1024
       },
       "ohlcv": {
-        "attempts": 1662,
-        "empty": 6,
+        "attempts": 2218,
+        "empty": 8,
         "errors": 0,
-        "successes": 1656
+        "successes": 2210
       }
     },
     "date": "2026-07-21",
     "providers": {
       "stooq": {
-        "attempts": 3,
-        "empty": 3,
+        "attempts": 4,
+        "empty": 4,
         "errors": 0,
         "failure_types": {
-          "empty_response": 3,
+          "empty_response": 4,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -675,11 +675,11 @@
         "unauthorized": 0
       },
       "yfinance": {
-        "attempts": 4133,
-        "empty": 3,
-        "errors": 166,
+        "attempts": 5516,
+        "empty": 4,
+        "errors": 179,
         "failure_types": {
-          "empty_response": 3,
+          "empty_response": 4,
           "market_closed": 0,
           "missing_history": 0,
           "missing_intraday_bars": 0,
@@ -688,14 +688,14 @@
           "rate_limited": 150,
           "stale_data": 0,
           "symbol_not_found": 0,
-          "timeout": 15,
+          "timeout": 28,
           "unknown_provider_failure": 0
         },
         "not_found": 0,
         "provider_error": 1,
         "rate_limited": 150,
-        "successes": 3964,
-        "timeout": 15,
+        "successes": 5333,
+        "timeout": 28,
         "unauthorized": 0
       }
     },
@@ -977,7 +977,7 @@
         "ticker": "VLTO"
       }
     ],
-    "timestamp_utc": "2026-07-21T13:12:34Z"
+    "timestamp_utc": "2026-07-21T13:24:09Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1006,11 +1006,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-07-21T09:12:34-04:00",
+  "selection_time_et": "2026-07-21T09:24:09-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-07-21T13:12:34Z",
+  "timestamp_utc": "2026-07-21T13:24:09Z",
   "watch_only_available": false,
-  "workflow_run_id": "29832861060",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29832861060"
+  "workflow_run_id": "29833594013",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/29833594013"
 }
