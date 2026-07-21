@@ -819,6 +819,66 @@
       "url": "https://www.benzinga.com/news/26/07/60585093/ge-aerospace-s-genx-1b-engine-selected-aercap-power-additional-15-boeing-787-dreamliners",
       "source": "alpaca",
       "added_at": "2026-07-21T16:19:16.404919+00:00"
+    },
+    {
+      "ticker": "LGND",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Citigroup reinstating Buy rating with $387 price target represents a meaningful positive catalyst from a major investment bank that typically drives near-term price action.",
+      "action_window": "next_day",
+      "headline": "Citigroup Reinstates Buy on Ligand Pharmaceuticals, Announces $387 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60591942/citigroup-reinstates-buy-ligand-pharmaceuticals-announces-387-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-21T19:08:35.458546+00:00"
+    },
+    {
+      "ticker": "SIND",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Citigroup initiating coverage with a Buy rating and $18 price target represents a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
+      "action_window": "next_day",
+      "headline": "Citigroup Initiates Coverage On Sinda with Buy Rating, Announces Price Target of $18",
+      "url": "https://www.benzinga.com/news/26/07/60591858/citigroup-initiates-coverage-sinda-buy-rating-announces-price-target-18",
+      "source": "alpaca",
+      "added_at": "2026-07-21T19:08:35.458560+00:00"
+    },
+    {
+      "ticker": "HAL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Earnings beat overshadowed by regional weakness and stock decline, indicating market focus on forward concerns despite technical beat.",
+      "action_window": "intraday",
+      "headline": "Halliburton Stock Slides as Regional Pressure Squeezes Middle East Revenue",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60591815/halliburton-stock-slides-regional-pressure-squeezes-middle-east-revenue",
+      "source": "alpaca",
+      "added_at": "2026-07-21T19:08:35.458569+00:00"
+    },
+    {
+      "ticker": "HIHO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Company reported return to profitability with higher revenue and improved earnings in Q1, with shares already surging on the news indicating strong positive market reaction.",
+      "action_window": "intraday",
+      "headline": "Highway Holdings Returns To Profit Despite Customer Loss",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60591622/highway-holdings-returns-to-profit-despite-customer-loss",
+      "source": "alpaca",
+      "added_at": "2026-07-21T19:08:35.458578+00:00"
+    },
+    {
+      "ticker": "PSNL",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive $1.5B acquisition of Personalis represents a significant premium M&A transaction with immediate trading impact for the target company.",
+      "action_window": "intraday",
+      "headline": "Tempus AI Makes Billion-Dollar Bet on the Future of Cancer Monitoring",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60591588/tempus-ai-makes-billion-dollar-bet-on-the-future-of-cancer-monitoring",
+      "source": "alpaca",
+      "added_at": "2026-07-21T19:08:35.458584+00:00"
     }
   ]
 }
