@@ -1348,45 +1348,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DRI": {
-    "ticker": "DRI",
-    "score_delta": 0.018,
-    "catalyst": "product_launch",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "Olive Garden Follows McDonald\u2019s Bet on Value: Will Never Ending Pasta Pass Strategy Work?",
-    "added_at": "2026-07-14T22:51:51.526887+00:00",
-    "expires": "2026-07-21T22:51:51.526895+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JCTC": {
-    "ticker": "JCTC",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Jewett-Cameron Trading Q3 EPS $(0.23) Down From $(0.18) YoY, Sales $9.852M Down From $12.605M YoY",
-    "added_at": "2026-07-14T22:51:51.530282+00:00",
-    "expires": "2026-07-21T22:51:51.530288+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GLDG": {
-    "ticker": "GLDG",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "GoldMining Q2 EPS $(0.03) Down From $(0.01) YoY",
-    "added_at": "2026-07-14T22:51:51.533171+00:00",
-    "expires": "2026-07-21T22:51:51.533177+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SPXC": {
     "ticker": "SPXC",
     "score_delta": 0.04,
@@ -2923,16 +2884,16 @@
   },
   "TEM": {
     "ticker": "TEM",
-    "score_delta": -0.015,
+    "score_delta": 0.05,
     "catalyst": "ma_acquirer",
     "sentiment": "bearish",
-    "tradeable_score": 0.82,
+    "tradeable_score": 0.85,
     "action_window": "intraday",
-    "headline": "Tempus AI Slides as Investors Weigh $1.5 Billion Personalis Acquisition",
-    "added_at": "2026-07-20T16:54:00.335315+00:00",
-    "expires": "2026-08-03T16:54:00.335320+00:00",
+    "headline": "Tempus AI (TEM) Is Buying Personalis For $1.5 Billion To Deepen Cancer Monitoring",
+    "added_at": "2026-07-21T22:58:55.370224+00:00",
+    "expires": "2026-08-04T22:58:55.370230+00:00",
     "hard_block": false,
-    "negative_reaction": true
+    "negative_reaction": false
   },
   "RYAAY": {
     "ticker": "RYAAY",

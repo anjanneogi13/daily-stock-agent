@@ -148,15 +148,16 @@
     },
     {
       "ticker": "TEM",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.85,
       "sentiment": "bearish",
       "category": "ma_acquirer",
-      "rationale": "Stock is sliding on confirmed $1.5B acquisition as investors question valuation despite strategic expansion into $20B MRD market, creating immediate trading opportunity on acquirer weakness.",
+      "rationale": "Tempus AI acquiring Personalis for $1.5B is a significant M&A transaction that typically pressures acquirer stock due to dilution and integration risks, while PSNL (target) would see upside.",
       "action_window": "intraday",
-      "headline": "Tempus AI Slides as Investors Weigh $1.5 Billion Personalis Acquisition",
-      "url": "https://www.benzinga.com/m-a/26/07/60558953/tempus-ai-slides-as-investors-weigh-1-5-billion-personalis-acquisition",
+      "headline": "Tempus AI (TEM) Is Buying Personalis For $1.5 Billion To Deepen Cancer Monitoring",
+      "url": "https://finance.yahoo.com/healthcare/articles/tempus-ai-tem-buying-personalis-091037787.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-20T16:54:00.348996+00:00"
+      "added_at": "2026-07-20T16:54:00.348996+00:00",
+      "updated_at": "2026-07-21T22:58:55.378118+00:00"
     },
     {
       "ticker": "RYAAY",
@@ -895,15 +896,16 @@
     },
     {
       "ticker": "FNWD",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Definitive all-stock M&A agreement with clear exchange ratio (1.35x) and $208M valuation creates immediate arbitrage opportunity and acquisition premium for FNWD shareholders.",
+      "rationale": "Definitive all-stock acquisition agreement announced for FNWD, which typically triggers immediate premium pricing for the target company.",
       "action_window": "intraday",
-      "headline": "First Financial Bancorp To Acquire Munster-Based Finward In An All-Stock Transaction; Under The Terms Of The Agreement, Each Outstanding Share Of Finward Common Stock Will Be Converted Into The Right To Receive 1.35 Shares Of First Financial Common Stock, Valuing The Transaction At ~ $208M",
-      "url": "https://www.benzinga.com/m/26/07/60595518/first-financial-bancorp-acquire-munster-based-finward-all-stock-transaction-under-terms-agreement-ea",
+      "headline": "Finward Bancorp Acquisition",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/finward-bancorp-acquisition-203000260.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-21T20:43:22.133377+00:00"
+      "added_at": "2026-07-21T20:43:22.133377+00:00",
+      "updated_at": "2026-07-21T22:58:55.378132+00:00"
     },
     {
       "ticker": "FSBW",
