@@ -19,7 +19,7 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_hard_block_pick_count: **2**
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
-- rejected_candidate_count: **2**
+- rejected_candidate_count: **6**
 - scored_count: **279**
 - scored_not_filtered_count: **264**
 - selected_pick_count: **0**
@@ -30,5 +30,9 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - None.
 
 ## Rejected Candidates
-- PEBO: **hard_block** — SL too tight (1.1% < 2.0% for $39 stock)
 - ZION: **hard_block** — SL too tight (1.3% < 2.0% for $72 stock)
+- CLIK: **hard_block** — penny stock ($1.54 < $5.0)
+- PEBO: **earnings_risk** — earnings in 0d
+- THRM: **earnings_risk** — earnings in 2d
+- TRVI: **earnings_risk** — earnings in 0d
+- STTK: **earnings_risk** — earnings in 0d

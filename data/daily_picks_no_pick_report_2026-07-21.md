@@ -25,12 +25,12 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **550**
 
 ## Market Data Health
-- stooq: attempts=**2**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**2750**, successes=**2592**, errors=**156**, rate_limited=**150**, unauthorized=**0**
+- stooq: attempts=**3**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**4133**, successes=**3964**, errors=**166**, rate_limited=**150**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED
 
 ## Hard-Blocked Finalists
-- PEBO: **sl_too_tight** — SL too tight (1.1% < 2.0% for $39 stock)
 - ZION: **sl_too_tight** — SL too tight (1.3% < 2.0% for $72 stock)
+- CLIK: **penny_stock** — penny stock ($1.54 < $5.0)

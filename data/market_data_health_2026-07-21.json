@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1092,
+      "attempts": 1641,
       "empty": 0,
-      "errors": 90,
-      "successes": 1002
+      "errors": 91,
+      "successes": 1550
     },
     "monster_info": {
-      "attempts": 554,
+      "attempts": 833,
       "empty": 0,
-      "errors": 66,
-      "successes": 488
+      "errors": 75,
+      "successes": 758
     },
     "ohlcv": {
-      "attempts": 1106,
-      "empty": 4,
+      "attempts": 1662,
+      "empty": 6,
       "errors": 0,
-      "successes": 1102
+      "successes": 1656
     }
   },
   "date": "2026-07-21",
   "providers": {
     "stooq": {
-      "attempts": 2,
-      "empty": 2,
+      "attempts": 3,
+      "empty": 3,
       "errors": 0,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 3,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,27 +47,27 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 2750,
-      "empty": 2,
-      "errors": 156,
+      "attempts": 4133,
+      "empty": 3,
+      "errors": 166,
       "failure_types": {
-        "empty_response": 2,
+        "empty_response": 3,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 0,
+        "provider_exception": 1,
         "rate_limited": 150,
         "stale_data": 0,
         "symbol_not_found": 0,
-        "timeout": 6,
+        "timeout": 15,
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 0,
+      "provider_error": 1,
       "rate_limited": 150,
-      "successes": 2592,
-      "timeout": 6,
+      "successes": 3964,
+      "timeout": 15,
       "unauthorized": 0
     }
   },
@@ -349,5 +349,5 @@
       "ticker": "VLTO"
     }
   ],
-  "timestamp_utc": "2026-07-21T12:41:33Z"
+  "timestamp_utc": "2026-07-21T13:12:34Z"
 }
