@@ -532,16 +532,16 @@
     },
     {
       "ticker": "DHR",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Danaher beat both EPS estimates by 6% and revenue estimates by 2.7%, representing a meaningful double-beat that typically drives immediate positive price action.",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Danaher's Q2 earnings result triggered a severe 10.1% pre-market decline, indicating a significant earnings miss or guidance disappointment requiring immediate attention.",
       "action_window": "intraday",
-      "headline": "Danaher Q2 Adj. EPS $1.94 Beats $1.83 Estimate, Sales $6.265B Beat $6.102B Estimate",
-      "url": "https://www.benzinga.com/quote/DHR",
+      "headline": "Danaher Posts Q2 Results, Joins Calix, Equifax And Other Big Stocks Moving Lower In Tuesday\u2019s Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60573473/danaher-posts-q2-results-joins-calix-equifax-and-other-big-stocks-moving-lower-in-tuesdays-pre-market-session",
       "source": "alpaca",
       "added_at": "2026-07-21T10:19:38.844327+00:00",
-      "updated_at": "2026-07-21T10:19:38.844357+00:00"
+      "updated_at": "2026-07-21T12:08:49.783646+00:00"
     },
     {
       "ticker": "PEBO",
@@ -602,6 +602,115 @@
       "url": "https://www.benzinga.com/markets/tech/26/07/60570266/whats-going-on-with-micron-technology-stock-tuesday-4",
       "source": "alpaca",
       "added_at": "2026-07-21T10:19:38.844365+00:00"
+    },
+    {
+      "ticker": "CLIK",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong 80%+ CAGR in logistics division signals impressive growth trajectory, though single-month revenue figure lacks full context for valuation impact.",
+      "action_window": "next_day",
+      "headline": "Click Holdings\u2019 High-Flying Logistics Division Posts HK$4.37M June Revenue, CAGR Tops 80% Since FY2024",
+      "url": "https://www.benzinga.com/news/26/07/60573578/click-holdings-high-flying-logistics-division-posts-hk-4-37m-june-revenue-cagr-tops-80-fy2024",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783588+00:00"
+    },
+    {
+      "ticker": "WDAY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade to Underweight with price target represents a meaningful negative catalyst from a major investment bank that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades Workday to Underweight, Lowers Price Target to $145",
+      "url": "https://www.benzinga.com/news/26/07/60573574/morgan-stanley-downgrades-workday-underweight-lowers-price-target-145",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783599+00:00"
+    },
+    {
+      "ticker": "KTOS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $156M Department of Energy contract award is material new revenue representing significant percentage of KTOS market cap and validates their counter-UAS technology platform.",
+      "action_window": "intraday",
+      "headline": "Kratos Defense & Security Solutions Receives ~$156M U.S. Department Of Energy Award To Offer Mobile Counter-Unmanned Aircraft System Platforms",
+      "url": "https://www.benzinga.com/news/26/07/60573573/kratos-defense-security-solutions-receives-156m-u-s-department-energy-award-offer-mobile-counter-unm",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783606+00:00"
+    },
+    {
+      "ticker": "CVKD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Launching a partnering process signals potential M&A, licensing deals, or strategic partnerships which typically creates upside optionality for biotech companies, though execution uncertainty remains.",
+      "action_window": "this_week",
+      "headline": "Cadrenal Therapeutics Launches Partnering Process",
+      "url": "https://www.benzinga.com/quote/CVKD",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783612+00:00"
+    },
+    {
+      "ticker": "UTZ",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive acquisition agreement at $14.25/share in cash represents a concrete M&A catalyst with immediate trading implications as the stock will converge to the offer price.",
+      "action_window": "intraday",
+      "headline": "Utz Brands Strikes Agreement To Be Acquired By Intersnack For $14.25/Share In Cash",
+      "url": "https://www.benzinga.com/m/26/07/60573549/utz-brands-strikes-agreement-be-acquired-intersnack-14-25-share-cash",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783617+00:00"
+    },
+    {
+      "ticker": "ALBT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Complete business transformation from biotech to AI sector with ticker/name change is a major catalyst that typically drives significant volatility and attracts momentum traders seeking AI exposure.",
+      "action_window": "intraday",
+      "headline": "Avalon GloboCare Undergoes Transformation into Agentic AI Software Firm; Rebrands To Change Agents Corp. Under Ticker 'CHGA'",
+      "url": "https://www.benzinga.com/quote/ALBT",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783624+00:00",
+      "updated_at": "2026-07-21T12:08:49.783638+00:00"
+    },
+    {
+      "ticker": "OSS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "A $2.2M production order represents tangible revenue for a small-cap company, validating product-market fit in the high-growth autonomous equipment sector, though the amount is relatively modest and customer anonymity limits near-term impact assessment.",
+      "action_window": "intraday",
+      "headline": "One Stop Systems Gets ~$2.2M Production Order From Unnamed Manufacturer Of Autonomous Construction And Mining Equipment",
+      "url": "https://www.benzinga.com/news/26/07/60573496/one-stop-systems-gets-2-2m-production-order-unnamed-manufacturer-autonomous-construction-and-mining-",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783630+00:00"
+    },
+    {
+      "ticker": "SHOP",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Rothschild & Co downgrades Shopify from a higher rating to Neutral with a $130 price target, signaling reduced confidence that typically creates selling pressure in the near term.",
+      "action_window": "intraday",
+      "headline": "Rothschild & Co Downgrades Shopify to Neutral, Lowers Price Target to $130",
+      "url": "https://www.benzinga.com/news/26/07/60573243/rothschild-co-downgrades-shopify-neutral-lowers-price-target-130",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783653+00:00"
+    },
+    {
+      "ticker": "NICE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade from Overweight to Equal-Weight with lowered price target creates near-term selling pressure from a major investment bank.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades NICE to Equal-Weight, Lowers Price Target to $111",
+      "url": "https://www.benzinga.com/news/26/07/60573195/morgan-stanley-downgrades-nice-equal-weight-lowers-price-target-111",
+      "source": "alpaca",
+      "added_at": "2026-07-21T12:08:49.783659+00:00"
     }
   ]
 }
