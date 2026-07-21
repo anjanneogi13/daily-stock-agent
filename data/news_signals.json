@@ -1243,19 +1243,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "C": {
-    "ticker": "C",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Citigroup CFO Says Bank Is Still Playing Catch-up in Equities",
-    "added_at": "2026-07-14T14:44:55.794029+00:00",
-    "expires": "2026-07-21T14:44:55.794037+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ASML": {
     "ticker": "ASML",
     "score_delta": 0.1,
@@ -1266,19 +1253,6 @@
     "headline": "ASML Stock Rises On Second-Quarter Beat, Raised Forecast",
     "added_at": "2026-07-15T23:32:11.124898+00:00",
     "expires": "2026-07-22T23:32:11.124904+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSM": {
-    "ticker": "TSM",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "TSMC's 68% Sales Surge Just Validated This Billionaire's $9.5 Billion Bet",
-    "added_at": "2026-07-14T16:11:03.307220+00:00",
-    "expires": "2026-07-21T16:11:03.307228+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2164,19 +2138,6 @@
     "headline": "Aptorum Group Announces 1-For-10 Reverse Stock Split, Effective July 20; Proposed Merger With DiamiR Biosciences Anticipated To Close Around July 20",
     "added_at": "2026-07-16T15:29:48.462304+00:00",
     "expires": "2026-08-15T15:29:48.462309+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NRG": {
-    "ticker": "NRG",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on NRG Energy, Raises Price Target to $209",
-    "added_at": "2026-07-16T15:29:48.465416+00:00",
-    "expires": "2026-07-21T15:29:48.465421+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3824,6 +3785,71 @@
     "headline": "Susquehanna Maintains Positive on STMicroelectronics, Raises Price Target to $75",
     "added_at": "2026-07-21T14:33:27.729403+00:00",
     "expires": "2026-07-26T14:33:27.729409+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AROC": {
+    "ticker": "AROC",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Archrock, Raises Price Target to $44",
+    "added_at": "2026-07-21T16:19:16.380160+00:00",
+    "expires": "2026-07-26T16:19:16.380167+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CTVA": {
+    "ticker": "CTVA",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Corteva, Raises Price Target to $103",
+    "added_at": "2026-07-21T16:19:16.383992+00:00",
+    "expires": "2026-07-26T16:19:16.383998+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EFX": {
+    "ticker": "EFX",
+    "score_delta": -0.146,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Equifax Says Inflation Is Hitting Lower-Income Consumers",
+    "added_at": "2026-07-21T16:19:16.387211+00:00",
+    "expires": "2026-08-04T16:19:16.387216+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "CRM": {
+    "ticker": "CRM",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Why Is Salesforce Stock Falling on Tuesday?",
+    "added_at": "2026-07-21T16:19:16.390440+00:00",
+    "expires": "2026-07-26T16:19:16.390446+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VELO": {
+    "ticker": "VELO",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Velo3D Stock Climbs as Forge 1 Opens Bigger Path to Production",
+    "added_at": "2026-07-21T16:19:16.397146+00:00",
+    "expires": "2026-07-28T16:19:16.397152+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
