@@ -1048,19 +1048,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AMD": {
-    "ticker": "AMD",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "AMD's $600 Target Isn't Really About AMD",
-    "added_at": "2026-07-16T16:50:34.793124+00:00",
-    "expires": "2026-07-21T16:50:34.793131+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "EVO": {
     "ticker": "EVO",
     "score_delta": -0.15,
@@ -1253,32 +1240,6 @@
     "headline": "ASML Stock Rises On Second-Quarter Beat, Raised Forecast",
     "added_at": "2026-07-15T23:32:11.124898+00:00",
     "expires": "2026-07-22T23:32:11.124904+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GFUZ": {
-    "ticker": "GFUZ",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Why Are General Fusion Shares Surging On Tuesday?",
-    "added_at": "2026-07-14T17:40:55.459458+00:00",
-    "expires": "2026-07-21T17:40:55.459465+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FAST": {
-    "ticker": "FAST",
-    "score_delta": 0.093,
-    "catalyst": "earnings_beat",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Why Is Fastenal Stock Trading Lower Today?",
-    "added_at": "2026-07-14T17:40:55.462891+00:00",
-    "expires": "2026-07-21T17:40:55.462896+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3850,6 +3811,45 @@
     "headline": "Velo3D Stock Climbs as Forge 1 Opens Bigger Path to Production",
     "added_at": "2026-07-21T16:19:16.397146+00:00",
     "expires": "2026-07-28T16:19:16.397152+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SPG": {
+    "ticker": "SPG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Overweight on Simon Property Group, Raises Price Target to $285",
+    "added_at": "2026-07-21T17:52:59.842683+00:00",
+    "expires": "2026-07-26T17:52:59.842690+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SLG": {
+    "ticker": "SLG",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Overweight on SL Green Realty, Raises Price Target to $65",
+    "added_at": "2026-07-21T17:52:59.848099+00:00",
+    "expires": "2026-07-26T17:52:59.848104+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SITC": {
+    "ticker": "SITC",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Neutral on SITE Centers, Lowers Price Target to $5",
+    "added_at": "2026-07-21T17:52:59.850806+00:00",
+    "expires": "2026-07-26T17:52:59.850811+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
