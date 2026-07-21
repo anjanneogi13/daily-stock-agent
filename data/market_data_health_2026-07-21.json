@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 543,
+      "attempts": 1092,
       "empty": 0,
-      "errors": 88,
-      "successes": 455
+      "errors": 90,
+      "successes": 1002
     },
     "monster_info": {
-      "attempts": 275,
+      "attempts": 554,
       "empty": 0,
-      "errors": 53,
-      "successes": 222
+      "errors": 66,
+      "successes": 488
     },
     "ohlcv": {
-      "attempts": 550,
-      "empty": 2,
+      "attempts": 1106,
+      "empty": 4,
       "errors": 0,
-      "successes": 548
+      "successes": 1102
     }
   },
   "date": "2026-07-21",
   "providers": {
     "stooq": {
-      "attempts": 1,
-      "empty": 1,
+      "attempts": 2,
+      "empty": 2,
       "errors": 0,
       "failure_types": {
-        "empty_response": 1,
+        "empty_response": 2,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,35 +47,35 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1367,
-      "empty": 1,
-      "errors": 141,
+      "attempts": 2750,
+      "empty": 2,
+      "errors": 156,
       "failure_types": {
-        "empty_response": 1,
+        "empty_response": 2,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 141,
+        "rate_limited": 150,
         "stale_data": 0,
         "symbol_not_found": 0,
-        "timeout": 0,
+        "timeout": 6,
         "unknown_provider_failure": 0
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 141,
-      "successes": 1225,
-      "timeout": 0,
+      "rate_limited": 150,
+      "successes": 2592,
+      "timeout": 6,
       "unauthorized": 0
     }
   },
   "run": {
-    "fetched_count": 543,
+    "fetched_count": 549,
     "final_pick_count": 0,
-    "scored_count": 275,
-    "universe_count": 544
+    "scored_count": 279,
+    "universe_count": 550
   },
   "samples": [
     {
@@ -349,5 +349,5 @@
       "ticker": "VLTO"
     }
   ],
-  "timestamp_utc": "2026-07-21T12:10:02Z"
+  "timestamp_utc": "2026-07-21T12:41:33Z"
 }

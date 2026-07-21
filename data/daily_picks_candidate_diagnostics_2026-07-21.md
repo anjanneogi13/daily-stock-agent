@@ -9,7 +9,7 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 
 ## Stage Counts
 - capped_count: **2**
-- fetched_count: **543**
+- fetched_count: **549**
 - filtered_count: **15**
 - filtered_not_capped_count: **13**
 - hard_blocked_count: **2**
@@ -20,15 +20,15 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
 - rejected_candidate_count: **2**
-- scored_count: **275**
-- scored_not_filtered_count: **260**
+- scored_count: **279**
+- scored_not_filtered_count: **264**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
-- universe_count: **544**
+- universe_count: **550**
 
 ## Selected Official Picks
 - None.
 
 ## Rejected Candidates
 - PEBO: **hard_block** — SL too tight (1.1% < 2.0% for $39 stock)
-- DHR: **hard_block** — SL too tight (1.5% < 1.5% for $201 stock)
+- ZION: **hard_block** — SL too tight (1.3% < 2.0% for $72 stock)

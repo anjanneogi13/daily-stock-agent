@@ -14,23 +14,23 @@ Monitoring-only failure evidence. No official picks were generated.
 - capped_count: **2**
 - data_readiness_passed: **True**
 - data_readiness_status: **ready**
-- fetched_count: **543**
+- fetched_count: **549**
 - filtered_count: **15**
 - final_pick_count: **0**
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **0**
 - pre_hard_block_pick_count: **2**
-- scored_count: **275**
+- scored_count: **279**
 - scorer_workers: **4**
-- universe_count: **544**
+- universe_count: **550**
 
 ## Market Data Health
-- stooq: attempts=**1**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-- yfinance: attempts=**1367**, successes=**1225**, errors=**141**, rate_limited=**141**, unauthorized=**0**
+- stooq: attempts=**2**, successes=**0**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2750**, successes=**2592**, errors=**156**, rate_limited=**150**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED
 
 ## Hard-Blocked Finalists
 - PEBO: **sl_too_tight** — SL too tight (1.1% < 2.0% for $39 stock)
-- DHR: **sl_too_tight** — SL too tight (1.5% < 1.5% for $201 stock)
+- ZION: **sl_too_tight** — SL too tight (1.3% < 2.0% for $72 stock)
