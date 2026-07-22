@@ -727,15 +727,16 @@
     },
     {
       "ticker": "GM",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Strong Q2 earnings from GM combined with broad market rally (Dow +300pts) creates positive momentum, though specific earnings beat magnitude not disclosed.",
+      "rationale": "Better-than-expected Q2 earnings with raised FY26 guidance and multiple analyst forecast increases represents a meaningful positive catalyst, though mixed price targets suggest some uncertainty.",
       "action_window": "intraday",
-      "headline": "Dow Surges 300 Points; General Motors Posts Upbeat Earnings",
-      "url": "https://www.benzinga.com/markets/market-summary/26/07/60580397/dow-surges-300-points-general-motors-posts-upbeat-earnings",
+      "headline": "These Analysts Boost Their Forecasts On General Motors After Better-Than-Expected Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60614397/these-analysts-boost-their-forecasts-on-general-motors-after-better-than-expected-q2-results",
       "source": "alpaca",
-      "added_at": "2026-07-21T14:33:27.733806+00:00"
+      "added_at": "2026-07-21T14:33:27.733806+00:00",
+      "updated_at": "2026-07-22T16:18:05.636591+00:00"
     },
     {
       "ticker": "VICR",
@@ -1400,6 +1401,42 @@
       "url": "https://www.benzinga.com/m/26/07/60608641/penske-automotive-group-13d-amended-filing-says-penske-and-mitsui-propose-acquire-remaining-penske-a",
       "source": "alpaca",
       "added_at": "2026-07-22T14:33:47.991096+00:00"
+    },
+    {
+      "ticker": "FTAI",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BTIG maintains Buy rating with significant price target raise to $400, indicating strong analyst conviction and potential upside catalyst for the stock.",
+      "action_window": "intraday",
+      "headline": "BTIG Maintains Buy on FTAI Aviation, Raises Price Target to $400",
+      "url": "https://www.benzinga.com/news/26/07/60614419/btig-maintains-buy-ftai-aviation-raises-price-target-400",
+      "source": "alpaca",
+      "added_at": "2026-07-22T16:18:05.636577+00:00"
+    },
+    {
+      "ticker": "RPM",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record Q4 earnings beat with EPS of $1.89 and revenue of $2.23B exceeding estimates drove shares higher, though Iran conflict headwinds are flagged for FY27.",
+      "action_window": "intraday",
+      "headline": "RPM International Expects Iran Conflict to Hit Costs Hardest Early in Fiscal 2027",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60614136/rpm-international-expects-iran-conflict-to-hit-costs-hardest-early-in-fiscal-2027",
+      "source": "alpaca",
+      "added_at": "2026-07-22T16:18:05.636605+00:00"
+    },
+    {
+      "ticker": "KEY",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "KeyCorp beat Q2 earnings estimates and multiple analysts raised price targets, creating a credible positive catalyst with immediate trading implications.",
+      "action_window": "intraday",
+      "headline": "KeyCorp Analysts Increase Their Forecasts After Upbeat Q2 Earnings",
+      "url": "https://www.benzinga.com/news/26/07/60613880/keycorp-analysts-increase-their-forecasts-after-upbeat-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-07-22T16:18:05.636624+00:00"
     }
   ]
 }
