@@ -80,19 +80,6 @@
     "expires": "2026-12-14T21:02:46.918268+00:00",
     "hard_block": true
   },
-  "EPC": {
-    "ticker": "EPC",
-    "score_delta": 0.157,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "'Schick Razor Maker Is Said to Reject Unsolicited Takeover Offer'- Bloomberg",
-    "added_at": "2026-06-22T23:00:47.107775+00:00",
-    "expires": "2026-07-22T23:00:47.107781+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SNY": {
     "ticker": "SNY",
     "score_delta": 0.15,
@@ -1032,19 +1019,6 @@
     "headline": "NVIDIA Partners With Noetra Corp To Build Vera Rubin AI Factory Using 13,750 Vera CPUs And 27,500 Rubin GPUs In Japan",
     "added_at": "2026-07-16T10:02:12.630840+00:00",
     "expires": "2026-07-23T10:02:12.630846+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ASML": {
-    "ticker": "ASML",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "ASML Stock Rises On Second-Quarter Beat, Raised Forecast",
-    "added_at": "2026-07-15T23:32:11.124898+00:00",
-    "expires": "2026-07-22T23:32:11.124904+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2984,14 +2958,14 @@
   },
   "FFBC": {
     "ticker": "FFBC",
-    "score_delta": 0.079,
+    "score_delta": 0.097,
     "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
     "action_window": "next_day",
-    "headline": "First Financial Bancor Q2 Adj. EPS $0.80 Beats $0.77 Estimate, Sales $264.168M Miss $269.967M Estimate",
-    "added_at": "2026-07-21T20:43:22.111780+00:00",
-    "expires": "2026-07-28T20:43:22.111785+00:00",
+    "headline": "First Financial Bancorp (FFBC) Q2 2026 Earnings Call Highlights: Record Net Income and ...",
+    "added_at": "2026-07-22T23:57:28.638044+00:00",
+    "expires": "2026-07-29T23:57:28.638049+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3850,6 +3824,19 @@
     "headline": "Packaging Corp of America Sees Q3 Adj EPS $2.91 vs $2.94 Est",
     "added_at": "2026-07-22T22:56:56.137276+00:00",
     "expires": "2026-07-29T22:56:56.137281+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ELS": {
+    "ticker": "ELS",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Equity Lifestyle Properties (ELS) Surpasses Q2 FFO and Revenue Estimates",
+    "added_at": "2026-07-22T23:57:28.607494+00:00",
+    "expires": "2026-07-29T23:57:28.607501+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -934,15 +934,16 @@
     },
     {
       "ticker": "FFBC",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Mixed earnings result with EPS beat of 3.9% offset by revenue miss of 2.1%, creating uncertainty about quality of earnings and operational performance.",
+      "rationale": "Record net income with 8% increase and strong loan growth signals solid earnings beat, though acquisition impacts and fee income challenges temper enthusiasm.",
       "action_window": "next_day",
-      "headline": "First Financial Bancor Q2 Adj. EPS $0.80 Beats $0.77 Estimate, Sales $264.168M Miss $269.967M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60595312/first-financial-bancor-q2-adj-eps-0-80-beats-0-77-estimate-sales-264-168m-miss-269-967m-estimate",
+      "headline": "First Financial Bancorp (FFBC) Q2 2026 Earnings Call Highlights: Record Net Income and ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/first-financial-bancorp-ffbc-q2-210137593.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-21T20:43:22.133414+00:00"
+      "added_at": "2026-07-21T20:43:22.133414+00:00",
+      "updated_at": "2026-07-22T23:57:28.652205+00:00"
     },
     {
       "ticker": "OSUR",
@@ -1799,6 +1800,18 @@
       "url": "https://www.benzinga.com/news/26/07/60627028/packaging-corp-america-sees-q3-adj-eps-2-91-vs-2-94-est",
       "source": "alpaca",
       "added_at": "2026-07-22T22:56:56.145148+00:00"
+    },
+    {
+      "ticker": "ELS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "ELS beat Q2 FFO estimates by 2.78% and revenue by 4.02%, representing a modest but solid earnings beat that typically generates positive trading momentum in REITs.",
+      "action_window": "next_day",
+      "headline": "Equity Lifestyle Properties (ELS) Surpasses Q2 FFO and Revenue Estimates",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/equity-lifestyle-properties-els-surpasses-215504729.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-07-22T23:57:28.652175+00:00"
     }
   ]
 }
