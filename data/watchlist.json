@@ -1111,6 +1111,127 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60596320/bar-harbor-bankshares-q2-adj-eps-0-92-beats-0-90-estimate-sales-49-651m-beat-48-821m-estimate",
       "source": "alpaca",
       "added_at": "2026-07-21T22:00:03.883777+00:00"
+    },
+    {
+      "ticker": "MNDY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant 20% workforce reduction signals cost discipline and efficiency focus while maintaining guidance suggests improved profitability outlook, though one-time charges create near-term uncertainty.",
+      "action_window": "intraday",
+      "headline": "Monday.com Initiates Restructuring With ~20% Headcount Reduction; Sees ~$45M-$55M In Net Charges; Reaffirms FY2026 Guidance",
+      "url": "https://www.benzinga.com/news/26/07/60600920/monday-com-initiates-restructuring-20-headcount-reduction-sees-45m-55m-net-charges-reaffirms-fy2026-",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464319+00:00"
+    },
+    {
+      "ticker": "DOCN",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Stifel upgraded DOCN to Buy with a significant price target of $160, representing a major positive catalyst from a reputable investment bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Stifel Upgrades DigitalOcean Holdings to Buy, Raises Price Target to $160",
+      "url": "https://www.benzinga.com/news/26/07/60600691/stifel-upgrades-digitalocean-holdings-buy-raises-price-target-160",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464335+00:00"
+    },
+    {
+      "ticker": "OTIS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Otis cut FY2026 adjusted EPS guidance by approximately 4.5% below consensus estimates while maintaining sales guidance, indicating margin pressure and immediate negative impact on valuation.",
+      "action_window": "intraday",
+      "headline": "Otis Worldwide Lowers FY2026 Adj EPS Guidance from $4.20-$4.24 to $4.01-$4.05 vs $4.18 Est; Affirms FY2026 Sales Guidance of $15.100B-$15.300B vs $15.126B Est",
+      "url": "https://www.benzinga.com/news/26/07/60600681/otis-worldwide-lowers-fy2026-adj-eps-guidance-4-20-4-24-4-01-4-05-vs-4-18-est-affirms-fy2026-sales-g",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464344+00:00"
+    },
+    {
+      "ticker": "GLSI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "UK regulatory approval to expand Phase III trial with prestigious Royal Marsden collaboration represents meaningful clinical development progress for a biotech, though not final product approval.",
+      "action_window": "intraday",
+      "headline": "Greenwich LifeSciences Receives UK Regulatory Approval To Expand FLAMINGO-01 Phase III Trial With Royal Marsden Collaboration",
+      "url": "https://www.benzinga.com/quote/GLSI",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464361+00:00"
+    },
+    {
+      "ticker": "NTRA",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive clinical validation data published in prestigious JAMA Dermatology showing Signatera test superiority over existing standard (AMERK) in Merkel Cell Carcinoma, supporting product differentiation and commercial potential.",
+      "action_window": "intraday",
+      "headline": "Natera Publishes Results From Prospective, Multicenter Study In Merkel Cell Carcinoma In The JAMA Dermatology Journal; Signatera Test Was A Significantly Stronger Predictor Of Recurrence Than AMERK",
+      "url": "https://www.benzinga.com/news/26/07/60600607/natera-publishes-results-prospective-multicenter-study-merkel-cell-carcinoma-jama-dermatology-journa",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464369+00:00"
+    },
+    {
+      "ticker": "HPE",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "HPE stock surging 3%+ premarket on positive AI server demand catalyst triggered by peer earnings, representing a sector momentum trade with immediate price action.",
+      "action_window": "intraday",
+      "headline": "Why Is Hewlett Packard Stock Gaining Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60600535/why-is-hewlett-packard-stock-gaining-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464377+00:00"
+    },
+    {
+      "ticker": "BLFS",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Definitive acquisition announcement at $31/share in cash and stock represents a confirmed M&A catalyst requiring immediate trading action for BLFS shareholders.",
+      "action_window": "intraday",
+      "headline": "BioLife Solutions To Be Acquired By Repligen For $31 Per Share In Cash And RGEN Stock At EV Of ~$1.5B",
+      "url": "https://www.benzinga.com/m/26/07/60600492/biolife-solutions-be-acquired-repligen-31-share-cash-and-rgen-stock-ev-1-5b",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464384+00:00"
+    },
+    {
+      "ticker": "CAE",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Partnership expansion with Leonardo for next-gen fighter pilot training systems signals future revenue growth and strategic positioning in defense sector, though impact timing is uncertain.",
+      "action_window": "next_day",
+      "headline": "CAE And Leonardo Expand Longstanding Partnership To Develop Next-Generation Fighter Pilot Training Systems",
+      "url": "https://www.benzinga.com/quote/CAE",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464391+00:00"
+    },
+    {
+      "ticker": "CALM",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with negative EPS of $(0.76) versus $0.06 estimate and revenue miss of ~$11M creates immediate selling pressure on market open.",
+      "action_window": "intraday",
+      "headline": "Cal-Maine Foods Q4 EPS $(0.76) Misses $0.06 Estimate, Sales $552.581M Miss $563.826M Estimate",
+      "url": "https://www.benzinga.com/quote/CALM",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464398+00:00"
+    },
+    {
+      "ticker": "TEL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "TE Connectivity beat both EPS estimates by 3.5% and revenue estimates by 3.1%, representing a solid earnings beat that typically drives positive price action.",
+      "action_window": "intraday",
+      "headline": "TE Connectivity Q3 Adj. EPS $2.94 Beats $2.84 Estimate, Sales $5.160B Beat $5.003B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60600382/te-connectivity-q3-adj-eps-2-94-beats-2-84-estimate-sales-5-160b-beat-5-003b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-22T10:20:00.464405+00:00",
+      "updated_at": "2026-07-22T10:20:00.464414+00:00"
     }
   ]
 }
