@@ -1340,6 +1340,66 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60603430/preferred-bank-q2-eps-2-78-beats-2-65-estimate-sales-69-990m-miss-70-501m-estimate",
       "source": "alpaca",
       "added_at": "2026-07-22T12:12:31.814090+00:00"
+    },
+    {
+      "ticker": "ADTN",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Preliminary revenue miss combined with weaker margins and below-consensus Q3 guidance represents a meaningful negative catalyst with immediate trading impact as evidenced by share price tumble.",
+      "action_window": "intraday",
+      "headline": "ADTRAN Shares Tumble As Preliminary Results Miss Guidance and Estimates",
+      "url": "https://www.benzinga.com/markets/guidance/26/07/60609192/adtran-shares-tumble-as-preliminary-results-miss-guidance-and-estimates",
+      "source": "alpaca",
+      "added_at": "2026-07-22T14:33:47.991048+00:00"
+    },
+    {
+      "ticker": "DEO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Major workforce reductions of 30% signal operational distress and potential near-term disruption despite cost-cutting benefits, with CEO nickname suggesting drastic measures that could impact morale and execution.",
+      "action_window": "intraday",
+      "headline": "'Diageo teams face up to 30% reductions as CEO 'Drastic Dave' slashes costs' - Reuters",
+      "url": "https://www.benzinga.com/news/26/07/60609009/diageo-teams-face-30-reductions-ceo-drastic-dave-slashes-costs-reuters",
+      "source": "alpaca",
+      "added_at": "2026-07-22T14:33:47.991069+00:00"
+    },
+    {
+      "ticker": "BFAM",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Reports of child abuse at multiple locations including a flagship branch pose severe reputational and regulatory risk to a childcare provider, with shares already showing downside volume.",
+      "action_window": "intraday",
+      "headline": "Watching Bright Horizons Family Solutions; Shares See Volume To The Downside, Traders Circulate New York Magazine X Post Reporting \"In the past few years, disturbing incidents have transpired in multiple Bright Horizons locations, including reports of child abuse at the Columbus Circle branch and co",
+      "url": "https://www.benzinga.com/news/26/07/60608827/watching-bright-horizons-family-solutions-shares-see-volume-downside-traders-circulate-new-york-maga",
+      "source": "alpaca",
+      "added_at": "2026-07-22T14:33:47.991079+00:00"
+    },
+    {
+      "ticker": "REBN",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Significant dilutive equity offering of 10.5M shares ($21M) will increase share count substantially and typically pressures stock price downward in near-term.",
+      "action_window": "intraday",
+      "headline": "Reborn Coffee Shareholders Approve $21M Sale Of 10.5M Common Shares At $2 Per Share",
+      "url": "https://www.benzinga.com/news/26/07/60608687/reborn-coffee-shareholders-approve-21m-sale-10-5m-common-shares-2-share",
+      "source": "alpaca",
+      "added_at": "2026-07-22T14:33:47.991088+00:00"
+    },
+    {
+      "ticker": "PAG",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "A formal 13D filing with a $210/share cash acquisition proposal for remaining shares represents a major M&A catalyst with immediate price impact potential.",
+      "action_window": "intraday",
+      "headline": "Penske Automotive Group 13D/Amended Filing Says Penske And Mitsui Propose To Acquire Remaining Penske Automotive Shares For $210/Share In Cash",
+      "url": "https://www.benzinga.com/m/26/07/60608641/penske-automotive-group-13d-amended-filing-says-penske-and-mitsui-propose-acquire-remaining-penske-a",
+      "source": "alpaca",
+      "added_at": "2026-07-22T14:33:47.991096+00:00"
     }
   ]
 }

@@ -80,45 +80,6 @@
     "expires": "2026-12-14T21:02:46.918268+00:00",
     "hard_block": true
   },
-  "DFTX": {
-    "ticker": "DFTX",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.92,
-    "action_window": "intraday",
-    "headline": "Definium Shares Soar After Reporting Positive Phase 3 Results For Single-Dose Depression Treatment",
-    "added_at": "2026-06-22T13:30:14.668626+00:00",
-    "expires": "2026-07-22T13:30:14.668634+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RGNX": {
-    "ticker": "RGNX",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Regenxbio Gains Fresh Chance As FDA Reconsiders Gene Therapy",
-    "added_at": "2026-06-22T13:30:14.670652+00:00",
-    "expires": "2026-07-22T13:30:14.670658+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CELZ": {
-    "ticker": "CELZ",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Creative Medical Technology Receives FDA Clearance To Expand Its ADAPT Clinical Trial Evaluating CELZ-201 For Chronic Lower Back Pain Associated With Degenerative Disc Disease",
-    "added_at": "2026-06-22T13:30:14.680797+00:00",
-    "expires": "2026-07-22T13:30:14.680804+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MGNX": {
     "ticker": "MGNX",
     "score_delta": 0.15,
@@ -1374,19 +1335,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NBIS": {
-    "ticker": "NBIS",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Nebius Launches New Business Model Allowing Infrastructure Partners To Deploy Its Full-Stack AI Cloud Platform In Their Own Data Centers",
-    "added_at": "2026-07-15T12:50:50.326176+00:00",
-    "expires": "2026-07-22T12:50:50.326181+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FAC": {
     "ticker": "FAC",
     "score_delta": 0.044,
@@ -2037,19 +1985,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FROG": {
-    "ticker": "FROG",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Guggenheim Maintains Buy on JFrog, Raises Price Target to $105",
-    "added_at": "2026-07-17T12:42:06.377173+00:00",
-    "expires": "2026-07-22T12:42:06.377179+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "USB": {
     "ticker": "USB",
     "score_delta": 0.05,
@@ -2060,71 +1995,6 @@
     "headline": "Evercore ISI Group Upgrades U.S. Bancorp to Outperform, Raises Price Target to $72",
     "added_at": "2026-07-20T13:03:14.249853+00:00",
     "expires": "2026-07-25T13:03:14.249858+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "STT": {
-    "ticker": "STT",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on State Street, Raises Price Target to $215",
-    "added_at": "2026-07-17T14:27:52.346632+00:00",
-    "expires": "2026-07-22T14:27:52.346638+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TWLO": {
-    "ticker": "TWLO",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "TD Cowen Maintains Buy on Twilio, Raises Price Target to $245",
-    "added_at": "2026-07-17T14:27:52.349977+00:00",
-    "expires": "2026-07-22T14:27:52.349983+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CFG": {
-    "ticker": "CFG",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Keefe, Bruyette & Woods Maintains Outperform on Citizens Financial Group, Raises Price Target to $90",
-    "added_at": "2026-07-17T14:27:52.353365+00:00",
-    "expires": "2026-07-22T14:27:52.353371+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSX:MER": {
-    "ticker": "TSX:MER",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Scotiabank Downgrades Meren Energy to Sector Perform, Announces C$2.5 Price Target",
-    "added_at": "2026-07-17T14:27:52.360087+00:00",
-    "expires": "2026-07-22T14:27:52.360094+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSX:IPCO": {
-    "ticker": "TSX:IPCO",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Scotiabank Upgrades International Petroleum to Sector Outperform, Announces C$38 Price Target",
-    "added_at": "2026-07-17T14:27:52.363663+00:00",
-    "expires": "2026-07-22T14:27:52.363672+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3876,6 +3746,32 @@
     "headline": "Preferred Bank Q2 EPS $2.78 Beats $2.65 Estimate, Sales $69.990M Miss $70.501M Estimate",
     "added_at": "2026-07-22T12:12:31.809596+00:00",
     "expires": "2026-07-29T12:12:31.809601+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ADTN": {
+    "ticker": "ADTN",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "ADTRAN Shares Tumble As Preliminary Results Miss Guidance and Estimates",
+    "added_at": "2026-07-22T14:33:47.982450+00:00",
+    "expires": "2026-07-29T14:33:47.982457+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PAG": {
+    "ticker": "PAG",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "Penske Automotive Group 13D/Amended Filing Says Penske And Mitsui Propose To Acquire Remaining Penske Automotive Shares For $210/Share In Cash",
+    "added_at": "2026-07-22T14:33:47.986471+00:00",
+    "expires": "2026-08-21T14:33:47.986478+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
