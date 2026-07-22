@@ -1473,6 +1473,18 @@
       "url": "https://www.benzinga.com/m/26/07/60617632/eu-antitrust-regulators-clear-paramount-s-110b-acquisition-warner-bros-paramount-ditch-its-stake-fil",
       "source": "alpaca",
       "added_at": "2026-07-22T17:49:15.139712+00:00"
+    },
+    {
+      "ticker": "INM",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Substantial $200M financing secured by merger partner immediately prior to combination provides strong capital position and de-risks pipeline execution for the combined entity.",
+      "action_window": "intraday",
+      "headline": "InMed Pharmaceuticals Merger Partner Raises $200 Million To Boost Migraine Pipeline",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60620216/inmed-pharmaceuticals-merger-partner-raises-200-million-to-boost-migraine-pipeline",
+      "source": "alpaca",
+      "added_at": "2026-07-22T19:02:00.475459+00:00"
     }
   ]
 }
