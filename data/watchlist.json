@@ -1437,6 +1437,42 @@
       "url": "https://www.benzinga.com/news/26/07/60613880/keycorp-analysts-increase-their-forecasts-after-upbeat-q2-earnings",
       "source": "alpaca",
       "added_at": "2026-07-22T16:18:05.636624+00:00"
+    },
+    {
+      "ticker": "PATH",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "product_launch",
+      "rationale": "OpenAI's new enterprise AI platform launch represents a major competitive threat to UiPath's automation business, evidenced by the immediate 13% stock decline.",
+      "action_window": "intraday",
+      "headline": "Why Is UiPath Stock Falling Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60617831/why-is-uipath-stock-falling-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-22T17:49:15.139690+00:00"
+    },
+    {
+      "ticker": "GSK",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Early FDA approval for first-in-class lung cancer drug is a significant catalyst, though impact moderated by GSK's large diversified portfolio and specialized indication.",
+      "action_window": "intraday",
+      "headline": "FDA Greenlights GSK\u2019s First Lung Cancer Drug Ahead of Schedule",
+      "url": "https://www.benzinga.com/news/fda/26/07/60617644/fda-greenlights-gsks-first-lung-cancer-drug-ahead-of-schedule",
+      "source": "alpaca",
+      "added_at": "2026-07-22T17:49:15.139704+00:00"
+    },
+    {
+      "ticker": "PSKY",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "EU antitrust approval of $110B mega-merger removes major regulatory hurdle, significantly increasing deal completion probability and creating transformative media consolidation.",
+      "action_window": "intraday",
+      "headline": "EU Antitrust Regulators Clear Paramount's $110B Acquisition Of Warner Bros; Paramount To Ditch Its Stake In Film Distribution Joint Venture With United International Picture In Europe; Paramount Will Not Enter Into Any Film Distribution Deal With Universal For 10 Years In Europe; Paramount Will Not ",
+      "url": "https://www.benzinga.com/m/26/07/60617632/eu-antitrust-regulators-clear-paramount-s-110b-acquisition-warner-bros-paramount-ditch-its-stake-fil",
+      "source": "alpaca",
+      "added_at": "2026-07-22T17:49:15.139712+00:00"
     }
   ]
 }
