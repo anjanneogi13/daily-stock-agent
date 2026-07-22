@@ -1751,6 +1751,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60626337/update-northern-trust-q2-adj-eps-2-97-beats-2-71-estimate-sales-2-698b-beat-2-417b-estimate",
       "source": "alpaca",
       "added_at": "2026-07-22T21:36:54.399188+00:00"
+    },
+    {
+      "ticker": "OII",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with adjusted EPS exceeding estimates by 37% and revenue beating by 4.5%, creating immediate trading opportunity.",
+      "action_window": "next_day",
+      "headline": "Oceaneering International Q2 Adj. EPS $0.63 Beats $0.46 Estimate, Sales $768.184M Beat $734.780M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60627311/oceaneering-international-q2-adj-eps-0-63-beats-0-46-estimate-sales-768-184m-beat-734-780m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-22T22:56:56.145111+00:00"
+    },
+    {
+      "ticker": "LBRT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Liberty Energy beat Q2 EPS estimates by 29% ($0.09 vs $0.07) and revenue estimates by 9% ($1.189B vs $1.090B), representing a strong dual beat that typically drives positive price action.",
+      "action_window": "next_day",
+      "headline": "Liberty Energy Q2 Adj. EPS $0.09 Beats $0.07 Estimate, Sales $1.189B Beat $1.090B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60627191/liberty-energy-q2-adj-eps-0-09-beats-0-07-estimate-sales-1-189b-beat-1-090b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-22T22:56:56.145127+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CFO commentary on strong AI demand exceeding capacity during earnings call is driving immediate after-hours movement in AI infrastructure stocks, creating a sector-wide trading opportunity.",
+      "action_window": "next_day",
+      "headline": "Alphabet CFO Says Demand Still Outpaces Capacity: AI Infrastructure Stocks Rise",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60627122/alphabet-cfo-says-demand-still-outpaces-capacity-ai-infrastructure-stocks-rise",
+      "source": "alpaca",
+      "added_at": "2026-07-22T22:56:56.145138+00:00"
+    },
+    {
+      "ticker": "PKG",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Packaging Corp missed Q3 adjusted EPS estimates by $0.03 (1% miss), representing a meaningful earnings disappointment that typically triggers immediate selling pressure in after-hours trading.",
+      "action_window": "intraday",
+      "headline": "Packaging Corp of America Sees Q3 Adj EPS $2.91 vs $2.94 Est",
+      "url": "https://www.benzinga.com/news/26/07/60627028/packaging-corp-america-sees-q3-adj-eps-2-91-vs-2-94-est",
+      "source": "alpaca",
+      "added_at": "2026-07-22T22:56:56.145148+00:00"
     }
   ]
 }
