@@ -1536,15 +1536,16 @@
     },
     {
       "ticker": "IBM",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "IBM's FY2026 sales guidance midpoint of $70.574B falls below analyst consensus estimate of $70.846B, representing a meaningful revenue shortfall that warrants immediate trading attention.",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CFO disclosure showing generative AI comprising 50% of Q2 consulting signings and over 30% of backlog represents strong revenue visibility and successful pivot to high-growth AI services.",
       "action_window": "intraday",
-      "headline": "IBM Sees FY2026 Sales $70.236B-$70.912B vs $70.846B Est",
-      "url": "https://www.benzinga.com/news/26/07/60623404/ibm-sees-fy2026-sales-70-236b-70-912b-vs-70-846b-est",
+      "headline": "IBM CFO Says Generative AI Represented About 50% Of Consulting Signings In Q2, Now Makes Up Over 30% Of Backlog",
+      "url": "https://www.benzinga.com/news/26/07/60626685/ibm-cfo-says-generative-ai-represented-about-50-consulting-signings-q2-now-makes-over-30-backlog",
       "source": "alpaca",
-      "added_at": "2026-07-22T20:16:16.129304+00:00"
+      "added_at": "2026-07-22T20:16:16.129304+00:00",
+      "updated_at": "2026-07-22T21:36:54.399116+00:00"
     },
     {
       "ticker": "TSLA",
@@ -1678,6 +1679,78 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60623228/knight-swift-q2-adj-eps-0-63-beats-0-51-estimate-sales-2-096b-beat-2-042b-estimate",
       "source": "alpaca",
       "added_at": "2026-07-22T20:16:16.129418+00:00"
+    },
+    {
+      "ticker": "NOW",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "CFO reaffirming confidence in Q3 and full-year forecasts signals operational strength and reduces downside risk, though this is management commentary rather than a hard catalyst like guidance raise or earnings beat.",
+      "action_window": "next_day",
+      "headline": "ServiceNow CFO Says 'Very Confident' In Our Q3 And Full Year Forecasts",
+      "url": "https://www.benzinga.com/news/26/07/60626665/servicenow-cfo-says-very-confident-our-q3-and-full-year-forecasts",
+      "source": "alpaca",
+      "added_at": "2026-07-22T21:36:54.399131+00:00"
+    },
+    {
+      "ticker": "GGG",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Graco's Q3 sales guidance midpoint of $590M falls below consensus estimate of $588.77M, indicating a modest revenue miss that warrants immediate trading attention.",
+      "action_window": "intraday",
+      "headline": "Graco Sees Q3 Sales $580.000M-$600.000M vs $588.770M Est",
+      "url": "https://www.benzinga.com/news/26/07/60626653/graco-sees-q3-sales-580-000m-600-000m-vs-588-770m-est",
+      "source": "alpaca",
+      "added_at": "2026-07-22T21:36:54.399143+00:00"
+    },
+    {
+      "ticker": "FCHS",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed $650M merger deal represents significant premium and liquidity event for FCHS shareholders with immediate price discovery upon announcement.",
+      "action_window": "intraday",
+      "headline": "First Choice Healthcare Solutions To Merge With Westin Acquisition In $650M Deal, Rebranding As Wellgevity 360, PubCo",
+      "url": "https://www.benzinga.com/m/26/07/60626537/first-choice-healthcare-solutions-merge-westin-acquisition-650m-deal-rebranding-wellgevity-360-pubco",
+      "source": "alpaca",
+      "added_at": "2026-07-22T21:36:54.399154+00:00"
+    },
+    {
+      "ticker": "CSX",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Stock already climbing on confirmed Q2 earnings beat, indicating positive market reaction to results with immediate price momentum.",
+      "action_window": "intraday",
+      "headline": "CSX Stock Climbs After Q2 Earnings Beat Estimates",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60626498/csx-stock-climbs-after-q2-earnings-beat-estimates",
+      "source": "alpaca",
+      "added_at": "2026-07-22T21:36:54.399163+00:00"
+    },
+    {
+      "ticker": "DXCM",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Being selected as the first participant in FDA's TEMPO program signals regulatory favoritism and potential faster approval pathways for DexCom's future digital health products, providing competitive advantage.",
+      "action_window": "next_day",
+      "headline": "DexCom Selected As First Participant For FDA's TEMPO Digital Health Devices Program",
+      "url": "https://www.benzinga.com/news/26/07/60626438/dexcom-selected-first-participant-fda-s-tempo-digital-health-devices-program",
+      "source": "alpaca",
+      "added_at": "2026-07-22T21:36:54.399172+00:00"
+    },
+    {
+      "ticker": "NTRS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Northern Trust beat Q2 EPS estimates by 9.6% ($2.97 vs $2.71) and revenue by 11.6% ($2.698B vs $2.417B), representing a significant double beat on key metrics.",
+      "action_window": "intraday",
+      "headline": "UPDATE: Northern Trust Q2 Adj. EPS $2.97 Beats $2.71 Estimate, Sales $2.698B Beat $2.417B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60626337/update-northern-trust-q2-adj-eps-2-97-beats-2-71-estimate-sales-2-698b-beat-2-417b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-22T21:36:54.399188+00:00"
     }
   ]
 }
