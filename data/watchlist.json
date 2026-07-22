@@ -1232,6 +1232,114 @@
       "source": "alpaca",
       "added_at": "2026-07-22T10:20:00.464405+00:00",
       "updated_at": "2026-07-22T10:20:00.464414+00:00"
+    },
+    {
+      "ticker": "HTCO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings improvement with EPS loss narrowing 80% YoY from $(3.29) to $(0.67) while revenue grew 38% to $137.452M, indicating strong operational momentum.",
+      "action_window": "intraday",
+      "headline": "High-Trend International H1 EPS $(0.67) Up From $(3.29) YoY, Sales $137.452M Up From $99.416M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60603648/high-trend-international-h1-eps-0-67-3-29-yoy-sales-137-452m-99-416m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814014+00:00"
+    },
+    {
+      "ticker": "EVGN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic collaboration announcement for drug discovery in large cardiovascular market represents meaningful business development catalyst for small biotech company.",
+      "action_window": "intraday",
+      "headline": "Evogene Announces Strategic Collaboration With ELIO To Discover And Develop Small-Molecule Oral Inhibitors To Treat Hyperlipidemia And Cardiovascular Diseases",
+      "url": "https://www.benzinga.com/quote/EVGN",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814029+00:00"
+    },
+    {
+      "ticker": "DRIO",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Direct offering of ~3.5M shares at $6.80 typically causes immediate dilution pressure, though pricing to institutional investors provides some support floor.",
+      "action_window": "intraday",
+      "headline": "DarioHealth Prices Direct Offering Of 3,454,559 Shares At $6.80 Per Share To Long-Term Institutional And New Fundamental Investors",
+      "url": "https://www.benzinga.com/news/26/07/60603586/dariohealth-prices-direct-offering-3-454-559-shares-6-80-share-long-term-institutional-and-new-funda",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814040+00:00"
+    },
+    {
+      "ticker": "LABT",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Positive clinical resistance data for Nu-3 aligned with federal antibiotic-resistant bacteria initiative suggests regulatory pathway progress and validates drug mechanism for a high-priority therapeutic area.",
+      "action_window": "intraday",
+      "headline": "Lakewood-Amedex Biotherapeutics Announces Resistance Data For Nu-3 In Alignment With Presidential Advisory Council On Combating Antibiotic Resistant Bacteria",
+      "url": "https://www.benzinga.com/news/26/07/60603516/lakewood-amedex-biotherapeutics-announces-resistance-data-nu-3-alignment-presidential-advisory-counc",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814052+00:00"
+    },
+    {
+      "ticker": "WETO",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $20M, 24-month contract represents significant revenue visibility for what is likely a small-cap robotics company, providing material impact to future financials.",
+      "action_window": "intraday",
+      "headline": "Wetour Robotics's Wetour Travel Tech Subsidiary Strikes 24-Month, $20M Agreement With Undisclosed Global Trade And Logistics Firm Over Orchestra Robotics Services",
+      "url": "https://www.benzinga.com/news/26/07/60603506/wetour-robotics-s-wetour-travel-tech-subsidiary-strikes-24-month-20m-agreement-undisclosed-global-tr",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814061+00:00"
+    },
+    {
+      "ticker": "NNE",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic collaboration with Fortil to design critical fuel handling system for KRONOS reactor represents meaningful technical progress for NANO Nuclear's modular microreactor development program.",
+      "action_window": "intraday",
+      "headline": "NANO Nuclear Energy And Fortil Collaborate To Design  KRONOS MMR Energy System's Fuel Handling & Storage System.",
+      "url": "https://www.benzinga.com/quote/NNE",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814069+00:00"
+    },
+    {
+      "ticker": "LBRX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Timeline delay for pivotal Phase 3 trial topline results pushed to H1 2027 with FDA pre-NDA meeting delayed to H2 2027, extending the path to potential commercialization and revenue generation.",
+      "action_window": "intraday",
+      "headline": "LB Pharma Now Expects To Report Topline Results From Pivotal Phase 3 NOVA-2 Clinical Trial Of LB-102 In Patients With Schizophrenia In H1 Of 2027 And To Schedule Pre-NDA Meeting With FDA In H2 Of 2027",
+      "url": "https://www.benzinga.com/news/26/07/60603469/lb-pharma-now-expects-report-topline-results-pivotal-phase-3-nova-2-clinical-trial-lb-102-patients-s",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814075+00:00"
+    },
+    {
+      "ticker": "MNPR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Rolling NDA submission to FDA represents a major regulatory milestone for a biotech company that typically drives significant positive price action, though final approval still pending.",
+      "action_window": "intraday",
+      "headline": "Monopar Therapeutics Begins Rolling Submission Of FDA New Drug Application For ALXN1840 Albumin Tripartite Complex Activator To Treat Wilson Disease",
+      "url": "https://www.benzinga.com/news/26/07/60603456/monopar-therapeutics-begins-rolling-submission-fda-new-drug-application-alxn1840-albumin-tripartite-",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814083+00:00"
+    },
+    {
+      "ticker": "PFBC",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating by 4.9% but revenue missing by 0.7%, creating offsetting signals that likely limit significant directional movement.",
+      "action_window": "intraday",
+      "headline": "Preferred Bank Q2 EPS $2.78 Beats $2.65 Estimate, Sales $69.990M Miss $70.501M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60603430/preferred-bank-q2-eps-2-78-beats-2-65-estimate-sales-69-990m-miss-70-501m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-22T12:12:31.814090+00:00"
     }
   ]
 }
