@@ -80,19 +80,6 @@
     "expires": "2026-12-14T21:02:46.918268+00:00",
     "hard_block": true
   },
-  "SNY": {
-    "ticker": "SNY",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Sanofi Wins FDA Nod for Expanded Use of T1D Drug in Children",
-    "added_at": "2026-06-23T00:11:23.205795+00:00",
-    "expires": "2026-07-23T00:11:23.205801+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SGMO": {
     "ticker": "SGMO",
     "score_delta": -1.0,
@@ -1009,19 +996,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NVDA": {
-    "ticker": "NVDA",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "NVIDIA Partners With Noetra Corp To Build Vera Rubin AI Factory Using 13,750 Vera CPUs And 27,500 Rubin GPUs In Japan",
-    "added_at": "2026-07-16T10:02:12.630840+00:00",
-    "expires": "2026-07-23T10:02:12.630846+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CTEV": {
     "ticker": "CTEV",
     "score_delta": -0.1,
@@ -1322,19 +1296,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "UNH": {
-    "ticker": "UNH",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "UnitedHealth Group Q2 Adj. EPS $6.38 Beats $4.86 Estimate, Sales $112.032B Beat $110.825B Estimate",
-    "added_at": "2026-07-16T10:02:12.592872+00:00",
-    "expires": "2026-07-23T10:02:12.592880+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "EYPT": {
     "ticker": "EYPT",
     "score_delta": -0.079,
@@ -1358,19 +1319,6 @@
     "headline": "Google May Be Held Liable For Gambling-Related YouTube Videos After EU Court Rules Reviewing Content For Partnership Deals Forfeits Hosting Exemption",
     "added_at": "2026-07-16T10:02:12.605875+00:00",
     "expires": "2026-07-30T10:02:12.605881+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VSAT": {
-    "ticker": "VSAT",
-    "score_delta": 0.044,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.62,
-    "action_window": "next_day",
-    "headline": "Viasat Brings Non-Terrestrial Network Communications To Connected Vehicles, Enabling Voice Calls Beyond Cellular Coverage Via BMW iX3",
-    "added_at": "2026-07-16T10:02:12.633943+00:00",
-    "expires": "2026-07-23T10:02:12.633949+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2425,14 +2373,14 @@
   },
   "CX": {
     "ticker": "CX",
-    "score_delta": -0.064,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
     "action_window": "intraday",
-    "headline": "CEMEX Received European Commission Statement Of Objections On Admixtures Activity In France, Germany, Does Not Agree With Preliminary Findings, Will Respond, Unable To Assess Outcome Or Material Impac",
-    "added_at": "2026-07-21T10:19:38.820541+00:00",
-    "expires": "2026-08-04T10:19:38.820546+00:00",
+    "headline": "Cemex Q2 EPS $0.24 Beats $0.20 Estimate, Sales $4.593B Beat $4.499B Estimate",
+    "added_at": "2026-07-23T10:15:06.013446+00:00",
+    "expires": "2026-07-30T10:15:06.013451+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3837,6 +3785,84 @@
     "headline": "Equity Lifestyle Properties (ELS) Surpasses Q2 FFO and Revenue Estimates",
     "added_at": "2026-07-22T23:57:28.607494+00:00",
     "expires": "2026-07-29T23:57:28.607501+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WST": {
+    "ticker": "WST",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "West Pharmaceutical Servs Raises FY2026 Adj EPS Guidance from $8.40-$8.75 to $8.85-$9.05 vs $8.61 Est; Raises FY2026 Sales Guidance from $3.295B-$3.350B to $3.345B-$3.380B vs $3.332B Est",
+    "added_at": "2026-07-23T10:15:06.007126+00:00",
+    "expires": "2026-08-06T10:15:06.007133+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GOOG": {
+    "ticker": "GOOG",
+    "score_delta": -0.1,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "European Commission Fines Google \u20ac890 Million For Breaches Of The Digital Markets Act",
+    "added_at": "2026-07-23T10:15:06.023030+00:00",
+    "expires": "2026-08-06T10:15:06.023035+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RTX": {
+    "ticker": "RTX",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "RTX Raises FY2026 Adj EPS Guidance from $6.70-$6.90 to $7.10-$7.25 vs $6.92 Est; Raises FY2026 Sales Guidance from $92.500B-$93.500B to $95.000B-$96.000B vs $94.085B Est",
+    "added_at": "2026-07-23T10:15:06.026177+00:00",
+    "expires": "2026-08-06T10:15:06.026182+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PCG": {
+    "ticker": "PCG",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "PG&E Q2 Adj. EPS $0.40 Beats $0.36 Estimate, Sales $5.902B Miss $6.181B Estimate",
+    "added_at": "2026-07-23T10:15:06.037388+00:00",
+    "expires": "2026-07-30T10:15:06.037393+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CLF": {
+    "ticker": "CLF",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Cleveland-Cliffs Q2 Adj. EPS $(0.20), Inline, Sales $5.226B Beat $5.186B Estimate",
+    "added_at": "2026-07-23T10:15:06.040613+00:00",
+    "expires": "2026-07-30T10:15:06.040618+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FCFS": {
+    "ticker": "FCFS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "FirstCash Hldgs Q2 Adj. EPS $2.50 Beats $2.40 Estimate, Sales $1.075B Beat $1.032B Estimate",
+    "added_at": "2026-07-23T10:15:06.043808+00:00",
+    "expires": "2026-07-30T10:15:06.043814+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

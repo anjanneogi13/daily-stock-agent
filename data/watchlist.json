@@ -1812,6 +1812,80 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/equity-lifestyle-properties-els-surpasses-215504729.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-07-22T23:57:28.652175+00:00"
+    },
+    {
+      "ticker": "ONC",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "$300M manufacturing expansion demonstrates strong capital commitment and growth trajectory, signaling confidence in pipeline and commercial prospects, though impact is medium-term rather than immediate catalyst.",
+      "action_window": "this_week",
+      "headline": "BeOne Medicines Announces $300M Expansion Of Its Manufacturing And R&D Center In New Jersey; Total U.S. Manufacturing Investment Reaches $1B+",
+      "url": "https://www.benzinga.com/news/26/07/60630928/beone-medicines-announces-300m-expansion-its-manufacturing-and-r-d-center-new-jersey-total-u-s-manuf",
+      "source": "alpaca",
+      "added_at": "2026-07-23T10:15:06.048384+00:00"
+    },
+    {
+      "ticker": "WST",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "West Pharmaceutical raised both FY2026 EPS guidance (midpoint up 8.4% from $8.58 to $9.28) and revenue guidance above consensus estimates, signaling strong business momentum and visibility.",
+      "action_window": "intraday",
+      "headline": "West Pharmaceutical Servs Raises FY2026 Adj EPS Guidance from $8.40-$8.75 to $8.85-$9.05 vs $8.61 Est; Raises FY2026 Sales Guidance from $3.295B-$3.350B to $3.345B-$3.380B vs $3.332B Est",
+      "url": "https://www.benzinga.com/news/26/07/60630894/west-pharmaceutical-servs-raises-fy2026-adj-eps-guidance-8-40-8-75-8-85-9-05-vs-8-61-est-raises-fy20",
+      "source": "alpaca",
+      "added_at": "2026-07-23T10:15:06.048404+00:00"
+    },
+    {
+      "ticker": "CX",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Cemex delivered a double beat with EPS 20% above estimates and revenue 2.1% above consensus, representing a significant positive surprise that typically drives immediate price action.",
+      "action_window": "intraday",
+      "headline": "Cemex Q2 EPS $0.24 Beats $0.20 Estimate, Sales $4.593B Beat $4.499B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60630874/cemex-q2-eps-0-24-beats-0-20-estimate-sales-4-593b-beat-4-499b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-23T10:15:06.048421+00:00"
+    },
+    {
+      "ticker": "RTX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "RTX delivered a significant earnings beat with Q2 adj. EPS of $1.89 vs $1.66 estimate (13.9% beat) and sales of $24.708B vs $22.893B estimate (7.9% beat), representing a strong double beat on both top and bottom lines.",
+      "action_window": "intraday",
+      "headline": "RTX Q2 Adj. EPS $1.89 Beats $1.66 Estimate, Sales $24.708B Beat $22.893B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60630621/rtx-q2-adj-eps-1-89-beats-1-66-estimate-sales-24-708b-beat-22-893b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-23T10:15:06.048450+00:00",
+      "updated_at": "2026-07-23T10:15:06.048470+00:00"
+    },
+    {
+      "ticker": "FCFS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "FirstCash reported Q2 earnings that beat estimates on both EPS (4.2% beat) and revenue (4.2% beat), representing a solid double-beat that typically drives positive price action.",
+      "action_window": "next_day",
+      "headline": "FirstCash Hldgs Q2 Adj. EPS $2.50 Beats $2.40 Estimate, Sales $1.075B Beat $1.032B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60630537/firstcash-hldgs-q2-adj-eps-2-50-beats-2-40-estimate-sales-1-075b-beat-1-032b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-23T10:15:06.048460+00:00",
+      "updated_at": "2026-07-23T10:15:06.048494+00:00"
+    },
+    {
+      "ticker": "PCG",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beating estimates by 11% but revenue missing by 4.5%, creating offsetting price pressures that typically result in muted trading response.",
+      "action_window": "intraday",
+      "headline": "PG&E Q2 Adj. EPS $0.40 Beats $0.36 Estimate, Sales $5.902B Miss $6.181B Estimate",
+      "url": "https://www.benzinga.com/quote/PCG",
+      "source": "alpaca",
+      "added_at": "2026-07-23T10:15:06.048481+00:00"
     }
   ]
 }
