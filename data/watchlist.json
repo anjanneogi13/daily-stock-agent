@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "IBIT",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "BlackRock's IBIT selling 100,000 BTC represents a significant liquidity event that could pressure Bitcoin prices and create volatility in spot Bitcoin ETF flows, though the 'stress test' framing suggests this may be a temporary technical event rather than fundamental deterioration.",
-      "action_window": "intraday",
-      "headline": "What Happens When The Largest Bitcoin ETF Sells 100,000 BTC?",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60555788/what-happens-when-the-largest-bitcoin-etf-sells-100000-btc",
-      "source": "alpaca",
-      "added_at": "2026-07-20T15:27:47.397447+00:00"
-    },
-    {
-      "ticker": "DPZ",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "CFO publicly acknowledging continued macro headwinds, consumer pressure, and heightened competition signals ongoing business challenges and likely indicates softer guidance or results ahead.",
-      "action_window": "intraday",
-      "headline": "Domino's Pizza CFO Says Business Continued To Be Impacted By Challenging Macro Environment, Pressuring Consumers And Heightened Competition",
-      "url": "https://www.benzinga.com/news/26/07/60555778/domino-s-pizza-cfo-says-business-continued-be-impacted-challenging-macro-environment-pressuring-cons",
-      "source": "alpaca",
-      "added_at": "2026-07-20T15:27:47.397459+00:00"
-    },
-    {
-      "ticker": "FITB",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Fifth Third beat both earnings (7.4% above consensus at $1.02 vs $0.95) and revenue expectations, prompting multiple analyst forecast increases which provides strong positive momentum.",
-      "action_window": "intraday",
-      "headline": "These Analysts Boost Their Forecasts On Fifth Third Bancorp Following Upbeat Q2 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60555576/these-analysts-boost-their-forecasts-on-fifth-third-bancorp-following-upbeat-q2-results",
-      "source": "alpaca",
-      "added_at": "2026-07-20T15:27:47.397470+00:00"
-    },
-    {
       "ticker": "SPY",
       "tradeable_score": 0.78,
       "sentiment": "bearish",
@@ -1909,6 +1873,18 @@
       "url": "https://www.benzinga.com/markets/earnings/26/07/60641046/lockheed-martin-cashes-in-on-global-defense-boom-with-record-orders",
       "source": "alpaca",
       "added_at": "2026-07-23T14:41:33.678678+00:00"
+    },
+    {
+      "ticker": "KNSA",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Goldman Sachs maintaining Buy rating with significant price target raise to $75 signals increased conviction and upside potential, though impact partially depends on current stock price relative to new target.",
+      "action_window": "intraday",
+      "headline": "Goldman Sachs Maintains Buy on Kiniksa Pharmaceuticals, Raises Price Target to $75",
+      "url": "https://www.benzinga.com/news/26/07/60646423/goldman-sachs-maintains-buy-kiniksa-pharmaceuticals-raises-price-target-75",
+      "source": "alpaca",
+      "added_at": "2026-07-23T16:24:10.521713+00:00"
     }
   ]
 }

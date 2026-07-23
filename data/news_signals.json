@@ -1322,19 +1322,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "WABC": {
-    "ticker": "WABC",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Westamerica Bancorp Q2 EPS $1.17 Beats $1.10 Estimate, Sales $62.968M Beat $61.600M Estimate",
-    "added_at": "2026-07-16T15:29:48.455469+00:00",
-    "expires": "2026-07-23T15:29:48.455476+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "APM": {
     "ticker": "APM",
     "score_delta": 0.157,
@@ -3980,6 +3967,32 @@
     "headline": "Barclays Maintains Overweight on Raymond James Finl, Raises Price Target to $196",
     "added_at": "2026-07-23T14:41:33.667194+00:00",
     "expires": "2026-07-28T14:41:33.667200+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PARR": {
+    "ticker": "PARR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Goldman Sachs Maintains Buy on Par Pacific Hldgs, Raises Price Target to $92",
+    "added_at": "2026-07-23T16:24:10.509631+00:00",
+    "expires": "2026-07-28T16:24:10.509640+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KNSA": {
+    "ticker": "KNSA",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Goldman Sachs Maintains Buy on Kiniksa Pharmaceuticals, Raises Price Target to $75",
+    "added_at": "2026-07-23T16:24:10.514112+00:00",
+    "expires": "2026-07-28T16:24:10.514119+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
