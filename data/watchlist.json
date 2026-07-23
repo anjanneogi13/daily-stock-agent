@@ -1,55 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BABA",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "\u20ac550M fine by European Commission for DSA violation is material regulatory action against Alibaba's AliExpress platform, creating immediate downward pressure on the stock and raising concerns about operational compliance costs and potential further regulatory scrutiny.",
-      "action_window": "intraday",
-      "headline": "European Commission Fines AliExpress \u20ac550M For Violation Of The Digital Services Act",
-      "url": "https://www.benzinga.com/news/26/07/60546087/european-commission-fines-aliexpress-550m-violation-digital-services-act",
-      "source": "alpaca",
-      "added_at": "2026-07-20T10:45:27.779367+00:00",
-      "updated_at": "2026-07-20T10:45:27.779417+00:00"
-    },
-    {
-      "ticker": "HUT",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major 15-year, $9.8B capacity lease securing 352MW represents significant revenue visibility and validates expansion of Hut 8's data center infrastructure business model.",
-      "action_window": "intraday",
-      "headline": "Hut 8 Enters 15-Year, $9.8B Capacity Lease For 352MW On The Second Phase Of Its 1GW Beacon Point Data Center Campus In Texas",
-      "url": "https://www.benzinga.com/news/26/07/60546199/hut-8-enters-15-year-9-8b-capacity-lease-352mw-second-phase-its-1gw-beacon-point-data-center-campus-",
-      "source": "alpaca",
-      "added_at": "2026-07-20T10:45:27.779399+00:00"
-    },
-    {
-      "ticker": "LXP",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Definitive acquisition announcement at $61.20/share with $5.2B enterprise value represents a confirmed M&A catalyst with immediate price discovery for the target.",
-      "action_window": "intraday",
-      "headline": "LXP Industrial Trust To Be Acquired By Brookfield Asset Management And CPP Investments For $61.20 Per Share In Cash At An EV Of ~$5.2B",
-      "url": "https://www.benzinga.com/m/26/07/60546115/lxp-industrial-trust-be-acquired-brookfield-asset-management-and-cpp-investments-61-20-share-cash-ev",
-      "source": "alpaca",
-      "added_at": "2026-07-20T10:45:27.779408+00:00"
-    },
-    {
-      "ticker": "NOMD",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Company issued negative revenue guidance for both Q2 and full-year FY25 with declines of 2.5-3.5% and 2-5% respectively, representing a material guidance cut that will likely trigger immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Nomad Foods Sees Q2 Revenue Down 2.5%-3.5%, FY25 Revenue Decline Of 2%-5%",
-      "url": "https://www.benzinga.com/news/26/07/60546001/nomad-foods-sees-q2-revenue-down-2-5-3-5-fy25-revenue-decline-2-5",
-      "source": "alpaca",
-      "added_at": "2026-07-20T10:45:27.779429+00:00"
-    },
-    {
       "ticker": "USB",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1886,6 +1837,102 @@
       "url": "https://www.benzinga.com/quote/PCG",
       "source": "alpaca",
       "added_at": "2026-07-23T10:15:06.048481+00:00"
+    },
+    {
+      "ticker": "PEGA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "William Blair downgrade to Market Perform (equivalent to Hold/Neutral) signals reduced confidence and typically triggers near-term selling pressure as the firm removes its positive rating.",
+      "action_window": "intraday",
+      "headline": "William Blair Downgrades Pegasystems to Market Perform",
+      "url": "https://www.benzinga.com/news/26/07/60634084/william-blair-downgrades-pegasystems-market-perform",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.444935+00:00"
+    },
+    {
+      "ticker": "A",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "EU certification for companion diagnostic expands Agilent's regulatory approvals and market opportunity in oncology diagnostics, though this is a secondary product approval rather than a blockbuster drug.",
+      "action_window": "next_day",
+      "headline": "Agilent Technologies Receives EU Certification For Code SK006 As Companion Diagnostic To Aid In Identifying Patients With Epithelial Ovarian, Fallopian Tube, Or Primary Peritoneal Carcinoma",
+      "url": "https://www.benzinga.com/news/26/07/60634046/agilent-technologies-receives-eu-certification-code-sk006-companion-diagnostic-aid-identifying-patie",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.444950+00:00"
+    },
+    {
+      "ticker": "IKT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA Orphan Drug Designation for lead candidate is a meaningful regulatory milestone that provides market exclusivity incentives and accelerates development pathway for rare disease treatment.",
+      "action_window": "intraday",
+      "headline": "Inhibikase Therapeutics Says FDA Grants Orphan Drug Designation To Its Lead Product Candidate IKT-001, Prodrug Of Imatinib Mesylate, For Treatment Of PAH",
+      "url": "https://www.benzinga.com/news/26/07/60634028/inhibikase-therapeutics-says-fda-grants-orphan-drug-designation-its-lead-product-candidate-ikt-001-p",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.444962+00:00"
+    },
+    {
+      "ticker": "ROL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Rollins reported disappointing Q2 earnings with multiple large-cap stocks declining in pre-market, creating immediate trading opportunities on confirmed negative catalyst.",
+      "action_window": "intraday",
+      "headline": "Rollins Posts Downbeat Q2 Earnings, Joins Texas Instruments, Alphabet And Other Big Stocks Moving Lower In Thursday\u2019s Pre-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60634006/rollins-posts-downbeat-q2-earnings-joins-texas-instruments-alphabet-and-other-big-stocks-moving-lower-in-thursdays-pre-market-session",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.444972+00:00"
+    },
+    {
+      "ticker": "HFWA",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with significant EPS beat (+21%) offset by revenue miss (-2.5%), creating conflicting signals for traders.",
+      "action_window": "intraday",
+      "headline": "Heritage Financial Q2 Adj. EPS $0.57 Beats $0.47 Estimate, Sales $84.127M Miss $86.311M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60633995/heritage-financial-q2-adj-eps-0-57-beats-0-47-estimate-sales-84-127m-miss-86-311m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.444981+00:00"
+    },
+    {
+      "ticker": "BPOP",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong double beat with EPS exceeding estimates by 17% and revenue beating by 14%, indicating significant operational outperformance that typically drives immediate price action.",
+      "action_window": "intraday",
+      "headline": "Popular Q2 EPS $4.35 Beats $3.72 Estimate, Sales $873.964M Beat $765.804M Estimate",
+      "url": "https://www.benzinga.com/quote/BPOP",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.444991+00:00"
+    },
+    {
+      "ticker": "PETS",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Sale-leaseback generates $37M in liquidity while maintaining operational control, improving balance sheet flexibility but represents a financing transaction rather than operational catalyst.",
+      "action_window": "intraday",
+      "headline": "PetMeds Announces Proposed Sale-Leaseback Of Delray Beach, FL Buildings For $37M",
+      "url": "https://www.benzinga.com/quote/PETS",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.445001+00:00"
+    },
+    {
+      "ticker": "UBSI",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "United Bankshares beat Q2 EPS by 8% ($0.95 vs $0.88) and revenue by 1.3% ($323.8M vs $319.6M), representing a solid double beat that typically drives positive intraday momentum for regional banks.",
+      "action_window": "intraday",
+      "headline": "United Bankshares Q2 EPS $0.95 Beats $0.88 Estimate, Sales $323.818M Beat $319.561M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60633690/united-bankshares-q2-eps-0-95-beats-0-88-estimate-sales-323-818m-beat-319-561m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-23T12:10:42.445011+00:00"
     }
   ]
 }
