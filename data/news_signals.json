@@ -645,32 +645,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KORE": {
-    "ticker": "KORE",
-    "score_delta": -0.079,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "KORE Group Says Two Complaints Filed June 24, 2026 Against Kore And Board Over Merger; Complaints Allege Negligent Misrepresentation And Concealment In Kore Merger Proxy; Co. Makes Supplemental Disclo",
-    "added_at": "2026-07-09T21:55:47.116242+00:00",
-    "expires": "2026-07-23T21:55:47.116251+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AIRI": {
-    "ticker": "AIRI",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Air Industries Amends Tenax Merger Deal, Sets 126.9M-Share Consideration and Approves 1-For-5 Reverse Stock Split",
-    "added_at": "2026-07-09T21:55:47.119034+00:00",
-    "expires": "2026-07-23T21:55:47.119039+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PERF": {
     "ticker": "PERF",
     "score_delta": 0.2,
@@ -1084,19 +1058,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SPCX": {
-    "ticker": "SPCX",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "SpaceXAI Launches Grok 4.5, SpaceXAI's Smartest Model Built To Excel At Coding, Agentic Tasks, And Knowledge Work; Says It's Our Strongest Model Ever And Was Trained Alongside Cursor",
-    "added_at": "2026-07-16T21:32:07.736731+00:00",
-    "expires": "2026-07-23T21:32:07.736735+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TSLA": {
     "ticker": "TSLA",
     "score_delta": -0.1,
@@ -1328,19 +1289,6 @@
     "headline": "Jasper Therapeutics Completes The Acquisition Of Kira Pharmaceuticals; Announces $132M Private Placement Of Convertible Preferred Stock; Combined Company Operations Expected To Be Funded Through Secon",
     "added_at": "2026-07-16T21:32:07.731100+00:00",
     "expires": "2026-07-30T21:32:07.731106+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CSWC": {
-    "ticker": "CSWC",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Capital Southwest Sees Q1 GAAP EPS $0.58-$0.59 vs $0.55 Est",
-    "added_at": "2026-07-16T21:32:07.734173+00:00",
-    "expires": "2026-07-23T21:32:07.734178+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4197,6 +4145,67 @@
     "headline": "Avidbank Holdings Q2 Adj. EPS $0.71 Misses $0.82 Estimate, Sales $26.700M Miss $28.113M Estimate",
     "added_at": "2026-07-23T20:36:32.876755+00:00",
     "expires": "2026-07-30T20:36:32.876761+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "INTC": {
+    "ticker": "INTC",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Intel CFO Says AI PC Revenue Grew 26% Sequentially, Now Represents Two-thirds Of Our Client Revenue Mix; See Strong Momentum In Purpose-built Silicon Product LINE With Revenue Up Roughly 20% Sequentia",
+    "added_at": "2026-07-23T22:00:55.142265+00:00",
+    "expires": "2026-07-30T22:00:55.142272+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HSCS": {
+    "ticker": "HSCS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Heart Test Laboratories Q4 EPS $(0.87) Misses $(0.73) Estimate",
+    "added_at": "2026-07-23T22:00:55.153436+00:00",
+    "expires": "2026-07-30T22:00:55.153441+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FLYE": {
+    "ticker": "FLYE",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Fly-E Group Q4 EPS $(2.24) Up From $(13.60) YoY, Sales $7.177M Up From $5.051M YoY",
+    "added_at": "2026-07-23T22:00:55.156928+00:00",
+    "expires": "2026-07-30T22:00:55.156934+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALM": {
+    "ticker": "ALM",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Almonty Industries To Voluntarily Delist From ASX; Co.  Expects That The Delisting Will Occur On 1 September 2026",
+    "added_at": "2026-07-23T22:00:55.160383+00:00",
+    "expires": "2027-01-19T22:00:55.160389+00:00",
+    "hard_block": true
+  },
+  "ECBK": {
+    "ticker": "ECBK",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "ECB Bancorp Q2 EPS $0.39 Up From $0.17 YoY, Sales $10.339M Up From $8.015M YoY",
+    "added_at": "2026-07-23T22:00:55.163931+00:00",
+    "expires": "2026-07-30T22:00:55.163936+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
