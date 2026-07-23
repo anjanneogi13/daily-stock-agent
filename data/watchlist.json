@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ENB",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Major tariff announcement up to 50% on Canadian imports creates significant headwinds for Canadian-exposed companies and trade-sensitive sectors, with immediate market impact likely.",
-      "action_window": "intraday",
-      "headline": "Trump Hits Canada with New Tariffs Up to 50% on Hockey Sticks, Other Goods",
-      "url": "https://www.benzinga.com/news/26/07/60567622/trump-hits-canada-with-new-tariffs-up-to-50-on-hockey-sticks-other-goods",
-      "source": "alpaca",
-      "added_at": "2026-07-20T22:52:53.422602+00:00"
-    },
-    {
       "ticker": "GPUS",
       "tradeable_score": 0.68,
       "sentiment": "bullish",

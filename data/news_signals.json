@@ -1292,32 +1292,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BSFC": {
-    "ticker": "BSFC",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Blue Star Foods Q1 Sales $250.259K Down From $960.758K YoY",
-    "added_at": "2026-07-16T22:32:08.439255+00:00",
-    "expires": "2026-07-23T22:32:08.439265+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "WAFD": {
-    "ticker": "WAFD",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "WaFd Q3 EPS $0.84 Beats $0.81 Estimate, Sales $205.516M Beat $183.376M Estimate",
-    "added_at": "2026-07-16T22:32:08.442788+00:00",
-    "expires": "2026-07-23T22:32:08.442795+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "IPGP": {
     "ticker": "IPGP",
     "score_delta": 0.05,
@@ -4206,6 +4180,19 @@
     "headline": "ECB Bancorp Q2 EPS $0.39 Up From $0.17 YoY, Sales $10.339M Up From $8.015M YoY",
     "added_at": "2026-07-23T22:00:55.163931+00:00",
     "expires": "2026-07-30T22:00:55.163936+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GPI": {
+    "ticker": "GPI",
+    "score_delta": -0.064,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Earnings Preview: Group 1 Automotive (GPI) Q2 Earnings Expected to Decline",
+    "added_at": "2026-07-23T22:59:45.304911+00:00",
+    "expires": "2026-07-30T22:59:45.304918+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
