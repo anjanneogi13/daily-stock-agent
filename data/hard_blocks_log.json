@@ -840,5 +840,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-23 12:08:54",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "RTX",
+        "reason": "SL too tight (1.4% < 1.5% for $195 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "CX",
+        "reason": "SL too tight (1.7% < 2.5% for $13 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
