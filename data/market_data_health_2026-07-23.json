@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 597,
+      "attempts": 1198,
       "empty": 0,
       "errors": 81,
-      "successes": 516
+      "successes": 1117
     },
     "monster_info": {
-      "attempts": 282,
+      "attempts": 566,
       "empty": 0,
       "errors": 49,
-      "successes": 233
+      "successes": 517
     },
     "ohlcv": {
-      "attempts": 605,
-      "empty": 2,
+      "attempts": 1214,
+      "empty": 4,
       "errors": 0,
-      "successes": 603
+      "successes": 1210
     }
   },
   "date": "2026-07-23",
   "providers": {
     "stooq": {
-      "attempts": 1,
-      "empty": 1,
+      "attempts": 2,
+      "empty": 2,
       "errors": 0,
       "failure_types": {
-        "empty_response": 1,
+        "empty_response": 2,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,11 +47,11 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1483,
-      "empty": 1,
+      "attempts": 2976,
+      "empty": 2,
       "errors": 130,
       "failure_types": {
-        "empty_response": 1,
+        "empty_response": 2,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -66,16 +66,16 @@
       "not_found": 0,
       "provider_error": 0,
       "rate_limited": 130,
-      "successes": 1352,
+      "successes": 2844,
       "timeout": 0,
       "unauthorized": 0
     }
   },
   "run": {
-    "fetched_count": 597,
-    "final_pick_count": 0,
-    "scored_count": 282,
-    "universe_count": 599
+    "fetched_count": 601,
+    "final_pick_count": 1,
+    "scored_count": 284,
+    "universe_count": 603
   },
   "samples": [
     {
@@ -349,5 +349,5 @@
       "ticker": "NVEC"
     }
   ],
-  "timestamp_utc": "2026-07-23T12:08:54Z"
+  "timestamp_utc": "2026-07-23T12:39:55Z"
 }

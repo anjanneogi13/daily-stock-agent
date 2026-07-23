@@ -858,5 +858,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-23 12:39:55",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "CSX",
+        "reason": "SL too tight (1.0% < 2.0% for $50 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
