@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BTCUSD",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Major crypto legislative progress with CLARITY Act advancing to Senate creates regulatory tailwinds, driving Bitcoin to $65K with expert targets of $85K suggesting continued momentum.",
-      "action_window": "intraday",
-      "headline": "Bitcoin Crosses $65,000 As Ethereum, XRP, Dogecoin Rally After CLARITY Act Advances To Senate Floor",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60562956/bitcoin-crosses-65000-ethereum-xrp-dogecoin-rally-clarity-act-advances-senate-floor",
-      "source": "alpaca",
-      "added_at": "2026-07-20T18:51:04.050498+00:00"
-    },
-    {
-      "ticker": "IREN",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Major $2.8B AI deal win with 20% stock surge and guidance raise represents a significant fundamental catalyst with immediate price momentum across core stock and leveraged derivatives.",
-      "action_window": "intraday",
-      "headline": "IREN Stock Rally Sparks 40% Surge in Leveraged ETFs After $2.8 Billion AI Deal Win",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60562648/iren-stock-rally-sparks-40-surge-in-leveraged-etfs-after-2-8-billion-ai-deal-win",
-      "source": "alpaca",
-      "added_at": "2026-07-20T18:51:04.050514+00:00"
-    },
-    {
       "ticker": "BNRG",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -1871,6 +1847,42 @@
       "url": "https://www.benzinga.com/news/26/07/60649717/td-cowen-maintains-buy-ge-vernova-raises-price-target-1235",
       "source": "alpaca",
       "added_at": "2026-07-23T17:55:57.252011+00:00"
+    },
+    {
+      "ticker": "DOMO",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from Overweight/Buy to Equal-Weight with a low $4 price target represents a significant negative re-rating that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Stephens & Co. Downgrades Domo to Equal-Weight, Announces $4 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60652487/stephens-co-downgrades-domo-equal-weight-announces-4-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-23T19:04:30.691783+00:00"
+    },
+    {
+      "ticker": "DIS",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Disney stock falling to near 52-week low on EU patent injunctions and break-up speculation represents meaningful negative catalyst with immediate market impact, though speculative Q2 recovery mention adds uncertainty.",
+      "action_window": "intraday",
+      "headline": "Why Is Walt Disney Stock Falling Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60652375/why-is-walt-disney-stock-falling-thursday",
+      "source": "alpaca",
+      "added_at": "2026-07-23T19:04:30.691798+00:00"
+    },
+    {
+      "ticker": "SMCI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New server portfolio launch targeting high-growth AI and cloud markets represents meaningful product cycle catalyst for both companies, with SMCI as primary beneficiary as the system integrator.",
+      "action_window": "next_day",
+      "headline": "Super Micro Launches H15 Server Portfolio Powered By AMD 6th Gen EPYC CPUs For AI, Cloud And High-Performance Computing Workloads",
+      "url": "https://www.benzinga.com/news/26/07/60652281/super-micro-launches-h15-server-portfolio-powered-amd-6th-gen-epyc-cpus-ai-cloud-and-high-performanc",
+      "source": "alpaca",
+      "added_at": "2026-07-23T19:04:30.691809+00:00"
     }
   ]
 }
