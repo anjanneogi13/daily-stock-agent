@@ -1309,19 +1309,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "PNC": {
-    "ticker": "PNC",
-    "score_delta": 0.05,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "PNC Financial Analysts Boost Their Forecasts After Strong Q2 Results",
-    "added_at": "2026-07-16T13:49:47.697386+00:00",
-    "expires": "2026-07-23T13:49:47.697394+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HYMLF": {
     "ticker": "HYMLF",
     "score_delta": 0.05,
@@ -2581,14 +2568,14 @@
   },
   "LMT": {
     "ticker": "LMT",
-    "score_delta": 0.025,
-    "catalyst": "product_launch",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Lockheed Martin And Venus Aerospace To Collaborate On Rotating Detonation Rocket Engine Technology",
-    "added_at": "2026-07-21T14:33:27.716382+00:00",
-    "expires": "2026-07-28T14:33:27.716389+00:00",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Lockheed Martin Cashes in on Global Defense Boom With Record Orders",
+    "added_at": "2026-07-23T14:41:33.673908+00:00",
+    "expires": "2026-07-30T14:41:33.673915+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3954,6 +3941,45 @@
     "headline": "United Bankshares Q2 EPS $0.95 Beats $0.88 Estimate, Sales $323.818M Beat $319.561M Estimate",
     "added_at": "2026-07-23T12:10:42.438326+00:00",
     "expires": "2026-07-30T12:10:42.438332+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LVS": {
+    "ticker": "LVS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "These Analysts Slash Their Forecasts On Las Vegas Sands After Downbeat Q2 Results",
+    "added_at": "2026-07-23T14:41:33.659860+00:00",
+    "expires": "2026-07-30T14:41:33.659868+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TATT": {
+    "ticker": "TATT",
+    "score_delta": 0.025,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Watching TAT Technologies; Hearing Zacks Homerun Investor Newsletter Mentions Stock As A Buy",
+    "added_at": "2026-07-23T14:41:33.663838+00:00",
+    "expires": "2026-07-28T14:41:33.663844+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RJF": {
+    "ticker": "RJF",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "Barclays Maintains Overweight on Raymond James Finl, Raises Price Target to $196",
+    "added_at": "2026-07-23T14:41:33.667194+00:00",
+    "expires": "2026-07-28T14:41:33.667200+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
