@@ -1,103 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GPUS",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Disclosure of substantial $70.3M Bitcoin treasury position represents a significant balance sheet development that could attract crypto-focused investors and reposition the company's investment narrative.",
-      "action_window": "intraday",
-      "headline": "Hyperscale Data Discloses Bitcoin Treasury Of 1,087 BTC Worth ~$70.3M",
-      "url": "https://www.benzinga.com/quote/GPUS",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844310+00:00"
-    },
-    {
-      "ticker": "CRNT",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $70M five-year contract represents significant revenue visibility for a small-cap company like Ceragon, likely material to its revenue base and warranting immediate price reaction.",
-      "action_window": "intraday",
-      "headline": "Ceragon Awarded Five-Year, ~$70M Agreement From A Wireless Connectivity Solutions Provider",
-      "url": "https://www.benzinga.com/news/26/07/60570696/ceragon-awarded-five-year-70m-agreement-wireless-connectivity-solutions-provider",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844320+00:00"
-    },
-    {
-      "ticker": "DHR",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Danaher's Q2 earnings result triggered a severe 10.1% pre-market decline, indicating a significant earnings miss or guidance disappointment requiring immediate attention.",
-      "action_window": "intraday",
-      "headline": "Danaher Posts Q2 Results, Joins Calix, Equifax And Other Big Stocks Moving Lower In Tuesday\u2019s Pre-Market Session",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60573473/danaher-posts-q2-results-joins-calix-equifax-and-other-big-stocks-moving-lower-in-tuesdays-pre-market-session",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844327+00:00",
-      "updated_at": "2026-07-21T12:08:49.783646+00:00"
-    },
-    {
-      "ticker": "PEBO",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Peoples Bancorp reported Q2 adjusted EPS of $0.96, beating consensus estimate of $0.84 by 14.3%, representing a significant earnings beat that typically drives positive price action.",
-      "action_window": "intraday",
-      "headline": "UPDATE: Peoples Bancorp Q2 Adj. EPS $0.96 Beats $0.84 Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60570568/update-peoples-bancorp-q2-adj-eps-0-96-beats-0-84-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844331+00:00"
-    },
-    {
-      "ticker": "TRVI",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "BMO Capital initiating coverage with Outperform rating and $36 price target represents fresh buy-side validation and potential institutional interest in small-cap biotech.",
-      "action_window": "intraday",
-      "headline": "BMO Capital Initiates Coverage On Trevi Therapeutics with Outperform Rating, Announces Price Target of $36",
-      "url": "https://www.benzinga.com/news/26/07/60570545/bmo-capital-initiates-coverage-trevi-therapeutics-outperform-rating-announces-price-target-36",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844335+00:00"
-    },
-    {
-      "ticker": "MPLT",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "BMO Capital initiating coverage with Outperform rating and $46 price target is a meaningful positive catalyst from a major bank that typically drives initial trading interest.",
-      "action_window": "intraday",
-      "headline": "BMO Capital Initiates Coverage On MapLight Therapeutics with Outperform Rating, Announces Price Target of $46",
-      "url": "https://www.benzinga.com/news/26/07/60570464/bmo-capital-initiates-coverage-maplight-therapeutics-outperform-rating-announces-price-target-46",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844348+00:00"
-    },
-    {
-      "ticker": "SYF",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Synchrony raised the lower bound of FY2026 EPS guidance while keeping the upper bound unchanged, resulting in a modest increase to the midpoint that remains above consensus estimates.",
-      "action_window": "intraday",
-      "headline": "Synchrony Financial Raises FY2026 GAAP EPS Guidance from $9.10-$9.50 to $9.25-$9.50 vs $9.34 Est",
-      "url": "https://www.benzinga.com/news/26/07/60570328/synchrony-financial-raises-fy2026-gaap-eps-guidance-9-10-9-50-9-25-9-50-vs-9-34-est",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844361+00:00"
-    },
-    {
-      "ticker": "MU",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strong 6% premarket gain driven by AI memory demand surge represents a meaningful sector catalyst with immediate price action already underway.",
-      "action_window": "intraday",
-      "headline": "What's Going on With Micron Technology Stock Tuesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60570266/whats-going-on-with-micron-technology-stock-tuesday-4",
-      "source": "alpaca",
-      "added_at": "2026-07-21T10:19:38.844365+00:00"
-    },
-    {
       "ticker": "CLIK",
       "tradeable_score": 0.62,
       "sentiment": "bullish",
@@ -1827,15 +1730,16 @@
     },
     {
       "ticker": "ORCL",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "10-year defense contract is a significant revenue catalyst causing immediate after-hours price movement, though contract value details are not disclosed.",
+      "rationale": "A $7 billion 10-year Pentagon contract is a major confirmed revenue catalyst representing significant government business expansion for Oracle.",
       "action_window": "next_day",
-      "headline": "Oracle Stock Jumps After The Close: Here's Why",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60658136/oracle-stock-jumps-after-the-close-heres-why",
+      "headline": "What's Going On With Oracle Stock on Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60663486/whats-going-on-with-oracle-stock-on-friday-2",
       "source": "alpaca",
-      "added_at": "2026-07-23T22:00:55.177481+00:00"
+      "added_at": "2026-07-23T22:00:55.177481+00:00",
+      "updated_at": "2026-07-24T12:01:44.924071+00:00"
     },
     {
       "ticker": "ECBK",
@@ -1908,6 +1812,54 @@
       "url": "https://www.benzinga.com/news/26/07/60661199/hsbc-downgrades-infosys-hold-lowers-price-target-11-47",
       "source": "alpaca",
       "added_at": "2026-07-24T10:11:01.745788+00:00"
+    },
+    {
+      "ticker": "DELL",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Headline suggests significant analyst upgrades (17% upside on DELL) but this is aggregated analyst commentary rather than a single major catalyst, creating moderate but not urgent trading opportunity.",
+      "action_window": "next_day",
+      "headline": "Dell To Rally More Than 17%? Here Are 10 Top Analyst Forecasts For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60663665/dell-to-rally-more-than-17-here-are-10-top-analyst-forecasts-for-friday",
+      "source": "alpaca",
+      "added_at": "2026-07-24T12:01:44.924036+00:00"
+    },
+    {
+      "ticker": "AZN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "EU approval recommendation for Enhertu in HER2-positive breast cancer is a meaningful regulatory milestone for a key oncology franchise drug, though partially anticipated and shared with partner Daiichi Sankyo.",
+      "action_window": "intraday",
+      "headline": "AstraZeneca's Enhertu Receives EU Approval Recommendation To Treat Unresectable Or Metastatic HER2-Positive Breast Cancer",
+      "url": "https://www.benzinga.com/news/26/07/60663654/astrazeneca-s-enhertu-receives-eu-approval-recommendation-treat-unresectable-or-metastatic-her2-posi",
+      "source": "alpaca",
+      "added_at": "2026-07-24T12:01:44.924053+00:00"
+    },
+    {
+      "ticker": "WRLD",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Revenue miss of 3.3% below estimates with non-comparable EPS creates uncertainty and negative trading pressure despite seemingly strong adjusted earnings.",
+      "action_window": "intraday",
+      "headline": "World Acceptance Q1 Adj. EPS $2.12 May Not Be Comparable To $0.54 Estimate, Sales $139.209M Miss $143.900M Estimate",
+      "url": "https://www.benzinga.com/quote/WRLD",
+      "source": "alpaca",
+      "added_at": "2026-07-24T12:01:44.924092+00:00"
+    },
+    {
+      "ticker": "CAKE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Multiple analyst downgrades across five stocks create negative sentiment, with CAKE highlighted as losing bullish support, creating moderate trading opportunities on potential short-term weakness.",
+      "action_window": "intraday",
+      "headline": "This Cheesecake Factory Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/07/60663255/this-cheesecake-factory-analyst-is-no-longer-bullish-here-are-top-5-downgrades-for-friday",
+      "source": "alpaca",
+      "added_at": "2026-07-24T12:01:44.924102+00:00"
     }
   ]
 }
