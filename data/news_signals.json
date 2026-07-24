@@ -4377,5 +4377,83 @@
     "expires": "2026-07-31T13:52:20.401643+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TMO": {
+    "ticker": "TMO",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on Thermo Fisher Scientific, Raises Price Target to $650",
+    "added_at": "2026-07-24T15:23:22.586451+00:00",
+    "expires": "2026-07-29T15:23:22.586459+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WLDS": {
+    "ticker": "WLDS",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Why Is Wearable Devices Stock Surging on Friday?",
+    "added_at": "2026-07-24T15:23:22.590903+00:00",
+    "expires": "2026-07-31T15:23:22.590909+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "THC": {
+    "ticker": "THC",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Barclays Maintains Overweight on Tenet Healthcare, Raises Price Target to $271",
+    "added_at": "2026-07-24T15:23:22.594581+00:00",
+    "expires": "2026-07-29T15:23:22.594587+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RNG": {
+    "ticker": "RNG",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "RingCentral Stock is Jumping Today: What's Going On?",
+    "added_at": "2026-07-24T15:23:22.598230+00:00",
+    "expires": "2026-07-31T15:23:22.598236+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSCO": {
+    "ticker": "TSCO",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Neutral on Tractor Supply, Lowers Price Target to $31",
+    "added_at": "2026-07-24T15:23:22.618342+00:00",
+    "expires": "2026-07-29T15:23:22.618349+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NVCR": {
+    "ticker": "NVCR",
+    "score_delta": 0.079,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "NovoCure's Strongest Quarter Ever Isn't Enough to Stop NVCR Stock From Sliding",
+    "added_at": "2026-07-24T15:23:22.625959+00:00",
+    "expires": "2026-07-31T15:23:22.625966+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

@@ -1,43 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CPHI",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Stock up 68.13% after circuit breaker halt indicates significant positive catalyst or volatile short squeeze event requiring immediate attention.",
-      "action_window": "intraday",
-      "headline": "China Pharma Holdings Shares Halted On Circuit Breaker To The Downside, Stock Now Up 68.13%",
-      "url": "https://www.benzinga.com/quote/CPHI",
-      "source": "alpaca",
-      "added_at": "2026-07-21T14:33:27.733792+00:00"
-    },
-    {
-      "ticker": "GM",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Better-than-expected Q2 earnings with raised FY26 guidance and multiple analyst forecast increases represents a meaningful positive catalyst, though mixed price targets suggest some uncertainty.",
-      "action_window": "intraday",
-      "headline": "These Analysts Boost Their Forecasts On General Motors After Better-Than-Expected Q2 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60614397/these-analysts-boost-their-forecasts-on-general-motors-after-better-than-expected-q2-results",
-      "source": "alpaca",
-      "added_at": "2026-07-21T14:33:27.733806+00:00",
-      "updated_at": "2026-07-22T16:18:05.636591+00:00"
-    },
-    {
-      "ticker": "VICR",
-      "tradeable_score": 0.74,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Company providing formal guidance for 10% YoY revenue growth in Q3 during conference call is a meaningful positive catalyst that typically drives immediate trading activity.",
-      "action_window": "intraday",
-      "headline": "Conference Call:\nVicor Sees Q3 Revenue To Increase Nearly 10% YoY.",
-      "url": "https://www.benzinga.com/news/26/07/60579865/conference-call-vicor-sees-q3-revenue-increase-nearly-10-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-21T14:33:27.733817+00:00"
-    },
-    {
       "ticker": "EFX",
       "tradeable_score": 0.68,
       "sentiment": "bearish",
@@ -1823,6 +1786,30 @@
       "url": "https://www.benzinga.com/news/26/07/60665847/blackrock-kicks-12-3-billion-bond-sale-meta-data-center-bloomberg",
       "source": "alpaca",
       "added_at": "2026-07-24T13:52:20.406988+00:00"
+    },
+    {
+      "ticker": "RNG",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "RingCentral posted Q2 earnings beat and raised full-year guidance, driving shares significantly higher with confirmed fundamental catalyst.",
+      "action_window": "intraday",
+      "headline": "RingCentral Stock is Jumping Today: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60671284/ringcentral-stock-is-jumping-today-whats-going-on",
+      "source": "alpaca",
+      "added_at": "2026-07-24T15:23:22.631136+00:00"
+    },
+    {
+      "ticker": "NVCR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with raised guidance contradicted by negative stock price action suggests sell-the-news event or disappointing forward expectations despite positive fundamentals.",
+      "action_window": "intraday",
+      "headline": "NovoCure's Strongest Quarter Ever Isn't Enough to Stop NVCR Stock From Sliding",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60670817/novocures-strongest-quarter-ever-isnt-enough-to-stop-nvcr-stock-from-sliding",
+      "source": "alpaca",
+      "added_at": "2026-07-24T15:23:22.631173+00:00"
     }
   ]
 }
