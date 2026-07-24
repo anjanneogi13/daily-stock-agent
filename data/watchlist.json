@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "EFX",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Stock dropped despite earnings beat due to narrowed full-year guidance and weak Q3 outlook, indicating forward-looking concerns outweigh current performance.",
-      "action_window": "intraday",
-      "headline": "Equifax Says Inflation Is Hitting Lower-Income Consumers",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60585348/equifax-says-inflation-is-hitting-lower-income-consumers",
-      "source": "alpaca",
-      "added_at": "2026-07-21T16:19:16.404878+00:00"
-    },
-    {
-      "ticker": "CRM",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Morgan Stanley downgrade to Equal-Weight with price target cut to $185 is a meaningful negative catalyst from a major bank that typically drives immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Why Is Salesforce Stock Falling on Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60585272/why-is-salesforce-stock-falling-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-21T16:19:16.404892+00:00"
-    },
-    {
-      "ticker": "SPCX",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Macquarie analyst upgrade with $250 price target and strong 'buy any dip' recommendation positions SPCX as AI infrastructure play, representing meaningful bullish catalyst from major bank.",
-      "action_window": "next_day",
-      "headline": "'Buy Any Dip' in SpaceX Stock \u2014 Macquarie Sees Massive Upside Ahead",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60585270/buy-any-dip-in-spacex-stock-macquarie-sees-massive-upside-ahead",
-      "source": "alpaca",
-      "added_at": "2026-07-21T16:19:16.404900+00:00"
-    },
-    {
-      "ticker": "SUPX",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Substantial $26.9M convertible financing combined with strategic partnership in high-growth AI infrastructure sector represents significant capital influx and business expansion catalyst.",
-      "action_window": "intraday",
-      "headline": "SuperX AI Technology Secures $26.895M Convertible Note Financing And Forms Global AI Data Center Partnership With Mercuria Energy Group To Build Innovative AI Infrastructure Ecosystem",
-      "url": "https://www.benzinga.com/news/26/07/60585175/superx-ai-technology-secures-26-895m-convertible-note-financing-and-forms-global-ai-data-center-part",
-      "source": "alpaca",
-      "added_at": "2026-07-21T16:19:16.404907+00:00"
-    },
-    {
-      "ticker": "VELO",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New production capacity expansion (Forge 1) provides concrete growth catalyst with larger program support, driving immediate stock price appreciation.",
-      "action_window": "intraday",
-      "headline": "Velo3D Stock Climbs as Forge 1 Opens Bigger Path to Production",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60585130/velo3d-stock-climbs-as-forge-1-opens-bigger-path-to-production",
-      "source": "alpaca",
-      "added_at": "2026-07-21T16:19:16.404913+00:00"
-    },
-    {
-      "ticker": "GE",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Engine selection for 15 additional aircraft represents meaningful revenue confirmation for GE Aerospace and validates competitive positioning, though order size is moderate and partially expected given existing Boeing 787 production.",
-      "action_window": "intraday",
-      "headline": "GE Aerospace's GEnx-1B Engine Selected By AerCap To Power Additional 15 Boeing 787 Dreamliners",
-      "url": "https://www.benzinga.com/news/26/07/60585093/ge-aerospace-s-genx-1b-engine-selected-aercap-power-additional-15-boeing-787-dreamliners",
-      "source": "alpaca",
-      "added_at": "2026-07-21T16:19:16.404919+00:00"
-    },
-    {
       "ticker": "LGND",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -1810,6 +1738,30 @@
       "url": "https://www.benzinga.com/markets/earnings/26/07/60670817/novocures-strongest-quarter-ever-isnt-enough-to-stop-nvcr-stock-from-sliding",
       "source": "alpaca",
       "added_at": "2026-07-24T15:23:22.631173+00:00"
+    },
+    {
+      "ticker": "SGRY",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Major asset sale of $795M provides significant capital for faster growth strategy while reaffirming guidance, with stock already rising on the news.",
+      "action_window": "intraday",
+      "headline": "Surgery Partners Monetizes Idaho Assets As It Chases Faster Growth",
+      "url": "https://www.benzinga.com/markets/asset-sales/26/07/60675140/surgery-partners-monetizes-idaho-assets-as-it-chases-faster-growth",
+      "source": "alpaca",
+      "added_at": "2026-07-24T17:03:07.948941+00:00"
+    },
+    {
+      "ticker": "ZVRA",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "European CHMP negative opinion on arimoclomol for Niemann-Pick Type C is a major regulatory setback that significantly impairs the drug's commercial pathway in Europe.",
+      "action_window": "intraday",
+      "headline": "Zevra Therapeutics Stock Down \u2014 European Panel Slams Arimoclomol Bid for Niemann-Pick Type C",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60674830/zevra-therapeutics-stock-down-european-panel-slams-arimoclomol-bid-for-niemann-pick-type-c",
+      "source": "alpaca",
+      "added_at": "2026-07-24T17:03:07.948959+00:00"
     }
   ]
 }
