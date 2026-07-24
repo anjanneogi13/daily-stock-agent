@@ -458,19 +458,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CTSH": {
-    "ticker": "CTSH",
-    "score_delta": -0.036,
-    "catalyst": "lawsuit",
-    "sentiment": "neutral",
-    "tradeable_score": 0.25,
-    "action_window": "ignore",
-    "headline": "Cognizant Says Court Preliminarily Approves Proposed Settlement Of Cognizant Stockholder Derivative Action On June 30, 2026; Settlement Hearing Scheduled For September 14, 2026, At U.S. District Court",
-    "added_at": "2026-07-10T21:55:34.621068+00:00",
-    "expires": "2026-07-24T21:55:34.621075+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PTNM": {
     "ticker": "PTNM",
     "score_delta": -1.0,
@@ -642,19 +629,6 @@
     "headline": "Pfizer And Astellas Win FDA Approval For PADCEV Plus Keytruda As First Platinum-Free Perioperative Treatment For Muscle-Invasive Bladder Cancer",
     "added_at": "2026-07-10T15:45:20.979418+00:00",
     "expires": "2026-08-09T15:45:20.979427+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SLSN": {
-    "ticker": "SLSN",
-    "score_delta": -0.05,
-    "catalyst": "lawsuit",
-    "sentiment": "neutral",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Solesence's Unit Enters Settlement Agreement With Refy Beauty On July 6, 2026; Co's Unit & Refy Agreed To Settle & Compromise Disputes Relating To Certain Consumer Care Products Previously Sold By Co'",
-    "added_at": "2026-07-10T21:55:34.624314+00:00",
-    "expires": "2026-07-24T21:55:34.624340+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
