@@ -1762,6 +1762,18 @@
       "url": "https://www.benzinga.com/news/health-care/26/07/60674830/zevra-therapeutics-stock-down-european-panel-slams-arimoclomol-bid-for-niemann-pick-type-c",
       "source": "alpaca",
       "added_at": "2026-07-24T17:03:07.948959+00:00"
+    },
+    {
+      "ticker": "OTLK",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA approval of LYTENAVA for wet AMD is a major binary catalyst that typically drives significant upside for biotech stocks, especially for a company likely dependent on this approval for commercialization.",
+      "action_window": "intraday",
+      "headline": "Outlook Therapeutics Says FDA Approves LYTENAVA For Treatment Of Neovascular Age-Related Macular Degeneration, Commonly Known As Wet AMD",
+      "url": "https://www.benzinga.com/news/26/07/60678742/outlook-therapeutics-says-fda-approves-lytenava-treatment-neovascular-age-related-macular-degenerati",
+      "source": "alpaca",
+      "added_at": "2026-07-24T18:56:03.002425+00:00"
     }
   ]
 }
