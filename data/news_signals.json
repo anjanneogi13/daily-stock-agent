@@ -4585,5 +4585,70 @@
     "expires": "2026-07-29T18:56:02.992174+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TSX:CAS": {
+    "ticker": "TSX:CAS",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Scotiabank Maintains Sector Outperform on Cascades, Raises Price Target to C$16",
+    "added_at": "2026-07-24T20:14:35.798787+00:00",
+    "expires": "2026-07-29T20:14:35.798794+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DINO": {
+    "ticker": "DINO",
+    "score_delta": -0.069,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "'HF Sinclair Sues EPA for Delays on Biofuel Blending Decision' - Bloomberg",
+    "added_at": "2026-07-24T20:14:35.803423+00:00",
+    "expires": "2026-08-07T20:14:35.803430+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MCBS": {
+    "ticker": "MCBS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "MetroCity Bankshares Q2 EPS $0.76 Misses $0.82 Estimate, Sales $49.796M Miss $52.400M Estimate",
+    "added_at": "2026-07-24T20:14:35.807280+00:00",
+    "expires": "2026-07-31T20:14:35.807285+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:ADEN": {
+    "ticker": "TSX:ADEN",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Scotiabank Maintains Sector Outperform on Adentra, Raises Price Target to C$47",
+    "added_at": "2026-07-24T20:14:35.811040+00:00",
+    "expires": "2026-07-29T20:14:35.811046+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KVYO": {
+    "ticker": "KVYO",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Klaviyo, Raises Price Target to $34",
+    "added_at": "2026-07-24T20:14:35.814942+00:00",
+    "expires": "2026-07-29T20:14:35.814947+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

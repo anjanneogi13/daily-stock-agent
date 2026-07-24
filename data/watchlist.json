@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LGND",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Citigroup reinstating Buy rating with $387 price target represents a meaningful positive catalyst from a major investment bank that typically drives near-term price action.",
-      "action_window": "next_day",
-      "headline": "Citigroup Reinstates Buy on Ligand Pharmaceuticals, Announces $387 Price Target",
-      "url": "https://www.benzinga.com/news/26/07/60591942/citigroup-reinstates-buy-ligand-pharmaceuticals-announces-387-price-target",
-      "source": "alpaca",
-      "added_at": "2026-07-21T19:08:35.458546+00:00"
-    },
-    {
-      "ticker": "SIND",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Citigroup initiating coverage with a Buy rating and $18 price target represents a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
-      "action_window": "next_day",
-      "headline": "Citigroup Initiates Coverage On Sinda with Buy Rating, Announces Price Target of $18",
-      "url": "https://www.benzinga.com/news/26/07/60591858/citigroup-initiates-coverage-sinda-buy-rating-announces-price-target-18",
-      "source": "alpaca",
-      "added_at": "2026-07-21T19:08:35.458560+00:00"
-    },
-    {
-      "ticker": "HAL",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "earnings_beat",
-      "rationale": "Earnings beat overshadowed by regional weakness and stock decline, indicating market focus on forward concerns despite technical beat.",
-      "action_window": "intraday",
-      "headline": "Halliburton Stock Slides as Regional Pressure Squeezes Middle East Revenue",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60591815/halliburton-stock-slides-regional-pressure-squeezes-middle-east-revenue",
-      "source": "alpaca",
-      "added_at": "2026-07-21T19:08:35.458569+00:00"
-    },
-    {
-      "ticker": "HIHO",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Company reported return to profitability with higher revenue and improved earnings in Q1, with shares already surging on the news indicating strong positive market reaction.",
-      "action_window": "intraday",
-      "headline": "Highway Holdings Returns To Profit Despite Customer Loss",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60591622/highway-holdings-returns-to-profit-despite-customer-loss",
-      "source": "alpaca",
-      "added_at": "2026-07-21T19:08:35.458578+00:00"
-    },
-    {
-      "ticker": "PSNL",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Definitive $1.5B acquisition of Personalis represents a significant premium M&A transaction with immediate trading impact for the target company.",
-      "action_window": "intraday",
-      "headline": "Tempus AI Makes Billion-Dollar Bet on the Future of Cancer Monitoring",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60591588/tempus-ai-makes-billion-dollar-bet-on-the-future-of-cancer-monitoring",
-      "source": "alpaca",
-      "added_at": "2026-07-21T19:08:35.458584+00:00"
-    },
-    {
       "ticker": "WFRD",
       "tradeable_score": 0.78,
       "sentiment": "bearish",
@@ -1774,6 +1714,42 @@
       "url": "https://www.benzinga.com/news/26/07/60678742/outlook-therapeutics-says-fda-approves-lytenava-treatment-neovascular-age-related-macular-degenerati",
       "source": "alpaca",
       "added_at": "2026-07-24T18:56:03.002425+00:00"
+    },
+    {
+      "ticker": "CHGG",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "NYSE noncompliance notice signals serious regulatory/listing standards issues that typically trigger immediate selling pressure and potential delisting risk.",
+      "action_window": "intraday",
+      "headline": "Chegg Receives NYSE Noncompliance Notice",
+      "url": "https://www.benzinga.com/news/26/07/60681507/chegg-receives-nyse-noncompliance-notice",
+      "source": "alpaca",
+      "added_at": "2026-07-24T20:14:35.824154+00:00"
+    },
+    {
+      "ticker": "MCBS",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "MetroCity Bankshares missed both EPS estimates by 7.3% and revenue estimates by 5.0%, representing a double miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "MetroCity Bankshares Q2 EPS $0.76 Misses $0.82 Estimate, Sales $49.796M Miss $52.400M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60681262/metrocity-bankshares-q2-eps-0-76-misses-0-82-estimate-sales-49-796m-miss-52-400m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-24T20:14:35.824171+00:00"
+    },
+    {
+      "ticker": "EWC",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Presidential announcement of major tariff on Canada creates immediate geopolitical risk for Canadian equities (EWC) and potential oil price volatility (USO), while broader market (SPY) faces trade tension uncertainty.",
+      "action_window": "intraday",
+      "headline": "President Trump Says Iran Not Ready Yet To Make A Deal; We Can Negotiate And We Are Speaking To Them; Going To Put A Big Tariff On Canada Because Of The Smoke",
+      "url": "https://www.benzinga.com/news/26/07/60680535/president-trump-says-iran-not-ready-yet-make-deal-we-can-negotiate-and-we-are-speaking-them-going-pu",
+      "source": "alpaca",
+      "added_at": "2026-07-24T20:14:35.824191+00:00"
     }
   ]
 }
