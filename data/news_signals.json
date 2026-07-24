@@ -89,19 +89,6 @@
     "expires": "2026-12-22T23:51:44.271345+00:00",
     "hard_block": true
   },
-  "FSRL": {
-    "ticker": "FSRL",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "next_day",
-    "headline": "Colony Bankcorp And First Reliance Bancshares Sign Definitive Merger Agreement; Colony To Acquire 100% Of The Stock Of First Reliance In A Combined Stock-And-Cash Transaction Valued At ~$163M",
-    "added_at": "2026-06-24T21:12:05.036319+00:00",
-    "expires": "2026-07-24T21:12:05.036324+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CMCSA": {
     "ticker": "CMCSA",
     "score_delta": 0.129,
@@ -655,19 +642,6 @@
     "headline": "Pfizer And Astellas Win FDA Approval For PADCEV Plus Keytruda As First Platinum-Free Perioperative Treatment For Muscle-Invasive Bladder Cancer",
     "added_at": "2026-07-10T15:45:20.979418+00:00",
     "expires": "2026-08-09T15:45:20.979427+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAPL": {
-    "ticker": "AAPL",
-    "score_delta": -0.1,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Apple Says Tang Yew Tan Allegedly Using Apple Trade Secrets As OpenAI Chief Hardware Officer; Chang Liu Allegedly Stole Dozens Of Confidential Hardware Files After Joining OpenAI; Alleges OpenAI Instr",
-    "added_at": "2026-07-10T20:49:18.978715+00:00",
-    "expires": "2026-07-24T20:49:18.978721+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1357,19 +1331,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ATLO": {
-    "ticker": "ATLO",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "next_day",
-    "headline": "Ames National Q2 EPS $0.67 Beats $0.66 Estimate, Sales $19.084M Beat $3.720M Estimate",
-    "added_at": "2026-07-17T21:02:38.180617+00:00",
-    "expires": "2026-07-24T21:02:38.180622+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TXNM": {
     "ticker": "TXNM",
     "score_delta": 0.1,
@@ -1393,19 +1354,6 @@
     "headline": "BOXABL Completes SPAC Merger With FG Merger II Corp., Becomes Publicly Traded On Nasdaq Under \u201cBXBL\u201d Beginning July 20, 2026",
     "added_at": "2026-07-17T21:02:38.187656+00:00",
     "expires": "2026-08-16T21:02:38.187667+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DRMY": {
-    "ticker": "DRMY",
-    "score_delta": 0.029,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "this_week",
-    "headline": "This New ETF Targets AI Memory Leaders and Weekly Cash Payouts",
-    "added_at": "2026-07-17T21:02:38.191147+00:00",
-    "expires": "2026-07-24T21:02:38.191152+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4648,6 +4596,32 @@
     "headline": "Citigroup Maintains Buy on Klaviyo, Raises Price Target to $34",
     "added_at": "2026-07-24T20:14:35.814942+00:00",
     "expires": "2026-07-29T20:14:35.814947+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FCAP": {
+    "ticker": "FCAP",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "First Cap Q2 EPS $1.43 Up From $1.13 YoY, Sales $14.292M Up From $12.430M YoY",
+    "added_at": "2026-07-24T21:36:06.253444+00:00",
+    "expires": "2026-07-31T21:36:06.253450+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AXR": {
+    "ticker": "AXR",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Amrep Q4 EPS $0.23 Misses $0.43 Estimate, Sales $11.024M Miss $12.360M Estimate",
+    "added_at": "2026-07-24T21:36:06.257286+00:00",
+    "expires": "2026-07-31T21:36:06.257291+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
