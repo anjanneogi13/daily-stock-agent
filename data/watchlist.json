@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SGRY",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Major asset sale of $795M provides significant capital for faster growth strategy while reaffirming guidance, with stock already rising on the news.",
-      "action_window": "intraday",
-      "headline": "Surgery Partners Monetizes Idaho Assets As It Chases Faster Growth",
-      "url": "https://www.benzinga.com/markets/asset-sales/26/07/60675140/surgery-partners-monetizes-idaho-assets-as-it-chases-faster-growth",
-      "source": "alpaca",
-      "added_at": "2026-07-24T17:03:07.948941+00:00"
-    },
-    {
-      "ticker": "ZVRA",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "fda_rejection",
-      "rationale": "European CHMP negative opinion on arimoclomol for Niemann-Pick Type C is a major regulatory setback that significantly impairs the drug's commercial pathway in Europe.",
-      "action_window": "intraday",
-      "headline": "Zevra Therapeutics Stock Down \u2014 European Panel Slams Arimoclomol Bid for Niemann-Pick Type C",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60674830/zevra-therapeutics-stock-down-european-panel-slams-arimoclomol-bid-for-niemann-pick-type-c",
-      "source": "alpaca",
-      "added_at": "2026-07-24T17:03:07.948959+00:00"
-    },
-    {
       "ticker": "OTLK",
       "tradeable_score": 0.95,
       "sentiment": "bullish",
@@ -504,6 +480,30 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60701322/lamb-weston-analysts-boost-their-forecasts-after-strong-q4-results",
       "source": "alpaca",
       "added_at": "2026-07-27T16:11:55.271369+00:00"
+    },
+    {
+      "ticker": "SPCX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock continues sliding below IPO price with imminent supply wave expected in two weeks, creating technical and fundamental selling pressure.",
+      "action_window": "this_week",
+      "headline": "SpaceX Stock Continues To Slide: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60705972/spacex-stock-continues-to-slide-whats-going-on",
+      "source": "alpaca",
+      "added_at": "2026-07-27T18:02:37.887363+00:00"
+    },
+    {
+      "ticker": "BKR",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 earnings beat with stock climbing, driven by strong LNG equipment orders and emerging AI power infrastructure tailwind creates actionable momentum.",
+      "action_window": "intraday",
+      "headline": "Baker Hughes Says AI Is Rewriting the Energy Playbook",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60705653/baker-hughes-says-ai-is-rewriting-the-energy-playbook",
+      "source": "alpaca",
+      "added_at": "2026-07-27T18:02:37.887378+00:00"
     }
   ]
 }
