@@ -363,15 +363,16 @@
     },
     {
       "ticker": "RKLB",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Rocket Lab secured a substantial $266M Space Force contract demonstrating strong execution and competitive positioning in the aerospace sector, creating a meaningful catalyst for upward price movement.",
+      "rationale": "Major $266M government contract win representing Rocket Lab's largest-ever Space Force deal provides significant revenue visibility and validates competitive positioning in defense aerospace sector.",
       "action_window": "intraday",
-      "headline": "Rocket Lab Rallies as SpaceX Slides. Wall Street Is Rewarding Execution Again",
-      "url": "https://www.benzinga.com/news/space/26/07/60708836/rocket-lab-rallies-as-spacex-slides-wall-street-is-rewarding-execution-again",
+      "headline": "Rocket Lab Stock Soars After Winning Biggest-Ever U.S. Space Force Deal",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-stock-soars-winning-182244022.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-27T20:04:17.642522+00:00"
+      "added_at": "2026-07-27T20:04:17.642522+00:00",
+      "updated_at": "2026-07-27T22:55:57.082708+00:00"
     },
     {
       "ticker": "VALE",
@@ -564,6 +565,18 @@
       "url": "https://www.benzinga.com/news/26/07/60712861/vulcan-materials-provides-update-nafta-arbitration-tribunal-found-mexico-violated-nafta-several-resp",
       "source": "alpaca",
       "added_at": "2026-07-27T21:37:35.208766+00:00"
+    },
+    {
+      "ticker": "BULL",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New bond portfolio product expands Webull's offerings and addressable market, but impact depends on adoption rates and competitive positioning in a crowded fintech space.",
+      "action_window": "next_day",
+      "headline": "EXCLUSIVE: Webull Just Made 'Smart Money' Bond Strategy Available For $500",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60713649/exclusive-webull-just-made-smart-money-bond-strategy-available-for-500",
+      "source": "alpaca",
+      "added_at": "2026-07-27T22:55:57.082669+00:00"
     }
   ]
 }

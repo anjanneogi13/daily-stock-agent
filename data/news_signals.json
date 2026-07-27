@@ -1353,19 +1353,6 @@
     "expires": "2027-01-16T21:40:52.853064+00:00",
     "hard_block": true
   },
-  "MCRI": {
-    "ticker": "MCRI",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Monarch Casino & Resort Q2 EPS $1.78 Beats $1.68 Estimate, Sales $142.597M Beat $142.181M Estimate",
-    "added_at": "2026-07-20T21:40:52.856354+00:00",
-    "expires": "2026-07-27T21:40:52.856360+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BEEM": {
     "ticker": "BEEM",
     "score_delta": 0.032,
