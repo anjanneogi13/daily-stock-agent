@@ -4000,5 +4000,57 @@
     "expires": "2026-08-01T11:14:53.462264+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "LXFR": {
+    "ticker": "LXFR",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "UPDATE: Wynnchurch Capital's Affiliate Agrees To Acquire Luxfer Holdings In All-Cash Deal; Luxfer Shareholders Will Receive $17.37 Per Ordinary Share",
+    "added_at": "2026-07-27T13:54:31.771060+00:00",
+    "expires": "2026-08-26T13:54:31.771067+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TLN": {
+    "ticker": "TLN",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Wells Fargo Maintains Overweight on Talen Energy, Raises Price Target to $482",
+    "added_at": "2026-07-27T13:54:31.773473+00:00",
+    "expires": "2026-08-01T13:54:31.773479+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "F": {
+    "ticker": "F",
+    "score_delta": 0.025,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Ford Wants to Turn Car Customization Into the Next Big Thing\u2014Exec Says Think \u2018Nike Dropping a Sneaker\u2019",
+    "added_at": "2026-07-27T13:54:31.775834+00:00",
+    "expires": "2026-08-03T13:54:31.775839+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CHTR": {
+    "ticker": "CHTR",
+    "score_delta": -0.03,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Wells Fargo Maintains Underweight on Charter Communications, Lowers Price Target to $101",
+    "added_at": "2026-07-27T13:54:31.778147+00:00",
+    "expires": "2026-08-01T13:54:31.778152+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
