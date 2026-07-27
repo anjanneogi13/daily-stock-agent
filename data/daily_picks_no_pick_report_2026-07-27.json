@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-30268637885",
+  "artifact_bundle_name": "official-decision-artifacts-30269401800",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -217,8 +217,8 @@
       "universe_count": 534
     }
   },
-  "commit_sha": "b9c5f0dc389ac18d4341c75dc443d1d474662fe4",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/b9c5f0dc389ac18d4341c75dc443d1d474662fe4",
+  "commit_sha": "1260c93dbb63bb28b33138a60150d5e4103e0131",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/1260c93dbb63bb28b33138a60150d5e4103e0131",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_hard_blocked",
@@ -446,30 +446,30 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1602,
+        "attempts": 2136,
         "empty": 0,
-        "errors": 10,
-        "successes": 1592
+        "errors": 22,
+        "successes": 2114
       },
       "monster_info": {
-        "attempts": 268,
+        "attempts": 536,
         "empty": 0,
-        "errors": 10,
-        "successes": 258
+        "errors": 21,
+        "successes": 515
       },
       "ohlcv": {
-        "attempts": 1617,
+        "attempts": 2156,
         "empty": 0,
         "errors": 0,
-        "successes": 1617
+        "successes": 2156
       }
     },
     "date": "2026-07-27",
     "providers": {
       "yfinance": {
-        "attempts": 3487,
+        "attempts": 4828,
         "empty": 0,
-        "errors": 20,
+        "errors": 43,
         "failure_types": {
           "empty_response": 0,
           "market_closed": 0,
@@ -477,7 +477,7 @@
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 20,
+          "rate_limited": 43,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -485,8 +485,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 20,
-        "successes": 3467,
+        "rate_limited": 43,
+        "successes": 4785,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -677,9 +677,99 @@
         "result": "error",
         "stage": "monster_info",
         "ticker": "VRXA"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "OTLK"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "FCAP"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "QBTS"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "RNG"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SGRY"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "FAC"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "CMRE"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "QBTS"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "CAMP"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "SGRY"
       }
     ],
-    "timestamp_utc": "2026-07-27T13:08:48Z"
+    "timestamp_utc": "2026-07-27T13:18:51Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -708,11 +798,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-07-27T09:08:48-04:00",
+  "selection_time_et": "2026-07-27T09:18:51-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-07-27T13:08:48Z",
+  "timestamp_utc": "2026-07-27T13:18:51Z",
   "watch_only_available": false,
-  "workflow_run_id": "30268637885",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/30268637885"
+  "workflow_run_id": "30269401800",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/30269401800"
 }

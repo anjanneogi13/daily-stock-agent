@@ -2,30 +2,30 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1602,
+      "attempts": 2136,
       "empty": 0,
-      "errors": 10,
-      "successes": 1592
+      "errors": 22,
+      "successes": 2114
     },
     "monster_info": {
-      "attempts": 268,
+      "attempts": 536,
       "empty": 0,
-      "errors": 10,
-      "successes": 258
+      "errors": 21,
+      "successes": 515
     },
     "ohlcv": {
-      "attempts": 1617,
+      "attempts": 2156,
       "empty": 0,
       "errors": 0,
-      "successes": 1617
+      "successes": 2156
     }
   },
   "date": "2026-07-27",
   "providers": {
     "yfinance": {
-      "attempts": 3487,
+      "attempts": 4828,
       "empty": 0,
-      "errors": 20,
+      "errors": 43,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
@@ -33,7 +33,7 @@
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 20,
+        "rate_limited": 43,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -41,8 +41,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 20,
-      "successes": 3467,
+      "rate_limited": 43,
+      "successes": 4785,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -233,7 +233,97 @@
       "result": "error",
       "stage": "monster_info",
       "ticker": "VRXA"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "OTLK"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "FCAP"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "QBTS"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "RNG"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SGRY"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "FAC"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "CMRE"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "QBTS"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "CAMP"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SGRY"
     }
   ],
-  "timestamp_utc": "2026-07-27T13:08:48Z"
+  "timestamp_utc": "2026-07-27T13:18:51Z"
 }
