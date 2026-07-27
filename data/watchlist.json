@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "OTLK",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA approval of LYTENAVA for wet AMD is a major binary catalyst that typically drives significant upside for biotech stocks, especially for a company likely dependent on this approval for commercialization.",
-      "action_window": "intraday",
-      "headline": "Outlook Therapeutics Says FDA Approves LYTENAVA For Treatment Of Neovascular Age-Related Macular Degeneration, Commonly Known As Wet AMD",
-      "url": "https://www.benzinga.com/news/26/07/60678742/outlook-therapeutics-says-fda-approves-lytenava-treatment-neovascular-age-related-macular-degenerati",
-      "source": "alpaca",
-      "added_at": "2026-07-24T18:56:03.002425+00:00"
-    },
-    {
       "ticker": "CHGG",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -504,6 +492,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60705653/baker-hughes-says-ai-is-rewriting-the-energy-playbook",
       "source": "alpaca",
       "added_at": "2026-07-27T18:02:37.887378+00:00"
+    },
+    {
+      "ticker": "SXTP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "US patent issuance for treatment methods covering multiple indications (gram-positive bacteria, fungus, virus) represents meaningful intellectual property protection that could expand commercial opportunity and competitive moat for tafenoquine.",
+      "action_window": "next_day",
+      "headline": "60 Degrees Pharmaceuticals Will Be Issued US Patent Number 12,691,107 Tomorrow Titled \"METHODS FOR THE TREATMENT AND PREVENTION OF LUNG INFECTIONS CAUSED BY GRAM-POSITIVE BACTERIA, FUNGUS, OR VIRUS BY ADMINISTRATION OF TAFENOQUINE\".",
+      "url": "https://www.benzinga.com/general/biotech/26/07/60709945/60-degrees-pharmaceuticals-will-be-issued-us-patent-number-12-691-107-tomorrow-titled-methods-treatm",
+      "source": "alpaca",
+      "added_at": "2026-07-27T20:04:17.642493+00:00"
+    },
+    {
+      "ticker": "ASML",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Major competitive threat as China achieves breakthrough in domestic production of advanced lithography equipment, directly challenging ASML's core monopoly and triggering steep intraday decline.",
+      "action_window": "intraday",
+      "headline": "ASML Stock Slides as China Mass-Produces Chip Tools",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60709106/asml-stock-slides-as-china-mass-produces-chip-tools",
+      "source": "alpaca",
+      "added_at": "2026-07-27T20:04:17.642515+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Rocket Lab secured a substantial $266M Space Force contract demonstrating strong execution and competitive positioning in the aerospace sector, creating a meaningful catalyst for upward price movement.",
+      "action_window": "intraday",
+      "headline": "Rocket Lab Rallies as SpaceX Slides. Wall Street Is Rewarding Execution Again",
+      "url": "https://www.benzinga.com/news/space/26/07/60708836/rocket-lab-rallies-as-spacex-slides-wall-street-is-rewarding-execution-again",
+      "source": "alpaca",
+      "added_at": "2026-07-27T20:04:17.642522+00:00"
+    },
+    {
+      "ticker": "VALE",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Goldman Sachs downgrade from Buy/Overweight to Neutral with lowered price target represents meaningful negative catalyst from a top-tier investment bank that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Goldman Sachs Downgrades Vale to Neutral, Lowers Price Target to $16",
+      "url": "https://www.benzinga.com/news/26/07/60708265/goldman-sachs-downgrades-vale-neutral-lowers-price-target-16",
+      "source": "alpaca",
+      "added_at": "2026-07-27T20:04:17.642528+00:00"
     }
   ]
 }

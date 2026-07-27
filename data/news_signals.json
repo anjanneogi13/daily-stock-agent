@@ -541,32 +541,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SHEL": {
-    "ticker": "SHEL",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Shell Sells Sprng Energy to India\u2019s Aditya Birla Group",
-    "added_at": "2026-07-13T18:17:50.750785+00:00",
-    "expires": "2026-07-27T18:17:50.750790+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EVO": {
-    "ticker": "EVO",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Evotec Now Expects FY26 Revenue From \u20ac700M - \u20ac780M To ~\u20ac570M - \u20ac610M, Expects H1 Revenue Of ~\u20ac300.1M",
-    "added_at": "2026-07-13T19:57:51.274470+00:00",
-    "expires": "2026-07-27T19:57:51.274477+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MDT": {
     "ticker": "MDT",
     "score_delta": -0.194,
@@ -2211,32 +2185,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MSFT": {
-    "ticker": "MSFT",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "Analysts Say Microsoft Stock is Deeply Undervalued Ahead of Q4 Earnings",
-    "added_at": "2026-07-22T19:02:00.460666+00:00",
-    "expires": "2026-07-27T19:02:00.460675+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "WYFI": {
-    "ticker": "WYFI",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Watching WhiteFiber; Hearing Zacks Technical Analysis & Zacks Rank Buys Stock",
-    "added_at": "2026-07-22T19:02:00.464598+00:00",
-    "expires": "2026-07-27T19:02:00.464604+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INM": {
     "ticker": "INM",
     "score_delta": 0.2,
@@ -2247,19 +2195,6 @@
     "headline": "InMed Pharmaceuticals Merger Partner Raises $200 Million To Boost Migraine Pipeline",
     "added_at": "2026-07-22T19:02:00.467843+00:00",
     "expires": "2026-08-21T19:02:00.467849+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NRIX": {
-    "ticker": "NRIX",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "UBS Maintains Buy on Nurix Therapeutics, Raises Price Target to $31",
-    "added_at": "2026-07-22T19:02:00.470985+00:00",
-    "expires": "2026-07-27T19:02:00.470991+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4089,6 +4024,19 @@
     "headline": "Piper Sandler Maintains Overweight on USCB Financial Holdings, Raises Price Target to $27",
     "added_at": "2026-07-27T18:02:37.882731+00:00",
     "expires": "2026-08-01T18:02:37.882736+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VALE": {
+    "ticker": "VALE",
+    "score_delta": -0.049,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Goldman Sachs Downgrades Vale to Neutral, Lowers Price Target to $16",
+    "added_at": "2026-07-27T20:04:17.637014+00:00",
+    "expires": "2026-08-01T20:04:17.637022+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
