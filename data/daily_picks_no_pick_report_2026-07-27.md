@@ -1,35 +1,11 @@
-# Daily Picks No-Pick Report
+# Daily Picks Official No-Pick Guard Decision
 
-Monitoring-only failure evidence. No official picks were generated.
+Monitoring-only official no-pick artifact. Not buy instructions.
 
 - Date: **2026-07-27**
-- Reason: **No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.**
-- Primary no-pick cause: **NO_PICK_ALL_FINALISTS_HARD_BLOCKED**
-- Summary: **No official picks were generated because all 2 finalist candidate(s) were hard-blocked.**
+- Primary no-pick cause: **NO_PICK_WINDOW_MISSED**
+- Decision ID: `premarket_official_daily_pick:2026-07-27:NO_PICK:NO_PICK_WINDOW_MISSED:30270176640:51704766b32a`
+- Artifact ID: `daily_picks_no_pick_report:2026-07-27:NO_PICK_WINDOW_MISSED`
+- Summary: **No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.**
 - Paper trading enabled: **false**
 - Live trading enabled: **false**
-- Official premarket pick: **false**
-
-## Pipeline
-- capped_count: **2**
-- data_readiness_passed: **True**
-- data_readiness_status: **ready**
-- fetched_count: **534**
-- filtered_count: **15**
-- final_pick_count: **0**
-- hard_blocked_count: **2**
-- post_hard_block_pick_count: **0**
-- pre_hard_block_pick_count: **2**
-- scored_count: **268**
-- scorer_workers: **4**
-- universe_count: **534**
-
-## Market Data Health
-- yfinance: attempts=**4828**, successes=**4785**, errors=**43**, rate_limited=**43**, unauthorized=**0**
-
-## Secondary Causes
-- YFINANCE_PROVIDER_DEGRADED
-
-## Hard-Blocked Finalists
-- CMRE: **sl_too_tight** — SL too tight (1.7% < 2.5% for $16 stock)
-- HBT: **sl_too_tight** — SL too tight (1.5% < 2.0% for $33 stock)
