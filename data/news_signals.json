@@ -2432,32 +2432,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TATT": {
-    "ticker": "TATT",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Watching TAT Technologies; Hearing Zacks Homerun Investor Newsletter Mentions Stock As A Buy",
-    "added_at": "2026-07-23T14:41:33.663838+00:00",
-    "expires": "2026-07-28T14:41:33.663844+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RJF": {
-    "ticker": "RJF",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Barclays Maintains Overweight on Raymond James Finl, Raises Price Target to $196",
-    "added_at": "2026-07-23T14:41:33.667194+00:00",
-    "expires": "2026-07-28T14:41:33.667200+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PARR": {
     "ticker": "PARR",
     "score_delta": 0.03,
@@ -4102,6 +4076,45 @@
     "headline": "Citigroup Maintains Buy on Brinker International, Raises Price Target to $227",
     "added_at": "2026-07-28T12:21:41.923967+00:00",
     "expires": "2026-08-02T12:21:41.923973+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MAGA": {
+    "ticker": "MAGA",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "QUICK SPARK: Trump-Backed Truth Social ETF Suite Adds Original America First ETF, Renames It MAGA",
+    "added_at": "2026-07-28T14:59:14.587611+00:00",
+    "expires": "2026-08-04T14:59:14.587618+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BA": {
+    "ticker": "BA",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Boeing CEO, On 737-10, Says We Recently Completed Our Final Test Flight",
+    "added_at": "2026-07-28T14:59:14.591692+00:00",
+    "expires": "2026-08-04T14:59:14.591698+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KO": {
+    "ticker": "KO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
+    "added_at": "2026-07-28T14:59:14.595217+00:00",
+    "expires": "2026-08-04T14:59:14.595222+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

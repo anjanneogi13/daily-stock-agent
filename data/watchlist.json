@@ -698,6 +698,55 @@
       "url": "https://www.benzinga.com/news/26/07/60721514/citigroup-maintains-buy-brinker-international-raises-price-target-227",
       "source": "alpaca",
       "added_at": "2026-07-28T12:21:41.930540+00:00"
+    },
+    {
+      "ticker": "EDBL",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Nasdaq panel grants continued listing relief avoiding immediate delisting, but company must still meet $1.00 minimum bid price by August 15 deadline creating near-term uncertainty.",
+      "action_window": "intraday",
+      "headline": "Edible Garden Announces Nasdaq Panel Grants Continued Listing, Subject To Demonstrating $1.00 Minimum Bid Price Compliance By August 15",
+      "url": "https://www.benzinga.com/quote/EDBL",
+      "source": "alpaca",
+      "added_at": "2026-07-28T14:59:14.603427+00:00"
+    },
+    {
+      "ticker": "BA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Completion of final test flight for 737-10 is a significant regulatory milestone that moves the aircraft closer to certification and revenue generation, though actual certification approval is still pending.",
+      "action_window": "intraday",
+      "headline": "Boeing CEO, On 737-10, Says We Recently Completed Our Final Test Flight",
+      "url": "https://www.benzinga.com/news/26/07/60729142/boeing-ceo-on-737-10-we-recently-completed-our-final-test-flight",
+      "source": "alpaca",
+      "added_at": "2026-07-28T14:59:14.603438+00:00",
+      "updated_at": "2026-07-28T14:59:14.603450+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Multiple memory stocks experiencing severe selloff (up to 52% losses) with AI memory trade unwinding, creating sector-wide pressure but uncertainty around China's role suggests some overreaction risk.",
+      "action_window": "intraday",
+      "headline": "The AI Memory Trade Is Crumbling: SanDisk, Micron and Western Digital Extend Brutal Selloff",
+      "url": "https://www.benzinga.com/markets/tech/26/07/60729392/ai-memory-trade-crumbling-sandisk-micron-western-digital-sk-hynix",
+      "source": "alpaca",
+      "added_at": "2026-07-28T14:59:14.603458+00:00"
+    },
+    {
+      "ticker": "KO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with 7% gain to record high and material market impact, but much of the move already occurred intraday.",
+      "action_window": "next_day",
+      "headline": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60729367/quick-spark-coca-cola-stock-hits-record-high-after-earnings",
+      "source": "alpaca",
+      "added_at": "2026-07-28T14:59:14.603464+00:00"
     }
   ]
 }
