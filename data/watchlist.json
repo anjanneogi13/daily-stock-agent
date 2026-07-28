@@ -751,15 +751,16 @@
     },
     {
       "ticker": "GLW",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.72,
       "sentiment": "bearish",
-      "category": "earnings_beat",
-      "rationale": "Corning's in-line guidance despite earnings beat triggered sector-wide selloff affecting multiple optical component peers, creating contagion risk with immediate market impact.",
+      "category": "earnings_miss",
+      "rationale": "Corning's 15% post-earnings crash creates significant spillover risk to AI infrastructure ETFs and related photonics/fiber optics plays, signaling broader sector concerns about AI data center demand.",
       "action_window": "intraday",
-      "headline": "Coherent, Lumentum, Ciena Stocks Fall After Corning Earnings Trigger Sector Selloff",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60734873/coherent-lumentum-ciena-stocks-fall-corning-earnings-trigger-sector-selloff",
+      "headline": "Corning\u2019s 15% Crash Hits a Lesser-Known AI Trade: These ETFs Are Under Pressure",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60738279/cornings-15-crash-hits-a-lesser-known-ai-trade-these-etfs-are-under-pressure",
       "source": "alpaca",
-      "added_at": "2026-07-28T16:40:52.212650+00:00"
+      "added_at": "2026-07-28T16:40:52.212650+00:00",
+      "updated_at": "2026-07-28T18:09:02.202332+00:00"
     },
     {
       "ticker": "AMT",
@@ -808,6 +809,42 @@
       "url": "https://www.benzinga.com/news/26/07/60734041/wolfe-research-downgrades-visteon-peer-perform",
       "source": "alpaca",
       "added_at": "2026-07-28T16:40:52.212704+00:00"
+    },
+    {
+      "ticker": "LDOS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $717M government contract win represents material new revenue (~4% of LDOS's ~$15B annual revenue) with high-margin defense/intelligence work, providing multi-year revenue visibility.",
+      "action_window": "next_day",
+      "headline": "Leidos Receives ~$717M U.S. Air Force's Air Combat Command Acquisition Management And Integration Center Task Order To Continue Providing Intelligence, Surveillance, Reconnaissance Operations Support",
+      "url": "https://www.benzinga.com/news/26/07/60738510/leidos-receives-u-s-air-forces-air-combat-command-acquisition-management-and-integration-center-task-order-to-continue-providing-intelligence-surveillance-reconnaissance-operations-support",
+      "source": "alpaca",
+      "added_at": "2026-07-28T18:09:02.202301+00:00"
+    },
+    {
+      "ticker": "CRM",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Salesforce secured a significant $1.6B federal AI contract driving immediate momentum past technical resistance levels, representing a meaningful catalyst for the stock.",
+      "action_window": "intraday",
+      "headline": "Why Is Salesforce Stock Surging Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60738580/why-is-salesforce-stock-surging-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-07-28T18:09:02.202318+00:00"
+    },
+    {
+      "ticker": "PNR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major $1.4B acquisition positioning company for AI data center growth overrides Q2 earnings miss, driving positive stock reaction.",
+      "action_window": "intraday",
+      "headline": "Why Pentair Is Spending $1.4 Billion To Ride The AI Data Center Wave",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60738085/why-pentair-is-spending-1-4-billion-to-ride-the-ai-data-center-wave",
+      "source": "alpaca",
+      "added_at": "2026-07-28T18:09:02.202347+00:00"
     }
   ]
 }
