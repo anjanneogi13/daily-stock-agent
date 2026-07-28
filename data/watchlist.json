@@ -617,15 +617,16 @@
     },
     {
       "ticker": "PMN",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Positive interim Phase 1B trial results showing safety and biomarker evidence of target engagement for Alzheimer's treatment is a meaningful de-risking catalyst for a biotech company.",
+      "rationale": "Positive interim Phase 1b clinical trial data for Alzheimer's drug with zero ARIA-E (brain swelling) is a significant de-risking event for small-cap biotech, likely to drive substantial stock movement.",
       "action_window": "intraday",
-      "headline": "ProMIS Neurosciences Announces Six-Month Interim Safety And Biomarker Results From Its PRECISE-AD Phase 1B Trial Of PMN310 In Patients With Mild Cognitive Impairment Due To Alzheimer\u2019s; Early Biomarker Movement Consistent With Target Engagement",
-      "url": "https://www.benzinga.com/news/26/07/60717660/promis-neurosciences-announces-six-month-interim-safety-and-biomarker-results-its-precise-ad-phase-1",
+      "headline": "Small-Cap ProMIS Neurosciences Says Lead Drug Shows Encouraging Action in Early Alzheimer's Study",
+      "url": "https://www.benzinga.com/news/health-care/26/07/60734701/small-cap-promis-neurosciences-says-lead-drug-shows-encouraging-action-in-early-alzheimers-study",
       "source": "alpaca",
-      "added_at": "2026-07-28T10:29:06.773517+00:00"
+      "added_at": "2026-07-28T10:29:06.773517+00:00",
+      "updated_at": "2026-07-28T16:40:52.212667+00:00"
     },
     {
       "ticker": "KIDZ",
@@ -747,6 +748,66 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60729367/quick-spark-coca-cola-stock-hits-record-high-after-earnings",
       "source": "alpaca",
       "added_at": "2026-07-28T14:59:14.603464+00:00"
+    },
+    {
+      "ticker": "GLW",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Corning's in-line guidance despite earnings beat triggered sector-wide selloff affecting multiple optical component peers, creating contagion risk with immediate market impact.",
+      "action_window": "intraday",
+      "headline": "Coherent, Lumentum, Ciena Stocks Fall After Corning Earnings Trigger Sector Selloff",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60734873/coherent-lumentum-ciena-stocks-fall-corning-earnings-trigger-sector-selloff",
+      "source": "alpaca",
+      "added_at": "2026-07-28T16:40:52.212650+00:00"
+    },
+    {
+      "ticker": "AMT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "American Tower beat Q2 earnings estimates and raised full-year 2026 outlook, driven by strong AI demand tailwinds, representing a meaningful positive catalyst with confirmed fundamental improvement.",
+      "action_window": "intraday",
+      "headline": "American Tower Rides AI Demand To Another Outlook Raise",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60734494/american-tower-rides-ai-demand-to-another-outlook-raise",
+      "source": "alpaca",
+      "added_at": "2026-07-28T16:40:52.212682+00:00"
+    },
+    {
+      "ticker": "TFII",
+      "tradeable_score": 0.5,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Q2 earnings miss offset by decent Q3 guidance and mixed analyst revisions creates uncertainty with limited immediate trading edge.",
+      "action_window": "next_day",
+      "headline": "These Analysts Revise Their Forecasts On TFI International Following Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60734471/these-analysts-revise-their-forecasts-on-tfi-international-following-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-07-28T16:40:52.212690+00:00"
+    },
+    {
+      "ticker": "SSB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Better-than-expected Q2 earnings combined with dividend increase and multiple analyst price target raises creates a strong bullish catalyst with actionable upside.",
+      "action_window": "next_day",
+      "headline": "These Analysts Boost Their Forecasts On SouthState Bank Following Upbeat Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60734258/these-analysts-boost-their-forecasts-on-southstate-bank-following-upbeat-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-07-28T16:40:52.212696+00:00"
+    },
+    {
+      "ticker": "VC",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Wolfe Research downgrade to Peer Perform (equivalent to Hold/Neutral) signals reduced conviction and typically triggers selling pressure from investors who follow analyst ratings.",
+      "action_window": "intraday",
+      "headline": "Wolfe Research Downgrades Visteon to Peer Perform",
+      "url": "https://www.benzinga.com/news/26/07/60734041/wolfe-research-downgrades-visteon-peer-perform",
+      "source": "alpaca",
+      "added_at": "2026-07-28T16:40:52.212704+00:00"
     }
   ]
 }
