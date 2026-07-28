@@ -566,6 +566,66 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60713649/exclusive-webull-just-made-smart-money-bond-strategy-available-for-500",
       "source": "alpaca",
       "added_at": "2026-07-27T22:55:57.082669+00:00"
+    },
+    {
+      "ticker": "ACIW",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership expanding payment capabilities in high-growth Latin American markets creates revenue opportunity for both companies, with ACIW as larger established player likely to see more immediate trading impact.",
+      "action_window": "intraday",
+      "headline": "ACI Worldwide And dLocal Form Strategic Partnership To Provide Global Merchants Access To Local Payment Methods In Brazil, Mexico And Latin America",
+      "url": "https://www.benzinga.com/news/26/07/60717962/aci-worldwide-and-dlocal-form-strategic-partnership-provide-global-merchants-access-local-payment-me",
+      "source": "alpaca",
+      "added_at": "2026-07-28T10:29:06.773483+00:00"
+    },
+    {
+      "ticker": "TRU",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "TransUnion's Q3 EPS guidance of $0.68-$0.71 significantly misses consensus estimate of $0.79, representing a 10-14% shortfall that will likely pressure the stock.",
+      "action_window": "intraday",
+      "headline": "TransUnion Sees Q3 GAAP EPS $0.68-$0.71 vs $0.79 Est",
+      "url": "https://www.benzinga.com/news/26/07/60717902/transunion-sees-q3-gaap-eps-0-68-0-71-vs-0-79-est",
+      "source": "alpaca",
+      "added_at": "2026-07-28T10:29:06.773493+00:00"
+    },
+    {
+      "ticker": "TE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Strategic $135M acquisition of solar patents and IP represents a significant expansion into clean energy technology with immediate defensible market positioning.",
+      "action_window": "intraday",
+      "headline": "T1 Energy Acquires Solar Patents And Other IP From Evervolt Green Energy For $135M",
+      "url": "https://www.benzinga.com/m/26/07/60717717/t1-energy-acquires-solar-patents-and-other-ip-evervolt-green-energy-135m",
+      "source": "alpaca",
+      "added_at": "2026-07-28T10:29:06.773506+00:00"
+    },
+    {
+      "ticker": "AB",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings report with EPS missing by 1.2% but sales beating estimates by 29%, creating conflicting signals that require immediate evaluation but offset overall impact.",
+      "action_window": "intraday",
+      "headline": "AllianceBernstein Holding Q2 Adj. EPS $0.82 Misses $0.83 Estimate, Sales $1.171B Beat $907.667M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60717711/alliancebernstein-holding-q2-adj-eps-0-82-misses-0-83-estimate-sales-1-171b-beat-907-667m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-28T10:29:06.773510+00:00"
+    },
+    {
+      "ticker": "PMN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive interim Phase 1B trial results showing safety and biomarker evidence of target engagement for Alzheimer's treatment is a meaningful de-risking catalyst for a biotech company.",
+      "action_window": "intraday",
+      "headline": "ProMIS Neurosciences Announces Six-Month Interim Safety And Biomarker Results From Its PRECISE-AD Phase 1B Trial Of PMN310 In Patients With Mild Cognitive Impairment Due To Alzheimer\u2019s; Early Biomarker Movement Consistent With Target Engagement",
+      "url": "https://www.benzinga.com/news/26/07/60717660/promis-neurosciences-announces-six-month-interim-safety-and-biomarker-results-its-precise-ad-phase-1",
+      "source": "alpaca",
+      "added_at": "2026-07-28T10:29:06.773517+00:00"
     }
   ]
 }
