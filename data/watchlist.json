@@ -267,15 +267,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "macro",
-      "rationale": "Military action involving commercial vessel interdictions suggests heightened geopolitical tensions affecting critical shipping routes, creating near-term risk-off sentiment and potential supply chain disruption concerns.",
+      "rationale": "Iranian ballistic missile attack on U.S. forces, though intercepted, signals major geopolitical escalation likely to trigger risk-off sentiment and spike oil prices in immediate trading.",
       "action_window": "intraday",
-      "headline": "U.S. Central Command, On X, Says It Has Redirected 17 Commercial Vessels, Disabled 2, And Boarded 2 To Ensure Compliance",
-      "url": "https://www.benzinga.com/news/26/07/60701531/u-s-central-command-x-says-it-has-redirected-17-commercial-vessels-disabled-2-and-boarded-2-ensure-c",
+      "headline": "U.S. Central Command Posts On X \"At 5:45 p.m. ET today, Islamic Revolutionary Guard Corps forces launched multiple ballistic missiles from Iran in an attempted surprise attack on U.S. forces based in the Middle East. All Iranian missiles were successfully intercepted. U.S. forces remain vigilant and",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60748029/u-s-central-command-posts-x-5-45-p-m-et-today-islamic-revolutionary-guard-corps-forces-launched-mult",
       "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271362+00:00"
+      "added_at": "2026-07-27T16:11:55.271362+00:00",
+      "updated_at": "2026-07-28T23:55:19.388559+00:00"
     },
     {
       "ticker": "CNI",
@@ -992,15 +993,16 @@
     },
     {
       "ticker": "ORLA",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Final court approval for business combination removes major regulatory uncertainty and confirms the M&A transaction will proceed, typically triggering immediate price action for the target company.",
+      "rationale": "Court approval of M&A deal is a major de-risking event that removes regulatory uncertainty and moves the acquisition to near-certain completion, typically triggering immediate price convergence to deal terms.",
       "action_window": "intraday",
-      "headline": "Orla Mining Receives Final Court Approval for Business Combination With Equinox Gold",
-      "url": "https://www.benzinga.com/m/26/07/60746822/orla-mining-receives-final-court-approval-business-combination-equinox-gold",
+      "headline": "Orla Receives Court Approval for Business Combination with Equinox Gold",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/orla-receives-court-approval-business-210000712.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-07-28T21:11:16.622203+00:00"
+      "added_at": "2026-07-28T21:11:16.622203+00:00",
+      "updated_at": "2026-07-28T23:55:19.388584+00:00"
     },
     {
       "ticker": "MEOH",
@@ -1242,6 +1244,18 @@
       "url": "https://www.benzinga.com/news/26/07/60747452/petvivo-reaches-settlement-vetstem-terminates-preciseprp-license-agreement-petvivo-s-sole-remaining-",
       "source": "alpaca",
       "added_at": "2026-07-28T22:33:44.253008+00:00"
+    },
+    {
+      "ticker": "PKG",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Quarterly earnings beat driven by record shipments and accretive acquisition despite headwinds creates immediate positive catalyst for PKG stock.",
+      "action_window": "intraday",
+      "headline": "Packaging Corp Q2 Earnings Beat Estimates on Record Shipments",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q2-earnings-beat-141200724.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-07-28T23:55:19.388604+00:00"
     }
   ]
 }

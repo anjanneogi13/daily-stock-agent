@@ -733,19 +733,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SPXC": {
-    "ticker": "SPXC",
-    "score_delta": 0.04,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.28,
-    "action_window": "ignore",
-    "headline": "SPXC Climbs 26% in a Year: Is the Stock Poised for More Growth?",
-    "added_at": "2026-07-14T23:45:55.329155+00:00",
-    "expires": "2026-07-28T23:45:55.329161+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TSLA": {
     "ticker": "TSLA",
     "score_delta": -0.1,
