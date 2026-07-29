@@ -759,19 +759,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GRRR": {
-    "ticker": "GRRR",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Gorilla Technology Completes Acquisition of Shackleton Finance and Launches Gorilla Tech Capital",
-    "added_at": "2026-07-15T23:32:11.115924+00:00",
-    "expires": "2026-07-29T23:32:11.115929+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "EYPT": {
     "ticker": "EYPT",
     "score_delta": -0.079,
@@ -1571,45 +1558,6 @@
     "headline": "First Choice Healthcare Solutions To Merge With Westin Acquisition In $650M Deal, Rebranding As Wellgevity 360, PubCo",
     "added_at": "2026-07-22T21:36:54.372462+00:00",
     "expires": "2026-08-21T21:36:54.372468+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "OII": {
-    "ticker": "OII",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Oceaneering International Q2 Adj. EPS $0.63 Beats $0.46 Estimate, Sales $768.184M Beat $734.780M Estimate",
-    "added_at": "2026-07-22T22:56:56.130255+00:00",
-    "expires": "2026-07-29T22:56:56.130262+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LBRT": {
-    "ticker": "LBRT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Liberty Energy Q2 Adj. EPS $0.09 Beats $0.07 Estimate, Sales $1.189B Beat $1.090B Estimate",
-    "added_at": "2026-07-22T22:56:56.134031+00:00",
-    "expires": "2026-07-29T22:56:56.134036+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PKG": {
-    "ticker": "PKG",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Packaging Corp of America Sees Q3 Adj EPS $2.91 vs $2.94 Est",
-    "added_at": "2026-07-22T22:56:56.137276+00:00",
-    "expires": "2026-07-29T22:56:56.137281+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4609,6 +4557,19 @@
     "headline": "Glen Burnie Bancorp Q2 EPS $(0.09) Down From $(0.07) YoY, Sales $3.563M Up From $2.920M YoY",
     "added_at": "2026-07-29T22:55:36.146655+00:00",
     "expires": "2026-08-05T22:55:36.146662+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LHX": {
+    "ticker": "LHX",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "L3Harris Stock Jumps on Earnings Beat. The Defense Business Is Growing.",
+    "added_at": "2026-07-29T23:56:54.390287+00:00",
+    "expires": "2026-08-05T23:56:54.390293+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
