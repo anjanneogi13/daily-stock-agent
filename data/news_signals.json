@@ -2519,19 +2519,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TSCO": {
-    "ticker": "TSCO",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Mizuho Maintains Neutral on Tractor Supply, Lowers Price Target to $28",
-    "added_at": "2026-07-24T18:56:02.977320+00:00",
-    "expires": "2026-07-29T18:56:02.977328+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NVCR": {
     "ticker": "NVCR",
     "score_delta": 0.079,
@@ -2584,19 +2571,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "WEX": {
-    "ticker": "WEX",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Mizuho Maintains Outperform on WEX, Raises Price Target to $200",
-    "added_at": "2026-07-24T18:56:02.969180+00:00",
-    "expires": "2026-07-29T18:56:02.969195+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "OTLK": {
     "ticker": "OTLK",
     "score_delta": 0.15,
@@ -2607,32 +2581,6 @@
     "headline": "Outlook Therapeutics Says FDA Approves LYTENAVA For Treatment Of Neovascular Age-Related Macular Degeneration, Commonly Known As Wet AMD",
     "added_at": "2026-07-24T18:56:02.981040+00:00",
     "expires": "2026-08-23T18:56:02.981045+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MBLY": {
-    "ticker": "MBLY",
-    "score_delta": -0.029,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Mizuho Maintains Neutral on Mobileye Global, Lowers Price Target to $8",
-    "added_at": "2026-07-24T18:56:02.988452+00:00",
-    "expires": "2026-07-29T18:56:02.988457+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AAL": {
-    "ticker": "AAL",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "BMO Capital Maintains Market Perform on American Airlines Group, Lowers Price Target to $19",
-    "added_at": "2026-07-24T18:56:02.992169+00:00",
-    "expires": "2026-07-29T18:56:02.992174+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4289,14 +4237,14 @@
   },
   "VFC": {
     "ticker": "VFC",
-    "score_delta": -0.025,
-    "catalyst": "downgrade",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
     "sentiment": "bearish",
-    "tradeable_score": 0.35,
+    "tradeable_score": 0.88,
     "action_window": "intraday",
-    "headline": "Needham Maintains Buy on VF, Lowers Price Target to $21",
-    "added_at": "2026-07-29T15:07:54.955185+00:00",
-    "expires": "2026-08-03T15:07:54.955191+00:00",
+    "headline": "Timberland Parent VF Corp CEO Admits Quarter 'Wasn't Great'",
+    "added_at": "2026-07-29T19:52:34.279150+00:00",
+    "expires": "2026-08-05T19:52:34.279156+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4531,6 +4479,32 @@
     "headline": "SpaceXAI Announces Grok Voice Think Fast 2.0; Grok Voice Think Fast 2.0 Is Priced At $0.08 / Min Of Audio; On August 5, Grok-Voice-Latest Will Move From Grok-Voice-Think-Fast-1.0 To Grok-Voice-Think-F",
     "added_at": "2026-07-29T18:04:13.369767+00:00",
     "expires": "2026-08-05T18:04:13.369771+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WPC": {
+    "ticker": "WPC",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "BNP Paribas Upgrades W.P. Carey to Outperform, Raises Price Target to $88",
+    "added_at": "2026-07-29T19:52:34.282758+00:00",
+    "expires": "2026-08-03T19:52:34.282764+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CTO": {
+    "ticker": "CTO",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Jones Trading Maintains Buy on CTO Realty Growth, Raises Price Target to $24",
+    "added_at": "2026-07-29T19:52:34.293287+00:00",
+    "expires": "2026-08-03T19:52:34.293292+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

@@ -1640,6 +1640,30 @@
       "url": "https://www.benzinga.com/markets/earnings/26/07/60772936/tevas-innovative-drug-portfolio-fuels-growth-as-company-raises-outlook-transitions-to-direct-nyse-listing",
       "source": "alpaca",
       "added_at": "2026-07-29T18:04:13.373837+00:00"
+    },
+    {
+      "ticker": "VFC",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock already tumbled 18% on widening adjusted loss despite revenue beat, with CEO acknowledging poor quarter performance - significant confirmed negative catalyst with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Timberland Parent VF Corp CEO Admits Quarter 'Wasn't Great'",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60776731/timberland-parent-vf-corp-ceo-admits-quarter-wasnt-great",
+      "source": "alpaca",
+      "added_at": "2026-07-29T19:52:34.342770+00:00"
+    },
+    {
+      "ticker": "WPC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BNP Paribas upgrade to Outperform with raised price target represents a meaningful positive catalyst from a major European investment bank that typically drives institutional buying interest.",
+      "action_window": "next_day",
+      "headline": "BNP Paribas Upgrades W.P. Carey to Outperform, Raises Price Target to $88",
+      "url": "https://www.benzinga.com/news/26/07/60776038/bnp-paribas-upgrades-w-p-carey-outperform-raises-price-target-88",
+      "source": "alpaca",
+      "added_at": "2026-07-29T19:52:34.342794+00:00"
     }
   ]
 }
