@@ -267,16 +267,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
+      "tradeable_score": 0.85,
+      "sentiment": "neutral",
       "category": "macro",
-      "rationale": "Iranian ballistic missile attack on U.S. forces, though intercepted, signals major geopolitical escalation likely to trigger risk-off sentiment and spike oil prices in immediate trading.",
+      "rationale": "FOMC statements are major market-moving events that typically cause immediate volatility across all equities, requiring analysis of the actual statement content for directional bias.",
       "action_window": "intraday",
-      "headline": "U.S. Central Command Posts On X \"At 5:45 p.m. ET today, Islamic Revolutionary Guard Corps forces launched multiple ballistic missiles from Iran in an attempted surprise attack on U.S. forces based in the Middle East. All Iranian missiles were successfully intercepted. U.S. forces remain vigilant and",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60748029/u-s-central-command-posts-x-5-45-p-m-et-today-islamic-revolutionary-guard-corps-forces-launched-mult",
+      "headline": "Federal Reserve Issues FOMC Statement For July 28-29, 2026 (Link In Body)",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60773122/federal-reserve-issues-fomc-statement-july-28-29-2026-link-body",
       "source": "alpaca",
       "added_at": "2026-07-27T16:11:55.271362+00:00",
-      "updated_at": "2026-07-28T23:55:19.388559+00:00"
+      "updated_at": "2026-07-29T18:04:13.373821+00:00"
     },
     {
       "ticker": "CNI",
@@ -1628,6 +1628,18 @@
       "url": "https://www.benzinga.com/markets/penny-stocks/26/07/60769266/airwa-stock-crashes-as-investors-weigh-130-million-best-life-deal",
       "source": "alpaca",
       "added_at": "2026-07-29T16:48:45.591745+00:00"
+    },
+    {
+      "ticker": "TEVA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Guidance raise and revenue beat offset earnings miss, with NYSE transition adding structural positive, creating mixed but net-positive catalyst requiring immediate assessment.",
+      "action_window": "intraday",
+      "headline": "Teva's Innovative Drug Portfolio Fuels Growth as Company Raises Outlook, Transitions to Direct NYSE Listing",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60772936/tevas-innovative-drug-portfolio-fuels-growth-as-company-raises-outlook-transitions-to-direct-nyse-listing",
+      "source": "alpaca",
+      "added_at": "2026-07-29T18:04:13.373837+00:00"
     }
   ]
 }
