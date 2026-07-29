@@ -1532,6 +1532,102 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60764179/these-analysts-revise-their-forecasts-on-varonis-following-q2-earnings",
       "source": "alpaca",
       "added_at": "2026-07-29T15:07:54.972256+00:00"
+    },
+    {
+      "ticker": "STX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q4 earnings beat with raised guidance, positive analyst commentary on pricing power and supply dynamics, and stock already showing positive momentum create a meaningful trading catalyst.",
+      "action_window": "intraday",
+      "headline": "Seagate Stock Gains, Analyst Points to Stronger Pricing Power and Widening Supply Shortages",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/07/60769853/seagate-stock-gains-analyst-points-to-widening-supply-shortages",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591670+00:00"
+    },
+    {
+      "ticker": "HIMS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "FTC lawsuit over privacy violations involving health data sharing is a significant regulatory threat with potential for substantial fines, operational restrictions, and reputational damage to telehealth company.",
+      "action_window": "intraday",
+      "headline": "'US FTC suing Hims & Hers for sending user health info to Meta, Snap' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/news/26/07/60769669/us-ftc-suing-hims-hers-sending-user-health-info-meta-snap-reuters-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591685+00:00"
+    },
+    {
+      "ticker": "LMND",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Strong 79% revenue growth with narrowing losses and raised FY26 guidance represents multiple positive catalysts for sustained momentum.",
+      "action_window": "intraday",
+      "headline": "Lemonade Boosts Forecast Amid Premium Growth Momentum",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60769549/lemonade-boosts-forecast-amid-premium-growth-momentum",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591697+00:00"
+    },
+    {
+      "ticker": "V",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q3 earnings beat combined with raised revenue guidance and analyst reaffirmation creates meaningful positive catalyst with shares already moving higher.",
+      "action_window": "intraday",
+      "headline": "Visa Beats on Q3, Raises Revenue Outlook as Analyst Points to Healthy Spending",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60769501/visa-beats-on-q3-raises-revenue-outlook-as-analyst-points-to-healthy-spending",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591704+00:00"
+    },
+    {
+      "ticker": "NCRA",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Strategic 30% controlling stake acquisition in Taiwan memory firm is a significant growth catalyst with shares already surging intraday on confirmed news.",
+      "action_window": "intraday",
+      "headline": "Nocera Stock Surges as Company Buys 30% Stake in Taiwan Memory Firm",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60769484/nocera-stock-surges-as-company-buys-30-stake-in-taiwan-memory-firm",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591713+00:00"
+    },
+    {
+      "ticker": "ODFL",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 earnings beat with revenue surge driven by pricing power and operational efficiency represents a strong fundamental catalyst for immediate trading.",
+      "action_window": "intraday",
+      "headline": "Old Dominion Freight Line Q2 Revenue Surges On Pricing Gains",
+      "url": "https://www.benzinga.com/markets/large-cap/26/07/60769409/old-dominion-freight-line-q2-revenue-surges-on-pricing-gains",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591722+00:00"
+    },
+    {
+      "ticker": "RDY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "FDA Form 483 issuance indicates regulatory observations/deficiencies at manufacturing facility, creating uncertainty about potential corrective actions and impact on production, though not an outright rejection.",
+      "action_window": "intraday",
+      "headline": "Dr. Reddy\u2019s Laboratories Announces U.S. FDA Completes Inspection at Srikakulam Unit, Issues Form 483",
+      "url": "https://www.benzinga.com/news/26/07/60769387/dr-reddy-s-laboratories-announces-u-s-fda-completes-inspection-srikakulam-unit-issues-form-483",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591730+00:00"
+    },
+    {
+      "ticker": "YYAI",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "ma_acquirer",
+      "rationale": "Stock crashes on investor concerns about $130M acquisition with earn-outs and ambitious targets, indicating meaningful negative market reaction to M&A deal terms.",
+      "action_window": "intraday",
+      "headline": "AiRWA Stock Crashes as Investors Weigh $130 Million Best Life Deal",
+      "url": "https://www.benzinga.com/markets/penny-stocks/26/07/60769266/airwa-stock-crashes-as-investors-weigh-130-million-best-life-deal",
+      "source": "alpaca",
+      "added_at": "2026-07-29T16:48:45.591745+00:00"
     }
   ]
 }
