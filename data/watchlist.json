@@ -1256,6 +1256,66 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q2-earnings-beat-141200724.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-07-28T23:55:19.388604+00:00"
+    },
+    {
+      "ticker": "OKE",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade from Overweight to Equal-Weight with lower price target represents a negative catalyst from a major investment bank that typically triggers selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades ONEOK to Equal-Weight, Lowers Price Target to $103",
+      "url": "https://www.benzinga.com/news/26/07/60752602/morgan-stanley-downgrades-oneok-equal-weight-lowers-price-target-103",
+      "source": "alpaca",
+      "added_at": "2026-07-29T10:34:15.717832+00:00"
+    },
+    {
+      "ticker": "GEHC",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "GE HealthCare beat Q2 EPS estimates by 9.7% ($1.13 vs $1.03) and revenue estimates by 0.6% ($5.295B vs $5.264B), representing a meaningful double beat on earnings.",
+      "action_window": "intraday",
+      "headline": "GE HealthCare Techs Q2 Adj. EPS $1.13 Beats $1.03 Estimate, Sales $5.295B Beat $5.264B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60752539/ge-healthcare-techs-q2-adj-eps-1-13-beats-1-03-estimate-sales-5-295b-beat-5-264b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-29T10:34:15.717846+00:00"
+    },
+    {
+      "ticker": "BIIB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Biogen significantly beat Q2 earnings expectations with EPS 22% above estimates and revenue 11% above consensus, indicating strong operational performance warranting immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Biogen Q2 Adj. EPS $3.60 Beats $2.96 Estimate, Sales $2.736B Beat $2.458B Estimate",
+      "url": "https://www.benzinga.com/quote/BIIB",
+      "source": "alpaca",
+      "added_at": "2026-07-29T10:34:15.717856+00:00"
+    },
+    {
+      "ticker": "LZM",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "EPS missed estimates by 60% but revenue massively beat by 386%, creating mixed signals that warrant immediate evaluation of underlying business trends.",
+      "action_window": "intraday",
+      "headline": "Lifezone Metals H1 EPS $(0.08) Misses $(0.05) Estimate, Sales $1.700M Beat $350.000K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60752382/lifezone-metals-h1-eps-0-08-misses-0-05-estimate-sales-1-700m-beat-350-000k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-29T10:34:15.717863+00:00"
+    },
+    {
+      "ticker": "CLVT",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company significantly lowered FY2026 GAAP EPS guidance by approximately 120-184% versus prior range and well below analyst estimates, indicating severe fundamental deterioration.",
+      "action_window": "intraday",
+      "headline": "Clarivate Lowers FY2026 GAAP EPS Guidance from $(0.29)-$(0.19) to $(0.64)-$(0.54) vs $(0.17) Est",
+      "url": "https://www.benzinga.com/news/26/07/60752311/clarivate-lowers-fy2026-gaap-eps-guidance-0-29-0-19-0-64-0-54-vs-0-17-est",
+      "source": "alpaca",
+      "added_at": "2026-07-29T10:34:15.717880+00:00"
     }
   ]
 }
