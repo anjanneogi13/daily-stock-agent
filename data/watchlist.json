@@ -1316,6 +1316,126 @@
       "url": "https://www.benzinga.com/news/26/07/60752311/clarivate-lowers-fy2026-gaap-eps-guidance-0-29-0-19-0-64-0-54-vs-0-17-est",
       "source": "alpaca",
       "added_at": "2026-07-29T10:34:15.717880+00:00"
+    },
+    {
+      "ticker": "SOFI",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Stock falling despite positive earnings beat and raised guidance indicates negative market reaction to underlying factors or valuation concerns, creating immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "SoFi Stock Falls Despite Q2 Earnings Beat and Raised Guidance: What Investors Need to Know",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60758430/sofi-stock-falls-despite-q2-earnings-beat-and-raised-guidance-what-investors-need-to-know",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982346+00:00"
+    },
+    {
+      "ticker": "WING",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Despite EPS beat, revenue miss coupled with significant 7.5% same-store sales decline and spending pressure signals fundamental deterioration in business momentum.",
+      "action_window": "intraday",
+      "headline": "Wingstop Flags Spending Pressure as Restaurant Traffic Slows",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60758429/wingstop-flags-spending-pressure-as-restaurant-traffic-slows",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982359+00:00"
+    },
+    {
+      "ticker": "CSGP",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Keefe Bruyette & Woods downgrade from Outperform to Market Perform with significant price target reduction creates immediate selling pressure on CSGP shares.",
+      "action_window": "intraday",
+      "headline": "Keefe, Bruyette & Woods Downgrades CoStar Group to Market Perform, Lowers Price Target to $29",
+      "url": "https://www.benzinga.com/news/26/07/60758388/keefe-bruyette-woods-downgrades-costar-group-market-perform-lowers-price-target-29",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982369+00:00"
+    },
+    {
+      "ticker": "UPST",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Securing a $4B loan sale agreement with Castlelake provides significant balance sheet capacity and validates Upstart's platform, materially improving liquidity and enabling loan origination growth.",
+      "action_window": "intraday",
+      "headline": "Upstart Holdings Signs Agreement To Sell Up To $4B Consumer Loans On Its Platform To Castlelake",
+      "url": "https://www.benzinga.com/news/26/07/60758250/upstart-holdings-signs-agreement-sell-4b-consumer-loans-its-platform-castlelake",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982377+00:00"
+    },
+    {
+      "ticker": "TOPS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Asset acquisition of three modern eco-fitted tankers for net $7.4M consideration represents fleet expansion and modernization, material for a micro-cap shipping company.",
+      "action_window": "intraday",
+      "headline": "TOP Ships Signs Share Purchase Agreement For Three ECO Scrubber-Fitted MR Product Tankers, Net $7.4M Consideration After Dubai Deal Refund",
+      "url": "https://www.benzinga.com/news/26/07/60758240/top-ships-signs-share-purchase-agreement-three-eco-scrubber-fitted-mr-product-tankers-net-7-4m-consi",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982385+00:00"
+    },
+    {
+      "ticker": "SLDE",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Barclays maintains bullish stance with raised price target to $28, signaling positive analyst conviction though not a rating change from neutral to overweight.",
+      "action_window": "intraday",
+      "headline": "Barclays Maintains Overweight on Slide Insurance Holdings, Raises Price Target to $28",
+      "url": "https://www.benzinga.com/news/26/07/60758175/barclays-maintains-overweight-slide-insurance-holdings-raises-price-target-28",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982394+00:00"
+    },
+    {
+      "ticker": "KMX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Multiple analyst upgrades including a bearish-to-bullish stance change on KMX creates meaningful positive sentiment, though impact is moderate as analyst calls are backward-looking catalysts.",
+      "action_window": "intraday",
+      "headline": "This CarMax Analyst Is No Longer Bearish; Here Are Top 4 Upgrades For Wednesday",
+      "url": "https://www.benzinga.com/news/26/07/60758147/this-carmax-analyst-is-no-longer-bearish-here-are-top-4-upgrades-for-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982401+00:00"
+    },
+    {
+      "ticker": "VSEE",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Non-binding LOI for acquisition with significant revenue ($35M+) and positive EBITDA ($7M) is material but lacks binding commitment and deal certainty.",
+      "action_window": "intraday",
+      "headline": "Vsee Health Enters Into Non-Binding LOI For Proposed Acquisition Of Healthcare Technology And Operating Assets With $35M Plus Run Rate And $7M EBITDA",
+      "url": "https://www.benzinga.com/news/26/07/60758095/vsee-health-enters-non-binding-loi-proposed-acquisition-healthcare-technology-and-operating-assets-3",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982410+00:00"
+    },
+    {
+      "ticker": "BSAC",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with significant EPS beat (+34%) offset by substantial revenue miss (-26%), creating uncertainty about quality of earnings and growth trajectory.",
+      "action_window": "intraday",
+      "headline": "Banco Santander Chile Q2 EPS $0.90 Beats $0.67 Estimate, Sales $653.893M Miss $882.670M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60758079/banco-santander-chile-q2-eps-0-90-beats-0-67-estimate-sales-653-893m-miss-882-670m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982417+00:00"
+    },
+    {
+      "ticker": "PYPD",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA acceptance of NDA with Priority Review designation is a major de-risking catalyst for biotech stocks, significantly increasing approval probability with expedited timeline to November PDUFA date.",
+      "action_window": "intraday",
+      "headline": "PolyPid Announces FDA Acceptance Of Its New Drug Application With A Priority Review For D-PLEX100 For The Prevention Of Surgical Site Infections In Patients Undergoing Abdominal Colorectal Surgery; PDUFA Action Date Is November 28",
+      "url": "https://www.benzinga.com/news/26/07/60758048/polypid-announces-fda-acceptance-its-new-drug-application-priority-review-d-plex100-prevention-surgi",
+      "source": "alpaca",
+      "added_at": "2026-07-29T12:58:05.982425+00:00"
     }
   ]
 }
