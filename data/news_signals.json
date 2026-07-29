@@ -746,19 +746,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MATX": {
-    "ticker": "MATX",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Matson Sees Q2 GAAP EPS $4.12-$4.30 vs $3.71 Est",
-    "added_at": "2026-07-15T22:31:29.342028+00:00",
-    "expires": "2026-07-29T22:31:29.342039+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "D": {
     "ticker": "D",
     "score_delta": 0.2,
@@ -4570,6 +4557,58 @@
     "headline": "Saturn Oil & Gas Q2 EPS $0.57 Misses $0.78 Estimate, Sales $358.714M Beat $216.400M Estimate",
     "added_at": "2026-07-29T21:54:18.831801+00:00",
     "expires": "2026-08-05T21:54:18.831807+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CFP": {
+    "ticker": "CFP",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "Canfor Q2 EPS $(0.16) Beats $(0.36) Estimate, Sales $1.526B Beat $1.440B Estimate",
+    "added_at": "2026-07-29T22:55:36.122817+00:00",
+    "expires": "2026-08-05T22:55:36.122823+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SIMO": {
+    "ticker": "SIMO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "Silicon Motion Technology Q2 Adj. EPS $2.43 Beats $2.14 Estimate, Sales $451.001M Beat $403.406M Estimate",
+    "added_at": "2026-07-29T22:55:36.126534+00:00",
+    "expires": "2026-08-05T22:55:36.126539+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:GDC": {
+    "ticker": "TSX:GDC",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "Genesis Land Development Q2 EPS $0.08 Down From $0.11 YoY, Sales $74.829M Up From $71.417M YoY",
+    "added_at": "2026-07-29T22:55:36.134011+00:00",
+    "expires": "2026-08-05T22:55:36.134017+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GLBZ": {
+    "ticker": "GLBZ",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Glen Burnie Bancorp Q2 EPS $(0.09) Down From $(0.07) YoY, Sales $3.563M Up From $2.920M YoY",
+    "added_at": "2026-07-29T22:55:36.146655+00:00",
+    "expires": "2026-08-05T22:55:36.146662+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

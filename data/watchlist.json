@@ -1897,15 +1897,16 @@
     },
     {
       "ticker": "ASTL",
-      "tradeable_score": 0.78,
+      "tradeable_score": 0.85,
       "sentiment": "bearish",
       "category": "earnings_miss",
-      "rationale": "Algoma Steel missed EPS estimates by 8.6% and revenue estimates by 15.5%, representing a significant double-miss that typically triggers immediate negative price action in steel sector equities.",
+      "rationale": "Massive earnings miss with EPS 64% worse than expected and sales missing by 55%, indicating severe operational deterioration requiring immediate reassessment.",
       "action_window": "next_day",
-      "headline": "Algoma Steel Group Q2 EPS $(0.88) Misses $(0.81) Estimate, Sales $267.500M Miss $316.700M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60784891/algoma-steel-group-q2-eps-0-88-misses-0-81-estimate-sales-267-500m-miss-316-700m-estimate",
+      "headline": "Algoma Steel Gr Q2 EPS $(0.64) Misses $(0.39) Estimate, Sales $193.231M Miss $425.540M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60785337/algoma-steel-gr-q2-eps-0-64-misses-0-39-estimate-sales-193-231m-miss-425-540m-estimate",
       "source": "alpaca",
-      "added_at": "2026-07-29T21:54:18.841005+00:00"
+      "added_at": "2026-07-29T21:54:18.841005+00:00",
+      "updated_at": "2026-07-29T22:55:36.167252+00:00"
     },
     {
       "ticker": "AER",
@@ -1967,6 +1968,78 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60784837/saturn-oil-gas-q2-eps-0-57-misses-0-78-estimate-sales-358-714m-beat-216-400m-estimate",
       "source": "alpaca",
       "added_at": "2026-07-29T21:54:18.841056+00:00"
+    },
+    {
+      "ticker": "ARES",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Ares reporting increased distressed borrowers and AI-related portfolio disruption signals deteriorating credit quality and potential future writedowns, representing material fundamental concerns for a private credit manager.",
+      "action_window": "next_day",
+      "headline": "Ares Flags More Distressed Borrowers as AI Disrupts Private Credit Portfolio",
+      "url": "https://www.benzinga.com/markets/private-markets/26/07/60785361/ares-flags-more-distressed-borrowers-as-ai-disrupts-private-credit-portfolio",
+      "source": "alpaca",
+      "added_at": "2026-07-29T22:55:36.167231+00:00"
+    },
+    {
+      "ticker": "LMT",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $59B defense contract is a massive confirmed catalyst representing significant future revenue for Lockheed Martin, likely material to annual revenues.",
+      "action_window": "next_day",
+      "headline": "'Lockheed Wins $59B Deal to Build More Patriot Missiles'- Bloomberg",
+      "url": "https://www.benzinga.com/news/26/07/60785315/lockheed-wins-59b-deal-build-more-patriot-missiles-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-07-29T22:55:36.167267+00:00"
+    },
+    {
+      "ticker": "CFP",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Canfor beat both EPS and revenue estimates with EPS loss of $0.16 versus expected $0.36 loss (55% better than expected) and revenue beat of 6%, representing a meaningful positive surprise for trading.",
+      "action_window": "next_day",
+      "headline": "Canfor Q2 EPS $(0.16) Beats $(0.36) Estimate, Sales $1.526B Beat $1.440B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60785265/canfor-q2-eps-0-16-beats-0-36-estimate-sales-1-526b-beat-1-440b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-29T22:55:36.167285+00:00"
+    },
+    {
+      "ticker": "SIMO",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong double beat with EPS exceeding estimates by 13.6% and revenue beating by 11.8%, indicating significant operational outperformance that typically drives immediate positive price action.",
+      "action_window": "next_day",
+      "headline": "Silicon Motion Technology Q2 Adj. EPS $2.43 Beats $2.14 Estimate, Sales $451.001M Beat $403.406M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60785245/silicon-motion-technology-q2-adj-eps-2-43-beats-2-14-estimate-sales-451-001m-beat-403-406m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-29T22:55:36.167297+00:00"
+    },
+    {
+      "ticker": "TSX:GDC",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS declined 27% YoY ($0.08 vs $0.11) despite modest 5% revenue growth, indicating margin compression and operational challenges.",
+      "action_window": "next_day",
+      "headline": "Genesis Land Development Q2 EPS $0.08 Down From $0.11 YoY, Sales $74.829M Up From $71.417M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60785214/genesis-land-development-q2-eps-0-08-down-0-11-yoy-sales-74-829m-71-417m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-29T22:55:36.167311+00:00"
+    },
+    {
+      "ticker": "GLBZ",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 earnings miss with EPS declining to $(0.09) from $(0.07) YoY despite 22% revenue growth suggests deteriorating profitability and margin compression.",
+      "action_window": "next_day",
+      "headline": "Glen Burnie Bancorp Q2 EPS $(0.09) Down From $(0.07) YoY, Sales $3.563M Up From $2.920M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60785172/glen-burnie-bancorp-q2-eps-0-09-down-0-07-yoy-sales-3-563m-2-920m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-29T22:55:36.167326+00:00"
     }
   ]
 }
