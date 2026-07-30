@@ -759,19 +759,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "IPGP": {
-    "ticker": "IPGP",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "next_day",
-    "headline": "IPG Photonics Enters Into A Binding Offer To Acquire Lumibird Medical For A Purchase Price Of \u20ac300M On A Cash-Free, Debt-free Basis; Co. Expects Deal Also Adds About $1B In Addressable Market For Adva",
-    "added_at": "2026-07-16T22:32:08.445818+00:00",
-    "expires": "2026-07-30T22:32:08.445824+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "GME": {
     "ticker": "GME",
     "score_delta": 0.05,
@@ -1543,19 +1530,6 @@
     "added_at": "2026-07-23T22:00:55.160383+00:00",
     "expires": "2027-01-19T22:00:55.160389+00:00",
     "hard_block": true
-  },
-  "GPI": {
-    "ticker": "GPI",
-    "score_delta": -0.064,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Earnings Preview: Group 1 Automotive (GPI) Q2 Earnings Expected to Decline",
-    "added_at": "2026-07-23T22:59:45.304911+00:00",
-    "expires": "2026-07-30T22:59:45.304918+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "GRVY": {
     "ticker": "GRVY",
@@ -4791,6 +4765,84 @@
     "headline": "Black Diamond Gr Q2 Adj. EPS $0.09 Misses $0.11 Estimate, Sales $129.200M Miss $129.760M Estimate",
     "added_at": "2026-07-30T22:01:54.505124+00:00",
     "expires": "2026-08-06T22:01:54.505129+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BWIN": {
+    "ticker": "BWIN",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Conference Call:\nBaldwin Insurance Sees Q3 Adj EPS $0.42-$0.46 vs $0.44 Est; Sees Sales $485.000M-$495.000M vs $492.818M Est",
+    "added_at": "2026-07-30T23:13:37.365353+00:00",
+    "expires": "2026-08-13T23:13:37.365361+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LNT": {
+    "ticker": "LNT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Alliant Energy Q2 Adj. EPS $0.65 Beats $0.61 Estimate, Sales $971.000M Beat $896.938M Estimate",
+    "added_at": "2026-07-30T23:13:37.374106+00:00",
+    "expires": "2026-08-06T23:13:37.374111+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KTOS": {
+    "ticker": "KTOS",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Could Kratos (KTOS) Hypersonics Expansion Quietly Reframe Its Capacity and Defense-Contracting Narrative?",
+    "added_at": "2026-07-30T23:13:37.385857+00:00",
+    "expires": "2026-08-06T23:13:37.385863+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LMT": {
+    "ticker": "LMT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.8,
+    "action_window": "intraday",
+    "headline": "L3Harris Missile Business Is Booming. So Why Is the Stock Tanking?",
+    "added_at": "2026-07-30T23:13:37.389785+00:00",
+    "expires": "2026-08-06T23:13:37.389790+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AM": {
+    "ticker": "AM",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "AM Q2 Earnings Miss on Higher Costs, Revenues Beat Estimates",
+    "added_at": "2026-07-30T23:13:37.395603+00:00",
+    "expires": "2026-08-06T23:13:37.395608+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CRK": {
+    "ticker": "CRK",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "CRK Q2 Earnings Beat Estimates, Revenues Miss on Weak Gas Prices",
+    "added_at": "2026-07-30T23:13:37.399576+00:00",
+    "expires": "2026-08-06T23:13:37.399581+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

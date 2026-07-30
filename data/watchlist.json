@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BULL",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New bond portfolio product expands Webull's offerings and addressable market, but impact depends on adoption rates and competitive positioning in a crowded fintech space.",
-      "action_window": "next_day",
-      "headline": "EXCLUSIVE: Webull Just Made 'Smart Money' Bond Strategy Available For $500",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60713649/exclusive-webull-just-made-smart-money-bond-strategy-available-for-500",
-      "source": "alpaca",
-      "added_at": "2026-07-27T22:55:57.082669+00:00"
-    },
-    {
       "ticker": "ACIW",
       "tradeable_score": 0.58,
       "sentiment": "bullish",
@@ -2050,6 +2038,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60825592/black-diamond-gr-q2-adj-eps-0-09-misses-0-11-estimate-sales-129-200m-miss-129-760m-estimate",
       "source": "alpaca",
       "added_at": "2026-07-30T22:01:54.510825+00:00"
+    },
+    {
+      "ticker": "BWIN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Q3 EPS guidance midpoint of $0.44 meets estimates but range skews below, while revenue guidance midpoint of $490M falls short of $492.8M consensus, indicating potential underperformance.",
+      "action_window": "next_day",
+      "headline": "Conference Call:\nBaldwin Insurance Sees Q3 Adj EPS $0.42-$0.46 vs $0.44 Est; Sees Sales $485.000M-$495.000M vs $492.818M Est",
+      "url": "https://www.benzinga.com/news/26/07/60826040/conference-call-baldwin-insurance-sees-q3-adj-eps-0-42-0-46-vs-0-44-est-sees-sales-485-000m-495-000m",
+      "source": "alpaca",
+      "added_at": "2026-07-30T23:13:37.413080+00:00"
+    },
+    {
+      "ticker": "LNT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Alliant Energy reported Q2 earnings beat of 6.6% on EPS and 8.3% revenue beat versus estimates, representing a solid double beat on quarterly results.",
+      "action_window": "next_day",
+      "headline": "Alliant Energy Q2 Adj. EPS $0.65 Beats $0.61 Estimate, Sales $971.000M Beat $896.938M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60826005/alliant-energy-q2-adj-eps-0-65-beats-0-61-estimate-sales-971-000m-beat-896-938m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-30T23:13:37.413108+00:00"
+    },
+    {
+      "ticker": "KTOS",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Completed $50M hypersonics facility ahead of schedule and delivered validated hardware to Lockheed Martin, demonstrating execution capability and strengthening defense contractor positioning in strategic hypersonics market.",
+      "action_window": "next_day",
+      "headline": "Could Kratos (KTOS) Hypersonics Expansion Quietly Reframe Its Capacity and Defense-Contracting Narrative?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/could-kratos-ktos-hypersonics-expansion-210902817.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-07-30T23:13:37.413126+00:00"
+    },
+    {
+      "ticker": "AM",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings with Q2 EPS miss offset by revenue beat and record operational metrics creates neutral-to-slightly-positive outlook with limited immediate trading edge.",
+      "action_window": "intraday",
+      "headline": "AM Q2 Earnings Miss on Higher Costs, Revenues Beat Estimates",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/am-q2-earnings-miss-higher-170600506.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-07-30T23:13:37.413148+00:00"
     }
   ]
 }
