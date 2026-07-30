@@ -1,55 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SXTP",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "US patent issuance for treatment methods covering multiple indications (gram-positive bacteria, fungus, virus) represents meaningful intellectual property protection that could expand commercial opportunity and competitive moat for tafenoquine.",
-      "action_window": "next_day",
-      "headline": "60 Degrees Pharmaceuticals Will Be Issued US Patent Number 12,691,107 Tomorrow Titled \"METHODS FOR THE TREATMENT AND PREVENTION OF LUNG INFECTIONS CAUSED BY GRAM-POSITIVE BACTERIA, FUNGUS, OR VIRUS BY ADMINISTRATION OF TAFENOQUINE\".",
-      "url": "https://www.benzinga.com/general/biotech/26/07/60709945/60-degrees-pharmaceuticals-will-be-issued-us-patent-number-12-691-107-tomorrow-titled-methods-treatm",
-      "source": "alpaca",
-      "added_at": "2026-07-27T20:04:17.642493+00:00"
-    },
-    {
-      "ticker": "ASML",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Major competitive threat as China achieves breakthrough in domestic production of advanced lithography equipment, directly challenging ASML's core monopoly and triggering steep intraday decline.",
-      "action_window": "intraday",
-      "headline": "ASML Stock Slides as China Mass-Produces Chip Tools",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60709106/asml-stock-slides-as-china-mass-produces-chip-tools",
-      "source": "alpaca",
-      "added_at": "2026-07-27T20:04:17.642515+00:00"
-    },
-    {
-      "ticker": "RKLB",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major $266M government contract win representing Rocket Lab's largest-ever Space Force deal provides significant revenue visibility and validates competitive positioning in defense aerospace sector.",
-      "action_window": "intraday",
-      "headline": "Rocket Lab Stock Soars After Winning Biggest-Ever U.S. Space Force Deal",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-stock-soars-winning-182244022.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-07-27T20:04:17.642522+00:00",
-      "updated_at": "2026-07-27T22:55:57.082708+00:00"
-    },
-    {
-      "ticker": "VALE",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Goldman Sachs downgrade from Buy/Overweight to Neutral with lowered price target represents meaningful negative catalyst from a top-tier investment bank that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Goldman Sachs Downgrades Vale to Neutral, Lowers Price Target to $16",
-      "url": "https://www.benzinga.com/news/26/07/60708265/goldman-sachs-downgrades-vale-neutral-lowers-price-target-16",
-      "source": "alpaca",
-      "added_at": "2026-07-27T20:04:17.642528+00:00"
-    },
-    {
       "ticker": "VIV",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -2050,6 +2001,115 @@
       "url": "https://www.benzinga.com/news/26/07/60817245/inno-holdings-resumes-nasdaq-trading",
       "source": "alpaca",
       "added_at": "2026-07-30T19:15:03.844753+00:00"
+    },
+    {
+      "ticker": "JDZG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Trading resumption after nearly 2-month Nasdaq halt is a significant catalyst that typically creates immediate price volatility and trading opportunities as pent-up orders execute.",
+      "action_window": "intraday",
+      "headline": "JIADE Says Trading In Shares Resumes At 12:00 P.M. ET July 31 After June 4 Nasdaq Halt",
+      "url": "https://www.benzinga.com/quote/JDZG",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.313953+00:00"
+    },
+    {
+      "ticker": "CTVA",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "guidance_raise",
+      "rationale": "Guidance raise to $3.60-$3.80 is positive but new midpoint of $3.70 still below consensus estimate of $3.75, creating mixed signals.",
+      "action_window": "next_day",
+      "headline": "Corteva Raises FY2026 Adj EPS Guidance from $3.45-$3.70 to $3.60-$3.80 vs $3.75 Est",
+      "url": "https://www.benzinga.com/news/26/07/60823510/corteva-raises-fy2026-adj-eps-guidance-3-45-3-70-3-60-3-80-vs-3-75-est",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.313969+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record Q3 net sales of $109.4B represents a significant earnings beat with strong performance across all geographic segments, particularly Americas at $45.8B.",
+      "action_window": "next_day",
+      "headline": "Apple Reports Record Q3 Net Sales of $109.4B As Americas Revenue Reaches $45.8B, Europe $29.4B, Greater China $18.8B, Japan $6.6B And Rest Of Asia Pacific $8.9B",
+      "url": "https://www.benzinga.com/news/26/07/60823329/apple-reports-record-q3-net-sales-109-4b-americas-revenue-reaches-45-8b-europe-29-4b-greater-china-1",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.313981+00:00",
+      "updated_at": "2026-07-30T20:41:54.314049+00:00"
+    },
+    {
+      "ticker": "RDDT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Shares tumbling despite revenue beat indicates negative market reaction to guidance, user metrics, or profitability concerns that outweigh the topline beat.",
+      "action_window": "intraday",
+      "headline": "Reddit Shares Tumble Despite Q2 Earnings, Revenue Beats",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60823454/reddit-shares-tumble-despite-q2-earnings-revenue-beats",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.313990+00:00"
+    },
+    {
+      "ticker": "TSX:ARE",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Aecon Group delivered a double beat with EPS 10% above estimates and sales 11.6% ahead of expectations, representing a significant positive surprise.",
+      "action_window": "next_day",
+      "headline": "Aecon Group Q2 Adj. EPS $0.33 Beats $0.30 Estimate, Sales $1.631B Beat $1.461B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60823449/aecon-group-q2-adj-eps-0-33-beats-0-30-estimate-sales-1-631b-beat-1-461b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.313999+00:00"
+    },
+    {
+      "ticker": "EMN",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Eastman Chemical reported Q3 adjusted EPS of $1.97, beating analyst estimates of $1.91 by approximately 3%, a modest but positive earnings beat.",
+      "action_window": "next_day",
+      "headline": "Eastman Chemical Sees Q3 Adj EPS $1.97 vs $1.91 Est",
+      "url": "https://www.benzinga.com/news/26/07/60823436/eastman-chemical-sees-q3-adj-eps-1-97-vs-1-91-est",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.314008+00:00"
+    },
+    {
+      "ticker": "DLB",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Dolby lowered FY2026 GAAP EPS guidance below consensus estimates ($2.62-$2.77 vs $2.83 est), signaling weaker-than-expected performance and likely triggering immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Dolby Laboratories Lowers FY2026 GAAP EPS Guidance from $2.66-$2.81 to $2.62-$2.77 vs $2.83 Est",
+      "url": "https://www.benzinga.com/news/26/07/60823402/dolby-laboratories-lowers-fy2026-gaap-eps-guidance-2-66-2-81-2-62-2-77-vs-2-83-est",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.314018+00:00"
+    },
+    {
+      "ticker": "AEE",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings result with EPS beat of 6.6% offset by significant revenue miss of 7.9%, creating uncertainty about top-line growth despite bottom-line strength.",
+      "action_window": "next_day",
+      "headline": "Ameren Q2 EPS $1.13 Beats $1.06 Estimate, Sales $2.092B Miss $2.272B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60823366/ameren-q2-eps-1-13-beats-1-06-estimate-sales-2-092b-miss-2-272b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.314038+00:00"
+    },
+    {
+      "ticker": "MTD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Mettler-Toledo raised FY2026 EPS guidance midpoint by ~2.4% above consensus, though sales guidance midpoint remains slightly below estimates, creating a mixed but overall positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Mettler-Toledo Intl Raises FY2026 Adj EPS Guidance from $46.30-$46.95 to $47.15-$47.50 vs $46.66 Est; Raises FY2026 Sales Guidance from $4.187B to $4.187B-$4.227B vs $4.236B Est",
+      "url": "https://www.benzinga.com/news/26/07/60823326/mettler-toledo-intl-raises-fy2026-adj-eps-guidance-46-30-46-95-47-15-47-50-vs-46-66-est-raises-fy202",
+      "source": "alpaca",
+      "added_at": "2026-07-30T20:41:54.314060+00:00"
     }
   ]
 }
