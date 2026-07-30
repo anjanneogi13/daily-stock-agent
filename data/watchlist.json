@@ -1,104 +1,6 @@
 {
   "items": [
     {
-      "ticker": "FROG",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains bullish stance with significant price target raise, indicating increased confidence but not a rating upgrade which limits immediate impact.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on JFrog, Raises Price Target to $100",
-      "url": "https://www.benzinga.com/news/26/07/60702181/jp-morgan-maintains-overweight-jfrog-raises-price-target-100",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271324+00:00"
-    },
-    {
-      "ticker": "AURE",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q3 EPS loss of $0.72 represents a 227% deterioration versus prior year $0.22 loss, indicating significant operational challenges and a substantial earnings miss.",
-      "action_window": "intraday",
-      "headline": "Aurelion Q3 EPS $(0.72) Down From $(0.22) YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60702056/aurelion-q3-eps-0-72-down-0-22-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271335+00:00"
-    },
-    {
-      "ticker": "MSS",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Regaining Nasdaq compliance removes delisting risk and can trigger positive technical momentum, though impact depends on stock's prior distress level.",
-      "action_window": "intraday",
-      "headline": "Maison Solutions Regains Nasdaq Compliance",
-      "url": "https://www.benzinga.com/news/26/07/60701887/maison-solutions-regains-nasdaq-compliance",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271341+00:00"
-    },
-    {
-      "ticker": "LVMUY",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "LVMH beat overall revenue and profit estimates significantly, but key Fashion & Leather Goods segment missed expectations, creating a mixed earnings picture with offsetting factors.",
-      "action_window": "intraday",
-      "headline": "LVMH Q2 Revenue \u20ac19.52 Billion Vs \u20ac19.45 Billion Est.; H1 Profit From Recurring Operations \u20ac8.69 Billion Vs \u20ac8.45 Billion Est.; Q2 Fashion And Leather Goods Revenue \u20ac8.90 Billion Vs \u20ac8.97 Billion Est.; H1 Net Income Group Share \u20ac5.70 Billion  Vs \u20ac5.22 Billion Est.",
-      "url": "https://www.benzinga.com/news/26/07/60701771/lvmh-q2-revenue-19-52-billion-vs-19-45-billion-est-h1-profit-recurring-operations-8-69-billion-vs-8-",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271346+00:00"
-    },
-    {
-      "ticker": "LHX",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "L3Harris beat EPS estimates by 11.8% ($3.13 vs $2.80 expected) with growing defense business, though ticker mentioned (LMT) appears to be an error as headline refers to L3Harris (LHX).",
-      "action_window": "intraday",
-      "headline": "L3Harris Stock Jumps on Earnings Beat. The Defense Business Is Growing.",
-      "url": "https://finance.yahoo.com/m/80abaddf-fab3-379b-bc43-81fe73bca9de/l3harris-stock-jumps-on.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271359+00:00",
-      "updated_at": "2026-07-29T23:56:54.415984+00:00"
-    },
-    {
-      "ticker": "SPY",
-      "tradeable_score": 0.85,
-      "sentiment": "neutral",
-      "category": "macro",
-      "rationale": "FOMC statements are major market-moving events that typically cause immediate volatility across all equities, requiring analysis of the actual statement content for directional bias.",
-      "action_window": "intraday",
-      "headline": "Federal Reserve Issues FOMC Statement For July 28-29, 2026 (Link In Body)",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60773122/federal-reserve-issues-fomc-statement-july-28-29-2026-link-body",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271362+00:00",
-      "updated_at": "2026-07-29T18:04:13.373821+00:00"
-    },
-    {
-      "ticker": "CNI",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q2 earnings beat with revenue exceeding estimates followed by multiple analyst price target increases creates a meaningful positive catalyst.",
-      "action_window": "next_day",
-      "headline": "These Analysts Increase Their Forecasts On Canadian National Railway Following Upbeat Q2 Earnings",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60701526/these-analysts-increase-their-forecasts-on-canadian-national-railway-following-upbeat-q2-earnings",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271365+00:00"
-    },
-    {
-      "ticker": "LW",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q4 earnings beat with positive fiscal 2027 guidance and analyst upgrades drove 4.2% stock gain, indicating meaningful positive catalyst already partially reflected in price.",
-      "action_window": "next_day",
-      "headline": "Lamb Weston Analysts Boost Their Forecasts After Strong Q4 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60701322/lamb-weston-analysts-boost-their-forecasts-after-strong-q4-results",
-      "source": "alpaca",
-      "added_at": "2026-07-27T16:11:55.271369+00:00"
-    },
-    {
       "ticker": "SPCX",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -2089,6 +1991,42 @@
       "url": "https://www.benzinga.com/news/26/07/60803196/eli-lilly-resilience-investing-750m-expand-critical-medicines-manufacturing-capacity-u-s",
       "source": "alpaca",
       "added_at": "2026-07-30T14:41:13.052682+00:00"
+    },
+    {
+      "ticker": "JMKE",
+      "tradeable_score": 0.75,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "IPO pricing announcement is a significant catalyst for initial public offering that creates immediate trading opportunity for investors interested in participating at offering price or first-day trading.",
+      "action_window": "intraday",
+      "headline": "Jersey Mike's Subs IPO Indicating $21.99/Share",
+      "url": "https://www.benzinga.com/quote/JMKE",
+      "source": "alpaca",
+      "added_at": "2026-07-30T16:23:16.554171+00:00"
+    },
+    {
+      "ticker": "QCOM",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Qualcomm missed earnings expectations with margin guidance falling short and shares tanking post-results, compounded by negative forward-looking commentary on ASIC ramp and Apple business headwinds.",
+      "action_window": "intraday",
+      "headline": "Qualcomm's Near-Term Visibility 'Cloudy' As ASIC Ramp, Apple Roll-Off Weigh on Margins",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60808931/qualcomms-near-term-visibility-cloudy-as-asic-ramp-apple-roll-off-weigh-on-margins",
+      "source": "alpaca",
+      "added_at": "2026-07-30T16:23:16.554192+00:00"
+    },
+    {
+      "ticker": "BMY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Bristol-Myers Squibb earnings beat expectations amid broad market strength with tech surging 5.3% and multiple companies reporting strong earnings, creating positive momentum for immediate trading.",
+      "action_window": "intraday",
+      "headline": "Gold Surges 3%; Bristol-Myers Squibb Earnings Top Views",
+      "url": "https://www.benzinga.com/markets/market-summary/26/07/60808850/gold-surges-3-bristol-myers-squibb-earnings-top-views",
+      "source": "alpaca",
+      "added_at": "2026-07-30T16:23:16.554205+00:00"
     }
   ]
 }
