@@ -1,31 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPCX",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Stock continues sliding below IPO price with imminent supply wave expected in two weeks, creating technical and fundamental selling pressure.",
-      "action_window": "this_week",
-      "headline": "SpaceX Stock Continues To Slide: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60705972/spacex-stock-continues-to-slide-whats-going-on",
-      "source": "alpaca",
-      "added_at": "2026-07-27T18:02:37.887363+00:00"
-    },
-    {
-      "ticker": "BKR",
-      "tradeable_score": 0.92,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Baker Hughes crushed Q2 earnings estimates, raised guidance, and stock surged above key technical level on AI data center demand tailwinds.",
-      "action_window": "intraday",
-      "headline": "Baker Hughes Jumps On Higher Outlook As AI-Powered Orders Explode",
-      "url": "https://finance.yahoo.com/m/8a9120f8-90f7-37bc-b1e9-55874a85490e/baker-hughes-jumps-on-higher.html?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-07-27T18:02:37.887378+00:00",
-      "updated_at": "2026-07-27T23:58:17.439677+00:00"
-    },
-    {
       "ticker": "SXTP",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -2063,6 +2038,18 @@
       "url": "https://www.benzinga.com/markets/earnings/26/07/60813422/hershey-stock-drops-as-earnings-beat-overshadows-volume-slide",
       "source": "alpaca",
       "added_at": "2026-07-30T17:56:42.689476+00:00"
+    },
+    {
+      "ticker": "INHD",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Resumption of Nasdaq trading after a halt typically indicates resolution of compliance issues or material concerns, removing uncertainty and enabling liquidity for traders.",
+      "action_window": "intraday",
+      "headline": "INNO HOLDINGS Resumes Nasdaq Trading",
+      "url": "https://www.benzinga.com/news/26/07/60817245/inno-holdings-resumes-nasdaq-trading",
+      "source": "alpaca",
+      "added_at": "2026-07-30T19:15:03.844753+00:00"
     }
   ]
 }

@@ -89,19 +89,6 @@
     "expires": "2026-12-22T23:51:44.271345+00:00",
     "hard_block": true
   },
-  "CMCSA": {
-    "ticker": "CMCSA",
-    "score_delta": 0.129,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "Comcast\u2019s NBCUniversal Spin-Off Increases Potential For Merger With This Telecom Giant",
-    "added_at": "2026-06-30T18:02:03.268951+00:00",
-    "expires": "2026-07-30T18:02:03.268958+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TNMG": {
     "ticker": "TNMG",
     "score_delta": -1.0,
@@ -119,19 +106,6 @@
     "added_at": "2026-06-29T21:51:57.426504+00:00",
     "expires": "2026-12-26T21:51:57.426510+00:00",
     "hard_block": true
-  },
-  "YOOV": {
-    "ticker": "YOOV",
-    "score_delta": 0.129,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Concorde International Group Receives Offer To Sell Majority Equity Interest In Wholly Owned Subsidiary YOOV Group Holding Limited; No Terms Disclosed",
-    "added_at": "2026-06-30T18:02:03.275756+00:00",
-    "expires": "2026-07-30T18:02:03.275761+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "GETY": {
     "ticker": "GETY",
@@ -1246,19 +1220,6 @@
     "headline": "Treasure Global's Tadaa Capital Subsidiary To Acquire 80% Of Cigar Secret",
     "added_at": "2026-07-21T20:43:22.121072+00:00",
     "expires": "2026-08-04T20:43:22.121077+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SMCI": {
-    "ticker": "SMCI",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Super Micro Launches H15 Server Portfolio Powered By AMD 6th Gen EPYC CPUs For AI, Cloud And High-Performance Computing Workloads",
-    "added_at": "2026-07-23T19:04:30.672429+00:00",
-    "expires": "2026-07-30T19:04:30.672433+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4715,5 +4676,83 @@
     "expires": "2026-08-06T17:56:42.674919+00:00",
     "hard_block": false,
     "negative_reaction": true
+  },
+  "AON": {
+    "ticker": "AON",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Aon, Raises Price Target to $435",
+    "added_at": "2026-07-30T19:15:03.794983+00:00",
+    "expires": "2026-08-04T19:15:03.794989+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "APH": {
+    "ticker": "APH",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "BNP Paribas Maintains Outperform on Amphenol, Raises Price Target to $215",
+    "added_at": "2026-07-30T19:15:03.807390+00:00",
+    "expires": "2026-08-04T19:15:03.807395+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TVRD": {
+    "ticker": "TVRD",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "intraday",
+    "headline": "BTIG Maintains Buy on Tvardi Therapeutics, Lowers Price Target to $5",
+    "added_at": "2026-07-30T19:15:03.811364+00:00",
+    "expires": "2026-08-04T19:15:03.811370+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GD": {
+    "ticker": "GD",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "BNP Paribas Maintains Outperform on General Dynamics, Raises Price Target to $430",
+    "added_at": "2026-07-30T19:15:03.819188+00:00",
+    "expires": "2026-08-04T19:15:03.819193+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AER": {
+    "ticker": "AER",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on AerCap Holdings, Raises Price Target to $178",
+    "added_at": "2026-07-30T19:15:03.823103+00:00",
+    "expires": "2026-08-04T19:15:03.823108+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GKOS": {
+    "ticker": "GKOS",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Glaukos, Raises Price Target to $188",
+    "added_at": "2026-07-30T19:15:03.839032+00:00",
+    "expires": "2026-08-04T19:15:03.839039+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
