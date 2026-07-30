@@ -785,19 +785,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NTAP": {
-    "ticker": "NTAP",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "NetApp Acquires AI Data Infrastructure Company DataPelago; Financial Terms Undisclosed",
-    "added_at": "2026-07-16T16:50:34.803273+00:00",
-    "expires": "2026-07-30T16:50:34.803278+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INMD": {
     "ticker": "INMD",
     "score_delta": 0.194,
@@ -1545,32 +1532,6 @@
     "headline": "Honeywell Raises EPS Outlook, Cuts Sales Forecast After First Post-Split Earnings",
     "added_at": "2026-07-23T17:55:57.214378+00:00",
     "expires": "2026-08-06T17:55:57.214385+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMD": {
-    "ticker": "AMD",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "AMD And Cerebras Systems Announce Technical Partnership To Deliver New Disaggregated AI Inference Solution That Combines AMD Helios Rackscale Solutions With Cerebras Wafer-Scale Engine",
-    "added_at": "2026-07-23T17:55:57.221740+00:00",
-    "expires": "2026-07-30T17:55:57.221746+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "DGX": {
-    "ticker": "DGX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Americans Are Buying More Preventive Health Tests\u2014and Quest Diagnostics Is Winning",
-    "added_at": "2026-07-23T17:55:57.225100+00:00",
-    "expires": "2026-07-30T17:55:57.225107+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3535,16 +3496,16 @@
   },
   "SOFI": {
     "ticker": "SOFI",
-    "score_delta": -0.028,
-    "catalyst": "earnings_beat",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
     "sentiment": "bearish",
-    "tradeable_score": 0.65,
+    "tradeable_score": 0.45,
     "action_window": "intraday",
-    "headline": "SoFi Stock Falls Despite Q2 Earnings Beat and Raised Guidance: What Investors Need to Know",
-    "added_at": "2026-07-29T12:58:05.939896+00:00",
-    "expires": "2026-08-05T12:58:05.939901+00:00",
+    "headline": "Morgan Stanley Maintains Underweight on SoFi Technologies, Lowers Price Target to $15",
+    "added_at": "2026-07-30T17:56:42.671022+00:00",
+    "expires": "2026-08-04T17:56:42.671027+00:00",
     "hard_block": false,
-    "negative_reaction": true
+    "negative_reaction": false
   },
   "WING": {
     "ticker": "WING",
@@ -4715,5 +4676,44 @@
     "expires": "2026-08-04T16:23:16.548603+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "AVNW": {
+    "ticker": "AVNW",
+    "score_delta": 0.025,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "Watching Aviat Networks; Hearing Zacks Home Run Investor Newsletter Mentions The Stock As A Buy",
+    "added_at": "2026-07-30T17:56:42.654844+00:00",
+    "expires": "2026-08-04T17:56:42.654851+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CVE": {
+    "ticker": "CVE",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Cenovus Energy, Raises Price Target to C$51",
+    "added_at": "2026-07-30T17:56:42.667166+00:00",
+    "expires": "2026-08-04T17:56:42.667174+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HSY": {
+    "ticker": "HSY",
+    "score_delta": -0.03,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Hershey Stock Drops as Earnings Beat Overshadows Volume Slide",
+    "added_at": "2026-07-30T17:56:42.674914+00:00",
+    "expires": "2026-08-06T17:56:42.674919+00:00",
+    "hard_block": false,
+    "negative_reaction": true
   }
 }

@@ -2027,6 +2027,42 @@
       "url": "https://www.benzinga.com/markets/market-summary/26/07/60808850/gold-surges-3-bristol-myers-squibb-earnings-top-views",
       "source": "alpaca",
       "added_at": "2026-07-30T16:23:16.554205+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Google's $15B financial commitment backing Anthropic's massive data center demonstrates significant strategic AI infrastructure investment, though this is a financing arrangement rather than a direct business catalyst.",
+      "action_window": "next_day",
+      "headline": "'Banks In Talks To Lend $15 Billion For Anthropic Data Center Backed By Google; Google\u2019s Guarantees Of Power And Lease Obligations Would Help Developer Secure Financing For The 1.6-Gigawatt Texas Project' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/07/60813745/banks-talks-lend-15-billion-anthropic-data-center-backed-google-google-s-guarantees-power-and-lease-",
+      "source": "alpaca",
+      "added_at": "2026-07-30T17:56:42.689448+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Iranian military strike on US base in Bahrain represents significant geopolitical escalation that typically triggers flight-to-safety selling in equities and rally in oil prices.",
+      "action_window": "intraday",
+      "headline": "Iran's PressTV Posts On X \"Iran's Army announces that it has struck power generators, navigation systems, and administrative and support buildings of the terrorist US military at the Sheikh Isa base in Bahrain with Arash drones as part of the 26th wave of Operation Sa'eqeh.\"",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/07/60813634/iran-s-presstv-posts-x-iran-s-army-announces-it-has-struck-power-generators-navigation-systems-and-a",
+      "source": "alpaca",
+      "added_at": "2026-07-30T17:56:42.689464+00:00"
+    },
+    {
+      "ticker": "HSY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Stock declining despite earnings beat and raised guidance indicates market concern over volume decline outweighing positive metrics, creating immediate trading opportunity on negative price action.",
+      "action_window": "intraday",
+      "headline": "Hershey Stock Drops as Earnings Beat Overshadows Volume Slide",
+      "url": "https://www.benzinga.com/markets/earnings/26/07/60813422/hershey-stock-drops-as-earnings-beat-overshadows-volume-slide",
+      "source": "alpaca",
+      "added_at": "2026-07-30T17:56:42.689476+00:00"
     }
   ]
 }
