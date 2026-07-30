@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LXFR",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Definitive all-cash acquisition agreement at $17.37 per share represents a confirmed M&A catalyst with immediate price target certainty for shareholders.",
-      "action_window": "intraday",
-      "headline": "UPDATE: Wynnchurch Capital's Affiliate Agrees To Acquire Luxfer Holdings In All-Cash Deal; Luxfer Shareholders Will Receive $17.37 Per Ordinary Share",
-      "url": "https://www.benzinga.com/m/26/07/60695111/update-wynnchurch-capital-s-affiliate-agrees-acquire-luxfer-holdings-all-cash-deal-luxfer-shareholde",
-      "source": "alpaca",
-      "added_at": "2026-07-27T13:54:31.799722+00:00"
-    },
-    {
-      "ticker": "TLN",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Wells Fargo maintains positive outlook with significant price target increase, indicating strong conviction but not a ratings change from negative to positive.",
-      "action_window": "intraday",
-      "headline": "Wells Fargo Maintains Overweight on Talen Energy, Raises Price Target to $482",
-      "url": "https://www.benzinga.com/news/26/07/60694831/wells-fargo-maintains-overweight-talen-energy-raises-price-target-482",
-      "source": "alpaca",
-      "added_at": "2026-07-27T13:54:31.799733+00:00"
-    },
-    {
-      "ticker": "NVDA",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Credit risk spike in swaps market indicates institutional concern about NVDA's financial stability related to unspecified AI deal talks, representing meaningful near-term trading risk despite being based on reports rather than confirmed news.",
-      "action_window": "intraday",
-      "headline": "'Nvidia Credit Risk Jumps in Swaps Market on AI Deal Talk Reports' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/07/60694693/nvidia-credit-risk-jumps-swaps-market-ai-deal-talk-reports-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-07-27T13:54:31.799737+00:00"
-    },
-    {
-      "ticker": "STRC",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Management commitment to buyback below $100 and no dilution below that level establishes a floor and signals confidence in valuation, creating tactical trading opportunity.",
-      "action_window": "intraday",
-      "headline": "Strategy Plans To Be Regular And Disciplined Buyer Of Its Perpetual Stretch Preferred Stock Trading As 'STRC' When It's Under $100 Per Share; Won't Issue New STRC Shares Below $100 Per Share",
-      "url": "https://www.benzinga.com/news/26/07/60694390/strategy-plans-be-regular-and-disciplined-buyer-its-perpetual-stretch-preferred-stock-trading-strc-w",
-      "source": "alpaca",
-      "added_at": "2026-07-27T13:54:31.799742+00:00"
-    },
-    {
-      "ticker": "CISS",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Small-cap equity offering of 11.535M units at $0.52 will cause significant dilution (~$6M raise suggests material shareholder dilution) and typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "C3is Prices ~$6M Offering Of 11.535M Units At $0.52/Unit",
-      "url": "https://www.benzinga.com/news/26/07/60694364/c3is-prices-6m-offering-11-535m-units-0-52-unit",
-      "source": "alpaca",
-      "added_at": "2026-07-27T13:54:31.799747+00:00"
-    },
-    {
-      "ticker": "MNDR",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Joint venture agreement with established partner to deploy digital healthcare infrastructure in Ghana represents meaningful market expansion and revenue opportunity for MNDR.",
-      "action_window": "next_day",
-      "headline": "Mobile-health Network Solutions, Jospong Group Of Companies Ink Agreement To Create JV To Install, Operate MNDR's Digital Healthcare Ecosystem In Ghana",
-      "url": "https://www.benzinga.com/news/26/07/60694288/mobile-health-network-solutions-jospong-group-companies-ink-agreement-create-jv-install-operate-mndr",
-      "source": "alpaca",
-      "added_at": "2026-07-27T13:54:31.799752+00:00"
-    },
-    {
       "ticker": "FROG",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
@@ -2113,6 +2041,54 @@
       "url": "https://www.benzinga.com/news/26/07/60795560/bgc-group-sees-q3-sales-775-000m-835-000m-vs-814-260m-est",
       "source": "alpaca",
       "added_at": "2026-07-30T12:12:04.527446+00:00"
+    },
+    {
+      "ticker": "SMID",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $17M contract represents a material revenue win for a small-cap company that warrants immediate price discovery and likely positive market reaction.",
+      "action_window": "intraday",
+      "headline": "Smith-Midland Receives $17M Contract To Produce, Deliver Precast Concrete Utility Vaults For Data Center Project In Louisiana",
+      "url": "https://www.benzinga.com/news/26/07/60803552/smith-midland-receives-17m-contract-produce-deliver-precast-concrete-utility-vaults-data-center-proj",
+      "source": "alpaca",
+      "added_at": "2026-07-30T14:41:13.052640+00:00"
+    },
+    {
+      "ticker": "CORZ",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major partnership announcement with $14B revenue potential over 15 years from credible source (Bernstein) represents significant strategic deal for Core Scientific in the AI data center space.",
+      "action_window": "intraday",
+      "headline": "Core Scientific's AMD Deal Could Generate $14 Billion Over 15 Years, Bernstein Forecasts",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60803478/core-scientifics-amd-deal-could-generate-14-billion-over-15-years-bernstein-forecasts",
+      "source": "alpaca",
+      "added_at": "2026-07-30T14:41:13.052657+00:00"
+    },
+    {
+      "ticker": "UNG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Natural gas storage came in significantly below expectations (28B vs 37B Est.), indicating tighter supply which is bullish for natural gas prices and UNG.",
+      "action_window": "intraday",
+      "headline": "USA Natural Gas Storage 28B Vs 37B Est.",
+      "url": "https://www.benzinga.com/quote/UNG",
+      "source": "alpaca",
+      "added_at": "2026-07-30T14:41:13.052670+00:00"
+    },
+    {
+      "ticker": "LLY",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $750M manufacturing expansion demonstrates strategic growth investment and commitment to domestic production capacity, though impact is long-term rather than immediate revenue-driving.",
+      "action_window": "next_day",
+      "headline": "Eli Lilly, Resilience Investing $750M To Expand Critical Medicines Manufacturing \u200bCapacity In U.S.",
+      "url": "https://www.benzinga.com/news/26/07/60803196/eli-lilly-resilience-investing-750m-expand-critical-medicines-manufacturing-capacity-u-s",
+      "source": "alpaca",
+      "added_at": "2026-07-30T14:41:13.052682+00:00"
     }
   ]
 }
