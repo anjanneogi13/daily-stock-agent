@@ -772,19 +772,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GOOGL": {
-    "ticker": "GOOGL",
-    "score_delta": -0.083,
-    "catalyst": "lawsuit",
-    "sentiment": "bearish",
-    "tradeable_score": 0.58,
-    "action_window": "intraday",
-    "headline": "Google May Be Held Liable For Gambling-Related YouTube Videos After EU Court Rules Reviewing Content For Partnership Deals Forfeits Hosting Exemption",
-    "added_at": "2026-07-16T10:02:12.605875+00:00",
-    "expires": "2026-07-30T10:02:12.605881+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HYMLF": {
     "ticker": "HYMLF",
     "score_delta": 0.05,
@@ -1184,19 +1171,6 @@
     "expires": "2027-01-16T21:40:52.853064+00:00",
     "hard_block": true
   },
-  "CX": {
-    "ticker": "CX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Cemex Q2 EPS $0.24 Beats $0.20 Estimate, Sales $4.593B Beat $4.499B Estimate",
-    "added_at": "2026-07-23T10:15:06.013446+00:00",
-    "expires": "2026-07-30T10:15:06.013451+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VLTO": {
     "ticker": "VLTO",
     "score_delta": 0.029,
@@ -1311,19 +1285,6 @@
     "headline": "First Financial Bancorp To Acquire Munster-Based Finward In An All-Stock Transaction; Under The Terms Of The Agreement, Each Outstanding Share Of Finward Common Stock Will Be Converted Into The Right ",
     "added_at": "2026-07-21T20:43:22.099372+00:00",
     "expires": "2026-08-20T20:43:22.099377+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FFBC": {
-    "ticker": "FFBC",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "First Financial Bancorp (FFBC) Q2 2026 Earnings Call Highlights: Record Net Income and ...",
-    "added_at": "2026-07-22T23:57:28.638044+00:00",
-    "expires": "2026-07-29T23:57:28.638049+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1561,19 +1522,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ELS": {
-    "ticker": "ELS",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Equity Lifestyle Properties (ELS) Surpasses Q2 FFO and Revenue Estimates",
-    "added_at": "2026-07-22T23:57:28.607494+00:00",
-    "expires": "2026-07-29T23:57:28.607501+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WST": {
     "ticker": "WST",
     "score_delta": 0.1,
@@ -1610,45 +1558,6 @@
     "headline": "RTX Raises FY2026 Adj EPS Guidance from $6.70-$6.90 to $7.10-$7.25 vs $6.92 Est; Raises FY2026 Sales Guidance from $92.500B-$93.500B to $95.000B-$96.000B vs $94.085B Est",
     "added_at": "2026-07-23T10:15:06.026177+00:00",
     "expires": "2026-08-06T10:15:06.026182+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PCG": {
-    "ticker": "PCG",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "PG&E Q2 Adj. EPS $0.40 Beats $0.36 Estimate, Sales $5.902B Miss $6.181B Estimate",
-    "added_at": "2026-07-23T10:15:06.037388+00:00",
-    "expires": "2026-07-30T10:15:06.037393+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CLF": {
-    "ticker": "CLF",
-    "score_delta": 0.064,
-    "catalyst": "earnings_beat",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Cleveland-Cliffs Q2 Adj. EPS $(0.20), Inline, Sales $5.226B Beat $5.186B Estimate",
-    "added_at": "2026-07-23T10:15:06.040613+00:00",
-    "expires": "2026-07-30T10:15:06.040618+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FCFS": {
-    "ticker": "FCFS",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "FirstCash Hldgs Q2 Adj. EPS $2.50 Beats $2.40 Estimate, Sales $1.075B Beat $1.032B Estimate",
-    "added_at": "2026-07-23T10:15:06.043808+00:00",
-    "expires": "2026-07-30T10:15:06.043814+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4570,6 +4479,97 @@
     "headline": "L3Harris Stock Jumps on Earnings Beat. The Defense Business Is Growing.",
     "added_at": "2026-07-29T23:56:54.390287+00:00",
     "expires": "2026-08-05T23:56:54.390293+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SFM": {
+    "ticker": "SFM",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "JP Morgan Upgrades Sprouts Farmers Market to Overweight, Raises Price Target to $103",
+    "added_at": "2026-07-30T10:18:17.844023+00:00",
+    "expires": "2026-08-04T10:18:17.844029+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EUDA": {
+    "ticker": "EUDA",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "EUDA Health Collaborates With GO POSB Organoids And Shenzhen Innovation To Develop Next\u2011Gen Off\u2011the\u2011Shelf iPSC\u2011Based NK Cell Therapies For Wellness And Oncology Across Asia",
+    "added_at": "2026-07-30T10:18:17.848007+00:00",
+    "expires": "2026-08-06T10:18:17.848015+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TT": {
+    "ticker": "TT",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Trane Technologies Raises FY2026 Adj EPS Guidance from $14.75-$14.95 to $15.20-$15.30 vs $14.92 Est; Raises FY2026 Sales Guidance from $23.347B to $23.774B vs $23.392B Est",
+    "added_at": "2026-07-30T10:18:17.851393+00:00",
+    "expires": "2026-08-13T10:18:17.851400+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BEEM": {
+    "ticker": "BEEM",
+    "score_delta": 0.03,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Beam Global Says Its EV ARC Off-Grid Solar-Powered EV Charging Systems Deployed As Part Of New CommunityEV Carshare Pilot Launched By Metropolitan Area Planning Council In Massachusetts",
+    "added_at": "2026-07-30T10:18:17.859008+00:00",
+    "expires": "2026-08-06T10:18:17.859015+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SITE": {
+    "ticker": "SITE",
+    "score_delta": -0.039,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Stifel Downgrades SiteOne Landscape Supply to Hold, Lowers Price Target to $100",
+    "added_at": "2026-07-30T10:18:17.863687+00:00",
+    "expires": "2026-08-04T10:18:17.863694+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TWI": {
+    "ticker": "TWI",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Titan Intl Sees Q3 Sales $440.000M-$460.000M vs $478.726M Est",
+    "added_at": "2026-07-30T10:18:17.875947+00:00",
+    "expires": "2026-08-13T10:18:17.875953+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PI": {
+    "ticker": "PI",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Jefferies Maintains Buy on Impinj, Raises Price Target to $190",
+    "added_at": "2026-07-30T10:18:17.883700+00:00",
+    "expires": "2026-08-04T10:18:17.883706+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

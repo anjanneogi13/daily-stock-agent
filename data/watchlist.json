@@ -2041,6 +2041,91 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60785172/glen-burnie-bancorp-q2-eps-0-09-down-0-07-yoy-sales-3-563m-2-920m-yoy",
       "source": "alpaca",
       "added_at": "2026-07-29T22:55:36.167326+00:00"
+    },
+    {
+      "ticker": "SFM",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan upgrade to Overweight with substantial price target increase represents a meaningful positive catalyst from a major Wall Street bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Upgrades Sprouts Farmers Market to Overweight, Raises Price Target to $103",
+      "url": "https://www.benzinga.com/news/26/07/60790332/jp-morgan-upgrades-sprouts-farmers-market-overweight-raises-price-target-103",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888538+00:00"
+    },
+    {
+      "ticker": "EUDA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic collaboration to develop next-generation iPSC-based NK cell therapies represents significant pipeline expansion into high-value oncology and wellness markets across Asia, though commercial impact remains years away.",
+      "action_window": "intraday",
+      "headline": "EUDA Health Collaborates With GO POSB Organoids And Shenzhen Innovation To Develop Next\u2011Gen Off\u2011the\u2011Shelf iPSC\u2011Based NK Cell Therapies For Wellness And Oncology Across Asia",
+      "url": "https://www.benzinga.com/news/26/07/60790315/euda-health-collaborates-go-posb-organoids-and-shenzhen-innovation-develop-next-gen-shelf-ipsc-based",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888555+00:00"
+    },
+    {
+      "ticker": "GIL",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Asset divestiture at A$700M (~$490M) represents portfolio optimization and cash generation for Gildan, though impact depends on valuation context and strategic rationale.",
+      "action_window": "intraday",
+      "headline": "Gildan Activewear Sells HanesBrands Australia At EV Of ~A$700M (~$490M)",
+      "url": "https://www.benzinga.com/news/26/07/60790305/gildan-activewear-sells-hanesbrands-australia-ev-700m-490m",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888566+00:00"
+    },
+    {
+      "ticker": "TT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Trane raises FY2026 EPS guidance significantly above consensus ($15.25 midpoint vs $14.92 est, +2.2%) and sales guidance above expectations, indicating strong business momentum.",
+      "action_window": "intraday",
+      "headline": "Trane Technologies Raises FY2026 Adj EPS Guidance from $14.75-$14.95 to $15.20-$15.30 vs $14.92 Est; Raises FY2026 Sales Guidance from $23.347B to $23.774B vs $23.392B Est",
+      "url": "https://www.benzinga.com/news/26/07/60790295/trane-technologies-raises-fy2026-adj-eps-guidance-14-75-14-95-15-20-15-30-vs-14-92-est-raises-fy2026",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888574+00:00"
+    },
+    {
+      "ticker": "RCAT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $2.49M U.S. Air Force contract award for defense product represents concrete revenue catalyst and validates technology for small-cap defense contractor.",
+      "action_window": "intraday",
+      "headline": "Red Cat Receives $2.49M Contract From The U.S. Air Force For Its Black Widow Small UAS",
+      "url": "https://www.benzinga.com/news/26/07/60790199/red-cat-receives-2-49m-contract-u-s-air-force-its-black-widow-small-uas",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888594+00:00"
+    },
+    {
+      "ticker": "SITE",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Stifel downgrade from Buy/Outperform to Hold with reduced price target creates near-term selling pressure, though Hold rating limits severity.",
+      "action_window": "intraday",
+      "headline": "Stifel Downgrades SiteOne Landscape Supply to Hold, Lowers Price Target to $100",
+      "url": "https://www.benzinga.com/news/26/07/60790091/stifel-downgrades-siteone-landscape-supply-hold-lowers-price-target-100",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888604+00:00"
+    },
+    {
+      "ticker": "TWI",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Titan International beat both EPS and revenue estimates significantly, with Q2 adjusted EPS of $0.10 versus estimate of -$0.05 (a complete reversal from expected loss to profit) and revenue exceeding consensus.",
+      "action_window": "intraday",
+      "headline": "Titan Intl Q2 Adj. EPS $0.10 Beats $(0.05) Estimate, Sales $484.766M Beat $480.055M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60790030/titan-intl-q2-adj-eps-0-10-beats-0-05-estimate-sales-484-766m-beat-480-055m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-30T10:18:17.888614+00:00",
+      "updated_at": "2026-07-30T10:18:17.888624+00:00"
     }
   ]
 }
