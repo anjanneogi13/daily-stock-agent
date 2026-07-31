@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "PKG",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Quarterly earnings beat driven by record shipments and accretive acquisition despite headwinds creates immediate positive catalyst for PKG stock.",
-      "action_window": "intraday",
-      "headline": "Packaging Corp Q2 Earnings Beat Estimates on Record Shipments",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/packaging-corp-q2-earnings-beat-141200724.html?.tsrc=rss",
-      "source": "yahoo",
-      "added_at": "2026-07-28T23:55:19.388604+00:00"
-    },
-    {
       "ticker": "OKE",
       "tradeable_score": 0.65,
       "sentiment": "bearish",
