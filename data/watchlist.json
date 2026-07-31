@@ -2086,6 +2086,18 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/am-q2-earnings-miss-higher-170600506.html?.tsrc=rss",
       "source": "yahoo",
       "added_at": "2026-07-30T23:13:37.413148+00:00"
+    },
+    {
+      "ticker": "CSAI",
+      "tradeable_score": 0.75,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Trading halt with pending news announcement indicates imminent material information release that could be highly impactful, but direction is unknown until news is disclosed.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halted at 7:50:00 p.m. ET - Trading Halt: Halt News Pending",
+      "url": "https://www.benzinga.com/quote/CSAI",
+      "source": "alpaca",
+      "added_at": "2026-07-31T01:03:10.789049+00:00"
     }
   ]
 }
