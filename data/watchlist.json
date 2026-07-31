@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GLW",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Corning's 15% post-earnings crash creates significant spillover risk to AI infrastructure ETFs and related photonics/fiber optics plays, signaling broader sector concerns about AI data center demand.",
-      "action_window": "intraday",
-      "headline": "Corning\u2019s 15% Crash Hits a Lesser-Known AI Trade: These ETFs Are Under Pressure",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/07/60738279/cornings-15-crash-hits-a-lesser-known-ai-trade-these-etfs-are-under-pressure",
-      "source": "alpaca",
-      "added_at": "2026-07-28T16:40:52.212650+00:00",
-      "updated_at": "2026-07-28T18:09:02.202332+00:00"
-    },
-    {
-      "ticker": "AMT",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "American Tower beat Q2 earnings estimates and raised full-year 2026 outlook, driven by strong AI demand tailwinds, representing a meaningful positive catalyst with confirmed fundamental improvement.",
-      "action_window": "intraday",
-      "headline": "American Tower Rides AI Demand To Another Outlook Raise",
-      "url": "https://www.benzinga.com/markets/earnings/26/07/60734494/american-tower-rides-ai-demand-to-another-outlook-raise",
-      "source": "alpaca",
-      "added_at": "2026-07-28T16:40:52.212682+00:00"
-    },
-    {
-      "ticker": "TFII",
-      "tradeable_score": 0.5,
-      "sentiment": "neutral",
-      "category": "earnings_miss",
-      "rationale": "Q2 earnings miss offset by decent Q3 guidance and mixed analyst revisions creates uncertainty with limited immediate trading edge.",
-      "action_window": "next_day",
-      "headline": "These Analysts Revise Their Forecasts On TFI International Following Q2 Earnings",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60734471/these-analysts-revise-their-forecasts-on-tfi-international-following-q2-earnings",
-      "source": "alpaca",
-      "added_at": "2026-07-28T16:40:52.212690+00:00"
-    },
-    {
-      "ticker": "SSB",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Better-than-expected Q2 earnings combined with dividend increase and multiple analyst price target raises creates a strong bullish catalyst with actionable upside.",
-      "action_window": "next_day",
-      "headline": "These Analysts Boost Their Forecasts On SouthState Bank Following Upbeat Q2 Earnings",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60734258/these-analysts-boost-their-forecasts-on-southstate-bank-following-upbeat-q2-earnings",
-      "source": "alpaca",
-      "added_at": "2026-07-28T16:40:52.212696+00:00"
-    },
-    {
-      "ticker": "VC",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Wolfe Research downgrade to Peer Perform (equivalent to Hold/Neutral) signals reduced conviction and typically triggers selling pressure from investors who follow analyst ratings.",
-      "action_window": "intraday",
-      "headline": "Wolfe Research Downgrades Visteon to Peer Perform",
-      "url": "https://www.benzinga.com/news/26/07/60734041/wolfe-research-downgrades-visteon-peer-perform",
-      "source": "alpaca",
-      "added_at": "2026-07-28T16:40:52.212704+00:00"
-    },
-    {
       "ticker": "LDOS",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -2135,6 +2074,19 @@
       "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60842639/semiconductor-ai-data-center-axt-earnings-etfs-surge-50",
       "source": "alpaca",
       "added_at": "2026-07-31T15:00:26.229184+00:00"
+    },
+    {
+      "ticker": "AMBA",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "M&A acquisition talks typically drive significant premium for target company (AMBA) though still in negotiation phase rather than confirmed deal.",
+      "action_window": "intraday",
+      "headline": "'NXP Semiconductors Is In Talks To Buy Ambarella, A Chip Designer Specializing In AI-Enabled Chips' - Financial Times",
+      "url": "https://www.benzinga.com/m-a/26/07/60847379/nxp-semiconductors-is-in-talks-to-buy-ambarella-a-chip-designer-specialising-in-ai-enabled-chips",
+      "source": "alpaca",
+      "added_at": "2026-07-31T16:47:52.899548+00:00",
+      "updated_at": "2026-07-31T16:47:52.899569+00:00"
     }
   ]
 }
