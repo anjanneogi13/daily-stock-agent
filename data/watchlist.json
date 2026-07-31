@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "KIDZ",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Buyback expansion combined with strong net cash position signals management confidence and direct shareholder value return, with stock already surging in premarket confirming positive market reaction.",
-      "action_window": "intraday",
-      "headline": "Why Is KIDZ AI Stock Gaining Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60721735/why-is-kidz-ai-stock-gaining-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-28T12:21:41.930487+00:00"
-    },
-    {
-      "ticker": "GXAI",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Post-divestiture strategic refocus on AI/health sectors combined with Q1 revenue growth signals positive operational direction, though small absolute revenue limits immediate impact.",
-      "action_window": "intraday",
-      "headline": "Gaxos.ai Outlines Post\u2011Divestiture Strategy, Refocuses On AI And Health Businesses; Q1 Revenue Increases To $1.81M",
-      "url": "https://www.benzinga.com/news/26/07/60721706/gaxos-ai-outlines-post-divestiture-strategy-refocuses-ai-and-health-businesses-q1-revenue-increases-",
-      "source": "alpaca",
-      "added_at": "2026-07-28T12:21:41.930499+00:00"
-    },
-    {
-      "ticker": "CHAI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Partnership expansion with TikTok for AI-powered user acquisition represents meaningful revenue growth opportunity and validates Core AI's technology platform.",
-      "action_window": "intraday",
-      "headline": "Core AI Expands TikTok Partnership To Accelerate AI-Powered Global User Acquisition And Cross-Platform Growth",
-      "url": "https://www.benzinga.com/news/26/07/60721649/core-ai-expands-tiktok-partnership-accelerate-ai-powered-global-user-acquisition-and-cross-platform-",
-      "source": "alpaca",
-      "added_at": "2026-07-28T12:21:41.930514+00:00"
-    },
-    {
-      "ticker": "CRWV",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major enterprise client win for CoreWeave validates their AI cloud platform competitiveness and represents meaningful revenue expansion opportunity in high-growth AI infrastructure market.",
-      "action_window": "intraday",
-      "headline": "Flow Traders Selects CoreWeave As Primary AI Cloud Platform Provider",
-      "url": "https://www.benzinga.com/quote/CRWV",
-      "source": "alpaca",
-      "added_at": "2026-07-28T12:21:41.930524+00:00"
-    },
-    {
-      "ticker": "LOBO",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Company reports 100%+ month-over-month revenue growth in high-demand AI business segment, demonstrating strong commercial traction and acceleration in a hot market category.",
-      "action_window": "intraday",
-      "headline": "LOBO Says AI Products And Large Model API Business Generates Over $2M In Monthly Revenue For July, Up From Under $1M In June",
-      "url": "https://www.benzinga.com/quote/LOBO",
-      "source": "alpaca",
-      "added_at": "2026-07-28T12:21:41.930530+00:00"
-    },
-    {
-      "ticker": "EAT",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Citigroup maintaining Buy rating with significant price target raise to $227 signals strong conviction and upside potential for Brinker International.",
-      "action_window": "intraday",
-      "headline": "Citigroup Maintains Buy on Brinker International, Raises Price Target to $227",
-      "url": "https://www.benzinga.com/news/26/07/60721514/citigroup-maintains-buy-brinker-international-raises-price-target-227",
-      "source": "alpaca",
-      "added_at": "2026-07-28T12:21:41.930540+00:00"
-    },
-    {
       "ticker": "EDBL",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -2172,6 +2100,78 @@
       "url": "https://www.benzinga.com/news/earnings/26/07/60830757/patria-investments-q2-adj-eps-0-32-beats-0-28-estimate-sales-111-300m-beat-98-148m-estimate",
       "source": "alpaca",
       "added_at": "2026-07-31T10:31:52.155430+00:00"
+    },
+    {
+      "ticker": "INTT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Preliminary Q2 sales guidance raised 6% above midpoint and 6% above consensus estimates represents a meaningful positive surprise that should drive immediate price action.",
+      "action_window": "intraday",
+      "headline": "inTest Raises Q2 Prelim Sales Guidance from $32.000M-$34.000M to $35.000M vs $33.013M Est",
+      "url": "https://www.benzinga.com/news/26/07/60834574/intest-raises-q2-prelim-sales-guidance-32-000m-34-000m-35-000m-vs-33-013m-est",
+      "source": "alpaca",
+      "added_at": "2026-07-31T12:30:00.882847+00:00"
+    },
+    {
+      "ticker": "BEN",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Franklin Resources beat EPS estimates by 7.5% and significantly exceeded sales estimates by 33.8%, indicating strong operational performance warranting immediate trading consideration.",
+      "action_window": "intraday",
+      "headline": "Franklin Resources Q3 Adj. EPS $0.72 Beats $0.67 Estimate, Sales $2.358B Beat $1.762B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60834436/franklin-resources-q3-adj-eps-0-72-beats-0-67-estimate-sales-2-358b-beat-1-762b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-31T12:30:00.882877+00:00"
+    },
+    {
+      "ticker": "IRMD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "iRadimed beat both EPS estimates by 9.5% and revenue estimates by 0.6%, indicating solid operational performance that typically drives intraday price appreciation.",
+      "action_window": "intraday",
+      "headline": "iRadimed Q2 Adj. EPS $0.46 Beats $0.42 Estimate, Sales $20.466M Beat $20.350M Estimate",
+      "url": "https://www.benzinga.com/quote/IRMD",
+      "source": "alpaca",
+      "added_at": "2026-07-31T12:30:00.882890+00:00"
+    },
+    {
+      "ticker": "RYAN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analysts raising forecasts following better-than-expected Q2 earnings represents a meaningful positive catalyst combining earnings beat with upward revisions.",
+      "action_window": "next_day",
+      "headline": "These Analysts Boost Their Forecasts On Ryan Specialty After Better-Than-Expected Q2 Earnings",
+      "url": "https://www.benzinga.com/news/26/07/60834401/these-analysts-boost-their-forecasts-on-ryan-specialty-after-better-than-expected-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-07-31T12:30:00.882901+00:00"
+    },
+    {
+      "ticker": "ABBV",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "AbbVie lowered FY2026 adjusted EPS guidance below consensus estimates ($14.08), signaling weaker-than-expected future performance that warrants immediate repricing.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: AbbVie Lowers FY2026 Adj EPS Guidance from $13.91-$14.11 to $13.87-$14.07 vs $14.08 Est",
+      "url": "https://www.benzinga.com/news/26/07/60834349/correction-abbvie-lowers-fy2026-adj-eps-guidance-13-91-14-11-13-87-14-07-vs-14-08-est",
+      "source": "alpaca",
+      "added_at": "2026-07-31T12:30:00.882922+00:00"
+    },
+    {
+      "ticker": "MPWR",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with positive Q3 guidance and analyst upgrades, confirmed by significant 11.3% pre-market move indicating institutional validation.",
+      "action_window": "intraday",
+      "headline": "Monolithic Power Systems Analysts Increase Their Forecasts After Strong Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60834297/monolithic-power-systems-analysts-increase-their-forecasts-after-strong-q2-results",
+      "source": "alpaca",
+      "added_at": "2026-07-31T12:30:00.882949+00:00"
     }
   ]
 }
