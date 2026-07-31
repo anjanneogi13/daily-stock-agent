@@ -2,32 +2,32 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 588,
+      "attempts": 1173,
       "empty": 0,
-      "errors": 138,
-      "successes": 450
+      "errors": 265,
+      "successes": 908
     },
     "monster_info": {
-      "attempts": 347,
+      "attempts": 695,
       "empty": 0,
-      "errors": 77,
-      "successes": 270
+      "errors": 152,
+      "successes": 543
     },
     "ohlcv": {
-      "attempts": 609,
-      "empty": 14,
+      "attempts": 1214,
+      "empty": 28,
       "errors": 0,
-      "successes": 595
+      "successes": 1186
     }
   },
   "date": "2026-07-31",
   "providers": {
     "stooq": {
-      "attempts": 7,
-      "empty": 7,
+      "attempts": 14,
+      "empty": 14,
       "errors": 0,
       "failure_types": {
-        "empty_response": 7,
+        "empty_response": 14,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
@@ -47,17 +47,17 @@
       "unauthorized": 0
     },
     "yfinance": {
-      "attempts": 1537,
-      "empty": 7,
-      "errors": 215,
+      "attempts": 3068,
+      "empty": 14,
+      "errors": 417,
       "failure_types": {
-        "empty_response": 7,
+        "empty_response": 14,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 215,
+        "rate_limited": 417,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -65,17 +65,17 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 215,
-      "successes": 1315,
+      "rate_limited": 417,
+      "successes": 2637,
       "timeout": 0,
       "unauthorized": 0
     }
   },
   "run": {
-    "fetched_count": 588,
-    "final_pick_count": 0,
-    "scored_count": 347,
-    "universe_count": 597
+    "fetched_count": 585,
+    "final_pick_count": 1,
+    "scored_count": 348,
+    "universe_count": 594
   },
   "samples": [
     {
@@ -349,5 +349,5 @@
       "ticker": "VEEV"
     }
   ],
-  "timestamp_utc": "2026-07-31T12:09:00Z"
+  "timestamp_utc": "2026-07-31T12:39:04Z"
 }
