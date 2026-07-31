@@ -1,176 +1,6 @@
 {
   "items": [
     {
-      "ticker": "TIH",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant EPS miss of 10.7% ($1.51 vs $1.69) despite revenue beat creates mixed signals with earnings quality concerns likely to drive negative price action.",
-      "action_window": "next_day",
-      "headline": "Toromont Industries Q2 EPS $1.51 Misses $1.69 Estimate, Sales $1.598B Beat $1.488B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747815/toromont-industries-q2-eps-1-51-misses-1-69-estimate-sales-1-598b-beat-1-488b-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252888+00:00"
-    },
-    {
-      "ticker": "CHR",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Massive earnings miss with EPS down 95% YoY ($4.92 vs $100.42) and revenue declining 15% represents a severe fundamental deterioration requiring immediate reassessment.",
-      "action_window": "next_day",
-      "headline": "Cheer Holding H1 EPS $4.92 Down From $100.42 YoY, Sales $60.529M Down From $70.993M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747805/cheer-holding-h1-eps-4-92-down-100-42-yoy-sales-60-529m-down-70-993m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252902+00:00"
-    },
-    {
-      "ticker": "NOV",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "NOV delivered a significant earnings beat with EPS of $0.31 vs $0.18 estimate (72% beat) and revenue also exceeded expectations, representing a strong quarterly performance likely to drive immediate price action.",
-      "action_window": "intraday",
-      "headline": "NOV Q2 EPS $0.31 Beats $0.18 Estimate, Sales $2.134B Beat $2.086B Estimate",
-      "url": "https://www.benzinga.com/quote/NOV",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252912+00:00",
-      "updated_at": "2026-07-28T22:33:44.252924+00:00"
-    },
-    {
-      "ticker": "CLW",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Clearwater Paper missed Q2 adjusted EPS estimates by $0.17 (reporting -$1.75 vs -$1.58 expected) with revenue also marginally missing consensus, indicating operational challenges worse than anticipated.",
-      "action_window": "next_day",
-      "headline": "CORRECTION: Clearwater Paper Q2 Adj. EPS $(1.75) Misses $(1.58) Estimate, Sales $374.800M Miss $374.803M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747667/correction-clearwater-paper-q2-adj-eps-1-75-misses-1-58-estimate-sales-374-800m-miss-374-803m-estima",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252934+00:00"
-    },
-    {
-      "ticker": "MSFT",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong AI product metrics with 75% QoQ growth in enterprise Copilot deployment and 60%+ revenue acceleration demonstrate meaningful monetization of Microsoft's AI investments, likely exceeding market expectations.",
-      "action_window": "intraday",
-      "headline": "Microsoft CEO Says Number Of Enterprise Customers Deploying Copilot To The Majority Of Information Workers Grew Nearly 75% QoQ;  Copilot Revenue Accelerated Over 60% Quarter Over Quarter; GitHub Now Has 225M Users; GitHub Copilot Now Has 50M Users",
-      "url": "https://www.benzinga.com/news/26/07/60785059/microsoft-ceo-says-number-enterprise-customers-deploying-copilot-majority-information-workers-grew-n",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252942+00:00",
-      "updated_at": "2026-07-29T21:54:18.840921+00:00"
-    },
-    {
-      "ticker": "TSX:AP/UN",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "earnings_miss",
-      "rationale": "Mixed earnings result with FFO missing estimates by 4% while revenue beat by 3%, creating offsetting impacts for REIT investors who prioritize cash flow metrics.",
-      "action_window": "next_day",
-      "headline": "Allied Properties REIT Q2 FFO $0.24 Misses $0.25 Estimate, Sales $140.510M Beat $136.452M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747643/allied-properties-reit-q2-ffo-0-24-misses-0-25-estimate-sales-140-510m-beat-136-452m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252948+00:00"
-    },
-    {
-      "ticker": "TRTX",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "earnings_miss",
-      "rationale": "Mixed earnings result with EPS missing by 11.5% but sales beating estimate by 25.4%, creating conflicting signals that warrant immediate evaluation.",
-      "action_window": "intraday",
-      "headline": "CORRECTION: TPG RE Finance Trust Q2 Adj. EPS $0.23 Misses $0.26 Estimate, Sales $34.008M Beat $27.125M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747619/correction-tpg-re-finance-trust-q2-adj-eps-0-23-misses-0-26-estimate-sales-34-008m-beat-27-125m-esti",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252956+00:00"
-    },
-    {
-      "ticker": "TSX:WRG",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Western Energy Services missed both EPS estimates by 71% ($0.12 loss vs $0.07 expected) and revenue estimates by 3.6%, representing a significant double-miss on key financial metrics.",
-      "action_window": "next_day",
-      "headline": "Western Energy Services Q2 EPS $(0.12) Misses $(0.07) Estimate, Sales $38.575M Miss $40.000M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747593/western-energy-services-q2-eps-0-12-misses-0-07-estimate-sales-38-575m-miss-40-000m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252962+00:00"
-    },
-    {
-      "ticker": "SFBC",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Sound Financial Bancorp reported Q2 EPS of $0.98 vs $0.79 YoY (24% increase) and revenue of $11.02M vs $10.375M YoY (6.2% increase), representing a solid earnings beat with double-digit growth.",
-      "action_window": "next_day",
-      "headline": "Sound Financial Bancorp Q2 EPS $0.98 Up From $0.79 YoY, Sales $11.020M Up From $10.375M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747582/sound-financial-bancorp-q2-eps-0-98-0-79-yoy-sales-11-020m-10-375m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252969+00:00"
-    },
-    {
-      "ticker": "TSX:ECO",
-      "tradeable_score": 0.95,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Catastrophic earnings miss with sales of $4.541M vs $216.300M estimate (97.9% miss) and EPS miss indicating severe business deterioration or estimate error requiring immediate attention.",
-      "action_window": "next_day",
-      "headline": "EcoSynthetix Q2 EPS $(0.01) Misses $4.41 Estimate, Sales $4.541M Miss $216.300M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747565/ecosynthetix-q2-eps-0-01-misses-4-41-estimate-sales-4-541m-miss-216-300m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252975+00:00"
-    },
-    {
-      "ticker": "ENPH",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Sales beat by ~$2M (0.7%) while EPS inline creates modest positive signal, but limited upside given earnings met rather than exceeded expectations.",
-      "action_window": "intraday",
-      "headline": "CORRECTION: Enphase Energy Q2 Adj. EPS $0.46, Inline, Sales $291.854M Beat $289.917M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747554/correction-enphase-energy-q2-adj-eps-0-46-inline-sales-291-854m-beat-289-917m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252982+00:00"
-    },
-    {
-      "ticker": "CAKE",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Q3 sales guidance of $980M-$990M represents 3.7%-4.8% beat versus $944.849M consensus estimate, indicating strong operational momentum.",
-      "action_window": "intraday",
-      "headline": "Conference Call:\nCheesecake Factory Sees Q3 Sales $980.000M-$990.000M vs $944.849M Est",
-      "url": "https://www.benzinga.com/news/26/07/60747526/conference-call-cheesecake-factory-sees-q3-sales-980-000m-990-000m-vs-944-849m-est",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.252989+00:00"
-    },
-    {
-      "ticker": "GEF",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Greif reported Q3 adjusted EPS of $1.61, beating estimates by 45%, while sales of $1.166B also exceeded the $1.116B estimate, representing a significant double beat on both top and bottom lines.",
-      "action_window": "intraday",
-      "headline": "CORRECTION: Greif Q3 Adj. EPS $1.61 Beats $1.11 Estimate, Sales $1.166B Beat $1.116B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60747493/correction-greif-q3-adj-eps-1-61-beats-1-11-estimate-sales-1-166b-beat-1-116b-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.253002+00:00"
-    },
-    {
-      "ticker": "PETV",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "lawsuit",
-      "rationale": "Settlement resolves legal uncertainty and eliminates ongoing financial obligations except for a modest $75K payment, removing overhang and improving balance sheet clarity.",
-      "action_window": "next_day",
-      "headline": "PetVivo Reaches Settlement With VetStem, Terminates PrecisePRP License Agreement; PetVivo's Sole Remaining Financial Obligation Under The Settlement Agreement Is The Payment Of An Aggregate Of $75,000, Consisting Of Two Scheduled Cash Payments",
-      "url": "https://www.benzinga.com/news/26/07/60747452/petvivo-reaches-settlement-vetstem-terminates-preciseprp-license-agreement-petvivo-s-sole-remaining-",
-      "source": "alpaca",
-      "added_at": "2026-07-28T22:33:44.253008+00:00"
-    },
-    {
       "ticker": "PKG",
       "tradeable_score": 0.78,
       "sentiment": "bullish",
@@ -1942,6 +1772,18 @@
       "url": "https://www.benzinga.com/news/26/07/60857509/quince-therapeutics-says-brigette-roberts-conditionally-appointed-ceo-john-militello-conditionally-a",
       "source": "alpaca",
       "added_at": "2026-07-31T21:12:47.273817+00:00"
+    },
+    {
+      "ticker": "FBLG",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS beat expectations by approximately 8.3% ($0.66 loss vs $0.72 loss estimate), a modest positive surprise for a small-cap biotech though still unprofitable.",
+      "action_window": "next_day",
+      "headline": "FibroBiologics, Inc. - Common Stock Q2 EPS $(0.66) Beats $(0.72) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60858461/fibrobiologics-inc-common-stock-q2-eps-0-66-beats-0-72-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-31T22:34:32.474431+00:00"
     }
   ]
 }
