@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LDOS",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Significant $717M government contract win represents material new revenue (~4% of LDOS's ~$15B annual revenue) with high-margin defense/intelligence work, providing multi-year revenue visibility.",
-      "action_window": "next_day",
-      "headline": "Leidos Receives ~$717M U.S. Air Force's Air Combat Command Acquisition Management And Integration Center Task Order To Continue Providing Intelligence, Surveillance, Reconnaissance Operations Support",
-      "url": "https://www.benzinga.com/news/26/07/60738510/leidos-receives-u-s-air-forces-air-combat-command-acquisition-management-and-integration-center-task-order-to-continue-providing-intelligence-surveillance-reconnaissance-operations-support",
-      "source": "alpaca",
-      "added_at": "2026-07-28T18:09:02.202301+00:00"
-    },
-    {
-      "ticker": "CRM",
-      "tradeable_score": 0.73,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Salesforce secured a significant $1.6B federal AI contract driving immediate momentum past technical resistance levels, representing a meaningful catalyst for the stock.",
-      "action_window": "intraday",
-      "headline": "Why Is Salesforce Stock Surging Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60738580/why-is-salesforce-stock-surging-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-07-28T18:09:02.202318+00:00"
-    },
-    {
-      "ticker": "PNR",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Major $1.4B acquisition positioning company for AI data center growth overrides Q2 earnings miss, driving positive stock reaction.",
-      "action_window": "intraday",
-      "headline": "Why Pentair Is Spending $1.4 Billion To Ride The AI Data Center Wave",
-      "url": "https://www.benzinga.com/markets/large-cap/26/07/60738085/why-pentair-is-spending-1-4-billion-to-ride-the-ai-data-center-wave",
-      "source": "alpaca",
-      "added_at": "2026-07-28T18:09:02.202347+00:00"
-    },
-    {
       "ticker": "ABCB",
       "tradeable_score": 0.82,
       "sentiment": "bearish",
@@ -170,15 +134,16 @@
     },
     {
       "ticker": "HOOD",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Robinhood Chain achieving leadership in RWA holders (328K) demonstrates successful blockchain product adoption and competitive positioning against major platforms like Solana and Ethereum, likely driving positive investor sentiment.",
+      "category": "upgrade",
+      "rationale": "Bernstein analyst report projecting 85% upside is a meaningful bullish catalyst from a major bank, highlighting significant expansion opportunities in emerging crypto markets.",
       "action_window": "next_day",
-      "headline": "Robinhood Chain Overtakes Solana, Ethereum for Real-World Asset Trading: What Does It Mean for HOOD?",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60746835/robinhood-chain-overtakes-solana-ethereum-for-real-world-asset-trading-what-does-it-mean-for-hood",
+      "headline": "HOOD Could Rally 85% as Tokenization, Prediction Markets Fuel Crypto Growth: Bernstein (CORRECTED)",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/07/60840790/hood-could-rally-85-as-tokenization-prediction-markets-fuel-crypto-growth-bernstein",
       "source": "alpaca",
-      "added_at": "2026-07-28T21:11:16.622197+00:00"
+      "added_at": "2026-07-28T21:11:16.622197+00:00",
+      "updated_at": "2026-07-31T18:18:36.201614+00:00"
     },
     {
       "ticker": "ORLA",
@@ -2087,6 +2052,30 @@
       "source": "alpaca",
       "added_at": "2026-07-31T16:47:52.899548+00:00",
       "updated_at": "2026-07-31T16:47:52.899569+00:00"
+    },
+    {
+      "ticker": "SOXL",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Massive 18% rally in Korean semiconductors and broad sector strength represents a significant acute catalyst for semiconductor equities with immediate trading implications.",
+      "action_window": "intraday",
+      "headline": "Wonder Boy Blowup Sparks Massive Semiconductor Rally, Korea Up 18%; Amazon Helps, Apple Disappoints",
+      "url": "https://www.benzinga.com/Opinion/26/07/60851764/wonder-boy-blowup-sparks-massive-semiconductor-rally-korea-up-18-amazon-helps-apple-disappoints",
+      "source": "alpaca",
+      "added_at": "2026-07-31T18:18:36.201599+00:00"
+    },
+    {
+      "ticker": "TCOM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "While the $780M fine is substantial, the fact that regulators spared Trip.com from major business restructuring removes significant regulatory overhang and worst-case scenario risk.",
+      "action_window": "intraday",
+      "headline": "Trip.com Hit With Fines After Anti-Monopoly Probe, But Spared A Major Overhaul",
+      "url": "https://www.benzinga.com/Opinion/26/07/60851399/trip-com-hit-with-fines-after-anti-monopoly-probe-but-spared-a-major-overhaul",
+      "source": "alpaca",
+      "added_at": "2026-07-31T18:18:36.201633+00:00"
     }
   ]
 }
