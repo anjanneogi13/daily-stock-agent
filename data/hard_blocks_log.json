@@ -959,5 +959,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-07-31 12:09:00",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "CVX",
+        "reason": "SL too tight (1.3% < 1.5% for $192 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "AAPL",
+        "reason": "SL too tight (1.5% < 1.5% for $333 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
