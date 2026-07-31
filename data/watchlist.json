@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ABCB",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Material $79.55M legal judgment against Ameris Bank in whistleblower retaliation case represents significant unexpected financial liability and reputational risk.",
-      "action_window": "intraday",
-      "headline": "Ameris Bank Ordered To Pay ~$79.55M In Whistleblower Retaliation Case Brought By Former Balboa Capital CEO Patrick Byrne",
-      "url": "https://www.benzinga.com/news/26/07/60741991/ameris-bank-ordered-pay-79-55m-whistleblower-retaliation-case-brought-former-balboa-capital-ceo-patr",
-      "source": "alpaca",
-      "added_at": "2026-07-28T20:00:34.168249+00:00"
-    },
-    {
-      "ticker": "GIPR",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A 13D filing indicating a 15.56% activist stake acquisition typically signals potential strategic changes or shareholder value initiatives, often bullish for small-cap stocks.",
-      "action_window": "next_day",
-      "headline": "Generation Income Properties 13D Filing Shows Sobelman David Acquires 15.56% Stake In Co. As Of July 24",
-      "url": "https://www.benzinga.com/m/26/07/60741916/generation-income-properties-13d-filing-shows-sobelman-david-acquires-15-56-stake-co-july-24",
-      "source": "alpaca",
-      "added_at": "2026-07-28T20:00:34.168261+00:00"
-    },
-    {
-      "ticker": "LCID",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major 5% stake disclosure by prominent investor Prince Alwaleed provides credibility and capital confidence catalyst, with stock already surging intraday on the news.",
-      "action_window": "intraday",
-      "headline": "Lucid Stock Surges Tuesday Following Prince Alwaleed's 5% Stake Disclosure",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60741793/lucid-stock-surges-tuesday-following-prince-alwaleeds-5-stake-disclosure",
-      "source": "alpaca",
-      "added_at": "2026-07-28T20:00:34.168269+00:00"
-    },
-    {
-      "ticker": "UROY",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A 7.7% stake disclosure via 13D filing indicates a significant passive investment by Uranium Energy Corp in Uranium Royalty, signaling potential strategic interest and sector consolidation themes, though not an immediate catalyst.",
-      "action_window": "next_day",
-      "headline": "Uranium Royalty 13D Filing Shows Uranium Energy Corp. Reports 7.7% Stake In Co As Of July 27, 2026",
-      "url": "https://www.benzinga.com/m/26/07/60741771/uranium-royalty-13d-filing-shows-uranium-energy-corp-reports-7-7-stake-co-july-27-2026",
-      "source": "alpaca",
-      "added_at": "2026-07-28T20:00:34.168275+00:00"
-    },
-    {
       "ticker": "GWO",
       "tradeable_score": 0.75,
       "sentiment": "bullish",

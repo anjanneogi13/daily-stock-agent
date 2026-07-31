@@ -5053,5 +5053,44 @@
     "expires": "2026-08-05T18:18:36.195585+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TRP": {
+    "ticker": "TRP",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on TC Energy, Raises Price Target to $106",
+    "added_at": "2026-07-31T20:01:34.517035+00:00",
+    "expires": "2026-08-05T20:01:34.517044+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PWR": {
+    "ticker": "PWR",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Quanta Services, Raises Price Target to $871",
+    "added_at": "2026-07-31T20:01:34.522701+00:00",
+    "expires": "2026-08-05T20:01:34.522710+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "APG": {
+    "ticker": "APG",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on APi Group, Raises Price Target to $54",
+    "added_at": "2026-07-31T20:01:34.526741+00:00",
+    "expires": "2026-08-05T20:01:34.526747+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
