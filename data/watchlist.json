@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ACIW",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership expanding payment capabilities in high-growth Latin American markets creates revenue opportunity for both companies, with ACIW as larger established player likely to see more immediate trading impact.",
-      "action_window": "intraday",
-      "headline": "ACI Worldwide And dLocal Form Strategic Partnership To Provide Global Merchants Access To Local Payment Methods In Brazil, Mexico And Latin America",
-      "url": "https://www.benzinga.com/news/26/07/60717962/aci-worldwide-and-dlocal-form-strategic-partnership-provide-global-merchants-access-local-payment-me",
-      "source": "alpaca",
-      "added_at": "2026-07-28T10:29:06.773483+00:00"
-    },
-    {
-      "ticker": "TRU",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "TransUnion's Q3 EPS guidance of $0.68-$0.71 significantly misses consensus estimate of $0.79, representing a 10-14% shortfall that will likely pressure the stock.",
-      "action_window": "intraday",
-      "headline": "TransUnion Sees Q3 GAAP EPS $0.68-$0.71 vs $0.79 Est",
-      "url": "https://www.benzinga.com/news/26/07/60717902/transunion-sees-q3-gaap-eps-0-68-0-71-vs-0-79-est",
-      "source": "alpaca",
-      "added_at": "2026-07-28T10:29:06.773493+00:00"
-    },
-    {
-      "ticker": "TE",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Strategic $135M acquisition of solar patents and IP represents a significant expansion into clean energy technology with immediate defensible market positioning.",
-      "action_window": "intraday",
-      "headline": "T1 Energy Acquires Solar Patents And Other IP From Evervolt Green Energy For $135M",
-      "url": "https://www.benzinga.com/m/26/07/60717717/t1-energy-acquires-solar-patents-and-other-ip-evervolt-green-energy-135m",
-      "source": "alpaca",
-      "added_at": "2026-07-28T10:29:06.773506+00:00"
-    },
-    {
-      "ticker": "AB",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "earnings_miss",
-      "rationale": "Mixed earnings report with EPS missing by 1.2% but sales beating estimates by 29%, creating conflicting signals that require immediate evaluation but offset overall impact.",
-      "action_window": "intraday",
-      "headline": "AllianceBernstein Holding Q2 Adj. EPS $0.82 Misses $0.83 Estimate, Sales $1.171B Beat $907.667M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60717711/alliancebernstein-holding-q2-adj-eps-0-82-misses-0-83-estimate-sales-1-171b-beat-907-667m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-28T10:29:06.773510+00:00"
-    },
-    {
-      "ticker": "PMN",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive interim Phase 1b clinical trial data for Alzheimer's drug with zero ARIA-E (brain swelling) is a significant de-risking event for small-cap biotech, likely to drive substantial stock movement.",
-      "action_window": "intraday",
-      "headline": "Small-Cap ProMIS Neurosciences Says Lead Drug Shows Encouraging Action in Early Alzheimer's Study",
-      "url": "https://www.benzinga.com/news/health-care/26/07/60734701/small-cap-promis-neurosciences-says-lead-drug-shows-encouraging-action-in-early-alzheimers-study",
-      "source": "alpaca",
-      "added_at": "2026-07-28T10:29:06.773517+00:00",
-      "updated_at": "2026-07-28T16:40:52.212667+00:00"
-    },
-    {
       "ticker": "KIDZ",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -872,15 +811,16 @@
     },
     {
       "ticker": "SKHY",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
       "category": "other",
-      "rationale": "Despite record earnings with 76% operating margin, stock experiencing worst monthly decline in 24 years suggests broader market forces or systematic selling creating a disconnect between fundamentals and price action.",
+      "rationale": "First-ever daily limit surge of 30% in South Korea with continued 6% premarket gains in US indicates major positive catalyst for SK Hynix, though the underlying catalyst is not specified in the headline.",
       "action_window": "intraday",
-      "headline": "QUICK SPARK: SK Hynix on Pace for Worst Month Since June 2002",
-      "url": "https://www.benzinga.com/markets/tech/26/07/60765539/quick-spark-sk-hynix-on-pace-for-worst-month-since-june-2002",
+      "headline": "SK Hynix's US-Listed Shares Jump 6% In Friday Premarket After Stock Surged 30% to Hit First-Ever Daily Limit In South Korea (UPDATED)",
+      "url": "https://www.benzinga.com/markets/asia/26/07/60828228/sk-hynix-stock-just-hit-its-daily-limit-in-south-korea-for-the-first-time-ever-surging-nearly-30-as-asian-chip-stocks-recover",
       "source": "alpaca",
-      "added_at": "2026-07-29T15:07:54.972181+00:00"
+      "added_at": "2026-07-29T15:07:54.972181+00:00",
+      "updated_at": "2026-07-31T10:31:52.155282+00:00"
     },
     {
       "ticker": "VRT",
@@ -2098,6 +2038,140 @@
       "url": "https://www.benzinga.com/quote/CSAI",
       "source": "alpaca",
       "added_at": "2026-07-31T01:03:10.789049+00:00"
+    },
+    {
+      "ticker": "PGY",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Canaccord Genuity maintains Buy rating while raising price target to $36, signaling increased analyst confidence and potential upside.",
+      "action_window": "intraday",
+      "headline": "Canaccord Genuity Maintains Buy on Pagaya Technologies, Raises Price Target to $36",
+      "url": "https://www.benzinga.com/news/26/07/60831221/canaccord-genuity-maintains-buy-pagaya-technologies-raises-price-target-36",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155301+00:00"
+    },
+    {
+      "ticker": "CCJ",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Confidential S-1 filing for Westinghouse IPO represents meaningful value unlock catalyst for Cameco and Brookfield as joint owners, creating potential for realized gains and portfolio repositioning.",
+      "action_window": "intraday",
+      "headline": "Cameco Announces Confidential Draft S-1 Submission Relating To Proposed IPO Of Westinghouse Electric Company, The Company And Brookfield Renewable Partners's Jointly Held Entity",
+      "url": "https://www.benzinga.com/news/26/07/60831209/cameco-announces-confidential-draft-s-1-submission-relating-proposed-ipo-westinghouse-electric-compa",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155314+00:00"
+    },
+    {
+      "ticker": "UPBD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from a recognized firm (BTIG) to Neutral represents negative sentiment shift that typically triggers selling pressure in the near term.",
+      "action_window": "intraday",
+      "headline": "BTIG Downgrades Upbound Group to Neutral",
+      "url": "https://www.benzinga.com/news/26/07/60831193/btig-downgrades-upbound-group-neutral",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155325+00:00"
+    },
+    {
+      "ticker": "CYCU",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major contract win ($54.6M record) driving massive multi-day rally (533% total), though momentum may be overextended and partially priced in after initial 496% surge.",
+      "action_window": "intraday",
+      "headline": "Cycurion Adds Another 37% After Stunning 496% Surge\u2014What's Fueling the Rally?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60830478/cycurion-adds-another-37-after-stunning-496-surge-whats-fueling-the-rally",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155336+00:00"
+    },
+    {
+      "ticker": "SMFG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q1 earnings beat with EPS up 22.5% YoY ($0.49 vs $0.40) and sales up 5.8% YoY ($17.886B vs $16.910B) represents solid financial performance warranting immediate attention.",
+      "action_window": "intraday",
+      "headline": "Sumitomo Mitsui Finl Gr Q1 EPS $0.49 Up From $0.40 YoY, Sales $17.886B Up From $16.910B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60831062/sumitomo-mitsui-finl-gr-q1-eps-0-49-0-40-yoy-sales-17-886b-16-910b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155346+00:00",
+      "updated_at": "2026-07-31T10:31:52.155420+00:00"
+    },
+    {
+      "ticker": "NVT",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant capacity expansion in high-growth data center cooling segment signals strong demand visibility and revenue growth potential, though impact timing is medium-term.",
+      "action_window": "next_day",
+      "headline": "nVent Electric Leases 160K Sq. Feet Of Additional Manufacturing Space In Minnesota To Produce Data Center Liquid Cooling Solutions",
+      "url": "https://www.benzinga.com/news/26/07/60831160/nvent-electric-leases-160k-sq-feet-additional-manufacturing-space-minnesota-produce-data-center-liqu",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155356+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Amazon delivered a significant earnings beat with 12% premarket surge on strong AWS growth, representing a major confirmed catalyst with immediate price action.",
+      "action_window": "intraday",
+      "headline": "'The Breakout the Stock Needed': Analyst Cheers Amazon's AWS Surge",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/07/60831159/the-breakout-the-stock-needed-analyst-cheers-amazons-aws-surge",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155366+00:00"
+    },
+    {
+      "ticker": "RBLX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BTIG downgrade to Sell with $30 price target represents a significant negative call from a reputable firm, likely to trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "BTIG Downgrades Roblox to Sell, Announces $30 Price Target",
+      "url": "https://www.benzinga.com/news/26/07/60831140/btig-downgrades-roblox-sell-announces-30-price-target",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155376+00:00"
+    },
+    {
+      "ticker": "CVX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Chevron beat EPS estimates by 9% ($6.06 vs $5.56) and sales beat by 13% ($70.055B vs $61.970B), representing a significant double beat on key metrics.",
+      "action_window": "intraday",
+      "headline": "Chevron Q2 Adj. EPS $6.06 Beats $5.56 Estimate, Sales $70.055B Beat $61.970B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60831103/chevron-q2-adj-eps-6-06-beats-5-56-estimate-sales-70-055b-beat-61-970b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155386+00:00",
+      "updated_at": "2026-07-31T10:31:52.155398+00:00"
+    },
+    {
+      "ticker": "FTH",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Raymond James initiation with Outperform rating and $56 price target is a meaningful positive catalyst from a major bank that typically drives trading interest and upward price momentum.",
+      "action_window": "intraday",
+      "headline": "Raymond James Initiates Coverage On Faeth Therapeutics with Outperform Rating, Announces Price Target of $56",
+      "url": "https://www.benzinga.com/news/26/07/60831090/raymond-james-initiates-coverage-faeth-therapeutics-outperform-rating-announces-price-target-56",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155408+00:00"
+    },
+    {
+      "ticker": "PAX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong double beat with EPS exceeding estimates by 14% and revenue beating by 13%, representing a meaningful positive earnings surprise for PAX.",
+      "action_window": "intraday",
+      "headline": "Patria Investments Q2 Adj. EPS $0.32 Beats $0.28 Estimate, Sales $111.300M Beat $98.148M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/07/60830757/patria-investments-q2-adj-eps-0-32-beats-0-28-estimate-sales-111-300m-beat-98-148m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-07-31T10:31:52.155430+00:00"
     }
   ]
 }
