@@ -2298,19 +2298,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "KMX": {
-    "ticker": "KMX",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "This CarMax Analyst Is No Longer Bearish; Here Are Top 4 Upgrades For Wednesday",
-    "added_at": "2026-07-29T12:58:05.957701+00:00",
-    "expires": "2026-08-03T12:58:05.957706+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "INCY": {
     "ticker": "INCY",
     "score_delta": 0.1,
@@ -2363,19 +2350,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RLI": {
-    "ticker": "RLI",
-    "score_delta": 0.029,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Keefe, Bruyette & Woods Maintains Outperform on RLI, Raises Price Target to $74",
-    "added_at": "2026-07-29T12:58:05.935559+00:00",
-    "expires": "2026-08-03T12:58:05.935566+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SOFI": {
     "ticker": "SOFI",
     "score_delta": -0.032,
@@ -2402,19 +2376,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CSGP": {
-    "ticker": "CSGP",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Keefe, Bruyette & Woods Downgrades CoStar Group to Market Perform, Lowers Price Target to $29",
-    "added_at": "2026-07-29T12:58:05.947007+00:00",
-    "expires": "2026-08-03T12:58:05.947012+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TOPS": {
     "ticker": "TOPS",
     "score_delta": 0.049,
@@ -2425,19 +2386,6 @@
     "headline": "TOP Ships Signs Share Purchase Agreement For Three ECO Scrubber-Fitted MR Product Tankers, Net $7.4M Consideration After Dubai Deal Refund",
     "added_at": "2026-07-29T12:58:05.950601+00:00",
     "expires": "2026-08-12T12:58:05.950607+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SLDE": {
-    "ticker": "SLDE",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Barclays Maintains Overweight on Slide Insurance Holdings, Raises Price Target to $28",
-    "added_at": "2026-07-29T12:58:05.954130+00:00",
-    "expires": "2026-08-03T12:58:05.954135+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2477,19 +2425,6 @@
     "headline": "Banco Santander Chile Q2 EPS $0.90 Beats $0.67 Estimate, Sales $653.893M Miss $882.670M Estimate",
     "added_at": "2026-07-29T12:58:05.970175+00:00",
     "expires": "2026-08-05T12:58:05.970180+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "R": {
-    "ticker": "R",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Barclays Maintains Overweight on Ryder System, Raises Price Target to $300",
-    "added_at": "2026-07-29T12:58:05.973761+00:00",
-    "expires": "2026-08-03T12:58:05.973766+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4791,6 +4726,84 @@
     "headline": "Sportradar Gr Lowers FY2026 Sales Guidance from $1.813B-$1.842B to $1.765B-$1.782B vs $1.830B Est",
     "added_at": "2026-08-03T11:16:31.081475+00:00",
     "expires": "2026-08-17T11:16:31.081480+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GTES": {
+    "ticker": "GTES",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Keybanc Maintains Overweight on Gates Industrial, Raises Price Target to $34",
+    "added_at": "2026-08-03T13:58:38.993920+00:00",
+    "expires": "2026-08-08T13:58:38.993926+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LPLA": {
+    "ticker": "LPLA",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "BMO Capital Maintains Outperform on LPL Finl Hldgs, Raises Price Target to $390",
+    "added_at": "2026-08-03T13:58:38.998477+00:00",
+    "expires": "2026-08-08T13:58:38.998483+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "THC": {
+    "ticker": "THC",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Wells Fargo Maintains Overweight on Tenet Healthcare, Raises Price Target to $281",
+    "added_at": "2026-08-03T13:58:39.002723+00:00",
+    "expires": "2026-08-08T13:58:39.002729+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UBS": {
+    "ticker": "UBS",
+    "score_delta": -0.097,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "UBS Financial Services Facing $125M Penalty From Treasury\u2019s Financial Crimes Enforcement Network Over Alleged Breach Of Bank Secrecy Act",
+    "added_at": "2026-08-03T13:58:39.007034+00:00",
+    "expires": "2026-08-17T13:58:39.007040+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OWL": {
+    "ticker": "OWL",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "BMO Capital Maintains Outperform on Blue Owl Capital, Raises Price Target to $12",
+    "added_at": "2026-08-03T13:58:39.011359+00:00",
+    "expires": "2026-08-08T13:58:39.011365+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "INFQ": {
+    "ticker": "INFQ",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Wedbush Assumes Infleqtion at Outperform, Maintains Price Target of $20",
+    "added_at": "2026-08-03T13:58:39.022853+00:00",
+    "expires": "2026-08-08T13:58:39.022859+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

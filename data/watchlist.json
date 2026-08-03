@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "INTT",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Preliminary Q2 sales guidance raised 6% above midpoint and 6% above consensus estimates represents a meaningful positive surprise that should drive immediate price action.",
-      "action_window": "intraday",
-      "headline": "inTest Raises Q2 Prelim Sales Guidance from $32.000M-$34.000M to $35.000M vs $33.013M Est",
-      "url": "https://www.benzinga.com/news/26/07/60834574/intest-raises-q2-prelim-sales-guidance-32-000m-34-000m-35-000m-vs-33-013m-est",
-      "source": "alpaca",
-      "added_at": "2026-07-31T12:30:00.882847+00:00"
-    },
-    {
-      "ticker": "BEN",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Franklin Resources beat EPS estimates by 7.5% and significantly exceeded sales estimates by 33.8%, indicating strong operational performance warranting immediate trading consideration.",
-      "action_window": "intraday",
-      "headline": "Franklin Resources Q3 Adj. EPS $0.72 Beats $0.67 Estimate, Sales $2.358B Beat $1.762B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60834436/franklin-resources-q3-adj-eps-0-72-beats-0-67-estimate-sales-2-358b-beat-1-762b-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-31T12:30:00.882877+00:00"
-    },
-    {
-      "ticker": "IRMD",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "iRadimed beat both EPS estimates by 9.5% and revenue estimates by 0.6%, indicating solid operational performance that typically drives intraday price appreciation.",
-      "action_window": "intraday",
-      "headline": "iRadimed Q2 Adj. EPS $0.46 Beats $0.42 Estimate, Sales $20.466M Beat $20.350M Estimate",
-      "url": "https://www.benzinga.com/quote/IRMD",
-      "source": "alpaca",
-      "added_at": "2026-07-31T12:30:00.882890+00:00"
-    },
-    {
-      "ticker": "RYAN",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Analysts raising forecasts following better-than-expected Q2 earnings represents a meaningful positive catalyst combining earnings beat with upward revisions.",
-      "action_window": "next_day",
-      "headline": "These Analysts Boost Their Forecasts On Ryan Specialty After Better-Than-Expected Q2 Earnings",
-      "url": "https://www.benzinga.com/news/26/07/60834401/these-analysts-boost-their-forecasts-on-ryan-specialty-after-better-than-expected-q2-earnings",
-      "source": "alpaca",
-      "added_at": "2026-07-31T12:30:00.882901+00:00"
-    },
-    {
-      "ticker": "ABBV",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "AbbVie lowered FY2026 adjusted EPS guidance below consensus estimates ($14.08), signaling weaker-than-expected future performance that warrants immediate repricing.",
-      "action_window": "intraday",
-      "headline": "CORRECTION: AbbVie Lowers FY2026 Adj EPS Guidance from $13.91-$14.11 to $13.87-$14.07 vs $14.08 Est",
-      "url": "https://www.benzinga.com/news/26/07/60834349/correction-abbvie-lowers-fy2026-adj-eps-guidance-13-91-14-11-13-87-14-07-vs-14-08-est",
-      "source": "alpaca",
-      "added_at": "2026-07-31T12:30:00.882922+00:00"
-    },
-    {
-      "ticker": "MPWR",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q2 earnings beat with positive Q3 guidance and analyst upgrades, confirmed by significant 11.3% pre-market move indicating institutional validation.",
-      "action_window": "intraday",
-      "headline": "Monolithic Power Systems Analysts Increase Their Forecasts After Strong Q2 Results",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/07/60834297/monolithic-power-systems-analysts-increase-their-forecasts-after-strong-q2-results",
-      "source": "alpaca",
-      "added_at": "2026-07-31T12:30:00.882949+00:00"
-    },
-    {
       "ticker": "AXTI",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -123,15 +51,16 @@
     },
     {
       "ticker": "MSTR",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.72,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Strategy may liquidate Bitcoin holdings to rescue failing STRC preferred stock trading below peg, signaling financial distress and potential forced selling of core asset.",
+      "rationale": "Strategy's forced Bitcoin sale to fund dividends amid 41% stock decline and $10.9B unrealized losses signals financial stress and marks a strategic reversal for the Bitcoin-focused company.",
       "action_window": "intraday",
-      "headline": "Michael Saylor Opens Door to Selling Bitcoin to Rescue STRC: \u2018If It Took an Extra $4 Billion, Spend $4 Billion\u2019",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/07/60857893/michael-saylor-opens-door-to-selling-bitcoin-to-rescue-strc-if-it-took-an-extra-4-billion-spend-4-billion",
+      "headline": "Strategy Sold 1,638 BTC for $105 Million: Will MSTR Now Plunge Below $90?",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/60873132/strategy-sold-1638-btc-for-105-million-will-mstr-now-plunge-below-90",
       "source": "alpaca",
-      "added_at": "2026-07-31T21:12:47.273735+00:00"
+      "added_at": "2026-07-31T21:12:47.273735+00:00",
+      "updated_at": "2026-08-03T13:58:39.028380+00:00"
     },
     {
       "ticker": "MKTX",
@@ -348,6 +277,30 @@
       "url": "https://www.benzinga.com/news/26/08/60867543/sportradar-gr-lowers-fy2026-sales-guidance-1-813b-1-842b-1-765b-1-782b-vs-1-830b-est",
       "source": "alpaca",
       "added_at": "2026-08-03T11:16:31.087089+00:00"
+    },
+    {
+      "ticker": "UBS",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "A $125M regulatory penalty from FinCEN for Bank Secrecy Act violations represents material financial and reputational damage that typically triggers immediate negative price action.",
+      "action_window": "intraday",
+      "headline": "UBS Financial Services Facing $125M Penalty From Treasury\u2019s Financial Crimes Enforcement Network Over Alleged Breach Of Bank Secrecy Act",
+      "url": "https://www.benzinga.com/news/26/08/60872891/ubs-financial-services-facing-125m-penalty-treasury-s-financial-crimes-enforcement-network-over-alle",
+      "source": "alpaca",
+      "added_at": "2026-08-03T13:58:39.028392+00:00"
+    },
+    {
+      "ticker": "INFQ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wedbush initiating coverage at Outperform with $20 price target is a meaningful positive catalyst from a credible firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Wedbush Assumes Infleqtion at Outperform, Maintains Price Target of $20",
+      "url": "https://www.benzinga.com/news/26/08/60872642/wedbush-assumes-infleqtion-outperform-maintains-price-target-20",
+      "source": "alpaca",
+      "added_at": "2026-08-03T13:58:39.028406+00:00"
     }
   ]
 }
