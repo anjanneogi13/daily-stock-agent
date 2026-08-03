@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AXTI",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "AI-driven earnings beat with bullish guidance drove 30% stock surge and 49% leveraged ETF gains, but significant move already occurred Friday making immediate chase risky.",
-      "action_window": "next_day",
-      "headline": "These AXT ETFs Turned a 30% Stock Rally Into Nearly 50% Returns",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/07/60842639/semiconductor-ai-data-center-axt-earnings-etfs-surge-50",
-      "source": "alpaca",
-      "added_at": "2026-07-31T15:00:26.229184+00:00"
-    },
-    {
       "ticker": "AMBA",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -301,6 +289,30 @@
       "url": "https://www.benzinga.com/news/26/08/60872642/wedbush-assumes-infleqtion-outperform-maintains-price-target-20",
       "source": "alpaca",
       "added_at": "2026-08-03T13:58:39.028406+00:00"
+    },
+    {
+      "ticker": "TWST",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q3 earnings beat with raised guidance and accelerating growth in high-value AI drug discovery segment creates meaningful positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Twist Bioscience Sees AI Drug Discovery Pipeline Expand",
+      "url": "https://www.benzinga.com/news/health-care/26/08/60880094/twist-bioscience-sees-ai-drug-discovery-pipeline-expand",
+      "source": "alpaca",
+      "added_at": "2026-08-03T16:21:54.131111+00:00"
+    },
+    {
+      "ticker": "MAR",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Mixed earnings with Q2 beat offset by Q3 guidance miss and geopolitical impact on international RevPAR, causing immediate stock decline despite raised outlook.",
+      "action_window": "intraday",
+      "headline": "Middle East Conflict Hits Marriott Hard, But Hotel Giant Still Raises Outlook",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60879878/middle-east-conflict-hits-marriott-hard-but-hotel-giant-still-raises-outlook",
+      "source": "alpaca",
+      "added_at": "2026-08-03T16:21:54.131123+00:00"
     }
   ]
 }
