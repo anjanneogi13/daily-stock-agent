@@ -759,19 +759,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CTRI": {
-    "ticker": "CTRI",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Centuri Holdings Acquires J.J. White, To Become Part Of Centuri's Riggs Distler Operation",
-    "added_at": "2026-07-20T20:17:50.172956+00:00",
-    "expires": "2026-08-03T20:17:50.172961+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NU": {
     "ticker": "NU",
     "score_delta": 0.05,
@@ -1440,19 +1427,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VIV": {
-    "ticker": "VIV",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Telefonica Brasil Q2 EPS $0.19 Misses $0.23 Estimate, Sales $3.116B Miss $3.120B Estimate",
-    "added_at": "2026-07-27T21:37:35.164448+00:00",
-    "expires": "2026-08-03T21:37:35.164454+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BBBY": {
     "ticker": "BBBY",
     "score_delta": 0.2,
@@ -1466,19 +1440,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BLX": {
-    "ticker": "BLX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Banco Latinoamericano Q2 EPS $1.77 Up From $1.73 YoY, Sales $98.900M Beat $89.000M Estimate",
-    "added_at": "2026-07-27T21:37:35.171608+00:00",
-    "expires": "2026-08-03T21:37:35.171614+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "UDR": {
     "ticker": "UDR",
     "score_delta": -0.15,
@@ -1489,58 +1450,6 @@
     "headline": "UPDATE: UDR Sees Q3 FFO $0.63-$0.65 vs $0.64 Est",
     "added_at": "2026-07-27T21:37:35.178200+00:00",
     "expires": "2026-08-10T21:37:35.178206+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FSUN": {
-    "ticker": "FSUN",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Firstsun Capital Q2 Adj. EPS $0.45 Misses $0.50 Estimate, Sales $225.974M Beat $182.853M Estimate",
-    "added_at": "2026-07-27T21:37:35.181583+00:00",
-    "expires": "2026-08-03T21:37:35.181588+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CINF": {
-    "ticker": "CINF",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "CORRECTION: Cincinnati Financial Q2 Adj. EPS $1.43 Misses $1.84 Estimate, Sales $2.825B Miss $2.920B Estimate",
-    "added_at": "2026-07-27T21:37:35.184837+00:00",
-    "expires": "2026-08-03T21:37:35.184842+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TPZ": {
-    "ticker": "TPZ",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Topaz Energy Q2 Adj. EPS $0.29, Inline, Sales $111.214M Miss $122.000M Estimate",
-    "added_at": "2026-07-27T21:37:35.190757+00:00",
-    "expires": "2026-08-03T21:37:35.190762+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RMBI": {
-    "ticker": "RMBI",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Richmond Mutual Bancorp Q2 EPS $0.22 Down From $0.26 YoY, Sales $13.654M Up From $11.839M YoY",
-    "added_at": "2026-07-27T21:37:35.194145+00:00",
-    "expires": "2026-08-03T21:37:35.194150+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4830,6 +4739,71 @@
     "headline": "Inspire Medical Systems Lowers FY2026 GAAP EPS Guidance from $0.07-$0.62 to $(0.42)-$0.17 vs $0.90 Est",
     "added_at": "2026-08-03T20:09:46.040403+00:00",
     "expires": "2026-08-17T20:09:46.040409+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "WGS": {
+    "ticker": "WGS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "CORRECTION: GeneDx Hldgs Q2 Adj. EPS $0.01 Beats $(0.19) Estimate, Sales $114.440M Beat $111.011M Estimate",
+    "added_at": "2026-08-03T21:38:49.077900+00:00",
+    "expires": "2026-08-10T21:38:49.077908+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PHAR": {
+    "ticker": "PHAR",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Canaccord Genuity Maintains Buy on Pharming, Raises Price Target to $38",
+    "added_at": "2026-08-03T21:38:49.082656+00:00",
+    "expires": "2026-08-08T21:38:49.082662+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NWL": {
+    "ticker": "NWL",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Canaccord Genuity Maintains Buy on Newell Brands, Raises Price Target to $11",
+    "added_at": "2026-08-03T21:38:49.086764+00:00",
+    "expires": "2026-08-08T21:38:49.086771+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GPOR": {
+    "ticker": "GPOR",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "UPDATE: Gulfport Energy Q2 Adj. EPS $3.917 Misses $4.09 Estimate, Sales $323.228M Beat $304.853M Estimate",
+    "added_at": "2026-08-03T21:38:49.101643+00:00",
+    "expires": "2026-08-10T21:38:49.101650+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNAP": {
+    "ticker": "SNAP",
+    "score_delta": 0.1,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Snap CFO Says Looking Beyond 2026, We Believe The Stronger Near-Term Outlook Reflects Durable Improvements In The Business; We Expect Direct Revenue To Continue Growing Materially Faster Than The Over",
+    "added_at": "2026-08-03T21:38:49.113786+00:00",
+    "expires": "2026-08-17T21:38:49.113791+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
