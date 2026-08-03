@@ -1,19 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AMBA",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "M&A acquisition talks typically drive significant premium for target company (AMBA) though still in negotiation phase rather than confirmed deal.",
-      "action_window": "intraday",
-      "headline": "'NXP Semiconductors Is In Talks To Buy Ambarella, A Chip Designer Specializing In AI-Enabled Chips' - Financial Times",
-      "url": "https://www.benzinga.com/m-a/26/07/60847379/nxp-semiconductors-is-in-talks-to-buy-ambarella-a-chip-designer-specialising-in-ai-enabled-chips",
-      "source": "alpaca",
-      "added_at": "2026-07-31T16:47:52.899548+00:00",
-      "updated_at": "2026-07-31T16:47:52.899569+00:00"
-    },
-    {
       "ticker": "SOXL",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -313,6 +300,54 @@
       "url": "https://www.benzinga.com/markets/earnings/26/08/60879878/middle-east-conflict-hits-marriott-hard-but-hotel-giant-still-raises-outlook",
       "source": "alpaca",
       "added_at": "2026-08-03T16:21:54.131123+00:00"
+    },
+    {
+      "ticker": "LNTH",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "TD Cowen downgrade from a higher rating to Hold with a lower price target of $102.5 signals reduced analyst confidence and typically triggers near-term selling pressure.",
+      "action_window": "intraday",
+      "headline": "TD Cowen Downgrades Lantheus Holdings to Hold, Lowers Price Target to $102.5",
+      "url": "https://www.benzinga.com/news/26/08/60883874/td-cowen-downgrades-lantheus-holdings-hold-lowers-price-target-102-5",
+      "source": "alpaca",
+      "added_at": "2026-08-03T18:16:14.378745+00:00"
+    },
+    {
+      "ticker": "APLD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "B. Riley analyst upgrade with significantly raised price target to $75 on strong AI infrastructure demand is a meaningful catalyst driving immediate stock momentum.",
+      "action_window": "intraday",
+      "headline": "Why Is Applied Digital Stock Surging Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60883840/why-is-applied-digital-stock-surging-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-03T18:16:14.378756+00:00"
+    },
+    {
+      "ticker": "NEXR",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Circuit breaker halt with 49.58% intraday gain indicates significant buying pressure from a major catalyst, though the specific driver is unclear which adds risk.",
+      "action_window": "intraday",
+      "headline": "Nexera Technologies Shares Halted On Circuit Breaker To The Upside; Stock Now Up 49.58%",
+      "url": "https://www.benzinga.com/quote/NEXR",
+      "source": "alpaca",
+      "added_at": "2026-08-03T18:16:14.378765+00:00"
+    },
+    {
+      "ticker": "SPCX",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Major share unlock of $100B combined with earnings while stock already down 50% creates significant dilution risk and selling pressure catalyst.",
+      "action_window": "intraday",
+      "headline": "SpaceX Stock Faces Most Dangerous Moment Since IPO \u2014 Earnings and $100B Unlock Collide",
+      "url": "https://www.benzinga.com/markets/tech/26/08/60883329/spacex-earnings-100b-share-unlock",
+      "source": "alpaca",
+      "added_at": "2026-08-03T18:16:14.378770+00:00"
     }
   ]
 }
