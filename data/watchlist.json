@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "FBLG",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Q2 EPS beat expectations by approximately 8.3% ($0.66 loss vs $0.72 loss estimate), a modest positive surprise for a small-cap biotech though still unprofitable.",
-      "action_window": "next_day",
-      "headline": "FibroBiologics, Inc. - Common Stock Q2 EPS $(0.66) Beats $(0.72) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/07/60858461/fibrobiologics-inc-common-stock-q2-eps-0-66-beats-0-72-estimate",
-      "source": "alpaca",
-      "added_at": "2026-07-31T22:34:32.474431+00:00"
-    },
-    {
       "ticker": "ETN",
       "tradeable_score": 0.58,
       "sentiment": "bullish",
@@ -291,15 +279,16 @@
     },
     {
       "ticker": "PLTR",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Palantir raised FY2026 sales guidance by ~6.5% ($500M increase) significantly above consensus estimates, indicating strong business momentum and visibility.",
+      "category": "earnings_beat",
+      "rationale": "Exceptional 93% YoY revenue growth with raised full-year guidance across revenue, operating income, and free cash flow represents a massive earnings beat.",
       "action_window": "intraday",
-      "headline": "Palantir Technologies Raises FY2026 Sales Guidance from $7.650B-$7.662B to $8.150B-$8.158B vs $7.694B Est",
-      "url": "https://www.benzinga.com/news/26/08/60888193/palantir-technologies-raises-fy2026-sales-guidance-7-650b-7-662b-8-150b-8-158b-vs-7-694b-est",
+      "headline": "Palantir Technologies Q2 Earnings Call Highlights",
+      "url": "https://www.marketbeat.com/instant-alerts/palantir-technologies-q2-earnings-call-highlights-2026-08-03/?utm_source=yahoofinance&amp;utm_medium=yahoofinance&amp;.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-08-03T20:09:46.053431+00:00"
+      "added_at": "2026-08-03T20:09:46.053431+00:00",
+      "updated_at": "2026-08-03T22:55:49.630671+00:00"
     },
     {
       "ticker": "SBAC",
@@ -409,6 +398,78 @@
       "url": "https://www.benzinga.com/news/26/08/60892876/snap-cfo-says-looking-beyond-2026-we-believe-stronger-near-term-outlook-reflects-durable-improvement",
       "source": "alpaca",
       "added_at": "2026-08-03T21:38:49.119323+00:00"
+    },
+    {
+      "ticker": "NUTR",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq delisting notice is a severe negative catalyst indicating non-compliance with listing standards, typically triggering immediate selling pressure and liquidity concerns for the affected company.",
+      "action_window": "intraday",
+      "headline": "Nusatrip Receives Nasdaq Delisting Notice",
+      "url": "https://www.benzinga.com/news/26/08/60893650/nusatrip-receives-nasdaq-delisting-notice",
+      "source": "alpaca",
+      "added_at": "2026-08-03T22:55:49.630620+00:00"
+    },
+    {
+      "ticker": "TTI",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Sales beat estimates by 4.2% while EPS met expectations, indicating moderate positive surprise with mixed earnings quality that warrants attention but not strong conviction.",
+      "action_window": "next_day",
+      "headline": "Tetra Technologies Q2 Adj. EPS $0.08, Inline, Sales $185.657M Beat $178.125M Estimate",
+      "url": "https://www.benzinga.com/quote/TTI",
+      "source": "alpaca",
+      "added_at": "2026-08-03T22:55:49.630631+00:00"
+    },
+    {
+      "ticker": "OTTR",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Otter Tail slashed FY2026 GAAP EPS guidance by approximately 26% at the midpoint ($5.42 to $4.04), representing a significant negative earnings revision that typically triggers immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "Otter Tail Lowers FY2026 GAAP EPS Guidance from $5.22-$5.62 to $3.84-$4.24",
+      "url": "https://www.benzinga.com/news/26/08/60893626/otter-tail-lowers-fy2026-gaap-eps-guidance-5-22-5-62-3-84-4-24",
+      "source": "alpaca",
+      "added_at": "2026-08-03T22:55:49.630638+00:00"
+    },
+    {
+      "ticker": "MAGH",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq delisting notice is a severe negative catalyst indicating non-compliance with listing standards, typically triggering immediate selling pressure and forced liquidation by institutional holders.",
+      "action_window": "next_day",
+      "headline": "Magnitude International Receives Nasdaq Delisting Notice",
+      "url": "https://www.benzinga.com/news/26/08/60893546/magnitude-international-receives-nasdaq-delisting-notice",
+      "source": "alpaca",
+      "added_at": "2026-08-03T22:55:49.630648+00:00"
+    },
+    {
+      "ticker": "TMQ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Confirmation of active Letter of Intent with U.S. Department of War signals continued government interest in Trilogy's strategic minerals project, reducing deal uncertainty and supporting project advancement prospects.",
+      "action_window": "next_day",
+      "headline": "Trilogy Metals Says Letter Of Intent With U.S. Department Of War Remains In Effect",
+      "url": "https://www.benzinga.com/news/26/08/60893519/trilogy-metals-says-letter-intent-u-s-department-war-remains-effect",
+      "source": "alpaca",
+      "added_at": "2026-08-03T22:55:49.630653+00:00"
+    },
+    {
+      "ticker": "VVOS",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CFO resignation and replacement is notable for a small-cap company but lacks details on circumstances (voluntary vs. forced) that would indicate clear positive or negative implications.",
+      "action_window": "next_day",
+      "headline": "Vivos Therapeutics' Bradford Amman Resigns As CFO; Roman Franklin Appointed As Chief Financial Officer",
+      "url": "https://www.benzinga.com/news/26/08/60893401/vivos-therapeutics-bradford-amman-resigns-cfo-roman-franklin-appointed-chief-financial-officer",
+      "source": "alpaca",
+      "added_at": "2026-08-03T22:55:49.630661+00:00"
     }
   ]
 }
