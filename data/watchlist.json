@@ -979,6 +979,114 @@
       "url": "https://www.benzinga.com/quote/SLRC",
       "source": "alpaca",
       "added_at": "2026-08-04T20:08:52.674078+00:00"
+    },
+    {
+      "ticker": "OKUR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings beat with actual EPS of -$0.31 versus estimate of -$0.54 represents a 42% better-than-expected result, likely to drive immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: OnKure Therapeutics Q2 EPS $(0.31) Beats $(0.54) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60935437/correction-onkure-therapeutics-q2-eps-0-31-beats-0-54-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.477978+00:00"
+    },
+    {
+      "ticker": "SGHT",
+      "tradeable_score": 0.91,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA 510(k) clearance for next-generation flagship product (OMNI Ultra) is a major regulatory catalyst that directly enables commercialization and revenue generation for a medical device company.",
+      "action_window": "next_day",
+      "headline": "Sight Sciences Receives FDA 510(k) Clearance For OMNI Ultra Surgical System; Next-Generation Implant-Free MIGS Device For Primary Open-Angle Glaucoma",
+      "url": "https://www.benzinga.com/general/biotech/26/08/60935405/sight-sciences-receives-fda-510-k-clearance-omni-ultra-surgical-system-next-generation-implant-free-",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.477998+00:00"
+    },
+    {
+      "ticker": "TSX:AKT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss (reported -$0.15 vs expected -$0.07, more than double the expected loss) outweighs the revenue beat, indicating margin pressure and operational challenges despite top-line strength.",
+      "action_window": "next_day",
+      "headline": "Akita Drilling Q2 EPS $(0.15) Misses $(0.07) Estimate, Sales $46.370M Beat $42.200M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60935393/akita-drilling-q2-eps-0-15-misses-0-07-estimate-sales-46-370m-beat-42-200m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478005+00:00"
+    },
+    {
+      "ticker": "KODK",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with EPS swinging positive from -$0.36 to $0.13 YoY and revenue growing 18% to $311M, indicating significant operational turnaround.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: Eastman Kodak Q2 EPS $0.13 Up From $(0.36) YoY, Sales $311.000M Up From $263.000M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60935358/correction-eastman-kodak-q2-eps-0-13-0-36-yoy-sales-311-000m-263-000m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478012+00:00"
+    },
+    {
+      "ticker": "ITUB",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Itau Unibanco missed both EPS ($0.21 vs $0.22 est) and revenue ($9.186B vs $9.400B est), representing a double miss on key quarterly metrics that typically drives immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "Itau Unibanco Holding Q2 Adj. EPS $0.21 Misses $0.22 Estimate, Sales $9.186B Miss $9.400B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60935337/itau-unibanco-holding-q2-adj-eps-0-21-misses-0-22-estimate-sales-9-186b-miss-9-400b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478019+00:00"
+    },
+    {
+      "ticker": "XPON",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CFO resignation is negative but offset by positive Nasdaq compliance news, creating mixed signals with moderate trading relevance.",
+      "action_window": "next_day",
+      "headline": "Expion 360 CFO Shawna Bowin Resigns; Co. Confirms Regain Of Nasdaq Compliance",
+      "url": "https://www.benzinga.com/news/26/08/60935319/expion-360-cfo-shawna-bowin-resigns-co-confirms-regain-nasdaq-compliance",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478025+00:00"
+    },
+    {
+      "ticker": "SU",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Suncor Energy beat EPS estimates by 3% and significantly exceeded sales estimates by 22%, indicating strong operational performance warranting immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Suncor Energy Q2 Adj. EPS $2.33 Beats $2.26 Estimate, Sales $12.665B Beat $10.370B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60935292/suncor-energy-q2-adj-eps-2-33-beats-2-26-estimate-sales-12-665b-beat-10-370b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478032+00:00"
+    },
+    {
+      "ticker": "BOXL",
+      "tradeable_score": 0.52,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CFO resignation creates uncertainty despite orderly transition plan with interim replacement and support through September, typically viewed negatively for small-cap companies.",
+      "action_window": "next_day",
+      "headline": "Boxlight CFO Ryan Zeek Resigns, Effective August 17; Co. Appoints Jennifer Grabow As Interim CFO; Ryan Zeek To Provide Transition Support Through September 30",
+      "url": "https://www.benzinga.com/news/26/08/60935106/boxlight-cfo-ryan-zeek-resigns-effective-august-17-co-appoints-jennifer-grabow-interim-cfo-ryan-zeek",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478044+00:00"
+    },
+    {
+      "ticker": "WTTR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Select Water Solutions beat Q2 EPS estimates by 30.8% ($0.17 vs $0.13) and revenue estimates by 6.1% ($395.8M vs $373.0M), representing a significant dual beat that typically drives immediate price action.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: Select Water Solutions Q2 EPS $0.17 Beats $0.13 Estimate, Sales $395.807M Beat $373.017M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60935072/correction-select-water-solutions-q2-eps-0-17-beats-0-13-estimate-sales-395-807m-beat-373-017m-estim",
+      "source": "alpaca",
+      "added_at": "2026-08-04T21:47:35.478055+00:00"
     }
   ]
 }
