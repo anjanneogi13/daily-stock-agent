@@ -698,6 +698,31 @@
       "url": "https://www.benzinga.com/news/26/08/60911166/conference-call-dupont-de-nemours-sees-q3-adj-eps-1-80-1-90-vs-1-93-est-sees-sales-1-835b-vs-1-877b-",
       "source": "alpaca",
       "added_at": "2026-08-04T15:00:27.950147+00:00"
+    },
+    {
+      "ticker": "PFE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Pfizer beat Q2 earnings estimates and raised 2026 revenue guidance to $62.5B, demonstrating successful diversification beyond declining COVID product sales.",
+      "action_window": "intraday",
+      "headline": "Pfizer's Diversified Drug Portfolio Fuels Growth as COVID Sales Decline",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60918935/pfizers-diversified-drug-portfolio-fuels-growth-as-covid-sales-decline",
+      "source": "alpaca",
+      "added_at": "2026-08-04T16:53:52.033469+00:00"
+    },
+    {
+      "ticker": "NVO",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Novo Nordisk cut full-year revenue outlook to -6% to 0% growth despite strong Q2 results and raised 2026 guidance, indicating near-term headwinds that outweigh longer-term GLP-1 optimism.",
+      "action_window": "intraday",
+      "headline": "Novo Nordisk Expects Outlook FY Adjusted Revenue Growth -6 To 0%; Q2 Adj Sales Up 7% At CER; Adj Operating Profit Up 11% At CER; Raises 2026 Adj Sales, Operating Profit Outlook To 0% To -6% At Cer; Improved Outlook Is Driven By Increased Expectations For Glp-1 Product Sales",
+      "url": "https://www.benzinga.com/news/26/08/60918540/novo-nordisk-expects-outlook-fy-adjusted-revenue-growth-6-0-q2-adj-sales-7-cer-adj-operating-profit-",
+      "source": "alpaca",
+      "added_at": "2026-08-04T16:53:52.033481+00:00",
+      "updated_at": "2026-08-04T16:53:52.033494+00:00"
     }
   ]
 }
