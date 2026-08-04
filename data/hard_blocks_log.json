@@ -1021,5 +1021,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-04 12:09:08",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 1,
+    "blocked": [
+      {
+        "ticker": "MAURY",
+        "reason": "SL too tight (1.9% < 2.0% for $38 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
