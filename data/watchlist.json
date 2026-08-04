@@ -650,6 +650,54 @@
       "url": "https://www.benzinga.com/quote/NXRT",
       "source": "alpaca",
       "added_at": "2026-08-04T12:28:01.688084+00:00"
+    },
+    {
+      "ticker": "TRUMPUSD",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "SEC investigation demand by prominent senators for potential fraud creates significant regulatory risk and likely triggers immediate selling pressure on the memecoin.",
+      "action_window": "intraday",
+      "headline": "Elizabeth Warren, Richard Blumenthal Demand SEC Investigation Into 'Illegal Scam' TRUMP Meme Coin",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/60911648/elizabeth-warren-richard-blumenthal-demand-sec-investigation-into-illegal-scam-trump-meme-coin",
+      "source": "alpaca",
+      "added_at": "2026-08-04T15:00:27.950109+00:00"
+    },
+    {
+      "ticker": "AAOI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Stock is already trading higher on a sector-wide rally driven by a proposed regulatory ban that creates tailwinds for domestic fiber optic companies at the expense of Chinese competitors.",
+      "action_window": "intraday",
+      "headline": "Applied Optoelectronics Shares Jump Following Proposed Ban on Chinese AI Hardware",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60911598/applied-optoelectronics-shares-jump-following-proposed-ban-on-chinese-ai-hardware",
+      "source": "alpaca",
+      "added_at": "2026-08-04T15:00:27.950122+00:00"
+    },
+    {
+      "ticker": "SQNS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company guides Q3 sales 22-28% below consensus estimates of $10.925M, representing a significant revenue miss that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Conference Call:\nSequans Communications Sees Q3 Sales $8.500M-$10.000M vs $10.925M Est",
+      "url": "https://www.benzinga.com/news/26/08/60911247/conference-call-sequans-communications-sees-q3-sales-8-500m-10-000m-vs-10-925m-est",
+      "source": "alpaca",
+      "added_at": "2026-08-04T15:00:27.950139+00:00"
+    },
+    {
+      "ticker": "DD",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "DuPont Q3 guidance significantly misses consensus with EPS $1.80-$1.90 vs $1.93 est and sales $1.835B vs $1.877B est, representing material downside that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Conference Call:\nDuPont de Nemours Sees Q3 Adj EPS $1.80-$1.90 vs $1.93 Est; Sees Sales $1.835B vs $1.877B Est",
+      "url": "https://www.benzinga.com/news/26/08/60911166/conference-call-dupont-de-nemours-sees-q3-adj-eps-1-80-1-90-vs-1-93-est-sees-sales-1-835b-vs-1-877b-",
+      "source": "alpaca",
+      "added_at": "2026-08-04T15:00:27.950147+00:00"
     }
   ]
 }

@@ -246,19 +246,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LLY": {
-    "ticker": "LLY",
-    "score_delta": -0.064,
-    "catalyst": "lawsuit",
-    "sentiment": "neutral",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Novo Nordisk Sues Eli Lilly Over Alleged Deceptive Weight Loss Drug Advertising",
-    "added_at": "2026-07-21T14:33:27.705882+00:00",
-    "expires": "2026-08-04T14:33:27.705889+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VOYA": {
     "ticker": "VOYA",
     "score_delta": 0.2,
@@ -765,19 +752,6 @@
     "headline": "Utz Brands Strikes Agreement To Be Acquired By Intersnack For $14.25/Share In Cash",
     "added_at": "2026-07-21T12:08:49.745710+00:00",
     "expires": "2026-08-20T12:08:49.745716+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VICR": {
-    "ticker": "VICR",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.74,
-    "action_window": "intraday",
-    "headline": "Conference Call:\nVicor Sees Q3 Revenue To Increase Nearly 10% YoY.",
-    "added_at": "2026-07-21T14:33:27.722927+00:00",
-    "expires": "2026-08-04T14:33:27.722933+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1427,19 +1401,6 @@
     "hard_block": false,
     "negative_reaction": true
   },
-  "MAGA": {
-    "ticker": "MAGA",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "QUICK SPARK: Trump-Backed Truth Social ETF Suite Adds Original America First ETF, Renames It MAGA",
-    "added_at": "2026-07-28T14:59:14.587611+00:00",
-    "expires": "2026-08-04T14:59:14.587618+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BA": {
     "ticker": "BA",
     "score_delta": 0.079,
@@ -1450,19 +1411,6 @@
     "headline": "Crude Oil Down Over 5%; Boeing Shares Rise After Q2 Results",
     "added_at": "2026-07-28T16:40:52.184273+00:00",
     "expires": "2026-08-04T16:40:52.184279+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KO": {
-    "ticker": "KO",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "QUICK SPARK: Coca-Cola Stock Hits Record High After Earnings",
-    "added_at": "2026-07-28T14:59:14.595217+00:00",
-    "expires": "2026-08-04T14:59:14.595222+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2727,19 +2675,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RSI": {
-    "ticker": "RSI",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Citizens Maintains Market Outperform on Rush Street Interactive, Raises Price Target to $34",
-    "added_at": "2026-07-30T14:41:13.031675+00:00",
-    "expires": "2026-08-04T14:41:13.031683+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BX": {
     "ticker": "BX",
     "score_delta": 0.025,
@@ -2750,45 +2685,6 @@
     "headline": "Blackstone Enters Definitive Agreement To Acquire Darkvision Technologies From Koch Engineered Solutions; No Financial Terms Disclosed",
     "added_at": "2026-07-30T14:41:13.035860+00:00",
     "expires": "2026-08-13T14:41:13.035866+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VRSK": {
-    "ticker": "VRSK",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on Verisk Analytics, Raises Price Target to $260",
-    "added_at": "2026-07-30T14:41:13.039708+00:00",
-    "expires": "2026-08-04T14:41:13.039715+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CHRW": {
-    "ticker": "CHRW",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Maintains Outperform on C.H. Robinson Worldwide, Raises Price Target to $237",
-    "added_at": "2026-07-30T14:41:13.043499+00:00",
-    "expires": "2026-08-04T14:41:13.043504+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "FICO": {
-    "ticker": "FICO",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on Fair Isaac, Raises Price Target to $1450",
-    "added_at": "2026-07-30T14:41:13.047294+00:00",
-    "expires": "2026-08-04T14:41:13.047300+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4822,6 +4718,97 @@
     "headline": "ZenaTech Submits Five U.S. Provisional Patents For Its Portfolio Of Acoustic Fire Suppression, Aerial Wildfire Assessment Technologies",
     "added_at": "2026-08-04T12:28:01.672702+00:00",
     "expires": "2026-08-11T12:28:01.672709+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRUMPUSD": {
+    "ticker": "TRUMPUSD",
+    "score_delta": -0.093,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Elizabeth Warren, Richard Blumenthal Demand SEC Investigation Into 'Illegal Scam' TRUMP Meme Coin",
+    "added_at": "2026-08-04T15:00:27.906800+00:00",
+    "expires": "2026-08-18T15:00:27.906807+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MU": {
+    "ticker": "MU",
+    "score_delta": 0.044,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "next_day",
+    "headline": "Micron\u2019s Bear-Case Earnings Are Still 8x Higher Than 2018 Peak: Bank of America",
+    "added_at": "2026-08-04T15:00:27.910807+00:00",
+    "expires": "2026-08-09T15:00:27.910815+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AMD": {
+    "ticker": "AMD",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "this_week",
+    "headline": "Big Tech's $1.2 Trillion Hyperscaler AI Bet Could Ignite the Next Semiconductor ETF Rally",
+    "added_at": "2026-08-04T15:00:27.914186+00:00",
+    "expires": "2026-08-09T15:00:27.914193+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AUDC": {
+    "ticker": "AUDC",
+    "score_delta": 0.064,
+    "catalyst": "guidance_raise",
+    "sentiment": "neutral",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Conference Call:\nAudioCodes Affirms FY2026 Adj EPS Guidance of $0.60-$0.75 vs $0.61 Est; Raises FY2026 Sales Guidance from $247.000M-$255.000M to $251.000M-$256.000M vs $251.600M Est",
+    "added_at": "2026-08-04T15:00:27.920733+00:00",
+    "expires": "2026-08-18T15:00:27.920740+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CNH": {
+    "ticker": "CNH",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on CNH Industrial, Raises Price Target to $13",
+    "added_at": "2026-08-04T15:00:27.932502+00:00",
+    "expires": "2026-08-09T15:00:27.932508+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SQNS": {
+    "ticker": "SQNS",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Conference Call:\nSequans Communications Sees Q3 Sales $8.500M-$10.000M vs $10.925M Est",
+    "added_at": "2026-08-04T15:00:27.939044+00:00",
+    "expires": "2026-08-18T15:00:27.939050+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DD": {
+    "ticker": "DD",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Conference Call:\nDuPont de Nemours Sees Q3 Adj EPS $1.80-$1.90 vs $1.93 Est; Sees Sales $1.835B vs $1.877B Est",
+    "added_at": "2026-08-04T15:00:27.945643+00:00",
+    "expires": "2026-08-18T15:00:27.945649+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
