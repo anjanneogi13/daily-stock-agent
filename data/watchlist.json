@@ -470,6 +470,102 @@
       "url": "https://www.benzinga.com/news/26/08/60893401/vivos-therapeutics-bradford-amman-resigns-cfo-roman-franklin-appointed-chief-financial-officer",
       "source": "alpaca",
       "added_at": "2026-08-03T22:55:49.630661+00:00"
+    },
+    {
+      "ticker": "APG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wells Fargo initiation with Overweight rating and $53 price target is a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Wells Fargo Initiates Coverage On APi Group with Overweight Rating, Announces Price Target of $53",
+      "url": "https://www.benzinga.com/news/26/08/60898566/wells-fargo-initiates-coverage-api-group-overweight-rating-announces-price-target-53",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213166+00:00"
+    },
+    {
+      "ticker": "OLN",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Wells Fargo downgrade from Overweight to Equal-Weight with price target reduction signals deteriorating analyst confidence and likely triggers selling pressure.",
+      "action_window": "intraday",
+      "headline": "Wells Fargo Downgrades Olin to Equal-Weight, Lowers Price Target to $20",
+      "url": "https://www.benzinga.com/news/26/08/60898537/wells-fargo-downgrades-olin-equal-weight-lowers-price-target-20",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213177+00:00"
+    },
+    {
+      "ticker": "WMT",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Oppenheimer downgrade from Outperform to Perform signals reduced confidence in Walmart's near-term prospects, likely triggering selling pressure from momentum investors.",
+      "action_window": "intraday",
+      "headline": "Oppenheimer Downgrades Walmart to Perform",
+      "url": "https://www.benzinga.com/news/26/08/60898528/oppenheimer-downgrades-walmart-perform",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213184+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Micron's 4% premarket jump on AI-driven DRAM demand and tight supply represents a meaningful near-term catalyst with confirmed price action, though partially driven by broader sector trends rather than company-specific news.",
+      "action_window": "intraday",
+      "headline": "Micron's AI-Fueled Surge Puts SK Hynix Under Pressure In DRAM Market Shake-Up",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/60898449/microns-ai-fueled-surge-puts-sk-hynix-under-pressure-in-dram-market-shake-up",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213189+00:00"
+    },
+    {
+      "ticker": "LPCN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Lipocine beat EPS estimates by 25.6% (-$0.32 vs -$0.43) and revenue beat by 21.5%, signaling stronger-than-expected performance despite low absolute revenue.",
+      "action_window": "intraday",
+      "headline": "Lipocine Q2 EPS $(0.32) Beats $(0.43) Estimate, Sales $190.099K Beat $156.500K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60898480/lipocine-q2-eps-0-32-beats-0-43-estimate-sales-190-099k-beat-156-500k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213200+00:00"
+    },
+    {
+      "ticker": "MAURY",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raised FY2026 sales guidance by $3M (~0.16% increase) while maintaining EPS guidance, indicating modest revenue improvement but limited material impact.",
+      "action_window": "intraday",
+      "headline": "Marui Group Affirms FY2026 GAAP EPS Guidance of $2.09; Raises FY2026 Sales Guidance from $1.887B to $1.890B",
+      "url": "https://www.benzinga.com/news/26/08/60898472/marui-group-affirms-fy2026-gaap-eps-guidance-2-09-raises-fy2026-sales-guidance-1-887b-1-890b",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213205+00:00"
+    },
+    {
+      "ticker": "SOPH",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic collaboration with major pharma AstraZeneca to develop companion diagnostics represents significant validation and revenue potential for SOPHiA GENETICS, though impact is more material for the smaller-cap partner.",
+      "action_window": "intraday",
+      "headline": "SOPHiA GENETICS Announces Global Collaboration To Develop, Validate, And Deploy Two Companion Diagnostics Supporting Precision Oncology Therapies With AstraZeneca",
+      "url": "https://www.benzinga.com/news/26/08/60898471/sophia-genetics-announces-global-collaboration-develop-validate-and-deploy-two-companion-diagnostics",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213209+00:00"
+    },
+    {
+      "ticker": "QXO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley reinstating Overweight rating with specific $35 price target is a meaningful catalyst from a major investment bank that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Reinstates Overweight on QXO, Announces $35 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/60898439/morgan-stanley-reinstates-overweight-qxo-announces-35-price-target",
+      "source": "alpaca",
+      "added_at": "2026-08-04T10:31:11.213217+00:00"
     }
   ]
 }
