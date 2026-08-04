@@ -1195,6 +1195,18 @@
       "url": "https://www.benzinga.com/news/26/08/60935495/eplus-authorizes-repurchase-1-5m-shares-over-12-months-aug-11-2026",
       "source": "alpaca",
       "added_at": "2026-08-04T22:56:17.332350+00:00"
+    },
+    {
+      "ticker": "IART",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat of 16.67% above estimates with only marginal revenue miss suggests operational efficiency and profitability strength that typically drives positive market reaction.",
+      "action_window": "intraday",
+      "headline": "Integra LifeSciences (IART) Q2 Earnings Top Estimates",
+      "url": "https://finance.yahoo.com/healthcare/articles/integra-lifesciences-iart-q2-earnings-113005705.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-08-04T23:59:08.402888+00:00"
     }
   ]
 }
