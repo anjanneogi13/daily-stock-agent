@@ -723,6 +723,79 @@
       "source": "alpaca",
       "added_at": "2026-08-04T16:53:52.033481+00:00",
       "updated_at": "2026-08-04T16:53:52.033494+00:00"
+    },
+    {
+      "ticker": "XOM",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Jones Act waiver extension would increase tanker competition and lower domestic shipping costs, pressuring refining margins for integrated oil majors while achieving administration's goal of cheaper gasoline prices.",
+      "action_window": "next_day",
+      "headline": "'White House Set To Extend Jones Act Waiver As Trump Hunts For Cheaper Gasoline' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/60923557/white-house-set-extend-jones-act-waiver-trump-hunts-cheaper-gasoline-reuters-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-08-04T18:25:16.529229+00:00"
+    },
+    {
+      "ticker": "AMZN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Jeff Bezos announcing plans to sell a substantial block of shares creates immediate selling pressure and negative sentiment for AMZN despite broader market strength.",
+      "action_window": "intraday",
+      "headline": "Amazon Stock Drops as S&P 500 Hits Fresh Highs: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60923032/amazon-stock-drops-as-sp-500-hits-fresh-highs-whats-happening",
+      "source": "alpaca",
+      "added_at": "2026-08-04T18:25:16.529252+00:00"
+    },
+    {
+      "ticker": "CMG",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A salmonella outbreak investigation linked to Mexican-style quick-service restaurants with 110 identified cases presents significant food safety and reputational risk for Chipotle, which has history of similar incidents.",
+      "action_window": "intraday",
+      "headline": "Minnesota Health Dept: Investigating Salmonella Javiana Outbreak Associated With Mexican-Style Quick-Service Restaurants. Jalape\u00f1os Are Suspected As Vehicle; MDH Has Identified 110 Salmonella Javiana Cases In Minnesota That Are Part Of This Outbreak; Jalape\u00f1os Are Suspected As The Vehicle Of Salmone",
+      "url": "https://www.benzinga.com/general/biotech/26/08/60922683/minnesota-health-dept-investigating-salmonella-javiana-outbreak-associated-mexican-style-quick-servi",
+      "source": "alpaca",
+      "added_at": "2026-08-04T18:25:16.529259+00:00",
+      "updated_at": "2026-08-04T18:25:16.529265+00:00"
+    },
+    {
+      "ticker": "JEF",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Evidence of fraudulent invoices at a fund associated with Jefferies represents significant reputational and potential legal/financial risk that could impact the stock negatively.",
+      "action_window": "intraday",
+      "headline": "'Jefferies Gets New Evidence of Fake Invoices at Beleaguered Fund' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/legal/26/08/60922434/jefferies-finds-new-evidence-of-fake-invoices-linked-to-sapphire-minmetals-financing-expands-trade-finance-probe",
+      "source": "alpaca",
+      "added_at": "2026-08-04T18:25:16.529271+00:00"
+    },
+    {
+      "ticker": "PRKS",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "United Parks missed both Q2 revenue and earnings estimates with declining attendance of 2.9%, representing a meaningful negative earnings catalyst despite positive per-guest spending trends.",
+      "action_window": "intraday",
+      "headline": "What's Going on With United Parks Stock Tuesday?",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60922573/whats-going-on-with-united-parks-stock-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-08-04T18:25:16.529277+00:00"
+    },
+    {
+      "ticker": "MDT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "First trial verdict establishes $88M liability and precedent for potentially thousands of similar hernia mesh cases, creating significant legal and financial overhang.",
+      "action_window": "intraday",
+      "headline": "U.S. Jury Says Medtronic Owes $88M In First Case To Go To Trial Over Covidien's Hernia Mesh",
+      "url": "https://www.benzinga.com/news/26/08/60922466/u-s-jury-says-medtronic-owes-88m-first-case-go-trial-over-covidien-s-hernia-mesh",
+      "source": "alpaca",
+      "added_at": "2026-08-04T18:25:16.529282+00:00"
     }
   ]
 }

@@ -1362,32 +1362,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TE": {
-    "ticker": "TE",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "T1 Energy Sees Q2 Loss, Shares Tank",
-    "added_at": "2026-07-28T18:09:02.183956+00:00",
-    "expires": "2026-08-04T18:09:02.183968+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
-  "GLW": {
-    "ticker": "GLW",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Corning\u2019s 15% Crash Hits a Lesser-Known AI Trade: These ETFs Are Under Pressure",
-    "added_at": "2026-07-28T18:09:02.172399+00:00",
-    "expires": "2026-08-04T18:09:02.172411+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SPGI": {
     "ticker": "SPGI",
     "score_delta": 0.025,
@@ -2659,32 +2633,6 @@
     "headline": "Everpure Announces General Availability Of Everpure Cloud Azure Native For Azure VMs, Says Fully Managed Block Storage Service Cuts Storage TCO Up To 40%",
     "added_at": "2026-07-30T16:23:16.544658+00:00",
     "expires": "2026-08-06T16:23:16.544664+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AVNW": {
-    "ticker": "AVNW",
-    "score_delta": 0.025,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Watching Aviat Networks; Hearing Zacks Home Run Investor Newsletter Mentions The Stock As A Buy",
-    "added_at": "2026-07-30T17:56:42.654844+00:00",
-    "expires": "2026-08-04T17:56:42.654851+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CVE": {
-    "ticker": "CVE",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on Cenovus Energy, Raises Price Target to C$51",
-    "added_at": "2026-07-30T17:56:42.667166+00:00",
-    "expires": "2026-08-04T17:56:42.667174+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4809,6 +4757,32 @@
     "headline": "TD Cowen Maintains Buy on SI-BONE, Raises Price Target to $20",
     "added_at": "2026-08-04T16:53:52.024146+00:00",
     "expires": "2026-08-09T16:53:52.024151+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SAH": {
+    "ticker": "SAH",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Underweight on Sonic Automotive, Lowers Price Target to $72",
+    "added_at": "2026-08-04T18:25:16.516402+00:00",
+    "expires": "2026-08-09T18:25:16.516409+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PRKS": {
+    "ticker": "PRKS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "What's Going on With United Parks Stock Tuesday?",
+    "added_at": "2026-08-04T18:25:16.519609+00:00",
+    "expires": "2026-08-11T18:25:16.519615+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
