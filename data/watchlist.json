@@ -1448,6 +1448,78 @@
       "source": "alpaca",
       "added_at": "2026-08-05T14:45:54.723908+00:00",
       "updated_at": "2026-08-05T14:45:54.723919+00:00"
+    },
+    {
+      "ticker": "GFS",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Stock fell despite earnings beat, indicating market disappointment with guidance or AI business trajectory despite positive 'early innings' framing.",
+      "action_window": "intraday",
+      "headline": "GlobalFoundries Says AI Data Center Business Is Still in the 'Early Innings'",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60959178/globalfoundries-says-ai-data-center-business-is-still-in-the-early-innings",
+      "source": "alpaca",
+      "added_at": "2026-08-05T16:29:02.605373+00:00"
+    },
+    {
+      "ticker": "ATTO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "IPO opened 23.5% above pricing at $21 versus $17, indicating strong institutional and retail demand for this biotech debut.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: Attovia Therapeutics IPO Shares Open For Trade At $21/Share; IPO Priced At $17/Share On 17M Shares",
+      "url": "https://www.benzinga.com/quote/ATTO",
+      "source": "alpaca",
+      "added_at": "2026-08-05T16:29:02.605388+00:00"
+    },
+    {
+      "ticker": "MLM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Regulatory approval for M&A combination removes key deal uncertainty and allows transaction to proceed, typically a significant positive catalyst for the acquirer's stock.",
+      "action_window": "intraday",
+      "headline": "Martin Marietta Materials Receives Regulatory Nods For Business Combination With Lhoist North America",
+      "url": "https://www.benzinga.com/news/26/08/60959090/martin-marietta-materials-receives-regulatory-nods-business-combination-lhoist-north-america",
+      "source": "alpaca",
+      "added_at": "2026-08-05T16:29:02.605396+00:00"
+    },
+    {
+      "ticker": "FRPT",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Earnings beat combined with raised 2026 outlook, multiple operational improvements, and short squeeze dynamics creates strong positive catalyst with immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Freshpet Short Squeeze - Pet Food Maker Stock Surges After Outlook Bump",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60958997/freshpet-short-squeeze-pet-food-maker-stock-surges-after-outlook-bump",
+      "source": "alpaca",
+      "added_at": "2026-08-05T16:29:02.605404+00:00"
+    },
+    {
+      "ticker": "SHAK",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Activist investor Starboard publicly announces potentially largest shareholder position calling stock undervalued with growth acceleration opportunity, typically catalyzing immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Live On Bloomberg TV, Starboard CEO Jeff Smith Says Starboard Has Taken A Position In Shake Shack; Shake Shack Is Just Too Cheap; May Be The Largest Shareholder In Shake Shack; Opportunity To Accelerate Growth Further",
+      "url": "https://www.benzinga.com/quote/SHAK",
+      "source": "alpaca",
+      "added_at": "2026-08-05T16:29:02.605411+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Promoting a renowned AI leader (DeepMind founder) to Chief Scientist signals Alphabet's strategic commitment to AI leadership, though executive changes typically have moderate trading impact.",
+      "action_window": "next_day",
+      "headline": "Demis Hassabis Appointed As Alphabet's Chief Scientist, Chair Of Google DeepMind",
+      "url": "https://www.benzinga.com/news/26/08/60958827/demis-hassabis-appointed-alphabet-s-chief-scientist-chair-google-deepmind",
+      "source": "alpaca",
+      "added_at": "2026-08-05T16:29:02.605421+00:00"
     }
   ]
 }

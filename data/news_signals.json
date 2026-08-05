@@ -1128,19 +1128,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VRNS": {
-    "ticker": "VRNS",
-    "score_delta": 0.089,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.62,
-    "action_window": "next_day",
-    "headline": "These Analysts Revise Their Forecasts On Varonis Following Q2 Earnings",
-    "added_at": "2026-07-29T15:07:54.966820+00:00",
-    "expires": "2026-08-05T15:07:54.966829+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ZVRA": {
     "ticker": "ZVRA",
     "score_delta": -0.2,
@@ -1375,19 +1362,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "INCY": {
-    "ticker": "INCY",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "Incyte Analysts Raise Their Forecasts After Upbeat Q2 Results",
-    "added_at": "2026-07-29T15:07:54.949640+00:00",
-    "expires": "2026-08-05T15:07:54.949646+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CLVT": {
     "ticker": "CLVT",
     "score_delta": -0.15,
@@ -1453,19 +1427,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VRT": {
-    "ticker": "VRT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Vertiv Lifts EPS Outlook After Record Cash Flow Growth",
-    "added_at": "2026-07-29T15:07:54.926087+00:00",
-    "expires": "2026-08-05T15:07:54.926095+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "UHS": {
     "ticker": "UHS",
     "score_delta": -0.096,
@@ -1489,19 +1450,6 @@
     "headline": "Timberland Parent VF Corp CEO Admits Quarter 'Wasn't Great'",
     "added_at": "2026-07-29T19:52:34.279150+00:00",
     "expires": "2026-08-05T19:52:34.279156+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EWY": {
-    "ticker": "EWY",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "SK Hynix Earnings Sinks KOSPI Further, Putting South Korea ETFs in Focus",
-    "added_at": "2026-07-29T15:07:54.958990+00:00",
-    "expires": "2026-08-05T15:07:54.958996+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2623,19 +2571,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "STGW": {
-    "ticker": "STGW",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on Stagwell, Raises Price Target to $10",
-    "added_at": "2026-07-31T15:00:26.199501+00:00",
-    "expires": "2026-08-05T15:00:26.199508+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AXTI": {
     "ticker": "AXTI",
     "score_delta": 0.1,
@@ -2646,58 +2581,6 @@
     "headline": "These AXT ETFs Turned a 30% Stock Rally Into Nearly 50% Returns",
     "added_at": "2026-07-31T15:00:26.204298+00:00",
     "expires": "2026-08-07T15:00:26.204305+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "REGN": {
-    "ticker": "REGN",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Cantor Fitzgerald Maintains Overweight on Regeneron Pharmaceuticals, Raises Price Target to $795",
-    "added_at": "2026-07-31T15:00:26.208423+00:00",
-    "expires": "2026-08-05T15:00:26.208432+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NBIX": {
-    "ticker": "NBIX",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Piper Sandler Maintains Overweight on Neurocrine Biosciences, Raises Price Target to $210",
-    "added_at": "2026-07-31T15:00:26.212561+00:00",
-    "expires": "2026-08-05T15:00:26.212566+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MMSI": {
-    "ticker": "MMSI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Piper Sandler Maintains Overweight on Merit Medical Systems, Raises Price Target to $106",
-    "added_at": "2026-07-31T15:00:26.219229+00:00",
-    "expires": "2026-08-05T15:00:26.219235+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BNL": {
-    "ticker": "BNL",
-    "score_delta": 0.029,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.4,
-    "action_window": "next_day",
-    "headline": "Cantor Fitzgerald Maintains Overweight on Broadstone Net Lease, Raises Price Target to $24",
-    "added_at": "2026-07-31T15:00:26.223319+00:00",
-    "expires": "2026-08-05T15:00:26.223325+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4783,6 +4666,97 @@
     "headline": "Wells Fargo Maintains Overweight on Diamondback Energy, Raises Price Target to $263",
     "added_at": "2026-08-05T14:45:54.718376+00:00",
     "expires": "2026-08-10T14:45:54.718382+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GFS": {
+    "ticker": "GFS",
+    "score_delta": -0.024,
+    "catalyst": "earnings_beat",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "GlobalFoundries Says AI Data Center Business Is Still in the 'Early Innings'",
+    "added_at": "2026-08-05T16:29:02.568757+00:00",
+    "expires": "2026-08-12T16:29:02.568765+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "MLM": {
+    "ticker": "MLM",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Martin Marietta Materials Receives Regulatory Nods For Business Combination With Lhoist North America",
+    "added_at": "2026-08-05T16:29:02.572943+00:00",
+    "expires": "2026-08-19T16:29:02.572952+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FRPT": {
+    "ticker": "FRPT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Freshpet Short Squeeze - Pet Food Maker Stock Surges After Outlook Bump",
+    "added_at": "2026-08-05T16:29:02.576584+00:00",
+    "expires": "2026-08-12T16:29:02.576591+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "J": {
+    "ticker": "J",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Jacobs Solutions, Raises Price Target to $174",
+    "added_at": "2026-08-05T16:29:02.580127+00:00",
+    "expires": "2026-08-10T16:29:02.580134+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CSWC": {
+    "ticker": "CSWC",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "B. Riley Securities Maintains Buy on Capital Southwest, Raises Price Target to $25.5",
+    "added_at": "2026-08-05T16:29:02.589528+00:00",
+    "expires": "2026-08-10T16:29:02.589536+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IRT": {
+    "ticker": "IRT",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Independence Realty Trust, Raises Price Target to $19",
+    "added_at": "2026-08-05T16:29:02.593062+00:00",
+    "expires": "2026-08-10T16:29:02.593068+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CMG": {
+    "ticker": "CMG",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Why Is Chipotle Mexican Grill Stock Surging on Wednesday?",
+    "added_at": "2026-08-05T16:29:02.600095+00:00",
+    "expires": "2026-08-10T16:29:02.600101+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
