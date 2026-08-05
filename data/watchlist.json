@@ -254,15 +254,16 @@
     },
     {
       "ticker": "TKO",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Company raised FY2026 sales guidance with new midpoint of $5.8B representing ~2% increase above prior guidance and slightly above consensus estimates of $5.794B.",
+      "category": "earnings_beat",
+      "rationale": "Taseko Mines beat both EPS estimates by 10% and sales estimates by 12.2%, representing a meaningful double-beat in a mining company's quarterly results.",
       "action_window": "intraday",
-      "headline": "TKO Group Holdings Raises FY2026 Sales Guidance from $5.675B-$5.775B to $5.775B-$5.825B vs $5.794B Est",
-      "url": "https://www.benzinga.com/news/26/08/60888209/tko-group-holdings-raises-fy2026-sales-guidance-5-675b-5-775b-5-775b-5-825b-vs-5-794b-est",
+      "headline": "Taseko Mines Q2 Adj. EPS $0.11 Beats $0.10 Estimate, Sales $330.553M Beat $294.498M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60979507/taseko-mines-q2-adj-eps-0-11-beats-0-10-estimate-sales-330-553m-beat-294-498m-estimate",
       "source": "alpaca",
-      "added_at": "2026-08-03T20:09:46.053421+00:00"
+      "added_at": "2026-08-03T20:09:46.053421+00:00",
+      "updated_at": "2026-08-05T22:52:14.924879+00:00"
     },
     {
       "ticker": "ICHR",
@@ -1785,6 +1786,138 @@
       "url": "https://www.benzinga.com/markets/earnings/26/08/60977912/sunrun-stock-plunges-after-q2-report-details",
       "source": "alpaca",
       "added_at": "2026-08-05T21:43:51.687482+00:00"
+    },
+    {
+      "ticker": "KRMD",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "Withdrawal of FDA 510(k) application represents a setback for regulatory approval timeline, though company pivots to potentially larger market opportunity with alternative molecules.",
+      "action_window": "next_day",
+      "headline": "Koru Medical Systems Withdraws 510(K) Application For FreedomEDGE With Phesgo In U.S. To Focus On Alternative Higher Volume Molecules",
+      "url": "https://www.benzinga.com/general/biotech/26/08/60979578/koru-medical-systems-withdraws-510-k-application-freedomedge-phesgo-u-s-focus-alternative-higher-vol",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924837+00:00"
+    },
+    {
+      "ticker": "CF",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Middle East conflict reducing global nitrogen supply by significant volumes (4.0-4.5M tons urea, 1M tons ammonia) creates favorable supply-demand dynamics and pricing power for CF Industries through 2027.",
+      "action_window": "next_day",
+      "headline": "CF Industries Says Global Nitrogen Supply-Demand Fundamentals Remain Constructive Into 2027; Conflict With Iran Reduced M. East Traded Nitrogen Supply By About 4.0M-4.5M Metric Tons Urea & About 1M Metric Tons Ammonia; Expects Higher Shipping Costs From M East Region To Persist Over The Longer Term;",
+      "url": "https://www.benzinga.com/quote/CF",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924853+00:00"
+    },
+    {
+      "ticker": "TSX:ADEN",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Adentra delivered a significant earnings beat with Q2 adjusted EPS of $0.96 versus $0.70 estimate (37% beat) and sales also exceeded expectations by 2.9%, indicating strong operational performance.",
+      "action_window": "next_day",
+      "headline": "Adentra Q2 Adj. EPS $0.96 Beats $0.70 Estimate, Sales $607.128M Beat $590.294M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60979532/adentra-q2-adj-eps-0-96-beats-0-70-estimate-sales-607-128m-beat-590-294m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924863+00:00"
+    },
+    {
+      "ticker": "TGB",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat on EPS with exceptional 185% YoY revenue growth signals significant operational improvement and likely triggers immediate market reaction.",
+      "action_window": "next_day",
+      "headline": "Taseko Mines Q2 Adj. EPS $0.08 Beats $0.07 Estimate, Sales $238.778M Up From $83.862M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60979518/taseko-mines-q2-adj-eps-0-08-beats-0-07-estimate-sales-238-778m-83-862m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924872+00:00"
+    },
+    {
+      "ticker": "FFAI",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Company announces significant debt reduction plan (57% liability decrease from $230M to below $100M within four quarters), which improves financial health but lacks immediate confirmed execution.",
+      "action_window": "next_day",
+      "headline": "Faraday Future Intelligent Electric To Accelerate Liability Optimization Efforts; Plans To Reduce Liabilities From $230M As Of Q1-End To Below $100MWithin Four Quarters",
+      "url": "https://www.benzinga.com/quote/FFAI",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924891+00:00"
+    },
+    {
+      "ticker": "HDSN",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major $210M government contract re-award with potential 15-year duration through 2036 provides significant revenue visibility and validates competitive position for a small-cap company.",
+      "action_window": "next_day",
+      "headline": "Hudson Technologies Re-Awarded $210M DLA Refrigerant Contract Through 2031; Includes Five-Year Extension Option Through 2036",
+      "url": "https://www.benzinga.com/news/26/08/60979483/hudson-technologies-re-awarded-210m-dla-refrigerant-contract-through-2031-includes-five-year-extensi",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924900+00:00"
+    },
+    {
+      "ticker": "TNYA",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Severe earnings miss with EPS 4x worse than expected and revenue missing by 89% creates significant downward pressure.",
+      "action_window": "next_day",
+      "headline": "Tenaya Therapeutics Q2 EPS $(0.20) Misses $(0.05) Estimate, Sales $1.110M Miss $10.000M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60979470/tenaya-therapeutics-q2-eps-0-20-misses-0-05-estimate-sales-1-110m-miss-10-000m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924909+00:00"
+    },
+    {
+      "ticker": "UWMC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Dividend suspension is typically viewed negatively by income-focused investors and signals financial stress despite stated intent to reduce debt.",
+      "action_window": "next_day",
+      "headline": "UWM HOLDINGS Suspends Common Dividend To Prioritize Debt Reduction",
+      "url": "https://www.benzinga.com/trading-ideas/dividends/26/08/60979459/uwm-holdings-suspends-common-dividend-prioritize-debt-reduction",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924917+00:00"
+    },
+    {
+      "ticker": "SITM",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "SiTime raised Q3 guidance dramatically with EPS 59-66% above consensus and revenue 61-67% above estimates, indicating a major positive surprise.",
+      "action_window": "intraday",
+      "headline": "Conference Call:\nSiTime Sees Q3 Adj EPS $3.50-$3.65 vs $2.20 Est; Sees Sales $285.000M-$295.000M vs $177.001M Est",
+      "url": "https://www.benzinga.com/news/26/08/60979432/conference-call-sitime-sees-q3-adj-eps-3-50-3-65-vs-2-20-est-sees-sales-285-000m-295-000m-vs-177-001",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924934+00:00"
+    },
+    {
+      "ticker": "PCVX",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Vaxcyte beat Q2 EPS estimates by $0.25 (11% better than expected), a meaningful positive surprise for a biotech company that typically justifies after-hours or pre-market trading action.",
+      "action_window": "next_day",
+      "headline": "Vaxcyte Q2 EPS $(1.97) Beats $(2.22) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60979348/vaxcyte-q2-eps-1-97-beats-2-22-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924942+00:00"
+    },
+    {
+      "ticker": "SNDK",
+      "tradeable_score": 0.64,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Accelerating business development with 5 new model agreements (3 new customers, 2 expansions) signals strong commercial momentum and potential revenue growth beyond previous guidance.",
+      "action_window": "next_day",
+      "headline": "Sandisk Says Since Announcing Five New Business Model Agreements During Our April Earnings Call, We Have Signed Five Additional Agreements, Including Three NBMs With New Customers And Two Deals Expanding On Previously Signed NBMs",
+      "url": "https://www.benzinga.com/news/26/08/60979328/sandisk-says-announcing-five-new-business-model-agreements-during-our-april-earnings-call-we-have-si",
+      "source": "alpaca",
+      "added_at": "2026-08-05T22:52:14.924951+00:00"
     }
   ]
 }
