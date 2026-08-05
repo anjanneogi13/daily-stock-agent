@@ -1520,6 +1520,66 @@
       "url": "https://www.benzinga.com/news/26/08/60958827/demis-hassabis-appointed-alphabet-s-chief-scientist-chair-google-deepmind",
       "source": "alpaca",
       "added_at": "2026-08-05T16:29:02.605421+00:00"
+    },
+    {
+      "ticker": "TDC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Stock is actively falling on weak Q3 guidance despite Q2 beat and raised full-year EPS, creating mixed signals but immediate downward pressure dominates.",
+      "action_window": "intraday",
+      "headline": "Why Is Teradata Stock Falling on Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60963206/why-is-teradata-stock-falling-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-08-05T18:04:57.216570+00:00"
+    },
+    {
+      "ticker": "CPRI",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Despite earnings beat, lowered FY27 revenue guidance due to Middle East conflict impact on luxury sales triggered immediate stock decline, creating actionable trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Michael Kors Parent Warns Middle East Conflict Is Taking a Toll on Luxury Sales",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60962984/michael-kors-parent-warns-middle-east-conflict-is-taking-a-toll-on-luxury-sales",
+      "source": "alpaca",
+      "added_at": "2026-08-05T18:04:57.216585+00:00"
+    },
+    {
+      "ticker": "GILT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with higher EBITDA and significant M&A progress creates immediate positive catalyst for GILT with spillover impact to CMTL.",
+      "action_window": "intraday",
+      "headline": "Gilat Satellite Defense Business Boosts Q2 Earnings",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60962904/gilat-satellite-defense-business-boosts-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-08-05T18:04:57.216595+00:00"
+    },
+    {
+      "ticker": "ASTS",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Successful satellite launch expands AST SpaceMobile's operational network capability, a major operational milestone for the space communications company that directly advances revenue potential.",
+      "action_window": "intraday",
+      "headline": "AST SpaceMobile Launches Three BlueBird Satellites Into Orbit",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60962813/ast-spacemobile-launches-three-bluebird-satellites-into-orbit",
+      "source": "alpaca",
+      "added_at": "2026-08-05T18:04:57.216604+00:00"
+    },
+    {
+      "ticker": "CROX",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Negative investigative journalism from major outlet (NYT) exposing aggressive tax avoidance strategies creates reputational risk, potential regulatory scrutiny, and immediate selling pressure as shares already moving lower.",
+      "action_window": "intraday",
+      "headline": "Watching Crocs; Shares Move Lower, New York Times Issues Article Titled \"Crocs Has a Trick for Dodging Taxes: a Tiny Office in Malta; The Mediterranean archipelago is a hot destination for U.S. companies seeking to shield profits from income taxes.\"",
+      "url": "https://www.benzinga.com/news/26/08/60962656/watching-crocs-shares-move-lower-new-york-times-issues-article-titled-crocs-has-a-trick-for-dodging-taxes-a-tiny-office-in-malta-the-mediterranean-archipelago-is-a-hot-destination-for-u-s-compan",
+      "source": "alpaca",
+      "added_at": "2026-08-05T18:04:57.216612+00:00"
     }
   ]
 }
