@@ -1918,6 +1918,102 @@
       "url": "https://www.benzinga.com/news/26/08/60979328/sandisk-says-announcing-five-new-business-model-agreements-during-our-april-earnings-call-we-have-si",
       "source": "alpaca",
       "added_at": "2026-08-05T22:52:14.924951+00:00"
+    },
+    {
+      "ticker": "COIN",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Coinbase is expanding into perpetual futures trading in Australia across multiple asset classes, representing meaningful product diversification and revenue stream expansion in a regulated market.",
+      "action_window": "next_day",
+      "headline": "Coinbase Australia Is Launching Perpetuals To Eligible Wholesale Customers. The Launch Represents A Significant Leap In Our Australian Product Suite, Moving Beyond Spot Crypto And Stablecoins To Provide Locally Licensed Perpetual Trading For Crypto, Equity And Commodity Assets",
+      "url": "https://www.benzinga.com/news/26/08/60980045/coinbase-australia-launching-perpetuals-eligible-wholesale-customers-launch-represents-significant-l",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294702+00:00"
+    },
+    {
+      "ticker": "FCCN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "NASDAQ uplisting application is a meaningful catalyst that typically improves liquidity, institutional access, and stock visibility, though final approval is not yet confirmed.",
+      "action_window": "next_day",
+      "headline": "Spectral Capital Corp Applies To List Common Stock On NASDAQ Under Symbol \"FCCN\"",
+      "url": "https://www.benzinga.com/quote/FCCN",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294728+00:00"
+    },
+    {
+      "ticker": "PACB",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Restructuring plan targeting $30M-$40M annualized cost savings by 2027 with minimal upfront charges ($2M) signals operational efficiency improvements, though 8% workforce reduction and multi-year timeline temper immediate impact.",
+      "action_window": "next_day",
+      "headline": "Pacific Biosciences Of California Approves Restructuring Plan To Align With Strategic Initiatives; Restructuring To Reduce Workforce By About 8%; Expects $30M-$40M Annualized Operating Expense Reduction By End Of 2027; Estimates $2M Pre-Tax Charges For Reduction In Force",
+      "url": "https://www.benzinga.com/news/26/08/60979941/pacific-biosciences-california-approves-restructuring-plan-align-strategic-initiatives-restructuring",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294740+00:00"
+    },
+    {
+      "ticker": "HON",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Aerospace CEO admits twice underestimating supply chain recovery timeline and corrective measure effectiveness, signaling likely production delays and potential revenue/margin guidance cuts.",
+      "action_window": "intraday",
+      "headline": "Honeywell Aerospace CEO Says Co Supply Base Has Not Been Able To Ramp In The Manner Expected Earlier This Year; Says I Underestimated How Long It Would Take To Implement And See Traction From The Corrective Measures We Had Taken; I Underestimated How Long It Would Take To Implement And See Traction ",
+      "url": "https://www.benzinga.com/news/26/08/60979905/honeywell-aerospace-ceo-says-co-supply-base-has-not-been-able-ramp-manner-expected-earlier-year-says",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294750+00:00"
+    },
+    {
+      "ticker": "NTR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Nutrien raised 2026 potash sales volume guidance while lowering capex, indicating improved operational efficiency and capital discipline, though mixed with neutral phosphate guidance.",
+      "action_window": "next_day",
+      "headline": "Nutrien Increases 2026 Potash Sales Volume Guidance To 14.2M-14.8M Tonnes; Lowers 2026 Capital Expenditures Guidance To $1.95B-$2.05B; 2026 Phosphate Sales Volume Guidance Of 2.4M To 2.6M Tonnes Reflects Benefits Of Reliability Improvement Initiatives Completed In 2025; Remain On Track To Solidify T",
+      "url": "https://www.benzinga.com/quote/NTR",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294760+00:00"
+    },
+    {
+      "ticker": "VEEA",
+      "tradeable_score": 0.62,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "CFO termination (not resignation) signals potential financial irregularities or governance issues, creating near-term uncertainty despite COO appointment as acting replacement.",
+      "action_window": "next_day",
+      "headline": "Veea Terminates CFO Randal Stephenson; Appoints COO Greg Deisher As Acting CFO",
+      "url": "https://www.benzinga.com/news/26/08/60979855/veea-terminates-cfo-randal-stephenson-appoints-coo-greg-deisher-acting-cfo",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294770+00:00"
+    },
+    {
+      "ticker": "EC",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Ecopetrol successfully completed tender offer for 25% of Brava Energia and is on track to acquire controlling 51% stake, representing a significant strategic expansion in Brazil's energy sector.",
+      "action_window": "next_day",
+      "headline": "Ecopetrol Completes Tender Offer Auction For 25% Of Brava Energia At R$23.00 Per Share; On Track To Acquire ~51% Controlling Stake",
+      "url": "https://www.benzinga.com/m/26/08/60979834/ecopetrol-completes-tender-offer-auction-25-brava-energia-r-23-00-share-track-acquire-51-controlling",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294778+00:00"
+    },
+    {
+      "ticker": "BKD",
+      "tradeable_score": 0.76,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major strategic acquisition of 17 communities combined with complete refinancing of mortgage debt through 2028 significantly improves both growth profile and financial stability.",
+      "action_window": "next_day",
+      "headline": "Brookdale Senior Living Announces Acquisition Of 17 Leased Communities And Refinances All Mortgage Debt Maturities Until 2028; To Buy 17 Senior Living Communities For $157M",
+      "url": "https://www.benzinga.com/m/26/08/60979755/brookdale-senior-living-announces-acquisition-17-leased-communities-and-refinances-all-mortgage-debt",
+      "source": "alpaca",
+      "added_at": "2026-08-05T23:54:18.294790+00:00"
     }
   ]
 }
