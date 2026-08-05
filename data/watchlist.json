@@ -1399,6 +1399,55 @@
       "url": "https://www.benzinga.com/quote/SPY",
       "source": "alpaca",
       "added_at": "2026-08-05T12:24:42.674426+00:00"
+    },
+    {
+      "ticker": "AXTA",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Shareholder approval of all-stock merger with AkzoNobel is a critical milestone that significantly increases deal certainty and typically triggers final price convergence to deal terms.",
+      "action_window": "intraday",
+      "headline": "Axalta Coating Systems' Shareholders Approve Previously Announced All-Stock Business Combination With Azko Nobel",
+      "url": "https://www.benzinga.com/m/26/08/60953932/axalta-coating-systems-shareholders-approve-previously-announced-all-stock-business-combination-azko",
+      "source": "alpaca",
+      "added_at": "2026-08-05T14:45:54.723873+00:00"
+    },
+    {
+      "ticker": "TCGX",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "IPO security released for quotation represents the beginning of public trading with high initial volatility but uncertain directional bias.",
+      "action_window": "intraday",
+      "headline": "Trading Halt: Halt status updated at 10:35:00 AM ET: Quotation Resumption: IPO security released for quotation",
+      "url": "https://www.benzinga.com/quote/TCGX",
+      "source": "alpaca",
+      "added_at": "2026-08-05T14:45:54.723890+00:00"
+    },
+    {
+      "ticker": "UBER",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant $10B long-term strategic investment in autonomous vehicles signals major business model evolution and competitive positioning, though timeline ambiguity and execution risk temper immediate trading impact.",
+      "action_window": "intraday",
+      "headline": "'Uber Plans To Invest $10 Billion Over Time In Autonomous Vehicle Fleet Expansion' - The Information",
+      "url": "https://www.benzinga.com/news/26/08/60953481/uber-plans-invest-10-billion-over-time-autonomous-vehicle-fleet-expansion-information",
+      "source": "alpaca",
+      "added_at": "2026-08-05T14:45:54.723900+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Crude oil inventories showed a significant 2.479M barrel build versus expectations of a 1.500M draw, indicating weaker demand or oversupply which is bearish for oil prices.",
+      "action_window": "intraday",
+      "headline": "USA Crude Oil Inventories 2.479M Barrel Build Vs 1.500M Barrel Draw Est.",
+      "url": "https://www.benzinga.com/quote/USO",
+      "source": "alpaca",
+      "added_at": "2026-08-05T14:45:54.723908+00:00",
+      "updated_at": "2026-08-05T14:45:54.723919+00:00"
     }
   ]
 }
