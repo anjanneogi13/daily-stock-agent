@@ -1580,6 +1580,30 @@
       "url": "https://www.benzinga.com/news/26/08/60962656/watching-crocs-shares-move-lower-new-york-times-issues-article-titled-crocs-has-a-trick-for-dodging-taxes-a-tiny-office-in-malta-the-mediterranean-archipelago-is-a-hot-destination-for-u-s-compan",
       "source": "alpaca",
       "added_at": "2026-08-05T18:04:57.216612+00:00"
+    },
+    {
+      "ticker": "CELZ",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Patent allowance for diabetes treatment using stem cell technology is a meaningful IP milestone that strengthens the company's competitive position and potential commercial pathway.",
+      "action_window": "next_day",
+      "headline": "Creative Medical Technologies Has Received A Notice Of Allowance For A U.S. Patent Titled \"SUPPRESSION OF DIABETES USING EXOSOMES FROM STEM CELL PROGRAMMED MYELOID CELLS\"",
+      "url": "https://www.benzinga.com/general/biotech/26/08/60967788/creative-medical-technologies-has-received-notice-allowance-u-s-patent-titled-suppression-diabetes-u",
+      "source": "alpaca",
+      "added_at": "2026-08-05T20:05:09.361347+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Meta launches competitive AI coding agent at lower price point, directly addressing investor pressure for AI revenue monetization in the high-growth enterprise AI market.",
+      "action_window": "next_day",
+      "headline": "'Meta Releases Coding Agent to Compete With OpenAI and Anthropic; The company, pressed by investors to generate revenue from AI, says its offering will cost less than popular alternatives' - WSJ",
+      "url": "https://www.benzinga.com/news/26/08/60967383/meta-releases-coding-agent-compete-openai-and-anthropic-company-pressed-investors-generate-revenue-a",
+      "source": "alpaca",
+      "added_at": "2026-08-05T20:05:09.361365+00:00"
     }
   ]
 }
