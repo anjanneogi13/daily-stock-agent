@@ -1,0 +1,74 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-31004100732",
+  "artifact_filename": "premarket_official_pick_2026-08-05_ANET.json",
+  "artifact_id": "premarket_official_pick:2026-08-05:ANET",
+  "artifact_path": "data/premarket_official_pick_2026-08-05_ANET.json",
+  "commit_sha": "d6b1efa832eb0c85e0d1bdf17c91634a3cc7e664",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/d6b1efa832eb0c85e0d1bdf17c91634a3cc7e664",
+  "company": "ANET",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-08-05",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-08-05:ANET:31004100732:d6b1efa832eb",
+  "entry": 190.51,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 184.56.",
+    "Review/exit near take profit 200.43."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 8,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 9.97,
+    "regime": "bull",
+    "sma_value": 701.39,
+    "sma_window": 200,
+    "spy_close": 771.33,
+    "spy_sma200": 701.39,
+    "spy_sma_anchor": 701.39
+  },
+  "risk_dollars": 47.6,
+  "risk_flags": [
+    "PREMARKET_HALF_SIZE"
+  ],
+  "risk_reward": 1.67,
+  "score": 0.964,
+  "score_components": {
+    "composite": 0.964,
+    "day_score": 0.929,
+    "monster_score": 0.4,
+    "news_boost": 0.1,
+    "sector_mult": 1.0,
+    "sector_tag": "SEMI / AI",
+    "vol_ratio": 1.8202566277078642,
+    "watchlist_boost": 0.264
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "ANET selected as official day pick; composite score 0.964; tag SEMI / AI; premarket sanity: fresh price unavailable from any provider; reduced size.",
+  "selection_time_et": "2026-08-05T08:09:14-04:00",
+  "stop_loss": 184.56,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 200.43,
+  "ticker": "ANET",
+  "top_reasons": [
+    "composite score 0.964",
+    "sector tag: SEMI / AI",
+    "premarket sanity: fresh price unavailable from any provider; reduced size"
+  ],
+  "workflow_run_id": "31004100732",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/31004100732"
+}
