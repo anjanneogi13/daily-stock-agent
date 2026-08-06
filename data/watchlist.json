@@ -1,126 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ETN",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Multiple analyst upgrades including Eaton turning bullish typically drive near-term price momentum, though impact is moderate as upgrades are less decisive than hard catalysts.",
-      "action_window": "intraday",
-      "headline": "This Eaton Analyst Turns Bullish; Here Are Top 5 Upgrades For Monday",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/08/60867843/this-eaton-analyst-turns-bullish-here-are-top-5-upgrades-for-monday",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087041+00:00"
-    },
-    {
-      "ticker": "ZSQR",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Strategic acquisition of AI compute and data infrastructure business for $25M in stock represents meaningful expansion into high-growth AI infrastructure sector with clear valuation.",
-      "action_window": "intraday",
-      "headline": "Z Squared To Acquire AI Compute And High-Density Data Infrastructure Business Paradox Data From Paradox Infrastructure For Up To $25M In Preferred Stock",
-      "url": "https://www.benzinga.com/m/26/08/60867744/z-squared-acquire-ai-compute-and-high-density-data-infrastructure-business-paradox-data-paradox-infr",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087053+00:00"
-    },
-    {
-      "ticker": "OCUL",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Ocular Therapeutix beat both EPS estimates by 12.5% and revenue estimates by 2.1%, representing a meaningful double-beat worthy of intraday trading action.",
-      "action_window": "intraday",
-      "headline": "Ocular Therapeutix Q2 EPS $(0.35) Beats $(0.40) Estimate, Sales $13.475M Beat $13.199M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/60867676/ocular-therapeutix-q2-eps-0-35-beats-0-40-estimate-sales-13-475m-beat-13-199m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087060+00:00"
-    },
-    {
-      "ticker": "IRD",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Completion of Phase 3 trial enrollment is a significant clinical milestone that de-risks timeline to potential regulatory submission and demonstrates operational execution for a gene therapy candidate.",
-      "action_window": "intraday",
-      "headline": "Opus Genetics Says Last Patient Enrolled In Registrational Phase 3 Clinical Trial Evaluating OPGx-LCA5, Investigational Gene Therapy For LCA5-Associated Inherited Retinal Disease",
-      "url": "https://www.benzinga.com/news/26/08/60867662/opus-genetics-says-last-patient-enrolled-registrational-phase-3-clinical-trial-evaluating-opgx-lca5-",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087064+00:00"
-    },
-    {
-      "ticker": "BCBP",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 sales of $22.875M missed estimates by 12.8% ($26.221M), representing a significant revenue shortfall that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "BCB Bancorp Q2 Sales $22.875M Miss $26.221M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/60867650/bcb-bancorp-q2-sales-22-875m-miss-26-221m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087068+00:00"
-    },
-    {
-      "ticker": "SMTK",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "ma_acquirer",
-      "rationale": "Smartkem acquiring Ferrox via $125M stock issuance represents significant dilution to existing shareholders, typically pressuring acquirer stock price on announcement.",
-      "action_window": "intraday",
-      "headline": "Smartkem To Merge With Ferrox Critical Minerals; Ferrox Shareholders To Receive $125M In SMTK Stock",
-      "url": "https://www.benzinga.com/m/26/08/60867640/smartkem-merge-ferrox-critical-minerals-ferrox-shareholders-receive-125m-smtk-stock",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087072+00:00"
-    },
-    {
-      "ticker": "SPTX",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Seaport Therapeutics missed Q2 EPS estimates by 174% ($1.78 loss vs $0.65 expected), representing a significant negative earnings surprise that typically drives immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Seaport Therapeutics Q2 EPS $(1.78) Misses $(0.65) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/60867629/seaport-therapeutics-q2-eps-1-78-misses-0-65-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087076+00:00"
-    },
-    {
-      "ticker": "ANL",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Phase I clinical trial approval for oncology candidate AN4035 is a meaningful de-risking milestone for biotech company, though early-stage with uncertain commercial timeline.",
-      "action_window": "next_day",
-      "headline": "Adlai Nortye Submits Clinical Trial Notification To Australia's TGA And Receives Approval From HREC To Commence Phase I Clinical Trial Evaluating AN4035 For Treatment Of CEACAM5-Enriched RAS-Addicted Solid Tumors",
-      "url": "https://www.benzinga.com/news/26/08/60867604/adlai-nortye-submits-clinical-trial-notification-australia-s-tga-and-receives-approval-hrec-commence",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087081+00:00"
-    },
-    {
-      "ticker": "COCP",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $5M strategic investment from OPKO Health provides meaningful capital to advance Cocrystal's norovirus program toward Phase 1b data, validating the program and reducing near-term funding risk for the small biotech.",
-      "action_window": "intraday",
-      "headline": "Cocrystal Pharma Secures $5M Investment From OPKO Health To Advance Norovirus Program Toward Phase 1b Data",
-      "url": "https://www.benzinga.com/news/26/08/60867556/cocrystal-pharma-secures-5m-investment-opko-health-advance-norovirus-program-toward-phase-1b-data",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087085+00:00"
-    },
-    {
-      "ticker": "SRAD",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Sportradar cuts FY2026 sales guidance by approximately 3.5% below consensus estimates, representing a material negative revision that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Sportradar Gr Lowers FY2026 Sales Guidance from $1.813B-$1.842B to $1.765B-$1.782B vs $1.830B Est",
-      "url": "https://www.benzinga.com/news/26/08/60867543/sportradar-gr-lowers-fy2026-sales-guidance-1-813b-1-842b-1-765b-1-782b-vs-1-830b-est",
-      "source": "alpaca",
-      "added_at": "2026-08-03T11:16:31.087089+00:00"
-    },
-    {
       "ticker": "UBS",
       "tradeable_score": 0.68,
       "sentiment": "bearish",
@@ -2099,6 +1979,90 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/60984987/fs-kkr-capital-q2-adj-eps-0-43-beats-0-42-estimate-sales-290-000m-beat-286-383m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-06T10:33:01.841162+00:00"
+    },
+    {
+      "ticker": "WTM",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with EPS up 68.7% YoY ($80.58 vs $47.75) and revenue growth of 22.5% ($844.6M vs $689.2M) represents a significant positive catalyst.",
+      "action_window": "intraday",
+      "headline": "White Mountains Insurance Q2 EPS $80.58 Up From $47.75 YoY, Sales $844.600M Up From $689.200M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60994123/white-mountains-insurance-q2-eps-80-58-47-75-yoy-sales-844-600m-689-200m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336487+00:00"
+    },
+    {
+      "ticker": "CNDT",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material state-level Medicaid contract award represents significant new revenue stream and validates company's modernization capabilities in government services vertical.",
+      "action_window": "intraday",
+      "headline": "Conduent Awarded Contract From Virginia Department Of Medical Assistance Services To Manage And Modernize Its State Medicaid System",
+      "url": "https://www.benzinga.com/news/26/08/60994084/conduent-awarded-contract-virginia-department-medical-assistance-services-manage-and-modernize-its-s",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336504+00:00"
+    },
+    {
+      "ticker": "WHWK",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS beat estimate by 33% ($0.20 actual vs $0.30 expected loss), representing a significant positive surprise that typically drives immediate price action in biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Whitehawk Therapeutics Q2 EPS $(0.20) Beats $(0.30) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60994058/whitehawk-therapeutics-q2-eps-0-20-beats-0-30-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336516+00:00"
+    },
+    {
+      "ticker": "BRLT",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q3 sales miss of $3.6M (3.2% below consensus) represents a meaningful negative catalyst for a specialty retailer where top-line growth is critical.",
+      "action_window": "intraday",
+      "headline": "Brilliant Earth Group Sees Q3 Sales $110.252M vs $113.872M Est",
+      "url": "https://www.benzinga.com/news/26/08/60993992/brilliant-earth-group-sees-q3-sales-110-252m-vs-113-872m-est",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336527+00:00"
+    },
+    {
+      "ticker": "VAC",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Marriott Vacations beat Q2 earnings estimates and raised full-year 2026 guidance, creating a strong dual catalyst with stock already surging.",
+      "action_window": "intraday",
+      "headline": "Why Is Marriott Vacations Stock Gaining Thursday?",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/60993947/why-is-marriott-vacations-stock-gaining-thursday",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336537+00:00"
+    },
+    {
+      "ticker": "EWTX",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS missed analyst estimates by 12.8% ($0.53 actual vs $0.47 expected), representing a meaningful negative earnings surprise that typically triggers immediate selling pressure in biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Edgewise Therapeutics Q2 EPS $(0.53) Misses $(0.47) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60993924/edgewise-therapeutics-q2-eps-0-53-misses-0-47-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336547+00:00"
+    },
+    {
+      "ticker": "BRNS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS beat by $0.04 (13% better than estimate) is a meaningful positive surprise that typically drives intraday upward momentum for small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Barinthus Biotherapeutics Q2 EPS $(0.26) Beats $(0.30) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60993812/barinthus-biotherapeutics-q2-eps-0-26-beats-0-30-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T12:53:57.336568+00:00"
     }
   ]
 }
