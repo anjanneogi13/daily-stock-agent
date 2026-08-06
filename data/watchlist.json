@@ -1909,15 +1909,16 @@
     },
     {
       "ticker": "SNDK",
-      "tradeable_score": 0.64,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Accelerating business development with 5 new model agreements (3 new customers, 2 expansions) signals strong commercial momentum and potential revenue growth beyond previous guidance.",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Despite beating Q4 revenue expectations at $8.97B, SNDK dropped 10% premarket on sustainability concerns about record profit margins, creating immediate trading opportunity on mixed earnings reaction.",
       "action_window": "next_day",
-      "headline": "Sandisk Says Since Announcing Five New Business Model Agreements During Our April Earnings Call, We Have Signed Five Additional Agreements, Including Three NBMs With New Customers And Two Deals Expanding On Previously Signed NBMs",
-      "url": "https://www.benzinga.com/news/26/08/60979328/sandisk-says-announcing-five-new-business-model-agreements-during-our-april-earnings-call-we-have-si",
+      "headline": "Bigger Earnings, Bigger Drop: The Sandisk Selloff Explained",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/60984997/bigger-earnings-bigger-drop-the-sandisk-selloff-explained",
       "source": "alpaca",
-      "added_at": "2026-08-05T22:52:14.924951+00:00"
+      "added_at": "2026-08-05T22:52:14.924951+00:00",
+      "updated_at": "2026-08-06T10:33:01.841151+00:00"
     },
     {
       "ticker": "COIN",
@@ -2014,6 +2015,90 @@
       "url": "https://www.benzinga.com/m/26/08/60979755/brookdale-senior-living-announces-acquisition-17-leased-communities-and-refinances-all-mortgage-debt",
       "source": "alpaca",
       "added_at": "2026-08-05T23:54:18.294790+00:00"
+    },
+    {
+      "ticker": "BXMT",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Raymond James downgrade from Outperform to Market Perform signals loss of analyst confidence and typically triggers immediate selling pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Raymond James Downgrades Blackstone Mortgage Trust to Market Perform",
+      "url": "https://www.benzinga.com/news/26/08/60985164/raymond-james-downgrades-blackstone-mortgage-trust-market-perform",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841070+00:00"
+    },
+    {
+      "ticker": "TSX:KEY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Keyera significantly beat Q2 sales estimates by 38% ($2.404B vs $1.738B expected), representing a material positive earnings surprise that typically drives immediate stock price appreciation.",
+      "action_window": "intraday",
+      "headline": "Keyera Q2 Sales $2.404B Beat $1.738B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60985124/keyera-q2-sales-2-404b-beat-1-738b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841086+00:00"
+    },
+    {
+      "ticker": "ENOV",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Enovis beat both EPS estimates by 5.9% and revenue estimates marginally, representing a solid double-beat that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "Enovis Q2 Adj. EPS $0.90 Beats $0.85 Estimate, Sales $582.782M Beat $582.542M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60985107/enovis-q2-adj-eps-0-90-beats-0-85-estimate-sales-582-782m-beat-582-542m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841109+00:00"
+    },
+    {
+      "ticker": "ATRL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "AtkinsR\u00e9alis beat both EPS estimates by 6.6% and sales estimates by 3.9%, representing a solid dual beat that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "AtkinsR\u00e9alis Group Inc Q2 Adj. EPS $0.97 Beats $0.91 Estimate, Sales $2.985B Beat $2.873B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60985080/atkinsr-alis-group-inc-q2-adj-eps-0-97-beats-0-91-estimate-sales-2-985b-beat-2-873b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841120+00:00"
+    },
+    {
+      "ticker": "WDC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_beat",
+      "rationale": "Stock falling despite earnings beat indicates negative forward guidance or concerns that outweigh Q4 performance, creating a tradeable divergence.",
+      "action_window": "intraday",
+      "headline": "Why Is Western Digital Stock Sinking Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60983547/why-is-western-digital-stock-sinking-thursday",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841130+00:00"
+    },
+    {
+      "ticker": "DAC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analyst upgrade to Buy with raised price target typically drives positive near-term momentum, though impact depends on Freedom Broker's market influence and credibility.",
+      "action_window": "intraday",
+      "headline": "Freedom Broker Upgrades Danaos to Buy, Raises Price Target to $155",
+      "url": "https://www.benzinga.com/news/26/08/60985000/freedom-broker-upgrades-danaos-buy-raises-price-target-155",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841139+00:00"
+    },
+    {
+      "ticker": "FSK",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "FS KKR Capital beat both EPS and revenue estimates with adjusted EPS of $0.43 vs $0.42 expected and sales of $290M vs $286.4M expected, representing modest beats that should drive positive price action.",
+      "action_window": "intraday",
+      "headline": "FS KKR Capital Q2 Adj. EPS $0.43 Beats $0.42 Estimate, Sales $290.000M Beat $286.383M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/60984987/fs-kkr-capital-q2-adj-eps-0-43-beats-0-42-estimate-sales-290-000m-beat-286-383m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-06T10:33:01.841162+00:00"
     }
   ]
 }
