@@ -4694,5 +4694,70 @@
     "expires": "2026-08-13T12:53:57.330899+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "RDW": {
+    "ticker": "RDW",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Redwire's SpaceMD Reveals Its First Commercial Mission on SpaceX\u2019s Starfall Spacecraft to Scale In-Space Pharmaceutical Development; SpaceMD Plans To Fly 32 PIL-BOXes  In 2028 On This Starfall Mission",
+    "added_at": "2026-08-06T15:10:26.379097+00:00",
+    "expires": "2026-08-13T15:10:26.379103+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CRL": {
+    "ticker": "CRL",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Evercore ISI Group Maintains Outperform on Charles River, Raises Price Target to $300",
+    "added_at": "2026-08-06T15:10:26.387214+00:00",
+    "expires": "2026-08-11T15:10:26.387222+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TBLA": {
+    "ticker": "TBLA",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "intraday",
+    "headline": "Benchmark Maintains Buy on Taboola.com, Lowers Price Target to $5.5",
+    "added_at": "2026-08-06T15:10:26.389883+00:00",
+    "expires": "2026-08-11T15:10:26.389889+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "COR": {
+    "ticker": "COR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "ignore",
+    "headline": "Evercore ISI Group Maintains Outperform on Cencora, Raises Price Target to $350",
+    "added_at": "2026-08-06T15:10:26.409766+00:00",
+    "expires": "2026-08-11T15:10:26.409775+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SHOP": {
+    "ticker": "SHOP",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Benchmark Maintains Buy on Shopify, Raises Price Target to $170",
+    "added_at": "2026-08-06T15:10:26.417276+00:00",
+    "expires": "2026-08-11T15:10:26.417281+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

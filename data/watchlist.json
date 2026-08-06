@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "UBS",
-      "tradeable_score": 0.68,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "A $125M regulatory penalty from FinCEN for Bank Secrecy Act violations represents material financial and reputational damage that typically triggers immediate negative price action.",
-      "action_window": "intraday",
-      "headline": "UBS Financial Services Facing $125M Penalty From Treasury\u2019s Financial Crimes Enforcement Network Over Alleged Breach Of Bank Secrecy Act",
-      "url": "https://www.benzinga.com/news/26/08/60872891/ubs-financial-services-facing-125m-penalty-treasury-s-financial-crimes-enforcement-network-over-alle",
-      "source": "alpaca",
-      "added_at": "2026-08-03T13:58:39.028392+00:00"
-    },
-    {
-      "ticker": "INFQ",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Wedbush initiating coverage at Outperform with $20 price target is a meaningful positive catalyst from a credible firm that typically drives near-term buying interest.",
-      "action_window": "intraday",
-      "headline": "Wedbush Assumes Infleqtion at Outperform, Maintains Price Target of $20",
-      "url": "https://www.benzinga.com/news/26/08/60872642/wedbush-assumes-infleqtion-outperform-maintains-price-target-20",
-      "source": "alpaca",
-      "added_at": "2026-08-03T13:58:39.028406+00:00"
-    },
-    {
       "ticker": "TWST",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -2063,6 +2039,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/60993812/barinthus-biotherapeutics-q2-eps-0-26-beats-0-30-estimate",
       "source": "alpaca",
       "added_at": "2026-08-06T12:53:57.336568+00:00"
+    },
+    {
+      "ticker": "RDW",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "First commercial mission announcement for SpaceMD with specific scale (32 PIL-BOXes) signals revenue potential but execution is 2+ years away in 2028, reducing immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "Redwire's SpaceMD Reveals Its First Commercial Mission on SpaceX\u2019s Starfall Spacecraft to Scale In-Space Pharmaceutical Development; SpaceMD Plans To Fly 32 PIL-BOXes  In 2028 On This Starfall Mission",
+      "url": "https://www.benzinga.com/news/26/08/61002650/redwire-s-spacemd-reveals-its-first-commercial-mission-spacex-s-starfall-spacecraft-scale-space-phar",
+      "source": "alpaca",
+      "added_at": "2026-08-06T15:10:26.420820+00:00"
     }
   ]
 }
