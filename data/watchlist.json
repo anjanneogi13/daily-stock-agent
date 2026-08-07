@@ -1723,6 +1723,126 @@
       "url": "https://www.benzinga.com/news/26/08/61002650/redwire-s-spacemd-reveals-its-first-commercial-mission-spacex-s-starfall-spacecraft-scale-space-phar",
       "source": "alpaca",
       "added_at": "2026-08-06T15:10:26.420820+00:00"
+    },
+    {
+      "ticker": "TEAM",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Atlassian beat revenue and earnings estimates with stock surging 30.7% in pre-market, indicating a significant earnings beat catalyst with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Why Atlassian Shares Are Trading Higher By More Than 30%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61030351/why-atlassian-shares-are-trading-higher-by-more-than-30-here-are-20-stocks-moving-premarket",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026313+00:00"
+    },
+    {
+      "ticker": "CVR",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with Q2 EPS loss more than doubling year-over-year from $(0.41) to $(1.02) while revenue also declined, indicating deteriorating fundamentals.",
+      "action_window": "intraday",
+      "headline": "Reported Earlier, Chicago Rivet & Machine Q2 EPS $(1.02) Down From $(0.41) YoY, Sales $7.237M Down From $7.298M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030286/reported-earlier-chicago-rivet-machine-q2-eps-1-02-down-0-41-yoy-sales-7-237m-down-7-298m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026331+00:00"
+    },
+    {
+      "ticker": "PPTA",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "High-grade mineral discoveries at Stibnite project represent meaningful exploration success for mining company, though already reported earlier which reduces immediate trading impact.",
+      "action_window": "next_day",
+      "headline": "Reported Earlier, Perpetua Resources Reports New High-Grade Gold, Antimony And Tungsten Discoveries At Stibnite, Including 21.3 Meters Of 3.2 g/t Gold And 0.9% Tungsten At Yellow-Pine",
+      "url": "https://www.benzinga.com/quote/PPTA",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026343+00:00"
+    },
+    {
+      "ticker": "STI",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS deterioration from $0.05 profit to $0.35 loss YoY despite 30x revenue growth indicates severe margin compression and operational inefficiency.",
+      "action_window": "intraday",
+      "headline": "Reported Earlier, Solidion Technology Q2 EPS $(0.35) Down From $0.05 YoY, Sales $124.914K Up From $4.000K YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030252/reported-earlier-solidion-technology-q2-eps-0-35-down-0-05-yoy-sales-124-914k-4-000k-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026352+00:00"
+    },
+    {
+      "ticker": "TNGX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Executive Chairman departure creates leadership uncertainty for a small-cap biotech, typically triggering short-term negative pressure though impact depends on succession plan and circumstances.",
+      "action_window": "intraday",
+      "headline": "Reported Earlier, Tango Therapeutics Announces Executive Chairman Dr. Barbara Weber To Step Down From Board Role To Pursue Other Ventures",
+      "url": "https://www.benzinga.com/quote/TNGX",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026361+00:00"
+    },
+    {
+      "ticker": "ARTNA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Artesian Resources beat both EPS estimates by 16.4% and revenue estimates by 2.9%, representing a solid dual beat that typically drives positive intraday price action.",
+      "action_window": "intraday",
+      "headline": "Artesian Resources Q2 EPS $0.64 Beats $0.55 Estimate, Sales $30.664M Beat $29.800M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030130/artesian-resources-q2-eps-0-64-beats-0-55-estimate-sales-30-664m-beat-29-800m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026370+00:00"
+    },
+    {
+      "ticker": "IBOC",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS declined 4.3% YoY despite revenue growth of 3.2%, indicating margin compression and bottom-line underperformance that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "International Bancshares Q2 EPS $1.54 Down From $1.61 YoY, Sales $214.821M Up From $208.167M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030094/international-bancshares-q2-eps-1-54-down-1-61-yoy-sales-214-821m-208-167m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026380+00:00"
+    },
+    {
+      "ticker": "OCS",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant double beat with EPS beating by 58% ($0.28 improvement) and sales beating by 51%, presenting a strong positive catalyst for immediate trading.",
+      "action_window": "intraday",
+      "headline": "Oculis Holding Q2 EPS $(0.20) Beats $(0.48) Estimate, Sales $392.150K Beat $260.000K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030068/oculis-holding-q2-eps-0-20-beats-0-48-estimate-sales-392-150k-beat-260-000k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026389+00:00"
+    },
+    {
+      "ticker": "BRDCY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Bridgestone posted Q2 EPS of $0.29 versus $0.10 YoY (190% increase) with revenue growth of 3.6%, representing a significant earnings beat that should drive positive price action.",
+      "action_window": "intraday",
+      "headline": "Bridgestone Q2 EPS $0.29 Up From $0.10 YoY, Sales $7.581B Up From $7.321B YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030041/bridgestone-q2-eps-0-29-0-10-yoy-sales-7-581b-7-321b-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026399+00:00"
+    },
+    {
+      "ticker": "VATE",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Massive 46.53% after-hours surge on exceptional 74.2% YoY revenue growth represents a significant earnings beat with strong confirmation via price action.",
+      "action_window": "next_day",
+      "headline": "Innovate Stock Soars Over 42% Overnight: Here's What You Need to Know",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61030032/innovate-shares-surge-after-hours-q2-results-revenue-growth",
+      "source": "alpaca",
+      "added_at": "2026-08-07T08:50:34.026407+00:00"
     }
   ]
 }
