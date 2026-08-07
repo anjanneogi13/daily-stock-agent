@@ -5188,5 +5188,57 @@
     "expires": "2026-08-12T16:16:01.389462+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "SION": {
+    "ticker": "SION",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Guggenheim Maintains Buy on Sionna Therapeutics, Raises Price Target to $60",
+    "added_at": "2026-08-07T17:15:59.162954+00:00",
+    "expires": "2026-08-12T17:15:59.162961+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SHC": {
+    "ticker": "SHC",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Reiterates Overweight on Sotera Health, Raises Price Target to $25",
+    "added_at": "2026-08-07T17:15:59.167576+00:00",
+    "expires": "2026-08-12T17:15:59.167582+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QNST": {
+    "ticker": "QNST",
+    "score_delta": 0.03,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.15,
+    "action_window": "ignore",
+    "headline": "12 Communication Services Stocks Moving In Friday's Intraday Session",
+    "added_at": "2026-08-07T17:15:59.176099+00:00",
+    "expires": "2026-08-14T17:15:59.176104+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ICUI": {
+    "ticker": "ICUI",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Overweight on ICU Medical, Raises Price Target to $195",
+    "added_at": "2026-08-07T17:15:59.180413+00:00",
+    "expires": "2026-08-12T17:15:59.180419+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

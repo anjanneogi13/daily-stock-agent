@@ -1,31 +1,6 @@
 {
   "items": [
     {
-      "ticker": "PFE",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Pfizer beat Q2 earnings estimates and raised 2026 revenue guidance to $62.5B, demonstrating successful diversification beyond declining COVID product sales.",
-      "action_window": "intraday",
-      "headline": "Pfizer's Diversified Drug Portfolio Fuels Growth as COVID Sales Decline",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/60918935/pfizers-diversified-drug-portfolio-fuels-growth-as-covid-sales-decline",
-      "source": "alpaca",
-      "added_at": "2026-08-04T16:53:52.033469+00:00"
-    },
-    {
-      "ticker": "NVO",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Novo Nordisk significantly beat Q2 expectations with EPS 18.5% above estimates and revenue 7.6% above consensus, indicating strong operational performance warranting immediate trading attention.",
-      "action_window": "intraday",
-      "headline": "Novo Nordisk Q2 Adj. EPS $0.96 Beats $0.81 Estimate, Sales $12.209B Beat $11.350B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/60935766/novo-nordisk-q2-adj-eps-0-96-beats-0-81-estimate-sales-12-209b-beat-11-350b-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-04T16:53:52.033481+00:00",
-      "updated_at": "2026-08-04T22:56:17.332310+00:00"
-    },
-    {
       "ticker": "XOM",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
