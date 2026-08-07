@@ -1570,19 +1570,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FBLG": {
-    "ticker": "FBLG",
-    "score_delta": 0.079,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "FibroBiologics, Inc. - Common Stock Q2 EPS $(0.66) Beats $(0.72) Estimate",
-    "added_at": "2026-07-31T22:34:32.468314+00:00",
-    "expires": "2026-08-07T22:34:32.468320+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ETN": {
     "ticker": "ETN",
     "score_delta": 0.041,
@@ -5542,14 +5529,14 @@
   },
   "USFD": {
     "ticker": "USFD",
-    "score_delta": 0.03,
+    "score_delta": 0.034,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.42,
+    "tradeable_score": 0.48,
     "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on US Foods Holdings, Raises Price Target to $124",
-    "added_at": "2026-08-07T21:09:00.856355+00:00",
-    "expires": "2026-08-12T21:09:00.856361+00:00",
+    "headline": "UBS Maintains Buy on US Foods Holdings, Raises Price Target to $127",
+    "added_at": "2026-08-07T23:04:45.592297+00:00",
+    "expires": "2026-08-12T23:04:45.592303+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -5628,6 +5615,45 @@
     "headline": "Faraday Copper Q2 EPS $(0.05) Down From $(0.03) YoY",
     "added_at": "2026-08-07T22:05:13.747434+00:00",
     "expires": "2026-08-14T22:05:13.747437+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CACI": {
+    "ticker": "CACI",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on CACI International, Raises Price Target to $804",
+    "added_at": "2026-08-07T23:04:45.583003+00:00",
+    "expires": "2026-08-12T23:04:45.583011+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PZZA": {
+    "ticker": "PZZA",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Neutral on Papa John's International, Lowers Price Target to $28",
+    "added_at": "2026-08-07T23:04:45.587670+00:00",
+    "expires": "2026-08-12T23:04:45.587676+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PH": {
+    "ticker": "PH",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Parker Hannifin, Raises Price Target to $1250",
+    "added_at": "2026-08-07T23:04:45.596860+00:00",
+    "expires": "2026-08-12T23:04:45.596866+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
