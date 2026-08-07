@@ -2028,6 +2028,66 @@
       "url": "https://www.benzinga.com/news/26/08/61044407/wells-fargo-maintains-overweight-cloudflare-raises-price-target-380",
       "source": "alpaca",
       "added_at": "2026-08-07T15:23:57.837846+00:00"
+    },
+    {
+      "ticker": "XPOF",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Guggenheim downgrade from positive rating to neutral represents a meaningful negative catalyst that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Guggenheim Downgrades Xponential Fitness to Neutral",
+      "url": "https://www.benzinga.com/news/26/08/61047132/guggenheim-downgrades-xponential-fitness-neutral",
+      "source": "alpaca",
+      "added_at": "2026-08-07T16:16:01.395491+00:00"
+    },
+    {
+      "ticker": "IONQ",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat combined with raised 2026 guidance and new DARPA contract creates multiple positive catalysts with 9%+ immediate price reaction.",
+      "action_window": "intraday",
+      "headline": "Why Is IonQ Stock Surging Friday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61047094/why-is-ionq-stock-surging-friday",
+      "source": "alpaca",
+      "added_at": "2026-08-07T16:16:01.395517+00:00"
+    },
+    {
+      "ticker": "U",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "HSBC upgrade to Buy is a meaningful catalyst from a major global bank that typically drives near-term price appreciation and increases institutional interest.",
+      "action_window": "next_day",
+      "headline": "HSBC Upgrades Unity Software to Buy",
+      "url": "https://www.benzinga.com/news/26/08/61047043/hsbc-upgrades-unity-software-buy",
+      "source": "alpaca",
+      "added_at": "2026-08-07T16:16:01.395528+00:00"
+    },
+    {
+      "ticker": "GD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large $1.3B government contract win provides revenue visibility but represents only ~3% of GD's annual revenue, making it moderately positive but not transformational.",
+      "action_window": "next_day",
+      "headline": "General Dynamics' GDIT Wins $1.3B Army National Guard IT And Cybersecurity Contract",
+      "url": "https://www.benzinga.com/news/26/08/61047007/general-dynamics-gdit-wins-1-3b-army-national-guard-it-and-cybersecurity-contract",
+      "source": "alpaca",
+      "added_at": "2026-08-07T16:16:01.395538+00:00"
+    },
+    {
+      "ticker": "HASI",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains positive stance with price target increase, signaling continued conviction and upside potential that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Maintains Overweight on HASI, Raises Price Target to $51",
+      "url": "https://www.benzinga.com/news/26/08/61046769/jp-morgan-maintains-overweight-hasi-raises-price-target-51",
+      "source": "alpaca",
+      "added_at": "2026-08-07T16:16:01.395549+00:00"
     }
   ]
 }

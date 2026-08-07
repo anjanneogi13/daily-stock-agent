@@ -5123,5 +5123,70 @@
     "expires": "2026-09-06T15:23:57.826800+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "XPOF": {
+    "ticker": "XPOF",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Guggenheim Downgrades Xponential Fitness to Neutral",
+    "added_at": "2026-08-07T16:16:01.357253+00:00",
+    "expires": "2026-08-12T16:16:01.357261+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IONQ": {
+    "ticker": "IONQ",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Why Is IonQ Stock Surging Friday?",
+    "added_at": "2026-08-07T16:16:01.376711+00:00",
+    "expires": "2026-08-14T16:16:01.376720+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "U": {
+    "ticker": "U",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "HSBC Upgrades Unity Software to Buy",
+    "added_at": "2026-08-07T16:16:01.380897+00:00",
+    "expires": "2026-08-12T16:16:01.380902+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CART": {
+    "ticker": "CART",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Maplebear, Raises Price Target to $62",
+    "added_at": "2026-08-07T16:16:01.385150+00:00",
+    "expires": "2026-08-12T16:16:01.385156+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HASI": {
+    "ticker": "HASI",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on HASI, Raises Price Target to $51",
+    "added_at": "2026-08-07T16:16:01.389455+00:00",
+    "expires": "2026-08-12T16:16:01.389462+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
