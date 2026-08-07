@@ -5656,5 +5656,57 @@
     "expires": "2026-08-12T23:04:45.596866+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "KDP": {
+    "ticker": "KDP",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Keurig Dr Pepper, Raises Price Target to $39",
+    "added_at": "2026-08-07T23:57:40.175314+00:00",
+    "expires": "2026-08-12T23:57:40.175321+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EHC": {
+    "ticker": "EHC",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Encompass Health, Raises Price Target to $155",
+    "added_at": "2026-08-07T23:57:40.194155+00:00",
+    "expires": "2026-08-12T23:57:40.194160+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DNLI": {
+    "ticker": "DNLI",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "UBS Maintains Buy on Denali Therapeutics, Raises Price Target to $34",
+    "added_at": "2026-08-07T23:57:40.198721+00:00",
+    "expires": "2026-08-12T23:57:40.198726+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ZTS": {
+    "ticker": "ZTS",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "ignore",
+    "headline": "UBS Maintains Neutral on Zoetis, Lowers Price Target to $80",
+    "added_at": "2026-08-07T23:57:40.203282+00:00",
+    "expires": "2026-08-12T23:57:40.203287+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
