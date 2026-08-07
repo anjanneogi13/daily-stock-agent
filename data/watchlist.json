@@ -1969,6 +1969,30 @@
       "url": "https://www.benzinga.com/news/26/08/61036372/neurocrine-biosciences-initiates-phase-1-first-human-clinical-study-evaluating-nbip-1968-investigati",
       "source": "alpaca",
       "added_at": "2026-08-07T12:45:25.540339+00:00"
+    },
+    {
+      "ticker": "YJ",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Circuit breaker halt with 69.92% price surge indicates extreme buying pressure from a major catalyst, though the underlying driver is not specified in the headline.",
+      "action_window": "intraday",
+      "headline": "Yunji Shares Halted On Circuit Breaker To The Upside, Stock Now Up 69.92%",
+      "url": "https://www.benzinga.com/quote/YJ",
+      "source": "alpaca",
+      "added_at": "2026-08-07T14:08:24.927172+00:00"
+    },
+    {
+      "ticker": "PONY",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Tongcheng (PONY) nearing completion of Dida acquisition with 52% shareholder approval represents a meaningful M&A catalyst for the acquirer, expanding its ride-sharing capabilities.",
+      "action_window": "next_day",
+      "headline": "Tongcheng Nears Completion Of Dida Takeover",
+      "url": "https://www.benzinga.com/Opinion/26/08/61040201/tongcheng-nears-completion-of-dida-takeover",
+      "source": "alpaca",
+      "added_at": "2026-08-07T14:08:24.927190+00:00"
     }
   ]
 }
