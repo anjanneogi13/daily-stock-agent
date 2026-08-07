@@ -2062,6 +2062,18 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61054095/wf-holding-shares-skyrocket-friday-whats-driving-the-action",
       "source": "alpaca",
       "added_at": "2026-08-07T19:28:13.503195+00:00"
+    },
+    {
+      "ticker": "JHX",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q1 earnings beat with raised FY27 guidance, analyst upgrades, and 8.3% pre-market surge creates significant near-term momentum.",
+      "action_window": "intraday",
+      "headline": "James Hardie Industries Analysts Boost Their Forecasts Following Better-Than-Expected Q1 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61055220/james-hardie-industries-analysts-boost-their-forecasts-following-better-than-expected-q1-earnings",
+      "source": "alpaca",
+      "added_at": "2026-08-07T20:05:54.887370+00:00"
     }
   ]
 }
