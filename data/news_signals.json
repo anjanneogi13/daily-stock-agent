@@ -168,19 +168,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AFJK": {
-    "ticker": "AFJK",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Aimei Health Technology Terminates The Business Combination Agreement With United Hydrogen Group",
-    "added_at": "2026-07-08T22:01:50.763354+00:00",
-    "expires": "2026-08-07T22:01:50.763360+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WSR": {
     "ticker": "WSR",
     "score_delta": 0.2,
@@ -1554,19 +1541,6 @@
     "headline": "Wells Fargo Initiates Coverage On APi Group with Overweight Rating, Announces Price Target of $53",
     "added_at": "2026-08-04T10:31:11.170215+00:00",
     "expires": "2026-08-09T10:31:11.170223+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TWC": {
-    "ticker": "TWC",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "TWC Enterprises Q2 EPS $0.81 Down From $0.88 YoY, Sales $57.134M Down From $61.560M YoY",
-    "added_at": "2026-07-31T21:12:47.242568+00:00",
-    "expires": "2026-08-07T21:12:47.242574+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -5589,6 +5563,71 @@
     "headline": "TD Cowen Maintains Buy on ExxonMobil Holdings, Raises Price Target to $168",
     "added_at": "2026-08-07T21:09:00.860882+00:00",
     "expires": "2026-08-12T21:09:00.860888+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KVYO": {
+    "ticker": "KVYO",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Klaviyo, Raises Price Target to $36",
+    "added_at": "2026-08-07T22:05:13.737198+00:00",
+    "expires": "2026-08-12T22:05:13.737203+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "FIG": {
+    "ticker": "FIG",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Figma, Raises Price Target to $37",
+    "added_at": "2026-08-07T22:05:13.739828+00:00",
+    "expires": "2026-08-12T22:05:13.739832+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "APPN": {
+    "ticker": "APPN",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Appian, Raises Price Target to $40",
+    "added_at": "2026-08-07T22:05:13.742392+00:00",
+    "expires": "2026-08-12T22:05:13.742395+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AIXC": {
+    "ticker": "AIXC",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "next_day",
+    "headline": "AIxCrypto Holdings Q3 EPS $(0.21) Up From $(1.00) YoY",
+    "added_at": "2026-08-07T22:05:13.744900+00:00",
+    "expires": "2026-08-14T22:05:13.744903+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:FDY": {
+    "ticker": "TSX:FDY",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Faraday Copper Q2 EPS $(0.05) Down From $(0.03) YoY",
+    "added_at": "2026-08-07T22:05:13.747434+00:00",
+    "expires": "2026-08-14T22:05:13.747437+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
