@@ -1843,6 +1843,56 @@
       "url": "https://www.benzinga.com/markets/equities/26/08/61030032/innovate-shares-surge-after-hours-q2-results-revenue-growth",
       "source": "alpaca",
       "added_at": "2026-08-07T08:50:34.026407+00:00"
+    },
+    {
+      "ticker": "TSX:MDA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "FY2026 sales guidance floor raised by 5.9% ($1.7B to $1.8B) while maintaining the upper end, though new range midpoint ($1.85B) only slightly exceeds consensus estimate ($1.826B), suggesting modest incremental positive news.",
+      "action_window": "intraday",
+      "headline": "MDA Space Raises FY2026 Sales Guidance from $1.700B-$1.900B to $1.800B-$1.900B vs $1.826B Est",
+      "url": "https://www.benzinga.com/news/26/08/61031179/mda-space-raises-fy2026-sales-guidance-1-700b-1-900b-1-800b-1-900b-vs-1-826b-est",
+      "source": "alpaca",
+      "added_at": "2026-08-07T09:54:56.558347+00:00"
+    },
+    {
+      "ticker": "MDA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "MDA Space delivered a dual beat with EPS exceeding estimates by 5.9% and revenue beating by 11.9%, representing a strong operational performance that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "MDA Space Q2 Adj. EPS $0.36 Beats $0.34 Estimate, Sales $498.600M Beat $445.683M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61031144/mda-space-q2-adj-eps-0-36-beats-0-34-estimate-sales-498-600m-beat-445-683m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-07T09:54:56.558363+00:00"
+    },
+    {
+      "ticker": "TILE",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Interface beat Q2 EPS estimates by 37.5% ($0.88 vs $0.64) and revenue estimates by 1.4%, representing a substantial earnings surprise worthy of immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Interface Q2 Adj. EPS $0.88 Beats $0.64 Estimate, Sales $395.700M Beat $390.320M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030914/interface-q2-adj-eps-0-88-beats-0-64-estimate-sales-395-700m-beat-390-320m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-07T09:54:56.558382+00:00",
+      "updated_at": "2026-08-07T09:54:56.558393+00:00"
+    },
+    {
+      "ticker": "ACMR",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Substantial earnings beat with EPS exceeding estimates by 79% ($0.61 vs $0.34) and revenue beat of 8.8%, indicating strong operational performance likely to drive immediate price action.",
+      "action_window": "intraday",
+      "headline": "ACM Research Q2 Adj. EPS $0.61 Beats $0.34 Estimate, Sales $292.919M Beat $269.276M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61030842/acm-research-q2-adj-eps-0-61-beats-0-34-estimate-sales-292-919m-beat-269-276m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-07T09:54:56.558404+00:00",
+      "updated_at": "2026-08-07T09:54:56.558415+00:00"
     }
   ]
 }
