@@ -756,6 +756,18 @@
       "url": "https://www.benzinga.com/markets/tech/26/08/61081684/nvidia-stock-rubin-era-bofa-top-pick",
       "source": "alpaca",
       "added_at": "2026-08-10T16:25:26.669129+00:00"
+    },
+    {
+      "ticker": "MLTX",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial results for psoriatic arthritis drug represent a major clinical milestone that significantly de-risks the asset and validates the therapeutic approach, with strong cash runway providing operational security.",
+      "action_window": "intraday",
+      "headline": "MoonLake\u2019s Psoriatic Arthritis Drug Shows Promise In Late-Stage Study",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61084682/moonlakes-psoriatic-arthritis-drug-shows-promise-in-late-stage-study",
+      "source": "alpaca",
+      "added_at": "2026-08-10T17:24:48.615987+00:00"
     }
   ]
 }
