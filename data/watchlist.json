@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "POLA",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large secondary offering of 18.3M shares by selling stockholder creates significant dilution pressure and likely near-term supply overhang on the stock.",
-      "action_window": "next_day",
-      "headline": "Polar Power Files Prospectus Related To The Offer And Resale Of Up To 18.3M Shares By Selling Stockholder",
-      "url": "https://www.benzinga.com/news/26/08/61059350/polar-power-files-prospectus-related-offer-and-resale-18-3m-shares-selling-stockholder",
-      "source": "alpaca",
-      "added_at": "2026-08-07T22:05:13.822332+00:00"
-    },
-    {
-      "ticker": "AIXC",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Loss per share improved significantly by 79% year-over-year from $(1.00) to $(0.21), indicating strong operational improvement and path toward profitability.",
-      "action_window": "next_day",
-      "headline": "AIxCrypto Holdings Q3 EPS $(0.21) Up From $(1.00) YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61059154/aixcrypto-holdings-q3-eps-0-21-1-00-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-07T22:05:13.822350+00:00"
-    },
-    {
-      "ticker": "TSX:FDY",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 EPS loss widened 67% year-over-year from $(0.03) to $(0.05), indicating deteriorating financial performance",
-      "action_window": "next_day",
-      "headline": "Faraday Copper Q2 EPS $(0.05) Down From $(0.03) YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61059079/faraday-copper-q2-eps-0-05-down-0-03-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-07T22:05:13.822357+00:00"
-    },
-    {
       "ticker": "AWX",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -948,6 +912,138 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61095510/microvast-holdings-q2-adj-eps-0-01-misses-0-01-estimate-sales-87-262m-miss-94-403m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-10T21:11:44.205100+00:00"
+    },
+    {
+      "ticker": "PAL",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss ($0.00 vs $0.07 estimate) outweighs modest sales beat, indicating margin compression or operational issues that warrant immediate attention.",
+      "action_window": "next_day",
+      "headline": "UPDATE: Proficient Auto Logistics Q2 Adj. EPS $0.00 Misses $0.07 Estimate, Sales $109.399M Beat $108.525M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097141/update-proficient-auto-logistics-q2-adj-eps-0-00-misses-0-07-estimate-sales-109-399m-beat-108-525m-e",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089280+00:00"
+    },
+    {
+      "ticker": "NHIC",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "SEC registration statement effectiveness and Nasdaq listing approval for SPAC business combination represents a major de-risking milestone that clears the path to transaction completion.",
+      "action_window": "next_day",
+      "headline": "NewHold Investment Corp. III Reveals Effectiveness of Registration Statement on Form F-4 With The SEC In Connection With Proposed Business Combination and Nasdaq Listing; Combined Company Is To Be Named \"Newcleo PLC\" And Is Expected To Trade On The Nasdaq Under The Ticker Symbol \"NWCL\"",
+      "url": "https://www.benzinga.com/news/26/08/61097089/newhold-investment-corp-iii-reveals-effectiveness-registration-statement-form-f-4-sec-connection-pro",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089295+00:00"
+    },
+    {
+      "ticker": "NGS",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Natural Gas Services Group beat Q2 adjusted EPS by 17.5% ($0.47 vs $0.40 estimate) and revenue by 2.8% ($51.4M vs $50.0M estimate), representing a meaningful double beat on earnings.",
+      "action_window": "next_day",
+      "headline": "UPDATE: Natural Gas Services Gr Q2 Adj. EPS $0.47 Beats $0.40 Estimate, Sales $51.401M Beat $49.995M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097038/update-natural-gas-services-gr-q2-adj-eps-0-47-beats-0-40-estimate-sales-51-401m-beat-49-995m-estima",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089304+00:00"
+    },
+    {
+      "ticker": "SHO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "At-the-market equity offering programs typically signal dilution risk and management's view that shares are fairly/overvalued, creating near-term selling pressure.",
+      "action_window": "next_day",
+      "headline": "Sunstone Hotel Investors Enters $300M Equity Distribution Agreement With Sales Agents On Aug 10, 2026",
+      "url": "https://www.benzinga.com/news/26/08/61096914/sunstone-hotel-investors-enters-300m-equity-distribution-agreement-sales-agents-aug-10-2026",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089311+00:00"
+    },
+    {
+      "ticker": "RDVT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Red Violet beat Q2 EPS estimates by 51.5% ($0.50 vs $0.33) and revenue by 4.2%, representing a significant earnings surprise with immediate trading implications.",
+      "action_window": "next_day",
+      "headline": "CORRECTION Red Violet Q2 Adj. EPS $0.50 Beats $0.33 Estimate, Sales $26.700M Beat $25.618M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61096902/correction-red-violet-q2-adj-eps-0-50-beats-0-33-estimate-sales-26-700m-beat-25-618m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089318+00:00"
+    },
+    {
+      "ticker": "TSX:NXR/UN",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q2 results with FFO declining 6.3% YoY to $0.15 despite 11% revenue growth, indicating margin compression that typically concerns REIT investors focused on distribution coverage.",
+      "action_window": "next_day",
+      "headline": "Nexus Ind REIT Q2 FFO $0.15 Down From $0.16 YoY, Sales $46.620M Up From $42.022M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61096876/nexus-ind-reit-q2-ffo-0-15-down-0-16-yoy-sales-46-620m-42-022m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089324+00:00"
+    },
+    {
+      "ticker": "TSX:DCM",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings report with EPS meeting expectations but revenue missing estimates by $0.4M (0.4% miss), creating modest negative trading pressure.",
+      "action_window": "next_day",
+      "headline": "DATA Comms Mgmt Q2 Adj. EPS $0.03, Inline, Sales $110.920M Miss $111.325M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61096842/data-comms-mgmt-q2-adj-eps-0-03-inline-sales-110-920m-miss-111-325m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089338+00:00"
+    },
+    {
+      "ticker": "LHX",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Successful completion of critical rocket motor test for high-priority defense program demonstrates technical capability and advances contract milestone, though impact magnitude depends on contract value and timeline to production.",
+      "action_window": "next_day",
+      "headline": "L3Harris Technologies Completes A Hot-Fire Test Of Its Stage Two Advanced Large Solid Rocket Motor For The Missile Defense Agency\u2019s Next Generation Interceptor",
+      "url": "https://www.benzinga.com/news/26/08/61096810/l3harris-technologies-completes-hot-fire-test-its-stage-two-advanced-large-solid-rocket-motor-missil",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089344+00:00"
+    },
+    {
+      "ticker": "VGAS",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 loss narrowed by 43% year-over-year from $(0.07) to $(0.04), showing improving fundamentals but still unprofitable.",
+      "action_window": "next_day",
+      "headline": "Verde Clean Fuels Q2 EPS $(0.04) Up From $(0.07) YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61096780/verde-clean-fuels-q2-eps-0-04-0-07-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089351+00:00"
+    },
+    {
+      "ticker": "RKLB",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant 90+ launch backlog increase signals strong demand and revenue visibility, while substantial headcount growth of 439 employees demonstrates aggressive scaling for future capacity.",
+      "action_window": "intraday",
+      "headline": "Rocket Lab CEO Peter Beck Says Backlog Increased 90 Plus Launches After Q2; Rocket Lab CFO Adam Spice Says Total Headcount At End Of Q2, Was 3,217, Up 439 Heads From Q1",
+      "url": "https://www.benzinga.com/news/26/08/61096760/rocket-lab-ceo-peter-beck-says-backlog-increased-90-plus-launches-after-q2-rocket-lab-cfo-adam-spice",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089357+00:00"
+    },
+    {
+      "ticker": "BRT",
+      "tradeable_score": 0.6,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Strong FFO beat of 24% is offset by revenue miss, creating mixed signals typical of REIT earnings where bottom-line quality matters more than top-line.",
+      "action_window": "next_day",
+      "headline": "BRT Apartments Q2 FFO $0.36 Beats $0.29 Estimate, Sales $24.474M Miss $24.592M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61096749/brt-apartments-q2-ffo-0-36-beats-0-29-estimate-sales-24-474m-miss-24-592m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T22:06:56.089363+00:00"
     }
   ]
 }
