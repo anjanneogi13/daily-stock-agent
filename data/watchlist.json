@@ -675,15 +675,16 @@
     },
     {
       "ticker": "SION",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.95,
       "sentiment": "bearish",
       "category": "fda_rejection",
-      "rationale": "Drug discontinuation due to unfavorable clinical data is a major negative catalyst for a biotech, representing pipeline value destruction and confirmed by stock collapse.",
+      "rationale": "Phase 2a trial failure for lead cystic fibrosis drug candidate causing 91% stock crash represents a catastrophic binary clinical event for a biotech.",
       "action_window": "intraday",
-      "headline": "Sionna Therapeutics Discontinues Cystic Fibrosis Drug Following Unfavorable Data Data, Stock Tanks",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61086327/sionna-therapeutics-discontinues-cystic-fibrosis-drug-following-unfavorable-data-data-stock-tanks",
+      "headline": "Why Sionna Therapeutics Stock Is Crashing 91% to a Record Low",
+      "url": "https://finance.yahoo.com/m/b81755ac-36bf-3983-868f-dada13133338/why-sionna-therapeutics-stock.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-08-10T18:13:19.806461+00:00"
+      "added_at": "2026-08-10T18:13:19.806461+00:00",
+      "updated_at": "2026-08-10T23:06:31.676743+00:00"
     },
     {
       "ticker": "USO",
@@ -1044,6 +1045,126 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61096749/brt-apartments-q2-ffo-0-36-beats-0-29-estimate-sales-24-474m-miss-24-592m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-10T22:06:56.089363+00:00"
+    },
+    {
+      "ticker": "FDSB",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Severe earnings miss with EPS down 87% and revenue down 42% year-over-year represents a significant fundamental deterioration requiring immediate reassessment.",
+      "action_window": "next_day",
+      "headline": "Fifth District Bancorp Q2 EPS $0.08 Down From $0.61 YoY, Sales $3.955M Down From $6.867M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097668/fifth-district-bancorp-q2-eps-0-08-down-0-61-yoy-sales-3-955m-down-6-867m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676640+00:00"
+    },
+    {
+      "ticker": "NOTE",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS loss of $1.06 versus $0.44 estimate (141% worse) and revenue shortfall creates immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "FiscalNote Holdings Q2 EPS $(1.06) Misses $(0.44) Estimate, Sales $19.581M Miss $19.852M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097537/fiscalnote-holdings-q2-eps-1-06-misses-0-44-estimate-sales-19-581m-miss-19-852m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676653+00:00"
+    },
+    {
+      "ticker": "ASTS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Double miss with Q2 EPS 25% worse than expected ($0.35 vs $0.28) and revenue missing by nearly 10% ($31.5M vs $35.0M) creates significant negative trading pressure.",
+      "action_window": "intraday",
+      "headline": "UPDATE: AST SpaceMobile Q2 Adj. EPS $(0.35) Misses $(0.28) Estimate, Sales $31.520M Miss $34.977M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097519/update-ast-spacemobile-q2-adj-eps-0-35-misses-0-28-estimate-sales-31-520m-miss-34-977m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676662+00:00"
+    },
+    {
+      "ticker": "SCYX",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q2 earnings with EPS missing estimates by 12% but revenue beating by nearly 3x expectations, creating conflicting trading signals that warrant immediate evaluation.",
+      "action_window": "intraday",
+      "headline": "UPDATE: SCYNEXIS Q2 Adj. EPS $(0.57) Misses $(0.51) Estimate, Sales $235.000K Beat $80.330K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097495/update-scynexis-q2-adj-eps-0-57-misses-0-51-estimate-sales-235-000k-beat-80-330k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676669+00:00"
+    },
+    {
+      "ticker": "BMO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Confirmed divestiture of jointly-owned Moneris for $2B cash provides immediate capital return and strategic simplification for both BMO and RY.",
+      "action_window": "next_day",
+      "headline": "BMO Financial Group, Together With Royal Bank of Canada, Entered Into An Agreement For The Sale Of Jointly-Owned Moneris Solutions Corporation To Francisco Partners For Cash Consideration Of ~ $2B",
+      "url": "https://www.benzinga.com/m-a/26/08/61097209/bmo-financial-group-together-with-royal-bank-of-canada-entered-into-an-agreement-for-the-sale-of-jointly-owned-moneris-solutions-corporation-to-francisco-partners-for-cash-consideration-of-2b",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676676+00:00"
+    },
+    {
+      "ticker": "IMDX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "While EPS narrowly beat by $0.01, revenue missed estimates by 45% ($239K vs $437.5K expected), indicating significant operational challenges that outweigh the marginal earnings beat.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: Insight Molecular Q2 Adj. EPS $(0.23) Beats $(0.24) Estimate, Sales $239.000K Miss $437.500K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097435/correction-insight-molecular-q2-adj-eps-0-23-beats-0-24-estimate-sales-239-000k-miss-437-500k-estima",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676683+00:00"
+    },
+    {
+      "ticker": "CJT",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q2 earnings with EPS missing by 15% while revenue beat by 7%, creating uncertainty that typically triggers immediate trading volatility.",
+      "action_window": "next_day",
+      "headline": "Cargojet Q2 Adj. EPS $0.67 Misses $0.79 Estimate, Sales $275.800M Beat $257.930M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097401/cargojet-q2-adj-eps-0-67-misses-0-79-estimate-sales-275-800m-beat-257-930m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676690+00:00"
+    },
+    {
+      "ticker": "ALTI",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 93% below estimates ($0.004 vs $0.06) and revenue 11% below estimates ($58.023M vs $65.400M), indicating material operational underperformance.",
+      "action_window": "next_day",
+      "headline": "UPDATE: AlTi Global Q2 Adj. EPS $0.004 Misses $0.06 Estimate, Sales $58.023M Miss $65.400M Estimate",
+      "url": "https://www.benzinga.com/quote/ALTI",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676697+00:00"
+    },
+    {
+      "ticker": "AMPY",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with significant EPS miss (-$0.04 vs $0.07 estimate) offset by strong revenue beat ($52.7M vs $43.7M, +20.6%), creating short-term volatility but uncertain direction.",
+      "action_window": "intraday",
+      "headline": "UPDATE: Amplify Energy Q2 Adj. EPS $(0.04) Misses $0.07 Estimate, Sales $52.686M Beat $43.690M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61097239/update-amplify-energy-q2-adj-eps-0-04-misses-0-07-estimate-sales-52-686m-beat-43-690m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T23:06:31.676724+00:00"
+    },
+    {
+      "ticker": "VRTX",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "fda_rejection",
+      "rationale": "Vertex benefits from competitor Sionna's 92% plunge due to failed cystic fibrosis trial, eliminating key competitive threat in CF market where Vertex is dominant player.",
+      "action_window": "next_day",
+      "headline": "Why Vertex Pharma Popped, As A Key Rival Plummeted 92%",
+      "url": "https://finance.yahoo.com/m/5448cf60-d94a-347d-90d3-c5b2cd4f502f/why-vertex-pharma-popped%2C-as.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-08-10T23:06:31.676734+00:00"
     }
   ]
 }
