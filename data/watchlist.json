@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LUC",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong EPS beat ($0.01 vs -$0.01 estimate) offset by modest 6% YoY revenue decline, creating mixed signal with positive earnings surprise as dominant factor.",
-      "action_window": "next_day",
-      "headline": "Lucara Diamond Q2 EPS $0.01 Beats $(0.01) Estimate, Sales $41.000M Down From $43.700M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61058584/lucara-diamond-q2-eps-0-01-beats-0-01-estimate-sales-41-000m-down-43-700m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-07T21:09:00.867143+00:00"
-    },
-    {
       "ticker": "POLA",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -840,6 +828,126 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61090615/mesa-laboratories-q1-adj-eps-2-68-beats-0-03-estimate-sales-60-138m-miss-60-867m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-10T20:10:20.427650+00:00"
+    },
+    {
+      "ticker": "TSX:CRT",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings with FFO missing by 6% ($0.33 vs $0.35) offset by marginal revenue beat, creating uncertainty for REIT investors focused on distribution coverage.",
+      "action_window": "next_day",
+      "headline": "CT Real Estate IT Q2 FFO $0.33 Misses $0.35 Estimate, Sales $156.706M Beat $156.491M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095875/ct-real-estate-it-q2-ffo-0-33-misses-0-35-estimate-sales-156-706m-beat-156-491m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205028+00:00"
+    },
+    {
+      "ticker": "ARI",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Despite massive EPS beat, revenue missed estimates by 82% ($8.1M vs $45.9M expected), indicating severe top-line deterioration that outweighs bottom-line performance.",
+      "action_window": "intraday",
+      "headline": "Apollo Comml Real Est Q2 Adj. EPS $0.15 Beats $(0.35) Estimate, Sales $8.141M Miss $45.900M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095862/apollo-comml-real-est-q2-adj-eps-0-15-beats-0-35-estimate-sales-8-141m-miss-45-900m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205042+00:00"
+    },
+    {
+      "ticker": "TSX:ALS",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Altius Minerals missed Q2 EPS estimates by 30% ($0.14 vs $0.20) and revenue by 2.7%, representing a meaningful double-miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Altius Minerals Q2 Adj. EPS $0.14 Misses $0.20 Estimate, Sales $23.200M Miss $23.833M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095820/altius-minerals-q2-adj-eps-0-14-misses-0-20-estimate-sales-23-200m-miss-23-833m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205050+00:00"
+    },
+    {
+      "ticker": "BW",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Babcock & Wilcox surged 34.5% in after-market trading following Q2 earnings report, indicating a significant earnings beat with immediate market reaction.",
+      "action_window": "next_day",
+      "headline": "12 Industrials Stocks Moving In Monday's After-Market Session",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61095736/12-industrials-stocks-moving-monday-s-after-market-session",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205060+00:00"
+    },
+    {
+      "ticker": "VERA",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Modest earnings beat of $0.09 per share (~5.6% better than estimates) for a biotech company, likely to generate positive momentum in after-hours and next-day trading though not a dramatic beat.",
+      "action_window": "next_day",
+      "headline": "Vera Therapeutics Q2 EPS $(1.52) Beats $(1.61) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095716/vera-therapeutics-q2-eps-1-52-beats-1-61-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205067+00:00"
+    },
+    {
+      "ticker": "RIOT",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Riot Platforms announced a massive $9.1B 20-year data center lease with potential $16.1B total value and $365M-$411M annual NOI, representing a transformative business model shift with secured long-term revenue and Morgan Stanley financing backing.",
+      "action_window": "intraday",
+      "headline": "Riot Platforms Executes 20-Year, 191 MW Data Center Lease With Frontier AI Lab For $9.1B Revenue; Data Center Lease Extensions Could Increase Total Contract Value To $16.1B; Estimated NOI From Lease $7.3B-$8.2B Over Base Term, $365M-$411M Annually; Morgan Stanley Provides $573M Interim Financing For",
+      "url": "https://www.benzinga.com/quote/RIOT",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205074+00:00"
+    },
+    {
+      "ticker": "NKTX",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS missed estimates by 42% ($0.54 actual vs $0.38 expected), representing a significant earnings disappointment that typically triggers immediate selling pressure in biotech stocks.",
+      "action_window": "next_day",
+      "headline": "Nkarta Q2 EPS $(0.54) Misses $(0.38) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095667/nkarta-q2-eps-0-54-misses-0-38-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205080+00:00"
+    },
+    {
+      "ticker": "SANA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Sana Biotechnology beat Q2 EPS estimates by $0.02 (13% better than expected), representing a meaningful earnings beat that typically drives positive after-hours trading in biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Sana Biotechnology Q2 Adj. EPS $(0.13) Beats $(0.15) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095653/sana-biotechnology-q2-adj-eps-0-13-beats-0-15-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205086+00:00"
+    },
+    {
+      "ticker": "FLOC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Special dividend declaration signals excess cash and shareholder-friendly capital allocation, though payout is 3 weeks away reducing immediate urgency.",
+      "action_window": "next_day",
+      "headline": "Flowco Holdings Declares A One-Time Special Cash Dividend Of $0.14 Per Share Of Class A Common Stock, Payable On August 31, 2026",
+      "url": "https://www.benzinga.com/news/26/08/61095603/flowco-holdings-declares-one-time-special-cash-dividend-0-14-share-class-common-stock-payable-august",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205094+00:00"
+    },
+    {
+      "ticker": "MVST",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Microvast missed both EPS and revenue estimates significantly, with actual EPS of -$0.01 vs +$0.01 expected and revenue missing by 7.6%, creating immediate downward pressure.",
+      "action_window": "intraday",
+      "headline": "Microvast Holdings Q2 Adj. EPS $(0.01) Misses $0.01 Estimate, Sales $87.262M Miss $94.403M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61095510/microvast-holdings-q2-adj-eps-0-01-misses-0-01-estimate-sales-87-262m-miss-94-403m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T21:11:44.205100+00:00"
     }
   ]
 }
