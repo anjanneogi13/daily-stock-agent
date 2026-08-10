@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "XPOF",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Guggenheim downgrade from positive rating to neutral represents a meaningful negative catalyst that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Guggenheim Downgrades Xponential Fitness to Neutral",
-      "url": "https://www.benzinga.com/news/26/08/61047132/guggenheim-downgrades-xponential-fitness-neutral",
-      "source": "alpaca",
-      "added_at": "2026-08-07T16:16:01.395491+00:00"
-    },
-    {
-      "ticker": "IONQ",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q2 earnings beat combined with raised 2026 guidance and new DARPA contract creates multiple positive catalysts with 9%+ immediate price reaction.",
-      "action_window": "intraday",
-      "headline": "Why Is IonQ Stock Surging Friday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61047094/why-is-ionq-stock-surging-friday",
-      "source": "alpaca",
-      "added_at": "2026-08-07T16:16:01.395517+00:00"
-    },
-    {
-      "ticker": "U",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "HSBC upgrade to Buy is a meaningful catalyst from a major global bank that typically drives near-term price appreciation and increases institutional interest.",
-      "action_window": "next_day",
-      "headline": "HSBC Upgrades Unity Software to Buy",
-      "url": "https://www.benzinga.com/news/26/08/61047043/hsbc-upgrades-unity-software-buy",
-      "source": "alpaca",
-      "added_at": "2026-08-07T16:16:01.395528+00:00"
-    },
-    {
-      "ticker": "GD",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Large $1.3B government contract win provides revenue visibility but represents only ~3% of GD's annual revenue, making it moderately positive but not transformational.",
-      "action_window": "next_day",
-      "headline": "General Dynamics' GDIT Wins $1.3B Army National Guard IT And Cybersecurity Contract",
-      "url": "https://www.benzinga.com/news/26/08/61047007/general-dynamics-gdit-wins-1-3b-army-national-guard-it-and-cybersecurity-contract",
-      "source": "alpaca",
-      "added_at": "2026-08-07T16:16:01.395538+00:00"
-    },
-    {
-      "ticker": "HASI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive stance with price target increase, signaling continued conviction and upside potential that typically drives near-term buying interest.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on HASI, Raises Price Target to $51",
-      "url": "https://www.benzinga.com/news/26/08/61046769/jp-morgan-maintains-overweight-hasi-raises-price-target-51",
-      "source": "alpaca",
-      "added_at": "2026-08-07T16:16:01.395549+00:00"
-    },
-    {
       "ticker": "VRT",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -756,6 +696,66 @@
       "url": "https://www.benzinga.com/news/26/08/61079729/td-cowen-upgrades-sezzle-buy-maintains-price-target-165",
       "source": "alpaca",
       "added_at": "2026-08-10T15:31:32.387344+00:00"
+    },
+    {
+      "ticker": "ESNT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong Q2 earnings beat with multiple analyst price target raises creates a meaningful positive catalyst with follow-through potential.",
+      "action_window": "next_day",
+      "headline": "These Analysts Boost Their Forecasts On Essent Group After Upbeat Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61082257/these-analysts-boost-their-forecasts-on-essent-group-after-upbeat-q2-results",
+      "source": "alpaca",
+      "added_at": "2026-08-10T16:25:26.669095+00:00"
+    },
+    {
+      "ticker": "ZD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analysts raising forecasts post-earnings is constructive despite mixed Q2 results, with stock already up 0.5% showing modest positive reaction.",
+      "action_window": "next_day",
+      "headline": "Ziff Davis Analysts Raise Their Forecasts Following Q2 Earnings",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61082126/ziff-davis-analysts-raise-their-forecasts-following-q2-earnings",
+      "source": "alpaca",
+      "added_at": "2026-08-10T16:25:26.669110+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock gaining on multiple positive catalysts including AI infrastructure vision, Q2 financials update, and new AI product launch, but details lack specificity on magnitude.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Meta Platforms Stock Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61082061/whats-going-on-with-meta-platforms-stock-monday-2",
+      "source": "alpaca",
+      "added_at": "2026-08-10T16:25:26.669116+00:00"
+    },
+    {
+      "ticker": "OKLO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Multiple analyst downgrades following Q2 results triggered 7.7% share decline despite revenue beat, indicating concerns about forward outlook outweigh current performance.",
+      "action_window": "intraday",
+      "headline": "These Analysts Cut Their Forecasts On Oklo After Q2 Results",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61081838/these-analysts-cut-their-forecasts-on-oklo-after-q2-results",
+      "source": "alpaca",
+      "added_at": "2026-08-10T16:25:26.669123+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BofA analyst upgrades NVDA to top pick with $350 price target implying 56% upside, driven by new Rubin product cycle catalyst.",
+      "action_window": "intraday",
+      "headline": "Nvidia Stock\u2019s Rubin Era Begins: A \u2018Top Pick,\u2019 BofA Says",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61081684/nvidia-stock-rubin-era-bofa-top-pick",
+      "source": "alpaca",
+      "added_at": "2026-08-10T16:25:26.669129+00:00"
     }
   ]
 }
