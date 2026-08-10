@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "YJ",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Circuit breaker halt with 69.92% price surge indicates extreme buying pressure from a major catalyst, though the underlying driver is not specified in the headline.",
-      "action_window": "intraday",
-      "headline": "Yunji Shares Halted On Circuit Breaker To The Upside, Stock Now Up 69.92%",
-      "url": "https://www.benzinga.com/quote/YJ",
-      "source": "alpaca",
-      "added_at": "2026-08-07T14:08:24.927172+00:00"
-    },
-    {
-      "ticker": "PONY",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Tongcheng (PONY) nearing completion of Dida acquisition with 52% shareholder approval represents a meaningful M&A catalyst for the acquirer, expanding its ride-sharing capabilities.",
-      "action_window": "next_day",
-      "headline": "Tongcheng Nears Completion Of Dida Takeover",
-      "url": "https://www.benzinga.com/Opinion/26/08/61040201/tongcheng-nears-completion-of-dida-takeover",
-      "source": "alpaca",
-      "added_at": "2026-08-07T14:08:24.927190+00:00"
-    },
-    {
       "ticker": "GOOG",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -410,15 +386,16 @@
     },
     {
       "ticker": "IPHA",
-      "tradeable_score": 0.78,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Strategic partnership with Sobi to advance drug toward Phase 3 and accelerated approval filing represents significant validation and de-risking of the lacutamab program with potential near-term regulatory catalyst.",
+      "rationale": "Partnership deal with $75 million upfront payment provides significant secured financing for Phase 3 trial advancement, representing immediate capital influx and validation of lacutamab's potential.",
       "action_window": "intraday",
-      "headline": "Innate Pharma Partners With Sobi To Advance Lacutamab Toward Phase 3, Targets Accelerated Approval Filing In S\u00e9zary Syndrome",
-      "url": "https://www.benzinga.com/news/26/08/61066002/innate-pharma-partners-sobi-advance-lacutamab-toward-phase-3-targets-accelerated-approval-filing-s-z",
+      "headline": "Innate Pharma Jumps as Sobi Deal Boosts Secured Financing for Advancing Rare Skin Cancer Therapy",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61076274/innate-pharma-jumps-as-sobi-deal-boosts-secured-financing-for-advancing-rare-skin-cancer-therapy",
       "source": "alpaca",
-      "added_at": "2026-08-10T09:11:42.218514+00:00"
+      "added_at": "2026-08-10T09:11:42.218514+00:00",
+      "updated_at": "2026-08-10T14:17:26.683274+00:00"
     },
     {
       "ticker": "CITR",
@@ -803,6 +780,42 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61072907/aim-immunotech-q2-eps-0-43-misses-0-18-estimate-sales-26-000k-25-000k-yoy",
       "source": "alpaca",
       "added_at": "2026-08-10T12:52:52.330229+00:00"
+    },
+    {
+      "ticker": "CD",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registered direct offerings typically cause immediate dilution to existing shareholders, creating selling pressure as new shares enter the market at a discount.",
+      "action_window": "intraday",
+      "headline": "Chaince Digital Reveals A  ~$16.2M Registered Direct Offering",
+      "url": "https://www.benzinga.com/news/26/08/61076329/chaince-digital-reveals-16-2m-registered-direct-offering",
+      "source": "alpaca",
+      "added_at": "2026-08-10T14:17:26.683260+00:00"
+    },
+    {
+      "ticker": "VRSK",
+      "tradeable_score": 0.62,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Court decision went against Verisk with expedited ruling suggesting material adverse outcome, though appeal options create uncertainty and potential recovery path.",
+      "action_window": "intraday",
+      "headline": "Verisk Says \"We Appreciate The Expedited Response From The Court But Strongly Disagree With The Decision. It Is Possible To Appeal, Among Other Next Steps, And We Are Evaluating Our Options At This Time.\"",
+      "url": "https://www.benzinga.com/quote/VRSK",
+      "source": "alpaca",
+      "added_at": "2026-08-10T14:17:26.683285+00:00"
+    },
+    {
+      "ticker": "GCL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic $9M investment from ADATA at defined $3.50/share valuation provides clear price signal and validates subsidiary 4Divinity at $350M, representing meaningful external validation and capital infusion.",
+      "action_window": "intraday",
+      "headline": "GCL\u2019s 4Divinity Secures Additional $9M Strategic Investment From ADATA At $3.50/Share, Valuing Unit At $350M",
+      "url": "https://www.benzinga.com/news/26/08/61075629/gcl-s-4divinity-secures-additional-9m-strategic-investment-adata-3-50-share-valuing-unit-350m",
+      "source": "alpaca",
+      "added_at": "2026-08-10T14:17:26.683292+00:00"
     }
   ]
 }

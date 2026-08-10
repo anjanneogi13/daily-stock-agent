@@ -5513,5 +5513,18 @@
     "expires": "2026-08-17T12:52:52.324185+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "VRSK": {
+    "ticker": "VRSK",
+    "score_delta": -0.089,
+    "catalyst": "lawsuit",
+    "sentiment": "bearish",
+    "tradeable_score": 0.62,
+    "action_window": "intraday",
+    "headline": "Verisk Says \"We Appreciate The Expedited Response From The Court But Strongly Disagree With The Decision. It Is Possible To Appeal, Among Other Next Steps, And We Are Evaluating Our Options At This Ti",
+    "added_at": "2026-08-10T14:17:26.666213+00:00",
+    "expires": "2026-08-24T14:17:26.666221+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
