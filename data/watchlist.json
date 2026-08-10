@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPCX",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Major $60B acquisition by SpaceX expected to close within days with concrete integration plans already mapped out, representing a massive catalyst for the target company.",
-      "action_window": "intraday",
-      "headline": "'Cursor Maps Out Branding, Other Changes As SpaceX Acquisition Nears; Cursor Will Consolidate Teams With SpaceXAI; SpaceX Could Complete Its $60 Billion Acquisition Of The Coding Startup As Soon As The End Of Next Week' - The Information",
-      "url": "https://www.benzinga.com/m/26/08/61054302/cursor-maps-out-branding-other-changes-spacex-acquisition-nears-cursor-will-consolidate-teams-spacex",
-      "source": "alpaca",
-      "added_at": "2026-08-07T19:28:13.503176+00:00"
-    },
-    {
-      "ticker": "WFF",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Shares are actively surging on confirmed standby equity purchase agreement announcement, providing immediate capital access and strong positive price momentum.",
-      "action_window": "intraday",
-      "headline": "WF Holding Shares Skyrocket Friday: What's Driving the Action?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61054095/wf-holding-shares-skyrocket-friday-whats-driving-the-action",
-      "source": "alpaca",
-      "added_at": "2026-08-07T19:28:13.503195+00:00"
-    },
-    {
       "ticker": "JHX",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -780,6 +756,30 @@
       "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61086257/reported-earlier-hormuz-letter-posted-x-iran-has-flatly-ruled-out-any-future-negotiations-trump-admi",
       "source": "alpaca",
       "added_at": "2026-08-10T18:13:19.806468+00:00"
+    },
+    {
+      "ticker": "BRK",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Berkshire Hathaway delivered a significant Q2 earnings beat exceeding expectations by a wide margin with shares already advancing, representing a meaningful positive catalyst for a major blue-chip stock.",
+      "action_window": "intraday",
+      "headline": "Berkshire Hathaway Stock Pop After Q2 EPS Surprise",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61089190/berkshire-hathaway-stock-pop-after-q2-eps-surprise",
+      "source": "alpaca",
+      "added_at": "2026-08-10T19:30:23.634768+00:00"
+    },
+    {
+      "ticker": "BNTX",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Federal policy shift removing Hepatitis B, COVID-19, and influenza from recommended childhood vaccinations represents a significant demand reduction for major vaccine manufacturers' core products.",
+      "action_window": "intraday",
+      "headline": "Trump Says Administration Recognizing Childhood Vaccine Recommendations For Only 11 Core Vaccinations; Hepatitis B, COVID-19, Influenza No Longer Recommended For All Children",
+      "url": "https://www.benzinga.com/news/26/08/61088567/trump-says-administration-recognizing-childhood-vaccine-recommendations-for-only-11-core-vaccinations-hepatitis-b-covid-19-influenza-no-longer-recommended-for-all-children",
+      "source": "alpaca",
+      "added_at": "2026-08-10T19:30:23.634784+00:00"
     }
   ]
 }

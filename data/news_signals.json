@@ -5591,5 +5591,83 @@
     "expires": "2026-08-15T18:13:19.791371+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DNOW": {
+    "ticker": "DNOW",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "DA Davidson Maintains Buy on Dnow, Raises Price Target to $19",
+    "added_at": "2026-08-10T19:30:23.598166+00:00",
+    "expires": "2026-08-15T19:30:23.598174+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MLR": {
+    "ticker": "MLR",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "DA Davidson Maintains Buy on Miller Industries, Raises Price Target to $64",
+    "added_at": "2026-08-10T19:30:23.609299+00:00",
+    "expires": "2026-08-15T19:30:23.609310+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BRK": {
+    "ticker": "BRK",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Berkshire Hathaway Stock Pop After Q2 EPS Surprise",
+    "added_at": "2026-08-10T19:30:23.613604+00:00",
+    "expires": "2026-08-17T19:30:23.613612+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OSG": {
+    "ticker": "OSG",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Watching Octave Specialty Group; Hearing Zacks Under $10 Sells Stock",
+    "added_at": "2026-08-10T19:30:23.617480+00:00",
+    "expires": "2026-08-15T19:30:23.617487+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LMT": {
+    "ticker": "LMT",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Lockheed Martin Announces $250M Committed To Date To New Strigo Product Center, Launching Modular RF Sensor, Missile Datalink And Seeker Solutions",
+    "added_at": "2026-08-10T19:30:23.621448+00:00",
+    "expires": "2026-08-17T19:30:23.621455+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MUX": {
+    "ticker": "MUX",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Roth Capital Maintains Buy on McEwen, Lowers Price Target to $31",
+    "added_at": "2026-08-10T19:30:23.625461+00:00",
+    "expires": "2026-08-15T19:30:23.625468+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
