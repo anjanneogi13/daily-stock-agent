@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "JHX",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong Q1 earnings beat with raised FY27 guidance, analyst upgrades, and 8.3% pre-market surge creates significant near-term momentum.",
-      "action_window": "intraday",
-      "headline": "James Hardie Industries Analysts Boost Their Forecasts Following Better-Than-Expected Q1 Earnings",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61055220/james-hardie-industries-analysts-boost-their-forecasts-following-better-than-expected-q1-earnings",
-      "source": "alpaca",
-      "added_at": "2026-08-07T20:05:54.887370+00:00"
-    },
-    {
       "ticker": "LUC",
       "tradeable_score": 0.55,
       "sentiment": "bullish",
@@ -780,6 +768,78 @@
       "url": "https://www.benzinga.com/news/26/08/61088567/trump-says-administration-recognizing-childhood-vaccine-recommendations-for-only-11-core-vaccinations-hepatitis-b-covid-19-influenza-no-longer-recommended-for-all-children",
       "source": "alpaca",
       "added_at": "2026-08-10T19:30:23.634784+00:00"
+    },
+    {
+      "ticker": "NIQ",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "NIQ beat EPS estimates by 35% ($0.27 vs $0.20) and revenue estimates by 1.6%, representing a strong quarterly outperformance that typically drives immediate positive price action.",
+      "action_window": "intraday",
+      "headline": "NIQ Global Intelligence Q2 Adj. EPS $0.27 Beats $0.20 Estimate, Sales $1.124B Beat $1.106B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61090862/niq-global-intelligence-q2-adj-eps-0-27-beats-0-20-estimate-sales-1-124b-beat-1-106b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T20:10:20.427614+00:00"
+    },
+    {
+      "ticker": "PPHC",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Massive earnings miss with Q3 EPS of $0.34 vs $0.95 estimate (64% miss) and sales of $52.1M vs $111.9M estimate (53% miss) represents a significant fundamental deterioration.",
+      "action_window": "intraday",
+      "headline": "Public Policy Holding Co Q3 Adj. EPS $0.34 Misses $0.95 Estimate, Sales $52.143M Miss $111.900M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61090834/public-policy-holding-co-q3-adj-eps-0-34-misses-0-95-estimate-sales-52-143m-miss-111-900m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T20:10:20.427624+00:00"
+    },
+    {
+      "ticker": "EROK",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with adjusted EPS of -$0.37 versus estimate of $0.12 (a $0.49 miss and unexpected loss) warrants immediate negative trading action.",
+      "action_window": "next_day",
+      "headline": "EagleRock Land Q2 Adj. EPS $(0.37) Misses $0.12 Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61090807/eaglerock-land-q2-adj-eps-0-37-misses-0-12-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T20:10:20.427630+00:00"
+    },
+    {
+      "ticker": "BBIO",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings with significant EPS miss (-32% vs estimate) offset by revenue beat (+11% vs estimate), creating uncertain trading direction requiring immediate assessment.",
+      "action_window": "intraday",
+      "headline": "BridgeBio Pharma Q2 EPS $(0.78) Misses $(0.59) Estimate, Sales $243.676M Beat $218.743M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61090720/bridgebio-pharma-q2-eps-0-78-misses-0-59-estimate-sales-243-676m-beat-218-743m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T20:10:20.427636+00:00"
+    },
+    {
+      "ticker": "PLUG",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Plug Power beat both EPS and revenue estimates in Q2 earnings, with revenue exceeding consensus by 5.2% and losses coming in better than expected, representing a meaningful positive catalyst for near-term trading.",
+      "action_window": "intraday",
+      "headline": "Plug Power Q2 Adj. EPS $(0.07) Beats $(0.08) Estimate, Sales $178.299M Beat $169.405M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61090672/plug-power-q2-adj-eps-0-07-beats-0-08-estimate-sales-178-299m-beat-169-405m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T20:10:20.427644+00:00"
+    },
+    {
+      "ticker": "MLAB",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Significant EPS beat ($2.68 vs $0.03 estimate) offset by revenue miss ($60.138M vs $60.867M), creating mixed signals that warrant immediate attention but uncertain direction.",
+      "action_window": "intraday",
+      "headline": "Mesa Laboratories Q1 Adj. EPS $2.68 Beats $0.03 Estimate, Sales $60.138M Miss $60.867M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61090615/mesa-laboratories-q1-adj-eps-2-68-beats-0-03-estimate-sales-60-138m-miss-60-867m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-10T20:10:20.427650+00:00"
     }
   ]
 }
