@@ -1,90 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GOOG",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Google faces a material $28 billion portfolio loss from SpaceX investment deterioration, representing significant unrealized losses that could impact balance sheet and investor confidence.",
-      "action_window": "intraday",
-      "headline": "SpaceX Stock Meltdown Takes $28 Billion Bite Out of Google's Portfolio",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61044958/spacex-stock-meltdown-takes-28-billion-bite-out-of-googles-portfolio",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837789+00:00"
-    },
-    {
-      "ticker": "DRVN",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Activist investor publicly urging strategic review and potential sale after rejecting $18/share offer signals near-term M&A catalyst with disclosed price floor, likely to drive stock movement toward or above that level.",
-      "action_window": "intraday",
-      "headline": "ADW Capital Urges Driven Brands To Launch Strategic Review, Explore Sale Of Company Or Asset Divestitures After Rejecting $18/Share Offer",
-      "url": "https://www.benzinga.com/news/26/08/61044915/adw-capital-urges-driven-brands-launch-strategic-review-explore-sale-company-or-asset-divestitures-a",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837802+00:00"
-    },
-    {
-      "ticker": "RXO",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Analyst upgrade from Citizens to Market Outperform with $30 price target represents a meaningful positive catalyst that typically drives near-term price appreciation.",
-      "action_window": "intraday",
-      "headline": "Citizens Upgrades RXO to Market Outperform, Announces $30 Price Target",
-      "url": "https://www.benzinga.com/news/26/08/61044816/citizens-upgrades-rxo-market-outperform-announces-30-price-target",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837812+00:00"
-    },
-    {
-      "ticker": "F",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Ford's sub-$30K electric pickup at 2.5x cheaper than Cybertruck is a major competitive product launch that could capture significant market share in the mass-market EV segment.",
-      "action_window": "intraday",
-      "headline": "Ford Drops Fathom EV \u2014 and It Undercuts Tesla\u2019s Cybertruck by 2.5x",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61044815/ford-drops-fathom-ev-and-it-undercuts-teslas-cybertruck-by-2-5x",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837819+00:00"
-    },
-    {
-      "ticker": "CGC",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Canopy Growth delivered a Q1 earnings beat with 13% revenue growth, improved margins, and positive momentum in medical cannabis segment indicating operational improvement toward profitability.",
-      "action_window": "intraday",
-      "headline": "Canopy Growth Sees Steady Progress on Profitability Measures",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61044613/canopy-growth-sees-steady-progress-on-profitability-measures",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837827+00:00"
-    },
-    {
-      "ticker": "GRAL",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA Advisory Committee review scheduled for multi-cancer blood test is a meaningful regulatory milestone that could lead to approval, though the actual decision date is over a month away reducing immediate urgency.",
-      "action_window": "this_week",
-      "headline": "GRAIL's Galleri Multi-Cancer Blood Test PMA Set For FDA Advisory Committee Review On Sept. 23",
-      "url": "https://www.benzinga.com/general/biotech/26/08/61044480/grail-s-galleri-multi-cancer-blood-test-pma-set-fda-advisory-committee-review-sept-23",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837839+00:00"
-    },
-    {
-      "ticker": "NET",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Wells Fargo maintains bullish Overweight rating while raising price target to $380, signaling increased confidence in Cloudflare's upside potential from a major institutional analyst.",
-      "action_window": "intraday",
-      "headline": "Wells Fargo Maintains Overweight on Cloudflare, Raises Price Target to $380",
-      "url": "https://www.benzinga.com/news/26/08/61044407/wells-fargo-maintains-overweight-cloudflare-raises-price-target-380",
-      "source": "alpaca",
-      "added_at": "2026-08-07T15:23:57.837846+00:00"
-    },
-    {
       "ticker": "XPOF",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -816,6 +732,30 @@
       "url": "https://www.benzinga.com/news/26/08/61075629/gcl-s-4divinity-secures-additional-9m-strategic-investment-adata-3-50-share-valuing-unit-350m",
       "source": "alpaca",
       "added_at": "2026-08-10T14:17:26.683292+00:00"
+    },
+    {
+      "ticker": "OPEN",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JPMorgan positive commentary on path to profitability offsets Q2 earnings miss, creating mixed but cautiously optimistic outlook with forward momentum.",
+      "action_window": "intraday",
+      "headline": "Opendoor\u2019s Door To Profitability Is Cracking Open, Says JPMorgan",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61079882/opendoor-technologies-q2-profitability-2027",
+      "source": "alpaca",
+      "added_at": "2026-08-10T15:31:32.387330+00:00"
+    },
+    {
+      "ticker": "SEZL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "TD Cowen upgraded Sezzle to Buy from a lower rating with a $165 price target, representing a meaningful positive catalyst from a reputable firm that typically drives near-term trading momentum.",
+      "action_window": "intraday",
+      "headline": "TD Cowen Upgrades Sezzle to Buy, Maintains Price Target to $165",
+      "url": "https://www.benzinga.com/news/26/08/61079729/td-cowen-upgrades-sezzle-buy-maintains-price-target-165",
+      "source": "alpaca",
+      "added_at": "2026-08-10T15:31:32.387344+00:00"
     }
   ]
 }
