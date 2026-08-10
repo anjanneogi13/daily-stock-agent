@@ -255,15 +255,16 @@
     },
     {
       "ticker": "BWMN",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong dual beat with adjusted EPS of $0.62 vs $0.33 estimate (88% beat) and revenue of $146.1M vs $138.6M estimate (5.4% beat) represents a meaningful positive catalyst for immediate trading.",
+      "category": "ma_target",
+      "rationale": "Stock up 56% on merger announcement with Bernhard Capital Partners combined with earnings beat represents a confirmed M&A catalyst already reflected in price action.",
       "action_window": "intraday",
-      "headline": "Bowman Consulting Group Q2 Adj. EPS $0.62 Beats $0.33 Estimate, Sales $146.125M Beat $138.639M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61070670/bowman-consulting-group-q2-adj-eps-0-62-beats-0-33-estimate-sales-146-125m-beat-138-639m-estimate",
+      "headline": "Bowman Consulting Shares Rise After Higher Q2 Adjusted Earnings, Merger Deal With Bernhard Capital Partners",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bowman-consulting-shares-rise-higher-190758063.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-08-10T11:43:55.198163+00:00"
+      "added_at": "2026-08-10T11:43:55.198163+00:00",
+      "updated_at": "2026-08-10T23:59:50.528518+00:00"
     },
     {
       "ticker": "DKS",
@@ -1156,15 +1157,28 @@
     },
     {
       "ticker": "VRTX",
-      "tradeable_score": 0.85,
+      "tradeable_score": 0.88,
       "sentiment": "bullish",
       "category": "fda_rejection",
-      "rationale": "Vertex benefits from competitor Sionna's 92% plunge due to failed cystic fibrosis trial, eliminating key competitive threat in CF market where Vertex is dominant player.",
+      "rationale": "Vertex's main competitor suffered a catastrophic 92% drop due to clinical trial failure in cystic fibrosis, substantially strengthening Vertex's competitive moat and market position.",
       "action_window": "next_day",
       "headline": "Why Vertex Pharma Popped, As A Key Rival Plummeted 92%",
       "url": "https://finance.yahoo.com/m/5448cf60-d94a-347d-90d3-c5b2cd4f502f/why-vertex-pharma-popped%2C-as.html?.tsrc=rss",
       "source": "yahoo",
-      "added_at": "2026-08-10T23:06:31.676734+00:00"
+      "added_at": "2026-08-10T23:06:31.676734+00:00",
+      "updated_at": "2026-08-10T23:59:50.528491+00:00"
+    },
+    {
+      "ticker": "AMAT",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "TSMC's strong 44.7% AI chip revenue growth indicates potential capital equipment spending increases that would benefit AMAT as a key supplier, though this is indirect/derivative demand signal rather than direct AMAT news.",
+      "action_window": "next_day",
+      "headline": "Applied Materials (AMAT) Gets A Demand Lift From 44.7% AI Chip Growth",
+      "url": "https://finance.yahoo.com/technology/ai/articles/applied-materials-amat-gets-demand-210941837.html?.tsrc=rss",
+      "source": "yahoo",
+      "added_at": "2026-08-10T23:59:50.528508+00:00"
     }
   ]
 }
