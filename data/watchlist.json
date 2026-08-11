@@ -412,15 +412,16 @@
     },
     {
       "ticker": "ONDS",
-      "tradeable_score": 0.62,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Contract win with high-profile NFL client demonstrates commercial traction and validates Ondas' counter-drone technology, though financial terms and deal size are not disclosed.",
+      "category": "other",
+      "rationale": "Multi-million-dollar defense contract win with confirmed share price rise represents a meaningful revenue catalyst for Ondas with immediate market reaction.",
       "action_window": "intraday",
-      "headline": "Ondas Wins NFL Counter-Drone Deal to Protect Jaguars' EverBank Stadium",
-      "url": "https://www.benzinga.com/markets/mid-cap/26/08/61073220/ondas-wins-nfl-counter-drone-deal-to-protect-jaguars-everbank-stadium",
+      "headline": "Ondas Wins Multi-Million-Dollar Israel Contract For Tactical Attack Drones",
+      "url": "https://www.benzinga.com/markets/mid-cap/26/08/61123159/ondas-wins-multi-million-dollar-israel-contract-for-tactical-attack-drones",
       "source": "alpaca",
-      "added_at": "2026-08-10T12:52:52.330177+00:00"
+      "added_at": "2026-08-10T12:52:52.330177+00:00",
+      "updated_at": "2026-08-11T19:33:41.379077+00:00"
     },
     {
       "ticker": "NLST",
@@ -1914,6 +1915,42 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/08/61121390/monday-com-beats-on-q2-loses-some-analyst-love-as-growth-slows",
       "source": "alpaca",
       "added_at": "2026-08-11T18:15:14.176476+00:00"
+    },
+    {
+      "ticker": "ACB",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Aurora Cannabis received unsolicited $4.00/share takeover offer from Curaleaf and is forming special committee to review, suggesting potential for higher bid or competing offers given their mention that $5.00 was below December 2025 levels.",
+      "action_window": "intraday",
+      "headline": "Aurora Cannabis Says Board To Form Special Committee To Review Curaleaf's Unsolicited $4.00 Per Share Take-Over Proposal; Says $5.00 Cap Below December 2025 Trading Levels",
+      "url": "https://www.benzinga.com/quote/ACB",
+      "source": "alpaca",
+      "added_at": "2026-08-11T19:33:41.379025+00:00"
+    },
+    {
+      "ticker": "ALL",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Citigroup downgrade to Sell is a strong negative signal from a major bank, though the raised price target creates mixed messaging that may limit downside.",
+      "action_window": "next_day",
+      "headline": "Citigroup Downgrades Allstate to Sell, Raises Price Target to $240",
+      "url": "https://www.benzinga.com/news/26/08/61123829/citigroup-downgrades-allstate-sell-raises-price-target-240",
+      "source": "alpaca",
+      "added_at": "2026-08-11T19:33:41.379051+00:00"
+    },
+    {
+      "ticker": "NUTX",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Lake Street maintains Buy rating while raising price target to $310, indicating increased confidence and upside potential for the stock.",
+      "action_window": "next_day",
+      "headline": "Lake Street Maintains Buy on Nutex Health, Raises Price Target to $310",
+      "url": "https://www.benzinga.com/news/26/08/61123196/lake-street-maintains-buy-nutex-health-raises-price-target-310",
+      "source": "alpaca",
+      "added_at": "2026-08-11T19:33:41.379070+00:00"
     }
   ]
 }
