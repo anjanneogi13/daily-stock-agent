@@ -1782,6 +1782,30 @@
       "url": "https://www.benzinga.com/news/26/08/61114842/cme-group-and-silicon-data-announce-plans-launch-two-compute-futures-contracts-october-5-pending-reg",
       "source": "alpaca",
       "added_at": "2026-08-11T15:29:11.765689+00:00"
+    },
+    {
+      "ticker": "SNEX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "StoneX delivered a significant earnings beat with 47% revenue growth and doubled net income, representing a strong fundamental catalyst across all business segments.",
+      "action_window": "intraday",
+      "headline": "What's Going on With StoneX Shares on Tuesday?",
+      "url": "https://www.benzinga.com/markets/mid-cap/26/08/61117325/whats-going-on-with-stonex-shares-on-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-08-11T16:25:09.810811+00:00"
+    },
+    {
+      "ticker": "UNG",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Increased Qatar LNG loading ahead of potential Strait of Hormuz reopening suggests supply normalization, which would pressure natural gas and oil prices downward as geopolitical supply concerns ease.",
+      "action_window": "next_day",
+      "headline": "'Qatar LNG Loading Jumps Ahead of Potential Hormuz Reopening' - Bloomberg News",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61117308/qatar-lng-loading-jumps-ahead-potential-hormuz-reopening-bloomberg-news",
+      "source": "alpaca",
+      "added_at": "2026-08-11T16:25:09.810823+00:00"
     }
   ]
 }
