@@ -1280,15 +1280,16 @@
     },
     {
       "ticker": "TME",
-      "tradeable_score": 0.65,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Mixed Q2 earnings with EPS beat of 8.7% offset by revenue miss of 2.4%, creating uncertain near-term trading direction requiring immediate evaluation.",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock is sinking despite EPS beat, indicating revenue miss or guidance disappointment overshadowing positive EPS, creating immediate selling pressure.",
       "action_window": "intraday",
-      "headline": "Tencent Music Enter Gr Q2 Adj. EPS $0.25 Beats $0.23 Estimate, Sales $1.317B Miss $1.350B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61100694/tencent-music-enter-gr-q2-adj-eps-0-25-beats-0-23-estimate-sales-1-317b-miss-1-350b-estimate",
+      "headline": "Why Is Tencent Music Stock Sinking Tuesday?",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61115015/why-is-tencent-music-stock-sinking-tuesday",
       "source": "alpaca",
-      "added_at": "2026-08-11T09:54:58.612282+00:00"
+      "added_at": "2026-08-11T09:54:58.612282+00:00",
+      "updated_at": "2026-08-11T15:29:11.765678+00:00"
     },
     {
       "ticker": "ONON",
@@ -1745,6 +1746,42 @@
       "url": "https://www.benzinga.com/news/26/08/61110734/ypf-argentine-ceo-says-ypf-expects-2026-ebitda-8b-previous-estimate-6b",
       "source": "alpaca",
       "added_at": "2026-08-11T14:15:33.331381+00:00"
+    },
+    {
+      "ticker": "SCWO",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "ATM offering of up to $50M signals potential dilution for existing shareholders, typically creating near-term selling pressure despite providing capital for growth.",
+      "action_window": "intraday",
+      "headline": "374water Enters Into ATM Sales Agreement For Up To $50M Of Common Stock",
+      "url": "https://www.benzinga.com/news/26/08/61115404/374water-enters-atm-sales-agreement-50m-common-stock",
+      "source": "alpaca",
+      "added_at": "2026-08-11T15:29:11.765648+00:00"
+    },
+    {
+      "ticker": "LION",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Activist pressure for a sale typically creates upward price pressure as markets anticipate potential premium buyout, though outcome remains uncertain and this is a reported development rather than confirmed action.",
+      "action_window": "intraday",
+      "headline": "Reported Earlier: \"Lionsgate Faces Activist Pressure To Sell Itself In 'AI Era'\" - Semafor",
+      "url": "https://www.benzinga.com/m/26/08/61115375/reported-earlier-lionsgate-faces-activist-pressure-sell-itself-ai-era-semafor",
+      "source": "alpaca",
+      "added_at": "2026-08-11T15:29:11.765663+00:00"
+    },
+    {
+      "ticker": "CME",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New futures product launch represents revenue diversification into emerging compute/AI infrastructure market, but impact depends on adoption and regulatory approval remains pending.",
+      "action_window": "this_week",
+      "headline": "CME Group And Silicon Data Announce Plans To Launch Two Compute Futures Contracts On October 5, Pending Regulatory Review",
+      "url": "https://www.benzinga.com/news/26/08/61114842/cme-group-and-silicon-data-announce-plans-launch-two-compute-futures-contracts-october-5-pending-reg",
+      "source": "alpaca",
+      "added_at": "2026-08-11T15:29:11.765689+00:00"
     }
   ]
 }
