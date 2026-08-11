@@ -881,19 +881,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SPGI": {
-    "ticker": "SPGI",
-    "score_delta": 0.025,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "'S&P Acquires Nigerian Rating Agency to Deepen Africa Coverage' - Bloomberg",
-    "added_at": "2026-07-28T16:40:52.180671+00:00",
-    "expires": "2026-08-11T16:40:52.180678+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ABCB": {
     "ticker": "ABCB",
     "score_delta": -0.1,
@@ -1715,19 +1702,6 @@
     "headline": "Conference Call:\nDuPont de Nemours Sees Q3 Adj EPS $1.80-$1.90 vs $1.93 Est; Sees Sales $1.835B vs $1.877B Est",
     "added_at": "2026-08-04T15:00:27.945643+00:00",
     "expires": "2026-08-18T15:00:27.945649+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "WFC": {
-    "ticker": "WFC",
-    "score_delta": 0.032,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "Wells Fargo Joins JPMorgan, Citi In Race To Tokenize Wall Street",
-    "added_at": "2026-08-04T16:53:51.981366+00:00",
-    "expires": "2026-08-11T16:53:51.981373+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6447,6 +6421,58 @@
     "headline": "CoreWeave Likely To Report Q2 Loss; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
     "added_at": "2026-08-11T16:25:09.805254+00:00",
     "expires": "2026-08-18T16:25:09.805258+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "QMCO": {
+    "ticker": "QMCO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Why Is Quantum Stock Surging on Tuesday?",
+    "added_at": "2026-08-11T17:26:32.956218+00:00",
+    "expires": "2026-08-18T17:26:32.956225+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VSEC": {
+    "ticker": "VSEC",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Deutsche Bank Maintains Buy on VSE, Raises Price Target to $290",
+    "added_at": "2026-08-11T17:26:32.972566+00:00",
+    "expires": "2026-08-16T17:26:32.972573+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UPWK": {
+    "ticker": "UPWK",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Upwork Cuts Profit Forecast, Warns of Near-Term AI Headwinds",
+    "added_at": "2026-08-11T17:26:32.977099+00:00",
+    "expires": "2026-08-25T17:26:32.977106+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ATHE": {
+    "ticker": "ATHE",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Craig-Hallum Initiates Coverage On Alterity Therapeutics with Buy Rating, Announces Price Target of $12",
+    "added_at": "2026-08-11T17:26:32.981566+00:00",
+    "expires": "2026-08-16T17:26:32.981572+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

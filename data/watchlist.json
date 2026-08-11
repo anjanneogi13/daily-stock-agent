@@ -1806,6 +1806,66 @@
       "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61117308/qatar-lng-loading-jumps-ahead-potential-hormuz-reopening-bloomberg-news",
       "source": "alpaca",
       "added_at": "2026-08-11T16:25:09.810823+00:00"
+    },
+    {
+      "ticker": "KMI",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $5B pipeline project approval represents significant capital deployment and future revenue opportunity for all three energy infrastructure partners, with Kinder Morgan being the largest pure-play midstream company.",
+      "action_window": "next_day",
+      "headline": "Phillips 66, Kinder Morgan, HF Sinclair Approve $5B Pipeline Project",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61119980/phillips-66-kinder-morgan-hf-sinclair-approve-5b-pipeline-project",
+      "source": "alpaca",
+      "added_at": "2026-08-11T17:26:32.992457+00:00"
+    },
+    {
+      "ticker": "QMCO",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat combined with raised guidance and significant balance sheet improvement through full debt elimination creates multiple positive catalysts.",
+      "action_window": "intraday",
+      "headline": "Why Is Quantum Stock Surging on Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61119871/why-is-quantum-stock-surging-on-tuesday",
+      "source": "alpaca",
+      "added_at": "2026-08-11T17:26:32.992473+00:00"
+    },
+    {
+      "ticker": "CMG",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Multistate Salmonella outbreak linked to Chipotle's ingredients poses significant food safety risk with potential for store closures, sales decline, and brand damage similar to past E. coli incidents.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Chipotle Mexican Grill Stock Tuesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61119793/whats-going-on-with-chipotle-mexican-grill-stock-tuesday-2",
+      "source": "alpaca",
+      "added_at": "2026-08-11T17:26:32.992483+00:00"
+    },
+    {
+      "ticker": "UPWK",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Despite Q2 beat, lowered 2026 guidance citing AI headwinds and weaker client additions creates significant near-term negative catalyst that typically drives immediate sell-off.",
+      "action_window": "intraday",
+      "headline": "Upwork Cuts Profit Forecast, Warns of Near-Term AI Headwinds",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61119405/upwork-cuts-profit-forecast-warns-of-near-term-ai-headwinds",
+      "source": "alpaca",
+      "added_at": "2026-08-11T17:26:32.992494+00:00"
+    },
+    {
+      "ticker": "SPCX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New AI product (Grok Bot) launch with immediate availability across multiple premium tiers represents a meaningful product expansion that could drive subscriber growth and revenue.",
+      "action_window": "intraday",
+      "headline": "SpaceXAI Introduces Grok Bot; Grok Bot Is In Beta & Available Today For SuperGrok Heavy, Cursor Ultra, & Cursor Teams Premium Subscribers On Desktop & iOS",
+      "url": "https://www.benzinga.com/news/26/08/61119018/spacexai-introduces-grok-bot-grok-bot-beta-available-today-supergrok-heavy-cursor-ultra-cursor-teams",
+      "source": "alpaca",
+      "added_at": "2026-08-11T17:26:32.992508+00:00"
     }
   ]
 }
