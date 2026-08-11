@@ -881,19 +881,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TRU": {
-    "ticker": "TRU",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "TransUnion Sees Q3 GAAP EPS $0.68-$0.71 vs $0.79 Est",
-    "added_at": "2026-07-28T10:29:06.733271+00:00",
-    "expires": "2026-08-11T10:29:06.733275+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SPGI": {
     "ticker": "SPGI",
     "score_delta": 0.025,
@@ -1640,19 +1627,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LPCN": {
-    "ticker": "LPCN",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Lipocine Q2 EPS $(0.32) Beats $(0.43) Estimate, Sales $190.099K Beat $156.500K Estimate",
-    "added_at": "2026-08-04T10:31:11.186665+00:00",
-    "expires": "2026-08-11T10:31:11.186670+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MAURY": {
     "ticker": "MAURY",
     "score_delta": 0.074,
@@ -1663,19 +1637,6 @@
     "headline": "Marui Group Affirms FY2026 GAAP EPS Guidance of $2.09; Raises FY2026 Sales Guidance from $1.887B to $1.890B",
     "added_at": "2026-08-04T10:31:11.190508+00:00",
     "expires": "2026-08-18T10:31:11.190514+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SOPH": {
-    "ticker": "SOPH",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "SOPHiA GENETICS Announces Global Collaboration To Develop, Validate, And Deploy Two Companion Diagnostics Supporting Precision Oncology Therapies With AstraZeneca",
-    "added_at": "2026-08-04T10:31:11.194399+00:00",
-    "expires": "2026-08-11T10:31:11.194404+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2836,19 +2797,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BXMT": {
-    "ticker": "BXMT",
-    "score_delta": -0.049,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Raymond James Downgrades Blackstone Mortgage Trust to Market Perform",
-    "added_at": "2026-08-06T10:33:01.792511+00:00",
-    "expires": "2026-08-11T10:33:01.792516+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TSX:KEY": {
     "ticker": "TSX:KEY",
     "score_delta": 0.1,
@@ -2901,19 +2849,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "IRON": {
-    "ticker": "IRON",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "HC Wainwright & Co. Maintains Buy on Disc Medicine, Raises Price Target to $120",
-    "added_at": "2026-08-06T10:33:01.813105+00:00",
-    "expires": "2026-08-11T10:33:01.813111+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WDC": {
     "ticker": "WDC",
     "score_delta": -0.03,
@@ -2926,19 +2861,6 @@
     "expires": "2026-08-13T10:33:01.820621+00:00",
     "hard_block": false,
     "negative_reaction": true
-  },
-  "DAC": {
-    "ticker": "DAC",
-    "score_delta": 0.039,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Freedom Broker Upgrades Danaos to Buy, Raises Price Target to $155",
-    "added_at": "2026-08-06T10:33:01.824374+00:00",
-    "expires": "2026-08-11T10:33:01.824379+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "SNDK": {
     "ticker": "SNDK",
@@ -6096,6 +6018,149 @@
     "headline": "Elon Musk\u2019s Terafab Construction Plan: A Semiconductor Factory Bigger Than The World\u2019s Largest Building",
     "added_at": "2026-08-11T09:54:58.599331+00:00",
     "expires": "2026-08-18T09:54:58.599336+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LAR": {
+    "ticker": "LAR",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Lithium Argentina Q2 EPS $0.01 Misses $0.14 Estimate",
+    "added_at": "2026-08-11T10:44:51.484623+00:00",
+    "expires": "2026-08-18T10:44:51.484631+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PET": {
+    "ticker": "PET",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Pet Valu Holdings Q2 Adj. EPS $0.41 Beats $0.35 Estimate, Sales $290.682M Beat $289.290M Estimate",
+    "added_at": "2026-08-11T10:44:51.496055+00:00",
+    "expires": "2026-08-18T10:44:51.496061+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BHST": {
+    "ticker": "BHST",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "BioHarvest Sciences Revises FY26 CDMO Revenue Guidance to $4M-$5M from $4M-$6M; VINIA D2C Revenue Guidance to $33M-$35M from $38M-$42M",
+    "added_at": "2026-08-11T10:44:51.500953+00:00",
+    "expires": "2026-08-25T10:44:51.500959+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IMUX": {
+    "ticker": "IMUX",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Immunic Q2 EPS $(0.80) Beats $(1.10) Estimate",
+    "added_at": "2026-08-11T10:44:51.505752+00:00",
+    "expires": "2026-08-18T10:44:51.505757+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SAFX": {
+    "ticker": "SAFX",
+    "score_delta": 0.034,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "XCF Global Announces Sale Of Renewable Diesel From Its New Rise Renewables Reno Facility To Tartan Oil; Terms Not Disclosed",
+    "added_at": "2026-08-11T10:44:51.510568+00:00",
+    "expires": "2026-08-18T10:44:51.510573+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GPUS": {
+    "ticker": "GPUS",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Hyperscale Data Board Initiates Strategic Review Focusing Its Data Center Operations, Considering Variety Of Options To Maximize Stockholder Value",
+    "added_at": "2026-08-11T10:44:51.515362+00:00",
+    "expires": "2026-09-10T10:44:51.515367+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DRIO": {
+    "ticker": "DRIO",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "DarioHealth Q2 Adj. EPS $(0.72) Beats $(1.22) Estimate, Sales $5.177M Miss $5.923M Estimate",
+    "added_at": "2026-08-11T10:44:51.520189+00:00",
+    "expires": "2026-08-18T10:44:51.520194+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:CGX": {
+    "ticker": "TSX:CGX",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Cineplex Q2 EPS $0.12 Misses $0.17 Estimate, Sales $383.724M Beat $375.277M Estimate",
+    "added_at": "2026-08-11T10:44:51.525011+00:00",
+    "expires": "2026-08-18T10:44:51.525017+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ARMK": {
+    "ticker": "ARMK",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Aramark Q3 Adj. EPS $0.52 Beats $0.48 Estimate, Sales $5.058B Beat $4.936B Estimate",
+    "added_at": "2026-08-11T10:44:51.529833+00:00",
+    "expires": "2026-08-18T10:44:51.529838+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SE": {
+    "ticker": "SE",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Sea Q2 EPS $0.70 Misses $0.75 Estimate, Sales $7.788B Beat $7.063B Estimate",
+    "added_at": "2026-08-11T10:44:51.539551+00:00",
+    "expires": "2026-08-18T10:44:51.539557+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DOMH": {
+    "ticker": "DOMH",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Dominari Holdings Q2 Adj. EPS $(0.21) Down From $1.12 YoY, Sales $16.789M Down From $38.914M YoY",
+    "added_at": "2026-08-11T10:44:51.544470+00:00",
+    "expires": "2026-08-18T10:44:51.544496+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
