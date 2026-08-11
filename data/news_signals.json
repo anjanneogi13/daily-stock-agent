@@ -6046,5 +6046,57 @@
     "expires": "2026-09-10T08:46:57.642613+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TME": {
+    "ticker": "TME",
+    "score_delta": 0.093,
+    "catalyst": "earnings_beat",
+    "sentiment": "neutral",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Tencent Music Enter Gr Q2 Adj. EPS $0.25 Beats $0.23 Estimate, Sales $1.317B Miss $1.350B Estimate",
+    "added_at": "2026-08-11T09:54:58.573774+00:00",
+    "expires": "2026-08-18T09:54:58.573781+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MKTX": {
+    "ticker": "MKTX",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Keefe, Bruyette & Woods Downgrades MarketAxess Holdings to Market Perform, Raises Price Target to $167",
+    "added_at": "2026-08-11T09:54:58.584069+00:00",
+    "expires": "2026-08-16T09:54:58.584076+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ONON": {
+    "ticker": "ONON",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
+    "sentiment": "bearish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "On Holding Sees FY2026 Sales $4.390B-$4.503B vs $4.490B Est",
+    "added_at": "2026-08-11T09:54:58.587947+00:00",
+    "expires": "2026-08-25T09:54:58.587952+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "score_delta": 0.027,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.38,
+    "action_window": "ignore",
+    "headline": "Elon Musk\u2019s Terafab Construction Plan: A Semiconductor Factory Bigger Than The World\u2019s Largest Building",
+    "added_at": "2026-08-11T09:54:58.599331+00:00",
+    "expires": "2026-08-18T09:54:58.599336+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

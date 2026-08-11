@@ -1264,6 +1264,54 @@
       "url": "https://www.benzinga.com/news/26/08/61099835/samsung-sdi-and-gm-sign-new-prismatic-battery-agreement-samsung-sdi-acquires-gm-s-stake-indiana-jv-e",
       "source": "alpaca",
       "added_at": "2026-08-11T08:46:57.649290+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong pricing power confirmation with AI-driven memory shortage extending through 2027 signals sustained margin expansion and revenue visibility.",
+      "action_window": "intraday",
+      "headline": "Micron Says Customers Are Scrambling for Memory Even at \u2018Very High\u2019 Prices",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61100740/micron-says-customers-are-scrambling-for-memory-even-at-very-high-prices",
+      "source": "alpaca",
+      "added_at": "2026-08-11T09:54:58.612269+00:00"
+    },
+    {
+      "ticker": "TME",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "Mixed Q2 earnings with EPS beat of 8.7% offset by revenue miss of 2.4%, creating uncertain near-term trading direction requiring immediate evaluation.",
+      "action_window": "intraday",
+      "headline": "Tencent Music Enter Gr Q2 Adj. EPS $0.25 Beats $0.23 Estimate, Sales $1.317B Miss $1.350B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61100694/tencent-music-enter-gr-q2-adj-eps-0-25-beats-0-23-estimate-sales-1-317b-miss-1-350b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T09:54:58.612282+00:00"
+    },
+    {
+      "ticker": "ONON",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "On Holding's FY2026 sales guidance midpoint of $4.45B materially misses consensus estimate of $4.49B by approximately 1%, representing a significant guidance cut that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "On Holding Sees FY2026 Sales $4.390B-$4.503B vs $4.490B Est",
+      "url": "https://www.benzinga.com/news/26/08/61100644/holding-sees-fy2026-sales-4-390b-4-503b-vs-4-490b-est",
+      "source": "alpaca",
+      "added_at": "2026-08-11T09:54:58.612292+00:00"
+    },
+    {
+      "ticker": "UCL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq minimum bid price notice indicates the stock has traded below $1 for an extended period, raising delisting risk and potential shareholder concern.",
+      "action_window": "next_day",
+      "headline": "UCLOUDLINK GROUP Announced Receipt Of Minimum Bid Price Notice From Nasdaq",
+      "url": "https://www.benzinga.com/quote/UCL",
+      "source": "alpaca",
+      "added_at": "2026-08-11T09:54:58.612307+00:00"
     }
   ]
 }
