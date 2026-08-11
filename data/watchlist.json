@@ -1457,6 +1457,138 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61101807/dominari-holdings-q2-adj-eps-0-21-down-1-12-yoy-sales-16-789m-down-38-914m-yoy",
       "source": "alpaca",
       "added_at": "2026-08-11T10:44:51.551313+00:00"
+    },
+    {
+      "ticker": "CCCC",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong dual beat with EPS beating by 28% and sales exceeding estimates by 66%, indicating significant operational outperformance that typically drives immediate positive price action in biotech stocks.",
+      "action_window": "intraday",
+      "headline": "C4 Therapeutics Q2 EPS $(0.18) Beats $(0.23) Estimate, Sales $6.641M Beat $4.000M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61104156/c4-therapeutics-q2-eps-0-18-beats-0-23-estimate-sales-6-641m-beat-4-000m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077076+00:00"
+    },
+    {
+      "ticker": "UPB",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Upstream Bio beat both EPS and revenue estimates with revenue exceeding consensus by approximately 79%, indicating strong operational performance for this biotech company.",
+      "action_window": "intraday",
+      "headline": "Upstream Bio Q2 EPS $(0.73) Beats $(0.76) Estimate, Sales $773.000K Beat $430.714K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61104108/upstream-bio-q2-eps-0-73-beats-0-76-estimate-sales-773-000k-beat-430-714k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077093+00:00"
+    },
+    {
+      "ticker": "BRN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q3 earnings improved significantly with EPS loss narrowing 80% YoY from $(0.15) to $(0.03) and revenue up 5.9%, indicating positive operational momentum despite still being unprofitable.",
+      "action_window": "intraday",
+      "headline": "Barnwell Industries Q3 EPS $(0.03) Up From $(0.15) YoY, Sales $3.379M Up From $3.192M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61104107/barnwell-industries-q3-eps-0-03-0-15-yoy-sales-3-379m-3-192m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077102+00:00"
+    },
+    {
+      "ticker": "PLAG",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Entry into commercial operations in the Chinese market represents a meaningful business expansion and new revenue stream for Planet Green, though execution risk remains.",
+      "action_window": "intraday",
+      "headline": "Planet Green Announces Entry Into Commercial Operations To Source, Market And Distribute Lactoferrin For Chinese Market",
+      "url": "https://www.benzinga.com/quote/PLAG",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077112+00:00"
+    },
+    {
+      "ticker": "ACVA",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Company exploring sale amid takeover interest typically triggers significant upside as potential acquirers emerge and premium speculation builds.",
+      "action_window": "intraday",
+      "headline": "Bloomberg Report ACV Auctions Said To Explore Sale Amid Takeover Interest",
+      "url": "https://www.benzinga.com/m/26/08/61104063/bloomberg-report-acv-auctions-said-explore-sale-amid-takeover-interest",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077120+00:00"
+    },
+    {
+      "ticker": "EIKN",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Dose selection announcement for clinical trial represents positive progress in drug development, reducing uncertainty and moving trial forward, though not a major binary catalyst.",
+      "action_window": "intraday",
+      "headline": "Eikon Therapeutics Announces Selection Of Dose Of 0.60 mg/m2 To Be Employed In Future For All Patients Randomized To Receive EIK1001 In TeLuRide-006 Trial",
+      "url": "https://www.benzinga.com/news/26/08/61104040/eikon-therapeutics-announces-selection-dose-0-60-mg-m2-be-employed-future-all-patients-randomized-re",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077128+00:00"
+    },
+    {
+      "ticker": "AMBQ",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Ambiq Micro delivered a double beat with EPS significantly exceeding estimates (loss of $0.07 vs expected loss of $0.26, a 73% beat) and revenue beating by 7.6%, representing a strong positive earnings surprise.",
+      "action_window": "intraday",
+      "headline": "Ambiq Micro Q2 Adj. EPS $(0.07) Beats $(0.26) Estimate, Sales $33.901M Beat $31.513M Estimate",
+      "url": "https://www.benzinga.com/quote/AMBQ",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077137+00:00"
+    },
+    {
+      "ticker": "EVGO",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Flagship station opening with major retailer partner and concrete 100+ location expansion target by 2026 demonstrates execution on growth strategy but represents incremental progress rather than transformative catalyst.",
+      "action_window": "next_day",
+      "headline": "EVgo Announces Opening Of Detroit-Area Flagship Charging Station With Meijer; Expects Over 100 Online By End Of 2026",
+      "url": "https://www.benzinga.com/quote/EVGO",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077145+00:00"
+    },
+    {
+      "ticker": "GANX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS beat expectations by 21% ($0.11 actual vs $0.14 estimated loss), representing a meaningful positive earnings surprise that typically drives immediate price action in small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Gain Therapeutics Q2 EPS $(0.11) Beats $(0.14) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61103892/gain-therapeutics-q2-eps-0-11-beats-0-14-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077163+00:00"
+    },
+    {
+      "ticker": "CALC",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS missed estimates by 61% ($0.45 loss vs $0.28 expected), representing a significant earnings disappointment that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "CalciMedica Q2 EPS $(0.45) Misses $(0.28) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61103854/calcimedica-q2-eps-0-45-misses-0-28-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077171+00:00"
+    },
+    {
+      "ticker": "TNGX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS missed estimates by 15.6% ($0.37 vs $0.32 expected), representing a meaningful negative catalyst for biotech stock likely to see immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Tango Therapeutics Q2 EPS $(0.37) Misses $(0.32) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61103830/tango-therapeutics-q2-eps-0-37-misses-0-32-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T11:40:15.077181+00:00"
     }
   ]
 }
