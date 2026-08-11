@@ -1705,58 +1705,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "T": {
-    "ticker": "T",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "SpaceX's Starlink Mobile Plans to Take 'Quite a Few' T-Mobile, Verizon, AT&T Customers [CORRECTED]",
-    "added_at": "2026-08-04T22:56:17.290680+00:00",
-    "expires": "2026-08-11T22:56:17.290687+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSX:PHX": {
-    "ticker": "TSX:PHX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "PHX Energy Services Q2 EPS $0.21 Beats $0.17 Estimate, Sales $178.911M Beat $176.500M Estimate",
-    "added_at": "2026-08-04T22:56:17.299120+00:00",
-    "expires": "2026-08-11T22:56:17.299126+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SEB": {
-    "ticker": "SEB",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "next_day",
-    "headline": "Seaboard Q2 EPS $159.74 Up From $105.22 YoY, Sales $2.922B Up From $2.480B YoY",
-    "added_at": "2026-08-04T22:56:17.302947+00:00",
-    "expires": "2026-08-11T22:56:17.302952+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RIOCF": {
-    "ticker": "RIOCF",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "Riocan REIT Q2 FFO $0.28 Down From $0.34 YoY, Sales $219.854M Down From $261.272M YoY",
-    "added_at": "2026-08-04T22:56:17.314401+00:00",
-    "expires": "2026-08-11T22:56:17.314406+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DXPE": {
     "ticker": "DXPE",
     "score_delta": 0.049,
@@ -1767,19 +1715,6 @@
     "headline": "DXP Enterprises To Acquire Mequipco; No Terms Disclosed",
     "added_at": "2026-08-04T22:56:17.323072+00:00",
     "expires": "2026-08-18T22:56:17.323079+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSX:REI": {
-    "ticker": "TSX:REI",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Riocan REIT Q2 FFO $0.39 Down From $0.47 YoY, Sales $304.355M Down From $361.654M YoY",
-    "added_at": "2026-08-04T22:56:17.326994+00:00",
-    "expires": "2026-08-11T22:56:17.326999+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
