@@ -6475,5 +6475,83 @@
     "expires": "2026-08-16T17:26:32.981572+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "PDFS": {
+    "ticker": "PDFS",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Bernstein Initiates Coverage On PDF Solutions with Outperform Rating, Announces Price Target of $65",
+    "added_at": "2026-08-11T18:15:14.137228+00:00",
+    "expires": "2026-08-16T18:15:14.137238+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MYPS": {
+    "ticker": "MYPS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "PLAYSTUDIOS Q2 EPS $(0.10) Misses $(0.03) Estimate, Sales $54.992M Miss $57.051M Estimate",
+    "added_at": "2026-08-11T18:15:14.142846+00:00",
+    "expires": "2026-08-18T18:15:14.142853+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HQI": {
+    "ticker": "HQI",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "DA Davidson Maintains Buy on HireQuest, Raises Price Target to $19",
+    "added_at": "2026-08-11T18:15:14.148177+00:00",
+    "expires": "2026-08-16T18:15:14.148183+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "STIM": {
+    "ticker": "STIM",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "BTIG Maintains Buy on Neuronetics, Raises Price Target to $6",
+    "added_at": "2026-08-11T18:15:14.158681+00:00",
+    "expires": "2026-08-16T18:15:14.158692+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MNDY": {
+    "ticker": "MNDY",
+    "score_delta": -0.039,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Monday.com Beats On Q2, Loses Some Analyst Love As Growth Slows",
+    "added_at": "2026-08-11T18:15:14.163937+00:00",
+    "expires": "2026-08-16T18:15:14.163944+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "WSM": {
+    "ticker": "WSM",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Goldman Sachs Maintains Buy on Williams-Sonoma, Raises Price Target to $261",
+    "added_at": "2026-08-11T18:15:14.169193+00:00",
+    "expires": "2026-08-16T18:15:14.169199+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

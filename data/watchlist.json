@@ -689,16 +689,16 @@
     },
     {
       "ticker": "USO",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
       "category": "macro",
-      "rationale": "Fatal Houthi attack on commercial vessel in critical shipping strait creates immediate geopolitical risk premium for oil and broader market volatility.",
+      "rationale": "Explosions near Strait of Hormuz (20% of global oil transit) create immediate supply disruption risk, historically driving sharp oil price spikes.",
       "action_window": "next_day",
-      "headline": "Reported Earlier, 'Houthi missile attack kills three members of commercial vessel crew in Bab al-Mandeb' - Al Arabiya",
-      "url": "https://www.benzinga.com/news/26/08/61101818/reported-earlier-houthi-missile-attack-kills-three-members-commercial-vessel-crew-bab-al-mandeb-al-a",
+      "headline": "Reports Of Explosions In Sirik, Southern Iran, With Launches Possibly Towards Straight Of Hormuz",
+      "url": "https://www.benzinga.com/news/26/08/61121354/reports-explosions-sirik-southern-iran-launches-possibly-towards-straight-hormuz",
       "source": "alpaca",
       "added_at": "2026-08-10T18:13:19.806468+00:00",
-      "updated_at": "2026-08-11T10:44:51.551304+00:00"
+      "updated_at": "2026-08-11T18:15:14.176486+00:00"
     },
     {
       "ticker": "BRK",
@@ -1866,6 +1866,54 @@
       "url": "https://www.benzinga.com/news/26/08/61119018/spacexai-introduces-grok-bot-grok-bot-beta-available-today-supergrok-heavy-cursor-ultra-cursor-teams",
       "source": "alpaca",
       "added_at": "2026-08-11T17:26:32.992508+00:00"
+    },
+    {
+      "ticker": "PDFS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Bernstein initiating coverage with Outperform rating is a meaningful positive catalyst from a reputable firm, though impact may be partially muted as it's initial coverage rather than an upgrade.",
+      "action_window": "next_day",
+      "headline": "Bernstein Initiates Coverage On PDF Solutions with Outperform Rating, Announces Price Target of $65",
+      "url": "https://www.benzinga.com/news/26/08/61121703/bernstein-initiates-coverage-pdf-solutions-outperform-rating-announces-price-target-65",
+      "source": "alpaca",
+      "added_at": "2026-08-11T18:15:14.176431+00:00"
+    },
+    {
+      "ticker": "MYPS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS of $(0.10) versus $(0.03) estimate (233% worse) and revenue missing by 3.6%, creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "PLAYSTUDIOS Q2 EPS $(0.10) Misses $(0.03) Estimate, Sales $54.992M Miss $57.051M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61121675/playstudios-q2-eps-0-10-misses-0-03-estimate-sales-54-992m-miss-57-051m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-11T18:15:14.176449+00:00"
+    },
+    {
+      "ticker": "MSFT",
+      "tradeable_score": 0.52,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "COO departure from OpenAI creates leadership uncertainty at a critical Microsoft partner, though impact is moderate as succession planning typically mitigates executive exits.",
+      "action_window": "next_day",
+      "headline": "OpenAI COO Confirms 'Bittersweet' Exit, Has New Venture in Sight",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61121654/openai-coo-confirms-bittersweet-exit-has-new-venture-in-sight",
+      "source": "alpaca",
+      "added_at": "2026-08-11T18:15:14.176461+00:00"
+    },
+    {
+      "ticker": "MNDY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Mixed Q2 earnings beat offset by analyst downgrade citing growth deceleration and shares edging lower, creating near-term selling pressure despite some bullish analysts.",
+      "action_window": "next_day",
+      "headline": "Monday.com Beats On Q2, Loses Some Analyst Love As Growth Slows",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/08/61121390/monday-com-beats-on-q2-loses-some-analyst-love-as-growth-slows",
+      "source": "alpaca",
+      "added_at": "2026-08-11T18:15:14.176476+00:00"
     }
   ]
 }
