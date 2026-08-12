@@ -2795,6 +2795,18 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61143384/neocloud-stocks-catch-fire-as-coreweave-doubles-revenue",
       "source": "alpaca",
       "added_at": "2026-08-12T14:17:29.089261+00:00"
+    },
+    {
+      "ticker": "NOK",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Nokia beat Q2 earnings and raised guidance with stock already up 10% on strong AI data center demand, representing a significant confirmed catalyst with immediate market reaction.",
+      "action_window": "intraday",
+      "headline": "Why Is Nokia Stock Surging Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61147703/why-is-nokia-stock-surging-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-08-12T15:28:52.097170+00:00"
     }
   ]
 }

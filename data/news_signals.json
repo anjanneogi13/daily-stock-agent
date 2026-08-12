@@ -881,19 +881,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "UHS": {
-    "ticker": "UHS",
-    "score_delta": -0.096,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "These Analysts Slash Their Forecasts On Universal Health Services Following Q2 Earnings",
-    "added_at": "2026-07-29T15:07:54.934621+00:00",
-    "expires": "2026-08-12T15:07:54.934628+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HIMS": {
     "ticker": "HIMS",
     "score_delta": -0.1,
@@ -1586,14 +1573,14 @@
   },
   "NOK": {
     "ticker": "NOK",
-    "score_delta": 0.069,
-    "catalyst": "guidance_raise",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "ignore",
-    "headline": "Nokia Stock Rallies Tuesday: What's Driving the Rebound?",
-    "added_at": "2026-08-04T16:53:51.993808+00:00",
-    "expires": "2026-08-18T16:53:51.993813+00:00",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Why Is Nokia Stock Surging Wednesday?",
+    "added_at": "2026-08-12T15:28:52.061630+00:00",
+    "expires": "2026-08-19T15:28:52.061637+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1685,19 +1672,6 @@
     "headline": "Natera Submits Application To Japan\u2019s Pharmaceuticals And Medical Devices Agency For Approval Of The Signatera Test In Muscle-Invasive Bladder Cancer As A Companion Diagnostic",
     "added_at": "2026-08-05T10:29:33.433383+00:00",
     "expires": "2026-09-04T10:29:33.433388+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "UBER": {
-    "ticker": "UBER",
-    "score_delta": 0.046,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "'Uber Plans To Invest $10 Billion Over Time In Autonomous Vehicle Fleet Expansion' - The Information",
-    "added_at": "2026-08-05T14:45:54.714412+00:00",
-    "expires": "2026-08-12T14:45:54.714418+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2767,19 +2741,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NET": {
-    "ticker": "NET",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Wells Fargo Maintains Overweight on Cloudflare, Raises Price Target to $380",
-    "added_at": "2026-08-07T15:23:57.833281+00:00",
-    "expires": "2026-08-12T15:23:57.833285+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PONY": {
     "ticker": "PONY",
     "score_delta": 0.05,
@@ -2803,19 +2764,6 @@
     "headline": "ADW Capital Urges Driven Brands To Launch Strategic Review, Explore Sale Of Company Or Asset Divestitures After Rejecting $18/Share Offer",
     "added_at": "2026-08-07T15:23:57.794791+00:00",
     "expires": "2026-09-06T15:23:57.794798+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RXO": {
-    "ticker": "RXO",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Citizens Upgrades RXO to Market Outperform, Announces $30 Price Target",
-    "added_at": "2026-08-07T15:23:57.807276+00:00",
-    "expires": "2026-08-12T15:23:57.807280+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6677,6 +6625,71 @@
     "headline": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
     "added_at": "2026-08-12T14:17:29.081750+00:00",
     "expires": "2026-08-19T14:17:29.081755+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SMC": {
+    "ticker": "SMC",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "TD Cowen Maintains Buy on Summit Midstream, Raises Price Target to $43",
+    "added_at": "2026-08-12T15:28:52.067965+00:00",
+    "expires": "2026-08-17T15:28:52.067971+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRNO": {
+    "ticker": "TRNO",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Scotiabank Maintains Sector Outperform on Terreno Realty, Raises Price Target to $72",
+    "added_at": "2026-08-12T15:28:52.073432+00:00",
+    "expires": "2026-08-17T15:28:52.073439+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SKIN": {
+    "ticker": "SKIN",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "TD Cowen Maintains Hold on SkinHealth Systems, Lowers Price Target to $0.9",
+    "added_at": "2026-08-12T15:28:52.078771+00:00",
+    "expires": "2026-08-17T15:28:52.078779+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CARG": {
+    "ticker": "CARG",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Oppenheimer Maintains Outperform on CarGurus, Raises Price Target to $44",
+    "added_at": "2026-08-12T15:28:52.084106+00:00",
+    "expires": "2026-08-17T15:28:52.084111+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TARS": {
+    "ticker": "TARS",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Oppenheimer Maintains Outperform on Tarsus Pharmaceuticals, Raises Price Target to $100",
+    "added_at": "2026-08-12T15:28:52.089439+00:00",
+    "expires": "2026-08-17T15:28:52.089444+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
