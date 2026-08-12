@@ -2813,15 +2813,16 @@
     },
     {
       "ticker": "PFGC",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.78,
       "sentiment": "bearish",
       "category": "earnings_miss",
-      "rationale": "Performance Food Group reported Q4 earnings miss with shares down 6%, a meaningful negative catalyst already being priced intraday.",
+      "rationale": "Performance Food Group missed Q4 earnings and issued lower Q1 sales guidance, representing a meaningful negative catalyst with immediate trading impact.",
       "action_window": "intraday",
-      "headline": "Gold Gains 1%; Performance Food Group Shares Fall After Q4 Results",
-      "url": "https://www.benzinga.com/markets/market-summary/26/08/61149768/gold-gains-1-performance-food-group-shares-fall-after-q4-results",
+      "headline": "GLP-1s Are Rewriting America\u2019s Menu \u2014 Performance Food Group Spots A Big Protein Shift",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61153593/glp-1s-are-rewriting-americas-menu-performance-food-group-spots-a-big-protein-shift",
       "source": "alpaca",
-      "added_at": "2026-08-12T16:26:27.111802+00:00"
+      "added_at": "2026-08-12T16:26:27.111802+00:00",
+      "updated_at": "2026-08-12T18:25:42.506200+00:00"
     },
     {
       "ticker": "SHAZ",
@@ -2846,6 +2847,30 @@
       "url": "https://www.benzinga.com/markets/biotech/26/08/61152014/why-is-rhythm-pharmaceuticals-stock-trading-higher-on-wednesday",
       "source": "alpaca",
       "added_at": "2026-08-12T17:27:59.262495+00:00"
+    },
+    {
+      "ticker": "STRO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Dose-limiting toxicities (DLTs) in Phase 1 trial signal safety concerns and delayed next update until 2027 creates significant uncertainty for the drug candidate's development timeline.",
+      "action_window": "intraday",
+      "headline": "Why is Sutro Biopharma Stock Falling On Wednesday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61153542/why-is-sutro-biopharma-stock-falling-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-08-12T18:25:42.506223+00:00"
+    },
+    {
+      "ticker": "UAMY",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Company missed Q2 earnings estimates and cut full-year revenue guidance by 50%, representing a severe negative catalyst with stock already reacting downward.",
+      "action_window": "intraday",
+      "headline": "United States Antimony Stock Dives Wednesday: Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61153444/united-states-antimony-stock-dives-wednesday-heres-why",
+      "source": "alpaca",
+      "added_at": "2026-08-12T18:25:42.506240+00:00"
     }
   ]
 }
