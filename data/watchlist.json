@@ -2871,6 +2871,66 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61153444/united-states-antimony-stock-dives-wednesday-heres-why",
       "source": "alpaca",
       "added_at": "2026-08-12T18:25:42.506240+00:00"
+    },
+    {
+      "ticker": "RUM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record revenue and closes combined with expanded AI-infrastructure narrative creates strong bullish catalyst with shares already surging intraday.",
+      "action_window": "intraday",
+      "headline": "RUM Group Shares Surge Wednesday: What's Driving the Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61155996/rum-group-shares-surge-wednesday-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-08-12T19:36:18.029321+00:00"
+    },
+    {
+      "ticker": "NCPL",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "SEC civil complaint filing against company and individuals represents severe regulatory action with immediate material impact on company operations, valuation, and investor confidence.",
+      "action_window": "intraday",
+      "headline": "Netcapital CEO Issues Statement As SEC Files Civil Complaint Against The Company And Certain Individuals Following Earlier Wells Notice",
+      "url": "https://www.benzinga.com/news/26/08/61155553/netcapital-ceo-issues-statement-sec-files-civil-complaint-against-company-and-certain-individuals-fo",
+      "source": "alpaca",
+      "added_at": "2026-08-12T19:36:18.029346+00:00"
+    },
+    {
+      "ticker": "CRDF",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "William Blair downgrade from a higher rating to Market Perform (equivalent to Hold/Neutral) typically triggers immediate selling pressure, especially for small-cap biotech stocks.",
+      "action_window": "intraday",
+      "headline": "William Blair Downgrades Cardiff Oncology to Market Perform",
+      "url": "https://www.benzinga.com/news/26/08/61155440/william-blair-downgrades-cardiff-oncology-market-perform",
+      "source": "alpaca",
+      "added_at": "2026-08-12T19:36:18.029362+00:00"
+    },
+    {
+      "ticker": "KTOS",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Flight pause of flagship XQ-58 Valkyrie drone program following crash represents significant operational setback and potential revenue/contract delays for key defense product line.",
+      "action_window": "intraday",
+      "headline": "'Kratos pauses XQ-58 Valkyrie flights after Utah crash' - AeroTime",
+      "url": "https://www.benzinga.com/news/26/08/61155368/kratos-pauses-xq-58-valkyrie-flights-after-utah-crash-aerotime",
+      "source": "alpaca",
+      "added_at": "2026-08-12T19:36:18.029375+00:00"
+    },
+    {
+      "ticker": "GETY",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic product launch positioning Getty Images to monetize AI demand for licensed content, addressing a key growth opportunity in the evolving AI ecosystem.",
+      "action_window": "next_day",
+      "headline": "Getty Images Announces Launch Of Model Context Protocol Server, Giving AI Agents Standardized Access To Licensed Creative, Editorial, And Archival Visual Content",
+      "url": "https://www.benzinga.com/quote/GETY",
+      "source": "alpaca",
+      "added_at": "2026-08-12T19:36:18.029389+00:00"
     }
   ]
 }
