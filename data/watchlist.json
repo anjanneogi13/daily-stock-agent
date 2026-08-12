@@ -677,16 +677,16 @@
     },
     {
       "ticker": "SION",
-      "tradeable_score": 0.95,
+      "tradeable_score": 1.0,
       "sentiment": "bearish",
       "category": "fda_rejection",
-      "rationale": "Phase 2a trial failure for lead cystic fibrosis drug candidate causing 91% stock crash represents a catastrophic binary clinical event for a biotech.",
+      "rationale": "Phase 2a trial failure with 92% stock decline represents a catastrophic binary event for biotech with drug candidate termination already confirmed and priced.",
       "action_window": "intraday",
-      "headline": "Why Sionna Therapeutics Stock Is Crashing 91% to a Record Low",
-      "url": "https://finance.yahoo.com/m/b81755ac-36bf-3983-868f-dada13133338/why-sionna-therapeutics-stock.html?.tsrc=rss",
+      "headline": "Sionna Therapeutics stock falls 92% after SION-719 trial failure",
+      "url": "https://qz.com/sionna-therapeutics-stock-cystic-fibrosis-drug-trial-failure-081126?.tsrc=rss",
       "source": "alpaca",
       "added_at": "2026-08-10T18:13:19.806461+00:00",
-      "updated_at": "2026-08-10T23:06:31.676743+00:00"
+      "updated_at": "2026-08-12T23:34:35.839859+00:00"
     },
     {
       "ticker": "USO",
