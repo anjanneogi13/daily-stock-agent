@@ -95,12 +95,16 @@ def _base_outcome(row: dict, *, source: str, observation_type: str) -> dict:
     }
 
 
-def evaluate_late_daily_idea(row: dict) -> dict:
+def evaluate_late_daily_idea(row: dict, *, day_range: tuple[float, float] | None = None) -> dict:
     """Evaluate a late watch-only idea from retained same-day range only.
 
     Late idea artifacts currently retain day high/low but not a full intraday
     bar sequence. Therefore this can determine whether TP/SL were inside the
     observed range, but cannot honestly determine which hit first when both did.
+
+    `day_range` optionally supplies a refreshed FULL-day (high, low) — the
+    artifact's own range was captured at generation time (shortly after the
+    open), which under-observes the rest of the session.
     """
     out = _base_outcome(row, source=str(row.get("source") or "late_daily_ideas"), observation_type="late_daily_watch_only")
     first_ts = row.get("generated_at_et") or row.get("date")
@@ -108,8 +112,13 @@ def evaluate_late_daily_idea(row: dict) -> dict:
     entry = _safe_float(row.get("watch_buy_price") or row.get("current_price"))
     stop_loss = _safe_float(row.get("watch_stop_loss"))
     take_profit = _safe_float(row.get("watch_take_profit"))
-    day_high = _safe_float(row.get("day_high"))
-    day_low = _safe_float(row.get("day_low"))
+    if day_range is not None:
+        day_high, day_low = day_range
+        range_source = "daily_ohlc_refresh"
+    else:
+        day_high = _safe_float(row.get("day_high"))
+        day_low = _safe_float(row.get("day_low"))
+        range_source = "artifact_generation_time_range"
 
     out.update({
         "first_observed_timestamp": first_ts,
@@ -118,6 +127,7 @@ def evaluate_late_daily_idea(row: dict) -> dict:
         "stop_loss_observation_level": stop_loss,
         "take_profit_observation_level": take_profit,
         "data_sufficiency_status": "range_only_no_intraday_sequence",
+        "range_source": range_source,
         "safety_flags": [
             "watch_only_evidence",
             "not_official_performance",
@@ -433,7 +443,40 @@ def evaluate_opening_range_observation(row: dict, *, data_dir: Path, max_hold_mi
     return out
 
 
-def build_outcomes(date_str: str, *, data_dir: Path = DATA_DIR, max_hold_minutes: int = 240) -> tuple[list[dict], dict]:
+def _fetch_daily_range(ticker: str, date_str: str) -> tuple[float, float] | None:
+    """Fetch the FULL-day (high, low) for `ticker` on `date_str` via yfinance.
+
+    Fail-open: any error returns None and the caller falls back to the range
+    captured inside the late-idea artifact at generation time.
+    """
+    try:
+        import yfinance as yf
+
+        day = datetime.fromisoformat(date_str).date()
+        hist = yf.Ticker(ticker).history(
+            start=day.isoformat(),
+            end=(day + timedelta(days=1)).isoformat(),
+            interval="1d",
+            auto_adjust=False,
+        )
+        if hist is None or hist.empty:
+            return None
+        row = hist.iloc[0]
+        high, low = float(row["High"]), float(row["Low"])
+        if high > 0 and low > 0 and high >= low:
+            return (high, low)
+    except Exception:
+        return None
+    return None
+
+
+def build_outcomes(
+    date_str: str,
+    *,
+    data_dir: Path = DATA_DIR,
+    max_hold_minutes: int = 240,
+    refresh_range: bool = False,
+) -> tuple[list[dict], dict]:
     late_path = data_dir / f"late_daily_ideas_{date_str}.jsonl"
     opening_path = data_dir / f"opening_range_observations_{date_str}.jsonl"
 
@@ -444,7 +487,10 @@ def build_outcomes(date_str: str, *, data_dir: Path = DATA_DIR, max_hold_minutes
 
     for row in late_rows:
         if row.get("watch_only") is True:
-            outcomes.append(evaluate_late_daily_idea(row))
+            day_range = None
+            if refresh_range:
+                day_range = _fetch_daily_range(str(row.get("ticker") or ""), date_str)
+            outcomes.append(evaluate_late_daily_idea(row, day_range=day_range))
 
     for row in opening_rows:
         if row.get("watch_only") is True:
@@ -584,10 +630,20 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--data-dir", default=str(DATA_DIR))
     parser.add_argument("--max-hold-minutes", type=int, default=240)
     parser.add_argument("--no-write", action="store_true")
+    parser.add_argument(
+        "--refresh-range",
+        action="store_true",
+        help="Re-fetch the full-day high/low for late ideas (artifact range is captured near the open).",
+    )
     args = parser.parse_args(argv)
 
     data_dir = Path(args.data_dir)
-    outcomes, summary = build_outcomes(args.date, data_dir=data_dir, max_hold_minutes=args.max_hold_minutes)
+    outcomes, summary = build_outcomes(
+        args.date,
+        data_dir=data_dir,
+        max_hold_minutes=args.max_hold_minutes,
+        refresh_range=args.refresh_range,
+    )
 
     if args.no_write:
         print(json.dumps({"summary": summary, "outcomes": outcomes}, indent=2, sort_keys=True))

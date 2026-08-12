@@ -57,6 +57,14 @@ CORPORATE_ACTION_RE = re.compile(
 STANDARD_NEWS_ONLY_SCORE_CAP = 95.0
 EVENT_STRUCTURE_UNCERTAIN_SCORE_CAP = 75.0
 
+# Learning/freshness controls (issue: same tickers resurfaced every missed
+# window because month-old news signals were re-ranked identically each day
+# and prior late ideas / their outcomes were never consulted).
+NEWS_SIGNAL_MAX_AGE_HOURS = 48.0
+REPEAT_COOLDOWN_DAYS = 3
+LOSS_COOLDOWN_DAYS = 5
+OUTCOME_LOOKBACK_DAYS = 14
+
 
 def _as_float(value, default: float = 0.0) -> float:
     try:
@@ -65,6 +73,116 @@ def _as_float(value, default: float = 0.0) -> float:
         return float(value)
     except (TypeError, ValueError):
         return default
+
+
+def _parse_iso(value) -> datetime | None:
+    if not value:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except (TypeError, ValueError):
+        return None
+
+
+def signal_is_fresh(payload: dict, now_dt: datetime) -> bool:
+    """True when a signal is neither expired nor older than the max age.
+
+    Missing timestamps are treated as fresh (watchlist items and test
+    fixtures have no added_at/expires).
+    """
+    expires = _parse_iso(payload.get("expires"))
+    if expires is not None and expires <= now_dt:
+        return False
+    added_at = _parse_iso(payload.get("added_at"))
+    if added_at is not None:
+        age_hours = (now_dt - added_at).total_seconds() / 3600.0
+        if age_hours > NEWS_SIGNAL_MAX_AGE_HOURS:
+            return False
+    return True
+
+
+def load_recent_late_idea_tickers(
+    now_et: datetime,
+    *,
+    days: int = REPEAT_COOLDOWN_DAYS,
+    data_dir: Path = DATA_DIR,
+) -> dict[str, str]:
+    """Map ticker → most recent prior date it was surfaced as a late idea."""
+    from datetime import timedelta
+
+    recent: dict[str, str] = {}
+    for back in range(1, days + 1):
+        day = (now_et - timedelta(days=back)).strftime("%Y-%m-%d")
+        path = late_ideas_path(day, data_dir=data_dir)
+        if not path.exists():
+            continue
+        try:
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    row = json.loads(line)
+                except Exception:
+                    continue
+                ticker = str(row.get("ticker") or "").strip().upper()
+                if ticker and (ticker not in recent or day > recent[ticker]):
+                    recent[ticker] = day
+        except Exception:
+            continue
+    return recent
+
+
+def load_recent_watch_only_losers(
+    now_et: datetime,
+    *,
+    loss_cooldown_days: int = LOSS_COOLDOWN_DAYS,
+    lookback_days: int = OUTCOME_LOOKBACK_DAYS,
+    data_dir: Path = DATA_DIR,
+) -> dict[str, str]:
+    """Map ticker → date of its most recent watch-only SL-style outcome.
+
+    Reads data/watch_only_outcomes_YYYY-MM-DD.jsonl (written by
+    scripts/build_watch_only_outcomes.py). A ticker whose LATEST outcome in
+    the lookback hit its watch-only SL is excluded for loss_cooldown_days —
+    this is how late watch-only ideas learn from their own track record.
+    """
+    from datetime import timedelta
+
+    latest: dict[str, tuple[str, bool]] = {}  # ticker -> (date, was_loss)
+    for back in range(1, lookback_days + 1):
+        day = (now_et - timedelta(days=back)).strftime("%Y-%m-%d")
+        path = data_dir / f"watch_only_outcomes_{day}.jsonl"
+        if not path.exists():
+            continue
+        try:
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    row = json.loads(line)
+                except Exception:
+                    continue
+                if row.get("observation_type") != "late_daily_watch_only":
+                    continue
+                ticker = str(row.get("ticker") or "").strip().upper()
+                if not ticker:
+                    continue
+                was_loss = bool(row.get("sl_hit"))
+                prev = latest.get(ticker)
+                if prev is None or day > prev[0]:
+                    latest[ticker] = (day, was_loss)
+        except Exception:
+            continue
+
+    cutoff = (now_et - timedelta(days=loss_cooldown_days)).strftime("%Y-%m-%d")
+    return {
+        ticker: day
+        for ticker, (day, was_loss) in latest.items()
+        if was_loss and day >= cutoff
+    }
 
 
 def _now_et(now: datetime | None = None) -> datetime:
@@ -376,24 +494,55 @@ def build_late_ideas(
     min_score: float = 0.40,
     now: datetime | None = None,
     require_quote: bool = False,
+    history_dir: Path | None = None,
 ) -> list[dict]:
     now_dt = now or datetime.now(timezone.utc)
     by_ticker: dict[str, dict] = {}
+
+    # History for learning lives next to the input signals unless overridden,
+    # so tests with tmp fixtures never read the real data/ history.
+    resolved_history_dir = history_dir if history_dir is not None else news_signals_path.parent
+    now_et = _now_et(now_dt)
+    repeat_cooldown = load_recent_late_idea_tickers(now_et, data_dir=resolved_history_dir)
+    recent_losers = load_recent_watch_only_losers(now_et, data_dir=resolved_history_dir)
+    skipped = {"stale": 0, "repeat_cooldown": 0, "recent_loss": 0}
+
+    def _accept(cand: dict | None) -> None:
+        if not cand:
+            return
+        ticker = cand["ticker"]
+        if ticker in recent_losers:
+            skipped["recent_loss"] += 1
+            print(
+                f"[late-ideas] skip {ticker}: watch-only SL outcome on "
+                f"{recent_losers[ticker]} (learning cooldown {LOSS_COOLDOWN_DAYS}d)"
+            )
+            return
+        if ticker in repeat_cooldown:
+            skipped["repeat_cooldown"] += 1
+            print(
+                f"[late-ideas] skip {ticker}: already surfaced on "
+                f"{repeat_cooldown[ticker]} (repeat cooldown {REPEAT_COOLDOWN_DAYS}d)"
+            )
+            return
+        if cand["score"] > by_ticker.get(ticker, {}).get("score", -1):
+            by_ticker[ticker] = cand
 
     news_signals = load_json(news_signals_path, {})
     if isinstance(news_signals, dict):
         for payload in news_signals.values():
             if not isinstance(payload, dict):
                 continue
-            cand = _candidate_from_payload(
+            if not signal_is_fresh(payload, now_dt):
+                skipped["stale"] += 1
+                continue
+            _accept(_candidate_from_payload(
                 payload,
                 source="news_signal",
                 now=now_dt,
                 min_score=min_score,
                 require_quote=require_quote,
-            )
-            if cand and cand["score"] > by_ticker.get(cand["ticker"], {}).get("score", -1):
-                by_ticker[cand["ticker"]] = cand
+            ))
 
     watchlist = load_json(watchlist_path, {})
     items = []
@@ -407,15 +556,23 @@ def build_late_ideas(
     for payload in items:
         if not isinstance(payload, dict):
             continue
-        cand = _candidate_from_payload(
+        if not signal_is_fresh(payload, now_dt):
+            skipped["stale"] += 1
+            continue
+        _accept(_candidate_from_payload(
             payload,
             source="watchlist",
             now=now_dt,
             min_score=min_score,
             require_quote=require_quote,
+        ))
+
+    if any(skipped.values()):
+        print(
+            f"[late-ideas] filtered: {skipped['stale']} stale/expired signal(s), "
+            f"{skipped['repeat_cooldown']} repeat-cooldown ticker(s), "
+            f"{skipped['recent_loss']} recent watch-only loser(s)"
         )
-        if cand and cand["score"] > by_ticker.get(cand["ticker"], {}).get("score", -1):
-            by_ticker[cand["ticker"]] = cand
 
     out = sorted(
         by_ticker.values(),
