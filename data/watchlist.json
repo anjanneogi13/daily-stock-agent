@@ -1859,15 +1859,16 @@
     },
     {
       "ticker": "SPCX",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "New AI product (Grok Bot) launch with immediate availability across multiple premium tiers represents a meaningful product expansion that could drive subscriber growth and revenue.",
+      "category": "other",
+      "rationale": "Stock already surging on strong subscriber growth metrics from CEO announcement showing significant Starlink business momentum with 13M consumer and 22M mobile users.",
       "action_window": "intraday",
-      "headline": "SpaceXAI Introduces Grok Bot; Grok Bot Is In Beta & Available Today For SuperGrok Heavy, Cursor Ultra, & Cursor Teams Premium Subscribers On Desktop & iOS",
-      "url": "https://www.benzinga.com/news/26/08/61119018/spacexai-introduces-grok-bot-grok-bot-beta-available-today-supergrok-heavy-cursor-ultra-cursor-teams",
+      "headline": "SpaceX Stock Surges Past $135 IPO Price: What's Going On?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61152207/spacex-stock-surges-past-135-ipo-price-whats-going-on",
       "source": "alpaca",
-      "added_at": "2026-08-11T17:26:32.992508+00:00"
+      "added_at": "2026-08-11T17:26:32.992508+00:00",
+      "updated_at": "2026-08-12T17:27:59.262477+00:00"
     },
     {
       "ticker": "PDFS",
@@ -2039,15 +2040,16 @@
     },
     {
       "ticker": "QNT",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "FY2026 sales guidance of $28-32M exceeds consensus estimate of $26.485M by 5.7-20.8%, representing a meaningful positive catalyst for the stock.",
+      "category": "upgrade",
+      "rationale": "Analyst Buy reiteration with strong Q2 results and strategic Oracle partnership represents meaningful positive catalyst for quantum computing stock.",
       "action_window": "next_day",
-      "headline": "Quantinuum Sees FY2026 Sales $28.000M-$32.000M vs $26.485M Est",
-      "url": "https://www.benzinga.com/news/26/08/61127979/quantinuum-sees-fy2026-sales-28-000m-32-000m-vs-26-485m-est",
+      "headline": "Quantinuum Is a \u2018Core Quantum Name to Own,\u2019 Analyst Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/reiteration/26/08/61152320/quantinuum-is-a-core-quantum-name-to-own-analyst-says",
       "source": "alpaca",
-      "added_at": "2026-08-11T20:37:29.754797+00:00"
+      "added_at": "2026-08-11T20:37:29.754797+00:00",
+      "updated_at": "2026-08-12T17:27:59.262433+00:00"
     },
     {
       "ticker": "MATW",
@@ -2820,6 +2822,30 @@
       "url": "https://www.benzinga.com/markets/market-summary/26/08/61149768/gold-gains-1-performance-food-group-shares-fall-after-q4-results",
       "source": "alpaca",
       "added_at": "2026-08-12T16:26:27.111802+00:00"
+    },
+    {
+      "ticker": "SHAZ",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock rallying on major Nvidia partnership announcement and testing key resistance despite messy earnings, suggesting strong momentum from strategic collaboration outweighing fundamentals.",
+      "action_window": "intraday",
+      "headline": "SharonAI Shares Rally as Nvidia Deal Overshadows a Messy Earnings Quarter",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61152319/sharonai-shares-rally-as-nvidia-deal-overshadows-a-messy-earnings-quarter",
+      "source": "alpaca",
+      "added_at": "2026-08-12T17:27:59.262459+00:00"
+    },
+    {
+      "ticker": "RYTM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "U.K. regulatory expansion of Imcivree authorization to broader patient population (adults and children 4+) represents meaningful market expansion catalyst for Rhythm Pharmaceuticals.",
+      "action_window": "intraday",
+      "headline": "Why Is Rhythm Pharmaceuticals Stock Trading Higher On Wednesday?",
+      "url": "https://www.benzinga.com/markets/biotech/26/08/61152014/why-is-rhythm-pharmaceuticals-stock-trading-higher-on-wednesday",
+      "source": "alpaca",
+      "added_at": "2026-08-12T17:27:59.262495+00:00"
     }
   ]
 }
