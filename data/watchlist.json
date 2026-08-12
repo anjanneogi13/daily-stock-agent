@@ -2729,15 +2729,16 @@
     },
     {
       "ticker": "FUL",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.82,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Activist investor Ancora seeking to acquire H.B. Fuller's adhesives unit represents a potential value-unlocking catalyst through asset divestiture, though execution risk remains until a formal deal materializes.",
+      "rationale": "Unsolicited acquisition proposal of $1.1B-$1.2B for a business segment creates immediate M&A premium potential and signals asset value recognition, though final outcome remains uncertain pending board evaluation.",
       "action_window": "intraday",
-      "headline": "'Activist Ancora Now Seeks to Buy H.B. Fuller Adhesives Unit' - Bloomberg",
-      "url": "https://www.benzinga.com/m/26/08/61140176/activist-ancora-now-seeks-buy-h-b-fuller-adhesives-unit-bloomberg",
+      "headline": "H. B. Fuller Confirms Receipt Of An Unsolicited Proposal Today From Ancora Holdings Group To Acquire Its Building Adhesives Solutions Business For Between $1.1B And $1.2B In Cash; Board Will Carefully Evaluate The Proposal In Consultation With Its Financial And Legal Advisors",
+      "url": "https://www.benzinga.com/news/26/08/61162499/h-b-fuller-confirms-receipt-unsolicited-proposal-today-ancora-holdings-group-acquire-its-building-ad",
       "source": "alpaca",
-      "added_at": "2026-08-12T12:52:38.973984+00:00"
+      "added_at": "2026-08-12T12:52:38.973984+00:00",
+      "updated_at": "2026-08-12T21:38:32.395138+00:00"
     },
     {
       "ticker": "FLY",
@@ -3124,6 +3125,150 @@
       "url": "https://www.benzinga.com/news/26/08/61159528/aligos-therapeutics-initiates-dosing-phase-1-study-alg-170675-investigational-next-gen-antisense-oli",
       "source": "alpaca",
       "added_at": "2026-08-12T20:36:29.462486+00:00"
+    },
+    {
+      "ticker": "PS",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with EPS beat of 17% offset by significant revenue miss of 27%, creating uncertain trading direction.",
+      "action_window": "next_day",
+      "headline": "CORRECTION: Pershing Square Q2 Adj. EPS $0.14 Beats $0.12 Estimate, Sales $54.177M Miss $74.440M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162561/correction-pershing-square-q2-adj-eps-0-14-beats-0-12-estimate-sales-54-177m-miss-74-440m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395068+00:00"
+    },
+    {
+      "ticker": "KITT",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant revenue decline of 57% YoY despite EPS improvement suggests shrinking business operations and potential fundamental deterioration that outweighs the reduced loss per share.",
+      "action_window": "next_day",
+      "headline": "Nauticus Robotics Q2 EPS $(2.11) Up From $(18.50) YoY, Sales $885.947K Down From $2.076M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162545/nauticus-robotics-q2-eps-2-11-18-50-yoy-sales-885-947k-down-2-076m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395091+00:00"
+    },
+    {
+      "ticker": "BGMS",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS loss of $0.08 represents significant 91% improvement from prior year loss of $0.93, indicating strong operational turnaround despite still being unprofitable.",
+      "action_window": "next_day",
+      "headline": "Bio Green Med Solution Q2 EPS $(0.08) Up From $(0.93) YoY, Sales $336.000K",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162532/bio-green-med-solution-q2-eps-0-08-0-93-yoy-sales-336-000k",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395107+00:00"
+    },
+    {
+      "ticker": "VOXR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "FY2026 sales guidance midpoint of $34.5M falls below consensus estimate of $33.555M, representing a modest miss that signals weaker-than-expected revenue outlook.",
+      "action_window": "next_day",
+      "headline": "Vox Royalty Sees FY2026 Sales $32.000M-$37.000M vs $33.555M Est",
+      "url": "https://www.benzinga.com/news/26/08/61162510/vox-royalty-sees-fy2026-sales-32-000m-37-000m-vs-33-555m-est",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395122+00:00"
+    },
+    {
+      "ticker": "ANDG",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Andersen Group reported Q2 earnings with sales of $217.658M beating estimates of $199.310M by approximately 9.2%, representing a meaningful catalyst for immediate trading action.",
+      "action_window": "intraday",
+      "headline": "CORRECTION: Andersen Group Q2 Adj. EPS $2.94, Sales $217.658M Beat $199.310M Estimate",
+      "url": "https://www.benzinga.com/quote/ANDG",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395155+00:00"
+    },
+    {
+      "ticker": "TSX:CCL",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "CCL Industries beat both EPS estimates by 8.9% and sales estimates by 4.4%, representing a meaningful double-beat that typically drives immediate positive price action.",
+      "action_window": "next_day",
+      "headline": "CCL Industries Q2 Adj. EPS $1.35 Beats $1.24 Estimate, Sales $2.110B Beat $2.022B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162452/ccl-industries-q2-adj-eps-1-35-beats-1-24-estimate-sales-2-110b-beat-2-022b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395179+00:00"
+    },
+    {
+      "ticker": "NOA",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raised FY2026 revenue guidance significantly above consensus estimates ($1.6B-$1.8B vs $1.277B est), indicating strong business momentum and representing material upside to street expectations.",
+      "action_window": "next_day",
+      "headline": "North American Construction Group Raises FY2026 Sales Guidance from $1.500B-$1.700B to $1.600B-$1.800B vs $1.277B Est",
+      "url": "https://www.benzinga.com/news/26/08/61162419/north-american-construction-group-raises-fy2026-sales-guidance-1-500b-1-700b-1-600b-1-800b-vs-1-277b",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395192+00:00"
+    },
+    {
+      "ticker": "CYN",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Corporate restructuring and cost-cutting initiatives typically signal improved future margins and operational efficiency, though execution risk remains.",
+      "action_window": "next_day",
+      "headline": "Cyngn Says Co. Streamlined The Organization And Reduced Management Layers As Part Of A Broader Initiative To Lower Operating Costs, Increase Accountability, And Improve Execution",
+      "url": "https://www.benzinga.com/quote/CYN",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395205+00:00"
+    },
+    {
+      "ticker": "PAAS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 30% below estimates ($0.73 vs $1.04) and revenue also missing ($1.124B vs $1.158B), creating immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Pan American Silver Q2 Adj. EPS $0.73 Misses $1.04 Estimate, Sales $1.124B Miss $1.158B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162227/pan-american-silver-q2-adj-eps-0-73-misses-1-04-estimate-sales-1-124b-miss-1-158b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395228+00:00"
+    },
+    {
+      "ticker": "TSX:PRV/UN",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q2 results with FFO declining 8.3% YoY despite 19.6% revenue growth, suggesting margin compression and reduced profitability for this REIT.",
+      "action_window": "next_day",
+      "headline": "PRO REIT Q2 FFO $0.11 Down From $0.12 YoY, Sales $29.953M Up From $25.032M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162214/pro-reit-q2-ffo-0-11-down-0-12-yoy-sales-29-953m-25-032m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395240+00:00"
+    },
+    {
+      "ticker": "SLND",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS missing by 269% and revenue missing by 35%, indicating serious operational issues requiring immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "Southland Holdings Q2 EPS $(1.55) Misses $(0.42) Estimate, Sales $113.306M Miss $175.512M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162197/southland-holdings-q2-eps-1-55-misses-0-42-estimate-sales-113-306m-miss-175-512m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395254+00:00"
+    },
+    {
+      "ticker": "AOSL",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Stock decline on earnings miss with soft forward guidance creates immediate selling pressure and typically drives continued weakness in after-hours and next-day trading.",
+      "action_window": "next_day",
+      "headline": "Alpha And Omega Semiconductor Stock Falls on Q4 Earnings, Soft Guidance",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61162054/alpha-and-omega-semiconductor-stock-falls-on-q4-earnings-soft-guidance",
+      "source": "alpaca",
+      "added_at": "2026-08-12T21:38:32.395267+00:00"
     }
   ]
 }
