@@ -2207,15 +2207,16 @@
     },
     {
       "ticker": "CRWV",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
-      "category": "other",
-      "rationale": "CFO confirms margin inflection and sequential expansion in Q2 as previously guided, indicating improving profitability and execution on financial targets.",
+      "category": "earnings_beat",
+      "rationale": "CoreWeave's 17%+ premarket surge on better-than-expected Q2 earnings is a meaningful catalyst with clear immediate trading opportunity.",
       "action_window": "next_day",
-      "headline": "CoreWeave CFO Says Q2 Marked The Quarter In Which We Saw Margins Inflect, Expanding Sequentially, As We Had Discussed Over The Past Several Quarters",
-      "url": "https://www.benzinga.com/news/26/08/61130358/coreweave-cfo-says-q2-marked-quarter-which-we-saw-margins-inflect-expanding-sequentially-we-had-disc",
+      "headline": "Why CoreWeave Shares Are Trading Higher By Over 17%; Here Are 20 Stocks Moving Premarket",
+      "url": "https://www.benzinga.com/news/26/08/61133967/why-coreweave-shares-are-trading-higher-by-over-17-here-are-20-stocks-moving-premarket",
       "source": "alpaca",
-      "added_at": "2026-08-11T21:39:22.019820+00:00"
+      "added_at": "2026-08-11T21:39:22.019820+00:00",
+      "updated_at": "2026-08-12T09:05:44.487644+00:00"
     },
     {
       "ticker": "WPRT",
@@ -2432,6 +2433,66 @@
       "url": "https://www.benzinga.com/news/26/08/61130518/tenon-medical-files-shelf-registration-offer-securities-100m",
       "source": "alpaca",
       "added_at": "2026-08-11T22:35:07.273471+00:00"
+    },
+    {
+      "ticker": "BNTGY",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Brenntag beat Q2 EPS estimates by 16% ($0.29 vs $0.25) and sales estimates by 2.6% ($4.956B vs $4.830B), representing a solid double beat on earnings.",
+      "action_window": "intraday",
+      "headline": "Brenntag Q2 EPS $0.29 Beats $0.25 Estimate, Sales $4.956B Beat $4.830B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61133984/brenntag-q2-eps-0-29-beats-0-25-estimate-sales-4-956b-beat-4-830b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T09:05:44.487623+00:00"
+    },
+    {
+      "ticker": "TSX:NANO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS beat expectations by 20% ($0.04 loss vs $0.05 expected loss), representing a meaningful positive earnings surprise that typically drives immediate price action.",
+      "action_window": "intraday",
+      "headline": "Nano One Materials Q2 EPS $(0.04) Beats $(0.05) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61133847/nano-one-materials-q2-eps-0-04-beats-0-05-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T09:05:44.487657+00:00"
+    },
+    {
+      "ticker": "FCX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Unplanned smelter halt at Freeport Indonesia's subsidiary since August 8 likely disrupts production capacity and near-term revenue, though furnace repairs are routine operational issues with temporary impact.",
+      "action_window": "next_day",
+      "headline": "Freeport Indonesia's Smelting Gresik Subsidiary Halts Smelter Operations Since August 8 For Furnace Repairs",
+      "url": "https://www.benzinga.com/news/26/08/61133830/freeport-indonesia-s-smelting-gresik-subsidiary-halts-smelter-operations-august-8-furnace-repairs",
+      "source": "alpaca",
+      "added_at": "2026-08-12T09:05:44.487670+00:00"
+    },
+    {
+      "ticker": "TKOMY",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Tokio Marine's adjusted EPS guidance of $3.23 significantly misses analyst estimates of $4.13, representing a 21.8% shortfall that will likely trigger immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Tokio Marine Holdings Sees FY2026 Adj EPS $3.23 vs $4.13 Est",
+      "url": "https://www.benzinga.com/news/26/08/61133661/tokio-marine-holdings-sees-fy2026-adj-eps-3-23-vs-4-13-est",
+      "source": "alpaca",
+      "added_at": "2026-08-12T09:05:44.487692+00:00"
+    },
+    {
+      "ticker": "VWDRY",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Vestas delivered exceptional Q2 results with EPS beating estimates by 617% ($0.43 vs $0.06) and revenue exceeding expectations, representing a highly significant positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Vestas Wind Systems Q2 EPS $0.43 Beats $0.06 Estimate, Sales $5.491B Beat $5.390B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61133598/vestas-wind-systems-q2-eps-0-43-beats-0-06-estimate-sales-5-491b-beat-5-390b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T09:05:44.487703+00:00"
     }
   ]
 }
