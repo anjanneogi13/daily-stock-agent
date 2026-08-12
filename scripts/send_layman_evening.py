@@ -72,9 +72,11 @@ def build_message(outcomes):
             o["pnl_dollar"] = ent * qty * ret / 100
 
     # unreachable_entry = no position was ever taken → not a win or a loss.
-    no_fills = [o for o in outcomes
-                if (o.get("evaluation_status", "") or "").lower() == "unreachable_entry"]
-    trades = [o for o in outcomes if o not in no_fills]
+    def _is_no_fill(o):
+        return (o.get("evaluation_status", "") or "").lower() == "unreachable_entry"
+
+    no_fills = [o for o in outcomes if _is_no_fill(o)]
+    trades = [o for o in outcomes if not _is_no_fill(o)]
 
     # Fix (issue: 'agent couldn't count any wins'): a trade that made money
     # counts as a WIN whatever its exit label (tp_hit, day_close, expired).

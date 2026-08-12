@@ -114,6 +114,8 @@ def load_recent_late_idea_tickers(
     from datetime import timedelta
 
     recent: dict[str, str] = {}
+    # back=1 is yesterday, back=days is the oldest scanned day. The max-date
+    # comparison below keeps the most recent surfacing regardless of order.
     for back in range(1, days + 1):
         day = (now_et - timedelta(days=back)).strftime("%Y-%m-%d")
         path = late_ideas_path(day, data_dir=data_dir)
