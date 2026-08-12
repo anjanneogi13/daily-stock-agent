@@ -69,16 +69,11 @@ jobs:
             exit 0
           fi
 
-          if [ $ET_MINUTES_OF_DAY -gt $OFFICIAL_CUTOFF ]; then
-            echo "Official premarket window missed after 09:20 ET — writing official no-pick artifact"
-            python scripts/write_guard_no_pick_artifact.py --date "$ET_DATE" --cause NO_PICK_WINDOW_MISSED
-            python scripts/record_daily_picks_run_status.py --event missed_window_skip --result skipped --reason "after 09:20 ET official cutoff; official no-pick artifact written"
-            echo "should_run=false" >> $GITHUB_OUTPUT
-            echo "missed_window=true" >> $GITHUB_OUTPUT
-            exit 0
-          fi
-
-          # 🚨 NEW: Check picks_log.csv directly (more reliable than premarket_check.json)
+          # 🚨 Dedup FIRST: if official picks are already logged for today,
+          # skip quietly — even after the 09:20 ET cutoff. Previously the
+          # missed-window branch ran before this check, so post-cutoff cron
+          # fires wrote NO_PICK_WINDOW_MISSED artifacts and sent "PREMARKET
+          # WINDOW MISSED" late ideas on days that DID have official picks.
           if [ -f data/picks_log.csv ]; then
             TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
           TODAY_ROWS="${TODAY_ROWS:-0}"
@@ -88,6 +83,15 @@ jobs:
               echo "should_run=false" >> $GITHUB_OUTPUT
               exit 0
             fi
+          fi
+
+          if [ $ET_MINUTES_OF_DAY -gt $OFFICIAL_CUTOFF ]; then
+            echo "Official premarket window missed after 09:20 ET — writing official no-pick artifact"
+            python scripts/write_guard_no_pick_artifact.py --date "$ET_DATE" --cause NO_PICK_WINDOW_MISSED
+            python scripts/record_daily_picks_run_status.py --event missed_window_skip --result skipped --reason "after 09:20 ET official cutoff; official no-pick artifact written"
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "missed_window=true" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
           echo "✅ Proceeding with daily picks at $ET_HOUR:$ET_MIN ET"

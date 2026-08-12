@@ -20,15 +20,17 @@ CHATS = [c for c in [os.environ.get("TELEGRAM_CHAT_ID"),
 
 
 def _today_outcomes():
-    """Return picks that CLOSED today (sl_hit/tp_hit/expired), regardless of
-    when they were originally picked. Bug fix 2026-05-05:
+    """Return picks that CLOSED today (sl_hit/tp_hit/expired/day_close),
+    regardless of when they were originally picked. Bug fix 2026-05-05:
       (1) was reading 'status' column — CSV uses 'evaluation_status'
       (2) was filtering on pick_date == today — should be evaluated_on == today
           so that a pick made yesterday and closed today actually shows up."""
     p = Path("data/picks_log.csv")
     if not p.exists(): return []
     today = os.environ.get("PICK_DATE") or datetime.now().strftime("%Y-%m-%d")
-    CLOSED = ("tp_hit", "sl_hit", "expired", "unreachable_entry")
+    # day_close = day trades force-closed at the bell (was missing, so day
+    # trades never appeared in the evening report at all).
+    CLOSED = ("tp_hit", "sl_hit", "expired", "unreachable_entry", "day_close")
     from datetime import timedelta
     cutoff = (datetime.strptime(today, "%Y-%m-%d") - timedelta(days=3)).strftime("%Y-%m-%d")
     out = []
@@ -60,29 +62,43 @@ def build_message(outcomes):
                 "_(Either no picks today, or picks are still open and will close tomorrow.)_\n\n" +
                 LAYMAN_PERFORMANCE_SOURCE_NOTE)
 
-    wins = sum(1 for o in outcomes if (o.get("evaluation_status","") or "").lower() == "tp_hit")
-    losses = len(outcomes) - wins
-    total_pnl = sum(_safe_f(o.get("pnl_dollar")) for o in outcomes)
-    # Compute pnl per row from CSV fields if missing
+    # Compute pnl per row from CSV fields first, so wins/losses below are
+    # counted by ACTUAL money made, not by which exit label was recorded.
     for o in outcomes:
         if not o.get("pnl_dollar"):
             ret = _safe_f(o.get("actual_return_pct"))
             ent = _safe_f(o.get("entry"))
             qty = _safe_f(o.get("qty")) or _safe_f(o.get("position_size"))
             o["pnl_dollar"] = ent * qty * ret / 100
-    total_pnl = sum(_safe_f(o.get("pnl_dollar")) for o in outcomes)
-    cost_basis = sum(_safe_f(o.get("entry",0)) * _safe_f(o.get("qty",0)) for o in outcomes)
+
+    # unreachable_entry = no position was ever taken → not a win or a loss.
+    def _is_no_fill(o):
+        return (o.get("evaluation_status", "") or "").lower() == "unreachable_entry"
+
+    no_fills = [o for o in outcomes if _is_no_fill(o)]
+    trades = [o for o in outcomes if not _is_no_fill(o)]
+
+    # Fix (issue: 'agent couldn't count any wins'): a trade that made money
+    # counts as a WIN whatever its exit label (tp_hit, day_close, expired).
+    # Previously only tp_hit counted, so profitable exits showed as losses.
+    wins = sum(1 for o in trades if _safe_f(o.get("pnl_dollar")) > 0)
+    losses = len(trades) - wins
+    total_pnl = sum(_safe_f(o.get("pnl_dollar")) for o in trades)
+    cost_basis = sum(_safe_f(o.get("entry",0)) * _safe_f(o.get("qty",0)) for o in trades)
     agent_pct = (total_pnl / max(1, cost_basis)) * 100 if cost_basis else 0
     spy = _spy_change_today()
 
     lines = [header("🌆", "Today's Performance", today)]
     lines.append(verdict_line(wins, losses, total_pnl))
     lines.append("")
-    lines.append(f"📊 *Results:* {wins} wins · {losses} losses · *Total: {money(total_pnl)}* ({pct(agent_pct)})")
+    results = f"📊 *Results:* {wins} wins · {losses} losses · *Total: {money(total_pnl)}* ({pct(agent_pct)})"
+    if no_fills:
+        results += f" · {len(no_fills)} not filled"
+    lines.append(results)
     bm = beat_market_line(agent_pct, spy)
     if bm: lines.append(bm)
     lines.append("")
-    lines.append("━━━━━ *Trade-by-trade* ━━━━━")
+    lines.append("━━━━━ *What happened with each pick* ━━━━━")
     lines.append("")
     for o in outcomes:
         lines.append(outcome_to_layman(o))

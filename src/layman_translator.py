@@ -141,13 +141,27 @@ def pick_to_layman(pick: Dict, idx: int = 1) -> str:
 # Outcome → friend-explains line
 # ═══════════════════════════════════════════════════════════════
 def outcome_to_layman(outcome: Dict) -> str:
-    """Convert one closed pick row → plain English line.
+    """Convert one closed pick row → plain English lines.
     Bug fix 2026-05-05: reads REAL csv column names:
       evaluation_status (not 'status'), actual_return_pct + entry + qty
-      (CSV has no pnl_dollar field — must compute it)."""
+      (CSV has no pnl_dollar field — must compute it).
+    Clarity fix (issue: 'trade-by-trade data is very confusing'): every
+    closed trade now shows bought → sold prices and the % move in plain
+    words instead of a bare status label."""
     t = outcome.get("ticker", "?")
     # Accept both layman-flavor ("status") and real CSV ("evaluation_status")
     status = (outcome.get("evaluation_status") or outcome.get("status") or "").upper()
+
+    def _f(key):
+        try:
+            v = outcome.get(key)
+            return float(v) if v not in (None, "") else None
+        except (TypeError, ValueError):
+            return None
+
+    entry = _f("entry")
+    exit_price = _f("exit_price")
+    ret_pct = _f("actual_return_pct")
 
     # Compute pnl from real CSV fields if pnl_dollar absent
     try:
@@ -157,25 +171,34 @@ def outcome_to_layman(outcome: Dict) -> str:
     if pnl == 0:
         # CSV has actual_return_pct + entry + qty → compute dollar P&L
         try:
-            ret_pct = float(outcome.get("actual_return_pct") or 0)
-            entry = float(outcome.get("entry") or 0)
             qty = float(outcome.get("qty") or outcome.get("position_size") or 0)
-            pnl = entry * qty * ret_pct / 100
+            pnl = (entry or 0) * qty * (ret_pct or 0) / 100
         except (TypeError, ValueError):
             pnl = 0
 
-    try: r = float(outcome.get("r_multiple")) if outcome.get("r_multiple") not in (None, "") else None
-    except (TypeError, ValueError): r = None
+    def _trade_math() -> str:
+        """' — bought $100.00 → sold $105.00 (+5.0%)' when data available."""
+        if entry and exit_price:
+            move = f" ({pct(ret_pct)})" if ret_pct is not None else ""
+            return f" — bought ${entry:.2f} → sold ${exit_price:.2f}{move}"
+        if ret_pct is not None:
+            return f" ({pct(ret_pct)})"
+        return ""
 
     if status in ("TP_HIT", "WIN"):
-        return f"✅ *{t}* — hit profit target ({money(pnl)})"
+        return f"✅ *{t}* — WIN: hit the profit target{_trade_math()} · {money(pnl)}"
     if status in ("SL_HIT", "LOSS"):
-        return f"❌ *{t}* — hit stop-loss ({money(pnl)})"
+        return f"❌ *{t}* — LOSS: hit the safety stop{_trade_math()} · {money(pnl)}"
+    if status == "DAY_CLOSE":
+        e = "✅" if pnl > 0 else ("⚠️" if pnl < 0 else "➖")
+        word = "WIN" if pnl > 0 else ("LOSS" if pnl < 0 else "FLAT")
+        return f"{e} *{t}* — {word}: day trade sold at the closing bell{_trade_math()} · {money(pnl)}"
     if status in ("EXPIRED", "EOD_CLOSE"):
         e = "✅" if pnl > 0 else "⚠️"
-        return f"{e} *{t}* — closed at end of holding period ({money(pnl)})"
+        word = "WIN" if pnl > 0 else ("LOSS" if pnl < 0 else "FLAT")
+        return f"{e} *{t}* — {word}: holding time ran out, sold at market{_trade_math()} · {money(pnl)}"
     if status == "UNREACHABLE_ENTRY":
-        return f"🚫 *{t}* — entry price never reached (no fill)"
+        return f"🚫 *{t}* — no trade: the buy price was never reached (no money in, no money out)"
     if status in ("OPEN", "PENDING"):
         return f"⏳ *{t}* — still holding"
     return f"❔ *{t}* — {status.lower() or 'unclear'} ({money(pnl)})"

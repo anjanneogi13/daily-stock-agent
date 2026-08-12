@@ -4,14 +4,30 @@ from .semiconductors import is_semi, get_semi_meta
 
 
 # ─── Adaptive sector concentration (Week 2) ───────────────────────
+# Placeholder sector labels ("N/A" from the data provider, "Unknown" padding)
+# must not share one capped bucket — that collapsed 30 candidates to 2/day.
+_UNKNOWN_SECTOR_LABELS = {"", "unknown", "n/a", "na", "none"}
+
+
+def _is_unknown_sector(sector) -> bool:
+    return str(sector or "").strip().lower() in _UNKNOWN_SECTOR_LABELS
+
+
 def apply_sector_cap(picks: list, max_per_sector: int = 4,
                      reduced_sectors: dict = None) -> list:
-    """Cap picks per sector. reduced_sectors = {"Technology": 2} for weak sectors today."""
+    """Cap picks per sector. reduced_sectors = {"Technology": 2} for weak sectors today.
+
+    Candidates with an unknown/placeholder sector are exempt from the shared
+    cap (the tag cap and portfolio risk gate still bound their concentration).
+    """
     reduced_sectors = reduced_sectors or {}
     counts = {}
     kept = []
     for p in sorted(picks, key=lambda x: x.get("scores", {}).get("composite", 0), reverse=True):
         sector = p.get("info_short", {}).get("sector", "Unknown")
+        if _is_unknown_sector(sector):
+            kept.append(p)
+            continue
         cap = reduced_sectors.get(sector, max_per_sector)
         if counts.get(sector, 0) < cap:
             kept.append(p)
