@@ -177,19 +177,6 @@
     "expires": "2027-01-05T21:55:47.104941+00:00",
     "hard_block": true
   },
-  "AKZOY": {
-    "ticker": "AKZOY",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Reported Earlier, 'Nippon Paint offers \u20ac7.5bn for Akzo unit in attempt to gatecrash rival deal' - Financial Times",
-    "added_at": "2026-07-13T10:53:51.095824+00:00",
-    "expires": "2026-08-12T10:53:51.095830+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MDT": {
     "ticker": "MDT",
     "score_delta": -0.194,
@@ -1551,16 +1538,12 @@
   },
   "CYCU": {
     "ticker": "CYCU",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Cycurion Closes Acquisition Of Kustom Entertainment's Legacy Video Solutions Unit; Sees Pro Forma Gross Revenue Run Rate At ~$30M",
-    "added_at": "2026-08-04T12:28:01.649732+00:00",
-    "expires": "2026-08-18T12:28:01.649740+00:00",
-    "hard_block": false,
-    "negative_reaction": false
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Reported August 7, Cycurion Says Nasdaq Hearings Panel Hearing Scheduled For August 20; Delisting Action Stayed And Shares Continue To Trade",
+    "added_at": "2026-08-12T11:42:32.789221+00:00",
+    "expires": "2027-02-08T11:42:32.789228+00:00",
+    "hard_block": true
   },
   "HUBC": {
     "ticker": "HUBC",
@@ -2680,19 +2663,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ASTH": {
-    "ticker": "ASTH",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Barclays Maintains Overweight on Astrana Health, Raises Price Target to $53",
-    "added_at": "2026-08-07T10:45:31.980763+00:00",
-    "expires": "2026-08-12T10:45:31.980770+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "AQN": {
     "ticker": "AQN",
     "score_delta": -0.1,
@@ -2703,19 +2673,6 @@
     "headline": "Algonquin Power Q2 Sales $543.900M Miss $601.000M Estimate",
     "added_at": "2026-08-07T10:45:31.995662+00:00",
     "expires": "2026-08-14T10:45:31.995668+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RGNX": {
-    "ticker": "RGNX",
-    "score_delta": -0.039,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Barclays Downgrades Regenxbio to Equal-Weight, Maintains Price Target to $12",
-    "added_at": "2026-08-07T10:45:31.999656+00:00",
-    "expires": "2026-08-12T10:45:31.999662+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -2732,19 +2689,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ATI": {
-    "ticker": "ATI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "BTIG Maintains Buy on ATI, Raises Price Target to $270",
-    "added_at": "2026-08-07T10:45:32.019527+00:00",
-    "expires": "2026-08-12T10:45:32.019533+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "HTZ": {
     "ticker": "HTZ",
     "score_delta": 0.1,
@@ -2758,19 +2702,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ONT": {
-    "ticker": "ONT",
-    "score_delta": -0.049,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Barclays Downgrades Onterris to Equal-Weight, Lowers Price Target to $15",
-    "added_at": "2026-08-07T10:45:32.027475+00:00",
-    "expires": "2026-08-12T10:45:32.027481+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FROG": {
     "ticker": "FROG",
     "score_delta": 0.1,
@@ -2781,19 +2712,6 @@
     "headline": "These Analysts Boost Their Forecasts On JFrog After Upbeat Q2 Results",
     "added_at": "2026-08-07T11:41:12.328560+00:00",
     "expires": "2026-08-14T11:41:12.328566+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TSEM": {
-    "ticker": "TSEM",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "B of A Securities Initiates Coverage On Tower Semiconductor with Buy Rating, Announces Price Target of $367",
-    "added_at": "2026-08-07T10:45:32.035530+00:00",
-    "expires": "2026-08-12T10:45:32.035536+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6668,6 +6586,123 @@
     "headline": "Rocky Mountain Chocolate Factory Board Is Exploring Strategic Alternatives Including Possible Sale Or Merger",
     "added_at": "2026-08-12T10:34:34.126319+00:00",
     "expires": "2026-09-11T10:34:34.126325+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "XLO": {
+    "ticker": "XLO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Xilio Therapeutics Q2 EPS $(0.33) Beats $(0.59) Estimate, Sales $18.692M Beat $12.720M Estimate",
+    "added_at": "2026-08-12T11:42:32.728204+00:00",
+    "expires": "2026-08-19T11:42:32.728211+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BLTE": {
+    "ticker": "BLTE",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "HC Wainwright & Co. Maintains Buy on Belite Bio, Raises Price Target to $214",
+    "added_at": "2026-08-12T11:42:32.740790+00:00",
+    "expires": "2026-08-17T11:42:32.740797+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MSGE": {
+    "ticker": "MSGE",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Madison Square Garden Q4 EPS $(0.21) Beats $(0.49) Estimate, Sales $196.322M Beat $166.619M Estimate",
+    "added_at": "2026-08-12T11:42:32.746304+00:00",
+    "expires": "2026-08-19T11:42:32.746310+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ABUS": {
+    "ticker": "ABUS",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Arbutus Biopharma Q2 EPS $(0.03) Misses $(0.02) Estimate, Sales $1.014M Beat $700.000K Estimate",
+    "added_at": "2026-08-12T11:42:32.751704+00:00",
+    "expires": "2026-08-19T11:42:32.751710+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALT": {
+    "ticker": "ALT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Altimmune Q2 EPS $(0.12) Beats $(0.15) Estimate",
+    "added_at": "2026-08-12T11:42:32.757012+00:00",
+    "expires": "2026-08-19T11:42:32.757018+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CAPS": {
+    "ticker": "CAPS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Capstone Holding Q2 EPS $(0.11) Misses $0.12 Estimate, Sales $21.657M Beat $20.385M Estimate",
+    "added_at": "2026-08-12T11:42:32.762358+00:00",
+    "expires": "2026-08-19T11:42:32.762364+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ADAG": {
+    "ticker": "ADAG",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Adagene H1 Adj. EPS $(0.20) Misses $(0.10) Estimate, Sales $1.620M",
+    "added_at": "2026-08-12T11:42:32.767683+00:00",
+    "expires": "2026-08-19T11:42:32.767688+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NEXN": {
+    "ticker": "NEXN",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Nexxen International Q2 Adj. EPS $0.23 Beats $0.20 Estimate, Sales $100.518M Beat $94.584M Estimate",
+    "added_at": "2026-08-12T11:42:32.773076+00:00",
+    "expires": "2026-08-19T11:42:32.773082+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "REKR": {
+    "ticker": "REKR",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Rekor Systems Announces Patent-Pending Audio Verification For GoSecure Platform; Says It Expects To Finalize Initial Launch-Partner Commercial Terms In Q3",
+    "added_at": "2026-08-12T11:42:32.778471+00:00",
+    "expires": "2026-08-19T11:42:32.778476+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

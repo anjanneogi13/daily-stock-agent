@@ -2578,6 +2578,127 @@
       "url": "https://www.benzinga.com/m/26/08/61135399/rocky-mountain-chocolate-factory-board-exploring-strategic-alternatives-including-possible-sale-or-m",
       "source": "alpaca",
       "added_at": "2026-08-12T10:34:34.133881+00:00"
+    },
+    {
+      "ticker": "CAPS",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss ($0.23 below estimate, swinging from expected profit to loss) outweighs modest 6% revenue beat, likely triggering selling pressure.",
+      "action_window": "intraday",
+      "headline": "Capstone Holding Q2 EPS $(0.11) Misses $0.12 Estimate, Sales $21.657M Beat $20.385M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137634/capstone-holding-q2-eps-0-11-misses-0-12-estimate-sales-21-657m-beat-20-385m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796763+00:00",
+      "updated_at": "2026-08-12T11:42:32.796833+00:00"
+    },
+    {
+      "ticker": "XLO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant dual beat with EPS missing by 44% less than expected ($0.26 beat) and sales beating estimates by 47%, indicating strong operational performance.",
+      "action_window": "intraday",
+      "headline": "Xilio Therapeutics Q2 EPS $(0.33) Beats $(0.59) Estimate, Sales $18.692M Beat $12.720M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137707/xilio-therapeutics-q2-eps-0-33-beats-0-59-estimate-sales-18-692m-beat-12-720m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796780+00:00"
+    },
+    {
+      "ticker": "MSGE",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant double beat with EPS loss 57% better than expected (-$0.21 vs -$0.49) and revenue 18% above estimates, likely to drive strong positive price action at market open.",
+      "action_window": "intraday",
+      "headline": "Madison Square Garden Q4 EPS $(0.21) Beats $(0.49) Estimate, Sales $196.322M Beat $166.619M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137684/madison-square-garden-q4-eps-0-21-beats-0-49-estimate-sales-196-322m-beat-166-619m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796794+00:00"
+    },
+    {
+      "ticker": "ABUS",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed Q2 earnings with EPS missing by 50% but revenue beating estimates by 45%, creating conflicting signals for near-term direction.",
+      "action_window": "intraday",
+      "headline": "Arbutus Biopharma Q2 EPS $(0.03) Misses $(0.02) Estimate, Sales $1.014M Beat $700.000K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137666/arbutus-biopharma-q2-eps-0-03-misses-0-02-estimate-sales-1-014m-beat-700-000k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796806+00:00"
+    },
+    {
+      "ticker": "ALT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Altimmune beat EPS estimates by 20% ($0.12 vs $0.15 expected loss), representing a meaningful positive earnings surprise for a biotech company that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "Altimmune Q2 EPS $(0.12) Beats $(0.15) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137652/altimmune-q2-eps-0-12-beats-0-15-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796817+00:00"
+    },
+    {
+      "ticker": "ADAG",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Adagene reported adjusted EPS of -$0.20, missing estimates of -$0.10 by 100%, representing a significant earnings miss that typically drives immediate negative price action in biotech stocks.",
+      "action_window": "intraday",
+      "headline": "Adagene H1 Adj. EPS $(0.20) Misses $(0.10) Estimate, Sales $1.620M",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137629/adagene-h1-adj-eps-0-20-misses-0-10-estimate-sales-1-620m",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796846+00:00"
+    },
+    {
+      "ticker": "AEHR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $22M follow-on production order from a lead AI processor customer represents significant revenue and validates product-market fit in the high-growth AI testing market.",
+      "action_window": "intraday",
+      "headline": "Aehr Test Systems Announces $22M Follow-On Production Order From Its Lead Wafer-Level AI Processor Customer",
+      "url": "https://www.benzinga.com/news/26/08/61137603/aehr-test-systems-announces-22m-follow-production-order-its-lead-wafer-level-ai-processor-customer",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796858+00:00"
+    },
+    {
+      "ticker": "NEXN",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Nexxen beat Q2 EPS estimates by 15% ($0.23 vs $0.20) and revenue estimates by 6.3% ($100.5M vs $94.6M), representing a meaningful double-beat warranting immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Nexxen International Q2 Adj. EPS $0.23 Beats $0.20 Estimate, Sales $100.518M Beat $94.584M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137586/nexxen-international-q2-adj-eps-0-23-beats-0-20-estimate-sales-100-518m-beat-94-584m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796869+00:00"
+    },
+    {
+      "ticker": "PYPD",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "PolyPid beat EPS estimates by $0.03 (8.6% beat), which is positive but modest for a small-cap biotech with high volatility expectations.",
+      "action_window": "intraday",
+      "headline": "PolyPid Q2 EPS $(0.35) Beats $(0.38) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61137549/polypid-q2-eps-0-35-beats-0-38-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796881+00:00"
+    },
+    {
+      "ticker": "CYCU",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Delisting action stayed and shares continue trading is positive news avoiding worst-case scenario, but uncertainty remains until August 20 hearing outcome.",
+      "action_window": "next_day",
+      "headline": "Reported August 7, Cycurion Says Nasdaq Hearings Panel Hearing Scheduled For August 20; Delisting Action Stayed And Shares Continue To Trade",
+      "url": "https://www.benzinga.com/quote/CYCU",
+      "source": "alpaca",
+      "added_at": "2026-08-12T11:42:32.796893+00:00"
     }
   ]
 }
