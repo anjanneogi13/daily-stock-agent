@@ -3092,15 +3092,16 @@
     },
     {
       "ticker": "SCOR",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.82,
       "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Company issued FY2026 revenue guidance below consensus estimates, with midpoint of $320M falling short of $325.4M analyst expectations by approximately 1.7%.",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with Q2 adjusted EPS of -$0.56 versus $0.13 estimate and revenue missing by approximately 5%, representing a substantial negative earnings surprise.",
       "action_window": "intraday",
-      "headline": "comScore Sees FY2026 Sales $315.000M-$325.000M vs $325.400M Est",
-      "url": "https://www.benzinga.com/news/26/08/61159548/comscore-sees-fy2026-sales-315-000m-325-000m-vs-325-400m-est",
+      "headline": "UPDATE: comScore Q2 Adj. EPS $(0.56) Misses $0.13 Estimate, Sales $79.246M Miss $83.300M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61163011/update-comscore-q2-adj-eps-0-56-misses-0-13-estimate-sales-79-246m-miss-83-300m-estimate",
       "source": "alpaca",
-      "added_at": "2026-08-12T20:36:29.462468+00:00"
+      "added_at": "2026-08-12T20:36:29.462468+00:00",
+      "updated_at": "2026-08-12T22:33:40.859286+00:00"
     },
     {
       "ticker": "LPA",
@@ -3269,6 +3270,150 @@
       "url": "https://www.benzinga.com/markets/earnings/26/08/61162054/alpha-and-omega-semiconductor-stock-falls-on-q4-earnings-soft-guidance",
       "source": "alpaca",
       "added_at": "2026-08-12T21:38:32.395267+00:00"
+    },
+    {
+      "ticker": "TSX:DIV",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "EPS missed estimate by 67% ($0.02 vs $0.06 expected) despite revenue beat, indicating margin compression or cost issues that typically drive immediate negative price action.",
+      "action_window": "next_day",
+      "headline": "Diversified Royalty Q2 EPS $0.02 Misses $0.06 Estimate, Sales $21.683M Beat $20.505M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162976/diversified-royalty-q2-eps-0-02-misses-0-06-estimate-sales-21-683m-beat-20-505m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859306+00:00"
+    },
+    {
+      "ticker": "WHK",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of -$0.73 versus $0.38 estimate (191% miss) outweighs the 20% sales beat, creating immediate negative trading pressure.",
+      "action_window": "next_day",
+      "headline": "UPDATE: WhiteHawk Minerals Q2 Adj. EPS $(0.35) Misses $0.38 Estimate, Sales $29.077M Beat $24.207M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162965/update-whitehawk-minerals-q2-adj-eps-0-35-misses-0-38-estimate-sales-29-077m-beat-24-207m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859323+00:00"
+    },
+    {
+      "ticker": "MDCX",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS miss of $0.21 versus estimate of $0.13 represents a 62% larger loss than expected, a significant negative earnings surprise that typically triggers immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "Medicus Pharma Q2 EPS $(0.21) Misses $(0.13) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162933/medicus-pharma-q2-eps-0-21-misses-0-13-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859339+00:00"
+    },
+    {
+      "ticker": "SFC",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings beat with EPS exceeding estimates by 8.7% and extraordinary revenue growth from $84.5M to $1.328B YoY (1,472% increase) represents a transformational quarter likely driven by major acquisition or business combination.",
+      "action_window": "next_day",
+      "headline": "Sagicor Financial Co Q2 Adj. EPS $0.25 Beats $0.23 Estimate, Sales $1.328B Up From $84.500M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162905/sagicor-financial-co-q2-adj-eps-0-25-beats-0-23-estimate-sales-1-328b-84-500m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859354+00:00"
+    },
+    {
+      "ticker": "QTI",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings result with EPS beat but revenue miss creates offsetting signals with moderate after-hours trading opportunity.",
+      "action_window": "next_day",
+      "headline": "UPDATE: QT Imaging Holdings Q2 Adj. EPS $(0.19) Beats $(0.22) Estimate, Sales $7.435M Miss $7.600M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162887/update-qt-imaging-holdings-q2-adj-eps-0-19-beats-0-22-estimate-sales-7-435m-miss-7-600m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859367+00:00"
+    },
+    {
+      "ticker": "RVPH",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Reviva Pharmaceuticals reported Q2 EPS loss of $0.19 versus estimate of $0.39, beating expectations by 51% which is a significant positive surprise for a small-cap biotech.",
+      "action_window": "next_day",
+      "headline": "Reviva Pharmaceuticals Q2 EPS $(0.19) Beats $(0.39) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162874/reviva-pharmaceuticals-q2-eps-0-19-beats-0-39-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859381+00:00"
+    },
+    {
+      "ticker": "DNN",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Denison Mines missed both EPS estimates and dramatically missed revenue estimates by over 98% ($520K vs $48.24M expected), indicating a severe operational shortfall requiring immediate reassessment.",
+      "action_window": "intraday",
+      "headline": "Denison Mines Q2 Adj. EPS $(0.02) Misses $(0.01) Estimate, Sales $520.100K Miss $48.240M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162858/denison-mines-q2-adj-eps-0-02-misses-0-01-estimate-sales-520-100k-miss-48-240m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859394+00:00"
+    },
+    {
+      "ticker": "BLSH",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "First-of-its-kind GFSC-regulated tokenized equity trading with 24/7 settlement represents a significant structural innovation and competitive advantage for Bullish's own shares.",
+      "action_window": "next_day",
+      "headline": "Bullish Launches First GFSC-Regulated Tokenized Equity Trading, Enabling 24/7 Settlement Of 'BLSH' Shares",
+      "url": "https://www.benzinga.com/quote/BLSH",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859408+00:00"
+    },
+    {
+      "ticker": "DML",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Denison Mines missed EPS estimates by 200% (-$0.03 vs -$0.01 expected) with revenue declining 44% year-over-year, representing a significant double miss.",
+      "action_window": "next_day",
+      "headline": "Denison Mines Q2 Adj. EPS $(0.03) Misses $(0.01) Estimate, Sales $720.000K Down From $1.276M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162831/denison-mines-q2-adj-eps-0-03-misses-0-01-estimate-sales-720-000k-down-1-276m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859421+00:00"
+    },
+    {
+      "ticker": "BOXL",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant revenue miss of 16% ($25.918M vs $30.852M estimate) despite EPS beat creates immediate selling pressure on small-cap stock.",
+      "action_window": "next_day",
+      "headline": "Boxlight Q2 EPS $0.34, Sales $25.918M Miss $30.852M Estimate",
+      "url": "https://www.benzinga.com/quote/BOXL",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859446+00:00"
+    },
+    {
+      "ticker": "RIO",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $1.8B government bailout for Rio Tinto's aluminum smelter removes significant operational and financial risk while providing capital support for a major asset.",
+      "action_window": "intraday",
+      "headline": "'Rio Tinto Aluminum Smelter Gets $1.8B Australian Bailout'- Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61162770/rio-tinto-aluminum-smelter-gets-1-8b-australian-bailout-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859470+00:00"
+    },
+    {
+      "ticker": "EPSN",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Adjusted EPS declined 44% YoY despite revenue growth of 57%, indicating significant margin compression and operational inefficiency that warrants immediate reassessment.",
+      "action_window": "next_day",
+      "headline": "UPDATE: Epsilon Energy Q2 Adj. EPS $0.05 Down From $0.09 YoY, Sales $18.262M Up From $11.625M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61162759/update-epsilon-energy-q2-adj-eps-0-05-down-0-09-yoy-sales-18-262m-11-625m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-12T22:33:40.859484+00:00"
     }
   ]
 }
