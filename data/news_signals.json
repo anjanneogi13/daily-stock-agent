@@ -2819,19 +2819,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "XPOF": {
-    "ticker": "XPOF",
-    "score_delta": -0.05,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Guggenheim Downgrades Xponential Fitness to Neutral",
-    "added_at": "2026-08-07T16:16:01.357253+00:00",
-    "expires": "2026-08-12T16:16:01.357261+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "IONQ": {
     "ticker": "IONQ",
     "score_delta": 0.1,
@@ -2842,45 +2829,6 @@
     "headline": "Why Is IonQ Stock Surging Friday?",
     "added_at": "2026-08-07T16:16:01.376711+00:00",
     "expires": "2026-08-14T16:16:01.376720+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "U": {
-    "ticker": "U",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "HSBC Upgrades Unity Software to Buy",
-    "added_at": "2026-08-07T16:16:01.380897+00:00",
-    "expires": "2026-08-12T16:16:01.380902+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CART": {
-    "ticker": "CART",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "JP Morgan Maintains Overweight on Maplebear, Raises Price Target to $62",
-    "added_at": "2026-08-07T16:16:01.385150+00:00",
-    "expires": "2026-08-12T16:16:01.385156+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "HASI": {
-    "ticker": "HASI",
-    "score_delta": 0.049,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "JP Morgan Maintains Overweight on HASI, Raises Price Target to $51",
-    "added_at": "2026-08-07T16:16:01.389455+00:00",
-    "expires": "2026-08-12T16:16:01.389462+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6253,14 +6201,14 @@
   },
   "APGE": {
     "ticker": "APGE",
-    "score_delta": -0.039,
+    "score_delta": -0.046,
     "catalyst": "downgrade",
     "sentiment": "bearish",
-    "tradeable_score": 0.55,
+    "tradeable_score": 0.65,
     "action_window": "intraday",
-    "headline": "BTIG Downgrades Apogee Therapeutics to Neutral",
-    "added_at": "2026-08-12T10:34:34.073359+00:00",
-    "expires": "2026-08-17T10:34:34.073367+00:00",
+    "headline": "This Apogee Therapeutics Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Wednesday",
+    "added_at": "2026-08-12T16:26:27.076410+00:00",
+    "expires": "2026-08-17T16:26:27.076418+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6692,5 +6640,57 @@
     "expires": "2026-08-17T15:28:52.089444+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "TXG": {
+    "ticker": "TXG",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Stephens & Co. Maintains Overweight on 10x Genomics, Raises Price Target to $65",
+    "added_at": "2026-08-12T16:26:27.064492+00:00",
+    "expires": "2026-08-17T16:26:27.064500+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AXP": {
+    "ticker": "AXP",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Piper Sandler Maintains Overweight on American Express, Raises Price Target to $405",
+    "added_at": "2026-08-12T16:26:27.081889+00:00",
+    "expires": "2026-08-17T16:26:27.081898+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ORCL": {
+    "ticker": "ORCL",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "What's Going On With Oracle Stock on Wednesday? (CORRECTED)",
+    "added_at": "2026-08-12T16:26:27.087429+00:00",
+    "expires": "2026-08-19T16:26:27.087436+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PFGC": {
+    "ticker": "PFGC",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Gold Gains 1%; Performance Food Group Shares Fall After Q4 Results",
+    "added_at": "2026-08-12T16:26:27.092943+00:00",
+    "expires": "2026-08-19T16:26:27.092951+00:00",
+    "hard_block": false,
+    "negative_reaction": true
   }
 }
