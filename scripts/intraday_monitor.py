@@ -89,6 +89,16 @@ def load_todays_picks() -> list:
                 "entry":       float(r.get("entry") or 0),
                 "stop_loss":   float(r.get("stop_loss") or 0),
                 "take_profit": float(r.get("take_profit") or 0),
+                # Persisted trailing/adaptive state (informational levels).
+                # Without these, every 30-min run restarted trailing from
+                # scratch because p.get(...) always returned None.
+                "original_sl":  r.get("original_sl") or "",
+                "current_sl":   r.get("current_sl") or "",
+                "current_tp":   r.get("current_tp") or "",
+                "peak_price":   r.get("peak_price") or "",
+                "peak_rsi":     r.get("peak_rsi") or "",
+                "tp_raises":    r.get("tp_raises") or "",
+                "sl_tightens":  r.get("sl_tightens") or "",
             })
         except ValueError:
             continue
@@ -164,8 +174,15 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             updates["trail_active"] = "true"
         if updates:
             update_pick_row(today_str, ticker, updates)
-        # Use the (possibly raised) SL for the rest of this check
-        sl = new_sl
+        # Issue fix (wrong win/loss records): the trailed/tightened SL and
+        # raised TP are INFORMATIONAL ONLY (current_sl/current_tp columns +
+        # alert flags). Hit detection and CSV closes below always use the
+        # ORIGINAL predicted SL/TP so recorded outcomes match the plan sent
+        # in the morning — same semantics as src/pick_evaluator.py.
+        # Previously `sl = new_sl` here made the monitor close picks at the
+        # updated SL, so a pick that later hit the original TP was recorded
+        # as an sl_hit loss and wins were never counted.
+        informational_sl = new_sl
 
         flags = []
         if sl > 0 and price <= sl * 1.01 and price > sl:
@@ -185,9 +202,11 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
         if live.get("vol_ratio", 0) >= 3.0:
             flags.append(("vol_spike", f"Volume spike ({live['vol_ratio']:.1f}x avg)"))
         if did_raise:
-            flags.append(("trail_raise", f"🔒 SL raised to ${new_sl:.2f} (locked +{((new_sl-entry)/entry*100):.1f}%)"))
+            flags.append(("trail_raise", f"🔒 Trailing SL reference raised to ${new_sl:.2f} (locked +{((new_sl-entry)/entry*100):.1f}%) — official SL for records stays ${sl:.2f}"))
 
-        # Phase 2B.3: adaptive TP raise (momentum-driven)
+        # Phase 2B.3: adaptive TP raise (momentum-driven) — informational
+        # only: updates current_tp column + alert, never the official TP
+        # used for hit detection and outcome records.
         try:
             current_tp = float(p.get("current_tp") or tp)
             current_rsi = live.get("rsi")
@@ -207,12 +226,12 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
                     "current_tp": new_tp,
                     "tp_raises": updated_audit,
                 })
-                flags.append(("tp_raise", f"🚀 TP raised to ${new_tp:.2f} ({reason})"))
-                tp = new_tp  # use new TP for rest of this check
+                flags.append(("tp_raise", f"🚀 Stretch TP reference raised to ${new_tp:.2f} ({reason}) — official TP for records stays ${tp:.2f}"))
         except Exception as e:
             print(f"[adaptive_tp] {ticker} skipped: {e}")
 
         # Phase 2B.5: adaptive SL tighten (momentum-fading, profit-protect)
+        # — informational only, same rule as the trailing SL above.
         try:
             current_rsi = live.get("rsi")
             vol_ratio = live.get("vol_ratio")
@@ -222,7 +241,7 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             should_t, new_sl_t, reason_t = should_tighten_sl(
                 entry=entry,
                 current_price=price,
-                current_sl=sl,
+                current_sl=informational_sl,
                 current_rsi=current_rsi,
                 peak_rsi=new_peak_rsi if new_peak_rsi > 0 else None,
                 vol_ratio=vol_ratio,
@@ -235,8 +254,7 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
                 updated_audit_t = append_tighten_audit(sl_tightens_json, new_sl_t, reason_t)
                 sl_updates["current_sl"] = new_sl_t
                 sl_updates["sl_tightens"] = updated_audit_t
-                flags.append(("sl_tighten", f"🛡️ SL tightened to ${new_sl_t:.2f} ({reason_t})"))
-                sl = new_sl_t  # use tightened SL for rest of this check
+                flags.append(("sl_tighten", f"🛡️ SL reference tightened to ${new_sl_t:.2f} ({reason_t}) — official SL for records stays ${sl:.2f}"))
             if sl_updates:
                 update_pick_row(today_str, ticker, sl_updates)
         except Exception as e:

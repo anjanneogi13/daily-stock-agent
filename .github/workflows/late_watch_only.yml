@@ -63,6 +63,10 @@ jobs:
           fi
 
           TODAY_ROWS=0
+          # Refresh from origin first: the daily-picks run may have pushed
+          # today's picks AFTER this job's checkout, and a stale tree would
+          # send a false "premarket window missed" message.
+          git fetch origin main --depth 1 2>/dev/null && git checkout FETCH_HEAD -- data/picks_log.csv 2>/dev/null || true
           if [ -f data/picks_log.csv ]; then
             TODAY_ROWS=$(grep -c "^$ET_DATE" data/picks_log.csv 2>/dev/null || true)
             TODAY_ROWS="${TODAY_ROWS:-0}"

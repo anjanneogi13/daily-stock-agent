@@ -895,11 +895,15 @@ def run():
     # ═══════════════════════════════════════════════════════════════
     rprint("[5c/6] Applying sector concentration cap...")
     pre_cap = len(filtered)
-    # Pad info_short.sector if missing (for cap to work)
+    # Pad info_short.sector if missing (for cap to work). "N/A" is the
+    # data-provider placeholder (see src/data_fetcher.py) — treat it as
+    # missing too, otherwise every unresolved candidate lands in one shared
+    # "N/A" sector bucket and the cap collapses the day to 2 picks.
     for p in filtered:
         if "info_short" not in p:
             p["info_short"] = {}
-        if not p["info_short"].get("sector"):
+        _sec = str(p["info_short"].get("sector") or "").strip()
+        if not _sec or _sec.lower() in ("n/a", "na", "none", "unknown"):
             p["info_short"]["sector"] = p["scores"].get("sector_tag") or "Unknown"
     capped = apply_sector_cap(filtered, max_per_sector=2, reduced_sectors=weak_sectors)
     # Tier 1 fix: hard cap 2 per primary tag (SEMI, AI, etc.) — catches what yfinance sector misses

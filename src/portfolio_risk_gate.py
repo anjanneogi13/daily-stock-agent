@@ -45,8 +45,14 @@ def _safe_float(value: Any, default: float | None = None) -> float | None:
 
 
 def _safe_int(value: Any, default: int = 0) -> int:
+    # Bug fix (issue: only ~1 pick/day): `int(float(value or 0))` turned a
+    # MISSING config key (None) into 0 instead of the caller's default, so
+    # max_per_sector/max_per_tag collapsed to max(1, 0) == 1 and
+    # corr_lookback_days to 2. Missing/blank must mean "use the default".
     try:
-        return int(float(value or 0))
+        if value in (None, ""):
+            return default
+        return int(float(value))
     except (TypeError, ValueError):
         return default
 
@@ -54,6 +60,16 @@ def _safe_int(value: Any, default: int = 0) -> int:
 def _candidate_sector(candidate: dict) -> str:
     info = candidate.get("info_short") if isinstance(candidate.get("info_short"), dict) else {}
     return str(info.get("sector") or "Unknown").strip() or "Unknown"
+
+
+# Placeholder sector labels that must NOT share one capped bucket. When the
+# data provider cannot resolve a real sector it returns "N/A"/"Unknown"; with
+# a shared bucket the whole day collapsed to max_per_sector picks total.
+_UNKNOWN_SECTOR_LABELS = {"", "unknown", "n/a", "na", "none"}
+
+
+def _is_unknown_sector(sector: str) -> bool:
+    return str(sector or "").strip().lower() in _UNKNOWN_SECTOR_LABELS
 
 
 def _candidate_tag(candidate: dict) -> str:
@@ -244,7 +260,7 @@ def evaluate_candidate_portfolio_risk(
     if profile["risk_pct"] is None or profile["risk_pct"] > max_risk_pct:
         return False, f"per-trade risk {profile['risk_pct']}% exceeds limit {max_risk_pct:.2f}%", detail
 
-    if sector_counts.get(sector, 0) >= risk_config["max_per_sector"]:
+    if not _is_unknown_sector(sector) and sector_counts.get(sector, 0) >= risk_config["max_per_sector"]:
         return False, f"daily sector cap reached for {sector}", detail
     if tag and tag_counts.get(tag, 0) >= risk_config["max_per_tag"]:
         return False, f"daily tag cap reached for {tag}", detail

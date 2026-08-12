@@ -56,6 +56,30 @@ def default_et_date() -> str:
     return datetime.now(ET).strftime("%Y-%m-%d")
 
 
+def official_picks_logged_for_date(date_str: str, picks_log_path: Path = Path("data/picks_log.csv")) -> int:
+    """Count official (non watch-only) picks already logged for `date_str`.
+
+    Defense-in-depth for the missed-window guard: a NO_PICK_WINDOW_MISSED
+    artifact must never be written on a day that already has official picks.
+    """
+    if not picks_log_path.exists():
+        return 0
+    try:
+        import csv
+
+        from src.performance_source_separation import is_watch_only_row
+
+        with picks_log_path.open() as f:
+            return sum(
+                1
+                for row in csv.DictReader(f)
+                if (row.get("pick_date") or "").strip() == date_str and not is_watch_only_row(row)
+            )
+    except Exception:
+        # Fail open: guard artifact writing must not crash on a bad CSV.
+        return 0
+
+
 def _now_utc_and_et() -> tuple[str, str]:
     now_utc = datetime.now(timezone.utc).replace(microsecond=0)
     return now_utc.isoformat().replace("+00:00", "Z"), now_utc.astimezone(ET).isoformat()
@@ -229,6 +253,18 @@ def main() -> int:
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--reason", default="")
     args = parser.parse_args()
+
+    # Never claim "window missed / no pick" on a day that already has
+    # official picks logged. The workflow guard also dedups first, but this
+    # keeps a stray/manual invocation from overwriting a real pick day.
+    if args.cause == "NO_PICK_WINDOW_MISSED":
+        already = official_picks_logged_for_date(args.date)
+        if already > 0:
+            print(
+                f"⏭ Skipping NO_PICK_WINDOW_MISSED artifact: {already} official pick(s) "
+                f"already logged for {args.date} — this is not a no-pick day."
+            )
+            return 0
 
     try:
         result = write_guard_no_pick_artifact(
