@@ -868,32 +868,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TOPS": {
-    "ticker": "TOPS",
-    "score_delta": 0.049,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "TOP Ships Signs Share Purchase Agreement For Three ECO Scrubber-Fitted MR Product Tankers, Net $7.4M Consideration After Dubai Deal Refund",
-    "added_at": "2026-07-29T12:58:05.950601+00:00",
-    "expires": "2026-08-12T12:58:05.950607+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VSEE": {
-    "ticker": "VSEE",
-    "score_delta": 0.039,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Vsee Health Enters Into Non-Binding LOI For Proposed Acquisition Of Healthcare Technology And Operating Assets With $35M Plus Run Rate And $7M EBITDA",
-    "added_at": "2026-07-29T12:58:05.966607+00:00",
-    "expires": "2026-08-12T12:58:05.966613+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PYPD": {
     "ticker": "PYPD",
     "score_delta": 0.15,
@@ -2585,19 +2559,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FIGS": {
-    "ticker": "FIGS",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on FIGS, Raises Price Target to $20",
-    "added_at": "2026-08-07T14:08:24.905084+00:00",
-    "expires": "2026-08-12T14:08:24.905090+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ACMR": {
     "ticker": "ACMR",
     "score_delta": 0.1,
@@ -2793,19 +2754,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "INSM": {
-    "ticker": "INSM",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Wells Fargo Maintains Overweight on Insmed, Raises Price Target to $169",
-    "added_at": "2026-08-07T14:08:24.917314+00:00",
-    "expires": "2026-08-12T14:08:24.917319+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NBIX": {
     "ticker": "NBIX",
     "score_delta": 0.044,
@@ -2816,19 +2764,6 @@
     "headline": "Neurocrine Biosciences Initiates Phase 1 First-In-Human Clinical Study Evaluating NBIP-'1968, Investigational GLP-1/GIP/Glucagon Receptor Triple Agonist Being Developed As Therapy For Obesity",
     "added_at": "2026-08-07T12:45:25.530306+00:00",
     "expires": "2026-08-14T12:45:25.530311+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "GENI": {
-    "ticker": "GENI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "Oppenheimer Maintains Outperform on Genius Sports, Raises Price Target to $12",
-    "added_at": "2026-08-07T14:08:24.900886+00:00",
-    "expires": "2026-08-12T14:08:24.900892+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6690,6 +6625,58 @@
     "headline": "Dyadic International Q2 EPS $(0.06) Misses $(0.04) Estimate, Sales $961.138K Miss $993.333K Estimate",
     "added_at": "2026-08-12T12:52:38.966510+00:00",
     "expires": "2026-08-19T12:52:38.966516+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CVS": {
+    "ticker": "CVS",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on CVS Health, Raises Price Target to $118",
+    "added_at": "2026-08-12T14:17:29.060238+00:00",
+    "expires": "2026-08-17T14:17:29.060245+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DPC": {
+    "ticker": "DPC",
+    "score_delta": 0.029,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on DPC Holdings, Raises Price Target to $62",
+    "added_at": "2026-08-12T14:17:29.065690+00:00",
+    "expires": "2026-08-17T14:17:29.065696+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TGT": {
+    "ticker": "TGT",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Target, Raises Price Target to $166",
+    "added_at": "2026-08-12T14:17:29.076397+00:00",
+    "expires": "2026-08-17T14:17:29.076405+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CORZ": {
+    "ticker": "CORZ",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
+    "added_at": "2026-08-12T14:17:29.081750+00:00",
+    "expires": "2026-08-19T14:17:29.081755+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

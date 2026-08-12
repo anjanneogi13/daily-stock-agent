@@ -2783,6 +2783,18 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61139929/dyadic-international-q2-eps-0-06-misses-0-04-estimate-sales-961-138k-miss-993-333k-estimate",
       "source": "alpaca",
       "added_at": "2026-08-12T12:52:38.974039+00:00"
+    },
+    {
+      "ticker": "CORZ",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Blockbuster earnings from CoreWeave (revenue doubled) creating sector-wide rally in neocloud stocks with multiple tickers showing momentum.",
+      "action_window": "intraday",
+      "headline": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61143384/neocloud-stocks-catch-fire-as-coreweave-doubles-revenue",
+      "source": "alpaca",
+      "added_at": "2026-08-12T14:17:29.089261+00:00"
     }
   ]
 }
