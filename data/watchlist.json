@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MLTX",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive Phase 3 trial results for psoriatic arthritis drug represent a major clinical milestone that significantly de-risks the asset and validates the therapeutic approach, with strong cash runway providing operational security.",
-      "action_window": "intraday",
-      "headline": "MoonLake\u2019s Psoriatic Arthritis Drug Shows Promise In Late-Stage Study",
-      "url": "https://www.benzinga.com/news/health-care/26/08/61084682/moonlakes-psoriatic-arthritis-drug-shows-promise-in-late-stage-study",
-      "source": "alpaca",
-      "added_at": "2026-08-10T17:24:48.615987+00:00"
-    },
-    {
       "ticker": "AQST",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -3295,6 +3283,90 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61183742/coherent-post-q4-beat-analyst-raises-price-target-on-accelerating-data-center-growth",
       "source": "alpaca",
       "added_at": "2026-08-13T16:26:04.846237+00:00"
+    },
+    {
+      "ticker": "BIIB",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wolfe Research upgrade to Outperform with $300 price target is a meaningful positive catalyst from a respected sell-side firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Wolfe Research Upgrades Biogen to Outperform, Announces $300 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61186456/wolfe-research-upgrades-biogen-outperform-announces-300-price-target",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841583+00:00"
+    },
+    {
+      "ticker": "ABBV",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wolfe Research upgrade to Outperform with $300 price target is a meaningful catalyst from a respected research firm that typically drives institutional buying interest.",
+      "action_window": "intraday",
+      "headline": "Wolfe Research Upgrades AbbVie to Outperform, Announces $300 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61186359/wolfe-research-upgrades-abbvie-outperform-announces-300-price-target",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841618+00:00"
+    },
+    {
+      "ticker": "ABT",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Wolfe Research upgrade to Outperform with $130 price target is a meaningful catalyst from a reputable research firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Wolfe Research Upgrades Abbott Laboratories to Outperform, Announces $130 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61186309/wolfe-research-upgrades-abbott-laboratories-outperform-announces-130-price-target",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841645+00:00"
+    },
+    {
+      "ticker": "KDP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "HSBC upgrade from lower rating to Buy with specific price target represents meaningful positive catalyst from major global bank that typically drives near-term buying pressure.",
+      "action_window": "next_day",
+      "headline": "HSBC Upgrades Keurig Dr Pepper to Buy, Announces $40 Price Target",
+      "url": "https://www.benzinga.com/news/26/08/61186238/hsbc-upgrades-keurig-dr-pepper-buy-announces-40-price-target",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841661+00:00"
+    },
+    {
+      "ticker": "ZTS",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "FDA Emergency Use Authorization represents regulatory approval for a veterinary drug treating parasitic infection, expanding Zoetis's product portfolio, though limited to dogs/puppies in a niche indication.",
+      "action_window": "next_day",
+      "headline": "FDA Issues Emergency Use Authorization for Drug to Treat New World Screwworm in Dogs and Puppies",
+      "url": "https://www.benzinga.com/general/biotech/26/08/61186192/fda-issues-emergency-use-authorization-drug-treat-new-world-screwworm-dogs-and-puppies",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841675+00:00"
+    },
+    {
+      "ticker": "GOOGL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "New AI model launch with competitive pricing signals Google's continued innovation in the strategic AI market, likely to generate positive trading momentum in a highly watched sector.",
+      "action_window": "intraday",
+      "headline": "Google Introduces Gemini 3.7 Flash; 3.7 Flash Is Available Through The End Of The Year At An Introductory Price Of $0.75/1M Input Tokens And $3.75/1M Output Tokens",
+      "url": "https://www.benzinga.com/news/26/08/61186147/google-introduces-gemini-3-7-flash-3-7-flash-available-through-end-year-introductory-price-0-75-1m-i",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841687+00:00"
+    },
+    {
+      "ticker": "RPRX",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $100M funding deal provides immediate capital and validates rusfertide's commercial potential, though FDA action is still 2 years away reducing immediate urgency.",
+      "action_window": "intraday",
+      "headline": "Royalty Pharma Locks in $100M Zealand Pharma Funding Pact for Blood Disorder Drug",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61186126/royalty-pharma-locks-in-100m-zealand-pharma-funding-pact-for-blood-disorder-drug",
+      "source": "alpaca",
+      "added_at": "2026-08-13T17:28:30.841702+00:00"
     }
   ]
 }
