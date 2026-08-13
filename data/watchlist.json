@@ -3414,6 +3414,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61162759/update-epsilon-energy-q2-adj-eps-0-05-down-0-09-yoy-sales-18-262m-11-625m-yoy",
       "source": "alpaca",
       "added_at": "2026-08-12T22:33:40.859484+00:00"
+    },
+    {
+      "ticker": "FGI",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong 15.48% after-hours price movement on earnings beat provides clear directional signal despite revenue miss, with pre-market continuation likely.",
+      "action_window": "intraday",
+      "headline": "Why Did FGI Industries Stock Rise Pre-Market?",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61165699/fgi-industries-stock-jumps-after-hours-q2-earnings-beat",
+      "source": "alpaca",
+      "added_at": "2026-08-13T09:06:17.203521+00:00"
+    },
+    {
+      "ticker": "TSX:BR",
+      "tradeable_score": 0.95,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Massive earnings miss with both EPS and revenue dramatically below estimates (EPS missed by $3.78, revenue missed by over 99% suggesting likely data error but still significant negative surprise).",
+      "action_window": "intraday",
+      "headline": "Big Rock Brewery Q2 EPS $(0.03) Misses $3.75 Estimate, Sales $13.910M Miss $2.170B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61165599/big-rock-brewery-q2-eps-0-03-misses-3-75-estimate-sales-13-910m-miss-2-170b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-13T09:06:17.203545+00:00"
+    },
+    {
+      "ticker": "LGD",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Liberty Gold posted positive Q2 EPS of $0.07 versus a loss of $(0.01) in the prior year, representing a significant earnings swing and beat.",
+      "action_window": "intraday",
+      "headline": "Liberty Gold Q2 EPS $0.07 Up From $(0.01) YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61165394/liberty-gold-q2-eps-0-07-0-01-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-13T09:06:17.203563+00:00"
+    },
+    {
+      "ticker": "DTCX",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Company reported negative EPS of $0.14 with very low revenues of $1.913M, indicating continued losses and weak operational performance for a public company.",
+      "action_window": "intraday",
+      "headline": "Datacentrex Q2 EPS $(0.14), Sales $1.913M",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61165330/datacentrex-q2-eps-0-14-sales-1-913m",
+      "source": "alpaca",
+      "added_at": "2026-08-13T09:06:17.203579+00:00"
     }
   ]
 }
