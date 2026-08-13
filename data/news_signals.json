@@ -213,32 +213,6 @@
     "expires": "2027-01-10T21:52:56.800802+00:00",
     "hard_block": true
   },
-  "GCTK": {
-    "ticker": "GCTK",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "GlucoTrack Completes Its Strategic Business Combination With L\u014dkahi Therapeutics; Transaction Is Structured Such That L\u014dkahi Therapeutics Becomes The Operating And Controlling Business Of The Combined",
-    "added_at": "2026-07-14T21:52:56.804015+00:00",
-    "expires": "2026-08-13T21:52:56.804021+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "LION": {
-    "ticker": "LION",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "'Lionsgate Studios attracts takeover interest from Bollore, Banijay, sources say'- Reuters Exclusive",
-    "added_at": "2026-07-14T21:52:56.817953+00:00",
-    "expires": "2026-08-13T21:52:56.817957+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PYPL": {
     "ticker": "PYPL",
     "score_delta": 0.2,
@@ -790,19 +764,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "AAPL": {
-    "ticker": "AAPL",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Conference Call:\nApple Sees Q4 Sales $111.688B-$113.737B vs $114.840B Est",
-    "added_at": "2026-07-30T22:01:54.469050+00:00",
-    "expires": "2026-08-13T22:01:54.469055+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SEER": {
     "ticker": "SEER",
     "score_delta": 0.2,
@@ -813,19 +774,6 @@
     "headline": "Seer Receives Revised Acquisition Proposal From Radoff-JEC Group For $2.55 Per Share In Cash Plus A Contingent Value Right.; Special Committee To Review Both Acquisition Proposals And Other Alternativ",
     "added_at": "2026-07-30T22:01:54.489563+00:00",
     "expires": "2026-08-29T22:01:54.489568+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "INBK": {
-    "ticker": "INBK",
-    "score_delta": 0.1,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "next_day",
-    "headline": "First Internet Sees FY2026 GAAP EPS $2.35-$2.45 vs $2.16 Est",
-    "added_at": "2026-07-30T22:01:54.497296+00:00",
-    "expires": "2026-08-13T22:01:54.497302+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6318,14 +6266,14 @@
   },
   "GLOB": {
     "ticker": "GLOB",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
+    "score_delta": -0.15,
+    "catalyst": "guidance_cut",
     "sentiment": "bearish",
-    "tradeable_score": 0.45,
+    "tradeable_score": 0.82,
     "action_window": "intraday",
-    "headline": "Globant Likely To Report Lower Q2 Earnings; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
-    "added_at": "2026-08-13T10:35:45.367704+00:00",
-    "expires": "2026-08-18T10:35:45.367709+00:00",
+    "headline": "CORRECTION: Globant Sees Q3 Adj EPS $1.43-$1.53 vs $1.59 Est; Sees Sales $607.000M-$615.000M vs $625.791M Est",
+    "added_at": "2026-08-13T22:34:38.981386+00:00",
+    "expires": "2026-08-27T22:34:38.981394+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7262,6 +7210,45 @@
     "headline": "RFA Financial Q2 EPS $0.15 Up From $(0.81) YoY, Sales $47.011M Up From $30.729M YoY",
     "added_at": "2026-08-13T21:38:20.966677+00:00",
     "expires": "2026-08-20T21:38:20.966683+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KYNB": {
+    "ticker": "KYNB",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "UPDATE: Kyntra Bio Q2 Adj. EPS $(4.68) Misses $(3.18) Estimate, Sales $(1.474M) Miss $2.007M Estimate",
+    "added_at": "2026-08-13T22:34:38.988782+00:00",
+    "expires": "2026-08-20T22:34:38.988789+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GRN": {
+    "ticker": "GRN",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Greenlane Renewables Q2 EPS $(0.01) Down From $0.01 YoY, Sales $11.315M Down From $15.077M YoY",
+    "added_at": "2026-08-13T22:34:38.994873+00:00",
+    "expires": "2026-08-20T22:34:38.994879+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "API": {
+    "ticker": "API",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Agora Q2 EPS $0.02 Up From $0.01 YoY, Sales $40.420M Up From $34.259M YoY",
+    "added_at": "2026-08-13T22:34:39.000709+00:00",
+    "expires": "2026-08-20T22:34:39.000715+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
