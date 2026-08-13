@@ -1,68 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AQST",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Positive clinical study results enabling FDA resubmission in Q3 is a meaningful de-risking event for biotech, though actual approval remains uncertain.",
-      "action_window": "next_day",
-      "headline": "Aquestive Prepares FDA Resubmission for Severe Allergy Treatment Following Successful Study",
-      "url": "https://www.benzinga.com/news/health-care/26/08/61086469/aquestive-prepares-fda-resubmission-for-severe-allergy-treatment-following-successful-study",
-      "source": "alpaca",
-      "added_at": "2026-08-10T18:13:19.806433+00:00"
-    },
-    {
-      "ticker": "B",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Barrick beat Q2 estimates and secured a significant $1.95B settlement with Newmont, offset by stock pullback and mixed signal from upcoming IPO creating near-term uncertainty.",
-      "action_window": "next_day",
-      "headline": "Barrick Says North America Gold IPO Is \u2018Very Close\u2019",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61086368/barrick-says-north-america-gold-ipo-is-very-close",
-      "source": "alpaca",
-      "added_at": "2026-08-10T18:13:19.806447+00:00"
-    },
-    {
-      "ticker": "ARTW",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Massive 1,361% increase in segment backlog from $1.3M to over $19M represents a material business inflection that should impact near-term revenue and investor expectations.",
-      "action_window": "intraday",
-      "headline": "Art\u2019s-Way Manufacturing's Modular Buildings Segment Has Been Awarded Major Projects Recently, Increasing The Segment's Backlog To Over $19M, Up From The $1.3M Reported In The Company's Quarterly Report Ended May 31, 2026.",
-      "url": "https://www.benzinga.com/news/26/08/61086346/art-s-way-manufacturing-s-modular-buildings-segment-has-been-awarded-major-projects-recently-increas",
-      "source": "alpaca",
-      "added_at": "2026-08-10T18:13:19.806455+00:00"
-    },
-    {
-      "ticker": "SION",
-      "tradeable_score": 1.0,
-      "sentiment": "bearish",
-      "category": "fda_rejection",
-      "rationale": "Phase 2a trial failure with 92% stock decline represents a catastrophic binary event for biotech with drug candidate termination already confirmed and priced.",
-      "action_window": "intraday",
-      "headline": "Sionna Therapeutics stock falls 92% after SION-719 trial failure",
-      "url": "https://qz.com/sionna-therapeutics-stock-cystic-fibrosis-drug-trial-failure-081126?.tsrc=rss",
-      "source": "alpaca",
-      "added_at": "2026-08-10T18:13:19.806461+00:00",
-      "updated_at": "2026-08-12T23:34:35.839859+00:00"
-    },
-    {
-      "ticker": "USO",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Explosions near Strait of Hormuz (20% of global oil transit) create immediate supply disruption risk, historically driving sharp oil price spikes.",
-      "action_window": "next_day",
-      "headline": "Reports Of Explosions In Sirik, Southern Iran, With Launches Possibly Towards Straight Of Hormuz",
-      "url": "https://www.benzinga.com/news/26/08/61121354/reports-explosions-sirik-southern-iran-launches-possibly-towards-straight-hormuz",
-      "source": "alpaca",
-      "added_at": "2026-08-10T18:13:19.806468+00:00",
-      "updated_at": "2026-08-11T18:15:14.176486+00:00"
-    },
-    {
       "ticker": "BRK",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -3367,6 +3305,78 @@
       "url": "https://www.benzinga.com/news/health-care/26/08/61186126/royalty-pharma-locks-in-100m-zealand-pharma-funding-pact-for-blood-disorder-drug",
       "source": "alpaca",
       "added_at": "2026-08-13T17:28:30.841702+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Military escalation rhetoric involving Iran typically drives oil prices higher due to Middle East supply disruption concerns, though this is a call for action rather than actual strikes.",
+      "action_window": "intraday",
+      "headline": "Israel's Channel 13 Reports CENTOM Admiral Brad Cooper Calls For Renewed Strikes On Iran",
+      "url": "https://www.benzinga.com/news/26/08/61188206/israel-s-channel-13-reports-centom-admiral-brad-cooper-calls-renewed-strikes-iran",
+      "source": "alpaca",
+      "added_at": "2026-08-13T18:27:18.992230+00:00"
+    },
+    {
+      "ticker": "CYTK",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Barclays maintains positive Overweight rating and raises price target to $110, indicating increased confidence and upside potential that typically drives near-term buying interest.",
+      "action_window": "next_day",
+      "headline": "Barclays Maintains Overweight on Cytokinetics, Raises Price Target to $110",
+      "url": "https://www.benzinga.com/news/26/08/61188008/barclays-maintains-overweight-cytokinetics-raises-price-target-110",
+      "source": "alpaca",
+      "added_at": "2026-08-13T18:27:18.992253+00:00"
+    },
+    {
+      "ticker": "NBIS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strong pricing power evidenced by 15% price increase in AI compute auction demonstrates robust demand and margin expansion potential for Nebius.",
+      "action_window": "intraday",
+      "headline": "Nebius Says AI Compute Prices Jumped 15%, Signaling Strong Pricing Power",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61187906/nebius-says-ai-compute-prices-jumped-15-percent-after-first-capacity-auction",
+      "source": "alpaca",
+      "added_at": "2026-08-13T18:27:18.992269+00:00"
+    },
+    {
+      "ticker": "RBRK",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant institutional ownership disclosure (6.18% stake by AQR) combined with positive technical momentum creates moderate trading opportunity, though lacks hard catalyst like earnings results.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Rubrik Stock Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61187840/whats-going-on-with-rubrik-stock-thursday",
+      "source": "alpaca",
+      "added_at": "2026-08-13T18:27:18.992299+00:00"
+    },
+    {
+      "ticker": "BDX",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "FDA-involved product recall due to sterility and contamination risks poses regulatory, liability, and reputational damage for Becton Dickinson with immediate trading impact.",
+      "action_window": "intraday",
+      "headline": "Medline Convenience Kits Impacted By Contamination In Recalled Becton Dickinson Products",
+      "url": "https://www.benzinga.com/news/fda/26/08/61187685/medline-convenience-kits-impacted-by-contamination-in-recalled-becton-dickinson-products",
+      "source": "alpaca",
+      "added_at": "2026-08-13T18:27:18.992315+00:00"
+    },
+    {
+      "ticker": "IBM",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with OpenAI to integrate GPT-5.6 into enterprise workflows represents a meaningful AI positioning catalyst for IBM's consulting business.",
+      "action_window": "next_day",
+      "headline": "IBM, OpenAI Target Legacy Systems Holding Back Enterprise AI",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61187569/ibm-openai-target-legacy-systems-holding-back-enterprise-ai",
+      "source": "alpaca",
+      "added_at": "2026-08-13T18:27:18.992329+00:00"
     }
   ]
 }

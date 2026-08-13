@@ -6913,5 +6913,83 @@
     "expires": "2026-08-20T17:28:30.816876+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "SKYX": {
+    "ticker": "SKYX",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Lake Street Maintains Buy on SKYX Platforms, Lowers Price Target to $4",
+    "added_at": "2026-08-13T18:27:18.932445+00:00",
+    "expires": "2026-08-18T18:27:18.932452+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KSCP": {
+    "ticker": "KSCP",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Lake Street Maintains Buy on Knightscope, Lowers Price Target to $3",
+    "added_at": "2026-08-13T18:27:18.939191+00:00",
+    "expires": "2026-08-18T18:27:18.939198+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RFIL": {
+    "ticker": "RFIL",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Lake Street Initiates Coverage On RF Industries with Buy Rating, Announces Price Target of $19",
+    "added_at": "2026-08-13T18:27:18.944843+00:00",
+    "expires": "2026-08-18T18:27:18.944849+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CYTK": {
+    "ticker": "CYTK",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Barclays Maintains Overweight on Cytokinetics, Raises Price Target to $110",
+    "added_at": "2026-08-13T18:27:18.950431+00:00",
+    "expires": "2026-08-18T18:27:18.950437+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IBM": {
+    "ticker": "IBM",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "IBM, OpenAI Target Legacy Systems Holding Back Enterprise AI",
+    "added_at": "2026-08-13T18:27:18.978572+00:00",
+    "expires": "2026-08-20T18:27:18.978578+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EROC": {
+    "ticker": "EROC",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "ignore",
+    "headline": "ERock Stock Surges Thursday: What's Driving the Action?",
+    "added_at": "2026-08-13T18:27:18.984218+00:00",
+    "expires": "2026-08-20T18:27:18.984224+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
