@@ -803,19 +803,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BX": {
-    "ticker": "BX",
-    "score_delta": 0.025,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Blackstone Enters Definitive Agreement To Acquire Darkvision Technologies From Koch Engineered Solutions; No Financial Terms Disclosed",
-    "added_at": "2026-07-30T14:41:13.035860+00:00",
-    "expires": "2026-08-13T14:41:13.035866+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CTVA": {
     "ticker": "CTVA",
     "score_delta": 0.079,
@@ -6669,14 +6656,14 @@
   },
   "EAT": {
     "ticker": "EAT",
-    "score_delta": 0.032,
+    "score_delta": 0.041,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Keybanc Maintains Overweight on Brinker International, Raises Price Target to $275",
-    "added_at": "2026-08-13T12:53:48.203996+00:00",
-    "expires": "2026-08-18T12:53:48.204002+00:00",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Brinker Shares Slide Even As Analysts Raise The Temperature On Price Targets",
+    "added_at": "2026-08-13T15:30:32.137433+00:00",
+    "expires": "2026-08-18T15:30:32.137440+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6781,6 +6768,32 @@
     "headline": "Barclays Maintains Overweight on First Tracks, Raises Price Target to $65",
     "added_at": "2026-08-13T14:19:42.594523+00:00",
     "expires": "2026-08-18T14:19:42.594528+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KGS": {
+    "ticker": "KGS",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Kodiak Gas Services, Raises Price Target to $88",
+    "added_at": "2026-08-13T15:30:32.155150+00:00",
+    "expires": "2026-08-18T15:30:32.155157+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRMB": {
+    "ticker": "TRMB",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "JP Morgan Maintains Overweight on Trimble, Raises Price Target to $76",
+    "added_at": "2026-08-13T15:30:32.160661+00:00",
+    "expires": "2026-08-18T15:30:32.160668+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

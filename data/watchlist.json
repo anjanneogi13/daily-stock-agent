@@ -3260,15 +3260,16 @@
     },
     {
       "ticker": "MLCO",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.78,
       "sentiment": "bearish",
       "category": "earnings_miss",
-      "rationale": "Double miss on both EPS and revenue creates immediate negative trading pressure, though relatively small magnitude of misses limits downside.",
+      "rationale": "Melco reported Q2 earnings miss with EPS and revenue below estimates, stock already declining on news, compounded by fundamental weakness in gaming demand.",
       "action_window": "intraday",
-      "headline": "Melco Resorts and Enter Q2 Adj. EPS $0.06 Misses $0.07 Estimate, Sales $1.252B Miss $1.275B Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61172631/melco-resorts-and-enter-q2-adj-eps-0-06-misses-0-07-estimate-sales-1-252b-miss-1-275b-estimate",
+      "headline": "Melco Resorts Profit Slumps as Gaming Demand Softens",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61181388/melco-resorts-profit-slumps-as-gaming-demand-softens",
       "source": "alpaca",
-      "added_at": "2026-08-13T12:53:48.234020+00:00"
+      "added_at": "2026-08-13T12:53:48.234020+00:00",
+      "updated_at": "2026-08-13T15:30:32.168561+00:00"
     },
     {
       "ticker": "DKI",
@@ -3305,6 +3306,30 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61172431/elmet-group-q2-adj-eps-0-18-beats-0-06-estimate-sales-66-401m-beat-58-123m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-13T12:53:48.234072+00:00"
+    },
+    {
+      "ticker": "EAT",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Mixed headline signal (shares slide vs analyst upgrades) following Q4 results with positive fundamentals (accelerating same-store sales and FY guidance raise) suggests market overreaction with potential upside.",
+      "action_window": "next_day",
+      "headline": "Brinker Shares Slide Even As Analysts Raise The Temperature On Price Targets",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/08/61181552/brinker-shares-slide-even-as-analysts-raise-the-temperature-on-price-targets",
+      "source": "alpaca",
+      "added_at": "2026-08-13T15:30:32.168534+00:00"
+    },
+    {
+      "ticker": "CGEM",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive Phase 3 trial results for a first-line lung cancer treatment represent a major clinical milestone that significantly de-risks the drug candidate and validates commercial potential.",
+      "action_window": "intraday",
+      "headline": "Cullinan Therapeutics Zipalertinib Combo Clears Key Phase 3 Hurdle As First-Line Lung Cancer Treatment Option Takes Shape",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61181387/cullinan-therapeutics-zipalertinib-combo-clears-key-phase-3-hurdle-as-first-line-lung-cancer-treatment-option-takes-shape",
+      "source": "alpaca",
+      "added_at": "2026-08-13T15:30:32.168580+00:00"
     }
   ]
 }
