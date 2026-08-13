@@ -777,19 +777,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BWIN": {
-    "ticker": "BWIN",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Conference Call:\nBaldwin Insurance Sees Q3 Adj EPS $0.42-$0.46 vs $0.44 Est; Sees Sales $485.000M-$495.000M vs $492.818M Est",
-    "added_at": "2026-07-30T23:13:37.365353+00:00",
-    "expires": "2026-08-13T23:13:37.365361+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SMFG": {
     "ticker": "SMFG",
     "score_delta": -0.118,
@@ -6045,14 +6032,14 @@
   },
   "BEEP": {
     "ticker": "BEEP",
-    "score_delta": -0.057,
+    "score_delta": -0.064,
     "catalyst": "earnings_miss",
     "sentiment": "neutral",
-    "tradeable_score": 0.4,
+    "tradeable_score": 0.45,
     "action_window": "next_day",
     "headline": "Mobile Infrastructure Corporation (BEEP) Reports Q2 Loss, Lags Revenue Estimates",
-    "added_at": "2026-08-12T23:34:35.833052+00:00",
-    "expires": "2026-08-19T23:34:35.833058+00:00",
+    "added_at": "2026-08-13T23:34:33.729803+00:00",
+    "expires": "2026-08-20T23:34:33.729809+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6578,14 +6565,14 @@
   },
   "MGTX": {
     "ticker": "MGTX",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
     "sentiment": "bullish",
-    "tradeable_score": 0.95,
+    "tradeable_score": 0.82,
     "action_window": "intraday",
-    "headline": "MeiraGTx Hldgs Q2 EPS $1.71 Beats $(0.46) Estimate, Sales $321.434M Beat $12.476M Estimate",
-    "added_at": "2026-08-13T12:53:48.220510+00:00",
-    "expires": "2026-08-20T12:53:48.220518+00:00",
+    "headline": "MeiraGTx Reports Second Quarter 2026 Financial and Operational Results",
+    "added_at": "2026-08-13T23:34:33.741547+00:00",
+    "expires": "2026-09-12T23:34:33.741571+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7249,6 +7236,32 @@
     "headline": "Agora Q2 EPS $0.02 Up From $0.01 YoY, Sales $40.420M Up From $34.259M YoY",
     "added_at": "2026-08-13T22:34:39.000709+00:00",
     "expires": "2026-08-20T22:34:39.000715+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "RSKD": {
+    "ticker": "RSKD",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "DA Davidson Maintains Buy on Riskified, Raises Price Target to $7.5",
+    "added_at": "2026-08-13T23:34:33.723129+00:00",
+    "expires": "2026-08-18T23:34:33.723137+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TCRX": {
+    "ticker": "TCRX",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "TScan Therapeutics, Inc. (TCRX) Reports Q2 Loss, Misses Revenue Estimates",
+    "added_at": "2026-08-13T23:34:33.747301+00:00",
+    "expires": "2026-08-20T23:34:33.747307+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
