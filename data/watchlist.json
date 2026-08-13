@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BRK",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Berkshire Hathaway delivered a significant Q2 earnings beat exceeding expectations by a wide margin with shares already advancing, representing a meaningful positive catalyst for a major blue-chip stock.",
-      "action_window": "intraday",
-      "headline": "Berkshire Hathaway Stock Pop After Q2 EPS Surprise",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61089190/berkshire-hathaway-stock-pop-after-q2-eps-surprise",
-      "source": "alpaca",
-      "added_at": "2026-08-10T19:30:23.634768+00:00"
-    },
-    {
-      "ticker": "BNTX",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Federal policy shift removing Hepatitis B, COVID-19, and influenza from recommended childhood vaccinations represents a significant demand reduction for major vaccine manufacturers' core products.",
-      "action_window": "intraday",
-      "headline": "Trump Says Administration Recognizing Childhood Vaccine Recommendations For Only 11 Core Vaccinations; Hepatitis B, COVID-19, Influenza No Longer Recommended For All Children",
-      "url": "https://www.benzinga.com/news/26/08/61088567/trump-says-administration-recognizing-childhood-vaccine-recommendations-for-only-11-core-vaccinations-hepatitis-b-covid-19-influenza-no-longer-recommended-for-all-children",
-      "source": "alpaca",
-      "added_at": "2026-08-10T19:30:23.634784+00:00"
-    },
-    {
       "ticker": "NIQ",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -2887,15 +2863,16 @@
     },
     {
       "ticker": "POET",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Company beat both EPS and revenue estimates with EPS loss of $0.07 vs expected $0.08 and sales of $569.9K vs expected $500K, representing a 14% revenue beat, though absolute revenue remains modest.",
+      "rationale": "Stock rising on confirmed upbeat Q2 earnings results combined with new optical chip orders represents a dual positive catalyst with immediate market reaction already underway.",
       "action_window": "intraday",
-      "headline": "POET Technologies Q2 EPS $(0.07) Beats $(0.08) Estimate, Sales $569.925K Beat $500.000K Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61170295/poet-technologies-q2-eps-0-07-beats-0-08-estimate-sales-569-925k-beat-500-000k-estimate",
+      "headline": "What\u2019s Going On With POET Technologies Stock?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61190030/whats-going-on-with-poet-technologies-stock-3",
       "source": "alpaca",
-      "added_at": "2026-08-13T11:42:42.144666+00:00"
+      "added_at": "2026-08-13T11:42:42.144666+00:00",
+      "updated_at": "2026-08-13T19:35:07.856372+00:00"
     },
     {
       "ticker": "CMND",
@@ -3377,6 +3354,90 @@
       "url": "https://www.benzinga.com/markets/large-cap/26/08/61187569/ibm-openai-target-legacy-systems-holding-back-enterprise-ai",
       "source": "alpaca",
       "added_at": "2026-08-13T18:27:18.992329+00:00"
+    },
+    {
+      "ticker": "BP",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic partnership announcement for significant offshore gas asset (4T cubic feet proven reserves) represents notable expansion opportunity for BP, though details on investment size and timeline are limited.",
+      "action_window": "next_day",
+      "headline": "ADNOC's XRG Announces Partnership With BP And UCC On Venezuela's Offshore Loran License, Holding Over 4T Cubic Feet Of Proven Gas",
+      "url": "https://www.benzinga.com/news/26/08/61190405/adnoc-s-xrg-announces-partnership-bp-and-ucc-venezuela-s-offshore-loran-license-holding-over-4t-cubi",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856324+00:00"
+    },
+    {
+      "ticker": "LEXX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock is actively rallying on a Material Transfer Agreement announcement, indicating immediate market reaction but limited fundamental impact of partnership agreement.",
+      "action_window": "intraday",
+      "headline": "Lexaria Bioscience Stock Rallies Thursday: What Investors Need to Know",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61190130/lexaria-bioscience-stock-rallies-thursday-what-investors-need-to-know",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856351+00:00"
+    },
+    {
+      "ticker": "SBSW",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Citigroup initiating coverage with a Buy rating and $13.5 price target provides meaningful positive catalyst from a major investment bank, though impact may be tempered as this is initial coverage rather than an upgrade.",
+      "action_window": "next_day",
+      "headline": "Citigroup Initiates Coverage On Sibanye Stillwater with Buy Rating, Announces Price Target of $13.5",
+      "url": "https://www.benzinga.com/news/26/08/61189480/citigroup-initiates-coverage-sibanye-stillwater-buy-rating-announces-price-target-13-5",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856398+00:00"
+    },
+    {
+      "ticker": "ORCL",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JPMorgan upgrade with 30% upside target on AI transformation thesis is meaningful but represents analyst opinion rather than fundamental catalyst, and ORCL isn't listed in mentioned tickers suggesting potential data issue.",
+      "action_window": "next_day",
+      "headline": "Oracle Has 30% Upside, JPMorgan Says. The Market May Be Missing Its AI Transformation.",
+      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/08/61189372/oracle-ai-transformation-unlock-30-percent-upside-jpmorgan",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856415+00:00"
+    },
+    {
+      "ticker": "SKHY",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Sector-wide rally driven by positive industry outlook from Sandisk and AI demand tailwinds, but news is derivative rather than company-specific catalyst.",
+      "action_window": "intraday",
+      "headline": "Why Is SK Hynix Stock Surging Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61189107/why-is-sk-hynix-stock-surging-thursday",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856430+00:00"
+    },
+    {
+      "ticker": "WDAY",
+      "tradeable_score": 0.92,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Trading halt triggered by circuit breaker with 14% upside move indicates a major positive catalyst requiring immediate attention, though specific catalyst not disclosed in headline.",
+      "action_window": "intraday",
+      "headline": "Workday Shares Halted On Circuit Breaker To The Upside, Shares Now Up 14.12%",
+      "url": "https://www.benzinga.com/quote/WDAY",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856444+00:00"
+    },
+    {
+      "ticker": "DELL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Dell hitting all-time high on positive industry momentum from peer earnings beats signals strong sector tailwinds and immediate price action.",
+      "action_window": "intraday",
+      "headline": "Dell Stock Gains as Super Micro, Lenovo Beat Expectations",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61189024/dell-stock-gains-as-super-micro-lenovo-beat-expectations",
+      "source": "alpaca",
+      "added_at": "2026-08-13T19:35:07.856459+00:00"
     }
   ]
 }
