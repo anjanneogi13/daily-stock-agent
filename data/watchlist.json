@@ -1,127 +1,6 @@
 {
   "items": [
     {
-      "ticker": "TSX:CRT",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "earnings_miss",
-      "rationale": "Mixed earnings with FFO missing by 6% ($0.33 vs $0.35) offset by marginal revenue beat, creating uncertainty for REIT investors focused on distribution coverage.",
-      "action_window": "next_day",
-      "headline": "CT Real Estate IT Q2 FFO $0.33 Misses $0.35 Estimate, Sales $156.706M Beat $156.491M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095875/ct-real-estate-it-q2-ffo-0-33-misses-0-35-estimate-sales-156-706m-beat-156-491m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205028+00:00"
-    },
-    {
-      "ticker": "ARI",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Despite massive EPS beat, revenue missed estimates by 82% ($8.1M vs $45.9M expected), indicating severe top-line deterioration that outweighs bottom-line performance.",
-      "action_window": "intraday",
-      "headline": "Apollo Comml Real Est Q2 Adj. EPS $0.15 Beats $(0.35) Estimate, Sales $8.141M Miss $45.900M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095862/apollo-comml-real-est-q2-adj-eps-0-15-beats-0-35-estimate-sales-8-141m-miss-45-900m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205042+00:00"
-    },
-    {
-      "ticker": "TSX:ALS",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Altius Minerals missed Q2 EPS estimates by 30% ($0.14 vs $0.20) and revenue by 2.7%, representing a meaningful double-miss that typically triggers immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Altius Minerals Q2 Adj. EPS $0.14 Misses $0.20 Estimate, Sales $23.200M Miss $23.833M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095820/altius-minerals-q2-adj-eps-0-14-misses-0-20-estimate-sales-23-200m-miss-23-833m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205050+00:00"
-    },
-    {
-      "ticker": "BW",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Babcock & Wilcox surged 34.5% in after-market trading following Q2 earnings report, indicating a significant earnings beat with immediate market reaction.",
-      "action_window": "next_day",
-      "headline": "12 Industrials Stocks Moving In Monday's After-Market Session",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61095736/12-industrials-stocks-moving-monday-s-after-market-session",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205060+00:00"
-    },
-    {
-      "ticker": "VERA",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Modest earnings beat of $0.09 per share (~5.6% better than estimates) for a biotech company, likely to generate positive momentum in after-hours and next-day trading though not a dramatic beat.",
-      "action_window": "next_day",
-      "headline": "Vera Therapeutics Q2 EPS $(1.52) Beats $(1.61) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095716/vera-therapeutics-q2-eps-1-52-beats-1-61-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205067+00:00"
-    },
-    {
-      "ticker": "RIOT",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $9 billion cloud infrastructure deal represents a massive revenue catalyst for Riot Platforms, transforming its business model and providing substantial long-term cash flow visibility.",
-      "action_window": "intraday",
-      "headline": "'Anthropic Strikes $9 Billion Cloud Deal With Riot Platforms' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/61099965/anthropic-strikes-9-billion-cloud-deal-riot-platforms-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205074+00:00",
-      "updated_at": "2026-08-11T08:46:57.649278+00:00"
-    },
-    {
-      "ticker": "NKTX",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 EPS missed estimates by 42% ($0.54 actual vs $0.38 expected), representing a significant earnings disappointment that typically triggers immediate selling pressure in biotech stocks.",
-      "action_window": "next_day",
-      "headline": "Nkarta Q2 EPS $(0.54) Misses $(0.38) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095667/nkarta-q2-eps-0-54-misses-0-38-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205080+00:00"
-    },
-    {
-      "ticker": "SANA",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Sana Biotechnology beat Q2 EPS estimates by $0.02 (13% better than expected), representing a meaningful earnings beat that typically drives positive after-hours trading in biotech stocks.",
-      "action_window": "intraday",
-      "headline": "Sana Biotechnology Q2 Adj. EPS $(0.13) Beats $(0.15) Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095653/sana-biotechnology-q2-adj-eps-0-13-beats-0-15-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205086+00:00"
-    },
-    {
-      "ticker": "FLOC",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Special dividend declaration signals excess cash and shareholder-friendly capital allocation, though payout is 3 weeks away reducing immediate urgency.",
-      "action_window": "next_day",
-      "headline": "Flowco Holdings Declares A One-Time Special Cash Dividend Of $0.14 Per Share Of Class A Common Stock, Payable On August 31, 2026",
-      "url": "https://www.benzinga.com/news/26/08/61095603/flowco-holdings-declares-one-time-special-cash-dividend-0-14-share-class-common-stock-payable-august",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205094+00:00"
-    },
-    {
-      "ticker": "MVST",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Microvast missed both EPS and revenue estimates significantly, with actual EPS of -$0.01 vs +$0.01 expected and revenue missing by 7.6%, creating immediate downward pressure.",
-      "action_window": "intraday",
-      "headline": "Microvast Holdings Q2 Adj. EPS $(0.01) Misses $0.01 Estimate, Sales $87.262M Miss $94.403M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61095510/microvast-holdings-q2-adj-eps-0-01-misses-0-01-estimate-sales-87-262m-miss-94-403m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-10T21:11:44.205100+00:00"
-    },
-    {
       "ticker": "PAL",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -3510,6 +3389,78 @@
       "url": "https://www.benzinga.com/quote/AKAN",
       "source": "alpaca",
       "added_at": "2026-08-13T20:34:52.568378+00:00"
+    },
+    {
+      "ticker": "HGBL",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_beat",
+      "rationale": "EPS beat by 100% is positive but offset by 7.7% revenue miss, creating mixed signals for trading action.",
+      "action_window": "next_day",
+      "headline": "UPDATE: Heritage Glb Q2 Adj. EPS $0.06 Beats $0.03 Estimate, Sales $12.265M Miss $13.290M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61197751/update-heritage-glb-q2-adj-eps-0-06-beats-0-03-estimate-sales-12-265m-miss-13-290m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-13T21:38:20.975008+00:00"
+    },
+    {
+      "ticker": "BCG",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Q2 sales increased 12.1% year-over-year to $46.516M, showing solid growth but lacking context on profitability or guidance to warrant stronger conviction.",
+      "action_window": "next_day",
+      "headline": "Binah Capital Group Q2 Sales $46.516M Up From $41.497M YoY",
+      "url": "https://www.benzinga.com/quote/BCG",
+      "source": "alpaca",
+      "added_at": "2026-08-13T21:38:20.975030+00:00"
+    },
+    {
+      "ticker": "TSX:FC",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Double miss on both EPS (4.2% below estimate) and revenue (3.2% below estimate) represents a meaningful negative catalyst requiring immediate attention.",
+      "action_window": "intraday",
+      "headline": "Firm Cap Mortgage Inv Q2 EPS $0.23 Misses $0.24 Estimate, Sales $13.556M Miss $14.004M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61197655/firm-cap-mortgage-inv-q2-eps-0-23-misses-0-24-estimate-sales-13-556m-miss-14-004m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-13T21:38:20.975044+00:00"
+    },
+    {
+      "ticker": "CTNT",
+      "tradeable_score": 0.95,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Massive earnings beat with EPS of -$0.037 versus estimate of -$0.66 (94% better than expected) and revenue beat of 769% ($868.9K vs $100K estimate) represents a transformational quarter.",
+      "action_window": "next_day",
+      "headline": "Cheetah Net Supply Chain Q2 EPS $(0.037) Beats $(0.66) Estimate, Sales $868.909K Beat $100.000K Estimate",
+      "url": "https://www.benzinga.com/quote/CTNT",
+      "source": "alpaca",
+      "added_at": "2026-08-13T21:38:20.975059+00:00"
+    },
+    {
+      "ticker": "AIRJ",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS of $(0.12) missed estimates of $(0.07) by 71%, representing a significant earnings miss that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Montana Technologies Q2 EPS $(0.12) Misses $(0.07) Estimate",
+      "url": "https://www.benzinga.com/quote/AIRJ",
+      "source": "alpaca",
+      "added_at": "2026-08-13T21:38:20.975074+00:00"
+    },
+    {
+      "ticker": "RFA",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with EPS swinging from loss to profit ($0.15 vs -$0.81) and revenue up 53% YoY indicating significant operational improvement.",
+      "action_window": "next_day",
+      "headline": "RFA Financial Q2 EPS $0.15 Up From $(0.81) YoY, Sales $47.011M Up From $30.729M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61197505/rfa-financial-q2-eps-0-15-0-81-yoy-sales-47-011m-30-729m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-13T21:38:20.975089+00:00"
     }
   ]
 }
