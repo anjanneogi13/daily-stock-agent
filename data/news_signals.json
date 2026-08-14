@@ -213,19 +213,6 @@
     "expires": "2027-01-10T21:52:56.800802+00:00",
     "hard_block": true
   },
-  "NVO": {
-    "ticker": "NVO",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Novo Nordisk Receives European Commission's Marketing Authorization For Wegovy Pill To Treat Adults With Obesity",
-    "added_at": "2026-07-15T16:16:23.062267+00:00",
-    "expires": "2026-08-14T16:16:23.062273+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MRK": {
     "ticker": "MRK",
     "score_delta": 0.15,
@@ -1493,19 +1480,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "IONQ": {
-    "ticker": "IONQ",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Why Is IonQ Stock Surging Friday?",
-    "added_at": "2026-08-07T16:16:01.376711+00:00",
-    "expires": "2026-08-14T16:16:01.376720+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SION": {
     "ticker": "SION",
     "score_delta": -0.2,
@@ -1516,19 +1490,6 @@
     "headline": "Sionna Therapeutics Discontinues Cystic Fibrosis Drug Following Unfavorable Data Data, Stock Tanks",
     "added_at": "2026-08-10T18:13:19.782452+00:00",
     "expires": "2026-09-09T18:13:19.782457+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "QNST": {
-    "ticker": "QNST",
-    "score_delta": 0.03,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.15,
-    "action_window": "ignore",
-    "headline": "12 Communication Services Stocks Moving In Friday's Intraday Session",
-    "added_at": "2026-08-07T17:15:59.176099+00:00",
-    "expires": "2026-08-14T17:15:59.176104+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7355,5 +7316,18 @@
     "expires": "2026-08-19T16:14:34.452548+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "AVGO": {
+    "ticker": "AVGO",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Broadcom Plunges 5% as Its AI Boom Faces a $370 Billion Financing Question",
+    "added_at": "2026-08-14T17:26:29.028726+00:00",
+    "expires": "2026-08-19T17:26:29.028732+00:00",
+    "hard_block": false,
+    "negative_reaction": true
   }
 }

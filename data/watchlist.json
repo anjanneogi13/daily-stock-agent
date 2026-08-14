@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SNEX",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "StoneX delivered a significant earnings beat with 47% revenue growth and doubled net income, representing a strong fundamental catalyst across all business segments.",
-      "action_window": "intraday",
-      "headline": "What's Going on With StoneX Shares on Tuesday?",
-      "url": "https://www.benzinga.com/markets/mid-cap/26/08/61117325/whats-going-on-with-stonex-shares-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-08-11T16:25:09.810811+00:00"
-    },
-    {
-      "ticker": "UNG",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Increased Qatar LNG loading ahead of potential Strait of Hormuz reopening suggests supply normalization, which would pressure natural gas and oil prices downward as geopolitical supply concerns ease.",
-      "action_window": "next_day",
-      "headline": "'Qatar LNG Loading Jumps Ahead of Potential Hormuz Reopening' - Bloomberg News",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61117308/qatar-lng-loading-jumps-ahead-potential-hormuz-reopening-bloomberg-news",
-      "source": "alpaca",
-      "added_at": "2026-08-11T16:25:09.810823+00:00"
-    },
-    {
       "ticker": "KMI",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
@@ -3037,6 +3013,18 @@
       "url": "https://www.benzinga.com/news/26/08/61216402/jp-morgan-maintains-overweight-heartflow-raises-price-target-45",
       "source": "alpaca",
       "added_at": "2026-08-14T16:14:34.459074+00:00"
+    },
+    {
+      "ticker": "AVGO",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Broadcom experiencing significant 5-6% sell-off driven by BofA analyst concerns over massive $370B financing requirements for AI chip business, raising sustainability questions about the AI growth narrative.",
+      "action_window": "intraday",
+      "headline": "Broadcom Plunges 5% as Its AI Boom Faces a $370 Billion Financing Question",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61219624/broadcom-ai-financing-370-billion",
+      "source": "alpaca",
+      "added_at": "2026-08-14T17:26:29.045083+00:00"
     }
   ]
 }
