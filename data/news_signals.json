@@ -226,19 +226,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "D": {
-    "ticker": "D",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Dominion Energy And NextEra Energy File Applications Seeking Regulatory Approval Of Their Proposed Combination; Customers To Receive $2.25B In Shareholder-Funded Bill Credits; The Transaction Is Expec",
-    "added_at": "2026-07-15T22:31:29.346963+00:00",
-    "expires": "2026-08-14T22:31:29.346977+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "APM": {
     "ticker": "APM",
     "score_delta": 0.157,
