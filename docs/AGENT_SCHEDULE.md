@@ -22,14 +22,28 @@ Daily Stock Agent currently runs in:
 
 Most trading logic is guarded in America/New_York time.
 
-Some cron expressions are written in UTC because GitHub Actions schedules use UTC. Workflow guards convert to ET and skip wrong DST slots.
+Some cron expressions are written in UTC because GitHub Actions schedules use UTC. Workflow guards convert to ET and act inside explicit ET windows.
+
+GitHub cron is best-effort and frequently 30-90 minutes late. Premarket-critical workflows therefore schedule earlier nominal slots than their target ET times (delay compensation), and their guards use ET time windows plus ledger dedup instead of exact-hour "wrong DST slot" checks. Exact-hour checks previously caused delayed correct-slot runs to be silently skipped (2026-08-06 to 2026-08-13: six straight NO_PICK_WINDOW_MISSED days with no watchdog rescue or alert).
+
+## External Scheduler Redundancy (cron-job.org)
+
+GitHub schedules alone cannot guarantee an in-window premarket run. cron-job.org jobs POST `workflow_dispatch` for `daily-picks.yml` (08:05, 08:35, 09:05, 09:15 ET) and `late_watch_only.yml` (09:25, 09:40 ET) using a GitHub PAT in the Authorization header.
+
+Health check: today's `data/daily_picks_run_status_YYYY-MM-DD.jsonl` must contain runs with `"event_name": "workflow_dispatch"`. If it only contains `"schedule"` triggers, the external scheduler is down (historical example: dispatches stopped after 2026-08-05 when the PAT configured on 2026-05-07 hit a 90-day expiry). The watchdog alert includes an "External scheduler appears DOWN" note when no dispatch is seen.
+
+Restore procedure (manual, cannot be done from this repo):
+
+1. Create a new GitHub fine-grained PAT with Actions read/write on `anjanneogi13/daily-stock-agent` (or classic PAT with `repo` + `workflow`), noting the expiry date.
+2. In cron-job.org, replace the token in the `Authorization` header on all six jobs and re-enable any auto-disabled jobs.
+3. Test one job manually and confirm a `204 No Content` response and a matching `workflow_dispatch` run in GitHub Actions.
 
 ## Core Weekday Workflows
 
 | Workflow | File | Purpose |
 |---|---|---|
 | Daily Stock Picks | `.github/workflows/daily-picks.yml` | Runs guarded official premarket pick generation attempts before the 09:20 ET cutoff |
-| Morning Run Watchdog | `.github/workflows/watchdog.yml` | Checks before cutoff whether official picks were logged and alerts if missing |
+| Morning Run Watchdog | `.github/workflows/watchdog.yml` | Checks in the 08:30-11:00 ET window whether official picks were logged; rescues before cutoff and alerts if missing |
 | Late Watch-Only Daily Ideas | `.github/workflows/late_watch_only.yml` | After cutoff, sends clearly labeled watch-only fallback ideas only if official picks are missing |
 | Intraday Monitor | `.github/workflows/intraday_monitor.yml` | Runs intraday monitoring, opening-range checks, alerts, observations, and run-status artifacts |
 | News Engine | `.github/workflows/news_engine.yml` | Fetches/classifies news, updates watchlist/news evidence, and records run status |
@@ -79,11 +93,11 @@ Related artifacts include:
 
 ## Watchdog Safety Schedule
 
-The watchdog checks before the official cutoff whether picks have been logged.
+The watchdog checks between 08:30 and 11:00 ET whether picks have been logged, and dedups to one successful alert per day.
 
 It may:
 
-- send an urgent Telegram alert
+- send an urgent Telegram alert (including external-scheduler health)
 - attempt to dispatch Daily Stock Picks before cutoff
 - record run-status evidence
 
@@ -95,7 +109,7 @@ It must not:
 
 ## Late Watch-Only Safety Schedule
 
-Late watch-only fallback ideas run only after the official window is missed.
+Late watch-only fallback ideas run only after the official window is missed, between the 09:20 ET cutoff and 12:00 ET, with sent-ledger dedup.
 
 They must:
 

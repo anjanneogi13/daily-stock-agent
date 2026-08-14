@@ -20,7 +20,7 @@ def test_daily_picks_has_frequent_guarded_cron_chances():
     text = _text()
     crons = re.findall(r"cron:\s*'([^']+)'", text)
 
-    assert "5,20,35,50 12-14 * * 1-5" in crons
+    assert "5,20,35,50 11-14 * * 1-5" in crons
     assert "frequent guarded premarket attempts" in text
     assert "picks_log.csv dedup guard" in text
     assert "OFFICIAL_CUTOFF=$((9 * 60 + 20))" in text
@@ -77,10 +77,14 @@ def test_watchdog_runs_before_market_open_and_cutoff():
     text = _watchdog_text()
     crons = re.findall(r"cron:\s*'([^']+)'", text)
 
-    assert "10,18 13-14 * * 1-5" in crons
-    assert "09:10 and 09:18 ET" in text
+    assert "40,55 12-13 * * 1-5" in crons
+    assert "08:40, 08:55, 09:40 and 09:55 ET" in text
     assert "09:20 ET cutoff" in text
     assert "9:35" not in text
+    # Delayed correct-slot runs must not be skipped as a wrong DST hour.
+    assert 'if [ "$ET_HOUR" != "09" ]' not in text
+    assert "WATCH_WINDOW_START=$((8 * 60 + 30))" in text
+    assert "WATCH_WINDOW_END=$((11 * 60))" in text
 
 
 def test_watchdog_checks_picks_log_not_stale_premarket_check():
@@ -174,6 +178,17 @@ def test_watchdog_can_trigger_daily_picks_before_cutoff():
     assert "Rescue triggered: $RESCUE_TRIGGERED" in text
     assert "does not create picks itself" in text
 
+def test_watchdog_dedups_alerts_and_reports_external_scheduler_health():
+    text = _watchdog_text()
+
+    assert "watchdog_already_alerted_skip" in text
+    assert '"event": "watchdog_alert"' in text
+    assert "git fetch origin main --depth 1" in text
+    assert '"event_name": "workflow_dispatch"' in text
+    assert "External scheduler appears DOWN" in text
+    assert "$EXTERNAL_NOTE" in text
+
+
 def test_daily_picks_sends_failure_alert_and_commits_no_pick_report():
     text = _text()
 
@@ -191,6 +206,10 @@ def test_independent_late_watch_only_workflow_exists_and_is_safe():
     crons = re.findall(r"cron:\s*'([^']+)'", text)
     assert "25,40 13-14 * * 1-5" in crons
     assert "OFFICIAL_CUTOFF=$((9 * 60 + 20))" in text
+    # Delayed correct-slot runs must not be skipped as a wrong DST hour.
+    assert 'if [ "$ET_HOUR" != "09" ]' not in text
+    assert "LATE_WINDOW_END=$((12 * 60))" in text
+    assert "late_watch_only_already_sent_skip" in text
     assert "Does not create official picks" in text
     assert "Does not write data/picks_log.csv" in text
     assert "Does not enable live trading" in text

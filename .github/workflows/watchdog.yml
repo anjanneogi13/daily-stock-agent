@@ -14,9 +14,13 @@ name: Morning Run Watchdog
 
 on:
   schedule:
-    # 09:10 and 09:18 ET, covered for both EDT and EST.
-    # The ET guard below skips the duplicate/wrong DST hour.
-    - cron: '10,18 13-14 * * 1-5'
+    # Delay-compensated slots. Nominal fire times during EDT are
+    # 08:40, 08:55, 09:40 and 09:55 ET (07:40-08:55 ET during EST).
+    # GitHub cron is best-effort and often 30-90 minutes late, so earlier
+    # nominal slots are what actually land near the 09:20 ET cutoff.
+    # The ET guard below only acts between 08:30 and 10:59 ET and dedups
+    # alerts, instead of skipping delayed runs as a wrong DST hour.
+    - cron: '40,55 12-13 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -40,16 +44,35 @@ jobs:
           ET_DATE=$(TZ='America/New_York' date +%Y-%m-%d)
           ET_MINUTES_OF_DAY=$((10#$ET_HOUR * 60 + 10#$ET_MIN))
           OFFICIAL_CUTOFF=$((9 * 60 + 20))
+          WATCH_WINDOW_START=$((8 * 60 + 30))
+          WATCH_WINDOW_END=$((11 * 60))
 
           echo "Watchdog firing at $ET_DATE $ET_HOUR:$ET_MIN ET"
           python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_started --result started --reason "watchdog checking daily picks status"
 
-          # Skip duplicate DST fire — only run in the 09:xx ET hour.
-          if [ "$ET_HOUR" != "09" ]; then
-            echo "⏭ Wrong DST slot ($ET_HOUR:$ET_MIN ET) — skipping"
-            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_wrong_slot_skip --result skipped --reason "wrong DST slot"
+          # GitHub cron delays previously pushed every "correct slot" run past
+          # 09:59 ET, where an exact-hour DST check misclassified it as a
+          # duplicate and skipped it — so the watchdog never rescued or
+          # alerted (2026-08-06..13). Act inside a window instead.
+          if [ "$ET_MINUTES_OF_DAY" -lt "$WATCH_WINDOW_START" ]; then
+            echo "⏭ Before 08:30 ET watch window ($ET_HOUR:$ET_MIN ET) — skipping"
+            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_before_window_skip --result skipped --reason "before 08:30 ET watch window"
             exit 0
           fi
+          if [ "$ET_MINUTES_OF_DAY" -ge "$WATCH_WINDOW_END" ]; then
+            echo "⏭ After 11:00 ET watch window ($ET_HOUR:$ET_MIN ET) — stale run, skipping"
+            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_after_window_skip --result skipped --reason "after 11:00 ET watch window"
+            exit 0
+          fi
+
+          # Refresh shared evidence from origin: picks may have been pushed
+          # after this job's checkout, and an earlier watchdog run may have
+          # already alerted today.
+          STATUS_FILE="data/daily_picks_run_status_${ET_DATE}.jsonl"
+          git fetch origin main --depth 1 2>/dev/null || true
+          git checkout FETCH_HEAD -- data/picks_log.csv 2>/dev/null || true
+          REMOTE_STATUS=$(git show "FETCH_HEAD:$STATUS_FILE" 2>/dev/null || true)
+          LEDGER_ALL=$(printf '%s\n' "$REMOTE_STATUS"; cat "$STATUS_FILE" 2>/dev/null || true)
 
           TODAY_ROWS=0
           if [ -f data/picks_log.csv ]; then
@@ -63,7 +86,24 @@ jobs:
             exit 0
           fi
 
+          # One alert per day: skip only if an earlier watchdog alert SUCCEEDED,
+          # so failed sends are retried by later slots.
+          if printf '%s\n' "$LEDGER_ALL" | grep '"event": "watchdog_alert"' | grep -q '"result": "success"'; then
+            echo "⏭ Watchdog already alerted for $ET_DATE — skipping duplicate alert"
+            python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_already_alerted_skip --result skipped --reason "watchdog alert already sent for ET date" --picks-logged 0
+            exit 0
+          fi
+
           python scripts/record_daily_picks_run_status.py --workflow watchdog --event watchdog_checked --result missing_picks --reason "no daily picks rows before cutoff" --picks-logged 0
+
+          # External scheduler health: cron-job.org should have dispatched
+          # daily-picks via workflow_dispatch during premarket. If no
+          # workflow_dispatch trigger is on today's ledger, the external
+          # scheduler is presumed down (e.g. expired PAT or disabled jobs).
+          EXTERNAL_NOTE=""
+          if ! printf '%s\n' "$LEDGER_ALL" | grep -q '"event_name": "workflow_dispatch"'; then
+            EXTERNAL_NOTE="%0A%0A⚠️ External scheduler appears DOWN: no workflow_dispatch trigger recorded today. Check cron-job.org jobs and rotate the GitHub PAT if expired."
+          fi
 
           RESCUE_TRIGGERED=0
           if [ "$ET_MINUTES_OF_DAY" -gt "$OFFICIAL_CUTOFF" ]; then
@@ -89,7 +129,7 @@ jobs:
             fi
           fi
 
-          MSG="🚨 *Daily picks not logged for $ET_DATE*%0A%0ATime: $ET_HOUR:$ET_MIN ET%0A%0AThe premarket picks workflow has not produced rows in data/picks_log.csv yet.%0A%0A$WINDOW_NOTE%0A%0ARescue triggered: $RESCUE_TRIGGERED%0A%0AManual run: Actions → Daily Stock Picks → Run workflow"
+          MSG="🚨 *Daily picks not logged for $ET_DATE*%0A%0ATime: $ET_HOUR:$ET_MIN ET%0A%0AThe premarket picks workflow has not produced rows in data/picks_log.csv yet.%0A%0A$WINDOW_NOTE%0A%0ARescue triggered: $RESCUE_TRIGGERED$EXTERNAL_NOTE%0A%0AManual run: Actions → Daily Stock Picks → Run workflow"
 
           SENT=0
           for CHAT in "$TELEGRAM_CHAT_ID" "$TELEGRAM_GROUP_CHAT_ID"; do
