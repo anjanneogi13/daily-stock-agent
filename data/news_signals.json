@@ -1493,32 +1493,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VST": {
-    "ticker": "VST",
-    "score_delta": -0.079,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Vistra Says Power Demand Growth Extends Beyond AI Data Centers",
-    "added_at": "2026-08-07T18:10:42.416226+00:00",
-    "expires": "2026-08-14T18:10:42.416231+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "STLN": {
-    "ticker": "STLN",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Starling Oncology Q2 EPS $(0.08) Up From $(0.15) YoY, Sales $161.282M Up From $119.802M YoY",
-    "added_at": "2026-08-07T18:10:42.446572+00:00",
-    "expires": "2026-08-14T18:10:42.446578+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SPCX": {
     "ticker": "SPCX",
     "score_delta": 0.2,
@@ -4537,14 +4511,14 @@
   },
   "BLTE": {
     "ticker": "BLTE",
-    "score_delta": 0.032,
+    "score_delta": 0.046,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
+    "tradeable_score": 0.65,
     "action_window": "next_day",
-    "headline": "HC Wainwright & Co. Maintains Buy on Belite Bio, Raises Price Target to $214",
-    "added_at": "2026-08-12T11:42:32.740790+00:00",
-    "expires": "2026-08-17T11:42:32.740797+00:00",
+    "headline": "Morgan Stanley Maintains Overweight on Belite Bio, Raises Price Target to $206",
+    "added_at": "2026-08-14T18:14:53.846852+00:00",
+    "expires": "2026-08-19T18:14:53.846856+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6890,16 +6864,16 @@
   },
   "AMAT": {
     "ticker": "AMAT",
-    "score_delta": -0.028,
-    "catalyst": "earnings_beat",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "Applied Materials Sees Another Record Year in 2027 As AI Demand Gives It \u2018Unprecedented Visibility\u2019",
-    "added_at": "2026-08-14T10:32:20.754283+00:00",
-    "expires": "2026-08-21T10:32:20.754290+00:00",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Bernstein Maintains Outperform on Applied Materials, Raises Price Target to $700",
+    "added_at": "2026-08-14T18:14:53.856253+00:00",
+    "expires": "2026-08-19T18:14:53.856256+00:00",
     "hard_block": false,
-    "negative_reaction": true
+    "negative_reaction": false
   },
   "CMCT": {
     "ticker": "CMCT",
@@ -7329,5 +7303,57 @@
     "expires": "2026-08-19T17:26:29.028732+00:00",
     "hard_block": false,
     "negative_reaction": true
+  },
+  "PH": {
+    "ticker": "PH",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Bernstein Maintains Outperform on Parker Hannifin, Raises Price Target to $1218",
+    "added_at": "2026-08-14T18:14:53.836486+00:00",
+    "expires": "2026-08-19T18:14:53.836493+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NBIS": {
+    "ticker": "NBIS",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on Nebius Group, Raises Price Target to $324",
+    "added_at": "2026-08-14T18:14:53.840484+00:00",
+    "expires": "2026-08-19T18:14:53.840488+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "JCI": {
+    "ticker": "JCI",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Bernstein Maintains Outperform on Johnson Controls Intl, Raises Price Target to $190",
+    "added_at": "2026-08-14T18:14:53.849966+00:00",
+    "expires": "2026-08-19T18:14:53.849970+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TT": {
+    "ticker": "TT",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Bernstein Maintains Outperform on Trane Technologies, Raises Price Target to $575",
+    "added_at": "2026-08-14T18:14:53.853120+00:00",
+    "expires": "2026-08-19T18:14:53.853124+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

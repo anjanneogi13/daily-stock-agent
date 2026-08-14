@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "KMI",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $5B pipeline project approval represents significant capital deployment and future revenue opportunity for all three energy infrastructure partners, with Kinder Morgan being the largest pure-play midstream company.",
-      "action_window": "next_day",
-      "headline": "Phillips 66, Kinder Morgan, HF Sinclair Approve $5B Pipeline Project",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61119980/phillips-66-kinder-morgan-hf-sinclair-approve-5b-pipeline-project",
-      "source": "alpaca",
-      "added_at": "2026-08-11T17:26:32.992457+00:00"
-    },
-    {
-      "ticker": "QMCO",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong earnings beat combined with raised guidance and significant balance sheet improvement through full debt elimination creates multiple positive catalysts.",
-      "action_window": "intraday",
-      "headline": "Why Is Quantum Stock Surging on Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61119871/why-is-quantum-stock-surging-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-08-11T17:26:32.992473+00:00"
-    },
-    {
-      "ticker": "CMG",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Multistate Salmonella outbreak linked to Chipotle's ingredients poses significant food safety risk with potential for store closures, sales decline, and brand damage similar to past E. coli incidents.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Chipotle Mexican Grill Stock Tuesday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61119793/whats-going-on-with-chipotle-mexican-grill-stock-tuesday-2",
-      "source": "alpaca",
-      "added_at": "2026-08-11T17:26:32.992483+00:00"
-    },
-    {
-      "ticker": "UPWK",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Despite Q2 beat, lowered 2026 guidance citing AI headwinds and weaker client additions creates significant near-term negative catalyst that typically drives immediate sell-off.",
-      "action_window": "intraday",
-      "headline": "Upwork Cuts Profit Forecast, Warns of Near-Term AI Headwinds",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61119405/upwork-cuts-profit-forecast-warns-of-near-term-ai-headwinds",
-      "source": "alpaca",
-      "added_at": "2026-08-11T17:26:32.992494+00:00"
-    },
-    {
-      "ticker": "SPCX",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major sovereign wealth fund (PIF) taking substantial new stake of 154M+ shares signals strong institutional confidence and likely price appreciation from buying pressure.",
-      "action_window": "intraday",
-      "headline": "Public Investment Fund Takes New Stake In Space Exploration Technology Corp With 154,146,835 Shares",
-      "url": "https://www.benzinga.com/m/26/08/61213909/public-investment-fund-takes-new-stake-space-exploration-technology-corp-154-146-835-shares",
-      "source": "alpaca",
-      "added_at": "2026-08-11T17:26:32.992508+00:00",
-      "updated_at": "2026-08-14T15:14:49.862949+00:00"
-    },
-    {
       "ticker": "PDFS",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
@@ -3025,6 +2964,42 @@
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61219624/broadcom-ai-financing-370-billion",
       "source": "alpaca",
       "added_at": "2026-08-14T17:26:29.045083+00:00"
+    },
+    {
+      "ticker": "MP",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Federal defense policy shifts favoring domestic supply chains directly benefit MP Materials as a rare earth mining company, with stock already surging intraday on confirmed government action.",
+      "action_window": "intraday",
+      "headline": "MP Materials Stock Surges Friday Amid Defense Policy Shifts",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61221844/mp-materials-stock-surges-friday-amid-defense-policy-shifts",
+      "source": "alpaca",
+      "added_at": "2026-08-14T18:14:53.860768+00:00"
+    },
+    {
+      "ticker": "MDXH",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Company signals path to profitability with positive EBITDA expectations and reaffirmed 2026 guidance, but mixed Q2 earnings temper immediate impact.",
+      "action_window": "next_day",
+      "headline": "MDxHealth Says Well-Positioned to 'Return to Positive EBITDA'",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61221809/mdxhealth-says-well-positioned-to-return-to-positive-ebitda",
+      "source": "alpaca",
+      "added_at": "2026-08-14T18:14:53.860782+00:00"
+    },
+    {
+      "ticker": "BLTE",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley maintaining Overweight rating while raising price target to $206 signals increased conviction and potential upside, though impact depends on current stock price relative to the new target.",
+      "action_window": "next_day",
+      "headline": "Morgan Stanley Maintains Overweight on Belite Bio, Raises Price Target to $206",
+      "url": "https://www.benzinga.com/news/26/08/61221593/morgan-stanley-maintains-overweight-belite-bio-raises-price-target-206",
+      "source": "alpaca",
+      "added_at": "2026-08-14T18:14:53.860798+00:00"
     }
   ]
 }
