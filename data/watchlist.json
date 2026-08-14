@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ACB",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Aurora Cannabis received unsolicited $4.00/share takeover offer from Curaleaf and is forming special committee to review, suggesting potential for higher bid or competing offers given their mention that $5.00 was below December 2025 levels.",
-      "action_window": "intraday",
-      "headline": "Aurora Cannabis Says Board To Form Special Committee To Review Curaleaf's Unsolicited $4.00 Per Share Take-Over Proposal; Says $5.00 Cap Below December 2025 Trading Levels",
-      "url": "https://www.benzinga.com/quote/ACB",
-      "source": "alpaca",
-      "added_at": "2026-08-11T19:33:41.379025+00:00"
-    },
-    {
-      "ticker": "ALL",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Citigroup downgrade to Sell is a strong negative signal from a major bank, though the raised price target creates mixed messaging that may limit downside.",
-      "action_window": "next_day",
-      "headline": "Citigroup Downgrades Allstate to Sell, Raises Price Target to $240",
-      "url": "https://www.benzinga.com/news/26/08/61123829/citigroup-downgrades-allstate-sell-raises-price-target-240",
-      "source": "alpaca",
-      "added_at": "2026-08-11T19:33:41.379051+00:00"
-    },
-    {
-      "ticker": "NUTX",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Lake Street maintains Buy rating while raising price target to $310, indicating increased confidence and upside potential for the stock.",
-      "action_window": "next_day",
-      "headline": "Lake Street Maintains Buy on Nutex Health, Raises Price Target to $310",
-      "url": "https://www.benzinga.com/news/26/08/61123196/lake-street-maintains-buy-nutex-health-raises-price-target-310",
-      "source": "alpaca",
-      "added_at": "2026-08-11T19:33:41.379070+00:00"
-    },
-    {
       "ticker": "SMR",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
@@ -2896,15 +2860,16 @@
     },
     {
       "ticker": "HTFL",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive Overweight rating and raises price target, signaling increased confidence from a major institutional bank which typically drives near-term buying interest.",
+      "category": "earnings_beat",
+      "rationale": "Shares are surging on Q2 earnings beat with raised full-year guidance, creating a strong dual catalyst for immediate price momentum.",
       "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on HeartFlow, Raises Price Target to $45",
-      "url": "https://www.benzinga.com/news/26/08/61216402/jp-morgan-maintains-overweight-heartflow-raises-price-target-45",
+      "headline": "HeartFlow Shares Soar Following Strong Q2 Results and Upgraded Guidance",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61225914/heartflow-shares-soar-following-strong-q2-results-and-upgraded-guidance",
       "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459074+00:00"
+      "added_at": "2026-08-14T16:14:34.459074+00:00",
+      "updated_at": "2026-08-14T20:03:57.609608+00:00"
     },
     {
       "ticker": "AVGO",
@@ -3013,6 +2978,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61224186/kustom-entertainment-q2-eps-5-49-66-46-yoy-sales-5-381m-2-859m-yoy",
       "source": "alpaca",
       "added_at": "2026-08-14T19:28:09.787778+00:00"
+    },
+    {
+      "ticker": "PSKY",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major M&A milestone achieved with all regulatory clearances secured for Warner Bros. Discovery acquisition, leaving only state AG litigation as final obstacle before deal completion.",
+      "action_window": "intraday",
+      "headline": "Paramount Skydance Says All Regulatory Clearances Secured For Proposed Warner Bros. Discovery Acquisition; Says State AG Litigation Remaining Final Obstacl",
+      "url": "https://www.benzinga.com/m/26/08/61226125/paramount-skydance-says-all-regulatory-clearances-secured-proposed-warner-bros-discovery-acquisition",
+      "source": "alpaca",
+      "added_at": "2026-08-14T20:03:57.609537+00:00"
+    },
+    {
+      "ticker": "LGND",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Analyst initiation with Outperform rating and $330 price target represents fresh positive coverage but lacks the immediate catalyst impact of major firm upgrades or material corporate events.",
+      "action_window": "next_day",
+      "headline": "Leerink Partners Initiates Coverage On Ligand Pharmaceuticals with Outperform Rating, Announces Price Target of $330",
+      "url": "https://www.benzinga.com/news/26/08/61226107/leerink-partners-initiates-coverage-ligand-pharmaceuticals-outperform-rating-announces-price-target-",
+      "source": "alpaca",
+      "added_at": "2026-08-14T20:03:57.609559+00:00"
+    },
+    {
+      "ticker": "PYPL",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "WSJ exclusive reporting active M&A talks with credible acquirers (Stripe/Advent) represents a significant potential premium catalyst for PayPal, though still unconfirmed and characterized as the company being 'struggling'.",
+      "action_window": "intraday",
+      "headline": "'Stripe, Advent In Talks To Buy PayPal; The Fintech Startup And Private-Equity Firm Advent Offered To Buy The Struggling Payments Company In July' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/m/26/08/61225976/stripe-advent-talks-buy-paypal-fintech-startup-and-private-equity-firm-advent-offered-buy-struggling",
+      "source": "alpaca",
+      "added_at": "2026-08-14T20:03:57.609576+00:00"
+    },
+    {
+      "ticker": "SXTP",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double-miss with EPS 5% worse than expected and revenue missing by 69% ($56.8K vs $186K estimate), indicating severe operational underperformance.",
+      "action_window": "intraday",
+      "headline": "60 Degrees Q2 EPS $(0.90) Misses $(0.86) Estimate, Sales $56.798K Miss $186.000K Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61225953/60-degrees-q2-eps-0-90-misses-0-86-estimate-sales-56-798k-miss-186-000k-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-14T20:03:57.609590+00:00"
     }
   ]
 }
