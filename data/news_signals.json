@@ -6318,14 +6318,14 @@
   },
   "GOOGL": {
     "ticker": "GOOGL",
-    "score_delta": 0.049,
+    "score_delta": 0.05,
     "catalyst": "product_launch",
     "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Google Introduces Gemini 3.7 Flash; 3.7 Flash Is Available Through The End Of The Year At An Introductory Price Of $0.75/1M Input Tokens And $3.75/1M Output Tokens",
-    "added_at": "2026-08-13T17:28:30.816870+00:00",
-    "expires": "2026-08-20T17:28:30.816876+00:00",
+    "tradeable_score": 0.72,
+    "action_window": "next_day",
+    "headline": "Waymo Posts On X \"Big news for the Golden State \u2014 we have received the CPUC\u2019s approval to expand our autonomous ride-hailing service across the SF Bay Area and LA, and bring our service to Sacramento ",
+    "added_at": "2026-08-14T19:28:09.771432+00:00",
+    "expires": "2026-08-21T19:28:09.771444+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7353,6 +7353,32 @@
     "headline": "Bernstein Maintains Outperform on Trane Technologies, Raises Price Target to $575",
     "added_at": "2026-08-14T18:14:53.853120+00:00",
     "expires": "2026-08-19T18:14:53.853124+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HCWB": {
+    "ticker": "HCWB",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.92,
+    "action_window": "next_day",
+    "headline": "HCW Biologics Restates Q1 2026 EPS $1.39, Sales $6.543M Up From $5.065K YoY",
+    "added_at": "2026-08-14T19:28:09.750275+00:00",
+    "expires": "2026-08-21T19:28:09.750291+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KUST": {
+    "ticker": "KUST",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.78,
+    "action_window": "intraday",
+    "headline": "Kustom Entertainment Q2 EPS $(5.49) Up From $(66.46) YoY, Sales $5.381M Up From $2.859M YoY",
+    "added_at": "2026-08-14T19:28:09.778156+00:00",
+    "expires": "2026-08-21T19:28:09.778166+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
