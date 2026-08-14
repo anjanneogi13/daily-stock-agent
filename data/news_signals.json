@@ -7225,5 +7225,83 @@
     "expires": "2026-09-13T12:47:57.150410+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "BIRK": {
+    "ticker": "BIRK",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "Evercore ISI Group Maintains Outperform on Birkenstock Holding, Raises Price Target to $49",
+    "added_at": "2026-08-14T14:12:30.828245+00:00",
+    "expires": "2026-08-19T14:12:30.828255+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALVO": {
+    "ticker": "ALVO",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Evercore ISI Group Initiates Coverage On Alvotech with Outperform Rating",
+    "added_at": "2026-08-14T14:12:30.834246+00:00",
+    "expires": "2026-08-19T14:12:30.834254+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ALKT": {
+    "ticker": "ALKT",
+    "score_delta": 0.032,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Alkami Technology\u2019s Digital Banking Platform Selected By Strata Credit Union To Modernize Consumer Digital Banking Experience",
+    "added_at": "2026-08-14T14:12:30.840143+00:00",
+    "expires": "2026-08-21T14:12:30.840151+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OKTA": {
+    "ticker": "OKTA",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Okta, Raises Price Target to $166",
+    "added_at": "2026-08-14T14:12:30.846143+00:00",
+    "expires": "2026-08-19T14:12:30.846151+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MSGS": {
+    "ticker": "MSGS",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Susquehanna Maintains Positive on Madison Square Garden, Raises Price Target to $477",
+    "added_at": "2026-08-14T14:12:30.852027+00:00",
+    "expires": "2026-08-19T14:12:30.852034+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NTNX": {
+    "ticker": "NTNX",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Nutanix, Raises Price Target to $84",
+    "added_at": "2026-08-14T14:12:30.858007+00:00",
+    "expires": "2026-08-19T14:12:30.858014+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

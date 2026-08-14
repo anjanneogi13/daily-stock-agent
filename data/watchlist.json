@@ -3038,6 +3038,18 @@
       "url": "https://www.benzinga.com/m/26/08/61206551/star-equity-holdings-acquire-harte-hanks-5-share-comprising-cash-and-strrp-pref-shares-ev-38-4m",
       "source": "alpaca",
       "added_at": "2026-08-14T12:47:57.158627+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Michigan Consumer Sentiment missed expectations significantly (51.0 vs 54.4), indicating weaker economic conditions that typically pressure equities and may influence Fed policy.",
+      "action_window": "intraday",
+      "headline": "Michigan Consumer Sentiment For August 51.0 Vs 54.4 Est.",
+      "url": "https://www.benzinga.com/quote/SPY",
+      "source": "alpaca",
+      "added_at": "2026-08-14T14:12:30.866568+00:00"
     }
   ]
 }
