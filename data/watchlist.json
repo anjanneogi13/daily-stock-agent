@@ -1,55 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MU",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Strong pricing power confirmation with AI-driven memory shortage extending through 2027 signals sustained margin expansion and revenue visibility.",
-      "action_window": "intraday",
-      "headline": "Micron Says Customers Are Scrambling for Memory Even at \u2018Very High\u2019 Prices",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61100740/micron-says-customers-are-scrambling-for-memory-even-at-very-high-prices",
-      "source": "alpaca",
-      "added_at": "2026-08-11T09:54:58.612269+00:00"
-    },
-    {
-      "ticker": "TME",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Stock is sinking despite EPS beat, indicating revenue miss or guidance disappointment overshadowing positive EPS, creating immediate selling pressure.",
-      "action_window": "intraday",
-      "headline": "Why Is Tencent Music Stock Sinking Tuesday?",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61115015/why-is-tencent-music-stock-sinking-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-08-11T09:54:58.612282+00:00",
-      "updated_at": "2026-08-11T15:29:11.765678+00:00"
-    },
-    {
-      "ticker": "ONON",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "On Holding's FY2026 sales guidance midpoint of $4.45B materially misses consensus estimate of $4.49B by approximately 1%, representing a significant guidance cut that warrants immediate trading action.",
-      "action_window": "intraday",
-      "headline": "On Holding Sees FY2026 Sales $4.390B-$4.503B vs $4.490B Est",
-      "url": "https://www.benzinga.com/news/26/08/61100644/holding-sees-fy2026-sales-4-390b-4-503b-vs-4-490b-est",
-      "source": "alpaca",
-      "added_at": "2026-08-11T09:54:58.612292+00:00"
-    },
-    {
-      "ticker": "UCL",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Nasdaq minimum bid price notice indicates the stock has traded below $1 for an extended period, raising delisting risk and potential shareholder concern.",
-      "action_window": "next_day",
-      "headline": "UCLOUDLINK GROUP Announced Receipt Of Minimum Bid Price Notice From Nasdaq",
-      "url": "https://www.benzinga.com/quote/UCL",
-      "source": "alpaca",
-      "added_at": "2026-08-11T09:54:58.612307+00:00"
-    },
-    {
       "ticker": "LAR",
       "tradeable_score": 0.82,
       "sentiment": "bearish",
@@ -3220,6 +3171,78 @@
       "url": "https://www.benzinga.com/markets/equities/26/08/61201301/digital-asset-acquisition-shares-jump-old-glory-deal-termination",
       "source": "alpaca",
       "added_at": "2026-08-14T09:02:25.756317+00:00"
+    },
+    {
+      "ticker": "LRCX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "A $3B+ R&D expansion into AI chip production is a significant strategic investment signaling future growth, but impact timing is longer-term rather than immediate.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Lam Research Stock Friday?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61203022/lam-research-plans-3-billion-rd-blitz-as-ai-raises-the-stakes-for-chipmakers",
+      "source": "alpaca",
+      "added_at": "2026-08-14T10:32:20.783598+00:00"
+    },
+    {
+      "ticker": "AMAT",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Record Q3 gross margin and strong Q4 guidance with positive 2027 outlook signals fundamental strength, though premarket decline suggests temporary negative reaction creating potential entry opportunity.",
+      "action_window": "intraday",
+      "headline": "Applied Materials Sees Another Record Year in 2027 As AI Demand Gives It \u2018Unprecedented Visibility\u2019",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61202488/applied-materials-sees-another-record-year-in-2027-as-ai-demand-gives-it-unprecedented-visibility",
+      "source": "alpaca",
+      "added_at": "2026-08-14T10:32:20.783616+00:00"
+    },
+    {
+      "ticker": "MU",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Positive premarket movement driven by AI memory demand tailwinds and $250M venture fund deployment signals strategic growth initiatives, though lacks hard catalysts like earnings or formal guidance.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Micron Technology Stock Friday?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61202173/whats-going-on-with-micron-technology-stock-friday-5",
+      "source": "alpaca",
+      "added_at": "2026-08-14T10:32:20.783626+00:00"
+    },
+    {
+      "ticker": "CMCT",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of 30% ($4.03 vs $3.11 estimate) outweighs modest 5.6% revenue beat, indicating deteriorating profitability and margin compression.",
+      "action_window": "intraday",
+      "headline": "Creative Media Q2 EPS $(4.03) Misses $(3.11) Estimate, Sales $29.683M Beat $28.100M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61203002/creative-media-q2-eps-4-03-misses-3-11-estimate-sales-29-683m-beat-28-100m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-14T10:32:20.783637+00:00"
+    },
+    {
+      "ticker": "CAPR",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Cantor Fitzgerald upgraded CAPR to Overweight with a $28 price target, a meaningful catalyst from a reputable biotech-focused bank that typically drives immediate price action in small-cap therapeutics.",
+      "action_window": "intraday",
+      "headline": "Cantor Fitzgerald Upgrades Capricor Therapeutics to Overweight, Raises Price Target to $28",
+      "url": "https://www.benzinga.com/news/26/08/61202927/cantor-fitzgerald-upgrades-capricor-therapeutics-overweight-raises-price-target-28",
+      "source": "alpaca",
+      "added_at": "2026-08-14T10:32:20.783650+00:00"
+    },
+    {
+      "ticker": "KDK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "California driverless testing permit is a significant regulatory milestone enabling Kodiak AI to advance heavy-duty autonomous vehicle testing, reducing technical and regulatory risk.",
+      "action_window": "intraday",
+      "headline": "Kodiak AI Receives California State Drivered Testing Permit Under Autonomous Vehicle Tester Program For Heavy-Duty Autonomous Vehicles",
+      "url": "https://www.benzinga.com/news/26/08/61202558/kodiak-ai-receives-california-state-drivered-testing-permit-under-autonomous-vehicle-tester-program-",
+      "source": "alpaca",
+      "added_at": "2026-08-14T10:32:20.783661+00:00"
     }
   ]
 }

@@ -213,19 +213,6 @@
     "expires": "2027-01-10T21:52:56.800802+00:00",
     "hard_block": true
   },
-  "PYPL": {
-    "ticker": "PYPL",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "PayPal Stock Surges Nearly 15% in Premarket as Stripe and Advent International Reportedly Propose $53 Billion Joint Acquisition",
-    "added_at": "2026-07-15T09:55:27.980196+00:00",
-    "expires": "2026-08-14T09:55:27.980202+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NVO": {
     "ticker": "NVO",
     "score_delta": 0.15,
@@ -774,19 +761,6 @@
     "headline": "Seer Receives Revised Acquisition Proposal From Radoff-JEC Group For $2.55 Per Share In Cash Plus A Contingent Value Right.; Special Committee To Review Both Acquisition Proposals And Other Alternativ",
     "added_at": "2026-07-30T22:01:54.489563+00:00",
     "expires": "2026-08-29T22:01:54.489568+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SMFG": {
-    "ticker": "SMFG",
-    "score_delta": -0.118,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Sumitomo Mitsui Finl Gr Lowers FY2026 GAAP EPS Guidance from $0.85 to $0.84",
-    "added_at": "2026-07-31T10:31:52.106970+00:00",
-    "expires": "2026-08-14T10:31:52.106977+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1441,19 +1415,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "MDA": {
-    "ticker": "MDA",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "MDA Space Q2 Adj. EPS $0.36 Beats $0.34 Estimate, Sales $498.600M Beat $445.683M Estimate",
-    "added_at": "2026-08-07T09:54:56.508658+00:00",
-    "expires": "2026-08-14T09:54:56.508666+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TXRH": {
     "ticker": "TXRH",
     "score_delta": 0.1,
@@ -1477,19 +1438,6 @@
     "headline": "Interface Sees Q3 Sales $370.000M-$380.000M vs $378.806M Est",
     "added_at": "2026-08-07T09:54:56.528562+00:00",
     "expires": "2026-08-21T09:54:56.528567+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ACMR": {
-    "ticker": "ACMR",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "ACM Research Q2 Adj. EPS $0.61 Beats $0.34 Estimate, Sales $292.919M Beat $269.276M Estimate",
-    "added_at": "2026-08-07T09:54:56.552653+00:00",
-    "expires": "2026-08-14T09:54:56.552659+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7171,6 +7119,97 @@
     "headline": "Digital Asset Acquisition Corp. (DAAQ) Stock Rallies Over 41% After Hours: Here's What Is Going On",
     "added_at": "2026-08-14T09:02:25.730726+00:00",
     "expires": "2026-09-13T09:02:25.730731+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NU": {
+    "ticker": "NU",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Needham Maintains Buy on Nu Holdings, Raises Price Target to $19",
+    "added_at": "2026-08-14T10:32:20.744542+00:00",
+    "expires": "2026-08-19T10:32:20.744549+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LRCX": {
+    "ticker": "LRCX",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "What's Going On With Lam Research Stock Friday?",
+    "added_at": "2026-08-14T10:32:20.749837+00:00",
+    "expires": "2026-08-21T10:32:20.749844+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AMAT": {
+    "ticker": "AMAT",
+    "score_delta": -0.028,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Applied Materials Sees Another Record Year in 2027 As AI Demand Gives It \u2018Unprecedented Visibility\u2019",
+    "added_at": "2026-08-14T10:32:20.754283+00:00",
+    "expires": "2026-08-21T10:32:20.754290+00:00",
+    "hard_block": false,
+    "negative_reaction": true
+  },
+  "CMCT": {
+    "ticker": "CMCT",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Creative Media Q2 EPS $(4.03) Misses $(3.11) Estimate, Sales $29.683M Beat $28.100M Estimate",
+    "added_at": "2026-08-14T10:32:20.758813+00:00",
+    "expires": "2026-08-21T10:32:20.758819+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "YSS": {
+    "ticker": "YSS",
+    "score_delta": -0.025,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.35,
+    "action_window": "next_day",
+    "headline": "Needham Maintains Buy on York Space Systems, Lowers Price Target to $18",
+    "added_at": "2026-08-14T10:32:20.764303+00:00",
+    "expires": "2026-08-19T10:32:20.764310+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CAPR": {
+    "ticker": "CAPR",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Cantor Fitzgerald Upgrades Capricor Therapeutics to Overweight, Raises Price Target to $28",
+    "added_at": "2026-08-14T10:32:20.768657+00:00",
+    "expires": "2026-08-19T10:32:20.768663+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KDK": {
+    "ticker": "KDK",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Kodiak AI Receives California State Drivered Testing Permit Under Autonomous Vehicle Tester Program For Heavy-Duty Autonomous Vehicles",
+    "added_at": "2026-08-14T10:32:20.772957+00:00",
+    "expires": "2026-08-21T10:32:20.772963+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
