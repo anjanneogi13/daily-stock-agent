@@ -3073,6 +3073,66 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61232078/laser-photonics-q2-eps-0-08-0-12-yoy-sales-1-806m-down-2-599m-yoy",
       "source": "alpaca",
       "added_at": "2026-08-14T21:49:11.015500+00:00"
+    },
+    {
+      "ticker": "SPAI",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS missed estimates by 25% ($0.15 loss vs $0.12 expected) despite revenue beat of 9%, indicating operational challenges and likely negative market reaction.",
+      "action_window": "next_day",
+      "headline": "Safe Pro Group Q2 EPS $(0.15) Misses $(0.12) Estimate, Sales $1.332M Beat $1.220M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61232643/safe-pro-group-q2-eps-0-15-misses-0-12-estimate-sales-1-332m-beat-1-220m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-14T22:15:52.241269+00:00"
+    },
+    {
+      "ticker": "TRNR",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings with EPS beat on reduced losses but significant revenue miss of 17% ($6.647M vs $8.000M estimate) signals weaker business fundamentals despite cost management.",
+      "action_window": "next_day",
+      "headline": "Interactive Strength Q2 EPS $(17.37) Beats $(19.67) Estimate, Sales $6.647M Miss $8.000M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61232554/interactive-strength-q2-eps-17-37-beats-19-67-estimate-sales-6-647m-miss-8-000m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-14T22:15:52.241292+00:00"
+    },
+    {
+      "ticker": "TSX:ACD",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with adjusted EPS deteriorating from -$0.03 to -$0.16 YoY and revenue declining 22% from $8.788M to $6.824M, indicating fundamental business deterioration.",
+      "action_window": "next_day",
+      "headline": "Accord Financial Q2 Adj. EPS $(0.16) Down From $(0.03) YoY, Sales $6.824M Down From $8.788M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61232461/accord-financial-q2-adj-eps-0-16-down-0-03-yoy-sales-6-824m-down-8-788m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-14T22:15:52.241306+00:00"
+    },
+    {
+      "ticker": "AIRT",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS deteriorating nearly 10x year-over-year despite 63% revenue growth, indicating severe margin compression or operational issues.",
+      "action_window": "next_day",
+      "headline": "Air T Q1 EPS $(5.86) Down From $(0.61) YoY, Sales $115.461M Up From $70.870M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61232449/air-t-q1-eps-5-86-down-0-61-yoy-sales-115-461m-70-870m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-14T22:15:52.241320+00:00"
+    },
+    {
+      "ticker": "HIVE",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS of -$0.54 versus -$0.20 estimate (170% worse) and revenue missing by $2M creates immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "HIVE Digital Technologies Q1 EPS $(0.54) Misses $(0.20) Estimate, Sales $79.120M Miss $81.123M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61232419/hive-digital-technologies-q1-eps-0-54-misses-0-20-estimate-sales-79-120m-miss-81-123m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-14T22:15:52.241334+00:00"
     }
   ]
 }
