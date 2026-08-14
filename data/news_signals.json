@@ -1363,19 +1363,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RDW": {
-    "ticker": "RDW",
-    "score_delta": 0.05,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.35,
-    "action_window": "ignore",
-    "headline": "Why Is Redwire Stock Surging on Friday?",
-    "added_at": "2026-08-07T15:23:57.823527+00:00",
-    "expires": "2026-08-14T15:23:57.823531+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TSX:MDA": {
     "ticker": "TSX:MDA",
     "score_delta": 0.079,
@@ -1480,19 +1467,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "F": {
-    "ticker": "F",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Ford Drops Fathom EV \u2014 and It Undercuts Tesla\u2019s Cybertruck by 2.5x",
-    "added_at": "2026-08-07T15:23:57.810545+00:00",
-    "expires": "2026-08-14T15:23:57.810549+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PPL": {
     "ticker": "PPL",
     "score_delta": 0.064,
@@ -1503,19 +1477,6 @@
     "headline": "PPL Corp Says Expects Stronger Earnings Growth In H2 2026, Supported By Rate Case Outcomes",
     "added_at": "2026-08-07T15:23:57.813786+00:00",
     "expires": "2026-08-21T15:23:57.813791+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CGC": {
-    "ticker": "CGC",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Canopy Growth Sees Steady Progress on Profitability Measures",
-    "added_at": "2026-08-07T15:23:57.817038+00:00",
-    "expires": "2026-08-14T15:23:57.817042+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3185,14 +3146,14 @@
   },
   "TSLA": {
     "ticker": "TSLA",
-    "score_delta": 0.027,
+    "score_delta": 0.039,
     "catalyst": "product_launch",
     "sentiment": "bullish",
-    "tradeable_score": 0.38,
-    "action_window": "ignore",
-    "headline": "Elon Musk\u2019s Terafab Construction Plan: A Semiconductor Factory Bigger Than The World\u2019s Largest Building",
-    "added_at": "2026-08-11T09:54:58.599331+00:00",
-    "expires": "2026-08-18T09:54:58.599336+00:00",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "Tesla Preps SpaceX Rocket-Powered Flying Roadster Demo",
+    "added_at": "2026-08-14T16:14:34.443344+00:00",
+    "expires": "2026-08-21T16:14:34.443349+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7327,6 +7288,71 @@
     "headline": "Micron and 15 Other Stocks To Play The AI Buildout Race: They Are Still 20% Below Highs",
     "added_at": "2026-08-14T15:14:49.849559+00:00",
     "expires": "2026-08-19T15:14:49.849567+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OMDA": {
+    "ticker": "OMDA",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on Omada Health, Raises Price Target to $30",
+    "added_at": "2026-08-14T16:14:34.423841+00:00",
+    "expires": "2026-08-19T16:14:34.423847+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BMY": {
+    "ticker": "BMY",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Bristol Myers Squibb Gets FDA Nod For Novel Multiple Myeloma Treatment",
+    "added_at": "2026-08-14T16:14:34.429583+00:00",
+    "expires": "2026-09-13T16:14:34.429589+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MBOT": {
+    "ticker": "MBOT",
+    "score_delta": -0.029,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.4,
+    "action_window": "intraday",
+    "headline": "B. Riley Securities Reiterates Buy on Microbot Medical, Lowers Price Target to $4",
+    "added_at": "2026-08-14T16:14:34.434278+00:00",
+    "expires": "2026-08-19T16:14:34.434284+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ASND": {
+    "ticker": "ASND",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "TD Cowen Maintains Buy on Ascendis Pharma, Raises Price Target to $341",
+    "added_at": "2026-08-14T16:14:34.447950+00:00",
+    "expires": "2026-08-19T16:14:34.447954+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HTFL": {
+    "ticker": "HTFL",
+    "score_delta": 0.049,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "JP Morgan Maintains Overweight on HeartFlow, Raises Price Target to $45",
+    "added_at": "2026-08-14T16:14:34.452544+00:00",
+    "expires": "2026-08-19T16:14:34.452548+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
