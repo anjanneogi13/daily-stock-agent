@@ -13,8 +13,13 @@ on:
     # - send missed-window alerts after the 09:20 ET cutoff.
     #
     # Minute offsets avoid the most crowded top-of-hour cron slots.
-    # The 12-14 UTC range covers both EDT and EST premarket windows.
-    - cron: '5,20,35,50 12-14 * * 1-5'
+    # The 11-14 UTC range covers both EDT and EST premarket windows and
+    # compensates for GitHub cron delays: 11:xx UTC fires are 07:xx ET during
+    # EDT (guard skips them harmlessly before 08:00 ET), but when GitHub runs
+    # them 30-90 minutes late they land INSIDE the 08:00-09:20 ET window.
+    # Evidence: 2026-08-06 through 2026-08-13 every 12:05 UTC fire started
+    # after 09:20 ET, causing NO_PICK_WINDOW_MISSED on 6 straight trading days.
+    - cron: '5,20,35,50 11-14 * * 1-5'
 
   workflow_dispatch:
 
