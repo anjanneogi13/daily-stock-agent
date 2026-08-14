@@ -30,7 +30,7 @@ GitHub cron is best-effort and frequently 30-90 minutes late. Premarket-critical
 
 GitHub schedules alone cannot guarantee an in-window premarket run. cron-job.org jobs POST `workflow_dispatch` for `daily-picks.yml` (08:05, 08:35, 09:05, 09:15 ET) and `late_watch_only.yml` (09:25, 09:40 ET) using a GitHub PAT in the Authorization header.
 
-Health check: today's `data/daily_picks_run_status_YYYY-MM-DD.jsonl` must contain runs with `"event_name": "workflow_dispatch"`. If it only contains `"schedule"` triggers, the external scheduler is down. The last recorded external dispatch was 2026-08-05; the PAT was configured 2026-05-07, so a 90-day token expiry is the most likely cause. The watchdog alert now includes an "External scheduler appears DOWN" note when no dispatch is seen.
+Health check: today's `data/daily_picks_run_status_YYYY-MM-DD.jsonl` must contain runs with `"event_name": "workflow_dispatch"`. If it only contains `"schedule"` triggers, the external scheduler is down (historical example: dispatches stopped after 2026-08-05 when the PAT configured on 2026-05-07 hit a 90-day expiry). The watchdog alert includes an "External scheduler appears DOWN" note when no dispatch is seen.
 
 Restore procedure (manual, cannot be done from this repo):
 
