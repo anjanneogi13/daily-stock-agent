@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CAH",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Cardinal Health delivered a Q4 earnings beat, raised FY27 guidance, announced $5B buyback expansion, hit 52-week highs, and announced significant market share expansion in high-growth cell-and-gene therapy segment.",
-      "action_window": "intraday",
-      "headline": "Cardinal Health Says It Now Exclusively Serves Nearly Half The Cell-And-Gene Therapy Market",
-      "url": "https://www.benzinga.com/markets/earnings/26/08/61111526/cardinal-health-says-it-now-exclusively-serves-nearly-half-the-cell-and-gene-therapy-market",
-      "source": "alpaca",
-      "added_at": "2026-08-11T14:15:33.331326+00:00"
-    },
-    {
-      "ticker": "ACHR",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Multiple stocks moving higher with QMCO reporting 44% gain on strong earnings, but this is a roundup of various gainers rather than a single actionable catalyst with unclear direct impact on listed tickers.",
-      "action_window": "ignore",
-      "headline": "Quantum, Kopin, Alamar Biosciences And Other Big Stocks Moving Higher On Tuesday",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61111418/quantum-kopin-alamar-biosciences-and-other-big-stocks-moving-higher-on-tuesday",
-      "source": "alpaca",
-      "added_at": "2026-08-11T14:15:33.331345+00:00"
-    },
-    {
-      "ticker": "CLSK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major $6.6B AI data center lease represents significant business expansion and revenue diversification despite Q3 loss, creating a mixed but overall positive catalyst for the bitcoin miner.",
-      "action_window": "intraday",
-      "headline": "CleanSpark Signs $6.6 Billion AI Data Center Lease, Reports Q3 Loss",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61110862/cleanspark-signs-6-6-billion-ai-data-center-lease-reports-q3-loss",
-      "source": "alpaca",
-      "added_at": "2026-08-11T14:15:33.331362+00:00"
-    },
-    {
-      "ticker": "ALMS",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strong Phase 3 long-term data showing leading skin clearance rates de-risks upcoming Q4 FDA filing and validates competitive positioning in psoriasis market.",
-      "action_window": "intraday",
-      "headline": "Alumis Psoriasis Treatment Shows Leading Skin Clearance Rates",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61110779/alumis-psoriasis-treatment-shows-leading-skin-clearance-rates",
-      "source": "alpaca",
-      "added_at": "2026-08-11T14:15:33.331372+00:00"
-    },
-    {
-      "ticker": "YPF",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "CEO publicly raised 2026 EBITDA guidance by 33% ($6B to $8B), a significant positive revision indicating strong operational performance and improved business outlook.",
-      "action_window": "intraday",
-      "headline": "YPF Argentine CEO Says YPF Expects 2026 EBITDA Of $8B, Up From Previous Estimate Of $6B",
-      "url": "https://www.benzinga.com/news/26/08/61110734/ypf-argentine-ceo-says-ypf-expects-2026-ebitda-8b-previous-estimate-6b",
-      "source": "alpaca",
-      "added_at": "2026-08-11T14:15:33.331381+00:00"
-    },
-    {
       "ticker": "SCWO",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
@@ -171,16 +111,16 @@
     },
     {
       "ticker": "SPCX",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Stock already surging on strong subscriber growth metrics from CEO announcement showing significant Starlink business momentum with 13M consumer and 22M mobile users.",
+      "rationale": "Major sovereign wealth fund (PIF) taking substantial new stake of 154M+ shares signals strong institutional confidence and likely price appreciation from buying pressure.",
       "action_window": "intraday",
-      "headline": "SpaceX Stock Surges Past $135 IPO Price: What's Going On?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61152207/spacex-stock-surges-past-135-ipo-price-whats-going-on",
+      "headline": "Public Investment Fund Takes New Stake In Space Exploration Technology Corp With 154,146,835 Shares",
+      "url": "https://www.benzinga.com/m/26/08/61213909/public-investment-fund-takes-new-stake-space-exploration-technology-corp-154-146-835-shares",
       "source": "alpaca",
       "added_at": "2026-08-11T17:26:32.992508+00:00",
-      "updated_at": "2026-08-12T17:27:59.262477+00:00"
+      "updated_at": "2026-08-14T15:14:49.862949+00:00"
     },
     {
       "ticker": "PDFS",
@@ -3050,6 +2990,18 @@
       "url": "https://www.benzinga.com/quote/SPY",
       "source": "alpaca",
       "added_at": "2026-08-14T14:12:30.866568+00:00"
+    },
+    {
+      "ticker": "AVAV",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "New tariffs directly benefiting US drone manufacturers create immediate competitive advantage for AeroVironment as a domestic producer.",
+      "action_window": "intraday",
+      "headline": "What's Going On With the Rise in AeroVironment Stock?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61213656/whats-going-on-with-the-rise-in-aerovironment-stock",
+      "source": "alpaca",
+      "added_at": "2026-08-14T15:14:49.862971+00:00"
     }
   ]
 }
