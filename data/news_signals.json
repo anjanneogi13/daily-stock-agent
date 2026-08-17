@@ -6796,5 +6796,83 @@
     "expires": "2026-08-22T09:34:39.570778+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DAVE": {
+    "ticker": "DAVE",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Piper Sandler Initiates Coverage On Dave with Overweight Rating, Announces Price Target of $390",
+    "added_at": "2026-08-17T10:25:44.248776+00:00",
+    "expires": "2026-08-22T10:25:44.248783+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HTHT": {
+    "ticker": "HTHT",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "H World Group Q2 Adj. EPS $0.78 Beats $0.70 Estimate, Sales $1.050B Beat $982.800M Estimate",
+    "added_at": "2026-08-17T10:25:44.258924+00:00",
+    "expires": "2026-08-24T10:25:44.258933+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNDK": {
+    "ticker": "SNDK",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Why Sandisk Bulls Think the Old Memory Boom-And-Bust Playbook Is Dead",
+    "added_at": "2026-08-17T10:25:44.289153+00:00",
+    "expires": "2026-08-22T10:25:44.289159+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EMAT": {
+    "ticker": "EMAT",
+    "score_delta": -0.079,
+    "catalyst": "earnings_miss",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Evolution Metals & Techs Q2 EPS $(0.02) Beats $(0.03) Estimate, Sales $1.636M Miss $2.100M Estimate",
+    "added_at": "2026-08-17T10:25:44.293137+00:00",
+    "expires": "2026-08-24T10:25:44.293142+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "OABI": {
+    "ticker": "OABI",
+    "score_delta": 0.097,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Omniab Revises 2026 Cash and Cash Equivalents Financial Guidance to Between $49M and $53M Vs. $37-$41M Previously",
+    "added_at": "2026-08-17T10:25:44.297125+00:00",
+    "expires": "2026-08-31T10:25:44.297130+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TTMI": {
+    "ticker": "TTMI",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "TTM Technologies To Acquire Radio Frequency Technology Maker EPIQ Design Solutions For ~$1.1B In Cash",
+    "added_at": "2026-08-17T10:25:44.301086+00:00",
+    "expires": "2026-08-31T10:25:44.301091+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

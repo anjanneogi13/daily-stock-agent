@@ -940,15 +940,16 @@
     },
     {
       "ticker": "HIVE",
-      "tradeable_score": 0.78,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant double miss with EPS of -$0.54 versus -$0.20 estimate (170% worse) and revenue missing by $2M creates immediate selling pressure.",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $350M cloud deal adding $70M annualized revenue with confirmed premarket price jump represents significant revenue catalyst for HIVE.",
       "action_window": "intraday",
-      "headline": "HIVE Digital Technologies Q1 EPS $(0.54) Misses $(0.20) Estimate, Sales $79.120M Miss $81.123M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232419/hive-digital-technologies-q1-eps-0-54-misses-0-20-estimate-sales-79-120m-miss-81-123m-estimate",
+      "headline": "HIVE Stock Jumps After AI Cloud Deal - Here's Why",
+      "url": "https://www.benzinga.com/crypto/26/08/61240625/hive-stock-jumps-after-ai-cloud-deal-heres-why",
       "source": "alpaca",
-      "added_at": "2026-08-14T22:15:52.241334+00:00"
+      "added_at": "2026-08-14T22:15:52.241334+00:00",
+      "updated_at": "2026-08-17T10:25:44.306701+00:00"
     },
     {
       "ticker": "GOOGL",
@@ -1021,6 +1022,127 @@
       "url": "https://www.benzinga.com/news/26/08/61239724/goldman-sachs-initiates-coverage-innovation-buy-rating-announces-price-target-400",
       "source": "alpaca",
       "added_at": "2026-08-17T09:34:39.594401+00:00"
+    },
+    {
+      "ticker": "DAVE",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Piper Sandler initiating coverage with Overweight rating is a meaningful positive catalyst that typically drives immediate buying interest and price discovery.",
+      "action_window": "intraday",
+      "headline": "Piper Sandler Initiates Coverage On Dave with Overweight Rating, Announces Price Target of $390",
+      "url": "https://www.benzinga.com/news/26/08/61240783/piper-sandler-initiates-coverage-dave-overweight-rating-announces-price-target-390",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306671+00:00"
+    },
+    {
+      "ticker": "HTHT",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "H World Group beat Q2 EPS estimates by 11.4% ($0.78 vs $0.70) and sales by 6.8% ($1.050B vs $982.8M), representing a strong double beat on key metrics.",
+      "action_window": "intraday",
+      "headline": "H World Group Q2 Adj. EPS $0.78 Beats $0.70 Estimate, Sales $1.050B Beat $982.800M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61240757/h-world-group-q2-adj-eps-0-78-beats-0-70-estimate-sales-1-050b-beat-982-800m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306683+00:00"
+    },
+    {
+      "ticker": "SOFI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Piper Sandler initiates coverage with Overweight rating and $22 price target, representing meaningful positive catalyst from a reputable bank that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Piper Sandler Initiates Coverage On SoFi Technologies with Overweight Rating, Announces Price Target of $22",
+      "url": "https://www.benzinga.com/news/26/08/61240740/piper-sandler-initiates-coverage-sofi-technologies-overweight-rating-announces-price-target-22",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306690+00:00"
+    },
+    {
+      "ticker": "SNDK",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Strong 6% premarket move driven by multiple analyst upgrades citing structural AI demand tailwinds, margin expansion, and capital allocation, representing a meaningful shift in sector narrative from cyclical to secular growth.",
+      "action_window": "intraday",
+      "headline": "Why Sandisk Bulls Think the Old Memory Boom-And-Bust Playbook Is Dead",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61240609/why-sandisk-bulls-think-the-old-memory-boom-and-bust-playbook-is-dead",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306708+00:00"
+    },
+    {
+      "ticker": "TSQ",
+      "tradeable_score": 0.52,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Strategic partnership in digital advertising suggests potential revenue growth but lacks specific financial details or immediate material impact.",
+      "action_window": "next_day",
+      "headline": "Townsquare Media Enters Strategic Digital Advertising Partnership With Midlands Media Group",
+      "url": "https://www.benzinga.com/news/26/08/61240598/townsquare-media-enters-strategic-digital-advertising-partnership-midlands-media-group",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306713+00:00"
+    },
+    {
+      "ticker": "NRRWF",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Nasdaq uplisting combined with significant three-year infrastructure contract announcement creates dual catalysts for immediate trading activity and broader market access.",
+      "action_window": "intraday",
+      "headline": "NuRAN Wireless Shares Begin Trading On Nasdaq Capital Market Under The Symbol 'NUR'; Starts Three-Year Rural Mobile Network Infrastructure Project For A State-Owned Mobile Network Operator In West Africa",
+      "url": "https://www.benzinga.com/news/26/08/61240571/nuran-wireless-shares-begin-trading-nasdaq-capital-market-under-symbol-nur-starts-three-year-rural-m",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306719+00:00"
+    },
+    {
+      "ticker": "EMAT",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "earnings_miss",
+      "rationale": "Mixed earnings results with EPS beating expectations by 33% but revenue missing by 22%, creating offsetting trading signals that likely result in muted net impact.",
+      "action_window": "intraday",
+      "headline": "Evolution Metals & Techs Q2 EPS $(0.02) Beats $(0.03) Estimate, Sales $1.636M Miss $2.100M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61240462/evolution-metals-techs-q2-eps-0-02-beats-0-03-estimate-sales-1-636m-miss-2-100m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306724+00:00"
+    },
+    {
+      "ticker": "OABI",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Definitive collaboration with major pharma Eli Lilly including upfront payment and up to $370M in milestones represents significant value for smaller biotech OmniAb.",
+      "action_window": "intraday",
+      "headline": "OmniAb Announces Global Collaboration and License Agreement with Eli Lilly For New Ion Channel Program; OmniAb To Receive An Upfront Payment and Is Eligible To Receive Up to $370M In R&D and Commercial Milestone Payments",
+      "url": "https://www.benzinga.com/general/biotech/26/08/61240357/omniab-announces-global-collaboration-and-license-agreement-eli-lilly-new-ion-channel-program-omniab",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306729+00:00",
+      "updated_at": "2026-08-17T10:25:44.306754+00:00"
+    },
+    {
+      "ticker": "EQX",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "BLM Record of Decision is a critical regulatory milestone that removes major permitting risk for a significant mining project, enabling capital investment and future production.",
+      "action_window": "intraday",
+      "headline": "Equinox Gold Announces That The U.S. BLM Has Issued A Positive Record Of Decision For The Company's South Railroad Project In Nevada",
+      "url": "https://www.benzinga.com/news/26/08/61240391/equinox-gold-announces-u-s-blm-has-issued-positive-record-decision-company-s-south-railroad-project-",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306746+00:00"
+    },
+    {
+      "ticker": "TTMI",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Major M&A announcement with TTM acquiring EPIQ for $1.1B in cash represents significant strategic expansion into RF technology, likely to drive immediate market reaction for the acquirer.",
+      "action_window": "intraday",
+      "headline": "TTM Technologies To Acquire Radio Frequency Technology Maker EPIQ Design Solutions For ~$1.1B In Cash",
+      "url": "https://www.benzinga.com/m/26/08/61240335/ttm-technologies-acquire-radio-frequency-technology-maker-epiq-design-solutions-1-1b-cash",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:25:44.306760+00:00"
     }
   ]
 }
