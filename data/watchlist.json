@@ -1017,15 +1017,16 @@
     },
     {
       "ticker": "MAIR",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.65,
       "sentiment": "bearish",
-      "category": "ma_target",
-      "rationale": "The \u20ac250M termination fee disclosure signals a potential M&A deal in progress but creates downside risk if the deal falls through, while revealing material information not previously disclosed.",
+      "category": "ma_acquirer",
+      "rationale": "Significant $5.4B acquisition announced but market focuses on financing risks creating near-term bearish pressure despite long-term strategic benefits.",
       "action_window": "intraday",
-      "headline": "Madison Air Solutions Discloses \u20ac250M Fee To Be Paid To emb-pabst In Event Of Deal Termination",
-      "url": "https://www.benzinga.com/m/26/08/61241951/madison-air-solutions-discloses-250m-fee-be-paid-emb-pabst-event-deal-termination",
+      "headline": "Madison Air\u2019s $5.4 Billion Deal Promises Growth, but Financing Risks Pressure Shares",
+      "url": "https://www.benzinga.com/m-a/26/08/61252133/madison-airs-5-4-billion-deal-promises-growth-but-financing-risks-pressure-shares",
       "source": "alpaca",
-      "added_at": "2026-08-17T11:19:59.758852+00:00"
+      "added_at": "2026-08-17T11:19:59.758852+00:00",
+      "updated_at": "2026-08-17T15:48:40.046564+00:00"
     },
     {
       "ticker": "GILT",
@@ -1496,6 +1497,54 @@
       "url": "https://www.benzinga.com/news/26/08/61250918/synchrony-partners-openai-enhance-its-services-shopping-payments",
       "source": "alpaca",
       "added_at": "2026-08-17T15:20:01.057541+00:00"
+    },
+    {
+      "ticker": "NFLX",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "Market concerns over weak Q3 revenue and earnings guidance outweigh positive news of Ackman's stake, creating immediate downward pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Why Is Netflix Stock Falling on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61252587/why-is-netflix-stock-falling-on-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-17T15:48:40.046553+00:00"
+    },
+    {
+      "ticker": "ALAB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Northland upgrade to Outperform with substantial $350 price target following strong Q2 results creates meaningful positive catalyst with stock already surging.",
+      "action_window": "intraday",
+      "headline": "Why Is Astera Labs Stock Surging Monday?",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/08/61252061/why-is-astera-labs-stock-surging-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-17T15:48:40.046571+00:00"
+    },
+    {
+      "ticker": "RIOT",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan maintains positive stance with price target increase to $22, signaling continued confidence and potential upside catalyst from a major bank.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Maintains Overweight on Riot Platforms, Raises Price Target to $22",
+      "url": "https://www.benzinga.com/news/26/08/61251899/jp-morgan-maintains-overweight-riot-platforms-raises-price-target-22",
+      "source": "alpaca",
+      "added_at": "2026-08-17T15:48:40.046578+00:00"
+    },
+    {
+      "ticker": "PURR",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "High-profile institutional investor Stan Druckenmiller's $23M stake disclosure creates significant positive signal for PURR and related crypto assets, likely driving immediate speculative interest.",
+      "action_window": "intraday",
+      "headline": "Stan Druckenmiller Reveals $23 Million PURR Bet as Hyperliquid Takes On Polymarket",
+      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61251896/stan-druckenmiller-hyperliquid-bet",
+      "source": "alpaca",
+      "added_at": "2026-08-17T15:48:40.046582+00:00"
     }
   ]
 }
