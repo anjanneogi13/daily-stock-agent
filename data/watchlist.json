@@ -1,79 +1,6 @@
 {
   "items": [
     {
-      "ticker": "OMDA",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive Overweight rating and raises price target to $30, signaling increased confidence and upside potential that typically drives near-term buying interest.",
-      "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on Omada Health, Raises Price Target to $30",
-      "url": "https://www.benzinga.com/news/26/08/61216958/jp-morgan-maintains-overweight-omada-health-raises-price-target-30",
-      "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459007+00:00"
-    },
-    {
-      "ticker": "BMY",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA approval for first-in-class CELMoD therapy for multiple myeloma represents a significant confirmed catalyst with market exclusivity potential and revenue expansion opportunity.",
-      "action_window": "intraday",
-      "headline": "Bristol Myers Squibb Gets FDA Nod For Novel Multiple Myeloma Treatment",
-      "url": "https://www.benzinga.com/news/fda/26/08/61216905/bristol-myers-squibb-gets-fda-nod-for-novel-multiple-myeloma-treatment",
-      "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459026+00:00"
-    },
-    {
-      "ticker": "TSLA",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Innovative product demo combining Tesla and SpaceX technology could generate significant buzz, but demonstration timing is uncertain ('as soon as this month') and actual commercial impact remains unclear.",
-      "action_window": "next_day",
-      "headline": "Tesla Preps SpaceX Rocket-Powered Flying Roadster Demo",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61216798/tesla-spacex-rocket-powered-flying-roadster-demo",
-      "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459039+00:00"
-    },
-    {
-      "ticker": "RTX",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Seven-year Pentagon production framework for SM-3 missiles represents significant multi-year revenue visibility for both defense contractors, though impact is distributed over time rather than immediate.",
-      "action_window": "next_day",
-      "headline": "Pentagon Missile Push Gives Boeing, RTX Fresh SM-3 Production Boost",
-      "url": "https://www.benzinga.com/markets/large-cap/26/08/61216664/pentagon-missile-push-gives-boeing-rtx-fresh-sm-3-production-boost",
-      "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459052+00:00"
-    },
-    {
-      "ticker": "RCAT",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Tariffs on foreign-made drones create immediate competitive advantage for U.S. drone manufacturers, directly benefiting domestic players with reduced foreign competition and potential market share gains.",
-      "action_window": "intraday",
-      "headline": "QUICK SPARK: Drone Stocks Rally on Trump's Latest Tariff Move",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61216473/drone-stocks-rally-on-trumps-latest-tariff-move",
-      "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459064+00:00"
-    },
-    {
-      "ticker": "HTFL",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Shares are surging on Q2 earnings beat with raised full-year guidance, creating a strong dual catalyst for immediate price momentum.",
-      "action_window": "intraday",
-      "headline": "HeartFlow Shares Soar Following Strong Q2 Results and Upgraded Guidance",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61225914/heartflow-shares-soar-following-strong-q2-results-and-upgraded-guidance",
-      "source": "alpaca",
-      "added_at": "2026-08-14T16:14:34.459074+00:00",
-      "updated_at": "2026-08-14T20:03:57.609608+00:00"
-    },
-    {
       "ticker": "AVGO",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -1545,6 +1472,18 @@
       "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61251896/stan-druckenmiller-hyperliquid-bet",
       "source": "alpaca",
       "added_at": "2026-08-17T15:48:40.046582+00:00"
+    },
+    {
+      "ticker": "CORZ",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large unusual options sweep of 20,000 call contracts above ask with low existing open interest signals aggressive bullish positioning by sophisticated traders expecting upward price movement.",
+      "action_window": "intraday",
+      "headline": "Core Scientific Option Alert: Oct 16 $28 Calls Sweep (21) Above Ask!: 20000 @ $0.551 Vs 67 OI; Ref=$20.235",
+      "url": "https://www.benzinga.com/quote/CORZ",
+      "source": "alpaca",
+      "added_at": "2026-08-17T16:20:14.994704+00:00"
     }
   ]
 }
