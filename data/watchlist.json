@@ -267,16 +267,16 @@
     },
     {
       "ticker": "NVDA",
-      "tradeable_score": 0.75,
+      "tradeable_score": 0.78,
       "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $100B infrastructure investment by Nvidia for OpenAI represents a massive capital commitment signaling strong AI infrastructure demand and strategic partnership expansion, though details need confirmation from credible sources.",
+      "category": "product_launch",
+      "rationale": "Major $1.5B partnership to build massive 8 GW AI infrastructure with OpenAI represents significant revenue expansion and validates NVIDIA's AI infrastructure leadership.",
       "action_window": "next_day",
-      "headline": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
-      "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
+      "headline": "NVIDIA\u2019s Ohio AI Megadeal: OpenAI, 8 GW of Compute and a $1.5 Billion SB Energy Bet",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61249540/nvidias-ohio-ai-megadeal-openai-8-gw-of-compute-and-a-1-5-billion-sb-energy-bet",
       "source": "alpaca",
       "added_at": "2026-08-14T20:55:45.644260+00:00",
-      "updated_at": "2026-08-17T14:31:12.641822+00:00"
+      "updated_at": "2026-08-17T14:56:41.053475+00:00"
     },
     {
       "ticker": "JBLU",
@@ -1137,15 +1137,16 @@
     },
     {
       "ticker": "EYPT",
-      "tradeable_score": 0.75,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Topline results from pivotal Phase 3 trial for wet AMD treatment is a major catalyst, but sentiment depends on whether results met endpoints which is unclear from headline alone.",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "Phase 3 trial missed primary endpoint despite some positive secondary data, triggering immediate stock plunge and creating high-conviction trading signal.",
       "action_window": "intraday",
-      "headline": "EyePoint Announces Topline Results From LUGANO, First Pivotal Phase 3 Clinical Trial For DURAVYU For Treatment Of Wet Age-Related Macular Degeneration",
-      "url": "https://www.benzinga.com/news/26/08/61241757/eyepoint-announces-topline-results-lugano-first-pivotal-phase-3-clinical-trial-duravyu-treatment-wet",
+      "headline": "EyePoint Stock Plummets on Mixed Primary Data From Blindness Drug Study",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61249866/eyepoint-stock-plummets-on-mixed-primary-data-from-blindness-drug-study",
       "source": "alpaca",
-      "added_at": "2026-08-17T11:19:59.758937+00:00"
+      "added_at": "2026-08-17T11:19:59.758937+00:00",
+      "updated_at": "2026-08-17T14:56:41.053452+00:00"
     },
     {
       "ticker": "TLRY",
@@ -1459,6 +1460,42 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61248704/why-is-bloom-energy-stock-surging-on-monday",
       "source": "alpaca",
       "added_at": "2026-08-17T14:31:12.641813+00:00"
+    },
+    {
+      "ticker": "TSX:LCFS",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgrade to Outperform with price target raise represents a meaningful catalyst from a major bank that typically drives immediate trading interest.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Upgrades Tidewater Renewables to Outperform, Raises Price Target to C$25",
+      "url": "https://www.benzinga.com/news/26/08/61250267/rbc-capital-upgrades-tidewater-renewables-outperform-raises-price-target-c-25",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:56:41.053423+00:00"
+    },
+    {
+      "ticker": "TSX:TWM",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgrade to Outperform with price target raise represents a meaningful catalyst from a major bank that typically drives intraday buying pressure.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Upgrades Tidewater Midstream to Outperform, Raises Price Target to C$30",
+      "url": "https://www.benzinga.com/news/26/08/61250108/rbc-capital-upgrades-tidewater-midstream-outperform-raises-price-target-c-30",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:56:41.053438+00:00"
+    },
+    {
+      "ticker": "AAPL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "U.S. government urging Apple to avoid Chinese memory chips creates supply chain complexity and potential cost increases, though impact depends on implementation timeline and Apple's current sourcing mix.",
+      "action_window": "next_day",
+      "headline": "Reported Aug. 14: 'U.S. Urges Apple Not to Buy Chinese Memory Chips' - WSJ Exclusive",
+      "url": "https://www.benzinga.com/news/26/08/61249755/reported-aug-14-u-s-urges-apple-not-buy-chinese-memory-chips-wsj-exclusive",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:56:41.053469+00:00"
     }
   ]
 }
