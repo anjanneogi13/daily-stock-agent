@@ -1,90 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AUID",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 results show mixed signals with improved loss per share but severe 65% revenue decline YoY, indicating fundamental business deterioration despite cost-cutting.",
-      "action_window": "next_day",
-      "headline": "AuthID Q2 EPS $(0.29) Up From $(0.33) YoY, Sales $490.619K Down From $1.400M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232389/authid-q2-eps-0-29-0-33-yoy-sales-490-619k-down-1-400m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015407+00:00"
-    },
-    {
-      "ticker": "RVP",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Sales declined 31% year-over-year from $10.4M to $7.2M, representing a significant revenue miss that signals deteriorating business fundamentals despite positive EPS.",
-      "action_window": "next_day",
-      "headline": "Retractable Technologies Q2 EPS $0.09, Sales $7.201M Down From $10.400M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232368/retractable-technologies-q2-eps-0-09-sales-7-201m-down-10-400m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015430+00:00"
-    },
-    {
-      "ticker": "STGO",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 earnings deteriorated from $0.04 profit to breakeven ($0.00), representing a 100% decline in profitability year-over-year which is a significant negative catalyst for this small-cap miner.",
-      "action_window": "next_day",
-      "headline": "Steppe Gold Q2 EPS $(0.00) Down From $0.04 YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232321/steppe-gold-q2-eps-0-00-down-0-04-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015445+00:00"
-    },
-    {
-      "ticker": "TSX:ERD",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Strong earnings swing from -$0.06 to +$0.15 EPS represents a significant profitability turnaround that should drive positive price action.",
-      "action_window": "next_day",
-      "headline": "Erdene Resource Dev Q2 EPS $0.15 Up From $(0.06) YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232299/erdene-resource-dev-q2-eps-0-15-0-06-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015457+00:00"
-    },
-    {
-      "ticker": "BNAI",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Despite EPS beating estimates, revenue missed by 43% ($56.6K vs $100K expected), which is a significant shortfall that typically drives negative price action despite the earnings beat.",
-      "action_window": "next_day",
-      "headline": "Brand Engagement Network Q2 EPS $(0.49) Beats $(0.80) Estimate, Sales $56.562K Miss $100.000K Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232179/brand-engagement-network-q2-eps-0-49-beats-0-80-estimate-sales-56-562k-miss-100-000k-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015474+00:00"
-    },
-    {
-      "ticker": "BTCUSD",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Preliminary regulatory approval for a Trump-backed crypto bank represents significant legitimacy for crypto banking infrastructure and could drive institutional adoption, though conditional approval carries execution risk.",
-      "action_window": "intraday",
-      "headline": "'Trump Family\u2019s World Liberty Financial Gets Preliminary Approval To Launch A Bank; The Office Of The Comptroller Of The Currency Gives The Flagship Crypto Venture A Conditional Approval To Be A Trust Bank' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61232126/trump-family-s-world-liberty-financial-gets-preliminary-approval-launch-bank-office-comptroller-curr",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015487+00:00"
-    },
-    {
-      "ticker": "LASE",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Mixed Q2 earnings with EPS improvement but significant 30.5% revenue decline YoY creates immediate trading concern despite reduced losses.",
-      "action_window": "next_day",
-      "headline": "Laser Photonics Q2 EPS $(0.08) Up From $(0.12) YoY, Sales $1.806M Down From $2.599M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61232078/laser-photonics-q2-eps-0-08-0-12-yoy-sales-1-806m-down-2-599m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-14T21:49:11.015500+00:00"
-    },
-    {
       "ticker": "SPAI",
       "tradeable_score": 0.72,
       "sentiment": "bearish",
@@ -1563,6 +1479,42 @@
       "url": "https://www.benzinga.com/news/26/08/61262014/carter-bankshares-announces-lawsuit-against-carter-bankshares-and-carter-bank-trust-dismissed-prejud",
       "source": "alpaca",
       "added_at": "2026-08-17T21:20:17.263264+00:00"
+    },
+    {
+      "ticker": "NKLR",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with Q2 EPS of $(0.16) versus estimate of $(0.07), representing a loss more than double expectations, which typically triggers immediate selling pressure.",
+      "action_window": "next_day",
+      "headline": "Terra Innovatum Global Q2 EPS $(0.16) Misses $(0.07) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61262774/terra-innovatum-global-q2-eps-0-16-misses-0-07-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T21:49:29.782898+00:00"
+    },
+    {
+      "ticker": "CHRS",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Company announcing immediate sale process for biosimilar assets plus special dividend via CVRs represents significant value crystallization event and potential strategic restructuring that typically drives near-term price appreciation.",
+      "action_window": "intraday",
+      "headline": "Coherus Oncology Reveals Special Dividend of Biosimilar Contingent Value Rights; Company Intends To Immediately Commence A Sale Process For The Legacy Biosim Assets",
+      "url": "https://www.benzinga.com/news/26/08/61262732/coherus-oncology-reveals-special-dividend-biosimilar-contingent-value-rights-company-intends-immedia",
+      "source": "alpaca",
+      "added_at": "2026-08-17T21:49:29.782914+00:00"
+    },
+    {
+      "ticker": "BTBD",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "EPS increased 800% YoY from $0.01 to $0.09 representing a significant earnings beat, though revenue declined 6% which tempers the positive impact.",
+      "action_window": "next_day",
+      "headline": "BT Brands Q2 EPS $0.09 Up From $0.01 YoY, Sales $3.551M Down From $3.780M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61262435/bt-brands-q2-eps-0-09-0-01-yoy-sales-3-551m-down-3-780m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-17T21:49:29.782925+00:00"
     }
   ]
 }
