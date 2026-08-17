@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "MP",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Federal defense policy shifts favoring domestic supply chains directly benefit MP Materials as a rare earth mining company, with stock already surging intraday on confirmed government action.",
-      "action_window": "intraday",
-      "headline": "MP Materials Stock Surges Friday Amid Defense Policy Shifts",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61221844/mp-materials-stock-surges-friday-amid-defense-policy-shifts",
-      "source": "alpaca",
-      "added_at": "2026-08-14T18:14:53.860768+00:00"
-    },
-    {
-      "ticker": "MDXH",
-      "tradeable_score": 0.52,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Company signals path to profitability with positive EBITDA expectations and reaffirmed 2026 guidance, but mixed Q2 earnings temper immediate impact.",
-      "action_window": "next_day",
-      "headline": "MDxHealth Says Well-Positioned to 'Return to Positive EBITDA'",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61221809/mdxhealth-says-well-positioned-to-return-to-positive-ebitda",
-      "source": "alpaca",
-      "added_at": "2026-08-14T18:14:53.860782+00:00"
-    },
-    {
-      "ticker": "BLTE",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Morgan Stanley maintaining Overweight rating while raising price target to $206 signals increased conviction and potential upside, though impact depends on current stock price relative to the new target.",
-      "action_window": "next_day",
-      "headline": "Morgan Stanley Maintains Overweight on Belite Bio, Raises Price Target to $206",
-      "url": "https://www.benzinga.com/news/26/08/61221593/morgan-stanley-maintains-overweight-belite-bio-raises-price-target-206",
-      "source": "alpaca",
-      "added_at": "2026-08-14T18:14:53.860798+00:00"
-    },
-    {
       "ticker": "HCWB",
       "tradeable_score": 0.92,
       "sentiment": "bullish",
@@ -74,15 +38,16 @@
     },
     {
       "ticker": "TLT",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
       "category": "macro",
-      "rationale": "Highest 30-year Treasury yields since 2001 signals significant bearish pressure on long-duration bond ETFs like TLT due to supply concerns and hawkish Fed positioning.",
+      "rationale": "Sharp spike in 30-year Treasury yields to multi-decade highs creates immediate negative pressure on long-duration bond ETFs like TLT, signaling meaningful market repricing of inflation and fiscal risks.",
       "action_window": "next_day",
-      "headline": "The US Treasury Market Hasn't Been This Cheap in Decades: Here's Why",
-      "url": "https://www.benzinga.com/etfs/specialty-etfs/26/08/61224320/the-us-treasury-market-hasnt-been-this-cheap-in-decades-heres-why",
+      "headline": "QUICK SPARK: 30-Year Treasury Yields Jump to 5.31%, Highest Since June 2007",
+      "url": "https://www.benzinga.com/markets/bonds/26/08/61257711/30-year-treasury-yield-5-31-highest-since-2007",
       "source": "alpaca",
-      "added_at": "2026-08-14T19:28:09.787761+00:00"
+      "added_at": "2026-08-14T19:28:09.787761+00:00",
+      "updated_at": "2026-08-17T18:28:26.782667+00:00"
     },
     {
       "ticker": "KUST",
@@ -801,15 +766,16 @@
     },
     {
       "ticker": "IMCC",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.68,
       "sentiment": "bullish",
       "category": "ma_target",
-      "rationale": "Asset sale transaction improves shareholders' equity by C$3M, representing balance sheet cleanup and value realization, though modest absolute improvement suggests limited near-term trading catalyst.",
+      "rationale": "Definitive asset sale agreement to reduce financial strain and strengthen equity is a meaningful catalyst for a distressed company, though impact depends on deal terms and execution risk.",
       "action_window": "intraday",
-      "headline": "IM Cannabis Agrees To Sell IMC Holdings And European Focused Assets to Slil; Transaction Expected to Improve Shareholders' Equity by of Approximately C$3M",
-      "url": "https://www.benzinga.com/m/26/08/61241220/im-cannabis-agrees-sell-imc-holdings-and-european-focused-assets-slil-transaction-expected-improve-s",
+      "headline": "IM Cannabis Leverages Restructuring Deal to Reduce Financial Strain",
+      "url": "https://www.benzinga.com/m-a/26/08/61256986/im-cannabis-leverages-restructuring-deal-to-reduce-financial-strain",
       "source": "alpaca",
-      "added_at": "2026-08-17T10:56:59.529844+00:00"
+      "added_at": "2026-08-17T10:56:59.529844+00:00",
+      "updated_at": "2026-08-17T18:28:26.782707+00:00"
     },
     {
       "ticker": "BCSF",
@@ -1643,6 +1609,42 @@
       "url": "https://www.benzinga.com/markets/private-markets/26/08/61255963/xai-faces-fresh-allegation-over-groks-role-in-creating-child-abuse-material",
       "source": "alpaca",
       "added_at": "2026-08-17T17:54:33.973171+00:00"
+    },
+    {
+      "ticker": "META",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Meta faces massive $1.4T potential legal damages with trial beginning and stock already down 4% trading below key technical levels, creating significant downside risk.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Meta Platforms Stock Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61257572/whats-going-on-with-meta-platforms-stock-monday-3",
+      "source": "alpaca",
+      "added_at": "2026-08-17T18:28:26.782681+00:00"
+    },
+    {
+      "ticker": "RUM",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "11% stock surge driven by strong Q3 revenue guidance and AI infrastructure expansion represents a meaningful catalyst with some momentum already captured.",
+      "action_window": "next_day",
+      "headline": "Why Is RUM Group Stock Gaining Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61257180/why-is-rum-group-stock-gaining-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-17T18:28:26.782696+00:00"
+    },
+    {
+      "ticker": "LULU",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Combination of operational challenges, sector weakness, and notable institutional investor (Soros) exit creates meaningful selling pressure but lacks specific catalyst details.",
+      "action_window": "intraday",
+      "headline": "Lululemon Shares Slump Amid Sector Sell-Off, Soros Exit",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61257000/lululemon-shares-slump-amid-sector-sell-off-soros-exit",
+      "source": "alpaca",
+      "added_at": "2026-08-17T18:28:26.782703+00:00"
     }
   ]
 }
