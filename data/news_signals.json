@@ -7065,5 +7065,70 @@
     "expires": "2026-08-31T20:19:00.478731+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "XOS": {
+    "ticker": "XOS",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Xos Announces First US Air Force Contract, A Prototype OTA For Mobile Battery Energy Storage System To Charge Electrified Support Equipment; Terms Not Disclosed",
+    "added_at": "2026-08-17T20:52:49.479585+00:00",
+    "expires": "2026-08-24T20:52:49.479593+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DCGO": {
+    "ticker": "DCGO",
+    "score_delta": -0.118,
+    "catalyst": "guidance_cut",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "next_day",
+    "headline": "DocGo Narrows FY2026 Sales Guidance from $300.000M-$315.000M to $305.000M-$310.000M vs $306.281M Est",
+    "added_at": "2026-08-17T20:52:49.497076+00:00",
+    "expires": "2026-08-31T20:52:49.497082+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRGP": {
+    "ticker": "TRGP",
+    "score_delta": 0.097,
+    "catalyst": "guidance_raise",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Targa Resources Announces 3 New Gas Plants And 70-Mile Bull Run II Pipeline; Raises 2026 Net Growth Capital Estimate To ~$5.0B",
+    "added_at": "2026-08-17T20:52:49.508509+00:00",
+    "expires": "2026-08-31T20:52:49.508515+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HCHL": {
+    "ticker": "HCHL",
+    "score_delta": 0.049,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Happy City Holdings Announces Agreement To Acquire Hong Kong Catering Management Firm Wing Shing International Consultancy For $2,598,726 In 1,312,487 Class A Ordinary Shares At $1.98/Share",
+    "added_at": "2026-08-17T20:52:49.514287+00:00",
+    "expires": "2026-08-31T20:52:49.514293+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TRUG": {
+    "ticker": "TRUG",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "TruGolf Shares Surge Monday: What's Driving the Action?",
+    "added_at": "2026-08-17T20:52:49.520138+00:00",
+    "expires": "2026-08-24T20:52:49.520144+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
