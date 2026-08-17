@@ -647,19 +647,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "ZSQR": {
-    "ticker": "ZSQR",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Z Squared To Acquire AI Compute And High-Density Data Infrastructure Business Paradox Data From Paradox Infrastructure For Up To $25M In Preferred Stock",
-    "added_at": "2026-08-03T11:16:31.048435+00:00",
-    "expires": "2026-08-17T11:16:31.048440+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PPHC": {
     "ticker": "PPHC",
     "score_delta": -0.1,
@@ -673,19 +660,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SMTK": {
-    "ticker": "SMTK",
-    "score_delta": 0.05,
-    "catalyst": "ma_acquirer",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "Smartkem To Merge With Ferrox Critical Minerals; Ferrox Shareholders To Receive $125M In SMTK Stock",
-    "added_at": "2026-08-03T11:16:31.069693+00:00",
-    "expires": "2026-08-17T11:16:31.069699+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ANL": {
     "ticker": "ANL",
     "score_delta": 0.146,
@@ -696,19 +670,6 @@
     "headline": "Adlai Nortye Submits Clinical Trial Notification To Australia's TGA And Receives Approval From HREC To Commence Phase I Clinical Trial Evaluating AN4035 For Treatment Of CEACAM5-Enriched RAS-Addicted ",
     "added_at": "2026-08-03T11:16:31.077555+00:00",
     "expires": "2026-09-02T11:16:31.077561+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SRAD": {
-    "ticker": "SRAD",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Sportradar Gr Lowers FY2026 Sales Guidance from $1.813B-$1.842B to $1.765B-$1.782B vs $1.830B Est",
-    "added_at": "2026-08-03T11:16:31.081475+00:00",
-    "expires": "2026-08-17T11:16:31.081480+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6859,6 +6820,58 @@
     "headline": "Red Cat's Marine Unit Blue Ops Partners With Collaborative Autonomy Firm Havoc To Integrate Software And Command-And-Control Capabilities Across Multiple Blue Ops Uncrewed Surface Vessels",
     "added_at": "2026-08-17T10:56:59.511521+00:00",
     "expires": "2026-08-24T10:56:59.511527+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MAIR": {
+    "ticker": "MAIR",
+    "score_delta": 0.157,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Madison Air Solutions Discloses \u20ac250M Fee To Be Paid To emb-pabst In Event Of Deal Termination",
+    "added_at": "2026-08-17T11:19:59.722518+00:00",
+    "expires": "2026-09-16T11:19:59.722524+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NRXP": {
+    "ticker": "NRXP",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "NRX Pharmaceuticals Q2 EPS $(0.44) Misses $0.06 Estimate, Sales $1.101M Miss $17.488M Estimate",
+    "added_at": "2026-08-17T11:19:59.740491+00:00",
+    "expires": "2026-08-24T11:19:59.740496+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AUUD": {
+    "ticker": "AUUD",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "Auddia Partners With AMG Corp Making Discovr Radio The Label's Exclusive Digital Radio Release Channel For Every Active Artist On Its Roster",
+    "added_at": "2026-08-17T11:19:59.745960+00:00",
+    "expires": "2026-08-24T11:19:59.745965+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TLRY": {
+    "ticker": "TLRY",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Tilray Medical Expands UK Commercial Reach With First Direct-To-Patient Launch Via Lyphe Clinic And Dispensary Network",
+    "added_at": "2026-08-17T11:19:59.751486+00:00",
+    "expires": "2026-08-24T11:19:59.751492+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
