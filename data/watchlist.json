@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "HCWB",
-      "tradeable_score": 0.92,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Massive revenue growth from $5.065K to $6.543M YoY (over 129,000% increase) with positive EPS of $1.39 represents a transformational earnings beat indicating commercial inflection point.",
-      "action_window": "next_day",
-      "headline": "HCW Biologics Restates Q1 2026 EPS $1.39, Sales $6.543M Up From $5.065K YoY",
-      "url": "https://www.benzinga.com/quote/HCWB",
-      "source": "alpaca",
-      "added_at": "2026-08-14T19:28:09.787668+00:00"
-    },
-    {
-      "ticker": "DAIC",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Nasdaq delisting determination due to failing $50M market cap requirement poses significant downside risk, though appeal provides temporary lifeline creating near-term volatility.",
-      "action_window": "intraday",
-      "headline": "CID HoldCo (Dot Ai) Plans Nasdaq Appeal After Staff Determination To Delist Shares Over $50M Market Value Requirement",
-      "url": "https://www.benzinga.com/news/26/08/61224469/cid-holdco-dot-ai-plans-nasdaq-appeal-after-staff-determination-delist-shares-over-50m-market-value-",
-      "source": "alpaca",
-      "added_at": "2026-08-14T19:28:09.787732+00:00"
-    },
-    {
-      "ticker": "COIN",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "White House meeting with major crypto executives signals potential regulatory engagement and legitimization, representing a notable positive catalyst for crypto-related equities, particularly Coinbase as the most liquid publicly-traded participant.",
-      "action_window": "next_day",
-      "headline": "White House Reporter For Semafor Eleanor Mueller Posts On X \"News: Executives from Coinbase, a16z, Ripple & Chainlink plus Kalshi & Paradigm (a Kalshi backer) as well as Digital Chamber are among those expected to attend Wednesday's meeting at the WH, people familiar with it tell me....\"",
-      "url": "https://www.benzinga.com/markets/cryptocurrency/26/08/61224411/white-house-reporter-semafor-eleanor-mueller-posts-x-news-executives-coinbase-a16z-ripple-chainlink-",
-      "source": "alpaca",
-      "added_at": "2026-08-14T19:28:09.787747+00:00"
-    },
-    {
-      "ticker": "TLT",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Sharp spike in 30-year Treasury yields to multi-decade highs creates immediate negative pressure on long-duration bond ETFs like TLT, signaling meaningful market repricing of inflation and fiscal risks.",
-      "action_window": "next_day",
-      "headline": "QUICK SPARK: 30-Year Treasury Yields Jump to 5.31%, Highest Since June 2007",
-      "url": "https://www.benzinga.com/markets/bonds/26/08/61257711/30-year-treasury-yield-5-31-highest-since-2007",
-      "source": "alpaca",
-      "added_at": "2026-08-14T19:28:09.787761+00:00",
-      "updated_at": "2026-08-17T18:28:26.782667+00:00"
-    },
-    {
-      "ticker": "KUST",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Significant improvement in Q2 results with EPS loss narrowing 92% YoY and revenue nearly doubling, indicating strong operational turnaround momentum.",
-      "action_window": "intraday",
-      "headline": "Kustom Entertainment Q2 EPS $(5.49) Up From $(66.46) YoY, Sales $5.381M Up From $2.859M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61224186/kustom-entertainment-q2-eps-5-49-66-46-yoy-sales-5-381m-2-859m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-14T19:28:09.787778+00:00"
-    },
-    {
       "ticker": "PSKY",
       "tradeable_score": 0.82,
       "sentiment": "bullish",
@@ -1359,15 +1298,16 @@
     },
     {
       "ticker": "AAPL",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "U.S. government urging Apple to avoid Chinese memory chips creates supply chain complexity and potential cost increases, though impact depends on implementation timeline and Apple's current sourcing mix.",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Rothschild Redburn upgraded AAPL to Buy from Neutral with a sharply raised price target to $400, representing a significant catalyst from a respected institutional firm.",
       "action_window": "next_day",
-      "headline": "Reported Aug. 14: 'U.S. Urges Apple Not to Buy Chinese Memory Chips' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/news/26/08/61249755/reported-aug-14-u-s-urges-apple-not-buy-chinese-memory-chips-wsj-exclusive",
+      "headline": "Could Apple Stock Be Headed to $400?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61259595/could-apple-stock-be-headed-to-400",
       "source": "alpaca",
-      "added_at": "2026-08-17T14:56:41.053469+00:00"
+      "added_at": "2026-08-17T14:56:41.053469+00:00",
+      "updated_at": "2026-08-17T19:50:57.231830+00:00"
     },
     {
       "ticker": "SYF",
@@ -1645,6 +1585,66 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61257000/lululemon-shares-slump-amid-sector-sell-off-soros-exit",
       "source": "alpaca",
       "added_at": "2026-08-17T18:28:26.782703+00:00"
+    },
+    {
+      "ticker": "GOOG",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Anthropic's exceptional $65B revenue run rate pre-IPO validates AI investment thesis for major backers Google and Amazon, strengthening their competitive positioning in the AI race.",
+      "action_window": "intraday",
+      "headline": "'Anthropic Revenue Run Rate Surpasses $65 Billion Ahead of IPO' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61259752/anthropic-revenue-run-rate-surpasses-65-billion-ahead-ipo-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-08-17T19:50:57.231791+00:00"
+    },
+    {
+      "ticker": "INBS",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "fda_approval",
+      "rationale": "Shares are actively surging on announcement of significant regulatory milestone for rapid testing unit, representing a major de-risking catalyst for the company.",
+      "action_window": "intraday",
+      "headline": "Intelligent Bio Solutions Shares Surge Monday: What's Driving the Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61259674/intelligent-bio-solutions-shares-surge-monday-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-08-17T19:50:57.231815+00:00"
+    },
+    {
+      "ticker": "F",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Ongoing US-Canada tariff negotiations discussing reduction from 25% to 15% on autos is moderately positive for North American automakers, though outcome remains uncertain with content deduction details still being negotiated.",
+      "action_window": "this_week",
+      "headline": "'U.S., Canada Discussing Possible Reduction In Us Autos To 15% After Some Value Content Deductions From 25% Currently; U.S. Officials Offer To Deduct Only U.S.-Specific Value Content From 15% Tariffs On Canadian Vehicles, But Canadian Officials Want All North American Content Deducted; Some North Am",
+      "url": "https://www.benzinga.com/news/26/08/61259552/u-s-canada-discussing-possible-reduction-us-autos-15-after-some-value-content-deductions-25-currentl",
+      "source": "alpaca",
+      "added_at": "2026-08-17T19:50:57.231841+00:00"
+    },
+    {
+      "ticker": "IVF",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Stock is actively surging on confirmed Q2 earnings beat with bottom-line outperformance, creating immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "INVO Fertility Stock Surges Following Q2 Earnings Beat",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61259442/invo-fertility-stock-surges-following-q2-earnings-beat",
+      "source": "alpaca",
+      "added_at": "2026-08-17T19:50:57.231852+00:00"
+    },
+    {
+      "ticker": "TSLA",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major product launch of steering-wheel-less robotaxi represents significant milestone in Tesla's autonomous vehicle strategy and potential new revenue stream, though execution risk remains.",
+      "action_window": "intraday",
+      "headline": "'Tesla Readies August Launch of Cybercab, Its Robotaxi Without a Steering Wheel; Tesla Targets August Public Launch For Cybercab Robotaxi In Austin' - The Information",
+      "url": "https://www.benzinga.com/news/26/08/61259396/tesla-readies-august-launch-cybercab-its-robotaxi-without-steering-wheel-tesla-targets-august-public",
+      "source": "alpaca",
+      "added_at": "2026-08-17T19:50:57.231862+00:00"
     }
   ]
 }

@@ -1441,19 +1441,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BRK": {
-    "ticker": "BRK",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Berkshire Hathaway Stock Pop After Q2 EPS Surprise",
-    "added_at": "2026-08-10T19:30:23.613604+00:00",
-    "expires": "2026-08-17T19:30:23.613612+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LMT": {
     "ticker": "LMT",
     "score_delta": 0.034,
@@ -2080,14 +2067,14 @@
   },
   "TSLA": {
     "ticker": "TSLA",
-    "score_delta": 0.039,
+    "score_delta": 0.05,
     "catalyst": "product_launch",
     "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "next_day",
-    "headline": "Tesla Preps SpaceX Rocket-Powered Flying Roadster Demo",
-    "added_at": "2026-08-14T16:14:34.443344+00:00",
-    "expires": "2026-08-21T16:14:34.443349+00:00",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "'Tesla Readies August Launch of Cybercab, Its Robotaxi Without a Steering Wheel; Tesla Targets August Public Launch For Cybercab Robotaxi In Austin' - The Information",
+    "added_at": "2026-08-17T19:50:57.198205+00:00",
+    "expires": "2026-08-24T19:50:57.198214+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3378,19 +3365,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LQDA": {
-    "ticker": "LQDA",
-    "score_delta": -0.032,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "LifeSci Capital Downgrades Liquidia to Market Perform, Announces $90 Price Target",
-    "added_at": "2026-08-12T19:36:17.972815+00:00",
-    "expires": "2026-08-17T19:36:17.972822+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "RUM": {
     "ticker": "RUM",
     "score_delta": 0.1,
@@ -3404,32 +3378,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DFTX": {
-    "ticker": "DFTX",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Needham Maintains Buy on Definium Therapeutics, Raises Price Target to $66",
-    "added_at": "2026-08-12T19:36:17.994776+00:00",
-    "expires": "2026-08-17T19:36:17.994782+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KRNT": {
-    "ticker": "KRNT",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Needham Maintains Buy on Kornit Digital, Raises Price Target to $23",
-    "added_at": "2026-08-12T19:36:18.000019+00:00",
-    "expires": "2026-08-17T19:36:18.000025+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "NCPL": {
     "ticker": "NCPL",
     "score_delta": -0.1,
@@ -3440,19 +3388,6 @@
     "headline": "Netcapital CEO Issues Statement As SEC Files Civil Complaint Against The Company And Certain Individuals Following Earlier Wells Notice",
     "added_at": "2026-08-12T19:36:18.010609+00:00",
     "expires": "2026-08-26T19:36:18.010615+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CRDF": {
-    "ticker": "CRDF",
-    "score_delta": -0.049,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "William Blair Downgrades Cardiff Oncology to Market Perform",
-    "added_at": "2026-08-12T19:36:18.015910+00:00",
-    "expires": "2026-08-17T19:36:18.015917+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7143,5 +7078,44 @@
     "expires": "2026-08-31T18:28:26.731018+00:00",
     "hard_block": false,
     "negative_reaction": true
+  },
+  "RRR": {
+    "ticker": "RRR",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Macquarie Maintains Outperform on Red Rock Resorts, Raises Price Target to $74",
+    "added_at": "2026-08-17T19:50:57.160094+00:00",
+    "expires": "2026-08-22T19:50:57.160101+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "INBS": {
+    "ticker": "INBS",
+    "score_delta": 0.15,
+    "catalyst": "fda_approval",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Intelligent Bio Solutions Shares Surge Monday: What's Driving the Action?",
+    "added_at": "2026-08-17T19:50:57.180378+00:00",
+    "expires": "2026-09-16T19:50:57.180416+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "IVF": {
+    "ticker": "IVF",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "INVO Fertility Stock Surges Following Q2 Earnings Beat",
+    "added_at": "2026-08-17T19:50:57.192274+00:00",
+    "expires": "2026-08-24T19:50:57.192282+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
