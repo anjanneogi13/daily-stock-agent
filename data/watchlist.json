@@ -798,15 +798,16 @@
     },
     {
       "ticker": "HTHT",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.85,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "H World Group beat Q2 EPS estimates by 11.4% ($0.78 vs $0.70) and sales by 6.8% ($1.050B vs $982.8M), representing a strong double beat on key metrics.",
+      "rationale": "H World Group beats Q2 earnings with raised sales guidance and 8.1% share price jump, indicating strong fundamental performance with immediate market reaction.",
       "action_window": "intraday",
-      "headline": "H World Group Q2 Adj. EPS $0.78 Beats $0.70 Estimate, Sales $1.050B Beat $982.800M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61240757/h-world-group-q2-adj-eps-0-78-beats-0-70-estimate-sales-1-050b-beat-982-800m-estimate",
+      "headline": "H World Group Posts Upbeat Q2 Results, Joins Almonty Industries, Diana Shipping And Other Big Stocks Moving Higher On Monday",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61247435/h-world-group-posts-upbeat-q2-results-joins-almonty-industries-diana-shipping-and-other-big-stocks-moving-higher-on-monday",
       "source": "alpaca",
-      "added_at": "2026-08-17T10:25:44.306683+00:00"
+      "added_at": "2026-08-17T10:25:44.306683+00:00",
+      "updated_at": "2026-08-17T14:00:50.136063+00:00"
     },
     {
       "ticker": "SOFI",
@@ -895,15 +896,16 @@
     },
     {
       "ticker": "TTMI",
-      "tradeable_score": 0.88,
+      "tradeable_score": 0.92,
       "sentiment": "bullish",
       "category": "ma_acquirer",
-      "rationale": "Major M&A announcement with TTM acquiring EPIQ for $1.1B in cash represents significant strategic expansion into RF technology, likely to drive immediate market reaction for the acquirer.",
+      "rationale": "Major $1.1B cash acquisition expanding TTMI into high-growth defense and space sectors represents significant strategic shift and confirmed material catalyst.",
       "action_window": "intraday",
-      "headline": "TTM Technologies To Acquire Radio Frequency Technology Maker EPIQ Design Solutions For ~$1.1B In Cash",
-      "url": "https://www.benzinga.com/m/26/08/61240335/ttm-technologies-acquire-radio-frequency-technology-maker-epiq-design-solutions-1-1b-cash",
+      "headline": "TTM Technologies Makes $1.1 Billion Defense Push With Epiq Solutions Deal",
+      "url": "https://www.benzinga.com/m-a/26/08/61247186/ttm-technologies-makes-1-1-billion-defense-push-with-epiq-solutions-deal",
       "source": "alpaca",
-      "added_at": "2026-08-17T10:25:44.306760+00:00"
+      "added_at": "2026-08-17T10:25:44.306760+00:00",
+      "updated_at": "2026-08-17T14:00:50.136052+00:00"
     },
     {
       "ticker": "IMCC",
@@ -1385,6 +1387,54 @@
       "url": "https://www.benzinga.com/news/26/08/61245455/wedbush-initiates-coverage-immunic-outperform-rating-announces-price-target-45",
       "source": "alpaca",
       "added_at": "2026-08-17T13:22:38.587267+00:00"
+    },
+    {
+      "ticker": "TSX:CAE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgraded CAE to Outperform with a price target raise to C$46, representing a meaningful positive catalyst from a major bank that typically drives near-term price appreciation.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Upgrades CAE to Outperform, Raises Price Target to C$46",
+      "url": "https://www.benzinga.com/news/26/08/61247565/rbc-capital-upgrades-cae-outperform-raises-price-target-c-46",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:00:50.136032+00:00"
+    },
+    {
+      "ticker": "CAE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "RBC Capital upgrade to Outperform with significant price target increase represents a meaningful positive catalyst from a major bank that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "RBC Capital Upgrades CAE to Outperform, Raises Price Target to $46",
+      "url": "https://www.benzinga.com/news/26/08/61247314/rbc-capital-upgrades-cae-outperform-raises-price-target-46",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:00:50.136076+00:00"
+    },
+    {
+      "ticker": "NMRK",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Barclays maintains Overweight rating while raising price target to $20, signaling increased conviction and upside potential for Newmark Group.",
+      "action_window": "intraday",
+      "headline": "Barclays Maintains Overweight on Newmark Group, Raises Price Target to $20",
+      "url": "https://www.benzinga.com/news/26/08/61247274/barclays-maintains-overweight-newmark-group-raises-price-target-20",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:00:50.136085+00:00"
+    },
+    {
+      "ticker": "PMNT",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Massive earnings miss with EPS 7x worse than expected and revenue missing by 79% ($1.15M vs $5.62M estimate), indicating severe operational problems.",
+      "action_window": "intraday",
+      "headline": "Perfect Moment Q1 EPS $(0.07) Misses $(0.01) Estimate, Sales $1.150M Miss $5.616M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61246990/perfect-moment-q1-eps-0-07-misses-0-01-estimate-sales-1-150m-miss-5-616m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:00:50.136094+00:00"
     }
   ]
 }
