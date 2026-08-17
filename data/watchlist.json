@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "PSKY",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "ma_acquirer",
-      "rationale": "Major M&A milestone achieved with all regulatory clearances secured for Warner Bros. Discovery acquisition, leaving only state AG litigation as final obstacle before deal completion.",
-      "action_window": "intraday",
-      "headline": "Paramount Skydance Says All Regulatory Clearances Secured For Proposed Warner Bros. Discovery Acquisition; Says State AG Litigation Remaining Final Obstacl",
-      "url": "https://www.benzinga.com/m/26/08/61226125/paramount-skydance-says-all-regulatory-clearances-secured-proposed-warner-bros-discovery-acquisition",
-      "source": "alpaca",
-      "added_at": "2026-08-14T20:03:57.609537+00:00"
-    },
-    {
-      "ticker": "LGND",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Analyst initiation with Outperform rating and $330 price target represents fresh positive coverage but lacks the immediate catalyst impact of major firm upgrades or material corporate events.",
-      "action_window": "next_day",
-      "headline": "Leerink Partners Initiates Coverage On Ligand Pharmaceuticals with Outperform Rating, Announces Price Target of $330",
-      "url": "https://www.benzinga.com/news/26/08/61226107/leerink-partners-initiates-coverage-ligand-pharmaceuticals-outperform-rating-announces-price-target-",
-      "source": "alpaca",
-      "added_at": "2026-08-14T20:03:57.609559+00:00"
-    },
-    {
-      "ticker": "PYPL",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "WSJ exclusive reporting active M&A talks with credible acquirers (Stripe/Advent) represents a significant potential premium catalyst for PayPal, though still unconfirmed and characterized as the company being 'struggling'.",
-      "action_window": "intraday",
-      "headline": "'Stripe, Advent In Talks To Buy PayPal; The Fintech Startup And Private-Equity Firm Advent Offered To Buy The Struggling Payments Company In July' - WSJ Exclusive",
-      "url": "https://www.benzinga.com/m/26/08/61225976/stripe-advent-talks-buy-paypal-fintech-startup-and-private-equity-firm-advent-offered-buy-struggling",
-      "source": "alpaca",
-      "added_at": "2026-08-14T20:03:57.609576+00:00"
-    },
-    {
-      "ticker": "SXTP",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant double-miss with EPS 5% worse than expected and revenue missing by 69% ($56.8K vs $186K estimate), indicating severe operational underperformance.",
-      "action_window": "intraday",
-      "headline": "60 Degrees Q2 EPS $(0.90) Misses $(0.86) Estimate, Sales $56.798K Miss $186.000K Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61225953/60-degrees-q2-eps-0-90-misses-0-86-estimate-sales-56-798k-miss-186-000k-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-14T20:03:57.609590+00:00"
-    },
-    {
       "ticker": "NVVE",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1645,6 +1597,140 @@
       "url": "https://www.benzinga.com/news/26/08/61259396/tesla-readies-august-launch-cybercab-its-robotaxi-without-steering-wheel-tesla-targets-august-public",
       "source": "alpaca",
       "added_at": "2026-08-17T19:50:57.231862+00:00"
+    },
+    {
+      "ticker": "FN",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Fabrinet issues Q1 guidance significantly above consensus with EPS midpoint of $4.18 vs $3.96 estimate (5.6% beat) and revenue midpoint of $1.4B vs $1.321B estimate (6% beat), indicating strong forward momentum.",
+      "action_window": "intraday",
+      "headline": "Fabrinet Sees Q1 Adj EPS $4.10-$4.25 vs $3.96 Est; Sees Sales $1.375B-$1.425B vs $1.321B Est",
+      "url": "https://www.benzinga.com/news/26/08/61260790/fabrinet-sees-q1-adj-eps-4-10-4-25-vs-3-96-est-sees-sales-1-375b-1-425b-vs-1-321b-est",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492160+00:00",
+      "updated_at": "2026-08-17T20:19:00.492189+00:00"
+    },
+    {
+      "ticker": "TRGP",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Two-year commercial agreement with ExxonMobil secures midstream volumes and revenue visibility for Targa in strategic Permian Basin, a material positive catalyst for TRGP.",
+      "action_window": "next_day",
+      "headline": "Targa Resources Executes 2-Year Agreement With ExxonMobil Over Integrated Natural Gas Gathering, Processing In Permian Basin",
+      "url": "https://www.benzinga.com/news/26/08/61260818/targa-resources-executes-2-year-agreement-exxonmobil-over-integrated-natural-gas-gathering-processin",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492176+00:00"
+    },
+    {
+      "ticker": "DDI",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Major shareholder publicly rejecting takeover offer as undervalued by 135% creates potential for deal renegotiation or competing bids, though outcome remains uncertain.",
+      "action_window": "next_day",
+      "headline": "DoubleDown Interactive Shareholder Four Tree Island Advisory Urges Special Committee To Reject $11.25/ADS Takeover Offer; Believes Co Is Worth At Least $26.40/ADS",
+      "url": "https://www.benzinga.com/news/26/08/61260716/doubledown-interactive-shareholder-four-tree-island-advisory-urges-special-committee-reject-11-25-ad",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492200+00:00"
+    },
+    {
+      "ticker": "FLXS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong double beat with Q4 adjusted EPS exceeding estimates by 22% ($1.33 vs $1.09) and sales beating by 5.2% ($115.365M vs $109.663M), representing a significant positive earnings surprise.",
+      "action_window": "next_day",
+      "headline": "Flexsteel Industries Q4 Adj. EPS $1.33 Beats $1.09 Estimate, Sales $115.365M Beat $109.663M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61260652/flexsteel-industries-q4-adj-eps-1-33-beats-1-09-estimate-sales-115-365m-beat-109-663m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492210+00:00"
+    },
+    {
+      "ticker": "XP",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Share buyback cancellation reducing total share count by 2.3% is accretive to existing shareholders and typically viewed positively for EPS enhancement.",
+      "action_window": "next_day",
+      "headline": "XP's Board Of Directors  Approves The Cancellation Of Existing Treasury Class A Shares Held By The Company; Total Share Count Went From 520,292,030 To 508,500,275 After Cancellation",
+      "url": "https://www.benzinga.com/news/26/08/61260577/xp-s-board-directors-approves-cancellation-existing-treasury-class-shares-held-company-total-share-c",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492218+00:00"
+    },
+    {
+      "ticker": "BANR",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Receipt of all regulatory approvals removes deal uncertainty and confirms merger completion with specific near-term closing date, a major de-risking catalyst for the acquirer.",
+      "action_window": "next_day",
+      "headline": "Banner Corporation Says All Regulatory Approvals Received For Merger With Pacific Financial; Closing Anticipated September 1",
+      "url": "https://www.benzinga.com/quote/BANR",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492227+00:00"
+    },
+    {
+      "ticker": "LMNR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Asset sale for debt reduction and strategic reallocation to higher-return avocado operations signals improved capital allocation and balance sheet strengthening.",
+      "action_window": "next_day",
+      "headline": "Limoneira Agrees To Sell 724-Acre Windfall Farms Vineyard In Paso Robles For $15M; Proceeds Expected To Reduce Debt And Fund Avocado Expansion And Other Higher-Return Investments",
+      "url": "https://www.benzinga.com/news/26/08/61260498/limoneira-agrees-sell-724-acre-windfall-farms-vineyard-paso-robles-15m-proceeds-expected-reduce-debt",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492242+00:00"
+    },
+    {
+      "ticker": "JFB",
+      "tradeable_score": 0.73,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Multi-year $15M defense contract with European NATO member represents significant revenue for JFB Construction through its XTEND subsidiary, likely material to company valuation.",
+      "action_window": "intraday",
+      "headline": "JFB Construction Says XTEND Enters Into Multi-Year Contract Valued At Up To ~$15M With Ministry Of Defense Of European NATO Member Nation",
+      "url": "https://www.benzinga.com/news/26/08/61260497/jfb-construction-says-xtend-enters-multi-year-contract-valued-15m-ministry-defense-european-nato-mem",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492251+00:00"
+    },
+    {
+      "ticker": "GXAI",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Significant dilution event with 3M shares issued at reduced price plus 6M additional warrants at lower strike, effectively doubling potential share count dilution while raising modest capital.",
+      "action_window": "next_day",
+      "headline": "Gaxos.ai Announces Closing Of Warrant Exercise Inducement For 3,007,654 Shares At Reduced $1.20/Share Exercise Price, Raising $3.6M Gross; Issues New Warrants For Up To 6,015,308 Shares At $0.95/Share",
+      "url": "https://www.benzinga.com/quote/GXAI",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492260+00:00"
+    },
+    {
+      "ticker": "DUOT",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Significant earnings beat with EPS of $1.35 vs $0.66 estimate (104% beat) and revenue of $6.175M vs $4.900M estimate (26% beat) represents a major positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Duos Technologies Group Q2 EPS $1.35 Beats $0.66 Estimate, Sales $6.175M Beat $4.900M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61260289/duos-technologies-group-q2-eps-1-35-beats-0-66-estimate-sales-6-175m-beat-4-900m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492268+00:00",
+      "updated_at": "2026-08-17T20:19:00.492278+00:00"
+    },
+    {
+      "ticker": "AMLX",
+      "tradeable_score": 0.75,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Phase 3 trial results announcement scheduled for next morning creates binary event with high volatility potential but unknown directional outcome until data release.",
+      "action_window": "next_day",
+      "headline": "Amylyx Pharmaceuticals To Announce Phase 3 LUCIDITY Trial Topline Results For Avexitide In Post-Bariatric Hypoglycemia On August 18 At 8:00 a.m. ET",
+      "url": "https://www.benzinga.com/general/biotech/26/08/61260227/amylyx-pharmaceuticals-announce-phase-3-lucidity-trial-topline-results-avexitide-post-bariatric-hypo",
+      "source": "alpaca",
+      "added_at": "2026-08-17T20:19:00.492287+00:00"
     }
   ]
 }
