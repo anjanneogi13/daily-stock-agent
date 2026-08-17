@@ -7143,5 +7143,44 @@
     "added_at": "2026-08-17T16:54:32.965519+00:00",
     "expires": "2027-02-13T16:54:32.965528+00:00",
     "hard_block": true
+  },
+  "FULC": {
+    "ticker": "FULC",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Fulcrum Therapeutics Strikes All-Stock Merger With Slate Medicines",
+    "added_at": "2026-08-17T17:21:09.036490+00:00",
+    "expires": "2026-09-16T17:21:09.036498+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EQNR": {
+    "ticker": "EQNR",
+    "score_delta": 0.05,
+    "catalyst": "ma_acquirer",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Equinor Strengthens Position In U.S. Power Market; Agrees To Acquire 87.71% Stake In 1,483 MW Lackawanna Gas-Fired Power Plant In Pennsylvania For $940M",
+    "added_at": "2026-08-17T17:21:09.055968+00:00",
+    "expires": "2026-08-31T17:21:09.055975+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UBER": {
+    "ticker": "UBER",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Uber Goes All-In On Drone Delivery With Zipline",
+    "added_at": "2026-08-17T17:21:09.061725+00:00",
+    "expires": "2026-08-24T17:21:09.061732+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

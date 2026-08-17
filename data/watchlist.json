@@ -1511,6 +1511,66 @@
       "url": "https://www.benzinga.com/quote/USO",
       "source": "alpaca",
       "added_at": "2026-08-17T16:54:33.009086+00:00"
+    },
+    {
+      "ticker": "FULC",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "All-stock merger announcement is a major catalyst for the target company, typically triggering immediate repricing to reflect deal terms and takeover premium.",
+      "action_window": "intraday",
+      "headline": "Fulcrum Therapeutics Strikes All-Stock Merger With Slate Medicines",
+      "url": "https://www.benzinga.com/m-a/26/08/61255912/fulcrum-therapeutics-strikes-all-stock-merger-with-slate-medicines",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:21:09.069610+00:00"
+    },
+    {
+      "ticker": "EWC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Canadian PM signaling active tariff negotiations with upcoming dialogue before deadline reduces tail risk of worst-case trade war scenario, providing short-term relief for Canadian equities.",
+      "action_window": "intraday",
+      "headline": "Canada Prime Minister Carney Says He Expects To Speak To Trump Before August 19 Tariffs Deadline; Says We'll Have Opportunities Over The Next 48 Hours To Discuss In More Detail As The Negotiations Go Forward",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61255727/canada-prime-minister-carney-says-he-expects-speak-trump-august-19-tariffs-deadline-says-we-ll-have-",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:21:09.069628+00:00"
+    },
+    {
+      "ticker": "DKNG",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Capital raise of $600M and expanded credit facility strengthens balance sheet and provides operational flexibility, though dilution or debt concerns may temper immediate upside.",
+      "action_window": "next_day",
+      "headline": "DraftKings Boosts Liquidity With New $600 Million Capital Raise",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61255608/draftkings-boosts-liquidity-with-new-600-million-capital-raise",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:21:09.069651+00:00"
+    },
+    {
+      "ticker": "EQNR",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Significant $940M acquisition of gas-fired power plant strengthens Equinor's U.S. market position with immediate strategic expansion into Pennsylvania power generation.",
+      "action_window": "intraday",
+      "headline": "Equinor Strengthens Position In U.S. Power Market; Agrees To Acquire 87.71% Stake In 1,483 MW Lackawanna Gas-Fired Power Plant In Pennsylvania For $940M",
+      "url": "https://www.benzinga.com/m/26/08/61255522/equinor-strengthens-position-u-s-power-market-agrees-acquire-87-71-stake-1-483-mw-lackawanna-gas-fir",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:21:09.069662+00:00"
+    },
+    {
+      "ticker": "UBER",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership announcement for drone delivery expansion represents meaningful business line development but lacks immediate financial impact or concrete deployment timeline.",
+      "action_window": "next_day",
+      "headline": "Uber Goes All-In On Drone Delivery With Zipline",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61255285/uber-goes-all-in-on-drone-delivery-with-zipline",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:21:09.069672+00:00"
     }
   ]
 }
