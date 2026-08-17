@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPY",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Michigan Consumer Sentiment missed expectations significantly (51.0 vs 54.4), indicating weaker economic conditions that typically pressure equities and may influence Fed policy.",
-      "action_window": "intraday",
-      "headline": "Michigan Consumer Sentiment For August 51.0 Vs 54.4 Est.",
-      "url": "https://www.benzinga.com/quote/SPY",
-      "source": "alpaca",
-      "added_at": "2026-08-14T14:12:30.866568+00:00"
-    },
-    {
       "ticker": "AVAV",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
@@ -279,16 +267,16 @@
     },
     {
       "ticker": "NVDA",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
       "category": "other",
-      "rationale": "Nvidia's disclosed 122.8M share stake in SpaceX represents a significant strategic investment linking the AI chip leader to a major private space/tech company, likely positive for NVDA's strategic positioning but impact depends on valuation details.",
+      "rationale": "A $100B infrastructure investment by Nvidia for OpenAI represents a massive capital commitment signaling strong AI infrastructure demand and strategic partnership expansion, though details need confirmation from credible sources.",
       "action_window": "next_day",
-      "headline": "Nvidia Corp Reports Share Stake Of 122.8 Mln Class A Shares In SpaceX",
-      "url": "https://www.benzinga.com/m/26/08/61230665/nvidia-corp-reports-share-stake-122-8-mln-class-shares-spacex",
+      "headline": "'Nvidia To Invest $100B For OpenAI Data Centre In Ohio' - Financial Times",
+      "url": "https://www.benzinga.com/news/26/08/61248274/nvidia-invest-100b-openai-data-centre-ohio-financial-times",
       "source": "alpaca",
       "added_at": "2026-08-14T20:55:45.644260+00:00",
-      "updated_at": "2026-08-14T20:55:45.644302+00:00"
+      "updated_at": "2026-08-17T14:31:12.641822+00:00"
     },
     {
       "ticker": "JBLU",
@@ -1435,6 +1423,42 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61246990/perfect-moment-q1-eps-0-07-misses-0-01-estimate-sales-1-150m-miss-5-616m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-17T14:00:50.136094+00:00"
+    },
+    {
+      "ticker": "NXE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Reuters exclusive reveals NXE as confirmed M&A target with BHP sharing technical data and $1B+ financing plans, indicating serious deal momentum beyond rumor stage.",
+      "action_window": "intraday",
+      "headline": "'Uranium Miner Nexgen Energy Says Sharing Technical Information With BHP As Nexgen Looks To Raise Over $1B For Rook I Mine; BHP Assessed Nexgen As Potential Takeover Target Last Year, Sources Say' - Reuters Exclusive",
+      "url": "https://www.benzinga.com/quote/BHP",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:31:12.641788+00:00"
+    },
+    {
+      "ticker": "BX",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Launching high-grade bond offerings through private credit funds represents meaningful product expansion and potential AUM growth for both alternative asset managers.",
+      "action_window": "next_day",
+      "headline": "'Blackstone, Blue Owl Private Credit Funds Offer High-Grade Bonds' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61248989/blackstone-blue-owl-private-credit-funds-offer-high-grade-bonds-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:31:12.641803+00:00"
+    },
+    {
+      "ticker": "BE",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Bloom Energy benefits from positive AI infrastructure sentiment spillover due to Anthropic's revenue growth, but indirect connection limits immediate trading catalyst strength.",
+      "action_window": "intraday",
+      "headline": "Why Is Bloom Energy Stock Surging on Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61248704/why-is-bloom-energy-stock-surging-on-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-17T14:31:12.641813+00:00"
     }
   ]
 }
