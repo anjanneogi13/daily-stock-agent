@@ -186,16 +186,16 @@
     },
     {
       "ticker": "TTMI",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.95,
       "sentiment": "bullish",
       "category": "ma_acquirer",
-      "rationale": "Major $1.1B cash acquisition expanding TTMI into high-growth defense and space sectors represents significant strategic shift and confirmed material catalyst.",
+      "rationale": "TTM Technologies announced a definitive $1.1 billion acquisition of Epiq Solutions, a material M&A transaction representing a significant strategic expansion for the company.",
       "action_window": "intraday",
-      "headline": "TTM Technologies Makes $1.1 Billion Defense Push With Epiq Solutions Deal",
-      "url": "https://www.benzinga.com/m-a/26/08/61247186/ttm-technologies-makes-1-1-billion-defense-push-with-epiq-solutions-deal",
+      "headline": "Veritas Capital Announces $1.1 Billion Sale of Epiq Solutions to TTM Technologies",
+      "url": "https://finance.yahoo.com/technology/articles/veritas-capital-announces-1-1-125600094.html?.tsrc=rss",
       "source": "alpaca",
       "added_at": "2026-08-17T10:25:44.306760+00:00",
-      "updated_at": "2026-08-17T14:00:50.136052+00:00"
+      "updated_at": "2026-08-17T23:45:40.477997+00:00"
     },
     {
       "ticker": "IMCC",
