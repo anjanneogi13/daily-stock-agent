@@ -480,14 +480,14 @@
   },
   "AZN": {
     "ticker": "AZN",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "AstraZeneca's Enhertu Receives EU Approval Recommendation To Treat Unresectable Or Metastatic HER2-Positive Breast Cancer",
-    "added_at": "2026-07-24T12:01:44.901168+00:00",
-    "expires": "2026-08-23T12:01:44.901174+00:00",
+    "score_delta": 0.186,
+    "catalyst": "ma_target",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "Is the Reported $400 Billion AstraZeneca-Bristol Myers Squibb Megamerger a Slam Dunk -- or a Disaster Waiting to Happen?",
+    "added_at": "2026-08-17T23:16:51.804012+00:00",
+    "expires": "2026-09-16T23:16:51.804017+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -669,19 +669,6 @@
     "expires": "2027-01-31T23:59:08.398436+00:00",
     "hard_block": true
   },
-  "OTTR": {
-    "ticker": "OTTR",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "Otter Tail Lowers FY2026 GAAP EPS Guidance from $5.22-$5.62 to $3.84-$4.24",
-    "added_at": "2026-08-03T22:55:49.598751+00:00",
-    "expires": "2026-08-17T22:55:49.598757+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MAGH": {
     "ticker": "MAGH",
     "score_delta": -1.0,
@@ -690,19 +677,6 @@
     "added_at": "2026-08-03T22:55:49.606878+00:00",
     "expires": "2027-01-30T22:55:49.606885+00:00",
     "hard_block": true
-  },
-  "TEAD": {
-    "ticker": "TEAD",
-    "score_delta": -0.064,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Teads Holding Files A Lawsuit In The U.S. District Court For The Southern District Of New York Against Google And Alphabet, Seeking Financial Damages And Other Legal Remedies",
-    "added_at": "2026-08-03T22:55:49.610943+00:00",
-    "expires": "2026-08-17T22:55:49.610949+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "MAURY": {
     "ticker": "MAURY",
@@ -946,19 +920,6 @@
     "expires": "2026-08-19T18:04:57.185872+00:00",
     "hard_block": false,
     "negative_reaction": true
-  },
-  "ASTS": {
-    "ticker": "ASTS",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "UPDATE: AST SpaceMobile Q2 Adj. EPS $(0.35) Misses $(0.28) Estimate, Sales $31.520M Miss $34.977M Estimate",
-    "added_at": "2026-08-10T23:06:31.631936+00:00",
-    "expires": "2026-08-17T23:06:31.631941+00:00",
-    "hard_block": false,
-    "negative_reaction": false
   },
   "Z": {
     "ticker": "Z",
@@ -1415,45 +1376,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "FDSB": {
-    "ticker": "FDSB",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "next_day",
-    "headline": "Fifth District Bancorp Q2 EPS $0.08 Down From $0.61 YoY, Sales $3.955M Down From $6.867M YoY",
-    "added_at": "2026-08-10T23:06:31.621559+00:00",
-    "expires": "2026-08-17T23:06:31.621567+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NOTE": {
-    "ticker": "NOTE",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "FiscalNote Holdings Q2 EPS $(1.06) Misses $(0.44) Estimate, Sales $19.581M Miss $19.852M Estimate",
-    "added_at": "2026-08-10T23:06:31.627130+00:00",
-    "expires": "2026-08-17T23:06:31.627136+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SCYX": {
-    "ticker": "SCYX",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "UPDATE: SCYNEXIS Q2 Adj. EPS $(0.57) Misses $(0.51) Estimate, Sales $235.000K Beat $80.330K Estimate",
-    "added_at": "2026-08-10T23:06:31.636659+00:00",
-    "expires": "2026-08-17T23:06:31.636665+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "BMO": {
     "ticker": "BMO",
     "score_delta": 0.2,
@@ -1464,58 +1386,6 @@
     "headline": "BMO Financial Group, Together With Royal Bank of Canada, Entered Into An Agreement For The Sale Of Jointly-Owned Moneris Solutions Corporation To Francisco Partners For Cash Consideration Of ~ $2B",
     "added_at": "2026-08-10T23:06:31.641472+00:00",
     "expires": "2026-09-09T23:06:31.641478+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "IMDX": {
-    "ticker": "IMDX",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "CORRECTION: Insight Molecular Q2 Adj. EPS $(0.23) Beats $(0.24) Estimate, Sales $239.000K Miss $437.500K Estimate",
-    "added_at": "2026-08-10T23:06:31.646227+00:00",
-    "expires": "2026-08-17T23:06:31.646232+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CJT": {
-    "ticker": "CJT",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "Cargojet Q2 Adj. EPS $0.67 Misses $0.79 Estimate, Sales $275.800M Beat $257.930M Estimate",
-    "added_at": "2026-08-10T23:06:31.650981+00:00",
-    "expires": "2026-08-17T23:06:31.650986+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ALTI": {
-    "ticker": "ALTI",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.82,
-    "action_window": "next_day",
-    "headline": "UPDATE: AlTi Global Q2 Adj. EPS $0.004 Misses $0.06 Estimate, Sales $58.023M Miss $65.400M Estimate",
-    "added_at": "2026-08-10T23:06:31.655695+00:00",
-    "expires": "2026-08-17T23:06:31.655725+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AMPY": {
-    "ticker": "AMPY",
-    "score_delta": -0.093,
-    "catalyst": "earnings_miss",
-    "sentiment": "neutral",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "UPDATE: Amplify Energy Q2 Adj. EPS $(0.04) Misses $0.07 Estimate, Sales $52.686M Beat $43.690M Estimate",
-    "added_at": "2026-08-10T23:06:31.660464+00:00",
-    "expires": "2026-08-17T23:06:31.660469+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
