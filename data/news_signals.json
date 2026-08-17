@@ -7121,5 +7121,44 @@
     "expires": "2026-08-24T14:56:41.045639+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "MGM": {
+    "ticker": "MGM",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Argus Research Maintains Buy on MGM Resorts International, Raises Price Target to $55",
+    "added_at": "2026-08-17T15:20:01.029806+00:00",
+    "expires": "2026-08-22T15:20:01.029813+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PPLI": {
+    "ticker": "PPLI",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Citigroup Maintains Buy on People, Raises Price Target to $52",
+    "added_at": "2026-08-17T15:20:01.043045+00:00",
+    "expires": "2026-08-22T15:20:01.043054+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SYF": {
+    "ticker": "SYF",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Synchrony Partners With OpenAI To Enhance Its Services In Shopping, Payments",
+    "added_at": "2026-08-17T15:20:01.049220+00:00",
+    "expires": "2026-08-24T15:20:01.049227+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AVAV",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "New tariffs directly benefiting US drone manufacturers create immediate competitive advantage for AeroVironment as a domestic producer.",
-      "action_window": "intraday",
-      "headline": "What's Going On With the Rise in AeroVironment Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61213656/whats-going-on-with-the-rise-in-aerovironment-stock",
-      "source": "alpaca",
-      "added_at": "2026-08-14T15:14:49.862971+00:00"
-    },
-    {
       "ticker": "OMDA",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1496,6 +1484,18 @@
       "url": "https://www.benzinga.com/news/26/08/61249755/reported-aug-14-u-s-urges-apple-not-buy-chinese-memory-chips-wsj-exclusive",
       "source": "alpaca",
       "added_at": "2026-08-17T14:56:41.053469+00:00"
+    },
+    {
+      "ticker": "SYF",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with OpenAI to enhance customer-facing services represents a meaningful competitive advantage in the evolving fintech/payments landscape, though execution and impact timeline remain uncertain.",
+      "action_window": "next_day",
+      "headline": "Synchrony Partners With OpenAI To Enhance Its Services In Shopping, Payments",
+      "url": "https://www.benzinga.com/news/26/08/61250918/synchrony-partners-openai-enhance-its-services-shopping-payments",
+      "source": "alpaca",
+      "added_at": "2026-08-17T15:20:01.057541+00:00"
     }
   ]
 }
