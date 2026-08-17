@@ -195,15 +195,16 @@
     },
     {
       "ticker": "JBLU",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.75,
       "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Major activist investor Carl Icahn reducing his stake by 38.6% signals loss of confidence and typically triggers negative sentiment and selling pressure from other institutional investors.",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade with extreme language ('worthless') citing operational risks from geopolitical fuel volatility and potential debt-funded losses creates immediate selling pressure.",
       "action_window": "next_day",
-      "headline": "Carl Icahn Cuts Share Stake In JetBlue Airways By 38.6% To 20.7M Shares",
-      "url": "https://www.benzinga.com/news/26/08/61230697/carl-icahn-cuts-share-stake-jetblue-airways-38-6-20-7m-shares",
+      "headline": "JetBlue 'Worthless'? Analyst Cuts Rating As Us-Iran Conflict Keeps Jet Fuel Volatile",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/08/61254946/jetblue-worthless-analyst-cuts-rating-as-us-iran-conflict-keeps-jet-fuel-volatile",
       "source": "alpaca",
-      "added_at": "2026-08-14T20:55:45.644273+00:00"
+      "added_at": "2026-08-14T20:55:45.644273+00:00",
+      "updated_at": "2026-08-17T16:54:33.009044+00:00"
     },
     {
       "ticker": "SRG",
@@ -836,15 +837,16 @@
     },
     {
       "ticker": "WDAY",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.65,
       "sentiment": "bearish",
       "category": "downgrade",
-      "rationale": "BTIG downgrade from positive to neutral rating creates moderate selling pressure, though impact is limited as it's not a downgrade to underperform/sell.",
+      "rationale": "Analyst downgrade citing overly optimistic revenue estimates and limited adoption of key product (Flex Credit), though buyout speculation adds uncertainty.",
       "action_window": "intraday",
-      "headline": "BTIG Downgrades Workday to Neutral",
-      "url": "https://www.benzinga.com/news/26/08/61241138/btig-downgrades-workday-neutral",
+      "headline": "Is Workday In Buyout Talks? Analyst No Longer Bullish After Flex Credit\u2019s \u2018Limited Adoption\u2019",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/08/61254780/is-workday-in-buyout-talks-analyst-no-longer-bullish-after-flex-credits-limited-adoption",
       "source": "alpaca",
-      "added_at": "2026-08-17T10:56:59.529868+00:00"
+      "added_at": "2026-08-17T10:56:59.529868+00:00",
+      "updated_at": "2026-08-17T16:54:33.009062+00:00"
     },
     {
       "ticker": "CCAP",
@@ -1451,15 +1453,16 @@
     },
     {
       "ticker": "RIOT",
-      "tradeable_score": 0.68,
+      "tradeable_score": 0.72,
       "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "JP Morgan maintains positive stance with price target increase to $22, signaling continued confidence and potential upside catalyst from a major bank.",
+      "category": "other",
+      "rationale": "JPMorgan confirmation that Anthropic pays 33% premium validates RIOT's pricing power and revenue quality in tight AI infrastructure market.",
       "action_window": "intraday",
-      "headline": "JP Morgan Maintains Overweight on Riot Platforms, Raises Price Target to $22",
-      "url": "https://www.benzinga.com/news/26/08/61251899/jp-morgan-maintains-overweight-riot-platforms-raises-price-target-22",
+      "headline": "Anthropic Paying 33% Above Market for AI Capacity, JPMorgan Says",
+      "url": "https://www.benzinga.com/markets/tech/26/08/61254262/anthropic-pays-33-percent-above-market-ai-capacity-jpmorgan",
       "source": "alpaca",
-      "added_at": "2026-08-17T15:48:40.046578+00:00"
+      "added_at": "2026-08-17T15:48:40.046578+00:00",
+      "updated_at": "2026-08-17T16:54:33.009097+00:00"
     },
     {
       "ticker": "PURR",
@@ -1484,6 +1487,30 @@
       "url": "https://www.benzinga.com/quote/CORZ",
       "source": "alpaca",
       "added_at": "2026-08-17T16:20:14.994704+00:00"
+    },
+    {
+      "ticker": "ORCL",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Oracle facing multiple headwinds including massive AI capital spending strain, negative cash flow concerns, and notable short position from Michael Burry creating downward pressure.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Oracle Stock Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61254663/whats-going-on-with-oracle-stock-monday-4",
+      "source": "alpaca",
+      "added_at": "2026-08-17T16:54:33.009074+00:00"
+    },
+    {
+      "ticker": "USO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Significant drawdown in US Strategic Petroleum Reserve to 40-year lows signals tighter oil supply conditions, supportive for crude oil prices and related instruments like USO.",
+      "action_window": "next_day",
+      "headline": "Stocks Of Crude Oil In The U.S. Strategic Petroleum Reserve Fell By About 5.3M Barrels To 293.4M Barrels Last Week, Lowest Since 1982",
+      "url": "https://www.benzinga.com/quote/USO",
+      "source": "alpaca",
+      "added_at": "2026-08-17T16:54:33.009086+00:00"
     }
   ]
 }

@@ -582,19 +582,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SOFI": {
-    "ticker": "SOFI",
-    "score_delta": 0.064,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "ignore",
-    "headline": "SoFi Stock Surges Monday: What's Driving the Post-Earnings Rebound?",
-    "added_at": "2026-08-03T16:21:54.125847+00:00",
-    "expires": "2026-08-17T16:21:54.125853+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PYPD": {
     "ticker": "PYPD",
     "score_delta": 0.15,
@@ -1425,32 +1412,6 @@
     "headline": "Verisk Says \"We Appreciate The Expedited Response From The Court But Strongly Disagree With The Decision. It Is Possible To Appeal, Among Other Next Steps, And We Are Evaluating Our Options At This Ti",
     "added_at": "2026-08-10T14:17:26.666213+00:00",
     "expires": "2026-08-24T14:17:26.666221+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ESNT": {
-    "ticker": "ESNT",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "next_day",
-    "headline": "These Analysts Boost Their Forecasts On Essent Group After Upbeat Q2 Results",
-    "added_at": "2026-08-10T16:25:26.635436+00:00",
-    "expires": "2026-08-17T16:25:26.635443+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "META": {
-    "ticker": "META",
-    "score_delta": 0.041,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "intraday",
-    "headline": "What's Going On With Meta Platforms Stock Monday?",
-    "added_at": "2026-08-10T16:25:26.646861+00:00",
-    "expires": "2026-08-17T16:25:26.646865+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3105,19 +3066,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "APGE": {
-    "ticker": "APGE",
-    "score_delta": -0.046,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.65,
-    "action_window": "intraday",
-    "headline": "This Apogee Therapeutics Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Wednesday",
-    "added_at": "2026-08-12T16:26:27.076410+00:00",
-    "expires": "2026-08-17T16:26:27.076418+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "VEEA": {
     "ticker": "VEEA",
     "score_delta": 0.097,
@@ -3375,32 +3323,6 @@
     "headline": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
     "added_at": "2026-08-12T14:17:29.081750+00:00",
     "expires": "2026-08-19T14:17:29.081755+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TXG": {
-    "ticker": "TXG",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Stephens & Co. Maintains Overweight on 10x Genomics, Raises Price Target to $65",
-    "added_at": "2026-08-12T16:26:27.064492+00:00",
-    "expires": "2026-08-17T16:26:27.064500+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "AXP": {
-    "ticker": "AXP",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Piper Sandler Maintains Overweight on American Express, Raises Price Target to $405",
-    "added_at": "2026-08-12T16:26:27.081889+00:00",
-    "expires": "2026-08-17T16:26:27.081898+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7212,5 +7134,14 @@
     "expires": "2026-08-22T16:20:14.981116+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "JBLU": {
+    "ticker": "JBLU",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "JetBlue 'Worthless'? Analyst Cuts Rating As Us-Iran Conflict Keeps Jet Fuel Volatile",
+    "added_at": "2026-08-17T16:54:32.965519+00:00",
+    "expires": "2027-02-13T16:54:32.965528+00:00",
+    "hard_block": true
   }
 }
