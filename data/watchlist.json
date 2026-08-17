@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AVGO",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "downgrade",
-      "rationale": "Broadcom experiencing significant 5-6% sell-off driven by BofA analyst concerns over massive $370B financing requirements for AI chip business, raising sustainability questions about the AI growth narrative.",
-      "action_window": "intraday",
-      "headline": "Broadcom Plunges 5% as Its AI Boom Faces a $370 Billion Financing Question",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61219624/broadcom-ai-financing-370-billion",
-      "source": "alpaca",
-      "added_at": "2026-08-14T17:26:29.045083+00:00"
-    },
-    {
       "ticker": "MP",
       "tradeable_score": 0.78,
       "sentiment": "bullish",
@@ -1571,6 +1559,90 @@
       "url": "https://www.benzinga.com/markets/large-cap/26/08/61255285/uber-goes-all-in-on-drone-delivery-with-zipline",
       "source": "alpaca",
       "added_at": "2026-08-17T17:21:09.069672+00:00"
+    },
+    {
+      "ticker": "OCUL",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Competitor's Phase 3 clinical trial failure reduces competitive threat for OCUL in wet AMD market, providing indirect positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Why Is Ocular Therapeutix Stock Gaining Monday?",
+      "url": "https://www.benzinga.com/news/health-care/26/08/61256847/why-is-ocular-therapeutix-stock-gaining-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973092+00:00"
+    },
+    {
+      "ticker": "MESO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Completion of Phase 3 patient dosing is a significant clinical milestone for a large market opportunity, though final trial results and FDA approval remain uncertain.",
+      "action_window": "next_day",
+      "headline": "Mesoblast Targets $10 Billion Market With Regenerative Back Pain Treatment",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61256766/mesoblast-targets-10-billion-market-with-regenerative-back-pain-treatment",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973120+00:00"
+    },
+    {
+      "ticker": "TPC",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "A $60M government contract is material for Tutor Perini but represents modest revenue relative to their typical annual revenue base, creating a positive but not transformational catalyst.",
+      "action_window": "next_day",
+      "headline": "Tutor Perini Corporation Awarded $60M U.S. Coast Guard Contract",
+      "url": "https://www.benzinga.com/news/26/08/61256526/tutor-perini-corporation-awarded-60m-u-s-coast-guard-contract",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973131+00:00"
+    },
+    {
+      "ticker": "VSAT",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Viasat winning a Space Force contract with Rocket Lab is a meaningful defense contract win with stated technical momentum, though already trading higher suggests partial price discovery.",
+      "action_window": "intraday",
+      "headline": "What's Going On With Viasat Stock Monday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61256402/whats-going-on-with-viasat-stock-monday",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973143+00:00"
+    },
+    {
+      "ticker": "STLA",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Stock hitting 52-week lows combined with large-scale recall of 955,000 vehicles creates immediate negative trading pressure with safety and cost implications.",
+      "action_window": "intraday",
+      "headline": "Stellantis Stock Hits 52-Week Lows: What's Happening Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61256353/stellantis-stock-hits-52-week-lows-whats-happening-today",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973153+00:00"
+    },
+    {
+      "ticker": "CVX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major offshore oil discovery with 600+ meters of hydrocarbons represents significant reserve addition that enhances long-term production potential and asset value for Chevron.",
+      "action_window": "next_day",
+      "headline": "Chevron Makes Major Oil Discovery in Angola\u2019s Offshore Block",
+      "url": "https://www.benzinga.com/markets/large-cap/26/08/61256260/chevron-makes-major-oil-discovery-in-angolas-offshore-block",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973161+00:00"
+    },
+    {
+      "ticker": "SPCX",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Serious legal allegations involving child abuse material creates significant reputational and regulatory risk for xAI, with potential cascading effects on related securities.",
+      "action_window": "intraday",
+      "headline": "xAI Faces Fresh Allegation Over Grok\u2019s Role in Creating Child Abuse Material",
+      "url": "https://www.benzinga.com/markets/private-markets/26/08/61255963/xai-faces-fresh-allegation-over-groks-role-in-creating-child-abuse-material",
+      "source": "alpaca",
+      "added_at": "2026-08-17T17:54:33.973171+00:00"
     }
   ]
 }

@@ -3352,32 +3352,6 @@
     "hard_block": false,
     "negative_reaction": true
   },
-  "DEC": {
-    "ticker": "DEC",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Truist Securities Maintains Buy on Diversified Energy, Raises Price Target to $20",
-    "added_at": "2026-08-12T17:27:59.215233+00:00",
-    "expires": "2026-08-17T17:27:59.215243+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CCJ": {
-    "ticker": "CCJ",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Truist Securities Maintains Buy on Cameco, Raises Price Target to $130",
-    "added_at": "2026-08-12T17:27:59.226329+00:00",
-    "expires": "2026-08-17T17:27:59.226338+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "RYTM": {
     "ticker": "RYTM",
     "score_delta": 0.15,
@@ -3388,19 +3362,6 @@
     "headline": "Why Is Rhythm Pharmaceuticals Stock Trading Higher On Wednesday?",
     "added_at": "2026-08-12T17:27:59.237695+00:00",
     "expires": "2026-09-11T17:27:59.237703+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "BWAY": {
-    "ticker": "BWAY",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "BTIG Maintains Buy on BrainsWay, Raises Price Target to $20",
-    "added_at": "2026-08-12T17:27:59.254577+00:00",
-    "expires": "2026-08-17T17:27:59.254586+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7180,6 +7141,19 @@
     "headline": "Uber Goes All-In On Drone Delivery With Zipline",
     "added_at": "2026-08-17T17:21:09.061725+00:00",
     "expires": "2026-08-24T17:21:09.061732+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VSAT": {
+    "ticker": "VSAT",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "intraday",
+    "headline": "What's Going On With Viasat Stock Monday?",
+    "added_at": "2026-08-17T17:54:33.945878+00:00",
+    "expires": "2026-08-24T17:54:33.945885+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
