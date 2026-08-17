@@ -1,78 +1,6 @@
 {
   "items": [
     {
-      "ticker": "LRCX",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "A $3B+ R&D expansion into AI chip production is a significant strategic investment signaling future growth, but impact timing is longer-term rather than immediate.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Lam Research Stock Friday?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61203022/lam-research-plans-3-billion-rd-blitz-as-ai-raises-the-stakes-for-chipmakers",
-      "source": "alpaca",
-      "added_at": "2026-08-14T10:32:20.783598+00:00"
-    },
-    {
-      "ticker": "AMAT",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Record Q3 gross margin and strong Q4 guidance with positive 2027 outlook signals fundamental strength, though premarket decline suggests temporary negative reaction creating potential entry opportunity.",
-      "action_window": "intraday",
-      "headline": "Applied Materials Sees Another Record Year in 2027 As AI Demand Gives It \u2018Unprecedented Visibility\u2019",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61202488/applied-materials-sees-another-record-year-in-2027-as-ai-demand-gives-it-unprecedented-visibility",
-      "source": "alpaca",
-      "added_at": "2026-08-14T10:32:20.783616+00:00"
-    },
-    {
-      "ticker": "MU",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Positive premarket movement driven by AI memory demand tailwinds and $250M venture fund deployment signals strategic growth initiatives, though lacks hard catalysts like earnings or formal guidance.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Micron Technology Stock Friday?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61202173/whats-going-on-with-micron-technology-stock-friday-5",
-      "source": "alpaca",
-      "added_at": "2026-08-14T10:32:20.783626+00:00"
-    },
-    {
-      "ticker": "CMCT",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant EPS miss of 30% ($4.03 vs $3.11 estimate) outweighs modest 5.6% revenue beat, indicating deteriorating profitability and margin compression.",
-      "action_window": "intraday",
-      "headline": "Creative Media Q2 EPS $(4.03) Misses $(3.11) Estimate, Sales $29.683M Beat $28.100M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61203002/creative-media-q2-eps-4-03-misses-3-11-estimate-sales-29-683m-beat-28-100m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-14T10:32:20.783637+00:00"
-    },
-    {
-      "ticker": "CAPR",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Cantor Fitzgerald upgraded CAPR to Overweight with a $28 price target, a meaningful catalyst from a reputable biotech-focused bank that typically drives immediate price action in small-cap therapeutics.",
-      "action_window": "intraday",
-      "headline": "Cantor Fitzgerald Upgrades Capricor Therapeutics to Overweight, Raises Price Target to $28",
-      "url": "https://www.benzinga.com/news/26/08/61202927/cantor-fitzgerald-upgrades-capricor-therapeutics-overweight-raises-price-target-28",
-      "source": "alpaca",
-      "added_at": "2026-08-14T10:32:20.783650+00:00"
-    },
-    {
-      "ticker": "KDK",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "California driverless testing permit is a significant regulatory milestone enabling Kodiak AI to advance heavy-duty autonomous vehicle testing, reducing technical and regulatory risk.",
-      "action_window": "intraday",
-      "headline": "Kodiak AI Receives California State Drivered Testing Permit Under Autonomous Vehicle Tester Program For Heavy-Duty Autonomous Vehicles",
-      "url": "https://www.benzinga.com/news/26/08/61202558/kodiak-ai-receives-california-state-drivered-testing-permit-under-autonomous-vehicle-tester-program-",
-      "source": "alpaca",
-      "added_at": "2026-08-14T10:32:20.783661+00:00"
-    },
-    {
       "ticker": "DGXX",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
@@ -1143,6 +1071,138 @@
       "url": "https://www.benzinga.com/m/26/08/61240335/ttm-technologies-acquire-radio-frequency-technology-maker-epiq-design-solutions-1-1b-cash",
       "source": "alpaca",
       "added_at": "2026-08-17T10:25:44.306760+00:00"
+    },
+    {
+      "ticker": "IMCC",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "Asset sale transaction improves shareholders' equity by C$3M, representing balance sheet cleanup and value realization, though modest absolute improvement suggests limited near-term trading catalyst.",
+      "action_window": "intraday",
+      "headline": "IM Cannabis Agrees To Sell IMC Holdings And European Focused Assets to Slil; Transaction Expected to Improve Shareholders' Equity by of Approximately C$3M",
+      "url": "https://www.benzinga.com/m/26/08/61241220/im-cannabis-agrees-sell-imc-holdings-and-european-focused-assets-slil-transaction-expected-improve-s",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529844+00:00"
+    },
+    {
+      "ticker": "BCSF",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from a reputable financial services-focused firm (KBW) with lowered price target creates immediate selling pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Keefe, Bruyette & Woods Downgrades Bain Capital Specialty to Market Perform, Lowers Price Target to $13",
+      "url": "https://www.benzinga.com/news/26/08/61241195/keefe-bruyette-woods-downgrades-bain-capital-specialty-market-perform-lowers-price-target-13",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529858+00:00"
+    },
+    {
+      "ticker": "WDAY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "BTIG downgrade from positive to neutral rating creates moderate selling pressure, though impact is limited as it's not a downgrade to underperform/sell.",
+      "action_window": "intraday",
+      "headline": "BTIG Downgrades Workday to Neutral",
+      "url": "https://www.benzinga.com/news/26/08/61241138/btig-downgrades-workday-neutral",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529868+00:00"
+    },
+    {
+      "ticker": "CCAP",
+      "tradeable_score": 0.68,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Analyst downgrade from Outperform/Buy to Market Perform with price target reduction creates immediate selling pressure on a BDC stock.",
+      "action_window": "intraday",
+      "headline": "Keefe, Bruyette & Woods Downgrades Crescent Capital BDC to Market Perform, Lowers Price Target to $12",
+      "url": "https://www.benzinga.com/news/26/08/61241127/keefe-bruyette-woods-downgrades-crescent-capital-bdc-market-perform-lowers-price-target-12",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529875+00:00"
+    },
+    {
+      "ticker": "BABA",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Alibaba's strategic divestiture of non-core gaming assets for $1.5B+ to focus on AI represents positive portfolio rationalization and capital redeployment, though impact is moderate given the asset size relative to Alibaba's market cap.",
+      "action_window": "intraday",
+      "headline": "Alibaba\u2019s AI Pivot Deepens, Plans to Offload Gaming Business For at Least $1.5 Billion: Report",
+      "url": "https://www.benzinga.com/m-a/26/08/61241112/alibabas-ai-pivot-deepens-plans-to-offload-gaming-business-for-at-least-1-5-billion-report",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529882+00:00"
+    },
+    {
+      "ticker": "ACH",
+      "tradeable_score": 0.55,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "$45M asset sale provides capital but CEO succession in September creates leadership uncertainty, making this mixed news with moderate trading impact.",
+      "action_window": "next_day",
+      "headline": "Accendra Health Updates Capital Plans; Nets $45M From Non-Core Asset Sales And Sets CEO Succession Timeline For September",
+      "url": "https://www.benzinga.com/news/26/08/61241063/accendra-health-updates-capital-plans-nets-45m-non-core-asset-sales-and-sets-ceo-succession-timeline",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529890+00:00"
+    },
+    {
+      "ticker": "PMT",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Deutsche Bank upgrade to Buy is a meaningful catalyst from a major investment bank, though price target maintenance limits upside potential signal.",
+      "action_window": "intraday",
+      "headline": "Deutsche Bank Upgrades PennyMac Mortgage IT to Buy, Maintains Price Target to $12",
+      "url": "https://www.benzinga.com/news/26/08/61241052/deutsche-bank-upgrades-pennymac-mortgage-it-buy-maintains-price-target-12",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529896+00:00"
+    },
+    {
+      "ticker": "PLSE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Needham initiating coverage with Buy rating and $58 price target represents a meaningful bullish catalyst from a reputable firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Needham Initiates Coverage On Pulse Biosciences with Buy Rating, Announces Price Target of $58",
+      "url": "https://www.benzinga.com/news/26/08/61241041/needham-initiates-coverage-pulse-biosciences-buy-rating-announces-price-target-58",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529904+00:00"
+    },
+    {
+      "ticker": "FTAI",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Closing a $2B warehouse financing facility represents significant capital access that enhances liquidity and supports growth initiatives for the aviation asset business.",
+      "action_window": "intraday",
+      "headline": "FTAI Aviation Closes A $2B Warehouse Financing Facility For Its 2026 SPV",
+      "url": "https://www.benzinga.com/news/26/08/61241030/ftai-aviation-closes-2b-warehouse-financing-facility-its-2026-spv",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529911+00:00"
+    },
+    {
+      "ticker": "PPTA",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q2 EPS of $(0.78) significantly missed estimates of $(0.27) by 189%, representing a substantial earnings disappointment that typically triggers immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Perpetua Resources Q2 EPS $(0.78) Misses $(0.27) Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61241019/perpetua-resources-q2-eps-0-78-misses-0-27-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529918+00:00"
+    },
+    {
+      "ticker": "TT",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership between two industrial leaders targeting high-growth AI data center infrastructure market represents meaningful TAM expansion opportunity, though execution and revenue impact timeline remain uncertain.",
+      "action_window": "next_day",
+      "headline": "Trane Technologies And Eaton Collaborate To Accelerate AI-Factory Efficiency With Integrated Advanced Thermal Management And Electrical System Architectures",
+      "url": "https://www.benzinga.com/news/26/08/61240951/trane-technologies-and-eaton-collaborate-accelerate-ai-factory-efficiency-integrated-advanced-therma",
+      "source": "alpaca",
+      "added_at": "2026-08-17T10:56:59.529929+00:00"
     }
   ]
 }
