@@ -2476,15 +2476,101 @@
     },
     {
       "ticker": "WYFI",
-      "tradeable_score": 0.65,
+      "tradeable_score": 0.72,
       "sentiment": "bearish",
       "category": "other",
-      "rationale": "Convertible debt offerings typically signal dilution concerns and often pressure stock prices in the near-term as convertible arbitrage funds short the stock while buying the notes.",
+      "rationale": "Stock offering announcements typically cause immediate dilution concerns and selling pressure, confirmed by after-hours price decline.",
       "action_window": "intraday",
-      "headline": "WhiteFiber Announces Proposed $250M Convertible Senior Notes Offering Due 2032",
-      "url": "https://www.benzinga.com/news/26/08/61286922/whitefiber-announces-proposed-250m-convertible-senior-notes-offering-due-2032",
+      "headline": "WhiteFiber Stock Dives After the Bell: Here's Why",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61287911/whitefiber-stock-dives-after-the-bell-heres-why",
       "source": "alpaca",
-      "added_at": "2026-08-18T20:15:55.296624+00:00"
+      "added_at": "2026-08-18T20:15:55.296624+00:00",
+      "updated_at": "2026-08-18T20:48:09.015034+00:00"
+    },
+    {
+      "ticker": "JKHY",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Jack Henry reported Q4 earnings beat with EPS 7.5% above estimates ($1.57 vs $1.46) and revenue beat of 2.1% ($644M vs $631M), representing a double beat that typically drives positive price action.",
+      "action_window": "next_day",
+      "headline": "Jack Henry & Associates Q4 EPS $1.57 Beats $1.46 Estimate, Sales $644.023M Beat $630.835M Estimate",
+      "url": "https://www.benzinga.com/quote/JKHY",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.014915+00:00",
+      "updated_at": "2026-08-18T20:48:09.014938+00:00"
+    },
+    {
+      "ticker": "CW",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Share buyback expansion of $100M signals management confidence in valuation and returns capital to shareholders, typically providing near-term stock support.",
+      "action_window": "next_day",
+      "headline": "Curtiss-Wright Announces $100M Expansion To Buyback Plan",
+      "url": "https://www.benzinga.com/news/26/08/61288414/curtiss-wright-announces-100m-expansion-buyback-plan",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.014953+00:00"
+    },
+    {
+      "ticker": "METC",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Non-binding MOU for strategic mineral supply (gallium/germanium) represents potential revenue diversification but lacks binding terms and financial details to assess full impact.",
+      "action_window": "next_day",
+      "headline": "Ramaco Resources Announces Non-Binding MOU With Indium Corporation To Negotiate Supply Of Gallium And Germanium From Brook Mine; Terms Not Disclosed",
+      "url": "https://www.benzinga.com/quote/METC",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.014967+00:00"
+    },
+    {
+      "ticker": "TOL",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Increased share repurchase authorization by ~8% ($50M increase to $700M) signals strong cash flow confidence and management's view that stock is undervalued, typically supportive for near-term price action.",
+      "action_window": "next_day",
+      "headline": "Toll Brothers Increases Projected Share Repurchases For FY26 From $650M To $700M",
+      "url": "https://www.benzinga.com/news/26/08/61288356/toll-brothers-increases-projected-share-repurchases-fy26-650m-700m",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.014979+00:00"
+    },
+    {
+      "ticker": "EXOZ",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant 10-fold productivity gain and 67% higher output represents major operational breakthrough that could materially improve unit economics and manufacturing scalability.",
+      "action_window": "next_day",
+      "headline": "eXoZymes Says Optimized NCT Process Delivered 10-Fold Productivity Gain vs. 100-Liter Pilot, With About 67% More Output Per Liter",
+      "url": "https://www.benzinga.com/quote/EXOZ",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.014991+00:00"
+    },
+    {
+      "ticker": "BDX",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "fda_rejection",
+      "rationale": "FDA early alert for high-risk issue triggering product recall creates immediate regulatory and liability concerns with potential revenue impact and reputational damage for Becton Dickinson.",
+      "action_window": "intraday",
+      "headline": "FDA Issues Early Alert For High-Risk Issue With Becton Dickinson Convenience Kits; Becton Dickinson Advises Removal Of Recalled Components From Convenience Kits; Warns Against Use Of Sodium Chloride Ampules In Affected Bd Kits",
+      "url": "https://www.benzinga.com/general/biotech/26/08/61288069/fda-issues-early-alert-high-risk-issue-becton-dickinson-convenience-kits-becton-dickinson-advises-re",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.015012+00:00"
+    },
+    {
+      "ticker": "BETR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "lawsuit",
+      "rationale": "Company filing lawsuit against former CEO for alleged illegal solicitation signals significant internal conflict and governance concerns that could create near-term uncertainty and pressure on the stock.",
+      "action_window": "intraday",
+      "headline": "Better Home & Finance Holding Company Files Lawsuit Against Former CEO Vishal Garg, Seeking To Halt Alleged Illegal Solicitation And Correct Disclosures",
+      "url": "https://www.benzinga.com/news/26/08/61287955/better-home-finance-holding-company-files-lawsuit-against-former-ceo-vishal-garg-seeking-halt-allege",
+      "source": "alpaca",
+      "added_at": "2026-08-18T20:48:09.015022+00:00"
     }
   ]
 }
