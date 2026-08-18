@@ -6857,5 +6857,57 @@
     "expires": "2026-09-01T20:48:09.007054+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "OMQS": {
+    "ticker": "OMQS",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.82,
+    "action_window": "next_day",
+    "headline": "OMNIQ Q2 EPS $(0.03) Down From $0.19 YoY, Sales $7.375M Down From $7.802M YoY",
+    "added_at": "2026-08-18T21:17:08.687736+00:00",
+    "expires": "2026-08-25T21:17:08.687743+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ELLO": {
+    "ticker": "ELLO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "next_day",
+    "headline": "Ellomay Cap Q2 EPS $5.97 , Sales $14.158M",
+    "added_at": "2026-08-18T21:17:08.706756+00:00",
+    "expires": "2026-08-25T21:17:08.706769+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AUNA": {
+    "ticker": "AUNA",
+    "score_delta": -0.093,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Auna Q2 Adj. EPS $0.15 Misses $0.26 Estimate, Sales $363.000M Beat $350.520M Estimate",
+    "added_at": "2026-08-18T21:17:08.712454+00:00",
+    "expires": "2026-08-25T21:17:08.712467+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MRCY": {
+    "ticker": "MRCY",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Mercury Systems Stock Falls on Q4 Earnings",
+    "added_at": "2026-08-18T21:17:08.724112+00:00",
+    "expires": "2026-08-25T21:17:08.724121+00:00",
+    "hard_block": false,
+    "negative_reaction": true
   }
 }

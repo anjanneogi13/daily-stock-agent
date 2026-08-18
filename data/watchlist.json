@@ -2571,6 +2571,66 @@
       "url": "https://www.benzinga.com/news/26/08/61287955/better-home-finance-holding-company-files-lawsuit-against-former-ceo-vishal-garg-seeking-halt-allege",
       "source": "alpaca",
       "added_at": "2026-08-18T20:48:09.015022+00:00"
+    },
+    {
+      "ticker": "OMQS",
+      "tradeable_score": 0.82,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS swinging from profit of $0.19 to loss of $0.03 YoY and revenue declining 5.5%, representing a clear negative catalyst for after-hours and next-day trading.",
+      "action_window": "next_day",
+      "headline": "OMNIQ Q2 EPS $(0.03) Down From $0.19 YoY, Sales $7.375M Down From $7.802M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61289557/omniq-q2-eps-0-03-down-0-19-yoy-sales-7-375m-down-7-802m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-18T21:17:08.732293+00:00"
+    },
+    {
+      "ticker": "TCRX",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Termination of collaboration with major pharma partner Amgen represents loss of potential milestone payments and validation for TScan, though extended termination date (Nov 2026) reduces immediate impact.",
+      "action_window": "next_day",
+      "headline": "Amgen To Terminate Research Collaboration And License Agreement With TScan Therapeutics; Termination Of Collaboration Agreement Effective November 10, 2026",
+      "url": "https://www.benzinga.com/news/26/08/61289522/amgen-terminate-research-collaboration-and-license-agreement-tscan-therapeutics-termination-collabor",
+      "source": "alpaca",
+      "added_at": "2026-08-18T21:17:08.732316+00:00"
+    },
+    {
+      "ticker": "ELLO",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 EPS of $5.97 represents a significant earnings figure for a small-cap company with $14.158M in quarterly sales, indicating strong profitability and likely representing a substantial earnings beat.",
+      "action_window": "next_day",
+      "headline": "Ellomay Cap Q2 EPS $5.97 , Sales $14.158M",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61289373/ellomay-cap-q2-eps-5-97-sales-14-158m",
+      "source": "alpaca",
+      "added_at": "2026-08-18T21:17:08.732336+00:00"
+    },
+    {
+      "ticker": "AUNA",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant EPS miss of 42% ($0.15 vs $0.26 estimate) outweighs modest revenue beat of 3.6%, likely to trigger negative after-hours trading reaction.",
+      "action_window": "intraday",
+      "headline": "Auna Q2 Adj. EPS $0.15 Misses $0.26 Estimate, Sales $363.000M Beat $350.520M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61289166/auna-q2-adj-eps-0-15-misses-0-26-estimate-sales-363-000m-beat-350-520m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-18T21:17:08.732352+00:00"
+    },
+    {
+      "ticker": "MRCY",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Stock explicitly fell on Q4 earnings release, indicating market disappointment with results and creating immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Mercury Systems Stock Falls on Q4 Earnings",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61288937/mercury-systems-stock-falls-on-q4-earnings",
+      "source": "alpaca",
+      "added_at": "2026-08-18T21:17:08.732369+00:00"
     }
   ]
 }
