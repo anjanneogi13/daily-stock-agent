@@ -3235,19 +3235,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "RSKD": {
-    "ticker": "RSKD",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "DA Davidson Maintains Buy on Riskified, Raises Price Target to $7.5",
-    "added_at": "2026-08-13T23:34:33.723129+00:00",
-    "expires": "2026-08-18T23:34:33.723137+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TCRX": {
     "ticker": "TCRX",
     "score_delta": -0.093,

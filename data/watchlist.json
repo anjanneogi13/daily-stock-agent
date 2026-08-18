@@ -2416,15 +2416,16 @@
     },
     {
       "ticker": "KEYS",
-      "tradeable_score": 0.92,
+      "tradeable_score": 0.93,
       "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "Keysight significantly raised Q4 guidance with EPS 24-26% above consensus and revenue 6-7% above estimates, indicating strong operational performance.",
+      "category": "earnings_beat",
+      "rationale": "Keysight delivered a triple beat with 36.5% revenue growth, 23.7% EPS beat, and next quarter guidance 6.3% above consensus, representing a significant positive catalyst.",
       "action_window": "intraday",
-      "headline": "CORRECTION: Keysight Techs Sees Q4 Adj EPS $3.34-$3.40 vs $2.70 Est; Sees Sales $1.930B-$1.950B vs $1.814B Est",
-      "url": "https://www.benzinga.com/news/26/08/61287295/correction-keysight-techs-sees-q4-adj-eps-3-34-3-40-vs-2-70-est-sees-sales-1-930b-1-950b-vs-1-814b-e",
+      "headline": "Keysight (NYSE:KEYS) Reports Strong Q2 CY2026, Provides Optimistic Revenue Guidance for Next Quarter",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/keysight-nyse-keys-reports-strong-202943523.html?.tsrc=rss",
       "source": "alpaca",
-      "added_at": "2026-08-18T20:15:55.296510+00:00"
+      "added_at": "2026-08-18T20:15:55.296510+00:00",
+      "updated_at": "2026-08-18T23:45:46.156201+00:00"
     },
     {
       "ticker": "TWG",
