@@ -1981,15 +1981,16 @@
     },
     {
       "ticker": "DUOL",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.75,
       "sentiment": "bullish",
       "category": "upgrade",
-      "rationale": "DA Davidson upgraded Duolingo from neutral to buy with a significant price target raise to $160, representing a meaningful positive catalyst from a reputable firm that typically drives near-term buying momentum.",
+      "rationale": "Analyst upgrade to Buy rating from DA Davidson with stock already showing positive price action creates a meaningful trading catalyst for immediate momentum.",
       "action_window": "intraday",
-      "headline": "DA Davidson Upgrades Duolingo to Buy, Raises Price Target to $160",
-      "url": "https://www.benzinga.com/news/26/08/61270250/da-davidson-upgrades-duolingo-buy-raises-price-target-160",
+      "headline": "Duolingo Stock Surges After Upgrade to Buy Rating",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61284023/duolingo-stock-surges-after-upgrade-to-buy-rating",
       "source": "alpaca",
-      "added_at": "2026-08-18T12:31:12.044328+00:00"
+      "added_at": "2026-08-18T12:31:12.044328+00:00",
+      "updated_at": "2026-08-18T18:27:25.644583+00:00"
     },
     {
       "ticker": "ASPU",
@@ -2266,6 +2267,42 @@
       "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61282257/metaplanet-bets-2100-bitcoin-on-us-expansion-takes-95-7-stake-in-gaming-media-company",
       "source": "alpaca",
       "added_at": "2026-08-18T17:53:29.297192+00:00"
+    },
+    {
+      "ticker": "COP",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Geopolitical escalation in Hormuz Strait driving oil above $85 creates immediate bullish catalyst for energy sector stocks and ETFs with sustained price action potential.",
+      "action_window": "intraday",
+      "headline": "Trump\u2019s Hormuz Shock Sends Oil Above $85: 3 ETFs Poised for the Next Energy Rally",
+      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61283710/trumps-hormuz-shock-sends-oil-above-85-3-etfs-poised-for-the-next-energy-rally",
+      "source": "alpaca",
+      "added_at": "2026-08-18T18:27:25.644604+00:00"
+    },
+    {
+      "ticker": "C",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Major institutional bank entering crypto custody represents strategic expansion into high-growth segment, validating crypto infrastructure for traditional finance players.",
+      "action_window": "next_day",
+      "headline": "Bitcoin Custody for Institutional Clients Is Coming to Citi Later This Year",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61283420/bitcoin-custody-for-institutional-clients-is-coming-to-citi-later-this-year",
+      "source": "alpaca",
+      "added_at": "2026-08-18T18:27:25.644615+00:00"
+    },
+    {
+      "ticker": "ELVN",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "William Blair initiates coverage with Outperform rating citing strong clinical trial data and significant market opportunity, which typically drives meaningful positive price action for biotech stocks.",
+      "action_window": "next_day",
+      "headline": "Enliven\u2019s Lead Drug Could Disrupt The Leukemia Treatment Market, Analyst Says",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/08/61283386/enlivens-lead-drug-could-disrupt-the-leukemia-treatment-market-analyst-says",
+      "source": "alpaca",
+      "added_at": "2026-08-18T18:27:25.644626+00:00"
     }
   ]
 }
