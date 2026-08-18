@@ -7000,5 +7000,18 @@
     "expires": "2026-08-25T15:36:53.915059+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "CMI": {
+    "ticker": "CMI",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "next_day",
+    "headline": "Cummins Lands Its Biggest-Ever Battery Storage Project",
+    "added_at": "2026-08-18T16:23:47.942502+00:00",
+    "expires": "2026-08-25T16:23:47.942511+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
