@@ -6922,5 +6922,83 @@
     "expires": "2026-08-25T09:57:57.450966+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "WRD": {
+    "ticker": "WRD",
+    "score_delta": -0.064,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "WeRide Has Miles To Go",
+    "added_at": "2026-08-18T10:23:14.720662+00:00",
+    "expires": "2026-08-25T10:23:14.720668+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "KRG": {
+    "ticker": "KRG",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Keybanc Downgrades Kite Realty Group Trust to Sector Weight",
+    "added_at": "2026-08-18T10:23:14.732463+00:00",
+    "expires": "2026-08-23T10:23:14.732469+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AKR": {
+    "ticker": "AKR",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Keybanc Upgrades Acadia Realty Trust to Overweight, Announces $25 Price Target",
+    "added_at": "2026-08-18T10:23:14.738074+00:00",
+    "expires": "2026-08-23T10:23:14.738080+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "MOBX": {
+    "ticker": "MOBX",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Mobix Labs Q3 EPS $(1.33) Up From $(1.70) YoY, Sales $789.000K Down From $2.350M YoY",
+    "added_at": "2026-08-18T10:23:14.743669+00:00",
+    "expires": "2026-08-25T10:23:14.743674+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VNET": {
+    "ticker": "VNET",
+    "score_delta": 0.079,
+    "catalyst": "guidance_raise",
+    "sentiment": "neutral",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "VNET Group Raises FY2026 Sales Guidance from $1.660B-$1.704B to $1.695B-$1.739B vs $1.740B Est",
+    "added_at": "2026-08-18T10:23:14.749279+00:00",
+    "expires": "2026-09-01T10:23:14.749285+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AS": {
+    "ticker": "AS",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.85,
+    "action_window": "intraday",
+    "headline": "Amer Sports Q2 Adj. EPS $0.22 Beats $0.11 Estimate, Sales $1.633B Beat $1.543B Estimate",
+    "added_at": "2026-08-18T10:23:14.755152+00:00",
+    "expires": "2026-08-25T10:23:14.755157+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
