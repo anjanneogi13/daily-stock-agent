@@ -6818,5 +6818,44 @@
     "expires": "2026-08-24T21:49:29.728560+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "LGEIY": {
+    "ticker": "LGEIY",
+    "score_delta": 0.041,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "this_week",
+    "headline": "LG Electronics Expands Robotics Push With New Business Center And NVIDIA Partnership Spanning Data To Deployment",
+    "added_at": "2026-08-18T08:27:46.674630+00:00",
+    "expires": "2026-08-25T08:27:46.674638+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HIMX": {
+    "ticker": "HIMX",
+    "score_delta": 0.03,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "this_week",
+    "headline": "Himax And WAFERLOCK Partner To Bring Contactless Palm Vein Authentication To Smart Lock Access Control Solutions",
+    "added_at": "2026-08-18T08:27:46.687274+00:00",
+    "expires": "2026-08-25T08:27:46.687281+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HD": {
+    "ticker": "HD",
+    "score_delta": 0.064,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "next_day",
+    "headline": "Home Depot, Toll Brothers And 3 Stocks To Watch Heading Into Tuesday",
+    "added_at": "2026-08-18T08:27:46.692737+00:00",
+    "expires": "2026-08-25T08:27:46.692743+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

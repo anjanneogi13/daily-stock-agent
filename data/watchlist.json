@@ -1455,6 +1455,42 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61262435/bt-brands-q2-eps-0-09-0-01-yoy-sales-3-551m-down-3-780m-yoy",
       "source": "alpaca",
       "added_at": "2026-08-17T21:49:29.782925+00:00"
+    },
+    {
+      "ticker": "LGEIY",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Strategic partnership with NVIDIA for robotics expansion signals meaningful business diversification and technology advancement, though impact timing is uncertain given deployment phase nature.",
+      "action_window": "this_week",
+      "headline": "LG Electronics Expands Robotics Push With New Business Center And NVIDIA Partnership Spanning Data To Deployment",
+      "url": "https://www.benzinga.com/quote/NVDA",
+      "source": "alpaca",
+      "added_at": "2026-08-18T08:27:46.721990+00:00"
+    },
+    {
+      "ticker": "QQQ",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "Large short position combined with 15-year high insider buying suggests potential short squeeze setup, but timing remains uncertain and speculative.",
+      "action_window": "this_week",
+      "headline": "Nasdaq 100 Short Exposure Hits $20 Billion as Insiders Near \u201815-Year High\u2019 in Buying: Is a Squeeze Imminent?",
+      "url": "https://www.benzinga.com/markets/market-summary/26/08/61265599/nasdaq-100-short-exposure-hits-20-billion-as-insiders-near-15-year-high-in-buying-is-a-squeeze-imminent",
+      "source": "alpaca",
+      "added_at": "2026-08-18T08:27:46.722006+00:00"
+    },
+    {
+      "ticker": "RTX",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "$22.9B contract represents a massive order win that significantly impacts RTX's defense backlog and future revenue visibility amid heightened geopolitical tensions.",
+      "action_window": "intraday",
+      "headline": "RTX\u2019s Raytheon Lands $22.9 Billion Tomahawk Deal as US Rushes to Rebuild Missile Stockpiles Depleted by Iran War",
+      "url": "https://www.benzinga.com/markets/equities/26/08/61265483/rtxs-raytheon-lands-22-9-billion-tomahawk-deal-as-us-rushes-to-rebuild-missile-stockpiles-depleted-by-iran-war",
+      "source": "alpaca",
+      "added_at": "2026-08-18T08:27:46.722018+00:00"
     }
   ]
 }
