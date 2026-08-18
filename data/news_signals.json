@@ -6818,5 +6818,44 @@
     "expires": "2026-08-25T21:46:51.171074+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "LU": {
+    "ticker": "LU",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.75,
+    "action_window": "next_day",
+    "headline": "Lufax Holding Q2 EPS $(0.04) Misses $(0.03) Estimate, Sales $917.803M",
+    "added_at": "2026-08-18T22:15:56.929426+00:00",
+    "expires": "2026-08-25T22:15:56.929433+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ZTO": {
+    "ticker": "ZTO",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.88,
+    "action_window": "next_day",
+    "headline": "ZTO Express (Cayman) Q2 Adj. EPS $0.56 Up From $0.35 YoY, Sales $2.144B Up From $1.652B YoY",
+    "added_at": "2026-08-18T22:15:56.941246+00:00",
+    "expires": "2026-08-25T22:15:56.941252+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "NSC": {
+    "ticker": "NSC",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "'STB Adopts Procedural Schedule for Consideration of UP-NS Merger; Removes Proceeding from Abeyance' - Surface Transportation Board",
+    "added_at": "2026-08-18T22:15:56.946799+00:00",
+    "expires": "2026-09-17T22:15:56.946805+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
