@@ -2218,6 +2218,54 @@
       "url": "https://www.benzinga.com/m-a/26/08/61281733/ondas-adds-israeli-defense-manufacturing-muscle-in-33-million-deal",
       "source": "alpaca",
       "added_at": "2026-08-18T17:22:30.096352+00:00"
+    },
+    {
+      "ticker": "BMRN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "BioMarin's $275M acquisition of Alesta strengthens its rare disease portfolio with a strategic asset in rare bone disease, representing meaningful pipeline expansion.",
+      "action_window": "intraday",
+      "headline": "BioMarin Seeks to Strengthen Market Position in Rare Bone Disease Treatment",
+      "url": "https://www.benzinga.com/m-a/26/08/61282798/biomarin-seeks-to-strengthen-market-position-in-rare-bone-disease-treatment",
+      "source": "alpaca",
+      "added_at": "2026-08-18T17:53:29.297162+00:00"
+    },
+    {
+      "ticker": "ATAI",
+      "tradeable_score": 0.58,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Government access to 1994 IND application signals regulatory acceleration for ibogaine development, benefiting psychedelic therapy companies, though timeline and commercial impact remain uncertain.",
+      "action_window": "intraday",
+      "headline": "President Trump Say In A Social Media Post That The University Of Miami Shared Its 1994 Ibogaine Investigational New Drug Application With The Government, Which Will Help Accelerate Development As A Medical Treatment In The U.S.",
+      "url": "https://www.benzinga.com/quote/XTLB",
+      "source": "alpaca",
+      "added_at": "2026-08-18T17:53:29.297174+00:00"
+    },
+    {
+      "ticker": "AVB",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Forced divestiture of Boston properties by Attorney General suggests regulatory pressure and potential antitrust concerns, likely requiring asset sales at unfavorable terms and indicating competitive market power issues.",
+      "action_window": "next_day",
+      "headline": "Massachusetts Attorney General Andrea Joy Campbell Announces AvalonBay Communities, Equity Residential Agree To Divest Two Boston Buildings",
+      "url": "https://www.benzinga.com/government/26/08/61282587/massachusetts-attorney-general-andrea-joy-campbell-announces-avalonbay-communities-equity-residentia",
+      "source": "alpaca",
+      "added_at": "2026-08-18T17:53:29.297186+00:00"
+    },
+    {
+      "ticker": "MTPLF",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Metaplanet executes significant M&A taking 95.7% stake in Super League while deploying substantial Bitcoin holdings (2,100 BTC) for US market expansion, creating material strategic shift.",
+      "action_window": "intraday",
+      "headline": "Metaplanet Bets 2,100 Bitcoin on US Expansion, Takes 95.7% Stake in Gaming Media Company",
+      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61282257/metaplanet-bets-2100-bitcoin-on-us-expansion-takes-95-7-stake-in-gaming-media-company",
+      "source": "alpaca",
+      "added_at": "2026-08-18T17:53:29.297192+00:00"
     }
   ]
 }
