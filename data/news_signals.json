@@ -1350,19 +1350,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "TME": {
-    "ticker": "TME",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Why Is Tencent Music Stock Sinking Tuesday?",
-    "added_at": "2026-08-11T15:29:11.756317+00:00",
-    "expires": "2026-08-18T15:29:11.756323+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
   "ONON": {
     "ticker": "ONON",
     "score_delta": -0.15,
@@ -1451,19 +1438,6 @@
     "headline": "YPF Argentine CEO Says YPF Expects 2026 EBITDA Of $8B, Up From Previous Estimate Of $6B",
     "added_at": "2026-08-11T14:15:33.324071+00:00",
     "expires": "2026-08-25T14:15:33.324077+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CME": {
-    "ticker": "CME",
-    "score_delta": 0.037,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.52,
-    "action_window": "this_week",
-    "headline": "CME Group And Silicon Data Announce Plans To Launch Two Compute Futures Contracts On October 5, Pending Regulatory Review",
-    "added_at": "2026-08-11T15:29:11.760174+00:00",
-    "expires": "2026-08-18T15:29:11.760180+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3352,19 +3326,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "EAT": {
-    "ticker": "EAT",
-    "score_delta": 0.041,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.58,
-    "action_window": "next_day",
-    "headline": "Brinker Shares Slide Even As Analysts Raise The Temperature On Price Targets",
-    "added_at": "2026-08-13T15:30:32.137433+00:00",
-    "expires": "2026-08-18T15:30:32.137440+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "DKI": {
     "ticker": "DKI",
     "score_delta": -0.1,
@@ -3401,32 +3362,6 @@
     "headline": "The Elmet Group Q2 Adj. EPS $0.18 Beats $0.06 Estimate, Sales $66.401M Beat $58.123M Estimate",
     "added_at": "2026-08-13T12:53:48.226069+00:00",
     "expires": "2026-08-20T12:53:48.226075+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KGS": {
-    "ticker": "KGS",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on Kodiak Gas Services, Raises Price Target to $88",
-    "added_at": "2026-08-13T15:30:32.155150+00:00",
-    "expires": "2026-08-18T15:30:32.155157+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "TRMB": {
-    "ticker": "TRMB",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "JP Morgan Maintains Overweight on Trimble, Raises Price Target to $76",
-    "added_at": "2026-08-13T15:30:32.160661+00:00",
-    "expires": "2026-08-18T15:30:32.160668+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6998,6 +6933,71 @@
     "headline": "JP Morgan Maintains Overweight on Janus Living, Raises Price Target to $34",
     "added_at": "2026-08-18T15:02:01.936171+00:00",
     "expires": "2026-08-23T15:02:01.936176+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BULL": {
+    "ticker": "BULL",
+    "score_delta": 0.083,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.58,
+    "action_window": "next_day",
+    "headline": "Webull\u2019s July Trading Update Points Towards Q2 Beat, Says Bullish Analyst",
+    "added_at": "2026-08-18T15:36:53.865108+00:00",
+    "expires": "2026-08-25T15:36:53.865118+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AIXC": {
+    "ticker": "AIXC",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Penny Stock AIxC Pivots to Commercial Robotics Operations, Secures First Paid Commercial Order",
+    "added_at": "2026-08-18T15:36:53.876280+00:00",
+    "expires": "2026-08-25T15:36:53.876286+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "UGI": {
+    "ticker": "UGI",
+    "score_delta": 0.2,
+    "catalyst": "ma_target",
+    "sentiment": "bullish",
+    "tradeable_score": 0.95,
+    "action_window": "intraday",
+    "headline": "KKR Offered To Buy UGI For $42.50/Share",
+    "added_at": "2026-08-18T15:36:53.887305+00:00",
+    "expires": "2026-09-17T15:36:53.887311+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LHX": {
+    "ticker": "LHX",
+    "score_delta": 0.03,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "ignore",
+    "headline": "L3Harris Demonstrates Interoperable Multi-Domain Defense Capabilities At Army\u2019s Project Convergence-Capstone 6",
+    "added_at": "2026-08-18T15:36:53.903860+00:00",
+    "expires": "2026-08-25T15:36:53.903865+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VFS": {
+    "ticker": "VFS",
+    "score_delta": 0.046,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "next_day",
+    "headline": "VinSpace Joint Stock Company Inks Contract With SpaceX To Launch Satellites Aboard Transporter Rideshare Mission Next Year",
+    "added_at": "2026-08-18T15:36:53.915052+00:00",
+    "expires": "2026-08-25T15:36:53.915059+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
