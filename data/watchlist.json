@@ -1853,6 +1853,80 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61268173/evogene-q2-eps-0-63-misses-0-27-estimate-sales-347-000k-beat-325-000k-estimate",
       "source": "alpaca",
       "added_at": "2026-08-18T11:19:21.718785+00:00"
+    },
+    {
+      "ticker": "SAN",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "European Commission regulatory approval for M&A transaction removes key uncertainty and allows deal to proceed, a meaningful positive catalyst for acquirer Banco Santander.",
+      "action_window": "intraday",
+      "headline": "Banco Santander, Centerbridge Partners Receive European Commission Approval To Acquire Ebury Partners",
+      "url": "https://www.benzinga.com/government/26/08/61268971/banco-santander-centerbridge-partners-receive-european-commission-approval-acquire-ebury-partners",
+      "source": "alpaca",
+      "added_at": "2026-08-18T11:50:39.707737+00:00"
+    },
+    {
+      "ticker": "PRE",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Company raises Q3 sales guidance to $63-64M, representing a 6-8% beat versus consensus estimate of $59.31M, indicating stronger-than-expected business performance.",
+      "action_window": "intraday",
+      "headline": "Prenetics Global Sees Q3 Sales $63.000M-$64.000M vs $59.310M Est",
+      "url": "https://www.benzinga.com/news/26/08/61268906/prenetics-global-sees-q3-sales-63-000m-64-000m-vs-59-310m-est",
+      "source": "alpaca",
+      "added_at": "2026-08-18T11:50:39.707761+00:00",
+      "updated_at": "2026-08-18T11:50:39.707776+00:00"
+    },
+    {
+      "ticker": "KLAR",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Klarna delivered a significant double beat with EPS of $0.01 versus estimate of $(0.05) loss (turning profitable) and revenue beat of 4.9%, representing a meaningful positive catalyst.",
+      "action_window": "intraday",
+      "headline": "Klarna Group Q2 EPS $0.01 Beats $(0.05) Estimate, Sales $1.042B Beat $993.391M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61268862/klarna-group-q2-eps-0-01-beats-0-05-estimate-sales-1-042b-beat-993-391m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-18T11:50:39.707788+00:00",
+      "updated_at": "2026-08-18T11:50:39.707801+00:00"
+    },
+    {
+      "ticker": "IMTX",
+      "tradeable_score": 0.75,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant double miss with EPS 23% worse than expected (-$0.53 vs -$0.43) and revenue missing by 27% ($10.63M vs $14.59M estimate) creates immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Immatics Q2 EPS $(0.53) Misses $(0.43) Estimate, Sales $10.630M Miss $14.590M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61268786/immatics-q2-eps-0-53-misses-0-43-estimate-sales-10-630m-miss-14-590m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-18T11:50:39.707829+00:00"
+    },
+    {
+      "ticker": "NTWO",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "ma_target",
+      "rationale": "SPAC business combination announcement with defined valuation ($556.6M) and committed PIPE financing ($31M+) represents a major catalyst for the acquisition vehicle with deal closure expected in Q4 2026.",
+      "action_window": "intraday",
+      "headline": "Newbury Street II Acquisition Announces Business Combination Agreement With FORT Robotics At $556.6M Pro-Forma Enterprise Value, Including Over $31M In PIPE And NRA Commitments; Deal Expected To Close In Q4 2026",
+      "url": "https://www.benzinga.com/quote/NTWO",
+      "source": "alpaca",
+      "added_at": "2026-08-18T11:50:39.707839+00:00"
+    },
+    {
+      "ticker": "ELTK",
+      "tradeable_score": 0.8,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with Q2 EPS swinging from positive $0.05 to negative $(0.41) YoY and revenue declining 8% represents a material deterioration in financial performance.",
+      "action_window": "intraday",
+      "headline": "Eltek Q2 EPS $(0.41) Down From $0.05 YoY, Sales $11.534M Down From $12.529M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61268756/eltek-q2-eps-0-41-down-0-05-yoy-sales-11-534m-down-12-529m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-18T11:50:39.707849+00:00"
     }
   ]
 }
