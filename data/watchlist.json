@@ -2073,6 +2073,30 @@
       "url": "https://www.benzinga.com/news/26/08/61272215/greenland-technologies-announces-commercialization-its-proprietary-four-wheel-drive-transmission-sys",
       "source": "alpaca",
       "added_at": "2026-08-18T13:27:09.713428+00:00"
+    },
+    {
+      "ticker": "SPY",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Pending home sales missed expectations significantly (-2.3% vs +0.1% est), indicating housing market weakness that could weigh on broader economic sentiment and rate-sensitive sectors.",
+      "action_window": "intraday",
+      "headline": "USA Pending Home Sales (MoM) For July -2.3% Vs 0.1% Est.",
+      "url": "https://www.benzinga.com/quote/SPY",
+      "source": "alpaca",
+      "added_at": "2026-08-18T14:06:19.341690+00:00"
+    },
+    {
+      "ticker": "IPST",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Multiple negative catalysts converge including late regulatory filing (10-Q), wider losses, and digital asset declines following a massive 277% rally, suggesting potential profit-taking and fundamental concerns.",
+      "action_window": "intraday",
+      "headline": "Why Is IP Strategy Stock Falling Today?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61273861/why-is-ip-strategy-stock-falling-today",
+      "source": "alpaca",
+      "added_at": "2026-08-18T14:06:19.341717+00:00"
     }
   ]
 }

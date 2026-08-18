@@ -6431,14 +6431,14 @@
   },
   "HD": {
     "ticker": "HD",
-    "score_delta": 0.064,
+    "score_delta": 0.1,
     "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "Home Depot, Toll Brothers And 3 Stocks To Watch Heading Into Tuesday",
-    "added_at": "2026-08-18T08:27:46.692737+00:00",
-    "expires": "2026-08-25T08:27:46.692743+00:00",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Home Depot Customers Make Fewer Trips but Spend More",
+    "added_at": "2026-08-18T14:06:19.328121+00:00",
+    "expires": "2026-08-25T14:06:19.328132+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7050,6 +7050,32 @@
     "headline": "Greenland Technologies Announces Commercialization Of Its Proprietary Four-Wheel Drive Transmission Systems Designed For Off-Road Forklift Truck Applications",
     "added_at": "2026-08-18T13:27:09.705548+00:00",
     "expires": "2026-08-25T13:27:09.705553+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SNOW": {
+    "ticker": "SNOW",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "UBS Maintains Buy on Snowflake, Raises Price Target to $425",
+    "added_at": "2026-08-18T14:06:19.316777+00:00",
+    "expires": "2026-08-23T14:06:19.316783+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "HAE": {
+    "ticker": "HAE",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "BTIG Maintains Buy on Haemonetics, Raises Price Target to $110",
+    "added_at": "2026-08-18T14:06:19.322463+00:00",
+    "expires": "2026-08-23T14:06:19.322471+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
