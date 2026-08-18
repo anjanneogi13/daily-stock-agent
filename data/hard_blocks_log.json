@@ -1062,5 +1062,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-18 13:02:03",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 0,
+    "blocked": [
+      {
+        "ticker": "NTWO",
+        "reason": "SL too tight (0.1% < 2.5% for $11 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

@@ -1,10 +1,10 @@
 {
-  "regime": "bull",
-  "spy_close": 776.34,
-  "spy_sma200": 705.46,
-  "spy_sma_anchor": 705.46,
-  "sma_value": 705.46,
-  "bullish": true,
-  "distance_pct": 10.05,
+  "regime": "bear",
+  "spy_close": NaN,
+  "spy_sma200": NaN,
+  "spy_sma_anchor": NaN,
+  "sma_value": NaN,
+  "bullish": false,
+  "distance_pct": NaN,
   "sma_window": 200
 }
