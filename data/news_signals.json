@@ -1480,19 +1480,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "USAR": {
-    "ticker": "USAR",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "USA Rare Earth Stock Falls After Q2 Miss on Both Top and Bottom Lines",
-    "added_at": "2026-08-11T12:47:04.313434+00:00",
-    "expires": "2026-08-18T12:47:04.313442+00:00",
-    "hard_block": false,
-    "negative_reaction": true
-  },
   "RARE": {
     "ticker": "RARE",
     "score_delta": -0.097,
@@ -1503,19 +1490,6 @@
     "headline": "Ultragenyx Pharmaceutical And Baylor Research Institute Reach Settlement Agreement With Esjay Pharma To Resolve Patent Litigation Related To The Company\u2019s DOJOLVI Oral Liquid; Esjay Granted Non-Exclus",
     "added_at": "2026-08-11T12:47:04.327812+00:00",
     "expires": "2026-08-25T12:47:04.327827+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "EFOI": {
-    "ticker": "EFOI",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Energy Focus Q2 EPS $(0.14) Down From $(0.04) YoY, Sales $3.749M Up From $1.143M YoY",
-    "added_at": "2026-08-11T12:47:04.344208+00:00",
-    "expires": "2026-08-18T12:47:04.344220+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3404,19 +3378,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "SM": {
-    "ticker": "SM",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "intraday",
-    "headline": "Wells Fargo Upgrades SM Energy to Overweight, Raises Price Target to $47",
-    "added_at": "2026-08-13T12:53:48.176567+00:00",
-    "expires": "2026-08-18T12:53:48.176595+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CADL": {
     "ticker": "CADL",
     "score_delta": -0.1,
@@ -4290,14 +4251,14 @@
   },
   "YSS": {
     "ticker": "YSS",
-    "score_delta": -0.025,
+    "score_delta": -0.039,
     "catalyst": "downgrade",
     "sentiment": "bearish",
-    "tradeable_score": 0.35,
-    "action_window": "next_day",
-    "headline": "Needham Maintains Buy on York Space Systems, Lowers Price Target to $18",
-    "added_at": "2026-08-14T10:32:20.764303+00:00",
-    "expires": "2026-08-19T10:32:20.764310+00:00",
+    "tradeable_score": 0.55,
+    "action_window": "intraday",
+    "headline": "Canaccord Genuity Downgrades York Space Systems to Hold, Lowers Price Target to $13.5",
+    "added_at": "2026-08-18T13:27:09.677234+00:00",
+    "expires": "2026-08-23T13:27:09.677241+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6990,14 +6951,14 @@
   },
   "SCTX": {
     "ticker": "SCTX",
-    "score_delta": 0.046,
+    "score_delta": 0.05,
     "catalyst": "upgrade",
     "sentiment": "bullish",
-    "tradeable_score": 0.65,
+    "tradeable_score": 0.72,
     "action_window": "intraday",
-    "headline": "Guggenheim Initiates Coverage On Scribe Therapeutics with Buy Rating, Announces Price Target of $50",
-    "added_at": "2026-08-18T12:31:12.014390+00:00",
-    "expires": "2026-08-23T12:31:12.014396+00:00",
+    "headline": "Wells Fargo Initiates Coverage On Scribe Therapeutics with Overweight Rating, Announces Price Target of $60",
+    "added_at": "2026-08-18T13:27:09.664682+00:00",
+    "expires": "2026-08-23T13:27:09.664689+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -7050,6 +7011,45 @@
     "headline": "Compass Point Initiates Coverage On Gorilla Tech Gr with Buy Rating, Announces Price Target of $44",
     "added_at": "2026-08-18T12:31:12.036482+00:00",
     "expires": "2026-08-23T12:31:12.036487+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "DEFT": {
+    "ticker": "DEFT",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Benchmark Maintains Buy on DeFi Technologies, Lowers Price Target to $1",
+    "added_at": "2026-08-18T13:27:09.688598+00:00",
+    "expires": "2026-08-23T13:27:09.688604+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SPCE": {
+    "ticker": "SPCE",
+    "score_delta": -0.057,
+    "catalyst": "lawsuit",
+    "sentiment": "bullish",
+    "tradeable_score": 0.4,
+    "action_window": "next_day",
+    "headline": "Virgin Galactic Receives U.S. District Court Final Approval Of Settlement Resolving All Claims Pending In Shareholder Derivative Actions Case; Company\u2019s Insurers To Pay $2.75M To SPCE",
+    "added_at": "2026-08-18T13:27:09.699866+00:00",
+    "expires": "2026-09-01T13:27:09.699892+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "GTEC": {
+    "ticker": "GTEC",
+    "score_delta": 0.049,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Greenland Technologies Announces Commercialization Of Its Proprietary Four-Wheel Drive Transmission Systems Designed For Off-Road Forklift Truck Applications",
+    "added_at": "2026-08-18T13:27:09.705548+00:00",
+    "expires": "2026-08-25T13:27:09.705553+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
