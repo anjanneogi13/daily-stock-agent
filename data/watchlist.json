@@ -2194,6 +2194,30 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61280899/nokia-plans-near-total-china-exit-as-domestic-rivals-gain-ground-report",
       "source": "alpaca",
       "added_at": "2026-08-18T16:57:40.665257+00:00"
+    },
+    {
+      "ticker": "HAE",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock hitting new 52-week high on significant commercial agreement represents a meaningful catalyst with confirmed price momentum already underway.",
+      "action_window": "intraday",
+      "headline": "Haemonetics Shares Hit New 52-Week High: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61282060/haemonetics-shares-hit-new-52-week-high-whats-happening",
+      "source": "alpaca",
+      "added_at": "2026-08-18T17:22:30.096332+00:00"
+    },
+    {
+      "ticker": "ONDS",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "ma_acquirer",
+      "rationale": "Strategic $33M acquisition in high-value defense sector expands manufacturing capabilities and Israeli operations, representing significant confirmed M&A catalyst.",
+      "action_window": "intraday",
+      "headline": "Ondas Adds Israeli Defense Manufacturing Muscle In $33 Million Deal",
+      "url": "https://www.benzinga.com/m-a/26/08/61281733/ondas-adds-israeli-defense-manufacturing-muscle-in-33-million-deal",
+      "source": "alpaca",
+      "added_at": "2026-08-18T17:22:30.096352+00:00"
     }
   ]
 }
