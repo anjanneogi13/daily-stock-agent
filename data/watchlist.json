@@ -915,15 +915,16 @@
     },
     {
       "ticker": "EWC",
-      "tradeable_score": 0.55,
+      "tradeable_score": 0.68,
       "sentiment": "bullish",
       "category": "macro",
-      "rationale": "Canadian PM signaling active tariff negotiations with upcoming dialogue before deadline reduces tail risk of worst-case trade war scenario, providing short-term relief for Canadian equities.",
+      "rationale": "Potential tariff reprieve on Canadian goods represents material positive macro catalyst for Canadian equities and US-Canada trade relations, though deal remains uncertain.",
       "action_window": "intraday",
-      "headline": "Canada Prime Minister Carney Says He Expects To Speak To Trump Before August 19 Tariffs Deadline; Says We'll Have Opportunities Over The Next 48 Hours To Discuss In More Detail As The Negotiations Go Forward",
-      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61255727/canada-prime-minister-carney-says-he-expects-speak-trump-august-19-tariffs-deadline-says-we-ll-have-",
+      "headline": "'Trump Is Weighing Whether To Grant Canada A Tariff Reprieve; A Deal To Avoid 50 Percent Duties On Some Canadian Goods Is On Trump's Desk, As Ottawa And Washington Work Towards A Broader Trade Agreement' - Politico",
+      "url": "https://www.benzinga.com/economics/macro-economic-events/26/08/61285417/trump-weighing-whether-grant-canada-tariff-reprieve-deal-avoid-50-percent-duties-some-canadian-goods",
       "source": "alpaca",
-      "added_at": "2026-08-17T17:21:09.069628+00:00"
+      "added_at": "2026-08-17T17:21:09.069628+00:00",
+      "updated_at": "2026-08-18T19:48:49.185052+00:00"
     },
     {
       "ticker": "DKNG",
@@ -2327,6 +2328,54 @@
       "url": "https://www.benzinga.com/markets/cryptocurrency/26/08/61284636/sec-proposes-new-rules-create-clear-and-fit-purpose-framework-certain-investment-contracts-involving",
       "source": "alpaca",
       "added_at": "2026-08-18T19:07:28.394379+00:00"
+    },
+    {
+      "ticker": "CAST",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Stock is actively rallying on confirmed media portfolio expansion news, but lacks specifics on financial impact or deal size to warrant highest tradeable score.",
+      "action_window": "intraday",
+      "headline": "FreeCast Stock Skyrockets Tuesday: What's Driving the Action?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61286115/freecast-stock-skyrockets-tuesday-whats-driving-the-action",
+      "source": "alpaca",
+      "added_at": "2026-08-18T19:48:49.185010+00:00"
+    },
+    {
+      "ticker": "MUX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "rumor",
+      "rationale": "Major financing talks with Rio Tinto signals potential strategic partnership and capital injection for McEwen Copper, materially de-risking the project but remains unconfirmed discussions.",
+      "action_window": "intraday",
+      "headline": "'McEwen Copper in Talks With Rio as It Seeks $4 Billion Financing' - Bloomberg",
+      "url": "https://www.benzinga.com/news/26/08/61285600/mcewen-copper-talks-rio-it-seeks-4-billion-financing-bloomberg",
+      "source": "alpaca",
+      "added_at": "2026-08-18T19:48:49.185037+00:00"
+    },
+    {
+      "ticker": "SGLY",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Registered direct offering of 600K shares represents significant dilution (~33% based on small $1.8M raise) and typically pressures stock price in near-term despite capital raise.",
+      "action_window": "intraday",
+      "headline": "Singularity Future Technology Announces $1.8M Registered Direct Offering Of 600K Shares Of Common Stock At A Price Of $3/Share",
+      "url": "https://www.benzinga.com/news/26/08/61285290/singularity-future-technology-announces-1-8m-registered-direct-offering-600k-shares-common-stock-pri",
+      "source": "alpaca",
+      "added_at": "2026-08-18T19:48:49.185068+00:00"
+    },
+    {
+      "ticker": "LFUS",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Second nuclear plant announcement signals business expansion and validates TerraPower's technology, creating moderate positive momentum for nuclear energy suppliers like Lithium Americas, though impact depends on supply chain relationships.",
+      "action_window": "next_day",
+      "headline": "'TerraPower to Announce Second Nuclear Plant This Year' - Bloomberg News",
+      "url": "https://www.benzinga.com/news/26/08/61285206/terrapower-announce-second-nuclear-plant-year-bloomberg-news",
+      "source": "alpaca",
+      "added_at": "2026-08-18T19:48:49.185081+00:00"
     }
   ]
 }

@@ -1246,19 +1246,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LMT": {
-    "ticker": "LMT",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Lockheed Martin, Raises Price Target to $691",
-    "added_at": "2026-08-13T19:35:07.812041+00:00",
-    "expires": "2026-08-18T19:35:07.812048+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "RBC": {
     "ticker": "RBC",
     "score_delta": 0.029,
@@ -2205,19 +2192,6 @@
     "headline": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
     "added_at": "2026-08-12T14:17:29.081750+00:00",
     "expires": "2026-08-19T14:17:29.081755+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ORCL": {
-    "ticker": "ORCL",
-    "score_delta": 0.044,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.62,
-    "action_window": "next_day",
-    "headline": "Oracle Has 30% Upside, JPMorgan Says. The Market May Be Missing Its AI Transformation.",
-    "added_at": "2026-08-13T19:35:07.841901+00:00",
-    "expires": "2026-08-18T19:35:07.841910+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3378,19 +3352,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VOYG": {
-    "ticker": "VOYG",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Voyager Technologies, Raises Price Target to $54",
-    "added_at": "2026-08-13T19:35:07.800058+00:00",
-    "expires": "2026-08-18T19:35:07.800065+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CSRA": {
     "ticker": "CSRA",
     "score_delta": 0.018,
@@ -3401,58 +3362,6 @@
     "headline": "QUICK SPARK: This New ETF Puts Real Estate, Energy and Commodities Under One Roof to Win Resource Scarcity",
     "added_at": "2026-08-13T19:35:07.806045+00:00",
     "expires": "2026-08-20T19:35:07.806052+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "HEI": {
-    "ticker": "HEI",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Heico, Raises Price Target to $429",
-    "added_at": "2026-08-13T19:35:07.817916+00:00",
-    "expires": "2026-08-18T19:35:07.817949+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ARXS": {
-    "ticker": "ARXS",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Citigroup Maintains Buy on Arxis, Raises Price Target to $67",
-    "added_at": "2026-08-13T19:35:07.829795+00:00",
-    "expires": "2026-08-18T19:35:07.829801+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SBSW": {
-    "ticker": "SBSW",
-    "score_delta": 0.046,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.65,
-    "action_window": "next_day",
-    "headline": "Citigroup Initiates Coverage On Sibanye Stillwater with Buy Rating, Announces Price Target of $13.5",
-    "added_at": "2026-08-13T19:35:07.835814+00:00",
-    "expires": "2026-08-18T19:35:07.835821+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MARA": {
-    "ticker": "MARA",
-    "score_delta": -0.03,
-    "catalyst": "downgrade",
-    "sentiment": "bearish",
-    "tradeable_score": 0.42,
-    "action_window": "intraday",
-    "headline": "What's Going On With the Fall in MARA Shares?",
-    "added_at": "2026-08-13T19:35:07.847907+00:00",
-    "expires": "2026-08-18T19:35:07.847914+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6946,6 +6855,32 @@
     "headline": "Watching BRP; Shares Move Higher, Bloomberg Reports TD Cowen Upgrades Stock To Buy On SxS Momentum And Easing Tariff Concerns",
     "added_at": "2026-08-18T19:07:28.334580+00:00",
     "expires": "2026-08-23T19:07:28.334588+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CAST": {
+    "ticker": "CAST",
+    "score_delta": 0.046,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "FreeCast Stock Skyrockets Tuesday: What's Driving the Action?",
+    "added_at": "2026-08-18T19:48:49.133857+00:00",
+    "expires": "2026-08-25T19:48:49.133865+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "LFUS": {
+    "ticker": "LFUS",
+    "score_delta": 0.044,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.62,
+    "action_window": "next_day",
+    "headline": "'TerraPower to Announce Second Nuclear Plant This Year' - Bloomberg News",
+    "added_at": "2026-08-18T19:48:49.154403+00:00",
+    "expires": "2026-08-25T19:48:49.154412+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
