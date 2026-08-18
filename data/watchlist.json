@@ -1927,6 +1927,102 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61268756/eltek-q2-eps-0-41-down-0-05-yoy-sales-11-534m-down-12-529m-yoy",
       "source": "alpaca",
       "added_at": "2026-08-18T11:50:39.707849+00:00"
+    },
+    {
+      "ticker": "AMX",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan, a major bulge bracket bank, upgraded AMX to Overweight with a price target raise, which typically drives institutional buying and positive price action.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Upgrades America Movil SAB to Overweight, Raises Price Target to $32",
+      "url": "https://www.benzinga.com/news/26/08/61270354/jp-morgan-upgrades-america-movil-sab-overweight-raises-price-target-32",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044280+00:00"
+    },
+    {
+      "ticker": "NUVB",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "JP Morgan initiating coverage with Overweight rating and $13 price target is a meaningful positive catalyst from a major bulge bracket bank that typically drives immediate trading activity.",
+      "action_window": "intraday",
+      "headline": "JP Morgan Initiates Coverage On Nuvation Bio with Overweight Rating, Announces Price Target of $13",
+      "url": "https://www.benzinga.com/news/26/08/61270310/jp-morgan-initiates-coverage-nuvation-bio-overweight-rating-announces-price-target-13",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044297+00:00"
+    },
+    {
+      "ticker": "MDB",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Guggenheim maintains positive stance with significant price target increase to $560, indicating strong conviction but not a rating change from neutral to buy.",
+      "action_window": "intraday",
+      "headline": "Guggenheim Maintains Buy on MongoDB, Raises Price Target to $560",
+      "url": "https://www.benzinga.com/news/26/08/61270295/guggenheim-maintains-buy-mongodb-raises-price-target-560",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044308+00:00"
+    },
+    {
+      "ticker": "SCTX",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Guggenheim initiating coverage with Buy rating and $50 price target is a meaningful positive catalyst from a reputable firm that typically drives near-term buying interest.",
+      "action_window": "intraday",
+      "headline": "Guggenheim Initiates Coverage On Scribe Therapeutics with Buy Rating, Announces Price Target of $50",
+      "url": "https://www.benzinga.com/news/26/08/61270275/guggenheim-initiates-coverage-scribe-therapeutics-buy-rating-announces-price-target-50",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044319+00:00"
+    },
+    {
+      "ticker": "DUOL",
+      "tradeable_score": 0.72,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "DA Davidson upgraded Duolingo from neutral to buy with a significant price target raise to $160, representing a meaningful positive catalyst from a reputable firm that typically drives near-term buying momentum.",
+      "action_window": "intraday",
+      "headline": "DA Davidson Upgrades Duolingo to Buy, Raises Price Target to $160",
+      "url": "https://www.benzinga.com/news/26/08/61270250/da-davidson-upgrades-duolingo-buy-raises-price-target-160",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044328+00:00"
+    },
+    {
+      "ticker": "ASPU",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Q4 earnings swung from profit to loss ($0.02 to -$0.14) with revenue declining 11% YoY, representing a significant earnings miss.",
+      "action_window": "intraday",
+      "headline": "Aspen Gr Q4 EPS $(0.14) Down From $0.02 YoY, Sales $10.300M Down From $11.600M YoY",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61270215/aspen-gr-q4-eps-0-14-down-0-02-yoy-sales-10-300m-down-11-600m-yoy",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044338+00:00"
+    },
+    {
+      "ticker": "PMA",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Nasdaq non-compliance notice signals regulatory risk and potential delisting threat, typically triggering near-term selling pressure though the 45-day remediation window provides some mitigation.",
+      "action_window": "intraday",
+      "headline": "Ming Shing Group Receives Non-Compliance Notice From Nasdaq; Granted 45 Days To Submit Plan To Regain Compliance",
+      "url": "https://www.benzinga.com/news/26/08/61270190/ming-shing-group-receives-non-compliance-notice-nasdaq-granted-45-days-submit-plan-regain-compliance",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044348+00:00"
+    },
+    {
+      "ticker": "GRRR",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Initiation of coverage with Buy rating and $44 price target typically generates positive momentum, though impact depends on current stock price and Compass Point's influence.",
+      "action_window": "intraday",
+      "headline": "Compass Point Initiates Coverage On Gorilla Tech Gr with Buy Rating, Announces Price Target of $44",
+      "url": "https://www.benzinga.com/news/26/08/61270152/compass-point-initiates-coverage-gorilla-tech-gr-buy-rating-announces-price-target-44",
+      "source": "alpaca",
+      "added_at": "2026-08-18T12:31:12.044358+00:00"
     }
   ]
 }
