@@ -6935,5 +6935,18 @@
     "expires": "2026-08-23T18:27:25.611732+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "DOO": {
+    "ticker": "DOO",
+    "score_delta": 0.05,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Watching BRP; Shares Move Higher, Bloomberg Reports TD Cowen Upgrades Stock To Buy On SxS Momentum And Easing Tariff Concerns",
+    "added_at": "2026-08-18T19:07:28.334580+00:00",
+    "expires": "2026-08-23T19:07:28.334588+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

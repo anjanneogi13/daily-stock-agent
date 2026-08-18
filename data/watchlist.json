@@ -2303,6 +2303,30 @@
       "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/08/61283386/enlivens-lead-drug-could-disrupt-the-leukemia-treatment-market-analyst-says",
       "source": "alpaca",
       "added_at": "2026-08-18T18:27:25.644626+00:00"
+    },
+    {
+      "ticker": "DOO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "TD Cowen upgrade to Buy with multiple positive catalysts (SxS momentum and easing tariff concerns) already driving shares higher suggests meaningful near-term momentum.",
+      "action_window": "intraday",
+      "headline": "Watching BRP; Shares Move Higher, Bloomberg Reports TD Cowen Upgrades Stock To Buy On SxS Momentum And Easing Tariff Concerns",
+      "url": "https://www.benzinga.com/quote/DOO",
+      "source": "alpaca",
+      "added_at": "2026-08-18T19:07:28.394359+00:00"
+    },
+    {
+      "ticker": "BTCUSD",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "SEC regulatory clarity proposal reduces uncertainty for crypto markets, potentially bullish for institutional adoption but actual rules and implementation timeline remain unclear.",
+      "action_window": "next_day",
+      "headline": "SEC Proposes New Rules To Create 'Clear And Fit-For-Purpose' Framework For Certain Investment Contracts Involving Crypto Assets",
+      "url": "https://www.benzinga.com/markets/cryptocurrency/26/08/61284636/sec-proposes-new-rules-create-clear-and-fit-purpose-framework-certain-investment-contracts-involving",
+      "source": "alpaca",
+      "added_at": "2026-08-18T19:07:28.394379+00:00"
     }
   ]
 }
