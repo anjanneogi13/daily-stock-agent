@@ -3350,6 +3350,18 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61305692/honeywell-aerospace-stock-upgraded-to-overweight-following-sell-off",
       "source": "alpaca",
       "added_at": "2026-08-19T15:37:56.690520+00:00"
+    },
+    {
+      "ticker": "CGEM",
+      "tradeable_score": 0.62,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Selection for prestigious Presidential Symposium presentation suggests positive interim Phase 3 trial results, indicating promising clinical progress for Cullinan's oncology program.",
+      "action_window": "next_day",
+      "headline": "Taiho Oncology And Cullinan Therapeutics Say Results From Planned Interim Analysis Of Phase 3 REZILIENT3 Trial Selected For Presentation In Presidential Symposium 2 At IASLC 2026 World Conference On Lung Cancer",
+      "url": "https://www.benzinga.com/news/26/08/61307692/taiho-oncology-and-cullinan-therapeutics-say-results-planned-interim-analysis-phase-3-rezilient3-tri",
+      "source": "alpaca",
+      "added_at": "2026-08-19T16:23:23.321041+00:00"
     }
   ]
 }
