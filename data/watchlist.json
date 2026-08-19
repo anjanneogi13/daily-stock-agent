@@ -2079,15 +2079,16 @@
     },
     {
       "ticker": "SPY",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
       "category": "macro",
-      "rationale": "Pending home sales missed expectations significantly (-2.3% vs +0.1% est), indicating housing market weakness that could weigh on broader economic sentiment and rate-sensitive sectors.",
+      "rationale": "Presidential announcement pausing major 50% tariffs on Canada and indicating a trade deal removes significant downside risk and uncertainty for markets, particularly benefiting Canadian equities (EWC) and broader market sentiment (SPY).",
       "action_window": "intraday",
-      "headline": "USA Pending Home Sales (MoM) For July -2.3% Vs 0.1% Est.",
-      "url": "https://www.benzinga.com/quote/SPY",
+      "headline": "President Trump Posts On Truth Social \"I have paused the 50% Tariffs against Canada, that were scheduled to kick in tomorrow morning for a three day period, based on the fact that Canada and the U.S.A., subject to the finalization of documents, have a DEAL! The great Keystone XL Pipeline, long ago k",
+      "url": "https://www.benzinga.com/news/26/08/61292847/president-trump-posts-truth-social-i-have-paused-50-tariffs-against-canada-were-scheduled-kick-tomor",
       "source": "alpaca",
-      "added_at": "2026-08-18T14:06:19.341690+00:00"
+      "added_at": "2026-08-18T14:06:19.341690+00:00",
+      "updated_at": "2026-08-19T08:28:26.409668+00:00"
     },
     {
       "ticker": "IPST",
@@ -2740,6 +2741,54 @@
       "url": "https://www.benzinga.com/news/26/08/61290099/frenome-files-prospectus-related-offer-and-sale-time-time-selling-securityholders-75-188-742-shares-",
       "source": "alpaca",
       "added_at": "2026-08-18T22:15:56.998486+00:00"
+    },
+    {
+      "ticker": "AMTM",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Five-year framework contract with UK defense contractor Babcock supporting critical military domains represents meaningful multi-year revenue visibility and strategic positioning in defense sector.",
+      "action_window": "next_day",
+      "headline": "Amentum Joins Five-Year Babcock International Engineering Services Framework Supporting UK Armed Forces Nuclear, Marine, Land And Aviation Domains",
+      "url": "https://www.benzinga.com/quote/AMTM",
+      "source": "alpaca",
+      "added_at": "2026-08-19T08:28:26.409589+00:00"
+    },
+    {
+      "ticker": "SQM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Strong earnings beat with EPS exceeding estimates by 13% and revenue beating by 9.4%, indicating robust operational performance warranting immediate trading consideration.",
+      "action_window": "intraday",
+      "headline": "Sociedad Quimica Y Minera Q2 EPS $2.31 Beats $2.04 Estimate, Sales $2.468B Beat $2.255B Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61293134/sociedad-quimica-y-minera-q2-eps-2-31-beats-2-04-estimate-sales-2-468b-beat-2-255b-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-19T08:28:26.409613+00:00"
+    },
+    {
+      "ticker": "NVDA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "macro",
+      "rationale": "China easing export restrictions on high-end AI chips directly expands Nvidia's addressable market in the world's second-largest economy, representing a significant regulatory tailwind and revenue opportunity.",
+      "action_window": "intraday",
+      "headline": "'China Eases Limits on Nvidia H200 Chips as AI Race Escalates' - FT",
+      "url": "https://www.benzinga.com/news/26/08/61293075/china-eases-limits-nvidia-h200-chips-ai-race-escalates-ft",
+      "source": "alpaca",
+      "added_at": "2026-08-19T08:28:26.409642+00:00"
+    },
+    {
+      "ticker": "SLB",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "New production sharing contract with Hunt Oil and reservoir study agreement represents meaningful revenue opportunity for SLB in Venezuela's energy sector, though geopolitical and execution risks remain.",
+      "action_window": "next_day",
+      "headline": "Venezuela Partners With US Hunt Oil On Onshore Production Sharing Contract And With SLB On Reservoir Studies",
+      "url": "https://www.benzinga.com/news/26/08/61292941/venezuela-partners-us-hunt-oil-onshore-production-sharing-contract-and-slb-reservoir-studies",
+      "source": "alpaca",
+      "added_at": "2026-08-19T08:28:26.409655+00:00"
     }
   ]
 }

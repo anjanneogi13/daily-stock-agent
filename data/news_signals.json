@@ -6714,5 +6714,18 @@
     "expires": "2026-09-17T22:15:56.946805+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "SQM": {
+    "ticker": "SQM",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Sociedad Quimica Y Minera Q2 EPS $2.31 Beats $2.04 Estimate, Sales $2.468B Beat $2.255B Estimate",
+    "added_at": "2026-08-19T08:28:26.394171+00:00",
+    "expires": "2026-08-26T08:28:26.394179+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }
