@@ -2965,27 +2965,29 @@
     },
     {
       "ticker": "MRNA",
-      "tradeable_score": 0.82,
+      "tradeable_score": 0.88,
       "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Phase 3 topline results from a pre-specified interim analysis for melanoma treatment combining both companies' therapies represents a significant clinical milestone that typically drives immediate market reaction, with higher impact on MRNA given their smaller market cap and fewer approved products.",
+      "category": "product_launch",
+      "rationale": "Positive Phase 3 trial results for breakthrough mRNA cancer therapy represent a major clinical milestone that validates technology platform and expands addressable market significantly, with immediate market impact confirmed by stock surge.",
       "action_window": "intraday",
-      "headline": "Merck And Moderna Announce Topline Results From The Phase 3 Interpath-001 Trial Evaluating Adjuvant Treatment With Intismeran Autogene In Combination With KEYTRUDA In Patients With Completely Resected Stage IIB-IV Melanoma; At A Pre-specified Interim Analysis, Intismeran In Combination With KEYTRUDA",
-      "url": "https://www.benzinga.com/news/26/08/61295298/merck-and-moderna-announce-topline-results-from-the-phase-3-interpath-001-trial-evaluating-adjuvant-treatment-with-intismeran-autogene-in-combination-with-keytruda-in-patients-with-completely-resected",
+      "headline": "Merck and Moderna Release Landmark Personalized Cancer Therapy Trial Success, Stocks Soar",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61296452/merck-and-moderna-release-landmark-personalized-cancer-therapy-trial-success-stocks-soar",
       "source": "alpaca",
-      "added_at": "2026-08-19T10:54:57.996095+00:00"
+      "added_at": "2026-08-19T10:54:57.996095+00:00",
+      "updated_at": "2026-08-19T11:49:43.861265+00:00"
     },
     {
       "ticker": "DVLT",
-      "tradeable_score": 0.72,
+      "tradeable_score": 0.88,
       "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Convertible note offering of $25M typically signals dilution concerns and near-term selling pressure as investors anticipate equity conversion at discount.",
+      "category": "earnings_miss",
+      "rationale": "Massive earnings miss with EPS 4x worse than expected and revenue missing by 78%, indicating severe operational issues.",
       "action_window": "intraday",
-      "headline": "Datavault AI Announces Offering Of $25,030,000 Unsecured Convertible Promissory Note",
-      "url": "https://www.benzinga.com/news/26/08/61295246/datavault-ai-announces-offering-25-030-000-unsecured-convertible-promissory-note",
+      "headline": "Datavault AI Inc. - Common Stock Q2 EPS $(0.12) Misses $(0.03) Estimate, Sales $6.717M Miss $30.250M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61296564/datavault-ai-inc-common-stock-q2-eps-0-12-misses-0-03-estimate-sales-6-717m-miss-30-250m-estimate",
       "source": "alpaca",
-      "added_at": "2026-08-19T10:54:57.996108+00:00"
+      "added_at": "2026-08-19T10:54:57.996108+00:00",
+      "updated_at": "2026-08-19T11:49:43.861226+00:00"
     },
     {
       "ticker": "TGT",
@@ -3106,6 +3108,66 @@
       "url": "https://www.benzinga.com/news/26/08/61295726/analog-devices-sees-q4-adj-eps-3-71-4-01-vs-3-54-est-sees-sales-4-200b-4-400b-vs-4-070b-est",
       "source": "alpaca",
       "added_at": "2026-08-19T11:21:19.623140+00:00"
+    },
+    {
+      "ticker": "TWFG",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley upgrade to Overweight with price target increase represents a meaningful positive catalyst from a major Wall Street bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Upgrades TWFG to Overweight, Raises Price Target to $30",
+      "url": "https://www.benzinga.com/news/26/08/61296538/morgan-stanley-upgrades-twfg-overweight-raises-price-target-30",
+      "source": "alpaca",
+      "added_at": "2026-08-19T11:49:43.861248+00:00"
+    },
+    {
+      "ticker": "NBIS",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "Large $4.5B convertible debt offering signals significant capital raise for growth but creates near-term dilution uncertainty and potential downward pressure on stock price.",
+      "action_window": "intraday",
+      "headline": "Nebius Announces Proposed Private Offering Of $4.5B Of Convertible Senior Notes In Two Series; $2.75B Of Convertible Notes Due 2030 And $1.75B Of Convertible Notes Due 2034",
+      "url": "https://www.benzinga.com/news/26/08/61296440/nebius-announces-proposed-private-offering-4-5b-convertible-senior-notes-two-series-2-75b-convertibl",
+      "source": "alpaca",
+      "added_at": "2026-08-19T11:49:43.861280+00:00"
+    },
+    {
+      "ticker": "TJX",
+      "tradeable_score": 0.78,
+      "sentiment": "bearish",
+      "category": "guidance_cut",
+      "rationale": "TJX guided Q3 adjusted EPS below consensus estimates ($1.30-$1.32 vs $1.34 expected), representing a 1.5-3% miss that signals near-term earnings pressure.",
+      "action_window": "intraday",
+      "headline": "TJX Companies Sees Q3 Adj EPS $1.30-$1.32 vs $1.34 Est",
+      "url": "https://www.benzinga.com/news/26/08/61296335/tjx-companies-sees-q3-adj-eps-1-30-1-32-vs-1-34-est",
+      "source": "alpaca",
+      "added_at": "2026-08-19T11:49:43.861294+00:00"
+    },
+    {
+      "ticker": "NP",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley upgrade to Overweight with increased price target represents a meaningful positive catalyst from a top-tier investment bank that typically drives immediate buying interest.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Upgrades Neptune Insurance Hldgs to Overweight, Raises Price Target to $36",
+      "url": "https://www.benzinga.com/news/26/08/61296312/morgan-stanley-upgrades-neptune-insurance-hldgs-overweight-raises-price-target-36",
+      "source": "alpaca",
+      "added_at": "2026-08-19T11:49:43.861315+00:00"
+    },
+    {
+      "ticker": "XCH",
+      "tradeable_score": 0.65,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "A 1-for-20 reverse split via ADS ratio change typically signals financial distress or regulatory compliance issues to maintain exchange listing requirements, creating negative price pressure and increased volatility.",
+      "action_window": "intraday",
+      "headline": "XCharge Announces ADS Ratio Change To 1 ADS Per 800 Class A Ordinary Shares, Effective August 21, Equivalent To One-For-20 Reverse Split",
+      "url": "https://www.benzinga.com/quote/XCH",
+      "source": "alpaca",
+      "added_at": "2026-08-19T11:49:43.861337+00:00"
     }
   ]
 }
