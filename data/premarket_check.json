@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-17",
+  "date": "2026-08-19",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -10,7 +10,7 @@
   },
   "picks": [
     {
-      "ticker": "FTH",
+      "ticker": "SGHT",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -18,7 +18,7 @@
       "actionable": false
     },
     {
-      "ticker": "TTMI",
+      "ticker": "ADI",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -26,7 +26,7 @@
       "actionable": false
     },
     {
-      "ticker": "OKTA",
+      "ticker": "MRNA",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -34,15 +34,7 @@
       "actionable": false
     },
     {
-      "ticker": "SOFI",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
-    },
-    {
-      "ticker": "RKLB",
+      "ticker": "AZ",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
