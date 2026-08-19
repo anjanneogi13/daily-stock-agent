@@ -3216,6 +3216,54 @@
       "url": "https://www.benzinga.com/quote/AZ",
       "source": "alpaca",
       "added_at": "2026-08-19T12:31:58.930564+00:00"
+    },
+    {
+      "ticker": "BTDR",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Material $400M five-year offtake agreement securing 50% of facility capacity provides significant revenue visibility, though delayed start date (Q1 2027) reduces immediate trading impact.",
+      "action_window": "intraday",
+      "headline": "Bitdeer AI Announces Five-Year Offtake Commitment With Total Expected Revenue Of Approximately $400M For About 50% Of A102 Malaysia Facility; Revenue Expected To Begin Q1 2027",
+      "url": "https://www.benzinga.com/quote/BTDR",
+      "source": "alpaca",
+      "added_at": "2026-08-19T13:26:49.312919+00:00"
+    },
+    {
+      "ticker": "INIO",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant $300M+ capital investment and 500+ job creation signals strong growth commitment and potential revenue expansion, though impact will materialize over time rather than immediately.",
+      "action_window": "next_day",
+      "headline": "INNIO Announces Plans To Invest $300M+ In Its Waukesha, Wisconsin, Facility And To Create Over 500 Jobs",
+      "url": "https://www.benzinga.com/news/26/08/61299417/innio-announces-plans-invest-300m-its-waukesha-wisconsin-facility-and-create-over-500-jobs",
+      "source": "alpaca",
+      "added_at": "2026-08-19T13:26:49.312941+00:00"
+    },
+    {
+      "ticker": "DELL",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Evercore ISI maintains bullish stance with significant price target raise to $550, indicating strong conviction but limited immediate catalyst as rating unchanged.",
+      "action_window": "intraday",
+      "headline": "Evercore ISI Group Maintains Outperform on Dell Technologies, Raises Price Target to $550",
+      "url": "https://www.benzinga.com/news/26/08/61299303/evercore-isi-group-maintains-outperform-dell-technologies-raises-price-target-550",
+      "source": "alpaca",
+      "added_at": "2026-08-19T13:26:49.312974+00:00"
+    },
+    {
+      "ticker": "QTEX",
+      "tradeable_score": 0.55,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Patent-pending breakthrough technology in materials science represents meaningful innovation but lacks commercial timeline or revenue impact clarity for immediate high-conviction trading.",
+      "action_window": "intraday",
+      "headline": "QTREX Quantum Announces A Patent-Pending Technology Achieved First Direct Conversion Of 3D-Printed Dielectric Material Into Electrically Conductive, Graphene-Like Carbon",
+      "url": "https://www.benzinga.com/news/26/08/61299224/qtrex-quantum-announces-patent-pending-technology-achieved-first-direct-conversion-3d-printed-dielec",
+      "source": "alpaca",
+      "added_at": "2026-08-19T13:26:49.312990+00:00"
     }
   ]
 }
