@@ -213,19 +213,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "LXP": {
-    "ticker": "LXP",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "LXP Industrial Trust To Be Acquired By Brookfield Asset Management And CPP Investments For $61.20 Per Share In Cash At An EV Of ~$5.2B",
-    "added_at": "2026-07-20T10:45:27.754730+00:00",
-    "expires": "2026-08-19T10:45:27.754736+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "THRM": {
     "ticker": "THRM",
     "score_delta": 0.15,
@@ -710,32 +697,6 @@
     "headline": "Sight Sciences Receives FDA 510(k) Clearance For OMNI Ultra Surgical System; Next-Generation Implant-Free MIGS Device For Primary Open-Angle Glaucoma",
     "added_at": "2026-08-04T21:47:35.439989+00:00",
     "expires": "2026-09-03T21:47:35.439994+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "PRMB": {
-    "ticker": "PRMB",
-    "score_delta": 0.089,
-    "catalyst": "guidance_raise",
-    "sentiment": "bullish",
-    "tradeable_score": 0.62,
-    "action_window": "intraday",
-    "headline": "Primo Brands Sees Organic Revenue for 2026 FY is expected to up by 2 to 4% YoY",
-    "added_at": "2026-08-05T10:29:33.391746+00:00",
-    "expires": "2026-08-19T10:29:33.391753+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "VPG": {
-    "ticker": "VPG",
-    "score_delta": -0.15,
-    "catalyst": "guidance_cut",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Vishay Precision Group Sees Q3 Sales $84.000M-$89.000M vs $87.331M Est",
-    "added_at": "2026-08-05T10:29:33.411864+00:00",
-    "expires": "2026-08-19T10:29:33.411869+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1454,19 +1415,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "VEEA": {
-    "ticker": "VEEA",
-    "score_delta": 0.097,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "intraday",
-    "headline": "Veea Q2 EPS $(0.08) Up From $(0.19) YoY, Sales $176.221K Up From $72.927K YoY",
-    "added_at": "2026-08-12T10:34:34.099881+00:00",
-    "expires": "2026-08-19T10:34:34.099887+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "UAMY": {
     "ticker": "UAMY",
     "score_delta": -0.15,
@@ -1477,19 +1425,6 @@
     "headline": "United States Antimony Stock Dives Wednesday: Here's Why",
     "added_at": "2026-08-12T18:25:42.498566+00:00",
     "expires": "2026-08-26T18:25:42.498571+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ANNX": {
-    "ticker": "ANNX",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Annexon Q2 EPS $(0.28) Misses $(0.24) Estimate",
-    "added_at": "2026-08-12T10:34:34.121008+00:00",
-    "expires": "2026-08-19T10:34:34.121014+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3209,19 +3144,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "NU": {
-    "ticker": "NU",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "next_day",
-    "headline": "Needham Maintains Buy on Nu Holdings, Raises Price Target to $19",
-    "added_at": "2026-08-14T10:32:20.744542+00:00",
-    "expires": "2026-08-19T10:32:20.744549+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "LRCX": {
     "ticker": "LRCX",
     "score_delta": 0.049,
@@ -3271,19 +3193,6 @@
     "headline": "Canaccord Genuity Downgrades York Space Systems to Hold, Lowers Price Target to $13.5",
     "added_at": "2026-08-18T13:27:09.677234+00:00",
     "expires": "2026-08-23T13:27:09.677241+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CAPR": {
-    "ticker": "CAPR",
-    "score_delta": 0.05,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Cantor Fitzgerald Upgrades Capricor Therapeutics to Overweight, Raises Price Target to $28",
-    "added_at": "2026-08-14T10:32:20.768657+00:00",
-    "expires": "2026-08-19T10:32:20.768663+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -4849,14 +4758,14 @@
   },
   "TGT": {
     "ticker": "TGT",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
     "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "DA Davidson Maintains Buy on Target, Raises Price Target to $170",
-    "added_at": "2026-08-17T14:56:41.034283+00:00",
-    "expires": "2026-08-22T14:56:41.034289+00:00",
+    "tradeable_score": 0.76,
+    "action_window": "intraday",
+    "headline": "Target Reports Q2 Comparable Sales Growth Of 3.8% Driven By 3.6% Increase In Comparable Traffic",
+    "added_at": "2026-08-19T10:54:57.977447+00:00",
+    "expires": "2026-08-26T10:54:57.977463+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6816,6 +6725,71 @@
     "headline": "Lowe's Lowers Fiscal 2026 Comparable Sales Outlook To Flat, Down From Prior Flat To Up 2% Range",
     "added_at": "2026-08-19T10:23:56.690935+00:00",
     "expires": "2026-09-02T10:23:56.690940+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "BIDU": {
+    "ticker": "BIDU",
+    "score_delta": -0.05,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.72,
+    "action_window": "intraday",
+    "headline": "Morgan Stanley Downgrades Baidu to Underweight, Lowers Price Target to $80",
+    "added_at": "2026-08-19T10:54:57.969028+00:00",
+    "expires": "2026-08-24T10:54:57.969034+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "CTRI": {
+    "ticker": "CTRI",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "intraday",
+    "headline": "Cantor Fitzgerald Maintains Overweight on Centuri Holdings, Raises Price Target to $36",
+    "added_at": "2026-08-19T10:54:57.973240+00:00",
+    "expires": "2026-08-24T10:54:57.973245+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TOYO": {
+    "ticker": "TOYO",
+    "score_delta": -0.1,
+    "catalyst": "earnings_miss",
+    "sentiment": "bearish",
+    "tradeable_score": 0.88,
+    "action_window": "intraday",
+    "headline": "Toyo Co H1 EPS $0.45 Misses $0.52 Estimate, Sales $118.185M Miss $192.573M Estimate",
+    "added_at": "2026-08-19T10:54:57.981707+00:00",
+    "expires": "2026-08-26T10:54:57.981712+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "PANW": {
+    "ticker": "PANW",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Cantor Fitzgerald Maintains Overweight on Palo Alto Networks, Raises Price Target to $425",
+    "added_at": "2026-08-19T10:54:57.985923+00:00",
+    "expires": "2026-08-24T10:54:57.985927+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AGMB": {
+    "ticker": "AGMB",
+    "score_delta": 0.046,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.65,
+    "action_window": "intraday",
+    "headline": "Cantor Fitzgerald Initiates Coverage On AgomAb Therapeutics with Overweight Rating",
+    "added_at": "2026-08-19T10:54:57.990152+00:00",
+    "expires": "2026-08-24T10:54:57.990157+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

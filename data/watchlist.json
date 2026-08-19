@@ -2948,6 +2948,78 @@
       "url": "https://www.benzinga.com/quote/LOW",
       "source": "alpaca",
       "added_at": "2026-08-19T10:23:56.696888+00:00"
+    },
+    {
+      "ticker": "BIDU",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "downgrade",
+      "rationale": "Morgan Stanley downgrade to Underweight with price target reduction represents a major negative catalyst from a top-tier investment bank that typically drives immediate selling pressure.",
+      "action_window": "intraday",
+      "headline": "Morgan Stanley Downgrades Baidu to Underweight, Lowers Price Target to $80",
+      "url": "https://www.benzinga.com/news/26/08/61295321/morgan-stanley-downgrades-baidu-underweight-lowers-price-target-80",
+      "source": "alpaca",
+      "added_at": "2026-08-19T10:54:57.996079+00:00"
+    },
+    {
+      "ticker": "MRNA",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Phase 3 topline results from a pre-specified interim analysis for melanoma treatment combining both companies' therapies represents a significant clinical milestone that typically drives immediate market reaction, with higher impact on MRNA given their smaller market cap and fewer approved products.",
+      "action_window": "intraday",
+      "headline": "Merck And Moderna Announce Topline Results From The Phase 3 Interpath-001 Trial Evaluating Adjuvant Treatment With Intismeran Autogene In Combination With KEYTRUDA In Patients With Completely Resected Stage IIB-IV Melanoma; At A Pre-specified Interim Analysis, Intismeran In Combination With KEYTRUDA",
+      "url": "https://www.benzinga.com/news/26/08/61295298/merck-and-moderna-announce-topline-results-from-the-phase-3-interpath-001-trial-evaluating-adjuvant-treatment-with-intismeran-autogene-in-combination-with-keytruda-in-patients-with-completely-resected",
+      "source": "alpaca",
+      "added_at": "2026-08-19T10:54:57.996095+00:00"
+    },
+    {
+      "ticker": "DVLT",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Convertible note offering of $25M typically signals dilution concerns and near-term selling pressure as investors anticipate equity conversion at discount.",
+      "action_window": "intraday",
+      "headline": "Datavault AI Announces Offering Of $25,030,000 Unsecured Convertible Promissory Note",
+      "url": "https://www.benzinga.com/news/26/08/61295246/datavault-ai-announces-offering-25-030-000-unsecured-convertible-promissory-note",
+      "source": "alpaca",
+      "added_at": "2026-08-19T10:54:57.996108+00:00"
+    },
+    {
+      "ticker": "TGT",
+      "tradeable_score": 0.76,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Q2 comparable sales growth of 3.8% with strong traffic increase of 3.6% indicates healthy consumer demand and market share gains, representing a solid earnings result worthy of immediate trading consideration.",
+      "action_window": "intraday",
+      "headline": "Target Reports Q2 Comparable Sales Growth Of 3.8% Driven By 3.6% Increase In Comparable Traffic",
+      "url": "https://www.benzinga.com/news/26/08/61295129/target-reports-q2-comparable-sales-growth-3-8-driven-3-6-increase-comparable-traffic",
+      "source": "alpaca",
+      "added_at": "2026-08-19T10:54:57.996119+00:00"
+    },
+    {
+      "ticker": "TOYO",
+      "tradeable_score": 0.88,
+      "sentiment": "bearish",
+      "category": "earnings_miss",
+      "rationale": "Significant earnings miss with EPS 13% below estimate and sales missing by 39%, indicating substantial operational underperformance that warrants immediate trading action.",
+      "action_window": "intraday",
+      "headline": "Toyo Co H1 EPS $0.45 Misses $0.52 Estimate, Sales $118.185M Miss $192.573M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61295115/toyo-co-h1-eps-0-45-misses-0-52-estimate-sales-118-185m-miss-192-573m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-19T10:54:57.996129+00:00"
+    },
+    {
+      "ticker": "AGMB",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Cantor Fitzgerald initiating coverage with an Overweight rating is a meaningful positive catalyst that typically drives buying interest, though impact may be moderated as this is an initiation rather than an upgrade from existing coverage.",
+      "action_window": "intraday",
+      "headline": "Cantor Fitzgerald Initiates Coverage On AgomAb Therapeutics with Overweight Rating",
+      "url": "https://www.benzinga.com/news/26/08/61295046/cantor-fitzgerald-initiates-coverage-agomab-therapeutics-overweight-rating",
+      "source": "alpaca",
+      "added_at": "2026-08-19T10:54:57.996139+00:00"
     }
   ]
 }
