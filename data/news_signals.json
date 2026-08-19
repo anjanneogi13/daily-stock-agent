@@ -6870,5 +6870,70 @@
     "expires": "2026-08-24T11:49:43.853176+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "RYAN": {
+    "ticker": "RYAN",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Morgan Stanley Maintains Overweight on Ryan Specialty Holdings, Raises Price Target to $50",
+    "added_at": "2026-08-19T12:31:58.896327+00:00",
+    "expires": "2026-08-24T12:31:58.896333+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "SPSC": {
+    "ticker": "SPSC",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "intraday",
+    "headline": "Needham Maintains Buy on SPS Commerce, Raises Price Target to $100",
+    "added_at": "2026-08-19T12:31:58.906991+00:00",
+    "expires": "2026-08-24T12:31:58.906997+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AON": {
+    "ticker": "AON",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "Morgan Stanley Maintains Overweight on Aon, Raises Price Target to $410",
+    "added_at": "2026-08-19T12:31:58.915801+00:00",
+    "expires": "2026-08-24T12:31:58.915805+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "EHGO": {
+    "ticker": "EHGO",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "Eshallgo Locks Up Exclusive North America Rights For Chinese Printing Supplies Maker",
+    "added_at": "2026-08-19T12:31:58.920173+00:00",
+    "expires": "2026-08-26T12:31:58.920177+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AZ": {
+    "ticker": "AZ",
+    "score_delta": 0.05,
+    "catalyst": "product_launch",
+    "sentiment": "bullish",
+    "tradeable_score": 0.75,
+    "action_window": "intraday",
+    "headline": "A2Z Cust2Mate Secures Follow-On Order From HaStock For Additional 1,050 Smart Carts; Same Terms Of Previous 5-Year Agreement And Valued At Additional $11M Over Life Of Agreement",
+    "added_at": "2026-08-19T12:31:58.924485+00:00",
+    "expires": "2026-08-26T12:31:58.924490+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

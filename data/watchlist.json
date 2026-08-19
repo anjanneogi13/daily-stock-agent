@@ -3168,6 +3168,54 @@
       "url": "https://www.benzinga.com/quote/XCH",
       "source": "alpaca",
       "added_at": "2026-08-19T11:49:43.861337+00:00"
+    },
+    {
+      "ticker": "MRVL",
+      "tradeable_score": 0.85,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Major strategic partnership with Google for AI infrastructure components including TPUs plus significant warrant issuance for nearly 59M shares represents substantial revenue opportunity and validates Marvell's AI technology portfolio.",
+      "action_window": "intraday",
+      "headline": "Marvell Technology Enters Agreement With Google To Expand TPU Ecosystem, Including AI Inference Accelerators, Storage Controllers, Network Interface Controllers, Memory Interface Controllers And Near-Memory Compute; Company Issued To Google Warrant To Purchase Up To 58,970,907 MRVL Shares At An Exer",
+      "url": "https://www.benzinga.com/news/26/08/61297730/marvell-technology-enters-agreement-google-expand-tpu-ecosystem-including-ai-inference-accelerators-",
+      "source": "alpaca",
+      "added_at": "2026-08-19T12:31:58.930504+00:00"
+    },
+    {
+      "ticker": "PGR",
+      "tradeable_score": 0.55,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "Mixed earnings report with premium growth of 5% offset by 11% EPS decline suggests margin compression and profitability concerns in the insurance business.",
+      "action_window": "intraday",
+      "headline": "Progressive Reports July Net Premiums Earned Of $7.36B, Up 5%; EPS Of $1.65, Down 11%",
+      "url": "https://www.benzinga.com/quote/PGR",
+      "source": "alpaca",
+      "added_at": "2026-08-19T12:31:58.930539+00:00"
+    },
+    {
+      "ticker": "EHGO",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Exclusive distribution deal for North America is a significant business development catalyst, confirmed by strong 20% premarket price move indicating market validation.",
+      "action_window": "intraday",
+      "headline": "Eshallgo Locks Up Exclusive North America Rights For Chinese Printing Supplies Maker",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61297505/eshallgo-locks-up-exclusive-north-america-rights-for-chinese-printing-supplies-maker",
+      "source": "alpaca",
+      "added_at": "2026-08-19T12:31:58.930553+00:00"
+    },
+    {
+      "ticker": "AZ",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "product_launch",
+      "rationale": "Significant follow-on order of 1,050 smart carts valued at $11M over 5 years demonstrates customer validation and revenue visibility for A2Z Cust2Mate.",
+      "action_window": "intraday",
+      "headline": "A2Z Cust2Mate Secures Follow-On Order From HaStock For Additional 1,050 Smart Carts; Same Terms Of Previous 5-Year Agreement And Valued At Additional $11M Over Life Of Agreement",
+      "url": "https://www.benzinga.com/quote/AZ",
+      "source": "alpaca",
+      "added_at": "2026-08-19T12:31:58.930564+00:00"
     }
   ]
 }
