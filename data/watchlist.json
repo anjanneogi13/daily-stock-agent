@@ -3302,6 +3302,54 @@
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61304771/tempus-ai-soars-as-merck-moderna-cancer-trial-validates-personalis-acquisition",
       "source": "alpaca",
       "added_at": "2026-08-19T15:03:00.864604+00:00"
+    },
+    {
+      "ticker": "ZIM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "ZIM beat earnings estimates with strong Q2 results driven by rising freight rates and volume growth, creating immediate trading opportunity.",
+      "action_window": "intraday",
+      "headline": "ZIM Q2 Revenue Hits $1.78 Billion As Freight Rates Rise 8%",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61306220/zim-q2-revenue-hits-1-78-billion-as-freight-rates-rise-8",
+      "source": "alpaca",
+      "added_at": "2026-08-19T15:37:56.690446+00:00"
+    },
+    {
+      "ticker": "LYNX",
+      "tradeable_score": 0.85,
+      "sentiment": "bearish",
+      "category": "other",
+      "rationale": "IPO opened 11.4% below its pricing at $15.50 versus $17.50, indicating weak investor demand and negative first-day trading performance that typically continues short-term.",
+      "action_window": "intraday",
+      "headline": "Lyntris IPO Opens For Trade At $15.50/Share; IPO Priced At $17.50/Share On 17M Shares",
+      "url": "https://www.benzinga.com/quote/LYNX",
+      "source": "alpaca",
+      "added_at": "2026-08-19T15:37:56.690472+00:00"
+    },
+    {
+      "ticker": "GDS",
+      "tradeable_score": 0.88,
+      "sentiment": "bullish",
+      "category": "guidance_raise",
+      "rationale": "Strong Q2 profit, doubled 2026 sales target, raised full-year guidance, and record AI-driven bookings with new hyperscale customers represent multiple significant positive catalysts occurring simultaneously.",
+      "action_window": "intraday",
+      "headline": "GDS' Record AI-Driven Bookings Fueled By New Markets, 3 Hyperscale Customers",
+      "url": "https://www.benzinga.com/Opinion/26/08/61305789/gds-record-ai-driven-bookings-fueled-by-new-markets-3-hyperscale-customers",
+      "source": "alpaca",
+      "added_at": "2026-08-19T15:37:56.690489+00:00"
+    },
+    {
+      "ticker": "HONA",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "Morgan Stanley upgrade from Equal-weight to Overweight with $205 price target following a sell-off represents a meaningful catalyst from a major bank with potential recovery upside.",
+      "action_window": "intraday",
+      "headline": "Honeywell Aerospace Stock Upgraded to Overweight Following Sell-Off",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61305692/honeywell-aerospace-stock-upgraded-to-overweight-following-sell-off",
+      "source": "alpaca",
+      "added_at": "2026-08-19T15:37:56.690520+00:00"
     }
   ]
 }

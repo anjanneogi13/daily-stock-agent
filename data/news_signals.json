@@ -674,19 +674,6 @@
     "expires": "2027-02-08T11:42:32.789228+00:00",
     "hard_block": true
   },
-  "NOK": {
-    "ticker": "NOK",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "Why Is Nokia Stock Surging Wednesday?",
-    "added_at": "2026-08-12T15:28:52.061630+00:00",
-    "expires": "2026-08-19T15:28:52.061637+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SGHT": {
     "ticker": "SGHT",
     "score_delta": 0.15,
@@ -3167,19 +3154,6 @@
     "headline": "Evercore ISI Group Maintains Outperform on Dell Technologies, Raises Price Target to $550",
     "added_at": "2026-08-19T13:26:49.290650+00:00",
     "expires": "2026-08-24T13:26:49.290657+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MU": {
-    "ticker": "MU",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "this_week",
-    "headline": "Micron and 15 Other Stocks To Play The AI Buildout Race: They Are Still 20% Below Highs",
-    "added_at": "2026-08-14T15:14:49.849559+00:00",
-    "expires": "2026-08-19T15:14:49.849567+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6816,6 +6790,45 @@
     "headline": "Wolfe Research Initiates Coverage On Aflac with Underperform Rating, Announces Price Target of $103",
     "added_at": "2026-08-19T15:03:00.845973+00:00",
     "expires": "2026-08-24T15:03:00.845979+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "ZIM": {
+    "ticker": "ZIM",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "ZIM Q2 Revenue Hits $1.78 Billion As Freight Rates Rise 8%",
+    "added_at": "2026-08-19T15:37:56.633693+00:00",
+    "expires": "2026-08-26T15:37:56.633701+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "TSX:AC": {
+    "ticker": "TSX:AC",
+    "score_delta": 0.034,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.48,
+    "action_window": "next_day",
+    "headline": "Scotiabank Maintains Sector Outperform on Air Canada, Raises Price Target to C$37.5",
+    "added_at": "2026-08-19T15:37:56.648313+00:00",
+    "expires": "2026-08-24T15:37:56.648325+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "VIK": {
+    "ticker": "VIK",
+    "score_delta": 0.032,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "UBS Maintains Buy on Viking Holdings, Raises Price Target to $121",
+    "added_at": "2026-08-19T15:37:56.682492+00:00",
+    "expires": "2026-08-24T15:37:56.682502+00:00",
     "hard_block": false,
     "negative_reaction": false
   }
