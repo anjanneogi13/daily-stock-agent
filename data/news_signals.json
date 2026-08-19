@@ -6727,5 +6727,31 @@
     "expires": "2026-08-26T08:28:26.394179+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "WB": {
+    "ticker": "WB",
+    "score_delta": 0.097,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.68,
+    "action_window": "intraday",
+    "headline": "Weibo Q2 Adj. EPS $0.38 Beats $0.36 Estimate, Sales $453.826M Beat $442.746M Estimate",
+    "added_at": "2026-08-19T09:04:49.287580+00:00",
+    "expires": "2026-08-26T09:04:49.287587+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "YMM": {
+    "ticker": "YMM",
+    "score_delta": 0.1,
+    "catalyst": "earnings_beat",
+    "sentiment": "bullish",
+    "tradeable_score": 0.82,
+    "action_window": "intraday",
+    "headline": "Full Truck Alliance Co Q2 Adj. EPS $0.20 Beats $0.18 Estimate, Sales $498.381M Beat $458.670M Estimate",
+    "added_at": "2026-08-19T09:04:49.299469+00:00",
+    "expires": "2026-08-26T09:04:49.299475+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

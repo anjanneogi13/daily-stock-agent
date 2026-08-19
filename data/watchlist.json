@@ -2789,6 +2789,30 @@
       "url": "https://www.benzinga.com/news/26/08/61292941/venezuela-partners-us-hunt-oil-onshore-production-sharing-contract-and-slb-reservoir-studies",
       "source": "alpaca",
       "added_at": "2026-08-19T08:28:26.409655+00:00"
+    },
+    {
+      "ticker": "WB",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Weibo beat both EPS and revenue estimates with EPS exceeding by 5.6% and revenue by 2.5%, representing a solid but not exceptional earnings beat.",
+      "action_window": "intraday",
+      "headline": "Weibo Q2 Adj. EPS $0.38 Beats $0.36 Estimate, Sales $453.826M Beat $442.746M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61293571/weibo-q2-adj-eps-0-38-beats-0-36-estimate-sales-453-826m-beat-442-746m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-19T09:04:49.356608+00:00"
+    },
+    {
+      "ticker": "YMM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Full Truck Alliance beat both EPS estimates by 11% and revenue estimates by 9%, representing a strong double-beat on Q2 earnings.",
+      "action_window": "intraday",
+      "headline": "Full Truck Alliance Co Q2 Adj. EPS $0.20 Beats $0.18 Estimate, Sales $498.381M Beat $458.670M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61293422/full-truck-alliance-co-q2-adj-eps-0-20-beats-0-18-estimate-sales-498-381m-beat-458-670m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-19T09:04:49.356626+00:00"
     }
   ]
 }
