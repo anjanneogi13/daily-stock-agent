@@ -713,19 +713,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "DASH": {
-    "ticker": "DASH",
-    "score_delta": -0.064,
-    "catalyst": "lawsuit",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "next_day",
-    "headline": "U.S. Appeals Court Says New York City Law On Sharing Food Delivery Customers' Data With Restaurants Is Unconstitutional",
-    "added_at": "2026-08-05T14:45:54.696760+00:00",
-    "expires": "2026-08-19T14:45:54.696766+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "MLM": {
     "ticker": "MLM",
     "score_delta": 0.05,
@@ -1477,19 +1464,6 @@
     "headline": "Energy Fuels Announces Australian Strategic Materials Shareholders Approve Acquisition With 98.23% Of Votes Cast For Share Scheme; Closing Expected August 28",
     "added_at": "2026-08-12T12:52:38.955763+00:00",
     "expires": "2026-08-26T12:52:38.955771+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "CORZ": {
-    "ticker": "CORZ",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Neocloud Stocks Catch Fire As CoreWeave Doubles Revenue",
-    "added_at": "2026-08-12T14:17:29.081750+00:00",
-    "expires": "2026-08-19T14:17:29.081755+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -3157,32 +3131,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "BIRK": {
-    "ticker": "BIRK",
-    "score_delta": 0.034,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.48,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Maintains Outperform on Birkenstock Holding, Raises Price Target to $49",
-    "added_at": "2026-08-14T14:12:30.828245+00:00",
-    "expires": "2026-08-19T14:12:30.828255+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "ALVO": {
-    "ticker": "ALVO",
-    "score_delta": 0.032,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.45,
-    "action_window": "intraday",
-    "headline": "Evercore ISI Group Initiates Coverage On Alvotech with Outperform Rating",
-    "added_at": "2026-08-14T14:12:30.834246+00:00",
-    "expires": "2026-08-19T14:12:30.834254+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "ALKT": {
     "ticker": "ALKT",
     "score_delta": 0.032,
@@ -3206,32 +3154,6 @@
     "headline": "Wells Fargo Upgrades Okta to Overweight, Raises Price Target to $180",
     "added_at": "2026-08-17T12:29:00.950095+00:00",
     "expires": "2026-08-22T12:29:00.950100+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "MSGS": {
-    "ticker": "MSGS",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "Susquehanna Maintains Positive on Madison Square Garden, Raises Price Target to $477",
-    "added_at": "2026-08-14T14:12:30.852027+00:00",
-    "expires": "2026-08-19T14:12:30.852034+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NTNX": {
-    "ticker": "NTNX",
-    "score_delta": 0.03,
-    "catalyst": "upgrade",
-    "sentiment": "bullish",
-    "tradeable_score": 0.42,
-    "action_window": "next_day",
-    "headline": "RBC Capital Maintains Outperform on Nutanix, Raises Price Target to $84",
-    "added_at": "2026-08-14T14:12:30.858007+00:00",
-    "expires": "2026-08-19T14:12:30.858014+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -6881,6 +6803,19 @@
     "headline": "RBC Capital Maintains Outperform on Aramark, Raises Price Target to $70",
     "added_at": "2026-08-19T14:06:40.642215+00:00",
     "expires": "2026-08-24T14:06:40.642222+00:00",
+    "hard_block": false,
+    "negative_reaction": false
+  },
+  "AFL": {
+    "ticker": "AFL",
+    "score_delta": -0.032,
+    "catalyst": "downgrade",
+    "sentiment": "bearish",
+    "tradeable_score": 0.45,
+    "action_window": "intraday",
+    "headline": "Wolfe Research Initiates Coverage On Aflac with Underperform Rating, Announces Price Target of $103",
+    "added_at": "2026-08-19T15:03:00.845973+00:00",
+    "expires": "2026-08-24T15:03:00.845979+00:00",
     "hard_block": false,
     "negative_reaction": false
   }

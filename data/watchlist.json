@@ -2992,15 +2992,16 @@
     },
     {
       "ticker": "TGT",
-      "tradeable_score": 0.76,
+      "tradeable_score": 0.88,
       "sentiment": "bullish",
       "category": "earnings_beat",
-      "rationale": "Q2 comparable sales growth of 3.8% with strong traffic increase of 3.6% indicates healthy consumer demand and market share gains, representing a solid earnings result worthy of immediate trading consideration.",
+      "rationale": "Target hit 52-week high on Q2 earnings beat with strong digital growth and additional tailwind from tariff refunds, signaling successful turnaround momentum.",
       "action_window": "intraday",
-      "headline": "Target Reports Q2 Comparable Sales Growth Of 3.8% Driven By 3.6% Increase In Comparable Traffic",
-      "url": "https://www.benzinga.com/news/26/08/61295129/target-reports-q2-comparable-sales-growth-3-8-driven-3-6-increase-comparable-traffic",
+      "headline": "Target Says It\u2019s \u2018Pouring Gas\u2019 on What\u2019s Working As Retail Turnaround Takes Hold",
+      "url": "https://www.benzinga.com/markets/earnings/26/08/61303841/target-says-its-pouring-gas-on-whats-working-as-retail-turnaround-takes-hold",
       "source": "alpaca",
-      "added_at": "2026-08-19T10:54:57.996119+00:00"
+      "added_at": "2026-08-19T10:54:57.996119+00:00",
+      "updated_at": "2026-08-19T15:03:00.864656+00:00"
     },
     {
       "ticker": "TOYO",
@@ -3289,6 +3290,18 @@
       "url": "https://www.benzinga.com/news/26/08/61301285/lucid-group-names-eric-muller-chief-executive-officer-lead-next-phase-growth-rick-sannem-steps-down-",
       "source": "alpaca",
       "added_at": "2026-08-19T14:06:40.683411+00:00"
+    },
+    {
+      "ticker": "TEM",
+      "tradeable_score": 0.82,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Stock is already surging intraday on validation of recent multi-billion dollar acquisition through positive third-party clinical trial results, creating momentum-driven trading opportunity.",
+      "action_window": "intraday",
+      "headline": "Tempus AI Soars as Merck-Moderna Cancer Trial Validates Personalis Acquisition",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61304771/tempus-ai-soars-as-merck-moderna-cancer-trial-validates-personalis-acquisition",
+      "source": "alpaca",
+      "added_at": "2026-08-19T15:03:00.864604+00:00"
     }
   ]
 }
