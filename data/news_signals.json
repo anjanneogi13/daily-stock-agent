@@ -6870,5 +6870,18 @@
     "expires": "2026-08-26T13:26:49.305681+00:00",
     "hard_block": false,
     "negative_reaction": false
+  },
+  "ARMK": {
+    "ticker": "ARMK",
+    "score_delta": 0.03,
+    "catalyst": "upgrade",
+    "sentiment": "bullish",
+    "tradeable_score": 0.42,
+    "action_window": "next_day",
+    "headline": "RBC Capital Maintains Outperform on Aramark, Raises Price Target to $70",
+    "added_at": "2026-08-19T14:06:40.642215+00:00",
+    "expires": "2026-08-24T14:06:40.642222+00:00",
+    "hard_block": false,
+    "negative_reaction": false
   }
 }

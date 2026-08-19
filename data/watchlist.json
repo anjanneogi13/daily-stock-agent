@@ -2661,15 +2661,16 @@
     },
     {
       "ticker": "TGL",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
       "category": "other",
-      "rationale": "Termination of a software enhancement agreement with waiver of RM3.9M refund indicates failed partnership and material financial loss for Treasure Global's subsidiary.",
+      "rationale": "Listing on Binance's stock trading platform significantly expands TGL's accessibility to crypto-native retail investors, likely driving near-term volume and price discovery.",
       "action_window": "next_day",
-      "headline": "Treasure Global's TADAA Technologies And Apexcode Innovations Terminate Software Enhancement Agreement Dated March 11, 2026; TADAA Waives Right To Refund of RM3.9M First Milestone Payment",
-      "url": "https://www.benzinga.com/news/26/08/61289934/treasure-global-s-tadaa-technologies-and-apexcode-innovations-terminate-software-enhancement-agreeme",
+      "headline": "Treasure Global Says Its Common Stock Is Now Accessible To Eligible Investors Through Binance Stocks Trading",
+      "url": "https://www.benzinga.com/quote/TGL",
       "source": "alpaca",
-      "added_at": "2026-08-18T21:46:51.223083+00:00"
+      "added_at": "2026-08-18T21:46:51.223083+00:00",
+      "updated_at": "2026-08-19T14:06:40.683390+00:00"
     },
     {
       "ticker": "INHD",
@@ -3264,6 +3265,30 @@
       "url": "https://www.benzinga.com/news/26/08/61299224/qtrex-quantum-announces-patent-pending-technology-achieved-first-direct-conversion-3d-printed-dielec",
       "source": "alpaca",
       "added_at": "2026-08-19T13:26:49.312990+00:00"
+    },
+    {
+      "ticker": "DOX",
+      "tradeable_score": 0.68,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Significant enterprise contract win with Telefonica for full-stack BSS/OSS solutions represents material revenue opportunity and validates Amdocs' competitive position in Latin American telecom market.",
+      "action_window": "intraday",
+      "headline": "Amdocs Inks Agreement For Telefonica Chile, Telefonica Moviles To Use Amdocs' Full-Stack Business Support Systems, Operations Support Systems",
+      "url": "https://www.benzinga.com/news/26/08/61301735/amdocs-inks-agreement-telefonica-chile-telefonica-moviles-use-amdocs-full-stack-business-support-sys",
+      "source": "alpaca",
+      "added_at": "2026-08-19T14:06:40.683354+00:00"
+    },
+    {
+      "ticker": "LCID",
+      "tradeable_score": 0.65,
+      "sentiment": "neutral",
+      "category": "other",
+      "rationale": "CEO transition at struggling EV maker signals strategic shift but creates uncertainty; market will react to leadership change and assess new CEO's credibility for 'next phase of growth'.",
+      "action_window": "intraday",
+      "headline": "Lucid Group Names Eric Muller As Chief Executive Officer To Lead Next Phase Of Growth; Rick Sannem Steps Down As CEO, Becomes Strategic Advisor To Board",
+      "url": "https://www.benzinga.com/news/26/08/61301285/lucid-group-names-eric-muller-chief-executive-officer-lead-next-phase-growth-rick-sannem-steps-down-",
+      "source": "alpaca",
+      "added_at": "2026-08-19T14:06:40.683411+00:00"
     }
   ]
 }
