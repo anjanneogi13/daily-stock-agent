@@ -2813,6 +2813,54 @@
       "url": "https://www.benzinga.com/news/earnings/26/08/61293422/full-truck-alliance-co-q2-adj-eps-0-20-beats-0-18-estimate-sales-498-381m-beat-458-670m-estimate",
       "source": "alpaca",
       "added_at": "2026-08-19T09:04:49.356626+00:00"
+    },
+    {
+      "ticker": "SKHY",
+      "tradeable_score": 0.75,
+      "sentiment": "bullish",
+      "category": "other",
+      "rationale": "Large-scale share buyback (40T won) with full cancellation is a strong capital return signal that reduces share count and typically supports stock price appreciation.",
+      "action_window": "intraday",
+      "headline": "SK Hynix Earlier Announced Board Approval To Repurchase And Fully Cancel 40T Won Worth Of Its Own Shares",
+      "url": "https://www.benzinga.com/quote/SKHY",
+      "source": "alpaca",
+      "added_at": "2026-08-19T09:58:01.384828+00:00"
+    },
+    {
+      "ticker": "VGK",
+      "tradeable_score": 0.72,
+      "sentiment": "bearish",
+      "category": "macro",
+      "rationale": "Eurozone inflation came in dramatically below expectations at 0.2% MoM versus 2.8% estimate, representing a significant macro miss that could signal economic weakness and impact ECB policy expectations.",
+      "action_window": "intraday",
+      "headline": "Eurozone Consumer Price Index (MoM) For July 0.2% Vs. 2.8% Est.; -0.1% Prior",
+      "url": "https://www.benzinga.com/quote/VGK",
+      "source": "alpaca",
+      "added_at": "2026-08-19T09:58:01.384850+00:00"
+    },
+    {
+      "ticker": "ALNY",
+      "tradeable_score": 0.65,
+      "sentiment": "bullish",
+      "category": "upgrade",
+      "rationale": "BMO Capital initiating coverage with Outperform rating and $318 price target signals institutional confidence, though initiation carries less weight than upgrade from existing coverage.",
+      "action_window": "intraday",
+      "headline": "BMO Capital Initiates Coverage On Alnylam Pharmaceuticals with Outperform Rating, Announces Price Target of $318",
+      "url": "https://www.benzinga.com/news/26/08/61293874/bmo-capital-initiates-coverage-alnylam-pharmaceuticals-outperform-rating-announces-price-target-318",
+      "source": "alpaca",
+      "added_at": "2026-08-19T09:58:01.384866+00:00"
+    },
+    {
+      "ticker": "KC",
+      "tradeable_score": 0.78,
+      "sentiment": "bullish",
+      "category": "earnings_beat",
+      "rationale": "Kingsoft Cloud beat both EPS and revenue estimates with adjusted EPS loss of $0.03 versus expected $0.10 loss (70% beat) and revenue beat of $5M, representing meaningful positive surprise on profitability.",
+      "action_window": "intraday",
+      "headline": "Kingsoft Cloud Holdings Q2 Adj. EPS $(0.03) Beats $(0.10) Estimate, Sales $452.752M Beat $447.800M Estimate",
+      "url": "https://www.benzinga.com/news/earnings/26/08/61293664/kingsoft-cloud-holdings-q2-adj-eps-0-03-beats-0-10-estimate-sales-452-752m-beat-447-800m-estimate",
+      "source": "alpaca",
+      "added_at": "2026-08-19T09:58:01.384880+00:00"
     }
   ]
 }
