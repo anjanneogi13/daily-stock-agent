@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "META",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Meta faces massive $1.4T potential legal damages with trial beginning and stock already down 4% trading below key technical levels, creating significant downside risk.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Meta Platforms Stock Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61257572/whats-going-on-with-meta-platforms-stock-monday-3",
-      "source": "alpaca",
-      "added_at": "2026-08-17T18:28:26.782681+00:00"
-    },
-    {
-      "ticker": "RUM",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "guidance_raise",
-      "rationale": "11% stock surge driven by strong Q3 revenue guidance and AI infrastructure expansion represents a meaningful catalyst with some momentum already captured.",
-      "action_window": "next_day",
-      "headline": "Why Is RUM Group Stock Gaining Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61257180/why-is-rum-group-stock-gaining-monday",
-      "source": "alpaca",
-      "added_at": "2026-08-17T18:28:26.782696+00:00"
-    },
-    {
-      "ticker": "LULU",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Combination of operational challenges, sector weakness, and notable institutional investor (Soros) exit creates meaningful selling pressure but lacks specific catalyst details.",
-      "action_window": "intraday",
-      "headline": "Lululemon Shares Slump Amid Sector Sell-Off, Soros Exit",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61257000/lululemon-shares-slump-amid-sector-sell-off-soros-exit",
-      "source": "alpaca",
-      "added_at": "2026-08-17T18:28:26.782703+00:00"
-    },
-    {
       "ticker": "GOOG",
       "tradeable_score": 0.72,
       "sentiment": "bullish",
