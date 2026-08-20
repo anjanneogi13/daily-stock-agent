@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SYF",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership with OpenAI to enhance customer-facing services represents a meaningful competitive advantage in the evolving fintech/payments landscape, though execution and impact timeline remain uncertain.",
-      "action_window": "next_day",
-      "headline": "Synchrony Partners With OpenAI To Enhance Its Services In Shopping, Payments",
-      "url": "https://www.benzinga.com/news/26/08/61250918/synchrony-partners-openai-enhance-its-services-shopping-payments",
-      "source": "alpaca",
-      "added_at": "2026-08-17T15:20:01.057541+00:00"
-    },
-    {
-      "ticker": "NFLX",
-      "tradeable_score": 0.55,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Market concerns over weak Q3 revenue and earnings guidance outweigh positive news of Ackman's stake, creating immediate downward pressure on the stock.",
-      "action_window": "intraday",
-      "headline": "Why Is Netflix Stock Falling on Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61252587/why-is-netflix-stock-falling-on-monday",
-      "source": "alpaca",
-      "added_at": "2026-08-17T15:48:40.046553+00:00"
-    },
-    {
-      "ticker": "ALAB",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Northland upgrade to Outperform with substantial $350 price target following strong Q2 results creates meaningful positive catalyst with stock already surging.",
-      "action_window": "intraday",
-      "headline": "Why Is Astera Labs Stock Surging Monday?",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/08/61252061/why-is-astera-labs-stock-surging-monday",
-      "source": "alpaca",
-      "added_at": "2026-08-17T15:48:40.046571+00:00"
-    },
-    {
-      "ticker": "RIOT",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "JPMorgan confirmation that Anthropic pays 33% premium validates RIOT's pricing power and revenue quality in tight AI infrastructure market.",
-      "action_window": "intraday",
-      "headline": "Anthropic Paying 33% Above Market for AI Capacity, JPMorgan Says",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61254262/anthropic-pays-33-percent-above-market-ai-capacity-jpmorgan",
-      "source": "alpaca",
-      "added_at": "2026-08-17T15:48:40.046578+00:00",
-      "updated_at": "2026-08-17T16:54:33.009097+00:00"
-    },
-    {
-      "ticker": "PURR",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "High-profile institutional investor Stan Druckenmiller's $23M stake disclosure creates significant positive signal for PURR and related crypto assets, likely driving immediate speculative interest.",
-      "action_window": "intraday",
-      "headline": "Stan Druckenmiller Reveals $23 Million PURR Bet as Hyperliquid Takes On Polymarket",
-      "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61251896/stan-druckenmiller-hyperliquid-bet",
-      "source": "alpaca",
-      "added_at": "2026-08-17T15:48:40.046582+00:00"
-    },
-    {
       "ticker": "CORZ",
       "tradeable_score": 0.65,
       "sentiment": "bullish",
