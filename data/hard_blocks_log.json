@@ -1108,5 +1108,33 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-20 13:05:39",
+    "weak_sectors": {},
+    "blocked_count": 4,
+    "passed_count": 6,
+    "blocked": [
+      {
+        "ticker": "UGI",
+        "reason": "SL too tight (1.7% < 2.0% for $39 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "NSC",
+        "reason": "SL too tight (1.1% < 1.5% for $346 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "BHP",
+        "reason": "SL too tight (1.5% < 2.0% for $92 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "KPRX",
+        "reason": "penny stock ($2.60 < $5.0)",
+        "block_type": "penny_stock"
+      }
+    ]
   }
 ]
