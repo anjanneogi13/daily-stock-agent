@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ONTO",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "Goldman Sachs initiating coverage with a Buy rating and $400 price target is a strong positive catalyst from a tier-1 investment bank that typically drives immediate trading activity.",
-      "action_window": "intraday",
-      "headline": "Goldman Sachs Initiates Coverage On Onto Innovation with Buy Rating, Announces Price Target of $400",
-      "url": "https://www.benzinga.com/news/26/08/61239724/goldman-sachs-initiates-coverage-innovation-buy-rating-announces-price-target-400",
-      "source": "alpaca",
-      "added_at": "2026-08-17T09:34:39.594401+00:00"
-    },
-    {
       "ticker": "DAVE",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
