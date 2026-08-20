@@ -1,68 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GOOGL",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Major regulatory approval enables Waymo's significant geographic expansion across California's largest markets, advancing Alphabet's autonomous vehicle monetization while posing competitive pressure on Tesla's robotaxi ambitions.",
-      "action_window": "next_day",
-      "headline": "Waymo Gets California Green Light for Robotaxi Expansion Across Bay Area and Los Angeles",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61239145/waymo-gets-california-green-light-for-robotaxi-expansion-across-bay-area-and-los-angeles",
-      "source": "alpaca",
-      "added_at": "2026-08-17T08:35:29.922072+00:00"
-    },
-    {
-      "ticker": "FFAI",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Record Q2 revenue, positive margin inflection in robotics business, and significant debt reduction of $100M+ year-over-year represent multiple strong fundamental catalysts for a historically struggling company.",
-      "action_window": "intraday",
-      "headline": "Faraday Future CEO YT Jia Reports Record Q2 Revenue As EAI Robotics Business Enters Positive-Gross-Margin Volume Growth Phase, Reduces Debt By More Than $100 Million Year Over Year",
-      "url": "https://www.benzinga.com/quote/FFAI",
-      "source": "alpaca",
-      "added_at": "2026-08-17T08:35:29.922083+00:00"
-    },
-    {
-      "ticker": "RACE",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Record-breaking auction price 36x estimate demonstrates exceptional brand strength and validates Ferrari's EV strategy, though immediate trading impact is moderate as this is a one-off collectible sale rather than production revenue.",
-      "action_window": "next_day",
-      "headline": "Ferrari's First Luce EV Production Unit Sold for $40 Million at Sotheby's Auction, More Than 36 Times Its Estimate",
-      "url": "https://www.benzinga.com/markets/tech/26/08/61238939/ferraris-first-luce-ev-production-unit-sold-for-40-million-at-sothebys-auction-more-than-36-times-its-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-17T08:35:29.922089+00:00"
-    },
-    {
-      "ticker": "AZN",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Positive Phase III trial results showing significant survival benefits for combination therapy in lung cancer represent a major regulatory milestone that typically drives substantial stock appreciation.",
-      "action_window": "intraday",
-      "headline": "AstraZeneca And HUTCHMED\u2019s Savolitinib, In Combination With TAGRISSO, Delivers Significant Survival Benefits In SAFFRON Phase III EGFRm Lung Cancer Trial",
-      "url": "https://www.benzinga.com/news/26/08/61241915/astrazeneca-and-hutchmed-s-savolitinib-combination-tagrisso-delivers-significant-survival-benefits-s",
-      "source": "alpaca",
-      "added_at": "2026-08-17T08:35:29.922093+00:00",
-      "updated_at": "2026-08-17T11:19:59.758876+00:00"
-    },
-    {
-      "ticker": "RKLB",
-      "tradeable_score": 0.78,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Major government contract award with $981M ceiling represents significant revenue opportunity for Rocket Lab and validates their capabilities in the defense/space sector.",
-      "action_window": "next_day",
-      "headline": "Rocket Lab Onboarded To The United States Space Force\u2019s NITE-STAR IDIQ Contract, An Advanced Space Test And Training Infrastructure With A $981M Contract Ceiling",
-      "url": "https://www.benzinga.com/news/26/08/61262295/rocket-lab-onboarded-united-states-space-force-s-nite-star-idiq-contract-advanced-space-test-and-tra",
-      "source": "alpaca",
-      "added_at": "2026-08-17T08:35:29.922099+00:00",
-      "updated_at": "2026-08-17T21:20:17.263232+00:00"
-    },
-    {
       "ticker": "ONTO",
       "tradeable_score": 0.78,
       "sentiment": "bullish",
