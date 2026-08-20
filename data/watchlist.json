@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "ALM",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "A $300M share repurchase program signals strong board confidence in the stock's undervaluation and represents material capital return that should support the stock price.",
-      "action_window": "intraday",
-      "headline": "Almonty Industries Board Approves $300M Share Repurchase Program",
-      "url": "https://www.benzinga.com/news/26/08/61242451/almonty-industries-board-approves-300m-share-repurchase-program",
-      "source": "alpaca",
-      "added_at": "2026-08-17T11:49:43.796500+00:00"
-    },
-    {
-      "ticker": "XPON",
-      "tradeable_score": 0.55,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Improving gross margin to 32.4% and narrowing net loss suggests operational improvement, though absolute revenue of $2M remains modest for meaningful institutional interest.",
-      "action_window": "intraday",
-      "headline": "What's Going On With Experion Stock On Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61242450/whats-going-on-with-experion-stock-on-monday",
-      "source": "alpaca",
-      "added_at": "2026-08-17T11:49:43.796514+00:00"
-    },
-    {
-      "ticker": "LHX",
-      "tradeable_score": 0.55,
-      "sentiment": "neutral",
-      "category": "other",
-      "rationale": "Immediate CEO appointment creates short-term uncertainty but also signals decisive board action, requiring assessment of new leadership's strategic direction and market reception.",
-      "action_window": "intraday",
-      "headline": "L3Harris Technologies Appoints Sam Mehta President, CEO, Effective Immediately",
-      "url": "https://www.benzinga.com/news/26/08/61242436/l3harris-technologies-appoints-sam-mehta-president-ceo-effective-immediately",
-      "source": "alpaca",
-      "added_at": "2026-08-17T11:49:43.796523+00:00"
-    },
-    {
-      "ticker": "FTH",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "FDA Fast Track Designation is a significant regulatory catalyst for small biotech companies that accelerates development timelines and increases probability of eventual approval, though not as definitive as full FDA approval.",
-      "action_window": "intraday",
-      "headline": "Faeth Therapeutics Says FDA Grants Fast Track Designation To Combination Of Sapanisertib And Serabelisib With Paclitaxel For Treatment Of Patients With Endometrial Cancer",
-      "url": "https://www.benzinga.com/news/26/08/61242380/faeth-therapeutics-says-fda-grants-fast-track-designation-combination-sapanisertib-and-serabelisib-p",
-      "source": "alpaca",
-      "added_at": "2026-08-17T11:49:43.796531+00:00"
-    },
-    {
-      "ticker": "DFLI",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Strategic partnership to integrate AI into battery technology represents meaningful innovation and market positioning but lacks immediate revenue impact or specific commercialization timeline.",
-      "action_window": "intraday",
-      "headline": "Dragonfly Energy Partners With Sphere Energy To Develop And Integrate Next-Gen AI Capabilities Into Its Future Battery Technologies And Integrated Power Systems",
-      "url": "https://www.benzinga.com/news/26/08/61242359/dragonfly-energy-partners-sphere-energy-develop-and-integrate-next-gen-ai-capabilities-its-future-ba",
-      "source": "alpaca",
-      "added_at": "2026-08-17T11:49:43.796539+00:00"
-    },
-    {
       "ticker": "SVA",
       "tradeable_score": 0.82,
       "sentiment": "bearish",
