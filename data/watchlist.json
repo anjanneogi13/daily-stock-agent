@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GIPR",
-      "tradeable_score": 0.52,
-      "sentiment": "neutral",
-      "category": "earnings_beat",
-      "rationale": "Significant FFO beat ($0.02 vs -$0.20 estimate) offset by minor revenue miss ($2.111M vs $2.124M), creating mixed trading signals with positive earnings quality but weak top-line growth.",
-      "action_window": "next_day",
-      "headline": "Generation Income Q2 FFO $0.02 Beats $(0.20) Estimate, Sales $2.111M Miss $2.124M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61262364/generation-income-q2-ffo-0-02-beats-0-20-estimate-sales-2-111m-miss-2-124m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-17T21:20:17.263220+00:00"
-    },
-    {
-      "ticker": "INDP",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Large prospectus filing for resale of 58.9M shares by selling stockholders signals significant dilution pressure and likely near-term selling overhang.",
-      "action_window": "next_day",
-      "headline": "Indaptus Therapeutics Files Prospectus Related To The Proposed Resale Of Up To 58,895,000 Shares Of Common Stock By Selling Stockholders",
-      "url": "https://www.benzinga.com/news/26/08/61262131/indaptus-therapeutics-files-prospectus-related-proposed-resale-58-895-000-shares-common-stock-sellin",
-      "source": "alpaca",
-      "added_at": "2026-08-17T21:20:17.263242+00:00"
-    },
-    {
-      "ticker": "NDAQ",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Major structural change to exchange operations that benefits trading platforms and brokerages through increased volume opportunities, though implementation timeline reduces immediate urgency.",
-      "action_window": "this_week",
-      "headline": "Nasdaq's Going Almost 24/7: Exchange Eyes 23-Hour Trading Day",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61262081/nasdaq-going-almost-24-7-exchange-eyes-23-hour-trading-day",
-      "source": "alpaca",
-      "added_at": "2026-08-17T21:20:17.263248+00:00"
-    },
-    {
-      "ticker": "YALA",
-      "tradeable_score": 0.82,
-      "sentiment": "bearish",
-      "category": "guidance_cut",
-      "rationale": "Q3 sales guidance of $78-85M significantly misses consensus estimate of $89.4M by approximately 13% at midpoint, indicating deteriorating business fundamentals.",
-      "action_window": "intraday",
-      "headline": "Yalla Group Sees Q3 Sales $78.000M-$85.000M vs $89.400M Est",
-      "url": "https://www.benzinga.com/news/26/08/61262044/yalla-group-sees-q3-sales-78-000m-85-000m-vs-89-400m-est",
-      "source": "alpaca",
-      "added_at": "2026-08-17T21:20:17.263254+00:00"
-    },
-    {
-      "ticker": "CARE",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "lawsuit",
-      "rationale": "Lawsuit dismissal with prejudice removes legal overhang and uncertainty, eliminating future risk from this claim which is materially positive for the company.",
-      "action_window": "next_day",
-      "headline": "Carter Bankshares Announces Lawsuit Against Carter Bankshares And Carter Bank & Trust Dismissed With Prejudice",
-      "url": "https://www.benzinga.com/news/26/08/61262014/carter-bankshares-announces-lawsuit-against-carter-bankshares-and-carter-bank-trust-dismissed-prejud",
-      "source": "alpaca",
-      "added_at": "2026-08-17T21:20:17.263264+00:00"
-    },
-    {
       "ticker": "NKLR",
       "tradeable_score": 0.82,
       "sentiment": "bearish",
