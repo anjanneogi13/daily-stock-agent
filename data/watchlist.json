@@ -1,67 +1,6 @@
 {
   "items": [
     {
-      "ticker": "GOOG",
-      "tradeable_score": 0.72,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Anthropic's exceptional $65B revenue run rate pre-IPO validates AI investment thesis for major backers Google and Amazon, strengthening their competitive positioning in the AI race.",
-      "action_window": "intraday",
-      "headline": "'Anthropic Revenue Run Rate Surpasses $65 Billion Ahead of IPO' - Bloomberg",
-      "url": "https://www.benzinga.com/news/26/08/61259752/anthropic-revenue-run-rate-surpasses-65-billion-ahead-ipo-bloomberg",
-      "source": "alpaca",
-      "added_at": "2026-08-17T19:50:57.231791+00:00"
-    },
-    {
-      "ticker": "INBS",
-      "tradeable_score": 0.85,
-      "sentiment": "bullish",
-      "category": "fda_approval",
-      "rationale": "Shares are actively surging on announcement of significant regulatory milestone for rapid testing unit, representing a major de-risking catalyst for the company.",
-      "action_window": "intraday",
-      "headline": "Intelligent Bio Solutions Shares Surge Monday: What's Driving the Action?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61259674/intelligent-bio-solutions-shares-surge-monday-whats-driving-the-action",
-      "source": "alpaca",
-      "added_at": "2026-08-17T19:50:57.231815+00:00"
-    },
-    {
-      "ticker": "F",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Potential tariff reduction from current levels to 15% on autos would materially benefit domestic automakers' margins and competitiveness, with imminent Wednesday deadline creating urgent trading opportunity.",
-      "action_window": "this_week",
-      "headline": "US, Canada Trade Officials Mull Cutting Tariffs on Auto Sector: Report",
-      "url": "https://www.benzinga.com/news/politics/26/08/61265713/us-canada-trade-officials-mull-cutting-tariffs-on-auto-sector-report",
-      "source": "alpaca",
-      "added_at": "2026-08-17T19:50:57.231841+00:00",
-      "updated_at": "2026-08-18T09:03:40.610256+00:00"
-    },
-    {
-      "ticker": "IVF",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Stock is actively surging on confirmed Q2 earnings beat with bottom-line outperformance, creating immediate trading opportunity.",
-      "action_window": "intraday",
-      "headline": "INVO Fertility Stock Surges Following Q2 Earnings Beat",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61259442/invo-fertility-stock-surges-following-q2-earnings-beat",
-      "source": "alpaca",
-      "added_at": "2026-08-17T19:50:57.231852+00:00"
-    },
-    {
-      "ticker": "TSLA",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Major product launch of steering-wheel-less robotaxi represents significant milestone in Tesla's autonomous vehicle strategy and potential new revenue stream, though execution risk remains.",
-      "action_window": "intraday",
-      "headline": "'Tesla Readies August Launch of Cybercab, Its Robotaxi Without a Steering Wheel; Tesla Targets August Public Launch For Cybercab Robotaxi In Austin' - The Information",
-      "url": "https://www.benzinga.com/news/26/08/61259396/tesla-readies-august-launch-cybercab-its-robotaxi-without-steering-wheel-tesla-targets-august-public",
-      "source": "alpaca",
-      "added_at": "2026-08-17T19:50:57.231862+00:00"
-    },
-    {
       "ticker": "FN",
       "tradeable_score": 0.85,
       "sentiment": "bullish",
