@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CORZ",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Large unusual options sweep of 20,000 call contracts above ask with low existing open interest signals aggressive bullish positioning by sophisticated traders expecting upward price movement.",
-      "action_window": "intraday",
-      "headline": "Core Scientific Option Alert: Oct 16 $28 Calls Sweep (21) Above Ask!: 20000 @ $0.551 Vs 67 OI; Ref=$20.235",
-      "url": "https://www.benzinga.com/quote/CORZ",
-      "source": "alpaca",
-      "added_at": "2026-08-17T16:20:14.994704+00:00"
-    },
-    {
       "ticker": "ORCL",
       "tradeable_score": 0.55,
       "sentiment": "bearish",
