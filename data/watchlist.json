@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "ticker": "PSKY",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "lawsuit",
-      "rationale": "Significant legal obstacles to major M&A deal with $1.9B bond demand signals costly delays and merger uncertainty that typically pressures acquirer stock.",
-      "action_window": "intraday",
-      "headline": "Paramount Demands Up to $1.9 Billion Bond From 12 States, WGA as Warner Bros. Deal Faces Costly Delays",
-      "url": "https://www.benzinga.com/m-a/26/08/61265896/paramount-demands-up-to-1-9-billion-bond-from-12-states-wga-as-warner-bros-deal-faces-costly-delays",
-      "source": "alpaca",
-      "added_at": "2026-08-18T09:03:40.610229+00:00"
-    },
-    {
-      "ticker": "HSAI",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Q2 earnings show significant 86% YoY decline in adjusted EPS from $0.07 to $0.01 despite 29% revenue growth, indicating margin compression and profitability concerns.",
-      "action_window": "intraday",
-      "headline": "Hesai Gr Q2 Adj. EPS $0.01 Down From $0.07 YoY, Sales $126.870M Up From $98.608M YoY",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61265754/hesai-gr-q2-adj-eps-0-01-down-0-07-yoy-sales-126-870m-98-608m-yoy",
-      "source": "alpaca",
-      "added_at": "2026-08-18T09:03:40.610246+00:00"
-    },
-    {
       "ticker": "BHP",
       "tradeable_score": 0.88,
       "sentiment": "bullish",
