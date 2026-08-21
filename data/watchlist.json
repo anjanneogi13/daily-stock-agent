@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "ticker": "STN",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "other",
-      "rationale": "Approval to more than double share buyback volume (150% increase) signals strong management confidence and commitment to shareholder returns, providing moderate support for the stock.",
-      "action_window": "next_day",
-      "headline": "Stantec Receives TSX Approval To Increase Its Maximum Normal Course Issuer Bid Volume From 2,281,339 Shares To 5,703,349 Shares",
-      "url": "https://www.benzinga.com/news/26/08/61267786/stantec-receives-tsx-approval-increase-its-maximum-normal-course-issuer-bid-volume-2-281-339-shares-",
-      "source": "alpaca",
-      "added_at": "2026-08-18T10:55:14.072649+00:00"
-    },
-    {
-      "ticker": "DSGX",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "AI-powered product launch in core logistics vertical demonstrates innovation and potential competitive advantage, though market impact depends on adoption timeline and revenue contribution.",
-      "action_window": "next_day",
-      "headline": "Descartes Systems Group Unveils AI-Powered Image Document Management To Streamline Global Logistics",
-      "url": "https://www.benzinga.com/news/26/08/61267776/descartes-systems-group-unveils-ai-powered-image-document-management-streamline-global-logistics",
-      "source": "alpaca",
-      "added_at": "2026-08-18T10:55:14.072665+00:00"
-    },
-    {
-      "ticker": "ELWT",
-      "tradeable_score": 0.85,
-      "sentiment": "bearish",
-      "category": "earnings_miss",
-      "rationale": "Significant double miss with EPS nearly 2x worse than expected (-$0.47 vs -$0.24) and revenue missing by 40% ($2.856M vs $4.730M estimate), indicating severe operational underperformance.",
-      "action_window": "intraday",
-      "headline": "Elauwit Connection Q2 EPS $(0.47) Misses $(0.24) Estimate, Sales $2.856M Miss $4.730M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61267639/elauwit-connection-q2-eps-0-47-misses-0-24-estimate-sales-2-856m-miss-4-730m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-18T10:55:14.072680+00:00"
-    },
-    {
-      "ticker": "ENRD",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Negative EPS of $1.90 for H1 results indicates the company is unprofitable, creating immediate trading pressure on earnings release.",
-      "action_window": "intraday",
-      "headline": "Einride H1 EPS $(1.90), Sales $28.131M",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61267588/einride-h1-eps-1-90-sales-28-131m",
-      "source": "alpaca",
-      "added_at": "2026-08-18T10:55:14.072690+00:00"
-    },
-    {
-      "ticker": "RNW",
-      "tradeable_score": 0.88,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "ReNew Energy delivered a significant double beat with EPS 42% above estimates and revenue 21% above consensus, indicating strong operational performance warranting immediate trading action.",
-      "action_window": "intraday",
-      "headline": "ReNew Energy Glb Q1 EPS $0.17 Beats $0.12 Estimate, Sales $506.000M Beat $417.810M Estimate",
-      "url": "https://www.benzinga.com/news/earnings/26/08/61267535/renew-energy-glb-q1-eps-0-17-beats-0-12-estimate-sales-506-000m-beat-417-810m-estimate",
-      "source": "alpaca",
-      "added_at": "2026-08-18T10:55:14.072701+00:00"
-    },
-    {
       "ticker": "FTK",
       "tradeable_score": 0.55,
       "sentiment": "neutral",
