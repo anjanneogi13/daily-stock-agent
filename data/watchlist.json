@@ -1,31 +1,6 @@
 {
   "items": [
     {
-      "ticker": "SPY",
-      "tradeable_score": 0.82,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Presidential announcement pausing major 50% tariffs on Canada and indicating a trade deal removes significant downside risk and uncertainty for markets, particularly benefiting Canadian equities (EWC) and broader market sentiment (SPY).",
-      "action_window": "intraday",
-      "headline": "President Trump Posts On Truth Social \"I have paused the 50% Tariffs against Canada, that were scheduled to kick in tomorrow morning for a three day period, based on the fact that Canada and the U.S.A., subject to the finalization of documents, have a DEAL! The great Keystone XL Pipeline, long ago k",
-      "url": "https://www.benzinga.com/news/26/08/61292847/president-trump-posts-truth-social-i-have-paused-50-tariffs-against-canada-were-scheduled-kick-tomor",
-      "source": "alpaca",
-      "added_at": "2026-08-18T14:06:19.341690+00:00",
-      "updated_at": "2026-08-19T08:28:26.409668+00:00"
-    },
-    {
-      "ticker": "IPST",
-      "tradeable_score": 0.65,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Multiple negative catalysts converge including late regulatory filing (10-Q), wider losses, and digital asset declines following a massive 277% rally, suggesting potential profit-taking and fundamental concerns.",
-      "action_window": "intraday",
-      "headline": "Why Is IP Strategy Stock Falling Today?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61273861/why-is-ip-strategy-stock-falling-today",
-      "source": "alpaca",
-      "added_at": "2026-08-18T14:06:19.341717+00:00"
-    },
-    {
       "ticker": "BULL",
       "tradeable_score": 0.58,
       "sentiment": "bullish",
