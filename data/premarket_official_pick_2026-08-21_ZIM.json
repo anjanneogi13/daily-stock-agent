@@ -1,0 +1,74 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-32484643336",
+  "artifact_filename": "premarket_official_pick_2026-08-21_ZIM.json",
+  "artifact_id": "premarket_official_pick:2026-08-21:ZIM",
+  "artifact_path": "data/premarket_official_pick_2026-08-21_ZIM.json",
+  "commit_sha": "c7dcc3389449fae3be40fa491026bfa7ee573e58",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/c7dcc3389449fae3be40fa491026bfa7ee573e58",
+  "company": "ZIM",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-08-21",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-08-21:ZIM:32484643336:c7dcc3389449",
+  "entry": 27.16,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 24.64.",
+    "Review/exit near take profit 30.31."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 19,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 7.84,
+    "regime": "bull",
+    "sma_value": 707.13,
+    "sma_window": 200,
+    "spy_close": 762.6,
+    "spy_sma200": 707.13,
+    "spy_sma_anchor": 707.13
+  },
+  "risk_dollars": 47.88,
+  "risk_flags": [
+    "PREMARKET_HALF_SIZE",
+    "WATCH_ONLY_FLAG_PRESENT"
+  ],
+  "risk_reward": 1.25,
+  "score": 0.812,
+  "score_components": {
+    "composite": 0.812,
+    "day_score": 0.554,
+    "monster_score": 0.15,
+    "news_boost": 0.1,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.9629789297839091,
+    "watchlist_boost": 0.074
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "ZIM selected as official swing pick; composite score 0.812; premarket sanity: fresh price unavailable from any provider; reduced size.",
+  "selection_time_et": "2026-08-21T09:04:34-04:00",
+  "stop_loss": 24.64,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 30.31,
+  "ticker": "ZIM",
+  "top_reasons": [
+    "composite score 0.812",
+    "premarket sanity: fresh price unavailable from any provider; reduced size"
+  ],
+  "workflow_run_id": "32484643336",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/32484643336"
+}
