@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "AAOI",
-      "tradeable_score": 0.75,
-      "sentiment": "bearish",
-      "category": "macro",
-      "rationale": "Broad market selloff driven by rising bond yields and Fabrinet's margin miss creating sector-wide contagion in chip stocks with immediate market impact.",
-      "action_window": "intraday",
-      "headline": "Nasdaq Drops, Chip Stocks Crater As Bond Yields Bite: Stock Market Today",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61281196/stock-market-today-nasdaq-chip-stocks-bond-yields-bite",
-      "source": "alpaca",
-      "added_at": "2026-08-18T16:57:40.665200+00:00"
-    },
-    {
-      "ticker": "WEAV",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Confirmed $650M buyout at $7.40/share representing 34% premium with stock already up 32%, deal essentially complete and priced in at offer price.",
-      "action_window": "ignore",
-      "headline": "Weave Is Going Private: Francisco Partners Offers 34% Premium in $650 Million Buyout",
-      "url": "https://www.benzinga.com/m-a/26/08/61281164/weave-is-going-private-francisco-partners-offers-34-premium-in-650-million-buyout",
-      "source": "alpaca",
-      "added_at": "2026-08-18T16:57:40.665241+00:00"
-    },
-    {
-      "ticker": "NOK",
-      "tradeable_score": 0.72,
-      "sentiment": "bearish",
-      "category": "other",
-      "rationale": "Major strategic retreat from China market with workforce cuts and confirmed 4% stock drop represents significant negative catalyst with immediate market impact.",
-      "action_window": "intraday",
-      "headline": "Nokia Plans Near-Total China Exit As Domestic Rivals Gain Ground: Report",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61280899/nokia-plans-near-total-china-exit-as-domestic-rivals-gain-ground-report",
-      "source": "alpaca",
-      "added_at": "2026-08-18T16:57:40.665257+00:00"
-    },
-    {
       "ticker": "HAE",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
