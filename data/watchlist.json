@@ -1,42 +1,6 @@
 {
   "items": [
     {
-      "ticker": "COP",
-      "tradeable_score": 0.75,
-      "sentiment": "bullish",
-      "category": "macro",
-      "rationale": "Geopolitical escalation in Hormuz Strait driving oil above $85 creates immediate bullish catalyst for energy sector stocks and ETFs with sustained price action potential.",
-      "action_window": "intraday",
-      "headline": "Trump\u2019s Hormuz Shock Sends Oil Above $85: 3 ETFs Poised for the Next Energy Rally",
-      "url": "https://www.benzinga.com/etfs/sector-etfs/26/08/61283710/trumps-hormuz-shock-sends-oil-above-85-3-etfs-poised-for-the-next-energy-rally",
-      "source": "alpaca",
-      "added_at": "2026-08-18T18:27:25.644604+00:00"
-    },
-    {
-      "ticker": "C",
-      "tradeable_score": 0.62,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Major institutional bank entering crypto custody represents strategic expansion into high-growth segment, validating crypto infrastructure for traditional finance players.",
-      "action_window": "next_day",
-      "headline": "Bitcoin Custody for Institutional Clients Is Coming to Citi Later This Year",
-      "url": "https://www.benzinga.com/crypto/cryptocurrency/26/08/61283420/bitcoin-custody-for-institutional-clients-is-coming-to-citi-later-this-year",
-      "source": "alpaca",
-      "added_at": "2026-08-18T18:27:25.644615+00:00"
-    },
-    {
-      "ticker": "ELVN",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "upgrade",
-      "rationale": "William Blair initiates coverage with Outperform rating citing strong clinical trial data and significant market opportunity, which typically drives meaningful positive price action for biotech stocks.",
-      "action_window": "next_day",
-      "headline": "Enliven\u2019s Lead Drug Could Disrupt The Leukemia Treatment Market, Analyst Says",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/initiation/26/08/61283386/enlivens-lead-drug-could-disrupt-the-leukemia-treatment-market-analyst-says",
-      "source": "alpaca",
-      "added_at": "2026-08-18T18:27:25.644626+00:00"
-    },
-    {
       "ticker": "DOO",
       "tradeable_score": 0.75,
       "sentiment": "bullish",
