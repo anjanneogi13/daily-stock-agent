@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "ticker": "BULL",
-      "tradeable_score": 0.58,
-      "sentiment": "bullish",
-      "category": "earnings_beat",
-      "rationale": "Analyst preview suggests Q2 earnings beat based on July trading data, but tempered by sequential metric declines and earnings not yet reported.",
-      "action_window": "next_day",
-      "headline": "Webull\u2019s July Trading Update Points Towards Q2 Beat, Says Bullish Analyst",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/61278746/webull-july-trading-update-points-towards-q2-beat-says-bullish-analyst",
-      "source": "alpaca",
-      "added_at": "2026-08-18T15:36:53.922666+00:00"
-    },
-    {
-      "ticker": "AIXC",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Business pivot to commercial robotics with first paid order represents significant strategic shift for penny stock, likely to drive speculative trading volume.",
-      "action_window": "intraday",
-      "headline": "Penny Stock AIxC Pivots to Commercial Robotics Operations, Secures First Paid Commercial Order",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/61278630/penny-stock-aixc-pivots-to-commercial-robotics-operations-secures-first-paid-commercial-order",
-      "source": "alpaca",
-      "added_at": "2026-08-18T15:36:53.922694+00:00"
-    },
-    {
-      "ticker": "UGI",
-      "tradeable_score": 0.95,
-      "sentiment": "bullish",
-      "category": "ma_target",
-      "rationale": "Definitive acquisition offer at $42.50/share creates immediate arbitrage opportunity and likely premium to current trading price for UGI shareholders.",
-      "action_window": "intraday",
-      "headline": "KKR Offered To Buy UGI For $42.50/Share",
-      "url": "https://www.benzinga.com/m/26/08/61278418/kkr-offered-buy-ugi-42-50-share",
-      "source": "alpaca",
-      "added_at": "2026-08-18T15:36:53.922707+00:00"
-    },
-    {
-      "ticker": "VFS",
-      "tradeable_score": 0.65,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Confirmed commercial contract with SpaceX for satellite launch represents significant business development and validation for VinSpace, though execution is a year away reducing immediate urgency.",
-      "action_window": "next_day",
-      "headline": "VinSpace Joint Stock Company Inks Contract With SpaceX To Launch Satellites Aboard Transporter Rideshare Mission Next Year",
-      "url": "https://www.benzinga.com/news/26/08/61277932/vinspace-joint-stock-company-inks-contract-spacex-launch-satellites-aboard-transporter-rideshare-mis",
-      "source": "alpaca",
-      "added_at": "2026-08-18T15:36:53.922746+00:00"
-    },
-    {
       "ticker": "CMI",
       "tradeable_score": 0.68,
       "sentiment": "bullish",
