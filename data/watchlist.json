@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "ticker": "CMI",
-      "tradeable_score": 0.68,
-      "sentiment": "bullish",
-      "category": "product_launch",
-      "rationale": "Largest-ever battery storage project win for Cummins signals significant revenue expansion in high-growth AI data center market, representing meaningful business diversification and scale.",
-      "action_window": "next_day",
-      "headline": "Cummins Lands Its Biggest-Ever Battery Storage Project",
-      "url": "https://www.benzinga.com/markets/equities/26/08/61279795/cummins-lands-its-biggest-ever-battery-storage-project",
-      "source": "alpaca",
-      "added_at": "2026-08-18T16:23:47.950213+00:00"
-    },
-    {
       "ticker": "AAOI",
       "tradeable_score": 0.75,
       "sentiment": "bearish",
