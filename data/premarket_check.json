@@ -1,55 +1,53 @@
 {
-  "date": "2026-08-20",
+  "date": "2026-08-21",
   "market": {
     "spy_change_pct": 0.0,
-    "qqq_change_pct": -0.2,
-    "soxx_change_pct": -2.21,
-    "vix": 15.88,
-    "warnings": [
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -2.2% \u2014 semis at risk"
-    ],
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
+    "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
       "ticker": "WEAV",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 7.31,
-      "gap_pct": -0.0,
-      "actionable": true
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     },
     {
       "ticker": "ZIM",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 27.41,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "GDS",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 33.34,
-      "gap_pct": 0.0,
-      "actionable": true
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     },
     {
       "ticker": "JKHY",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 163.06,
-      "gap_pct": -0.0,
-      "actionable": true
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     },
     {
-      "ticker": "CLPBY",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 6.98,
-      "gap_pct": 0.0,
-      "actionable": true
+      "ticker": "NVDA",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
+    },
+    {
+      "ticker": "DOO",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }
