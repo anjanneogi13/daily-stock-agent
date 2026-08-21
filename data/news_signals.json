@@ -209,19 +209,6 @@
     "expires": "2027-01-16T21:40:52.853064+00:00",
     "hard_block": true
   },
-  "GSK": {
-    "ticker": "GSK",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "FDA Greenlights GSK\u2019s First Lung Cancer Drug Ahead of Schedule",
-    "added_at": "2026-07-22T17:49:15.123858+00:00",
-    "expires": "2026-08-21T17:49:15.123862+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PSKY": {
     "ticker": "PSKY",
     "score_delta": 0.2,
@@ -232,19 +219,6 @@
     "headline": "Judge temporarily halts Paramount-Warner Bros. Discovery merger",
     "added_at": "2026-07-24T00:01:08.392147+00:00",
     "expires": "2026-08-23T00:01:08.392153+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "INM": {
-    "ticker": "INM",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "InMed Pharmaceuticals Merger Partner Raises $200 Million To Boost Migraine Pipeline",
-    "added_at": "2026-07-22T19:02:00.467843+00:00",
-    "expires": "2026-08-21T19:02:00.467849+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -1311,19 +1285,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "GOOGL": {
-    "ticker": "GOOGL",
-    "score_delta": 0.05,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.72,
-    "action_window": "next_day",
-    "headline": "Waymo Posts On X \"Big news for the Golden State \u2014 we have received the CPUC\u2019s approval to expand our autonomous ride-hailing service across the SF Bay Area and LA, and bring our service to Sacramento ",
-    "added_at": "2026-08-14T19:28:09.771432+00:00",
-    "expires": "2026-08-21T19:28:09.771444+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "CWD": {
     "ticker": "CWD",
     "score_delta": -0.15,
@@ -1480,19 +1441,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HTFL": {
-    "ticker": "HTFL",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "HeartFlow Shares Soar Following Strong Q2 Results and Upgraded Guidance",
-    "added_at": "2026-08-14T20:03:57.583119+00:00",
-    "expires": "2026-08-21T20:03:57.583126+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "TT": {
     "ticker": "TT",
     "score_delta": 0.041,
@@ -1506,32 +1454,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "HCWB": {
-    "ticker": "HCWB",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.92,
-    "action_window": "next_day",
-    "headline": "HCW Biologics Restates Q1 2026 EPS $1.39, Sales $6.543M Up From $5.065K YoY",
-    "added_at": "2026-08-14T19:28:09.750275+00:00",
-    "expires": "2026-08-21T19:28:09.750291+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "KUST": {
-    "ticker": "KUST",
-    "score_delta": 0.1,
-    "catalyst": "earnings_beat",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Kustom Entertainment Q2 EPS $(5.49) Up From $(66.46) YoY, Sales $5.381M Up From $2.859M YoY",
-    "added_at": "2026-08-14T19:28:09.778156+00:00",
-    "expires": "2026-08-21T19:28:09.778166+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "PYPL": {
     "ticker": "PYPL",
     "score_delta": 0.2,
@@ -1542,19 +1464,6 @@
     "headline": "'Stripe, Advent In Talks To Buy PayPal; The Fintech Startup And Private-Equity Firm Advent Offered To Buy The Struggling Payments Company In July' - WSJ Exclusive",
     "added_at": "2026-08-14T20:03:57.571262+00:00",
     "expires": "2026-09-13T20:03:57.571268+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "SXTP": {
-    "ticker": "SXTP",
-    "score_delta": -0.1,
-    "catalyst": "earnings_miss",
-    "sentiment": "bearish",
-    "tradeable_score": 0.85,
-    "action_window": "intraday",
-    "headline": "60 Degrees Q2 EPS $(0.90) Misses $(0.86) Estimate, Sales $56.798K Miss $186.000K Estimate",
-    "added_at": "2026-08-14T20:03:57.577144+00:00",
-    "expires": "2026-08-21T20:03:57.577150+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -5067,6 +4976,15 @@
     "headline": "Deal Dispatch: MunichRe Buys At-Bay, Mavis Tire Closes Pep Boys Purchase, Werewolf Merges With Ambros",
     "added_at": "2026-08-21T17:34:01.876318+00:00",
     "expires": "2027-02-17T17:34:01.876324+00:00",
+    "hard_block": true
+  },
+  "KNRX": {
+    "ticker": "KNRX",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "KNOREX Announces Its FY25 Financial Statement Includes Its Going Concern Intention",
+    "added_at": "2026-08-21T20:47:24.191950+00:00",
+    "expires": "2027-02-17T20:47:24.191959+00:00",
     "hard_block": true
   }
 }
