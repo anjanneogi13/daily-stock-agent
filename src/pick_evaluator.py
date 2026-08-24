@@ -1,10 +1,15 @@
 """Evaluates pending picks: did they hit TP, SL, or stay open?
 Logic:
 - For each pending pick from past N days, fetch OHLC since pick date.
-- If intraday HIGH >= take_profit → TP hit (count from first day reaching it).
-- Else if intraday LOW <= stop_loss → SL hit.
-- Else if 20+ trading days passed → mark expired with current return.
-- Else → still open."""
+- Walk bars within the pick's hold horizon (trade_state.max_hold_days):
+  intraday HIGH >= take_profit → TP hit; intraday LOW <= stop_loss → SL hit.
+- Corrupt bars (implausible single-day move vs prior close) are skipped so a
+  bad print can never book a win or a loss (Cluster F).
+- Day trades force-close at their first session's close (day_close).
+- Past the horizon → force-close 'expired' (EXPIRED_OVERDUE) exactly once,
+  with a DETERMINISTIC evaluated_on (horizon session, never "today") so
+  re-running any day is idempotent and stale rows can't resurrect in daily
+  reports (Cluster B/E, §7)."""
 import csv
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -12,9 +17,11 @@ import yfinance as yf
 import pandas as pd
 from .signal_journal import attach_outcome as _journal_attach
 from .sector_benchmark import resolve_sector_etf
+from .price_sanity import plausible_bar
+from .trade_state import max_hold_days
 
 LOG_PATH = Path("data/picks_log.csv")
-MAX_DAYS_OPEN = 20   # mark expired after this many trading days
+MAX_DAYS_OPEN = 20   # legacy hard cap; per-type horizon from trade_state applies first
 EVAL_LOOKBACK_DAYS = 30   # only evaluate picks from past N days
 
 
@@ -245,10 +252,15 @@ def evaluate_pending() -> dict:
             pick_date = datetime.strptime(row["pick_date"], "%Y-%m-%d").date()
         except Exception:
             continue
+        max_hold = max_hold_days(row.get("trade_type", ""))
+        horizon_date = pick_date + timedelta(days=max_hold)
         if pick_date < cutoff:
-            # too old, mark expired with no exit data
+            # too old, mark expired with no exit data — settled UNVERIFIED.
+            # Deterministic evaluated_on = horizon date, NOT today: re-running
+            # must not stamp a new close date each run (§7 idempotency; this
+            # was the "45 stale FLAT tickers re-closed daily" bug).
             row["evaluation_status"] = "expired"
-            row["evaluated_on"] = today.isoformat()
+            row["evaluated_on"] = horizon_date.isoformat()
             counts["expired"] += 1
             continue
 
@@ -290,10 +302,15 @@ def evaluate_pending() -> dict:
                       f"outside [{pb_low:.2f}, {pb_high:.2f}] on {pick_date}")
                 continue
 
-        # Walk day by day from pick_date forward (entry is NEXT trading day after pick)
+        # Walk day by day from pick_date forward, bounded by the hold horizon
+        # (a swing cannot book a TP/SL after it should already have been
+        # force-closed) and gated by bar plausibility (Cluster F: a corrupt
+        # print must never book a win or a loss).
         outcome = None
         exit_price = None
         exit_date = None
+        prev_close = entry  # entry is the validated reference for bar 1
+        is_day_trade = (row.get("trade_type", "") or "").lower() == "day"
         for date, bar in df.iterrows():
             # BUG-2 FIX (May 2 2026): include pick_date bar.
             # Picks generate during US session (committed ~12 ET = ~16 UTC),
@@ -302,8 +319,15 @@ def evaluate_pending() -> dict:
             # when SL/TP hit on the same trading day.
             if date.date() < pick_date:
                 continue
+            if date.date() > horizon_date:
+                break
             high = float(bar["High"])
             low = float(bar["Low"])
+            if not plausible_bar(prev_close, high, low):
+                print(f"  🧯 {ticker} {date.date()}: bar quarantined "
+                      f"(H={high:.2f} L={low:.2f} vs prev close {prev_close:.2f}) — skipped")
+                continue
+            prev_close = float(bar["Close"])
             # Same-day BOTH hit: use Open as tie-breaker (whichever level is closer to Open hit first)
             if low <= sl and high >= tp:
                 open_px = float(bar["Open"])
@@ -328,6 +352,10 @@ def evaluate_pending() -> dict:
                 outcome = "tp_hit"
                 exit_price = tp
                 exit_date = date
+                break
+            if is_day_trade:
+                # Day trades live one session only — never book a TP/SL from
+                # a later bar; the day_close branch below settles them.
                 break
 
         if outcome:
@@ -396,35 +424,52 @@ def evaluate_pending() -> dict:
                     print(f"  📅 {ticker}: DAY_CLOSE on {actual_close_date} | exit ${pick_close:.2f} | {ret:+.2f}% | {row['r_multiple']}R")
                     continue
 
-            # Days elapsed since pick (existing swing-trade expiry logic)
+            # Hold-horizon force-close (Cluster B/E): a swing that exceeds its
+            # max hold becomes EXPIRED_OVERDUE ('expired') exactly once, at a
+            # DETERMINISTIC date/price — the last in-horizon session — never
+            # "today's" values. Re-running any day yields identical output.
             days_elapsed = (today - pick_date).days
-            if days_elapsed >= MAX_DAYS_OPEN:
-                # Mark expired with last close
-                last_close = float(df["Close"].iloc[-1])
+            if days_elapsed >= max_hold:
+                horizon_bars = df[(df.index.date >= pick_date) & (df.index.date <= horizon_date)]
+                if len(horizon_bars):
+                    exit_bar_date = horizon_bars.index[-1].date()
+                    last_close = float(horizon_bars["Close"].iloc[-1])
+                else:
+                    exit_bar_date = horizon_date
+                    last_close = None
                 row["evaluation_status"] = "expired"
-                row["evaluated_on"] = today.isoformat()
+                row["evaluated_on"] = exit_bar_date.isoformat()
+                if last_close is None:
+                    # settled without a verifiable price → UNVERIFIED outcome
+                    row["exit_price"] = ""
+                    row["actual_return_pct"] = ""
+                    row["r_multiple"] = ""
+                    counts["expired"] += 1
+                    counts["evaluated"] += 1
+                    print(f"  ⏰ {ticker}: EXPIRED after {days_elapsed}d (max {max_hold}d) | no price data — settled unverified")
+                    continue
                 row["exit_price"] = round(last_close, 4)
                 ret = (last_close - entry) / entry * 100
                 row["actual_return_pct"] = round(ret, 2)
                 risk = entry - sl
                 row["r_multiple"] = round((last_close - entry) / risk, 2) if risk > 0 else 0
                 # SPY relative perf for expired picks
-                row["spy_close_at_exit"] = _add_spy_alpha(row, today.isoformat(), ret)
-                row["sector_close_at_exit"] = _add_sector_alpha(row, today.isoformat(), ret)
+                row["spy_close_at_exit"] = _add_spy_alpha(row, exit_bar_date.isoformat(), ret)
+                row["sector_close_at_exit"] = _add_sector_alpha(row, exit_bar_date.isoformat(), ret)
                 try:
                     _journal_attach(
                         ticker=row.get("ticker"),
                         pick_date=row.get("pick_date"),
                         r_multiple=float(row.get("r_multiple")) if row.get("r_multiple") not in (None, "", "None") else None,
                         actual_return_pct=float(ret) if ret is not None else None,
-                        evaluated_on=today.isoformat(),
+                        evaluated_on=exit_bar_date.isoformat(),
                     )
                 except Exception as _e:
                     print(f"[eval] WARN journal_attach (expired) failed for {row.get('ticker','?')}: {_e}")  # M9
                 counts["expired"] += 1
                 counts["evaluated"] += 1
                 alpha_str = f" | α={row.get('alpha_pct','?')}%" if row.get('alpha_pct') is not None else ""
-                print(f"  ⏰ {ticker}: EXPIRED after {days_elapsed}d | exit ${last_close:.2f} | {ret:+.2f}% | {row['r_multiple']}R{alpha_str}")
+                print(f"  ⏰ {ticker}: EXPIRED after {days_elapsed}d (max {max_hold}d) | exit ${last_close:.2f} on {exit_bar_date} | {ret:+.2f}% | {row['r_multiple']}R{alpha_str}")
             else:
                 counts["still_open"] += 1
                 print(f"  🟡 {ticker}: still open ({days_elapsed}d since pick)")

@@ -19,14 +19,9 @@ import csv
 from datetime import date, datetime
 from pathlib import Path
 
-PICKS_LOG = Path("data/picks_log.csv")
+from src.trade_state import MAX_HOLD_DAYS, DEFAULT_MAX_HOLD, max_hold_days
 
-MAX_HOLD_DAYS = {
-    "day": 1,
-    "swing": 10,
-    "multi": 30,
-}
-DEFAULT_MAX_HOLD = 14
+PICKS_LOG = Path("data/picks_log.csv")
 
 
 def _parse_date(s: str) -> date | None:
@@ -39,7 +34,7 @@ def _parse_date(s: str) -> date | None:
 
 
 def _max_hold_for(trade_type: str) -> int:
-    return MAX_HOLD_DAYS.get((trade_type or "").lower(), DEFAULT_MAX_HOLD)
+    return max_hold_days(trade_type)
 
 
 def scan_open_positions(today: date | None = None) -> list[dict]:
