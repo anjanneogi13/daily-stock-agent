@@ -13,6 +13,9 @@ import csv, json, sys
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.price_sanity import validate_quote, log_quarantine
+
 try:
     import yfinance as yf
 except ImportError:
@@ -86,6 +89,18 @@ for p_ in picks:
     if last_close is None:
         tag, reason = "👀 WATCH ONLY", "could not verify fresh price — require fresh quote before entry"
     else:
+        # Cluster F: entries route through the same quote-sanity gate as
+        # monitoring and closes. An implausible print (wrong symbol, split
+        # artifact, corrupt feed) must not drive an entry decision.
+        verdict = validate_quote(last_close, entry)
+        if not verdict["ok"]:
+            log_quarantine(ticker, last_close, entry, verdict, context="premarket_entry")
+            tag, reason = "👀 WATCH ONLY", (
+                f"quote ${last_close:.2f} implausible vs planned entry ${entry:.2f} "
+                f"({verdict['reason']}) — quarantined, no entry"
+            )
+            last_close = None
+    if last_close is not None:
         gap_pct = (last_close - entry) / entry * 100
         sl_buffer = (entry - sl) / entry * 100  # how much room before SL
 

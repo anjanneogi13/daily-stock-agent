@@ -234,7 +234,18 @@ def attach_outcome(ticker: str, pick_date: str,
                 r["actual_return_pct"] = actual_return_pct
                 r["evaluated_on"]      = evaluated_on
                 if r_multiple is not None:
-                    r["outcome"] = "win" if r_multiple > 0 else "loss"
+                    # Cluster H sample accounting: a ≈0% exit is FLAT, not a
+                    # loss — same epsilon as the ledger taxonomy (§7), so the
+                    # hypothesis-review win-rate sample matches the ledger's
+                    # realized wins+losses instead of counting bell-flats
+                    # as losses.
+                    from .trade_state import FLAT_EPSILON_PCT
+                    ret = actual_return_pct
+                    if (ret is not None and abs(ret) <= FLAT_EPSILON_PCT) or \
+                            (ret is None and r_multiple == 0):
+                        r["outcome"] = "flat"
+                    else:
+                        r["outcome"] = "win" if r_multiple > 0 else "loss"
                 found = True
             rows.append(r)
     if found:

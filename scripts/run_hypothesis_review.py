@@ -21,9 +21,37 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.signal_journal import load_closed
 from src import hypothesis_engine as he
+from src.performance_source_separation import is_watch_only_row
+from src.trade_state import closed_rows as ledger_closed_rows, load_ledger, summarize
 
 
 REPORT_DIR = Path("data/reports/hypothesis")
+
+
+def ledger_reconciliation(journal_n: int) -> str:
+    """§7 reconciliation block: the ledger is the single source of truth for
+    closed-trade counts; the journal is a feature snapshot. Surface both and
+    warn when they diverge so 'LOW SAMPLE'/'no mutation' calls are auditable
+    against real closes (the Aug-2026 '52 vs 0 vs 14' contradiction)."""
+    rows = [r for r in ledger_closed_rows(load_ledger()) if not is_watch_only_row(r)]
+    s = summarize(rows)
+    realized = s["wins"] + s["losses"]
+    lines = [
+        "📒 *Ledger reconciliation (source of truth: data/picks_log.csv)*",
+        f"Closed official positions: {s['closed']} "
+        f"({s['wins']}W/{s['losses']}L/{s['flats']}F · {s['no_trades']} no-fill · "
+        f"{s['unverified']} settled unverified)",
+        f"Journal win/loss sample analyzed: {journal_n}",
+    ]
+    if journal_n != realized:
+        lines.append(
+            f"⚠️ Sample mismatch: journal has {journal_n} win/loss rows but the "
+            f"ledger shows {realized} realized wins+losses. The ledger is "
+            "authoritative — treat bucket stats below as indicative only."
+        )
+    else:
+        lines.append("✅ Journal sample matches ledger realized wins+losses.")
+    return "\n".join(lines)
 
 
 def _send_telegram(text: str) -> bool:
@@ -71,13 +99,16 @@ def main() -> int:
     closed = load_closed()
     n_closed = len(closed)
     print(f"[hypothesis] Loaded {n_closed} closed picks from journal")
+    recon = ledger_reconciliation(n_closed)
 
     if n_closed < 5:
         report = (
             f"🧠 *Hypothesis Review — {datetime.now():%Y-%m-%d}*\n"
             f"\n"
             f"Only {n_closed} closed picks in journal. Need ≥5 to run analysis.\n"
-            f"Come back next week."
+            f"Come back next week.\n"
+            f"\n"
+            f"{recon}"
         )
         print(report)
         if args.send:
@@ -93,7 +124,10 @@ def main() -> int:
         f"\n"
         f"{report_md}\n"
         f"\n"
-        f"_Observe-mode: insights only, no auto-flipping._"
+        f"{recon}\n"
+        f"\n"
+        f"_Observe-mode: insights only, no auto-flipping. "
+        f"See docs/brain_activation_path.md for the guardrailed path to bounded auto-adjustment._"
     )
 
     print(full_report)

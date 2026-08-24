@@ -42,6 +42,15 @@ jobs:
           fetch-depth: 0  # Need full history for rebase
           ref: main      # Always use latest main, even on workflow_dispatch
 
+      - name: Scheduler PAT expiry pre-alert (optional, never blocking)
+        continue-on-error: true
+        env:
+          SCHEDULER_PAT: ${{ secrets.SCHEDULER_PAT }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_GROUP_CHAT_ID: ${{ secrets.TELEGRAM_GROUP_CHAT_ID }}
+        run: python scripts/check_pat_expiry.py || true
+
       - name: DST + dedup guard (skip if already ran today)
         id: guard
         run: |
