@@ -1,53 +1,53 @@
 {
-  "date": "2026-08-21",
+  "date": "2026-08-24",
   "market": {
     "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
+    "qqq_change_pct": 0.35,
+    "soxx_change_pct": -0.44,
+    "vix": 15.9,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "WEAV",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "WDAY",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 200.01,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "ZIM",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "BMY",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 67.01,
+      "gap_pct": 0.0,
+      "actionable": true
     },
     {
       "ticker": "JKHY",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 166.2,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "NVDA",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "WST",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 353.08,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "DOO",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "FDX",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 325.08,
+      "gap_pct": -0.0,
+      "actionable": true
     }
   ]
 }
