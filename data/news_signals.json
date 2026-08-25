@@ -1719,19 +1719,6 @@
     "hard_block": false,
     "negative_reaction": false
   },
-  "CMI": {
-    "ticker": "CMI",
-    "score_delta": 0.049,
-    "catalyst": "product_launch",
-    "sentiment": "bullish",
-    "tradeable_score": 0.68,
-    "action_window": "next_day",
-    "headline": "Cummins Lands Its Biggest-Ever Battery Storage Project",
-    "added_at": "2026-08-18T16:23:47.942502+00:00",
-    "expires": "2026-08-25T16:23:47.942511+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "WEAV": {
     "ticker": "WEAV",
     "score_delta": 0.2,
@@ -2407,6 +2394,15 @@
     "headline": "KNOREX Announces Its FY25 Financial Statement Includes Its Going Concern Intention",
     "added_at": "2026-08-21T20:47:24.191950+00:00",
     "expires": "2027-02-17T20:47:24.191959+00:00",
+    "hard_block": true
+  },
+  "SDOT": {
+    "ticker": "SDOT",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Sadot CFO Resigns for \u2018Personal Reasons,\u2019 Stock Falls",
+    "added_at": "2026-08-25T16:44:30.887611+00:00",
+    "expires": "2027-02-21T16:44:30.887618+00:00",
     "hard_block": true
   }
 }
