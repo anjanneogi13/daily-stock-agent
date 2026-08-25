@@ -4,3 +4,4 @@
 {"ts": "2026-08-25T14:22:47+00:00", "ticker": "MRNA", "price": 154.36000061035156, "reference": 62.96, "reason": "implausible_move", "deviation_pct": 145.17, "suspected_action": null, "context": "intraday_monitor"}
 {"ts": "2026-08-25T14:44:08+00:00", "ticker": "MRNA", "price": 153.27999877929688, "reference": 62.96, "reason": "implausible_move", "deviation_pct": 143.46, "suspected_action": null, "context": "intraday_monitor"}
 {"ts": "2026-08-25T14:53:22+00:00", "ticker": "MRNA", "price": 153.70010375976562, "reference": 62.96, "reason": "implausible_move", "deviation_pct": 144.12, "suspected_action": null, "context": "intraday_monitor"}
+{"ts": "2026-08-25T15:14:42+00:00", "ticker": "MRNA", "price": 155.8209991455078, "reference": 62.96, "reason": "implausible_move", "deviation_pct": 147.49, "suspected_action": null, "context": "intraday_monitor"}
