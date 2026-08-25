@@ -1,53 +1,55 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "market": {
     "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
-    "warnings": [],
+    "qqq_change_pct": -1.0,
+    "soxx_change_pct": -2.67,
+    "vix": 15.79,
+    "warnings": [
+      "\u26a0\ufe0f Semiconductor sector (SOXX) down -2.7% \u2014 semis at risk"
+    ],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "WDAY",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
-    },
-    {
       "ticker": "BMY",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 67.28,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "JKHY",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "GEHC",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 74.19,
+      "gap_pct": 0.0,
+      "actionable": true
     },
     {
-      "ticker": "WST",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "CSX",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 51.44,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "FDX",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "ECL",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 286.98,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "FANG",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 205.6,
+      "gap_pct": 0.0,
+      "actionable": true
     }
   ]
 }
