@@ -1167,5 +1167,28 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-25 12:19:12",
+    "weak_sectors": {},
+    "blocked_count": 3,
+    "passed_count": 7,
+    "blocked": [
+      {
+        "ticker": "EXE",
+        "reason": "SL too tight (1.5% < 2.0% for $96 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "SLB",
+        "reason": "SL too tight (1.6% < 2.0% for $54 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "AMCR",
+        "reason": "SL too tight (1.5% < 2.0% for $48 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
