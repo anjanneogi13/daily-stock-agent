@@ -22,6 +22,12 @@ from src.trailing_stop import compute_trailing_sl, trail_status
 from src.picks_csv import update_pick_row
 from src.adaptive_tp import should_raise_tp, append_raise_audit, last_raise_ts
 from src.adaptive_sl import should_tighten_sl, append_tighten_audit, last_tighten_ts
+from src.price_sanity import validate_quote, log_quarantine
+from src.trade_state import (
+    is_open as _row_is_open,
+    max_hold_days as _max_hold_days,
+    provenance_label as _provenance_label,
+)
 
 # 🗓 T51 — Market calendar guard
 try:
@@ -60,33 +66,49 @@ def save_sent_alerts(alerts: set):
     ALERTS_FILE.write_text(json.dumps(sorted(alerts)))
 
 def load_todays_picks() -> list:
-    """Load picks from picks_log.csv. Falls back to most recent date if today's missing."""
+    """Load the monitored set from picks_log.csv (Cluster C — deterministic,
+    complete coverage).
+
+    Monitored set = EVERY open (non-terminal) position with an established
+    entry whose hold horizon has not been exceeded — today's picks AND
+    carryovers from prior days. Positions past their horizon belong to the
+    end-of-day evaluator's force-close path, not intraday monitoring.
+
+    Each pick carries `pick_date` (so closes update the correct row —
+    position identity = ticker + open_date + source) and a `provenance`
+    label ("official pick 2026-08-17 · carryover") for the report.
+    """
     if not PICKS_CSV.exists():
         print("[monitor] No picks_log.csv — nothing to monitor.")
         return []
     rows = list(_csv.DictReader(PICKS_CSV.open()))
     if not rows:
         return []
-    today_rows = [r for r in rows if r.get("pick_date", "").strip() == TODAY]
-    if not today_rows:
-        all_dates = sorted({r.get("pick_date", "") for r in rows if r.get("pick_date")})
-        if not all_dates:
-            return []
-        last_date = all_dates[-1]
-        print(f"[monitor] No picks for {TODAY} — using last available date {last_date}")
-        today_rows = [r for r in rows if r.get("pick_date", "") == last_date]
     picks = []
-    for r in today_rows:
-        status = (r.get("evaluation_status", "") or "").strip().lower()
-        if status not in ("pending", "open", ""):
+    for r in rows:
+        if not _row_is_open(r):
             continue
         ticker = (r.get("ticker") or "").strip()
-        if not ticker:
+        pick_date = (r.get("pick_date") or "").strip()
+        if not ticker or not pick_date or pick_date > TODAY:
             continue
         try:
+            age_days = (datetime.strptime(TODAY, "%Y-%m-%d").date()
+                        - datetime.strptime(pick_date, "%Y-%m-%d").date()).days
+        except ValueError:
+            continue
+        if age_days > _max_hold_days(r.get("trade_type", "")):
+            # Overdue → handled by the evaluator's EXPIRED_OVERDUE force-close.
+            continue
+        try:
+            entry = float(r.get("entry") or 0)
+            if entry <= 0:
+                continue  # no established entry → informational only, not a position
             picks.append({
                 "ticker": ticker,
-                "entry":       float(r.get("entry") or 0),
+                "pick_date":   pick_date,
+                "provenance":  _provenance_label(r, today=TODAY),
+                "entry":       entry,
                 "stop_loss":   float(r.get("stop_loss") or 0),
                 "take_profit": float(r.get("take_profit") or 0),
                 # Persisted trailing/adaptive state (informational levels).
@@ -116,24 +138,31 @@ def _close_pick_in_csv(ticker: str, pick: dict, exit_price: float,
 
     Idempotency: caller MUST check pick is still pending before calling.
     load_todays_picks() already filters non-pending picks, providing the
-    primary idempotency guard. This function does no second check.
+    primary idempotency guard, and update_pick_row refuses to overwrite a
+    terminal row (write-once), providing the second guard.
 
     Args:
       ticker:     stock ticker
-      pick:       in-memory pick dict (needs entry, original_sl)
+      pick:       in-memory pick dict (needs entry, original_sl, pick_date)
       exit_price: SL or TP level (NOT live tick — matches evaluator semantics)
       status:     "sl_hit" or "tp_hit"
-      today_str:  YYYY-MM-DD evaluation date
+      today_str:  YYYY-MM-DD evaluation date (close date, NOT the row key)
     """
     entry = float(pick.get("entry") or 0)
     original_sl = float(pick.get("original_sl") or pick.get("stop_loss") or 0)
     if entry <= 0:
         print(f"[close] {ticker} entry={entry} invalid — skipping CSV write")
         return
+    # Position identity fix (Cluster C): key the CSV update on the pick's OWN
+    # pick_date, not today's date. Previously carryover positions (pick_date
+    # < today) could never be closed intraday — update_pick_row silently
+    # found no row, so TP hits (e.g. MRNA 2026-08-19) were alerted but never
+    # booked, and the position kept printing all day.
+    row_date = (pick.get("pick_date") or today_str).strip()
     actual_return_pct = (exit_price - entry) / entry * 100
     risk_per_share = entry - original_sl
     r_multiple = ((exit_price - entry) / risk_per_share) if risk_per_share > 0 else 0.0
-    update_pick_row(today_str, ticker, {
+    update_pick_row(row_date, ticker, {
         "evaluation_status":  status,
         "evaluated_on":       today_str,
         "exit_price":         round(exit_price, 4),
@@ -154,6 +183,32 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
         if not live or live.get("price") is None:
             continue
         price = live["price"]
+
+        # ─── Cluster F: quote sanity gate on every consumed price ───
+        # Reference = the position's own recent history (gated peak) or its
+        # entry. An implausible print (e.g. MRNA quoted +86%…+176% intraday)
+        # is quarantined: hold state, book nothing, fabricate no movement.
+        peak_ref = float(p.get("peak_price") or 0)
+        reference = peak_ref if peak_ref > 0 else entry
+        q_check = validate_quote(price, reference)
+        if not q_check["ok"]:
+            log_quarantine(ticker, price, reference, q_check,
+                           context="intraday_monitor", data_dir=DATA_DIR)
+            fingerprint = f"{ticker}|quote_quarantined"
+            print(f"[quarantine] {ticker}: ${price} vs ref ${reference} "
+                  f"({q_check['reason']}, dev={q_check['deviation_pct']}%) — holding state")
+            if fingerprint not in sent_alerts:
+                sent_alerts.add(fingerprint)
+                note = q_check.get("suspected_action") or "implausible print vs recent history"
+                alerts.append({
+                    "ticker": ticker, "price": price, "entry": entry,
+                    "change_pct": 0.0, "provenance": p.get("provenance", ""),
+                    "flags": [("quote_quarantined",
+                               f"⚠️ Quote ${price:.2f} quarantined ({note}) — "
+                               f"stale quote, unverified; position state held")],
+                    "news": [],
+                })
+            continue
 
         # Phase 2B.2: update peak price + trailing SL per check
         # Use module TODAY, not wall-clock date, so tests/backfills/manual
@@ -277,7 +332,8 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             continue
         sent_alerts.add(fingerprint)
         alerts.append({"ticker": ticker, "price": price, "entry": entry,
-                       "change_pct": change_pct, "flags": flags, "news": material_news})
+                       "change_pct": change_pct, "flags": flags, "news": material_news,
+                       "provenance": p.get("provenance", "")})
     return alerts
 
 def build_message(monitor_alerts: list, new_opps: list) -> str:
@@ -291,6 +347,10 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
             arrow = "UP" if a["change_pct"] >= 0 else "DOWN"
             lines.append(f"{arrow} *{a['ticker']}* @ ${a['price']:.2f} "
                          f"(entry ${a['entry']:.2f}, {a['change_pct']:+.1f}%)")
+            # Cluster C provenance: open-date + source + carryover flag, so no
+            # position ever appears "from nowhere".
+            if a.get("provenance"):
+                lines.append(f"   - Source: {a['provenance']}")
             for _, msg in a["flags"]:
                 lines.append(f"   - {msg}")
             for cat, headline, url in a["news"][:2]:
@@ -306,6 +366,7 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
                          f"   Score: {o['score']:.1f}\n"
                          f"   Reference levels: Observed ${o['entry']:.2f} | SL ref ${o['sl']:.2f} | TP ref ${o['tp']:.2f}\n"
                          f"   {o.get('reason','Live momentum')}\n"
+                         f"   Informational — no position, no follow-up tracking.\n"
                          f"   Monitoring-only. Do not treat as a buy instruction.\n")
     # Task 9b (#3): prices come from get_live_quote() = last 5-min yfinance
     # bar (~15 min delayed), NOT a live tick. Disclose so the fresh "HH:MM ET"

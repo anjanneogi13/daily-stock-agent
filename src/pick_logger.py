@@ -89,6 +89,11 @@ def _ensure_header():
 
 def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
     """Append today's picks to the log. Returns count saved."""
+    # Cluster A schema gate: an official pick missing its actionable field
+    # set is downgraded to watch-only with an explicit reason — never logged
+    # actionable-shaped but empty (Aug 17/21 failure mode).
+    from src.pick_schema import enforce_pick_schema
+    picks = enforce_pick_schema(picks)
     _ensure_header()
     now = datetime.now()
     today = now.strftime("%Y-%m-%d")

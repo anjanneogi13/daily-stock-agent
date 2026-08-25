@@ -89,6 +89,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # CRITICAL (Cluster B persistence): the monitor writes intraday
+          # TP/SL closes + trailing state into picks_log.csv. Without
+          # committing it, every close was lost when the runner exited —
+          # positions kept printing all day and wins were never booked
+          # (e.g. MRNA 2026-08-19 TP hit alerted but never recorded).
+          git add -f data/picks_log.csv 2>/dev/null || true
+          git add -f data/quote_quarantine_*.jsonl 2>/dev/null || true
           git add -f data/intraday_alerts_*.json 2>/dev/null || true
           git add -f data/intraday_momentum_observations_*.jsonl 2>/dev/null || true
           git add -f data/opening_range_observations_*.jsonl 2>/dev/null || true

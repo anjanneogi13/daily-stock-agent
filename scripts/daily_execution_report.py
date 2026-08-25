@@ -30,7 +30,22 @@ if not p.exists():
 
 picks = [r for r in csv.DictReader(p.open()) if r.get("pick_date") == date_str]
 if not picks:
-    print(f"No picks for {date_str}"); sys.exit(0)
+    # Cluster G: no-pick days must still emit a coherent report instead of a
+    # silent exit — the Position Monitor may still be tracking carryovers, and
+    # an empty day needs an explicit explanation, not a missing report.
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+    try:
+        from src.trade_state import load_ledger, open_positions, provenance_label
+        carryovers = [r for r in open_positions(load_ledger())
+                      if (r.get("pick_date") or "") < date_str]
+    except Exception:
+        carryovers = []
+    print(f"═══ EXECUTION REPORT — {date_str} ═══")
+    print(f"No premarket picks logged for {date_str}; "
+          f"{len(carryovers)} carryover position(s) monitored.")
+    for r in carryovers:
+        print(f"  • {r.get('ticker','?')} — {provenance_label(r, date_str)}")
+    sys.exit(0)
 
 def fetch_intraday(ticker, date):
     """Get 5-min bars for the trading day."""

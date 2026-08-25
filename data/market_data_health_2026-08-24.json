@@ -2,10 +2,10 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 519,
+      "attempts": 526,
       "empty": 0,
-      "errors": 0,
-      "successes": 519
+      "errors": 2,
+      "successes": 524
     },
     "monster_info": {
       "attempts": 243,
@@ -14,25 +14,25 @@
       "successes": 243
     },
     "ohlcv": {
-      "attempts": 524,
-      "empty": 0,
-      "errors": 0,
+      "attempts": 542,
+      "empty": 9,
+      "errors": 9,
       "successes": 524
     }
   },
   "date": "2026-08-24",
   "providers": {
-    "yfinance": {
-      "attempts": 1286,
+    "stooq": {
+      "attempts": 9,
       "empty": 0,
-      "errors": 0,
+      "errors": 9,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 0,
+        "provider_exception": 9,
         "rate_limited": 0,
         "stale_data": 0,
         "symbol_not_found": 0,
@@ -40,9 +40,33 @@
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 0,
+      "provider_error": 9,
       "rate_limited": 0,
-      "successes": 1286,
+      "successes": 0,
+      "timeout": 0,
+      "unauthorized": 0
+    },
+    "yfinance": {
+      "attempts": 1302,
+      "empty": 9,
+      "errors": 2,
+      "failure_types": {
+        "empty_response": 9,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 2,
+        "rate_limited": 0,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 2,
+      "rate_limited": 0,
+      "successes": 1291,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -53,6 +77,187 @@
     "scored_count": 243,
     "universe_count": 519
   },
-  "samples": [],
-  "timestamp_utc": "2026-08-24T12:08:05Z"
+  "samples": [
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "AAPL"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "AAPL"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "empty",
+      "failure_type": "empty_response",
+      "message": "empty OHLCV dataframe",
+      "provider": "yfinance",
+      "result": "empty",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "Failed to perform, curl: (6) Could not resolve host: stooq.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.",
+      "provider": "stooq",
+      "result": "error",
+      "stage": "ohlcv",
+      "ticker": "SPY"
+    }
+  ],
+  "timestamp_utc": "2026-08-24T17:03:28Z"
 }
