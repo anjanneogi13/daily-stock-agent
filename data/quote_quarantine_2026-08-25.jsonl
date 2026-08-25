@@ -1,1 +1,2 @@
 {"ts": "2026-08-25T13:17:25+00:00", "ticker": "MRNA", "price": 138.88999938964844, "reference": 62.96, "reason": "implausible_move", "deviation_pct": 120.6, "suspected_action": null, "context": "intraday_monitor"}
+{"ts": "2026-08-25T13:44:47+00:00", "ticker": "MRNA", "price": 152.00680541992188, "reference": 62.96, "reason": "implausible_move", "deviation_pct": 141.43, "suspected_action": null, "context": "intraday_monitor"}
