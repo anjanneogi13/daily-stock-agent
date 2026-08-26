@@ -1190,5 +1190,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-26 12:19:29",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 8,
+    "blocked": [
+      {
+        "ticker": "ECL",
+        "reason": "SL too tight (1.1% < 1.5% for $290 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "PEP",
+        "reason": "SL too tight (1.0% < 1.5% for $142 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
