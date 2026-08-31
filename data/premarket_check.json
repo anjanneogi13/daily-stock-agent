@@ -1,52 +1,54 @@
 {
-  "date": "2026-08-26",
+  "date": "2026-08-31",
   "market": {
-    "spy_change_pct": 0.32,
-    "qqq_change_pct": 0.62,
-    "soxx_change_pct": 1.56,
-    "vix": 15.66,
-    "warnings": [],
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": -0.65,
+    "soxx_change_pct": -3.2,
+    "vix": 15.21,
+    "warnings": [
+      "\u26a0\ufe0f Semiconductor sector (SOXX) down -3.2% \u2014 semis at risk"
+    ],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "BMY",
+      "ticker": "NSC",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 67.92,
+      "current_price": 348.68,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "TRGP",
+      "ticker": "A",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 286.91,
-      "gap_pct": 0.0,
+      "current_price": 153.84,
+      "gap_pct": -0.0,
       "actionable": true
     },
     {
       "ticker": "AJG",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 268.51,
+      "current_price": 267.56,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "PM",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 191.89,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "ECL",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 286.75,
       "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "MKC",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 54.48,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "EQIX",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 1073.44,
-      "gap_pct": -0.0,
       "actionable": true
     }
   ]
