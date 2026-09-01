@@ -1208,5 +1208,38 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-01 12:34:51",
+    "weak_sectors": {},
+    "blocked_count": 5,
+    "passed_count": 5,
+    "blocked": [
+      {
+        "ticker": "EG",
+        "reason": "SL too tight (1.1% < 1.5% for $375 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "APD",
+        "reason": "SL too tight (1.2% < 1.5% for $309 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "AMT",
+        "reason": "SL too tight (1.2% < 1.5% for $176 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "MCO",
+        "reason": "SL too tight (1.3% < 1.5% for $505 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "RSG",
+        "reason": "SL too tight (1.0% < 1.5% for $221 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
