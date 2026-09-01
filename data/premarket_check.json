@@ -1,54 +1,52 @@
 {
-  "date": "2026-08-31",
+  "date": "2026-09-01",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": -0.65,
-    "soxx_change_pct": -3.2,
-    "vix": 15.21,
-    "warnings": [
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -3.2% \u2014 semis at risk"
-    ],
+    "spy_change_pct": -0.3,
+    "qqq_change_pct": 0.05,
+    "soxx_change_pct": 0.48,
+    "vix": 15.88,
+    "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "NSC",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 348.68,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "A",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 153.84,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
       "ticker": "AJG",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 267.56,
+      "current_price": 262.15,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "PM",
+      "ticker": "VRSN",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 191.89,
+      "current_price": 288.28,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "ECL",
+      "ticker": "NWS",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 286.75,
-      "gap_pct": 0.0,
+      "current_price": 34.41,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "NEM",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 126.06,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "BIIB",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 216.65,
+      "gap_pct": -0.0,
       "actionable": true
     }
   ]
