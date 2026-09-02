@@ -1,27 +1,37 @@
 {
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "market": {
-    "spy_change_pct": -0.3,
-    "qqq_change_pct": 0.05,
-    "soxx_change_pct": 0.48,
-    "vix": 15.88,
-    "warnings": [],
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": -1.27,
+    "soxx_change_pct": -2.1,
+    "vix": 15.94,
+    "warnings": [
+      "\u26a0\ufe0f Semiconductor sector (SOXX) down -2.1% \u2014 semis at risk"
+    ],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "AJG",
+      "ticker": "VRSN",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 262.15,
+      "current_price": 288.37,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "VRSN",
+      "ticker": "AMT",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 288.28,
+      "current_price": 176.02,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "RVTY",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 126.59,
       "gap_pct": -0.0,
       "actionable": true
     },
@@ -29,23 +39,15 @@
       "ticker": "NWS",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 34.41,
+      "current_price": 34.23,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "NEM",
+      "ticker": "ROP",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 126.06,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "BIIB",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 216.65,
+      "current_price": 418.31,
       "gap_pct": -0.0,
       "actionable": true
     }
