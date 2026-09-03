@@ -1,54 +1,52 @@
 {
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "market": {
     "spy_change_pct": 0.0,
-    "qqq_change_pct": -1.27,
-    "soxx_change_pct": -2.1,
-    "vix": 15.94,
-    "warnings": [
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -2.1% \u2014 semis at risk"
-    ],
+    "qqq_change_pct": 0.23,
+    "soxx_change_pct": 0.23,
+    "vix": 15.37,
+    "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "VRSN",
+      "ticker": "ZTS",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 288.37,
+      "current_price": 76.17,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "AMT",
+      "ticker": "VRSN",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 176.02,
+      "current_price": 289.96,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "ELV",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 405.84,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "CAH",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 245.49,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "RVTY",
+      "ticker": "APD",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 126.59,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "NWS",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 34.23,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "ROP",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 418.31,
-      "gap_pct": -0.0,
+      "current_price": 309.45,
+      "gap_pct": 0.0,
       "actionable": true
     }
   ]
