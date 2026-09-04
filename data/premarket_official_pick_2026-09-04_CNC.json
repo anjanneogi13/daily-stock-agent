@@ -1,0 +1,69 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-33873082110",
+  "artifact_filename": "premarket_official_pick_2026-09-04_CNC.json",
+  "artifact_id": "premarket_official_pick:2026-09-04:CNC",
+  "artifact_path": "data/premarket_official_pick_2026-09-04_CNC.json",
+  "commit_sha": "4e6f3bdbfd4d48076c368e8689fcf74e3e641252",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/4e6f3bdbfd4d48076c368e8689fcf74e3e641252",
+  "company": "CNC",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-09-04",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-09-04:CNC:33873082110:4e6f3bdbfd4d",
+  "entry": 68.02,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 64.3.",
+    "Review/exit near take profit 72.67."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 26,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 8.65,
+    "regime": "bull",
+    "sma_value": 711.63,
+    "sma_window": 200,
+    "spy_close": 773.17,
+    "spy_sma200": 711.63,
+    "spy_sma_anchor": 711.63
+  },
+  "risk_dollars": 96.72,
+  "risk_flags": [],
+  "risk_reward": 1.25,
+  "score": 0.663,
+  "score_components": {
+    "composite": 0.663,
+    "day_score": 0.536,
+    "monster_score": 0.0,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.9632044964065053
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "CNC selected as official swing pick; composite score 0.663; premarket sanity: normal official premarket entry conditions.",
+  "selection_time_et": "2026-09-04T08:34:01-04:00",
+  "stop_loss": 64.3,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 72.67,
+  "ticker": "CNC",
+  "top_reasons": [
+    "composite score 0.663",
+    "premarket sanity: normal official premarket entry conditions"
+  ],
+  "workflow_run_id": "33873082110",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/33873082110"
+}
