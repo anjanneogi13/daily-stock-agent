@@ -125,19 +125,6 @@
     "expires": "2027-01-05T21:55:47.104941+00:00",
     "hard_block": true
   },
-  "AXTA": {
-    "ticker": "AXTA",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.95,
-    "action_window": "intraday",
-    "headline": "Axalta Coating Systems' Shareholders Approve Previously Announced All-Stock Business Combination With Azko Nobel",
-    "added_at": "2026-08-05T14:45:54.680955+00:00",
-    "expires": "2026-09-04T14:45:54.680961+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "SMMT": {
     "ticker": "SMMT",
     "score_delta": -1.0,
@@ -983,6 +970,15 @@
     "headline": "Nixxy Received Nasdaq Notice For Noncompliance With $1 Minimum Bid Price Requirement; Notice Does Not Result In Immediate Delisting",
     "added_at": "2026-09-04T10:34:57.317412+00:00",
     "expires": "2027-03-03T10:34:57.317420+00:00",
+    "hard_block": true
+  },
+  "DEC": {
+    "ticker": "DEC",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Deal Dispatch: Nvidia Buys Hugging Face for $12.9 Billion, Barilla Acquires Goodles, Park Place Partners Bankruptcy",
+    "added_at": "2026-09-04T19:04:44.018516+00:00",
+    "expires": "2027-03-03T19:04:44.018525+00:00",
     "hard_block": true
   }
 }
