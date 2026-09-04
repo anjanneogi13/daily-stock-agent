@@ -232,32 +232,6 @@
     "expires": "2027-02-08T11:42:32.789228+00:00",
     "hard_block": true
   },
-  "SGHT": {
-    "ticker": "SGHT",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.91,
-    "action_window": "next_day",
-    "headline": "Sight Sciences Receives FDA 510(k) Clearance For OMNI Ultra Surgical System; Next-Generation Implant-Free MIGS Device For Primary Open-Angle Glaucoma",
-    "added_at": "2026-08-04T21:47:35.439989+00:00",
-    "expires": "2026-09-03T21:47:35.439994+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "NTRA": {
-    "ticker": "NTRA",
-    "score_delta": 0.118,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.55,
-    "action_window": "intraday",
-    "headline": "Natera Submits Application To Japan\u2019s Pharmaceuticals And Medical Devices Agency For Approval Of The Signatera Test In Muscle-Invasive Bladder Cancer As A Companion Diagnostic",
-    "added_at": "2026-08-05T10:29:33.433383+00:00",
-    "expires": "2026-09-04T10:29:33.433388+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "KRMD": {
     "ticker": "KRMD",
     "score_delta": -0.157,
@@ -1000,6 +974,15 @@
     "headline": "China\u2019s State Playbook Fuels Humanoid Robot Boom, Resolves Evergrande Crisis",
     "added_at": "2026-09-03T17:05:53.105689+00:00",
     "expires": "2027-03-02T17:05:53.105697+00:00",
+    "hard_block": true
+  },
+  "NIXX": {
+    "ticker": "NIXX",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Nixxy Received Nasdaq Notice For Noncompliance With $1 Minimum Bid Price Requirement; Notice Does Not Result In Immediate Delisting",
+    "added_at": "2026-09-04T10:34:57.317412+00:00",
+    "expires": "2027-03-03T10:34:57.317420+00:00",
     "hard_block": true
   }
 }
