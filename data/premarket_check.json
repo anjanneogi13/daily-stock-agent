@@ -1,27 +1,19 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-08",
   "market": {
-    "spy_change_pct": 1.05,
-    "qqq_change_pct": 1.19,
-    "soxx_change_pct": 0.15,
-    "vix": 14.28,
+    "spy_change_pct": -0.39,
+    "qqq_change_pct": 0.18,
+    "soxx_change_pct": 3.52,
+    "vix": 15.64,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "ZTS",
+      "ticker": "SPGI",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 76.29,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "VRSN",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 293.35,
+      "current_price": 443.51,
       "gap_pct": 0.0,
       "actionable": true
     },
@@ -29,7 +21,23 @@
       "ticker": "DVN",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 48.79,
+      "current_price": 48.06,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "PSX",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 255.09,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "CNC",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 67.04,
       "gap_pct": 0.0,
       "actionable": true
     },
@@ -37,15 +45,7 @@
       "ticker": "CAH",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 248.61,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "CNC",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 68.02,
+      "current_price": 247.18,
       "gap_pct": -0.0,
       "actionable": true
     }
