@@ -1,51 +1,51 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "market": {
-    "spy_change_pct": -0.39,
-    "qqq_change_pct": 0.18,
-    "soxx_change_pct": 3.52,
-    "vix": 15.64,
+    "spy_change_pct": -0.55,
+    "qqq_change_pct": -0.08,
+    "soxx_change_pct": 1.64,
+    "vix": 16.49,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "SPGI",
+      "ticker": "APH",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 443.51,
+      "current_price": 81.76,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "DVN",
+      "ticker": "CVX",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 48.06,
+      "current_price": 209.8,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "PSX",
+      "ticker": "MCK",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 255.09,
+      "current_price": 889.12,
       "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "CNC",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 67.04,
-      "gap_pct": 0.0,
       "actionable": true
     },
     {
       "ticker": "CAH",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 247.18,
+      "current_price": 240.49,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "WFC",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 87.96,
       "gap_pct": -0.0,
       "actionable": true
     }
