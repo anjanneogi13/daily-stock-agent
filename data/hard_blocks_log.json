@@ -1313,5 +1313,33 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-09 12:36:00",
+    "weak_sectors": {},
+    "blocked_count": 4,
+    "passed_count": 6,
+    "blocked": [
+      {
+        "ticker": "ELV",
+        "reason": "SL too tight (1.2% < 1.5% for $402 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "COR",
+        "reason": "SL too tight (1.2% < 1.5% for $325 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "SBAC",
+        "reason": "SL too tight (1.5% < 1.5% for $189 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "TSM",
+        "reason": "SL too tight (1.4% < 1.5% for $439 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

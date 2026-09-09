@@ -1,0 +1,68 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 519,
+      "empty": 0,
+      "errors": 0,
+      "successes": 519
+    },
+    "monster_info": {
+      "attempts": 161,
+      "empty": 0,
+      "errors": 1,
+      "successes": 160
+    },
+    "ohlcv": {
+      "attempts": 524,
+      "empty": 0,
+      "errors": 0,
+      "successes": 524
+    }
+  },
+  "date": "2026-09-09",
+  "providers": {
+    "yfinance": {
+      "attempts": 1204,
+      "empty": 0,
+      "errors": 1,
+      "failure_types": {
+        "empty_response": 0,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 0,
+        "rate_limited": 1,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 0,
+      "rate_limited": 1,
+      "successes": 1203,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 519,
+    "final_pick_count": 6,
+    "scored_count": 161,
+    "universe_count": 519
+  },
+  "samples": [
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "KDP"
+    }
+  ],
+  "timestamp_utc": "2026-09-09T12:36:00Z"
+}
