@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-09",
+  "date": "2026-09-10",
   "market": {
-    "spy_change_pct": -0.55,
-    "qqq_change_pct": -0.08,
-    "soxx_change_pct": 1.64,
-    "vix": 16.49,
+    "spy_change_pct": -0.46,
+    "qqq_change_pct": -0.29,
+    "soxx_change_pct": 0.68,
+    "vix": 17.03,
     "warnings": [],
     "global_action": "normal"
   },
@@ -13,40 +13,40 @@
       "ticker": "APH",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 81.76,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "CVX",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 209.8,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "MCK",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 889.12,
+      "current_price": 81.34,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "CAH",
+      "ticker": "RSG",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 240.49,
+      "current_price": 222.47,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "WFC",
+      "ticker": "BRK-B",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 87.96,
+      "current_price": 506.72,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "TSM",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 435.36,
       "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "KDP",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 32.08,
+      "gap_pct": 0.0,
       "actionable": true
     }
   ]
