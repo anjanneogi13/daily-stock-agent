@@ -1,10 +1,10 @@
 {
   "regime": "bull",
-  "spy_close": 765.96,
-  "spy_sma200": 712.68,
-  "spy_sma_anchor": 712.68,
-  "sma_value": 712.68,
+  "spy_close": 762.4,
+  "spy_sma200": 713.18,
+  "spy_sma_anchor": 713.18,
+  "sma_value": 713.18,
   "bullish": true,
-  "distance_pct": 7.48,
+  "distance_pct": 6.9,
   "sma_window": 200
 }
