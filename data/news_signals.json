@@ -219,58 +219,6 @@
     "expires": "2027-02-08T11:42:32.789228+00:00",
     "hard_block": true
   },
-  "ACB": {
-    "ticker": "ACB",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.78,
-    "action_window": "intraday",
-    "headline": "Aurora Cannabis Says Board To Form Special Committee To Review Curaleaf's Unsolicited $4.00 Per Share Take-Over Proposal; Says $5.00 Cap Below December 2025 Trading Levels",
-    "added_at": "2026-08-11T19:33:41.310856+00:00",
-    "expires": "2026-09-10T19:33:41.310863+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "IPEX": {
-    "ticker": "IPEX",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.75,
-    "action_window": "intraday",
-    "headline": "Inflection Point Acquisition Corp. V And GOWell Announce SEC Effectiveness Of F-4 Registration For Proposed Business Combination",
-    "added_at": "2026-08-11T21:39:21.906616+00:00",
-    "expires": "2026-09-10T21:39:21.906624+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "JFB": {
-    "ticker": "JFB",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.88,
-    "action_window": "intraday",
-    "headline": "JFB Construction and XTEND Clear SEC S-4 Review, Target Sept. 1 Closing For XTEND AI Robotics Merger; Expected To Trade On The NYSE Under The Ticker Symbol \"XTND\"",
-    "added_at": "2026-08-11T22:35:07.228689+00:00",
-    "expires": "2026-09-10T22:35:07.228695+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RCMT": {
-    "ticker": "RCMT",
-    "score_delta": 0.2,
-    "catalyst": "ma_target",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Rocky Mountain Chocolate Factory Board Is Exploring Strategic Alternatives Including Possible Sale Or Merger",
-    "added_at": "2026-08-12T10:34:34.126319+00:00",
-    "expires": "2026-09-11T10:34:34.126325+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
   "FUL": {
     "ticker": "FUL",
     "score_delta": 0.2,
@@ -281,19 +229,6 @@
     "headline": "H. B. Fuller Confirms Receipt Of An Unsolicited Proposal Today From Ancora Holdings Group To Acquire Its Building Adhesives Solutions Business For Between $1.1B And $1.2B In Cash; Board Will Carefully",
     "added_at": "2026-08-12T21:38:32.344479+00:00",
     "expires": "2026-09-11T21:38:32.344486+00:00",
-    "hard_block": false,
-    "negative_reaction": false
-  },
-  "RYTM": {
-    "ticker": "RYTM",
-    "score_delta": 0.15,
-    "catalyst": "fda_approval",
-    "sentiment": "bullish",
-    "tradeable_score": 0.82,
-    "action_window": "intraday",
-    "headline": "Why Is Rhythm Pharmaceuticals Stock Trading Higher On Wednesday?",
-    "added_at": "2026-08-12T17:27:59.237695+00:00",
-    "expires": "2026-09-11T17:27:59.237703+00:00",
     "hard_block": false,
     "negative_reaction": false
   },
@@ -758,6 +693,15 @@
     "headline": "Deal Dispatch: Nvidia Buys Hugging Face for $12.9 Billion, Barilla Acquires Goodles, Park Place Partners Bankruptcy",
     "added_at": "2026-09-04T19:04:44.018516+00:00",
     "expires": "2027-03-03T19:04:44.018525+00:00",
+    "hard_block": true
+  },
+  "BSP": {
+    "ticker": "BSP",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Deal Dispatch: Bending Spoons Acquires Miro For $1.35B, Kinetik Up For Sale, LIV Golf Bankruptcy",
+    "added_at": "2026-09-11T17:33:02.344252+00:00",
+    "expires": "2027-03-10T17:33:02.344260+00:00",
     "hard_block": true
   }
 }
