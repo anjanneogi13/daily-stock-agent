@@ -1,35 +1,21 @@
 {
-  "date": "2026-09-10",
+  "date": "2026-09-11",
   "market": {
-    "spy_change_pct": -0.46,
-    "qqq_change_pct": -0.29,
-    "soxx_change_pct": 0.68,
-    "vix": 17.03,
-    "warnings": [],
+    "spy_change_pct": -0.6,
+    "qqq_change_pct": -1.06,
+    "soxx_change_pct": -2.74,
+    "vix": 16.98,
+    "warnings": [
+      "\u26a0\ufe0f Semiconductor sector (SOXX) down -2.7% \u2014 semis at risk"
+    ],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "APH",
+      "ticker": "ORCL",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 81.34,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "RSG",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 222.47,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "BRK-B",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 506.72,
+      "current_price": 152.94,
       "gap_pct": 0.0,
       "actionable": true
     },
@@ -37,15 +23,15 @@
       "ticker": "TSM",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 435.36,
+      "current_price": 428.03,
       "gap_pct": -0.0,
       "actionable": true
     },
     {
-      "ticker": "KDP",
+      "ticker": "DE",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 32.08,
+      "current_price": 677.94,
       "gap_pct": 0.0,
       "actionable": true
     }
