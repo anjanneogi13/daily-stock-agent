@@ -184,6 +184,7 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
             continue
         price = live["price"]
 
+
         # ─── Cluster F: quote sanity gate on every consumed price ───
         # Reference = the position's own recent history (gated peak) or its
         # entry. An implausible print (e.g. MRNA quoted +86%…+176% intraday)
@@ -203,12 +204,49 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
                 alerts.append({
                     "ticker": ticker, "price": price, "entry": entry,
                     "change_pct": 0.0, "provenance": p.get("provenance", ""),
+                    "pick_date": p.get("pick_date", ""),
                     "flags": [("quote_quarantined",
                                f"⚠️ Quote ${price:.2f} quarantined ({note}) — "
                                f"stale quote, unverified; position state held")],
                     "news": [],
                 })
             continue
+
+        # ─── Fill-awareness gate (Sep 2026): a TODAY buy-limit is only a
+        # position once price actually traded at/below entry. Previously the
+        # monitor treated every row as filled — it reported P&L vs entry and
+        # even booked SL/TP closes on orders that never filled (CVX
+        # 2026-09-09: "+2.3% halfway to TP" intraday, "no trade — buy price
+        # never reached" that evening). Carryovers already proved their fill
+        # to the end-of-day evaluator (unfilled rows become
+        # unreachable_entry on their first evening), so only today's picks
+        # are gated.
+        if p.get("pick_date") == TODAY:
+            day_low = live.get("day_low")
+            day_is_today = live.get("day_date") == TODAY
+            if day_is_today and day_low is not None:
+                filled = day_low <= entry
+            else:
+                # Degraded feed (no session-low data): the only safe fill
+                # proof is the current print itself being at/below the limit.
+                filled = price <= entry
+            if not filled:
+                fingerprint = f"{ticker}|awaiting_fill"
+                if fingerprint not in sent_alerts:
+                    sent_alerts.add(fingerprint)
+                    gap_pct = ((price - entry) / entry * 100) if entry else 0.0
+                    alerts.append({
+                        "ticker": ticker, "price": price, "entry": entry,
+                        "change_pct": 0.0, "unfilled": True,
+                        "pick_date": p.get("pick_date", ""),
+                        "provenance": p.get("provenance", ""),
+                        "flags": [("awaiting_fill",
+                                   f"⏳ Waiting for entry ${entry:.2f} — no position yet "
+                                   f"(last ${price:.2f}, {gap_pct:+.1f}% away). "
+                                   f"No P&L until the limit fills.")],
+                        "news": [],
+                    })
+                continue  # never trail/close/report P&L on an unfilled order
 
         # Phase 2B.2: update peak price + trailing SL per check
         # Use module TODAY, not wall-clock date, so tests/backfills/manual
@@ -333,8 +371,30 @@ def monitor_existing_picks(picks: list, sent_alerts: set) -> list:
         sent_alerts.add(fingerprint)
         alerts.append({"ticker": ticker, "price": price, "entry": entry,
                        "change_pct": change_pct, "flags": flags, "news": material_news,
+                       "pick_date": p.get("pick_date", ""),
                        "provenance": p.get("provenance", "")})
     return alerts
+
+def _format_pick_alert(a: dict) -> list:
+    """Render one pick-status alert as message lines."""
+    lines = []
+    if a.get("unfilled"):
+        lines.append(f"⏳ *{a['ticker']}* — order not filled yet (limit ${a['entry']:.2f})")
+    else:
+        arrow = "UP" if a["change_pct"] >= 0 else "DOWN"
+        lines.append(f"{arrow} *{a['ticker']}* @ ${a['price']:.2f} "
+                     f"(entry ${a['entry']:.2f}, {a['change_pct']:+.1f}%)")
+    # Cluster C provenance: open-date + source + carryover flag, so no
+    # position ever appears "from nowhere".
+    if a.get("provenance"):
+        lines.append(f"   - Source: {a['provenance']}")
+    for _, msg in a["flags"]:
+        lines.append(f"   - {msg}")
+    for cat, headline, url in a["news"][:2]:
+        lines.append(f"   - [{cat}] {headline}")
+    lines.append("")
+    return lines
+
 
 def build_message(monitor_alerts: list, new_opps: list) -> str:
     if not monitor_alerts and not new_opps:
@@ -342,20 +402,19 @@ def build_message(monitor_alerts: list, new_opps: list) -> str:
     et_now = datetime.now(timezone.utc).astimezone(ET)
     lines = [f"*INTRADAY UPDATE* — {et_now.strftime('%H:%M')} ET\n"]
     if monitor_alerts:
-        lines.append("*Pick Status*\n")
-        for a in monitor_alerts:
-            arrow = "UP" if a["change_pct"] >= 0 else "DOWN"
-            lines.append(f"{arrow} *{a['ticker']}* @ ${a['price']:.2f} "
-                         f"(entry ${a['entry']:.2f}, {a['change_pct']:+.1f}%)")
-            # Cluster C provenance: open-date + source + carryover flag, so no
-            # position ever appears "from nowhere".
-            if a.get("provenance"):
-                lines.append(f"   - Source: {a['provenance']}")
-            for _, msg in a["flags"]:
-                lines.append(f"   - {msg}")
-            for cat, headline, url in a["news"][:2]:
-                lines.append(f"   - [{cat}] {headline}")
-            lines.append("")
+        # Complaint fix (Sep 2026): split TODAY's picks from carryovers so a
+        # status line can never be mistaken for a same-day pick. Carryovers
+        # get an explicit "from previous days" header.
+        todays = [a for a in monitor_alerts if a.get("pick_date", "") == TODAY]
+        carry = [a for a in monitor_alerts if a.get("pick_date", "") != TODAY]
+        if todays:
+            lines.append("*Pick Status — TODAY'S PICKS*\n")
+            for a in todays:
+                lines.extend(_format_pick_alert(a))
+        if carry:
+            lines.append("*Pick Status — CARRYOVER (picks from previous days, still open)*\n")
+            for a in carry:
+                lines.extend(_format_pick_alert(a))
     if new_opps:
         lines.append("*New Opportunities Detected — WATCH ONLY*\n")
         for o in new_opps:

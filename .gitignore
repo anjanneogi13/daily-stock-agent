@@ -258,6 +258,7 @@ data/picks_log.csv.*.bak
 # when the file doesn't yet exist, breaking the 5%/week weight cap and
 # calibration/memoir continuity (audit 2026-06-24, Section 3 #1, Task 1).
 !data/weight_history.jsonl
+!data/weights_runtime.json
 !data/pattern_stats.json
 !data/agent_memoir.json
 !data/brain_state_meta.json

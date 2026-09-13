@@ -148,8 +148,10 @@ def _step_calibration_propose() -> Dict:
     # Build per-factor report → proposals
     try:
         report = cal.per_factor_report(rows)
-    except Exception:
-        return {"skipped": "calibration.per_factor_report failed"}
+    except Exception as e:
+        # Surface the real error — the anonymous skip reason hid a months-long
+        # crash (string CSV values fed to numeric comparisons).
+        return {"skipped": f"calibration.per_factor_report failed: {type(e).__name__}: {e}"}
     run_id = f"nightly_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     proposals = wp.propose(report, run_id=run_id) if report else []
     n = wp.write_proposals(proposals) if proposals else 0

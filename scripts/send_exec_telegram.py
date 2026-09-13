@@ -51,7 +51,10 @@ nf = [r for r in picks if r["status"]=="NOT_FILLED"]
 nd = [r for r in picks if r["status"]=="NO_DATA"]
 
 header_extra = f"\n🔔 = news-driven (watchlist)" if WL_TICKERS else ""
-lines = [f"📊 *Execution Report — {date}*{header_extra}\n",
+lines = [f"📊 *Execution Report — {date}*{header_extra}",
+         f"_Covers today's NEW picks only (picked {date}). Carryover positions "
+         f"from previous days are tracked in intraday updates and the evening "
+         f"performance report._\n",
          f"✅ TP: {len(tp)} | 🛑 SL: {len(sl)} | ⏳ Open: {len(op)} | ⚠️ Unfilled: {len(nf)}\n"]
 
 for r in picks:

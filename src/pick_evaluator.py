@@ -271,7 +271,21 @@ def evaluate_pending() -> dict:
 
         df = _fetch_ohlc(ticker, pick_date.isoformat())
         if df.empty:
-            counts["still_open"] += 1
+            # Past-horizon picks with NO price data must still settle —
+            # deterministically at the horizon date, with no fabricated exit
+            # (UNVERIFIED downstream). Previously this short-circuited to
+            # still_open, zombie-ing the row until the 30-day cutoff.
+            if today > horizon_date:
+                row["evaluation_status"] = "expired"
+                row["evaluated_on"] = horizon_date.isoformat()
+                row["exit_price"] = ""
+                row["actual_return_pct"] = ""
+                row["r_multiple"] = ""
+                counts["expired"] += 1
+                counts["evaluated"] += 1
+                print(f"  ⏰ {ticker}: EXPIRED (past {max_hold}d horizon, no price data) — settled unverified")
+            else:
+                counts["still_open"] += 1
             continue
 
         # ─── F3 (May 4 2026): unreachable_entry detection ─────────
@@ -288,9 +302,13 @@ def evaluate_pending() -> dict:
         if len(pick_bar):
             pb_high = float(pick_bar["High"].iloc[0])
             pb_low = float(pick_bar["Low"].iloc[0])
-            # Allow 0.5% tolerance for data-source rounding differences
+            pb_plausible = plausible_bar(entry, pb_high, pb_low)
+            # Allow 0.5% tolerance for data-source rounding differences.
+            # Corrupt pick-date bars (implausible vs entry) must not decide
+            # reachability — the walk below quarantines them and later sane
+            # bars settle the pick (MRNA 2026-08-19 corrupt print case).
             tol = entry * 0.005
-            if entry > pb_high + tol or entry < pb_low - tol:
+            if pb_plausible and (entry > pb_high + tol or entry < pb_low - tol):
                 row["evaluation_status"] = "unreachable_entry"
                 row["evaluated_on"] = pick_date.isoformat()
                 row["exit_price"] = ""
@@ -328,6 +346,27 @@ def evaluate_pending() -> dict:
                       f"(H={high:.2f} L={low:.2f} vs prev close {prev_close:.2f}) — skipped")
                 continue
             prev_close = float(bar["Close"])
+            is_fill_bar = date.date() == pick_date
+            open_px = float(bar["Open"])
+            # ── Fill-ordering guard (Sep 2026): on the FILL bar, if the
+            # session opened ABOVE the limit entry, the fill happened
+            # mid-session (price had to fall to entry). A daily bar cannot
+            # order a TP touch vs that fill, so a same-bar `high >= tp` must
+            # NEVER book a win — it may have printed before we owned shares
+            # (ORCL 2026-09-11: booked tp_hit +4.4% while the fill-aware
+            # execution x-ray showed the price never reached TP after fill).
+            # An SL touch IS provably post-fill (open > entry > sl means the
+            # path crossed entry on the way down), so losses still book.
+            if is_fill_bar and open_px > entry:
+                if low <= sl:
+                    outcome = "sl_hit"
+                    exit_price = sl
+                    exit_date = date
+                    break
+                if is_day_trade:
+                    # settle at day_close below — TP unconfirmable intraday
+                    break
+                continue  # swing: stays open; later bars use normal rules
             # Same-day BOTH hit: use Open as tie-breaker (whichever level is closer to Open hit first)
             if low <= sl and high >= tp:
                 open_px = float(bar["Open"])

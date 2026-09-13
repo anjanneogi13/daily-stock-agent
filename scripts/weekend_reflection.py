@@ -9,21 +9,37 @@ from pathlib import Path
 
 today = datetime.now().strftime("%Y-%m-%d")
 obs_file = Path("data/learning/observations.jsonl")
-if not obs_file.exists():
-    print("No observations yet"); sys.exit(0)
 
 cutoff = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
 all_obs = []
-for line in obs_file.read_text().splitlines():
-    if not line.strip(): continue
-    try:
-        o = json.loads(line)
-        if o["date"] >= cutoff:
-            all_obs.append(o)
-    except Exception: pass
+if obs_file.exists():
+    for line in obs_file.read_text().splitlines():
+        if not line.strip(): continue
+        try:
+            o = json.loads(line)
+            if o["date"] >= cutoff:
+                all_obs.append(o)
+        except Exception: pass
 
 if not all_obs:
-    print("No observations in last 7 days"); sys.exit(0)
+    # Resilience fix (Sep 2026): the old early-exit here meant one upstream
+    # gap (e.g. observations lost to the silent-push bug) cascaded into
+    # "Weekly review not generated." on Telegram. The picks ledger is an
+    # independent evidence source — ALWAYS write a review from it so the
+    # weekend learning loop never goes dark.
+    print("No observations in last 7 days — falling back to ledger-only local analysis")
+    sys.path.insert(0, str(Path(__file__).parent))
+    from local_analyst import analyze
+    local = analyze(period_days=7, label="Weekly")
+    md = (f"# 🧠 Weekend Review — {today}\n\n"
+          f"_⚠️ No learning observations were recorded this week "
+          f"(pipeline gap) — this review is computed directly from the "
+          f"picks ledger._\n\n---\n\n{local}\n")
+    out = Path(f"data/learning/weekly_review_{today}.md")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(md)
+    print(f"[reflect] ✅ Saved {out} (ledger-only fallback)")
+    sys.exit(0)
 
 # Aggregate stats from picks_log
 picks = list(csv.DictReader(Path("data/picks_log.csv").open()))

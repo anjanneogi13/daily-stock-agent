@@ -16,6 +16,7 @@ def isolated(tmp_path, monkeypatch):
     history = tmp_path / "weight_history.jsonl"
     proposals = tmp_path / "proposals.jsonl"
     monkeypatch.setattr(wa, "WEIGHTS", weights)
+    monkeypatch.setattr(wa, "RUNTIME_WEIGHTS", tmp_path / "weights_runtime.json")
     monkeypatch.setattr(wa, "HISTORY", history)
     monkeypatch.setattr(wa, "PROPOSALS", proposals)
     monkeypatch.setattr(wp, "PROPOSALS", proposals)

@@ -78,6 +78,21 @@ def _score_one(tk, df, cfg):
         except Exception:
             scores["pattern_multiplier"] = 1.0
 
+        # 🧠 Pillar 4 — learned-weights multiplier (closes the learning loop).
+        # Nightly calibration → proposals → applied weights finally feed back
+        # into live scoring. Bounded [0.85, 1.15], failure-safe like patterns.
+        try:
+            from .learned_weights import learned_multiplier as _lmul
+            _lmul_val, _lapplied = _lmul(sig, scores["composite"])
+            scores["learned_multiplier"] = _lmul_val
+            if _lapplied:
+                scores["learned_factors"] = ",".join(_lapplied)[:200]
+            if _lmul_val != 1.0:
+                scores["composite_pre_learned"] = scores["composite"]  # snapshot pre-mutation
+                scores["composite"] = max(0.0, min(1.0, round(scores["composite"] * _lmul_val, 4)))
+        except Exception:
+            scores["learned_multiplier"] = 1.0
+
         if scores["composite"] < cfg["output"]["min_score"]:
             return None
 

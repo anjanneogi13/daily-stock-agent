@@ -28,6 +28,7 @@ from src import weight_proposer as wp
 
 
 WEIGHTS  = Path("config/weights.json")
+RUNTIME_WEIGHTS = Path("data/weights_runtime.json")
 HISTORY  = Path("data/weight_history.jsonl")
 PROPOSALS = wp.PROPOSALS
 
@@ -36,15 +37,27 @@ WEEKLY_CAP_PCT = 5.0   # max cumulative |delta_pct| per (factor, week)
 
 # ─────────── load/save weights ───────────
 def _load() -> Dict:
-    if not WEIGHTS.exists():
-        return {"version": 1, "factors": {}, "updated": ""}
-    return json.loads(WEIGHTS.read_text())
+    # Fall back to the committed runtime snapshot when the working copy is
+    # missing (e.g. fresh CI checkout with config/weights.json untracked) so
+    # nightly runs never silently restart from neutral weights.
+    for path in (WEIGHTS, RUNTIME_WEIGHTS):
+        if path.exists():
+            try:
+                return json.loads(path.read_text())
+            except Exception:
+                continue
+    return {"version": 1, "factors": {}, "updated": ""}
 
 
 def _save(w: Dict) -> None:
     w["updated"] = datetime.now(timezone.utc).date().isoformat()
+    payload = json.dumps(w, indent=2) + "\n"
     WEIGHTS.parent.mkdir(parents=True, exist_ok=True)
-    WEIGHTS.write_text(json.dumps(w, indent=2) + "\n")
+    WEIGHTS.write_text(payload)
+    # Mirror to data/ — committed by nightly_brain.yml and consumed by
+    # src/learned_weights.py at scoring time (the loop-closing artifact).
+    RUNTIME_WEIGHTS.parent.mkdir(parents=True, exist_ok=True)
+    RUNTIME_WEIGHTS.write_text(payload)
 
 
 # ─────────── proposal dedup key ───────────
