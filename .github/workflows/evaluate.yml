@@ -51,6 +51,12 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: python scripts/evaluate_picks.py
 
+      - name: Self-heal missing SPY alpha on closed picks 🩹
+        if: steps.guard.outputs.skip != 'true'
+        # SPY fetch hiccups at eval time used to leave closed rows without
+        # alpha_pct forever (Bug #9 recurrence). Idempotent repair each run.
+        run: python scripts/backfill_alpha.py --apply || true
+
       - name: Build watch-only outcomes (late watch-only ideas learning) 📚
         if: steps.guard.outputs.skip != 'true'
         run: |

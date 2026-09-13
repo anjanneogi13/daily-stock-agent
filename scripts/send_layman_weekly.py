@@ -65,7 +65,7 @@ def build_message(outcomes):
     realized = s["buckets"][OUTCOME_WIN] + s["buckets"][OUTCOME_LOSS] + s["buckets"][OUTCOME_FLAT]
 
     lines = [header("📅", "This Week's Performance", period)]
-    lines.append(verdict_line(wins, losses, pnl))
+    lines.append(verdict_line(wins, losses, pnl, period="this week"))
     lines.append("")
     summary = (f"📊 *Week summary:* {s['closed']} trades closed · "
                f"{wins}W/{losses}L/{flats}F · *{money(pnl)}*")

@@ -184,3 +184,91 @@ def format_summary(result: Dict) -> str:
     elif not reasons:
         lines.append("  • All clear — no risk flags")
     return "\n".join(lines)
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Pillar 5 GROUP PAUSE (planned May 2026, shipped Sep 2026) — the
+# (dimension, value) group-level pause used by main.py's veto hook.
+# main.py has imported get_paused_set since May 2026 but the function was
+# never landed, so the hook failed with ImportError daily (silently
+# caught) — the agent never actually vetoed anything. This implements the
+# planned spec (docs/sessions/*may_03_2026*: "Ship Auto-Pause").
+#
+# Pause rules (conservative, per planned spec):
+#   RULE_ZERO_WIN:    n>=5 closed picks AND zero tp_hit wins
+#   RULE_LOSS_STREAK: last 3 consecutive closes were sl_hit
+#   RULE_NEG_R:       total R <= -5.0 AND n>=4
+#
+# Observe-mode by default: main.py only filters when AUTO_PAUSE_ENABLED
+# env var is "true". Watch-only rows never count; empty group keys are
+# never pausable (so untagged picks can't be blanket-vetoed).
+# ═══════════════════════════════════════════════════════════════════════
+MIN_N_FOR_ZERO_WIN = 5
+LOSS_STREAK_LEN = 3
+MIN_N_FOR_NEG_R = 4
+NEG_R_THRESHOLD = -5.0
+
+
+def _is_watch_only(row: Dict) -> bool:
+    return str(row.get("watch_only") or "").strip().lower() in (
+        "1", "true", "yes", "y", "watch", "watch_only")
+
+
+def _closed_in_window(lookback_days: int, today=None) -> List[Dict]:
+    today = today or datetime.now()
+    if hasattr(today, "date") is False:  # date -> datetime
+        today = datetime(today.year, today.month, today.day)
+    cutoff = today - timedelta(days=lookback_days)
+    out = []
+    for r in _load_closed():
+        if _is_watch_only(r):
+            continue
+        if r.get("actual_return_pct") in (None, ""):
+            continue
+        if r["_evaluated_dt"] >= cutoff:
+            out.append(r)
+    return out
+
+
+def _evaluate_group(items: List[Dict]):
+    """Apply pause rules to one group's closes (chronological order)."""
+    n = len(items)
+    if n == 0:
+        return False, None
+    wins = sum(1 for r in items if r.get("evaluation_status") == "tp_hit")
+    if n >= MIN_N_FOR_ZERO_WIN and wins == 0:
+        return True, f"zero_win 0/{n}"
+    if n >= LOSS_STREAK_LEN:
+        tail = items[-LOSS_STREAK_LEN:]
+        if all(r.get("evaluation_status") == "sl_hit" for r in tail):
+            return True, f"loss_streak {LOSS_STREAK_LEN}x sl_hit"
+    total_r = sum(_to_float(r.get("r_multiple"), 0.0) for r in items)
+    if n >= MIN_N_FOR_NEG_R and total_r <= NEG_R_THRESHOLD:
+        return True, f"neg_R total={total_r:+.1f}R (n={n})"
+    return False, None
+
+
+def get_paused_set(dimension: str, lookback_days: int = 30, today=None) -> Dict[str, str]:
+    """Return {group_value: reason} for paused groups in this dimension."""
+    rows = _closed_in_window(lookback_days, today)
+    if not rows:
+        return {}
+    groups: Dict[str, List[Dict]] = {}
+    for r in rows:
+        key = (r.get(dimension) or "").strip()
+        if key:
+            groups.setdefault(key, []).append(r)
+    paused = {}
+    for value, items in groups.items():
+        hit, reason = _evaluate_group(items)
+        if hit:
+            paused[value] = reason
+    return paused
+
+
+def is_group_paused(dimension: str, value: str, lookback_days: int = 30, today=None):
+    """Convenience: check a single (dimension, value) pair."""
+    if not value:
+        return False, None
+    reason = get_paused_set(dimension, lookback_days, today).get(value.strip())
+    return (reason is not None), reason

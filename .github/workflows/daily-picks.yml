@@ -303,6 +303,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Pillar 5 auto-pause ENFORCED (Sep 2026): the enforcement-readiness
+          # gate criteria (n>=50 post-floor closes + bad groups with WR<30%)
+          # are met, so group vetoes now filter picks instead of only logging.
+          # Groups un-pause automatically as the 30-day window improves.
+          AUTO_PAUSE_ENABLED: "true"
         run: |
           mkdir -p logs data
           python scripts/record_daily_picks_run_status.py --event agent_started --result started --reason "main.py starting"

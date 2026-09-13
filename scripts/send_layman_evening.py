@@ -14,7 +14,8 @@ from src.layman_translator import (
 from src.dedup_sender import should_send, mark_sent
 from src.performance_source_separation import LAYMAN_PERFORMANCE_SOURCE_NOTE, is_watch_only_row
 from src.trade_state import (
-    load_ledger, closed_on, summarize, pnl_dollar,
+    load_ledger, closed_on, summarize, pnl_dollar, is_open,
+    provenance_label, max_hold_days,
     OUTCOME_WIN, OUTCOME_LOSS, OUTCOME_FLAT, OUTCOME_NO_TRADE, OUTCOME_UNVERIFIED,
 )
 
@@ -48,6 +49,30 @@ def _today_research_outcomes():
     return [r for r in closed_on(rows, today) if is_watch_only_row(r)]
 
 
+def _open_positions():
+    """Official positions still open after today's evaluation — shown so the
+    evening report accounts for EVERY live position, not just today's closes.
+    Bounded by hold horizon (past-horizon rows belong to the force-close
+    path, not this list)."""
+    today = _report_date()
+    out = []
+    for r in load_ledger():
+        if is_watch_only_row(r) or not is_open(r):
+            continue
+        pick_date = (r.get("pick_date") or "").strip()
+        if not pick_date or pick_date > today:
+            continue
+        try:
+            age = (datetime.strptime(today, "%Y-%m-%d").date()
+                   - datetime.strptime(pick_date, "%Y-%m-%d").date()).days
+        except ValueError:
+            continue
+        if age > max_hold_days(r.get("trade_type", "")):
+            continue
+        out.append(r)
+    return out
+
+
 def _spy_change_today():
     p = Path(f"data/exec_report_{datetime.now().strftime('%Y-%m-%d')}.json")
     if not p.exists(): return None
@@ -56,14 +81,19 @@ def _spy_change_today():
     except Exception: return None
 
 
-def build_message(outcomes, research_outcomes=None):
+def build_message(outcomes, research_outcomes=None, open_positions=None):
     today = datetime.now().strftime("%A, %B %d %Y")
+    report_date = _report_date()
     research_outcomes = research_outcomes or []
+    open_positions = open_positions or []
     if not outcomes and not research_outcomes:
-        return (header("🌆", "Today's Performance", today) +
+        base = (header("🌆", "Today's Performance", today) +
                 "📭 *No closed trades to report yet.*\n"
-                "_(Either no picks today, or picks are still open and will close tomorrow.)_\n\n" +
-                LAYMAN_PERFORMANCE_SOURCE_NOTE)
+                "_(Either no picks today, or picks are still open and will close tomorrow.)_\n\n")
+        open_block = _open_positions_block(open_positions, report_date)
+        if open_block:
+            base += open_block + "\n"
+        return base + LAYMAN_PERFORMANCE_SOURCE_NOTE
 
     # §7: buckets come from the single source of truth (trade_state), which
     # classifies by realized return — a ≈$0 time-exit is FLAT, never a loss,
@@ -95,21 +125,56 @@ def build_message(outcomes, research_outcomes=None):
     if bm: lines.append(bm)
     lines.append("")
     if outcomes:
+        # Complaint fix (Sep 2026): split closes of TODAY's picks from closes
+        # of carryover picks so a stop-out of a 4-day-old position can never
+        # read as "today's pick failed".
+        todays_closes = [o for o in outcomes
+                         if (o.get("pick_date") or "").strip() == report_date]
+        carry_closes = [o for o in outcomes
+                        if (o.get("pick_date") or "").strip() != report_date]
         lines.append("━━━━━ *What happened with each pick* ━━━━━")
         lines.append("")
-        for o in outcomes:
-            lines.append(outcome_to_layman(o))
-        lines.append("")
+        if todays_closes:
+            lines.append("_Today's picks:_")
+            for o in todays_closes:
+                lines.append(outcome_to_layman(o, today=report_date))
+            lines.append("")
+        if carry_closes:
+            lines.append("_Carryover picks (from previous days) closed today:_")
+            for o in carry_closes:
+                lines.append(outcome_to_layman(o, today=report_date))
+            lines.append("")
     if research_outcomes:
         lines.append("━━━━━ *Watch-only research outcomes* ━━━━━")
         lines.append("_Reference levels only — no position was actionable. "
                      "Not counted in the headline results above._")
         for o in research_outcomes:
-            lines.append(outcome_to_layman(o))
+            lines.append(outcome_to_layman(o, today=report_date))
+        lines.append("")
+    open_block = _open_positions_block(open_positions, report_date)
+    if open_block:
+        lines.append(open_block)
         lines.append("")
     lines.append("_Tomorrow morning the agent will use today's results to refine its picks._")
     lines.append(LAYMAN_PERFORMANCE_SOURCE_NOTE)
     lines.append(footer_explainer())
+    return "\n".join(lines)
+
+
+def _open_positions_block(open_positions, report_date) -> str:
+    """'Still open going into tomorrow' section — day vs swing labeled, with
+    provenance, so the evening report and the next morning's intraday
+    updates tell one continuous story."""
+    if not open_positions:
+        return ""
+    lines = ["━━━━━ *Still open going into tomorrow* ━━━━━",
+             "_Not sold yet — no profit/loss booked. Tracked in intraday updates._"]
+    for r in sorted(open_positions, key=lambda x: (x.get("pick_date") or "", x.get("ticker") or "")):
+        t = r.get("ticker", "?")
+        ttype = (r.get("trade_type") or "swing").lower()
+        entry = _safe_f(r.get("entry"))
+        label = provenance_label(r, today=report_date)
+        lines.append(f"⏳ *{t}* ({ttype}) — entry ${entry:.2f} · {label}")
     return "\n".join(lines)
 
 
@@ -138,7 +203,8 @@ def _send(text):
 def main():
     outcomes = _today_outcomes()
     research = _today_research_outcomes()
-    msg = build_message(outcomes, research)
+    open_pos = _open_positions()
+    msg = build_message(outcomes, research, open_pos)
     print(msg); print("")
     if not should_send(msg):
         print("[dedup] already sent"); return 0

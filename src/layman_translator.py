@@ -140,14 +140,18 @@ def pick_to_layman(pick: Dict, idx: int = 1) -> str:
 # ═══════════════════════════════════════════════════════════════
 # Outcome → friend-explains line
 # ═══════════════════════════════════════════════════════════════
-def outcome_to_layman(outcome: Dict) -> str:
+def outcome_to_layman(outcome: Dict, today: Optional[str] = None) -> str:
     """Convert one closed pick row → plain English lines.
     Bug fix 2026-05-05: reads REAL csv column names:
       evaluation_status (not 'status'), actual_return_pct + entry + qty
       (CSV has no pnl_dollar field — must compute it).
     Clarity fix (issue: 'trade-by-trade data is very confusing'): every
     closed trade now shows bought → sold prices and the % move in plain
-    words instead of a bare status label."""
+    words instead of a bare status label.
+    Carryover labeling (Sep 2026): pass `today` (YYYY-MM-DD) and any row
+    picked on an earlier date gets an explicit "from pick <date>
+    (carryover)" suffix — closes from old picks can no longer masquerade
+    as today's picks."""
     t = outcome.get("ticker", "?")
     # Accept both layman-flavor ("status") and real CSV ("evaluation_status")
     status = (outcome.get("evaluation_status") or outcome.get("status") or "").upper()
@@ -185,38 +189,45 @@ def outcome_to_layman(outcome: Dict) -> str:
             return f" ({pct(ret_pct)})"
         return ""
 
+    pick_date = (outcome.get("pick_date") or "").strip()
+    carry = (f" · _from pick {pick_date} (carryover)_"
+             if today and pick_date and pick_date < today else "")
+
     if status in ("TP_HIT", "WIN"):
-        return f"✅ *{t}* — WIN: hit the profit target{_trade_math()} · {money(pnl)}"
+        return f"✅ *{t}* — WIN: hit the profit target{_trade_math()} · {money(pnl)}{carry}"
     if status in ("SL_HIT", "LOSS"):
-        return f"❌ *{t}* — LOSS: hit the safety stop{_trade_math()} · {money(pnl)}"
+        return f"❌ *{t}* — LOSS: hit the safety stop{_trade_math()} · {money(pnl)}{carry}"
     if status == "DAY_CLOSE":
         e = "✅" if pnl > 0 else ("⚠️" if pnl < 0 else "➖")
         word = "WIN" if pnl > 0 else ("LOSS" if pnl < 0 else "FLAT")
-        return f"{e} *{t}* — {word}: day trade sold at the closing bell{_trade_math()} · {money(pnl)}"
+        return f"{e} *{t}* — {word}: day trade sold at the closing bell{_trade_math()} · {money(pnl)}{carry}"
     if status in ("EXPIRED", "EOD_CLOSE"):
         e = "✅" if pnl > 0 else "⚠️"
         word = "WIN" if pnl > 0 else ("LOSS" if pnl < 0 else "FLAT")
-        return f"{e} *{t}* — {word}: holding time ran out, sold at market{_trade_math()} · {money(pnl)}"
+        return f"{e} *{t}* — {word}: holding time ran out, sold at market{_trade_math()} · {money(pnl)}{carry}"
     if status == "UNREACHABLE_ENTRY":
-        return f"🚫 *{t}* — no trade: the buy price was never reached (no money in, no money out)"
+        return f"🚫 *{t}* — no trade: the buy price was never reached (no money in, no money out){carry}"
     if status in ("OPEN", "PENDING"):
-        return f"⏳ *{t}* — still holding"
-    return f"❔ *{t}* — {status.lower() or 'unclear'} ({money(pnl)})"
+        return f"⏳ *{t}* — still holding{carry}"
+    return f"❔ *{t}* — {status.lower() or 'unclear'} ({money(pnl)}){carry}"
 
 
 # ═══════════════════════════════════════════════════════════════
 # Verdict — overall day/week/month performance
 # ═══════════════════════════════════════════════════════════════
-def verdict_line(wins: int, losses: int, total_pnl: float = 0) -> str:
+def verdict_line(wins: int, losses: int, total_pnl: float = 0,
+                 period: str = "today") -> str:
+    """One-line verdict. `period` fixes the wrong-window wording bug: the
+    weekly recap used to say "agent took a hit today" — pass "this week"."""
     n = wins + losses
     if n == 0: return "📭 No closed trades yet"
     wr = wins / n
-    if wr >= 0.70 and total_pnl > 0: return "🎯 GREAT — agent crushed it today"
+    if wr >= 0.70 and total_pnl > 0: return f"🎯 GREAT — agent crushed it {period}"
     if wr >= 0.55 and total_pnl > 0: return "✅ SOLID — more wins than losses"
     if wr >= 0.45 and total_pnl > 0: return "🟢 OK — slight edge"
     if total_pnl > 0:                return "🟢 NET POSITIVE — winners covered losers"
     if wr >= 0.45:                   return "🟡 MIXED — even win rate but small loss"
-    return "🔴 TOUGH — agent took a hit today"
+    return f"🔴 TOUGH — agent took a hit {period}"
 
 
 def beat_market_line(agent_pct: Optional[float], spy_pct: Optional[float]) -> str:

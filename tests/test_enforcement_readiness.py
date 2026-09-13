@@ -115,13 +115,23 @@ def test_format_report_includes_all_gates():
     assert "DASHBOARD" in text
 
 
-def test_no_gate_is_falsely_ready_today():
-    """Sanity: with current real data (n=0 post-floor), nothing should be ready."""
+def test_ready_gates_are_enabled_in_workflow():
+    """Drift guard: any gate the readiness checker marks READY on current
+    real data must actually be flipped on in the daily-picks workflow env.
+    (Sep 2026: AUTO_PAUSE_ENABLED became ready — n>=50 post-floor closes
+    with bad groups — and was enabled; this test used to assert nothing
+    was ever ready, which went stale the moment the agent had evidence.)"""
     results = run_all()
     ready = [r for r in results if r["ready"]]
-    assert not ready, (
-        f"Gate marked ready prematurely with current data: "
-        f"{[r['gate'] for r in ready]}"
+    wf = Path(__file__).parent.parent / ".github" / "workflows" / "daily-picks.yml"
+    wf_text = wf.read_text()
+    not_flipped = [
+        r["env_var"] for r in ready
+        if f'{r["env_var"]}: "true"' not in wf_text
+    ]
+    assert not not_flipped, (
+        f"Gates ready per current data but not enabled in daily-picks.yml: "
+        f"{not_flipped} — either enable them or document why not."
     )
 
 def test_enforcement_closed_statuses_align_with_monitoring_readiness():
