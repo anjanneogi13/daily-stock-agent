@@ -579,8 +579,14 @@ def _write_daily_picks_no_pick_report(reason: str, pipeline: dict | None = None,
         pass
 
 
-def _write_guard_no_pick_artifact_for_main(cause: str, reason: str = "") -> bool:
-    """Priority 17.1: write the formal official no-pick artifact for guard
+def _write_guard_no_pick_artifact_for_main(
+    cause: str,
+    reason: str = "",
+    *,
+    skip_if_official_picks_logged: bool = False,
+    skip_if_no_pick_artifact_exists: bool = False,
+) -> bool:
+    """Priority 17.1/17.2: write the formal official no-pick artifact for guard
     early-returns in main.py.
 
     Mirrors the daily-picks workflow YAML's pre-main guard step so the
@@ -594,14 +600,39 @@ def _write_guard_no_pick_artifact_for_main(cause: str, reason: str = "") -> bool
     Discovered 2026-05-09 during the Lane 1 P1-P19 audit: workflow YAML
     correctly wrote the artifact, but main.py's own T51 guard returned bare,
     leaving zero artifact when main.py was invoked outside the workflow.
+
+    P17.2 skip flags keep the "exactly one official outcome per day" invariant:
+
+    - skip_if_official_picks_logged: never write a no-pick artifact on a day
+      that already has official (non watch-only) picks logged.
+    - skip_if_no_pick_artifact_exists: never overwrite an earlier official
+      no-pick decision (first decision wins for audit-trail integrity).
     """
     try:
         from datetime import datetime as _dt
         from pathlib import Path as _P
         from zoneinfo import ZoneInfo as _ZI
-        from scripts.write_guard_no_pick_artifact import write_guard_no_pick_artifact
+        from scripts.write_guard_no_pick_artifact import (
+            official_picks_logged_for_date,
+            write_guard_no_pick_artifact,
+        )
 
         date_str = _dt.now(_ZI("America/New_York")).strftime("%Y-%m-%d")
+
+        if skip_if_official_picks_logged and official_picks_logged_for_date(date_str) > 0:
+            rprint(
+                f"[dim]guard no-pick artifact skipped: official picks already logged for {date_str}[/dim]"
+            )
+            return False
+
+        if skip_if_no_pick_artifact_exists and (
+            _P("data") / f"daily_picks_no_pick_report_{date_str}.json"
+        ).exists():
+            rprint(
+                f"[dim]guard no-pick artifact skipped: no-pick artifact already exists for {date_str}[/dim]"
+            )
+            return False
+
         write_guard_no_pick_artifact(
             date_str=date_str,
             cause=cause,
@@ -680,6 +711,16 @@ def run():
             }, indent=2))
         except Exception:
             pass
+        # 🔒 Priority 17.2 — record a formal official no-pick decision for the
+        # paused day. Best-effort: never raises; the bare return below is the
+        # hard stop. Skips if today already has official picks or an earlier
+        # official no-pick decision (first decision wins).
+        _write_guard_no_pick_artifact_for_main(
+            cause="NO_PICK_AGENT_PAUSED",
+            reason=f"Agent auto-paused ({_ps['reason']}); paused until {_ps['until']}.",
+            skip_if_official_picks_logged=True,
+            skip_if_no_pick_artifact_exists=True,
+        )
         return  # ← HARD STOP. No picks, no journaling, no Telegram picks.
 
     # ═══════════════════════════════════════════════════════════════
@@ -724,6 +765,24 @@ def run():
             for _row in _csv.DictReader(_f):
                 if _row.get("pick_date") == _today:
                     rprint(f"[yellow]⏭  SKIP: picks already logged for {_today} (multi-fire guard)[/yellow]")
+                    # 🔒 Priority 17.2 — keep the official-decision audit trail
+                    # complete for duplicate runs. Best-effort: never raises;
+                    # the bare return below is the hard stop. Skips when today
+                    # already has official picks (pick day — first run's
+                    # artifacts stand) or an earlier official no-pick decision
+                    # (first decision wins). Only writes in the corner case
+                    # where today's logged rows are all watch-only and no
+                    # official decision artifact exists yet.
+                    _write_guard_no_pick_artifact_for_main(
+                        cause="NO_PICK_DUPLICATE_ALREADY_LOGGED",
+                        reason=(
+                            f"Same-day run skipped: rows already logged for {_today} "
+                            "(multi-fire guard). Duplicate runs must not produce a "
+                            "second official decision."
+                        ),
+                        skip_if_official_picks_logged=True,
+                        skip_if_no_pick_artifact_exists=True,
+                    )
                     return
 
     rprint("[1/6] Checking market regime...")
