@@ -1,6 +1,38 @@
 {
-  "last_run_utc": "2026-09-13T12:45:44+00:00",
-  "note": "steps sanitized 2026-09-13 (previous content was test pollution; fixed in tests/test_nightly_conductor.py). Next nightly run rewrites this file.",
-  "run_id": "34757377878",
-  "steps": {}
+  "last_run_utc": "2026-09-13T23:11:43+00:00",
+  "run_id": "34788931016",
+  "steps": {
+    "agent_memoir": {
+      "status": "ok"
+    },
+    "auto_promote": {
+      "status": "ok"
+    },
+    "calibration_propose": {
+      "error": "AttributeError: 'str' object has no attribute 'get'",
+      "status": "failed",
+      "traceback": [
+        "    rmults = [r.get(\"r_multiple\") or 0.0 for r in rows]",
+        "              ^^^^^",
+        "AttributeError: 'str' object has no attribute 'get'"
+      ]
+    },
+    "lesson_gc": {
+      "status": "ok"
+    },
+    "pattern_auto_e_d": {
+      "status": "ok"
+    },
+    "pattern_scan": {
+      "status": "ok"
+    },
+    "pattern_stats": {
+      "status": "ok"
+    },
+    "weight_apply": {
+      "status": "ok"
+    }
+  },
+  "steps_failed": 1,
+  "steps_ok": 7
 }

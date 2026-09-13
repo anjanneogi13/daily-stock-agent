@@ -5,11 +5,10 @@
   "factors": {
     "rsi": {
       "rsi_oversold(<30)": 0.0,
-      "oversold": 0.0
+      "rsi_50-70": 1.05
     },
     "atrpct": {
-      "atrpct_<1.5": 1.05,
-      "high": 0.0
+      "atrpct_<1.5": 1.05
     },
     "score": {
       "score_>=0.85": 1.034
