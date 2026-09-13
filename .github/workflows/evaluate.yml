@@ -65,12 +65,24 @@ jobs:
           git add -f data/learning/ data/exec_report_*.json data/premarket_check.json \
                      data/picks_log.csv data/.last_run_evaluate.txt \
                      data/watch_only_outcomes_*.jsonl data/watch_only_outcome_report_*.md \
-                     data/signal_journal.jsonl data/learning_journal.jsonl 2>/dev/null || true
+                     data/signal_journal.jsonl data/learning_journal.jsonl \
+                     data/telegram_sent.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "📊 Daily pick evaluation [skip ci]"
+          # --autostash: unstaged tracked files (telegram dedup state, etc.)
+          # previously aborted the rebase every run and the push was silently
+          # lost — evaluation results never reached the repo.
+          PUSH_OK=0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && break
+            if git pull --rebase --autostash origin main && git push; then
+              PUSH_OK=1; break
+            fi
             echo "[push] retry $i after conflict"; sleep 3
-          done || true
+          done
+          # Don't hard-fail here — the final "Commit observations + exec
+          # report" step (always()) re-adds these files and fails visibly if
+          # the push is still impossible. Failing now would skip the evening
+          # Telegram reports.
+          [ "$PUSH_OK" -eq 1 ] || echo "⚠️ push failed — final commit step will retry and enforce"
 
       - name: Generate dashboard text
         if: steps.guard.outputs.skip != 'true'
@@ -160,9 +172,22 @@ jobs:
       - name: Commit observations + exec report
         if: always() && steps.guard.outputs.skip != 'true'
         run: |
-          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/learning_journal.jsonl data/signal_journal.jsonl 2>/dev/null || true
+          git add -f data/learning/ data/exec_report_*.json data/premarket_check.json data/picks_log.csv data/learning_journal.jsonl data/signal_journal.jsonl data/telegram_sent.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "📓 Daily observations + exec report [skip ci]"
+          # Root cause of the 4-month learning blackout (observations.jsonl +
+          # exec_report_*.json frozen at 2026-05-01): dedup senders left
+          # data/telegram_sent.json modified-unstaged, `git pull --rebase`
+          # refused ("You have unstaged changes"), and `|| true` swallowed the
+          # failed push every single day. --autostash fixes the rebase; the
+          # explicit exit 1 makes any future silent loss impossible.
+          PUSH_OK=0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && break
+            if git pull --rebase --autostash origin main && git push; then
+              PUSH_OK=1; break
+            fi
             echo "[push] retry $i after conflict"; sleep 3
-          done || true
+          done
+          if [ "$PUSH_OK" -eq 0 ]; then
+            echo "❌ CRITICAL: observations + exec report committed locally but NOT pushed — learning data would be lost"
+            exit 1
+          fi

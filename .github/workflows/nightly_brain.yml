@@ -79,6 +79,7 @@ jobs:
             data/pattern_stats.json \
             data/weight_proposals.jsonl \
             data/weight_history.jsonl \
+            data/weights_runtime.json \
             data/learning_journal.jsonl \
             data/agent_memoir.json \
             data/brain_state_meta.json
@@ -95,10 +96,22 @@ jobs:
             exit 1
           fi
           git commit -m "🧠 nightly brain maintenance $(date -u +%Y-%m-%d)"
+          # --autostash: the conductor also touches tracked files outside the
+          # staged list (e.g. data/wisdom/lessons.jsonl); those unstaged edits
+          # aborted every rebase, the push silently failed, and the brain's
+          # memory (weight_history, learning_journal, brain_state_meta) was
+          # wiped nightly — the agent re-learned from scratch every run.
+          PUSH_OK=0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push origin main && break
+            if git pull --rebase --autostash origin main && git push origin main; then
+              PUSH_OK=1; break
+            fi
             sleep 5
           done
+          if [ "$PUSH_OK" -eq 0 ]; then
+            echo "❌ CRITICAL: brain state committed locally but NOT pushed — nightly learning would be lost"
+            exit 1
+          fi
 
   meta-brain-sunday:
     runs-on: ubuntu-latest

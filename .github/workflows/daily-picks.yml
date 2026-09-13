@@ -215,7 +215,7 @@ jobs:
 
           git commit -m "status: daily picks attempt $(TZ='America/New_York' date +%Y-%m-%dT%H:%M%z) [skip ci]"
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            git pull --rebase --autostash origin main && git push && exit 0
             echo "[status-push] retry $i/3"
             sleep $((i * 2))
           done

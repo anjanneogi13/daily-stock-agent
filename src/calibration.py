@@ -131,9 +131,26 @@ class BucketStat:
         }
 
 
+def _num(v) -> Optional[float]:
+    """Coerce a value that may be a CSV string ('', '1.23', None) to float.
+
+    Live picks_log.csv rows arrive as raw DictReader strings (the nightly
+    conductor feeds them straight in), while backtest rows are pre-coerced
+    by load_picks(). Every numeric read below must go through here —
+    comparing raw strings crashed per_factor_report and silently disabled
+    the calibration→weight-proposal step for months.
+    """
+    if v is None or v == "" or v == "None":
+        return None
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def _is_win(row: Dict) -> bool:
     """A pick is a 'win' if its r_multiple > 0."""
-    r = row.get("r_multiple")
+    r = _num(row.get("r_multiple"))
     return r is not None and r > 0
 
 
@@ -158,8 +175,12 @@ def attribute_by(rows: List[Dict],
     for k, rs in buckets.items():
         if len(rs) < min_n:
             continue
-        rmults  = [r.get("r_multiple") or 0.0 for r in rs]
-        returns = [r.get("return_pct") or 0.0 for r in rs]
+        rmults  = [_num(r.get("r_multiple")) or 0.0 for r in rs]
+        # Live picks_log.csv calls the column actual_return_pct
+        returns = [_num(r.get("return_pct")) if r.get("return_pct") not in (None, "")
+                   else (_num(r.get("actual_return_pct")) or 0.0)
+                   for r in rs]
+        returns = [v if v is not None else 0.0 for v in returns]
         wins    = sum(1 for r in rs if _is_win(r))
         out.append(BucketStat(
             bucket=k,
@@ -177,10 +198,11 @@ def attribute_by(rows: List[Dict],
 
 FACTOR_KEYS: Dict[str, callable] = {
     "trade_type": lambda r: r.get("trade_type") or "unknown",
-    "rsi":        lambda r: _rsi_bucket(r.get("rsi")),
-    "score":      lambda r: _score_bucket(r.get("score")),
-    "atrpct":     lambda r: _atr_bucket(r.get("atr"), r.get("entry")),
-    "exit_status": lambda r: r.get("exit_status") or "unknown",
+    "rsi":        lambda r: _rsi_bucket(_num(r.get("rsi"))),
+    "score":      lambda r: _score_bucket(_num(r.get("score"))),
+    "atrpct":     lambda r: _atr_bucket(_num(r.get("atr")), _num(r.get("entry"))),
+    # Live picks_log.csv calls this column evaluation_status
+    "exit_status": lambda r: r.get("exit_status") or r.get("evaluation_status") or "unknown",
 }
 
 
