@@ -63,11 +63,31 @@ def get_live_quote(ticker: str) -> dict:
         avg_vol = float(daily["Volume"].tail(20).mean()) if len(daily) else 0
         today_vol = float(daily["Volume"].iloc[-1]) if len(daily) else 0
         vol_ratio = (today_vol / avg_vol) if avg_vol > 0 else 0
+        # Today's session extremes/open — used by the intraday monitor's
+        # limit-fill check (a buy-limit fills only if price traded at/below
+        # entry, i.e. day_low <= entry). day_date lets callers confirm the
+        # bar really is today's session. Individually defensive: absent
+        # columns (degraded feed) yield None, never a failed quote.
+        try:
+            day_low = float(daily["Low"].iloc[-1]) if len(daily) else None
+        except Exception:
+            day_low = None
+        try:
+            day_open = float(daily["Open"].iloc[-1]) if len(daily) else None
+        except Exception:
+            day_open = None
+        try:
+            day_date = daily.index[-1].date().isoformat() if len(daily) else None
+        except Exception:
+            day_date = None
         return {
             "price": last_close,
             "change_pct": change_pct,
             "vol_ratio": vol_ratio,
             "prev_close": prev_close,
+            "day_low": day_low,
+            "day_open": day_open,
+            "day_date": day_date,
             "data_freshness": "delayed_~15min",  # #3: last 5-min bar, NOT a live tick
         }
     except Exception as e:

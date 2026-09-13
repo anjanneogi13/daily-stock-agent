@@ -63,12 +63,20 @@ def _setup_module(csv_path, tmp_path):
     return intraday_monitor
 
 
-def _patches(price, vol_ratio=1.0, rsi=50):
+def _patches(price, vol_ratio=1.0, rsi=50, day_low=None):
     """Patch BOTH the monitor's reference AND the original module
-    attribute, so reload-followed-by-patch is robust."""
+    attribute, so reload-followed-by-patch is robust.
+
+    Fill-awareness (Sep 2026): today-picks are only positions once price
+    traded at/below entry. day_low defaults to `price` so scenarios where
+    the current print proves the fill (price <= entry) stay unchanged;
+    above-entry scenarios (TP hits) must pass an explicit day_low <= entry.
+    """
     return [
         patch("intraday_monitor.get_live_quote",
-              return_value={"price": price, "vol_ratio": vol_ratio, "rsi": rsi}),
+              return_value={"price": price, "vol_ratio": vol_ratio, "rsi": rsi,
+                            "day_low": day_low if day_low is not None else price,
+                            "day_date": "2026-05-05"}),
         patch("intraday_monitor.fetch_recent_news", return_value=[]),
     ]
 
@@ -95,7 +103,7 @@ def test_tp_hit_writes_row_to_csv(tmp_path, monkeypatch):
     csv_path = _make_picks_csv(tmp_path, [_base_pick("B", 100, 95, 110)])
     monkeypatch.chdir(tmp_path)
     mod = _setup_module(csv_path, tmp_path)
-    patches = _patches(price=110.50, rsi=60)
+    patches = _patches(price=110.50, rsi=60, day_low=99.5)  # dipped to fill, then ran to TP
     for p in patches: p.start()
     try:
         picks = mod.load_todays_picks()

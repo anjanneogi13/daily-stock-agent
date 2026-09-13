@@ -96,13 +96,29 @@ def test_day_pick_sl_hit_intraday_still_marks_sl_hit():
 
 
 def test_day_pick_tp_hit_intraday_still_marks_tp_hit():
-    """If day-trade hits TP during the day, tp_hit wins (NOT day_close)."""
+    """If day-trade fills at the open (Open <= entry) and hits TP during the
+    day, tp_hit wins (NOT day_close). TP touches are only credited when the
+    fill is provably earlier — see fill-ordering guard."""
     rows = [_row(ticker="DAY2", entry=100, sl=95, tp=110)]
-    # Pick-date bar: High 111 → TP hit
-    ohlc = {"DAY2": _bar("2026-05-02", o=101, h=111, l=99, c=109)}
+    # Opens at the limit → filled at open; High 111 → TP hit post-fill
+    ohlc = {"DAY2": _bar("2026-05-02", o=100, h=111, l=99, c=109)}
     saved, _ = _run_evaluator(rows, ohlc)
     assert saved[0]["evaluation_status"] == "tp_hit"
     assert float(saved[0]["exit_price"]) == 110.0
+
+
+def test_day_pick_open_above_entry_tp_touch_settles_day_close():
+    """Fill-ordering guard: day pick opens ABOVE the limit entry, so the TP
+    touch can't be ordered vs the mid-session fill — it must NOT book a
+    phantom tp_hit. The position provably existed at the close → day_close.
+    (ORCL 2026-09-11: booked +4.4% tp_hit while fill-aware execution x-ray
+    showed price never reached TP after the fill.)"""
+    rows = [_row(ticker="DAY3", entry=100, sl=95, tp=110)]
+    # Opens at 101 > entry 100; low 99 fills mid-session; high 111 unorderable
+    ohlc = {"DAY3": _bar("2026-05-02", o=101, h=111, l=99, c=109)}
+    saved, _ = _run_evaluator(rows, ohlc)
+    assert saved[0]["evaluation_status"] == "day_close"
+    assert float(saved[0]["exit_price"]) == 109.0
 
 
 def test_swing_pick_no_hit_is_NOT_day_closed():

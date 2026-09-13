@@ -61,10 +61,15 @@ def _setup(csv_path, tmp_path, today="2026-08-19"):
     return intraday_monitor
 
 
-def _quote(price):
+def _quote(price, day_low=None):
+    """Fill-awareness (Sep 2026): day_low defaults to `price` so at/below-
+    entry scenarios stay unchanged; above-entry position scenarios must pass
+    an explicit day_low <= entry proving the limit filled."""
     return [
         patch("intraday_monitor.get_live_quote",
-              return_value={"price": price, "vol_ratio": 1.0, "rsi": 55}),
+              return_value={"price": price, "vol_ratio": 1.0, "rsi": 55,
+                            "day_low": day_low if day_low is not None else price,
+                            "day_date": "2026-08-19"}),
         patch("intraday_monitor.fetch_recent_news", return_value=[]),
     ]
 
@@ -73,7 +78,7 @@ def test_mrna_tp_touch_books_win_once_and_monitoring_stops(tmp_path, monkeypatch
     csv_path = _make_csv(tmp_path, [_mrna()])
     monkeypatch.chdir(tmp_path)
     mod = _setup(csv_path, tmp_path)
-    patches = _quote(66.80)  # sane TP touch (+6.1% vs entry — passes gate)
+    patches = _quote(66.80, day_low=62.90)  # dipped to fill, then sane TP touch (+6.1% — passes gate)
     for p in patches: p.start()
     try:
         picks = mod.load_todays_picks()

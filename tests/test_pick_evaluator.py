@@ -177,17 +177,43 @@ def test_tp_hit_when_high_breaches_target(tmp_path, monkeypatch):
     assert counts["tp_hits"] == 1
 
 
-def test_tie_break_open_closer_to_tp_means_tp_hit(tmp_path, monkeypatch):
-    """When same bar hits both SL+TP, Open closer to TP → tp_hit."""
+def test_tie_break_open_above_entry_books_sl_not_phantom_tp(tmp_path, monkeypatch):
+    """Same bar hits both SL+TP but Open is ABOVE the limit entry: the fill
+    happened mid-session, so a TP touch is unorderable vs the fill and must
+    NEVER book a win (either the TP printed before we owned shares, or the
+    path fell open→entry→SL first). The provably-conservative outcome is
+    sl_hit. (Was the ORCL 2026-09-11 phantom-win bug.)"""
     from src import pick_evaluator
     pick_date = date.today() - timedelta(days=1)
     log = _seed_pick(tmp_path,
                      pick_date=pick_date.isoformat(),
                      entry="100.00", stop_loss="95.00", take_profit="110.00")
     monkeypatch.setattr(pick_evaluator, "LOG_PATH", log)
-    # Open=109 (close to TP=110, far from SL=95) → TP first
+    # Open=109 > entry=100 → mid-session fill; low 94 proves SL touch post-fill
     df = _ohlc([
         (pick_date.isoformat(), 109.0, 112.0, 94.0, 100.0),
+    ])
+    monkeypatch.setattr(pick_evaluator, "_fetch_ohlc", lambda t, s: df)
+    monkeypatch.setattr(pick_evaluator, "_add_spy_alpha", lambda *a, **k: "")
+    monkeypatch.setattr(pick_evaluator, "_add_sector_alpha", lambda *a, **k: "")
+
+    counts = pick_evaluator.evaluate_pending()
+    assert counts["tp_hits"] == 0
+    assert counts["sl_hits"] == 1
+
+
+def test_tie_break_open_at_entry_closer_to_tp_means_tp_hit(tmp_path, monkeypatch):
+    """When the bar OPENS at/below entry (filled at open) and hits both
+    SL+TP, the Open-proximity tie-break applies: Open closer to TP → tp_hit."""
+    from src import pick_evaluator
+    pick_date = date.today() - timedelta(days=1)
+    log = _seed_pick(tmp_path,
+                     pick_date=pick_date.isoformat(),
+                     entry="100.00", stop_loss="88.00", take_profit="102.00")
+    monkeypatch.setattr(pick_evaluator, "LOG_PATH", log)
+    # Open=100 = entry (filled at open); Open closer to TP=102 than SL=88 → TP first
+    df = _ohlc([
+        (pick_date.isoformat(), 100.0, 103.0, 87.0, 95.0),
     ])
     monkeypatch.setattr(pick_evaluator, "_fetch_ohlc", lambda t, s: df)
     monkeypatch.setattr(pick_evaluator, "_add_spy_alpha", lambda *a, **k: "")
