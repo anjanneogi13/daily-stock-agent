@@ -75,6 +75,7 @@ jobs:
           [ -f data/pattern_stats.json ]  || echo '{}' > data/pattern_stats.json
           [ -f data/agent_memoir.json ]   || echo '{}' > data/agent_memoir.json
           for path in \
+            config/weights.json \
             data/patterns.jsonl \
             data/pattern_stats.json \
             data/weight_proposals.jsonl \
