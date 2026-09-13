@@ -285,6 +285,17 @@ Deferred to follow-up ticket Priority 17.2:
 
 - agent-paused guard (`main.py` line ~604) and same-day-already-logged guard (`main.py` line ~661) require extending `SUPPORTED_GUARD_CAUSES` in `scripts/write_guard_no_pick_artifact.py` with `NO_PICK_AGENT_PAUSED` and `NO_PICK_DUPLICATE_ALREADY_LOGGED`. Not done in this slice to keep the change small and focused.
 
+### Priority 17.2 — agent-paused + duplicate guard wiring (2026-09-13, DONE)
+
+Implemented the deferred 17.2 slice:
+
+- `src/premarket_decision_contract.py` now allows `NO_PICK_AGENT_PAUSED` and `NO_PICK_DUPLICATE_ALREADY_LOGGED` as official no-pick primary causes.
+- `scripts/write_guard_no_pick_artifact.py` supports both new causes with status/reason mappings, and a `CAUSES_BLOCKED_WHEN_OFFICIAL_PICKS_EXIST` protection so these causes can never overwrite a pick-day outcome.
+- `main.py` agent-paused guard and duplicate/multi-fire guard now write official no-pick artifacts (best-effort, never raises) before their hard-stop returns, with two skip protections: skip when official picks already logged for the date, and skip when a no-pick artifact already exists (first decision wins — exactly one official outcome per day).
+- Regression tests: `tests/test_main_p17_2_guard_no_pick_artifacts.py`.
+
+Safety: additive change only; workflow YAML unchanged; no scoring, gate, or trading behavior changed; paper/live trading remain disabled.
+
 Safety:
 
 - additive change in main.py only,
