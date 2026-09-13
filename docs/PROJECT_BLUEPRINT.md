@@ -53,6 +53,9 @@ The repo is healthy for monitoring mode:
 - Product failure modes, mitigations, and market win strategy are documented in `docs/strategy/PRODUCT_FAILURE_AND_WIN_STRATEGY.md`.
 - Planning documentation now separates future backlog, data contracts, notification architecture, and candidate lifecycle rules under `docs/planning/`.
 - Import-time side effects in intraday Telegram sender and intraday monitor tests are isolated; full-suite tests no longer mutate tracked opening-range run-status artifacts.
+- All main.py hard-stop guards (market closed, agent paused, duplicate/multi-fire) now write official no-pick artifacts, so every scheduled day gets exactly one official decision outcome (Lane 1 Priority 17.2, 2026-09-13).
+- Theme signal validation harness (`scripts/validate_theme_signals.py`) can answer whether theme lifecycle signals have predictive value, with chronological train/test split and explicit overfitting warnings; observe-only (Reliability Plan Priority 17, 2026-09-13).
+- Lane 2 post-open watch-only opportunity lane v0 exists: read-only scanner + session-window runner + validators + safety tests; artifacts are watch-only, never counted in official stats, and never mutate Lane 1 state (Multi-lane roadmap Phase 3 v0, 2026-09-13). Outcome attribution and workflow scheduling deliberately deferred.
 
 The agent may recommend, monitor, explain, evaluate, report, and learn.
 

@@ -1,3 +1,30 @@
+## 2026-09-13 — Architecture gap closure: P17.2 guard wiring, theme signal validation harness, Lane 2 post-open watch-only v0
+
+**Type:** planned-architecture gap analysis + implementation
+
+**Summary:**
+
+Audited the repo against the active planning documents (Lane 1 hardening plan, System Reliability Repair Plan, Multi-Lane Implementation Roadmap) and built the three verified gaps:
+
+1. **Lane 1 Priority 17.2 (was half-built / deferred):** `main.py` agent-paused and duplicate/multi-fire guards previously did bare returns without official no-pick artifacts. Now both write official no-pick artifacts (`NO_PICK_AGENT_PAUSED`, `NO_PICK_DUPLICATE_ALREADY_LOGGED`) best-effort before their hard stops, with two protections: never write when official picks are already logged for the date, and never overwrite an existing no-pick artifact (first decision wins — exactly one official outcome per day).
+
+2. **Reliability Plan Priority 17 (was not built):** `scripts/validate_theme_signals.py` — observe-only theme signal validation harness. Joins theme discovery lifecycle buckets with forward closed non-watch-only pick returns and next-artifact theme-score changes, chronological 70/30 train/test split, six validation questions with per-bucket verdicts, explicit overfitting warning, honest `insufficient_artifact_history` verdict on today's real data (only one theme discovery artifact exists).
+
+3. **Multi-lane roadmap Phase 3 / Lane 2 v0 (was not built):** post-open watch-only opportunity lane — contract (`src/post_open_contract.py`), read-only scanner over news signals/watchlist (`src/post_open_scanner.py`), validate-before-write artifact writers + run-status ledger (`src/post_open_artifacts.py`), session-window-aware runner writing exactly one decision artifact per date (`scripts/run_post_open_watch_only.py`), artifact validator (`scripts/validate_post_open_artifacts.py`). Safety tests prove the lane never mutates `picks_log.csv`, `signal_journal.jsonl`, `learning_journal.jsonl`, or official pick artifacts, never uses buy wording, and always carries `watch_only: true` + trading-disabled flags. Outcome attribution and workflow YAML deliberately deferred per the roadmap's own sequencing.
+
+Changed files:
+
+- `main.py`, `src/premarket_decision_contract.py`, `scripts/write_guard_no_pick_artifact.py` (+ `tests/test_main_p17_2_guard_no_pick_artifacts.py`)
+- `scripts/validate_theme_signals.py` (+ `tests/test_theme_signal_validation.py`)
+- `src/post_open_contract.py`, `src/post_open_scanner.py`, `src/post_open_artifacts.py`, `scripts/run_post_open_watch_only.py`, `scripts/validate_post_open_artifacts.py` (+ 5 Lane 2 test files)
+- `docs/PROJECT_BLUEPRINT.md`, `docs/planning/LANE1_FINAL_PRODUCTION_HARDENING_PLAN.md`, `docs/planning/SYSTEM_RELIABILITY_REPAIR_PLAN.md`, `docs/planning/MULTI_LANE_IMPLEMENTATION_ROADMAP.md`, `docs/WORK_LOG.md`, `docs/NEXT_SESSION.md`
+
+Verification: full suite green (1872 passed, 33 skipped, 1 xfailed). CLI smoke tests run against temp data dirs only; no runtime artifacts committed.
+
+Still open after this session: Lane 1 P19 live certification (requires a real scheduled premarket run), Lane 2 outcome attribution + workflow scheduling (deferred by design), roadmap Phases 4+.
+
+---
+
 ## 2026-05-09 — Added extended product/business/operational lanes 23–31
 
 **Type:** product architecture / roadmap / co-founder review

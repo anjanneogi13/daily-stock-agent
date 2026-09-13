@@ -865,6 +865,18 @@ Validate whether theme signals have predictive value.
 - Overfitting warning is explicit.
 - No scoring is enabled.
 
+### Implementation status (2026-09-13, DONE)
+
+- `scripts/validate_theme_signals.py` implements the observe-only harness:
+  - joins `data/theme_discovery_*.json` lifecycle buckets with forward closed non-watch-only pick returns (5-day horizon) and next-artifact theme-score changes,
+  - chronological 70/30 train/test split by artifact date (no shuffling),
+  - answers the six validation questions with per-bucket verdicts (`supported` / `not_supported` / `insufficient_sample`),
+  - explicit overfitting warning embedded in every artifact,
+  - honest `insufficient_artifact_history` verdict when fewer than 3 artifact dates exist (currently true on real data),
+  - writes `data/theme_signal_validation_YYYY-MM-DD.json` + `.md`; `--no-write` supported,
+  - observe-only: no scoring, gating, or trading behavior is changed.
+- Tests: `tests/test_theme_signal_validation.py`.
+
 ---
 
 # Recommended Execution Order

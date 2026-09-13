@@ -295,6 +295,23 @@ Possible artifacts:
 - tests prove no official/paper/live mutation,
 - artifacts are not counted in official pick stats.
 
+### Phase 3 v0 implementation status (2026-09-13)
+
+Lane 2 v0 (steps 1–6, 8 of the implementation sequence) is BUILT:
+
+- `src/post_open_contract.py` — lane contract, output schemas, allowed no-opportunity causes, forbidden executable-action wording checks, validators.
+- `src/post_open_scanner.py` — read-only scanner over `data/news_signals.json` + `data/watchlist.json`; fresh bullish signals only, `tradeable_score >= 0.60`, hard-block skip, dedupe against today's official picks and late daily ideas, corporate-action score caps, levels only when the payload already carries a price (no network calls).
+- `src/post_open_artifacts.py` — validate-before-write artifact writers + run-status JSONL ledger.
+- `scripts/run_post_open_watch_only.py` — session-window aware runner (09:30–15:15 ET); writes exactly one decision artifact per date (watchlist XOR no-opportunity) + ledger events.
+- `scripts/validate_post_open_artifacts.py` — post-run artifact validation (exactly-one-decision, contract validation, markdown presence).
+- Tests: `tests/test_post_open_contract.py`, `tests/test_post_open_artifacts.py`, `tests/test_post_open_watch_only.py`, `tests/test_validate_post_open_artifacts.py`, `tests/test_post_open_safety.py` (proves no mutation of `picks_log.csv`, `signal_journal.jsonl`, `learning_journal.jsonl`, or official pick artifacts; no buy wording; safety flags false).
+
+Deliberately NOT built yet (per this roadmap's own sequencing):
+
+- step 7 outcome attribution (`scripts/post_open_outcome_attribution.py`, `data/post_open_outcomes_YYYY-MM-DD.jsonl`) — needs real watchlist artifacts first,
+- step 9 workflow YAML — only after script behavior is stable in manual runs,
+- Telegram delivery — v0 is artifact-only.
+
 ## Phase 4 — Lane 3: opening-range / intraday observations
 
 ### Goal

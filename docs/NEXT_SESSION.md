@@ -1,3 +1,20 @@
+## 2026-09-13 (Sat) — Architecture gap closure session: what changed and what to do next
+
+**This session built the three verified gaps between the repo and the planned architecture:**
+
+1. Lane 1 Priority 17.2 — agent-paused + duplicate guards in `main.py` now write official no-pick artifacts (was deferred).
+2. Reliability Plan Priority 17 — theme signal validation harness `scripts/validate_theme_signals.py` (was not built). It honestly reports `insufficient_artifact_history` until at least 3 `data/theme_discovery_*.json` artifacts exist.
+3. Multi-lane roadmap Phase 3 — Lane 2 post-open watch-only opportunity lane v0 (`src/post_open_*`, `scripts/run_post_open_watch_only.py`, `scripts/validate_post_open_artifacts.py`; was not built). Artifact-only, watch-only, no workflow YAML yet.
+
+**Next session priorities:**
+
+1. Lane 1 P19 live certification remains the top blocker — verify a real scheduled premarket run end-to-end (cannot be done from a sandbox).
+2. Run `scripts/run_post_open_watch_only.py` manually on 2–3 trading days after 09:30 ET; then run `scripts/validate_post_open_artifacts.py`. Only after stable manual runs, consider the Lane 2 workflow YAML (roadmap step 9) and outcome attribution (step 7).
+3. Accumulate theme discovery artifacts (nightly brain) so the theme signal validation harness can produce real verdicts; re-run `scripts/validate_theme_signals.py` once ≥3 artifact dates exist.
+4. The 2026-05-12 weekly-review-message investigation below is still open if not yet done.
+
+---
+
 ## 2026-05-12 (Tue) investigation queue — Weekly review Telegram message ambiguity
 
 **Trigger:** On 2026-05-09 (Sat) the founder received this Telegram message from the bot:
