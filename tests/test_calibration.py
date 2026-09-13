@@ -121,6 +121,36 @@ def test_is_win():
     assert cal._is_win({"r_multiple": 0}) is False
     assert cal._is_win({"r_multiple": None}) is False
 
+
+def test_is_win_coerces_csv_strings():
+    """Regression (Sep 2026): live picks_log.csv rows carry string values;
+    '>' between str and int crashed nightly calibration for months."""
+    assert cal._is_win({"r_multiple": "1.2"}) is True
+    assert cal._is_win({"r_multiple": "-0.4"}) is False
+    assert cal._is_win({"r_multiple": ""}) is False
+    assert cal._is_win({"r_multiple": "abc"}) is False
+
+
+def test_is_win_falls_back_to_picks_log_columns():
+    """Live picks_log.csv has actual_return_pct/evaluation_status, not
+    always r_multiple — calibration must read those too."""
+    assert cal._is_win({"actual_return_pct": "2.5"}) is True
+    assert cal._is_win({"actual_return_pct": "-1.0"}) is False
+    assert cal._is_win({"evaluation_status": "tp_hit"}) is True
+    assert cal._is_win({"evaluation_status": "sl_hit"}) is False
+
+
+def test_attribute_by_string_rows_no_crash():
+    rows = [
+        {"trade_type": "swing", "r_multiple": "1.0"},
+        {"trade_type": "swing", "r_multiple": "-1.0"},
+        {"trade_type": "swing", "r_multiple": ""},
+    ]
+    stats = cal.attribute_by(rows, lambda r: r["trade_type"], min_n=1)
+    assert stats[0].n == 3
+    assert 0.0 <= stats[0].win_rate <= 1.0
+
+
 def test_attribute_by_basic(fake_run):
     rows = cal.load_picks(fake_run)
     stats = cal.attribute_by(rows, lambda r: r["trade_type"], min_n=1)

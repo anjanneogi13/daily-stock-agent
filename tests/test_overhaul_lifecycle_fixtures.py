@@ -188,3 +188,54 @@ def test_pick_schema_gate_blocks_actionable_shaped_but_empty():
     wo = {"ticker": "NVDA", "watch_only": True, "watch_only_reason": ""}
     out = enforce_pick_schema([wo])[0]
     assert out["watch_only_reason"]
+
+
+def test_todays_unfilled_pick_gets_waiting_alert_not_pnl(tmp_path, monkeypatch):
+    """Fill gate (Sep 2026): a TODAY pick whose limit never filled (day_low
+    stayed above entry) must report 'waiting for entry' — no P&L, no TP/SL
+    close, no trailing. Regression for CVX 2026-09-09 (+2.3% reported on a
+    never-filled order)."""
+    row = _mrna()
+    row["watch_only"] = "false"
+    csv_path = _make_csv(tmp_path, [row])
+    monkeypatch.chdir(tmp_path)
+    mod = _setup(csv_path, tmp_path)
+    # price above entry all day: day_low 63.50 > entry 62.96 → no fill
+    patches = _quote(66.80, day_low=63.50)
+    for p in patches: p.start()
+    try:
+        picks = mod.load_todays_picks()
+        alerts = mod.monitor_existing_picks(picks, set())
+    finally:
+        for p in patches: p.stop()
+
+    saved = _read(csv_path, "MRNA")
+    assert saved["evaluation_status"] == "pending"   # NOT tp_hit
+    assert saved["exit_price"] == ""
+    waiting = [a for a in alerts if a.get("unfilled")]
+    assert waiting and waiting[0]["ticker"] == "MRNA"
+    assert any("Waiting for entry" in f[1] for f in waiting[0]["flags"])
+
+    msg = mod.build_message(alerts, [])
+    assert "Waiting for entry" in msg
+    # No P&L status line for an unfilled order (distance-to-limit info is ok)
+    assert "UP *MRNA*" not in msg and "DOWN *MRNA*" not in msg
+
+
+def test_carryover_pick_not_subject_to_fill_gate(tmp_path, monkeypatch):
+    """Carryovers proved their fill on a previous day — day_low above entry
+    today must NOT flip them to 'waiting'; normal monitoring applies."""
+    row = _mrna(pick_date="2026-08-18")
+    row["watch_only"] = "false"
+    csv_path = _make_csv(tmp_path, [row])
+    monkeypatch.chdir(tmp_path)
+    mod = _setup(csv_path, tmp_path, today="2026-08-19")
+    patches = _quote(64.10, day_low=63.50)  # mild up-move, no fill today
+    for p in patches: p.start()
+    try:
+        picks = mod.load_todays_picks()
+        alerts = mod.monitor_existing_picks(picks, set())
+    finally:
+        for p in patches: p.stop()
+
+    assert not any(a.get("unfilled") for a in alerts)

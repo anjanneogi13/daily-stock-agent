@@ -137,3 +137,25 @@ def test_trailed_market():
 
 def test_beat_market_handles_none():
     assert lt.beat_market_line(None, 1.0) == ""
+
+
+# ─── carryover labeling + period wording (Sep 2026 clarity fixes) ──
+def test_outcome_carryover_suffix_when_pick_date_older():
+    o = {"ticker": "CAH", "status": "SL_HIT", "entry": 245.49, "exit": 235.54,
+         "return_pct": -4.1, "pnl": -99.50, "pick_date": "2026-09-03"}
+    line = lt.outcome_to_layman(o, today="2026-09-11")
+    assert "from pick 2026-09-03 (carryover)" in line
+
+def test_outcome_no_suffix_for_todays_pick():
+    o = {"ticker": "ORCL", "status": "TP_HIT", "entry": 152.94, "exit": 159.73,
+         "return_pct": 4.4, "pnl": 162.97, "pick_date": "2026-09-11"}
+    line = lt.outcome_to_layman(o, today="2026-09-11")
+    assert "carryover" not in line
+
+def test_outcome_no_suffix_without_today_context():
+    o = {"ticker": "X", "status": "TP_HIT", "pick_date": "2026-09-03"}
+    assert "carryover" not in lt.outcome_to_layman(o)
+
+def test_verdict_line_week_period():
+    line = lt.verdict_line(3, 10, -752.29, period="this week")
+    assert "this week" in line and "today" not in line

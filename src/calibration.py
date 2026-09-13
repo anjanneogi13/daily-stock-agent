@@ -149,9 +149,18 @@ def _num(v) -> Optional[float]:
 
 
 def _is_win(row: Dict) -> bool:
-    """A pick is a 'win' if its r_multiple > 0."""
+    """A pick is a 'win' if its r_multiple > 0.
+
+    Falls back to live picks_log.csv columns (actual_return_pct,
+    evaluation_status) so calibration works on rows where the backtester's
+    r_multiple is absent."""
     r = _num(row.get("r_multiple"))
-    return r is not None and r > 0
+    if r is not None:
+        return r > 0
+    ret = _num(row.get("actual_return_pct"))
+    if ret is not None:
+        return ret > 0
+    return (row.get("exit_status") or row.get("evaluation_status")) == "tp_hit"
 
 
 def attribute_by(rows: List[Dict],
