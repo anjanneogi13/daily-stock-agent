@@ -1,38 +1,28 @@
 {
-  "date": "2026-09-11",
+  "date": "2026-09-14",
   "market": {
-    "spy_change_pct": -0.6,
-    "qqq_change_pct": -1.06,
-    "soxx_change_pct": -2.74,
-    "vix": 16.98,
-    "warnings": [
-      "\u26a0\ufe0f Semiconductor sector (SOXX) down -2.7% \u2014 semis at risk"
-    ],
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.87,
+    "soxx_change_pct": 1.86,
+    "vix": 17.59,
+    "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
+      "ticker": "ELV",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 418.72,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
       "ticker": "ORCL",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 152.94,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "TSM",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 428.03,
+      "current_price": 150.28,
       "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "DE",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 677.94,
-      "gap_pct": 0.0,
       "actionable": true
     }
   ]
