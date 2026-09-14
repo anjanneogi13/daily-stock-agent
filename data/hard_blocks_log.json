@@ -1367,5 +1367,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-14 12:35:16",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 9,
+    "blocked": [
+      {
+        "ticker": "AES",
+        "reason": "SL too tight (0.6% < 2.5% for $15 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
