@@ -1380,5 +1380,25 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-15 12:33:52",
+    "weak_sectors": {
+      "SEMI": -5.63
+    },
+    "blocked_count": 2,
+    "passed_count": 8,
+    "blocked": [
+      {
+        "ticker": "DVN",
+        "reason": "SL too tight (1.5% < 2.0% for $50 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "AES",
+        "reason": "SL too tight (0.6% < 2.5% for $15 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
