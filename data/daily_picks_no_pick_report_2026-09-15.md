@@ -25,7 +25,7 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**1185**, successes=**1185**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2370**, successes=**2370**, errors=**0**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
 - DVN: **sl_too_tight** — SL too tight (1.5% < 2.0% for $50 stock)

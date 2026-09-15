@@ -2,28 +2,28 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 519,
+      "attempts": 1038,
       "empty": 0,
       "errors": 0,
-      "successes": 519
+      "successes": 1038
     },
     "monster_info": {
-      "attempts": 142,
+      "attempts": 284,
       "empty": 0,
       "errors": 0,
-      "successes": 142
+      "successes": 284
     },
     "ohlcv": {
-      "attempts": 524,
+      "attempts": 1048,
       "empty": 0,
       "errors": 0,
-      "successes": 524
+      "successes": 1048
     }
   },
   "date": "2026-09-15",
   "providers": {
     "yfinance": {
-      "attempts": 1185,
+      "attempts": 2370,
       "empty": 0,
       "errors": 0,
       "failure_types": {
@@ -42,7 +42,7 @@
       "not_found": 0,
       "provider_error": 0,
       "rate_limited": 0,
-      "successes": 1185,
+      "successes": 2370,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -54,5 +54,5 @@
     "universe_count": 519
   },
   "samples": [],
-  "timestamp_utc": "2026-09-15T12:33:52Z"
+  "timestamp_utc": "2026-09-15T12:57:44Z"
 }
