@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-35221479439",
+  "artifact_bundle_name": "official-decision-artifacts-35223577069",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -349,8 +349,8 @@
       "universe_count": 519
     }
   },
-  "commit_sha": "012fd3038d240c9a1927f4de83acb17f60f4f70d",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/012fd3038d240c9a1927f4de83acb17f60f4f70d",
+  "commit_sha": "a14194ec7992bd0c3c36d926724efdb21c85b371",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/a14194ec7992bd0c3c36d926724efdb21c85b371",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "readiness_uncertain",
@@ -710,28 +710,28 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 519,
+        "attempts": 1038,
         "empty": 0,
         "errors": 0,
-        "successes": 519
+        "successes": 1038
       },
       "monster_info": {
-        "attempts": 99,
+        "attempts": 198,
         "empty": 0,
         "errors": 0,
-        "successes": 99
+        "successes": 198
       },
       "ohlcv": {
-        "attempts": 524,
+        "attempts": 1048,
         "empty": 0,
         "errors": 0,
-        "successes": 524
+        "successes": 1048
       }
     },
     "date": "2026-09-17",
     "providers": {
       "yfinance": {
-        "attempts": 1142,
+        "attempts": 2284,
         "empty": 0,
         "errors": 0,
         "failure_types": {
@@ -750,7 +750,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 1142,
+        "successes": 2284,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -762,7 +762,7 @@
       "universe_count": 519
     },
     "samples": [],
-    "timestamp_utc": "2026-09-17T12:33:29Z"
+    "timestamp_utc": "2026-09-17T12:58:15Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -789,11 +789,11 @@
   "reason": "No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-09-17T08:33:29-04:00",
+  "selection_time_et": "2026-09-17T08:58:15-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-09-17T12:33:29Z",
+  "timestamp_utc": "2026-09-17T12:58:15Z",
   "watch_only_available": false,
-  "workflow_run_id": "35221479439",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/35221479439"
+  "workflow_run_id": "35223577069",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/35223577069"
 }
