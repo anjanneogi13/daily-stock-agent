@@ -25,7 +25,7 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**2284**, successes=**2284**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**3426**, successes=**3426**, errors=**0**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
 - AES: **sl_too_tight** — SL too tight (0.6% < 2.5% for $15 stock)
