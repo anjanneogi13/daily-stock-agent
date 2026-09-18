@@ -9,7 +9,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 50,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -39,7 +39,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 47,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -69,7 +69,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 33,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -99,7 +99,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 40,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -146,7 +146,7 @@
       {
         "company": "",
         "day_score": 0.66,
-        "days_to_earnings": null,
+        "days_to_earnings": 50,
         "entry": 509.2,
         "news_action_window": null,
         "news_boost": null,
@@ -157,7 +157,7 @@
         "quantity": 28,
         "risk_flags": [],
         "risk_reward": 1.67,
-        "score": 0.74,
+        "score": 0.717,
         "sector": "Unknown",
         "sector_tag": null,
         "stop_loss": 505.69,
@@ -170,7 +170,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": null,
+        "days_to_earnings": 34,
         "entry": 302.05,
         "news_action_window": null,
         "news_boost": null,
@@ -194,7 +194,7 @@
       {
         "company": "",
         "day_score": 0.42,
-        "days_to_earnings": null,
+        "days_to_earnings": 47,
         "entry": 14.85,
         "news_action_window": null,
         "news_boost": null,
@@ -218,7 +218,7 @@
       {
         "company": "",
         "day_score": 0.491,
-        "days_to_earnings": null,
+        "days_to_earnings": 33,
         "entry": 190.48,
         "news_action_window": null,
         "news_boost": null,
@@ -242,7 +242,7 @@
       {
         "company": "",
         "day_score": 0.775,
-        "days_to_earnings": null,
+        "days_to_earnings": 33,
         "entry": 658.32,
         "news_action_window": null,
         "news_boost": null,
@@ -266,7 +266,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": null,
+        "days_to_earnings": 33,
         "entry": 414.26,
         "news_action_window": null,
         "news_boost": null,
@@ -290,7 +290,7 @@
       {
         "company": "",
         "day_score": 0.656,
-        "days_to_earnings": null,
+        "days_to_earnings": 40,
         "entry": 380.12,
         "news_action_window": null,
         "news_boost": null,
@@ -314,7 +314,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": null,
+        "days_to_earnings": 28,
         "entry": 379.49,
         "news_action_window": null,
         "news_boost": null,
@@ -338,7 +338,7 @@
       {
         "company": "",
         "day_score": 0.62,
-        "days_to_earnings": null,
+        "days_to_earnings": 38,
         "entry": 115.94,
         "news_action_window": null,
         "news_boost": null,
@@ -362,7 +362,7 @@
       {
         "company": "",
         "day_score": 0.596,
-        "days_to_earnings": null,
+        "days_to_earnings": 32,
         "entry": 247.45,
         "news_action_window": null,
         "news_boost": null,
@@ -392,7 +392,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 50,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -422,7 +422,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 47,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -452,7 +452,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 33,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -482,7 +482,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 40,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -552,5 +552,5 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "timestamp_utc": "2026-09-18T12:56:31Z"
+  "timestamp_utc": "2026-09-18T13:23:48Z"
 }

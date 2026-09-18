@@ -9,7 +9,7 @@ Monitoring-only diagnostic artifact. Not official picks. Not buy instructions.
 - Live trading enabled: **false**
 
 ## Pre-Hard-Block Finalists
-- BRK-B: score=0.74, sector=Unknown, trade_type=day, entry=509.2, stop_loss=505.69, take_profit=515.05, risk_reward=1.67, watch_only=False
+- BRK-B: score=0.717, sector=Unknown, trade_type=day, entry=509.2, stop_loss=505.69, take_profit=515.05, risk_reward=1.67, watch_only=False
 - VRSN: score=0.709, sector=Unknown, trade_type=swing, entry=302.05, stop_loss=286.58, take_profit=321.39, risk_reward=1.25, watch_only=False
 - AES: score=0.7, sector=Unknown, trade_type=swing, entry=14.85, stop_loss=14.75, take_profit=14.97, risk_reward=1.2, watch_only=False
 - PM: score=0.698, sector=Unknown, trade_type=swing, entry=190.48, stop_loss=181.35, take_profit=201.89, risk_reward=1.25, watch_only=False

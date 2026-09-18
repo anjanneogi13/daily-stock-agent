@@ -2,28 +2,28 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1038,
+      "attempts": 1557,
       "empty": 0,
       "errors": 2,
-      "successes": 1036
+      "successes": 1555
     },
     "monster_info": {
-      "attempts": 228,
+      "attempts": 342,
       "empty": 0,
       "errors": 0,
-      "successes": 228
+      "successes": 342
     },
     "ohlcv": {
-      "attempts": 1048,
+      "attempts": 1572,
       "empty": 0,
       "errors": 0,
-      "successes": 1048
+      "successes": 1572
     }
   },
   "date": "2026-09-18",
   "providers": {
     "yfinance": {
-      "attempts": 2314,
+      "attempts": 3471,
       "empty": 0,
       "errors": 2,
       "failure_types": {
@@ -42,7 +42,7 @@
       "not_found": 0,
       "provider_error": 0,
       "rate_limited": 2,
-      "successes": 2312,
+      "successes": 3469,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -73,5 +73,5 @@
       "ticker": "SMH"
     }
   ],
-  "timestamp_utc": "2026-09-18T12:56:31Z"
+  "timestamp_utc": "2026-09-18T13:23:48Z"
 }
