@@ -1530,5 +1530,33 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-18 12:56:31",
+    "weak_sectors": {},
+    "blocked_count": 4,
+    "passed_count": 6,
+    "blocked": [
+      {
+        "ticker": "BRK-B",
+        "reason": "SL too tight (0.7% < 1.5% for $509 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "AES",
+        "reason": "SL too tight (0.7% < 2.5% for $15 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "TMO",
+        "reason": "SL too tight (1.4% < 1.5% for $658 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "EG",
+        "reason": "SL too tight (1.1% < 1.5% for $380 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

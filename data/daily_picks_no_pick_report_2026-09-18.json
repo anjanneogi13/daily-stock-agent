@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-35344876772",
+  "artifact_bundle_name": "official-decision-artifacts-35346804086",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -9,7 +9,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 50,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -39,7 +39,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 47,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -69,7 +69,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 33,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -99,7 +99,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 40,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -146,7 +146,7 @@
       {
         "company": "",
         "day_score": 0.66,
-        "days_to_earnings": 50,
+        "days_to_earnings": null,
         "entry": 509.2,
         "news_action_window": null,
         "news_boost": null,
@@ -170,7 +170,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 34,
+        "days_to_earnings": null,
         "entry": 302.05,
         "news_action_window": null,
         "news_boost": null,
@@ -194,7 +194,7 @@
       {
         "company": "",
         "day_score": 0.42,
-        "days_to_earnings": 47,
+        "days_to_earnings": null,
         "entry": 14.85,
         "news_action_window": null,
         "news_boost": null,
@@ -218,7 +218,7 @@
       {
         "company": "",
         "day_score": 0.491,
-        "days_to_earnings": 33,
+        "days_to_earnings": null,
         "entry": 190.48,
         "news_action_window": null,
         "news_boost": null,
@@ -242,7 +242,7 @@
       {
         "company": "",
         "day_score": 0.775,
-        "days_to_earnings": 33,
+        "days_to_earnings": null,
         "entry": 658.32,
         "news_action_window": null,
         "news_boost": null,
@@ -266,7 +266,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 33,
+        "days_to_earnings": null,
         "entry": 414.26,
         "news_action_window": null,
         "news_boost": null,
@@ -290,7 +290,7 @@
       {
         "company": "",
         "day_score": 0.656,
-        "days_to_earnings": 40,
+        "days_to_earnings": null,
         "entry": 380.12,
         "news_action_window": null,
         "news_boost": null,
@@ -314,7 +314,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": 28,
+        "days_to_earnings": null,
         "entry": 379.49,
         "news_action_window": null,
         "news_boost": null,
@@ -338,7 +338,7 @@
       {
         "company": "",
         "day_score": 0.62,
-        "days_to_earnings": 38,
+        "days_to_earnings": null,
         "entry": 115.94,
         "news_action_window": null,
         "news_boost": null,
@@ -362,7 +362,7 @@
       {
         "company": "",
         "day_score": 0.596,
-        "days_to_earnings": 32,
+        "days_to_earnings": null,
         "entry": 247.45,
         "news_action_window": null,
         "news_boost": null,
@@ -392,7 +392,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 50,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -422,7 +422,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 47,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -452,7 +452,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 33,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -482,7 +482,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 40,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -529,8 +529,8 @@
       "universe_count": 519
     }
   },
-  "commit_sha": "a7455ea275c725f61e0445c842a8d90b191297d3",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/a7455ea275c725f61e0445c842a8d90b191297d3",
+  "commit_sha": "cb815a0c1f0ce7cf21a207dd558c0ed4829f1bc9",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/cb815a0c1f0ce7cf21a207dd558c0ed4829f1bc9",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "readiness_uncertain",
@@ -544,7 +544,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 50,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -574,7 +574,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 47,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -604,7 +604,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 33,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -634,7 +634,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 40,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -681,7 +681,7 @@
       {
         "company": "",
         "day_score": 0.66,
-        "days_to_earnings": 50,
+        "days_to_earnings": null,
         "entry": 509.2,
         "news_action_window": null,
         "news_boost": null,
@@ -705,7 +705,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 34,
+        "days_to_earnings": null,
         "entry": 302.05,
         "news_action_window": null,
         "news_boost": null,
@@ -729,7 +729,7 @@
       {
         "company": "",
         "day_score": 0.42,
-        "days_to_earnings": 47,
+        "days_to_earnings": null,
         "entry": 14.85,
         "news_action_window": null,
         "news_boost": null,
@@ -753,7 +753,7 @@
       {
         "company": "",
         "day_score": 0.491,
-        "days_to_earnings": 33,
+        "days_to_earnings": null,
         "entry": 190.48,
         "news_action_window": null,
         "news_boost": null,
@@ -777,7 +777,7 @@
       {
         "company": "",
         "day_score": 0.775,
-        "days_to_earnings": 33,
+        "days_to_earnings": null,
         "entry": 658.32,
         "news_action_window": null,
         "news_boost": null,
@@ -801,7 +801,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 33,
+        "days_to_earnings": null,
         "entry": 414.26,
         "news_action_window": null,
         "news_boost": null,
@@ -825,7 +825,7 @@
       {
         "company": "",
         "day_score": 0.656,
-        "days_to_earnings": 40,
+        "days_to_earnings": null,
         "entry": 380.12,
         "news_action_window": null,
         "news_boost": null,
@@ -849,7 +849,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": 28,
+        "days_to_earnings": null,
         "entry": 379.49,
         "news_action_window": null,
         "news_boost": null,
@@ -873,7 +873,7 @@
       {
         "company": "",
         "day_score": 0.62,
-        "days_to_earnings": 38,
+        "days_to_earnings": null,
         "entry": 115.94,
         "news_action_window": null,
         "news_boost": null,
@@ -897,7 +897,7 @@
       {
         "company": "",
         "day_score": 0.596,
-        "days_to_earnings": 32,
+        "days_to_earnings": null,
         "entry": 247.45,
         "news_action_window": null,
         "news_boost": null,
@@ -927,7 +927,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 50,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -957,7 +957,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 47,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -987,7 +987,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 33,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -1017,7 +1017,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": 40,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -1070,30 +1070,30 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 519,
+        "attempts": 1038,
         "empty": 0,
-        "errors": 0,
-        "successes": 519
+        "errors": 2,
+        "successes": 1036
       },
       "monster_info": {
-        "attempts": 114,
+        "attempts": 228,
         "empty": 0,
         "errors": 0,
-        "successes": 114
+        "successes": 228
       },
       "ohlcv": {
-        "attempts": 524,
+        "attempts": 1048,
         "empty": 0,
         "errors": 0,
-        "successes": 524
+        "successes": 1048
       }
     },
     "date": "2026-09-18",
     "providers": {
       "yfinance": {
-        "attempts": 1157,
+        "attempts": 2314,
         "empty": 0,
-        "errors": 0,
+        "errors": 2,
         "failure_types": {
           "empty_response": 0,
           "market_closed": 0,
@@ -1101,7 +1101,7 @@
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 0,
+          "rate_limited": 2,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -1109,8 +1109,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 0,
-        "successes": 1157,
+        "rate_limited": 2,
+        "successes": 2312,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1121,8 +1121,27 @@
       "scored_count": 114,
       "universe_count": 519
     },
-    "samples": [],
-    "timestamp_utc": "2026-09-18T12:33:25Z"
+    "samples": [
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SOXL"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SMH"
+      }
+    ],
+    "timestamp_utc": "2026-09-18T12:56:31Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1148,12 +1167,14 @@
   "ready_for_paper_trading": false,
   "reason": "No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.",
   "scoring_version": "legacy_composite_v1",
-  "secondary_causes": [],
-  "selection_time_et": "2026-09-18T08:33:25-04:00",
+  "secondary_causes": [
+    "YFINANCE_PROVIDER_DEGRADED"
+  ],
+  "selection_time_et": "2026-09-18T08:56:31-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-09-18T12:33:25Z",
+  "timestamp_utc": "2026-09-18T12:56:31Z",
   "watch_only_available": false,
-  "workflow_run_id": "35344876772",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/35344876772"
+  "workflow_run_id": "35346804086",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/35346804086"
 }

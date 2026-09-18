@@ -2,30 +2,30 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 519,
+      "attempts": 1038,
       "empty": 0,
-      "errors": 0,
-      "successes": 519
+      "errors": 2,
+      "successes": 1036
     },
     "monster_info": {
-      "attempts": 114,
+      "attempts": 228,
       "empty": 0,
       "errors": 0,
-      "successes": 114
+      "successes": 228
     },
     "ohlcv": {
-      "attempts": 524,
+      "attempts": 1048,
       "empty": 0,
       "errors": 0,
-      "successes": 524
+      "successes": 1048
     }
   },
   "date": "2026-09-18",
   "providers": {
     "yfinance": {
-      "attempts": 1157,
+      "attempts": 2314,
       "empty": 0,
-      "errors": 0,
+      "errors": 2,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
@@ -33,7 +33,7 @@
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 0,
+        "rate_limited": 2,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -41,8 +41,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 0,
-      "successes": 1157,
+      "rate_limited": 2,
+      "successes": 2312,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -53,6 +53,25 @@
     "scored_count": 114,
     "universe_count": 519
   },
-  "samples": [],
-  "timestamp_utc": "2026-09-18T12:33:25Z"
+  "samples": [
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SMH"
+    }
+  ],
+  "timestamp_utc": "2026-09-18T12:56:31Z"
 }
