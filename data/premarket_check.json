@@ -1,19 +1,27 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-21",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": -0.65,
-    "soxx_change_pct": 0.29,
-    "vix": 16.78,
+    "spy_change_pct": -0.12,
+    "qqq_change_pct": 0.63,
+    "soxx_change_pct": 2.69,
+    "vix": 14.84,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "ELV",
+      "ticker": "A",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 417.54,
+      "current_price": 156.47,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "WAT",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 421.63,
       "gap_pct": 0.0,
       "actionable": true
     }
