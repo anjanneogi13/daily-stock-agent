@@ -1,28 +1,28 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "market": {
-    "spy_change_pct": -0.12,
-    "qqq_change_pct": 0.63,
-    "soxx_change_pct": 2.69,
-    "vix": 14.84,
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 2.77,
+    "soxx_change_pct": 4.93,
+    "vix": 14.67,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "A",
+      "ticker": "WAT",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 156.47,
+      "current_price": 423.92,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "WAT",
+      "ticker": "DHR",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 421.63,
-      "gap_pct": 0.0,
+      "current_price": 215.84,
+      "gap_pct": -0.0,
       "actionable": true
     }
   ]
