@@ -358,5 +358,14 @@
     "added_at": "2026-09-18T18:37:22.107157+00:00",
     "expires": "2027-03-17T18:37:22.107164+00:00",
     "hard_block": true
+  },
+  "IRDM": {
+    "ticker": "IRDM",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "SpaceX Is Winding Down Falcon 9 as a Launch Crunch Looms: Can Rocket Lab's Neutron Fill the Gap?",
+    "added_at": "2026-09-22T20:06:03.165237+00:00",
+    "expires": "2027-03-21T20:06:03.165244+00:00",
+    "hard_block": true
   }
 }
