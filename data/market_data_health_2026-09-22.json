@@ -1,0 +1,86 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 519,
+      "empty": 0,
+      "errors": 1,
+      "successes": 518
+    },
+    "monster_info": {
+      "attempts": 156,
+      "empty": 0,
+      "errors": 2,
+      "successes": 154
+    },
+    "ohlcv": {
+      "attempts": 523,
+      "empty": 0,
+      "errors": 0,
+      "successes": 523
+    }
+  },
+  "date": "2026-09-22",
+  "providers": {
+    "yfinance": {
+      "attempts": 1198,
+      "empty": 0,
+      "errors": 3,
+      "failure_types": {
+        "empty_response": 0,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 1,
+        "rate_limited": 2,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 1,
+      "rate_limited": 2,
+      "successes": 1195,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 519,
+    "final_pick_count": 2,
+    "scored_count": 156,
+    "universe_count": 519
+  },
+  "samples": [
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SMH"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SOXL"
+    }
+  ],
+  "timestamp_utc": "2026-09-22T12:34:01Z"
+}
