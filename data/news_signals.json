@@ -367,5 +367,14 @@
     "added_at": "2026-09-22T20:06:03.165237+00:00",
     "expires": "2027-03-21T20:06:03.165244+00:00",
     "hard_block": true
+  },
+  "MYPS": {
+    "ticker": "MYPS",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "PLAYSTUDIOS Plans To Cease Operations Of Sweepstakes Product; Expects To Record Pre-Tax Impairment Charge In Range Of $3M - $3.5M During Q3",
+    "added_at": "2026-09-23T21:06:19.220537+00:00",
+    "expires": "2027-03-22T21:06:19.220545+00:00",
+    "hard_block": true
   }
 }
