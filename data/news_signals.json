@@ -376,5 +376,14 @@
     "added_at": "2026-09-23T21:06:19.220537+00:00",
     "expires": "2027-03-22T21:06:19.220545+00:00",
     "hard_block": true
+  },
+  "SBUX": {
+    "ticker": "SBUX",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Starbucks Board Approves Further Actions Under 'Back To Starbucks' Strategy; Will Close ~250, Or ~1% Of, Its North America Coffeehouses; Expects $300M Of Restructuring Charges, Including $200M In Cash",
+    "added_at": "2026-09-24T11:35:21.519049+00:00",
+    "expires": "2027-03-23T11:35:21.519057+00:00",
+    "hard_block": true
   }
 }
