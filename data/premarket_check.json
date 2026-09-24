@@ -1,27 +1,21 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-24",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 2.77,
-    "soxx_change_pct": 4.93,
-    "vix": 14.67,
-    "warnings": [],
-    "global_action": "normal"
+    "spy_change_pct": -0.72,
+    "qqq_change_pct": -0.84,
+    "soxx_change_pct": -1.23,
+    "vix": 15.96,
+    "warnings": [
+      "\u26a0\ufe0f SPY down -0.7% \u2014 caution"
+    ],
+    "global_action": "half"
   },
   "picks": [
     {
-      "ticker": "WAT",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 423.92,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "DHR",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 215.84,
+      "ticker": "BIIB",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 227.53,
       "gap_pct": -0.0,
       "actionable": true
     }
