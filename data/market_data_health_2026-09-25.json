@@ -1,0 +1,68 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 519,
+      "empty": 0,
+      "errors": 0,
+      "successes": 519
+    },
+    "monster_info": {
+      "attempts": 148,
+      "empty": 0,
+      "errors": 1,
+      "successes": 147
+    },
+    "ohlcv": {
+      "attempts": 524,
+      "empty": 0,
+      "errors": 0,
+      "successes": 524
+    }
+  },
+  "date": "2026-09-25",
+  "providers": {
+    "yfinance": {
+      "attempts": 1191,
+      "empty": 0,
+      "errors": 1,
+      "failure_types": {
+        "empty_response": 0,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 1,
+        "rate_limited": 0,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 1,
+      "rate_limited": 0,
+      "successes": 1190,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 519,
+    "final_pick_count": 3,
+    "scored_count": 148,
+    "universe_count": 519
+  },
+  "samples": [
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "AMD"
+    }
+  ],
+  "timestamp_utc": "2026-09-25T12:34:59Z"
+}
