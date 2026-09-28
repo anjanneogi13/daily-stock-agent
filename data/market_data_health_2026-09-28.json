@@ -2,30 +2,30 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 1038,
+      "attempts": 1557,
       "empty": 0,
-      "errors": 2,
-      "successes": 1036
+      "errors": 3,
+      "successes": 1554
     },
     "monster_info": {
-      "attempts": 326,
+      "attempts": 489,
       "empty": 0,
-      "errors": 5,
-      "successes": 321
+      "errors": 7,
+      "successes": 482
     },
     "ohlcv": {
-      "attempts": 1048,
+      "attempts": 1572,
       "empty": 0,
       "errors": 0,
-      "successes": 1048
+      "successes": 1572
     }
   },
   "date": "2026-09-28",
   "providers": {
     "yfinance": {
-      "attempts": 2412,
+      "attempts": 3618,
       "empty": 0,
-      "errors": 7,
+      "errors": 10,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
@@ -33,7 +33,7 @@
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 1,
-        "rate_limited": 6,
+        "rate_limited": 9,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -41,8 +41,8 @@
       },
       "not_found": 0,
       "provider_error": 1,
-      "rate_limited": 6,
-      "successes": 2405,
+      "rate_limited": 9,
+      "successes": 3608,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -116,7 +116,34 @@
       "result": "error",
       "stage": "monster_info",
       "ticker": "SMH"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SMH"
+    },
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SOXL"
     }
   ],
-  "timestamp_utc": "2026-09-28T13:00:40Z"
+  "timestamp_utc": "2026-09-28T13:05:15Z"
 }

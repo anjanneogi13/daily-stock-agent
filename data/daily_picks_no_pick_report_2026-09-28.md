@@ -11,7 +11,7 @@ Monitoring-only failure evidence. No official picks were generated.
 - Official premarket pick: **false**
 
 ## Pipeline
-- capped_count: **25**
+- capped_count: **24**
 - data_readiness_passed: **True**
 - data_readiness_status: **ready**
 - fetched_count: **519**
@@ -25,7 +25,7 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**2412**, successes=**2405**, errors=**7**, rate_limited=**6**, unauthorized=**0**
+- yfinance: attempts=**3618**, successes=**3608**, errors=**10**, rate_limited=**9**, unauthorized=**0**
 
 ## Secondary Causes
 - YFINANCE_PROVIDER_DEGRADED

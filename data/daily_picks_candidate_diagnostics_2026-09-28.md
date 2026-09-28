@@ -8,10 +8,10 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - Live trading enabled: **false**
 
 ## Stage Counts
-- capped_count: **25**
+- capped_count: **24**
 - fetched_count: **519**
 - filtered_count: **30**
-- filtered_not_capped_count: **5**
+- filtered_not_capped_count: **6**
 - hard_blocked_count: **1**
 - missing_data_blocked_count: **0**
 - portfolio_risk_blocked_count: **0**

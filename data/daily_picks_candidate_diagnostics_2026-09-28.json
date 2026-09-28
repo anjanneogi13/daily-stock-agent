@@ -37,7 +37,7 @@
     ],
     "missing_data_blocked_candidates": [],
     "pipeline": {
-      "capped_count": 25,
+      "capped_count": 24,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
       "fetched_count": 519,
@@ -272,7 +272,7 @@
       {
         "company": "",
         "day_score": 0.536,
-        "days_to_earnings": 37,
+        "days_to_earnings": null,
         "entry": 292.84,
         "news_action_window": null,
         "news_boost": null,
@@ -330,10 +330,10 @@
     ],
     "selected_picks": [],
     "stage_counts": {
-      "capped_count": 25,
+      "capped_count": 24,
       "fetched_count": 519,
       "filtered_count": 30,
-      "filtered_not_capped_count": 5,
+      "filtered_not_capped_count": 6,
       "hard_blocked_count": 1,
       "missing_data_blocked_count": 0,
       "portfolio_risk_blocked_count": 0,
@@ -355,7 +355,7 @@
   "official_premarket_pick": false,
   "paper_trading_enabled": false,
   "pipeline": {
-    "capped_count": 25,
+    "capped_count": 24,
     "data_readiness_passed": true,
     "data_readiness_status": "ready",
     "fetched_count": 519,
@@ -369,5 +369,5 @@
     "universe_count": 519
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-09-28T13:00:40Z"
+  "timestamp_utc": "2026-09-28T13:05:15Z"
 }
