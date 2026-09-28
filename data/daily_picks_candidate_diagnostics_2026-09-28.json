@@ -272,7 +272,7 @@
       {
         "company": "",
         "day_score": 0.536,
-        "days_to_earnings": null,
+        "days_to_earnings": 37,
         "entry": 292.84,
         "news_action_window": null,
         "news_boost": null,
@@ -369,5 +369,5 @@
     "universe_count": 519
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-09-28T12:39:23Z"
+  "timestamp_utc": "2026-09-28T13:00:40Z"
 }
