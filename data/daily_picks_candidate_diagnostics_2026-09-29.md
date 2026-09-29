@@ -30,8 +30,8 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - None.
 
 ## Rejected Candidates
-- NVDA: **hard_block** — SL too tight (1.4% < 1.5% for $229 stock)
 - AES: **hard_block** — SL too tight (0.5% < 2.5% for $15 stock)
+- NVDA: **hard_block** — SL too tight (1.4% < 1.5% for $229 stock)
 - SNPS: **earnings_risk** — earnings in 0d
 - NDSN: **earnings_risk** — earnings in 0d
 - MU: **earnings_risk** — earnings in 1d

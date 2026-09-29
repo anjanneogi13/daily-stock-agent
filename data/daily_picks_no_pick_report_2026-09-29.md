@@ -25,8 +25,8 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**1215**, successes=**1215**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2430**, successes=**2430**, errors=**0**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
-- NVDA: **sl_too_tight** — SL too tight (1.4% < 1.5% for $229 stock)
 - AES: **sl_too_tight** — SL too tight (0.5% < 2.5% for $15 stock)
+- NVDA: **sl_too_tight** — SL too tight (1.4% < 1.5% for $229 stock)
