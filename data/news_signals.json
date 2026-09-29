@@ -412,5 +412,14 @@
     "added_at": "2026-09-29T20:07:26.866188+00:00",
     "expires": "2027-03-28T20:07:26.866197+00:00",
     "hard_block": true
+  },
+  "ELME": {
+    "ticker": "ELME",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Elme Communities Completes Sale Of All Remaining Real Estate Properties; Board Approves Special Liquidating Dividend Of $1.74 Per Share Payable October 22; Signals Voluntary Dissolution, Anticipates T",
+    "added_at": "2026-09-29T21:06:13.334825+00:00",
+    "expires": "2027-03-28T21:06:13.334833+00:00",
+    "hard_block": true
   }
 }
