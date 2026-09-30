@@ -1,0 +1,77 @@
+{
+  "artifact": "market_data_health",
+  "by_stage": {
+    "info": {
+      "attempts": 519,
+      "empty": 0,
+      "errors": 0,
+      "successes": 519
+    },
+    "monster_info": {
+      "attempts": 174,
+      "empty": 0,
+      "errors": 2,
+      "successes": 172
+    },
+    "ohlcv": {
+      "attempts": 524,
+      "empty": 0,
+      "errors": 0,
+      "successes": 524
+    }
+  },
+  "date": "2026-09-30",
+  "providers": {
+    "yfinance": {
+      "attempts": 1217,
+      "empty": 0,
+      "errors": 2,
+      "failure_types": {
+        "empty_response": 0,
+        "market_closed": 0,
+        "missing_history": 0,
+        "missing_intraday_bars": 0,
+        "missing_quote": 0,
+        "provider_exception": 1,
+        "rate_limited": 1,
+        "stale_data": 0,
+        "symbol_not_found": 0,
+        "timeout": 0,
+        "unknown_provider_failure": 0
+      },
+      "not_found": 0,
+      "provider_error": 1,
+      "rate_limited": 1,
+      "successes": 1215,
+      "timeout": 0,
+      "unauthorized": 0
+    }
+  },
+  "run": {
+    "fetched_count": 519,
+    "final_pick_count": 0,
+    "scored_count": 174,
+    "universe_count": 519
+  },
+  "samples": [
+    {
+      "error_type": "rate_limited",
+      "failure_type": "rate_limited",
+      "message": "Too Many Requests. Rate limited. Try after a while.",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SOXL"
+    },
+    {
+      "error_type": "provider_error",
+      "failure_type": "provider_exception",
+      "message": "argument of type 'NoneType' is not iterable",
+      "provider": "yfinance",
+      "result": "error",
+      "stage": "monster_info",
+      "ticker": "SMH"
+    }
+  ],
+  "timestamp_utc": "2026-09-30T12:40:31Z"
+}
