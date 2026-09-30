@@ -421,5 +421,14 @@
     "added_at": "2026-09-29T21:06:13.334825+00:00",
     "expires": "2027-03-28T21:06:13.334833+00:00",
     "hard_block": true
+  },
+  "ARI": {
+    "ticker": "ARI",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Apollo Commercial Real Estate Finance Shareholders Approve Liquidation\u2014But $7.75\u2013$8.50 Distribution Remains An Estimate",
+    "added_at": "2026-09-30T16:39:22.180669+00:00",
+    "expires": "2027-03-29T16:39:22.180677+00:00",
+    "hard_block": true
   }
 }
