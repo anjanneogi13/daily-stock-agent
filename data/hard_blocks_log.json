@@ -1786,5 +1786,28 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-30 13:02:12",
+    "weak_sectors": {},
+    "blocked_count": 3,
+    "passed_count": 7,
+    "blocked": [
+      {
+        "ticker": "AES",
+        "reason": "SL too tight (0.2% < 2.5% for $15 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "CCL",
+        "reason": "SL too tight (2.2% < 2.5% for $25 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "KR",
+        "reason": "SL too tight (1.7% < 2.0% for $61 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

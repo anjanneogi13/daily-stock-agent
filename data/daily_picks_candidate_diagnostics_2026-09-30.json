@@ -9,7 +9,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 35,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -39,7 +39,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 79,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -69,7 +69,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 64,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -97,7 +97,7 @@
     ],
     "missing_data_blocked_candidates": [],
     "pipeline": {
-      "capped_count": 24,
+      "capped_count": 25,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
       "fetched_count": 519,
@@ -106,7 +106,7 @@
       "hard_blocked_count": 3,
       "post_hard_block_pick_count": 7,
       "pre_hard_block_pick_count": 10,
-      "scored_count": 174,
+      "scored_count": 175,
       "scorer_workers": 4,
       "universe_count": 519
     },
@@ -116,7 +116,7 @@
       {
         "company": "",
         "day_score": 0.585,
-        "days_to_earnings": null,
+        "days_to_earnings": 35,
         "entry": 14.86,
         "news_action_window": null,
         "news_boost": null,
@@ -140,7 +140,7 @@
       {
         "company": "",
         "day_score": 0.73,
-        "days_to_earnings": null,
+        "days_to_earnings": 79,
         "entry": 25.11,
         "news_action_window": null,
         "news_boost": null,
@@ -164,7 +164,7 @@
       {
         "company": "",
         "day_score": 0.68,
-        "days_to_earnings": null,
+        "days_to_earnings": 64,
         "entry": 60.79,
         "news_action_window": null,
         "news_boost": null,
@@ -188,7 +188,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": null,
+        "days_to_earnings": 28,
         "entry": 212.59,
         "news_action_window": null,
         "news_boost": null,
@@ -212,7 +212,7 @@
       {
         "company": "",
         "day_score": 0.54,
-        "days_to_earnings": null,
+        "days_to_earnings": 30,
         "entry": 473.37,
         "news_action_window": null,
         "news_boost": null,
@@ -236,7 +236,7 @@
       {
         "company": "",
         "day_score": 0.536,
-        "days_to_earnings": null,
+        "days_to_earnings": 48,
         "entry": 227.21,
         "news_action_window": null,
         "news_boost": null,
@@ -260,7 +260,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": null,
+        "days_to_earnings": 22,
         "entry": 148.32,
         "news_action_window": null,
         "news_boost": null,
@@ -283,32 +283,8 @@
       },
       {
         "company": "",
-        "day_score": 0.58,
-        "days_to_earnings": null,
-        "entry": 329.53,
-        "news_action_window": null,
-        "news_boost": null,
-        "premarket_action": null,
-        "premarket_actionable": null,
-        "premarket_gap_pct": null,
-        "premarket_reason": "",
-        "quantity": 8,
-        "risk_flags": [],
-        "risk_reward": 1.25,
-        "score": 0.68,
-        "sector": "Unknown",
-        "sector_tag": null,
-        "stop_loss": 317.18,
-        "take_profit": 344.96,
-        "ticker": "NDSN",
-        "trade_type": "swing",
-        "watch_only": false,
-        "watch_only_reason": ""
-      },
-      {
-        "company": "",
         "day_score": 0.515,
-        "days_to_earnings": null,
+        "days_to_earnings": 23,
         "entry": 431.63,
         "news_action_window": null,
         "news_boost": null,
@@ -332,7 +308,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": null,
+        "days_to_earnings": 35,
         "entry": 295.96,
         "news_action_window": null,
         "news_boost": null,
@@ -352,6 +328,30 @@
         "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
+      },
+      {
+        "company": "",
+        "day_score": 0.58,
+        "days_to_earnings": null,
+        "entry": 606.9,
+        "news_action_window": null,
+        "news_boost": null,
+        "premarket_action": null,
+        "premarket_actionable": null,
+        "premarket_gap_pct": null,
+        "premarket_reason": "",
+        "quantity": 3,
+        "risk_flags": [],
+        "risk_reward": 1.25,
+        "score": 0.669,
+        "sector": "SEMI / AI",
+        "sector_tag": "SEMI / AI",
+        "stop_loss": 574.58,
+        "take_profit": 647.3,
+        "ticker": "SMH",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
       }
     ],
     "pre_premarket_sanity_candidates": [],
@@ -362,7 +362,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 35,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -392,7 +392,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 79,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -422,7 +422,7 @@
         "candidate": {
           "company": "",
           "day_score": null,
-          "days_to_earnings": null,
+          "days_to_earnings": 64,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -446,14 +446,83 @@
         "reason": "SL too tight (1.7% < 2.0% for $61 stock)",
         "rejection_stage": "hard_block",
         "ticker": "KR"
+      },
+      {
+        "candidate": {
+          "company": "",
+          "day_score": 0.58,
+          "days_to_earnings": 0,
+          "entry": 329.53,
+          "news_action_window": null,
+          "news_boost": null,
+          "risk_reward": 1.25,
+          "score": 0.7046,
+          "sector": "N/A",
+          "sector_tag": null,
+          "stop_loss": 317.18,
+          "take_profit": 344.96,
+          "ticker": "NDSN",
+          "trade_type": "swing",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "earnings in 0d",
+        "rejection_stage": "earnings_risk",
+        "ticker": "NDSN"
+      },
+      {
+        "candidate": {
+          "company": "",
+          "day_score": 0.495,
+          "days_to_earnings": 0,
+          "entry": 1065.08,
+          "news_action_window": null,
+          "news_boost": null,
+          "risk_reward": 1.25,
+          "score": 0.6779,
+          "sector": "N/A",
+          "sector_tag": "SEMI / AI",
+          "stop_loss": 977.66,
+          "take_profit": 1174.35,
+          "ticker": "MU",
+          "trade_type": "swing",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "earnings in 0d",
+        "rejection_stage": "earnings_risk",
+        "ticker": "MU"
+      },
+      {
+        "candidate": {
+          "company": "",
+          "day_score": 0.371,
+          "days_to_earnings": 0,
+          "entry": 61.49,
+          "news_action_window": null,
+          "news_boost": null,
+          "risk_reward": 1.25,
+          "score": 0.6761,
+          "sector": "N/A",
+          "sector_tag": null,
+          "stop_loss": 54.03,
+          "take_profit": 70.81,
+          "ticker": "HPE",
+          "trade_type": "swing",
+          "watch_only": false,
+          "watch_only_reason": ""
+        },
+        "reason": "earnings in 0d",
+        "rejection_stage": "earnings_risk",
+        "ticker": "HPE"
       }
     ],
     "selected_picks": [],
     "stage_counts": {
-      "capped_count": 24,
+      "capped_count": 25,
       "fetched_count": 519,
       "filtered_count": 30,
-      "filtered_not_capped_count": 6,
+      "filtered_not_capped_count": 5,
       "hard_blocked_count": 3,
       "missing_data_blocked_count": 0,
       "portfolio_risk_blocked_count": 0,
@@ -461,9 +530,9 @@
       "pre_hard_block_pick_count": 10,
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
-      "rejected_candidate_count": 3,
-      "scored_count": 174,
-      "scored_not_filtered_count": 144,
+      "rejected_candidate_count": 6,
+      "scored_count": 175,
+      "scored_not_filtered_count": 145,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
@@ -475,7 +544,7 @@
   "official_premarket_pick": false,
   "paper_trading_enabled": false,
   "pipeline": {
-    "capped_count": 24,
+    "capped_count": 25,
     "data_readiness_passed": true,
     "data_readiness_status": "ready",
     "fetched_count": 519,
@@ -484,10 +553,10 @@
     "hard_blocked_count": 3,
     "post_hard_block_pick_count": 7,
     "pre_hard_block_pick_count": 10,
-    "scored_count": 174,
+    "scored_count": 175,
     "scorer_workers": 4,
     "universe_count": 519
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-09-30T12:40:31Z"
+  "timestamp_utc": "2026-09-30T13:02:12Z"
 }
