@@ -1832,5 +1832,28 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-01 12:37:49",
+    "weak_sectors": {},
+    "blocked_count": 3,
+    "passed_count": 7,
+    "blocked": [
+      {
+        "ticker": "BIIB",
+        "reason": "SL too tight (1.4% < 1.5% for $226 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "LIN",
+        "reason": "SL too tight (0.9% < 1.5% for $475 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "EMR",
+        "reason": "SL too tight (1.4% < 1.5% for $155 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
