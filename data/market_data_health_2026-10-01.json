@@ -2,28 +2,28 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 519,
+      "attempts": 1038,
       "empty": 0,
       "errors": 2,
-      "successes": 517
+      "successes": 1036
     },
     "monster_info": {
-      "attempts": 166,
+      "attempts": 332,
       "empty": 0,
       "errors": 3,
-      "successes": 163
+      "successes": 329
     },
     "ohlcv": {
-      "attempts": 524,
+      "attempts": 1047,
       "empty": 0,
       "errors": 0,
-      "successes": 524
+      "successes": 1047
     }
   },
   "date": "2026-10-01",
   "providers": {
     "yfinance": {
-      "attempts": 1209,
+      "attempts": 2417,
       "empty": 0,
       "errors": 5,
       "failure_types": {
@@ -42,7 +42,7 @@
       "not_found": 0,
       "provider_error": 2,
       "rate_limited": 3,
-      "successes": 1204,
+      "successes": 2412,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -100,5 +100,5 @@
       "ticker": "SOXL"
     }
   ],
-  "timestamp_utc": "2026-10-01T12:37:49Z"
+  "timestamp_utc": "2026-10-01T13:05:17Z"
 }

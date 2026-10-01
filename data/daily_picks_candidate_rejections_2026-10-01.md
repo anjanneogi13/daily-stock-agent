@@ -17,8 +17,8 @@ Monitoring-only diagnostic artifact. Not official picks. Not buy instructions.
 - INTC: score=0.682, sector=SEMI, sector_tag=SEMI, trade_type=swing, entry=120.23, stop_loss=106.84, take_profit=136.97, risk_reward=1.25, watch_only=False
 - EMR: score=0.673, sector=Unknown, trade_type=day, entry=155.1, stop_loss=152.9, take_profit=158.77, risk_reward=1.67, watch_only=False
 - ROST: score=0.672, sector=Unknown, trade_type=swing, entry=233.4, stop_loss=223.92, take_profit=245.26, risk_reward=1.25, watch_only=False
-- NVDA: score=0.671, sector=SEMI / AI, sector_tag=SEMI / AI, trade_type=swing, entry=228.38, stop_loss=217.79, take_profit=241.62, risk_reward=1.25, watch_only=False
 - ADI: score=0.671, sector=SEMI, sector_tag=SEMI, trade_type=swing, entry=396.71, stop_loss=373.73, take_profit=425.44, risk_reward=1.25, watch_only=False
+- ANET: score=0.667, sector=SEMI / AI, sector_tag=SEMI / AI, trade_type=swing, entry=203.59, stop_loss=188.77, take_profit=222.11, risk_reward=1.25, watch_only=False
 
 ## Hard-Blocked Finalists
 - BIIB: **sl_too_tight** — SL too tight (1.4% < 1.5% for $226 stock) (trade_type=day, watch_only=False)
