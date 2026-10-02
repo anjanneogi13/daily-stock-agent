@@ -1878,5 +1878,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-02 12:36:45",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 9,
+    "blocked": [
+      {
+        "ticker": "BIIB",
+        "reason": "SL too tight (1.4% < 1.5% for $223 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
