@@ -20,9 +20,9 @@ Monitoring-only failure evidence. No official picks were generated.
 - hard_blocked_count: **0**
 - post_hard_block_pick_count: **10**
 - pre_hard_block_pick_count: **10**
-- scored_count: **143**
+- scored_count: **141**
 - scorer_workers: **4**
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**1185**, successes=**1185**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**2369**, successes=**2369**, errors=**0**, rate_limited=**0**, unauthorized=**0**

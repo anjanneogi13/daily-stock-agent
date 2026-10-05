@@ -15,7 +15,7 @@
       "hard_blocked_count": 0,
       "post_hard_block_pick_count": 10,
       "pre_hard_block_pick_count": 10,
-      "scored_count": 143,
+      "scored_count": 141,
       "scorer_workers": 4,
       "universe_count": 519
     },
@@ -25,7 +25,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 31,
+        "days_to_earnings": null,
         "entry": 17.6,
         "news_action_window": null,
         "news_boost": null,
@@ -49,7 +49,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 30,
+        "days_to_earnings": null,
         "entry": 290.19,
         "news_action_window": null,
         "news_boost": null,
@@ -73,7 +73,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 29,
+        "days_to_earnings": null,
         "entry": 403.04,
         "news_action_window": null,
         "news_boost": null,
@@ -97,7 +97,7 @@
       {
         "company": "",
         "day_score": 0.596,
-        "days_to_earnings": 73,
+        "days_to_earnings": null,
         "entry": 198.9,
         "news_action_window": null,
         "news_boost": null,
@@ -121,7 +121,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": 15,
+        "days_to_earnings": null,
         "entry": 391.95,
         "news_action_window": null,
         "news_boost": null,
@@ -145,7 +145,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 23,
+        "days_to_earnings": null,
         "entry": 517.53,
         "news_action_window": null,
         "news_boost": null,
@@ -169,7 +169,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": 29,
+        "days_to_earnings": null,
         "entry": 375.86,
         "news_action_window": null,
         "news_boost": null,
@@ -193,7 +193,7 @@
       {
         "company": "",
         "day_score": 0.616,
-        "days_to_earnings": 23,
+        "days_to_earnings": null,
         "entry": 157.72,
         "news_action_window": null,
         "news_boost": null,
@@ -217,7 +217,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": 31,
+        "days_to_earnings": null,
         "entry": 363.37,
         "news_action_window": null,
         "news_boost": null,
@@ -241,7 +241,7 @@
       {
         "company": "",
         "day_score": 0.54,
-        "days_to_earnings": 22,
+        "days_to_earnings": null,
         "entry": 164.19,
         "news_action_window": null,
         "news_boost": null,
@@ -265,31 +265,7 @@
     ],
     "pre_premarket_sanity_candidates": [],
     "premarket_sanity_blocked_candidates": [],
-    "rejected_candidates": [
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.64,
-          "days_to_earnings": 4,
-          "entry": 84.09,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.25,
-          "score": 0.6678,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 79.22,
-          "take_profit": 90.18,
-          "ticker": "DAL",
-          "trade_type": "swing",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 4d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "DAL"
-      }
-    ],
+    "rejected_candidates": [],
     "selected_picks": [],
     "stage_counts": {
       "capped_count": 30,
@@ -303,9 +279,9 @@
       "pre_hard_block_pick_count": 10,
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
-      "rejected_candidate_count": 1,
-      "scored_count": 143,
-      "scored_not_filtered_count": 113,
+      "rejected_candidate_count": 0,
+      "scored_count": 141,
+      "scored_not_filtered_count": 111,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
@@ -326,10 +302,10 @@
     "hard_blocked_count": 0,
     "post_hard_block_pick_count": 10,
     "pre_hard_block_pick_count": 10,
-    "scored_count": 143,
+    "scored_count": 141,
     "scorer_workers": 4,
     "universe_count": 519
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-10-05T12:38:45Z"
+  "timestamp_utc": "2026-10-05T13:07:08Z"
 }

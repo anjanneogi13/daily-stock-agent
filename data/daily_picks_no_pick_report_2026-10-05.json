@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-37310480260",
+  "artifact_bundle_name": "official-decision-artifacts-37313209678",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [],
@@ -15,7 +15,7 @@
       "hard_blocked_count": 0,
       "post_hard_block_pick_count": 10,
       "pre_hard_block_pick_count": 10,
-      "scored_count": 143,
+      "scored_count": 141,
       "scorer_workers": 4,
       "universe_count": 519
     },
@@ -25,7 +25,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 31,
+        "days_to_earnings": null,
         "entry": 17.6,
         "news_action_window": null,
         "news_boost": null,
@@ -49,7 +49,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 30,
+        "days_to_earnings": null,
         "entry": 290.19,
         "news_action_window": null,
         "news_boost": null,
@@ -73,7 +73,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 29,
+        "days_to_earnings": null,
         "entry": 403.04,
         "news_action_window": null,
         "news_boost": null,
@@ -97,7 +97,7 @@
       {
         "company": "",
         "day_score": 0.596,
-        "days_to_earnings": 73,
+        "days_to_earnings": null,
         "entry": 198.9,
         "news_action_window": null,
         "news_boost": null,
@@ -121,7 +121,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": 15,
+        "days_to_earnings": null,
         "entry": 391.95,
         "news_action_window": null,
         "news_boost": null,
@@ -145,7 +145,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 23,
+        "days_to_earnings": null,
         "entry": 517.53,
         "news_action_window": null,
         "news_boost": null,
@@ -169,7 +169,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": 29,
+        "days_to_earnings": null,
         "entry": 375.86,
         "news_action_window": null,
         "news_boost": null,
@@ -193,7 +193,7 @@
       {
         "company": "",
         "day_score": 0.616,
-        "days_to_earnings": 23,
+        "days_to_earnings": null,
         "entry": 157.72,
         "news_action_window": null,
         "news_boost": null,
@@ -217,7 +217,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": 31,
+        "days_to_earnings": null,
         "entry": 363.37,
         "news_action_window": null,
         "news_boost": null,
@@ -241,7 +241,7 @@
       {
         "company": "",
         "day_score": 0.54,
-        "days_to_earnings": 22,
+        "days_to_earnings": null,
         "entry": 164.19,
         "news_action_window": null,
         "news_boost": null,
@@ -265,31 +265,7 @@
     ],
     "pre_premarket_sanity_candidates": [],
     "premarket_sanity_blocked_candidates": [],
-    "rejected_candidates": [
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.64,
-          "days_to_earnings": 4,
-          "entry": 84.09,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.25,
-          "score": 0.6678,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 79.22,
-          "take_profit": 90.18,
-          "ticker": "DAL",
-          "trade_type": "swing",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 4d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "DAL"
-      }
-    ],
+    "rejected_candidates": [],
     "selected_picks": [],
     "stage_counts": {
       "capped_count": 30,
@@ -303,16 +279,16 @@
       "pre_hard_block_pick_count": 10,
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
-      "rejected_candidate_count": 1,
-      "scored_count": 143,
-      "scored_not_filtered_count": 113,
+      "rejected_candidate_count": 0,
+      "scored_count": 141,
+      "scored_not_filtered_count": 111,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
     }
   },
-  "commit_sha": "f978d670bd8d238e2c82f73a8f1c3acdeaa6e560",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/f978d670bd8d238e2c82f73a8f1c3acdeaa6e560",
+  "commit_sha": "79769f74af1796355ad5cb70d026500f9ed9a3e2",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/79769f74af1796355ad5cb70d026500f9ed9a3e2",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "readiness_uncertain",
@@ -332,7 +308,7 @@
       "hard_blocked_count": 0,
       "post_hard_block_pick_count": 10,
       "pre_hard_block_pick_count": 10,
-      "scored_count": 143,
+      "scored_count": 141,
       "scorer_workers": 4,
       "universe_count": 519
     },
@@ -342,7 +318,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 31,
+        "days_to_earnings": null,
         "entry": 17.6,
         "news_action_window": null,
         "news_boost": null,
@@ -366,7 +342,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 30,
+        "days_to_earnings": null,
         "entry": 290.19,
         "news_action_window": null,
         "news_boost": null,
@@ -390,7 +366,7 @@
       {
         "company": "",
         "day_score": 0.64,
-        "days_to_earnings": 29,
+        "days_to_earnings": null,
         "entry": 403.04,
         "news_action_window": null,
         "news_boost": null,
@@ -414,7 +390,7 @@
       {
         "company": "",
         "day_score": 0.596,
-        "days_to_earnings": 73,
+        "days_to_earnings": null,
         "entry": 198.9,
         "news_action_window": null,
         "news_boost": null,
@@ -438,7 +414,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": 15,
+        "days_to_earnings": null,
         "entry": 391.95,
         "news_action_window": null,
         "news_boost": null,
@@ -462,7 +438,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 23,
+        "days_to_earnings": null,
         "entry": 517.53,
         "news_action_window": null,
         "news_boost": null,
@@ -486,7 +462,7 @@
       {
         "company": "",
         "day_score": 0.535,
-        "days_to_earnings": 29,
+        "days_to_earnings": null,
         "entry": 375.86,
         "news_action_window": null,
         "news_boost": null,
@@ -510,7 +486,7 @@
       {
         "company": "",
         "day_score": 0.616,
-        "days_to_earnings": 23,
+        "days_to_earnings": null,
         "entry": 157.72,
         "news_action_window": null,
         "news_boost": null,
@@ -534,7 +510,7 @@
       {
         "company": "",
         "day_score": 0.58,
-        "days_to_earnings": 31,
+        "days_to_earnings": null,
         "entry": 363.37,
         "news_action_window": null,
         "news_boost": null,
@@ -558,7 +534,7 @@
       {
         "company": "",
         "day_score": 0.54,
-        "days_to_earnings": 22,
+        "days_to_earnings": null,
         "entry": 164.19,
         "news_action_window": null,
         "news_boost": null,
@@ -582,31 +558,7 @@
     ],
     "pre_premarket_sanity_candidates": [],
     "premarket_sanity_blocked_candidates": [],
-    "rejected_candidates": [
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.64,
-          "days_to_earnings": 4,
-          "entry": 84.09,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.25,
-          "score": 0.6678,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 79.22,
-          "take_profit": 90.18,
-          "ticker": "DAL",
-          "trade_type": "swing",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 4d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "DAL"
-      }
-    ],
+    "rejected_candidates": [],
     "selected_picks": [],
     "stage_counts": {
       "capped_count": 30,
@@ -620,9 +572,9 @@
       "pre_hard_block_pick_count": 10,
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
-      "rejected_candidate_count": 1,
-      "scored_count": 143,
-      "scored_not_filtered_count": 113,
+      "rejected_candidate_count": 0,
+      "scored_count": 141,
+      "scored_not_filtered_count": 111,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
@@ -634,28 +586,28 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 519,
+        "attempts": 1038,
         "empty": 0,
         "errors": 0,
-        "successes": 519
+        "successes": 1038
       },
       "monster_info": {
-        "attempts": 143,
+        "attempts": 284,
         "empty": 0,
         "errors": 0,
-        "successes": 143
+        "successes": 284
       },
       "ohlcv": {
-        "attempts": 523,
+        "attempts": 1047,
         "empty": 0,
         "errors": 0,
-        "successes": 523
+        "successes": 1047
       }
     },
     "date": "2026-10-05",
     "providers": {
       "yfinance": {
-        "attempts": 1185,
+        "attempts": 2369,
         "empty": 0,
         "errors": 0,
         "failure_types": {
@@ -674,7 +626,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 1185,
+        "successes": 2369,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -682,11 +634,11 @@
     "run": {
       "fetched_count": 519,
       "final_pick_count": 0,
-      "scored_count": 143,
+      "scored_count": 141,
       "universe_count": 519
     },
     "samples": [],
-    "timestamp_utc": "2026-10-05T12:38:45Z"
+    "timestamp_utc": "2026-10-05T13:07:08Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -703,7 +655,7 @@
     "hard_blocked_count": 0,
     "post_hard_block_pick_count": 10,
     "pre_hard_block_pick_count": 10,
-    "scored_count": 143,
+    "scored_count": 141,
     "scorer_workers": 4,
     "universe_count": 519
   },
@@ -713,11 +665,11 @@
   "reason": "No official picks generated after scoring/filtering/gating. This is not safe to treat as a successful daily-picks run; check data-provider/rate-limit/no-candidate logs and use watch-only fallback if needed.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-10-05T08:38:45-04:00",
+  "selection_time_et": "2026-10-05T09:07:08-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-10-05T12:38:45Z",
+  "timestamp_utc": "2026-10-05T13:07:08Z",
   "watch_only_available": false,
-  "workflow_run_id": "37310480260",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/37310480260"
+  "workflow_run_id": "37313209678",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/37313209678"
 }

@@ -19,9 +19,9 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_hard_block_pick_count: **10**
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
-- rejected_candidate_count: **1**
-- scored_count: **143**
-- scored_not_filtered_count: **113**
+- rejected_candidate_count: **0**
+- scored_count: **141**
+- scored_not_filtered_count: **111**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
 - universe_count: **519**
@@ -30,4 +30,4 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - None.
 
 ## Rejected Candidates
-- DAL: **earnings_risk** — earnings in 4d
+- None recorded.
