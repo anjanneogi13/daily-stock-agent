@@ -1909,5 +1909,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-07 12:38:35",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 9,
+    "blocked": [
+      {
+        "ticker": "WAT",
+        "reason": "recent pick (1d ago, cooldown 3d)",
+        "block_type": "recent_pick"
+      }
+    ]
   }
 ]
