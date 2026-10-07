@@ -1,19 +1,19 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "market": {
-    "spy_change_pct": 0.67,
-    "qqq_change_pct": 0.88,
-    "soxx_change_pct": 0.1,
-    "vix": 15.3,
+    "spy_change_pct": 0.55,
+    "qqq_change_pct": 0.46,
+    "soxx_change_pct": -0.01,
+    "vix": 15.8,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "WAT",
+      "ticker": "CRL",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 440.12,
+      "current_price": 304.96,
       "gap_pct": -0.0,
       "actionable": true
     }
