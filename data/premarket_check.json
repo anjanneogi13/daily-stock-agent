@@ -1,20 +1,52 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "market": {
-    "spy_change_pct": 0.55,
-    "qqq_change_pct": 0.46,
-    "soxx_change_pct": -0.01,
-    "vix": 15.8,
+    "spy_change_pct": -0.24,
+    "qqq_change_pct": -0.25,
+    "soxx_change_pct": -1.12,
+    "vix": 15.71,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "CRL",
+      "ticker": "XOM",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 304.96,
+      "current_price": 164.05,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "PG",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 147.82,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "FFIV",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 466.65,
       "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "EXPD",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 190.85,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "TEL",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 215.83,
+      "gap_pct": 0.0,
       "actionable": true
     }
   ]
