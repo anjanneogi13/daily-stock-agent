@@ -1,27 +1,21 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "market": {
-    "spy_change_pct": -0.24,
-    "qqq_change_pct": -0.25,
-    "soxx_change_pct": -1.12,
-    "vix": 15.71,
-    "warnings": [],
+    "spy_change_pct": -0.42,
+    "qqq_change_pct": -1.34,
+    "soxx_change_pct": -3.35,
+    "vix": 15.18,
+    "warnings": [
+      "\u26a0\ufe0f Semiconductor sector (SOXX) down -3.4% \u2014 semis at risk"
+    ],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "XOM",
+      "ticker": "AME",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 164.05,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "PG",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 147.82,
+      "current_price": 247.52,
       "gap_pct": 0.0,
       "actionable": true
     },
@@ -29,23 +23,31 @@
       "ticker": "FFIV",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 466.65,
-      "gap_pct": -0.0,
+      "current_price": 461.66,
+      "gap_pct": 0.0,
       "actionable": true
     },
     {
       "ticker": "EXPD",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 190.85,
+      "current_price": 193.71,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "TEL",
+      "ticker": "CHD",
       "tag": "\u2705 SAFE",
       "reason": "normal entry",
-      "current_price": 215.83,
+      "current_price": 97.73,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "MCK",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 930.25,
       "gap_pct": 0.0,
       "actionable": true
     }
