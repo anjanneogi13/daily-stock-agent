@@ -1,0 +1,69 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-37930562883",
+  "artifact_filename": "premarket_official_pick_2026-10-09_CHD.json",
+  "artifact_id": "premarket_official_pick:2026-10-09:CHD",
+  "artifact_path": "data/premarket_official_pick_2026-10-09_CHD.json",
+  "commit_sha": "8993017e2c55c3e8a4ca78d74a078a9ad42cc167",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/8993017e2c55c3e8a4ca78d74a078a9ad42cc167",
+  "company": "CHD",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-10-09",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-10-09:CHD:37930562883:8993017e2c55",
+  "entry": 97.73,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 94.8.",
+    "Review/exit near take profit 101.39."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 34,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 7.12,
+    "regime": "bull",
+    "sma_value": 722.46,
+    "sma_window": 200,
+    "spy_close": 773.93,
+    "spy_sma200": 722.46,
+    "spy_sma_anchor": 722.46
+  },
+  "risk_dollars": 99.62,
+  "risk_flags": [],
+  "risk_reward": 1.25,
+  "score": 0.691,
+  "score_components": {
+    "composite": 0.691,
+    "day_score": 0.52,
+    "monster_score": 0.0,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.9165948680037073
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "CHD selected as official swing pick; composite score 0.691; premarket sanity: normal official premarket entry conditions.",
+  "selection_time_et": "2026-10-09T08:35:06-04:00",
+  "stop_loss": 94.8,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 101.39,
+  "ticker": "CHD",
+  "top_reasons": [
+    "composite score 0.691",
+    "premarket sanity: normal official premarket entry conditions"
+  ],
+  "workflow_run_id": "37930562883",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/37930562883"
+}
