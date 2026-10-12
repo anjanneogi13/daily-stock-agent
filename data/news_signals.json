@@ -448,5 +448,14 @@
     "added_at": "2026-10-09T20:39:22.642784+00:00",
     "expires": "2027-04-07T20:39:22.642790+00:00",
     "hard_block": true
+  },
+  "FMCC": {
+    "ticker": "FMCC",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Michael Burry Warns Fannie Mae and Freddie Mac Could Become \u2018Worthless\u2019 as Trump-Era Gains Collapse Under Fresh Pressure",
+    "added_at": "2026-10-12T09:02:09.391834+00:00",
+    "expires": "2027-04-10T09:02:09.391840+00:00",
+    "hard_block": true
   }
 }
