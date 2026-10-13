@@ -457,5 +457,14 @@
     "added_at": "2026-10-12T09:02:09.391834+00:00",
     "expires": "2027-04-10T09:02:09.391840+00:00",
     "hard_block": true
+  },
+  "DIS": {
+    "ticker": "DIS",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "From Google Deal to Bankruptcy: Character.AI Files for Chapter 11, Puts Disney In Driver\u2019s Seat With $20 Million Deal for Key Assets",
+    "added_at": "2026-10-13T08:51:02.254470+00:00",
+    "expires": "2027-04-11T08:51:02.254477+00:00",
+    "hard_block": true
   }
 }
