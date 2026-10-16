@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-38903817583",
+  "artifact_bundle_name": "official-decision-artifacts-38907036994",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -115,24 +115,24 @@
     "pre_hard_block_candidates": [
       {
         "company": "",
-        "day_score": 0.64,
+        "day_score": 0.536,
         "days_to_earnings": null,
-        "entry": 539.44,
+        "entry": 344.91,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 4,
+        "quantity": 6,
         "risk_flags": [],
         "risk_reward": 1.25,
-        "score": 0.7,
+        "score": 0.702,
         "sector": "Unknown",
         "sector_tag": null,
-        "stop_loss": 516.74,
-        "take_profit": 567.82,
-        "ticker": "MSFT",
+        "stop_loss": 328.29,
+        "take_profit": 365.69,
+        "ticker": "GOOG",
         "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
@@ -187,24 +187,24 @@
       },
       {
         "company": "",
-        "day_score": 0.536,
+        "day_score": 0.64,
         "days_to_earnings": null,
-        "entry": 344.91,
+        "entry": 539.44,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 6,
+        "quantity": 4,
         "risk_flags": [],
         "risk_reward": 1.25,
-        "score": 0.697,
+        "score": 0.694,
         "sector": "Unknown",
         "sector_tag": null,
-        "stop_loss": 328.29,
-        "take_profit": 365.69,
-        "ticker": "GOOG",
+        "stop_loss": 516.74,
+        "take_profit": 567.82,
+        "ticker": "MSFT",
         "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
@@ -469,8 +469,8 @@
       "universe_count": 519
     }
   },
-  "commit_sha": "6ba18e7c38eee64f1927bcce3ae5dfeeb5df2b1c",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/6ba18e7c38eee64f1927bcce3ae5dfeeb5df2b1c",
+  "commit_sha": "d2829f52c7ecb42038ae41dac16f2e9d2fcc23c0",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/d2829f52c7ecb42038ae41dac16f2e9d2fcc23c0",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "readiness_uncertain",
@@ -590,24 +590,24 @@
     "pre_hard_block_candidates": [
       {
         "company": "",
-        "day_score": 0.64,
+        "day_score": 0.536,
         "days_to_earnings": null,
-        "entry": 539.44,
+        "entry": 344.91,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 4,
+        "quantity": 6,
         "risk_flags": [],
         "risk_reward": 1.25,
-        "score": 0.7,
+        "score": 0.702,
         "sector": "Unknown",
         "sector_tag": null,
-        "stop_loss": 516.74,
-        "take_profit": 567.82,
-        "ticker": "MSFT",
+        "stop_loss": 328.29,
+        "take_profit": 365.69,
+        "ticker": "GOOG",
         "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
@@ -662,24 +662,24 @@
       },
       {
         "company": "",
-        "day_score": 0.536,
+        "day_score": 0.64,
         "days_to_earnings": null,
-        "entry": 344.91,
+        "entry": 539.44,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 6,
+        "quantity": 4,
         "risk_flags": [],
         "risk_reward": 1.25,
-        "score": 0.697,
+        "score": 0.694,
         "sector": "Unknown",
         "sector_tag": null,
-        "stop_loss": 328.29,
-        "take_profit": 365.69,
-        "ticker": "GOOG",
+        "stop_loss": 516.74,
+        "take_profit": 567.82,
+        "ticker": "MSFT",
         "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
@@ -950,30 +950,30 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1036,
+        "attempts": 1554,
         "empty": 0,
-        "errors": 61,
-        "successes": 975
+        "errors": 116,
+        "successes": 1438
       },
       "monster_info": {
-        "attempts": 661,
+        "attempts": 992,
         "empty": 0,
-        "errors": 30,
-        "successes": 631
+        "errors": 57,
+        "successes": 935
       },
       "ohlcv": {
-        "attempts": 1048,
+        "attempts": 1572,
         "empty": 0,
         "errors": 0,
-        "successes": 1048
+        "successes": 1572
       }
     },
     "date": "2026-10-16",
     "providers": {
       "yfinance": {
-        "attempts": 2745,
+        "attempts": 4118,
         "empty": 0,
-        "errors": 91,
+        "errors": 173,
         "failure_types": {
           "empty_response": 0,
           "market_closed": 0,
@@ -981,7 +981,7 @@
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 91,
+          "rate_limited": 173,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -989,8 +989,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 91,
-        "successes": 2654,
+        "rate_limited": 173,
+        "successes": 3945,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1273,7 +1273,7 @@
         "ticker": "WMT"
       }
     ],
-    "timestamp_utc": "2026-10-16T13:01:04Z"
+    "timestamp_utc": "2026-10-16T13:24:28Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1302,11 +1302,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-10-16T09:01:04-04:00",
+  "selection_time_et": "2026-10-16T09:24:28-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-10-16T13:01:04Z",
+  "timestamp_utc": "2026-10-16T13:24:28Z",
   "watch_only_available": false,
-  "workflow_run_id": "38903817583",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/38903817583"
+  "workflow_run_id": "38907036994",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/38907036994"
 }
