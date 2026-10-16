@@ -14,9 +14,9 @@ Monitoring-only diagnostic artifact. Not official picks. Not buy instructions.
 - GILD: score=0.697, sector=Unknown, trade_type=day, entry=157.37, stop_loss=155.06, take_profit=161.22, risk_reward=1.67, watch_only=False
 - GOOG: score=0.697, sector=Unknown, trade_type=swing, entry=344.91, stop_loss=328.29, take_profit=365.69, risk_reward=1.25, watch_only=False
 - ISRG: score=0.692, sector=Unknown, trade_type=swing, entry=427.86, stop_loss=405.41, take_profit=455.93, risk_reward=1.25, watch_only=False
+- GOOGL: score=0.692, sector=Unknown, trade_type=swing, entry=349.22, stop_loss=332.33, take_profit=370.33, risk_reward=1.25, watch_only=False
 - L: score=0.688, sector=Unknown, trade_type=swing, entry=108.79, stop_loss=105.59, take_profit=112.79, risk_reward=1.25, watch_only=False
 - PM: score=0.687, sector=Unknown, trade_type=day, entry=199.9, stop_loss=196.95, take_profit=204.82, risk_reward=1.67, watch_only=False
-- GOOGL: score=0.686, sector=Unknown, trade_type=swing, entry=349.22, stop_loss=332.33, take_profit=370.33, risk_reward=1.25, watch_only=False
 - DHR: score=0.685, sector=Unknown, trade_type=swing, entry=231.5, stop_loss=218.27, take_profit=248.04, risk_reward=1.25, watch_only=False
 - IEX: score=0.685, sector=Unknown, trade_type=swing, entry=236.42, stop_loss=227.16, take_profit=247.99, risk_reward=1.25, watch_only=False
 

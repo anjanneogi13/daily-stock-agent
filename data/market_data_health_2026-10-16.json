@@ -2,30 +2,30 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 518,
+      "attempts": 1036,
       "empty": 0,
-      "errors": 59,
-      "successes": 459
+      "errors": 61,
+      "successes": 975
     },
     "monster_info": {
-      "attempts": 330,
+      "attempts": 661,
       "empty": 0,
       "errors": 30,
-      "successes": 300
+      "successes": 631
     },
     "ohlcv": {
-      "attempts": 524,
+      "attempts": 1048,
       "empty": 0,
       "errors": 0,
-      "successes": 524
+      "successes": 1048
     }
   },
   "date": "2026-10-16",
   "providers": {
     "yfinance": {
-      "attempts": 1372,
+      "attempts": 2745,
       "empty": 0,
-      "errors": 89,
+      "errors": 91,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
@@ -33,7 +33,7 @@
         "missing_intraday_bars": 0,
         "missing_quote": 0,
         "provider_exception": 0,
-        "rate_limited": 89,
+        "rate_limited": 91,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
@@ -41,8 +41,8 @@
       },
       "not_found": 0,
       "provider_error": 0,
-      "rate_limited": 89,
-      "successes": 1283,
+      "rate_limited": 91,
+      "successes": 2654,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -50,7 +50,7 @@
   "run": {
     "fetched_count": 518,
     "final_pick_count": 0,
-    "scored_count": 330,
+    "scored_count": 331,
     "universe_count": 519
   },
   "samples": [
@@ -325,5 +325,5 @@
       "ticker": "WMT"
     }
   ],
-  "timestamp_utc": "2026-10-16T12:34:17Z"
+  "timestamp_utc": "2026-10-16T13:01:04Z"
 }

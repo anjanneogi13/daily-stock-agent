@@ -2017,5 +2017,28 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-16 13:01:04",
+    "weak_sectors": {},
+    "blocked_count": 3,
+    "passed_count": 7,
+    "blocked": [
+      {
+        "ticker": "BBY",
+        "reason": "SL too tight (1.7% < 2.0% for $94 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "GILD",
+        "reason": "SL too tight (1.5% < 1.5% for $157 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "PM",
+        "reason": "SL too tight (1.5% < 1.5% for $200 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]

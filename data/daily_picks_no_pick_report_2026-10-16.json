@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-38900930073",
+  "artifact_bundle_name": "official-decision-artifacts-38903817583",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "hard_blocked_candidates": [
@@ -106,7 +106,7 @@
       "hard_blocked_count": 3,
       "post_hard_block_pick_count": 7,
       "pre_hard_block_pick_count": 10,
-      "scored_count": 330,
+      "scored_count": 331,
       "scorer_workers": 4,
       "universe_count": 519
     },
@@ -235,6 +235,30 @@
       },
       {
         "company": "",
+        "day_score": 0.58,
+        "days_to_earnings": null,
+        "entry": 349.22,
+        "news_action_window": null,
+        "news_boost": null,
+        "premarket_action": null,
+        "premarket_actionable": null,
+        "premarket_gap_pct": null,
+        "premarket_reason": "",
+        "quantity": 5,
+        "risk_flags": [],
+        "risk_reward": 1.25,
+        "score": 0.692,
+        "sector": "Unknown",
+        "sector_tag": null,
+        "stop_loss": 332.33,
+        "take_profit": 370.33,
+        "ticker": "GOOGL",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
+      {
+        "company": "",
         "day_score": 0.495,
         "days_to_earnings": null,
         "entry": 108.79,
@@ -278,30 +302,6 @@
         "take_profit": 204.82,
         "ticker": "PM",
         "trade_type": "day",
-        "watch_only": false,
-        "watch_only_reason": ""
-      },
-      {
-        "company": "",
-        "day_score": 0.58,
-        "days_to_earnings": null,
-        "entry": 349.22,
-        "news_action_window": null,
-        "news_boost": null,
-        "premarket_action": null,
-        "premarket_actionable": null,
-        "premarket_gap_pct": null,
-        "premarket_reason": "",
-        "quantity": 5,
-        "risk_flags": [],
-        "risk_reward": 1.25,
-        "score": 0.686,
-        "sector": "Unknown",
-        "sector_tag": null,
-        "stop_loss": 332.33,
-        "take_profit": 370.33,
-        "ticker": "GOOGL",
-        "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
       },
@@ -462,15 +462,15 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 3,
-      "scored_count": 330,
-      "scored_not_filtered_count": 300,
+      "scored_count": 331,
+      "scored_not_filtered_count": 301,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
     }
   },
-  "commit_sha": "e6843d4efd2eae2b5d9bcd91d5debb567a1609c3",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/e6843d4efd2eae2b5d9bcd91d5debb567a1609c3",
+  "commit_sha": "6ba18e7c38eee64f1927bcce3ae5dfeeb5df2b1c",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/6ba18e7c38eee64f1927bcce3ae5dfeeb5df2b1c",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "readiness_uncertain",
@@ -581,7 +581,7 @@
       "hard_blocked_count": 3,
       "post_hard_block_pick_count": 7,
       "pre_hard_block_pick_count": 10,
-      "scored_count": 330,
+      "scored_count": 331,
       "scorer_workers": 4,
       "universe_count": 519
     },
@@ -710,6 +710,30 @@
       },
       {
         "company": "",
+        "day_score": 0.58,
+        "days_to_earnings": null,
+        "entry": 349.22,
+        "news_action_window": null,
+        "news_boost": null,
+        "premarket_action": null,
+        "premarket_actionable": null,
+        "premarket_gap_pct": null,
+        "premarket_reason": "",
+        "quantity": 5,
+        "risk_flags": [],
+        "risk_reward": 1.25,
+        "score": 0.692,
+        "sector": "Unknown",
+        "sector_tag": null,
+        "stop_loss": 332.33,
+        "take_profit": 370.33,
+        "ticker": "GOOGL",
+        "trade_type": "swing",
+        "watch_only": false,
+        "watch_only_reason": ""
+      },
+      {
+        "company": "",
         "day_score": 0.495,
         "days_to_earnings": null,
         "entry": 108.79,
@@ -753,30 +777,6 @@
         "take_profit": 204.82,
         "ticker": "PM",
         "trade_type": "day",
-        "watch_only": false,
-        "watch_only_reason": ""
-      },
-      {
-        "company": "",
-        "day_score": 0.58,
-        "days_to_earnings": null,
-        "entry": 349.22,
-        "news_action_window": null,
-        "news_boost": null,
-        "premarket_action": null,
-        "premarket_actionable": null,
-        "premarket_gap_pct": null,
-        "premarket_reason": "",
-        "quantity": 5,
-        "risk_flags": [],
-        "risk_reward": 1.25,
-        "score": 0.686,
-        "sector": "Unknown",
-        "sector_tag": null,
-        "stop_loss": 332.33,
-        "take_profit": 370.33,
-        "ticker": "GOOGL",
-        "trade_type": "swing",
         "watch_only": false,
         "watch_only_reason": ""
       },
@@ -937,8 +937,8 @@
       "pre_premarket_sanity_pick_count": 0,
       "premarket_sanity_blocked_count": 0,
       "rejected_candidate_count": 3,
-      "scored_count": 330,
-      "scored_not_filtered_count": 300,
+      "scored_count": 331,
+      "scored_not_filtered_count": 301,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
@@ -950,30 +950,30 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 518,
+        "attempts": 1036,
         "empty": 0,
-        "errors": 59,
-        "successes": 459
+        "errors": 61,
+        "successes": 975
       },
       "monster_info": {
-        "attempts": 330,
+        "attempts": 661,
         "empty": 0,
         "errors": 30,
-        "successes": 300
+        "successes": 631
       },
       "ohlcv": {
-        "attempts": 524,
+        "attempts": 1048,
         "empty": 0,
         "errors": 0,
-        "successes": 524
+        "successes": 1048
       }
     },
     "date": "2026-10-16",
     "providers": {
       "yfinance": {
-        "attempts": 1372,
+        "attempts": 2745,
         "empty": 0,
-        "errors": 89,
+        "errors": 91,
         "failure_types": {
           "empty_response": 0,
           "market_closed": 0,
@@ -981,7 +981,7 @@
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 89,
+          "rate_limited": 91,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -989,8 +989,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 89,
-        "successes": 1283,
+        "rate_limited": 91,
+        "successes": 2654,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -998,7 +998,7 @@
     "run": {
       "fetched_count": 518,
       "final_pick_count": 0,
-      "scored_count": 330,
+      "scored_count": 331,
       "universe_count": 519
     },
     "samples": [
@@ -1273,7 +1273,7 @@
         "ticker": "WMT"
       }
     ],
-    "timestamp_utc": "2026-10-16T12:34:17Z"
+    "timestamp_utc": "2026-10-16T13:01:04Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1290,7 +1290,7 @@
     "hard_blocked_count": 3,
     "post_hard_block_pick_count": 7,
     "pre_hard_block_pick_count": 10,
-    "scored_count": 330,
+    "scored_count": 331,
     "scorer_workers": 4,
     "universe_count": 519
   },
@@ -1302,11 +1302,11 @@
   "secondary_causes": [
     "YFINANCE_PROVIDER_DEGRADED"
   ],
-  "selection_time_et": "2026-10-16T08:34:17-04:00",
+  "selection_time_et": "2026-10-16T09:01:04-04:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-10-16T12:34:17Z",
+  "timestamp_utc": "2026-10-16T13:01:04Z",
   "watch_only_available": false,
-  "workflow_run_id": "38900930073",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/38900930073"
+  "workflow_run_id": "38903817583",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/38903817583"
 }

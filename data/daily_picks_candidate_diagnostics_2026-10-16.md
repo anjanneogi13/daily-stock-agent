@@ -20,8 +20,8 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
 - rejected_candidate_count: **3**
-- scored_count: **330**
-- scored_not_filtered_count: **300**
+- scored_count: **331**
+- scored_not_filtered_count: **301**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
 - universe_count: **519**
