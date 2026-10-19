@@ -511,5 +511,14 @@
     "added_at": "2026-10-19T12:10:07.128752+00:00",
     "expires": "2027-04-17T12:10:07.128760+00:00",
     "hard_block": true
+  },
+  "BURU": {
+    "ticker": "BURU",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "NUBURU Receives NYSE American Warning Letter For Disclosure Violation; Future Compliance Breaches Could Lead To Delisting Proceedings",
+    "added_at": "2026-10-19T20:38:14.805317+00:00",
+    "expires": "2027-04-17T20:38:14.805327+00:00",
+    "hard_block": true
   }
 }
