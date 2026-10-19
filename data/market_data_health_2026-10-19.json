@@ -2,47 +2,47 @@
   "artifact": "market_data_health",
   "by_stage": {
     "info": {
-      "attempts": 518,
+      "attempts": 1036,
       "empty": 0,
-      "errors": 34,
-      "successes": 484
+      "errors": 69,
+      "successes": 967
     },
     "monster_info": {
-      "attempts": 319,
+      "attempts": 639,
       "empty": 0,
-      "errors": 9,
-      "successes": 310
+      "errors": 21,
+      "successes": 618
     },
     "ohlcv": {
-      "attempts": 524,
+      "attempts": 1048,
       "empty": 0,
       "errors": 0,
-      "successes": 524
+      "successes": 1048
     }
   },
   "date": "2026-10-19",
   "providers": {
     "yfinance": {
-      "attempts": 1361,
+      "attempts": 2723,
       "empty": 0,
-      "errors": 43,
+      "errors": 90,
       "failure_types": {
         "empty_response": 0,
         "market_closed": 0,
         "missing_history": 0,
         "missing_intraday_bars": 0,
         "missing_quote": 0,
-        "provider_exception": 0,
-        "rate_limited": 43,
+        "provider_exception": 1,
+        "rate_limited": 89,
         "stale_data": 0,
         "symbol_not_found": 0,
         "timeout": 0,
         "unknown_provider_failure": 0
       },
       "not_found": 0,
-      "provider_error": 0,
-      "rate_limited": 43,
-      "successes": 1318,
+      "provider_error": 1,
+      "rate_limited": 89,
+      "successes": 2633,
       "timeout": 0,
       "unauthorized": 0
     }
@@ -50,7 +50,7 @@
   "run": {
     "fetched_count": 518,
     "final_pick_count": 0,
-    "scored_count": 319,
+    "scored_count": 320,
     "universe_count": 519
   },
   "samples": [
@@ -325,5 +325,5 @@
       "ticker": "AAOI"
     }
   ],
-  "timestamp_utc": "2026-10-19T12:36:29Z"
+  "timestamp_utc": "2026-10-19T13:04:35Z"
 }
