@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-20",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
+    "spy_change_pct": 0.42,
+    "qqq_change_pct": 1.21,
+    "soxx_change_pct": 1.73,
+    "vix": 18.87,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "DHR",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "CCL",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 26.45,
+      "gap_pct": 0.0,
+      "actionable": true
     },
     {
-      "ticker": "ISRG",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "EXPD",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 196.81,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "FFIV",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "DUK",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 119.27,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "VST",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "BIIB",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 233.48,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "GOOGL",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "HUM",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 414.98,
+      "gap_pct": 0.0,
+      "actionable": true
     }
   ]
 }
