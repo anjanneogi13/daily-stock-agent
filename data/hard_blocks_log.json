@@ -2112,5 +2112,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-22 12:33:48",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 8,
+    "blocked": [
+      {
+        "ticker": "IR",
+        "reason": "SL too tight (1.6% < 2.0% for $79 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "TDY",
+        "reason": "SL too tight (1.2% < 1.5% for $630 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
