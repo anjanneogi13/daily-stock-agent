@@ -2130,5 +2130,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-23 12:32:57",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 3,
+    "blocked": [
+      {
+        "ticker": "KMI",
+        "reason": "SL too tight (1.5% < 2.0% for $34 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "EXPD",
+        "reason": "SL too tight (1.2% < 1.5% for $196 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
