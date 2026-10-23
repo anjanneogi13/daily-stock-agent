@@ -1,53 +1,37 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "market": {
-    "spy_change_pct": 0.53,
-    "qqq_change_pct": 1.05,
-    "soxx_change_pct": 2.07,
-    "vix": 18.09,
+    "spy_change_pct": 0.0,
+    "qqq_change_pct": 0.0,
+    "soxx_change_pct": 0.0,
+    "vix": null,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
       "ticker": "RL",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 380.66,
-      "gap_pct": 0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "EXPD",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 197.01,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "HUM",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 425.42,
-      "gap_pct": 0.0,
-      "actionable": true
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     },
     {
       "ticker": "CCL",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 27.3,
-      "gap_pct": -0.0,
-      "actionable": true
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     },
     {
-      "ticker": "TRMB",
-      "tag": "\u2705 SAFE",
-      "reason": "normal entry",
-      "current_price": 62.59,
-      "gap_pct": 0.0,
-      "actionable": true
+      "ticker": "HUM",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
     }
   ]
 }
