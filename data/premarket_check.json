@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-26",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -10,7 +10,7 @@
   },
   "picks": [
     {
-      "ticker": "RL",
+      "ticker": "IDXX",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -18,7 +18,7 @@
       "actionable": false
     },
     {
-      "ticker": "CCL",
+      "ticker": "PGR",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -26,7 +26,7 @@
       "actionable": false
     },
     {
-      "ticker": "HUM",
+      "ticker": "AMGN",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
