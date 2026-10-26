@@ -2148,5 +2148,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-26 12:42:41",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 3,
+    "blocked": [
+      {
+        "ticker": "WRB",
+        "reason": "SL too tight (1.3% < 2.0% for $73 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "MET",
+        "reason": "SL too tight (1.4% < 2.0% for $99 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
