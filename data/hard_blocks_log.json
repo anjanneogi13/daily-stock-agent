@@ -2166,5 +2166,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-27 12:36:24",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 4,
+    "blocked": [
+      {
+        "ticker": "TDY",
+        "reason": "SL too tight (1.5% < 1.5% for $645 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
