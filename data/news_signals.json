@@ -547,5 +547,14 @@
     "added_at": "2026-10-26T22:38:17.632820+00:00",
     "expires": "2027-04-24T22:38:17.632827+00:00",
     "hard_block": true
+  },
+  "ENLV": {
+    "ticker": "ENLV",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Enlivex Receives Nasdaq Delisting Notice; Ineligible For 180-Day Compliance Period Following Prior Reverse Split",
+    "added_at": "2026-10-27T12:09:21.517436+00:00",
+    "expires": "2027-04-25T12:09:21.517444+00:00",
+    "hard_block": true
   }
 }
