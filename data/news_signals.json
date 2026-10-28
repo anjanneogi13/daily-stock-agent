@@ -556,5 +556,14 @@
     "added_at": "2026-10-27T12:09:21.517436+00:00",
     "expires": "2027-04-25T12:09:21.517444+00:00",
     "hard_block": true
+  },
+  "SYME": {
+    "ticker": "SYME",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Supply@ME Capital plc Provides Update on Financial Reporting and Asset Disposal Strategy",
+    "added_at": "2026-10-28T09:05:32.379608+00:00",
+    "expires": "2027-04-26T09:05:32.379615+00:00",
+    "hard_block": true
   }
 }
