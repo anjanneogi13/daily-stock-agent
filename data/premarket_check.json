@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -10,7 +10,23 @@
   },
   "picks": [
     {
-      "ticker": "LIN",
+      "ticker": "PGR",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
+    },
+    {
+      "ticker": "CME",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
+    },
+    {
+      "ticker": "DHR",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -19,6 +35,14 @@
     },
     {
       "ticker": "CB",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
+    },
+    {
+      "ticker": "ORLY",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
