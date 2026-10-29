@@ -2192,5 +2192,33 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-29 12:27:42",
+    "weak_sectors": {},
+    "blocked_count": 4,
+    "passed_count": 6,
+    "blocked": [
+      {
+        "ticker": "ORLY",
+        "reason": "SL too tight (1.2% < 2.0% for $90 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "CTAS",
+        "reason": "SL too tight (1.4% < 1.5% for $213 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "LNT",
+        "reason": "SL too tight (1.0% < 2.0% for $69 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "PNW",
+        "reason": "SL too tight (1.1% < 1.5% for $105 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
