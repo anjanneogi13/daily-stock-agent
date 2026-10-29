@@ -1,3 +1,18 @@
+## 2026-10-29 (Thu) — Self-learning loop audit: what changed and what to verify next
+
+**Why the agent never learned:** nine independent breaks (see `docs/WORK_LOG.md` 2026-10-29): nightly weight loop crashed every night (report dict passed instead of rows), every swing pick ran at R:R 1.25 (config SL/TP ignored → negative expectancy at 36% win rate), reflections windowed by `pick_date` so a week held ~1 closed trade, inconsistent "closed" definitions, unreachable LLM sample-size rule, 68 outcomes lost as unverified-expired, brain crashed on list-shaped `p["news"]` (0/N analysed), and kill→0.0 weights were unrevivable.
+
+**Next session priorities:**
+
+1. Check the first `evaluate.yml` run after merge: `data/learning/outcome_backfill_<date>.json` should show most of the 68 unverified rows repaired (`repaired` count). If `still_unverified` stays high, check `_fetch_ohlc` rate-limiting in CI.
+2. After the same run, `python scripts/sync_journal_outcomes.py` should report "already in sync" and `src.self_awareness.rolling_window(30)['n']` should match the weekly review's closed count.
+3. Check `data/brain_state_meta.json` → `calibration_propose` must be `ok` with `proposals_written > 0`, and `config/weights.json` should start moving (±5%/week cap, floor 0.5 / ceiling 1.5).
+4. Confirm the next premarket run prints `✓ Brain analyzed N/N picks` and `brain_p_win` / `brain_ev_pct` columns fill in picks_log.
+5. Confirm new swing picks log `risk_reward` ≈ 2.0 (TP 3.0×ATR / SL 1.5×ATR). Watch the weekly review (now by `evaluated_on`) for the win-rate/R shift over the following 4–6 weeks.
+6. Follow-ups not done in this session: dedupe `data/lessons.jsonl` (`auto_cooldown` ABC/JKL spam); log RSI/ATR per pick for factor calibration; restore Claude credits (brain currently falls back to Gemini).
+
+---
+
 ## 2026-09-13 (Sat) — Architecture gap closure session: what changed and what to do next
 
 **This session built the three verified gaps between the repo and the planned architecture:**

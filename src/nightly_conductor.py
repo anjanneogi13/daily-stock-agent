@@ -26,6 +26,10 @@ from typing import Dict, List, Optional
 
 WATCHLIST_PATH = Path("data/watchlist.json")
 PICKS_LOG      = Path("data/picks_log.csv")
+# Live picks accrue ~5/day, so the backtest default (min_n=30 per bucket)
+# would gate proposals for months. 20 closed picks per bucket is enough for a
+# capped ±5%/week nudge (learned_weights clamps the total to [0.85, 1.15]).
+LIVE_PROPOSAL_MIN_N = int(os.getenv("BRAIN_PROPOSAL_MIN_N", "20"))
 BRAIN_STATE_META_PATH = Path("data/brain_state_meta.json")
 
 
@@ -142,7 +146,12 @@ def _step_calibration_propose() -> Dict:
     if not PICKS_LOG.exists():
         return {"skipped": "no picks_log"}
     with PICKS_LOG.open() as f:
-        rows = [r for r in csv.DictReader(f) if r.get("r_multiple") not in (None, "")]
+        rows = [
+            r for r in csv.DictReader(f)
+            if r.get("r_multiple") not in (None, "", "None")
+            # Learn from OFFICIAL outcomes only — watch-only rows are not picks.
+            and str(r.get("watch_only", "")).strip().lower() not in ("true", "1", "yes")
+        ]
     if len(rows) < 10:
         return {"skipped": f"only {len(rows)} closed picks (need 10)"}
     # Build per-factor report → proposals
@@ -153,10 +162,14 @@ def _step_calibration_propose() -> Dict:
         # crash (string CSV values fed to numeric comparisons).
         return {"skipped": f"calibration.per_factor_report failed: {type(e).__name__}: {e}"}
     run_id = f"nightly_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-    proposals = wp.propose(report, run_id=run_id) if report else []
+    # weight_proposer.propose() expects the raw pick ROWS (it runs its own
+    # calibration). Passing the per-factor report dict here made every nightly
+    # run crash with "'str' object has no attribute 'get'" — the weight loop
+    # never produced a single proposal from live data.
+    proposals = wp.propose(rows, run_id=run_id, min_n=LIVE_PROPOSAL_MIN_N) if report else []
     n = wp.write_proposals(proposals) if proposals else 0
-    return {"factors_analyzed": len(report), "proposals_written": n,
-            "run_id": run_id}
+    return {"factors_analyzed": len(report), "closed_rows": len(rows),
+            "proposals_written": n, "run_id": run_id}
 
 
 def _step_weight_apply() -> Dict:

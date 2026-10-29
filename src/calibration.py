@@ -237,7 +237,7 @@ def overall_summary(rows: List[Dict]) -> Dict:
     if not rows:
         return {"n": 0, "wins": 0, "win_rate": 0.0,
                 "mean_r": 0.0, "total_r": 0.0, "expectancy_R": 0.0}
-    rmults = [r.get("r_multiple") or 0.0 for r in rows]
+    rmults = [_num(r.get("r_multiple")) or 0.0 for r in rows]
     wins   = sum(1 for r in rows if _is_win(r))
     return {
         "n":            len(rows),

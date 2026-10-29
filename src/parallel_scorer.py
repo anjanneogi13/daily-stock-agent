@@ -35,6 +35,39 @@ def _resolve_regime(cfg):
     cfg["_regime"] = r
     return r
 
+def _plan_overrides(cfg: dict, trade_type: str) -> dict:
+    """Config-driven SL/TP/risk knobs for atr_trade_plan.
+
+    Audit 2026-10-29: the scorer always used atr_trade_plan's hardcoded
+    defaults (2.0×ATR SL / 2.5×ATR TP → R:R 1.25 for every swing pick) while
+    config.yaml advertised stop_loss_atr_mult/take_profit_atr_mult that were
+    only honoured on the no-ATR fallback path. Live swing picks ran at
+    R:R 1.25 with a ~36% win rate — a mathematically negative expectancy
+    (0.36×1.25 − 0.64 ≈ −0.19R, exactly the realised mean R). Day trades keep
+    their own tight multipliers inside atr_trade_plan.
+    """
+    out = {}
+    risk_cfg = cfg.get("risk", {}) or {}
+    try:
+        rp = float(risk_cfg.get("risk_per_trade_pct", 1.0) or 1.0)
+        out["risk_pct"] = rp / 100 if rp > 0.2 else rp  # accept 1.0 (%) or 0.01
+    except (TypeError, ValueError):
+        pass
+    if trade_type == "day":
+        return out
+    swing_cfg = cfg.get("swing_trading", {}) or {}
+    sl = swing_cfg.get("atr_mult_sl", risk_cfg.get("stop_loss_atr_mult"))
+    tp = swing_cfg.get("atr_mult_tp", risk_cfg.get("take_profit_atr_mult"))
+    try:
+        if sl is not None and float(sl) > 0:
+            out["atr_mult_sl"] = float(sl)
+        if tp is not None and float(tp) > 0:
+            out["atr_mult_tp"] = float(tp)
+    except (TypeError, ValueError):
+        pass
+    return out
+
+
 def _score_one(tk, df, cfg):
     try:
         d = add_indicators(df)
@@ -119,7 +152,8 @@ def _score_one(tk, df, cfg):
         _regime_for_size = cfg.get("_regime") or _resolve_regime(cfg)
         if atr and atr > 0 and price > 0:
             plan = atr_trade_plan(price, atr, capital, trade_type=ttype,
-                                  regime=_regime_for_size)
+                                  regime=_regime_for_size,
+                                  **_plan_overrides(cfg, ttype))
         else:
             plan = trade_plan(sig, cfg)
             plan["trade_type"] = ttype

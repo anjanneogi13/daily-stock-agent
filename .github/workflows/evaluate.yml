@@ -51,6 +51,23 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: python scripts/evaluate_picks.py
 
+      - name: Recover lost outcomes (re-walk unverified expired picks) 🧭
+        if: steps.guard.outputs.skip != 'true'
+        # Audit 2026-10-29: 68 picks were bulk-settled "expired" with no
+        # exit price when the evaluator caught up after weeks of lost pushes.
+        # Those rows are invisible to every learning report. Re-walk them with
+        # the real evaluator against historical bars; verified rows are never
+        # touched and the run is idempotent (data/learning/outcome_backfill_*.json).
+        run: python scripts/backfill_unverified_outcomes.py --apply || true
+
+      - name: Sync journal outcomes from picks_log 🔁
+        if: steps.guard.outputs.skip != 'true'
+        # 45/110 closed picks had a signal_journal row with outcome=None, so
+        # the rolling 30/60/90d confidence intervals (self_awareness) and the
+        # hypothesis engine under-counted closed trades by ~40%. Idempotent:
+        # only journal rows with outcome=None are filled.
+        run: python scripts/sync_journal_outcomes.py --apply || true
+
       - name: Self-heal missing SPY alpha on closed picks 🩹
         if: steps.guard.outputs.skip != 'true'
         # SPY fetch hiccups at eval time used to leave closed rows without

@@ -233,15 +233,27 @@ def _add_sector_alpha(row: dict, exit_date_str: str, pick_return_pct: float) -> 
     return str(round(sec_at_exit, 2))
 
 
-def evaluate_pending() -> dict:
-    """Walk through pending picks, mark TP/SL/expired."""
-    rows = _load_picks()
+def evaluate_pending(lookback_days: int = EVAL_LOOKBACK_DAYS,
+                     rows: list | None = None,
+                     save: bool = True) -> dict:
+    """Walk through pending picks, mark TP/SL/expired.
+
+    Args:
+        lookback_days: picks older than this are settled 'expired' with NO
+            exit data (unverified). The outcome backfill passes a very large
+            value so historical rows are re-walked against real OHLC instead.
+        rows: pre-loaded picks_log rows to evaluate in place (default: load
+            from disk). Lets callers reset a subset to 'pending' first.
+        save: write the rows back to picks_log.csv (default True).
+    """
+    if rows is None:
+        rows = _load_picks()
     if not rows:
         print("[eval] No picks logged yet.")
         return {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0, "day_close": 0}
 
     today = datetime.now().date()
-    cutoff = today - timedelta(days=EVAL_LOOKBACK_DAYS)
+    cutoff = today - timedelta(days=lookback_days)
 
     counts = {"evaluated": 0, "tp_hits": 0, "sl_hits": 0, "expired": 0, "still_open": 0, "unreachable_entry": 0, "day_close": 0}
 
@@ -513,5 +525,6 @@ def evaluate_pending() -> dict:
                 counts["still_open"] += 1
                 print(f"  🟡 {ticker}: still open ({days_elapsed}d since pick)")
 
-    _save_picks(rows)
+    if save:
+        _save_picks(rows)
     return counts

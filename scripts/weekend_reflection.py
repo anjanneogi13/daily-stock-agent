@@ -41,13 +41,25 @@ if not all_obs:
     print(f"[reflect] ✅ Saved {out} (ledger-only fallback)")
     sys.exit(0)
 
-# Aggregate stats from picks_log
-picks = list(csv.DictReader(Path("data/picks_log.csv").open()))
-recent = [p for p in picks if p.get("pick_date","") >= cutoff]
-evaluated = [p for p in recent if p.get("evaluation_status") in ("tp_hit","sl_hit","expired")]
-tp_count = sum(1 for p in evaluated if p["evaluation_status"]=="tp_hit")
-sl_count = sum(1 for p in evaluated if p["evaluation_status"]=="sl_hit")
-win_rate = tp_count/len(evaluated)*100 if evaluated else 0
+# Aggregate stats from picks_log — canonical window (src/outcome_window):
+# picks MADE this week by pick_date, outcomes LEARNED this week by
+# evaluated_on. The old pick_date-only filter saw ~1 closed swing per week
+# (10-session hold), so the coach said "not enough data" every week while
+# 100+ closed trades were never reviewed (audit 2026-10-29).
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.outcome_window import window_report, outcomes_in_window, summarize
+_end = datetime.now().date()
+_start = _end - timedelta(days=7)
+_win = window_report(_start, _end)
+recent = _win["picked"]
+evaluated = _win["closed"]
+_ws = _win["summary"]
+tp_count = _ws["by_status"].get("tp_hit", 0)
+sl_count = _ws["by_status"].get("sl_hit", 0)
+win_rate = (_ws["win_rate"] or 0) * 100
+# Rolling 30-day evidence base so the coach can reason beyond one week.
+_closed_30 = outcomes_in_window(_end - timedelta(days=30), _end)
+_s30 = summarize(_closed_30)
 
 obs_types = Counter(o["type"] for o in all_obs)
 
@@ -57,11 +69,18 @@ Write your response in PLAIN ENGLISH (no jargon) for a retail trader to read on 
 # Data You Have
 
 ## Week of {cutoff} to {today}
-- Total picks generated: {len(recent)}
-- Evaluated (closed): {len(evaluated)}
+- Total picks generated (by pick_date): {len(recent)}
+- Trades that CLOSED this week (by evaluated_on, incl. expired-at-horizon and day_close): {len(evaluated)}
 - TP hits: {tp_count}
 - SL hits: {sl_count}
-- Win rate: {win_rate:.1f}%
+- Expired at hold horizon / day_close: {_ws["by_status"].get("expired", 0)} / {_ws["by_status"].get("day_close", 0)}
+- Win rate (R > 0): {win_rate:.1f}%
+- Total R this week: {_ws["total_r"]}  (avg R {_ws["avg_r"]})
+- Still pending: {_win["pending_total"]}  ·  Unverified expired (lost outcomes): {_win["unverified_expired_total"]}
+
+## Rolling 30-day evidence base (closed by evaluated_on)
+- Closed: {_s30["n"]}  ·  Win rate: {(_s30["win_rate"] or 0)*100:.1f}%  ·  Total R: {_s30["total_r"]}  ·  Avg R: {_s30["avg_r"]}
+- By status: {json.dumps(_s30["by_status"])}
 
 ## Observation type breakdown
 {json.dumps(dict(obs_types), indent=2)}
@@ -107,7 +126,7 @@ For each suggestion, use this format:
 - (2-3 things to monitor)
 
 CRITICAL RULES:
-1. If fewer than 20 evaluated trades exist, say "Not enough data yet — let's wait another week" and propose ZERO changes.
+1. Judge sample size on the ROLLING 30-DAY closed count above (not the single week). If it is below 20, say "Not enough data yet — let's wait another week" and propose ZERO changes; otherwise you MUST propose changes backed by the numbers.
 2. Be brutally honest — if the week was bad, say so.
 3. NO buzzwords. Write like you're explaining to a friend at a coffee shop.
 4. Every claim must reference a specific observation (e.g. "RMBS on 2026-04-28").

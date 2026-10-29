@@ -34,8 +34,13 @@ def test_multiplier_uses_or_default():
     assert '"sector_mult") or 1.0' in _block()
 
 
-def test_risk_reward_uses_or_default():
-    assert '"risk_reward") or 2.0' in _block()
+def test_risk_reward_is_recomputed_not_defaulted():
+    """Audit 2026-10-29: `p["plan"].get("risk_reward") or 2.0` fabricated a
+    2:1 R:R in the CSV whenever the plan lacked one, hiding that live swing
+    picks really ran at 1.25:1. The column must be derived from the actual
+    levels (never None: 0.0 = unknown), not a hardcoded default."""
+    assert '"risk_reward": _plan_risk_reward(p["plan"])' in _block()
+    assert '"risk_reward") or 2.0' not in _block()
 
 
 def test_qty_uses_or_default():

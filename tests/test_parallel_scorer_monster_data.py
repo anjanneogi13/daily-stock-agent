@@ -48,7 +48,7 @@ def _patch_common(monkeypatch, ps):
         "day_components": {},
     })
     monkeypatch.setattr(ps, "classify_with_day_score", lambda scores, day_score, sig=None: "swing")
-    monkeypatch.setattr(ps, "atr_trade_plan", lambda price, atr, capital, trade_type, regime: {
+    monkeypatch.setattr(ps, "atr_trade_plan", lambda price, atr, capital, trade_type, regime, **kw: {
         "entry": price,
         "stop_loss": price - atr,
         "take_profit": price + atr * 2,

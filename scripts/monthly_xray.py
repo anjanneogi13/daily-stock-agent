@@ -13,9 +13,17 @@ picks_file = Path("data/picks_log.csv")
 if not picks_file.exists():
     print("[monthly] No picks_log.csv yet — nothing to analyze. Skipping.")
     import sys; sys.exit(0)
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.outcome_window import window_report, is_closed_verified  # noqa: E402
+
 picks = list(csv.DictReader(picks_file.open()))
-month_picks = [p for p in picks if month_start <= p.get("pick_date", "") <= today_str]
-evaluated = [p for p in month_picks if p.get("evaluation_status") in ("tp_hit", "sl_hit", "expired")]
+# Canonical window (audit 2026-10-29): picks MADE this month by pick_date,
+# outcomes CLOSED this month by evaluated_on, with one closed-set definition
+# ({tp_hit, sl_hit, expired-with-price, day_close}; watch-only excluded).
+_win = window_report((today - timedelta(days=30)).date(), today.date(), picks)
+month_picks = _win["picked"]
+evaluated = _win["closed"]
 
 
 def f(x, d=0.0):
@@ -32,16 +40,17 @@ def week_of(d):
 
 weekly = defaultdict(lambda: {"picks": 0, "evaluated": 0, "tp": 0, "sl": 0, "r_sum": 0.0, "ret_sum": 0.0})
 for p in month_picks:
-    w = week_of(p["pick_date"])
-    weekly[w]["picks"] += 1
-    if p.get("evaluation_status") in ("tp_hit", "sl_hit", "expired"):
-        weekly[w]["evaluated"] += 1
-        if p["evaluation_status"] == "tp_hit":
-            weekly[w]["tp"] += 1
-        if p["evaluation_status"] == "sl_hit":
-            weekly[w]["sl"] += 1
-        weekly[w]["r_sum"] += f(p.get("r_multiple", 0))
-        weekly[w]["ret_sum"] += f(p.get("actual_return_pct", 0))
+    weekly[week_of(p["pick_date"])]["picks"] += 1
+for p in evaluated:
+    # bucket closed trades by the week their outcome became known
+    w = week_of((p.get("evaluated_on") or p["pick_date"])[:10])
+    weekly[w]["evaluated"] += 1
+    if p["evaluation_status"] == "tp_hit":
+        weekly[w]["tp"] += 1
+    if p["evaluation_status"] == "sl_hit":
+        weekly[w]["sl"] += 1
+    weekly[w]["r_sum"] += f(p.get("r_multiple", 0))
+    weekly[w]["ret_sum"] += f(p.get("actual_return_pct", 0))
 
 weekly_summary = []
 for w in sorted(weekly.keys()):
@@ -109,7 +118,7 @@ def stat_bucket(getter):
     for p in evaluated:
         k = getter(p)
         d[k]["n"] += 1
-        d[k]["wins"] += int(p["evaluation_status"] == "tp_hit")
+        d[k]["wins"] += int(f(p.get("r_multiple", 0)) > 0)  # win = R > 0, not only tp_hit
         d[k]["r_sum"] += f(p.get("r_multiple", 0))
     return {k: {"n": v["n"], "win_rate": round(v["wins"] / v["n"] * 100, 1),
                 "avg_r": round(v["r_sum"] / v["n"], 3)}
@@ -121,9 +130,17 @@ def score_bucket(p):
     return "0.85+" if s >= 0.85 else "0.80-0.85" if s >= 0.80 else "0.75-0.80" if s >= 0.75 else "<0.75"
 
 
+def rr_bucket(p):
+    rr = f(p.get("risk_reward", 0))
+    return f"R:R {rr:.2f}" if rr else "R:R n/a"
+
+
 stats = {
     "by_score": stat_bucket(score_bucket),
     "by_regime": stat_bucket(lambda p: p.get("regime", "unknown")),
+    "by_trade_type": stat_bucket(lambda p: p.get("trade_type") or "swing"),
+    "by_exit": stat_bucket(lambda p: p.get("evaluation_status") or "unknown"),
+    "by_risk_reward": stat_bucket(rr_bucket),
 }
 
 ranked = sorted([p for p in evaluated if p.get("r_multiple")],
@@ -143,6 +160,11 @@ data_blob = {
     "code_changes": changes,
     "by_score": stats["by_score"],
     "by_regime": stats["by_regime"],
+    "by_trade_type": stats["by_trade_type"],
+    "by_exit": stats["by_exit"],
+    "by_risk_reward": stats["by_risk_reward"],
+    "pending_total": _win["pending_total"],
+    "unverified_expired_total": _win["unverified_expired_total"],
     "best": best,
     "worst": worst,
     "observation_types": dict(obs_types),

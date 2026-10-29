@@ -79,7 +79,10 @@ swing_trading:
   enabled: true
   max_picks: 5              # max SWING picks per session
   min_score: 0.55           # existing threshold
-  # Uses existing atr_mult_sl=2.0 from risk: section
+  # Swing SL/TP come from risk.stop_loss_atr_mult / risk.take_profit_atr_mult
+  # (1.5x / 3.0x ATR -> R:R 2.0). Override here with atr_mult_sl / atr_mult_tp.
+  # Audit 2026-10-29: the scorer previously ignored these and hardcoded
+  # 2.0x/2.5x ATR (R:R 1.25), which needs a >44% win rate to break even.
 
 # 💎 Monster Hunt Mode (added Sunday May 3 2026)
 # Detects asymmetric high-conviction setups and gives them lottery treatment:

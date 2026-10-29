@@ -119,6 +119,47 @@ def _candidate_report_value(value):
 
 
 
+def _plan_risk_reward(plan: dict) -> float:
+    """Actual R:R of a plan; recomputed from levels when the field is missing.
+
+    The old ``plan.get("risk_reward") or 2.0`` fallback wrote a fictitious 2.0
+    into picks_log.csv, poisoning every downstream win-rate/expectancy lesson.
+    """
+    rr = plan.get("risk_reward")
+    try:
+        if rr is not None and float(rr) > 0:
+            return round(float(rr), 2)
+        entry = float(plan.get("entry") or 0)
+        sl = float(plan.get("stop_loss") or 0)
+        tp = float(plan.get("take_profit") or 0)
+        if entry > sl > 0 and tp > entry:
+            return round((tp - entry) / (entry - sl), 2)
+    except (TypeError, ValueError):
+        pass
+    return 0.0
+
+
+def _brain_news_inputs(pick: dict) -> tuple[float, str]:
+    """Return (tradeable_score, sentiment) for the probability engine.
+
+    Bug (2026-10-29 audit): p["news"] is a LIST of raw articles from the
+    scorer, so ``news.get("tradeable_score")`` raised AttributeError for every
+    pick, the per-pick except swallowed it, and brain_p_win/brain_ev_pct/
+    brain_sl/brain_tp were blank in picks_log.csv for the agent's whole life
+    ("Brain analyzed 0/9 picks"). The classified signal lives in
+    p["news_signal"]; a dict-shaped p["news"] is accepted as a fallback.
+    """
+    for field in (pick.get("news_signal"), pick.get("news")):
+        if isinstance(field, dict):
+            try:
+                score = float(field.get("tradeable_score", 0) or 0)
+            except (TypeError, ValueError):
+                score = 0.0
+            sentiment = field.get("sentiment") or "neutral"
+            return score, str(sentiment)
+    return 0.0, "neutral"
+
+
 def _news_action_window(news_field, scores_field=None) -> str | None:
     """Defensively extract action_window from a pick's news field.
 
@@ -1059,14 +1100,13 @@ def run():
                 if entry_price <= 0:
                     continue
                 # Pull conditioning signals from existing pick context
-                news_data = p.get("news", {}) or {}
-                news_score = float(news_data.get("tradeable_score", 0) or 0)
-                news_sentiment = news_data.get("sentiment", "neutral") or "neutral"
+                news_score, news_sentiment = _brain_news_inputs(p)
+                _d2e = p.get("days_to_earnings")
                 signals = SignalState(
                     regime=regime_label,
                     news_score=news_score,
                     news_sentiment=news_sentiment,
-                    days_to_earnings=p.get("days_to_earnings"),
+                    days_to_earnings=int(_d2e) if isinstance(_d2e, (int, float)) and _d2e < 999 else None,
                     watchlist_boost=float(p["scores"].get("watchlist_boost", 0) or 0),
                 )
                 decision = compute_probabilistic_decision(ticker, entry_price, signals=signals)
@@ -1085,6 +1125,13 @@ def run():
             except Exception as e:
                 p["brain"] = {"error": str(e)}
         rprint(f"  [green]✓ Brain analyzed {brain_count}/{len(top)} picks[/green]")
+        # Never fail silently again: surface the first per-pick error so a
+        # systemic crash (every pick failing) is visible in the run log.
+        _brain_errs = [(p["ticker"], p["brain"]["error"]) for p in top
+                       if isinstance(p.get("brain"), dict) and p["brain"].get("error")]
+        if _brain_errs:
+            rprint(f"  [red]⚠ Brain failed on {len(_brain_errs)} pick(s), e.g. "
+                   f"{_brain_errs[0][0]}: {_brain_errs[0][1]}[/red]")
         # Show brain decisions
         for p in top:
             b = p.get("brain", {})
@@ -1817,7 +1864,7 @@ def run():
                 "entry": p["plan"].get("entry"),
                 "stop_loss": p["plan"].get("stop_loss"),
                 "take_profit": p["plan"].get("take_profit"),
-                "risk_reward": p["plan"].get("risk_reward") or 2.0,  # Bug #14
+                "risk_reward": _plan_risk_reward(p["plan"]),  # never fabricate 2.0
                 "qty": p["plan"].get("quantity") or 0,  # Bug #14: coerce None
                 "days_to_earnings": p.get("days_to_earnings"),
                 # PILLAR 1 audit fields (May 2 2026)
