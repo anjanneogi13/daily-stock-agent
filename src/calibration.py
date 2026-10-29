@@ -100,6 +100,33 @@ def _atr_bucket(atr: Optional[float], entry: Optional[float]) -> str:
     return "atrpct_>=5"
 
 
+def _adx_bucket(adx: Optional[float]) -> str:
+    """Trend-strength bucket (ADX 14)."""
+    if adx is None:  return "adx_na"
+    if adx < 20:     return "adx_<20"
+    if adx < 25:     return "adx_20-25"
+    if adx < 40:     return "adx_25-40"
+    return "adx_>=40"
+
+
+def _rvol_bucket(vol_ratio: Optional[float]) -> str:
+    """Relative-volume bucket (volume / 20d average)."""
+    if vol_ratio is None:  return "rvol_na"
+    if vol_ratio < 0.8:    return "rvol_<0.8"
+    if vol_ratio < 1.3:    return "rvol_0.8-1.3"
+    if vol_ratio < 2.0:    return "rvol_1.3-2"
+    return "rvol_>=2"
+
+
+def _ext50_bucket(dist_pct: Optional[float]) -> str:
+    """Extension above/below the 50-day SMA, in percent."""
+    if dist_pct is None:  return "ext50_na"
+    if dist_pct < 0:      return "ext50_below"
+    if dist_pct < 3:      return "ext50_0-3"
+    if dist_pct < 8:      return "ext50_3-8"
+    return "ext50_>=8"
+
+
 def _month_bucket(pick_date: Optional[str]) -> str:
     """YYYY-MM from a YYYY-MM-DD string."""
     if not pick_date or len(pick_date) < 7:
@@ -210,6 +237,14 @@ FACTOR_KEYS: Dict[str, callable] = {
     "rsi":        lambda r: _rsi_bucket(_num(r.get("rsi"))),
     "score":      lambda r: _score_bucket(_num(r.get("score"))),
     "atrpct":     lambda r: _atr_bucket(_num(r.get("atr")), _num(r.get("entry"))),
+    # Audit 2026-10-29: picks_log.csv now carries the pick-time inputs below
+    # (src/pick_logger.FIELDS), so the brain can learn on more than `score`.
+    "adx":        lambda r: _adx_bucket(_num(r.get("adx"))),
+    "rvol":       lambda r: _rvol_bucket(_num(r.get("vol_ratio"))),
+    "ext50":      lambda r: _ext50_bucket(_num(r.get("dist_sma50_pct"))),
+    # Report-only (never a learned multiplier — the seed lesson forbids
+    # blanket sector boosts; see weight_proposer.propose).
+    "sector":     lambda r: r.get("sector") or "unknown",
     # Live picks_log.csv calls this column evaluation_status
     "exit_status": lambda r: r.get("exit_status") or r.get("evaluation_status") or "unknown",
 }

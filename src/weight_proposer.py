@@ -122,11 +122,16 @@ def propose(rows: List[Dict], run_id: str,
     factor_report = cal.per_factor_report(rows, min_n=min_n)
     ts = datetime.now().isoformat(timespec="seconds")
 
+    from src.learned_weights import PICK_TIME_FACTORS
+
     proposals: List[Proposal] = []
     for factor, table in factor_report.items():
-        # exit_status is descriptive (sl_hit / tp_hit etc), not a knob
-        # we can twist — skip it from auto-proposals.
-        if factor == "exit_status":
+        # Only factors that learned_weights applies at pick time are knobs.
+        # exit_status is descriptive, trade_type is owned by auto_pause, and
+        # sector is report-only (the seed lesson forbids blanket sector
+        # boosts). Proposals for those would be applied to weights.json and
+        # never read — dead weight that still burns the 5%/week cap.
+        if factor not in PICK_TIME_FACTORS:
             continue
         for bucket_row in table:
             n = bucket_row["n"]
@@ -191,7 +196,7 @@ def read_proposals(path: Optional[Path] = None,
                 rec = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            if only_unapplied and rec.get("applied"):
+            if only_unapplied and (rec.get("applied") or rec.get("archived")):
                 continue
             out.append(rec)
     if limit:

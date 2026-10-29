@@ -143,15 +143,14 @@ def _step_calibration_propose() -> Dict:
     """Run calibration → generate proposals from per-factor accuracy."""
     from src import calibration as cal
     from src import weight_proposer as wp
+    from src.outcome_window import is_closed_verified, is_official
     if not PICKS_LOG.exists():
         return {"skipped": "no picks_log"}
     with PICKS_LOG.open() as f:
-        rows = [
-            r for r in csv.DictReader(f)
-            if r.get("r_multiple") not in (None, "", "None")
-            # Learn from OFFICIAL outcomes only — watch-only rows are not picks.
-            and str(r.get("watch_only", "")).strip().lower() not in ("true", "1", "yes")
-        ]
+        # Canonical closed set (src/outcome_window): verified outcome AND
+        # official pick — the same definition the weekly/monthly reports use.
+        rows = [r for r in csv.DictReader(f)
+                if is_official(r) and is_closed_verified(r)]
     if len(rows) < 10:
         return {"skipped": f"only {len(rows)} closed picks (need 10)"}
     # Build per-factor report → proposals
@@ -196,13 +195,13 @@ def _step_auto_promote() -> Dict:
 
 
 def _step_lesson_gc() -> Dict:
-    from src.lesson_gc import gc_stale
-    res = gc_stale()
-    if isinstance(res, list):
-        return {"gc_removed": len(res)}
-    if isinstance(res, dict):
-        return {"gc_removed": res.get("removed", 0)}
-    return {"gc_removed": 0}
+    from src.lesson_gc import gc_stale, gc_duplicates
+    # gc_stale/gc_duplicates return (count, records); the old isinstance
+    # checks for list/dict never matched a tuple, so the step always
+    # reported gc_removed=0 even when it deactivated lessons.
+    stale_n, _ = gc_stale()
+    dup_n, _ = gc_duplicates()
+    return {"gc_removed": int(stale_n), "gc_duplicates": int(dup_n)}
 
 
 # ═══════════════════════════════════════════════════════════════

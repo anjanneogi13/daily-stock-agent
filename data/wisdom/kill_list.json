@@ -1,0 +1,32 @@
+{
+  "UNH": {
+    "reason": "Backtester avg -1.35R",
+    "added_at": "2026-10-29T12:23:23",
+    "expires_at": "2027-04-27T12:23:23",
+    "source": "backtester"
+  },
+  "TEAM": {
+    "reason": "Backtester avg -1.00R",
+    "added_at": "2026-10-29T12:23:23",
+    "expires_at": "2027-04-27T12:23:23",
+    "source": "backtester"
+  },
+  "SMCI": {
+    "reason": "Backtester avg -0.94R + high vol penalty",
+    "added_at": "2026-10-29T12:23:23",
+    "expires_at": "2027-04-27T12:23:23",
+    "source": "backtester"
+  },
+  "DIS": {
+    "reason": "Backtester avg -0.64R",
+    "added_at": "2026-10-29T12:23:23",
+    "expires_at": "2027-04-27T12:23:23",
+    "source": "backtester"
+  },
+  "SCHW": {
+    "reason": "Backtester avg -0.64R",
+    "added_at": "2026-10-29T12:23:23",
+    "expires_at": "2027-04-27T12:23:23",
+    "source": "backtester"
+  }
+}

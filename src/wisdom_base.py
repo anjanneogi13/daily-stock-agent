@@ -71,6 +71,33 @@ def load_active_lessons(min_confidence: float = 0.5) -> List[Dict]:
     return out
 
 
+def has_recent_lesson(source: str, tag: str, within_days: int) -> bool:
+    """True if an active lesson from `source` tagged `tag` was written in the
+    last `within_days` days. Lets automated writers (auto_cooldown) stay
+    idempotent: the 2026-10-29 audit found 2,542 identical cooldown lessons
+    for two tickers because every evaluator run re-wrote the same lesson."""
+    if not LESSONS.exists():
+        return False
+    cutoff = datetime.now() - timedelta(days=within_days)
+    tag_u = str(tag).upper()
+    with LESSONS.open() as f:
+        for line in f:
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if not r.get("active", True) or r.get("source") != source:
+                continue
+            if tag_u not in {str(t).upper() for t in (r.get("tags") or [])}:
+                continue
+            try:
+                if datetime.fromisoformat(str(r.get("ts"))) >= cutoff:
+                    return True
+            except (TypeError, ValueError):
+                continue
+    return False
+
+
 def deactivate_lesson(text_substring: str) -> int:
     """Mark all lessons containing substring as active=False. Returns count."""
     if not LESSONS.exists():

@@ -170,7 +170,8 @@ def test_attribute_by_min_n_drops_small_buckets(fake_run):
 def test_per_factor_report_keys(fake_run):
     rows = cal.load_picks(fake_run)
     rep = cal.per_factor_report(rows, min_n=1)
-    assert set(rep.keys()) == {"trade_type", "rsi", "score", "atrpct", "exit_status"}
+    assert set(rep.keys()) == {"trade_type", "rsi", "score", "atrpct", "exit_status",
+                               "adx", "rvol", "ext50", "sector"}
     # every entry is a list of dicts with required cols
     for table in rep.values():
         for row in table:

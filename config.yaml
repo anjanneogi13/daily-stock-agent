@@ -56,6 +56,22 @@ output:
   min_score: 0.55
   save_csv: true
   csv_path: data/picks.csv
+
+# ═══════════════════════════════════════════════════════════════
+# QUALITY GATE (added 2026-10-29 audit) — see src/quality_gate.py
+# Evidence from the 110 closed official picks (May→Oct 2026):
+#   final score <= 0.70 : n=71, total -19.6R (mean ≈ -0.28R)
+#   rvol < 0.8          : n=17, mean -0.49R
+#   pass (score>=0.70 & rvol>=0.8): n=37 mean -0.02R | fail: n=73 mean -0.25R
+# Applied after the earnings-quality blend + news boost, before the top-N
+# trim. Fewer picks on thin days is intended. QUALITY_GATE_MODE env var
+# (enforce|observe|off) overrides `mode`.
+# ═══════════════════════════════════════════════════════════════
+quality_gate:
+  enabled: true
+  mode: enforce
+  min_final_score: 0.70
+  min_rvol: 0.8
 llm:
   enabled: true
   model: claude-sonnet-4-5
@@ -66,19 +82,19 @@ llm:
 # ═══════════════════════════════════════════════════════════════
 day_trading:
   enabled: true
-  max_picks: 3              # max DAY picks per session
-  min_score: 0.65           # day_score threshold
+  max_picks: 3              # NOTE (2026-10-29 audit): not read by any code path
+  min_score: 0.65           # NOTE: not read by any code path (tagging uses day_score internally)
   atr_mult_sl: 0.6          # tight stop (~1-1.5% typical)
   atr_mult_tp1: 1.0         # quick target (~1.5-2%)
   atr_mult_tp2: 1.8         # full target (~3%)
   max_hold_minutes: 240     # force EOD close (4 hours)
-  min_rvol: 1.2             # require above-avg volume
+  min_rvol: 1.2             # NOTE: not read by any code path; pick-level rvol floor is quality_gate.min_rvol
   min_dollar_volume: 20000000  # $20M daily liquidity
   
 swing_trading:
   enabled: true
-  max_picks: 5              # max SWING picks per session
-  min_score: 0.55           # existing threshold
+  max_picks: 5              # NOTE (2026-10-29 audit): not read by any code path (output.top_n_picks gates)
+  min_score: 0.55           # NOTE: not read by any code path (output.min_score + quality_gate gate)
   # Swing SL/TP come from risk.stop_loss_atr_mult / risk.take_profit_atr_mult
   # (1.5x / 3.0x ATR -> R:R 2.0). Override here with atr_mult_sl / atr_mult_tp.
   # Audit 2026-10-29: the scorer previously ignored these and hardcoded

@@ -89,6 +89,7 @@ jobs:
                      data/picks_log.csv data/.last_run_evaluate.txt \
                      data/watch_only_outcomes_*.jsonl data/watch_only_outcome_report_*.md \
                      data/signal_journal.jsonl data/learning_journal.jsonl \
+                     data/wisdom/kill_list.json data/wisdom/lessons.jsonl \
                      data/telegram_sent.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "📊 Daily pick evaluation [skip ci]"
           # --autostash: unstaged tracked files (telegram dedup state, etc.)
