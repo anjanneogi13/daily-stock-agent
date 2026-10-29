@@ -56,12 +56,20 @@ def test_apply_boost_increases_multiplier(isolated):
     assert w["factors"]["rsi"]["oversold"] == pytest.approx(1.04, rel=1e-2)
 
 
-def test_apply_kill_zeroes(isolated):
+def test_apply_kill_floors_not_zero(isolated):
+    """kill -> KILL_FLOOR (0.5), never 0.0: a zeroed bucket could never be
+    boosted back (0.0 x 1.05 = 0.0), freezing the factor permanently."""
     weights, history, proposals = isolated
     _seed_proposals(proposals, [_make_proposal(action="kill", delta=0)])
     wa.apply_proposals()
     w = json.loads(weights.read_text())
-    assert w["factors"]["rsi"]["oversold"] == 0.0
+    assert w["factors"]["rsi"]["oversold"] == wa.KILL_FLOOR == 0.5
+
+
+def test_legacy_zero_kill_is_revivable():
+    """A 0.0 multiplier left by the old kill rule must respond to a boost."""
+    assert wa._new_multiplier(0.0, "boost", 5) == pytest.approx(0.525)
+    assert wa._new_multiplier(0.0, "penalize", 5) == wa.KILL_FLOOR
 
 
 # ── 5%/wk cap ──

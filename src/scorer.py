@@ -203,8 +203,11 @@ def sector_bonus(ticker: str, sector_cfg: dict) -> Dict:
     if not is_semi(ticker):
         return {"multiplier": 1.0, "tag": None, "category": None, "ai_weight": 0.0}
     meta = get_semi_meta(ticker)
-    base_boost = sector_cfg.get("semi_boost", 1.10)
-    ai_boost   = sector_cfg.get("ai_boost", 0.20)
+    # Defaults are NEUTRAL (2026-10-29 audit): the boost was disabled in
+    # config on 2026-05-02 (SEMI/AI boosted picks averaged -0.77R), so a
+    # missing `sector:` block must not silently re-enable a +30% multiplier.
+    base_boost = sector_cfg.get("semi_boost", 1.0)
+    ai_boost   = sector_cfg.get("ai_boost", 0.0)
     ai_weight  = meta.get("ai_weight", 0.5)
     multiplier = base_boost + (ai_boost * ai_weight)
     return {

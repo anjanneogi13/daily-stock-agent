@@ -40,6 +40,15 @@ FIELDS = [
     # Sector benchmark (May 3 2026 T3) — sector-relative alpha
     "sector_etf", "sector_close", "sector_close_at_exit",
     "sector_return_pct", "sector_alpha_pct",
+    # Pick-time factor inputs (audit 2026-10-29) — calibration.FACTOR_KEYS
+    # reads rsi/atr/adx/vol_ratio/dist_sma50_pct/sector, so the nightly
+    # brain can learn on more than `score`. learned_mult/learned_factors
+    # record what the brain already applied, for attribution.
+    "rsi", "atr", "adx", "dist_sma50_pct", "sector",
+    "learned_mult", "learned_factors",
+    # Pillar 3 attribution: chart patterns that fired at pick time + the
+    # multiplier applied; quality_gate records the gate verdict/mode.
+    "pattern_matches", "pattern_mult", "quality_gate",
 ]
 
 
@@ -206,6 +215,17 @@ def log_picks(picks: List[Dict], regime: Dict, cape: Dict = None) -> int:
                 "sector_close_at_exit": "",
                 "sector_return_pct": "",
                 "sector_alpha_pct": "",
+                # Pick-time factor inputs (audit 2026-10-29)
+                "rsi": p.get("rsi", ""),
+                "atr": p.get("atr", ""),
+                "adx": p.get("adx", ""),
+                "dist_sma50_pct": p.get("dist_sma50_pct", ""),
+                "sector": p.get("sector", ""),
+                "learned_mult": p.get("learned_mult", ""),
+                "learned_factors": p.get("learned_factors", ""),
+                "pattern_matches": p.get("pattern_matches", ""),
+                "pattern_mult": p.get("pattern_mult", ""),
+                "quality_gate": p.get("quality_gate", ""),
                 })
                 saved += 1
             except Exception as _ple:

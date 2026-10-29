@@ -1,17 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-13",
-  "_doc": "Brain-controlled knobs. Each entry is a per-factor-bucket multiplier (1.0 = neutral). weight_applier.py mutates these per proposal, capped at 5%/week per factor.",
-  "factors": {
-    "rsi": {
-      "rsi_oversold(<30)": 0.0,
-      "rsi_50-70": 1.05
-    },
-    "atrpct": {
-      "atrpct_<1.5": 1.05
-    },
-    "score": {
-      "score_>=0.85": 1.034
-    }
-  }
+  "updated": "2026-10-29",
+  "_doc": "Brain-controlled knobs. Each entry is a per-factor-bucket multiplier (1.0 = neutral). weight_applier.py mutates these per proposal, capped at 5%/week per factor. Kill floor is 0.5 (never 0.0) so killed buckets stay recoverable. Reset to neutral on 2026-10-29: every prior value came from a pytest fixture (rsi buckets) or the unverified May-2026 backtest; the loop relearns from live verified outcomes via calibration_propose -> weight_apply.",
+  "factors": {}
 }

@@ -7,6 +7,8 @@ preserving an audit trail and keeping idempotency.
 PROTECTIONS:
   - lessons with confidence >= PROTECT_CONF (default 0.90) are kept
     forever (user-curated truths)
+  - seed lessons (source "book:*", "backtester") are timeless
+    principles, not dated observations — never age out
   - already-inactive lessons are skipped
   - lessons missing/unparseable ts are kept (fail safe)
 
@@ -24,6 +26,12 @@ from .wisdom_base import LESSONS
 
 MAX_AGE_DAYS = 90
 PROTECT_CONF = 0.90
+PROTECT_SOURCE_PREFIXES = ("book:", "backtester")
+
+
+def _protected_source(r: Dict) -> bool:
+    src = str(r.get("source") or "")
+    return src.startswith(PROTECT_SOURCE_PREFIXES)
 
 
 def _parse_ts(s: str):
@@ -56,6 +64,8 @@ def find_stale(max_age_days: int = MAX_AGE_DAYS,
                 continue
             if float(r.get("confidence", 0)) >= protect_conf:
                 continue
+            if _protected_source(r):
+                continue
             ts = _parse_ts(r.get("ts"))
             if ts is None:
                 continue  # fail safe — keep
@@ -86,13 +96,54 @@ def gc_stale(max_age_days: int = MAX_AGE_DAYS,
             except json.JSONDecodeError:
                 continue
             if (r.get("active", True)
-                    and float(r.get("confidence", 0)) < protect_conf):
+                    and float(r.get("confidence", 0)) < protect_conf
+                    and not _protected_source(r)):
                 ts = _parse_ts(r.get("ts"))
                 if ts is not None and ts < cutoff:
                     r["active"] = False
                     r["deactivated_at"] = now.isoformat(timespec="seconds")
                     r["deactivated_reason"] = f"stale>{max_age_days}d"
                     deactivated.append(r)
+            rows.append(r)
+
+    if not dry_run and deactivated:
+        with LESSONS.open("w") as f:
+            for r in rows:
+                f.write(json.dumps(r) + "\n")
+
+    return len(deactivated), deactivated
+
+
+def gc_duplicates(dry_run: bool = False,
+                  now: datetime = None) -> Tuple[int, List[Dict]]:
+    """Deactivate exact duplicate active lessons (same source + text),
+    keeping the earliest copy. Automated writers can repeat themselves
+    (audit 2026-10-29: 2,542 identical auto_cooldown rows); duplicates
+    add no information but drown real lessons in the LLM prompt.
+
+    Returns: (count_deactivated, list_of_deactivated_records)
+    """
+    if not LESSONS.exists():
+        return 0, []
+    now = now or datetime.now()
+    rows: List[Dict] = []
+    seen = set()
+    deactivated: List[Dict] = []
+    with LESSONS.open() as f:
+        for line in f:
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if r.get("active", True):
+                key = (r.get("source"), (r.get("text") or "").strip())
+                if key in seen:
+                    r["active"] = False
+                    r["deactivated_at"] = now.isoformat(timespec="seconds")
+                    r["deactivated_reason"] = "duplicate"
+                    deactivated.append(r)
+                else:
+                    seen.add(key)
             rows.append(r)
 
     if not dry_run and deactivated:

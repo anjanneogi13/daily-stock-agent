@@ -1,3 +1,33 @@
+## 2026-10-29 (Thu, wave 2) — Full-repo audit: what to verify after merge
+
+**What changed (see `docs/WORK_LOG.md` 2026-10-29 wave 2):** suite no longer writes live data; fixture spam purged from lessons/proposals and guarded against; `.gitignore` root cause fixed so brain state (wisdom, patterns) persists; pattern engine fixed (lowercase columns → 0 matches for its whole life) and pick-time patterns persisted with the pick date; pick-time factors logged so calibration learns on more than `score`; evidence-based `quality_gate` (score ≥ 0.70 & rvol ≥ 0.8, enforced).
+
+**Next session priorities:**
+
+1. First premarket run: expect `[5c.7/6] ... Quality gate (ENFORCED): N → M` and `✓ Brain analyzed N/N picks`; `picks_log.csv` rows should carry `rsi/atr/adx/dist_sma50_pct/sector/pattern_matches/quality_gate`. If the gate drops everything on several consecutive days, flip `QUALITY_GATE_MODE=observe` in `daily-picks.yml` and re-check thresholds against the 30-day window, do not lower them blindly.
+2. First nightly run: `data/brain_state_meta.json` → `pattern_scan.matches_found > 0`, `pattern_stats.patterns_with_stats` growing over the following weeks (needs ≥20 joined outcomes per pattern×regime before `pattern_multiplier` moves), `lesson_gc` reporting `gc_duplicates`, `calibration_propose` ok. `data/patterns.jsonl` and `data/wisdom/*` must now show up in the nightly commit.
+3. After ~4 weeks: re-run the pick-quality factor analysis (closed official rows via `src.outcome_window`) by `quality_gate` label — the gate's pass bucket (n=37, mean −0.02R) is still not positive expectancy; the next lever is entry quality (`unreachable_entry` 24 rows: entry = prior close, premarket gaps make it unfillable — needs an opening-range / limit-entry rule).
+4. Dead config keys (`day_trading.max_picks/min_score/min_rvol`, `swing_trading.max_picks/min_score`) are annotated; either wire them or delete them.
+5. External scheduler: `data/daily_picks_run_status_*.jsonl` shows only `schedule` events (no `workflow_dispatch`) → cron-job.org redundancy is down; re-enable it (see `docs/AGENT_SCHEDULE.md`).
+6. Still open from wave 1: Claude credits (brain falls back to Gemini); confirm the outcome backfill repaired the 68 unverified rows.
+
+---
+
+## 2026-10-29 (Thu) — Self-learning loop audit: what changed and what to verify next
+
+**Why the agent never learned:** nine independent breaks (see `docs/WORK_LOG.md` 2026-10-29): nightly weight loop crashed every night (report dict passed instead of rows), every swing pick ran at R:R 1.25 (config SL/TP ignored → negative expectancy at 36% win rate), reflections windowed by `pick_date` so a week held ~1 closed trade, inconsistent "closed" definitions, unreachable LLM sample-size rule, 68 outcomes lost as unverified-expired, brain crashed on list-shaped `p["news"]` (0/N analysed), and kill→0.0 weights were unrevivable.
+
+**Next session priorities:**
+
+1. Check the first `evaluate.yml` run after merge: `data/learning/outcome_backfill_<date>.json` should show most of the 68 unverified rows repaired (`repaired` count). If `still_unverified` stays high, check `_fetch_ohlc` rate-limiting in CI.
+2. After the same run, `python scripts/sync_journal_outcomes.py` should report "already in sync" and `src.self_awareness.rolling_window(30)['n']` should match the weekly review's closed count.
+3. Check `data/brain_state_meta.json` → `calibration_propose` must be `ok` with `proposals_written > 0`, and `config/weights.json` should start moving (±5%/week cap, floor 0.5 / ceiling 1.5).
+4. Confirm the next premarket run prints `✓ Brain analyzed N/N picks` and `brain_p_win` / `brain_ev_pct` columns fill in picks_log.
+5. Confirm new swing picks log `risk_reward` ≈ 2.0 (TP 3.0×ATR / SL 1.5×ATR). Watch the weekly review (now by `evaluated_on`) for the win-rate/R shift over the following 4–6 weeks.
+6. Follow-ups not done in this session: dedupe `data/lessons.jsonl` (`auto_cooldown` ABC/JKL spam); log RSI/ATR per pick for factor calibration; restore Claude credits (brain currently falls back to Gemini).
+
+---
+
 ## 2026-09-13 (Sat) — Architecture gap closure session: what changed and what to do next
 
 **This session built the three verified gaps between the repo and the planned architecture:**

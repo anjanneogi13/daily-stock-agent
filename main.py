@@ -34,6 +34,40 @@ from src.market_calendar import is_trading_day as _is_td, reason_market_closed a
 from src.github_observability import github_observability_metadata
 from src.official_pick_artifact import config_hash as _config_hash
 
+def _quality_gate_label(verdict) -> str:
+    """Compact picks_log label for scores["quality_gate"] (e.g. 'pass' or
+    'observe:fail(final score 0.650 < 0.70)')."""
+    if not isinstance(verdict, dict):
+        return ""
+    mode = str(verdict.get("mode") or "")
+    ok = bool(verdict.get("pass"))
+    if ok:
+        return "pass"
+    reasons = "; ".join(str(r) for r in (verdict.get("reasons") or []))
+    return f"{mode}:fail({reasons})" if mode else f"fail({reasons})"
+
+
+def _pick_factor_inputs(sig: dict) -> dict:
+    """Round the pick-time indicator inputs that calibration learns on.
+    Empty strings (not None) so csv.DictWriter writes blanks consistently."""
+    from src.learned_weights import dist_sma50_pct
+
+    def _r(v, nd=3):
+        try:
+            return round(float(v), nd) if v is not None and v != "" else ""
+        except (TypeError, ValueError):
+            return ""
+
+    sig = sig or {}
+    d50 = dist_sma50_pct(sig)
+    return {
+        "rsi": _r(sig.get("rsi_14"), 2),
+        "atr": _r(sig.get("atr_14"), 4),
+        "adx": _r(sig.get("adx"), 2),
+        "dist_sma50_pct": d50 if d50 is not None else "",
+    }
+
+
 def _safe_trade_type_for_pick(scores: dict, pick_date=None, sig: dict = None, gap_pct: float = 0.0) -> str:
     """Calendar-safe DAY/SWING classifier.
 
@@ -117,6 +151,47 @@ def _candidate_report_value(value):
         }
     return str(value)
 
+
+
+def _plan_risk_reward(plan: dict) -> float:
+    """Actual R:R of a plan; recomputed from levels when the field is missing.
+
+    The old ``plan.get("risk_reward") or 2.0`` fallback wrote a fictitious 2.0
+    into picks_log.csv, poisoning every downstream win-rate/expectancy lesson.
+    """
+    rr = plan.get("risk_reward")
+    try:
+        if rr is not None and float(rr) > 0:
+            return round(float(rr), 2)
+        entry = float(plan.get("entry") or 0)
+        sl = float(plan.get("stop_loss") or 0)
+        tp = float(plan.get("take_profit") or 0)
+        if entry > sl > 0 and tp > entry:
+            return round((tp - entry) / (entry - sl), 2)
+    except (TypeError, ValueError):
+        pass
+    return 0.0
+
+
+def _brain_news_inputs(pick: dict) -> tuple[float, str]:
+    """Return (tradeable_score, sentiment) for the probability engine.
+
+    Bug (2026-10-29 audit): p["news"] is a LIST of raw articles from the
+    scorer, so ``news.get("tradeable_score")`` raised AttributeError for every
+    pick, the per-pick except swallowed it, and brain_p_win/brain_ev_pct/
+    brain_sl/brain_tp were blank in picks_log.csv for the agent's whole life
+    ("Brain analyzed 0/9 picks"). The classified signal lives in
+    p["news_signal"]; a dict-shaped p["news"] is accepted as a fallback.
+    """
+    for field in (pick.get("news_signal"), pick.get("news")):
+        if isinstance(field, dict):
+            try:
+                score = float(field.get("tradeable_score", 0) or 0)
+            except (TypeError, ValueError):
+                score = 0.0
+            sentiment = field.get("sentiment") or "neutral"
+            return score, str(sentiment)
+    return 0.0, "neutral"
 
 
 def _news_action_window(news_field, scores_field=None) -> str | None:
@@ -1016,6 +1091,37 @@ def run():
     except Exception as e:
         rprint(f"  [yellow]⚠ News signals unavailable: {e}[/yellow]")
 
+    # ═══════════════════════════════════════════════════════════════
+    # 2026-10-29 audit: evidence-based QUALITY GATE (see src/quality_gate.py).
+    # Drops the historically-losing buckets (final score < 0.70, rvol < 0.8;
+    # pass n=37 mean -0.02R vs fail n=73 mean -0.25R) BEFORE the top-N trim.
+    # ═══════════════════════════════════════════════════════════════
+    rprint("[5c.7/6] Applying quality gate (final score / relative volume)...")
+    _quality_dropped = []
+    try:
+        from src.quality_gate import apply_quality_gate
+        _pre_qg_list = list(capped)
+        capped, _qg_rejected, _qg_eff = apply_quality_gate(capped, cfg)
+        for r in _qg_rejected:
+            _cand = next((c for c in _pre_qg_list if c.get("ticker") == r["ticker"]), None)
+            if _cand is not None:
+                r["candidate"] = _summarize_candidate_for_report(_cand)
+            _quality_dropped.append(r)
+            rprint(f"  [red]⛔ DROP {r['ticker']:6s} — {r['reason']}[/red]")
+        pipeline["quality_gate_mode"] = _qg_eff["mode"]
+        pipeline["quality_gate_dropped_count"] = len(_qg_rejected)
+        pipeline["post_quality_gate_pick_count"] = len(capped)
+        if _qg_eff["mode"] == "enforce":
+            rprint(f"  [green]✓ Quality gate (ENFORCED): {len(_pre_qg_list)} → {len(capped)} "
+                   f"(min score {_qg_eff['min_final_score']:.2f}, min rvol {_qg_eff['min_rvol']:.2f})[/green]")
+        else:
+            _n_fail = sum(1 for p in capped
+                          if not (p.get("scores", {}).get("quality_gate") or {}).get("pass", True))
+            rprint(f"  [dim]Quality gate ({_qg_eff['mode'].upper()}): {_n_fail} would be dropped[/dim]")
+    except Exception as e:
+        rprint(f"  [yellow]⚠ Quality gate unavailable: {e}[/yellow]")
+    _earnings_dropped.extend(_quality_dropped)
+
     # Trim to final pick count
     top = capped[: cfg["output"]["top_n_picks"]]
     pre_hard_block_candidates = list(top)
@@ -1059,14 +1165,13 @@ def run():
                 if entry_price <= 0:
                     continue
                 # Pull conditioning signals from existing pick context
-                news_data = p.get("news", {}) or {}
-                news_score = float(news_data.get("tradeable_score", 0) or 0)
-                news_sentiment = news_data.get("sentiment", "neutral") or "neutral"
+                news_score, news_sentiment = _brain_news_inputs(p)
+                _d2e = p.get("days_to_earnings")
                 signals = SignalState(
                     regime=regime_label,
                     news_score=news_score,
                     news_sentiment=news_sentiment,
-                    days_to_earnings=p.get("days_to_earnings"),
+                    days_to_earnings=int(_d2e) if isinstance(_d2e, (int, float)) and _d2e < 999 else None,
                     watchlist_boost=float(p["scores"].get("watchlist_boost", 0) or 0),
                 )
                 decision = compute_probabilistic_decision(ticker, entry_price, signals=signals)
@@ -1085,6 +1190,13 @@ def run():
             except Exception as e:
                 p["brain"] = {"error": str(e)}
         rprint(f"  [green]✓ Brain analyzed {brain_count}/{len(top)} picks[/green]")
+        # Never fail silently again: surface the first per-pick error so a
+        # systemic crash (every pick failing) is visible in the run log.
+        _brain_errs = [(p["ticker"], p["brain"]["error"]) for p in top
+                       if isinstance(p.get("brain"), dict) and p["brain"].get("error")]
+        if _brain_errs:
+            rprint(f"  [red]⚠ Brain failed on {len(_brain_errs)} pick(s), e.g. "
+                   f"{_brain_errs[0][0]}: {_brain_errs[0][1]}[/red]")
         # Show brain decisions
         for p in top:
             b = p.get("brain", {})
@@ -1800,6 +1912,10 @@ def run():
             # to csv.DictWriter which writes empty string, killing sector alpha.
             _setf = p.get("_sector_etf") or "SPY"
             _sclose = p.get("_sector_close") or ""
+            # Pick-time factor inputs (audit 2026-10-29): without these the
+            # nightly calibration could only ever learn on `score`.
+            _sig = p.get("signals") or {}
+            _fac = _pick_factor_inputs(_sig)
             picks_for_log.append({
                 "ticker": p["ticker"],
                 "company": p.get("info_short", {}).get("name", ""),
@@ -1817,7 +1933,7 @@ def run():
                 "entry": p["plan"].get("entry"),
                 "stop_loss": p["plan"].get("stop_loss"),
                 "take_profit": p["plan"].get("take_profit"),
-                "risk_reward": p["plan"].get("risk_reward") or 2.0,  # Bug #14
+                "risk_reward": _plan_risk_reward(p["plan"]),  # never fabricate 2.0
                 "qty": p["plan"].get("quantity") or 0,  # Bug #14: coerce None
                 "days_to_earnings": p.get("days_to_earnings"),
                 # PILLAR 1 audit fields (May 2 2026)
@@ -1837,6 +1953,17 @@ def run():
                 # Sector benchmark (T3 May 3 2026)
                 "sector_etf": _setf,
                 "sector_close": _sclose,
+                # Pick-time factor inputs (audit 2026-10-29)
+                "rsi": _fac["rsi"],
+                "atr": _fac["atr"],
+                "adx": _fac["adx"],
+                "dist_sma50_pct": _fac["dist_sma50_pct"],
+                "sector": (p.get("info_short") or {}).get("sector") or "",
+                "learned_mult": p["scores"].get("learned_multiplier", ""),
+                "learned_factors": p["scores"].get("learned_factors", ""),
+                "pattern_matches": p["scores"].get("pattern_matches", ""),
+                "pattern_mult": p["scores"].get("pattern_multiplier", ""),
+                "quality_gate": _quality_gate_label(p["scores"].get("quality_gate")),
             })
         n = log_picks(picks_for_log, reg, cape if "cape" in dir() else None)
         # Pillar 1 Layer 4: signal journal (append signals + bucketed view)
@@ -1893,6 +2020,18 @@ def run():
             rprint(f"[green][journal] Logged {_journal_logged}/{len(top)} picks to signal_journal.jsonl[/green]")
         if _journal_errors > 0:
             rprint(f"[red][journal] ⚠ {_journal_errors} picks FAILED to journal — brain will learn from incomplete data[/red]")
+
+        # Pillar 3: persist pick-time pattern matches so pattern_stats can
+        # join them with this pick's eventual outcome (2026-10-29 audit).
+        # Only for newly logged picks — dedup re-runs must not duplicate rows.
+        if n > 0:
+            try:
+                from src.pattern_engine import persist_pick_time_matches
+                _pm_n = persist_pick_time_matches(top, pick_date=_today, regime=_regime_str)
+                if _pm_n:
+                    rprint(f"[dim][patterns] Persisted {_pm_n} pick-time pattern match(es) to data/patterns.jsonl[/dim]")
+            except Exception as _pme:
+                rprint(f"[yellow]⚠ pattern match persistence skipped: {_pme}[/yellow]")
 
         # Pillar 4: pause signal + auto-trigger if enforced
         try:

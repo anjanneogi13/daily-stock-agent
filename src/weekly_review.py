@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from .quarterly_report import _load_picks_in_range, _summary_metrics, _to_float
+from .outcome_window import is_closed_verified, outcomes_in_window
 from .wisdom_base import stats as wisdom_stats, load_active_patterns
 from .strategy_breakdown import breakdown_by
 from .sector_breakdown import sector_breakdown, format_sector_panel
@@ -39,7 +40,7 @@ def grade(metrics: Dict) -> str:
 
 def what_worked(picks: List[Dict]) -> List[str]:
     notes = []
-    closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit", "day_close"}]
+    closed = [p for p in picks if is_closed_verified(p)]
     if not closed:
         return ["(no closed picks this week)"]
 
@@ -102,7 +103,7 @@ def rules_violated_on_losers(picks):
 
 def what_failed(picks: List[Dict]) -> List[str]:
     notes = []
-    closed = [p for p in picks if p.get("evaluation_status") in {"tp_hit", "sl_hit", "day_close"}]
+    closed = [p for p in picks if is_closed_verified(p)]
     if not closed:
         return []
 
@@ -147,14 +148,21 @@ def recommended_actions(metrics: Dict, failed: List[str], grade_str: str) -> Lis
 def build_report(end_date: datetime = None) -> Dict:
     end = end_date or datetime.now()
     start = end - timedelta(days=7)
-    picks = _load_picks_in_range(start, end)
-    metrics = _summary_metrics(picks)
+    # Picks MADE this week (by pick_date) vs outcomes LEARNED this week (by
+    # evaluated_on). Swing picks close up to 10 sessions after pick_date, so
+    # grading only picks made in the last 7 days saw ~1 closed trade/week and
+    # the review said "need more data" forever (audit 2026-10-29).
+    picked = _load_picks_in_range(start, end)
+    closed = outcomes_in_window(start.date(), end.date())
+    metrics = _summary_metrics(closed)
+    metrics["total_picks"] = len(picked)
+    metrics["window_basis"] = "evaluated_on"
     g = grade(metrics)
-    won = what_worked(picks)
-    lost = what_failed(picks)
+    won = what_worked(closed)
+    lost = what_failed(closed)
     actions = recommended_actions(metrics, lost, g)
     wstats = wisdom_stats()
-    sectors = sector_breakdown(picks)
+    sectors = sector_breakdown(closed)
 
     return {
         "start_date": start.strftime("%b %d"),

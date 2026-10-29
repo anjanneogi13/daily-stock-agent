@@ -222,7 +222,12 @@ env/
 __pycache__/
 .env
 *.env
-data/
+# Audit 2026-10-29: `data/` (directory pattern) made EVERY `!data/...`
+# re-include below a silent no-op — git cannot re-include a file whose parent
+# directory is excluded. Tracked files only looked un-ignored because they
+# were already in the index, which is why the workflows need `git add -f`.
+# `data/*` excludes the contents instead, so the negations actually work.
+data/*
 logs/
 *.csv
 *.log
@@ -262,3 +267,15 @@ data/picks_log.csv.*.bak
 !data/pattern_stats.json
 !data/agent_memoir.json
 !data/brain_state_meta.json
+
+# Audit 2026-10-29: the wisdom base is brain state too. kill_list.json was
+# gitignored, so every auto-cooldown and backtester kill evaporated at the end
+# of the CI run that wrote it, and nightly lesson GC / auto-promote writes to
+# lessons.jsonl were never committed. Track the whole directory.
+!data/wisdom/
+!data/wisdom/lessons.jsonl
+!data/wisdom/kill_list.json
+!data/wisdom/patterns.jsonl
+# Pattern engine matches (nightly scan + pick-time) feed pattern_stats.json;
+# un-ignored 2026-10-29 so the daily-picks and nightly commits persist them.
+!data/patterns.jsonl

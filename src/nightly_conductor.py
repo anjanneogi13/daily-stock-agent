@@ -26,6 +26,10 @@ from typing import Dict, List, Optional
 
 WATCHLIST_PATH = Path("data/watchlist.json")
 PICKS_LOG      = Path("data/picks_log.csv")
+# Live picks accrue ~5/day, so the backtest default (min_n=30 per bucket)
+# would gate proposals for months. 20 closed picks per bucket is enough for a
+# capped ±5%/week nudge (learned_weights clamps the total to [0.85, 1.15]).
+LIVE_PROPOSAL_MIN_N = int(os.getenv("BRAIN_PROPOSAL_MIN_N", "20"))
 BRAIN_STATE_META_PATH = Path("data/brain_state_meta.json")
 
 
@@ -139,10 +143,14 @@ def _step_calibration_propose() -> Dict:
     """Run calibration → generate proposals from per-factor accuracy."""
     from src import calibration as cal
     from src import weight_proposer as wp
+    from src.outcome_window import is_closed_verified, is_official
     if not PICKS_LOG.exists():
         return {"skipped": "no picks_log"}
     with PICKS_LOG.open() as f:
-        rows = [r for r in csv.DictReader(f) if r.get("r_multiple") not in (None, "")]
+        # Canonical closed set (src/outcome_window): verified outcome AND
+        # official pick — the same definition the weekly/monthly reports use.
+        rows = [r for r in csv.DictReader(f)
+                if is_official(r) and is_closed_verified(r)]
     if len(rows) < 10:
         return {"skipped": f"only {len(rows)} closed picks (need 10)"}
     # Build per-factor report → proposals
@@ -153,10 +161,14 @@ def _step_calibration_propose() -> Dict:
         # crash (string CSV values fed to numeric comparisons).
         return {"skipped": f"calibration.per_factor_report failed: {type(e).__name__}: {e}"}
     run_id = f"nightly_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-    proposals = wp.propose(report, run_id=run_id) if report else []
+    # weight_proposer.propose() expects the raw pick ROWS (it runs its own
+    # calibration). Passing the per-factor report dict here made every nightly
+    # run crash with "'str' object has no attribute 'get'" — the weight loop
+    # never produced a single proposal from live data.
+    proposals = wp.propose(rows, run_id=run_id, min_n=LIVE_PROPOSAL_MIN_N) if report else []
     n = wp.write_proposals(proposals) if proposals else 0
-    return {"factors_analyzed": len(report), "proposals_written": n,
-            "run_id": run_id}
+    return {"factors_analyzed": len(report), "closed_rows": len(rows),
+            "proposals_written": n, "run_id": run_id}
 
 
 def _step_weight_apply() -> Dict:
@@ -183,13 +195,13 @@ def _step_auto_promote() -> Dict:
 
 
 def _step_lesson_gc() -> Dict:
-    from src.lesson_gc import gc_stale
-    res = gc_stale()
-    if isinstance(res, list):
-        return {"gc_removed": len(res)}
-    if isinstance(res, dict):
-        return {"gc_removed": res.get("removed", 0)}
-    return {"gc_removed": 0}
+    from src.lesson_gc import gc_stale, gc_duplicates
+    # gc_stale/gc_duplicates return (count, records); the old isinstance
+    # checks for list/dict never matched a tuple, so the step always
+    # reported gc_removed=0 even when it deactivated lessons.
+    stale_n, _ = gc_stale()
+    dup_n, _ = gc_duplicates()
+    return {"gc_removed": int(stale_n), "gc_duplicates": int(dup_n)}
 
 
 # ═══════════════════════════════════════════════════════════════

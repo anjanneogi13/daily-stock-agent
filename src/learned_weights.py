@@ -11,9 +11,11 @@ multipliers together. The total is clamped to [0.85, 1.15] so learning can
 tilt scores but never dominate them, and any failure returns a neutral 1.0
 (fail-safe: a broken brain must never block picking).
 
-Factors applied at pick time: rsi, score, atrpct. Outcome-only factors
-(exit_status) and post-score factors (trade_type) are skipped — they are
-unknowable when the composite is computed.
+Factors applied at pick time: rsi, score, atrpct, adx, rvol, ext50 (see
+PICK_TIME_FACTORS). Outcome-only factors (exit_status), post-score factors
+(trade_type — owned by auto_pause) and report-only factors (sector) are
+skipped — they are either unknowable when the composite is computed or
+deliberately not a knob.
 """
 from __future__ import annotations
 
@@ -21,7 +23,15 @@ import json
 from pathlib import Path
 from typing import Dict, Optional, Tuple
 
-from src.calibration import _rsi_bucket, _score_bucket, _atr_bucket
+from src.calibration import (
+    _rsi_bucket, _score_bucket, _atr_bucket,
+    _adx_bucket, _rvol_bucket, _ext50_bucket,
+)
+
+# Single source of truth for which calibration factors are learnable knobs.
+# weight_proposer.propose() only emits proposals for these; everything else
+# in calibration.FACTOR_KEYS stays report-only.
+PICK_TIME_FACTORS = ("rsi", "score", "atrpct", "adx", "rvol", "ext50")
 
 RUNTIME_WEIGHTS = Path("data/weights_runtime.json")
 CONFIG_WEIGHTS = Path("config/weights.json")
@@ -73,6 +83,9 @@ def learned_multiplier(sig: Dict, composite: float) -> Tuple[float, Dict[str, fl
             "rsi": _rsi_bucket(_f(sig.get("rsi_14"))),
             "score": _score_bucket(_f(composite)),
             "atrpct": _atr_bucket(_f(sig.get("atr_14")), _f(sig.get("close"))),
+            "adx": _adx_bucket(_f(sig.get("adx"))),
+            "rvol": _rvol_bucket(_f(sig.get("vol_ratio"))),
+            "ext50": _ext50_bucket(dist_sma50_pct(sig)),
         }
 
         total = 1.0
@@ -100,3 +113,12 @@ def _f(v) -> Optional[float]:
         return float(v) if v is not None and v != "" else None
     except (TypeError, ValueError):
         return None
+
+
+def dist_sma50_pct(sig: Dict) -> Optional[float]:
+    """Percent distance of close from the 50-day SMA (None if unavailable).
+    Shared by scoring (bucket) and pick logging (column) so both agree."""
+    close, sma50 = _f(sig.get("close")), _f(sig.get("sma_50"))
+    if close is None or sma50 is None or sma50 <= 0:
+        return None
+    return round((close / sma50 - 1.0) * 100.0, 3)

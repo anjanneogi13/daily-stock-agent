@@ -83,7 +83,10 @@ jobs:
             data/weights_runtime.json \
             data/learning_journal.jsonl \
             data/agent_memoir.json \
-            data/brain_state_meta.json
+            data/brain_state_meta.json \
+            data/wisdom/lessons.jsonl \
+            data/wisdom/kill_list.json \
+            data/wisdom/patterns.jsonl
           do
             if [ -e "$path" ]; then
               git add -f "$path"

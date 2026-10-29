@@ -49,6 +49,14 @@ def test_eyes_data_fetcher_returns_real_company_name():
     )
 
 
+@pytest.fixture(autouse=True)
+def _isolate_market_data_health(monkeypatch, tmp_path):
+    # fetch_info() records provider events into data/market_data_health_<today>.json;
+    # keep the live ledger clean when the suite runs.
+    import src.market_data_health as mdh
+    monkeypatch.setattr(mdh, "DATA_DIR", tmp_path)
+
+
 def test_eyes_returns_required_fields():
     """fetch_info contract — these fields MUST exist."""
     from src.data_fetcher import fetch_info

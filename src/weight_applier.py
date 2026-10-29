@@ -99,17 +99,26 @@ def _append_history(rec: Dict) -> None:
 
 
 # ─────────── core ───────────
+# A "kill" must stay recoverable: a bucket multiplier of 0.0 can never be
+# boosted back (0.0 × 1.05 = 0.0), so one bad month froze the factor forever.
+# 0.5 is already the hardest possible penalty — learned_weights clamps the
+# total multiplier to [0.85, 1.15] at scoring time.
+KILL_FLOOR = 0.5
+MULT_CEIL  = 1.5
+
+
 def _new_multiplier(current: float, action: str, delta_pct: float) -> float:
-    """Apply a single delta to a multiplier. Floor 0.5, ceil 1.5 (safety)."""
+    """Apply a single delta to a multiplier. Floor KILL_FLOOR, ceil MULT_CEIL."""
+    current = max(KILL_FLOOR, float(current))  # revive legacy 0.0 kills
     if action == "kill":
-        new = 0.0
+        new = KILL_FLOOR
     elif action == "boost":
         new = current * (1 + abs(delta_pct) / 100)
     elif action == "penalize":
         new = current * (1 - abs(delta_pct) / 100)
     else:
         new = current
-    return max(0.0, min(1.5, round(new, 4)))
+    return max(KILL_FLOOR, min(MULT_CEIL, round(new, 4)))
 
 
 def apply_proposals(dry_run: bool = False,

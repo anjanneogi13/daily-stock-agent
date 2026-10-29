@@ -1,3 +1,54 @@
+## 2026-10-29 (wave 2) — Full-repo audit: brain state persistence, pattern engine, pick-quality gate
+
+**Type:** full-repo audit (tests, data files, CI workflows, pick-quality factor analysis) → root-cause fixes
+
+**Findings and fixes (same branch as the wave-1 learning-loop audit):**
+
+1. **The test suite polluted live learning data.** `scripts/weekend_reflection.py` and `scripts/monthly_xray.py` ran their report at import time, so `tests/test_scripts_import.py` wrote `data/learning/weekly_review_<today>.md` / `monthly_xray_<today>.md` on every run, and `tests/test_faculty_integration.py` wrote `data/market_data_health_<today>.json`. Fixed: both scripts now have `main()` + `__main__` guard; faculty tests isolate `market_data_health.DATA_DIR`.
+2. **Brain memory was fixture garbage.** `data/wisdom/lessons.jsonl` held 2,596 rows of which 2,542 were identical `auto_cooldown` lessons for the pytest tickers ABC/JKL (every evaluator run re-wrote the same lesson); `data/weight_proposals.jsonl` held pytest-fixture rows (`run_id` `r`/`tr`), and the only weight ever *applied* came from one of them. Purged (54 real lessons remain, all 50 book lessons intact; the 3 pre-audit live proposals are `archived`, weights reset to neutral with an audit row in `weight_history.jsonl`). Guards: `wisdom_base.has_recent_lesson()` makes `auto_cooldown` idempotent, `lesson_gc.gc_duplicates()` runs nightly, `PROTECT_SOURCE_PREFIXES=("book:", "backtester")` stops seed lessons ageing out at 90 days, `read_proposals(only_unapplied=True)` skips `archived`, and `_step_lesson_gc` finally reports what it removed (it tested a tuple with `isinstance(list/dict)` → always 0).
+3. **Every `!data/...` line in `.gitignore` was a no-op.** `data/` is a *directory* pattern and git cannot re-include a file under an excluded directory; tracked files only looked un-ignored because they were already in the index. This is why `kill_list.json` evaporated at the end of every CI run (cooldowns never persisted) and why the workflows are full of `git add -f`. Fixed at the root (`data/*`), `data/wisdom/*` and `data/patterns.jsonl` are now tracked, and `nightly_brain.yml` / `evaluate.yml` / `daily-picks.yml` commit them.
+4. **The pattern engine (Pillar 3) had never produced a single data point.** `data_fetcher.fetch_ohlcv()` lowercases columns; every detector indexes `df["High"]`/`df["Close"]`; `scan_ticker` swallowed the `KeyError` per detector → `pattern_scan: matches_found 0` on 100 tickers every night and `pattern_stats.json == {"_disabled": {}}` forever. Fixed with `_detector_frame()` (either casing). Additionally the nightly scan stamped the *scan* date, so a pick's own patterns never joined its outcome — `persist_pick_time_matches()` now writes the patterns that fired on each official pick with `date = pick_date`.
+5. **Calibration could only learn on `score`.** `picks_log.csv` never carried the pick-time inputs. New columns `rsi, atr, adx, dist_sma50_pct, sector, learned_mult, learned_factors, pattern_matches, pattern_mult, quality_gate`; `calibration.FACTOR_KEYS` gained `adx`, `rvol`, `ext50` (+ `sector` report-only), `learned_weights.PICK_TIME_FACTORS` applies them, and `weight_proposer.propose()` only proposes factors that are actually applied at pick time (sector/trade_type/exit_status proposals were dead weight burning the 5%/week cap). `_step_calibration_propose` uses the canonical `outcome_window` closed set.
+6. **Evidence-based quality gate.** Factor analysis of the 110 closed official picks: final score ≤ 0.70 → n=71, ΣR −19.6R; rvol < 0.8 → n=17, mean −0.49R; combined pass (score ≥ 0.70 & rvol ≥ 0.8) n=37 mean −0.02R vs fail n=73 mean −0.25R. New `src/quality_gate.py` (config `quality_gate:` block, env `QUALITY_GATE_MODE` enforce|observe|off) runs after the EQ blend + news boost and before the top-N trim; rejections flow into the no-pick / rejection reports as `rejection_stage: quality_gate`. Fewer picks on thin days is intended.
+7. `scorer.sector_bonus` defaults (1.10 / 0.20) silently re-enabled the disabled SEMI/AI boost whenever a config lacked the `sector:` block → now neutral. Dead config keys (`day_trading.max_picks/min_score/min_rvol`, `swing_trading.max_picks/min_score`) are annotated as such.
+
+Verified from production logs (run 40687182119, 2026-10-28): `Brain analyzed 0/9 picks` (fixed in wave 1, lands with this PR), `pattern_scan matches_found 0`, `calibration_propose` AttributeError (fixed in wave 1).
+
+Changed files: `src/quality_gate.py` (new), `src/pattern_engine.py`, `src/pick_logger.py`, `src/calibration.py`, `src/learned_weights.py`, `src/weight_proposer.py`, `src/wisdom_base.py`, `src/auto_cooldown.py`, `src/lesson_gc.py`, `src/nightly_conductor.py`, `src/scorer.py`, `main.py`, `config.yaml`, `scripts/weekend_reflection.py`, `scripts/monthly_xray.py`, `.gitignore`, `.github/workflows/{nightly_brain,evaluate,daily-picks}.yml`, data (`data/wisdom/lessons.jsonl`, `data/wisdom/kill_list.json` now tracked, `data/weight_proposals.jsonl`, `config/weights.json`, `data/weights_runtime.json`, `data/weight_history.jsonl`, `data/signal_journal.jsonl` 45 outcomes attached), tests (`tests/test_full_repo_audit_wave2.py` new; `test_calibration.py`, `test_faculty_integration.py` updated).
+
+Verification: full suite green (1912 passed, 33 skipped, 1 xfailed) and `git status` clean of runtime artifacts after the run.
+
+Deferred: `unreachable_entry` (24 rows — entry = prior close, needs premarket-gap handling); external cron-job.org scheduler appears down (only `schedule` events in `daily_picks_run_status_*.jsonl`); September `ci.yml` PR failures (logs expired; CI runs 3.11 vs prod 3.12 — no 3.12-only syntax found).
+
+---
+
+## 2026-10-29 — Self-learning loop audit: why six months of picks taught the agent nothing
+
+**Type:** forensic audit (data + CI logs + code) → root-cause fixes
+
+**Finding:** `data/picks_log.csv` held 238 picks (Apr 28 → Oct 28 2026); 110 closed with a real R-multiple (win rate 36.4%, mean R −0.176, ΣR −19.4R). Yet `config/weights.json` had not moved since 2026-09-13, every weekly review said "Need more data", and every `brain_*` column was empty. Nine independent breaks, each sufficient on its own:
+
+1. **Nightly weight loop crashed every night.** `nightly_conductor._step_calibration_propose` passed the per-factor *report dict* to `weight_proposer.propose()` (which expects raw rows) → `'str' object has no attribute 'get'` in `data/brain_state_meta.json` for months. Fixed: pass filtered official closed rows + `min_n=LIVE_PROPOSAL_MIN_N` (env `BRAIN_PROPOSAL_MIN_N`, default 20). Live data now yields 3 proposals (score 0.7-0.85 boost, score 0.5-0.7 penalize, day trades boost).
+2. **Every swing pick ran at R:R 1.25.** `parallel_scorer` called `atr_trade_plan` with its hardcoded 2.0×/2.5× ATR defaults; `config.yaml`'s 1.5×/3.0× was only honoured on the no-ATR fallback. Break-even at 1.25:1 is 44% — realised 36% → expectancy ≈ −0.18R, exactly the observed mean. Fixed: `_plan_overrides(cfg, trade_type)` feeds config SL/TP/risk into the plan (swing R:R now 2.0; day trades unchanged).
+3. **Reports windowed by `pick_date`.** A 7-day window holds ~1 closed swing (10-session hold), so weekly/monthly reflections never saw the 100+ closed trades. New `src/outcome_window.py` is the single source of truth: closed+verified (status ∈ {tp_hit, sl_hit, expired, day_close} **and** numeric r_multiple), windowed by `evaluated_on`, official rows only. Rewired `weekly_review`, `weekend_reflection`, `monthly_xray`, `local_analyst`.
+4. **Four different definitions of "closed"** across reports ({tp_hit,sl_hit,"closed"} etc.) → inconsistent stats. Same fix as 3.
+5. **LLM reflection rule "≥20 evaluated this week" was unreachable** → it always answered "need more data". Now judged on the rolling 30-day closed count.
+6. **68 outcomes lost.** When evaluator pushes silently failed (May–Aug), catch-up runs bulk-settled picks older than `EVAL_LOOKBACK_DAYS` as `expired` with no exit price. New `scripts/backfill_unverified_outcomes.py` re-walks those rows with the real evaluator (`evaluate_pending(lookback_days, rows, save)` params added); verified rows are never touched; idempotent; wired into `evaluate.yml`.
+7. **Brain analysed 0/N picks every day.** `main.py` read `p["news"]` (a *list* of articles) as a dict → AttributeError per pick, swallowed by the per-pick `except`. Fixed via `_brain_news_inputs()` (reads `news_signal`), `days_to_earnings` sanitised, first per-pick error now printed.
+8. **Kill → 0.0 was unrevivable** (`rsi_oversold(<30)` multiplier stuck at 0.0 since Sep 13). `weight_applier` now floors at `KILL_FLOOR=0.5`, ceilings at 1.5, and revives legacy zeros; weights files patched.
+
+9. **Journal outcomes never attached for 45/110 closed picks** (17 in October), so `self_awareness` rolling 30/60/90d CIs and the hypothesis engine saw 13 closed trades in 30 days instead of 30. New idempotent `scripts/sync_journal_outcomes.py` (same `attach_outcome` code path; only fills `outcome=None` rows), wired into `evaluate.yml`.
+
+Also: `picks_for_log` no longer fabricates `risk_reward=2.0` (`_plan_risk_reward` recomputes from levels); `local_analyst` break-even messages use the actual planned R:R.
+
+Changed files: `src/nightly_conductor.py`, `src/calibration.py`, `src/weight_applier.py`, `src/parallel_scorer.py`, `src/pick_evaluator.py`, `src/weekly_review.py`, `src/outcome_window.py` (new), `main.py`, `scripts/weekend_reflection.py`, `scripts/monthly_xray.py`, `scripts/local_analyst.py`, `scripts/backfill_unverified_outcomes.py` (new), `scripts/sync_journal_outcomes.py` (new), `config.yaml`, `config/weights.json`, `data/weights_runtime.json`, `.github/workflows/evaluate.yml`, tests (`tests/test_learning_loop_audit.py` new; 3 updated).
+
+Verification: full suite green (1885 passed, 33 skipped, 1 xfailed). Fixed conductor step run against live picks_log (no writes) → 110 closed rows, 5 factors, 3 proposals.
+
+Still open: first CI run of the backfill (needs Yahoo access) — check `data/learning/outcome_backfill_*.json`; confirm `brain_*` columns fill on the next premarket run; lessons.jsonl dedupe (2.5k `auto_cooldown` ABC/JKL spam rows); log RSI/ATR per pick so calibration can test entry-condition factors; Claude credits exhausted (brain falls back to Gemini).
+
+---
+
 ## 2026-09-13 — Architecture gap closure: P17.2 guard wiring, theme signal validation harness, Lane 2 post-open watch-only v0
 
 **Type:** planned-architecture gap analysis + implementation
