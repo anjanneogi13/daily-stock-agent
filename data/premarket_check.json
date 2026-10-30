@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -18,7 +18,7 @@
       "actionable": false
     },
     {
-      "ticker": "BF-B",
+      "ticker": "ABBV",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -26,7 +26,7 @@
       "actionable": false
     },
     {
-      "ticker": "MNST",
+      "ticker": "KO",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -34,7 +34,7 @@
       "actionable": false
     },
     {
-      "ticker": "PFE",
+      "ticker": "ISRG",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -42,7 +42,7 @@
       "actionable": false
     },
     {
-      "ticker": "DUK",
+      "ticker": "L",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
