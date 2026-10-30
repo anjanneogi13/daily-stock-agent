@@ -583,5 +583,14 @@
     "added_at": "2026-10-30T17:03:57.515584+00:00",
     "expires": "2027-04-28T17:03:57.515592+00:00",
     "hard_block": true
+  },
+  "RAMP": {
+    "ticker": "RAMP",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "LiveRamp Set for NYSE Delisting Following Publicis Acquisition",
+    "added_at": "2026-10-30T18:04:57.285525+00:00",
+    "expires": "2027-04-28T18:04:57.285532+00:00",
+    "hard_block": true
   }
 }
