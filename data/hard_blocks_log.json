@@ -2256,5 +2256,28 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-03 13:17:45",
+    "weak_sectors": {},
+    "blocked_count": 3,
+    "passed_count": 2,
+    "blocked": [
+      {
+        "ticker": "ORLY",
+        "reason": "SL too tight (1.5% < 2.0% for $91 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "ABBV",
+        "reason": "SL too tight (1.4% < 1.5% for $289 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "XOM",
+        "reason": "SL too tight (1.5% < 1.5% for $180 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
