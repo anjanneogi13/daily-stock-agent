@@ -2279,5 +2279,23 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-04 13:17:18",
+    "weak_sectors": {},
+    "blocked_count": 2,
+    "passed_count": 3,
+    "blocked": [
+      {
+        "ticker": "IFF",
+        "reason": "SL too tight (1.4% < 2.0% for $92 stock)",
+        "block_type": "sl_too_tight"
+      },
+      {
+        "ticker": "BALL",
+        "reason": "SL too tight (1.8% < 2.0% for $63 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
