@@ -1,13 +1,4 @@
 {
-  "DFNS": {
-    "ticker": "DFNS",
-    "score_delta": -1.0,
-    "catalyst": "BANKRUPTCY_RISK",
-    "headline": "T3 Defense Gets Nasdaq Delisting Notice, Gets Time Through Nov. 2 To Regain Compliance",
-    "added_at": "2026-05-08T20:06:25.385086+00:00",
-    "expires": "2026-11-04T20:06:25.385114+00:00",
-    "hard_block": true
-  },
   "GOCO": {
     "ticker": "GOCO",
     "score_delta": -1.0,
@@ -627,6 +618,15 @@
     "headline": "Moolec Science SA in Voluntary Liquidation Announces Receipt of Nasdaq Delisting Determination",
     "added_at": "2026-11-03T09:04:30.605012+00:00",
     "expires": "2027-05-02T09:04:30.605019+00:00",
+    "hard_block": true
+  },
+  "ORTIN": {
+    "ticker": "ORTIN",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Nasdaq Closes Delisting Matter Concerning Ortelius International",
+    "added_at": "2026-11-05T08:06:00.522866+00:00",
+    "expires": "2027-05-04T08:06:00.522873+00:00",
     "hard_block": true
   }
 }
