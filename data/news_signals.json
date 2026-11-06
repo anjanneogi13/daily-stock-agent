@@ -628,5 +628,14 @@
     "added_at": "2026-11-05T08:06:00.522866+00:00",
     "expires": "2027-05-04T08:06:00.522873+00:00",
     "hard_block": true
+  },
+  "MSFT": {
+    "ticker": "MSFT",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Microsoft to Wind Down AI Computing Rental Agreement with Oracle",
+    "added_at": "2026-11-06T21:32:39.026480+00:00",
+    "expires": "2027-05-05T21:32:39.026486+00:00",
+    "hard_block": true
   }
 }
