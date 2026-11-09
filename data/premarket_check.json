@@ -1,21 +1,55 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
-    "warnings": [],
-    "global_action": "normal"
+    "spy_change_pct": 0.31,
+    "qqq_change_pct": 1.4,
+    "soxx_change_pct": 3.51,
+    "vix": 22.98,
+    "warnings": [
+      "\u26a0\ufe0f VIX at 23.0 \u2014 elevated volatility"
+    ],
+    "global_action": "half"
   },
   "picks": [
     {
-      "ticker": "MCK",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "CAH",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 271.72,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "MA",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 652.7,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "WM",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 236.26,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "CHD",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 109.33,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "ALL",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 254.81,
+      "gap_pct": -0.0,
+      "actionable": true
     }
   ]
 }
