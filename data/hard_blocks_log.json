@@ -2353,5 +2353,18 @@
         "block_type": "sl_too_tight"
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-10 13:17:32",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 4,
+    "blocked": [
+      {
+        "ticker": "PPL",
+        "reason": "SL too tight (1.0% < 2.0% for $36 stock)",
+        "block_type": "sl_too_tight"
+      }
+    ]
   }
 ]
