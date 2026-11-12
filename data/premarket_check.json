@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "market": {
     "spy_change_pct": 0.0,
     "qqq_change_pct": 0.0,
@@ -10,7 +10,7 @@
   },
   "picks": [
     {
-      "ticker": "UDR",
+      "ticker": "RTX",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -18,7 +18,7 @@
       "actionable": false
     },
     {
-      "ticker": "CL",
+      "ticker": "MA",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -26,7 +26,7 @@
       "actionable": false
     },
     {
-      "ticker": "ATO",
+      "ticker": "CB",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
@@ -34,7 +34,15 @@
       "actionable": false
     },
     {
-      "ticker": "COR",
+      "ticker": "VMRK",
+      "tag": "\ud83d\udc40 WATCH ONLY",
+      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
+      "current_price": null,
+      "gap_pct": null,
+      "actionable": false
+    },
+    {
+      "ticker": "ABNB",
       "tag": "\ud83d\udc40 WATCH ONLY",
       "reason": "could not verify fresh price \u2014 require fresh quote before entry",
       "current_price": null,
