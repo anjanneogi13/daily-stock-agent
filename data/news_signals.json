@@ -682,5 +682,14 @@
     "added_at": "2026-11-11T21:02:30.404233+00:00",
     "expires": "2027-05-10T21:02:30.404241+00:00",
     "hard_block": true
+  },
+  "AB9": {
+    "ticker": "AB9",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "ABO Energy Announces Comprehensive Financial Restructuring Under StaRUG",
+    "added_at": "2026-11-12T08:05:55.781836+00:00",
+    "expires": "2027-05-11T08:05:55.781844+00:00",
+    "hard_block": true
   }
 }
