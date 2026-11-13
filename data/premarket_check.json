@@ -1,53 +1,45 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
+    "spy_change_pct": -0.35,
+    "qqq_change_pct": -0.32,
+    "soxx_change_pct": -0.26,
+    "vix": 18.3,
     "warnings": [],
     "global_action": "normal"
   },
   "picks": [
     {
-      "ticker": "RTX",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "COR",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 349.38,
+      "gap_pct": 0.0,
+      "actionable": true
     },
     {
       "ticker": "MA",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 652.6,
+      "gap_pct": -0.0,
+      "actionable": true
     },
     {
-      "ticker": "CB",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "RTX",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 198.36,
+      "gap_pct": 0.0,
+      "actionable": true
     },
     {
-      "ticker": "VMRK",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
-    },
-    {
-      "ticker": "ABNB",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "SJM",
+      "tag": "\u2705 SAFE",
+      "reason": "normal entry",
+      "current_price": 131.71,
+      "gap_pct": 0.0,
+      "actionable": true
     }
   ]
 }
