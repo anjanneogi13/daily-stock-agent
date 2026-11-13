@@ -1,0 +1,69 @@
+{
+  "artifact": "premarket_official_pick",
+  "artifact_bundle_name": "official-decision-artifacts-43431574491",
+  "artifact_filename": "premarket_official_pick_2026-11-13_SJM.json",
+  "artifact_id": "premarket_official_pick:2026-11-13:SJM",
+  "artifact_path": "data/premarket_official_pick_2026-11-13_SJM.json",
+  "commit_sha": "0a60d9b159f283a56b305805cafb653ec295377c",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/0a60d9b159f283a56b305805cafb653ec295377c",
+  "company": "SJM",
+  "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
+  "contract_version": "premarket_decision_contract_v1",
+  "data_missing": [
+    "company"
+  ],
+  "data_readiness_status": "ready",
+  "date": "2026-11-13",
+  "decision": "official_pick",
+  "decision_id": "premarket_official_daily_pick:2026-11-13:SJM:43431574491:0a60d9b159f2",
+  "entry": 131.71,
+  "invalidation_conditions": [
+    "Do not enter if fresh quote is unavailable.",
+    "Do not enter if premarket sanity status changes to WATCH_ONLY or SKIP_TODAY.",
+    "Do not enter if portfolio risk limits would be exceeded.",
+    "Invalid below stop loss 124.52.",
+    "Review/exit near take profit 140.69."
+  ],
+  "live_trading_enabled": false,
+  "market_session_status": "premarket",
+  "model_version": "claude-sonnet-4-5",
+  "paper_trading_enabled": false,
+  "provider_status": "healthy",
+  "quantity": 11,
+  "regime": {
+    "bullish": true,
+    "distance_pct": 3.49,
+    "regime": "transition",
+    "sma_value": 731.62,
+    "sma_window": 200,
+    "spy_close": 757.12,
+    "spy_sma200": 731.62,
+    "spy_sma_anchor": 731.62
+  },
+  "risk_dollars": 79.09,
+  "risk_flags": [],
+  "risk_reward": 1.25,
+  "score": 0.697,
+  "score_components": {
+    "composite": 0.697,
+    "day_score": 0.491,
+    "monster_score": 0.0,
+    "sector_mult": 1.0,
+    "sector_tag": null,
+    "vol_ratio": 0.6968081584001059
+  },
+  "scoring_version": "legacy_composite_v1",
+  "selection_reason": "SJM selected as official swing pick; composite score 0.697; premarket sanity: normal official premarket entry conditions.",
+  "selection_time_et": "2026-11-13T08:17:19-05:00",
+  "stop_loss": 124.52,
+  "strategy_lane": "premarket_official_daily_pick",
+  "strategy_version": "premarket_official_v1",
+  "take_profit": 140.69,
+  "ticker": "SJM",
+  "top_reasons": [
+    "composite score 0.697",
+    "premarket sanity: normal official premarket entry conditions"
+  ],
+  "workflow_run_id": "43431574491",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/43431574491"
+}
