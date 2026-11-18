@@ -1,29 +1,56 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "market": {
-    "spy_change_pct": 0.0,
-    "qqq_change_pct": 0.0,
-    "soxx_change_pct": 0.0,
-    "vix": null,
-    "warnings": [],
-    "global_action": "normal"
+    "spy_change_pct": -1.01,
+    "qqq_change_pct": -0.73,
+    "soxx_change_pct": 0.17,
+    "vix": 24.74,
+    "warnings": [
+      "\u26a0\ufe0f SPY down -1.0% \u2014 caution",
+      "\u26a0\ufe0f VIX at 24.7 \u2014 elevated volatility"
+    ],
+    "global_action": "half"
   },
   "picks": [
     {
-      "ticker": "AIG",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "RJF",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 163.91,
+      "gap_pct": 0.0,
+      "actionable": true
     },
     {
-      "ticker": "ATO",
-      "tag": "\ud83d\udc40 WATCH ONLY",
-      "reason": "could not verify fresh price \u2014 require fresh quote before entry",
-      "current_price": null,
-      "gap_pct": null,
-      "actionable": false
+      "ticker": "SJM",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 133.44,
+      "gap_pct": 0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "COR",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 350.56,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "GWW",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 1466.96,
+      "gap_pct": -0.0,
+      "actionable": true
+    },
+    {
+      "ticker": "FAST",
+      "tag": "\u26a0\ufe0f HALF SIZE",
+      "reason": "market caution \u2014 reduce size",
+      "current_price": 54.35,
+      "gap_pct": -0.0,
+      "actionable": true
     }
   ]
 }
