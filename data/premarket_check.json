@@ -1,54 +1,45 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "market": {
-    "spy_change_pct": -1.01,
-    "qqq_change_pct": -0.73,
-    "soxx_change_pct": 0.17,
-    "vix": 24.74,
+    "spy_change_pct": -0.31,
+    "qqq_change_pct": 0.39,
+    "soxx_change_pct": 0.28,
+    "vix": 22.25,
     "warnings": [
-      "\u26a0\ufe0f SPY down -1.0% \u2014 caution",
-      "\u26a0\ufe0f VIX at 24.7 \u2014 elevated volatility"
+      "\u26a0\ufe0f VIX at 22.2 \u2014 elevated volatility"
     ],
     "global_action": "half"
   },
   "picks": [
     {
-      "ticker": "RJF",
+      "ticker": "CASY",
       "tag": "\u26a0\ufe0f HALF SIZE",
       "reason": "market caution \u2014 reduce size",
-      "current_price": 163.91,
-      "gap_pct": 0.0,
+      "current_price": 698.67,
+      "gap_pct": -0.0,
       "actionable": true
     },
     {
       "ticker": "SJM",
       "tag": "\u26a0\ufe0f HALF SIZE",
       "reason": "market caution \u2014 reduce size",
-      "current_price": 133.44,
+      "current_price": 133.72,
       "gap_pct": 0.0,
       "actionable": true
     },
     {
-      "ticker": "COR",
+      "ticker": "WRB",
       "tag": "\u26a0\ufe0f HALF SIZE",
       "reason": "market caution \u2014 reduce size",
-      "current_price": 350.56,
-      "gap_pct": -0.0,
+      "current_price": 76.93,
+      "gap_pct": 0.0,
       "actionable": true
     },
     {
       "ticker": "GWW",
       "tag": "\u26a0\ufe0f HALF SIZE",
       "reason": "market caution \u2014 reduce size",
-      "current_price": 1466.96,
-      "gap_pct": -0.0,
-      "actionable": true
-    },
-    {
-      "ticker": "FAST",
-      "tag": "\u26a0\ufe0f HALF SIZE",
-      "reason": "market caution \u2014 reduce size",
-      "current_price": 54.35,
+      "current_price": 1448.12,
       "gap_pct": -0.0,
       "actionable": true
     }
