@@ -1,13 +1,4 @@
 {
-  "LIMN": {
-    "ticker": "LIMN",
-    "score_delta": -1.0,
-    "catalyst": "BANKRUPTCY_RISK",
-    "headline": "Liminatus Pharma Announces Nasdaq Delisting Notification",
-    "added_at": "2026-05-23T00:01:13.901988+00:00",
-    "expires": "2026-11-19T00:01:13.901994+00:00",
-    "hard_block": true
-  },
   "BTCUSD": {
     "ticker": "BTCUSD",
     "score_delta": -1.0,
@@ -690,6 +681,15 @@
     "headline": "Alstom Reports H1 Net Loss and Outlines Debt Reduction Strategy",
     "added_at": "2026-11-18T17:04:01.859140+00:00",
     "expires": "2027-05-17T17:04:01.859147+00:00",
+    "hard_block": true
+  },
+  "INPST": {
+    "ticker": "INPST",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Consortium of Advent, FedEx, A&R, and PPF Completes Acquisition of InPost",
+    "added_at": "2026-11-20T17:03:36.462428+00:00",
+    "expires": "2027-05-19T17:03:36.462435+00:00",
     "hard_block": true
   }
 }
