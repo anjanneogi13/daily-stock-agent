@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-44748052947",
+  "artifact_bundle_name": "official-decision-artifacts-44751383526",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "extra": {
@@ -20,10 +20,10 @@
           "soxx_change_pct": -2.75,
           "spy": 715.780029296875,
           "spy_change_pct": -1.96,
-          "vix": 31.489999771118164,
+          "vix": 30.06999969482422,
           "warnings": [
             "SPY down -2.0% \u2014 broad market selloff",
-            "VIX at 31.5 \u2014 high fear regime",
+            "VIX at 30.1 \u2014 high fear regime",
             "SOXX down -2.7% \u2014 semiconductor sector risk"
           ]
         },
@@ -868,8 +868,8 @@
       "universe_count": 519
     }
   },
-  "commit_sha": "4fb02bad41c9b6ab97ffd7a5b77725bd5d679d94",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/4fb02bad41c9b6ab97ffd7a5b77725bd5d679d94",
+  "commit_sha": "baa56ab4b35996ff4bb344bb0120f48c3126df33",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/baa56ab4b35996ff4bb344bb0120f48c3126df33",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_blocked_by_premarket_sanity",
@@ -894,10 +894,10 @@
           "soxx_change_pct": -2.75,
           "spy": 715.780029296875,
           "spy_change_pct": -1.96,
-          "vix": 31.489999771118164,
+          "vix": 30.06999969482422,
           "warnings": [
             "SPY down -2.0% \u2014 broad market selloff",
-            "VIX at 31.5 \u2014 high fear regime",
+            "VIX at 30.1 \u2014 high fear regime",
             "SOXX down -2.7% \u2014 semiconductor sector risk"
           ]
         },
@@ -1748,28 +1748,28 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1557,
+        "attempts": 2076,
         "empty": 0,
         "errors": 0,
-        "successes": 1557
+        "successes": 2076
       },
       "monster_info": {
-        "attempts": 36,
+        "attempts": 48,
         "empty": 0,
         "errors": 0,
-        "successes": 36
+        "successes": 48
       },
       "ohlcv": {
-        "attempts": 1572,
+        "attempts": 2096,
         "empty": 0,
         "errors": 0,
-        "successes": 1572
+        "successes": 2096
       }
     },
     "date": "2026-11-20",
     "providers": {
       "yfinance": {
-        "attempts": 3165,
+        "attempts": 4220,
         "empty": 0,
         "errors": 0,
         "failure_types": {
@@ -1788,7 +1788,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 3165,
+        "successes": 4220,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1800,7 +1800,7 @@
       "universe_count": 519
     },
     "samples": [],
-    "timestamp_utc": "2026-11-20T13:55:41Z"
+    "timestamp_utc": "2026-11-20T14:17:37Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1830,11 +1830,11 @@
   "reason": "No official picks generated because all finalists were blocked by the premarket sanity gate.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-11-20T08:55:41-05:00",
+  "selection_time_et": "2026-11-20T09:17:37-05:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-11-20T13:55:41Z",
+  "timestamp_utc": "2026-11-20T14:17:37Z",
   "watch_only_available": false,
-  "workflow_run_id": "44748052947",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/44748052947"
+  "workflow_run_id": "44751383526",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/44751383526"
 }

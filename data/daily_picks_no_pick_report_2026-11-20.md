@@ -28,4 +28,4 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**3165**, successes=**3165**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**4220**, successes=**4220**, errors=**0**, rate_limited=**0**, unauthorized=**0**

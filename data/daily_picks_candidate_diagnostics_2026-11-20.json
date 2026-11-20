@@ -20,10 +20,10 @@
           "soxx_change_pct": -2.75,
           "spy": 715.780029296875,
           "spy_change_pct": -1.96,
-          "vix": 31.489999771118164,
+          "vix": 30.06999969482422,
           "warnings": [
             "SPY down -2.0% \u2014 broad market selloff",
-            "VIX at 31.5 \u2014 high fear regime",
+            "VIX at 30.1 \u2014 high fear regime",
             "SOXX down -2.7% \u2014 semiconductor sector risk"
           ]
         },
@@ -891,5 +891,5 @@
     "universe_count": 519
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-11-20T13:55:41Z"
+  "timestamp_utc": "2026-11-20T14:17:37Z"
 }
