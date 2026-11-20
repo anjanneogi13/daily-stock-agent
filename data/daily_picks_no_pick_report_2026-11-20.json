@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-44742349765",
+  "artifact_bundle_name": "official-decision-artifacts-44743782535",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "extra": {
@@ -9,7 +9,7 @@
         "current_prices": {
           "ALL": 266.739990234375,
           "CHTR": 133.25,
-          "CMCSA": 24.85300064086914,
+          "CMCSA": 24.850000381469727,
           "WRB": 77.38999938964844
         },
         "market_snapshot": {
@@ -20,10 +20,10 @@
           "soxx_change_pct": -2.75,
           "spy": 715.780029296875,
           "spy_change_pct": -1.96,
-          "vix": 30.760000228881836,
+          "vix": 30.969999313354492,
           "warnings": [
             "SPY down -2.0% \u2014 broad market selloff",
-            "VIX at 30.8 \u2014 high fear regime",
+            "VIX at 31.0 \u2014 high fear regime",
             "SOXX down -2.7% \u2014 semiconductor sector risk"
           ]
         },
@@ -133,7 +133,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -255,7 +255,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -353,7 +353,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -507,7 +507,7 @@
           "news_boost": null,
           "premarket_action": "SKIP_TODAY",
           "premarket_actionable": false,
-          "premarket_gap_pct": -0.03,
+          "premarket_gap_pct": -0.04,
           "premarket_reason": "broad market risk",
           "quantity": 41,
           "risk_flags": [],
@@ -527,9 +527,9 @@
         "sanity": {
           "action": "SKIP_TODAY",
           "actionable": false,
-          "current_price": 24.85300064086914,
+          "current_price": 24.850000381469727,
           "entry": 24.86,
-          "gap_pct": -0.03,
+          "gap_pct": -0.04,
           "provider_unverified": false,
           "reason": "broad market risk",
           "size_multiplier": 0.0,
@@ -677,7 +677,7 @@
           "news_boost": null,
           "premarket_action": "SKIP_TODAY",
           "premarket_actionable": false,
-          "premarket_gap_pct": -0.03,
+          "premarket_gap_pct": -0.04,
           "premarket_reason": "broad market risk",
           "quantity": 41,
           "risk_flags": [],
@@ -697,9 +697,9 @@
         "sanity": {
           "action": "SKIP_TODAY",
           "actionable": false,
-          "current_price": 24.85300064086914,
+          "current_price": 24.850000381469727,
           "entry": 24.86,
-          "gap_pct": -0.03,
+          "gap_pct": -0.04,
           "provider_unverified": false,
           "reason": "broad market risk",
           "size_multiplier": 0.0,
@@ -868,8 +868,8 @@
       "universe_count": 519
     }
   },
-  "commit_sha": "47f143deedbb530f14ad3c86117e9762c88c87b9",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/47f143deedbb530f14ad3c86117e9762c88c87b9",
+  "commit_sha": "0525e27561d8059c4f1a116d1707f2b2fda40045",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/0525e27561d8059c4f1a116d1707f2b2fda40045",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_blocked_by_premarket_sanity",
@@ -883,7 +883,7 @@
         "current_prices": {
           "ALL": 266.739990234375,
           "CHTR": 133.25,
-          "CMCSA": 24.85300064086914,
+          "CMCSA": 24.850000381469727,
           "WRB": 77.38999938964844
         },
         "market_snapshot": {
@@ -894,10 +894,10 @@
           "soxx_change_pct": -2.75,
           "spy": 715.780029296875,
           "spy_change_pct": -1.96,
-          "vix": 30.760000228881836,
+          "vix": 30.969999313354492,
           "warnings": [
             "SPY down -2.0% \u2014 broad market selloff",
-            "VIX at 30.8 \u2014 high fear regime",
+            "VIX at 31.0 \u2014 high fear regime",
             "SOXX down -2.7% \u2014 semiconductor sector risk"
           ]
         },
@@ -1007,7 +1007,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -1129,7 +1129,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -1227,7 +1227,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -1381,7 +1381,7 @@
           "news_boost": null,
           "premarket_action": "SKIP_TODAY",
           "premarket_actionable": false,
-          "premarket_gap_pct": -0.03,
+          "premarket_gap_pct": -0.04,
           "premarket_reason": "broad market risk",
           "quantity": 41,
           "risk_flags": [],
@@ -1401,9 +1401,9 @@
         "sanity": {
           "action": "SKIP_TODAY",
           "actionable": false,
-          "current_price": 24.85300064086914,
+          "current_price": 24.850000381469727,
           "entry": 24.86,
-          "gap_pct": -0.03,
+          "gap_pct": -0.04,
           "provider_unverified": false,
           "reason": "broad market risk",
           "size_multiplier": 0.0,
@@ -1551,7 +1551,7 @@
           "news_boost": null,
           "premarket_action": "SKIP_TODAY",
           "premarket_actionable": false,
-          "premarket_gap_pct": -0.03,
+          "premarket_gap_pct": -0.04,
           "premarket_reason": "broad market risk",
           "quantity": 41,
           "risk_flags": [],
@@ -1571,9 +1571,9 @@
         "sanity": {
           "action": "SKIP_TODAY",
           "actionable": false,
-          "current_price": 24.85300064086914,
+          "current_price": 24.850000381469727,
           "entry": 24.86,
-          "gap_pct": -0.03,
+          "gap_pct": -0.04,
           "provider_unverified": false,
           "reason": "broad market risk",
           "size_multiplier": 0.0,
@@ -1748,28 +1748,28 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 519,
+        "attempts": 1038,
         "empty": 0,
         "errors": 0,
-        "successes": 519
+        "successes": 1038
       },
       "monster_info": {
-        "attempts": 12,
+        "attempts": 24,
         "empty": 0,
         "errors": 0,
-        "successes": 12
+        "successes": 24
       },
       "ohlcv": {
-        "attempts": 524,
+        "attempts": 1048,
         "empty": 0,
         "errors": 0,
-        "successes": 524
+        "successes": 1048
       }
     },
     "date": "2026-11-20",
     "providers": {
       "yfinance": {
-        "attempts": 1055,
+        "attempts": 2110,
         "empty": 0,
         "errors": 0,
         "failure_types": {
@@ -1788,7 +1788,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 1055,
+        "successes": 2110,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1800,7 +1800,7 @@
       "universe_count": 519
     },
     "samples": [],
-    "timestamp_utc": "2026-11-20T13:17:25Z"
+    "timestamp_utc": "2026-11-20T13:28:03Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1830,11 +1830,11 @@
   "reason": "No official picks generated because all finalists were blocked by the premarket sanity gate.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-11-20T08:17:26-05:00",
+  "selection_time_et": "2026-11-20T08:28:04-05:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-11-20T13:17:26Z",
+  "timestamp_utc": "2026-11-20T13:28:04Z",
   "watch_only_available": false,
-  "workflow_run_id": "44742349765",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/44742349765"
+  "workflow_run_id": "44743782535",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/44743782535"
 }

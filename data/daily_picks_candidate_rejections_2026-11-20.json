@@ -9,7 +9,7 @@
         "current_prices": {
           "ALL": 266.739990234375,
           "CHTR": 133.25,
-          "CMCSA": 24.85300064086914,
+          "CMCSA": 24.850000381469727,
           "WRB": 77.38999938964844
         },
         "market_snapshot": {
@@ -20,10 +20,10 @@
           "soxx_change_pct": -2.75,
           "spy": 715.780029296875,
           "spy_change_pct": -1.96,
-          "vix": 30.760000228881836,
+          "vix": 30.969999313354492,
           "warnings": [
             "SPY down -2.0% \u2014 broad market selloff",
-            "VIX at 30.8 \u2014 high fear regime",
+            "VIX at 31.0 \u2014 high fear regime",
             "SOXX down -2.7% \u2014 semiconductor sector risk"
           ]
         },
@@ -133,7 +133,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -255,7 +255,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -353,7 +353,7 @@
         "news_boost": null,
         "premarket_action": "SKIP_TODAY",
         "premarket_actionable": false,
-        "premarket_gap_pct": -0.03,
+        "premarket_gap_pct": -0.04,
         "premarket_reason": "broad market risk",
         "quantity": 41,
         "risk_flags": [],
@@ -507,7 +507,7 @@
           "news_boost": null,
           "premarket_action": "SKIP_TODAY",
           "premarket_actionable": false,
-          "premarket_gap_pct": -0.03,
+          "premarket_gap_pct": -0.04,
           "premarket_reason": "broad market risk",
           "quantity": 41,
           "risk_flags": [],
@@ -527,9 +527,9 @@
         "sanity": {
           "action": "SKIP_TODAY",
           "actionable": false,
-          "current_price": 24.85300064086914,
+          "current_price": 24.850000381469727,
           "entry": 24.86,
-          "gap_pct": -0.03,
+          "gap_pct": -0.04,
           "provider_unverified": false,
           "reason": "broad market risk",
           "size_multiplier": 0.0,
@@ -677,7 +677,7 @@
           "news_boost": null,
           "premarket_action": "SKIP_TODAY",
           "premarket_actionable": false,
-          "premarket_gap_pct": -0.03,
+          "premarket_gap_pct": -0.04,
           "premarket_reason": "broad market risk",
           "quantity": 41,
           "risk_flags": [],
@@ -697,9 +697,9 @@
         "sanity": {
           "action": "SKIP_TODAY",
           "actionable": false,
-          "current_price": 24.85300064086914,
+          "current_price": 24.850000381469727,
           "entry": 24.86,
-          "gap_pct": -0.03,
+          "gap_pct": -0.04,
           "provider_unverified": false,
           "reason": "broad market risk",
           "size_multiplier": 0.0,
@@ -892,5 +892,5 @@
   "primary_no_pick_cause": "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL",
   "ready_for_paper_trading": false,
   "secondary_causes": [],
-  "timestamp_utc": "2026-11-20T13:17:26Z"
+  "timestamp_utc": "2026-11-20T13:28:04Z"
 }
