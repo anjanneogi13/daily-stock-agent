@@ -25,7 +25,7 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**3150**, successes=**3150**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**4200**, successes=**4200**, errors=**0**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
 - WRB: **sl_too_tight** — SL too tight (1.3% < 2.0% for $78 stock)
