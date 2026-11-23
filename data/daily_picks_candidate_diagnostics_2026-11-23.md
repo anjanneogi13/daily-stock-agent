@@ -19,9 +19,9 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - pre_hard_block_pick_count: **3**
 - pre_premarket_sanity_pick_count: **0**
 - premarket_sanity_blocked_count: **0**
-- rejected_candidate_count: **6**
-- scored_count: **7**
-- scored_not_filtered_count: **4**
+- rejected_candidate_count: **7**
+- scored_count: **8**
+- scored_not_filtered_count: **5**
 - selected_pick_count: **0**
 - selected_ticker_count: **0**
 - universe_count: **519**
@@ -36,3 +36,4 @@ Monitoring-only diagnostic artifact. Not buy instructions.
 - CMG: **earnings_risk** — earnings in 0d
 - PCG: **earnings_risk** — earnings in 0d
 - EIX: **earnings_risk** — earnings in 0d
+- TGT: **earnings_risk** — earnings in 0d
