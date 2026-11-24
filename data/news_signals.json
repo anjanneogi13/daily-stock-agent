@@ -498,9 +498,9 @@
     "ticker": "NDAQ",
     "score_delta": -1.0,
     "catalyst": "BANKRUPTCY_RISK",
-    "headline": "Nasdaq Announces Delisting of Multiple Securities",
-    "added_at": "2026-11-23T16:04:13.209007+00:00",
-    "expires": "2027-05-22T16:04:13.209015+00:00",
+    "headline": "Nasdaq Stays Delisting Action for Onfolio Holdings",
+    "added_at": "2026-11-24T14:32:31.554809+00:00",
+    "expires": "2027-05-23T14:32:31.554816+00:00",
     "hard_block": true
   },
   "AAME": {
