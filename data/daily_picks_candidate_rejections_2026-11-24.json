@@ -20,9 +20,9 @@
           "soxx_change_pct": 13.63,
           "spy": 722.3900146484375,
           "spy_change_pct": 4.71,
-          "vix": 32.380001068115234,
+          "vix": 29.3700008392334,
           "warnings": [
-            "VIX at 32.4 \u2014 high fear regime"
+            "VIX at 29.4 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -776,7 +776,7 @@
           "news_action_window": null,
           "news_boost": null,
           "risk_reward": 1.25,
-          "score": 0.7074,
+          "score": 0.7137,
           "sector": "N/A",
           "sector_tag": null,
           "stop_loss": 155.56,
@@ -836,5 +836,5 @@
   "primary_no_pick_cause": "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL",
   "ready_for_paper_trading": false,
   "secondary_causes": [],
-  "timestamp_utc": "2026-11-24T13:27:56Z"
+  "timestamp_utc": "2026-11-24T14:18:53Z"
 }
