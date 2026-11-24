@@ -16,13 +16,13 @@
           "global_action": "skip_all",
           "qqq": 650.8699951171875,
           "qqq_change_pct": 7.0,
-          "soxx": 140.2050018310547,
+          "soxx": 140.24000549316406,
           "soxx_change_pct": 13.63,
           "spy": 722.3900146484375,
           "spy_change_pct": 4.71,
-          "vix": 28.829999923706055,
+          "vix": 32.380001068115234,
           "warnings": [
-            "VIX at 28.8 \u2014 high fear regime"
+            "VIX at 32.4 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -836,5 +836,5 @@
   "primary_no_pick_cause": "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL",
   "ready_for_paper_trading": false,
   "secondary_causes": [],
-  "timestamp_utc": "2026-11-24T13:18:48Z"
+  "timestamp_utc": "2026-11-24T13:27:56Z"
 }

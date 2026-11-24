@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-45401195061",
+  "artifact_bundle_name": "official-decision-artifacts-45402782649",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "extra": {
@@ -16,13 +16,13 @@
           "global_action": "skip_all",
           "qqq": 650.8699951171875,
           "qqq_change_pct": 7.0,
-          "soxx": 140.2050018310547,
+          "soxx": 140.24000549316406,
           "soxx_change_pct": 13.63,
           "spy": 722.3900146484375,
           "spy_change_pct": 4.71,
-          "vix": 28.829999923706055,
+          "vix": 32.380001068115234,
           "warnings": [
-            "VIX at 28.8 \u2014 high fear regime"
+            "VIX at 32.4 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -812,8 +812,8 @@
       "universe_count": 519
     }
   },
-  "commit_sha": "e966a33ebb6804b1444e7c27992c3df99ec288d9",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/e966a33ebb6804b1444e7c27992c3df99ec288d9",
+  "commit_sha": "baa644486456690c07cdcd1cc6cb07c0a5db60f1",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/baa644486456690c07cdcd1cc6cb07c0a5db60f1",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_blocked_by_premarket_sanity",
@@ -834,13 +834,13 @@
           "global_action": "skip_all",
           "qqq": 650.8699951171875,
           "qqq_change_pct": 7.0,
-          "soxx": 140.2050018310547,
+          "soxx": 140.24000549316406,
           "soxx_change_pct": 13.63,
           "spy": 722.3900146484375,
           "spy_change_pct": 4.71,
-          "vix": 28.829999923706055,
+          "vix": 32.380001068115234,
           "warnings": [
-            "VIX at 28.8 \u2014 high fear regime"
+            "VIX at 32.4 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -1636,28 +1636,28 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 519,
+        "attempts": 1038,
         "empty": 0,
         "errors": 0,
-        "successes": 519
+        "successes": 1038
       },
       "monster_info": {
-        "attempts": 6,
+        "attempts": 12,
         "empty": 0,
         "errors": 0,
-        "successes": 6
+        "successes": 12
       },
       "ohlcv": {
-        "attempts": 524,
+        "attempts": 1048,
         "empty": 0,
         "errors": 0,
-        "successes": 524
+        "successes": 1048
       }
     },
     "date": "2026-11-24",
     "providers": {
       "yfinance": {
-        "attempts": 1049,
+        "attempts": 2098,
         "empty": 0,
         "errors": 0,
         "failure_types": {
@@ -1676,7 +1676,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 1049,
+        "successes": 2098,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1688,7 +1688,7 @@
       "universe_count": 519
     },
     "samples": [],
-    "timestamp_utc": "2026-11-24T13:18:47Z"
+    "timestamp_utc": "2026-11-24T13:27:55Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1718,11 +1718,11 @@
   "reason": "No official picks generated because all finalists were blocked by the premarket sanity gate.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-11-24T08:18:48-05:00",
+  "selection_time_et": "2026-11-24T08:27:56-05:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-11-24T13:18:48Z",
+  "timestamp_utc": "2026-11-24T13:27:56Z",
   "watch_only_available": false,
-  "workflow_run_id": "45401195061",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/45401195061"
+  "workflow_run_id": "45402782649",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/45402782649"
 }
