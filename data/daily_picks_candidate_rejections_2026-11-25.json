@@ -18,9 +18,9 @@
           "soxx_change_pct": -8.27,
           "spy": 718.7899780273438,
           "spy_change_pct": -0.49,
-          "vix": 30.860000610351562,
+          "vix": 30.790000915527344,
           "warnings": [
-            "VIX at 30.9 \u2014 high fear regime",
+            "VIX at 30.8 \u2014 high fear regime",
             "SOXX down -8.3% \u2014 semiconductor sector risk"
           ]
         },
@@ -654,5 +654,5 @@
   "primary_no_pick_cause": "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL",
   "ready_for_paper_trading": false,
   "secondary_causes": [],
-  "timestamp_utc": "2026-11-25T13:19:03Z"
+  "timestamp_utc": "2026-11-25T13:41:35Z"
 }
