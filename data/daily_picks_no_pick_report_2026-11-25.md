@@ -11,11 +11,11 @@ Monitoring-only failure evidence. No official picks were generated.
 - Official premarket pick: **false**
 
 ## Pipeline
-- capped_count: **11**
+- capped_count: **13**
 - data_readiness_passed: **True**
 - data_readiness_status: **ready**
 - fetched_count: **519**
-- filtered_count: **11**
+- filtered_count: **13**
 - final_pick_count: **0**
 - hard_blocked_count: **2**
 - post_hard_block_pick_count: **3**
@@ -28,7 +28,10 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**3167**, successes=**3167**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**4223**, successes=**4207**, errors=**16**, rate_limited=**16**, unauthorized=**0**
+
+## Secondary Causes
+- YFINANCE_PROVIDER_DEGRADED
 
 ## Hard-Blocked Finalists
 - SNDK: **penny_stock** — missing entry price (broken upstream pick)

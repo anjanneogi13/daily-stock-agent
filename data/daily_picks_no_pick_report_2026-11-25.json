@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-45627958764",
+  "artifact_bundle_name": "official-decision-artifacts-45628733038",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "extra": {
@@ -18,7 +18,7 @@
           "soxx_change_pct": -8.27,
           "spy": 718.7899780273438,
           "spy_change_pct": -0.49,
-          "vix": 31.260000228881836,
+          "vix": 31.31999969482422,
           "warnings": [
             "VIX at 31.3 \u2014 high fear regime",
             "SOXX down -8.3% \u2014 semiconductor sector risk"
@@ -34,7 +34,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.292,
-          "days_to_earnings": 82,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -64,7 +64,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.68,
-          "days_to_earnings": 8,
+          "days_to_earnings": null,
           "entry": 23.27,
           "news_action_window": null,
           "news_boost": null,
@@ -92,11 +92,11 @@
     ],
     "missing_data_blocked_candidates": [],
     "pipeline": {
-      "capped_count": 11,
+      "capped_count": 13,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
       "fetched_count": 519,
-      "filtered_count": 11,
+      "filtered_count": 13,
       "final_pick_count": 0,
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 3,
@@ -113,7 +113,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 77,
+        "days_to_earnings": null,
         "entry": 95.43,
         "news_action_window": null,
         "news_boost": null,
@@ -137,7 +137,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 64,
+        "days_to_earnings": null,
         "entry": 47.16,
         "news_action_window": null,
         "news_boost": null,
@@ -163,7 +163,7 @@
       {
         "company": "",
         "day_score": 0.292,
-        "days_to_earnings": 82,
+        "days_to_earnings": null,
         "entry": null,
         "news_action_window": null,
         "news_boost": null,
@@ -187,7 +187,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 77,
+        "days_to_earnings": null,
         "entry": 95.43,
         "news_action_window": null,
         "news_boost": null,
@@ -211,7 +211,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 64,
+        "days_to_earnings": null,
         "entry": 47.16,
         "news_action_window": null,
         "news_boost": null,
@@ -235,7 +235,7 @@
       {
         "company": "",
         "day_score": 0.68,
-        "days_to_earnings": 8,
+        "days_to_earnings": null,
         "entry": 23.27,
         "news_action_window": null,
         "news_boost": null,
@@ -258,24 +258,24 @@
       },
       {
         "company": "",
-        "day_score": 0.73,
-        "days_to_earnings": 110,
-        "entry": 154.65,
+        "day_score": 0.725,
+        "days_to_earnings": null,
+        "entry": 183.52,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 20,
+        "quantity": 23,
         "risk_flags": [],
         "risk_reward": 1.67,
-        "score": 0.683,
+        "score": 0.684,
         "sector": "Unknown",
         "sector_tag": null,
-        "stop_loss": 150.84,
-        "take_profit": 161.0,
-        "ticker": "DLTR",
+        "stop_loss": 180.05,
+        "take_profit": 189.3,
+        "ticker": "A",
         "trade_type": "day",
         "watch_only": false,
         "watch_only_reason": ""
@@ -285,7 +285,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 77,
+        "days_to_earnings": null,
         "entry": 95.43,
         "news_action_window": null,
         "news_boost": null,
@@ -309,7 +309,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 64,
+        "days_to_earnings": null,
         "entry": 47.16,
         "news_action_window": null,
         "news_boost": null,
@@ -337,7 +337,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.515,
-          "days_to_earnings": 77,
+          "days_to_earnings": null,
           "entry": 95.43,
           "news_action_window": null,
           "news_boost": null,
@@ -379,7 +379,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.56,
-          "days_to_earnings": 64,
+          "days_to_earnings": null,
           "entry": 47.16,
           "news_action_window": null,
           "news_boost": null,
@@ -423,7 +423,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.292,
-          "days_to_earnings": 82,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -453,7 +453,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.68,
-          "days_to_earnings": 8,
+          "days_to_earnings": null,
           "entry": 23.27,
           "news_action_window": null,
           "news_boost": null,
@@ -483,7 +483,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.515,
-          "days_to_earnings": 77,
+          "days_to_earnings": null,
           "entry": 95.43,
           "news_action_window": null,
           "news_boost": null,
@@ -525,7 +525,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.56,
-          "days_to_earnings": 64,
+          "days_to_earnings": null,
           "entry": 47.16,
           "news_action_window": null,
           "news_boost": null,
@@ -561,59 +561,13 @@
           "ticker": "VZ"
         },
         "ticker": "VZ"
-      },
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.725,
-          "days_to_earnings": 0,
-          "entry": 183.52,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.67,
-          "score": 0.7092,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 180.05,
-          "take_profit": 189.3,
-          "ticker": "A",
-          "trade_type": "day",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 0d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "A"
-      },
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.6,
-          "days_to_earnings": 0,
-          "entry": 176.06,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.25,
-          "score": 0.707,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 163.49,
-          "take_profit": 191.77,
-          "ticker": "TGT",
-          "trade_type": "swing",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 0d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "TGT"
       }
     ],
     "selected_picks": [],
     "stage_counts": {
-      "capped_count": 11,
+      "capped_count": 13,
       "fetched_count": 519,
-      "filtered_count": 11,
+      "filtered_count": 13,
       "filtered_not_capped_count": 0,
       "hard_blocked_count": 2,
       "missing_data_blocked_count": 0,
@@ -622,16 +576,16 @@
       "pre_hard_block_pick_count": 5,
       "pre_premarket_sanity_pick_count": 2,
       "premarket_sanity_blocked_count": 2,
-      "rejected_candidate_count": 6,
+      "rejected_candidate_count": 4,
       "scored_count": 13,
-      "scored_not_filtered_count": 2,
+      "scored_not_filtered_count": 0,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
     }
   },
-  "commit_sha": "e6b5a022110b57a3054cd28474ba672f8603e941",
-  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/e6b5a022110b57a3054cd28474ba672f8603e941",
+  "commit_sha": "0e131b0243072820a47d3ce27d2a9044544e880e",
+  "commit_url": "https://github.com/anjanneogi13/daily-stock-agent/commit/0e131b0243072820a47d3ce27d2a9044544e880e",
   "config_version": "sha256:42af212f30764fb01869759af731596a143c221352be23cdd228fb2a1823745d",
   "contract_version": "premarket_decision_contract_v1",
   "data_readiness_status": "ready_all_finalists_blocked_by_premarket_sanity",
@@ -654,7 +608,7 @@
           "soxx_change_pct": -8.27,
           "spy": 718.7899780273438,
           "spy_change_pct": -0.49,
-          "vix": 31.260000228881836,
+          "vix": 31.31999969482422,
           "warnings": [
             "VIX at 31.3 \u2014 high fear regime",
             "SOXX down -8.3% \u2014 semiconductor sector risk"
@@ -670,7 +624,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.292,
-          "days_to_earnings": 82,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -700,7 +654,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.68,
-          "days_to_earnings": 8,
+          "days_to_earnings": null,
           "entry": 23.27,
           "news_action_window": null,
           "news_boost": null,
@@ -728,11 +682,11 @@
     ],
     "missing_data_blocked_candidates": [],
     "pipeline": {
-      "capped_count": 11,
+      "capped_count": 13,
       "data_readiness_passed": true,
       "data_readiness_status": "ready",
       "fetched_count": 519,
-      "filtered_count": 11,
+      "filtered_count": 13,
       "final_pick_count": 0,
       "hard_blocked_count": 2,
       "post_hard_block_pick_count": 3,
@@ -749,7 +703,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 77,
+        "days_to_earnings": null,
         "entry": 95.43,
         "news_action_window": null,
         "news_boost": null,
@@ -773,7 +727,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 64,
+        "days_to_earnings": null,
         "entry": 47.16,
         "news_action_window": null,
         "news_boost": null,
@@ -799,7 +753,7 @@
       {
         "company": "",
         "day_score": 0.292,
-        "days_to_earnings": 82,
+        "days_to_earnings": null,
         "entry": null,
         "news_action_window": null,
         "news_boost": null,
@@ -823,7 +777,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 77,
+        "days_to_earnings": null,
         "entry": 95.43,
         "news_action_window": null,
         "news_boost": null,
@@ -847,7 +801,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 64,
+        "days_to_earnings": null,
         "entry": 47.16,
         "news_action_window": null,
         "news_boost": null,
@@ -871,7 +825,7 @@
       {
         "company": "",
         "day_score": 0.68,
-        "days_to_earnings": 8,
+        "days_to_earnings": null,
         "entry": 23.27,
         "news_action_window": null,
         "news_boost": null,
@@ -894,24 +848,24 @@
       },
       {
         "company": "",
-        "day_score": 0.73,
-        "days_to_earnings": 110,
-        "entry": 154.65,
+        "day_score": 0.725,
+        "days_to_earnings": null,
+        "entry": 183.52,
         "news_action_window": null,
         "news_boost": null,
         "premarket_action": null,
         "premarket_actionable": null,
         "premarket_gap_pct": null,
         "premarket_reason": "",
-        "quantity": 20,
+        "quantity": 23,
         "risk_flags": [],
         "risk_reward": 1.67,
-        "score": 0.683,
+        "score": 0.684,
         "sector": "Unknown",
         "sector_tag": null,
-        "stop_loss": 150.84,
-        "take_profit": 161.0,
-        "ticker": "DLTR",
+        "stop_loss": 180.05,
+        "take_profit": 189.3,
+        "ticker": "A",
         "trade_type": "day",
         "watch_only": false,
         "watch_only_reason": ""
@@ -921,7 +875,7 @@
       {
         "company": "",
         "day_score": 0.515,
-        "days_to_earnings": 77,
+        "days_to_earnings": null,
         "entry": 95.43,
         "news_action_window": null,
         "news_boost": null,
@@ -945,7 +899,7 @@
       {
         "company": "",
         "day_score": 0.56,
-        "days_to_earnings": 64,
+        "days_to_earnings": null,
         "entry": 47.16,
         "news_action_window": null,
         "news_boost": null,
@@ -973,7 +927,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.515,
-          "days_to_earnings": 77,
+          "days_to_earnings": null,
           "entry": 95.43,
           "news_action_window": null,
           "news_boost": null,
@@ -1015,7 +969,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.56,
-          "days_to_earnings": 64,
+          "days_to_earnings": null,
           "entry": 47.16,
           "news_action_window": null,
           "news_boost": null,
@@ -1059,7 +1013,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.292,
-          "days_to_earnings": 82,
+          "days_to_earnings": null,
           "entry": null,
           "news_action_window": null,
           "news_boost": null,
@@ -1089,7 +1043,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.68,
-          "days_to_earnings": 8,
+          "days_to_earnings": null,
           "entry": 23.27,
           "news_action_window": null,
           "news_boost": null,
@@ -1119,7 +1073,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.515,
-          "days_to_earnings": 77,
+          "days_to_earnings": null,
           "entry": 95.43,
           "news_action_window": null,
           "news_boost": null,
@@ -1161,7 +1115,7 @@
         "candidate": {
           "company": "",
           "day_score": 0.56,
-          "days_to_earnings": 64,
+          "days_to_earnings": null,
           "entry": 47.16,
           "news_action_window": null,
           "news_boost": null,
@@ -1197,59 +1151,13 @@
           "ticker": "VZ"
         },
         "ticker": "VZ"
-      },
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.725,
-          "days_to_earnings": 0,
-          "entry": 183.52,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.67,
-          "score": 0.7092,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 180.05,
-          "take_profit": 189.3,
-          "ticker": "A",
-          "trade_type": "day",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 0d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "A"
-      },
-      {
-        "candidate": {
-          "company": "",
-          "day_score": 0.6,
-          "days_to_earnings": 0,
-          "entry": 176.06,
-          "news_action_window": null,
-          "news_boost": null,
-          "risk_reward": 1.25,
-          "score": 0.707,
-          "sector": "N/A",
-          "sector_tag": null,
-          "stop_loss": 163.49,
-          "take_profit": 191.77,
-          "ticker": "TGT",
-          "trade_type": "swing",
-          "watch_only": false,
-          "watch_only_reason": ""
-        },
-        "reason": "earnings in 0d",
-        "rejection_stage": "earnings_risk",
-        "ticker": "TGT"
       }
     ],
     "selected_picks": [],
     "stage_counts": {
-      "capped_count": 11,
+      "capped_count": 13,
       "fetched_count": 519,
-      "filtered_count": 11,
+      "filtered_count": 13,
       "filtered_not_capped_count": 0,
       "hard_blocked_count": 2,
       "missing_data_blocked_count": 0,
@@ -1258,9 +1166,9 @@
       "pre_hard_block_pick_count": 5,
       "pre_premarket_sanity_pick_count": 2,
       "premarket_sanity_blocked_count": 2,
-      "rejected_candidate_count": 6,
+      "rejected_candidate_count": 4,
       "scored_count": 13,
-      "scored_not_filtered_count": 2,
+      "scored_not_filtered_count": 0,
       "selected_pick_count": 0,
       "selected_ticker_count": 0,
       "universe_count": 519
@@ -1272,30 +1180,30 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 1557,
+        "attempts": 2076,
         "empty": 0,
-        "errors": 0,
-        "successes": 1557
+        "errors": 3,
+        "successes": 2073
       },
       "monster_info": {
-        "attempts": 39,
+        "attempts": 52,
         "empty": 0,
-        "errors": 0,
+        "errors": 13,
         "successes": 39
       },
       "ohlcv": {
-        "attempts": 1571,
+        "attempts": 2095,
         "empty": 0,
         "errors": 0,
-        "successes": 1571
+        "successes": 2095
       }
     },
     "date": "2026-11-25",
     "providers": {
       "yfinance": {
-        "attempts": 3167,
+        "attempts": 4223,
         "empty": 0,
-        "errors": 0,
+        "errors": 16,
         "failure_types": {
           "empty_response": 0,
           "market_closed": 0,
@@ -1303,7 +1211,7 @@
           "missing_intraday_bars": 0,
           "missing_quote": 0,
           "provider_exception": 0,
-          "rate_limited": 0,
+          "rate_limited": 16,
           "stale_data": 0,
           "symbol_not_found": 0,
           "timeout": 0,
@@ -1311,8 +1219,8 @@
         },
         "not_found": 0,
         "provider_error": 0,
-        "rate_limited": 0,
-        "successes": 3167,
+        "rate_limited": 16,
+        "successes": 4207,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1323,8 +1231,153 @@
       "scored_count": 13,
       "universe_count": 519
     },
-    "samples": [],
-    "timestamp_utc": "2026-11-25T13:55:59Z"
+    "samples": [
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "A"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "CHTR"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "DRI"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "DLTR"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "DPZ"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "EIX"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "HRL"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "MGM"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "ORLY"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "SNDK"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "TGT"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "VZ"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "monster_info",
+        "ticker": "WRB"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SOXX"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SMH"
+      },
+      {
+        "error_type": "rate_limited",
+        "failure_type": "rate_limited",
+        "message": "Too Many Requests. Rate limited. Try after a while.",
+        "provider": "yfinance",
+        "result": "error",
+        "stage": "info",
+        "ticker": "SOXL"
+      }
+    ],
+    "timestamp_utc": "2026-11-25T14:02:46Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1332,11 +1385,11 @@
   "official_premarket_pick": false,
   "paper_trading_enabled": false,
   "pipeline": {
-    "capped_count": 11,
+    "capped_count": 13,
     "data_readiness_passed": true,
     "data_readiness_status": "ready",
     "fetched_count": 519,
-    "filtered_count": 11,
+    "filtered_count": 13,
     "final_pick_count": 0,
     "hard_blocked_count": 2,
     "post_hard_block_pick_count": 3,
@@ -1353,12 +1406,14 @@
   "ready_for_paper_trading": false,
   "reason": "No official picks generated because all finalists were blocked by the premarket sanity gate.",
   "scoring_version": "legacy_composite_v1",
-  "secondary_causes": [],
-  "selection_time_et": "2026-11-25T08:56:00-05:00",
+  "secondary_causes": [
+    "YFINANCE_PROVIDER_DEGRADED"
+  ],
+  "selection_time_et": "2026-11-25T09:02:47-05:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-11-25T13:56:00Z",
+  "timestamp_utc": "2026-11-25T14:02:47Z",
   "watch_only_available": false,
-  "workflow_run_id": "45627958764",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/45627958764"
+  "workflow_run_id": "45628733038",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/45628733038"
 }
