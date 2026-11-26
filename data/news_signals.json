@@ -718,5 +718,14 @@
     "added_at": "2026-11-26T09:32:41.408977+00:00",
     "expires": "2027-05-25T09:32:41.408986+00:00",
     "hard_block": true
+  },
+  "AREC": {
+    "ticker": "AREC",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "American Resources Corporation Discloses Accounting Errors and Nasdaq Delisting Notice",
+    "added_at": "2026-11-26T14:04:06.482540+00:00",
+    "expires": "2027-05-25T14:04:06.482548+00:00",
+    "hard_block": true
   }
 }
