@@ -2682,5 +2682,18 @@
         "block_type": "penny_stock"
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-27 13:41:30",
+    "weak_sectors": {},
+    "blocked_count": 1,
+    "passed_count": 4,
+    "blocked": [
+      {
+        "ticker": "SNDK",
+        "reason": "missing entry price (broken upstream pick)",
+        "block_type": "penny_stock"
+      }
+    ]
   }
 ]
