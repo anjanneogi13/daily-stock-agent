@@ -18,9 +18,9 @@
           "soxx_change_pct": -0.5,
           "spy": 716.760009765625,
           "spy_change_pct": -0.29,
-          "vix": 25.309999465942383,
+          "vix": 25.229999542236328,
           "warnings": [
-            "VIX at 25.3 \u2014 high fear regime"
+            "VIX at 25.2 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -569,5 +569,5 @@
     "universe_count": 519
   },
   "ready_for_paper_trading": false,
-  "timestamp_utc": "2026-11-27T13:41:31Z"
+  "timestamp_utc": "2026-11-27T13:56:23Z"
 }
