@@ -28,7 +28,7 @@ Monitoring-only failure evidence. No official picks were generated.
 - universe_count: **519**
 
 ## Market Data Health
-- yfinance: attempts=**5290**, successes=**5290**, errors=**0**, rate_limited=**0**, unauthorized=**0**
+- yfinance: attempts=**6348**, successes=**6348**, errors=**0**, rate_limited=**0**, unauthorized=**0**
 
 ## Hard-Blocked Finalists
 - SNDK: **penny_stock** — missing entry price (broken upstream pick)

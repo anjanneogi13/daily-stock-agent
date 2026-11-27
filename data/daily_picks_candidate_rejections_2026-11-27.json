@@ -18,9 +18,9 @@
           "soxx_change_pct": -0.5,
           "spy": 716.760009765625,
           "spy_change_pct": -0.29,
-          "vix": 25.360000610351562,
+          "vix": 25.489999771118164,
           "warnings": [
-            "VIX at 25.4 \u2014 high fear regime"
+            "VIX at 25.5 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -570,5 +570,5 @@
   "primary_no_pick_cause": "NO_PICK_PREMARKET_SANITY_BLOCKED_ALL",
   "ready_for_paper_trading": false,
   "secondary_causes": [],
-  "timestamp_utc": "2026-11-27T14:01:34Z"
+  "timestamp_utc": "2026-11-27T14:17:38Z"
 }
