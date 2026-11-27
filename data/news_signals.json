@@ -727,5 +727,14 @@
     "added_at": "2026-11-26T14:04:06.482540+00:00",
     "expires": "2027-05-25T14:04:06.482548+00:00",
     "hard_block": true
+  },
+  "PHOL.PR": {
+    "ticker": "PHOL.PR",
+    "score_delta": -1.0,
+    "catalyst": "BANKRUPTCY_RISK",
+    "headline": "Preservia Holding AB Outlines Corporate Structure and Long-Term Liquidation Plan",
+    "added_at": "2026-11-27T08:05:59.963070+00:00",
+    "expires": "2027-05-26T08:05:59.963077+00:00",
+    "hard_block": true
   }
 }
