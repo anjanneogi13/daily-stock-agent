@@ -1,6 +1,6 @@
 {
   "artifact": "daily_picks_no_pick_report",
-  "artifact_bundle_name": "official-decision-artifacts-46010776555",
+  "artifact_bundle_name": "official-decision-artifacts-46011432444",
   "candidate_diagnostics": {
     "diagnostics_available": true,
     "extra": {
@@ -18,9 +18,9 @@
           "soxx_change_pct": -0.5,
           "spy": 716.760009765625,
           "spy_change_pct": -0.29,
-          "vix": 25.229999542236328,
+          "vix": 25.360000610351562,
           "warnings": [
-            "VIX at 25.2 \u2014 high fear regime"
+            "VIX at 25.4 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -570,9 +570,9 @@
           "soxx_change_pct": -0.5,
           "spy": 716.760009765625,
           "spy_change_pct": -0.29,
-          "vix": 25.229999542236328,
+          "vix": 25.360000610351562,
           "warnings": [
-            "VIX at 25.2 \u2014 high fear regime"
+            "VIX at 25.4 \u2014 high fear regime"
           ]
         },
         "official_count": 0,
@@ -1104,28 +1104,28 @@
     "artifact": "market_data_health",
     "by_stage": {
       "info": {
-        "attempts": 2076,
+        "attempts": 2595,
         "empty": 0,
         "errors": 0,
-        "successes": 2076
+        "successes": 2595
       },
       "monster_info": {
-        "attempts": 60,
+        "attempts": 75,
         "empty": 0,
         "errors": 0,
-        "successes": 60
+        "successes": 75
       },
       "ohlcv": {
-        "attempts": 2096,
+        "attempts": 2620,
         "empty": 0,
         "errors": 0,
-        "successes": 2096
+        "successes": 2620
       }
     },
     "date": "2026-11-27",
     "providers": {
       "yfinance": {
-        "attempts": 4232,
+        "attempts": 5290,
         "empty": 0,
         "errors": 0,
         "failure_types": {
@@ -1144,7 +1144,7 @@
         "not_found": 0,
         "provider_error": 0,
         "rate_limited": 0,
-        "successes": 4232,
+        "successes": 5290,
         "timeout": 0,
         "unauthorized": 0
       }
@@ -1156,7 +1156,7 @@
       "universe_count": 519
     },
     "samples": [],
-    "timestamp_utc": "2026-11-27T13:56:22Z"
+    "timestamp_utc": "2026-11-27T14:01:33Z"
   },
   "market_session_status": "premarket",
   "mode": "monitoring_only",
@@ -1186,11 +1186,11 @@
   "reason": "No official picks generated because all finalists were blocked by the premarket sanity gate.",
   "scoring_version": "legacy_composite_v1",
   "secondary_causes": [],
-  "selection_time_et": "2026-11-27T08:56:23-05:00",
+  "selection_time_et": "2026-11-27T09:01:34-05:00",
   "strategy_lane": "premarket_official_daily_pick",
   "strategy_version": "premarket_official_v1",
-  "timestamp_utc": "2026-11-27T13:56:23Z",
+  "timestamp_utc": "2026-11-27T14:01:34Z",
   "watch_only_available": false,
-  "workflow_run_id": "46010776555",
-  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/46010776555"
+  "workflow_run_id": "46011432444",
+  "workflow_run_url": "https://github.com/anjanneogi13/daily-stock-agent/actions/runs/46011432444"
 }
