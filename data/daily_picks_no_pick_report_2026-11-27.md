@@ -1,34 +1,11 @@
-# Daily Picks No-Pick Report
+# Daily Picks Official No-Pick Guard Decision
 
-Monitoring-only failure evidence. No official picks were generated.
+Monitoring-only official no-pick artifact. Not buy instructions.
 
 - Date: **2026-11-27**
-- Reason: **No official picks generated because all finalists were blocked by the premarket sanity gate.**
-- Primary no-pick cause: **NO_PICK_PREMARKET_SANITY_BLOCKED_ALL**
-- Summary: **No official picks were generated because all finalists were blocked by the premarket sanity gate.**
+- Primary no-pick cause: **NO_PICK_WINDOW_MISSED**
+- Decision ID: `premarket_official_daily_pick:2026-11-27:NO_PICK:NO_PICK_WINDOW_MISSED:46015502112:5a2386f61b0d`
+- Artifact ID: `daily_picks_no_pick_report:2026-11-27:NO_PICK_WINDOW_MISSED`
+- Summary: **No official premarket pick was generated because the workflow ran after the 09:20 ET official cutoff. The system must not fabricate a normal daily pick after the official window is missed.**
 - Paper trading enabled: **false**
 - Live trading enabled: **false**
-- Official premarket pick: **false**
-
-## Pipeline
-- capped_count: **14**
-- data_readiness_passed: **True**
-- data_readiness_status: **ready**
-- fetched_count: **519**
-- filtered_count: **14**
-- final_pick_count: **0**
-- hard_blocked_count: **1**
-- post_hard_block_pick_count: **4**
-- post_premarket_sanity_pick_count: **0**
-- pre_hard_block_pick_count: **5**
-- pre_premarket_sanity_pick_count: **2**
-- premarket_sanity_blocked_count: **2**
-- scored_count: **15**
-- scorer_workers: **4**
-- universe_count: **519**
-
-## Market Data Health
-- yfinance: attempts=**6348**, successes=**6348**, errors=**0**, rate_limited=**0**, unauthorized=**0**
-
-## Hard-Blocked Finalists
-- SNDK: **penny_stock** — missing entry price (broken upstream pick)
